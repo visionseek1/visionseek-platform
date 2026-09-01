@@ -1,0 +1,4 @@
+Contact: mailto:abdelalim@visionseek.org
+Preferred-Languages: en, ar
+Canonical: https://visionseek.org/.well-known/security.txt
+Expires: 2027-08-29T00:00:00.000Z
