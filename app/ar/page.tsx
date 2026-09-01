@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: "VisionSeek — نحن نبني ما هو قادم",
-  description: "تجمع VisionSeek بين التكنولوجيا والعلم والتصميم وريادة الأعمال لتحويل الإمكانات الجديدة إلى مشروعات ومنتجات وأنظمة قابلة للتنفيذ والتوسع.",
+  title: "VisionSeek | بناء المستقبل بالتكنولوجيا والعلم وريادة الأعمال",
+  description: "VisionSeek مؤسسة عالمية في إنتشون تجمع التكنولوجيا والعلم والتصميم وريادة الأعمال لبناء مشروعات ومنتجات وأنظمة مستقبلية قابلة للتوسع.",
   alternates: {
     canonical: "/ar",
     languages: { en: "/", ar: "/ar" },

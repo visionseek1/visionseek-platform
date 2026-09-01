@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 const projects = [
-  { id: "space", title: "الفضاء والصواريخ", english: "Space & Aerospace", topics: ["Space + Aerospace"], image: "/field-space.jpg" },
-  { id: "drones", title: "الدرونز والأنظمة الجوية", english: "Drones & Aerial Systems", topics: ["Transport", "Logistics"], image: "/field-drones.jpg" },
-  { id: "cities", title: "مدن المستقبل", english: "Future Cities", topics: ["Connectivity", "Computing + AI"], image: "/field-cities.jpg" },
-  { id: "science", title: "العلم والصحة", english: "Science & Health", topics: ["Health"], image: "/field-science.jpg" },
-  { id: "energy", title: "الطاقة والمناخ", english: "Energy & Climate", topics: ["Energy", "Sustainability"], image: "/field-energy.jpg" },
-  { id: "robots", title: "الروبوتات والصناعة الذكية", english: "Robotics & Smart Industry", topics: ["Robotics", "Computing + AI"], image: "/field-industry.jpg" },
-  { id: "agriculture", title: "الزراعة والغذاء المستدام", english: "Agriculture & Sustainable Food", topics: ["Sustainability"], image: "/field-food.jpg" },
+  { id: "space", title: "الفضاء والصواريخ", english: "Space & Aerospace", description: "أنظمة وتقنيات تفتح فرصًا جديدة في الفضاء والطيران.", englishDescription: "Systems and technologies opening new possibilities across space and aerospace.", topics: ["Space + Aerospace"], image: "/field-space.jpg" },
+  { id: "drones", title: "الدرونز والأنظمة الجوية", english: "Drones & Aerial Systems", description: "منصات جوية ذكية للنقل والمراقبة والخدمات اللوجستية.", englishDescription: "Intelligent aerial platforms for transport, observation, and logistics.", topics: ["Transport", "Logistics"], image: "/field-drones.jpg" },
+  { id: "cities", title: "مدن المستقبل", english: "Future Cities", description: "بنية تحتية مترابطة تجعل المدن أكثر ذكاءً واستجابة.", englishDescription: "Connected infrastructure that makes cities more intelligent and responsive.", topics: ["Connectivity", "Computing + AI"], image: "/field-cities.jpg" },
+  { id: "science", title: "العلم والصحة", english: "Science & Health", description: "تحويل الاكتشاف العلمي إلى حلول تحسن صحة الإنسان.", englishDescription: "Turning scientific discovery into solutions that improve human health.", topics: ["Health"], image: "/field-science.jpg" },
+  { id: "energy", title: "الطاقة والمناخ", english: "Energy & Climate", description: "أنظمة طاقة مرنة وحلول عملية لمستقبل منخفض الكربون.", englishDescription: "Resilient energy systems and practical solutions for a low-carbon future.", topics: ["Energy", "Sustainability"], image: "/field-energy.jpg" },
+  { id: "robots", title: "الروبوتات والصناعة الذكية", english: "Robotics & Smart Industry", description: "روبوتات وذكاء اصطناعي يعيدان تشكيل الإنتاج والعمل.", englishDescription: "Robotics and artificial intelligence reshaping production and work.", topics: ["Robotics", "Computing + AI"], image: "/field-industry.jpg" },
+  { id: "agriculture", title: "الزراعة والغذاء المستدام", english: "Agriculture & Sustainable Food", description: "تقنيات تعزز الإنتاج الزراعي وتبني نظمًا غذائية مستدامة.", englishDescription: "Technologies that strengthen agriculture and build sustainable food systems.", topics: ["Sustainability"], image: "/field-food.jpg" },
 ];
 
 const topics = [
@@ -61,6 +61,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
         </Link>
         <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
           <Link href={ar ? "/ar" : "/"}>{ar ? "الرئيسية" : "HOME"}</Link>
+          <Link href={ar ? "/ar/insights" : "/insights"}>{ar ? "رؤى" : "INSIGHTS"}</Link>
           <Link href={ar ? "/ar#vision" : "/#vision"}>{ar ? "الرؤية" : "VISION"}</Link>
           <Link href={ar ? "/ar#founder" : "/#founder"}>{ar ? "المؤسس" : "FOUNDER"}</Link>
           <Link href={ar ? "/ar#contact" : "/#contact"}>{ar ? "تواصل" : "CONTACT"}</Link>
@@ -107,6 +108,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
               <div className="project-meta">
                 <span>{String(index + 1).padStart(2, "0")} / {ar ? "حالي" : "CURRENT"}</span>
                 <h2>{ar ? project.title : project.english}</h2>
+                <p>{ar ? project.description : project.englishDescription}</p>
                 <small>{project.topics.map((item) => ar ? topicArabic[item] : item).join(" · ")}</small>
               </div>
             </article>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: "VisionSeek — We Build What Comes Next",
+  title: "VisionSeek | Future Technology, Science & Venture Building",
   description: "VisionSeek brings together technology, science, design, and entrepreneurship to turn emerging possibilities into scalable projects, products, and systems.",
   alternates: {
     canonical: "/",

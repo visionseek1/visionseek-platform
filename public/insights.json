@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-09-01T13:05:00Z",
+  "items": [
+    {
+      "id": "human-skills-automation-2026",
+      "publishedAt": "2026-09-01T13:05:00Z",
+      "categoryEn": "AI + WORK",
+      "categoryAr": "الذكاء الاصطناعي والعمل",
+      "titleEn": "The future of work is becoming a system-design problem",
+      "titleAr": "مستقبل العمل يتحول إلى مسألة تصميم أنظمة",
+      "summaryEn": "McKinsey's 2026 analysis suggests that collaboration among people, AI agents, and robots will reshape many technical and repetitive tasks, while leadership and empathy remain distinctly human advantages.",
+      "summaryAr": "يشير تحليل McKinsey لعام 2026 إلى أن التعاون بين البشر ووكلاء الذكاء الاصطناعي والروبوتات سيعيد تشكيل المهام التقنية والمتكررة، بينما تظل القيادة والتعاطف ميزتين إنسانيتين أساسيتين.",
+      "takeEn": "Government implication: workforce policy should redesign roles, training, and accountability so machines expand public-sector judgment instead of merely removing tasks.",
+      "takeAr": "الدلالة للحكومات: يجب أن تعيد سياسة القوى العاملة تصميم الأدوار والتدريب والمساءلة بحيث توسّع الآلات قدرة القطاع العام على الحكم، لا أن تزيل المهام فقط.",
+      "source": "McKinsey & Company",
+      "sourceUrl": "https://www.mckinsey.com/featured-insights/charts/human-skills-in-the-age-of-automation"
+    },
+    {
+      "id": "modular-defense-systems-2026",
+      "publishedAt": "2026-09-01T12:05:00Z",
+      "categoryEn": "AEROSPACE + SYSTEMS",
+      "categoryAr": "الفضاء والأنظمة",
+      "titleEn": "Modularity may matter more than the next breakthrough platform",
+      "titleAr": "الأنظمة المعيارية قد تكون أهم من المنصة الخارقة التالية",
+      "summaryEn": "McKinsey argues that future defense technology is moving away from tightly integrated platforms toward modular, multidomain stacks that can evolve faster and scale at lower cost.",
+      "summaryAr": "ترى McKinsey أن تكنولوجيا الدفاع المستقبلية تنتقل من المنصات شديدة التكامل إلى أنظمة معيارية متعددة المجالات يمكن تطويرها بسرعة وتوسيعها بتكلفة أقل.",
+      "takeEn": "Government implication: sovereign capability will increasingly depend on open interfaces and procurement standards that connect sensors, software, vehicles, and decision-makers.",
+      "takeAr": "الدلالة للحكومات: ستعتمد القدرة السيادية بصورة متزايدة على الواجهات المفتوحة ومعايير الشراء التي تربط المستشعرات والبرمجيات والمركبات وصنّاع القرار.",
+      "source": "McKinsey & Company",
+      "sourceUrl": "https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/future-defense-tech-multidomain-stacks-to-build-affordable-mass"
+    },
+    {
+      "id": "ai-agriculture-value-2025",
+      "publishedAt": "2026-09-01T11:05:00Z",
+      "categoryEn": "AGRICULTURE + AI",
+      "categoryAr": "الزراعة والذكاء الاصطناعي",
+      "titleEn": "Agricultural AI creates value when it reaches the field",
+      "titleAr": "الذكاء الاصطناعي الزراعي يصنع القيمة عندما يصل إلى الحقل",
+      "summaryEn": "McKinsey estimates large value pools from applying AI to precision farming, crop imagery, weather intelligence, and enterprise decisions across agriculture.",
+      "summaryAr": "تقدّر McKinsey وجود فرص اقتصادية كبيرة عند استخدام الذكاء الاصطناعي في الزراعة الدقيقة وصور المحاصيل وتحليل الطقس والقرارات المؤسسية الزراعية.",
+      "takeEn": "Government implication: agricultural AI policy should connect data and intelligence to equipment, extension services, finance, and farmers' daily decisions—not fund dashboards alone.",
+      "takeAr": "الدلالة للحكومات: يجب أن تربط سياسة الذكاء الزراعي البيانات بالمعدات والإرشاد والتمويل وقرارات المزارع اليومية، بدلًا من تمويل لوحات البيانات وحدها.",
+      "source": "McKinsey & Company",
+      "sourceUrl": "https://www.mckinsey.com/industries/agriculture/our-insights/global-agriculture-at-a-crossroads-how-to-reap-returns-across-cycles"
+    }
+  ]
+}

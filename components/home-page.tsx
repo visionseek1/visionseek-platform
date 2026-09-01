@@ -11,6 +11,7 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
         </a>
         <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
           <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المشروعات" : "PROJECTS"}</Link>
+          <Link href={ar ? "/ar/insights" : "/insights"}>{ar ? "رؤى" : "INSIGHTS"}</Link>
           <a href="#vision">{ar ? "الرؤية" : "VISION"}</a>
           <a href="#founder">{ar ? "المؤسس" : "FOUNDER"}</a>
           <a href="#contact">{ar ? "تواصل" : "CONTACT"}</a>
