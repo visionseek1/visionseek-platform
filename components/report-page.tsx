@@ -95,8 +95,8 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
     headline: copy.title,
     datePublished: "2026-09-01",
     inLanguage: ar ? "ar" : "en",
-    author: { "@type": "Organization", name: "VisionSeek", url: "https://visionseek.org" },
-    publisher: { "@type": "Organization", name: "VisionSeek", url: "https://visionseek.org" },
+    author: { "@id": "https://visionseek.org/#organization" },
+    publisher: { "@id": "https://visionseek.org/#organization" },
     mainEntityOfPage: `https://visionseek.org${base}/insights/physical-ai`,
   };
 

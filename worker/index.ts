@@ -19,11 +19,12 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
-function withSecurityHeaders(response: Response): Response {
+function withSecurityHeaders(response: Response, pathname: string): Response {
   const headers = new Headers(response.headers);
   headers.set("Strict-Transport-Security", "max-age=31536000");
   headers.set("Cross-Origin-Resource-Policy", "same-origin");
   headers.set("X-Permitted-Cross-Domain-Policies", "none");
+  headers.set("Content-Language", pathname === "/ar" || pathname.startsWith("/ar/") ? "ar" : "en");
 
   return new Response(response.body, {
     status: response.status,
@@ -51,10 +52,10 @@ const worker = {
           return result.response();
         },
       }, allowedWidths);
-      return withSecurityHeaders(response);
+      return withSecurityHeaders(response, url.pathname);
     }
 
-    return withSecurityHeaders(await handler.fetch(request, env, ctx));
+    return withSecurityHeaders(await handler.fetch(request, env, ctx), url.pathname);
   },
 };
 
