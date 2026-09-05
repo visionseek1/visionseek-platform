@@ -1,0 +1,165 @@
+name: VisionSeek AI Feature Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Feature or change to implement"
+        required: true
+        type: string
+      request_id:
+        description: "External request ID (optional)"
+        required: false
+        type: string
+  repository_dispatch:
+    types: [visionseek_ai_feature]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ai-feature-${{ github.event.inputs.request_id || github.event.client_payload.request_id || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  implement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TASK: ${{ github.event.inputs.task || github.event.client_payload.task }}
+      REQUEST_ID: ${{ github.event.inputs.request_id || github.event.client_payload.request_id || github.run_id }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
+    steps:
+      - name: Validate request
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "${TASK:-}" ]; then
+            echo "Missing task"
+            exit 1
+          fi
+          if [ -z "${DEEPSEEK_API_KEY:-}" ]; then
+            echo "Repository secret DEEPSEEK_API_KEY is not configured"
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create isolated branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          SAFE_ID=$(printf '%s' "$REQUEST_ID" | tr -cs '[:alnum:]_-' '-' | cut -c1-40)
+          BRANCH="ai/feature-${SAFE_ID}-${GITHUB_RUN_NUMBER}"
+          git checkout -b "$BRANCH"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install coding agent
+        run: pip install --disable-pip-version-check aider-chat
+
+      - name: Implement feature with DeepSeek
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/agent_task.txt <<'EOF'
+          You are the implementation engineer for the VisionSeek platform.
+
+          Implement the user request in this repository. Work directly on the codebase.
+          Preserve the existing architecture and UI conventions. Prefer the smallest coherent change.
+          Do not modify .github/workflows, repository security configuration, deployment configuration,
+          secrets, environment credentials, or dependency lockfiles unless the request explicitly requires it.
+          Do not deploy or publish anything.
+
+          Before finishing:
+          1. inspect the relevant code paths,
+          2. implement the requested behavior,
+          3. add or update tests when reasonable,
+          4. run the available verification commands,
+          5. fix failures caused by your changes.
+
+          User request:
+          EOF
+          printf '%s\n' "$TASK" >> /tmp/agent_task.txt
+
+          aider \
+            --model deepseek/deepseek-chat \
+            --yes-always \
+            --no-auto-commits \
+            --message "$(cat /tmp/agent_task.txt)"
+
+      - name: Guard protected paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHANGED=$(git diff --name-only origin/main...HEAD; git diff --name-only)
+          printf '%s\n' "$CHANGED" | sort -u > /tmp/changed.txt
+          if grep -E '^(\.github/workflows/|\.env|wrangler\.toml|package-lock\.json$)' /tmp/changed.txt; then
+            echo "Agent modified a protected path. Human review required before allowing this class of change."
+            exit 1
+          fi
+
+      - name: Verify build and tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run lint
+          npm test
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes produced by agent"
+            exit 1
+          fi
+          git config user.name "visionseek-ai-agent"
+          git config user.email "visionseek-ai-agent@users.noreply.github.com"
+          git add -A
+          git commit -m "feat(ai): implement requested change"
+          git push origin "$BRANCH"
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          BODY=$(cat <<EOF
+          ## AI implementation request
+          **Request ID:** ${REQUEST_ID}
+
+          ### Requested change
+          ${TASK}
+
+          ### Automated verification
+          - npm run lint
+          - npm test
+
+          This PR was created by the VisionSeek AI Feature Agent. It has not been deployed. Human approval is required before merge.
+          EOF
+          )
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "AI feature: ${TASK:0:70}" \
+            --body "$BODY"
