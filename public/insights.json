@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-07T03:24:35Z",
+  "updatedAt": "2026-09-07T05:36:37Z",
   "items": [
+    {
+      "id": "nsw-icc-sydney-cbd-solar-farm-2026",
+      "publishedAt": "2026-09-07T05:36:37Z",
+      "categoryEn": "ENERGY + INFRASTRUCTURE",
+      "categoryAr": "الطاقة والبنية التحتية",
+      "titleEn": "NSW turns a government-owned convention precinct into a major urban solar asset",
+      "titleAr": "نيو ساوث ويلز تحوّل مجمّع مؤتمرات حكوميًا إلى أصل شمسي حضري كبير",
+      "summaryEn": "The NSW Government announced an 18,400-square-metre rooftop solar expansion across ICC Sydney, expected to generate 2.6 GWh annually. Combined with renewable-energy procurement, the project is intended to supply the government-owned venue with 100% renewable electricity.",
+      "summaryAr": "أعلنت حكومة نيو ساوث ويلز توسعة للطاقة الشمسية فوق أسطح مركز سيدني الدولي للمؤتمرات بمساحة 18,400 متر مربع، يُتوقع أن تولّد 2.6 غيغاواط ساعة سنويًا. وبالاقتران مع شراء الطاقة المتجددة، يستهدف المشروع تزويد المنشأة الحكومية بكهرباء متجددة بالكامل.",
+      "takeEn": "Government implication: public estates can become distributed energy infrastructure. Governments should map viable rooftops, bundle projects, and pair on-site generation with renewable procurement to reduce operating emissions and strengthen public-asset competitiveness.",
+      "takeAr": "الدلالة للحكومات: يمكن تحويل العقارات العامة إلى بنية تحتية موزعة للطاقة. ينبغي حصر الأسطح القابلة للاستغلال وتجميع المشروعات وربط التوليد المحلي بشراء الطاقة المتجددة لخفض انبعاثات التشغيل وتعزيز تنافسية الأصول العامة.",
+      "source": "NSW Government",
+      "sourceUrl": "https://www.nsw.gov.au/ministerial-releases/largest-cbd-solar-farm-southern-hemisphere-coming-to-icc-sydney"
+    },
     {
       "id": "china-rural-investment-mechanism-2026",
       "publishedAt": "2026-09-07T03:24:35Z",
