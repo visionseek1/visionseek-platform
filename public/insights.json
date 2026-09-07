@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-01T13:05:00Z",
+  "updatedAt": "2026-09-07T03:24:35Z",
   "items": [
+    {
+      "id": "china-rural-investment-mechanism-2026",
+      "publishedAt": "2026-09-07T03:24:35Z",
+      "categoryEn": "AGRICULTURE + INFRASTRUCTURE",
+      "categoryAr": "الزراعة والبنية التحتية",
+      "titleEn": "China builds a multi-channel financing system for rural modernization",
+      "titleAr": "الصين تبني منظومة تمويل متعددة القنوات لتحديث الريف",
+      "summaryEn": "Six Chinese authorities issued a plan through 2030 that links priority public budgets, local-government bonds, targeted credit, agricultural insurance, private investment, infrastructure REITs, and rural renewable-energy projects into one rural investment framework.",
+      "summaryAr": "أصدرت ست جهات صينية خطة حتى عام 2030 تربط أولوية الموازنات العامة وسندات الحكومات المحلية والائتمان الموجّه والتأمين الزراعي والاستثمار الخاص وصناديق البنية التحتية ومشروعات الطاقة المتجددة الريفية ضمن إطار استثماري واحد.",
+      "takeEn": "Government implication: rural strategies should be translated into investable project pipelines with shared risk tools, asset-valuation rules, financing platforms, and lifecycle oversight—not treated as isolated grant programs.",
+      "takeAr": "الدلالة للحكومات: ينبغي تحويل استراتيجيات الريف إلى محافظ مشروعات قابلة للتمويل، مدعومة بأدوات لتقاسم المخاطر وقواعد لتقييم الأصول ومنصات تمويل ورقابة طوال دورة المشروع، بدل التعامل معها كبرامج منح منفصلة.",
+      "source": "Ministry of Agriculture and Rural Affairs of China",
+      "sourceUrl": "https://www.moa.gov.cn/govpublic/CWS/202609/t20260907_6487329.htm"
+    },
     {
       "id": "human-skills-automation-2026",
       "publishedAt": "2026-09-01T13:05:00Z",
