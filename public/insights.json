@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-07T05:36:37Z",
+  "updatedAt": "2026-09-07T09:29:58Z",
   "items": [
+    {
+      "id": "uk-liverpool-public-bus-franchising-2026",
+      "publishedAt": "2026-09-07T08:30:45Z",
+      "categoryEn": "INFRASTRUCTURE + GOVERNANCE",
+      "categoryAr": "البنية التحتية والحوكمة",
+      "titleEn": "Liverpool shifts its bus network to public control with multi-year government backing",
+      "titleAr": "ليفربول تنقل شبكة الحافلات إلى التحكم العام بدعم حكومي متعدد السنوات",
+      "summaryEn": "The UK Government committed £86.3 million through 2029, alongside access to a new mayoral support fund, as Liverpool City Region begins franchising its bus network in St Helens before expanding to the Wirral and across the region by 2027. The model gives the regional authority control over routes, fares, branding, and service planning.",
+      "summaryAr": "خصصت الحكومة البريطانية 86.3 مليون جنيه إسترليني حتى عام 2029، إلى جانب إتاحة صندوق دعم جديد للعمد، مع بدء منطقة مدينة ليفربول تطبيق امتيازات تشغيل شبكة الحافلات في سانت هيلينز قبل التوسع إلى ويرال وبقية المنطقة بحلول 2027. ويمنح النموذج السلطة الإقليمية التحكم في المسارات والأسعار والهوية وتخطيط الخدمة.",
+      "takeEn": "Government implication: infrastructure reform can begin with governance, not construction. Devolving network control works best when paired with multi-year funding, unified service standards, and measurable outcomes for reliability, affordability, and access.",
+      "takeAr": "الدلالة للحكومات: إصلاح البنية التحتية قد يبدأ بإعادة تصميم الحوكمة لا بالبناء فقط. ويصبح نقل التحكم المحلي أكثر فاعلية عندما يقترن بتمويل متعدد السنوات ومعايير موحدة ومؤشرات قابلة للقياس للاعتمادية والتكلفة وإتاحة الخدمة.",
+      "source": "UK Department for Transport",
+      "sourceUrl": "https://www.gov.uk/government/news/new-era-for-liverpool-buses-as-government-backs-local-control"
+    },
     {
       "id": "nsw-icc-sydney-cbd-solar-farm-2026",
       "publishedAt": "2026-09-07T05:36:37Z",
