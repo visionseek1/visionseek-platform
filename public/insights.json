@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-08T09:19:42.735Z",
+  "updatedAt": "2026-09-08T11:43:03.007Z",
   "items": [
+    {
+      "id": "uk-rail-freight-growth-target-2040-2026",
+      "publishedAt": "2026-09-08T11:02:56Z",
+      "categoryEn": "INFRASTRUCTURE + CLIMATE",
+      "categoryAr": "البنية التحتية والمناخ",
+      "titleEn": "UK sets a 2040 rail-freight growth target under Great British Railways",
+      "titleAr": "بريطانيا تضع هدفًا لنمو الشحن بالسكك الحديدية ضمن منظومة السكك الوطنية",
+      "summaryEn": "The UK Government set a target to grow rail freight by at least 40% by 2040 as a milestone toward at least 75% growth by 2050. Great British Railways will receive strategic oversight of network access and explicit duties to support freight, with the government estimating that the 2040 target could shift around £15 billion more goods by rail each year and avoid up to one million tonnes of carbon dioxide annually compared with road transport.",
+      "summaryAr": "حددت الحكومة البريطانية هدفًا لزيادة الشحن بالسكك الحديدية بما لا يقل عن 40% بحلول 2040، كمرحلة نحو نمو لا يقل عن 75% بحلول 2050. وستتولى منظومة السكك الوطنية الإشراف الاستراتيجي على إتاحة الشبكة وتُمنح واجبات صريحة لدعم الشحن، مع تقدير حكومي بأن هدف 2040 قد ينقل بضائع إضافية بقيمة تقارب 15 مليار جنيه إسترليني سنويًا عبر السكك ويجنب ما يصل إلى مليون طن من ثاني أكسيد الكربون سنويًا مقارنة بالنقل البري.",
+      "takeEn": "Government implication: long-term infrastructure targets become investable when a single delivery institution has statutory duties, board-level accountability, control over network access, and measurable milestones. Governments can use this model to align freight policy, capacity planning, private investment, and emissions reduction in one mandate.",
+      "takeAr": "الدلالة للحكومات: تصبح أهداف البنية التحتية طويلة الأجل قابلة للاستثمار عندما تُسند إلى جهة تنفيذ واحدة بواجبات قانونية ومساءلة على مستوى مجلس الإدارة وسلطة على إتاحة الشبكة ومراحل قابلة للقياس. ويمكن استخدام هذا النموذج لدمج سياسة الشحن وتخطيط السعة والاستثمار الخاص وخفض الانبعاثات في تكليف واحد.",
+      "source": "UK Department for Transport",
+      "sourceUrl": "https://www.gov.uk/government/news/great-british-railways-sets-course-for-rail-freight-growth"
+    },
     {
       "id": "uk-angola-export-finance-infrastructure-2026",
       "publishedAt": "2026-09-08T08:35:40Z",
