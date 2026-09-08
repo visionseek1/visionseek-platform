@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-08T11:43:03.007Z",
+  "updatedAt": "2026-09-08T13:17:54.204Z",
   "items": [
+    {
+      "id": "uk-ai-clean-energy-vision-grid-review-2026",
+      "publishedAt": "2026-09-08T12:55:52Z",
+      "categoryEn": "AI + ENERGY INFRASTRUCTURE",
+      "categoryAr": "الذكاء الاصطناعي وبنية الطاقة",
+      "titleEn": "UK launches an AI-for-clean-energy vision and grid deployment review",
+      "titleAr": "بريطانيا تطلق رؤية للذكاء الاصطناعي في الطاقة النظيفة ومراجعة لتطبيقه في الشبكة",
+      "summaryEn": "The UK Government launched an AI-for-clean-energy vision and a call for evidence, alongside an independent review of AI deployment in electricity networks. The work focuses on risk-based grid operation and planning, consumer-benefiting flexibility, clear governance as autonomy increases, and faster deployment of proven solutions; the evidence will inform a national AI in Energy Strategy planned for next year.",
+      "summaryAr": "أطلقت الحكومة البريطانية رؤية للذكاء الاصطناعي في الطاقة النظيفة ودعوة لتقديم الأدلة، بالتزامن مع مراجعة مستقلة لتطبيق الذكاء الاصطناعي في شبكات الكهرباء. يركز المسار على تشغيل الشبكة وتخطيطها وفق المخاطر، ومرونة تحقق منفعة للمستهلك، وحوكمة واضحة مع زيادة الاستقلالية، وتسريع نشر الحلول المثبتة؛ وستُستخدم النتائج في إعداد استراتيجية وطنية للذكاء الاصطناعي في الطاقة العام المقبل.",
+      "takeEn": "Government implication: AI in critical infrastructure should be governed as an operating-system transition, not a collection of pilots. Governments should connect data access, safety thresholds, regulatory accountability, operator capability, consumer outcomes, and routes from validation to nationwide deployment in one implementation framework.",
+      "takeAr": "الدلالة للحكومات: يجب حوكمة الذكاء الاصطناعي في البنية التحتية الحرجة باعتباره انتقالًا في نظام التشغيل، لا مجموعة تجارب منفصلة. ينبغي جمع إتاحة البيانات وحدود السلامة والمساءلة التنظيمية وقدرات المشغلين ونتائج المستهلك ومسار الانتقال من التحقق إلى النشر الوطني ضمن إطار تنفيذ واحد.",
+      "source": "UK Department for Energy Security and Net Zero",
+      "sourceUrl": "https://www.gov.uk/government/speeches/minister-mccluskey-speech-on-ai-for-clean-energy-vision"
+    },
     {
       "id": "uk-rail-freight-growth-target-2040-2026",
       "publishedAt": "2026-09-08T11:02:56Z",
