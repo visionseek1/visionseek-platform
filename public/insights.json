@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-08T00:52:00Z",
+  "updatedAt": "2026-09-08T01:44:36Z",
   "items": [
+    {
+      "id": "nz-school-property-savings-classrooms-2026",
+      "publishedAt": "2026-09-08T00:57:59Z",
+      "categoryEn": "INFRASTRUCTURE + EDUCATION",
+      "categoryAr": "البنية التحتية والتعليم",
+      "titleEn": "New Zealand converts school-property savings into modular classroom expansion",
+      "titleAr": "نيوزيلندا تحوّل وفورات العقارات المدرسية إلى توسع معياري للفصول",
+      "summaryEn": "New Zealand allocated NZ$32.8 million from savings in its school-property portfolio to add 34 classrooms and a gym across ten schools facing enrolment pressure. The projects will use standard designs or offsite manufacturing, with work on the reprioritized projects beginning over the next 12 months.",
+      "summaryAr": "خصصت نيوزيلندا 32.8 مليون دولار نيوزيلندي من وفورات محفظة العقارات المدرسية لإضافة 34 فصلًا وصالة رياضية في عشر مدارس تواجه ضغطًا في أعداد الطلاب. وستستخدم المشروعات تصاميم معيارية أو تصنيعًا خارج الموقع، على أن يبدأ العمل في المشروعات التي أُعيد ترتيب تمويلها خلال الاثني عشر شهرًا المقبلة.",
+      "takeEn": "Government implication: portfolio-level efficiency can create new capital capacity when savings are ring-fenced for high-pressure locations and paired with standardized delivery. Governments should track savings, delivery time, unit cost, and added capacity as one infrastructure-performance system.",
+      "takeAr": "الدلالة للحكومات: يمكن لكفاءة إدارة المحافظ أن تولّد قدرة استثمارية جديدة عندما تُخصص الوفورات للمواقع الأعلى ضغطًا وتقترن بتنفيذ معياري. ينبغي متابعة الوفورات وزمن التنفيذ وتكلفة الوحدة والطاقة الاستيعابية المضافة ضمن منظومة أداء واحدة للبنية التحتية.",
+      "source": "New Zealand Government (Beehive)",
+      "sourceUrl": "https://www.beehive.govt.nz/release/government-funds-more-classrooms-growing-schools"
+    },
     {
       "id": "nz-japan-emergency-management-cooperation-2026",
       "publishedAt": "2026-09-08T00:30:00Z",
