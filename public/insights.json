@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-08T08:28:53Z",
+  "updatedAt": "2026-09-08T09:19:42.735Z",
   "items": [
+    {
+      "id": "uk-angola-export-finance-infrastructure-2026",
+      "publishedAt": "2026-09-08T08:35:40Z",
+      "categoryEn": "INFRASTRUCTURE + FINANCE",
+      "categoryAr": "البنية التحتية والتمويل",
+      "titleEn": "UK export finance bundles four major infrastructure projects in Angola",
+      "titleAr": "التمويل البريطاني يجمع أربعة مشروعات بنية تحتية كبرى في أنغولا",
+      "summaryEn": "UK Export Finance is providing £655 million in financing for four Angolan infrastructure projects: Cabinda International Airport, rehabilitation of the Camama–Viana Road, electrification in Uíge Province, and the Huambo transmission line. The package is expected to unlock £167 million in UK supply contracts while expanding transport connectivity and power infrastructure.",
+      "summaryAr": "توفر وكالة تمويل الصادرات البريطانية 655 مليون جنيه إسترليني لتمويل أربعة مشروعات بنية تحتية في أنغولا: مطار كابيندا الدولي، وتأهيل طريق كاماما–فيانا، وكهربة مقاطعة أويجي، وخط نقل الكهرباء في هوامبو. ومن المتوقع أن تتيح الحزمة عقود توريد بريطانية بقيمة 167 مليون جنيه إسترليني، مع توسيع الربط في النقل والبنية التحتية للطاقة.",
+      "takeEn": "Government implication: export credit can serve development and industrial policy together when transport, electrification, supplier participation, and delivery finance are structured as one investable portfolio. Governments should pair such packages with transparent procurement, local-capability targets, and outcome tracking for connectivity, reliability, and fiscal exposure.",
+      "takeAr": "الدلالة للحكومات: يمكن لائتمان الصادرات أن يخدم التنمية والسياسة الصناعية معًا عندما تُنظَّم مشروعات النقل والكهرباء ومشاركة الموردين وتمويل التنفيذ ضمن محفظة استثمارية واحدة. وينبغي ربط هذه الحزم بمشتريات شفافة وأهداف للقدرات المحلية ومتابعة نتائج الربط والاعتمادية والتعرض المالي.",
+      "source": "UK Export Finance",
+      "sourceUrl": "https://www.gov.uk/government/news/uk-backing-unlocks-167-million-of-exports-for-british-businesses-in-angola"
+    },
     {
       "id": "uk-ukraine-winter-air-defence-drones-2026",
       "publishedAt": "2026-09-08T07:38:42Z",
