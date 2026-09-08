@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-08T13:17:54.204Z",
+  "updatedAt": "2026-09-08T19:15:08.254Z",
   "items": [
+    {
+      "id": "us-fcc-space-broadband-spectrum-expansion-2026",
+      "publishedAt": "2026-09-08T18:43:54Z",
+      "categoryEn": "SPACE + DIGITAL INFRASTRUCTURE",
+      "categoryAr": "الفضاء والبنية التحتية الرقمية",
+      "titleEn": "US regulator proposes a major spectrum expansion for space-based broadband",
+      "titleAr": "الجهة التنظيمية الأمريكية تقترح توسعًا كبيرًا في الطيف للنطاق العريض الفضائي",
+      "summaryEn": "The US Federal Communications Commission proposed an order, scheduled for a September 30 vote, that would open many thousands of megahertz for space-based broadband. The additional capacity is intended to support high-speed links to homes, aircraft and ships, as well as data routing through satellite ground networks.",
+      "summaryAr": "اقترحت لجنة الاتصالات الفيدرالية الأمريكية أمرًا سيُطرح للتصويت في 30 سبتمبر، يفتح آلافًا عديدة من الميغاهرتز لخدمات النطاق العريض الفضائي. ويستهدف توسيع السعة للاتصالات عالية السرعة إلى المنازل والطائرات والسفن، إلى جانب توجيه البيانات عبر الشبكات الأرضية للأقمار الصناعية.",
+      "takeEn": "Government implication: spectrum policy is becoming a core infrastructure lever for the space economy. Governments should connect allocation decisions with interference safeguards, competition rules, coverage priorities, and terrestrial–satellite interoperability so new capacity translates into resilient public connectivity.",
+      "takeAr": "الدلالة للحكومات: أصبحت سياسة الطيف أداة أساسية لبناء اقتصاد الفضاء. ينبغي ربط قرارات التخصيص بضمانات منع التداخل وقواعد المنافسة وأولويات التغطية والتكامل بين الشبكات الأرضية والفضائية، حتى تتحول السعة الجديدة إلى اتصال عام أكثر مرونة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/us-fcc-proposes-open-more-wireless-spectrum-space-based-wireless-service-2026-09-08/"
+    },
     {
       "id": "uk-ai-clean-energy-vision-grid-review-2026",
       "publishedAt": "2026-09-08T12:55:52Z",
