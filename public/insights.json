@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-08T19:15:08.254Z",
+  "updatedAt": "2026-09-08T23:21:06Z",
   "items": [
+    {
+      "id": "iran-us-autonomous-underwater-drone-hormuz-2026",
+      "publishedAt": "2026-09-08T22:31:00Z",
+      "categoryEn": "AUTONOMOUS SYSTEMS + MARITIME SECURITY",
+      "categoryAr": "الأنظمة الذاتية والأمن البحري",
+      "titleEn": "Underwater drone incident in the Strait of Hormuz exposes autonomous-system risks",
+      "titleAr": "حادثة مسيّرة تحت الماء في مضيق هرمز تكشف مخاطر الأنظمة الذاتية",
+      "summaryEn": "Iran’s Revolutionary Guards said they captured a U.S. uncrewed submarine near the entrance to the Strait of Hormuz, while the Pentagon said the underwater drone had malfunctioned during a regional survey more than a day earlier. Reuters could not independently verify Iran’s account. Iranian media identified the vehicle as a large autonomous platform designed for missions that can include mine countermeasures, seabed mapping, intelligence gathering, and inspection of cables and pipelines.",
+      "summaryAr": "قال الحرس الثوري الإيراني إنه استولى على غواصة أمريكية غير مأهولة قرب مدخل مضيق هرمز، بينما أفاد البنتاغون بأن المسيّرة تحت الماء تعطلت أثناء مسح للمياه الإقليمية قبل أكثر من يوم. ولم تتمكن رويترز من التحقق مستقلًا من الرواية الإيرانية. وحددت وسائل إعلام إيرانية المركبة باعتبارها منصة ذاتية كبيرة مصممة لمهام قد تشمل مكافحة الألغام ورسم خرائط قاع البحر وجمع المعلومات وفحص الكابلات وخطوط الأنابيب.",
+      "takeEn": "Government implication: autonomous maritime fleets need governance for failure and capture, not only mission performance. Governments should connect communications-loss procedures, data minimization, asset-recovery plans, attribution standards, escalation rules, and protection of subsea infrastructure in one operational assurance framework.",
+      "takeAr": "الدلالة للحكومات: تحتاج أساطيل الأنظمة البحرية الذاتية إلى حوكمة لحالات التعطل والاستيلاء، لا إلى تقييم أداء المهمة فقط. ينبغي جمع إجراءات فقدان الاتصال وتقليل البيانات وخطط استعادة الأصول ومعايير الإسناد وقواعد التصعيد وحماية البنية التحتية البحرية ضمن إطار واحد للضمان التشغيلي.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/middle-east/iran-says-it-captured-us-submarine-drone-strait-hormuz-2026-09-08/"
+    },
     {
       "id": "us-fcc-space-broadband-spectrum-expansion-2026",
       "publishedAt": "2026-09-08T18:43:54Z",
