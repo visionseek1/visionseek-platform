@@ -1,6 +1,20 @@
 {
-  "updatedAt": "2026-09-07T09:29:58Z",
+  "updatedAt": "2026-09-08T00:52:00Z",
   "items": [
+    {
+      "id": "nz-japan-emergency-management-cooperation-2026",
+      "publishedAt": "2026-09-08T00:30:00Z",
+      "categoryEn": "CLIMATE + INFRASTRUCTURE",
+      "categoryAr": "المناخ والبنية التحتية",
+      "titleEn": "New Zealand and Japan formalize cooperation on disaster resilience",
+      "titleAr": "نيوزيلندا واليابان تؤسسان تعاونًا لتعزيز القدرة على مواجهة الكوارث",
+      "summaryEn": "New Zealand and Japan announced a Memorandum of Cooperation focused on disaster-risk reduction, preparedness, response, recovery, and early-warning practice. The agreement creates a channel for sharing expertise and developing emergency-management capability across the similar hazard environments of both countries and the wider Asia-Pacific.",
+      "summaryAr": "أعلنت نيوزيلندا واليابان مذكرة تعاون تركز على الحد من مخاطر الكوارث والاستعداد والاستجابة والتعافي وممارسات الإنذار المبكر. وتفتح الاتفاقية قناة لتبادل الخبرات وتطوير قدرات إدارة الطوارئ في ظل تشابه المخاطر التي تواجه البلدين ومنطقة آسيا والمحيط الهادئ.",
+      "takeEn": "Government implication: cross-border resilience agreements should be translated into shared operating playbooks, interoperable warning protocols, joint exercises, and measurable capability benchmarks that can be tested before disasters occur.",
+      "takeAr": "الدلالة للحكومات: ينبغي تحويل اتفاقيات المرونة العابرة للحدود إلى أدلة تشغيل مشتركة وبروتوكولات إنذار قابلة للتكامل وتمارين دورية ومؤشرات قدرة قابلة للقياس والاختبار قبل وقوع الكوارث.",
+      "source": "New Zealand Government (Beehive)",
+      "sourceUrl": "https://www.beehive.govt.nz/release/new-zealand-and-japan-strengthen-emergency-management-cooperation"
+    },
     {
       "id": "uk-liverpool-public-bus-franchising-2026",
       "publishedAt": "2026-09-07T08:30:45Z",
