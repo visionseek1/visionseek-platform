@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-france-ai-intellectual-property-cooperation-2026",
+      "publishedAt": "2026-09-09T08:00:00Z",
+      "categoryEn": "AI + INTELLECTUAL PROPERTY",
+      "categoryAr": "الذكاء الاصطناعي والملكية الفكرية",
+      "titleEn": "Korea and France extend intellectual-property cooperation to AI examination and commercialization",
+      "titleAr": "كوريا وفرنسا توسعان تعاون الملكية الفكرية ليشمل فحص الذكاء الاصطناعي وتسويقه",
+      "summaryEn": "South Korea’s Ministry of Intellectual Property and France’s National Institute of Industrial Property signed an expanded cooperation agreement during the Korea–France summit. It covers intellectual-property administration for AI transformation, cooperation on AI-related examination, intellectual-property finance and commercialization, and stronger cross-border protection and enforcement against counterfeit goods. The two sides also began follow-up discussions with French customs and industry bodies on practical implementation.",
+      "summaryAr": "وقّعت وزارة الملكية الفكرية الكورية والمعهد الوطني الفرنسي للملكية الصناعية اتفاقًا موسعًا للتعاون خلال القمة الكورية الفرنسية. ويشمل الاتفاق إدارة الملكية الفكرية في التحول بالذكاء الاصطناعي، والتعاون في فحص الابتكارات المرتبطة بالذكاء الاصطناعي، وتمويل الملكية الفكرية وتسويقها، وتعزيز الحماية والإنفاذ عبر الحدود ضد السلع المقلدة. وبدأ الجانبان كذلك مناقشات تنفيذية مع الجمارك والجهات الصناعية الفرنسية.",
+      "takeEn": "Government implication: AI competitiveness depends not only on compute and research, but also on how quickly inventions are examined, financed, commercialized and protected internationally. Governments should turn bilateral IP agreements into operating mechanisms with shared examination practice, expert exchange, commercialization pathways and measurable enforcement outcomes.",
+      "takeAr": "الدلالة للحكومات: لا تعتمد القدرة التنافسية في الذكاء الاصطناعي على الحوسبة والبحث فقط، بل أيضًا على سرعة فحص الابتكارات وتمويلها وتسويقها وحمايتها دوليًا. وينبغي تحويل اتفاقات الملكية الفكرية الثنائية إلى آليات تشغيل تشمل ممارسات فحص مشتركة، وتبادل الخبراء، ومسارات للتسويق، ونتائج قابلة للقياس في الإنفاذ.",
+      "source": "Republic of Korea Ministry of Intellectual Property",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780898"
+    },
+    {
       "id": "korea-emerging-security-human-control-ai-drones-space-2026",
       "publishedAt": "2026-09-09T06:00:00Z",
       "categoryEn": "AI + AUTONOMOUS SYSTEMS + SPACE SECURITY",
@@ -253,5 +267,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T06:27:24Z"
+  "updatedAt": "2026-09-09T08:16:28Z"
 }
