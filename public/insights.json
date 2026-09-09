@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "sweden-future-manned-unmanned-combat-aircraft-2026",
+      "publishedAt": "2026-09-09T13:18:00Z",
+      "categoryEn": "AUTONOMOUS SYSTEMS + AEROSPACE",
+      "categoryAr": "الأنظمة الذاتية والطيران",
+      "titleEn": "Sweden funds a common technology path for future crewed and uncrewed combat aircraft",
+      "titleAr": "السويد تموّل مسارًا تقنيًا مشتركًا لطائرات قتالية مستقبلية مأهولة وغير مأهولة",
+      "summaryEn": "Sweden ordered roughly SEK 2.9 billion of continued work from Saab on technologies for future crewed and uncrewed combat aircraft. The contract runs from 2026 through 2028, with options extending to 2030, moving Sweden’s future-air-combat effort from concept exploration into a funded development programme.",
+      "summaryAr": "طلبت السويد من شركة ساب مواصلة تطوير تقنيات لطائرات قتالية مستقبلية مأهولة وغير مأهولة بقيمة تقارب 2.9 مليار كرونة سويدية. ويمتد العقد من 2026 إلى 2028 مع خيارات للتمديد حتى 2030، بما ينقل مسار القتال الجوي المستقبلي من استكشاف المفاهيم إلى برنامج تطوير ممول.",
+      "takeEn": "Government implication: treating crewed and autonomous aircraft as one technology portfolio can preserve strategic options while doctrine and threat conditions evolve. Governments should pair phased funding with open interfaces, explicit human-control requirements, test evidence and decision gates before selecting a final force design.",
+      "takeAr": "الدلالة للحكومات: يتيح التعامل مع الطائرات المأهولة والذاتية كمحفظة تقنية واحدة الحفاظ على الخيارات الاستراتيجية مع تطور العقيدة والتهديدات. وينبغي ربط التمويل المرحلي بواجهات مفتوحة، ومتطلبات صريحة للتحكم البشري، وأدلة اختبار، ونقاط قرار قبل اعتماد تصميم نهائي للقوة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/saab-wins-303-million-order-sweden-work-future-combat-aircraft-2026-09-09/"
+    },
+    {
       "id": "korea-climate-citizen-platform-incentives-2026",
       "publishedAt": "2026-09-09T09:00:00Z",
       "categoryEn": "CLIMATE + DIGITAL PUBLIC INFRASTRUCTURE",
@@ -281,5 +295,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T09:39:15Z"
+  "updatedAt": "2026-09-09T13:42:58Z"
 }
