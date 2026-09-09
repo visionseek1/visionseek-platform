@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-emerging-security-human-control-ai-drones-space-2026",
+      "publishedAt": "2026-09-09T06:00:00Z",
+      "categoryEn": "AI + AUTONOMOUS SYSTEMS + SPACE SECURITY",
+      "categoryAr": "الذكاء الاصطناعي والأنظمة الذاتية وأمن الفضاء",
+      "titleEn": "Korea links AI, autonomous weapons and space security through a human-control framework",
+      "titleAr": "كوريا تربط الذكاء الاصطناعي والأسلحة الذاتية وأمن الفضاء بإطار للتحكم البشري",
+      "summaryEn": "At the 2026 World Emerging Security Forum, South Korea’s foreign ministry brought government, international-organization, industry and academic experts together to examine the combined security effects of AI, low-cost drones, cyber capabilities, nuclear command systems and increasingly commercial space activity. Participants identified human control and accountability for autonomous weapons, continued human involvement in critical nuclear decisions, and international norms that reflect the private sector’s growing role in space security as immediate governance priorities.",
+      "summaryAr": "جمع منتدى الأمن الناشئ العالمي لعام 2026، الذي نظمته وزارة الخارجية الكورية، خبراء من الحكومات والمنظمات الدولية والقطاع الخاص والأوساط الأكاديمية لبحث الآثار الأمنية المتداخلة للذكاء الاصطناعي والطائرات المسيّرة منخفضة التكلفة والقدرات السيبرانية وأنظمة القيادة النووية والنشاط التجاري المتنامي في الفضاء. وحدد المشاركون التحكم البشري والمساءلة في الأسلحة الذاتية، واستمرار التدخل البشري في القرارات النووية الحساسة، ووضع قواعد دولية تراعي الدور المتزايد للقطاع الخاص في أمن الفضاء كأولويات حوكمة عاجلة.",
+      "takeEn": "Government implication: AI, autonomous systems, cyber operations, nuclear command and commercial space can no longer be governed in separate policy silos. Governments should establish shared escalation thresholds, explicit human-decision checkpoints, private-operator obligations and cross-agency incident protocols before these systems become operationally intertwined.",
+      "takeAr": "الدلالة للحكومات: لم يعد ممكنًا حوكمة الذكاء الاصطناعي والأنظمة الذاتية والعمليات السيبرانية والقيادة النووية والفضاء التجاري في مسارات منفصلة. ينبغي وضع حدود تصعيد مشتركة، ونقاط قرار بشرية صريحة، والتزامات للمشغلين من القطاع الخاص، وبروتوكولات موحدة للحوادث بين الجهات قبل أن تتداخل هذه الأنظمة تشغيليًا.",
+      "source": "Republic of Korea Ministry of Foreign Affairs",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780886"
+    },
+    {
       "id": "korea-aidc-special-act-implementing-rules-consultation-2026",
       "publishedAt": "2026-09-09T05:00:00Z",
       "categoryEn": "AI + DIGITAL INFRASTRUCTURE",
@@ -239,5 +253,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T05:49:48Z"
+  "updatedAt": "2026-09-09T06:27:24Z"
 }
