@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-aidc-special-act-implementing-rules-consultation-2026",
+      "publishedAt": "2026-09-09T05:00:00Z",
+      "categoryEn": "AI + DIGITAL INFRASTRUCTURE",
+      "categoryAr": "الذكاء الاصطناعي والبنية التحتية الرقمية",
+      "titleEn": "Korea opens implementing rules for its AI data-center law to public consultation",
+      "titleAr": "كوريا تفتح اللوائح التنفيذية لقانون مراكز بيانات الذكاء الاصطناعي للمشاورة العامة",
+      "summaryEn": "South Korea’s Ministry of Science and ICT held a public forum on September 9 to present draft subordinate rules for the AI Data Center Special Act before formal legislative notice. The session combined expert presentations, panel discussion and open comments, with the ministry saying stakeholder feedback will be reflected in the enforcement decree.",
+      "summaryAr": "عقدت وزارة العلوم وتكنولوجيا المعلومات والاتصالات الكورية في 9 سبتمبر منتدى عامًا لعرض مسودة اللوائح التابعة لقانون مراكز بيانات الذكاء الاصطناعي قبل بدء الإخطار التشريعي الرسمي. وجمعت الجلسة عروضًا متخصصة ونقاشًا جماعيًا وتعليقات مفتوحة، وأكدت الوزارة أن ملاحظات أصحاب المصلحة ستنعكس في المرسوم التنفيذي.",
+      "takeEn": "Government implication: secondary rules are where AI-infrastructure strategy becomes an executable permitting and investment system. Governments should align data-center eligibility, land use, grid access, safety, reporting and incentives to one implementation timetable, then publish decision criteria early enough for agencies and investors to plan against them.",
+      "takeAr": "الدلالة للحكومات: اللوائح الثانوية هي المرحلة التي تتحول فيها استراتيجية البنية التحتية للذكاء الاصطناعي إلى نظام قابل للتنفيذ للتراخيص والاستثمار. وينبغي مواءمة أهلية المراكز واستخدام الأراضي والوصول إلى الشبكة والسلامة والإبلاغ والحوافز ضمن جدول تنفيذ واحد، مع نشر معايير القرار مبكرًا لتخطيط الجهات والمستثمرين.",
+      "source": "Republic of Korea Ministry of Science and ICT",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780865"
+    },
+    {
       "id": "korea-agrifood-finance-investment-roadshow-2026",
       "publishedAt": "2026-09-09T04:00:00Z",
       "categoryEn": "AGRICULTURE + INVESTMENT",
@@ -225,5 +239,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T04:43:45Z"
+  "updatedAt": "2026-09-09T05:49:48Z"
 }
