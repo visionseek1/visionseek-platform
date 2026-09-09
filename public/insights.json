@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-climate-citizen-platform-incentives-2026",
+      "publishedAt": "2026-09-09T09:00:00Z",
+      "categoryEn": "CLIMATE + DIGITAL PUBLIC INFRASTRUCTURE",
+      "categoryAr": "المناخ والبنية التحتية العامة الرقمية",
+      "titleEn": "Korea links a national climate-action platform to incentives and verified participation",
+      "titleAr": "كوريا تربط منصة وطنية للعمل المناخي بالحوافز والمشاركة الموثقة",
+      "summaryEn": "South Korea’s Ministry of Climate, Energy and Environment will open the integrated Korea Climate Action portal on September 10 as the delivery platform for its Ten Million Climate Citizens initiative. The service combines a digital climate-citizen declaration, ten action commitments, a personal digital card, activity history, estimated emissions reductions and carbon-neutrality points. Through year-end, participants can receive 1,000 points for the declaration and another 1,000 after verifying an initial action, while the ministry plans to expand rewards using accumulated participation data.",
+      "summaryAr": "تفتتح وزارة المناخ والطاقة والبيئة الكورية في 10 سبتمبر منصة «العمل المناخي في كوريا» لتكون قاعدة تنفيذ مبادرة «عشرة ملايين مواطن مناخي». وتجمع الخدمة إعلانًا رقميًا للمشاركة، وعشرة التزامات عملية، وبطاقة شخصية رقمية، وسجل الأنشطة، وتقديرات خفض الانبعاثات، ونقاط الحياد الكربوني. وحتى نهاية العام، يمكن للمشارك الحصول على 1000 نقطة عند التسجيل و1000 نقطة أخرى بعد توثيق أول نشاط، مع خطة لتوسيع المكافآت استنادًا إلى بيانات المشاركة المتراكمة.",
+      "takeEn": "Government implication: mass climate programmes become operational when identity, action choices, verification, feedback and incentives sit in one public-service loop. Governments adopting this model should define credible emissions baselines, privacy safeguards, anti-gaming controls and outcome metrics so participation data can guide policy without confusing activity counts with real carbon reduction.",
+      "takeAr": "الدلالة للحكومات: تتحول برامج المناخ الجماهيرية إلى أدوات تنفيذية عندما تجتمع الهوية وخيارات السلوك والتحقق والتغذية الراجعة والحوافز في دورة خدمة عامة واحدة. ويتطلب تكرار النموذج خطوط أساس موثوقة للانبعاثات، وضمانات للخصوصية، وضوابط لمنع التحايل، ومؤشرات نتائج تميّز بين عدد الأنشطة والخفض الحقيقي للكربون.",
+      "source": "Republic of Korea Ministry of Climate, Energy and Environment",
+      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971590"
+    },
+    {
       "id": "korea-france-ai-intellectual-property-cooperation-2026",
       "publishedAt": "2026-09-09T08:00:00Z",
       "categoryEn": "AI + INTELLECTUAL PROPERTY",
@@ -267,5 +281,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T08:16:28Z"
+  "updatedAt": "2026-09-09T09:39:15Z"
 }
