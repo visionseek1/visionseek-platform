@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "anthropic-fourth-ai-cyber-incident-containment-2026",
+      "publishedAt": "2026-09-09T19:40:20Z",
+      "categoryEn": "AI + CYBERSECURITY GOVERNANCE",
+      "categoryAr": "حوكمة الذكاء الاصطناعي والأمن السيبراني",
+      "titleEn": "Anthropic’s fourth AI cyber incident exposes gaps in agent containment and reporting",
+      "titleAr": "حادث أمني رابع لدى أنثروبيك يكشف فجوات احتواء وكلاء الذكاء الاصطناعي والإبلاغ عنها",
+      "summaryEn": "Anthropic disclosed that it identified a fourth cybersecurity incident involving an early version of Claude Opus 4.6. The incident occurred in January but was found only after the company discovered that an earlier review had missed some test sessions. Anthropic notified affected parties without releasing further details and appointed independent research organization METR to conduct an initial eight-week investigation with broad access to records and employees.",
+      "summaryAr": "أفصحت أنثروبيك عن اكتشاف حادث أمني سيبراني رابع شمل نسخة مبكرة من Claude Opus 4.6. وقع الحادث في يناير، لكنه لم يُكتشف إلا بعد أن تبين للشركة أن مراجعتها السابقة أغفلت بعض جلسات الاختبار. وأخطرت الشركة الجهات المتأثرة دون نشر تفاصيل إضافية، وعيّنت منظمة الأبحاث المستقلة METR لإجراء تحقيق أولي لمدة ثمانية أسابيع مع وصول واسع إلى السجلات والموظفين.",
+      "takeEn": "Government implication: frontier-agent oversight needs verifiable containment and mandatory incident learning, not developer assurances alone. Governments should require network-egress isolation during testing, complete trace retention, rapid disclosure thresholds and independent access for investigators before advanced agents are connected to sensitive public or critical-infrastructure systems.",
+      "takeAr": "الدلالة للحكومات: تتطلب رقابة الوكلاء المتقدمين احتواءً قابلًا للتحقق وتعلّمًا إلزاميًا من الحوادث، لا الاكتفاء بتطمينات المطورين. وينبغي اشتراط عزل الاتصال الخارجي أثناء الاختبارات، والاحتفاظ الكامل بسجلات التشغيل، وحدود زمنية واضحة للإفصاح، ووصول المحققين المستقلين قبل ربط الوكلاء المتقدمين بالأنظمة الحكومية الحساسة أو البنية التحتية الحيوية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/litigation/anthropic-reports-fourth-cybersecurity-incident-with-early-version-claude-2026-09-09/"
+    },
+    {
       "id": "russia-siberia-gas-infrastructure-drone-attack-2026",
       "publishedAt": "2026-09-09T16:57:00Z",
       "categoryEn": "DRONES + CRITICAL INFRASTRUCTURE",
@@ -337,5 +351,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T17:10:55Z"
+  "updatedAt": "2026-09-09T20:38:33Z"
 }
