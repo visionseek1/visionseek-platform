@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "portugal-ren-strategic-grid-stake-2026",
+      "publishedAt": "2026-09-09T15:41:00Z",
+      "categoryEn": "ENERGY + INFRASTRUCTURE GOVERNANCE",
+      "categoryAr": "الطاقة وحوكمة البنية التحتية",
+      "titleEn": "Portugal returns to strategic ownership of its power and gas grid operator",
+      "titleAr": "البرتغال تعود إلى الملكية الاستراتيجية لمشغّل شبكات الكهرباء والغاز",
+      "summaryEn": "Portugal’s government said it agreed to acquire a 13.7% stake in REN, the operator of the country’s electricity and gas transmission networks and gas-storage infrastructure, returning to the company 12 years after exiting. The government linked the move to sovereignty and national-security concerns amid geopolitical uncertainty, and to gaining greater influence over grid investments needed to connect new solar and wind projects.",
+      "summaryAr": "أعلنت الحكومة البرتغالية موافقتها على الاستحواذ على حصة قدرها 13.7% في شركة REN، المشغلة لشبكات نقل الكهرباء والغاز وبنية تخزين الغاز في البلاد، لتعود إلى ملكية الشركة بعد خروجها منها قبل 12 عامًا. وربطت الحكومة الخطوة باعتبارات السيادة والأمن القومي في ظل عدم اليقين الجيوسياسي، وبزيادة قدرتها على التأثير في استثمارات الشبكة اللازمة لربط مشروعات جديدة للطاقة الشمسية وطاقة الرياح.",
+      "takeEn": "Government implication: minority ownership can become a strategic-infrastructure governance tool, but its value depends on clear rights, investment mandates and public accountability. Governments considering a similar intervention should define national-security thresholds, competition safeguards, fiscal exposure and measurable milestones for new grid capacity and connection times.",
+      "takeAr": "الدلالة للحكومات: يمكن للملكية الجزئية أن تصبح أداة لحوكمة البنية التحتية الاستراتيجية، لكن قيمتها تعتمد على وضوح الحقوق وتفويض الاستثمار والمساءلة العامة. وينبغي للحكومات التي تدرس تدخلًا مشابهًا أن تحدد عتبات الأمن القومي وضمانات المنافسة والتعرّض المالي ومراحل قابلة للقياس لزيادة سعة الشبكة وتسريع التوصيلات.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/portugal-buys-into-power-gas-operator-ren-safeguard-strategic-assets-influence-2026-09-09/"
+    },
+    {
       "id": "nepal-drones-flood-relief-logistics-2026",
       "publishedAt": "2026-09-09T14:07:00Z",
       "categoryEn": "DRONES + CLIMATE RESILIENCE",
@@ -309,5 +323,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T14:39:05Z"
+  "updatedAt": "2026-09-09T16:16:13Z"
 }
