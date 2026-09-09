@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "nepal-drones-flood-relief-logistics-2026",
+      "publishedAt": "2026-09-09T14:07:00Z",
+      "categoryEn": "DRONES + CLIMATE RESILIENCE",
+      "categoryAr": "الطائرات المسيّرة والمرونة المناخية",
+      "titleEn": "Nepal deploys cargo drones as a disaster-relief logistics layer",
+      "titleAr": "نيبال توظّف مسيّرات الشحن كطبقة لوجستية للاستجابة للكوارث",
+      "summaryEn": "Nepal’s army is using four donated cargo drones to deliver food, medicine, fuel and other essentials after floods destroyed roads and bridges while helicopters remain focused on search and rescue. The fleet is making about 10–16 deliveries a day; each drone can carry up to 60 kilograms over roughly three to four kilometres. Reconnaissance drones are also supporting rescue operations.",
+      "summaryAr": "يستخدم الجيش النيبالي أربع طائرات شحن مسيّرة متبرعًا بها لتوصيل الغذاء والدواء والوقود والاحتياجات الأساسية بعدما دمرت الفيضانات الطرق والجسور، بينما تظل المروحيات مخصصة للبحث والإنقاذ. وينفذ الأسطول نحو 10 إلى 16 رحلة يوميًا، ويمكن لكل مسيّرة حمل ما يصل إلى 60 كيلوغرامًا لمسافة تقارب ثلاثة إلى أربعة كيلومترات، كما تدعم مسيّرات الاستطلاع عمليات الإنقاذ.",
+      "takeEn": "Government implication: drones can become a practical middle layer between ground convoys and scarce helicopters when disasters sever last-mile access. Governments should pre-approve emergency flight corridors, train operators, stock modular cargo kits and integrate drone tasking with civil-defence logistics before the next crisis.",
+      "takeAr": "الدلالة للحكومات: يمكن للطائرات المسيّرة أن تشكل طبقة عملية بين القوافل البرية والمروحيات المحدودة عندما تقطع الكوارث الوصول إلى الميل الأخير. وينبغي اعتماد ممرات طيران طارئة مسبقًا، وتدريب المشغلين، وتخزين حزم شحن معيارية، وربط مهام المسيّرات بمنظومة لوجستيات الدفاع المدني قبل الأزمة التالية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/nepal-turns-drones-deliver-flood-relief-2026-09-09/"
+    },
+    {
       "id": "sweden-future-manned-unmanned-combat-aircraft-2026",
       "publishedAt": "2026-09-09T13:18:00Z",
       "categoryEn": "AUTONOMOUS SYSTEMS + AEROSPACE",
@@ -295,5 +309,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T13:42:58Z"
+  "updatedAt": "2026-09-09T14:39:05Z"
 }
