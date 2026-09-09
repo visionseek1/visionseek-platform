@@ -1,18 +1,32 @@
 {
   "items": [
     {
+      "id": "korea-agrifood-finance-investment-roadshow-2026",
+      "publishedAt": "2026-09-09T04:00:00Z",
+      "categoryEn": "AGRICULTURE + INVESTMENT",
+      "categoryAr": "الزراعة والاستثمار",
+      "titleEn": "Korea links agrifood companies, investors and export channels in one government-led dealmaking platform",
+      "titleAr": "كوريا تجمع شركات الأغذية الزراعية والمستثمرين وقنوات التصدير في منصة حكومية واحدة",
+      "summaryEn": "South Korea’s agriculture ministry convened its 2026 Agrifood Finance and Investment Roadshow in Seoul, bringing together 50 agrifood companies and about 300 participants from public trade agencies, venture capital and accelerator firms, major food companies, global buyers and commerce platforms. The programme combined one-to-one investment, export, corporate mentoring and overseas-sales consultations, alongside demonstrations by 21 companies. The ministry also said it plans to expand support through the agrifood fund and strengthen the cycle of investment exits and reinvestment.",
+      "summaryAr": "نظمت وزارة الزراعة الكورية معرض التمويل والاستثمار للأغذية الزراعية لعام 2026 في سيول، جامعًا 50 شركة ونحو 300 مشارك من هيئات التجارة العامة وشركات رأس المال الجريء ومسرّعات الأعمال وكبرى شركات الأغذية والمشترين العالميين ومنصات التجارة. ودمج البرنامج في مكان واحد استشارات فردية للتمويل والتصدير والإرشاد المؤسسي والمبيعات الخارجية، إلى جانب عروض قدمتها 21 شركة. وأعلنت الوزارة أيضًا عزمها توسيع دعم صندوق الأغذية الزراعية وتعزيز دورة التخارج وإعادة الاستثمار.",
+      "takeEn": "Government implication: sector financing works better when capital, export access, corporate partnerships and public support are designed as one transaction pipeline. Governments can replicate this model by qualifying firms before the event, matching each company to investors and buyers, and tracking deals through export or investment close rather than measuring attendance alone.",
+      "takeAr": "الدلالة للحكومات: يصبح تمويل القطاعات أكثر فاعلية عندما تُصمم رؤوس الأموال والوصول إلى التصدير والشراكات المؤسسية والدعم العام كمسار صفقات واحد. ويمكن تكرار النموذج عبر تأهيل الشركات مسبقًا، ومطابقة كل شركة مع المستثمرين والمشترين المناسبين، ثم متابعة النتائج حتى إغلاق صفقة استثمار أو تصدير بدل الاكتفاء بقياس الحضور.",
+      "source": "Republic of Korea Ministry of Agriculture, Food and Rural Affairs",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-09&newsId=156780848&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-09"
+    },
+    {
+      "categoryAr": "الطاقة النظيفة والبنية التحتية",
+      "categoryEn": "CLEAN ENERGY + INFRASTRUCTURE",
       "id": "australia-energy-transition-coordinator-grid-2026",
       "publishedAt": "2026-09-09T02:33:00Z",
-      "categoryEn": "CLEAN ENERGY + INFRASTRUCTURE",
-      "categoryAr": "الطاقة النظيفة والبنية التحتية",
-      "titleEn": "Australia’s climate authority calls for an Energy Transition Coordinator to unblock grid projects",
-      "titleAr": "هيئة المناخ الأسترالية تدعو إلى منسق وطني لإزالة عوائق مشروعات الطاقة والشبكة",
-      "summaryEn": "Australia’s Climate Change Authority says meeting the country’s 2035 target requires a step change in renewable generation, storage and transmission delivery. Its chair urged governments to simplify approvals, resource grid connections through 2030, provide clearer guidance to developers, and appoint an Energy Transition Coordinator to drive priority projects through cross-jurisdictional bottlenecks.",
-      "summaryAr": "تقول هيئة تغيّر المناخ الأسترالية إن تحقيق هدف البلاد لعام 2035 يتطلب تحولًا كبيرًا في وتيرة تنفيذ التوليد المتجدد والتخزين وخطوط النقل. ودعا رئيسها الحكومات إلى تبسيط الموافقات، وتوفير موارد كافية لربط المشروعات بالشبكة حتى 2030، وتقديم إرشادات أوضح للمطورين، وتعيين منسق لانتقال الطاقة يدفع المشروعات ذات الأولوية عبر العوائق بين الجهات والولايات.",
-      "takeEn": "Government implication: clean-energy targets increasingly depend on delivery governance, not technology availability alone. A single empowered coordinator, shared approval milestones and adequately staffed connection processes can turn policy ambition into an investable infrastructure pipeline while preserving community benefit-sharing.",
-      "takeAr": "الدلالة للحكومات: بات تحقيق أهداف الطاقة النظيفة يعتمد على حوكمة التنفيذ بقدر اعتماده على توافر التقنية. ويمكن لمنسق مفوض واحد، ومراحل موافقة مشتركة، وعمليات ربط بالشبكة مزودة بالكوادر الكافية، تحويل الطموح السياسي إلى خط مشروعات قابل للاستثمار مع الحفاظ على تقاسم المنافع مع المجتمعات.",
       "source": "Australian Climate Change Authority",
-      "sourceUrl": "https://www.climatechangeauthority.gov.au/news/accelerating-investment-australias-energy-transition"
+      "sourceUrl": "https://www.climatechangeauthority.gov.au/news/accelerating-investment-australias-energy-transition",
+      "summaryAr": "تقول هيئة تغيّر المناخ الأسترالية إن تحقيق هدف البلاد لعام 2035 يتطلب تحولًا كبيرًا في وتيرة تنفيذ التوليد المتجدد والتخزين وخطوط النقل. ودعا رئيسها الحكومات إلى تبسيط الموافقات، وتوفير موارد كافية لربط المشروعات بالشبكة حتى 2030، وتقديم إرشادات أوضح للمطورين، وتعيين منسق لانتقال الطاقة يدفع المشروعات ذات الأولوية عبر العوائق بين الجهات والولايات.",
+      "summaryEn": "Australia’s Climate Change Authority says meeting the country’s 2035 target requires a step change in renewable generation, storage and transmission delivery. Its chair urged governments to simplify approvals, resource grid connections through 2030, provide clearer guidance to developers, and appoint an Energy Transition Coordinator to drive priority projects through cross-jurisdictional bottlenecks.",
+      "takeAr": "الدلالة للحكومات: بات تحقيق أهداف الطاقة النظيفة يعتمد على حوكمة التنفيذ بقدر اعتماده على توافر التقنية. ويمكن لمنسق مفوض واحد، ومراحل موافقة مشتركة، وعمليات ربط بالشبكة مزودة بالكوادر الكافية، تحويل الطموح السياسي إلى خط مشروعات قابل للاستثمار مع الحفاظ على تقاسم المنافع مع المجتمعات.",
+      "takeEn": "Government implication: clean-energy targets increasingly depend on delivery governance, not technology availability alone. A single empowered coordinator, shared approval milestones and adequately staffed connection processes can turn policy ambition into an investable infrastructure pipeline while preserving community benefit-sharing.",
+      "titleAr": "هيئة المناخ الأسترالية تدعو إلى منسق وطني لإزالة عوائق مشروعات الطاقة والشبكة",
+      "titleEn": "Australia’s climate authority calls for an Energy Transition Coordinator to unblock grid projects"
     },
     {
       "categoryAr": "الأنظمة الذاتية والأمن البحري",
@@ -211,5 +225,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T03:30:20Z"
+  "updatedAt": "2026-09-09T04:43:45Z"
 }
