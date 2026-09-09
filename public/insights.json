@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "russia-siberia-gas-infrastructure-drone-attack-2026",
+      "publishedAt": "2026-09-09T16:57:00Z",
+      "categoryEn": "DRONES + CRITICAL INFRASTRUCTURE",
+      "categoryAr": "الطائرات المسيّرة والبنية التحتية الحيوية",
+      "titleEn": "A drone attack reaches Russia’s northern gas heartland for the first time",
+      "titleAr": "هجوم بمسيّرات يصل للمرة الأولى إلى قلب صناعة الغاز الروسية في سيبيريا",
+      "summaryEn": "A drone attack caused a fire at an unidentified industrial facility in Novy Urengoy, the principal gas-producing hub in Russia’s Yamal-Nenets region, according to the regional governor. Reuters described it as the first such attack on Russia’s northern gas heartland, roughly 3,000 kilometres from the Ukrainian border. No deaths or injuries were reported, while the extent of the damage remained under assessment.",
+      "summaryAr": "تسبب هجوم بطائرات مسيّرة في حريق داخل منشأة صناعية غير محددة في نوفي أورينغوي، المركز الرئيسي لإنتاج الغاز في منطقة يامالو-نينيتس الروسية، وفقًا لحاكم المنطقة. ووصفت رويترز الحادث بأنه أول هجوم من هذا النوع يصل إلى قلب صناعة الغاز في شمال روسيا، على بُعد نحو 3,000 كيلومتر من الحدود الأوكرانية. ولم تُسجل وفيات أو إصابات، بينما ظل حجم الضرر قيد التقييم.",
+      "takeEn": "Government implication: long-range drones are pushing critical-infrastructure risk far beyond conventional front lines. Governments should treat remote energy hubs as part of the active threat surface and combine layered detection, site hardening, operational redundancy, repair reserves and cross-agency incident command in one resilience plan.",
+      "takeAr": "الدلالة للحكومات: توسّع الطائرات المسيّرة بعيدة المدى نطاق مخاطر البنية التحتية الحيوية إلى مناطق بعيدة عن خطوط المواجهة التقليدية. وينبغي اعتبار مراكز الطاقة النائية جزءًا من سطح التهديد الفعلي، ودمج الرصد متعدد الطبقات، وتحصين المواقع، والتكرار التشغيلي، واحتياطيات الإصلاح، وقيادة الحوادث المشتركة بين الجهات ضمن خطة مرونة واحدة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/drones-hit-russias-gas-hinterland-northern-siberia-first-time-2026-09-09/"
+    },
+    {
       "id": "portugal-ren-strategic-grid-stake-2026",
       "publishedAt": "2026-09-09T15:41:00Z",
       "categoryEn": "ENERGY + INFRASTRUCTURE GOVERNANCE",
@@ -323,5 +337,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T16:16:13Z"
+  "updatedAt": "2026-09-09T17:10:55Z"
 }
