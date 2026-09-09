@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "nasa-relativity-terran-r-launch-services-contract-2026",
+      "publishedAt": "2026-09-09T20:11:58Z",
+      "categoryEn": "SPACE + PROCUREMENT",
+      "categoryAr": "الفضاء والمشتريات",
+      "titleEn": "NASA adds Terran R to its launch-services procurement pool",
+      "titleAr": "ناسا تضيف صاروخ «تيران آر» إلى منظومة مشتريات خدمات الإطلاق",
+      "summaryEn": "NASA added Relativity Space’s Terran R launch service to its multiple-award NLS II contract through the programme’s annual on-ramp. The vehicle is now eligible to compete for future NASA missions under an ordering period that runs through June 2030, with contract performance extending through December 2032; the framework can also support launch services for other agencies such as NOAA.",
+      "summaryAr": "أضافت ناسا خدمة إطلاق صاروخ «تيران آر» التابعة لشركة ريليتيفيتي سبيس إلى عقد NLS II متعدد المورّدين عبر بوابة الانضمام السنوية للبرنامج. وبذلك أصبح الصاروخ مؤهلًا للمنافسة على مهام ناسا المستقبلية ضمن فترة طلبات تمتد حتى يونيو 2030، وفترة تنفيذ للعقد حتى ديسمبر 2032؛ كما يتيح الإطار تقديم خدمات إطلاق لجهات حكومية أخرى مثل الإدارة الوطنية للمحيطات والغلاف الجوي.",
+      "takeEn": "Government implication: recurring on-ramps let public buyers expand strategic supplier capacity as technologies mature without reopening the entire umbrella contract. Agencies using this model should apply common certification and mission-assurance gates, publish comparable schedule and cost evidence, and preserve fallback launch capacity before assigning missions.",
+      "takeAr": "الدلالة للحكومات: تتيح بوابات الانضمام الدورية للجهات العامة توسيع قاعدة المورّدين الاستراتيجيين مع نضج التقنيات من دون إعادة طرح العقد الإطاري كاملًا. وينبغي تطبيق متطلبات موحّدة للاعتماد وضمان المهام، ونشر بيانات قابلة للمقارنة عن الجداول والتكاليف، والحفاظ على قدرة إطلاق بديلة قبل إسناد المهام.",
+      "source": "NASA",
+      "sourceUrl": "https://www.nasa.gov/news-release/nasa-adds-relativity-spaces-terran-r-to-launch-services-contract/"
+    },
+    {
       "id": "anthropic-fourth-ai-cyber-incident-containment-2026",
       "publishedAt": "2026-09-09T19:40:20Z",
       "categoryEn": "AI + CYBERSECURITY GOVERNANCE",
@@ -351,5 +365,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T20:38:33Z"
+  "updatedAt": "2026-09-09T20:54:02Z"
 }
