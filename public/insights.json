@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "finland-ai-data-centre-national-permitting-energy-security-2026",
+      "publishedAt": "2026-09-10T15:07:03Z",
+      "categoryEn": "AI + ENERGY GOVERNANCE",
+      "categoryAr": "الذكاء الاصطناعي وحوكمة الطاقة",
+      "titleEn": "Finland’s AI build-out triggers a call for national data-centre permitting",
+      "titleAr": "توسع الذكاء الاصطناعي في فنلندا يطلق دعوة لترخيص وطني لمراكز البيانات",
+      "summaryEn": "Finnish opposition parties called for a national permitting system for data centres after Google announced a €13 billion AI-infrastructure programme. They argue that electricity supply, transmission capacity and affordability should be assessed together as an internal-security issue; the government has not adopted the proposal, while the prime minister says supply and prices will remain under control.",
+      "summaryAr": "دعت أحزاب معارضة فنلندية إلى نظام وطني لترخيص مراكز البيانات بعد إعلان غوغل برنامجًا للبنية التحتية للذكاء الاصطناعي بقيمة 13 مليار يورو. وترى أن إمدادات الكهرباء وقدرة النقل والأسعار يجب تقييمها معًا باعتبارها قضية أمن داخلي؛ ولم تتبنَّ الحكومة المقترح، بينما يؤكد رئيس الوزراء أن الإمدادات والأسعار ستظل تحت السيطرة.",
+      "takeEn": "Government implication: AI investment policy is becoming inseparable from power-system governance. Governments should require project-level tests for generation and grid capacity, household price exposure, resilience and long-term energy commitments before approving large computing campuses.",
+      "takeAr": "الدلالة للحكومات: أصبحت سياسة الاستثمار في الذكاء الاصطناعي مرتبطة مباشرة بحوكمة منظومة الكهرباء. وينبغي إخضاع مجمعات الحوسبة الكبرى قبل الموافقة لاختبارات على قدرة التوليد والشبكة، وتعرّض أسعار الأسر، والمرونة، والالتزامات طويلة الأجل للطاقة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/finland-risks-strained-power-supply-after-google-ai-deal-opposition-warns-2026-09-10/"
+    },
+    {
       "id": "chad-drought-crop-export-ban-food-security-2026",
       "publishedAt": "2026-09-10T13:25:00Z",
       "categoryEn": "AGRICULTURE + CLIMATE RESILIENCE",
@@ -477,5 +491,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T14:11:55.000Z"
+  "updatedAt": "2026-09-10T16:01:46.000Z"
 }
