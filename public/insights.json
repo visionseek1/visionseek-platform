@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-sierra-leone-customs-single-window-cooperation-2026",
+      "publishedAt": "2026-09-10T05:45:00Z",
+      "categoryEn": "DIGITAL INFRASTRUCTURE + TRADE",
+      "categoryAr": "البنية التحتية الرقمية والتجارة",
+      "titleEn": "Korea and Sierra Leone establish a digital pathway for customs modernization",
+      "titleAr": "كوريا وسيراليون تؤسسان مسارًا رقميًا لتحديث الجمارك",
+      "summaryEn": "The Korea Customs Service and Sierra Leone’s revenue authority signed an agreement to cooperate on a trade-logistics single window. The programme will combine transfer of Korea’s UNI-PASS implementation experience with expert support, customs-officer training and institutional consulting; Sierra Leone expects the system to shorten clearance times and reduce associated costs.",
+      "summaryAr": "وقّعت دائرة الجمارك الكورية وهيئة الإيرادات في سيراليون اتفاقًا للتعاون في إنشاء نافذة موحدة للتجارة واللوجستيات. ويجمع البرنامج نقل خبرة كوريا في تطبيق نظام UNI-PASS مع دعم الخبراء وتدريب موظفي الجمارك والاستشارات المؤسسية، فيما تتوقع سيراليون أن يقلص النظام زمن التخليص والتكاليف المرتبطة به.",
+      "takeEn": "Government implication: customs single windows succeed as institutional operating reforms, not software installations. Governments should align process redesign, agency interoperability, data governance, workforce capability and measurable clearance-time outcomes before scaling the platform.",
+      "takeAr": "الدلالة للحكومات: تنجح النوافذ الجمركية الموحدة بوصفها إصلاحًا لنظام التشغيل المؤسسي، لا مجرد تركيب برنامج. وينبغي مواءمة إعادة تصميم الإجراءات، والتشغيل البيني بين الجهات، وحوكمة البيانات، وقدرات الكوادر، ومؤشرات زمن التخليص قبل توسيع المنصة.",
+      "source": "Korea Customs Service",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781115&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
+    },
+    {
       "id": "korea-solar-industry-competitiveness-committee-2026",
       "publishedAt": "2026-09-10T05:00:00Z",
       "categoryEn": "ENERGY + INDUSTRIAL POLICY",
@@ -407,5 +421,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T05:33:20.000Z"
+  "updatedAt": "2026-09-10T05:58:35.000Z"
 }
