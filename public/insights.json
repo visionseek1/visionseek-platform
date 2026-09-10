@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "spain-weride-autonomous-vehicle-national-testing-permit-2026",
+      "publishedAt": "2026-09-10T17:39:00Z",
+      "categoryEn": "AUTONOMOUS SYSTEMS + REGULATION",
+      "categoryAr": "الأنظمة الذاتية والتنظيم",
+      "titleEn": "Spain issues its first national permit for WeRide autonomous-road testing",
+      "titleAr": "إسبانيا تصدر أول تصريح وطني لاختبار مركبات WeRide الذاتية على الطرق",
+      "summaryEn": "Spain’s Directorate-General for Traffic issued national permits for WeRide autonomous vehicles to be tested on public roads and authorized preparation work covering mapping, route validation and operational-readiness testing. The authorization is the first national approval for WeRide’s GXR vehicle in the European Union; a commercial Madrid service is planned by year-end, subject to regulatory and operational milestones.",
+      "summaryAr": "أصدرت الإدارة العامة للمرور في إسبانيا تصاريح وطنية لاختبار مركبات WeRide الذاتية على الطرق العامة، وسمحت بأعمال الإعداد التي تشمل رسم الخرائط والتحقق من المسارات واختبارات الجاهزية التشغيلية. ويعد التصريح أول موافقة وطنية لمركبة GXR التابعة للشركة داخل الاتحاد الأوروبي، مع التخطيط لخدمة تجارية في مدريد قبل نهاية العام رهناً بالمراحل التنظيمية والتشغيلية.",
+      "takeEn": "Government implication: autonomous-mobility regulation is moving from broad pilots to staged operational authorization. Governments should tie each permit to validated routes, safety-case evidence, fleet-operator accountability, incident reporting, data access and explicit go/no-go thresholds before commercial service begins.",
+      "takeAr": "الدلالة للحكومات: ينتقل تنظيم التنقل الذاتي من التجارب العامة إلى ترخيص تشغيلي مرحلي. وينبغي ربط كل تصريح بمسارات معتمدة، وأدلة سلامة، ومساءلة مشغل الأسطول، والإبلاغ عن الحوادث، وإتاحة البيانات، وحدود واضحة للانتقال أو الإيقاف قبل بدء الخدمة التجارية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/spain-issues-permit-allow-autonomous-vehicle-testing-uber-says-2026-09-10/"
+    },
+    {
       "id": "us-tesla-driver-monitoring-autopilot-safety-oversight-2026",
       "publishedAt": "2026-09-10T16:49:41Z",
       "categoryEn": "AUTONOMOUS SYSTEMS + SAFETY",
@@ -505,5 +519,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T17:06:25.000Z"
+  "updatedAt": "2026-09-10T18:46:13.000Z"
 }
