@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-solar-industry-competitiveness-committee-2026",
+      "publishedAt": "2026-09-10T05:00:00Z",
+      "categoryEn": "ENERGY + INDUSTRIAL POLICY",
+      "categoryAr": "الطاقة والسياسة الصناعية",
+      "titleEn": "Korea links solar deployment to domestic industrial competitiveness",
+      "titleAr": "كوريا تربط توسّع الطاقة الشمسية بتنافسية الصناعة المحلية",
+      "summaryEn": "South Korea launched a Solar Industry Competitiveness Enhancement Committee bringing together government, public agencies, industry, academia, research bodies and civil society. The committee will support the national renewable-energy plan by rebuilding the domestic solar supply chain, strengthening links among local value-chain firms, and shaping large-scale demonstration and research collaboration for next-generation technologies including tandem cells and inverters.",
+      "summaryAr": "أطلقت كوريا الجنوبية لجنة لتعزيز تنافسية صناعة الطاقة الشمسية تجمع الحكومة والجهات العامة والصناعة والجامعات ومؤسسات البحث والمجتمع المدني. وستدعم اللجنة تنفيذ الخطة الوطنية للطاقة المتجددة عبر إعادة بناء سلسلة الإمداد المحلية، وتعزيز الترابط بين شركات سلسلة القيمة، وتصميم مشروعات تجريبية واسعة وتعاون بحثي لتقنيات الجيل التالي، ومنها الخلايا الترادفية والمحولات.",
+      "takeEn": "Government implication: renewable-energy targets create stronger national value when deployment, supply-chain development and technology commercialization are governed as one portfolio. Governments should connect procurement rules, demonstration sites, localization benchmarks and export readiness to measurable cost, reliability and capacity outcomes.",
+      "takeAr": "الدلالة للحكومات: تحقق أهداف الطاقة المتجددة قيمة وطنية أكبر عندما تُدار عمليات النشر وتطوير سلسلة الإمداد وتسويق التكنولوجيا كمحفظة واحدة. وينبغي ربط قواعد المشتريات ومواقع التجارب ومؤشرات التوطين والاستعداد للتصدير بنتائج قابلة للقياس في التكلفة والموثوقية والقدرة الإنتاجية.",
+      "source": "Republic of Korea Ministry of Climate, Energy and Environment",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781109&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
+    },
+    {
       "id": "korea-next-generation-arctic-icebreaker-research-capacity-2026",
       "publishedAt": "2026-09-10T02:00:00Z",
       "categoryEn": "CLIMATE + RESEARCH INFRASTRUCTURE",
@@ -393,5 +407,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T02:59:24.546Z"
+  "updatedAt": "2026-09-10T05:33:20.000Z"
 }
