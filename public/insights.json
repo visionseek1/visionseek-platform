@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-tesla-driver-monitoring-autopilot-safety-oversight-2026",
+      "publishedAt": "2026-09-10T16:49:41Z",
+      "categoryEn": "AUTONOMOUS SYSTEMS + SAFETY",
+      "categoryAr": "الأنظمة الذاتية والسلامة",
+      "titleEn": "US scrutiny shifts automated-driving safety toward misuse-resistant driver monitoring",
+      "titleAr": "الرقابة الأميركية تدفع سلامة القيادة الآلية نحو مراقبة سائق مقاومة للتحايل",
+      "summaryEn": "A US lawmaker asked the National Highway Traffic Safety Administration to act on apparent misuse of Tesla’s Autopilot and Full Self-Driving systems after reports of drivers sleeping or disengaging. The request specifically asks whether safeguards remain effective when cabin cameras are obstructed, visibility is poor, or drivers use clothing and eyewear to interfere with detection; the agency is already investigating Tesla systems in separate safety probes.",
+      "summaryAr": "طلب مشرّع أميركي من الإدارة الوطنية لسلامة المرور التحرك بشأن إساءة استخدام تبدو ظاهرة لأنظمة «أوتوبايلوت» و«القيادة الذاتية الكاملة» من تسلا بعد تقارير عن نوم سائقين أو انشغالهم عن القيادة. ويركز الطلب على مدى بقاء وسائل الحماية فعالة عند حجب كاميرا المقصورة أو ضعف الرؤية أو استخدام الملابس والنظارات للتشويش على الاكتشاف، فيما تجري الوكالة بالفعل تحقيقات سلامة منفصلة في أنظمة تسلا.",
+      "takeEn": "Government implication: regulating assisted and autonomous driving must cover foreseeable human misuse, not only nominal system performance. Regulators should require independent testing of driver-monitoring systems under obstruction and evasion scenarios, standardized incident evidence, and explicit thresholds for recalls, software restrictions and enforcement.",
+      "takeAr": "الدلالة للحكومات: يجب أن تشمل حوكمة القيادة المساعدة والذاتية سوء الاستخدام البشري المتوقع، لا أداء النظام في الظروف الاسمية فقط. وينبغي للجهات التنظيمية فرض اختبارات مستقلة لمراقبة السائق في سيناريوهات الحجب والتحايل، وتوحيد أدلة الحوادث، ووضع حدود واضحة للاستدعاء وقيود البرمجيات والإنفاذ.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/us/house-democrat-urges-us-action-over-sleeping-tesla-drivers-2026-09-10/"
+    },
+    {
       "id": "finland-ai-data-centre-national-permitting-energy-security-2026",
       "publishedAt": "2026-09-10T15:07:03Z",
       "categoryEn": "AI + ENERGY GOVERNANCE",
@@ -491,5 +505,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T16:01:46.000Z"
+  "updatedAt": "2026-09-10T17:06:25.000Z"
 }
