@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "chad-drought-crop-export-ban-food-security-2026",
+      "publishedAt": "2026-09-10T13:25:00Z",
+      "categoryEn": "AGRICULTURE + CLIMATE RESILIENCE",
+      "categoryAr": "الزراعة والمرونة المناخية",
+      "titleEn": "Chad pairs crop export bans with grain import relief after drought damages harvests",
+      "titleAr": "تشاد تجمع بين حظر صادرات المحاصيل وتخفيف واردات الحبوب بعد أضرار الجفاف",
+      "summaryEn": "Chad suspended exports of millet, corn, rice, sorghum, wheat and cotton seed while removing import duties and taxes on several staple grains, livestock feed and agricultural equipment. The measures follow repeated dry spells that damaged harvests, with the government also supporting off-season cultivation in irrigated areas.",
+      "summaryAr": "علّقت تشاد صادرات الدخن والذرة والأرز والذرة الرفيعة والقمح وبذور القطن، وألغت الرسوم والضرائب على واردات عدد من الحبوب الأساسية وأعلاف الماشية والمعدات الزراعية. وتأتي الإجراءات بعد موجات جفاف متكررة أضرّت بالمحاصيل، مع دعم الحكومة أيضًا للزراعة خارج الموسم في المناطق المروية.",
+      "takeEn": "Government implication: climate-linked food shocks require coordinated trade, customs and production responses rather than a single emergency measure. Governments should predefine drought triggers, monitor regional price and supply spillovers, time-limit export controls, accelerate targeted import clearance and maintain irrigated off-season production plans.",
+      "takeAr": "الدلالة للحكومات: تتطلب صدمات الغذاء المرتبطة بالمناخ استجابة منسقة في التجارة والجمارك والإنتاج، لا إجراءً طارئًا منفردًا. وينبغي تحديد محفزات الجفاف مسبقًا، ومراقبة آثار الأسعار والإمدادات إقليميًا، وتقييد حظر التصدير زمنيًا، وتسريع تخليص الواردات المستهدفة، والحفاظ على خطط للزراعة المروية خارج الموسم.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/environment/drought-hit-chad-bans-some-crop-exports-avert-food-crisis-2026-09-10/"
+    },
+    {
       "id": "uk-starshield-military-satellite-dependency-2026",
       "publishedAt": "2026-09-10T11:24:00Z",
       "categoryEn": "SPACE + SECURITY INFRASTRUCTURE",
@@ -463,5 +477,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T11:45:39.000Z"
+  "updatedAt": "2026-09-10T14:11:55.000Z"
 }
