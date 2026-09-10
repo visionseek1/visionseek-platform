@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-seoul-regional-uam-public-health-tourism-pilot-2026",
+      "publishedAt": "2026-09-10T02:00:00Z",
+      "categoryEn": "UAM + PUBLIC SERVICES",
+      "categoryAr": "التنقل الجوي الحضري والخدمات العامة",
+      "titleEn": "Korea selects Seoul’s public-health and tourism model to advance regional UAM commercialization",
+      "titleAr": "كوريا تختار نموذج سيول للصحة العامة والسياحة لدفع تسويق التنقل الجوي الحضري",
+      "summaryEn": "South Korea’s Ministry of Land, Infrastructure and Transport selected Seoul’s combined model—linking public-health services with Han River tourism—through its regional UAM pilot-project competition. The decision moves urban air mobility from generic flight trials toward a place-specific service bundle designed for commercialization.",
+      "summaryAr": "اختارت وزارة الأراضي والبنية التحتية والنقل في كوريا الجنوبية نموذج سيول المركب، الذي يربط خدمات الصحة العامة بسياحة نهر الهان، ضمن مسابقة المشروعات التجريبية الإقليمية للتنقل الجوي الحضري. وتنقل الخطوة هذا المجال من اختبارات الطيران العامة إلى حزمة خدمات محلية مهيأة للتسويق.",
+      "takeEn": "Government implication: UAM pilots become decision-ready when aircraft, routes, vertiports, emergency-service protocols and viable use cases are tested as one local operating system. Authorities should set explicit safety, noise, equity and public-value gates before scaling or subsidizing services.",
+      "takeAr": "الدلالة للحكومات: تصبح تجارب التنقل الجوي الحضري صالحة لاتخاذ القرار عندما تُختبر الطائرات والمسارات ومهابط الإقلاع والهبوط وبروتوكولات الطوارئ وحالات الاستخدام القابلة للاستمرار كنظام محلي واحد. وينبغي وضع بوابات واضحة للسلامة والضوضاء والعدالة والقيمة العامة قبل التوسع أو تقديم الدعم.",
+      "source": "Republic of Korea Ministry of Land, Infrastructure and Transport",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781052&pWise=sub&pWiseSub=C5"
+    },
+    {
       "id": "nasa-relativity-terran-r-launch-services-contract-2026",
       "publishedAt": "2026-09-09T20:11:58Z",
       "categoryEn": "SPACE + PROCUREMENT",
@@ -365,5 +379,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-09T20:54:02Z"
+  "updatedAt": "2026-09-10T02:14:48.478Z"
 }
