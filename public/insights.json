@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-next-generation-arctic-icebreaker-research-capacity-2026",
+      "publishedAt": "2026-09-10T02:00:00Z",
+      "categoryEn": "CLIMATE + RESEARCH INFRASTRUCTURE",
+      "categoryAr": "المناخ والبنية التحتية البحثية",
+      "titleEn": "Korea begins building a next-generation icebreaker to expand Arctic research capacity",
+      "titleAr": "كوريا تبدأ بناء كاسحة جليد بحثية من الجيل التالي لتوسيع قدراتها في القطب الشمالي",
+      "summaryEn": "South Korea will mark the start of construction of its second icebreaking research vessel on September 11, targeting completion in 2029 and full Arctic research operations in 2030. The vessel is designed with about 50% greater icebreaking capability than Araon, a dual-fuel LNG and low-sulfur-oil system, and modular research facilities; assigning it to the Arctic while Araon focuses on Antarctica is expected to raise combined polar research voyages from roughly 85 to 270 days a year.",
+      "summaryAr": "تدشن كوريا الجنوبية في 11 سبتمبر بناء ثاني سفينة أبحاث لكسر الجليد، مستهدفة استكمالها في 2029 وبدء عملياتها البحثية الكاملة في القطب الشمالي عام 2030. وصُممت السفينة بقدرة على كسر الجليد أعلى بنحو 50% من «أراون»، ونظام وقود مزدوج للغاز الطبيعي المسال والزيت منخفض الكبريت، ومرافق بحثية معيارية؛ ومن المتوقع أن يؤدي تخصيصها للقطب الشمالي مع تركيز «أراون» على القطب الجنوبي إلى رفع أيام الرحلات البحثية القطبية مجتمعة من نحو 85 إلى 270 يومًا سنويًا.",
+      "takeEn": "Government implication: polar research vessels are strategic data infrastructure, not stand-alone ships. Governments making similar investments should connect vessel design, modular science payloads, low-carbon operations, satellite data and long-term mission scheduling to explicit climate, navigation and resource-governance decisions.",
+      "takeAr": "الدلالة للحكومات: سفن الأبحاث القطبية بنية تحتية استراتيجية للبيانات وليست أصولًا بحرية منفردة. وينبغي ربط تصميم السفينة والحمولات العلمية المعيارية والتشغيل منخفض الكربون وبيانات الأقمار الصناعية وجدولة المهام طويلة الأجل بقرارات واضحة تخص المناخ والملاحة وحوكمة الموارد.",
+      "source": "Republic of Korea Ministry of Oceans and Fisheries",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781049&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
+    },
+    {
       "id": "korea-seoul-regional-uam-public-health-tourism-pilot-2026",
       "publishedAt": "2026-09-10T02:00:00Z",
       "categoryEn": "UAM + PUBLIC SERVICES",
@@ -379,5 +393,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T02:14:48.478Z"
+  "updatedAt": "2026-09-10T02:59:24.546Z"
 }
