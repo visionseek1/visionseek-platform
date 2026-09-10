@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "uk-starshield-military-satellite-dependency-2026",
+      "publishedAt": "2026-09-10T11:24:00Z",
+      "categoryEn": "SPACE + SECURITY INFRASTRUCTURE",
+      "categoryAr": "الفضاء والبنية التحتية الأمنية",
+      "titleEn": "UK disclosure exposes operational dependence on SpaceX for military satellite communications",
+      "titleAr": "إفصاح بريطاني يكشف اعتمادًا تشغيليًا على سبيس إكس في الاتصالات العسكرية الفضائية",
+      "summaryEn": "Britain’s Ministry of Defence disclosed that it operates about 1,000 Starshield terminals and 500 Starlink terminals and has spent nearly $40 million on the two SpaceX services. The UK is the first country outside the United States to publicly acknowledge adopting Starshield for military and intelligence missions, while retaining its Skynet network and a stake in Eutelsat.",
+      "summaryAr": "كشفت وزارة الدفاع البريطانية أنها تشغّل نحو ألف محطة «ستارشيلد» و500 محطة «ستارلينك»، وأنفقت قرابة 40 مليون دولار على خدمتي سبيس إكس. وتصبح المملكة المتحدة أول دولة خارج الولايات المتحدة تعلن اعتماد «ستارشيلد» للمهام العسكرية والاستخباراتية، مع احتفاظها بشبكة «سكاي نت» وحصة في «يوتلسات».",
+      "takeEn": "Government implication: commercial satellite networks can add resilient capacity quickly, but concentration in one foreign supplier creates strategic, contractual and continuity risk. Governments should map mission dependencies, require assured-access and pricing protections, test failover across sovereign and allied networks, and maintain procurement options before operational traffic becomes locked in.",
+      "takeAr": "الدلالة للحكومات: تستطيع شبكات الأقمار الصناعية التجارية إضافة قدرة مرنة بسرعة، لكن التركّز لدى مورّد أجنبي واحد يخلق مخاطر استراتيجية وتعاقدية واستمرارية. وينبغي رسم تبعيات المهام، وفرض ضمانات الوصول والتسعير، واختبار التحويل إلى الشبكات السيادية والحليفة، والحفاظ على بدائل المشتريات قبل انحصار الحركة التشغيلية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/uk-deepens-reliance-musks-spacex-spending-nearly-40-million-satellite-services-2026-09-10/"
+    },
+    {
       "id": "korea-mongolia-digital-address-infrastructure-2026",
       "publishedAt": "2026-09-10T09:00:00Z",
       "categoryEn": "DIGITAL INFRASTRUCTURE + PUBLIC ADMINISTRATION",
@@ -449,5 +463,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T09:34:12.000Z"
+  "updatedAt": "2026-09-10T11:45:39.000Z"
 }
