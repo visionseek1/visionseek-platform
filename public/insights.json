@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-strategic-technology-patent-intelligence-service-2026",
+      "publishedAt": "2026-09-10T06:00:00Z",
+      "categoryEn": "STRATEGIC TECHNOLOGY + INTELLIGENCE",
+      "categoryAr": "التقنيات الاستراتيجية والاستخبارات",
+      "titleEn": "Korea institutionalizes patent intelligence for strategic-technology decisions",
+      "titleAr": "كوريا تؤسس استخبارات براءات دورية لقرارات التقنيات الاستراتيجية",
+      "summaryEn": "South Korea’s Ministry of Intellectual Property will publish a monthly service combining major-country policy and technology developments with patent analysis across ten national strategic-technology domains. The September edition examines topics including AI risk prevention and response, AI and software-defined-vehicle convergence for autonomous driving, integrated communications and sensing, zero-trust security, high-density NAND and next-generation OLED.",
+      "summaryAr": "ستصدر وزارة الملكية الفكرية في كوريا الجنوبية خدمة شهرية تجمع تطورات السياسات والتقنيات في الدول الكبرى مع تحليل البراءات عبر عشرة مجالات وطنية للتقنيات الاستراتيجية. ويبحث إصدار سبتمبر موضوعات تشمل تقنيات منع مخاطر الذكاء الاصطناعي والاستجابة لها، ودمج الذكاء الاصطناعي والمركبات المعرفة بالبرمجيات للقيادة الذاتية، ودمج الاتصالات والاستشعار، والأمن بانعدام الثقة، وذاكرة NAND عالية الكثافة، وشاشات OLED من الجيل التالي.",
+      "takeEn": "Government implication: strategic-technology policy becomes more actionable when horizon scanning and patent evidence feed the same decisions. Governments should connect this intelligence to R&D portfolio reviews, procurement roadmaps, standards priorities and commercialization support, with explicit owners and decision dates.",
+      "takeAr": "الدلالة للحكومات: تصبح سياسة التقنيات الاستراتيجية أكثر قابلية للتنفيذ عندما تغذي متابعة الاتجاهات وأدلة البراءات القرارات نفسها. وينبغي ربط هذه الاستخبارات بمراجعات محافظ البحث والتطوير، وخرائط المشتريات، وأولويات المعايير، ودعم التسويق، مع تحديد المسؤولين ومواعيد القرار.",
+      "source": "Republic of Korea Ministry of Intellectual Property",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781133&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
+    },
+    {
       "id": "korea-sierra-leone-customs-single-window-cooperation-2026",
       "publishedAt": "2026-09-10T05:45:00Z",
       "categoryEn": "DIGITAL INFRASTRUCTURE + TRADE",
@@ -421,5 +435,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T05:58:35.000Z"
+  "updatedAt": "2026-09-10T07:37:52.000Z"
 }
