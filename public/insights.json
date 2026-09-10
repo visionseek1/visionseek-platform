@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-mongolia-digital-address-infrastructure-2026",
+      "publishedAt": "2026-09-10T09:00:00Z",
+      "categoryEn": "DIGITAL INFRASTRUCTURE + PUBLIC ADMINISTRATION",
+      "categoryAr": "البنية التحتية الرقمية والإدارة العامة",
+      "titleEn": "Korea exports its digital addressing model to Mongolia’s ger districts",
+      "titleAr": "كوريا تنقل نموذج العناوين الرقمية إلى أحياء الخيام في منغوليا",
+      "summaryEn": "South Korea’s Ministry of the Interior and Safety launched the first overseas deployment of its address-system model through a 2026–2029 modernization programme in Mongolia. The project combines legal and institutional reform, address-data digitization, joint-use arrangements and civil-servant training, with Korean-style street and building signs being installed in Chingeltei’s ger area; Korea also plans to extend address cooperation to five countries in Africa and Central Asia.",
+      "summaryAr": "أطلقت وزارة الداخلية والسلامة في كوريا الجنوبية أول تطبيق خارجي لنموذجها في أنظمة العناوين ضمن برنامج لتحديث العناوين في منغوليا بين 2026 و2029. ويجمع المشروع إصلاح الأطر القانونية والمؤسسية، ورقمنة بيانات العناوين، وترتيبات الاستخدام المشترك، وتدريب الموظفين، مع تركيب لوحات طرق وأرقام مبانٍ بالنمط الكوري في منطقة الخيام بتشينغيلتي؛ كما تخطط كوريا لتوسيع التعاون إلى خمس دول في أفريقيا وآسيا الوسطى.",
+      "takeEn": "Government implication: address data is foundational digital public infrastructure for emergency response, logistics and service delivery. Governments should make standards, legal reform, local data stewardship, interoperability and measurable service outcomes part of the implementation contract so a pilot can scale sustainably.",
+      "takeAr": "الدلالة للحكومات: بيانات العناوين بنية تحتية رقمية عامة أساسية للاستجابة للطوارئ واللوجستيات وتقديم الخدمات. وينبغي إدراج المعايير والإصلاح القانوني والإشراف المحلي على البيانات والتشغيل البيني ونتائج الخدمة القابلة للقياس في عقد التنفيذ كي يتوسع المشروع التجريبي بصورة مستدامة.",
+      "source": "Republic of Korea Ministry of the Interior and Safety",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781211&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
+    },
+    {
       "id": "korea-strategic-technology-patent-intelligence-service-2026",
       "publishedAt": "2026-09-10T06:00:00Z",
       "categoryEn": "STRATEGIC TECHNOLOGY + INTELLIGENCE",
@@ -435,5 +449,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T07:37:52.000Z"
+  "updatedAt": "2026-09-10T09:34:12.000Z"
 }
