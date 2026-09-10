@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "anthropic-state-linked-ai-agent-cyber-campaigns-2026",
+      "publishedAt": "2026-09-10T20:23:14Z",
+      "categoryEn": "AI + CYBERSECURITY",
+      "categoryAr": "الذكاء الاصطناعي والأمن السيبراني",
+      "titleEn": "Anthropic reports state-linked cyber campaigns shifting from AI assistance to agent orchestration",
+      "titleAr": "تقرير أنثروبيك يرصد انتقال حملات سيبرانية مرتبطة بدول من مساعدة الذكاء الاصطناعي إلى تشغيل الوكلاء",
+      "summaryEn": "Anthropic said it disrupted several malicious campaigns in which AI systems orchestrated and executed substantial parts of cyber operations, including a suspected Russia-linked campaign against Ukrainian government, military and diplomatic targets. Its threat-intelligence report also alleged efforts by China-based AI developers to extract or reuse Claude capabilities, indicating that frontier-model access controls are becoming part of national cyber defence.",
+      "summaryAr": "قالت أنثروبيك إنها عطّلت عدة حملات خبيثة استُخدمت فيها أنظمة الذكاء الاصطناعي لتنسيق وتنفيذ أجزاء كبيرة من العمليات السيبرانية، بينها حملة يُشتبه بارتباطها بروسيا استهدفت جهات حكومية وعسكرية ودبلوماسية أوكرانية. كما اتهم تقرير استخباراتها التهديدية جهات تطوير ذكاء اصطناعي في الصين بمحاولات لاستخراج قدرات «كلود» أو إعادة استخدامها، ما يجعل ضوابط الوصول إلى النماذج المتقدمة جزءًا من الدفاع السيبراني الوطني.",
+      "takeEn": "Government implication: cyber defence must now detect AI-orchestrated campaign behaviour, not only known malware and human-operator patterns. Governments should require rapid provider-to-CERT reporting, cross-border indicator sharing, agent-action logging, model-abuse red-teaming and procurement clauses that preserve forensic access when public institutions are targeted.",
+      "takeAr": "الدلالة للحكومات: يجب أن ترصد منظومات الدفاع السيبراني سلوك الحملات التي ينسقها الذكاء الاصطناعي، لا البرمجيات الخبيثة المعروفة وأنماط المشغلين البشر فقط. وينبغي فرض إبلاغ سريع من مزودي النماذج إلى فرق الاستجابة الوطنية، وتبادل مؤشرات التهديد عبر الحدود، وتسجيل أفعال الوكلاء، واختبارات إساءة الاستخدام، وشروط مشتريات تحفظ الوصول إلى الأدلة الجنائية عند استهداف المؤسسات العامة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/litigation/anthropic-disrupts-russian-chinese-ai-campaigns-targeting-its-claude-models-2026-09-10/"
+    },
+    {
       "id": "spain-weride-autonomous-vehicle-national-testing-permit-2026",
       "publishedAt": "2026-09-10T17:39:00Z",
       "categoryEn": "AUTONOMOUS SYSTEMS + REGULATION",
@@ -519,5 +533,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T18:46:13.000Z"
+  "updatedAt": "2026-09-10T20:41:28.000Z"
 }
