@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "india-tech-foreign-regulatory-engagement-forum-2026",
+      "publishedAt": "2026-09-11T11:13:00Z",
+      "categoryEn": "AI + TECHNOLOGY DIPLOMACY",
+      "categoryAr": "الذكاء الاصطناعي والدبلوماسية التقنية",
+      "titleEn": "India’s finance minister calls for a forum to coordinate tech firms’ engagement with foreign regulators",
+      "titleAr": "وزيرة المالية الهندية تدعو إلى منصة تنسّق تعامل شركات التقنية مع الجهات التنظيمية الأجنبية",
+      "summaryEn": "India’s finance minister called for a coordinated forum through which domestic technology companies could engage foreign governments and regulators before rules become fixed or market barriers emerge. She linked the need to Indian firms expanding abroad while jurisdictions develop frameworks for frontier technologies including agentic AI and tokenised assets, and said the forum could support licensing, partnerships, market entry, standards interoperability, data practices and cybersecurity.",
+      "summaryAr": "دعت وزيرة المالية الهندية إلى إنشاء منصة منسقة تُمكّن شركات التقنية المحلية من التواصل مع الحكومات والجهات التنظيمية الأجنبية قبل استقرار القواعد أو ظهور حواجز السوق. وربطت الحاجة بتوسع الشركات الهندية خارجيًا بينما تضع الدول أطرًا لتقنيات ناشئة تشمل الذكاء الاصطناعي الوكيلي والأصول المرمّزة، مع إمكانية دعم الترخيص والشراكات ودخول الأسواق وتوافق المعايير وممارسات البيانات والأمن السيبراني.",
+      "takeEn": "Government implication: technology export strategy increasingly requires regulatory diplomacy, not only financing and trade promotion. Governments can create a public-private function that gives startups early intelligence on overseas rules, coordinates engagement without granting privileged access, and pursues interoperable data, cybersecurity and AI standards while preserving host-country sovereignty.",
+      "takeAr": "الدلالة للحكومات: باتت استراتيجية تصدير التقنية تحتاج إلى دبلوماسية تنظيمية، لا إلى التمويل والترويج التجاري وحدهما. ويمكن إنشاء وظيفة مشتركة بين القطاعين العام والخاص تمنح الشركات الناشئة فهمًا مبكرًا للقواعد الخارجية، وتنسّق الحوار دون امتيازات غير عادلة، وتدفع نحو توافق معايير البيانات والأمن السيبراني والذكاء الاصطناعي مع احترام سيادة الدول المضيفة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/india/india-needs-forum-tech-firms-engage-foreign-regulators-finance-minister-says-2026-09-11/"
+    },
+    {
       "id": "eu-ets-revenue-industrial-decarbonisation-proposal-2026",
       "publishedAt": "2026-09-11T09:56:00Z",
       "categoryEn": "CLIMATE + INDUSTRIAL POLICY",
@@ -631,5 +645,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T10:34:03.000Z"
+  "updatedAt": "2026-09-11T11:34:16.000Z"
 }
