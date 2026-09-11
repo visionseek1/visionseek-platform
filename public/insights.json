@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "eu-aluminium-scrap-controls-waste-rules-india-trade-2026",
+      "publishedAt": "2026-09-11T16:14:00Z",
+      "categoryEn": "Climate & Industrial Policy",
+      "categoryAr": "المناخ والسياسة الصناعية",
+      "titleEn": "EU shifts aluminium scrap controls from an export duty to waste rules amid India trade concerns",
+      "titleAr": "الاتحاد الأوروبي ينقل ضبط صادرات خردة الألومنيوم من رسم تصدير إلى قواعد النفايات وسط اعتبارات التجارة مع الهند",
+      "summaryEn": "The European Commission has shelved a planned export duty on aluminium scrap and will instead rely on waste-shipment rules to limit exports. The shift seeks to protect Europe’s energy-intensive recycling base and sustainability goals without complicating the EU–India trade agreement.",
+      "summaryAr": "أوقفت المفوضية الأوروبية خطة لفرض رسم على صادرات خردة الألومنيوم، وستعتمد بدلًا منها على قواعد شحن النفايات للحد من الصادرات. ويهدف التحول إلى حماية قاعدة إعادة التدوير كثيفة الطاقة وأهداف الاستدامة الأوروبية دون تعقيد الاتفاق التجاري بين الاتحاد الأوروبي والهند.",
+      "takeEn": "Governments should stress-test trade, climate and industrial measures together before announcement, with clear fallback rules and enforcement capacity so diplomatic exemptions do not hollow out domestic circular-materials policy.",
+      "takeAr": "ينبغي للحكومات اختبار أدوات التجارة والمناخ والسياسة الصناعية معًا قبل إعلانها، مع قواعد بديلة واضحة وقدرة تنفيذية تمنع الاستثناءات الدبلوماسية من إفراغ سياسة المواد الدائرية المحلية من مضمونها.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/eu-dropped-aluminium-scrap-duty-plan-over-india-concerns-sources-say-2026-09-11/"
+    },
+    {
       "id": "hungary-targeted-diesel-support-no-price-cap-2026",
       "publishedAt": "2026-09-11T13:47:00Z",
       "categoryEn": "ENERGY + FISCAL POLICY",
@@ -687,5 +701,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T14:24:38.000Z"
+  "updatedAt": "2026-09-11T16:43:58.000Z"
 }
