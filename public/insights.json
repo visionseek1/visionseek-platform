@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-solar-import-duties-india-indonesia-laos-2026",
+      "publishedAt": "2026-09-11T19:45:00Z",
+      "categoryEn": "CLIMATE + INDUSTRIAL POLICY",
+      "categoryAr": "المناخ والسياسة الصناعية",
+      "titleEn": "US finalizes solar trade-duty determinations covering India, Indonesia and Laos",
+      "titleAr": "الولايات المتحدة تستكمل قرارات رسوم تجارية على واردات الطاقة الشمسية من الهند وإندونيسيا ولاوس",
+      "summaryEn": "The U.S. Commerce Department finalized anti-dumping and countervailing-duty determinations on solar cells and panels from India, Indonesia and Laos after finding dumping and government subsidies. The measures still depend on a U.S. International Trade Commission injury determination scheduled for October 14; an affirmative decision would allow final duty orders expected in November.",
+      "summaryAr": "استكملت وزارة التجارة الأمريكية قراراتها النهائية بشأن رسوم مكافحة الإغراق والدعم على الخلايا والألواح الشمسية من الهند وإندونيسيا ولاوس، بعد أن خلصت إلى وجود إغراق ودعم حكومي. وما زال تطبيق الأوامر النهائية مرتبطًا بقرار لجنة التجارة الدولية الأمريكية بشأن الضرر، والمقرر في 14 أكتوبر؛ وإذا جاء القرار إيجابيًا يُتوقع إصدار أوامر الرسوم في نوفمبر.",
+      "takeEn": "Government implication: trade enforcement can protect domestic clean-energy manufacturing while also raising procurement costs and shifting supply chains. Governments should model those effects together, coordinate trade, customs and energy agencies, and prepare supplier-diversification and project-transition plans before duties take effect.",
+      "takeAr": "الدلالة للحكومات: قد تحمي إجراءات التجارة تصنيع الطاقة النظيفة محليًا، لكنها قد ترفع تكاليف المشتريات وتعيد توجيه سلاسل الإمداد. وينبغي للحكومات نمذجة هذه الآثار معًا، وتنسيق عمل جهات التجارة والجمارك والطاقة، وإعداد خطط لتنويع الموردين وانتقال المشروعات قبل دخول الرسوم حيز التنفيذ.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/us-commerce-department-finalizes-steep-duties-solar-imports-india-indonesia-laos-2026-09-11/"
+    },
+    {
       "id": "eu-aluminium-scrap-controls-waste-rules-india-trade-2026",
       "publishedAt": "2026-09-11T16:14:00Z",
       "categoryEn": "Climate & Industrial Policy",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: sovereign capability will increasingly depend on open interfaces and procurement standards that connect sensors, software, vehicles, and decision-makers.",
       "titleAr": "الأنظمة المعيارية قد تكون أهم من المنصة الخارقة التالية",
       "titleEn": "Modularity may matter more than the next breakthrough platform"
-    },
-    {
-      "categoryAr": "الزراعة والذكاء الاصطناعي",
-      "categoryEn": "AGRICULTURE + AI",
-      "id": "ai-agriculture-value-2025",
-      "publishedAt": "2026-09-01T11:05:00Z",
-      "source": "McKinsey & Company",
-      "sourceUrl": "https://www.mckinsey.com/industries/agriculture/our-insights/global-agriculture-at-a-crossroads-how-to-reap-returns-across-cycles",
-      "summaryAr": "تقدّر McKinsey وجود فرص اقتصادية كبيرة عند استخدام الذكاء الاصطناعي في الزراعة الدقيقة وصور المحاصيل وتحليل الطقس والقرارات المؤسسية الزراعية.",
-      "summaryEn": "McKinsey estimates large value pools from applying AI to precision farming, crop imagery, weather intelligence, and enterprise decisions across agriculture.",
-      "takeAr": "الدلالة للحكومات: يجب أن تربط سياسة الذكاء الزراعي البيانات بالمعدات والإرشاد والتمويل وقرارات المزارع اليومية، بدلًا من تمويل لوحات البيانات وحدها.",
-      "takeEn": "Government implication: agricultural AI policy should connect data and intelligence to equipment, extension services, finance, and farmers' daily decisions—not fund dashboards alone.",
-      "titleAr": "الذكاء الاصطناعي الزراعي يصنع القيمة عندما يصل إلى الحقل",
-      "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T16:43:58.000Z"
+  "updatedAt": "2026-09-11T20:31:38.052Z"
 }
