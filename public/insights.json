@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-gepa-green-economy-trade-rules-2026",
+      "publishedAt": "2026-09-11T01:00:00Z",
+      "categoryEn": "CLIMATE + TRADE GOVERNANCE",
+      "categoryAr": "المناخ وحوكمة التجارة",
+      "titleEn": "Korea joins plurilateral talks to shape green-economy trade rules",
+      "titleAr": "كوريا تنضم إلى مفاوضات لصياغة قواعد التجارة في الاقتصاد الأخضر",
+      "summaryEn": "South Korea’s Ministry of Trade formally joined Green Economy Partnership Agreement negotiations with Singapore, New Zealand and Chile. The proposed pact seeks rules that keep climate measures from becoming unnecessary trade barriers while expanding green trade and investment; Korea intends to use the talks to strengthen its response to measures such as the EU carbon border mechanism and reflect the interests of industries including low-emission steel.",
+      "summaryAr": "أعلنت وزارة التجارة في كوريا الجنوبية رسميًا الانضمام إلى مفاوضات اتفاقية شراكة الاقتصاد الأخضر مع سنغافورة ونيوزيلندا وتشيلي. وتهدف الاتفاقية المقترحة إلى وضع قواعد تمنع تحوّل تدابير المناخ إلى حواجز تجارية غير ضرورية مع توسيع التجارة والاستثمار الأخضرين؛ وتسعى كوريا عبر المفاوضات إلى تعزيز استجابتها لتدابير مثل آلية تعديل حدود الكربون الأوروبية وإدراج مصالح صناعات منها الصلب منخفض الانبعاثات.",
+      "takeEn": "Government implication: climate policy is moving directly into trade-rule design. Governments should align trade, climate and industry agencies before negotiations; build credible product-emissions data; and translate emerging rules into customs procedures, exporter support and investment criteria early enough to protect market access.",
+      "takeAr": "الدلالة للحكومات: تنتقل سياسة المناخ مباشرة إلى تصميم قواعد التجارة. وينبغي مواءمة جهات التجارة والمناخ والصناعة قبل التفاوض، وبناء بيانات موثوقة لانبعاثات المنتجات، وتحويل القواعد الناشئة مبكرًا إلى إجراءات جمركية ودعم للمصدّرين ومعايير للاستثمار لحماية النفاذ إلى الأسواق.",
+      "source": "Republic of Korea Ministry of Trade",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781281&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
+    },
+    {
       "id": "anthropic-state-linked-ai-agent-cyber-campaigns-2026",
       "publishedAt": "2026-09-10T20:23:14Z",
       "categoryEn": "AI + CYBERSECURITY",
@@ -533,5 +547,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-10T20:41:28.000Z"
+  "updatedAt": "2026-09-11T01:33:30.000Z"
 }
