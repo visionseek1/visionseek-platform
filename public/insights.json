@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-military-drone-counterdrone-validation-network-2026",
+      "publishedAt": "2026-09-11",
+      "categoryEn": "DRONES + DEFENCE INNOVATION",
+      "categoryAr": "الطائرات المسيّرة والابتكار الدفاعي",
+      "titleEn": "Korea expands real-world military validation for drones and counter-drone systems",
+      "titleAr": "كوريا توسّع الاختبار العسكري الميداني للمسيّرات وأنظمة مواجهتها",
+      "summaryEn": "South Korea’s Ministry of National Defense will stage a field technology event to test domestically developed drones, counter-drone capabilities and AI-enabled unmanned systems under operational conditions. Demonstrations will cover systems including AI swarm drones and high-speed unmanned aircraft, while dedicated military validation units will expand from one to nine across front-line, rear-area, mechanized, special-operations, sustainment and training environments.",
+      "summaryAr": "أعلنت وزارة الدفاع الكورية الجنوبية تنظيم فعالية ميدانية لاختبار طائرات مسيّرة وأنظمة مضادة لها ومنظومات غير مأهولة مدعومة بالذكاء الاصطناعي طُورت محليًا ضمن ظروف تشغيل فعلية. وتشمل العروض أنظمة منها أسراب مسيّرات بالذكاء الاصطناعي وطائرات غير مأهولة عالية السرعة، مع توسيع الوحدات العسكرية المخصصة للتحقق من وحدة واحدة إلى تسع وحدات تغطي بيئات أمامية وخلفية ومدرعة وخاصة ولوجستية وتدريبية.",
+      "takeEn": "Government implication: defence innovation can move faster when vendors test against multiple real operating environments before procurement decisions. Governments should use common test protocols, safety controls, mission-level scoring, secure data capture and explicit gates linking successful validation to rapid acquisition and fielding.",
+      "takeAr": "الدلالة للحكومات: يمكن تسريع الابتكار الدفاعي عندما تختبر الشركات حلولها في بيئات تشغيل عسكرية متعددة قبل قرارات الشراء. وينبغي اعتماد بروتوكولات اختبار موحدة، وضوابط سلامة، وتقييم على مستوى المهمة، وجمع آمن للبيانات، وبوابات واضحة تربط نجاح التحقق بالشراء والنشر السريعين.",
+      "source": "Republic of Korea Ministry of National Defense",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781307&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
+    },
+    {
       "id": "korea-public-procurement-inhouse-ai-services-2026",
       "publishedAt": "2026-09-11T02:15:52Z",
       "categoryEn": "AI + PUBLIC PROCUREMENT",
@@ -561,5 +575,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T02:37:21.000Z"
+  "updatedAt": "2026-09-11T05:32:54.000Z"
 }
