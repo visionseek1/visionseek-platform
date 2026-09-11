@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "germany-rosatom-nuclear-fuel-permit-legal-challenge-2026",
+      "publishedAt": "2026-09-11T12:52:00Z",
+      "categoryEn": "ENERGY + INFRASTRUCTURE GOVERNANCE",
+      "categoryAr": "الطاقة وحوكمة البنية التحتية",
+      "titleEn": "German court challenge tests security scrutiny in Rosatom-linked nuclear fuel licensing",
+      "titleAr": "طعن قضائي ألماني يختبر التدقيق الأمني في ترخيص وقود نووي مرتبط بروساتوم",
+      "summaryEn": "German environmental group BUND Niedersachsen sued Lower Saxony seeking to overturn approval for a Framatome subsidiary to expand nuclear-fuel production at Lingen under a licensing arrangement with Russia’s state-backed Rosatom. Federal and regional authorities had allowed the project subject to conditions, while the challenge alleges procedural flaws, outdated environmental screening and insufficient disclosure of Rosatom’s role; the state ministry said it will assess the case.",
+      "summaryAr": "رفعت منظمة «بوند ساكسونيا السفلى» البيئية دعوى ضد الولاية لإلغاء موافقتها على توسعة إنتاج الوقود النووي لدى شركة تابعة لفراماتوم في لينغن بموجب ترتيب ترخيص مع «روساتوم» الروسية الحكومية. وكانت السلطات الاتحادية والإقليمية قد أجازت المشروع بشروط، بينما يطعن المدعون في الإجراءات وحداثة التقييم البيئي ومدى الإفصاح عن دور روساتوم؛ وقالت وزارة الولاية إنها ستقيّم الدعوى.",
+      "takeEn": "Government implication: licensing for strategic energy infrastructure needs explicit tests for supplier provenance, geopolitical exposure, independent quality assurance and current environmental evidence. Governments should make those tests auditable and legally grounded so energy-security decisions can withstand judicial review without relying on political concern alone.",
+      "takeAr": "الدلالة للحكومات: يحتاج ترخيص البنية التحتية الاستراتيجية للطاقة إلى اختبارات صريحة لمصدر المورّدين والتعرض الجيوسياسي واستقلال ضمان الجودة وحداثة الأدلة البيئية. وينبغي جعل هذه الاختبارات قابلة للتدقيق وذات أساس قانوني كي تصمد قرارات أمن الطاقة أمام المراجعة القضائية من دون الاكتفاء بالمخاوف السياسية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/german-environmental-group-sues-block-rosatom-linked-nuclear-fuel-permit-2026-09-11/"
+    },
+    {
       "id": "new-mexico-supreme-court-ai-fabricated-testimony-sanction-2026",
       "publishedAt": "2026-09-11T12:07:00Z",
       "categoryEn": "AI + JUSTICE GOVERNANCE",
@@ -659,5 +673,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T12:37:09.000Z"
+  "updatedAt": "2026-09-11T13:49:23.000Z"
 }
