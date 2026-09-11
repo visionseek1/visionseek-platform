@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "uk-battery-electric-trains-industrial-strategy-2026",
+      "publishedAt": "2026-09-11",
+      "categoryEn": "INFRASTRUCTURE + INDUSTRIAL STRATEGY",
+      "categoryAr": "البنية التحتية والاستراتيجية الصناعية",
+      "titleEn": "Britain links battery-electric rail procurement to reindustrialisation",
+      "titleAr": "بريطانيا تربط شراء قطارات البطاريات الكهربائية بإعادة التصنيع",
+      "summaryEn": "The UK government backed an approximately £1 billion investment in 29 British-built battery-electric trains for TransPennine Express. The fleet will be the country’s first battery-electric trains for long-distance main-line services, operate without emissions on non-electrified sections, and support more than 350 jobs at Alstom’s Derby site plus nearly 6,000 across the UK supply chain; construction is due from 2028 and service from winter 2034.",
+      "summaryAr": "دعمت الحكومة البريطانية استثمارًا يقارب مليار جنيه إسترليني لشراء 29 قطارًا يعمل بالبطاريات الكهربائية لصالح «ترانس بنين إكسبريس». وسيكون الأسطول أول قطارات بريطانية من هذا النوع للخدمات طويلة المسافة على الخطوط الرئيسية، ويعمل بلا انبعاثات في المقاطع غير المكهربة، ويدعم أكثر من 350 وظيفة في مصنع ألستوم بديربي ونحو 6,000 وظيفة عبر سلسلة التوريد البريطانية؛ على أن يبدأ التصنيع في 2028 والتشغيل في شتاء 2034.",
+      "takeEn": "Government implication: rolling-stock procurement can deliver transport, decarbonisation and industrial-policy outcomes together when performance requirements, domestic capability and infrastructure planning are designed as one programme. Governments should track delivery milestones, battery performance, route readiness, lifecycle cost, passenger capacity and verified local supply-chain value.",
+      "takeAr": "الدلالة للحكومات: يمكن لمشتريات القطارات أن تحقق أهداف النقل وخفض الانبعاثات والسياسة الصناعية معًا عندما تُصمم متطلبات الأداء والقدرة المحلية وتخطيط البنية التحتية ضمن برنامج واحد. وينبغي متابعة مراحل التسليم وأداء البطاريات وجاهزية المسارات وتكلفة دورة الحياة والسعة وقيمة سلسلة التوريد المحلية المتحققة فعليًا.",
+      "source": "UK Department for Transport",
+      "sourceUrl": "https://www.gov.uk/government/news/new-british-built-trains-to-transform-railways-and-reindustrialise-britain"
+    },
+    {
       "id": "korea-customs-ai-transformation-budget-2027",
       "publishedAt": "2026-09-11",
       "categoryEn": "AI + CUSTOMS GOVERNANCE",
@@ -589,5 +603,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T06:06:59.000Z"
+  "updatedAt": "2026-09-11T07:39:17.000Z"
 }
