@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-public-procurement-inhouse-ai-services-2026",
+      "publishedAt": "2026-09-11T02:15:52Z",
+      "categoryEn": "AI + PUBLIC PROCUREMENT",
+      "categoryAr": "الذكاء الاصطناعي والمشتريات العامة",
+      "titleEn": "Korea’s procurement agency puts staff-built AI into operational use",
+      "titleAr": "هيئة المشتريات الكورية تشغّل أدوات ذكاء اصطناعي بناها الموظفون",
+      "summaryEn": "South Korea’s Public Procurement Service unveiled seven AI services developed by an internal task force of 26 employees for operational work including procurement-law advice, document drafting, parliamentary-request routing, legal research and task scheduling. The agency built a secure development and deployment environment on its internal network, connected current statutory information with internal data, and consolidated the tools in a shared procurement AI portal.",
+      "summaryAr": "كشفت هيئة المشتريات العامة في كوريا الجنوبية عن سبع خدمات ذكاء اصطناعي طورتها فرقة عمل داخلية تضم 26 موظفًا للاستخدام التشغيلي، وتشمل الاستشارات في قوانين المشتريات، وصياغة الوثائق، وتوجيه طلبات البرلمان، والبحث القانوني، وجدولة المهام. وأنشأت الهيئة بيئة آمنة للتطوير والنشر داخل شبكتها، وربطت المعلومات التشريعية المحدثة بالبيانات الداخلية، وجمعت الأدوات في بوابة موحدة للذكاء الاصطناعي في المشتريات.",
+      "takeEn": "Government implication: public-sector AI capacity can be built by domain staff, provided experimentation occurs inside a governed environment. Agencies should pair staff-led development with approved data connections, role-based access, model and code review, audit logs, human approval for consequential outputs, and measurable service and incident indicators before scaling.",
+      "takeAr": "الدلالة للحكومات: يمكن بناء قدرات الذكاء الاصطناعي الحكومية بواسطة موظفي المجال أنفسهم، بشرط أن يجري التطوير داخل بيئة محكومة. وينبغي الجمع بين التطوير بقيادة الموظفين وروابط بيانات معتمدة، وصلاحيات حسب الدور، ومراجعة النماذج والشيفرات، وسجلات تدقيق، واعتماد بشري للمخرجات المؤثرة، ومؤشرات قابلة للقياس للخدمة والحوادث قبل التوسع.",
+      "source": "Republic of Korea Public Procurement Service",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781295&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
+    },
+    {
       "id": "korea-gepa-green-economy-trade-rules-2026",
       "publishedAt": "2026-09-11T01:00:00Z",
       "categoryEn": "CLIMATE + TRADE GOVERNANCE",
@@ -547,5 +561,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T01:33:30.000Z"
+  "updatedAt": "2026-09-11T02:37:21.000Z"
 }
