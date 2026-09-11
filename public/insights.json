@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "new-mexico-supreme-court-ai-fabricated-testimony-sanction-2026",
+      "publishedAt": "2026-09-11T12:07:00Z",
+      "categoryEn": "AI + JUSTICE GOVERNANCE",
+      "categoryAr": "الذكاء الاصطناعي وحوكمة العدالة",
+      "titleEn": "New Mexico Supreme Court sanctions lawyer over AI-fabricated testimony in criminal appeal",
+      "titleAr": "المحكمة العليا في نيو مكسيكو تعاقب محاميًا بسبب شهادة مختلقة بالذكاء الاصطناعي في استئناف جنائي",
+      "summaryEn": "New Mexico’s highest court held a defence lawyer in contempt, fined him and referred him for disciplinary investigation after an appeal brief included fabricated witnesses and police testimony generated through ChatGPT. The lawyer said he used the system to summarise trial materials and failed to verify the output; the court treated the lapse as a serious professional failure affecting a criminal case.",
+      "summaryAr": "قررت أعلى محكمة في نيو مكسيكو إدانة محامي دفاع بازدراء المحكمة وتغريمه وإحالته إلى تحقيق تأديبي بعدما تضمنت مذكرة استئناف شهودًا وشهادة شرطة مختلقين عبر ChatGPT. وقال المحامي إنه استخدم النظام لتلخيص مواد المحاكمة من دون التحقق من المخرجات، فيما اعتبرت المحكمة الإخفاق تقصيرًا مهنيًا خطيرًا يمس قضية جنائية.",
+      "takeEn": "Government implication: justice systems need enforceable controls for AI-assisted legal work, not general warnings alone. Courts and public legal services should require source-linked verification, human sign-off, auditable disclosure of material AI use and sanctions for unverified submissions, while preserving confidentiality and defendants’ rights.",
+      "takeAr": "الدلالة للحكومات: تحتاج منظومات العدالة إلى ضوابط قابلة للإنفاذ للعمل القانوني المدعوم بالذكاء الاصطناعي، لا إلى تحذيرات عامة فقط. وينبغي للمحاكم وجهات المساعدة القانونية اشتراط التحقق المرتبط بالمصادر، واعتماد بشري مسؤول، وإفصاح قابل للتدقيق عن الاستخدام الجوهري للذكاء الاصطناعي، وعقوبات على المذكرات غير المتحققة، مع حماية السرية وحقوق المتهمين",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/government/chatgpt-invented-fake-police-testimony-murder-appeal-new-mexico-high-court-says-2026-09-11/"
+    },
+    {
       "id": "india-tech-foreign-regulatory-engagement-forum-2026",
       "publishedAt": "2026-09-11T11:13:00Z",
       "categoryEn": "AI + TECHNOLOGY DIPLOMACY",
@@ -645,5 +659,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T11:34:16.000Z"
+  "updatedAt": "2026-09-11T12:37:09.000Z"
 }
