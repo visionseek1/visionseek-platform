@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-distributed-plant-genetic-resources-safety-network-2026",
+      "publishedAt": "2026-09-11T08:39:25Z",
+      "categoryEn": "AGRICULTURE + CLIMATE RESILIENCE",
+      "categoryAr": "الزراعة والمرونة المناخية",
+      "titleEn": "Korea expands a distributed safety network for national plant genetic resources",
+      "titleAr": "كوريا توسّع شبكة حفظ موزّعة للموارد الوراثية النباتية الوطنية",
+      "summaryEn": "South Korea’s National Institute of Agricultural Sciences and the Korea Arboreta and Gardens Institute expanded their cooperation on geographically distributed backup preservation of plant genetic resources. The Agricultural Genetic Resources Center already duplicates 194,000 accessions covering 473 species at the Baekdudaegan Global Seed Vault; the new agreement also provides for reciprocal backup of wild-plant resources, shared information, joint research and specialist training.",
+      "summaryAr": "وسّع المعهد الوطني للعلوم الزراعية في كوريا الجنوبية ومعهد الحدائق النباتية تعاونَهما في الحفظ الاحتياطي الموزّع جغرافيًا للموارد الوراثية النباتية. ويحتفظ مركز الموارد الوراثية الزراعية بالفعل بنسخ احتياطية من 194 ألف مورد تغطي 473 نوعًا في خزنة بذور بيكدودايغان العالمية؛ ويضيف الاتفاق حفظًا متبادلًا للموارد النباتية البرية، وتبادل المعلومات، والبحث المشترك، وتدريب المتخصصين.",
+      "takeEn": "Government implication: genetic-resource collections should be governed as critical resilience infrastructure, with geographically separated custody, reciprocal backup, interoperable metadata and tested recovery procedures. Governments should also define access, stewardship and benefit-sharing rules so preserved assets can support breeding, food security and green-biotechnology development without weakening biosafety or sovereign control.",
+      "takeAr": "الدلالة للحكومات: ينبغي إدارة مجموعات الموارد الوراثية باعتبارها بنية تحتية حرجة للمرونة، عبر حفظ موزّع جغرافيًا ونسخ احتياطي متبادل وبيانات وصفية قابلة للتكامل وإجراءات استعادة تُختبر دوريًا. كما يلزم تحديد قواعد الوصول والحفظ وتقاسم المنافع كي تدعم الأصول المحفوظة استنباط الأصناف والأمن الغذائي والتقنية الحيوية الخضراء من دون إضعاف السلامة الأحيائية أو السيطرة السيادية.",
+      "source": "Republic of Korea Rural Development Administration",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781365&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
+    },
+    {
       "id": "uk-battery-electric-trains-industrial-strategy-2026",
       "publishedAt": "2026-09-11",
       "categoryEn": "INFRASTRUCTURE + INDUSTRIAL STRATEGY",
@@ -603,5 +617,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T07:39:17.000Z"
+  "updatedAt": "2026-09-11T09:17:57.000Z"
 }
