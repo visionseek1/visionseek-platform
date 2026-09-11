@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "eu-ets-revenue-industrial-decarbonisation-proposal-2026",
+      "publishedAt": "2026-09-11T09:56:00Z",
+      "categoryEn": "CLIMATE + INDUSTRIAL POLICY",
+      "categoryAr": "المناخ والسياسة الصناعية",
+      "titleEn": "EU Parliament lead negotiator proposes directing 75% of ETS revenue to industrial decarbonisation",
+      "titleAr": "مفاوض البرلمان الأوروبي يقترح توجيه 75% من عائدات سوق الكربون لإزالة الكربون من الصناعة",
+      "summaryEn": "The European Parliament’s lead negotiator on the EU Emissions Trading System revision proposed requiring member states to spend 75% of auction revenue on decarbonising industries covered by the scheme, above the European Commission’s proposed 50%. His draft would also slow the emissions-cap reduction early in the 2030s and accelerate it later; Parliament and member states are developing positions ahead of negotiations expected after December.",
+      "summaryAr": "اقترح المفاوض الرئيسي للبرلمان الأوروبي بشأن مراجعة نظام تداول الانبعاثات إلزام الدول الأعضاء بإنفاق 75% من عائدات مزادات التصاريح على إزالة الكربون من الصناعات المشمولة، مقابل 50% في مقترح المفوضية الأوروبية. كما تقترح مسودته إبطاء خفض سقف الانبعاثات في أوائل الثلاثينيات ثم تسريعه لاحقًا، فيما يبلور البرلمان والدول مواقفهما قبل مفاوضات متوقعة بعد ديسمبر.",
+      "takeEn": "Government implication: if the earmarking survives negotiations, national ETS revenue plans will need a larger, investment-ready pipeline of industrial decarbonisation projects. Governments should prepare transparent eligibility rules and delivery capacity now, while treating the percentages and timing as negotiating positions rather than settled law.",
+      "takeAr": "الدلالة للحكومات: إذا بقي تخصيص العائدات في النص النهائي، فستحتاج الخطط الوطنية لعائدات نظام التداول إلى محفظة أكبر وجاهزة للاستثمار من مشروعات إزالة الكربون الصناعية. وينبغي إعداد قواعد أهلية شفافة وقدرات تنفيذية منذ الآن، مع التعامل مع النسب والتوقيت بوصفها مواقف تفاوضية لا قانونًا نافذًا.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/environment/eu-lawmaker-proposes-more-carbon-market-investments-in-industry-2026-09-11/"
+    },
+    {
       "id": "korea-distributed-plant-genetic-resources-safety-network-2026",
       "publishedAt": "2026-09-11T08:39:25Z",
       "categoryEn": "AGRICULTURE + CLIMATE RESILIENCE",
@@ -617,5 +631,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T09:17:57.000Z"
+  "updatedAt": "2026-09-11T10:34:03.000Z"
 }
