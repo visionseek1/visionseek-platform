@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "hungary-targeted-diesel-support-no-price-cap-2026",
+      "publishedAt": "2026-09-11T13:47:00Z",
+      "categoryEn": "ENERGY + FISCAL POLICY",
+      "categoryAr": "الطاقة والسياسة المالية",
+      "titleEn": "Hungary chooses targeted diesel support over a price cap amid supply pressure",
+      "titleAr": "المجر تختار دعمًا موجّهًا للديزل بدل سقف سعري وسط ضغوط الإمداد",
+      "summaryEn": "Hungary will provide targeted compensation to households using diesel-powered cars as fuel prices rise, while rejecting a price cap that the government says could worsen shortages. Owners of up to one million diesel vehicles rated at no more than 150 horsepower are due to receive 20,000 forints by December, and farmers will receive excise-tax refunds.",
+      "summaryAr": "ستقدم المجر تعويضًا موجّهًا للأسر التي تستخدم سيارات الديزل مع ارتفاع أسعار الوقود، بينما رفضت فرض سقف سعري ترى الحكومة أنه قد يفاقم النقص. ومن المقرر أن يحصل مالكو ما يصل إلى مليون مركبة ديزل بقوة لا تتجاوز 150 حصانًا على 20 ألف فورنت بحلول ديسمبر، فيما يحصل المزارعون على رد لضريبة الإنتاج.",
+      "takeEn": "Government implication: emergency fuel relief can protect exposed users without suppressing price signals across the entire market. Governments should define eligibility from verifiable records, publish the fiscal cost and expiry date, monitor supply and distributional effects, and avoid locking temporary relief into incentives that undermine longer-term energy-transition goals.",
+      "takeAr": "الدلالة للحكومات: يمكن لإغاثة الوقود الطارئة حماية الفئات الأكثر تعرضًا من دون تعطيل إشارات الأسعار في السوق كله. وينبغي تحديد الأهلية من سجلات قابلة للتحقق، ونشر التكلفة المالية وموعد الانتهاء، ومراقبة الإمدادات والأثر التوزيعي، وتجنب تحويل الدعم المؤقت إلى حوافز دائمة تعرقل أهداف التحول الطاقي.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/hungary-give-targeted-subsidy-owners-diesel-powered-cars-2026-09-11/"
+    },
+    {
       "id": "germany-rosatom-nuclear-fuel-permit-legal-challenge-2026",
       "publishedAt": "2026-09-11T12:52:00Z",
       "categoryEn": "ENERGY + INFRASTRUCTURE GOVERNANCE",
@@ -673,5 +687,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T13:49:23.000Z"
+  "updatedAt": "2026-09-11T14:24:38.000Z"
 }
