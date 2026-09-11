@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-customs-ai-transformation-budget-2027",
+      "publishedAt": "2026-09-11",
+      "categoryEn": "AI + CUSTOMS GOVERNANCE",
+      "categoryAr": "الذكاء الاصطناعي وحوكمة الجمارك",
+      "titleEn": "Korea funds a phased AI transformation of customs administration",
+      "titleAr": "كوريا تموّل تحولًا مرحليًا بالذكاء الاصطناعي في إدارة الجمارك",
+      "summaryEn": "South Korea’s Customs Service set out a phased programme to integrate AI into customs operations through 2030 and allocated KRW 6.5 billion in its proposed 2027 budget. Planned applications include stronger AI screening of illegal goods linked to e-commerce platforms, integrated analysis of tax and investigation data, cross-agency import monitoring, and improved AI assistance in the customs mobile service.",
+      "summaryAr": "وضعت هيئة الجمارك الكورية الجنوبية برنامجًا مرحليًا لدمج الذكاء الاصطناعي في العمليات الجمركية حتى عام 2030، وخصصت له 6.5 مليارات وون في مشروع موازنة 2027. وتشمل الاستخدامات المخططة تطوير فرز السلع غير القانونية بالربط مع منصات التجارة الإلكترونية، والتحليل المتكامل لبيانات الضرائب والتحقيقات، ومراقبة الواردات عبر بيانات الجهات المختلفة، وتحسين المساعدة الذكية في تطبيق الجمارك.",
+      "takeEn": "Government implication: customs AI becomes an operating capability when investment connects risk screening, investigations, inter-agency data and public service channels. Governments should sequence deployment by risk, define data-sharing authority, preserve human review for enforcement decisions, and measure detection gains, false positives, clearance time and appeal outcomes.",
+      "takeAr": "الدلالة للحكومات: يصبح الذكاء الاصطناعي الجمركي قدرة تشغيلية عندما يربط الاستثمار بين فرز المخاطر والتحقيقات وبيانات الجهات الحكومية وقنوات خدمة الجمهور. وينبغي تنفيذ الاستخدامات بحسب مستوى المخاطر، وتحديد صلاحيات تبادل البيانات، والإبقاء على المراجعة البشرية لقرارات الإنفاذ، وقياس تحسن الكشف والإنذارات الخاطئة وزمن التخليص ونتائج التظلمات.",
+      "source": "Korea Customs Service",
+      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781315&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
+    },
+    {
       "id": "korea-military-drone-counterdrone-validation-network-2026",
       "publishedAt": "2026-09-11",
       "categoryEn": "DRONES + DEFENCE INNOVATION",
@@ -575,5 +589,5 @@
       "titleEn": "Agricultural AI creates value when it reaches the field"
     }
   ],
-  "updatedAt": "2026-09-11T05:32:54.000Z"
+  "updatedAt": "2026-09-11T06:06:59.000Z"
 }
