@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-fema-workforce-cut-illegal-disaster-response-governance-2026",
+      "publishedAt": "2026-09-12T15:19:00Z",
+      "categoryEn": "INFRASTRUCTURE + DISASTER GOVERNANCE",
+      "categoryAr": "البنية التحتية وحوكمة الكوارث",
+      "titleEn": "US court finds DHS-directed plan to halve FEMA workforce unlawful",
+      "titleAr": "محكمة أمريكية تعتبر خطة موجّهة من الأمن الداخلي لخفض قوة «فيما» إلى النصف غير قانونية",
+      "summaryEn": "A U.S. federal judge ruled that the Department of Homeland Security acted unlawfully by taking control of FEMA personnel decisions and directing staffing cuts projected to halve the disaster agency’s workforce. The court found the move conflicted with post-Katrina law protecting FEMA’s authorities and functions; remedies will be considered separately next month.",
+      "summaryAr": "قضت محكمة اتحادية أمريكية بأن وزارة الأمن الداخلي تصرفت بصورة غير قانونية حين استحوذت على قرارات شؤون العاملين في الوكالة الفيدرالية لإدارة الطوارئ ووجّهت تخفيضات كان متوقعًا أن تقلص قوتها العاملة إلى النصف. ورأت المحكمة أن الخطوة تتعارض مع قانون صدر بعد إعصار كاترينا لحماية صلاحيات الوكالة ووظائفها، على أن تُبحث سبل المعالجة بصورة منفصلة الشهر المقبل.",
+      "takeEn": "Government implication: restructuring an emergency-management institution requires explicit legal authority, evidence-based capacity modelling and auditable records. Workforce targets should be tested against surge staffing, response-time and continuity thresholds before implementation, with legislative oversight where core statutory functions could be diminished.",
+      "takeAr": "الدلالة للحكومات: تتطلب إعادة هيكلة مؤسسة لإدارة الطوارئ سندًا قانونيًا صريحًا، ونمذجة للقدرات قائمة على الأدلة، وسجلات قابلة للتدقيق. وينبغي اختبار أهداف القوى العاملة مقابل احتياجات التعزيز السريع وزمن الاستجابة واستمرارية العمليات قبل التنفيذ، مع رقابة تشريعية عندما قد تتقلص وظائف أساسية يحددها القانون.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/government/us-judge-rules-that-trump-plan-halve-fema-workforce-violated-law-2026-09-12/"
+    },
+    {
       "id": "syria-mezzeh-airport-redevelopment-mass-graves-land-rights-2026",
       "publishedAt": "2026-09-12T05:06:46Z",
       "categoryEn": "INFRASTRUCTURE + RIGHTS GOVERNANCE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: public estates can become distributed energy infrastructure. Governments should map viable rooftops, bundle projects, and pair on-site generation with renewable procurement to reduce operating emissions and strengthen public-asset competitiveness.",
       "titleAr": "نيو ساوث ويلز تحوّل مجمّع مؤتمرات حكوميًا إلى أصل شمسي حضري كبير",
       "titleEn": "NSW turns a government-owned convention precinct into a major urban solar asset"
-    },
-    {
-      "categoryAr": "الزراعة والبنية التحتية",
-      "categoryEn": "AGRICULTURE + INFRASTRUCTURE",
-      "id": "china-rural-investment-mechanism-2026",
-      "publishedAt": "2026-09-07T03:24:35Z",
-      "source": "Ministry of Agriculture and Rural Affairs of China",
-      "sourceUrl": "https://www.moa.gov.cn/govpublic/CWS/202609/t20260907_6487329.htm",
-      "summaryAr": "أصدرت ست جهات صينية خطة حتى عام 2030 تربط أولوية الموازنات العامة وسندات الحكومات المحلية والائتمان الموجّه والتأمين الزراعي والاستثمار الخاص وصناديق البنية التحتية ومشروعات الطاقة المتجددة الريفية ضمن إطار استثماري واحد.",
-      "summaryEn": "Six Chinese authorities issued a plan through 2030 that links priority public budgets, local-government bonds, targeted credit, agricultural insurance, private investment, infrastructure REITs, and rural renewable-energy projects into one rural investment framework.",
-      "takeAr": "الدلالة للحكومات: ينبغي تحويل استراتيجيات الريف إلى محافظ مشروعات قابلة للتمويل، مدعومة بأدوات لتقاسم المخاطر وقواعد لتقييم الأصول ومنصات تمويل ورقابة طوال دورة المشروع، بدل التعامل معها كبرامج منح منفصلة.",
-      "takeEn": "Government implication: rural strategies should be translated into investable project pipelines with shared risk tools, asset-valuation rules, financing platforms, and lifecycle oversight—not treated as isolated grant programs.",
-      "titleAr": "الصين تبني منظومة تمويل متعددة القنوات لتحديث الريف",
-      "titleEn": "China builds a multi-channel financing system for rural modernization"
     }
   ],
-  "updatedAt": "2026-09-12T06:02:38.032Z"
+  "updatedAt": "2026-09-12T15:34:23.206Z"
 }
