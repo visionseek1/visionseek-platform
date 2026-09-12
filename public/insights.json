@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "openai-ai-safety-pact-government-coordination-2026",
+      "publishedAt": "2026-09-12T20:38:00Z",
+      "categoryEn": "AI + GOVERNANCE",
+      "categoryAr": "الذكاء الاصطناعي والحوكمة",
+      "titleEn": "Frontier AI labs move toward a safety-pacing pact as government coordination gains urgency",
+      "titleAr": "مختبرات الذكاء الاصطناعي المتقدم تقترب من اتفاق لإبطاء القدرات مع تصاعد الحاجة إلى تنسيق حكومي",
+      "summaryEn": "OpenAI CEO Sam Altman said the company will not pursue a 2026 public listing while it addresses AI safety and alignment, and suggested leading AI developers may be close to an agreement to slow capability development and cooperate on safety risks. The statement comes as U.S. lawmakers call for stronger rules and industry leaders emphasize joint work with governments.",
+      "summaryAr": "قال سام ألتمان، الرئيس التنفيذي لـ«أوبن إيه آي»، إن الشركة لن تسعى إلى طرح عام خلال 2026 بينما تعالج قضايا سلامة الذكاء الاصطناعي ومواءمته، وأشار إلى أن كبار المطورين قد يقتربون من اتفاق لإبطاء تطوير القدرات والتعاون بشأن مخاطر السلامة. ويأتي ذلك مع دعوات مشرعين أمريكيين إلى قواعد أقوى وتشديد قادة الصناعة على العمل المشترك مع الحكومات.",
+      "takeEn": "Government implication: a voluntary industry pact can create a policy window, but public authorities should convert it into auditable safeguards. Governments should define measurable capability thresholds, require independent evaluations and incident disclosure, clarify competition-law boundaries for safety coordination, and establish escalation triggers before voluntary pacing becomes necessary.",
+      "takeAr": "الدلالة للحكومات: قد يفتح الاتفاق الطوعي بين الشركات نافذة للسياسة العامة، لكن ينبغي تحويله إلى ضمانات قابلة للتدقيق. ويتعين تحديد عتبات قابلة للقياس للقدرات، وفرض تقييمات مستقلة والإفصاح عن الحوادث، وتوضيح حدود قانون المنافسة أمام التنسيق المتعلق بالسلامة، ووضع محفزات للتصعيد قبل الحاجة إلى إبطاء طوعي.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/litigation/openai-ipo-will-not-happen-2026-amid-ai-safety-fears-altman-says-2026-09-12/"
+    },
+    {
       "id": "ukraine-winter-critical-infrastructure-fiscal-resilience-2026",
       "publishedAt": "2026-09-12T17:04:00Z",
       "categoryEn": "INFRASTRUCTURE + FISCAL RESILIENCE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: cross-border resilience agreements should be translated into shared operating playbooks, interoperable warning protocols, joint exercises, and measurable capability benchmarks that can be tested before disasters occur.",
       "titleAr": "نيوزيلندا واليابان تؤسسان تعاونًا لتعزيز القدرة على مواجهة الكوارث",
       "titleEn": "New Zealand and Japan formalize cooperation on disaster resilience"
-    },
-    {
-      "categoryAr": "البنية التحتية والحوكمة",
-      "categoryEn": "INFRASTRUCTURE + GOVERNANCE",
-      "id": "uk-liverpool-public-bus-franchising-2026",
-      "publishedAt": "2026-09-07T08:30:45Z",
-      "source": "UK Department for Transport",
-      "sourceUrl": "https://www.gov.uk/government/news/new-era-for-liverpool-buses-as-government-backs-local-control",
-      "summaryAr": "خصصت الحكومة البريطانية 86.3 مليون جنيه إسترليني حتى عام 2029، إلى جانب إتاحة صندوق دعم جديد للعمد، مع بدء منطقة مدينة ليفربول تطبيق امتيازات تشغيل شبكة الحافلات في سانت هيلينز قبل التوسع إلى ويرال وبقية المنطقة بحلول 2027. ويمنح النموذج السلطة الإقليمية التحكم في المسارات والأسعار والهوية وتخطيط الخدمة.",
-      "summaryEn": "The UK Government committed £86.3 million through 2029, alongside access to a new mayoral support fund, as Liverpool City Region begins franchising its bus network in St Helens before expanding to the Wirral and across the region by 2027. The model gives the regional authority control over routes, fares, branding, and service planning.",
-      "takeAr": "الدلالة للحكومات: إصلاح البنية التحتية قد يبدأ بإعادة تصميم الحوكمة لا بالبناء فقط. ويصبح نقل التحكم المحلي أكثر فاعلية عندما يقترن بتمويل متعدد السنوات ومعايير موحدة ومؤشرات قابلة للقياس للاعتمادية والتكلفة وإتاحة الخدمة.",
-      "takeEn": "Government implication: infrastructure reform can begin with governance, not construction. Devolving network control works best when paired with multi-year funding, unified service standards, and measurable outcomes for reliability, affordability, and access.",
-      "titleAr": "ليفربول تنقل شبكة الحافلات إلى التحكم العام بدعم حكومي متعدد السنوات",
-      "titleEn": "Liverpool shifts its bus network to public control with multi-year government backing"
     }
   ],
-  "updatedAt": "2026-09-12T18:23:45.702Z"
+  "updatedAt": "2026-09-12T21:37:18.810Z"
 }
