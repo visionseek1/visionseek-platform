@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "australia-optus-emergency-call-outage-resilience-2026",
+      "publishedAt": "2026-09-12T01:57:00Z",
+      "categoryEn": "INFRASTRUCTURE + RESILIENCE",
+      "categoryAr": "البنية التحتية والمرونة",
+      "titleEn": "Optus outage disrupts emergency calls across parts of four Australian jurisdictions",
+      "titleAr": "انقطاع أوبتس يعطّل بعض مكالمات الطوارئ في أجزاء من أربع مناطق أسترالية",
+      "summaryEn": "A 76-minute technical outage on Optus voice services caused intermittent call failures in parts of Victoria, South Australia, Tasmania and the Northern Territory, disrupting some emergency calls. Authorities began investigations, and Victoria Police conducted around 40 welfare checks; police reported no adverse outcomes.",
+      "summaryAr": "تسبب عطل تقني استمر 76 دقيقة في خدمات الاتصال الصوتي لدى «أوبتس» في انقطاعات متقطعة بأجزاء من فيكتوريا وجنوب أستراليا وتسمانيا والإقليم الشمالي، وأعاق بعض مكالمات الطوارئ. وبدأت الجهات المختصة التحقيق، فيما نفذت شرطة فيكتوريا نحو 40 فحصًا للاطمئنان ولم تسجل نتائج سلبية.",
+      "takeEn": "Government implication: emergency communications need independently tested failover, real-time service visibility and predefined welfare-check escalation—not reliance on a single carrier’s restoration process. Regulators should require auditable incident reporting, resilience drills and measurable recovery targets for emergency-call infrastructure.",
+      "takeAr": "الدلالة للحكومات: تحتاج اتصالات الطوارئ إلى مسارات بديلة تُختبر بصورة مستقلة، ورؤية لحظية لحالة الخدمة، وآلية مسبقة لتصعيد فحوص الاطمئنان، لا الاعتماد على استعادة شركة واحدة للشبكة. وينبغي للجهات التنظيمية فرض تقارير حوادث قابلة للتدقيق وتمارين مرونة وأهداف قابلة للقياس لاستعادة بنية مكالمات الطوارئ.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/australias-optus-apologises-outage-that-disrupted-emergency-calls-2026-09-12/"
+    },
+    {
       "id": "us-solar-import-duties-india-indonesia-laos-2026",
       "publishedAt": "2026-09-11T19:45:00Z",
       "categoryEn": "CLIMATE + INDUSTRIAL POLICY",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: workforce policy should redesign roles, training, and accountability so machines expand public-sector judgment instead of merely removing tasks.",
       "titleAr": "مستقبل العمل يتحول إلى مسألة تصميم أنظمة",
       "titleEn": "The future of work is becoming a system-design problem"
-    },
-    {
-      "categoryAr": "الفضاء والأنظمة",
-      "categoryEn": "AEROSPACE + SYSTEMS",
-      "id": "modular-defense-systems-2026",
-      "publishedAt": "2026-09-01T12:05:00Z",
-      "source": "McKinsey & Company",
-      "sourceUrl": "https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/future-defense-tech-multidomain-stacks-to-build-affordable-mass",
-      "summaryAr": "ترى McKinsey أن تكنولوجيا الدفاع المستقبلية تنتقل من المنصات شديدة التكامل إلى أنظمة معيارية متعددة المجالات يمكن تطويرها بسرعة وتوسيعها بتكلفة أقل.",
-      "summaryEn": "McKinsey argues that future defense technology is moving away from tightly integrated platforms toward modular, multidomain stacks that can evolve faster and scale at lower cost.",
-      "takeAr": "الدلالة للحكومات: ستعتمد القدرة السيادية بصورة متزايدة على الواجهات المفتوحة ومعايير الشراء التي تربط المستشعرات والبرمجيات والمركبات وصنّاع القرار.",
-      "takeEn": "Government implication: sovereign capability will increasingly depend on open interfaces and procurement standards that connect sensors, software, vehicles, and decision-makers.",
-      "titleAr": "الأنظمة المعيارية قد تكون أهم من المنصة الخارقة التالية",
-      "titleEn": "Modularity may matter more than the next breakthrough platform"
     }
   ],
-  "updatedAt": "2026-09-11T20:31:38.052Z"
+  "updatedAt": "2026-09-12T02:31:15.277Z"
 }
