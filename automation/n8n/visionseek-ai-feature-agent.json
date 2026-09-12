@@ -1,0 +1,87 @@
+{
+  "name": "VisionSeek — AI Feature Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "visionseek-ai-feature",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-input",
+      "name": "Feature Request Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [-520, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body ?? $json;\nconst task = String(body.task ?? body.feature ?? body.request ?? '').trim();\nif (!task) throw new Error('task is required');\nconst requestId = String(body.request_id ?? `vs-${Date.now()}`);\nreturn [{ json: { task, request_id: requestId } }];"
+      },
+      "id": "normalize-request",
+      "name": "Normalize Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-280, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.github.com/repos/visionseek1/visionseek-platform/dispatches",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "githubApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Accept", "value": "application/vnd.github+json" },
+            { "name": "X-GitHub-Api-Version", "value": "2022-11-28" }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify({ event_type: 'visionseek_ai_feature', client_payload: { task: $json.task, request_id: $json.request_id } }) }}",
+        "options": {}
+      },
+      "id": "dispatch-github",
+      "name": "Dispatch GitHub Agent",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-40, 0]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { accepted: true, request_id: $('Normalize Request').item.json.request_id, repository: 'visionseek1/visionseek-platform', message: 'AI engineering job dispatched. A pull request will be created only after lint/tests pass.' } }}",
+        "options": { "responseCode": 202 }
+      },
+      "id": "webhook-response",
+      "name": "Accepted",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [220, 0]
+    }
+  ],
+  "connections": {
+    "Feature Request Webhook": {
+      "main": [[{ "node": "Normalize Request", "type": "main", "index": 0 }]]
+    },
+    "Normalize Request": {
+      "main": [[{ "node": "Dispatch GitHub Agent", "type": "main", "index": 0 }]]
+    },
+    "Dispatch GitHub Agent": {
+      "main": [[{ "node": "Accepted", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "active": false,
+  "pinData": {},
+  "versionId": "00000000-0000-0000-0000-000000000001",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}
