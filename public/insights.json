@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "syria-mezzeh-airport-redevelopment-mass-graves-land-rights-2026",
+      "publishedAt": "2026-09-12T05:06:46Z",
+      "categoryEn": "INFRASTRUCTURE + RIGHTS GOVERNANCE",
+      "categoryAr": "البنية التحتية وحوكمة الحقوق",
+      "titleEn": "Syria’s Mezzeh airport redevelopment raises mass-grave and land-rights safeguards",
+      "titleAr": "إعادة تطوير مطار المزة في سوريا تثير متطلبات حماية المقابر وحقوق الملكية",
+      "summaryEn": "Syria’s civil aviation authority is preparing to convert Mezzeh military airport in Damascus for limited private and executive aviation, with rubble removal and infrastructure upgrades already under way. Rights groups and residents warn that redevelopment could disturb suspected mass graves, compromise evidence and advance construction before unresolved private-land claims are addressed.",
+      "summaryAr": "تستعد هيئة الطيران المدني السورية لتحويل مطار المزة العسكري في دمشق إلى استخدام مدني محدود للطيران الخاص والتنفيذي، وقد بدأت إزالة الأنقاض وتحديثات البنية التحتية. وتحذر منظمات حقوقية وسكان من أن إعادة التطوير قد تمس مقابر جماعية مشتبهًا بها وتعرّض الأدلة للخطر وتمضي بالبناء قبل معالجة مطالبات الملكية الخاصة غير المحسومة.",
+      "takeEn": "Government implication: redevelopment of conflict-legacy sites needs a binding stage gate before enabling works begin. Authorities should secure the site, commission an independent forensic survey with chain-of-custody rules, map ownership claims and publish a compensation process before procurement or construction proceeds.",
+      "takeAr": "الدلالة للحكومات: تحتاج إعادة تطوير المواقع المرتبطة بإرث النزاع إلى بوابة قرار ملزمة قبل بدء الأعمال التمهيدية. وينبغي تأمين الموقع، وإجراء مسح جنائي مستقل بقواعد لحفظ الأدلة، وحصر مطالبات الملكية، ونشر آلية للتعويض قبل المضي في المشتريات أو البناء.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/middle-east/syrian-private-airport-plans-spark-outcry-over-mass-graves-land-rights-2026-09-12/"
+    },
+    {
       "id": "australia-optus-emergency-call-outage-resilience-2026",
       "publishedAt": "2026-09-12T01:57:00Z",
       "categoryEn": "INFRASTRUCTURE + RESILIENCE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: rural strategies should be translated into investable project pipelines with shared risk tools, asset-valuation rules, financing platforms, and lifecycle oversight—not treated as isolated grant programs.",
       "titleAr": "الصين تبني منظومة تمويل متعددة القنوات لتحديث الريف",
       "titleEn": "China builds a multi-channel financing system for rural modernization"
-    },
-    {
-      "categoryAr": "الذكاء الاصطناعي والعمل",
-      "categoryEn": "AI + WORK",
-      "id": "human-skills-automation-2026",
-      "publishedAt": "2026-09-01T13:05:00Z",
-      "source": "McKinsey & Company",
-      "sourceUrl": "https://www.mckinsey.com/featured-insights/charts/human-skills-in-the-age-of-automation",
-      "summaryAr": "يشير تحليل McKinsey لعام 2026 إلى أن التعاون بين البشر ووكلاء الذكاء الاصطناعي والروبوتات سيعيد تشكيل المهام التقنية والمتكررة، بينما تظل القيادة والتعاطف ميزتين إنسانيتين أساسيتين.",
-      "summaryEn": "McKinsey's 2026 analysis suggests that collaboration among people, AI agents, and robots will reshape many technical and repetitive tasks, while leadership and empathy remain distinctly human advantages.",
-      "takeAr": "الدلالة للحكومات: يجب أن تعيد سياسة القوى العاملة تصميم الأدوار والتدريب والمساءلة بحيث توسّع الآلات قدرة القطاع العام على الحكم، لا أن تزيل المهام فقط.",
-      "takeEn": "Government implication: workforce policy should redesign roles, training, and accountability so machines expand public-sector judgment instead of merely removing tasks.",
-      "titleAr": "مستقبل العمل يتحول إلى مسألة تصميم أنظمة",
-      "titleEn": "The future of work is becoming a system-design problem"
     }
   ],
-  "updatedAt": "2026-09-12T02:31:15.277Z"
+  "updatedAt": "2026-09-12T06:02:38.032Z"
 }
