@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "brics-ai-open-source-zone-government-cooperation-2026",
+      "publishedAt": "2026-09-13T08:43:00Z",
+      "categoryEn": "AI + INTERNATIONAL COOPERATION",
+      "categoryAr": "الذكاء الاصطناعي والتعاون الدولي",
+      "titleEn": "China proposes a BRICS AI open-source zone for cross-border model cooperation",
+      "titleAr": "الصين تقترح منطقة مفتوحة المصدر للذكاء الاصطناعي ضمن «بريكس»",
+      "summaryEn": "Chinese President Xi Jinping said China will lead the creation of a BRICS AI Open Source Zone to support cooperation on large language models, AI training and an open AI ecosystem. Announced at the BRICS summit in New Delhi, the proposal forms part of a wider push to deepen practical cooperation and connect markets across the expanded bloc.",
+      "summaryAr": "قال الرئيس الصيني شي جين بينغ إن بلاده ستقود إنشاء منطقة مفتوحة المصدر للذكاء الاصطناعي ضمن «بريكس» لدعم التعاون في النماذج اللغوية الكبيرة وتدريب الذكاء الاصطناعي وبناء منظومة مفتوحة. وجاء المقترح خلال قمة «بريكس» في نيودلهي ضمن توجه أوسع لتعميق التعاون العملي وربط أسواق دول التكتل الموسع.",
+      "takeEn": "Government implication: participating states should shape the zone before its technical architecture hardens. Priorities include shared rules for data access, licensing, model evaluation, cybersecurity and cross-border accountability, plus transparent pathways for local researchers, languages and public-sector use cases to benefit from the ecosystem.",
+      "takeAr": "الدلالة للحكومات: ينبغي للدول المشاركة أن تسهم في تشكيل المنطقة قبل تثبيت بنيتها التقنية. وتشمل الأولويات قواعد مشتركة لإتاحة البيانات والترخيص وتقييم النماذج والأمن السيبراني والمساءلة عبر الحدود، مع مسارات شفافة تضمن استفادة الباحثين واللغات المحلية وحالات الاستخدام الحكومي من المنظومة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/xi-pushes-greater-brics-economic-ties-give-bloc-larger-global-role-2026-09-13/"
+    },
+    {
       "id": "saudi-east-west-pipeline-drone-strike-resilience-2026",
       "publishedAt": "2026-09-13T08:01:00Z",
       "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: export credit can serve development and industrial policy together when transport, electrification, supplier participation, and delivery finance are structured as one investable portfolio. Governments should pair such packages with transparent procurement, local-capability targets, and outcome tracking for connectivity, reliability, and fiscal exposure.",
       "titleAr": "التمويل البريطاني يجمع أربعة مشروعات بنية تحتية كبرى في أنغولا",
       "titleEn": "UK export finance bundles four major infrastructure projects in Angola"
-    },
-    {
-      "categoryAr": "الطائرات المسيّرة والأمن",
-      "categoryEn": "DRONES + SECURITY",
-      "id": "uk-ukraine-winter-air-defence-drones-2026",
-      "publishedAt": "2026-09-08T07:38:42Z",
-      "source": "UK Ministry of Defence",
-      "sourceUrl": "https://www.gov.uk/government/news/uk-pledges-winter-air-defence-package-to-boost-ukraines-defences",
-      "summaryAr": "أعلنت المملكة المتحدة مساهمة بقيمة 100 مليون جنيه إسترليني عبر قائمة متطلبات أوكرانيا ذات الأولوية التابعة للناتو لتمويل صواريخ باتريوت ومعدات دفاع جوي أخرى قبل الشتاء. كما تواصل تسليم أكثر من 120 ألف طائرة مسيّرة هذا العام، تشمل أنظمة اعتراض واستطلاع وهجوم، مع شحنات إضافية من ذخائر المدفعية بعيدة المدى ممولة بالتعاون مع حلفاء أوروبيين.",
-      "summaryEn": "The UK announced a £100 million contribution through NATO’s Prioritised Ukraine Requirements List for Patriot missiles and other air-defence equipment ahead of winter. It is also continuing delivery of more than 120,000 drones this year—including interceptor, reconnaissance, and attack systems—and plans further long-range artillery deliveries funded with European allies.",
-      "takeAr": "الدلالة للحكومات: تصبح القدرة العاجلة أكثر فاعلية عندما تُدار أموال الحلفاء والمشتريات وجداول التسليم والأنظمة غير المأهولة وأولويات حماية البنية التحتية ضمن محفظة جاهزية واحدة. ينبغي ربط بيانات المخزون ومراحل التسليم والاحتياج التشغيلي وترتيبات نقل الصناعة في رؤية قيادة مشتركة.",
-      "takeEn": "Government implication: time-critical capability is stronger when allied financing, procurement, delivery schedules, unmanned systems, and infrastructure-protection priorities are managed as one readiness portfolio. Governments should connect stockpile data, delivery milestones, operational demand, and industrial-transfer arrangements in a shared command view.",
-      "titleAr": "بريطانيا تجمع الدفاع الجوي والطائرات المسيّرة والمشتريات المتحالفة في حزمة شتوية لأوكرانيا",
-      "titleEn": "UK combines air defence, drones, and allied procurement in a winter support package for Ukraine"
     }
   ],
-  "updatedAt": "2026-09-13T08:20:04.093Z"
+  "updatedAt": "2026-09-13T09:23:22.393Z"
 }
