@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-ukraine-russian-diesel-strikes-global-supply-2026",
+      "publishedAt": "2026-09-13T14:34:24Z",
+      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
+      "categoryAr": "الطاقة والبنية التحتية الحيوية",
+      "titleEn": "Washington presses Ukraine to halt strikes on Russian diesel infrastructure",
+      "titleAr": "واشنطن تضغط لوقف ضربات أوكرانيا على بنية الديزل الروسية",
+      "summaryEn": "U.S. President Donald Trump said he had urged Ukrainian President Volodymyr Zelenskiy to stop attacks on Russian diesel infrastructure, arguing that the strikes were worsening a global fuel shortage. Ukraine says Russian refineries are legitimate military targets as Russia continues attacking Ukrainian energy infrastructure; Reuters reported that the Ukrainian campaign has reduced Russian fuel production and contributed to shortages inside Russia.",
+      "summaryAr": "قال الرئيس الأمريكي دونالد ترامب إنه حثّ الرئيس الأوكراني فولوديمير زيلينسكي على وقف الهجمات على بنية الديزل الروسية، معتبرًا أن الضربات تفاقم نقص الوقود عالميًا. وتقول أوكرانيا إن المصافي الروسية أهداف عسكرية مشروعة مع استمرار روسيا في مهاجمة بنيتها للطاقة؛ وأفادت رويترز بأن الحملة الأوكرانية خفضت إنتاج الوقود الروسي وأسهمت في نقصه داخل روسيا.",
+      "takeEn": "Government implication: cross-border strikes on fuel systems can quickly shift from battlefield tactics into global supply and diplomatic risk. Governments should connect targeting policy to real-time fuel-market assessment, define protected or conditional infrastructure categories with allies, and maintain rapid deconfliction channels without weakening accountability for attacks on civilian energy systems.",
+      "takeAr": "الدلالة للحكومات: قد تنتقل الضربات العابرة للحدود على منظومات الوقود سريعًا من تكتيك ميداني إلى خطر على الإمدادات العالمية والعلاقات الدبلوماسية. وينبغي ربط سياسة الاستهداف بتقييم آني لأسواق الوقود، وتحديد فئات البنية التحتية المحمية أو المشروطة مع الحلفاء، والإبقاء على قنوات سريعة لمنع التصعيد دون إضعاف المساءلة عن الهجمات على أنظمة الطاقة المدنية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/trump-tells-ukraines-zelenskiy-stop-hitting-russian-diesel-2026-09-13/"
+    },
+    {
       "id": "saudi-pipeline-export-stock-countdown-global-supply-risk-2026",
       "publishedAt": "2026-09-13T12:04:00Z",
       "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: AI in critical infrastructure should be governed as an operating-system transition, not a collection of pilots. Governments should connect data access, safety thresholds, regulatory accountability, operator capability, consumer outcomes, and routes from validation to nationwide deployment in one implementation framework.",
       "titleAr": "بريطانيا تطلق رؤية للذكاء الاصطناعي في الطاقة النظيفة ومراجعة لتطبيقه في الشبكة",
       "titleEn": "UK launches an AI-for-clean-energy vision and grid deployment review"
-    },
-    {
-      "categoryAr": "البنية التحتية والمناخ",
-      "categoryEn": "INFRASTRUCTURE + CLIMATE",
-      "id": "uk-rail-freight-growth-target-2040-2026",
-      "publishedAt": "2026-09-08T11:02:56Z",
-      "source": "UK Department for Transport",
-      "sourceUrl": "https://www.gov.uk/government/news/great-british-railways-sets-course-for-rail-freight-growth",
-      "summaryAr": "حددت الحكومة البريطانية هدفًا لزيادة الشحن بالسكك الحديدية بما لا يقل عن 40% بحلول 2040، كمرحلة نحو نمو لا يقل عن 75% بحلول 2050. وستتولى منظومة السكك الوطنية الإشراف الاستراتيجي على إتاحة الشبكة وتُمنح واجبات صريحة لدعم الشحن، مع تقدير حكومي بأن هدف 2040 قد ينقل بضائع إضافية بقيمة تقارب 15 مليار جنيه إسترليني سنويًا عبر السكك ويجنب ما يصل إلى مليون طن من ثاني أكسيد الكربون سنويًا مقارنة بالنقل البري.",
-      "summaryEn": "The UK Government set a target to grow rail freight by at least 40% by 2040 as a milestone toward at least 75% growth by 2050. Great British Railways will receive strategic oversight of network access and explicit duties to support freight, with the government estimating that the 2040 target could shift around £15 billion more goods by rail each year and avoid up to one million tonnes of carbon dioxide annually compared with road transport.",
-      "takeAr": "الدلالة للحكومات: تصبح أهداف البنية التحتية طويلة الأجل قابلة للاستثمار عندما تُسند إلى جهة تنفيذ واحدة بواجبات قانونية ومساءلة على مستوى مجلس الإدارة وسلطة على إتاحة الشبكة ومراحل قابلة للقياس. ويمكن استخدام هذا النموذج لدمج سياسة الشحن وتخطيط السعة والاستثمار الخاص وخفض الانبعاثات في تكليف واحد.",
-      "takeEn": "Government implication: long-term infrastructure targets become investable when a single delivery institution has statutory duties, board-level accountability, control over network access, and measurable milestones. Governments can use this model to align freight policy, capacity planning, private investment, and emissions reduction in one mandate.",
-      "titleAr": "بريطانيا تضع هدفًا لنمو الشحن بالسكك الحديدية ضمن منظومة السكك الوطنية",
-      "titleEn": "UK sets a 2040 rail-freight growth target under Great British Railways"
     }
   ],
-  "updatedAt": "2026-09-13T12:33:44.170Z"
+  "updatedAt": "2026-09-13T15:26:01Z"
 }
