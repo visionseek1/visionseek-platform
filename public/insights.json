@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "hormuz-talks-postponed-energy-diplomacy-contingency-2026",
+      "publishedAt": "2026-09-13T23:02:00Z",
+      "categoryEn": "ENERGY + INTERNATIONAL COORDINATION",
+      "categoryAr": "الطاقة والتنسيق الدولي",
+      "titleEn": "Hormuz talks postponed as energy-route diplomacy loses momentum",
+      "titleAr": "تأجيل محادثات هرمز يضعف المسار الدبلوماسي لحماية تدفقات الطاقة",
+      "summaryEn": "Oman postponed a September 14 meeting between Iran and Gulf Arab states that was expected to discuss a proposed framework for shipping routes through the Strait of Hormuz, citing the need for consensus. No new date was announced. Iran maintained that it would not reopen the strait until the United States meets its demands, while recent attacks and the continued closure of Saudi Arabia’s East–West pipeline are increasing risks across major regional energy corridors.",
+      "summaryAr": "أجّلت عُمان اجتماعًا كان مقررًا في 14 سبتمبر بين إيران ودول الخليج العربية لمناقشة إطار مقترح لمسارات الملاحة عبر مضيق هرمز، مشيرة إلى الحاجة إلى توافق. ولم يُعلن موعد جديد. وتمسكت إيران بعدم إعادة فتح المضيق قبل استجابة الولايات المتحدة لمطالبها، فيما تزيد الهجمات الأخيرة واستمرار إغلاق خط النفط السعودي شرق–غرب المخاطر عبر ممرات الطاقة الرئيسية في المنطقة.",
+      "takeEn": "Government implication: delayed diplomacy should trigger operational contingency measures, not a pause in decision-making. Governments should connect reserve-release thresholds, cargo rerouting, maritime-security coordination and public market communication to clear diplomatic milestones, while defining an interim shipping protocol and conditions for reconvening talks.",
+      "takeAr": "الدلالة للحكومات: ينبغي أن يؤدي تعثر المسار الدبلوماسي إلى تفعيل إجراءات تشغيلية احتياطية، لا إلى تعليق القرار. يجب ربط عتبات استخدام الاحتياطيات وإعادة توجيه الشحنات والتنسيق الأمني البحري والاتصال بالأسواق بمحطات دبلوماسية واضحة، مع وضع بروتوكول مؤقت للملاحة وشروط محددة لاستئناف المحادثات.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/"
+    },
+    {
       "id": "us-ukraine-russian-diesel-strikes-global-supply-2026",
       "publishedAt": "2026-09-13T14:34:24Z",
       "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: spectrum policy is becoming a core infrastructure lever for the space economy. Governments should connect allocation decisions with interference safeguards, competition rules, coverage priorities, and terrestrial–satellite interoperability so new capacity translates into resilient public connectivity.",
       "titleAr": "الجهة التنظيمية الأمريكية تقترح توسعًا كبيرًا في الطيف للنطاق العريض الفضائي",
       "titleEn": "US regulator proposes a major spectrum expansion for space-based broadband"
-    },
-    {
-      "categoryAr": "الذكاء الاصطناعي وبنية الطاقة",
-      "categoryEn": "AI + ENERGY INFRASTRUCTURE",
-      "id": "uk-ai-clean-energy-vision-grid-review-2026",
-      "publishedAt": "2026-09-08T12:55:52Z",
-      "source": "UK Department for Energy Security and Net Zero",
-      "sourceUrl": "https://www.gov.uk/government/speeches/minister-mccluskey-speech-on-ai-for-clean-energy-vision",
-      "summaryAr": "أطلقت الحكومة البريطانية رؤية للذكاء الاصطناعي في الطاقة النظيفة ودعوة لتقديم الأدلة، بالتزامن مع مراجعة مستقلة لتطبيق الذكاء الاصطناعي في شبكات الكهرباء. يركز المسار على تشغيل الشبكة وتخطيطها وفق المخاطر، ومرونة تحقق منفعة للمستهلك، وحوكمة واضحة مع زيادة الاستقلالية، وتسريع نشر الحلول المثبتة؛ وستُستخدم النتائج في إعداد استراتيجية وطنية للذكاء الاصطناعي في الطاقة العام المقبل.",
-      "summaryEn": "The UK Government launched an AI-for-clean-energy vision and a call for evidence, alongside an independent review of AI deployment in electricity networks. The work focuses on risk-based grid operation and planning, consumer-benefiting flexibility, clear governance as autonomy increases, and faster deployment of proven solutions; the evidence will inform a national AI in Energy Strategy planned for next year.",
-      "takeAr": "الدلالة للحكومات: يجب حوكمة الذكاء الاصطناعي في البنية التحتية الحرجة باعتباره انتقالًا في نظام التشغيل، لا مجموعة تجارب منفصلة. ينبغي جمع إتاحة البيانات وحدود السلامة والمساءلة التنظيمية وقدرات المشغلين ونتائج المستهلك ومسار الانتقال من التحقق إلى النشر الوطني ضمن إطار تنفيذ واحد.",
-      "takeEn": "Government implication: AI in critical infrastructure should be governed as an operating-system transition, not a collection of pilots. Governments should connect data access, safety thresholds, regulatory accountability, operator capability, consumer outcomes, and routes from validation to nationwide deployment in one implementation framework.",
-      "titleAr": "بريطانيا تطلق رؤية للذكاء الاصطناعي في الطاقة النظيفة ومراجعة لتطبيقه في الشبكة",
-      "titleEn": "UK launches an AI-for-clean-energy vision and grid deployment review"
     }
   ],
-  "updatedAt": "2026-09-13T15:26:01Z"
+  "updatedAt": "2026-09-13T23:36:44Z"
 }
