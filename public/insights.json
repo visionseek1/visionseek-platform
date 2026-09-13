@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "saudi-pipeline-export-stock-countdown-global-supply-risk-2026",
+      "publishedAt": "2026-09-13T12:04:00Z",
+      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
+      "categoryAr": "الطاقة والبنية التحتية الحيوية",
+      "titleEn": "Saudi pipeline outage starts a five-to-seven-day export-stock countdown",
+      "titleAr": "تعطل خط النفط السعودي يبدأ عدًّا تنازليًا لمخزون التصدير بين خمسة وسبعة أيام",
+      "summaryEn": "Saudi oil buyers and traders told Reuters that stocks at Yanbu could sustain exports for only five to seven days unless the East-West pipeline restarts. The route had been carrying about 4 million barrels a day, roughly 4% of global supply, and estimates for repairing strike damage range from a faster partial restart to five or six weeks. Saudi authorities have not disclosed the expected outage duration.",
+      "summaryAr": "قال مشترون وتجار للنفط السعودي لرويترز إن مخزون ينبع قد يدعم الصادرات لمدة تتراوح بين خمسة وسبعة أيام فقط ما لم يُستأنف تشغيل خط شرق–غرب. وكان المسار ينقل نحو أربعة ملايين برميل يوميًا، بما يعادل قرابة 4% من الإمدادات العالمية، فيما تراوحت تقديرات إصلاح أضرار الهجوم بين استئناف جزئي أسرع وخمسة أو ستة أسابيع. ولم تعلن السلطات السعودية المدة المتوقعة للتوقف.",
+      "takeEn": "Government implication: route resilience must be managed as a timed operating margin, not a binary open-or-closed status. Authorities should link verified repair milestones to daily inventory coverage, protect storage and alternate terminals, prepare export-allocation scenarios, and coordinate market communication before the buffer is exhausted.",
+      "takeAr": "الدلالة للحكومات: يجب إدارة مرونة مسارات الطاقة كهامش تشغيلي محسوب بالوقت، لا كحالة ثنائية بين العمل والتوقف. وينبغي ربط مراحل الإصلاح الموثقة بالتغطية اليومية للمخزون، وحماية مرافق التخزين والمحطات البديلة، وإعداد سيناريوهات لتخصيص الصادرات، وتنسيق الاتصال بالأسواق قبل نفاد الاحتياطي.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/"
+    },
+    {
       "id": "brics-ai-open-source-zone-government-cooperation-2026",
       "publishedAt": "2026-09-13T08:43:00Z",
       "categoryEn": "AI + INTERNATIONAL COOPERATION",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: long-term infrastructure targets become investable when a single delivery institution has statutory duties, board-level accountability, control over network access, and measurable milestones. Governments can use this model to align freight policy, capacity planning, private investment, and emissions reduction in one mandate.",
       "titleAr": "بريطانيا تضع هدفًا لنمو الشحن بالسكك الحديدية ضمن منظومة السكك الوطنية",
       "titleEn": "UK sets a 2040 rail-freight growth target under Great British Railways"
-    },
-    {
-      "categoryAr": "البنية التحتية والتمويل",
-      "categoryEn": "INFRASTRUCTURE + FINANCE",
-      "id": "uk-angola-export-finance-infrastructure-2026",
-      "publishedAt": "2026-09-08T08:35:40Z",
-      "source": "UK Export Finance",
-      "sourceUrl": "https://www.gov.uk/government/news/uk-backing-unlocks-167-million-of-exports-for-british-businesses-in-angola",
-      "summaryAr": "توفر وكالة تمويل الصادرات البريطانية 655 مليون جنيه إسترليني لتمويل أربعة مشروعات بنية تحتية في أنغولا: مطار كابيندا الدولي، وتأهيل طريق كاماما–فيانا، وكهربة مقاطعة أويجي، وخط نقل الكهرباء في هوامبو. ومن المتوقع أن تتيح الحزمة عقود توريد بريطانية بقيمة 167 مليون جنيه إسترليني، مع توسيع الربط في النقل والبنية التحتية للطاقة.",
-      "summaryEn": "UK Export Finance is providing £655 million in financing for four Angolan infrastructure projects: Cabinda International Airport, rehabilitation of the Camama–Viana Road, electrification in Uíge Province, and the Huambo transmission line. The package is expected to unlock £167 million in UK supply contracts while expanding transport connectivity and power infrastructure.",
-      "takeAr": "الدلالة للحكومات: يمكن لائتمان الصادرات أن يخدم التنمية والسياسة الصناعية معًا عندما تُنظَّم مشروعات النقل والكهرباء ومشاركة الموردين وتمويل التنفيذ ضمن محفظة استثمارية واحدة. وينبغي ربط هذه الحزم بمشتريات شفافة وأهداف للقدرات المحلية ومتابعة نتائج الربط والاعتمادية والتعرض المالي.",
-      "takeEn": "Government implication: export credit can serve development and industrial policy together when transport, electrification, supplier participation, and delivery finance are structured as one investable portfolio. Governments should pair such packages with transparent procurement, local-capability targets, and outcome tracking for connectivity, reliability, and fiscal exposure.",
-      "titleAr": "التمويل البريطاني يجمع أربعة مشروعات بنية تحتية كبرى في أنغولا",
-      "titleEn": "UK export finance bundles four major infrastructure projects in Angola"
     }
   ],
-  "updatedAt": "2026-09-13T09:23:22.393Z"
+  "updatedAt": "2026-09-13T12:33:44.170Z"
 }
