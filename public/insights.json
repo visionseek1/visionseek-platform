@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "microsoft-ai-human-control-code-2026",
+      "publishedAt": "2026-09-14T13:02:00Z",
+      "categoryEn": "AI + GOVERNANCE",
+      "categoryAr": "الذكاء الاصطناعي والحوكمة",
+      "titleEn": "Microsoft drafts a human-control code for future AI models",
+      "titleAr": "مايكروسوفت تطرح مسودة قواعد لإبقاء نماذج الذكاء الاصطناعي تحت السيطرة البشرية",
+      "summaryEn": "Microsoft unveiled a draft code of conduct for its future in-house AI models that would require them never to resist correction or shutdown, to communicate in ways humans can understand and to treat any breach of the code as a failure. The company is seeking six weeks of public feedback before using the code in model training.",
+      "summaryAr": "كشفت مايكروسوفت عن مسودة قواعد سلوك لنماذج الذكاء الاصطناعي الداخلية المستقبلية، تلزمها بألا تقاوم التصحيح أو الإيقاف، وأن تتواصل بصورة يفهمها البشر، وأن تعتبر أي خرق للقواعد إخفاقًا. وتطلب الشركة آراء الجمهور لمدة ستة أسابيع قبل استخدام القواعد في تدريب النماذج.",
+      "takeEn": "Government implication: voluntary model constitutions can become useful procurement and oversight baselines only when their promises are independently testable. Governments should require evidence for shutdown compliance, correction acceptance, comprehensible reporting and human escalation before deploying advanced AI in critical public services.",
+      "takeAr": "الدلالة للحكومات: لا تصبح دساتير النماذج الطوعية أساسًا مفيدًا للمشتريات والرقابة إلا إذا كانت وعودها قابلة للاختبار المستقل. ينبغي اشتراط أدلة على الامتثال للإيقاف، وقبول التصحيح، ووضوح التقارير، والتصعيد إلى البشر قبل نشر الذكاء الاصطناعي المتقدم في الخدمات العامة الحساسة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/"
+    },
+    {
       "id": "eu-truck-co2-target-delay-charging-grid-gap-2026",
       "publishedAt": "2026-09-14T12:15:00Z",
       "categoryEn": "CLIMATE + TRANSPORT INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: لا تعتمد القدرة التنافسية في الذكاء الاصطناعي على الحوسبة والبحث فقط، بل أيضًا على سرعة فحص الابتكارات وتمويلها وتسويقها وحمايتها دوليًا. وينبغي تحويل اتفاقات الملكية الفكرية الثنائية إلى آليات تشغيل تشمل ممارسات فحص مشتركة، وتبادل الخبراء، ومسارات للتسويق، ونتائج قابلة للقياس في الإنفاذ.",
       "source": "Republic of Korea Ministry of Intellectual Property",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780898"
-    },
-    {
-      "id": "korea-emerging-security-human-control-ai-drones-space-2026",
-      "publishedAt": "2026-09-09T06:00:00Z",
-      "categoryEn": "AI + AUTONOMOUS SYSTEMS + SPACE SECURITY",
-      "categoryAr": "الذكاء الاصطناعي والأنظمة الذاتية وأمن الفضاء",
-      "titleEn": "Korea links AI, autonomous weapons and space security through a human-control framework",
-      "titleAr": "كوريا تربط الذكاء الاصطناعي والأسلحة الذاتية وأمن الفضاء بإطار للتحكم البشري",
-      "summaryEn": "At the 2026 World Emerging Security Forum, South Korea’s foreign ministry brought government, international-organization, industry and academic experts together to examine the combined security effects of AI, low-cost drones, cyber capabilities, nuclear command systems and increasingly commercial space activity. Participants identified human control and accountability for autonomous weapons, continued human involvement in critical nuclear decisions, and international norms that reflect the private sector’s growing role in space security as immediate governance priorities.",
-      "summaryAr": "جمع منتدى الأمن الناشئ العالمي لعام 2026، الذي نظمته وزارة الخارجية الكورية، خبراء من الحكومات والمنظمات الدولية والقطاع الخاص والأوساط الأكاديمية لبحث الآثار الأمنية المتداخلة للذكاء الاصطناعي والطائرات المسيّرة منخفضة التكلفة والقدرات السيبرانية وأنظمة القيادة النووية والنشاط التجاري المتنامي في الفضاء. وحدد المشاركون التحكم البشري والمساءلة في الأسلحة الذاتية، واستمرار التدخل البشري في القرارات النووية الحساسة، ووضع قواعد دولية تراعي الدور المتزايد للقطاع الخاص في أمن الفضاء كأولويات حوكمة عاجلة.",
-      "takeEn": "Government implication: AI, autonomous systems, cyber operations, nuclear command and commercial space can no longer be governed in separate policy silos. Governments should establish shared escalation thresholds, explicit human-decision checkpoints, private-operator obligations and cross-agency incident protocols before these systems become operationally intertwined.",
-      "takeAr": "الدلالة للحكومات: لم يعد ممكنًا حوكمة الذكاء الاصطناعي والأنظمة الذاتية والعمليات السيبرانية والقيادة النووية والفضاء التجاري في مسارات منفصلة. ينبغي وضع حدود تصعيد مشتركة، ونقاط قرار بشرية صريحة، والتزامات للمشغلين من القطاع الخاص، وبروتوكولات موحدة للحوادث بين الجهات قبل أن تتداخل هذه الأنظمة تشغيليًا.",
-      "source": "Republic of Korea Ministry of Foreign Affairs",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780886"
     }
   ],
-  "updatedAt": "2026-09-14T12:55:10.644Z"
+  "updatedAt": "2026-09-14T13:51:44.058Z"
 }
