@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-trump-ai-existing-powers-no-slowdown-2026",
+      "publishedAt": "2026-09-14T14:06:00Z",
+      "categoryEn": "AI + GOVERNMENT POLICY",
+      "categoryAr": "الذكاء الاصطناعي والسياسة الحكومية",
+      "titleEn": "Trump says existing U.S. powers are sufficient to police AI and rejects slowdown calls",
+      "titleAr": "ترامب يؤكد كفاية السلطات الأميركية الحالية لضبط الذكاء الاصطناعي ويرفض دعوات الإبطاء",
+      "summaryEn": "U.S. President Donald Trump said the government already has substantial criminal and regulatory authority over AI companies, while dismissing industry leaders’ calls to slow development over safety risks. His comments signal continued federal support for rapid AI development and reliance on existing enforcement powers rather than a broad pause or new precautionary regime.",
+      "summaryAr": "قال الرئيس الأميركي دونالد ترامب إن الحكومة تمتلك بالفعل سلطات جنائية وتنظيمية واسعة على شركات الذكاء الاصطناعي، ورفض دعوات قادة القطاع إلى إبطاء التطوير بسبب مخاطر السلامة. وتشير تصريحاته إلى استمرار الدعم الفيدرالي للتطوير السريع والاعتماد على أدوات الإنفاذ الحالية بدلًا من توقف واسع أو نظام احترازي جديد.",
+      "takeEn": "Government implication: the U.S. policy path is leaning toward enforcement under existing law while preserving development speed. Agencies should publish a clear map of current authorities, identify uncovered frontier-model risks and define evidence-based intervention thresholds so confidence in existing powers can be tested against operational scenarios.",
+      "takeAr": "الدلالة للحكومات: يميل المسار الأميركي إلى الإنفاذ بموجب القوانين القائمة مع الحفاظ على سرعة التطوير. ينبغي للجهات الحكومية نشر خريطة واضحة لصلاحياتها الحالية، وتحديد مخاطر النماذج المتقدمة غير المغطاة، ووضع عتبات تدخل قائمة على الأدلة لاختبار مدى كفاية هذه الصلاحيات في سيناريوهات تشغيلية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/trump-says-there-is-sick-conspiracy-against-ai-data-centers-2026-09-14/"
+    },
+    {
       "id": "microsoft-ai-human-control-code-2026",
       "publishedAt": "2026-09-14T13:02:00Z",
       "categoryEn": "AI + GOVERNANCE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتحول برامج المناخ الجماهيرية إلى أدوات تنفيذية عندما تجتمع الهوية وخيارات السلوك والتحقق والتغذية الراجعة والحوافز في دورة خدمة عامة واحدة. ويتطلب تكرار النموذج خطوط أساس موثوقة للانبعاثات، وضمانات للخصوصية، وضوابط لمنع التحايل، ومؤشرات نتائج تميّز بين عدد الأنشطة والخفض الحقيقي للكربون.",
       "source": "Republic of Korea Ministry of Climate, Energy and Environment",
       "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971590"
-    },
-    {
-      "id": "korea-france-ai-intellectual-property-cooperation-2026",
-      "publishedAt": "2026-09-09T08:00:00Z",
-      "categoryEn": "AI + INTELLECTUAL PROPERTY",
-      "categoryAr": "الذكاء الاصطناعي والملكية الفكرية",
-      "titleEn": "Korea and France extend intellectual-property cooperation to AI examination and commercialization",
-      "titleAr": "كوريا وفرنسا توسعان تعاون الملكية الفكرية ليشمل فحص الذكاء الاصطناعي وتسويقه",
-      "summaryEn": "South Korea’s Ministry of Intellectual Property and France’s National Institute of Industrial Property signed an expanded cooperation agreement during the Korea–France summit. It covers intellectual-property administration for AI transformation, cooperation on AI-related examination, intellectual-property finance and commercialization, and stronger cross-border protection and enforcement against counterfeit goods. The two sides also began follow-up discussions with French customs and industry bodies on practical implementation.",
-      "summaryAr": "وقّعت وزارة الملكية الفكرية الكورية والمعهد الوطني الفرنسي للملكية الصناعية اتفاقًا موسعًا للتعاون خلال القمة الكورية الفرنسية. ويشمل الاتفاق إدارة الملكية الفكرية في التحول بالذكاء الاصطناعي، والتعاون في فحص الابتكارات المرتبطة بالذكاء الاصطناعي، وتمويل الملكية الفكرية وتسويقها، وتعزيز الحماية والإنفاذ عبر الحدود ضد السلع المقلدة. وبدأ الجانبان كذلك مناقشات تنفيذية مع الجمارك والجهات الصناعية الفرنسية.",
-      "takeEn": "Government implication: AI competitiveness depends not only on compute and research, but also on how quickly inventions are examined, financed, commercialized and protected internationally. Governments should turn bilateral IP agreements into operating mechanisms with shared examination practice, expert exchange, commercialization pathways and measurable enforcement outcomes.",
-      "takeAr": "الدلالة للحكومات: لا تعتمد القدرة التنافسية في الذكاء الاصطناعي على الحوسبة والبحث فقط، بل أيضًا على سرعة فحص الابتكارات وتمويلها وتسويقها وحمايتها دوليًا. وينبغي تحويل اتفاقات الملكية الفكرية الثنائية إلى آليات تشغيل تشمل ممارسات فحص مشتركة، وتبادل الخبراء، ومسارات للتسويق، ونتائج قابلة للقياس في الإنفاذ.",
-      "source": "Republic of Korea Ministry of Intellectual Property",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780898"
     }
   ],
-  "updatedAt": "2026-09-14T13:51:44.058Z"
+  "updatedAt": "2026-09-14T14:49:20.000Z"
 }
