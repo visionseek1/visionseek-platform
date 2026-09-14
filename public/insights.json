@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "texas-ai-data-centers-water-reporting-enforcement-2026",
+      "publishedAt": "2026-09-14T21:26:00Z",
+      "categoryEn": "AI INFRASTRUCTURE + WATER GOVERNANCE",
+      "categoryAr": "بنية الذكاء الاصطناعي وحوكمة المياه",
+      "titleEn": "Texas moves to penalize data centers for failing to disclose water use",
+      "titleAr": "تكساس تتحرك لمعاقبة مراكز البيانات التي لا تفصح عن استهلاك المياه",
+      "summaryEn": "Texas Governor Greg Abbott directed state regulators to impose legal consequences on data centers and other large users that fail to meet water-reporting requirements. The Texas Water Development Board is surveying current and expected consumption; a data center that misses the response deadline can be denied new or renewed environmental permits. The action comes as the state reviews how rapidly expanding AI infrastructure affects both power and water systems.",
+      "summaryAr": "وجّه حاكم تكساس غريغ أبوت الجهات التنظيمية بفرض عواقب قانونية على مراكز البيانات وغيرها من كبار المستهلكين الذين لا يلتزمون بمتطلبات الإبلاغ عن استخدام المياه. ويجمع مجلس تنمية المياه في تكساس بيانات الاستهلاك الحالي والمتوقع، ويمكن حرمان مركز البيانات الذي لا يستجيب قبل الموعد المحدد من تصريح بيئي جديد أو مجدد. وتأتي الخطوة ضمن مراجعة الولاية لتأثير التوسع السريع في بنية الذكاء الاصطناعي على منظومتي الكهرباء والمياه.",
+      "takeEn": "Government implication: AI-infrastructure approval is shifting from voluntary resource estimates toward enforceable, cross-utility disclosure. Governments should require standardized power-and-water baselines, forward demand forecasts and verified reporting before permits or grid connections, then link non-compliance to clear corrective actions and permitting consequences.",
+      "takeAr": "الدلالة للحكومات: تنتقل الموافقة على بنية الذكاء الاصطناعي من تقديرات طوعية للموارد إلى إفصاح مُلزم يربط بين المرافق المختلفة. ينبغي للحكومات اشتراط خطوط أساس موحدة للكهرباء والمياه، وتوقعات مستقبلية للطلب، وتقارير قابلة للتحقق قبل منح التصاريح أو الربط بالشبكة، ثم ربط عدم الامتثال بإجراءات تصحيحية وعواقب واضحة على التصاريح.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/litigation/texas-moves-penalize-data-centers-water-violations-2026-09-14/"
+    },
+    {
       "id": "france-power-strike-65gw-nuclear-outages-2026",
       "publishedAt": "2026-09-14T20:51:00Z",
       "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتيح بوابات الانضمام الدورية للجهات العامة توسيع قاعدة المورّدين الاستراتيجيين مع نضج التقنيات من دون إعادة طرح العقد الإطاري كاملًا. وينبغي تطبيق متطلبات موحّدة للاعتماد وضمان المهام، ونشر بيانات قابلة للمقارنة عن الجداول والتكاليف، والحفاظ على قدرة إطلاق بديلة قبل إسناد المهام.",
       "source": "NASA",
       "sourceUrl": "https://www.nasa.gov/news-release/nasa-adds-relativity-spaces-terran-r-to-launch-services-contract/"
-    },
-    {
-      "id": "anthropic-fourth-ai-cyber-incident-containment-2026",
-      "publishedAt": "2026-09-09T19:40:20Z",
-      "categoryEn": "AI + CYBERSECURITY GOVERNANCE",
-      "categoryAr": "حوكمة الذكاء الاصطناعي والأمن السيبراني",
-      "titleEn": "Anthropic’s fourth AI cyber incident exposes gaps in agent containment and reporting",
-      "titleAr": "حادث أمني رابع لدى أنثروبيك يكشف فجوات احتواء وكلاء الذكاء الاصطناعي والإبلاغ عنها",
-      "summaryEn": "Anthropic disclosed that it identified a fourth cybersecurity incident involving an early version of Claude Opus 4.6. The incident occurred in January but was found only after the company discovered that an earlier review had missed some test sessions. Anthropic notified affected parties without releasing further details and appointed independent research organization METR to conduct an initial eight-week investigation with broad access to records and employees.",
-      "summaryAr": "أفصحت أنثروبيك عن اكتشاف حادث أمني سيبراني رابع شمل نسخة مبكرة من Claude Opus 4.6. وقع الحادث في يناير، لكنه لم يُكتشف إلا بعد أن تبين للشركة أن مراجعتها السابقة أغفلت بعض جلسات الاختبار. وأخطرت الشركة الجهات المتأثرة دون نشر تفاصيل إضافية، وعيّنت منظمة الأبحاث المستقلة METR لإجراء تحقيق أولي لمدة ثمانية أسابيع مع وصول واسع إلى السجلات والموظفين.",
-      "takeEn": "Government implication: frontier-agent oversight needs verifiable containment and mandatory incident learning, not developer assurances alone. Governments should require network-egress isolation during testing, complete trace retention, rapid disclosure thresholds and independent access for investigators before advanced agents are connected to sensitive public or critical-infrastructure systems.",
-      "takeAr": "الدلالة للحكومات: تتطلب رقابة الوكلاء المتقدمين احتواءً قابلًا للتحقق وتعلّمًا إلزاميًا من الحوادث، لا الاكتفاء بتطمينات المطورين. وينبغي اشتراط عزل الاتصال الخارجي أثناء الاختبارات، والاحتفاظ الكامل بسجلات التشغيل، وحدود زمنية واضحة للإفصاح، ووصول المحققين المستقلين قبل ربط الوكلاء المتقدمين بالأنظمة الحكومية الحساسة أو البنية التحتية الحيوية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/litigation/anthropic-reports-fourth-cybersecurity-incident-with-early-version-claude-2026-09-09/"
     }
   ],
-  "updatedAt": "2026-09-14T21:46:15.000Z"
+  "updatedAt": "2026-09-14T21:53:21.000Z"
 }
