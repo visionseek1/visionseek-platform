@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-adb-critical-minerals-ai-energy-cooperation-2026",
+      "publishedAt": "2026-09-14T07:50:00Z",
+      "categoryEn": "AI + ENERGY + CRITICAL MINERALS",
+      "categoryAr": "الذكاء الاصطناعي والطاقة والمعادن الحرجة",
+      "titleEn": "Korea and ADB align critical-mineral, AI and regional energy cooperation",
+      "titleAr": "كوريا وبنك التنمية الآسيوي ينسقان التعاون في المعادن الحرجة والذكاء الاصطناعي والطاقة",
+      "summaryEn": "South Korean President Lee Jae Myung and Asian Development Bank President Masato Kanda agreed to deepen cooperation across three linked priorities: stabilizing critical-mineral supply chains in Central Asia, combining Korea’s AI capabilities with ADB’s development expertise, and expanding regional power infrastructure and nuclear cooperation. They also discussed using Korea’s technology and experience in ADB-backed initiatives including the ASEAN Power Grid and nuclear-financing policy.",
+      "summaryAr": "اتفق الرئيس الكوري الجنوبي لي جاي ميونغ ورئيس بنك التنمية الآسيوي ماساتو كاندا على تعميق التعاون في ثلاث أولويات مترابطة: استقرار سلاسل إمداد المعادن الحرجة في آسيا الوسطى، ودمج قدرات كوريا في الذكاء الاصطناعي مع خبرة البنك التنموية، وتوسيع البنية التحتية الإقليمية للكهرباء والتعاون النووي. كما ناقشا توظيف التقنية والخبرة الكورية في مبادرات يدعمها البنك، ومنها شبكة كهرباء الآسيان وسياسات تمويل الطاقة النووية.",
+      "takeEn": "Government implication: this creates a development-finance pathway that connects resource security, digital capability and power infrastructure instead of treating them as separate portfolios. Governments seeking participation should prepare bankable, cross-sector project pipelines with clear mineral-processing, AI deployment, grid-interconnection and financing roles before regional programmes are allocated.",
+      "takeAr": "الدلالة للحكومات: يفتح هذا مسارًا للتمويل التنموي يربط أمن الموارد والقدرات الرقمية والبنية التحتية للطاقة بدل إدارتها كملفات منفصلة. وعلى الحكومات الراغبة في المشاركة إعداد حزم مشروعات قابلة للتمويل تحدد أدوار معالجة المعادن ونشر الذكاء الاصطناعي وربط الشبكات والتمويل قبل توزيع البرامج الإقليمية.",
+      "source": "Republic of Korea Presidential Office",
+      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971844"
+    },
+    {
       "id": "korea-oil-contingency-rerouting-stock-swap-2026",
       "publishedAt": "2026-09-14T06:37:00Z",
       "categoryEn": "ENERGY + SUPPLY INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يصبح تمويل القطاعات أكثر فاعلية عندما تُصمم رؤوس الأموال والوصول إلى التصدير والشراكات المؤسسية والدعم العام كمسار صفقات واحد. ويمكن تكرار النموذج عبر تأهيل الشركات مسبقًا، ومطابقة كل شركة مع المستثمرين والمشترين المناسبين، ثم متابعة النتائج حتى إغلاق صفقة استثمار أو تصدير بدل الاكتفاء بقياس الحضور.",
       "source": "Republic of Korea Ministry of Agriculture, Food and Rural Affairs",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-09&newsId=156780848&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-09"
-    },
-    {
-      "categoryAr": "الطاقة النظيفة والبنية التحتية",
-      "categoryEn": "CLEAN ENERGY + INFRASTRUCTURE",
-      "id": "australia-energy-transition-coordinator-grid-2026",
-      "publishedAt": "2026-09-09T02:33:00Z",
-      "source": "Australian Climate Change Authority",
-      "sourceUrl": "https://www.climatechangeauthority.gov.au/news/accelerating-investment-australias-energy-transition",
-      "summaryAr": "تقول هيئة تغيّر المناخ الأسترالية إن تحقيق هدف البلاد لعام 2035 يتطلب تحولًا كبيرًا في وتيرة تنفيذ التوليد المتجدد والتخزين وخطوط النقل. ودعا رئيسها الحكومات إلى تبسيط الموافقات، وتوفير موارد كافية لربط المشروعات بالشبكة حتى 2030، وتقديم إرشادات أوضح للمطورين، وتعيين منسق لانتقال الطاقة يدفع المشروعات ذات الأولوية عبر العوائق بين الجهات والولايات.",
-      "summaryEn": "Australia’s Climate Change Authority says meeting the country’s 2035 target requires a step change in renewable generation, storage and transmission delivery. Its chair urged governments to simplify approvals, resource grid connections through 2030, provide clearer guidance to developers, and appoint an Energy Transition Coordinator to drive priority projects through cross-jurisdictional bottlenecks.",
-      "takeAr": "الدلالة للحكومات: بات تحقيق أهداف الطاقة النظيفة يعتمد على حوكمة التنفيذ بقدر اعتماده على توافر التقنية. ويمكن لمنسق مفوض واحد، ومراحل موافقة مشتركة، وعمليات ربط بالشبكة مزودة بالكوادر الكافية، تحويل الطموح السياسي إلى خط مشروعات قابل للاستثمار مع الحفاظ على تقاسم المنافع مع المجتمعات.",
-      "takeEn": "Government implication: clean-energy targets increasingly depend on delivery governance, not technology availability alone. A single empowered coordinator, shared approval milestones and adequately staffed connection processes can turn policy ambition into an investable infrastructure pipeline while preserving community benefit-sharing.",
-      "titleAr": "هيئة المناخ الأسترالية تدعو إلى منسق وطني لإزالة عوائق مشروعات الطاقة والشبكة",
-      "titleEn": "Australia’s climate authority calls for an Energy Transition Coordinator to unblock grid projects"
     }
   ],
-  "updatedAt": "2026-09-14T07:00:02.652Z"
+  "updatedAt": "2026-09-14T08:05:48.478Z"
 }
