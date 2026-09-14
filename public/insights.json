@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-ntsb-faa-aviation-safety-recommendations-gap-2026",
+      "publishedAt": "2026-09-14T22:14:00Z",
+      "categoryEn": "AVIATION INFRASTRUCTURE + SAFETY OVERSIGHT",
+      "categoryAr": "البنية التحتية للطيران والرقابة على السلامة",
+      "titleEn": "NTSB rejects one-third of FAA responses to post-crash safety recommendations",
+      "titleAr": "مجلس سلامة النقل الأميركي يرفض ثلث استجابات إدارة الطيران لتوصيات ما بعد الحادث",
+      "summaryEn": "The U.S. National Transportation Safety Board judged the Federal Aviation Administration’s responses to 11 of 33 recommendations issued after the 2025 Washington mid-air collision to be unacceptable. The FAA has not agreed to mandate ADS-B In, a cockpit safety system the NTSB says could have warned both crews before impact. The FAA reported route reviews in six major cities and a directive separating aircraft and helicopters, but did not indicate whether it would require the warning technology.",
+      "summaryAr": "اعتبر مجلس سلامة النقل الوطني الأميركي استجابات إدارة الطيران الفيدرالية لـ11 من أصل 33 توصية صدرت بعد حادث التصادم الجوي قرب واشنطن عام 2025 غير مقبولة. ولم توافق الإدارة على إلزام نظام ADS-B In، وهو نظام سلامة داخل قمرة القيادة يقول المجلس إنه كان يمكن أن ينبه الطاقمين قبل الاصطدام. وأفادت الإدارة بمراجعة مسارات المروحيات في ست مدن كبرى وإصدار توجيه للفصل بين الطائرات والمروحيات، لكنها لم توضح ما إذا كانت ستُلزم بتقنية التحذير.",
+      "takeEn": "Government implication: safety recommendations need a formal closure system, not an exchange of agency letters. Governments should assign an accountable owner, deadline, evidence standard and residual-risk decision to every recommendation, with automatic escalation to ministers or legislators when regulators reject, substitute or delay a critical safeguard.",
+      "takeAr": "الدلالة للحكومات: تحتاج توصيات السلامة إلى نظام رسمي للإغلاق والمتابعة، لا مجرد تبادل خطابات بين الجهات. ينبغي إسناد مالك مسؤول وموعد نهائي ومعيار أدلة وقرار واضح بشأن المخاطر المتبقية لكل توصية، مع تصعيد تلقائي إلى الوزراء أو المشرعين عندما ترفض الجهة التنظيمية إجراءً حاسمًا أو تستبدله أو تؤخره.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/us/us-ntsb-says-one-third-faa-answers-safety-recommendations-are-unacceptable-2026-09-14/"
+    },
+    {
       "id": "texas-ai-data-centers-water-reporting-enforcement-2026",
       "publishedAt": "2026-09-14T21:26:00Z",
       "categoryEn": "AI INFRASTRUCTURE + WATER GOVERNANCE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تصبح تجارب التنقل الجوي الحضري صالحة لاتخاذ القرار عندما تُختبر الطائرات والمسارات ومهابط الإقلاع والهبوط وبروتوكولات الطوارئ وحالات الاستخدام القابلة للاستمرار كنظام محلي واحد. وينبغي وضع بوابات واضحة للسلامة والضوضاء والعدالة والقيمة العامة قبل التوسع أو تقديم الدعم.",
       "source": "Republic of Korea Ministry of Land, Infrastructure and Transport",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781052&pWise=sub&pWiseSub=C5"
-    },
-    {
-      "id": "nasa-relativity-terran-r-launch-services-contract-2026",
-      "publishedAt": "2026-09-09T20:11:58Z",
-      "categoryEn": "SPACE + PROCUREMENT",
-      "categoryAr": "الفضاء والمشتريات",
-      "titleEn": "NASA adds Terran R to its launch-services procurement pool",
-      "titleAr": "ناسا تضيف صاروخ «تيران آر» إلى منظومة مشتريات خدمات الإطلاق",
-      "summaryEn": "NASA added Relativity Space’s Terran R launch service to its multiple-award NLS II contract through the programme’s annual on-ramp. The vehicle is now eligible to compete for future NASA missions under an ordering period that runs through June 2030, with contract performance extending through December 2032; the framework can also support launch services for other agencies such as NOAA.",
-      "summaryAr": "أضافت ناسا خدمة إطلاق صاروخ «تيران آر» التابعة لشركة ريليتيفيتي سبيس إلى عقد NLS II متعدد المورّدين عبر بوابة الانضمام السنوية للبرنامج. وبذلك أصبح الصاروخ مؤهلًا للمنافسة على مهام ناسا المستقبلية ضمن فترة طلبات تمتد حتى يونيو 2030، وفترة تنفيذ للعقد حتى ديسمبر 2032؛ كما يتيح الإطار تقديم خدمات إطلاق لجهات حكومية أخرى مثل الإدارة الوطنية للمحيطات والغلاف الجوي.",
-      "takeEn": "Government implication: recurring on-ramps let public buyers expand strategic supplier capacity as technologies mature without reopening the entire umbrella contract. Agencies using this model should apply common certification and mission-assurance gates, publish comparable schedule and cost evidence, and preserve fallback launch capacity before assigning missions.",
-      "takeAr": "الدلالة للحكومات: تتيح بوابات الانضمام الدورية للجهات العامة توسيع قاعدة المورّدين الاستراتيجيين مع نضج التقنيات من دون إعادة طرح العقد الإطاري كاملًا. وينبغي تطبيق متطلبات موحّدة للاعتماد وضمان المهام، ونشر بيانات قابلة للمقارنة عن الجداول والتكاليف، والحفاظ على قدرة إطلاق بديلة قبل إسناد المهام.",
-      "source": "NASA",
-      "sourceUrl": "https://www.nasa.gov/news-release/nasa-adds-relativity-spaces-terran-r-to-launch-services-contract/"
     }
   ],
-  "updatedAt": "2026-09-14T21:53:21.000Z"
+  "updatedAt": "2026-09-14T23:12:28.000Z"
 }
