@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "uk-speciality-steel-public-acquisition-2026",
+      "publishedAt": "2026-09-14T16:08:00Z",
+      "categoryEn": "INDUSTRIAL INFRASTRUCTURE + STRATEGIC OWNERSHIP",
+      "categoryAr": "البنية الصناعية والملكية الاستراتيجية",
+      "titleEn": "UK moves toward public acquisition of specialist steelmaker",
+      "titleAr": "بريطانيا تتحرك للاستحواذ العام على مُصنّع فولاذ متخصص",
+      "summaryEn": "The UK government is preparing to acquire Speciality Steel UK after rejecting a proposed private-sector bid as unable to provide a viable long-term outcome. The insolvent manufacturer has supplied automotive, aerospace and defence industries, operates sites in northern and central England and supports more than 1,300 jobs. Any purchase remains subject to due diligence and would use existing government budgets; no acquisition price was announced.",
+      "summaryAr": "تُعدّ الحكومة البريطانية خطة للاستحواذ على شركة Speciality Steel UK بعدما خلصت إلى أن عرضًا من القطاع الخاص لا يوفر نتيجة قابلة للاستمرار على المدى الطويل. وقد زوّد المُصنّع المتعثر قطاعات السيارات والطيران والدفاع، ويدير مواقع في شمال ووسط إنجلترا ويدعم أكثر من 1,300 وظيفة. ويظل أي شراء خاضعًا للفحص النافي للجهالة وسيُموَّل من الموازنات الحكومية القائمة، من دون إعلان قيمة للاستحواذ.",
+      "takeEn": "Government implication: public acquisition is being used as a bridge to preserve strategic industrial capacity when private capital will not absorb legacy risk. Governments considering similar interventions should define the capability being protected, publish due-diligence and value-for-money tests, set an operating and investment mandate, and establish measurable conditions for restructuring, partnership or eventual exit.",
+      "takeAr": "الدلالة للحكومات: يُستخدم الاستحواذ العام هنا كجسر لحماية قدرة صناعية استراتيجية عندما لا يقبل رأس المال الخاص تحمّل المخاطر المتراكمة. وعلى الحكومات التي تدرس تدخلًا مماثلًا تحديد القدرة المراد حمايتها، ونشر اختبارات الفحص والقيمة مقابل المال، ووضع تفويض واضح للتشغيل والاستثمار، وتحديد شروط قابلة للقياس لإعادة الهيكلة أو الشراكة أو الخروج لاحقًا.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/uk-government-seeks-acquire-insolvent-specialist-steelmaker-2026-09-14/"
+    },
+    {
       "id": "us-epa-power-plant-carbon-limits-repeal-2026",
       "publishedAt": "2026-09-14T14:38:00Z",
       "categoryEn": "CLIMATE + POWER SECTOR REGULATION",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يمكن للطائرات المسيّرة أن تشكل طبقة عملية بين القوافل البرية والمروحيات المحدودة عندما تقطع الكوارث الوصول إلى الميل الأخير. وينبغي اعتماد ممرات طيران طارئة مسبقًا، وتدريب المشغلين، وتخزين حزم شحن معيارية، وربط مهام المسيّرات بمنظومة لوجستيات الدفاع المدني قبل الأزمة التالية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/asia-pacific/nepal-turns-drones-deliver-flood-relief-2026-09-09/"
-    },
-    {
-      "id": "sweden-future-manned-unmanned-combat-aircraft-2026",
-      "publishedAt": "2026-09-09T13:18:00Z",
-      "categoryEn": "AUTONOMOUS SYSTEMS + AEROSPACE",
-      "categoryAr": "الأنظمة الذاتية والطيران",
-      "titleEn": "Sweden funds a common technology path for future crewed and uncrewed combat aircraft",
-      "titleAr": "السويد تموّل مسارًا تقنيًا مشتركًا لطائرات قتالية مستقبلية مأهولة وغير مأهولة",
-      "summaryEn": "Sweden ordered roughly SEK 2.9 billion of continued work from Saab on technologies for future crewed and uncrewed combat aircraft. The contract runs from 2026 through 2028, with options extending to 2030, moving Sweden’s future-air-combat effort from concept exploration into a funded development programme.",
-      "summaryAr": "طلبت السويد من شركة ساب مواصلة تطوير تقنيات لطائرات قتالية مستقبلية مأهولة وغير مأهولة بقيمة تقارب 2.9 مليار كرونة سويدية. ويمتد العقد من 2026 إلى 2028 مع خيارات للتمديد حتى 2030، بما ينقل مسار القتال الجوي المستقبلي من استكشاف المفاهيم إلى برنامج تطوير ممول.",
-      "takeEn": "Government implication: treating crewed and autonomous aircraft as one technology portfolio can preserve strategic options while doctrine and threat conditions evolve. Governments should pair phased funding with open interfaces, explicit human-control requirements, test evidence and decision gates before selecting a final force design.",
-      "takeAr": "الدلالة للحكومات: يتيح التعامل مع الطائرات المأهولة والذاتية كمحفظة تقنية واحدة الحفاظ على الخيارات الاستراتيجية مع تطور العقيدة والتهديدات. وينبغي ربط التمويل المرحلي بواجهات مفتوحة، ومتطلبات صريحة للتحكم البشري، وأدلة اختبار، ونقاط قرار قبل اعتماد تصميم نهائي للقوة.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/saab-wins-303-million-order-sweden-work-future-combat-aircraft-2026-09-09/"
     }
   ],
-  "updatedAt": "2026-09-14T15:04:08.664Z"
+  "updatedAt": "2026-09-14T16:39:11.859Z"
 }
