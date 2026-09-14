@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-senate-ai-duty-care-government-audits-2026",
+      "publishedAt": "2026-09-14T17:08:00Z",
+      "categoryEn": "AI + GOVERNMENT OVERSIGHT",
+      "categoryAr": "الذكاء الاصطناعي والرقابة الحكومية",
+      "titleEn": "US senators weigh an AI duty of care backed by government audits",
+      "titleAr": "مجلس الشيوخ الأميركي يدرس واجب عناية للذكاء الاصطناعي تدعمه اختبارات حكومية",
+      "summaryEn": "U.S. Senate negotiators are discussing legislation that would require AI developers to show they are taking reasonable precautions against harm. The proposal could authorize the commerce secretary to request evidence and deploy government auditors to test companies’ systems; negotiators are also considering a federal-court process for blocking model releases deemed unsafe. Key standards and the balance between federal and state powers remain unresolved, and President Donald Trump has argued that existing authorities are sufficient.",
+      "summaryAr": "يناقش مفاوضون في مجلس الشيوخ الأميركي تشريعًا يلزم مطوري الذكاء الاصطناعي بإثبات اتخاذ احتياطات معقولة للحد من الضرر. وقد يمنح المقترح وزير التجارة صلاحية طلب الأدلة وإرسال مدققين حكوميين لاختبار أنظمة الشركات، مع بحث مسار قضائي اتحادي لمنع طرح نماذج تُعد غير آمنة. ولا تزال المعايير وتوزيع الصلاحيات بين الحكومة الاتحادية والولايات دون حسم، بينما يرى الرئيس دونالد ترامب أن السلطات القائمة كافية.",
+      "takeEn": "Government implication: frontier-AI oversight is moving toward an auditable duty of care and direct public testing, but enforceability will depend on precise risk thresholds and institutional roles. Legislators should define required evidence, auditor access, intervention and appeal procedures, and federal-state boundaries before assigning agencies powers that could delay model releases.",
+      "takeAr": "الدلالة للحكومات: تتجه رقابة الذكاء الاصطناعي المتقدم نحو واجب عناية قابل للتدقيق واختبارات عامة مباشرة، لكن قابلية الإنفاذ ستعتمد على دقة عتبات المخاطر وتوزيع الأدوار المؤسسية. ينبغي للمشرعين تحديد الأدلة المطلوبة، وصلاحيات وصول المدققين، وإجراءات التدخل والطعن، وحدود الاختصاص الاتحادي واختصاص الولايات قبل منح الجهات سلطات قد تؤخر طرح النماذج.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/us-senators-weigh-requiring-ai-giants-commit-preventing-catastrophe-2026-09-14/"
+    },
+    {
       "id": "rwanda-us-tungsten-venture-traceable-supply-2026",
       "publishedAt": "2026-09-14T16:27:00Z",
       "categoryEn": "CRITICAL MINERALS + INDUSTRIAL POLICY",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: توسّع الطائرات المسيّرة بعيدة المدى نطاق مخاطر البنية التحتية الحيوية إلى مناطق بعيدة عن خطوط المواجهة التقليدية. وينبغي اعتبار مراكز الطاقة النائية جزءًا من سطح التهديد الفعلي، ودمج الرصد متعدد الطبقات، وتحصين المواقع، والتكرار التشغيلي، واحتياطيات الإصلاح، وقيادة الحوادث المشتركة بين الجهات ضمن خطة مرونة واحدة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/drones-hit-russias-gas-hinterland-northern-siberia-first-time-2026-09-09/"
-    },
-    {
-      "id": "portugal-ren-strategic-grid-stake-2026",
-      "publishedAt": "2026-09-09T15:41:00Z",
-      "categoryEn": "ENERGY + INFRASTRUCTURE GOVERNANCE",
-      "categoryAr": "الطاقة وحوكمة البنية التحتية",
-      "titleEn": "Portugal returns to strategic ownership of its power and gas grid operator",
-      "titleAr": "البرتغال تعود إلى الملكية الاستراتيجية لمشغّل شبكات الكهرباء والغاز",
-      "summaryEn": "Portugal’s government said it agreed to acquire a 13.7% stake in REN, the operator of the country’s electricity and gas transmission networks and gas-storage infrastructure, returning to the company 12 years after exiting. The government linked the move to sovereignty and national-security concerns amid geopolitical uncertainty, and to gaining greater influence over grid investments needed to connect new solar and wind projects.",
-      "summaryAr": "أعلنت الحكومة البرتغالية موافقتها على الاستحواذ على حصة قدرها 13.7% في شركة REN، المشغلة لشبكات نقل الكهرباء والغاز وبنية تخزين الغاز في البلاد، لتعود إلى ملكية الشركة بعد خروجها منها قبل 12 عامًا. وربطت الحكومة الخطوة باعتبارات السيادة والأمن القومي في ظل عدم اليقين الجيوسياسي، وبزيادة قدرتها على التأثير في استثمارات الشبكة اللازمة لربط مشروعات جديدة للطاقة الشمسية وطاقة الرياح.",
-      "takeEn": "Government implication: minority ownership can become a strategic-infrastructure governance tool, but its value depends on clear rights, investment mandates and public accountability. Governments considering a similar intervention should define national-security thresholds, competition safeguards, fiscal exposure and measurable milestones for new grid capacity and connection times.",
-      "takeAr": "الدلالة للحكومات: يمكن للملكية الجزئية أن تصبح أداة لحوكمة البنية التحتية الاستراتيجية، لكن قيمتها تعتمد على وضوح الحقوق وتفويض الاستثمار والمساءلة العامة. وينبغي للحكومات التي تدرس تدخلًا مشابهًا أن تحدد عتبات الأمن القومي وضمانات المنافسة والتعرّض المالي ومراحل قابلة للقياس لزيادة سعة الشبكة وتسريع التوصيلات.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/portugal-buys-into-power-gas-operator-ren-safeguard-strategic-assets-influence-2026-09-09/"
     }
   ],
-  "updatedAt": "2026-09-14T17:07:09.883Z"
+  "updatedAt": "2026-09-14T18:01:37.812Z"
 }
