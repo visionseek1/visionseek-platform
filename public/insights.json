@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "eu-truck-co2-target-delay-charging-grid-gap-2026",
+      "publishedAt": "2026-09-14T12:15:00Z",
+      "categoryEn": "CLIMATE + TRANSPORT INFRASTRUCTURE",
+      "categoryAr": "المناخ والبنية التحتية للنقل",
+      "titleEn": "European truckmakers seek three-year delay to 2030 CO2 target over charging gaps",
+      "titleAr": "صانعو الشاحنات الأوروبيون يطلبون تأجيل هدف انبعاثات 2030 بسبب فجوات الشحن",
+      "summaryEn": "CEOs of Europe’s seven leading truck and bus manufacturers asked the EU to delay compliance with its 2030 heavy-duty vehicle CO2 target by three years. Current rules require a 43% emissions reduction from 2025 levels by 2030, while zero-emission models account for only 2.4% of new heavy-duty vehicle sales. The manufacturers cited insufficient charging networks, slow grid connections and high energy costs, and called for infrastructure investment and stronger demand incentives.",
+      "summaryAr": "طلب رؤساء أكبر سبع شركات أوروبية لتصنيع الشاحنات والحافلات من الاتحاد الأوروبي تأجيل الامتثال لهدف خفض انبعاثات المركبات الثقيلة لعام 2030 ثلاث سنوات. وتفرض القواعد الحالية خفض الانبعاثات 43% مقارنة بمستويات 2025، بينما لا تمثل المركبات الثقيلة عديمة الانبعاثات سوى 2.4% من المبيعات الجديدة. وعزت الشركات الفجوة إلى قصور شبكات الشحن وبطء الربط الكهربائي وارتفاع تكاليف الطاقة، ودعت إلى الاستثمار في البنية التحتية وتحفيز الطلب.",
+      "takeEn": "Government implication: climate mandates are outrunning the infrastructure and economics needed for compliance. EU policymakers should link any regulatory flexibility to measurable milestones for charging deployment, grid-connection times, road-toll reform and reinvestment of emissions-trading revenue, so a delay buys implementation capacity rather than weakening the transition.",
+      "takeAr": "الدلالة للحكومات: تتقدم الالتزامات المناخية أسرع من البنية التحتية والجدوى الاقتصادية اللازمة للامتثال. ينبغي لصُنّاع السياسة الأوروبيين ربط أي مرونة تنظيمية بمؤشرات قابلة للقياس لنشر الشواحن وتقليص زمن ربط الشبكات وإصلاح رسوم الطرق وإعادة استثمار عائدات تداول الانبعاثات، حتى يتحول التأجيل إلى قدرة تنفيذية لا إلى إضعاف للتحول.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/autos-transportation/eu-truckmakers-seek-3-year-delay-2030-co2-targets-2026-09-14/"
+    },
+    {
       "id": "us-grain-rail-fuel-surcharge-record-2026",
       "publishedAt": "2026-09-14T10:10:00Z",
       "categoryEn": "AGRICULTURE + TRANSPORT INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: لم يعد ممكنًا حوكمة الذكاء الاصطناعي والأنظمة الذاتية والعمليات السيبرانية والقيادة النووية والفضاء التجاري في مسارات منفصلة. ينبغي وضع حدود تصعيد مشتركة، ونقاط قرار بشرية صريحة، والتزامات للمشغلين من القطاع الخاص، وبروتوكولات موحدة للحوادث بين الجهات قبل أن تتداخل هذه الأنظمة تشغيليًا.",
       "source": "Republic of Korea Ministry of Foreign Affairs",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780886"
-    },
-    {
-      "id": "korea-aidc-special-act-implementing-rules-consultation-2026",
-      "publishedAt": "2026-09-09T05:00:00Z",
-      "categoryEn": "AI + DIGITAL INFRASTRUCTURE",
-      "categoryAr": "الذكاء الاصطناعي والبنية التحتية الرقمية",
-      "titleEn": "Korea opens implementing rules for its AI data-center law to public consultation",
-      "titleAr": "كوريا تفتح اللوائح التنفيذية لقانون مراكز بيانات الذكاء الاصطناعي للمشاورة العامة",
-      "summaryEn": "South Korea’s Ministry of Science and ICT held a public forum on September 9 to present draft subordinate rules for the AI Data Center Special Act before formal legislative notice. The session combined expert presentations, panel discussion and open comments, with the ministry saying stakeholder feedback will be reflected in the enforcement decree.",
-      "summaryAr": "عقدت وزارة العلوم وتكنولوجيا المعلومات والاتصالات الكورية في 9 سبتمبر منتدى عامًا لعرض مسودة اللوائح التابعة لقانون مراكز بيانات الذكاء الاصطناعي قبل بدء الإخطار التشريعي الرسمي. وجمعت الجلسة عروضًا متخصصة ونقاشًا جماعيًا وتعليقات مفتوحة، وأكدت الوزارة أن ملاحظات أصحاب المصلحة ستنعكس في المرسوم التنفيذي.",
-      "takeEn": "Government implication: secondary rules are where AI-infrastructure strategy becomes an executable permitting and investment system. Governments should align data-center eligibility, land use, grid access, safety, reporting and incentives to one implementation timetable, then publish decision criteria early enough for agencies and investors to plan against them.",
-      "takeAr": "الدلالة للحكومات: اللوائح الثانوية هي المرحلة التي تتحول فيها استراتيجية البنية التحتية للذكاء الاصطناعي إلى نظام قابل للتنفيذ للتراخيص والاستثمار. وينبغي مواءمة أهلية المراكز واستخدام الأراضي والوصول إلى الشبكة والسلامة والإبلاغ والحوافز ضمن جدول تنفيذ واحد، مع نشر معايير القرار مبكرًا لتخطيط الجهات والمستثمرين.",
-      "source": "Republic of Korea Ministry of Science and ICT",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780865"
     }
   ],
-  "updatedAt": "2026-09-14T11:03:24.257Z"
+  "updatedAt": "2026-09-14T12:55:10.644Z"
 }
