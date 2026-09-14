@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "korea-oil-contingency-rerouting-stock-swap-2026",
+      "publishedAt": "2026-09-14T06:37:00Z",
+      "categoryEn": "ENERGY + SUPPLY INFRASTRUCTURE",
+      "categoryAr": "الطاقة وبنية الإمداد التحتية",
+      "titleEn": "Korea activates public-private oil contingency measures as regional routes tighten",
+      "titleAr": "كوريا تفعّل إجراءات طوارئ مشتركة للنفط مع تصاعد مخاطر مسارات الإمداد",
+      "summaryEn": "South Korea’s Ministry of Trade, Industry and Energy convened an emergency oil-supply review after rising risks around the Strait of Hormuz, the Red Sea and Saudi Arabia’s East–West pipeline. Industry participants reported that July–August crude imports exceeded the previous year’s level and that more than 90% of the comparable September–October volume had been secured. The government will track tanker movements and the Saudi pipeline restart, support rerouting through alternatives such as the Suez Canal, use its oil-stock swap programme and expand freight-cost support for diversified supplies.",
+      "summaryAr": "عقدت وزارة التجارة والصناعة والطاقة الكورية اجتماعًا طارئًا لمراجعة إمدادات النفط بعد تصاعد المخاطر حول مضيق هرمز والبحر الأحمر وخط الأنابيب السعودي شرق–غرب. وأفاد ممثلو القطاع بأن واردات يوليو وأغسطس تجاوزت مستوى العام السابق، وأن أكثر من 90% من الحجم المقارن لشهري سبتمبر وأكتوبر قد جرى تأمينه. وستتابع الحكومة حركة الناقلات واستئناف الخط السعودي، وتدعم التحويل إلى مسارات بديلة مثل قناة السويس، وتستخدم برنامج مبادلة المخزون النفطي، وتوسّع دعم فروق تكاليف الشحن لتنويع الإمدادات.",
+      "takeEn": "Government implication: energy resilience becomes executable when inventory coverage, vessel tracking, route switching and financial support operate through one trigger-based response plan. Governments should predefine escalation thresholds for stock swaps and freight assistance, verify alternate-route capacity with industry, and publish a common operating picture before disruptions reach domestic markets.",
+      "takeAr": "الدلالة للحكومات: تصبح مرونة الطاقة قابلة للتنفيذ عندما تعمل تغطية المخزون وتتبع الناقلات وتحويل المسارات والدعم المالي ضمن خطة استجابة واحدة قائمة على محفزات واضحة. ينبغي تحديد عتبات مسبقة لتفعيل مبادلة المخزون ودعم الشحن، والتحقق مع القطاع من قدرة المسارات البديلة، ونشر صورة تشغيلية مشتركة قبل وصول الاضطراب إلى السوق المحلية.",
+      "source": "Republic of Korea Ministry of Trade, Industry and Energy",
+      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971842"
+    },
+    {
       "id": "korea-smart-village-provincial-council-ai-iot-scaling-2026",
       "publishedAt": "2026-09-14T05:00:00Z",
       "categoryEn": "AI + REGIONAL INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: clean-energy targets increasingly depend on delivery governance, not technology availability alone. A single empowered coordinator, shared approval milestones and adequately staffed connection processes can turn policy ambition into an investable infrastructure pipeline while preserving community benefit-sharing.",
       "titleAr": "هيئة المناخ الأسترالية تدعو إلى منسق وطني لإزالة عوائق مشروعات الطاقة والشبكة",
       "titleEn": "Australia’s climate authority calls for an Energy Transition Coordinator to unblock grid projects"
-    },
-    {
-      "categoryAr": "الأنظمة الذاتية والأمن البحري",
-      "categoryEn": "AUTONOMOUS SYSTEMS + MARITIME SECURITY",
-      "id": "iran-us-autonomous-underwater-drone-hormuz-2026",
-      "publishedAt": "2026-09-08T22:31:00Z",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/middle-east/iran-says-it-captured-us-submarine-drone-strait-hormuz-2026-09-08/",
-      "summaryAr": "قال الحرس الثوري الإيراني إنه استولى على غواصة أمريكية غير مأهولة قرب مدخل مضيق هرمز، بينما أفاد البنتاغون بأن المسيّرة تحت الماء تعطلت أثناء مسح للمياه الإقليمية قبل أكثر من يوم. ولم تتمكن رويترز من التحقق مستقلًا من الرواية الإيرانية. وحددت وسائل إعلام إيرانية المركبة باعتبارها منصة ذاتية كبيرة مصممة لمهام قد تشمل مكافحة الألغام ورسم خرائط قاع البحر وجمع المعلومات وفحص الكابلات وخطوط الأنابيب.",
-      "summaryEn": "Iran’s Revolutionary Guards said they captured a U.S. uncrewed submarine near the entrance to the Strait of Hormuz, while the Pentagon said the underwater drone had malfunctioned during a regional survey more than a day earlier. Reuters could not independently verify Iran’s account. Iranian media identified the vehicle as a large autonomous platform designed for missions that can include mine countermeasures, seabed mapping, intelligence gathering, and inspection of cables and pipelines.",
-      "takeAr": "الدلالة للحكومات: تحتاج أساطيل الأنظمة البحرية الذاتية إلى حوكمة لحالات التعطل والاستيلاء، لا إلى تقييم أداء المهمة فقط. ينبغي جمع إجراءات فقدان الاتصال وتقليل البيانات وخطط استعادة الأصول ومعايير الإسناد وقواعد التصعيد وحماية البنية التحتية البحرية ضمن إطار واحد للضمان التشغيلي.",
-      "takeEn": "Government implication: autonomous maritime fleets need governance for failure and capture, not only mission performance. Governments should connect communications-loss procedures, data minimization, asset-recovery plans, attribution standards, escalation rules, and protection of subsea infrastructure in one operational assurance framework.",
-      "titleAr": "حادثة مسيّرة تحت الماء في مضيق هرمز تكشف مخاطر الأنظمة الذاتية",
-      "titleEn": "Underwater drone incident in the Strait of Hormuz exposes autonomous-system risks"
     }
   ],
-  "updatedAt": "2026-09-14T05:07:31.487Z"
+  "updatedAt": "2026-09-14T07:00:02.652Z"
 }
