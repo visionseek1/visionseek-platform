@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "canada-private-airport-concessions-2026",
+      "publishedAt": "2026-09-15T13:23:00Z",
+      "categoryEn": "INFRASTRUCTURE + PUBLIC ASSET GOVERNANCE",
+      "categoryAr": "البنية التحتية وحوكمة الأصول العامة",
+      "titleEn": "Canada seeks private capital for long-term concessions at its four largest airports",
+      "titleAr": "كندا تستهدف رأس المال الخاص عبر امتيازات طويلة الأجل لأكبر أربعة مطارات",
+      "summaryEn": "Canada will seek private investment through long-term concessions to operate its four largest airports—Toronto, Montreal, Calgary and Vancouver—while retaining public ownership of the underlying land and assets. Prime Minister Mark Carney presented the model as a way to bring new capital and operational expertise into airport growth. Labour groups oppose privatization, warning that it could raise costs for travellers.",
+      "summaryAr": "ستسعى كندا لجذب استثمار خاص عبر امتيازات طويلة الأجل لتشغيل أكبر أربعة مطارات في تورونتو ومونتريال وكالغاري وفانكوفر، مع إبقاء ملكية الأراضي والأصول الأساسية للدولة. وقدّم رئيس الوزراء مارك كارني النموذج بوصفه وسيلة لجلب رأس مال وخبرة تشغيلية جديدين إلى توسع المطارات. وتعارض مجموعات عمالية الخصخصة محذرة من احتمال ارتفاع تكاليف المسافرين.",
+      "takeEn": "Government implication: retaining ownership does not by itself protect public value. Canada should make capital commitments, service and resilience standards, fee protections, competition rules, workforce obligations, open-book audit rights and termination triggers explicit before awarding concessions; other governments considering airport partnerships should use the same safeguards.",
+      "takeAr": "الدلالة للحكومات: الاحتفاظ بالملكية لا يحمي القيمة العامة بمفرده. ينبغي لكندا أن تحدد قبل منح الامتيازات التزامات الاستثمار، ومعايير الخدمة والمرونة، وضوابط الرسوم والمنافسة، والتزامات القوى العاملة، وحقوق التدقيق المفتوح، وشروط الإنهاء؛ وعلى الحكومات الأخرى التي تدرس شراكات المطارات اعتماد الضمانات نفسها.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/canada-seek-private-investment-major-airports-says-carney-2026-09-15/"
+    },
+    {
       "id": "drc-us-critical-minerals-task-force-implementation-2026",
       "publishedAt": "2026-09-15T12:27:00Z",
       "categoryEn": "CRITICAL MINERALS + GOVERNMENT DELIVERY",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تستطيع شبكات الأقمار الصناعية التجارية إضافة قدرة مرنة بسرعة، لكن التركّز لدى مورّد أجنبي واحد يخلق مخاطر استراتيجية وتعاقدية واستمرارية. وينبغي رسم تبعيات المهام، وفرض ضمانات الوصول والتسعير، واختبار التحويل إلى الشبكات السيادية والحليفة، والحفاظ على بدائل المشتريات قبل انحصار الحركة التشغيلية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/media-telecom/uk-deepens-reliance-musks-spacex-spending-nearly-40-million-satellite-services-2026-09-10/"
-    },
-    {
-      "id": "korea-mongolia-digital-address-infrastructure-2026",
-      "publishedAt": "2026-09-10T09:00:00Z",
-      "categoryEn": "DIGITAL INFRASTRUCTURE + PUBLIC ADMINISTRATION",
-      "categoryAr": "البنية التحتية الرقمية والإدارة العامة",
-      "titleEn": "Korea exports its digital addressing model to Mongolia’s ger districts",
-      "titleAr": "كوريا تنقل نموذج العناوين الرقمية إلى أحياء الخيام في منغوليا",
-      "summaryEn": "South Korea’s Ministry of the Interior and Safety launched the first overseas deployment of its address-system model through a 2026–2029 modernization programme in Mongolia. The project combines legal and institutional reform, address-data digitization, joint-use arrangements and civil-servant training, with Korean-style street and building signs being installed in Chingeltei’s ger area; Korea also plans to extend address cooperation to five countries in Africa and Central Asia.",
-      "summaryAr": "أطلقت وزارة الداخلية والسلامة في كوريا الجنوبية أول تطبيق خارجي لنموذجها في أنظمة العناوين ضمن برنامج لتحديث العناوين في منغوليا بين 2026 و2029. ويجمع المشروع إصلاح الأطر القانونية والمؤسسية، ورقمنة بيانات العناوين، وترتيبات الاستخدام المشترك، وتدريب الموظفين، مع تركيب لوحات طرق وأرقام مبانٍ بالنمط الكوري في منطقة الخيام بتشينغيلتي؛ كما تخطط كوريا لتوسيع التعاون إلى خمس دول في أفريقيا وآسيا الوسطى.",
-      "takeEn": "Government implication: address data is foundational digital public infrastructure for emergency response, logistics and service delivery. Governments should make standards, legal reform, local data stewardship, interoperability and measurable service outcomes part of the implementation contract so a pilot can scale sustainably.",
-      "takeAr": "الدلالة للحكومات: بيانات العناوين بنية تحتية رقمية عامة أساسية للاستجابة للطوارئ واللوجستيات وتقديم الخدمات. وينبغي إدراج المعايير والإصلاح القانوني والإشراف المحلي على البيانات والتشغيل البيني ونتائج الخدمة القابلة للقياس في عقد التنفيذ كي يتوسع المشروع التجريبي بصورة مستدامة.",
-      "source": "Republic of Korea Ministry of the Interior and Safety",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781211&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
     }
   ],
-  "updatedAt": "2026-09-15T13:25:40.000Z"
+  "updatedAt": "2026-09-15T13:59:51.000Z"
 }
