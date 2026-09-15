@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "spain-first-ai-agent-data-breach-notification-2026",
+      "publishedAt": "2026-09-15T20:25:00Z",
+      "categoryEn": "AI AGENTS + CYBERSECURITY GOVERNANCE",
+      "categoryAr": "وكلاء الذكاء الاصطناعي وحوكمة الأمن السيبراني",
+      "titleEn": "Spain records first reported data breach allegedly executed by an AI agent",
+      "titleAr": "إسبانيا تسجل أول إخطار بخرق بيانات يُشتبه في تنفيذه بواسطة وكيل ذكاء اصطناعي",
+      "summaryEn": "Spain’s data protection authority said it received its first notification of a personal-data breach allegedly carried out by an AI agent. According to the affected organisation’s report, the agent used a widely known large language model to identify a vulnerability, access a system, alter personal information and view invoices with limited human intervention. The case remains under review, and the authority said one notification is not enough to establish a wider trend.",
+      "summaryAr": "قالت هيئة حماية البيانات الإسبانية إنها تلقت أول إخطار لديها بخرق للبيانات الشخصية يُشتبه في أن وكيل ذكاء اصطناعي نفذه. ووفقًا لبلاغ المؤسسة المتضررة، استخدم الوكيل نموذجًا لغويًا كبيرًا معروفًا لتحديد ثغرة ودخول نظام وتعديل معلومات شخصية والاطلاع على فواتير بتدخل بشري محدود. ولا تزال الواقعة قيد المراجعة، وأكدت الهيئة أن إخطارًا واحدًا لا يكفي لإثبات اتجاه أوسع.",
+      "takeEn": "Government implication: breach-reporting and incident-response rules now need agent-specific evidence and faster containment assumptions. Regulators should require organisations to preserve agent actions, tool calls, credentials and access logs; segment autonomous-system permissions; test rapid revocation; and clarify the duties of controllers, processors and model providers without presuming that use of a model means its provider or infrastructure was compromised.",
+      "takeAr": "الدلالة للحكومات: تحتاج قواعد الإبلاغ عن الخروقات والاستجابة للحوادث الآن إلى أدلة خاصة بالوكلاء وافتراضات أسرع للاحتواء. ينبغي للجهات التنظيمية إلزام المؤسسات بحفظ سجل أفعال الوكيل واستدعاءات الأدوات وبيانات الاعتماد والوصول، وتقسيم صلاحيات الأنظمة الذاتية، واختبار الإلغاء السريع، وتوضيح مسؤوليات المتحكمين والمعالجين ومزودي النماذج من دون افتراض أن استخدام نموذج يعني اختراق مزوده أو بنيته التحتية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/spanish-data-watchdog-publicises-first-ai-agent-linked-data-breach-report-2026-09-15/"
+    },
+    {
       "id": "us-nrc-rule-overhaul-2027-reactor-licensing-2026",
       "publishedAt": "2026-09-15T20:01:00Z",
       "categoryEn": "NUCLEAR ENERGY + REGULATORY GOVERNANCE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يمكن بناء قدرات الذكاء الاصطناعي الحكومية بواسطة موظفي المجال أنفسهم، بشرط أن يجري التطوير داخل بيئة محكومة. وينبغي الجمع بين التطوير بقيادة الموظفين وروابط بيانات معتمدة، وصلاحيات حسب الدور، ومراجعة النماذج والشيفرات، وسجلات تدقيق، واعتماد بشري للمخرجات المؤثرة، ومؤشرات قابلة للقياس للخدمة والحوادث قبل التوسع.",
       "source": "Republic of Korea Public Procurement Service",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781295&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
-    },
-    {
-      "id": "korea-gepa-green-economy-trade-rules-2026",
-      "publishedAt": "2026-09-11T01:00:00Z",
-      "categoryEn": "CLIMATE + TRADE GOVERNANCE",
-      "categoryAr": "المناخ وحوكمة التجارة",
-      "titleEn": "Korea joins plurilateral talks to shape green-economy trade rules",
-      "titleAr": "كوريا تنضم إلى مفاوضات لصياغة قواعد التجارة في الاقتصاد الأخضر",
-      "summaryEn": "South Korea’s Ministry of Trade formally joined Green Economy Partnership Agreement negotiations with Singapore, New Zealand and Chile. The proposed pact seeks rules that keep climate measures from becoming unnecessary trade barriers while expanding green trade and investment; Korea intends to use the talks to strengthen its response to measures such as the EU carbon border mechanism and reflect the interests of industries including low-emission steel.",
-      "summaryAr": "أعلنت وزارة التجارة في كوريا الجنوبية رسميًا الانضمام إلى مفاوضات اتفاقية شراكة الاقتصاد الأخضر مع سنغافورة ونيوزيلندا وتشيلي. وتهدف الاتفاقية المقترحة إلى وضع قواعد تمنع تحوّل تدابير المناخ إلى حواجز تجارية غير ضرورية مع توسيع التجارة والاستثمار الأخضرين؛ وتسعى كوريا عبر المفاوضات إلى تعزيز استجابتها لتدابير مثل آلية تعديل حدود الكربون الأوروبية وإدراج مصالح صناعات منها الصلب منخفض الانبعاثات.",
-      "takeEn": "Government implication: climate policy is moving directly into trade-rule design. Governments should align trade, climate and industry agencies before negotiations; build credible product-emissions data; and translate emerging rules into customs procedures, exporter support and investment criteria early enough to protect market access.",
-      "takeAr": "الدلالة للحكومات: تنتقل سياسة المناخ مباشرة إلى تصميم قواعد التجارة. وينبغي مواءمة جهات التجارة والمناخ والصناعة قبل التفاوض، وبناء بيانات موثوقة لانبعاثات المنتجات، وتحويل القواعد الناشئة مبكرًا إلى إجراءات جمركية ودعم للمصدّرين ومعايير للاستثمار لحماية النفاذ إلى الأسواق.",
-      "source": "Republic of Korea Ministry of Trade",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781281&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
     }
   ],
-  "updatedAt": "2026-09-15T20:10:14.000Z"
+  "updatedAt": "2026-09-15T21:19:06.000Z"
 }
