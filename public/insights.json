@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "russia-us-orbital-arms-un-space-stability-2026",
+      "publishedAt": "2026-09-15T17:38:00Z",
+      "categoryEn": "SPACE SECURITY + STRATEGIC STABILITY",
+      "categoryAr": "أمن الفضاء والاستقرار الاستراتيجي",
+      "titleEn": "Russia answers US orbital-weapons disclosure with a UN diplomatic push",
+      "titleAr": "روسيا ترد على كشف الأسلحة المدارية الأميركية بتحرك دبلوماسي في الأمم المتحدة",
+      "summaryEn": "Russia’s Foreign Ministry said the US acknowledgement of weapons operating in orbit threatens the long-term stability of space activity and could endanger Earth-based services that depend on satellites. Moscow said it will co-sponsor resolutions at the UN General Assembly next month on preventing the deployment of space-based weapons and improving transparency in space operations. The response turns the US disclosure into an immediate contest over international space-security norms.",
+      "summaryAr": "قالت وزارة الخارجية الروسية إن الاعتراف الأميركي بوجود أسلحة تعمل في المدار يهدد الاستقرار طويل الأجل للأنشطة الفضائية وقد يعرض الخدمات الأرضية المعتمدة على الأقمار الصناعية للخطر. وأعلنت موسكو أنها ستشارك في تقديم قرارات إلى الجمعية العامة للأمم المتحدة الشهر المقبل لمنع نشر أسلحة في الفضاء وتعزيز شفافية العمليات الفضائية. وينقل الرد الكشف الأميركي مباشرة إلى ساحة التنافس على قواعد الأمن الفضائي الدولية.",
+      "takeEn": "Government implication: space-security planning must now connect diplomacy with operational resilience. Governments should define negotiating positions before the UN debate, map civilian and critical-infrastructure dependence on vulnerable satellites, strengthen redundancy and recovery arrangements, and establish crisis-communication rules that reduce misinterpretation of defensive, dual-use and hostile orbital activity.",
+      "takeAr": "الدلالة للحكومات: يجب أن يربط التخطيط لأمن الفضاء بين الدبلوماسية والمرونة التشغيلية. ينبغي للحكومات تحديد مواقفها التفاوضية قبل نقاش الأمم المتحدة، وحصر اعتماد الخدمات المدنية والبنية التحتية الحيوية على الأقمار المعرضة للخطر، وتعزيز بدائل التشغيل والتعافي، ووضع قواعد اتصال للأزمات تقلل سوء تفسير الأنشطة المدارية الدفاعية ومزدوجة الاستخدام والمعادية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/russia-says-us-acknowledgement-orbital-arms-ignores-space-conflict-consequences-2026-09-15/"
+    },
+    {
       "id": "us-saudi-east-west-pipeline-restart-days-2026",
       "publishedAt": "2026-09-15T16:04:55Z",
       "categoryEn": "ENERGY SECURITY + CRITICAL INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينتقل تنظيم التنقل الذاتي من التجارب العامة إلى ترخيص تشغيلي مرحلي. وينبغي ربط كل تصريح بمسارات معتمدة، وأدلة سلامة، ومساءلة مشغل الأسطول، والإبلاغ عن الحوادث، وإتاحة البيانات، وحدود واضحة للانتقال أو الإيقاف قبل بدء الخدمة التجارية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/china/spain-issues-permit-allow-autonomous-vehicle-testing-uber-says-2026-09-10/"
-    },
-    {
-      "id": "us-tesla-driver-monitoring-autopilot-safety-oversight-2026",
-      "publishedAt": "2026-09-10T16:49:41Z",
-      "categoryEn": "AUTONOMOUS SYSTEMS + SAFETY",
-      "categoryAr": "الأنظمة الذاتية والسلامة",
-      "titleEn": "US scrutiny shifts automated-driving safety toward misuse-resistant driver monitoring",
-      "titleAr": "الرقابة الأميركية تدفع سلامة القيادة الآلية نحو مراقبة سائق مقاومة للتحايل",
-      "summaryEn": "A US lawmaker asked the National Highway Traffic Safety Administration to act on apparent misuse of Tesla’s Autopilot and Full Self-Driving systems after reports of drivers sleeping or disengaging. The request specifically asks whether safeguards remain effective when cabin cameras are obstructed, visibility is poor, or drivers use clothing and eyewear to interfere with detection; the agency is already investigating Tesla systems in separate safety probes.",
-      "summaryAr": "طلب مشرّع أميركي من الإدارة الوطنية لسلامة المرور التحرك بشأن إساءة استخدام تبدو ظاهرة لأنظمة «أوتوبايلوت» و«القيادة الذاتية الكاملة» من تسلا بعد تقارير عن نوم سائقين أو انشغالهم عن القيادة. ويركز الطلب على مدى بقاء وسائل الحماية فعالة عند حجب كاميرا المقصورة أو ضعف الرؤية أو استخدام الملابس والنظارات للتشويش على الاكتشاف، فيما تجري الوكالة بالفعل تحقيقات سلامة منفصلة في أنظمة تسلا.",
-      "takeEn": "Government implication: regulating assisted and autonomous driving must cover foreseeable human misuse, not only nominal system performance. Regulators should require independent testing of driver-monitoring systems under obstruction and evasion scenarios, standardized incident evidence, and explicit thresholds for recalls, software restrictions and enforcement.",
-      "takeAr": "الدلالة للحكومات: يجب أن تشمل حوكمة القيادة المساعدة والذاتية سوء الاستخدام البشري المتوقع، لا أداء النظام في الظروف الاسمية فقط. وينبغي للجهات التنظيمية فرض اختبارات مستقلة لمراقبة السائق في سيناريوهات الحجب والتحايل، وتوحيد أدلة الحوادث، ووضع حدود واضحة للاستدعاء وقيود البرمجيات والإنفاذ.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/us/house-democrat-urges-us-action-over-sleeping-tesla-drivers-2026-09-10/"
     }
   ],
-  "updatedAt": "2026-09-15T16:55:25.000Z"
+  "updatedAt": "2026-09-15T18:07:10.000Z"
 }
