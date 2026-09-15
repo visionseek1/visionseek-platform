@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "drc-us-critical-minerals-task-force-implementation-2026",
+      "publishedAt": "2026-09-15T12:27:00Z",
+      "categoryEn": "CRITICAL MINERALS + GOVERNMENT DELIVERY",
+      "categoryAr": "المعادن الحرجة والتنفيذ الحكومي",
+      "titleEn": "DR Congo creates task force to accelerate its US critical-minerals partnership",
+      "titleAr": "الكونغو الديمقراطية تنشئ فريق عمل لتسريع شراكتها مع الولايات المتحدة في المعادن الحرجة",
+      "summaryEn": "The Democratic Republic of Congo approved a dedicated task force to accelerate implementation of its strategic-minerals partnership with the United States. Cabinet minutes say the body is intended to turn partnership commitments into economic and security results, as Kinshasa seeks more Western investment in copper and cobalt and greater diversification beyond Chinese funding. The government has not yet disclosed the task force’s membership or priority-project list.",
+      "summaryAr": "وافقت جمهورية الكونغو الديمقراطية على إنشاء فريق عمل مخصص لتسريع تنفيذ شراكتها مع الولايات المتحدة في المعادن الاستراتيجية. وتوضح محاضر مجلس الوزراء أن الهيئة تهدف إلى تحويل التزامات الشراكة إلى نتائج اقتصادية وأمنية، مع سعي كينشاسا لجذب مزيد من الاستثمار الغربي في النحاس والكوبالت وتنويع التمويل بعيدًا عن الاعتماد الكبير على الصين. ولم تعلن الحكومة بعد تشكيل الفريق أو قائمة مشروعاته ذات الأولوية.",
+      "takeEn": "Government implication: creating an implementation unit is a useful shift from diplomacy to delivery, but credibility now depends on mandate clarity and public evidence. Congo should publish accountable leads, project-selection criteria, local-value and traceability requirements, infrastructure dependencies, milestones and conflict-of-interest controls; partner governments should tie support to those delivery safeguards.",
+      "takeAr": "الدلالة للحكومات: إنشاء وحدة تنفيذ يمثل انتقالًا مفيدًا من الدبلوماسية إلى الإنجاز، لكن المصداقية ستعتمد الآن على وضوح التفويض والأدلة العلنية. ينبغي للكونغو نشر المسؤوليات، ومعايير اختيار المشروعات، ومتطلبات القيمة المحلية والتتبع، واعتماديات البنية التحتية، والمراحل الزمنية، وضوابط تضارب المصالح؛ وعلى الحكومات الشريكة ربط دعمها بهذه الضمانات التنفيذية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/congo-creates-task-force-us-minerals-deal-cabinet-minutes-say-2026-09-15/"
+    },
+    {
       "id": "eu-cbam-emergency-brake-aluminium-coverage-2026",
       "publishedAt": "2026-09-15T11:23:00Z",
       "categoryEn": "CLIMATE + TRADE + INDUSTRIAL POLICY",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: بيانات العناوين بنية تحتية رقمية عامة أساسية للاستجابة للطوارئ واللوجستيات وتقديم الخدمات. وينبغي إدراج المعايير والإصلاح القانوني والإشراف المحلي على البيانات والتشغيل البيني ونتائج الخدمة القابلة للقياس في عقد التنفيذ كي يتوسع المشروع التجريبي بصورة مستدامة.",
       "source": "Republic of Korea Ministry of the Interior and Safety",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781211&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
-    },
-    {
-      "id": "korea-strategic-technology-patent-intelligence-service-2026",
-      "publishedAt": "2026-09-10T06:00:00Z",
-      "categoryEn": "STRATEGIC TECHNOLOGY + INTELLIGENCE",
-      "categoryAr": "التقنيات الاستراتيجية والاستخبارات",
-      "titleEn": "Korea institutionalizes patent intelligence for strategic-technology decisions",
-      "titleAr": "كوريا تؤسس استخبارات براءات دورية لقرارات التقنيات الاستراتيجية",
-      "summaryEn": "South Korea’s Ministry of Intellectual Property will publish a monthly service combining major-country policy and technology developments with patent analysis across ten national strategic-technology domains. The September edition examines topics including AI risk prevention and response, AI and software-defined-vehicle convergence for autonomous driving, integrated communications and sensing, zero-trust security, high-density NAND and next-generation OLED.",
-      "summaryAr": "ستصدر وزارة الملكية الفكرية في كوريا الجنوبية خدمة شهرية تجمع تطورات السياسات والتقنيات في الدول الكبرى مع تحليل البراءات عبر عشرة مجالات وطنية للتقنيات الاستراتيجية. ويبحث إصدار سبتمبر موضوعات تشمل تقنيات منع مخاطر الذكاء الاصطناعي والاستجابة لها، ودمج الذكاء الاصطناعي والمركبات المعرفة بالبرمجيات للقيادة الذاتية، ودمج الاتصالات والاستشعار، والأمن بانعدام الثقة، وذاكرة NAND عالية الكثافة، وشاشات OLED من الجيل التالي.",
-      "takeEn": "Government implication: strategic-technology policy becomes more actionable when horizon scanning and patent evidence feed the same decisions. Governments should connect this intelligence to R&D portfolio reviews, procurement roadmaps, standards priorities and commercialization support, with explicit owners and decision dates.",
-      "takeAr": "الدلالة للحكومات: تصبح سياسة التقنيات الاستراتيجية أكثر قابلية للتنفيذ عندما تغذي متابعة الاتجاهات وأدلة البراءات القرارات نفسها. وينبغي ربط هذه الاستخبارات بمراجعات محافظ البحث والتطوير، وخرائط المشتريات، وأولويات المعايير، ودعم التسويق، مع تحديد المسؤولين ومواعيد القرار.",
-      "source": "Republic of Korea Ministry of Intellectual Property",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781133&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
     }
   ],
-  "updatedAt": "2026-09-15T12:13:25.000Z"
+  "updatedAt": "2026-09-15T13:25:40.000Z"
 }
