@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "spacex-starship-first-orbital-test-starlink-v3-2026",
+      "publishedAt": "2026-09-15T18:49:00Z",
+      "categoryEn": "SPACE + LAUNCH INFRASTRUCTURE",
+      "categoryAr": "الفضاء والبنية التحتية للإطلاق",
+      "titleEn": "SpaceX targets Starship’s first orbital test and initial Starlink V3 deployment",
+      "titleAr": "سبيس إكس تستهدف أول اختبار مداري لـStarship ونشر الدفعة الأولى من Starlink V3",
+      "summaryEn": "SpaceX said it is preparing to launch Starship’s 14th flight test as soon as September 22, pending regulatory approval. The mission would place the vehicle into orbit for the first time, deploy the first batch of Starlink V3 satellites, fly for nearly 10 hours at roughly 275 kilometres altitude and complete about six orbits before a Pacific splashdown. It would also test booster launch, separation, return and splashdown procedures toward a reusable orbital system.",
+      "summaryAr": "قالت سبيس إكس إنها تستعد لإطلاق الاختبار الرابع عشر لـStarship في أقرب وقت يوم 22 سبتمبر، رهناً بالموافقة التنظيمية. وستضع المهمة المركبة في المدار للمرة الأولى، وتنشر الدفعة الأولى من أقمار Starlink V3، وتستمر قرابة عشر ساعات على ارتفاع يقارب 275 كيلومترًا مع نحو ست دورات حول الأرض قبل الهبوط في المحيط الهادئ. كما ستختبر إجراءات إطلاق المعزز وانفصاله وعودته وهبوطه ضمن مسار تطوير نظام مداري قابل لإعادة الاستخدام.",
+      "takeEn": "Government implication: a successful orbital test would accelerate both heavy reusable launch and large satellite deployment. Regulators and public agencies should coordinate launch licensing, air and maritime closures, spectrum and orbital-registration duties, re-entry and debris contingencies, independent tracking, and resilience plans for public services that may depend on rapidly expanding commercial constellations.",
+      "takeAr": "الدلالة للحكومات: نجاح الاختبار المداري قد يسرّع الإطلاق الثقيل القابل لإعادة الاستخدام ونشر تجمعات الأقمار الكبيرة معًا. ينبغي للجهات التنظيمية والعامة تنسيق تراخيص الإطلاق، وإغلاقات المجالين الجوي والبحري، والتزامات الطيف والتسجيل المداري، وخطط الطوارئ لإعادة الدخول والحطام، والتتبع المستقل، ومرونة الخدمات العامة التي قد تعتمد على تجمعات تجارية تتوسع سريعًا.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/spacex-targets-first-starship-orbital-test-september-22-2026-09-15/"
+    },
+    {
       "id": "russia-us-orbital-arms-un-space-stability-2026",
       "publishedAt": "2026-09-15T17:38:00Z",
       "categoryEn": "SPACE SECURITY + STRATEGIC STABILITY",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يجب أن ترصد منظومات الدفاع السيبراني سلوك الحملات التي ينسقها الذكاء الاصطناعي، لا البرمجيات الخبيثة المعروفة وأنماط المشغلين البشر فقط. وينبغي فرض إبلاغ سريع من مزودي النماذج إلى فرق الاستجابة الوطنية، وتبادل مؤشرات التهديد عبر الحدود، وتسجيل أفعال الوكلاء، واختبارات إساءة الاستخدام، وشروط مشتريات تحفظ الوصول إلى الأدلة الجنائية عند استهداف المؤسسات العامة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/legal/litigation/anthropic-disrupts-russian-chinese-ai-campaigns-targeting-its-claude-models-2026-09-10/"
-    },
-    {
-      "id": "spain-weride-autonomous-vehicle-national-testing-permit-2026",
-      "publishedAt": "2026-09-10T17:39:00Z",
-      "categoryEn": "AUTONOMOUS SYSTEMS + REGULATION",
-      "categoryAr": "الأنظمة الذاتية والتنظيم",
-      "titleEn": "Spain issues its first national permit for WeRide autonomous-road testing",
-      "titleAr": "إسبانيا تصدر أول تصريح وطني لاختبار مركبات WeRide الذاتية على الطرق",
-      "summaryEn": "Spain’s Directorate-General for Traffic issued national permits for WeRide autonomous vehicles to be tested on public roads and authorized preparation work covering mapping, route validation and operational-readiness testing. The authorization is the first national approval for WeRide’s GXR vehicle in the European Union; a commercial Madrid service is planned by year-end, subject to regulatory and operational milestones.",
-      "summaryAr": "أصدرت الإدارة العامة للمرور في إسبانيا تصاريح وطنية لاختبار مركبات WeRide الذاتية على الطرق العامة، وسمحت بأعمال الإعداد التي تشمل رسم الخرائط والتحقق من المسارات واختبارات الجاهزية التشغيلية. ويعد التصريح أول موافقة وطنية لمركبة GXR التابعة للشركة داخل الاتحاد الأوروبي، مع التخطيط لخدمة تجارية في مدريد قبل نهاية العام رهناً بالمراحل التنظيمية والتشغيلية.",
-      "takeEn": "Government implication: autonomous-mobility regulation is moving from broad pilots to staged operational authorization. Governments should tie each permit to validated routes, safety-case evidence, fleet-operator accountability, incident reporting, data access and explicit go/no-go thresholds before commercial service begins.",
-      "takeAr": "الدلالة للحكومات: ينتقل تنظيم التنقل الذاتي من التجارب العامة إلى ترخيص تشغيلي مرحلي. وينبغي ربط كل تصريح بمسارات معتمدة، وأدلة سلامة، ومساءلة مشغل الأسطول، والإبلاغ عن الحوادث، وإتاحة البيانات، وحدود واضحة للانتقال أو الإيقاف قبل بدء الخدمة التجارية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/spain-issues-permit-allow-autonomous-vehicle-testing-uber-says-2026-09-10/"
     }
   ],
-  "updatedAt": "2026-09-15T18:07:10.000Z"
+  "updatedAt": "2026-09-15T19:36:21.000Z"
 }
