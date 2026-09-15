@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "australia-saudi-fuel-security-diplomacy-2026",
+      "publishedAt": "2026-09-15T02:38:00Z",
+      "categoryEn": "ENERGY SECURITY + SUPPLY DIPLOMACY",
+      "categoryAr": "أمن الطاقة ودبلوماسية الإمدادات",
+      "titleEn": "Australia sends its energy minister to Saudi Arabia as fuel-security exposure sharpens",
+      "titleAr": "أستراليا ترسل وزير الطاقة إلى السعودية مع تصاعد انكشاف أمن الوقود",
+      "summaryEn": "Australian Energy Minister Chris Bowen will travel to Saudi Arabia next week to meet his counterpart as the Middle East conflict raises supply risks. Australia imported 84% of its petroleum-product demand last year and currently holds 41 days of petrol reserves. Bowen ruled out another fuel-tax cut and said Saudi policy would be important to fuel security over the coming weeks and months.",
+      "summaryAr": "يسافر وزير الطاقة الأسترالي كريس بوين إلى السعودية الأسبوع المقبل للقاء نظيره مع تصاعد مخاطر الإمداد بسبب الصراع في الشرق الأوسط. واستوردت أستراليا 84% من احتياجاتها من المنتجات البترولية العام الماضي، وتحتفظ حاليًا باحتياطيات بنزين تكفي 41 يومًا. واستبعد بوين خفضًا جديدًا لضريبة الوقود، وقال إن سياسة السعودية ستكون مهمة لأمن الوقود خلال الأسابيع والأشهر المقبلة.",
+      "takeEn": "Government implication: high import dependence turns external shocks into a time-bound continuity problem. Governments should pair supplier diplomacy with explicit reserve thresholds, diversified routes and contracts, demand-management triggers, fiscal-response criteria and frequent public reporting, so action starts before inventories reach critical levels.",
+      "takeAr": "الدلالة للحكومات: يحوّل الاعتماد المرتفع على الواردات الصدمات الخارجية إلى مشكلة استمرارية محددة بزمن. ينبغي الجمع بين دبلوماسية الموردين وعتبات واضحة للاحتياطي، وتنويع المسارات والعقود، ومحفزات لإدارة الطلب، ومعايير للاستجابة المالية، وتقارير عامة متكررة، بحيث يبدأ التحرك قبل وصول المخزون إلى مستويات حرجة.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/australias-energy-minister-visit-saudi-arabia-middle-east-conflict-escalates-2026-09-15/"
+    },
+    {
       "id": "us-ntsb-faa-aviation-safety-recommendations-gap-2026",
       "publishedAt": "2026-09-14T22:14:00Z",
       "categoryEn": "AVIATION INFRASTRUCTURE + SAFETY OVERSIGHT",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: سفن الأبحاث القطبية بنية تحتية استراتيجية للبيانات وليست أصولًا بحرية منفردة. وينبغي ربط تصميم السفينة والحمولات العلمية المعيارية والتشغيل منخفض الكربون وبيانات الأقمار الصناعية وجدولة المهام طويلة الأجل بقرارات واضحة تخص المناخ والملاحة وحوكمة الموارد.",
       "source": "Republic of Korea Ministry of Oceans and Fisheries",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-10&newsId=156781049&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-10"
-    },
-    {
-      "id": "korea-seoul-regional-uam-public-health-tourism-pilot-2026",
-      "publishedAt": "2026-09-10T02:00:00Z",
-      "categoryEn": "UAM + PUBLIC SERVICES",
-      "categoryAr": "التنقل الجوي الحضري والخدمات العامة",
-      "titleEn": "Korea selects Seoul’s public-health and tourism model to advance regional UAM commercialization",
-      "titleAr": "كوريا تختار نموذج سيول للصحة العامة والسياحة لدفع تسويق التنقل الجوي الحضري",
-      "summaryEn": "South Korea’s Ministry of Land, Infrastructure and Transport selected Seoul’s combined model—linking public-health services with Han River tourism—through its regional UAM pilot-project competition. The decision moves urban air mobility from generic flight trials toward a place-specific service bundle designed for commercialization.",
-      "summaryAr": "اختارت وزارة الأراضي والبنية التحتية والنقل في كوريا الجنوبية نموذج سيول المركب، الذي يربط خدمات الصحة العامة بسياحة نهر الهان، ضمن مسابقة المشروعات التجريبية الإقليمية للتنقل الجوي الحضري. وتنقل الخطوة هذا المجال من اختبارات الطيران العامة إلى حزمة خدمات محلية مهيأة للتسويق.",
-      "takeEn": "Government implication: UAM pilots become decision-ready when aircraft, routes, vertiports, emergency-service protocols and viable use cases are tested as one local operating system. Authorities should set explicit safety, noise, equity and public-value gates before scaling or subsidizing services.",
-      "takeAr": "الدلالة للحكومات: تصبح تجارب التنقل الجوي الحضري صالحة لاتخاذ القرار عندما تُختبر الطائرات والمسارات ومهابط الإقلاع والهبوط وبروتوكولات الطوارئ وحالات الاستخدام القابلة للاستمرار كنظام محلي واحد. وينبغي وضع بوابات واضحة للسلامة والضوضاء والعدالة والقيمة العامة قبل التوسع أو تقديم الدعم.",
-      "source": "Republic of Korea Ministry of Land, Infrastructure and Transport",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781052&pWise=sub&pWiseSub=C5"
     }
   ],
-  "updatedAt": "2026-09-14T23:12:28.000Z"
+  "updatedAt": "2026-09-15T02:50:59.000Z"
 }
