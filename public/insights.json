@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-orbital-space-control-weapons-acknowledgement-2026",
+      "publishedAt": "2026-09-15T14:55:00Z",
+      "categoryEn": "SPACE SECURITY + STRATEGIC STABILITY",
+      "categoryAr": "أمن الفضاء والاستقرار الاستراتيجي",
+      "titleEn": "US makes its strongest public acknowledgement yet of weapons operating in orbit",
+      "titleAr": "الولايات المتحدة تصدر أوضح اعتراف حتى الآن بامتلاك أسلحة تعمل في المدار",
+      "summaryEn": "US Air Force Secretary Troy Meink said Washington has on-orbit space-control weapons capable of defending the joint force against hostile action, the strongest public acknowledgement yet by a Pentagon official of US weapons in space. A US Space Command official described the disclosure as important to deterrence but declined to identify the systems or their capabilities. The statement marks a shift in public posture as the United States, Russia, China and allies prepare for conflict risks extending into space.",
+      "summaryAr": "قال وزير القوات الجوية الأميركي تروي مينك إن واشنطن تمتلك أسلحة للتحكم الفضائي تعمل في المدار وقادرة على حماية القوات المشتركة من الأعمال المعادية، في أوضح اعتراف علني حتى الآن من مسؤول في البنتاغون بوجود أسلحة أميركية في الفضاء. ووصف مسؤول في قيادة الفضاء الأميركية الإفصاح بأنه مهم للردع، لكنه امتنع عن تحديد الأنظمة أو قدراتها. ويمثل التصريح تحولًا في الموقف العلني مع استعداد الولايات المتحدة وروسيا والصين وحلفائها لاحتمال امتداد الصراع إلى الفضاء.",
+      "takeEn": "Government implication: public acknowledgement can strengthen deterrence but also raise escalation and miscalculation risks. Governments should update space-security doctrine, clarify command authority and thresholds for use, distinguish reversible non-kinetic effects from debris-producing actions, strengthen satellite resilience and allied interoperability, and establish crisis-communication channels before an orbital incident occurs.",
+      "takeAr": "الدلالة للحكومات: قد يعزز الاعتراف العلني الردع، لكنه يرفع أيضًا مخاطر التصعيد وسوء التقدير. ينبغي للحكومات تحديث عقيدة أمن الفضاء، وتوضيح سلطة القيادة وحدود الاستخدام، والتمييز بين التأثيرات غير الحركية القابلة للعكس والأعمال المنتجة للحطام، وتعزيز مرونة الأقمار الصناعية والتشغيل البيني مع الحلفاء، وإنشاء قنوات اتصال للأزمات قبل وقوع حادث مداري.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/us-orbital-weapons-acknowledgement-landmark-move-us-space-command-official-says-2026-09-15/"
+    },
+    {
       "id": "canada-private-airport-concessions-2026",
       "publishedAt": "2026-09-15T13:23:00Z",
       "categoryEn": "INFRASTRUCTURE + PUBLIC ASSET GOVERNANCE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتطلب صدمات الغذاء المرتبطة بالمناخ استجابة منسقة في التجارة والجمارك والإنتاج، لا إجراءً طارئًا منفردًا. وينبغي تحديد محفزات الجفاف مسبقًا، ومراقبة آثار الأسعار والإمدادات إقليميًا، وتقييد حظر التصدير زمنيًا، وتسريع تخليص الواردات المستهدفة، والحفاظ على خطط للزراعة المروية خارج الموسم.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/environment/drought-hit-chad-bans-some-crop-exports-avert-food-crisis-2026-09-10/"
-    },
-    {
-      "id": "uk-starshield-military-satellite-dependency-2026",
-      "publishedAt": "2026-09-10T11:24:00Z",
-      "categoryEn": "SPACE + SECURITY INFRASTRUCTURE",
-      "categoryAr": "الفضاء والبنية التحتية الأمنية",
-      "titleEn": "UK disclosure exposes operational dependence on SpaceX for military satellite communications",
-      "titleAr": "إفصاح بريطاني يكشف اعتمادًا تشغيليًا على سبيس إكس في الاتصالات العسكرية الفضائية",
-      "summaryEn": "Britain’s Ministry of Defence disclosed that it operates about 1,000 Starshield terminals and 500 Starlink terminals and has spent nearly $40 million on the two SpaceX services. The UK is the first country outside the United States to publicly acknowledge adopting Starshield for military and intelligence missions, while retaining its Skynet network and a stake in Eutelsat.",
-      "summaryAr": "كشفت وزارة الدفاع البريطانية أنها تشغّل نحو ألف محطة «ستارشيلد» و500 محطة «ستارلينك»، وأنفقت قرابة 40 مليون دولار على خدمتي سبيس إكس. وتصبح المملكة المتحدة أول دولة خارج الولايات المتحدة تعلن اعتماد «ستارشيلد» للمهام العسكرية والاستخباراتية، مع احتفاظها بشبكة «سكاي نت» وحصة في «يوتلسات».",
-      "takeEn": "Government implication: commercial satellite networks can add resilient capacity quickly, but concentration in one foreign supplier creates strategic, contractual and continuity risk. Governments should map mission dependencies, require assured-access and pricing protections, test failover across sovereign and allied networks, and maintain procurement options before operational traffic becomes locked in.",
-      "takeAr": "الدلالة للحكومات: تستطيع شبكات الأقمار الصناعية التجارية إضافة قدرة مرنة بسرعة، لكن التركّز لدى مورّد أجنبي واحد يخلق مخاطر استراتيجية وتعاقدية واستمرارية. وينبغي رسم تبعيات المهام، وفرض ضمانات الوصول والتسعير، واختبار التحويل إلى الشبكات السيادية والحليفة، والحفاظ على بدائل المشتريات قبل انحصار الحركة التشغيلية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/media-telecom/uk-deepens-reliance-musks-spacex-spending-nearly-40-million-satellite-services-2026-09-10/"
     }
   ],
-  "updatedAt": "2026-09-15T13:59:51.000Z"
+  "updatedAt": "2026-09-15T15:32:10.000Z"
 }
