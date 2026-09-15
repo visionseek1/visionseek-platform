@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "ukraine-underground-aid-logistics-drone-protection-2026",
+      "publishedAt": "2026-09-15T15:23:14Z",
+      "categoryEn": "AUTONOMOUS THREATS + RESILIENT INFRASTRUCTURE",
+      "categoryAr": "تهديدات الأنظمة الذاتية والبنية التحتية المرنة",
+      "titleEn": "UN considers moving Ukraine aid stocks underground as drone threats reshape humanitarian logistics",
+      "titleAr": "الأمم المتحدة تدرس نقل مخزونات الإغاثة في أوكرانيا تحت الأرض مع تغيّر لوجستيات الحماية من المسيّرات",
+      "summaryEn": "The United Nations is considering moving humanitarian supplies into underground bunkers in Ukraine after strikes hit 10 aid warehouses this year, including a major World Health Organization facility. It is also delaying purchases to reduce the time supplies remain exposed, investing in drone detection and armoured vehicles, and assessing requests for mobile drone shelters near public locations. These protective costs were not anticipated in the existing humanitarian budget.",
+      "summaryAr": "تدرس الأمم المتحدة نقل الإمدادات الإنسانية إلى مخازن محصنة تحت الأرض في أوكرانيا بعدما طالت الضربات عشرة مستودعات إغاثة هذا العام، بينها منشأة رئيسية لمنظمة الصحة العالمية. كما تؤخر المشتريات لتقليل مدة بقاء الإمدادات مكشوفة، وتستثمر في كشف المسيّرات والمركبات المدرعة، وتقيّم طلبات لإنشاء ملاجئ متنقلة ضد المسيّرات قرب المواقع العامة. ولم تكن تكاليف الحماية هذه محسوبة في الميزانية الإنسانية القائمة.",
+      "takeEn": "Government implication: drone exposure now requires civil logistics to be designed as protected critical infrastructure. Governments and aid agencies should distribute stocks across hardened sites, shorten replenishment cycles without weakening emergency reserves, integrate detection and alerting, pre-plan mobile shelters and alternate routes, and create contingency funding rules before attacks disrupt essential supplies.",
+      "takeAr": "الدلالة للحكومات: بات تعرض المنشآت للمسيّرات يفرض تصميم اللوجستيات المدنية كبنية تحتية حيوية محمية. ينبغي للحكومات وجهات الإغاثة توزيع المخزون بين مواقع محصنة، وتقليص دورات الإمداد من دون إضعاف احتياطيات الطوارئ، ودمج أنظمة الكشف والإنذار، والتخطيط المسبق للملاجئ المتنقلة والمسارات البديلة، ووضع قواعد تمويل احتياطية قبل أن تعطل الهجمات الإمدادات الأساسية.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/europe/un-weighs-moving-ukraine-aid-supplies-underground-after-warehouse-hits-2026-09-15/"
+    },
+    {
       "id": "us-orbital-space-control-weapons-acknowledgement-2026",
       "publishedAt": "2026-09-15T14:55:00Z",
       "categoryEn": "SPACE SECURITY + STRATEGIC STABILITY",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: أصبحت سياسة الاستثمار في الذكاء الاصطناعي مرتبطة مباشرة بحوكمة منظومة الكهرباء. وينبغي إخضاع مجمعات الحوسبة الكبرى قبل الموافقة لاختبارات على قدرة التوليد والشبكة، وتعرّض أسعار الأسر، والمرونة، والالتزامات طويلة الأجل للطاقة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/media-telecom/finland-risks-strained-power-supply-after-google-ai-deal-opposition-warns-2026-09-10/"
-    },
-    {
-      "id": "chad-drought-crop-export-ban-food-security-2026",
-      "publishedAt": "2026-09-10T13:25:00Z",
-      "categoryEn": "AGRICULTURE + CLIMATE RESILIENCE",
-      "categoryAr": "الزراعة والمرونة المناخية",
-      "titleEn": "Chad pairs crop export bans with grain import relief after drought damages harvests",
-      "titleAr": "تشاد تجمع بين حظر صادرات المحاصيل وتخفيف واردات الحبوب بعد أضرار الجفاف",
-      "summaryEn": "Chad suspended exports of millet, corn, rice, sorghum, wheat and cotton seed while removing import duties and taxes on several staple grains, livestock feed and agricultural equipment. The measures follow repeated dry spells that damaged harvests, with the government also supporting off-season cultivation in irrigated areas.",
-      "summaryAr": "علّقت تشاد صادرات الدخن والذرة والأرز والذرة الرفيعة والقمح وبذور القطن، وألغت الرسوم والضرائب على واردات عدد من الحبوب الأساسية وأعلاف الماشية والمعدات الزراعية. وتأتي الإجراءات بعد موجات جفاف متكررة أضرّت بالمحاصيل، مع دعم الحكومة أيضًا للزراعة خارج الموسم في المناطق المروية.",
-      "takeEn": "Government implication: climate-linked food shocks require coordinated trade, customs and production responses rather than a single emergency measure. Governments should predefine drought triggers, monitor regional price and supply spillovers, time-limit export controls, accelerate targeted import clearance and maintain irrigated off-season production plans.",
-      "takeAr": "الدلالة للحكومات: تتطلب صدمات الغذاء المرتبطة بالمناخ استجابة منسقة في التجارة والجمارك والإنتاج، لا إجراءً طارئًا منفردًا. وينبغي تحديد محفزات الجفاف مسبقًا، ومراقبة آثار الأسعار والإمدادات إقليميًا، وتقييد حظر التصدير زمنيًا، وتسريع تخليص الواردات المستهدفة، والحفاظ على خطط للزراعة المروية خارج الموسم.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/environment/drought-hit-chad-bans-some-crop-exports-avert-food-crisis-2026-09-10/"
     }
   ],
-  "updatedAt": "2026-09-15T15:32:10.000Z"
+  "updatedAt": "2026-09-15T16:18:05.000Z"
 }
