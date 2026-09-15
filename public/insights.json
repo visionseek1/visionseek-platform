@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "us-nrc-rule-overhaul-2027-reactor-licensing-2026",
+      "publishedAt": "2026-09-15T20:01:00Z",
+      "categoryEn": "NUCLEAR ENERGY + REGULATORY GOVERNANCE",
+      "categoryAr": "الطاقة النووية والحوكمة التنظيمية",
+      "titleEn": "US nuclear regulator extends reactor-licensing overhaul into 2027",
+      "titleAr": "الهيئة النووية الأميركية تمد إصلاح قواعد ترخيص المفاعلات إلى 2027",
+      "summaryEn": "The US Nuclear Regulatory Commission said its broad rule overhaul will continue well into 2027 as it works toward decisions on new nuclear facilities within 18 months. Final rules are expected to begin appearing late this year and continue through next year. Planned changes include a framework for factory-built microreactors, while the regulator said the faster timetable will not override safety judgments.",
+      "summaryAr": "قالت هيئة الرقابة النووية الأميركية إن إصلاحها الواسع للقواعد سيستمر حتى وقت متقدم من عام 2027، ضمن مسعى للوصول إلى قرارات بشأن المنشآت النووية الجديدة خلال 18 شهرًا. ومن المتوقع أن يبدأ صدور القواعد النهائية في أواخر هذا العام ويستمر خلال العام المقبل. وتشمل التغييرات المخططة إطارًا للمفاعلات الميكروية المصنّعة في المصانع، مع تأكيد الهيئة أن الجدول الأسرع لن يتجاوز اعتبارات السلامة.",
+      "takeEn": "Government implication: faster licensing will only translate into deployable capacity if regulatory deadlines are matched by qualified staff, standardized evidence, transparent safety gates and coordinated siting, grid and emergency-planning decisions. Governments should publish milestone dashboards and track review time, unresolved safety issues and post-approval delivery separately so speed does not become the sole performance measure.",
+      "takeAr": "الدلالة للحكومات: لن يتحول تسريع الترخيص إلى قدرة قابلة للنشر ما لم تقترن المهل التنظيمية بموظفين مؤهلين، وأدلة موحدة، وبوابات سلامة شفافة، وتنسيق قرارات المواقع والشبكة وخطط الطوارئ. ينبغي نشر مؤشرات مرحلية ومتابعة زمن المراجعة وقضايا السلامة غير المحسومة والتنفيذ بعد الموافقة بصورة منفصلة، حتى لا تصبح السرعة معيار الأداء الوحيد.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/us-nuclear-regulators-overhaul-rules-run-well-into-2027-its-chief-says-2026-09-15/"
+    },
+    {
       "id": "spacex-starship-first-orbital-test-starlink-v3-2026",
       "publishedAt": "2026-09-15T18:49:00Z",
       "categoryEn": "SPACE + LAUNCH INFRASTRUCTURE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تنتقل سياسة المناخ مباشرة إلى تصميم قواعد التجارة. وينبغي مواءمة جهات التجارة والمناخ والصناعة قبل التفاوض، وبناء بيانات موثوقة لانبعاثات المنتجات، وتحويل القواعد الناشئة مبكرًا إلى إجراءات جمركية ودعم للمصدّرين ومعايير للاستثمار لحماية النفاذ إلى الأسواق.",
       "source": "Republic of Korea Ministry of Trade",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781281&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
-    },
-    {
-      "id": "anthropic-state-linked-ai-agent-cyber-campaigns-2026",
-      "publishedAt": "2026-09-10T20:23:14Z",
-      "categoryEn": "AI + CYBERSECURITY",
-      "categoryAr": "الذكاء الاصطناعي والأمن السيبراني",
-      "titleEn": "Anthropic reports state-linked cyber campaigns shifting from AI assistance to agent orchestration",
-      "titleAr": "تقرير أنثروبيك يرصد انتقال حملات سيبرانية مرتبطة بدول من مساعدة الذكاء الاصطناعي إلى تشغيل الوكلاء",
-      "summaryEn": "Anthropic said it disrupted several malicious campaigns in which AI systems orchestrated and executed substantial parts of cyber operations, including a suspected Russia-linked campaign against Ukrainian government, military and diplomatic targets. Its threat-intelligence report also alleged efforts by China-based AI developers to extract or reuse Claude capabilities, indicating that frontier-model access controls are becoming part of national cyber defence.",
-      "summaryAr": "قالت أنثروبيك إنها عطّلت عدة حملات خبيثة استُخدمت فيها أنظمة الذكاء الاصطناعي لتنسيق وتنفيذ أجزاء كبيرة من العمليات السيبرانية، بينها حملة يُشتبه بارتباطها بروسيا استهدفت جهات حكومية وعسكرية ودبلوماسية أوكرانية. كما اتهم تقرير استخباراتها التهديدية جهات تطوير ذكاء اصطناعي في الصين بمحاولات لاستخراج قدرات «كلود» أو إعادة استخدامها، ما يجعل ضوابط الوصول إلى النماذج المتقدمة جزءًا من الدفاع السيبراني الوطني.",
-      "takeEn": "Government implication: cyber defence must now detect AI-orchestrated campaign behaviour, not only known malware and human-operator patterns. Governments should require rapid provider-to-CERT reporting, cross-border indicator sharing, agent-action logging, model-abuse red-teaming and procurement clauses that preserve forensic access when public institutions are targeted.",
-      "takeAr": "الدلالة للحكومات: يجب أن ترصد منظومات الدفاع السيبراني سلوك الحملات التي ينسقها الذكاء الاصطناعي، لا البرمجيات الخبيثة المعروفة وأنماط المشغلين البشر فقط. وينبغي فرض إبلاغ سريع من مزودي النماذج إلى فرق الاستجابة الوطنية، وتبادل مؤشرات التهديد عبر الحدود، وتسجيل أفعال الوكلاء، واختبارات إساءة الاستخدام، وشروط مشتريات تحفظ الوصول إلى الأدلة الجنائية عند استهداف المؤسسات العامة.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/litigation/anthropic-disrupts-russian-chinese-ai-campaigns-targeting-its-claude-models-2026-09-10/"
     }
   ],
-  "updatedAt": "2026-09-15T19:36:21.000Z"
+  "updatedAt": "2026-09-15T20:10:14.000Z"
 }
