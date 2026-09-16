@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id": "new-york-data-centers-community-investment-per-megawatt-2026",
+      "publishedAt": "2026-09-15T23:40:00Z",
+      "categoryEn": "AI INFRASTRUCTURE + COMMUNITY BENEFIT",
+      "categoryAr": "بنية الذكاء الاصطناعي والمنفعة المجتمعية",
+      "titleEn": "New York proposes $1 million per megawatt community investment for new data centers",
+      "titleAr": "نيويورك تقترح استثمارًا مجتمعيًا بمليون دولار لكل ميغاواط لمراكز البيانات الجديدة",
+      "summaryEn": "New York Governor Kathy Hochul recommended that local governments seek community investments of at least $1 million for each megawatt of utility demand from developers proposing new data centers. The recommendation, which is not a binding requirement, follows the state’s moratorium on large new data centers and reflects concern that these facilities can impose substantial power demand while generating fewer local jobs than traditional manufacturing.",
+      "summaryAr": "أوصت حاكمة نيويورك كاثي هوكول بأن تطلب الحكومات المحلية من مطوري مراكز البيانات الجديدة استثمارات مجتمعية لا تقل عن مليون دولار عن كل ميغاواط من الطلب على المرافق. وتأتي التوصية، التي لا تمثل التزامًا نافذًا، بعد وقف الولاية لمراكز البيانات الكبيرة الجديدة، وتعكس القلق من أن هذه المنشآت قد تفرض طلبًا كهربائيًا كبيرًا مع توليد وظائف محلية أقل من التصنيع التقليدي.",
+      "takeEn": "Government implication: data-center permitting is shifting toward capacity-linked community benefit. Governments should connect any contribution formula to transparent impact assessments, grid and water upgrades, ratepayer protection, local skills and verified delivery milestones, while keeping core environmental, infrastructure and decommissioning obligations separate rather than treating a payment as a substitute for mitigation.",
+      "takeAr": "الدلالة للحكومات: يتجه ترخيص مراكز البيانات نحو ربط السعة بمنفعة مجتمعية قابلة للقياس. ينبغي ربط أي صيغة مساهمة بتقييمات أثر شفافة، وتحديثات الشبكة والمياه، وحماية المشتركين، وتنمية المهارات المحلية، ومراحل تنفيذ قابلة للتحقق، مع إبقاء الالتزامات البيئية والبنية التحتية وإزالة المنشأة مستقلة، حتى لا تتحول المدفوعات إلى بديل عن تخفيف الأثر.",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/retail-consumer/new-york-proposes-1-million-per-megawatt-community-investment-data-centers-2026-09-15/"
+    },
+    {
       "id": "spain-first-ai-agent-data-breach-notification-2026",
       "publishedAt": "2026-09-15T20:25:00Z",
       "categoryEn": "AI AGENTS + CYBERSECURITY GOVERNANCE",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يمكن تسريع الابتكار الدفاعي عندما تختبر الشركات حلولها في بيئات تشغيل عسكرية متعددة قبل قرارات الشراء. وينبغي اعتماد بروتوكولات اختبار موحدة، وضوابط سلامة، وتقييم على مستوى المهمة، وجمع آمن للبيانات، وبوابات واضحة تربط نجاح التحقق بالشراء والنشر السريعين.",
       "source": "Republic of Korea Ministry of National Defense",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781307&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
-    },
-    {
-      "id": "korea-public-procurement-inhouse-ai-services-2026",
-      "publishedAt": "2026-09-11T02:15:52Z",
-      "categoryEn": "AI + PUBLIC PROCUREMENT",
-      "categoryAr": "الذكاء الاصطناعي والمشتريات العامة",
-      "titleEn": "Korea’s procurement agency puts staff-built AI into operational use",
-      "titleAr": "هيئة المشتريات الكورية تشغّل أدوات ذكاء اصطناعي بناها الموظفون",
-      "summaryEn": "South Korea’s Public Procurement Service unveiled seven AI services developed by an internal task force of 26 employees for operational work including procurement-law advice, document drafting, parliamentary-request routing, legal research and task scheduling. The agency built a secure development and deployment environment on its internal network, connected current statutory information with internal data, and consolidated the tools in a shared procurement AI portal.",
-      "summaryAr": "كشفت هيئة المشتريات العامة في كوريا الجنوبية عن سبع خدمات ذكاء اصطناعي طورتها فرقة عمل داخلية تضم 26 موظفًا للاستخدام التشغيلي، وتشمل الاستشارات في قوانين المشتريات، وصياغة الوثائق، وتوجيه طلبات البرلمان، والبحث القانوني، وجدولة المهام. وأنشأت الهيئة بيئة آمنة للتطوير والنشر داخل شبكتها، وربطت المعلومات التشريعية المحدثة بالبيانات الداخلية، وجمعت الأدوات في بوابة موحدة للذكاء الاصطناعي في المشتريات.",
-      "takeEn": "Government implication: public-sector AI capacity can be built by domain staff, provided experimentation occurs inside a governed environment. Agencies should pair staff-led development with approved data connections, role-based access, model and code review, audit logs, human approval for consequential outputs, and measurable service and incident indicators before scaling.",
-      "takeAr": "الدلالة للحكومات: يمكن بناء قدرات الذكاء الاصطناعي الحكومية بواسطة موظفي المجال أنفسهم، بشرط أن يجري التطوير داخل بيئة محكومة. وينبغي الجمع بين التطوير بقيادة الموظفين وروابط بيانات معتمدة، وصلاحيات حسب الدور، ومراجعة النماذج والشيفرات، وسجلات تدقيق، واعتماد بشري للمخرجات المؤثرة، ومؤشرات قابلة للقياس للخدمة والحوادث قبل التوسع.",
-      "source": "Republic of Korea Public Procurement Service",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?endDate=2026-09-11&newsId=156781295&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-09-11"
     }
   ],
-  "updatedAt": "2026-09-15T21:19:06.000Z"
+  "updatedAt": "2026-09-16T00:26:12.000Z"
 }
