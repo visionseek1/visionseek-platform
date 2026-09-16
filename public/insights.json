@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الأمن الحيوي الزراعي والتجارة الحدودية",
+      "categoryEn": "AGRICULTURAL BIOSECURITY + BORDER TRADE",
+      "id": "us-new-mexico-livestock-port-screwworm-reopening-2026",
+      "publishedAt": "2026-09-16T15:40:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/us/us-farm-agency-prepares-reopen-new-mexico-port-livestock-trade-next-week-2026-09-16/",
+      "summaryAr": "تستعد وزارة الزراعة الأميركية لإعادة فتح منفذ في نيو مكسيكو أمام تجارة الماشية مع المكسيك الأسبوع المقبل، بعد إغلاقه بسبب مخاطر انتشار الدودة الحلزونية للعالم الجديد. يأتي ذلك ضمن إعادة فتح مرحلية بدأت عبر منفذ دوغلاس في أريزونا أواخر أغسطس، فيما تؤكد الوزارة استعدادها لإغلاق المسار مجددًا فور ظهور تهديد جديد؛ وتوجد حاليًا إصابتان نشطتان معلنتان في تكساس، إحداهما في حصان والأخرى في كلب.",
+      "summaryEn": "The U.S. Department of Agriculture is preparing to reopen a New Mexico port to livestock trade with Mexico next week after its closure over New World screwworm risks. The move extends a phased reopening that began through Douglas, Arizona, in late August, while the agency says it will close the route again if a new threat emerges; two active infestations are currently reported in Texas, one in a horse and one in a dog.",
+      "takeAr": "الدلالة للحكومات: يمكن حماية التجارة الزراعية من دون الاختيار بين الإغلاق الكامل أو الفتح غير المشروط. النموذج القابل للتطبيق هو ممرات مرحلية مرتبطة بالمراقبة الوبائية، ومعايير تشغيل وإغلاق معلنة، وتبادل بيانات سريع عبر الحدود، وقدرة جاهزة للفحص والاستجابة؛ بما يحمي الثروة الحيوانية ويقلل اضطراب الإمدادات.",
+      "takeEn": "Government implication: agricultural trade can be protected without choosing between blanket closure and unconditional reopening. A practical model is to use phased corridors tied to disease surveillance, published operating and shutdown triggers, rapid cross-border data sharing, and ready inspection and response capacity—protecting livestock while limiting supply disruption.",
+      "titleAr": "الولايات المتحدة تستعد لإعادة فتح منفذ ماشية في نيو مكسيكو بضوابط قابلة للعكس لمواجهة الدودة الحلزونية",
+      "titleEn": "US prepares to reopen New Mexico livestock port under reversible screwworm controls"
+    },
+    {
       "categoryAr": "الزراعة الذكية مناخيًا وأسواق الكربون",
       "categoryEn": "CLIMATE-SMART AGRICULTURE + CARBON MARKETS",
       "id": "google-terradot-rice-methane-carbon-removal-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يحتاج ترخيص البنية التحتية الاستراتيجية للطاقة إلى اختبارات صريحة لمصدر المورّدين والتعرض الجيوسياسي واستقلال ضمان الجودة وحداثة الأدلة البيئية. وينبغي جعل هذه الاختبارات قابلة للتدقيق وذات أساس قانوني كي تصمد قرارات أمن الطاقة أمام المراجعة القضائية من دون الاكتفاء بالمخاوف السياسية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/german-environmental-group-sues-block-rosatom-linked-nuclear-fuel-permit-2026-09-11/"
-    },
-    {
-      "id": "new-mexico-supreme-court-ai-fabricated-testimony-sanction-2026",
-      "publishedAt": "2026-09-11T12:07:00Z",
-      "categoryEn": "AI + JUSTICE GOVERNANCE",
-      "categoryAr": "الذكاء الاصطناعي وحوكمة العدالة",
-      "titleEn": "New Mexico Supreme Court sanctions lawyer over AI-fabricated testimony in criminal appeal",
-      "titleAr": "المحكمة العليا في نيو مكسيكو تعاقب محاميًا بسبب شهادة مختلقة بالذكاء الاصطناعي في استئناف جنائي",
-      "summaryEn": "New Mexico’s highest court held a defence lawyer in contempt, fined him and referred him for disciplinary investigation after an appeal brief included fabricated witnesses and police testimony generated through ChatGPT. The lawyer said he used the system to summarise trial materials and failed to verify the output; the court treated the lapse as a serious professional failure affecting a criminal case.",
-      "summaryAr": "قررت أعلى محكمة في نيو مكسيكو إدانة محامي دفاع بازدراء المحكمة وتغريمه وإحالته إلى تحقيق تأديبي بعدما تضمنت مذكرة استئناف شهودًا وشهادة شرطة مختلقين عبر ChatGPT. وقال المحامي إنه استخدم النظام لتلخيص مواد المحاكمة من دون التحقق من المخرجات، فيما اعتبرت المحكمة الإخفاق تقصيرًا مهنيًا خطيرًا يمس قضية جنائية.",
-      "takeEn": "Government implication: justice systems need enforceable controls for AI-assisted legal work, not general warnings alone. Courts and public legal services should require source-linked verification, human sign-off, auditable disclosure of material AI use and sanctions for unverified submissions, while preserving confidentiality and defendants’ rights.",
-      "takeAr": "الدلالة للحكومات: تحتاج منظومات العدالة إلى ضوابط قابلة للإنفاذ للعمل القانوني المدعوم بالذكاء الاصطناعي، لا إلى تحذيرات عامة فقط. وينبغي للمحاكم وجهات المساعدة القانونية اشتراط التحقق المرتبط بالمصادر، واعتماد بشري مسؤول، وإفصاح قابل للتدقيق عن الاستخدام الجوهري للذكاء الاصطناعي، وعقوبات على المذكرات غير المتحققة، مع حماية السرية وحقوق المتهمين",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/government/chatgpt-invented-fake-police-testimony-murder-appeal-new-mexico-high-court-says-2026-09-11/"
     }
   ],
-  "updatedAt": "2026-09-16T12:27:54.000Z"
+  "updatedAt": "2026-09-16T16:30:16.000Z"
 }
