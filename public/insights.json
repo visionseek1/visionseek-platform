@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "مرونة الطاقة وتمويل التنمية",
+      "categoryEn": "Energy Resilience + Development Finance",
+      "id": "us-dfc-ukraine-dtek-battery-storage-loan-2026",
+      "publishedAt": "2026-09-16T20:32:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/us-dfc-approves-85-million-loan-ukraines-dtek-2026-09-16/",
+      "summaryAr": "وافقت مؤسسة تمويل التنمية الدولية الأميركية على قرض بقيمة 85 مليون يورو لشركة DTEK، أكبر شركة طاقة خاصة في أوكرانيا، لتوسيع تخزين البطاريات. ويعد هذا أكبر قرض تقدمه المؤسسة لقطاع الطاقة الأوكراني منذ بدء الغزو الروسي في 2022.",
+      "summaryEn": "The U.S. International Development Finance Corporation approved an €85 million loan to DTEK, Ukraine’s largest private energy company, to expand battery storage. It is DFC’s largest loan to Ukraine’s energy sector since Russia’s 2022 invasion.",
+      "takeAr": "يوضح التمويل كيف يمكن للحكومات استخدام مؤسسات تمويل التنمية لتقليل مخاطر الاستثمار في بنية الطاقة الواقعة تحت التهديد. ينبغي ربط التمويل بمراحل تشغيل قابلة للقياس، وخطط حماية وربط شبكي، وقدرة صيانة محلية لجذب رأس مال خاص إضافي دون إضعاف المرونة.",
+      "takeEn": "The financing shows how governments can use development-finance institutions to de-risk investment in energy infrastructure under threat. Funding should be tied to measurable commissioning milestones, protection and grid-integration plans, and local maintenance capacity to crowd in private capital without weakening resilience.",
+      "titleAr": "الولايات المتحدة تموّل توسعة تخزين البطاريات في أوكرانيا بـ85 مليون يورو",
+      "titleEn": "US backs Ukraine battery-storage expansion with €85 million loan"
+    },
+    {
       "categoryAr": "المعادن الحرجة",
       "categoryEn": "Critical Minerals",
       "id": "chile-codelco-restructuring-plan-delay-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تحتاج إعادة تطوير المواقع المرتبطة بإرث النزاع إلى بوابة قرار ملزمة قبل بدء الأعمال التمهيدية. وينبغي تأمين الموقع، وإجراء مسح جنائي مستقل بقواعد لحفظ الأدلة، وحصر مطالبات الملكية، ونشر آلية للتعويض قبل المضي في المشتريات أو البناء.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/middle-east/syrian-private-airport-plans-spark-outcry-over-mass-graves-land-rights-2026-09-12/"
-    },
-    {
-      "id": "australia-optus-emergency-call-outage-resilience-2026",
-      "publishedAt": "2026-09-12T01:57:00Z",
-      "categoryEn": "INFRASTRUCTURE + RESILIENCE",
-      "categoryAr": "البنية التحتية والمرونة",
-      "titleEn": "Optus outage disrupts emergency calls across parts of four Australian jurisdictions",
-      "titleAr": "انقطاع أوبتس يعطّل بعض مكالمات الطوارئ في أجزاء من أربع مناطق أسترالية",
-      "summaryEn": "A 76-minute technical outage on Optus voice services caused intermittent call failures in parts of Victoria, South Australia, Tasmania and the Northern Territory, disrupting some emergency calls. Authorities began investigations, and Victoria Police conducted around 40 welfare checks; police reported no adverse outcomes.",
-      "summaryAr": "تسبب عطل تقني استمر 76 دقيقة في خدمات الاتصال الصوتي لدى «أوبتس» في انقطاعات متقطعة بأجزاء من فيكتوريا وجنوب أستراليا وتسمانيا والإقليم الشمالي، وأعاق بعض مكالمات الطوارئ. وبدأت الجهات المختصة التحقيق، فيما نفذت شرطة فيكتوريا نحو 40 فحصًا للاطمئنان ولم تسجل نتائج سلبية.",
-      "takeEn": "Government implication: emergency communications need independently tested failover, real-time service visibility and predefined welfare-check escalation—not reliance on a single carrier’s restoration process. Regulators should require auditable incident reporting, resilience drills and measurable recovery targets for emergency-call infrastructure.",
-      "takeAr": "الدلالة للحكومات: تحتاج اتصالات الطوارئ إلى مسارات بديلة تُختبر بصورة مستقلة، ورؤية لحظية لحالة الخدمة، وآلية مسبقة لتصعيد فحوص الاطمئنان، لا الاعتماد على استعادة شركة واحدة للشبكة. وينبغي للجهات التنظيمية فرض تقارير حوادث قابلة للتدقيق وتمارين مرونة وأهداف قابلة للقياس لاستعادة بنية مكالمات الطوارئ.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/asia-pacific/australias-optus-apologises-outage-that-disrupted-emergency-calls-2026-09-12/"
     }
   ],
-  "updatedAt": "2026-09-16T20:09:38.000Z"
+  "updatedAt": "2026-09-16T21:22:51.000Z"
 }
