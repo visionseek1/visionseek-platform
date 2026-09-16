@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية الرقمية وتمويل التنمية",
+      "categoryEn": "DIGITAL INFRASTRUCTURE + DEVELOPMENT FINANCE",
+      "id": "us-dfc-wiocc-africa-digital-infrastructure-equity-2026",
+      "publishedAt": "2026-09-16T19:09:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/us-agency-invest-155-million-african-digital-infrastructure-firm-wiocc-2026-09-16/",
+      "summaryAr": "أعلنت مؤسسة تمويل التنمية الدولية الأميركية استثمارًا في الأسهم يصل إلى 155 مليون دولار في شركة WIOCC، وهو أكبر التزام استثماري من هذا النوع للمؤسسة. ستشاركها Vision Invest ومؤسسة التمويل الأفريقية لتمويل توسع شبكة مفتوحة الوصول ومحايدة للمشغلين تضم كابلات بحرية وأليافًا ومراكز بيانات في أكثر من 30 دولة أفريقية، ضمن توجه أميركي لدعم شبكات موثوقة وتوسع شركات التكنولوجيا الأميركية.",
+      "summaryEn": "The U.S. International Development Finance Corporation announced an equity investment of up to $155 million in WIOCC, its largest-ever equity commitment. Alongside Vision Invest and Africa Finance Corporation, the funding will support an open-access, carrier-neutral platform spanning subsea cables, fibre networks and data centres in more than 30 African countries, as Washington backs trusted networks and the expansion of U.S. technology companies.",
+      "takeAr": "على الحكومات الأفريقية التعامل مع تمويل البنية الرقمية كسياسة سيادة وقدرة، لا كمجرد توسعة اتصال. ينبغي ربط الدعم العام بشروط للنفاذ المفتوح وحياد المشغلين، وقابلية التشغيل البيني، ومؤشرات أسعار وتغطية، واستضافة محلية مرنة، وحماية البيانات والمنافسة؛ حتى توسع الاستثمارات القدرة الوطنية بدل استبدال اعتماد خارجي بآخر.",
+      "takeEn": "African governments should treat digital-infrastructure finance as a sovereignty and capability policy, not just a connectivity expansion. Public support should be tied to open access, carrier neutrality, interoperability, price and coverage benchmarks, resilient local hosting, data protection and competition so investment expands national capacity rather than replacing one external dependency with another.",
+      "titleAr": "الولايات المتحدة تضخ 155 مليون دولار في بنية رقمية أفريقية مفتوحة عبر WIOCC",
+      "titleEn": "US commits $155 million to WIOCC's open-access African digital infrastructure"
+    },
+    {
       "categoryAr": "حوكمة الذكاء الاصطناعي والحوار الاستراتيجي",
       "categoryEn": "AI GOVERNANCE + STRATEGIC DIALOGUE",
       "id": "us-china-shared-ai-risks-model-dialogue-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: قد تحمي إجراءات التجارة تصنيع الطاقة النظيفة محليًا، لكنها قد ترفع تكاليف المشتريات وتعيد توجيه سلاسل الإمداد. وينبغي للحكومات نمذجة هذه الآثار معًا، وتنسيق عمل جهات التجارة والجمارك والطاقة، وإعداد خطط لتنويع الموردين وانتقال المشروعات قبل دخول الرسوم حيز التنفيذ.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/us-commerce-department-finalizes-steep-duties-solar-imports-india-indonesia-laos-2026-09-11/"
-    },
-    {
-      "id": "eu-aluminium-scrap-controls-waste-rules-india-trade-2026",
-      "publishedAt": "2026-09-11T16:14:00Z",
-      "categoryEn": "Climate & Industrial Policy",
-      "categoryAr": "المناخ والسياسة الصناعية",
-      "titleEn": "EU shifts aluminium scrap controls from an export duty to waste rules amid India trade concerns",
-      "titleAr": "الاتحاد الأوروبي ينقل ضبط صادرات خردة الألومنيوم من رسم تصدير إلى قواعد النفايات وسط اعتبارات التجارة مع الهند",
-      "summaryEn": "The European Commission has shelved a planned export duty on aluminium scrap and will instead rely on waste-shipment rules to limit exports. The shift seeks to protect Europe’s energy-intensive recycling base and sustainability goals without complicating the EU–India trade agreement.",
-      "summaryAr": "أوقفت المفوضية الأوروبية خطة لفرض رسم على صادرات خردة الألومنيوم، وستعتمد بدلًا منها على قواعد شحن النفايات للحد من الصادرات. ويهدف التحول إلى حماية قاعدة إعادة التدوير كثيفة الطاقة وأهداف الاستدامة الأوروبية دون تعقيد الاتفاق التجاري بين الاتحاد الأوروبي والهند.",
-      "takeEn": "Governments should stress-test trade, climate and industrial measures together before announcement, with clear fallback rules and enforcement capacity so diplomatic exemptions do not hollow out domestic circular-materials policy.",
-      "takeAr": "ينبغي للحكومات اختبار أدوات التجارة والمناخ والسياسة الصناعية معًا قبل إعلانها، مع قواعد بديلة واضحة وقدرة تنفيذية تمنع الاستثناءات الدبلوماسية من إفراغ سياسة المواد الدائرية المحلية من مضمونها.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/eu-dropped-aluminium-scrap-duty-plan-over-india-concerns-sources-say-2026-09-11/"
     }
   ],
-  "updatedAt": "2026-09-16T18:31:51.000Z"
+  "updatedAt": "2026-09-16T19:25:02.000Z"
 }
