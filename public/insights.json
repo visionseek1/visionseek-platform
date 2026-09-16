@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "المعادن الحرجة",
+      "categoryEn": "Critical Minerals",
+      "id": "chile-codelco-restructuring-plan-delay-2026",
+      "publishedAt": "2026-09-16T19:40:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/americas/chiles-state-owned-miner-codelco-says-restructuring-plan-may-be-delayed-until-2026-09-16/",
+      "summaryAr": "قالت شركة كوديلكو الحكومية في تشيلي إن خطة التعافي المنتظرة لمعالجة ركود الإنتاج وارتفاع التكاليف قد لا تكتمل قبل نهاية 2026، بعدما كان متوقعًا طرحها في أكتوبر. ولم تُتخذ قرارات نهائية بشأن خفض الوظائف.",
+      "summaryEn": "Chile’s state-owned Codelco said its long-awaited recovery plan to address stagnant production and rising costs may not be ready until the end of 2026, rather than October. No final decisions have been made on workforce reductions.",
+      "takeAr": "على الحكومة ربط خطة التعافي بمؤشرات إنتاج وتكلفة محددة، وترتيب أولويات المشاريع وإعداد تدابير انتقال للعمال؛ فأداء كوديلكو يؤثر في إيرادات الدولة وموثوقية إمدادات النحاس العالمية.",
+      "takeEn": "The government should tie the recovery plan to clear production and cost milestones, prioritize projects, and prepare worker-transition measures because Codelco’s performance affects public revenue and the reliability of global copper supply.",
+      "titleAr": "تشيلي تؤجل خطة تعافي كوديلكو إلى نهاية 2026",
+      "titleEn": "Chile’s Codelco recovery plan slips to end-2026"
+    },
+    {
       "categoryAr": "البنية التحتية الرقمية وتمويل التنمية",
       "categoryEn": "DIGITAL INFRASTRUCTURE + DEVELOPMENT FINANCE",
       "id": "us-dfc-wiocc-africa-digital-infrastructure-equity-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تحتاج اتصالات الطوارئ إلى مسارات بديلة تُختبر بصورة مستقلة، ورؤية لحظية لحالة الخدمة، وآلية مسبقة لتصعيد فحوص الاطمئنان، لا الاعتماد على استعادة شركة واحدة للشبكة. وينبغي للجهات التنظيمية فرض تقارير حوادث قابلة للتدقيق وتمارين مرونة وأهداف قابلة للقياس لاستعادة بنية مكالمات الطوارئ.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/asia-pacific/australias-optus-apologises-outage-that-disrupted-emergency-calls-2026-09-12/"
-    },
-    {
-      "id": "us-solar-import-duties-india-indonesia-laos-2026",
-      "publishedAt": "2026-09-11T19:45:00Z",
-      "categoryEn": "CLIMATE + INDUSTRIAL POLICY",
-      "categoryAr": "المناخ والسياسة الصناعية",
-      "titleEn": "US finalizes solar trade-duty determinations covering India, Indonesia and Laos",
-      "titleAr": "الولايات المتحدة تستكمل قرارات رسوم تجارية على واردات الطاقة الشمسية من الهند وإندونيسيا ولاوس",
-      "summaryEn": "The U.S. Commerce Department finalized anti-dumping and countervailing-duty determinations on solar cells and panels from India, Indonesia and Laos after finding dumping and government subsidies. The measures still depend on a U.S. International Trade Commission injury determination scheduled for October 14; an affirmative decision would allow final duty orders expected in November.",
-      "summaryAr": "استكملت وزارة التجارة الأمريكية قراراتها النهائية بشأن رسوم مكافحة الإغراق والدعم على الخلايا والألواح الشمسية من الهند وإندونيسيا ولاوس، بعد أن خلصت إلى وجود إغراق ودعم حكومي. وما زال تطبيق الأوامر النهائية مرتبطًا بقرار لجنة التجارة الدولية الأمريكية بشأن الضرر، والمقرر في 14 أكتوبر؛ وإذا جاء القرار إيجابيًا يُتوقع إصدار أوامر الرسوم في نوفمبر.",
-      "takeEn": "Government implication: trade enforcement can protect domestic clean-energy manufacturing while also raising procurement costs and shifting supply chains. Governments should model those effects together, coordinate trade, customs and energy agencies, and prepare supplier-diversification and project-transition plans before duties take effect.",
-      "takeAr": "الدلالة للحكومات: قد تحمي إجراءات التجارة تصنيع الطاقة النظيفة محليًا، لكنها قد ترفع تكاليف المشتريات وتعيد توجيه سلاسل الإمداد. وينبغي للحكومات نمذجة هذه الآثار معًا، وتنسيق عمل جهات التجارة والجمارك والطاقة، وإعداد خطط لتنويع الموردين وانتقال المشروعات قبل دخول الرسوم حيز التنفيذ.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/us-commerce-department-finalizes-steep-duties-solar-imports-india-indonesia-laos-2026-09-11/"
     }
   ],
-  "updatedAt": "2026-09-16T19:25:02.000Z"
+  "updatedAt": "2026-09-16T20:09:38.000Z"
 }
