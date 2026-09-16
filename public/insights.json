@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية للطاقة وتحديث الشبكات",
+      "categoryEn": "ENERGY INFRASTRUCTURE + GRID MODERNIZATION",
+      "id": "spain-grid-investment-17-billion-2030-2026",
+      "publishedAt": "2026-09-16T10:55:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/spain-ups-planned-power-grid-investment-over-17-bln-through-2030-2026-09-16/",
+      "summaryAr": "قررت الحكومة الإسبانية رفع استثمارات شبكة نقل الكهرباء إلى أكثر من 17 مليار يورو حتى 2030، بزيادة تقارب 30% عن الخطة الأصلية، استجابةً لتنامي الطلب الناتج عن الكهربة ومراكز البيانات والصناعة والإسكان ومشروعات الطاقة المتجددة والتخزين. وقالت وزيرة الطاقة إن الحكومة ستنشر قريبًا قواعد سوق للقدرة قائم على المزادات يتيح تعويض التوليد والتخزين وبعض المستهلكين مقابل دعم الشبكة وقت الذروة والضغط.",
+      "summaryEn": "Spain’s government decided to raise planned electricity-transmission investment to more than €17 billion through 2030, roughly 30% above the initial plan, as electrification and demand from data centres, industry, housing, renewables and storage increase connection needs. The energy minister also said auction-based capacity-market rules will be published shortly, allowing generation, storage and some consumers to be compensated for supporting the system during peaks and stress events.",
+      "takeAr": "الدلالة للحكومات: لم تعد خطط الشبكات قادرة على التعامل مع مراكز البيانات والكهربة كمشروعات منفصلة. ينبغي دمج توقعات الطلب الصناعي والرقمي والسكني مع قوائم ربط شفافة، واستثمارات نقل مرحلية، وآليات قدرة تكافئ التخزين والمرونة وخفض الأحمال، حتى لا تتحول قيود الشبكة إلى عنق زجاجة للاستثمار أو إلى تكلفة غير عادلة على المستهلكين.",
+      "takeEn": "Government implication: grid plans can no longer treat data centres and electrification as isolated projects. Governments should combine industrial, digital and residential demand forecasts with transparent connection queues, staged transmission investment and capacity mechanisms that reward storage, flexibility and demand reduction, preventing grid constraints from becoming an investment bottleneck or an unfair burden on consumers.",
+      "titleAr": "إسبانيا ترفع استثمارات شبكة الكهرباء إلى أكثر من 17 مليار يورو حتى 2030",
+      "titleEn": "Spain lifts 2030 power-grid investment plan above €17 billion"
+    },
+    {
       "id": "eu-frontier-ai-labs-risk-dialogue-2026",
       "publishedAt": "2026-09-16T07:47:00Z",
       "categoryEn": "AI GOVERNANCE + FRONTIER SAFETY",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: باتت استراتيجية تصدير التقنية تحتاج إلى دبلوماسية تنظيمية، لا إلى التمويل والترويج التجاري وحدهما. ويمكن إنشاء وظيفة مشتركة بين القطاعين العام والخاص تمنح الشركات الناشئة فهمًا مبكرًا للقواعد الخارجية، وتنسّق الحوار دون امتيازات غير عادلة، وتدفع نحو توافق معايير البيانات والأمن السيبراني والذكاء الاصطناعي مع احترام سيادة الدول المضيفة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/india/india-needs-forum-tech-firms-engage-foreign-regulators-finance-minister-says-2026-09-11/"
-    },
-    {
-      "id": "eu-ets-revenue-industrial-decarbonisation-proposal-2026",
-      "publishedAt": "2026-09-11T09:56:00Z",
-      "categoryEn": "CLIMATE + INDUSTRIAL POLICY",
-      "categoryAr": "المناخ والسياسة الصناعية",
-      "titleEn": "EU Parliament lead negotiator proposes directing 75% of ETS revenue to industrial decarbonisation",
-      "titleAr": "مفاوض البرلمان الأوروبي يقترح توجيه 75% من عائدات سوق الكربون لإزالة الكربون من الصناعة",
-      "summaryEn": "The European Parliament’s lead negotiator on the EU Emissions Trading System revision proposed requiring member states to spend 75% of auction revenue on decarbonising industries covered by the scheme, above the European Commission’s proposed 50%. His draft would also slow the emissions-cap reduction early in the 2030s and accelerate it later; Parliament and member states are developing positions ahead of negotiations expected after December.",
-      "summaryAr": "اقترح المفاوض الرئيسي للبرلمان الأوروبي بشأن مراجعة نظام تداول الانبعاثات إلزام الدول الأعضاء بإنفاق 75% من عائدات مزادات التصاريح على إزالة الكربون من الصناعات المشمولة، مقابل 50% في مقترح المفوضية الأوروبية. كما تقترح مسودته إبطاء خفض سقف الانبعاثات في أوائل الثلاثينيات ثم تسريعه لاحقًا، فيما يبلور البرلمان والدول مواقفهما قبل مفاوضات متوقعة بعد ديسمبر.",
-      "takeEn": "Government implication: if the earmarking survives negotiations, national ETS revenue plans will need a larger, investment-ready pipeline of industrial decarbonisation projects. Governments should prepare transparent eligibility rules and delivery capacity now, while treating the percentages and timing as negotiating positions rather than settled law.",
-      "takeAr": "الدلالة للحكومات: إذا بقي تخصيص العائدات في النص النهائي، فستحتاج الخطط الوطنية لعائدات نظام التداول إلى محفظة أكبر وجاهزة للاستثمار من مشروعات إزالة الكربون الصناعية. وينبغي إعداد قواعد أهلية شفافة وقدرات تنفيذية منذ الآن، مع التعامل مع النسب والتوقيت بوصفها مواقف تفاوضية لا قانونًا نافذًا.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/environment/eu-lawmaker-proposes-more-carbon-market-investments-in-industry-2026-09-11/"
     }
   ],
-  "updatedAt": "2026-09-16T08:28:52.000Z"
+  "updatedAt": "2026-09-16T11:38:01.000Z"
 }
