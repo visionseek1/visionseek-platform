@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "حوكمة الذكاء الاصطناعي والحوار الاستراتيجي",
+      "categoryEn": "AI GOVERNANCE + STRATEGIC DIALOGUE",
+      "id": "us-china-shared-ai-risks-model-dialogue-2026",
+      "publishedAt": "2026-09-16T17:46:42Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/bessent-says-us-open-discussing-shared-ai-risks-with-china-axios-reports-2026-09-16/",
+      "summaryAr": "أشارت الولايات المتحدة إلى استعدادها لمناقشة المخاطر المشتركة للذكاء الاصطناعي مع الصين في محادثات مرتقبة، بما يشمل النماذج مفتوحة الأوزان ومغلقتها وتجنب انقسام النظامين التقنيين. التصريح يضع إدارة مخاطر النماذج المتقدمة ضمن قناة حكومية مباشرة بين أكبر قوتين في الذكاء الاصطناعي، من دون الإعلان بعد عن التزامات أو آلية تنفيذ مشتركة.",
+      "summaryEn": "The United States signalled it is open to discussing shared AI risks with China in upcoming talks, including open- and closed-weight models and ways to avoid a bifurcation of the two technology systems. The statement places advanced-model risk management inside a direct government channel between the two leading AI powers, though no joint commitments or implementation mechanism have yet been announced.",
+      "takeAr": "ينبغي للحكومات تحويل حوارات الذكاء الاصطناعي العابرة للحدود إلى بروتوكولات تشغيلية: تعريفات مشتركة للمخاطر، ونقاط اتصال للحوادث، وقواعد لتبادل المعلومات، ومسارات تصعيد، وتمارين دورية. البداية العملية هي فصل التعاون في السلامة ومنع إساءة الاستخدام عن التنافس التجاري، مع الحفاظ على السيادة والأمن الوطني.",
+      "takeEn": "Governments should turn cross-border AI dialogue into operating protocols: shared risk definitions, incident contacts, information-sharing rules, escalation paths and recurring exercises. A practical starting point is to separate cooperation on safety and misuse prevention from commercial competition while preserving national security and sovereignty.",
+      "titleAr": "الولايات المتحدة تفتح باب حوار مع الصين حول مخاطر الذكاء الاصطناعي والنماذج المفتوحة والمغلقة",
+      "titleEn": "US opens door to China dialogue on AI risks across open- and closed-weight models"
+    },
+    {
       "categoryAr": "البنية التحتية للطاقة والسياسة الصناعية",
       "categoryEn": "ENERGY INFRASTRUCTURE + INDUSTRIAL POLICY",
       "id": "ghana-west-east-gas-pipeline-fid-2027-2026",
@@ -685,21 +699,7 @@
       "takeAr": "ينبغي للحكومات اختبار أدوات التجارة والمناخ والسياسة الصناعية معًا قبل إعلانها، مع قواعد بديلة واضحة وقدرة تنفيذية تمنع الاستثناءات الدبلوماسية من إفراغ سياسة المواد الدائرية المحلية من مضمونها.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/china/eu-dropped-aluminium-scrap-duty-plan-over-india-concerns-sources-say-2026-09-11/"
-    },
-    {
-      "id": "hungary-targeted-diesel-support-no-price-cap-2026",
-      "publishedAt": "2026-09-11T13:47:00Z",
-      "categoryEn": "ENERGY + FISCAL POLICY",
-      "categoryAr": "الطاقة والسياسة المالية",
-      "titleEn": "Hungary chooses targeted diesel support over a price cap amid supply pressure",
-      "titleAr": "المجر تختار دعمًا موجّهًا للديزل بدل سقف سعري وسط ضغوط الإمداد",
-      "summaryEn": "Hungary will provide targeted compensation to households using diesel-powered cars as fuel prices rise, while rejecting a price cap that the government says could worsen shortages. Owners of up to one million diesel vehicles rated at no more than 150 horsepower are due to receive 20,000 forints by December, and farmers will receive excise-tax refunds.",
-      "summaryAr": "ستقدم المجر تعويضًا موجّهًا للأسر التي تستخدم سيارات الديزل مع ارتفاع أسعار الوقود، بينما رفضت فرض سقف سعري ترى الحكومة أنه قد يفاقم النقص. ومن المقرر أن يحصل مالكو ما يصل إلى مليون مركبة ديزل بقوة لا تتجاوز 150 حصانًا على 20 ألف فورنت بحلول ديسمبر، فيما يحصل المزارعون على رد لضريبة الإنتاج.",
-      "takeEn": "Government implication: emergency fuel relief can protect exposed users without suppressing price signals across the entire market. Governments should define eligibility from verifiable records, publish the fiscal cost and expiry date, monitor supply and distributional effects, and avoid locking temporary relief into incentives that undermine longer-term energy-transition goals.",
-      "takeAr": "الدلالة للحكومات: يمكن لإغاثة الوقود الطارئة حماية الفئات الأكثر تعرضًا من دون تعطيل إشارات الأسعار في السوق كله. وينبغي تحديد الأهلية من سجلات قابلة للتحقق، ونشر التكلفة المالية وموعد الانتهاء، ومراقبة الإمدادات والأثر التوزيعي، وتجنب تحويل الدعم المؤقت إلى حوافز دائمة تعرقل أهداف التحول الطاقي.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/hungary-give-targeted-subsidy-owners-diesel-powered-cars-2026-09-11/"
     }
   ],
-  "updatedAt": "2026-09-16T17:51:28.000Z"
+  "updatedAt": "2026-09-16T18:31:51.000Z"
 }
