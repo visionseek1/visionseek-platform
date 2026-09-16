@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية للذكاء الاصطناعي",
+      "categoryEn": "AI Infrastructure",
+      "id": "us-house-ratepayer-protection-data-center-grid-costs-2026",
+      "publishedAt": "2026-09-16T23:00:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/us-house-advances-first-bill-addressing-economic-impacts-data-center-boom-2026-09-16/",
+      "summaryAr": "أقر مجلس النواب الأميركي بأغلبية 417 مقابل 3 أصوات قانون حماية دافعي فواتير المرافق، في أول تشريع يمرره المجلس ويتناول مباشرةً التداعيات الاقتصادية لتوسع مراكز البيانات. ويلزم المشروع هيئات تنظيم المرافق في الولايات بالنظر فيما إذا كان ينبغي لكبار مستهلكي الكهرباء، ومنهم مراكز البيانات، تحمّل التكاليف الإضافية للبنية التحتية الكهربائية المبنية لخدمتهم.",
+      "summaryEn": "The U.S. House passed the Ratepayer Protection Act by 417–3, the chamber’s first approved legislation directly addressing the economic impact of data-center expansion. The bill would require state utility regulators to consider whether large electricity users, including data centers, should bear the incremental cost of power infrastructure built to serve them.",
+      "takeAr": "ينبغي للحكومات التي تجذب مراكز بيانات الذكاء الاصطناعي أن تربط الموافقات بقواعد صريحة وقابلة للتدقيق لتوزيع تكاليف الشبكة، حتى لا تتحول توسعات الكهرباء إلى دعم عام غير معلن على حساب الأسر.",
+      "takeEn": "Governments attracting AI data centers should pair approvals with explicit, auditable grid-cost allocation rules so power upgrades do not become an implicit public subsidy borne by households.",
+      "titleAr": "مجلس النواب الأميركي يقر أول مشروع قانون لمراجعة من يتحمل تكاليف شبكات مراكز بيانات الذكاء الاصطناعي",
+      "titleEn": "US House passes first bill scrutinizing who pays AI data-center grid costs"
+    },
+    {
       "categoryAr": "مرونة الطاقة وتمويل التنمية",
       "categoryEn": "Energy Resilience + Development Finance",
       "id": "us-dfc-ukraine-dtek-battery-storage-loan-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتطلب إعادة هيكلة مؤسسة لإدارة الطوارئ سندًا قانونيًا صريحًا، ونمذجة للقدرات قائمة على الأدلة، وسجلات قابلة للتدقيق. وينبغي اختبار أهداف القوى العاملة مقابل احتياجات التعزيز السريع وزمن الاستجابة واستمرارية العمليات قبل التنفيذ، مع رقابة تشريعية عندما قد تتقلص وظائف أساسية يحددها القانون.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/legal/government/us-judge-rules-that-trump-plan-halve-fema-workforce-violated-law-2026-09-12/"
-    },
-    {
-      "id": "syria-mezzeh-airport-redevelopment-mass-graves-land-rights-2026",
-      "publishedAt": "2026-09-12T05:06:46Z",
-      "categoryEn": "INFRASTRUCTURE + RIGHTS GOVERNANCE",
-      "categoryAr": "البنية التحتية وحوكمة الحقوق",
-      "titleEn": "Syria’s Mezzeh airport redevelopment raises mass-grave and land-rights safeguards",
-      "titleAr": "إعادة تطوير مطار المزة في سوريا تثير متطلبات حماية المقابر وحقوق الملكية",
-      "summaryEn": "Syria’s civil aviation authority is preparing to convert Mezzeh military airport in Damascus for limited private and executive aviation, with rubble removal and infrastructure upgrades already under way. Rights groups and residents warn that redevelopment could disturb suspected mass graves, compromise evidence and advance construction before unresolved private-land claims are addressed.",
-      "summaryAr": "تستعد هيئة الطيران المدني السورية لتحويل مطار المزة العسكري في دمشق إلى استخدام مدني محدود للطيران الخاص والتنفيذي، وقد بدأت إزالة الأنقاض وتحديثات البنية التحتية. وتحذر منظمات حقوقية وسكان من أن إعادة التطوير قد تمس مقابر جماعية مشتبهًا بها وتعرّض الأدلة للخطر وتمضي بالبناء قبل معالجة مطالبات الملكية الخاصة غير المحسومة.",
-      "takeEn": "Government implication: redevelopment of conflict-legacy sites needs a binding stage gate before enabling works begin. Authorities should secure the site, commission an independent forensic survey with chain-of-custody rules, map ownership claims and publish a compensation process before procurement or construction proceeds.",
-      "takeAr": "الدلالة للحكومات: تحتاج إعادة تطوير المواقع المرتبطة بإرث النزاع إلى بوابة قرار ملزمة قبل بدء الأعمال التمهيدية. وينبغي تأمين الموقع، وإجراء مسح جنائي مستقل بقواعد لحفظ الأدلة، وحصر مطالبات الملكية، ونشر آلية للتعويض قبل المضي في المشتريات أو البناء.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/middle-east/syrian-private-airport-plans-spark-outcry-over-mass-graves-land-rights-2026-09-12/"
     }
   ],
-  "updatedAt": "2026-09-16T21:22:51.000Z"
+  "updatedAt": "2026-09-16T23:46:06.000Z"
 }
