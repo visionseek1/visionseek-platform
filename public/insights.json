@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن الطاقة والسياسة التجارية",
+      "categoryEn": "Energy Security + Trade Policy",
+      "id": "india-energy-security-us-tariff-threat-2026",
+      "publishedAt": "2026-09-17T05:19:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/india-vows-protect-energy-security-warns-us-tariffs-could-hit-ties-2026-09-17/",
+      "summaryAr": "أكدت الهند أنها ستواصل تنويع مصادر الطاقة وفق ديناميكيات السوق، بعد إقرار مجلس النواب الأميركي مشروعًا يجيز فرض رسوم تصل إلى 100% على دول تواصل شراء النفط والغاز الروسيين. وقالت نيودلهي إنها ستتخذ الإجراءات اللازمة لحماية مصالحها التجارية والاقتصادية وستنسق مع قطاعات التجارة والصناعة للتعامل مع آثار التشريع إذا دخل حيز التنفيذ.",
+      "summaryEn": "India said it would continue diversifying energy supplies according to market conditions after the U.S. House passed legislation authorizing tariffs of up to 100% on countries that continue buying Russian oil and gas. New Delhi said it would take necessary steps to protect its trade and economic interests and coordinate with trade and industry bodies if the measure takes effect.",
+      "takeAr": "على الحكومات المستوردة للطاقة التعامل مع العقوبات الثانوية والرسوم كخطر تشغيلي لا دبلوماسي فقط: إعداد سيناريوهات لتكلفة الاستيراد والتأمين والشحن، وتأمين عقود ومورّدين بدلاء، وتنسيق قرارات الطاقة والتجارة والخارجية مع الصناعة قبل دخول القيود حيز التنفيذ.",
+      "takeEn": "Energy-importing governments should treat secondary sanctions and tariffs as an operational risk, not only a diplomatic one: model import, insurance and shipping costs, secure alternative suppliers and contracts, and coordinate energy, trade and foreign-policy decisions with industry before restrictions take effect.",
+      "titleAr": "الهند تتمسك بتنويع إمدادات الطاقة رغم تهديد الرسوم الأميركية",
+      "titleEn": "India holds to diversified energy sourcing despite U.S. tariff threat"
+    },
+    {
       "categoryAr": "القدرة على الصمود المناخي",
       "categoryEn": "Climate Resilience",
       "id": "wmo-global-water-resources-2025-dry-river-flows",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يجب إدارة مرونة مسارات الطاقة كهامش تشغيلي محسوب بالوقت، لا كحالة ثنائية بين العمل والتوقف. وينبغي ربط مراحل الإصلاح الموثقة بالتغطية اليومية للمخزون، وحماية مرافق التخزين والمحطات البديلة، وإعداد سيناريوهات لتخصيص الصادرات، وتنسيق الاتصال بالأسواق قبل نفاد الاحتياطي.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/"
-    },
-    {
-      "id": "brics-ai-open-source-zone-government-cooperation-2026",
-      "publishedAt": "2026-09-13T08:43:00Z",
-      "categoryEn": "AI + INTERNATIONAL COOPERATION",
-      "categoryAr": "الذكاء الاصطناعي والتعاون الدولي",
-      "titleEn": "China proposes a BRICS AI open-source zone for cross-border model cooperation",
-      "titleAr": "الصين تقترح منطقة مفتوحة المصدر للذكاء الاصطناعي ضمن «بريكس»",
-      "summaryEn": "Chinese President Xi Jinping said China will lead the creation of a BRICS AI Open Source Zone to support cooperation on large language models, AI training and an open AI ecosystem. Announced at the BRICS summit in New Delhi, the proposal forms part of a wider push to deepen practical cooperation and connect markets across the expanded bloc.",
-      "summaryAr": "قال الرئيس الصيني شي جين بينغ إن بلاده ستقود إنشاء منطقة مفتوحة المصدر للذكاء الاصطناعي ضمن «بريكس» لدعم التعاون في النماذج اللغوية الكبيرة وتدريب الذكاء الاصطناعي وبناء منظومة مفتوحة. وجاء المقترح خلال قمة «بريكس» في نيودلهي ضمن توجه أوسع لتعميق التعاون العملي وربط أسواق دول التكتل الموسع.",
-      "takeEn": "Government implication: participating states should shape the zone before its technical architecture hardens. Priorities include shared rules for data access, licensing, model evaluation, cybersecurity and cross-border accountability, plus transparent pathways for local researchers, languages and public-sector use cases to benefit from the ecosystem.",
-      "takeAr": "الدلالة للحكومات: ينبغي للدول المشاركة أن تسهم في تشكيل المنطقة قبل تثبيت بنيتها التقنية. وتشمل الأولويات قواعد مشتركة لإتاحة البيانات والترخيص وتقييم النماذج والأمن السيبراني والمساءلة عبر الحدود، مع مسارات شفافة تضمن استفادة الباحثين واللغات المحلية وحالات الاستخدام الحكومي من المنظومة.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/xi-pushes-greater-brics-economic-ties-give-bloc-larger-global-role-2026-09-13/"
     }
   ],
-  "updatedAt": "2026-09-17T04:35:21.000Z"
+  "updatedAt": "2026-09-17T06:09:56.000Z"
 }
