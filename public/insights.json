@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية الكمية والسياسة الصناعية",
+      "categoryEn": "Quantum Infrastructure + Industrial Policy",
+      "id": "france-cea-alice-bob-quantum-supercomputing-software-2026",
+      "publishedAt": "2026-09-17T07:07:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/technology/frances-cea-alice-bob-partner-quantum-supercomputing-software-2026-09-17/",
+      "summaryAr": "اتفقت هيئة الطاقة الذرية الفرنسية الحكومية وشركة الحوسبة الكمية الناشئة Alice & Bob على تطوير برمجيات تربط المعالجات الكمية بالحواسيب الفائقة التقليدية، بدءًا بتطبيقات في فيزياء المواد. وستطوّر الشراكة منصة Qaptiva كبديل محلي لـCUDA-Q من Nvidia، فيما تعمل الهيئة كعميل مبكر وتتيح للشركات الفرنسية الوصول إلى مرافقها الحاسوبية، مع التخطيط لتركيب جهاز Alice & Bob في 2027.",
+      "summaryEn": "France’s state Atomic Energy Commission and quantum startup Alice & Bob agreed to develop software that connects quantum processors with classical supercomputers, initially for materials physics. The partnership will improve the Qaptiva platform as a domestic alternative to Nvidia’s CUDA-Q, while CEA acts as an early customer and gives French startups access to its computing facilities; an Alice & Bob machine is planned for installation in 2027.",
+      "takeAr": "يمكن للحكومات التي تبني قدرات حوسبة استراتيجية الجمع بين البنية البحثية العامة والمشتريات المبكرة لتقليل الاعتماد البرمجي ومنح الشركات المحلية مسارًا من النماذج الأولية إلى الأنظمة التشغيلية. وينبغي أن تحدد البرامج واجهات قابلة للتشغيل البيني، وقواعد وصول وشراء مرتبطة بمراحل إنجاز، وحدودًا أمنية، ومسارات قابلة للقياس للمستخدمين الخارجيين.",
+      "takeEn": "Governments building strategic-computing capacity can pair public research infrastructure with early procurement to reduce software dependence and give domestic firms a path from prototypes to operational systems. Programs should set interoperable interfaces, milestone-based access and procurement rules, security boundaries, and measurable pathways for external users.",
+      "titleAr": "فرنسا توظف البنية الحاسوبية الحكومية لتسريع البرمجيات الكمية المحلية",
+      "titleEn": "France uses state computing infrastructure to accelerate domestic quantum software"
+    },
+    {
       "categoryAr": "أمن الطاقة والسياسة التجارية",
       "categoryEn": "Energy Security + Trade Policy",
       "id": "india-energy-security-us-tariff-threat-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: قد تنتقل الضربات العابرة للحدود على منظومات الوقود سريعًا من تكتيك ميداني إلى خطر على الإمدادات العالمية والعلاقات الدبلوماسية. وينبغي ربط سياسة الاستهداف بتقييم آني لأسواق الوقود، وتحديد فئات البنية التحتية المحمية أو المشروطة مع الحلفاء، والإبقاء على قنوات سريعة لمنع التصعيد دون إضعاف المساءلة عن الهجمات على أنظمة الطاقة المدنية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/trump-tells-ukraines-zelenskiy-stop-hitting-russian-diesel-2026-09-13/"
-    },
-    {
-      "id": "saudi-pipeline-export-stock-countdown-global-supply-risk-2026",
-      "publishedAt": "2026-09-13T12:04:00Z",
-      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "الطاقة والبنية التحتية الحيوية",
-      "titleEn": "Saudi pipeline outage starts a five-to-seven-day export-stock countdown",
-      "titleAr": "تعطل خط النفط السعودي يبدأ عدًّا تنازليًا لمخزون التصدير بين خمسة وسبعة أيام",
-      "summaryEn": "Saudi oil buyers and traders told Reuters that stocks at Yanbu could sustain exports for only five to seven days unless the East-West pipeline restarts. The route had been carrying about 4 million barrels a day, roughly 4% of global supply, and estimates for repairing strike damage range from a faster partial restart to five or six weeks. Saudi authorities have not disclosed the expected outage duration.",
-      "summaryAr": "قال مشترون وتجار للنفط السعودي لرويترز إن مخزون ينبع قد يدعم الصادرات لمدة تتراوح بين خمسة وسبعة أيام فقط ما لم يُستأنف تشغيل خط شرق–غرب. وكان المسار ينقل نحو أربعة ملايين برميل يوميًا، بما يعادل قرابة 4% من الإمدادات العالمية، فيما تراوحت تقديرات إصلاح أضرار الهجوم بين استئناف جزئي أسرع وخمسة أو ستة أسابيع. ولم تعلن السلطات السعودية المدة المتوقعة للتوقف.",
-      "takeEn": "Government implication: route resilience must be managed as a timed operating margin, not a binary open-or-closed status. Authorities should link verified repair milestones to daily inventory coverage, protect storage and alternate terminals, prepare export-allocation scenarios, and coordinate market communication before the buffer is exhausted.",
-      "takeAr": "الدلالة للحكومات: يجب إدارة مرونة مسارات الطاقة كهامش تشغيلي محسوب بالوقت، لا كحالة ثنائية بين العمل والتوقف. وينبغي ربط مراحل الإصلاح الموثقة بالتغطية اليومية للمخزون، وحماية مرافق التخزين والمحطات البديلة، وإعداد سيناريوهات لتخصيص الصادرات، وتنسيق الاتصال بالأسواق قبل نفاد الاحتياطي.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/"
     }
   ],
-  "updatedAt": "2026-09-17T06:09:56.000Z"
+  "updatedAt": "2026-09-17T07:34:06.000Z"
 }
