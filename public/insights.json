@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية للذكاء الاصطناعي",
+      "categoryEn": "AI Infrastructure",
+      "id": "huawei-two-ai-chips-2027-unifiedbus",
+      "publishedAt": "2026-09-17T02:40:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/chinas-huawei-launch-two-new-ai-chips-2027-2026-09-17/",
+      "summaryAr": "أعلنت هواوي أنها ستطلق معالجين جديدين للذكاء الاصطناعي في 2027: ‏960DT في الربع الأول وAscend 960PR في الربع الثالث. وتقول الشركة إن تقنية UnifiedBus ستربط أعدادًا كبيرة من المعالجات داخل أنظمة الحوسبة المقبلة، بعدما شحنت أكثر من ألف نظام مماثل إلى أكثر من 370 عميلًا.",
+      "summaryEn": "Huawei said it will launch two new AI processors in 2027: the 960DT in the first quarter and the Ascend 960PR in the third. The company says its UnifiedBus technology will connect large numbers of chips in next-generation computing systems, after shipping more than 1,000 such systems to over 370 customers.",
+      "takeAr": "ينبغي للحكومات تحديث خرائط موردي الحوسبة السيادية على مستوى النظام الكامل لا المعالج وحده، ومقارنة الأداء وكفاءة الطاقة والبرمجيات واستمرارية الإمداد وقابلية التشغيل البيني قبل قرارات الشراء أو وضع قيود التصدير.",
+      "takeEn": "Governments should update sovereign-compute supplier maps at the full-system level, not just the chip level, benchmarking performance, energy efficiency, software, supply continuity and interoperability before procurement or export-control decisions.",
+      "titleAr": "هواوي تحدد 2027 لإطلاق معالجين جديدين للذكاء الاصطناعي وتوسيع أنظمة الحوسبة",
+      "titleEn": "Huawei schedules two new AI chips for 2027 and expands system-scale computing"
+    },
+    {
       "categoryAr": "البنية التحتية الرقمية",
       "categoryEn": "Digital Infrastructure",
       "id": "us-fcc-spectrum-auctions-6g-ai-infrastructure-2028",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: لا يصبح مسار التصدير البديل مرنًا لمجرد تجاوزه نقطة اختناق واحدة. ينبغي رسم خريطة للتهديدات المشتركة التي تمس الموانئ والأنابيب والمجال الجوي، واختبار خطط إعادة التوجيه والاستعادة، وتنسيق الإسناد ومنع التصعيد عبر الحدود، ونشر حالة التشغيل سريعًا حتى لا تتحول الصدمة الأمنية إلى غموض مضاعف في الأسواق.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/middle-east/saudi-shares-drop-after-drone-attacks-target-key-oil-pipeline-2026-09-13/"
-    },
-    {
-      "id": "zaporizhzhia-diesel-supply-nuclear-safety-risk-2026",
-      "publishedAt": "2026-09-13T07:03:09Z",
-      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "الطاقة والبنية التحتية الحيوية",
-      "titleEn": "Claimed strike near Zaporizhzhia fuel supply exposes nuclear backup-power risk",
-      "titleAr": "ضربة مزعومة قرب إمدادات زابوريجيا تكشف مخاطر الطاقة الاحتياطية النووية",
-      "summaryEn": "The head of Russia’s state nuclear corporation accused Ukraine of striking diesel fuel trucks near the Russian-held Zaporizhzhia nuclear plant, saying the convoy supported fuel deliveries for backup generators. Both sides have repeatedly traded accusations over nuclear-safety risks. Diesel remains essential for cooling reactor fuel when external power links fail, while the IAEA maintains observers at the site and has previously mediated access for repairs.",
-      "summaryAr": "اتهم رئيس مؤسسة الطاقة النووية الروسية أوكرانيا بضرب شاحنات وقود ديزل قرب محطة زابوريجيا النووية الخاضعة للسيطرة الروسية، قائلًا إن القافلة كانت تدعم إمدادات مولدات الطوارئ. ويتبادل الطرفان منذ فترة اتهامات بشأن تهديد السلامة النووية. ويظل الديزل ضروريًا لتبريد وقود المفاعلات عند فقدان خطوط الكهرباء الخارجية، فيما تحتفظ الوكالة الدولية للطاقة الذرية بمراقبين في الموقع وسبق أن توسطت لتأمين أعمال الإصلاح.",
-      "takeEn": "Government implication: nuclear-safety planning must protect the last mile of backup-power logistics as critical infrastructure. Authorities and international monitors should establish verified delivery corridors, minimum onsite fuel thresholds, independent incident reporting, and rapid deconfliction procedures so military activity cannot interrupt reactor-cooling resilience.",
-      "takeAr": "الدلالة للحكومات: يجب أن تشمل خطط السلامة النووية حماية الحلقة الأخيرة في لوجستيات الطاقة الاحتياطية بوصفها بنية تحتية حيوية. وينبغي للسلطات والمراقبين الدوليين إنشاء ممرات إمداد موثقة، وحدود دنيا للوقود داخل الموقع، وتقارير مستقلة عن الحوادث، وإجراءات سريعة لمنع الاشتباك حتى لا تعطل العمليات العسكرية قدرة تبريد المفاعلات.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/russian-nuclear-head-says-ukraine-attacked-fuel-trucks-endangered-zaporizhzhia-2026-09-13/"
     }
   ],
-  "updatedAt": "2026-09-17T02:44:07.000Z"
+  "updatedAt": "2026-09-17T03:32:59.000Z"
 }
