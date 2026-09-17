@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن الطاقة ومرونة البنية التحتية الحيوية",
+      "categoryEn": "Energy Security + Critical Infrastructure Resilience",
+      "id": "saudi-east-west-pipeline-three-pumping-stations-damaged-2026",
+      "publishedAt": "2026-09-17T16:18:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/three-pumping-stations-along-saudi-east-west-pipeline-were-hit-recent-attack-2026-09-17/",
+      "summaryAr": "أظهر تحليل لصور الأقمار الصناعية وأكدت ثلاثة مصادر في القطاع تضرر ثلاث محطات ضخ في خط الأنابيب السعودي شرق–غرب خلال هجوم الأسبوع الماضي، أي محطة أكثر مما كان مقدّرًا سابقًا. توقف الخط البالغ طوله 1,200 كيلومتر مؤقتًا؛ وكان ينقل 4 إلى 5 ملايين برميل يوميًا، بما يعادل نحو 4% إلى 5% من الإمدادات العالمية، بينما لا يزال جدول الإصلاح غير محسوم وقدّرت ثلاثة مصادر أنه قد يستغرق خمسة إلى ستة أسابيع.",
+      "summaryEn": "Satellite-image analysis and three industry sources indicate that three pumping stations on Saudi Arabia’s East-West Pipeline were damaged in last week’s attack—one more than previously assessed. The 1,200-kilometre line temporarily shut down; it had been moving 4–5 million barrels a day, about 4%–5% of global supply, while the repair schedule remains uncertain and three sources estimated five to six weeks.",
+      "takeAr": "على الحكومات التعامل مع خطوط تجاوز الاختناقات بوصفها أنظمة موزعة قد تفشل من نقاط متعددة في وقت واحد. الأولويات العملية هي تحصين محطات الضخ، وتوفير وحدات ومكوّنات إصلاح احتياطية، ودمج صور الأقمار الصناعية والقياس عن بُعد للتحقق السريع، ووضع مسارات بديلة وعتبات واضحة للسحب من المخزونات الاستراتيجية قبل وقوع الانقطاع.",
+      "takeEn": "Governments should treat bypass pipelines as distributed systems that can lose several nodes at once. Practical priorities are hardening pumping stations, pre-positioning modular repair units and spares, combining satellite imagery with telemetry for rapid verification, and setting alternate-routing and strategic-stock release triggers before disruption occurs.",
+      "titleAr": "تضرر ثلاث محطات ضخ في خط الأنابيب السعودي شرق–غرب يهدد مسارًا حيويًا للإمدادات",
+      "titleEn": "Damage to three Saudi East-West Pipeline stations threatens a vital supply bypass"
+    },
+    {
       "categoryAr": "أمن المجال الجوي واقتصاد الطيران منخفض الارتفاع",
       "categoryEn": "Airspace Security + Low-Altitude Economy",
       "id": "china-beijing-permanent-airspace-security-zone-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يُستخدم الاستحواذ العام هنا كجسر لحماية قدرة صناعية استراتيجية عندما لا يقبل رأس المال الخاص تحمّل المخاطر المتراكمة. وعلى الحكومات التي تدرس تدخلًا مماثلًا تحديد القدرة المراد حمايتها، ونشر اختبارات الفحص والقيمة مقابل المال، ووضع تفويض واضح للتشغيل والاستثمار، وتحديد شروط قابلة للقياس لإعادة الهيكلة أو الشراكة أو الخروج لاحقًا.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/uk-government-seeks-acquire-insolvent-specialist-steelmaker-2026-09-14/"
-    },
-    {
-      "id": "us-epa-power-plant-carbon-limits-repeal-2026",
-      "publishedAt": "2026-09-14T14:38:00Z",
-      "categoryEn": "CLIMATE + POWER SECTOR REGULATION",
-      "categoryAr": "المناخ وتنظيم قطاع الكهرباء",
-      "titleEn": "US EPA moves to repeal carbon limits for coal- and gas-fired power plants",
-      "titleAr": "وكالة حماية البيئة الأميركية تلغي قيود الكربون على محطات الفحم والغاز",
-      "summaryEn": "The U.S. Environmental Protection Agency is issuing a final rule repealing federal carbon-emission limits for coal- and gas-fired power plants. The announcement comes alongside a G20 energy-ministers meeting focused on energy security, baseload power and regulatory efficiency; the outgoing standards were projected to cut one billion metric tons of greenhouse-gas emissions by 2047.",
-      "summaryAr": "تصدر وكالة حماية البيئة الأميركية قاعدة نهائية تلغي القيود الفيدرالية على انبعاثات الكربون من محطات الكهرباء العاملة بالفحم والغاز. ويأتي الإعلان بالتزامن مع اجتماع وزراء طاقة مجموعة العشرين الذي يركز على أمن الطاقة وقدرات التوليد الأساسية والكفاءة التنظيمية؛ وكانت المعايير الملغاة تستهدف خفض مليار طن متري من انبعاثات غازات الدفيئة بحلول 2047.",
-      "takeEn": "Government implication: the repeal shifts U.S. power-sector planning toward near-term supply and compliance relief while reopening long-term emissions and investment uncertainty. Energy and environmental agencies should stress-test generation, grid and capital plans under both looser federal rules and possible state or judicial constraints, and publish the trade-offs for reliability, cost and emissions.",
-      "takeAr": "الدلالة للحكومات: ينقل الإلغاء تخطيط قطاع الكهرباء الأميركي نحو أولوية الإمداد قصير الأجل وتخفيف كلفة الامتثال، لكنه يعيد فتح عدم اليقين طويل الأجل بشأن الانبعاثات والاستثمار. ينبغي لجهات الطاقة والبيئة اختبار خطط التوليد والشبكات ورأس المال في ظل قواعد اتحادية أخف وقيود محتملة من الولايات أو القضاء، مع نشر المفاضلات بين الموثوقية والتكلفة والانبعاثات.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/litigation/epa-undo-carbon-emission-limits-power-plants-g20-meeting-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T16:46:27.000Z"
+  "updatedAt": "2026-09-17T17:04:13.000Z"
 }
