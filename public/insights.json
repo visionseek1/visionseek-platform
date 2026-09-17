@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "تصنيع أشباه الموصلات وسيادة سلاسل الإمداد",
+      "categoryEn": "Semiconductor Manufacturing + Supply-Chain Sovereignty",
+      "id": "india-tata-nexperia-chip-production-packaging-partnership-2026",
+      "publishedAt": "2026-09-17T14:11:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/nexperia-says-it-will-partner-with-tata-chip-production-packaging-india-2026-09-17/",
+      "summaryAr": "أعلنت شركة Nexperia الهولندية لصناعة الرقائق شراكة مع Tata Electronics لإنتاج أشباه الموصلات وتغليفها في الهند. تمثل الخطوة انتقالًا من جذب الاستثمارات العامة في منظومة الرقائق إلى دمج شركة دولية داخل قدرات التصنيع والتغليف المحلية، مع بقاء Nexperia مملوكة لشركة Wingtech الصينية دون خضوعها لسيطرتها التشغيلية بعد نزاع سابق.",
+      "summaryEn": "Dutch chipmaker Nexperia will partner with Tata Electronics to produce and package semiconductors in India. The move shifts India’s chip push from broad investment attraction toward integrating an international supplier with domestic manufacturing and packaging capacity; Nexperia remains owned, but not controlled, by China’s Wingtech after an earlier dispute.",
+      "takeAr": "على الحكومات الساعية لتوطين أشباه الموصلات قياس النجاح بعمق سلسلة القيمة لا بحجم الاستثمارات المعلنة فقط: نقل الإنتاج والتغليف والاختبار وضمان الجودة، وتأهيل الموردين والمهارات المحلية، ووضع قواعد واضحة للملكية والسيطرة والوصول إلى التقنية واستمرارية الإمداد قبل منح الحوافز.",
+      "takeEn": "Governments pursuing semiconductor localization should measure value-chain depth, not announced investment alone: production, packaging, testing and quality assurance; local supplier and workforce qualification; and clear rules for ownership, control, technology access and supply continuity before incentives are granted.",
+      "titleAr": "Nexperia وTata تتشاركان لإنتاج الرقائق وتغليفها داخل الهند",
+      "titleEn": "Nexperia and Tata partner to manufacture and package chips in India"
+    },
+    {
       "categoryAr": "المسيّرات المدنية والسيادة الصناعية",
       "categoryEn": "Civil Drones + Industrial Sovereignty",
       "id": "hungary-abz-civil-drone-factory-expansion-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: لا تصبح دساتير النماذج الطوعية أساسًا مفيدًا للمشتريات والرقابة إلا إذا كانت وعودها قابلة للاختبار المستقل. ينبغي اشتراط أدلة على الامتثال للإيقاف، وقبول التصحيح، ووضوح التقارير، والتصعيد إلى البشر قبل نشر الذكاء الاصطناعي المتقدم في الخدمات العامة الحساسة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/"
-    },
-    {
-      "id": "eu-truck-co2-target-delay-charging-grid-gap-2026",
-      "publishedAt": "2026-09-14T12:15:00Z",
-      "categoryEn": "CLIMATE + TRANSPORT INFRASTRUCTURE",
-      "categoryAr": "المناخ والبنية التحتية للنقل",
-      "titleEn": "European truckmakers seek three-year delay to 2030 CO2 target over charging gaps",
-      "titleAr": "صانعو الشاحنات الأوروبيون يطلبون تأجيل هدف انبعاثات 2030 بسبب فجوات الشحن",
-      "summaryEn": "CEOs of Europe’s seven leading truck and bus manufacturers asked the EU to delay compliance with its 2030 heavy-duty vehicle CO2 target by three years. Current rules require a 43% emissions reduction from 2025 levels by 2030, while zero-emission models account for only 2.4% of new heavy-duty vehicle sales. The manufacturers cited insufficient charging networks, slow grid connections and high energy costs, and called for infrastructure investment and stronger demand incentives.",
-      "summaryAr": "طلب رؤساء أكبر سبع شركات أوروبية لتصنيع الشاحنات والحافلات من الاتحاد الأوروبي تأجيل الامتثال لهدف خفض انبعاثات المركبات الثقيلة لعام 2030 ثلاث سنوات. وتفرض القواعد الحالية خفض الانبعاثات 43% مقارنة بمستويات 2025، بينما لا تمثل المركبات الثقيلة عديمة الانبعاثات سوى 2.4% من المبيعات الجديدة. وعزت الشركات الفجوة إلى قصور شبكات الشحن وبطء الربط الكهربائي وارتفاع تكاليف الطاقة، ودعت إلى الاستثمار في البنية التحتية وتحفيز الطلب.",
-      "takeEn": "Government implication: climate mandates are outrunning the infrastructure and economics needed for compliance. EU policymakers should link any regulatory flexibility to measurable milestones for charging deployment, grid-connection times, road-toll reform and reinvestment of emissions-trading revenue, so a delay buys implementation capacity rather than weakening the transition.",
-      "takeAr": "الدلالة للحكومات: تتقدم الالتزامات المناخية أسرع من البنية التحتية والجدوى الاقتصادية اللازمة للامتثال. ينبغي لصُنّاع السياسة الأوروبيين ربط أي مرونة تنظيمية بمؤشرات قابلة للقياس لنشر الشواحن وتقليص زمن ربط الشبكات وإصلاح رسوم الطرق وإعادة استثمار عائدات تداول الانبعاثات، حتى يتحول التأجيل إلى قدرة تنفيذية لا إلى إضعاف للتحول.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/autos-transportation/eu-truckmakers-seek-3-year-delay-2030-co2-targets-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T13:17:38.000Z"
+  "updatedAt": "2026-09-17T14:40:09.000Z"
 }
