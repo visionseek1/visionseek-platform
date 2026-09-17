@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية للذكاء الاصطناعي وتخطيط الطاقة",
+      "categoryEn": "AI Infrastructure + Energy Planning",
+      "id": "crusoe-ai-infrastructure-series-f-6gw-capacity-2026",
+      "publishedAt": "2026-09-17T19:25:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/ai-infrastructure-provider-crusoe-valued-309-billion-latest-funding-round-2026-09-17/",
+      "summaryAr": "جمعت شركة Crusoe المتخصصة في البنية التحتية للذكاء الاصطناعي 3.9 مليارات دولار في جولة تمويل رفعت تقييمها بعد الاستثمار إلى 30.9 مليار دولار. ستستخدم الشركة التمويل لتوسيع برامجها وبناء «مصانع ذكاء اصطناعي» خاصة بها، وقالت إن لديها عقودًا تتجاوز قيمتها 140 مليار دولار وقدرة تعاقدية تزيد على 6 غيغاواط، منها 1 غيغاواط قيد التشغيل.",
+      "summaryEn": "AI infrastructure provider Crusoe raised $3.9 billion in a funding round that valued it at $30.9 billion post-money. The company plans to use the proceeds to expand existing programs and build its own “AI factories,” and said it has more than $140 billion in contracted value and over 6 gigawatts of contracted capacity, with 1 gigawatt already operational.",
+      "takeAr": "على الحكومات التعامل مع هذه التدفقات الرأسمالية بوصفها إشارة إلى تسارع طلب خاص ضخم على الكهرباء والأراضي والربط بالشبكات، لا مجرد تمويل تقني. الأولويات العملية هي ربط التصاريح بإثبات مصادر الطاقة والربط، ومنع تحميل دافعي الرسوم تكاليف التوسعة، وفرض شفافية استهلاك الطاقة والمياه والانبعاثات، وتخطيط القدرة الحاسوبية والسيادة الرقمية بالتوازي مع مرونة الشبكة.",
+      "takeEn": "Governments should treat this capital flow as evidence that private demand for power, land and grid connections is accelerating—not merely as a technology funding event. Practical priorities are to tie permits to verified power and interconnection plans, prevent expansion costs from shifting to ratepayers, require transparent energy, water and emissions reporting, and plan compute sovereignty alongside grid resilience.",
+      "titleAr": "Crusoe تجمع 3.9 مليارات دولار لتوسيع بنية ذكاء اصطناعي تتجاوز 6 غيغاواط",
+      "titleEn": "Crusoe raises $3.9 billion to scale AI infrastructure beyond 6 gigawatts"
+    },
+    {
       "categoryAr": "البنية التحتية للغاز الطبيعي المسال وأمن الطاقة",
       "categoryEn": "LNG Infrastructure + Energy Security",
       "id": "canada-lng-phase-two-double-export-capacity-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يمكن أن تتحول نزاعات القوى العاملة فورًا إلى أزمة في موثوقية النظام عندما يتركز التوليد في عدد محدود من الأصول الاستراتيجية. ينبغي لسلطات الطاقة إدماج سيناريوهات مخاطر العمل في تخطيط الاحتياطيات والتجارة العابرة للحدود والتواصل العام واستمرارية الخدمات الحيوية، مع وضع عتبات تصعيد واضحة إذا استمرت حالات التوقف.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/french-power-sector-strike-takes-65-gigawatts-offline-overnight-2026-09-14/"
-    },
-    {
-      "id": "us-senate-ai-duty-care-government-audits-2026",
-      "publishedAt": "2026-09-14T17:08:00Z",
-      "categoryEn": "AI + GOVERNMENT OVERSIGHT",
-      "categoryAr": "الذكاء الاصطناعي والرقابة الحكومية",
-      "titleEn": "US senators weigh an AI duty of care backed by government audits",
-      "titleAr": "مجلس الشيوخ الأميركي يدرس واجب عناية للذكاء الاصطناعي تدعمه اختبارات حكومية",
-      "summaryEn": "U.S. Senate negotiators are discussing legislation that would require AI developers to show they are taking reasonable precautions against harm. The proposal could authorize the commerce secretary to request evidence and deploy government auditors to test companies’ systems; negotiators are also considering a federal-court process for blocking model releases deemed unsafe. Key standards and the balance between federal and state powers remain unresolved, and President Donald Trump has argued that existing authorities are sufficient.",
-      "summaryAr": "يناقش مفاوضون في مجلس الشيوخ الأميركي تشريعًا يلزم مطوري الذكاء الاصطناعي بإثبات اتخاذ احتياطات معقولة للحد من الضرر. وقد يمنح المقترح وزير التجارة صلاحية طلب الأدلة وإرسال مدققين حكوميين لاختبار أنظمة الشركات، مع بحث مسار قضائي اتحادي لمنع طرح نماذج تُعد غير آمنة. ولا تزال المعايير وتوزيع الصلاحيات بين الحكومة الاتحادية والولايات دون حسم، بينما يرى الرئيس دونالد ترامب أن السلطات القائمة كافية.",
-      "takeEn": "Government implication: frontier-AI oversight is moving toward an auditable duty of care and direct public testing, but enforceability will depend on precise risk thresholds and institutional roles. Legislators should define required evidence, auditor access, intervention and appeal procedures, and federal-state boundaries before assigning agencies powers that could delay model releases.",
-      "takeAr": "الدلالة للحكومات: تتجه رقابة الذكاء الاصطناعي المتقدم نحو واجب عناية قابل للتدقيق واختبارات عامة مباشرة، لكن قابلية الإنفاذ ستعتمد على دقة عتبات المخاطر وتوزيع الأدوار المؤسسية. ينبغي للمشرعين تحديد الأدلة المطلوبة، وصلاحيات وصول المدققين، وإجراءات التدخل والطعن، وحدود الاختصاص الاتحادي واختصاص الولايات قبل منح الجهات سلطات قد تؤخر طرح النماذج.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/us-senators-weigh-requiring-ai-giants-commit-preventing-catastrophe-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T19:33:32.000Z"
+  "updatedAt": "2026-09-17T20:12:53.000Z"
 }
