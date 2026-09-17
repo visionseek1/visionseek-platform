@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "سياسة الطاقة",
+      "categoryEn": "Energy Policy",
+      "id": "brazil-diesel-subsidy-petrobras-price-offset-2026",
+      "publishedAt": "2026-09-17T00:17:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/petrobras-raises-diesel-price-offsets-increase-with-new-brazil-subsidy-2026-09-17/",
+      "summaryAr": "سترفع شركة بتروبراس الحكومية سعر الديزل للموزعين بمتوسط ريال برازيلي واحد للتر اعتبارًا من الخميس، لكنها ستمنح خصمًا بالقيمة نفسها بعد انضمامها إلى برنامج دعم حكومي جديد. وبذلك يبقى السعر الصافي للموزعين دون تغيير بينما تحصل الشركة على قيمة الدعم.",
+      "summaryEn": "State-run Petrobras will raise its average diesel price to distributors by one Brazilian real per liter from Thursday, then apply an equal discount after joining a new government subsidy program. The net distributor price therefore stays unchanged while the company receives the subsidy.",
+      "takeAr": "على الحكومات التي تستخدم دعم الوقود لامتصاص صدمات الأسعار أن تنشر كلفته المالية ومعايير انتهائه والمستفيدين منه، مع رقابة تمنع تحوله إلى التزام دائم أو إشارة سعرية مشوهة للاستثمار والنقل.",
+      "takeEn": "Governments using fuel subsidies to absorb price shocks should disclose fiscal exposure, sunset criteria and beneficiaries, with controls to prevent a temporary buffer from becoming a permanent liability or distorting transport and investment signals.",
+      "titleAr": "البرازيل تعوّض زيادة ديزل بتروبراس بدعم جديد يُبقي سعر الموزعين ثابتًا",
+      "titleEn": "Brazil offsets Petrobras diesel increase with new subsidy, holding distributor prices flat"
+    },
+    {
       "categoryAr": "البنية التحتية للذكاء الاصطناعي",
       "categoryEn": "AI Infrastructure",
       "id": "us-house-ratepayer-protection-data-center-grid-costs-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينبغي إدارة المرونة الشتوية كمحفظة واحدة تجمع إصلاح البنية التحتية واستمرارية الخدمات ولوجستيات التصدير والسيولة المالية. ويجب ترتيب الأصول بحسب أثرها على الخدمات الأساسية، وتحديد عتبات للاستعادة، وترتيب التمويل الطارئ مسبقًا، ونشر لوحة موحدة تربط الأضرار بقدرة التنفيذ والتعرض المالي.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/ukraine-braces-harsh-winter-russian-attacks-hit-economy-2026-09-12/"
-    },
-    {
-      "id": "us-fema-workforce-cut-illegal-disaster-response-governance-2026",
-      "publishedAt": "2026-09-12T15:19:00Z",
-      "categoryEn": "INFRASTRUCTURE + DISASTER GOVERNANCE",
-      "categoryAr": "البنية التحتية وحوكمة الكوارث",
-      "titleEn": "US court finds DHS-directed plan to halve FEMA workforce unlawful",
-      "titleAr": "محكمة أمريكية تعتبر خطة موجّهة من الأمن الداخلي لخفض قوة «فيما» إلى النصف غير قانونية",
-      "summaryEn": "A U.S. federal judge ruled that the Department of Homeland Security acted unlawfully by taking control of FEMA personnel decisions and directing staffing cuts projected to halve the disaster agency’s workforce. The court found the move conflicted with post-Katrina law protecting FEMA’s authorities and functions; remedies will be considered separately next month.",
-      "summaryAr": "قضت محكمة اتحادية أمريكية بأن وزارة الأمن الداخلي تصرفت بصورة غير قانونية حين استحوذت على قرارات شؤون العاملين في الوكالة الفيدرالية لإدارة الطوارئ ووجّهت تخفيضات كان متوقعًا أن تقلص قوتها العاملة إلى النصف. ورأت المحكمة أن الخطوة تتعارض مع قانون صدر بعد إعصار كاترينا لحماية صلاحيات الوكالة ووظائفها، على أن تُبحث سبل المعالجة بصورة منفصلة الشهر المقبل.",
-      "takeEn": "Government implication: restructuring an emergency-management institution requires explicit legal authority, evidence-based capacity modelling and auditable records. Workforce targets should be tested against surge staffing, response-time and continuity thresholds before implementation, with legislative oversight where core statutory functions could be diminished.",
-      "takeAr": "الدلالة للحكومات: تتطلب إعادة هيكلة مؤسسة لإدارة الطوارئ سندًا قانونيًا صريحًا، ونمذجة للقدرات قائمة على الأدلة، وسجلات قابلة للتدقيق. وينبغي اختبار أهداف القوى العاملة مقابل احتياجات التعزيز السريع وزمن الاستجابة واستمرارية العمليات قبل التنفيذ، مع رقابة تشريعية عندما قد تتقلص وظائف أساسية يحددها القانون.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/government/us-judge-rules-that-trump-plan-halve-fema-workforce-violated-law-2026-09-12/"
     }
   ],
-  "updatedAt": "2026-09-16T23:46:06.000Z"
+  "updatedAt": "2026-09-17T00:44:05.000Z"
 }
