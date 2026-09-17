@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الأمن السيبراني البحري وحماية البنية التحتية",
+      "categoryEn": "Maritime Cybersecurity + Infrastructure Protection",
+      "id": "us-bound-vessels-networks-compromised-coast-guard-fbi-2026",
+      "publishedAt": "2026-09-17T17:39:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/two-us-bound-vessels-apparently-compromised-by-hackers-us-officials-say-2026-09-17/",
+      "summaryAr": "صعدت فرق مشتركة من خفر السواحل الأميركي ومكتب التحقيقات الفيدرالي إلى سفينتين تجاريتين أجنبيتي العلم متجهتين إلى الولايات المتحدة في خليج المكسيك يومي 21 و24 أغسطس، بعد ورود مؤشرات على اختراق شبكتيهما الحاسوبيتين. قال خفر السواحل إن جهات سيبرانية أجنبية شاركت في إحدى الحالتين، من دون تحديد هويتها، بينما لم تكشف الوكالتان تفاصيل إضافية عن نطاق الاختراق أو أثره التشغيلي.",
+      "summaryEn": "Joint U.S. Coast Guard and FBI teams boarded two foreign-flagged commercial vessels bound for the United States in the Gulf of Mexico on August 21 and 24 after indications that their computer networks had been compromised. The Coast Guard said foreign cyber actors were involved in one case but did not identify them, while the agencies disclosed no further detail on the breaches’ scope or operational impact.",
+      "takeAr": "على الحكومات دمج الأمن السيبراني في إجراءات دخول السفن إلى الموانئ، لا معاملته كامتثال منفصل: إلزام الإبلاغ السريع عن الحوادث، وفصل أنظمة تقنية المعلومات عن أنظمة التشغيل والملاحة، وتحديد أدلة فنية دنيا قبل السماح بالدخول، وتدريب فرق مشتركة بين خفر السواحل والأمن السيبراني والموانئ على الاحتواء دون تعطيل التجارة أو السلامة.",
+      "takeEn": "Governments should integrate cyber assurance into vessel-entry procedures rather than treat it as separate compliance: require rapid incident reporting, segment IT from operational and navigation systems, define minimum technical evidence before port access, and train joint coast guard, cyber and port teams to contain threats without compromising trade or safety.",
+      "titleAr": "اختراق شبكتي سفينتين متجهتين إلى الولايات المتحدة يدفع إلى تدخل بحري–سيبراني مشترك",
+      "titleEn": "Compromised networks on two US-bound vessels trigger joint maritime-cyber intervention"
+    },
+    {
       "categoryAr": "أمن الطاقة ومرونة البنية التحتية الحيوية",
       "categoryEn": "Energy Security + Critical Infrastructure Resilience",
       "id": "saudi-east-west-pipeline-three-pumping-stations-damaged-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تنتقل دبلوماسية المعادن الحرجة من اتفاقات الوصول إلى الملكية المشتركة والمعالجة المحلية وإثبات المنشأ القابل للتدقيق. ينبغي للحكومات المنتجة التفاوض على مراحل واضحة للقيمة المضافة، وأنظمة التتبع، ومشاركة صغار المعدّنين، وضمانات العائد العام قبل تخصيص الامتيازات؛ وعلى الحكومات المستوردة مواءمة التمويل وقواعد المشتريات مبكرًا لجعل المشروعات المتوافقة قابلة للتمويل.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/africa/almonty-rwanda-form-tungsten-venture-backed-by-us-economic-framework-2026-09-14/"
-    },
-    {
-      "id": "uk-speciality-steel-public-acquisition-2026",
-      "publishedAt": "2026-09-14T16:08:00Z",
-      "categoryEn": "INDUSTRIAL INFRASTRUCTURE + STRATEGIC OWNERSHIP",
-      "categoryAr": "البنية الصناعية والملكية الاستراتيجية",
-      "titleEn": "UK moves toward public acquisition of specialist steelmaker",
-      "titleAr": "بريطانيا تتحرك للاستحواذ العام على مُصنّع فولاذ متخصص",
-      "summaryEn": "The UK government is preparing to acquire Speciality Steel UK after rejecting a proposed private-sector bid as unable to provide a viable long-term outcome. The insolvent manufacturer has supplied automotive, aerospace and defence industries, operates sites in northern and central England and supports more than 1,300 jobs. Any purchase remains subject to due diligence and would use existing government budgets; no acquisition price was announced.",
-      "summaryAr": "تُعدّ الحكومة البريطانية خطة للاستحواذ على شركة Speciality Steel UK بعدما خلصت إلى أن عرضًا من القطاع الخاص لا يوفر نتيجة قابلة للاستمرار على المدى الطويل. وقد زوّد المُصنّع المتعثر قطاعات السيارات والطيران والدفاع، ويدير مواقع في شمال ووسط إنجلترا ويدعم أكثر من 1,300 وظيفة. ويظل أي شراء خاضعًا للفحص النافي للجهالة وسيُموَّل من الموازنات الحكومية القائمة، من دون إعلان قيمة للاستحواذ.",
-      "takeEn": "Government implication: public acquisition is being used as a bridge to preserve strategic industrial capacity when private capital will not absorb legacy risk. Governments considering similar interventions should define the capability being protected, publish due-diligence and value-for-money tests, set an operating and investment mandate, and establish measurable conditions for restructuring, partnership or eventual exit.",
-      "takeAr": "الدلالة للحكومات: يُستخدم الاستحواذ العام هنا كجسر لحماية قدرة صناعية استراتيجية عندما لا يقبل رأس المال الخاص تحمّل المخاطر المتراكمة. وعلى الحكومات التي تدرس تدخلًا مماثلًا تحديد القدرة المراد حمايتها، ونشر اختبارات الفحص والقيمة مقابل المال، ووضع تفويض واضح للتشغيل والاستثمار، وتحديد شروط قابلة للقياس لإعادة الهيكلة أو الشراكة أو الخروج لاحقًا.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/uk-government-seeks-acquire-insolvent-specialist-steelmaker-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T17:04:13.000Z"
+  "updatedAt": "2026-09-17T18:02:02.000Z"
 }
