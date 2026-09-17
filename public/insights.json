@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "القدرة على الصمود المناخي",
+      "categoryEn": "Climate Resilience",
+      "id": "nepal-glacier-collapse-climate-attribution-2026",
+      "publishedAt": "2026-09-17T00:50:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/sustainability/cop/climate-change-likely-have-helped-trigger-nepal-glacier-collapse-scientists-say-2026-09-17/",
+      "summaryAr": "خلص تحليل لمجموعة World Weather Attribution إلى أن الاحترار البشري أسهم على الأرجح في تهيئة الظروف لانهيار جليدي وصخري كارثي في نيبال، عبر ترقق الأنهار الجليدية وذوبان التربة الصقيعية وزيادة الأمطار بدل الثلوج. ويشير الباحثون إلى أن المنحدر كان ضعيفًا جيولوجيًا أيضًا، لذلك لا ينسبون الانهيار إلى عامل مناخي واحد.",
+      "summaryEn": "A World Weather Attribution analysis found that human-caused warming likely helped create the conditions for Nepal’s catastrophic ice-and-rock collapse by thinning glaciers, thawing permafrost and shifting precipitation from snow toward rain. Researchers also identified geological vulnerability, so they do not attribute the collapse to climate change alone.",
+      "takeAr": "ينبغي للحكومات الجبلية إدماج تراجع الأنهار الجليدية وذوبان التربة الصقيعية في خرائط أخطار البنية التحتية والحماية المدنية، وربط المراقبة بالأقمار الصناعية وأجهزة الاستشعار بإنذارات وإجلاء قابلة للتنفيذ بدل التعامل معها كمؤشرات مناخية بعيدة.",
+      "takeEn": "Mountain governments should incorporate glacier retreat and permafrost thaw into infrastructure and civil-protection hazard maps, linking satellite and sensor monitoring to actionable warnings and evacuation plans rather than treating them as distant climate indicators.",
+      "titleAr": "تحليل علمي يربط الاحترار بتهيئة ظروف الانهيار الجليدي الكارثي في نيبال",
+      "titleEn": "Scientific analysis links warming to conditions behind Nepal’s catastrophic glacier collapse"
+    },
+    {
       "categoryAr": "سياسة الطاقة",
       "categoryEn": "Energy Policy",
       "id": "brazil-diesel-subsidy-petrobras-price-offset-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: قد يفتح الاتفاق الطوعي بين الشركات نافذة للسياسة العامة، لكن ينبغي تحويله إلى ضمانات قابلة للتدقيق. ويتعين تحديد عتبات قابلة للقياس للقدرات، وفرض تقييمات مستقلة والإفصاح عن الحوادث، وتوضيح حدود قانون المنافسة أمام التنسيق المتعلق بالسلامة، ووضع محفزات للتصعيد قبل الحاجة إلى إبطاء طوعي.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/legal/litigation/openai-ipo-will-not-happen-2026-amid-ai-safety-fears-altman-says-2026-09-12/"
-    },
-    {
-      "id": "ukraine-winter-critical-infrastructure-fiscal-resilience-2026",
-      "publishedAt": "2026-09-12T17:04:00Z",
-      "categoryEn": "INFRASTRUCTURE + FISCAL RESILIENCE",
-      "categoryAr": "البنية التحتية والمرونة المالية",
-      "titleEn": "Ukraine links winter infrastructure resilience to a widening fiscal and export shock",
-      "titleAr": "أوكرانيا تربط مرونة البنية التحتية الشتوية باتساع الصدمة المالية والتصديرية",
-      "summaryEn": "Ukrainian officials warned that intensified attacks on critical infrastructure and Black Sea export routes are converging with a tightening public budget ahead of winter. The economy minister estimated 2026 damage to infrastructure and fixed assets at nearly $10 billion and the wider impact of attacks and port disruption at about 1.5 percentage points of GDP, while the government seeks further external financing.",
-      "summaryAr": "حذّر مسؤولون أوكرانيون من تزامن تصاعد الهجمات على البنية التحتية الحيوية ومسارات التصدير عبر البحر الأسود مع ضيق الموازنة العامة قبيل الشتاء. وقدّر وزير الاقتصاد أضرار عام 2026 بالبنية التحتية والأصول الثابتة بنحو 10 مليارات دولار، والأثر الأوسع للهجمات وتعطل الموانئ بنحو 1.5 نقطة مئوية من الناتج المحلي الإجمالي، فيما تسعى الحكومة إلى تمويل خارجي إضافي.",
-      "takeEn": "Government implication: winter resilience must be managed as one portfolio spanning infrastructure repair, service continuity, export logistics and fiscal liquidity. Authorities should rank assets by essential-service impact, set restoration thresholds, pre-arrange emergency financing and publish a single dashboard connecting damage, delivery capacity and budget exposure.",
-      "takeAr": "الدلالة للحكومات: ينبغي إدارة المرونة الشتوية كمحفظة واحدة تجمع إصلاح البنية التحتية واستمرارية الخدمات ولوجستيات التصدير والسيولة المالية. ويجب ترتيب الأصول بحسب أثرها على الخدمات الأساسية، وتحديد عتبات للاستعادة، وترتيب التمويل الطارئ مسبقًا، ونشر لوحة موحدة تربط الأضرار بقدرة التنفيذ والتعرض المالي.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/ukraine-braces-harsh-winter-russian-attacks-hit-economy-2026-09-12/"
     }
   ],
-  "updatedAt": "2026-09-17T00:44:05.000Z"
+  "updatedAt": "2026-09-17T01:36:10.000Z"
 }
