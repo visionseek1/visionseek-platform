@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الطاقة المتجددة وتنفيذ المشروعات",
+      "categoryEn": "Renewable Energy + Project Delivery",
+      "id": "south-africa-gagasi-offshore-wind-delay-world-bank-potential-2026",
+      "publishedAt": "2026-09-17T09:23:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/south-africas-first-offshore-wind-farm-delayed-world-bank-highlights-potential-2026-09-17/",
+      "summaryAr": "تعطل التقييم البيئي لمشروع Gagasi بقدرة 800 ميغاواط، وهو أول مشروع رياح بحرية مقترح في جنوب أفريقيا، بعد سحب طلب الترخيص لإعادة تصميم التوربينات من عائمة إلى مثبتة، فيما لا يزال وضع المشروع غير واضح. وفي الوقت نفسه، قدّر إطار تطوير أصدره البنك الدولي إمكانات الرياح البحرية في مناطق ساحلية مختارة بنحو 95 غيغاواط، معظمها يعتمد على التقنيات العائمة.",
+      "summaryEn": "The environmental assessment for the 800-megawatt Gagasi project, South Africa’s first proposed offshore wind farm, has stalled after its authorisation application was withdrawn to redesign the turbines from floating to anchored, leaving the project’s status unclear. At the same time, a World Bank development framework estimated about 95 gigawatts of offshore wind potential across selected coastal areas, mostly suited to floating technology.",
+      "takeAr": "تكشف الفجوة بين الإمكانات الوطنية وتعطل المشروع الأول أن خرائط الموارد وحدها لا تصنع مسارًا استثماريًا. ينبغي للحكومات تثبيت الخيارات التقنية قبل التقييم البيئي، وتوفير بيانات بحرية مشتركة، ومسارات واضحة للتراخيص والربط بالشبكة والموانئ، مع بوابات مرحلية تكشف تغييرات التصميم قبل أن توقف المشروع.",
+      "takeEn": "The gap between national potential and a stalled first project shows that resource maps alone do not create an investable pipeline. Governments should stabilise technical choices before environmental review, provide shared marine data, clarify permitting, grid and port pathways, and use stage gates that surface design changes before they halt delivery.",
+      "titleAr": "تعطل أول مشروع رياح بحرية في جنوب أفريقيا رغم إمكانات تُقدّر بـ95 غيغاواط",
+      "titleEn": "South Africa’s first offshore wind project stalls despite 95 GW potential"
+    },
+    {
       "categoryAr": "أمن الطاقة والكهربة",
       "categoryEn": "Energy Security + Electrification",
       "id": "korea-iea-rise-asia-electrification-2035-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تصبح مرونة الطاقة قابلة للتنفيذ عندما تعمل تغطية المخزون وتتبع الناقلات وتحويل المسارات والدعم المالي ضمن خطة استجابة واحدة قائمة على محفزات واضحة. ينبغي تحديد عتبات مسبقة لتفعيل مبادلة المخزون ودعم الشحن، والتحقق مع القطاع من قدرة المسارات البديلة، ونشر صورة تشغيلية مشتركة قبل وصول الاضطراب إلى السوق المحلية.",
       "source": "Republic of Korea Ministry of Trade, Industry and Energy",
       "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971842"
-    },
-    {
-      "id": "korea-smart-village-provincial-council-ai-iot-scaling-2026",
-      "publishedAt": "2026-09-14T05:00:00Z",
-      "categoryEn": "AI + REGIONAL INFRASTRUCTURE",
-      "categoryAr": "الذكاء الاصطناعي والبنية التحتية الإقليمية",
-      "titleEn": "Korea launches nationwide council to scale AI- and IoT-enabled smart-village services",
-      "titleAr": "كوريا تطلق مجلسًا وطنيًا لتوسيع خدمات القرى الذكية المدعومة بالذكاء الاصطناعي وإنترنت الأشياء",
-      "summaryEn": "South Korea’s Ministry of Science and ICT launched a Smart Village Metropolitan and Provincial Council with participation from all regional governments. The council will meet twice yearly to share implementation experience, identify public services suitable for nationwide standardization and address policy barriers. The wider programme applies AI, IoT and other digital tools to agricultural and fisheries productivity as well as safety, care and education services.",
-      "summaryAr": "أطلقت وزارة العلوم وتكنولوجيا المعلومات والاتصالات الكورية مجلسًا للقرى الذكية بمشاركة جميع الحكومات الإقليمية. وسيجتمع المجلس مرتين سنويًا لتبادل خبرات التنفيذ، وتحديد الخدمات العامة القابلة للتوحيد والتوسع على المستوى الوطني، ومعالجة العوائق التنظيمية. ويستخدم البرنامج الأوسع الذكاء الاصطناعي وإنترنت الأشياء وتقنيات رقمية أخرى لرفع إنتاجية الزراعة ومصايد الأسماك وتحسين خدمات السلامة والرعاية والتعليم.",
-      "takeEn": "Government implication: scaling local innovation requires a shared delivery system, not a collection of disconnected pilots. Governments should create a cross-jurisdictional council that validates outcomes, publishes reusable service standards, records operational lessons and converts recurring local obstacles into national policy changes before funding wider replication.",
-      "takeAr": "الدلالة للحكومات: يتطلب توسيع الابتكار المحلي نظام تنفيذ مشتركًا، لا مجموعة من المشروعات التجريبية المنفصلة. ينبغي إنشاء مجلس عابر للجهات يتحقق من النتائج، وينشر معايير قابلة لإعادة الاستخدام، ويوثق الدروس التشغيلية، ويحوّل العقبات المحلية المتكررة إلى تعديلات وطنية قبل تمويل التوسع.",
-      "source": "Republic of Korea Ministry of Science and ICT",
-      "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781555"
     }
   ],
-  "updatedAt": "2026-09-17T09:50:25.000Z"
+  "updatedAt": "2026-09-17T10:16:42.000Z"
 }
