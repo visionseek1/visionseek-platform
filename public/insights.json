@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "القدرة على الصمود المناخي",
+      "categoryEn": "Climate Resilience",
+      "id": "wmo-global-water-resources-2025-dry-river-flows",
+      "publishedAt": "2026-09-17T04:02:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/sustainability/cop/river-flows-were-among-driest-decades-2025-world-meteorological-organization-2026-09-17/",
+      "summaryAr": "أفادت المنظمة العالمية للأرصاد الجوية بأن تدفقات الأنهار عالميًا كانت في 2025 من بين الأكثر جفافًا خلال عقود، مع تسجيل أكثر من ثلث أحواض الأنهار تدفقات دون المعدل. كما رصد التقرير استمرار تراجع مخزون المياه الأرضية لعقد، وخسائر واسعة للأنهار الجليدية للعام الرابع على التوالي، بما يضعف الاحتياطي الطبيعي المتاح في سنوات الجفاف.",
+      "summaryEn": "The World Meteorological Organization reported that global river flows in 2025 were among the driest in decades, with more than one-third of river basins recording below-normal flows. The report also found a decade-long decline in terrestrial water storage and widespread glacier losses for a fourth consecutive year, weakening the natural buffer available during dry periods.",
+      "takeAr": "ينبغي للحكومات تحويل بيانات الأحواض من مؤشر سنوي إلى مدخل تشغيلي لقرارات المياه: تحديث خطط الجفاف والفيضانات وتخصيصات الزراعة والطاقة، وحماية المياه الجوفية، وربط تبادل بيانات الأنهار الجليدية والأنهار بعتبات واضحة للتقنين والاستجابة الطارئة.",
+      "takeEn": "Governments should turn basin data from an annual indicator into an operational input for water decisions: update drought and flood plans and agriculture and power allocations, protect groundwater, and link river and glacier data-sharing to clear thresholds for restrictions and emergency response.",
+      "titleAr": "المنظمة العالمية للأرصاد ترصد أحد أكثر أعوام تدفقات الأنهار جفافًا خلال عقود",
+      "titleEn": "WMO records one of the driest years for global river flows in decades"
+    },
+    {
       "categoryAr": "البنية التحتية للذكاء الاصطناعي",
       "categoryEn": "AI Infrastructure",
       "id": "huawei-two-ai-chips-2027-unifiedbus",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينبغي للدول المشاركة أن تسهم في تشكيل المنطقة قبل تثبيت بنيتها التقنية. وتشمل الأولويات قواعد مشتركة لإتاحة البيانات والترخيص وتقييم النماذج والأمن السيبراني والمساءلة عبر الحدود، مع مسارات شفافة تضمن استفادة الباحثين واللغات المحلية وحالات الاستخدام الحكومي من المنظومة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/aerospace-defense/xi-pushes-greater-brics-economic-ties-give-bloc-larger-global-role-2026-09-13/"
-    },
-    {
-      "id": "saudi-east-west-pipeline-drone-strike-resilience-2026",
-      "publishedAt": "2026-09-13T08:01:00Z",
-      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "الطاقة والبنية التحتية الحيوية",
-      "titleEn": "Saudi pipeline shutdown turns energy-route resilience into an immediate market test",
-      "titleAr": "إغلاق خط نفط سعودي يحوّل مرونة مسارات الطاقة إلى اختبار فوري للسوق",
-      "summaryEn": "Saudi shares fell in their first market reaction to drone strikes that prompted the precautionary shutdown of the kingdom’s East-West crude pipeline, its principal export alternative to the Strait of Hormuz. Riyadh and Baghdad said the attack originated in Iraqi territory; Iraq dismissed a senior military commander, while Saudi Arabia reserved its right to defend its sovereignty and critical infrastructure.",
-      "summaryAr": "تراجعت الأسهم السعودية في أول رد فعل للسوق على هجمات بطائرات مسيّرة دفعت إلى الإغلاق الاحترازي لخط أنابيب النفط شرق–غرب، وهو البديل الرئيسي للمملكة عن التصدير عبر مضيق هرمز. وقالت الرياض وبغداد إن الهجوم انطلق من الأراضي العراقية؛ وأقال العراق قائدًا عسكريًا كبيرًا، فيما أكدت السعودية احتفاظها بحق الدفاع عن سيادتها وبنيتها التحتية الحيوية.",
-      "takeEn": "Government implication: an alternative export corridor is not resilient merely because it bypasses one chokepoint. Governments should map common-mode threats across ports, pipelines and airspace; maintain tested rerouting and restoration plans; coordinate cross-border attribution and deconfliction; and publish timely operational status so security shocks do not compound into market uncertainty.",
-      "takeAr": "الدلالة للحكومات: لا يصبح مسار التصدير البديل مرنًا لمجرد تجاوزه نقطة اختناق واحدة. ينبغي رسم خريطة للتهديدات المشتركة التي تمس الموانئ والأنابيب والمجال الجوي، واختبار خطط إعادة التوجيه والاستعادة، وتنسيق الإسناد ومنع التصعيد عبر الحدود، ونشر حالة التشغيل سريعًا حتى لا تتحول الصدمة الأمنية إلى غموض مضاعف في الأسواق.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/middle-east/saudi-shares-drop-after-drone-attacks-target-key-oil-pipeline-2026-09-13/"
     }
   ],
-  "updatedAt": "2026-09-17T03:32:59.000Z"
+  "updatedAt": "2026-09-17T04:35:21.000Z"
 }
