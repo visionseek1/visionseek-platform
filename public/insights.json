@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أشباه الموصلات والسياسة الصناعية",
+      "categoryEn": "Semiconductors + Industrial Policy",
+      "id": "india-applied-materials-five-billion-chip-ecosystem-2026",
+      "publishedAt": "2026-09-17T08:15:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/applied-materials-invest-5-billion-india-modis-flagship-chip-event-kicks-off-2026-09-17/",
+      "summaryAr": "أعلنت Applied Materials استثمار 5 مليارات دولار في الهند خلال العقد المقبل، مع توجيه الإنفاق إلى البحث وتوسيع سلسلة الإمداد وتنمية القوى العاملة. يأتي الالتزام بينما خصصت الحكومة الهندية أكثر من 21 مليار دولار لبرنامجين لتحفيز أشباه الموصلات، ووافقت على 12 مشروعًا، وبدأت ثلاثة مصانع لتغليف الرقائق الإنتاج التجاري، لكن البلاد لم تنتج بعد رقائق من مصنع تصنيع واسع النطاق.",
+      "summaryEn": "Applied Materials announced a $5 billion investment in India over the next decade, focused on research, supply-chain scale-up and workforce growth. The commitment follows more than $21 billion allocated by the Indian government across two semiconductor incentive programs, with 12 projects approved and three chip-packaging plants in commercial production, although the country has yet to produce chips from a large-scale fabrication plant.",
+      "takeAr": "بالنسبة للحكومات، تشير الخطوة إلى أن الحوافز تستطيع جذب مورّدي المعدات والبحث والمهارات إلى جانب المصانع نفسها، لكن القيمة تعتمد على تحويل التعهدات إلى قدرة إنتاجية فعلية. ينبغي ربط الدعم بمراحل إنجاز قابلة للقياس، وخطط واضحة لسد فجوات سلسلة الإمداد، وتنمية الموردين والمهارات المحلية، ومراجعات دورية لمخاطر التأخير.",
+      "takeEn": "For governments, the move shows that incentives can attract equipment, research and skills alongside fabrication plants, but the value depends on converting commitments into operating capacity. Support should be tied to measurable milestones, explicit supply-chain gap plans, local supplier and workforce development, and periodic reviews of delay risks.",
+      "titleAr": "الهند تستقطب استثمارًا بقيمة 5 مليارات دولار لتعميق منظومة أشباه الموصلات",
+      "titleEn": "India draws $5 billion commitment to deepen its semiconductor ecosystem"
+    },
+    {
       "categoryAr": "البنية التحتية الكمية والسياسة الصناعية",
       "categoryEn": "Quantum Infrastructure + Industrial Policy",
       "id": "france-cea-alice-bob-quantum-supercomputing-software-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينبغي أن يؤدي تعثر المسار الدبلوماسي إلى تفعيل إجراءات تشغيلية احتياطية، لا إلى تعليق القرار. يجب ربط عتبات استخدام الاحتياطيات وإعادة توجيه الشحنات والتنسيق الأمني البحري والاتصال بالأسواق بمحطات دبلوماسية واضحة، مع وضع بروتوكول مؤقت للملاحة وشروط محددة لاستئناف المحادثات.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/"
-    },
-    {
-      "id": "us-ukraine-russian-diesel-strikes-global-supply-2026",
-      "publishedAt": "2026-09-13T14:34:24Z",
-      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "الطاقة والبنية التحتية الحيوية",
-      "titleEn": "Washington presses Ukraine to halt strikes on Russian diesel infrastructure",
-      "titleAr": "واشنطن تضغط لوقف ضربات أوكرانيا على بنية الديزل الروسية",
-      "summaryEn": "U.S. President Donald Trump said he had urged Ukrainian President Volodymyr Zelenskiy to stop attacks on Russian diesel infrastructure, arguing that the strikes were worsening a global fuel shortage. Ukraine says Russian refineries are legitimate military targets as Russia continues attacking Ukrainian energy infrastructure; Reuters reported that the Ukrainian campaign has reduced Russian fuel production and contributed to shortages inside Russia.",
-      "summaryAr": "قال الرئيس الأمريكي دونالد ترامب إنه حثّ الرئيس الأوكراني فولوديمير زيلينسكي على وقف الهجمات على بنية الديزل الروسية، معتبرًا أن الضربات تفاقم نقص الوقود عالميًا. وتقول أوكرانيا إن المصافي الروسية أهداف عسكرية مشروعة مع استمرار روسيا في مهاجمة بنيتها للطاقة؛ وأفادت رويترز بأن الحملة الأوكرانية خفضت إنتاج الوقود الروسي وأسهمت في نقصه داخل روسيا.",
-      "takeEn": "Government implication: cross-border strikes on fuel systems can quickly shift from battlefield tactics into global supply and diplomatic risk. Governments should connect targeting policy to real-time fuel-market assessment, define protected or conditional infrastructure categories with allies, and maintain rapid deconfliction channels without weakening accountability for attacks on civilian energy systems.",
-      "takeAr": "الدلالة للحكومات: قد تنتقل الضربات العابرة للحدود على منظومات الوقود سريعًا من تكتيك ميداني إلى خطر على الإمدادات العالمية والعلاقات الدبلوماسية. وينبغي ربط سياسة الاستهداف بتقييم آني لأسواق الوقود، وتحديد فئات البنية التحتية المحمية أو المشروطة مع الحلفاء، والإبقاء على قنوات سريعة لمنع التصعيد دون إضعاف المساءلة عن الهجمات على أنظمة الطاقة المدنية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/trump-tells-ukraines-zelenskiy-stop-hitting-russian-diesel-2026-09-13/"
     }
   ],
-  "updatedAt": "2026-09-17T07:34:06.000Z"
+  "updatedAt": "2026-09-17T08:38:53.000Z"
 }
