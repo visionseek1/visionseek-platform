@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "حوكمة الذكاء الاصطناعي والسيادة الدفاعية",
+      "categoryEn": "AI Governance + Defence Sovereignty",
+      "id": "thales-international-ai-framework-hexaforce-2026",
+      "publishedAt": "2026-09-17T11:06:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/frances-thales-urges-international-framework-ai-development-2026-09-17/",
+      "summaryAr": "دعت Thales، أكبر شركة تكنولوجيا دفاعية في أوروبا، إلى إطار حكومي دولي يحكم تطوير الذكاء الاصطناعي ويضيف رقابة عامة فوق الضمانات التقنية. تأتي الدعوة مع توسع استخدام الذكاء الاصطناعي لتحليل بيانات المسيّرات والأقمار الصناعية في ساحات القتال، وإطلاق الشركة نظام Hexaforce لتعزيز السيادة والأداء التشغيلي لحلف الناتو وحلفائه بعد اختيار الناتو نظام Maven من Palantir لعمليات القيادة في مقره.",
+      "summaryEn": "Thales, Europe’s largest defence technology company, called for an international government framework to govern AI development, adding public oversight above technical safeguards. The call comes as AI is increasingly used to analyse drone and satellite data on the battlefield, and as Thales launches Hexaforce to strengthen sovereignty and operational performance for NATO and its allies after NATO selected Palantir’s Maven for command operations at its headquarters.",
+      "takeAr": "بالنسبة للحكومات، لا ينبغي التعامل مع الذكاء الاصطناعي العسكري كمجرد اختيار مورّد. يلزم قبل التوسع وضع قواعد مشتركة لسلطة الإنسان على القرار، والتحقق من النماذج، وسجلات التدقيق، وسيادة بيانات المهام، وقابلية التشغيل البيني، والإبلاغ عن الحوادث بين الحلفاء، مع تقييم صريح لمخاطر الاعتماد على المنصات الأجنبية.",
+      "takeEn": "Governments should not treat military AI as a vendor-selection exercise. Before scaling deployment, allies need shared rules for human decision authority, model assurance, audit logs, mission-data sovereignty, interoperability and incident reporting, together with explicit assessment of dependence on foreign platforms.",
+      "titleAr": "Thales تدعو لإطار دولي يحكم الذكاء الاصطناعي العسكري ويعزز السيادة التقنية",
+      "titleEn": "Thales calls for international military-AI rules as Europe pushes technology sovereignty"
+    },
+    {
       "categoryAr": "الطاقة المتجددة وتنفيذ المشروعات",
       "categoryEn": "Renewable Energy + Project Delivery",
       "id": "south-africa-gagasi-offshore-wind-delay-world-bank-potential-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يفتح هذا مسارًا للتمويل التنموي يربط أمن الموارد والقدرات الرقمية والبنية التحتية للطاقة بدل إدارتها كملفات منفصلة. وعلى الحكومات الراغبة في المشاركة إعداد حزم مشروعات قابلة للتمويل تحدد أدوار معالجة المعادن ونشر الذكاء الاصطناعي وربط الشبكات والتمويل قبل توزيع البرامج الإقليمية.",
       "source": "Republic of Korea Presidential Office",
       "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971844"
-    },
-    {
-      "id": "korea-oil-contingency-rerouting-stock-swap-2026",
-      "publishedAt": "2026-09-14T06:37:00Z",
-      "categoryEn": "ENERGY + SUPPLY INFRASTRUCTURE",
-      "categoryAr": "الطاقة وبنية الإمداد التحتية",
-      "titleEn": "Korea activates public-private oil contingency measures as regional routes tighten",
-      "titleAr": "كوريا تفعّل إجراءات طوارئ مشتركة للنفط مع تصاعد مخاطر مسارات الإمداد",
-      "summaryEn": "South Korea’s Ministry of Trade, Industry and Energy convened an emergency oil-supply review after rising risks around the Strait of Hormuz, the Red Sea and Saudi Arabia’s East–West pipeline. Industry participants reported that July–August crude imports exceeded the previous year’s level and that more than 90% of the comparable September–October volume had been secured. The government will track tanker movements and the Saudi pipeline restart, support rerouting through alternatives such as the Suez Canal, use its oil-stock swap programme and expand freight-cost support for diversified supplies.",
-      "summaryAr": "عقدت وزارة التجارة والصناعة والطاقة الكورية اجتماعًا طارئًا لمراجعة إمدادات النفط بعد تصاعد المخاطر حول مضيق هرمز والبحر الأحمر وخط الأنابيب السعودي شرق–غرب. وأفاد ممثلو القطاع بأن واردات يوليو وأغسطس تجاوزت مستوى العام السابق، وأن أكثر من 90% من الحجم المقارن لشهري سبتمبر وأكتوبر قد جرى تأمينه. وستتابع الحكومة حركة الناقلات واستئناف الخط السعودي، وتدعم التحويل إلى مسارات بديلة مثل قناة السويس، وتستخدم برنامج مبادلة المخزون النفطي، وتوسّع دعم فروق تكاليف الشحن لتنويع الإمدادات.",
-      "takeEn": "Government implication: energy resilience becomes executable when inventory coverage, vessel tracking, route switching and financial support operate through one trigger-based response plan. Governments should predefine escalation thresholds for stock swaps and freight assistance, verify alternate-route capacity with industry, and publish a common operating picture before disruptions reach domestic markets.",
-      "takeAr": "الدلالة للحكومات: تصبح مرونة الطاقة قابلة للتنفيذ عندما تعمل تغطية المخزون وتتبع الناقلات وتحويل المسارات والدعم المالي ضمن خطة استجابة واحدة قائمة على محفزات واضحة. ينبغي تحديد عتبات مسبقة لتفعيل مبادلة المخزون ودعم الشحن، والتحقق مع القطاع من قدرة المسارات البديلة، ونشر صورة تشغيلية مشتركة قبل وصول الاضطراب إلى السوق المحلية.",
-      "source": "Republic of Korea Ministry of Trade, Industry and Energy",
-      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971842"
     }
   ],
-  "updatedAt": "2026-09-17T10:16:42.000Z"
+  "updatedAt": "2026-09-17T11:21:18.000Z"
 }
