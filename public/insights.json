@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية للغاز الطبيعي المسال وأمن الطاقة",
+      "categoryEn": "LNG Infrastructure + Energy Security",
+      "id": "canada-lng-phase-two-double-export-capacity-2026",
+      "publishedAt": "2026-09-17T18:53:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/shell-led-lng-canada-could-approve-phase-2-expansion-by-early-october-sources-2026-09-17/",
+      "summaryAr": "قد يتخذ شركاء مشروع LNG Canada بقيادة Shell قرار الاستثمار النهائي في توسعة المرحلة الثانية مطلع أكتوبر. ستضيف التوسعة 14 مليون طن سنويًا، لترفع طاقة محطة كيتيمات في كولومبيا البريطانية من 14 إلى 28 مليون طن سنويًا، في وقت يسعى فيه المشترون الآسيويون إلى تنويع الإمدادات وسط اضطرابات الخليج والبحر الأحمر. وقالت Shell إن القرار سيراعي التنافسية والقدرة على تحمل التكلفة والدعم الحكومي واحتياجات أصحاب المصلحة.",
+      "summaryEn": "Partners in the Shell-led LNG Canada project could make a final investment decision on Phase 2 as early as October. The expansion would add 14 million tonnes per year, doubling the Kitimat, British Columbia terminal’s capacity from 14 to 28 million tonnes, as Asian buyers seek diversified supply amid Gulf and Red Sea disruptions. Shell said any decision would consider competitiveness, affordability, government support and stakeholder needs.",
+      "takeAr": "على الحكومات تقييم دعم التوسعة ضمن خطة متكاملة للسلسلة لا كمحطة تصدير منفردة: ربط الموافقات والمساندة العامة بمراحل تنفيذ واضحة، وتوافر الغاز وخطوط الأنابيب والموانئ والعمالة، وضوابط الانبعاثات والميثان، ومنافع المجتمعات المحلية. وتكمن القيمة الاستراتيجية في تنويع إمدادات آسيا عبر مسار أقصر من ساحل المحيط الهادئ، لكنها لا تتحقق من دون تنسيق البنية التحتية كاملة.",
+      "takeEn": "Governments should assess support for the expansion as a whole-chain program rather than a standalone export terminal: tie approvals and public backing to clear delivery milestones, gas, pipeline, port and workforce readiness, emissions and methane controls, and local-community benefits. Its strategic value is diversified Asian supply via a shorter Pacific route, but that value depends on coordinated infrastructure across the chain.",
+      "titleAr": "LNG Canada تقترب من قرار قد يضاعف طاقة التصدير إلى 28 مليون طن سنويًا",
+      "titleEn": "LNG Canada nears decision that could double export capacity to 28 million tonnes a year"
+    },
+    {
       "categoryAr": "الأمن السيبراني البحري وحماية البنية التحتية",
       "categoryEn": "Maritime Cybersecurity + Infrastructure Protection",
       "id": "us-bound-vessels-networks-compromised-coast-guard-fbi-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتجه رقابة الذكاء الاصطناعي المتقدم نحو واجب عناية قابل للتدقيق واختبارات عامة مباشرة، لكن قابلية الإنفاذ ستعتمد على دقة عتبات المخاطر وتوزيع الأدوار المؤسسية. ينبغي للمشرعين تحديد الأدلة المطلوبة، وصلاحيات وصول المدققين، وإجراءات التدخل والطعن، وحدود الاختصاص الاتحادي واختصاص الولايات قبل منح الجهات سلطات قد تؤخر طرح النماذج.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/us-senators-weigh-requiring-ai-giants-commit-preventing-catastrophe-2026-09-14/"
-    },
-    {
-      "id": "rwanda-us-tungsten-venture-traceable-supply-2026",
-      "publishedAt": "2026-09-14T16:27:00Z",
-      "categoryEn": "CRITICAL MINERALS + INDUSTRIAL POLICY",
-      "categoryAr": "المعادن الحرجة والسياسة الصناعية",
-      "titleEn": "Rwanda takes a 25% stake in a US-backed tungsten processing venture",
-      "titleAr": "رواندا تحصل على حصة 25% في مشروع تنغستن مدعوم بإطار اقتصادي أميركي",
-      "summaryEn": "Rwanda and Almonty Industries agreed to develop and process tungsten through a venture introduced by the U.S. Department of State and aligned with the U.S.–Rwanda Framework for Shared Economic Prosperity. Rwanda will receive a 25% stake by contributing an exploration concession and processing licence, while the venture plans to aggregate existing supply before advancing to a central processing facility. The deal precedes U.S. defence procurement rules due in January 2027 that require source traceability for tungsten in certain military supply chains.",
-      "summaryAr": "اتفقت رواندا وشركة Almonty Industries على تطوير التنغستن ومعالجته عبر مشروع جاء بعد تنسيق من وزارة الخارجية الأميركية ويتوافق مع إطار الازدهار الاقتصادي المشترك بين الولايات المتحدة ورواندا. وستحصل رواندا على حصة 25% مقابل تقديم امتياز استكشاف وترخيص للمعالجة، مع خطة لتجميع الإمدادات القائمة قبل الانتقال إلى منشأة معالجة مركزية. وتسبق الصفقة قواعد مشتريات دفاعية أميركية تدخل حيز التنفيذ في يناير 2027 وتشترط تتبع مصدر التنغستن في بعض سلاسل الإمداد العسكرية.",
-      "takeEn": "Government implication: critical-mineral diplomacy is moving from access agreements toward joint ownership, local processing and auditable origin. Resource-producing governments should negotiate value-addition milestones, traceability systems, small-miner participation and public-return safeguards before committing concessions, while importing governments align finance and procurement rules early enough to make compliant projects bankable.",
-      "takeAr": "الدلالة للحكومات: تنتقل دبلوماسية المعادن الحرجة من اتفاقات الوصول إلى الملكية المشتركة والمعالجة المحلية وإثبات المنشأ القابل للتدقيق. ينبغي للحكومات المنتجة التفاوض على مراحل واضحة للقيمة المضافة، وأنظمة التتبع، ومشاركة صغار المعدّنين، وضمانات العائد العام قبل تخصيص الامتيازات؛ وعلى الحكومات المستوردة مواءمة التمويل وقواعد المشتريات مبكرًا لجعل المشروعات المتوافقة قابلة للتمويل.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/africa/almonty-rwanda-form-tungsten-venture-backed-by-us-economic-framework-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T18:02:02.000Z"
+  "updatedAt": "2026-09-17T19:33:32.000Z"
 }
