@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "المسيّرات المدنية والسيادة الصناعية",
+      "categoryEn": "Civil Drones + Industrial Sovereignty",
+      "id": "hungary-abz-civil-drone-factory-expansion-2026",
+      "publishedAt": "2026-09-17T12:53:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/hungary-expands-civilian-drone-factory-boost-eu-production-2026-09-17/",
+      "summaryAr": "افتتحت شركة ABZ Innovation المجرية توسعة لمصنع مسيّرات مدنية باستثمار قدره 7 ملايين يورو، وتستهدف مضاعفة الإنتاج خمسة أضعاف بحلول نهاية 2027. يستطيع الموقع إنتاج 2,000 مسيّرة سنويًا بنظام وردية واحدة و3,500 بورديتين، لتطبيقات الزراعة الدقيقة والتنظيف الصناعي ونقل البضائع، بما يدعم تقليل الاعتماد الأوروبي على التصنيع الصيني.",
+      "summaryEn": "Hungary’s ABZ Innovation opened a €7 million civilian-drone factory expansion and aims to quintuple output by the end of 2027. The site can produce 2,000 drones annually on one shift and 3,500 on two shifts for precision agriculture, industrial cleaning and cargo operations, supporting efforts to reduce Europe’s reliance on Chinese manufacturing.",
+      "takeAr": "الحكومات التي تريد بناء صناعة مسيّرات محلية تحتاج إلى حزمة متكاملة، لا دعم المصانع وحده: مشتريات وتجارب تشغيلية مدنية، واعتماد معايير السلامة والأمن السيبراني، وسلاسل توريد للمكونات، والأهم تسريع أنظمة إدارة الحركة الجوية غير المأهولة حتى تتحول القدرة التصنيعية إلى انتشار فعلي وآمن.",
+      "takeEn": "Governments seeking a domestic drone industry need an integrated package, not factory support alone: civil procurement and operational pilots, safety and cybersecurity certification, component supply-chain development, and—most critically—faster unmanned traffic management so manufacturing capacity translates into safe deployment at scale.",
+      "titleAr": "المجر توسّع أحد أكبر مصانع المسيّرات المدنية في أوروبا مع استهداف 3,500 وحدة سنويًا",
+      "titleEn": "Hungary expands a major European civilian-drone factory with capacity for 3,500 units a year"
+    },
+    {
       "categoryAr": "أمن الأجهزة القابلة للارتداء في الحكومة",
       "categoryEn": "Government Wearables Security",
       "id": "australia-government-smart-glasses-ban-review-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتقدم الالتزامات المناخية أسرع من البنية التحتية والجدوى الاقتصادية اللازمة للامتثال. ينبغي لصُنّاع السياسة الأوروبيين ربط أي مرونة تنظيمية بمؤشرات قابلة للقياس لنشر الشواحن وتقليص زمن ربط الشبكات وإصلاح رسوم الطرق وإعادة استثمار عائدات تداول الانبعاثات، حتى يتحول التأجيل إلى قدرة تنفيذية لا إلى إضعاف للتحول.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/autos-transportation/eu-truckmakers-seek-3-year-delay-2030-co2-targets-2026-09-14/"
-    },
-    {
-      "id": "us-grain-rail-fuel-surcharge-record-2026",
-      "publishedAt": "2026-09-14T10:10:00Z",
-      "categoryEn": "AGRICULTURE + TRANSPORT INFRASTRUCTURE",
-      "categoryAr": "الزراعة والبنية التحتية للنقل",
-      "titleEn": "Record U.S. rail fuel surcharges squeeze grain logistics at harvest",
-      "titleAr": "رسوم وقود السكك الحديدية القياسية تضغط على نقل الحبوب الأميركي وقت الحصاد",
-      "summaryEn": "U.S. Department of Agriculture data cited by Reuters show the average fuel surcharge for grain rail shipments reached 48 cents per rail-car mile in the second week of September, 153% above a year earlier. The surcharge now represents 11% of corn and soybean rail transport costs, up from 5%, as harvest demand rises and elevated diesel prices are passed through to grain shippers and farmers.",
-      "summaryAr": "تُظهر بيانات وزارة الزراعة الأميركية التي أوردتها رويترز أن متوسط رسم الوقود على شحن الحبوب بالسكك الحديدية بلغ 48 سنتًا لكل ميل لعربة القطار في الأسبوع الثاني من سبتمبر، بزيادة 153% عن العام السابق. وأصبح الرسم يمثل 11% من تكلفة نقل الذرة وفول الصويا بالقطار بدلًا من 5%، مع ارتفاع طلب موسم الحصاد وانتقال أسعار الديزل المرتفعة إلى الشاحنين والمزارعين.",
-      "takeEn": "Government implication: transport-energy shocks are now directly eroding farm-gate returns during a critical logistics window. Agriculture and transport agencies should jointly monitor fuel-surcharge pass-through, rail capacity and regional basis levels, while competition regulators factor the added pricing pressure into scrutiny of railroad consolidation.",
-      "takeAr": "الدلالة للحكومات: صدمات الطاقة والنقل تُضعف الآن عوائد المزارعين مباشرة خلال نافذة لوجستية حرجة. ينبغي لجهات الزراعة والنقل أن تراقب معًا انتقال رسوم الوقود وطاقة السكك الحديدية وفروق الأسعار الإقليمية، وأن تُدخل هيئات المنافسة ضغط التسعير الإضافي في تقييمها لاندماجات شركات السكك الحديدية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/retail-consumer/us-rail-fuel-surcharges-grain-hit-record-highs-squeezing-farmers-harvest-season-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T12:27:02.000Z"
+  "updatedAt": "2026-09-17T13:17:38.000Z"
 }
