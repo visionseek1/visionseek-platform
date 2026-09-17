@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن الطاقة والكهربة",
+      "categoryEn": "Energy Security + Electrification",
+      "id": "korea-iea-rise-asia-electrification-2035-2026",
+      "publishedAt": "2026-09-17T09:15:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/iea-chief-says-electrification-remains-way-forward-despite-ai-investment-jitters-2026-09-17/",
+      "summaryAr": "أطلقت كوريا الجنوبية والوكالة الدولية للطاقة شراكة RISE ASIA لتعزيز أمن الطاقة ودعم انتقال الاقتصادات الآسيوية من الوقود الأحفوري إلى الكهرباء. وتخططان للعمل مع دول آسيوية للوصول إلى معدل كهربنة قدره 35% بحلول 2035، مع تركيز أولي على جنوب شرق آسيا والاستفادة من قاعدة التصنيع الكورية في البطاريات والأسلاك والكابلات والمحولات.",
+      "summaryEn": "South Korea and the International Energy Agency launched the RISE ASIA partnership to strengthen energy security and support Asian economies’ shift from fossil fuels to electricity. They plan to work with Asian countries toward 35% electrification by 2035, initially focusing on Southeast Asia and drawing on Korea’s manufacturing base in batteries, wires, cables and transformers.",
+      "takeAr": "تقدم الشراكة نموذجًا يربط دبلوماسية الطاقة بالقدرة الصناعية بدل الاكتفاء بأهداف مناخية عامة. ولتحويلها إلى نتائج، ينبغي للحكومات إعداد خطوط مشاريع قطرية للشبكات والكهربة، وتحديد فجوات المعدات والتمويل، وربط الدعم بمعايير القدرة على تحمل التكلفة والموثوقية، مع تتبع المشتريات والتنفيذ عبر حدود الدول.",
+      "takeEn": "The partnership offers a model that links energy diplomacy to industrial capacity instead of relying on broad climate targets alone. To turn it into results, governments should build country-level grid and electrification pipelines, map equipment and financing gaps, tie support to affordability and reliability metrics, and track procurement and delivery across borders.",
+      "titleAr": "كوريا الجنوبية والوكالة الدولية للطاقة تطلقان شراكة لكهربة آسيا بحلول 2035",
+      "titleEn": "South Korea and IEA launch Asian electrification partnership for 2035"
+    },
+    {
       "categoryAr": "أشباه الموصلات والسياسة الصناعية",
       "categoryEn": "Semiconductors + Industrial Policy",
       "id": "india-applied-materials-five-billion-chip-ecosystem-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يتطلب توسيع الابتكار المحلي نظام تنفيذ مشتركًا، لا مجموعة من المشروعات التجريبية المنفصلة. ينبغي إنشاء مجلس عابر للجهات يتحقق من النتائج، وينشر معايير قابلة لإعادة الاستخدام، ويوثق الدروس التشغيلية، ويحوّل العقبات المحلية المتكررة إلى تعديلات وطنية قبل تمويل التوسع.",
       "source": "Republic of Korea Ministry of Science and ICT",
       "sourceUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156781555"
-    },
-    {
-      "id": "hormuz-talks-postponed-energy-diplomacy-contingency-2026",
-      "publishedAt": "2026-09-13T23:02:00Z",
-      "categoryEn": "ENERGY + INTERNATIONAL COORDINATION",
-      "categoryAr": "الطاقة والتنسيق الدولي",
-      "titleEn": "Hormuz talks postponed as energy-route diplomacy loses momentum",
-      "titleAr": "تأجيل محادثات هرمز يضعف المسار الدبلوماسي لحماية تدفقات الطاقة",
-      "summaryEn": "Oman postponed a September 14 meeting between Iran and Gulf Arab states that was expected to discuss a proposed framework for shipping routes through the Strait of Hormuz, citing the need for consensus. No new date was announced. Iran maintained that it would not reopen the strait until the United States meets its demands, while recent attacks and the continued closure of Saudi Arabia’s East–West pipeline are increasing risks across major regional energy corridors.",
-      "summaryAr": "أجّلت عُمان اجتماعًا كان مقررًا في 14 سبتمبر بين إيران ودول الخليج العربية لمناقشة إطار مقترح لمسارات الملاحة عبر مضيق هرمز، مشيرة إلى الحاجة إلى توافق. ولم يُعلن موعد جديد. وتمسكت إيران بعدم إعادة فتح المضيق قبل استجابة الولايات المتحدة لمطالبها، فيما تزيد الهجمات الأخيرة واستمرار إغلاق خط النفط السعودي شرق–غرب المخاطر عبر ممرات الطاقة الرئيسية في المنطقة.",
-      "takeEn": "Government implication: delayed diplomacy should trigger operational contingency measures, not a pause in decision-making. Governments should connect reserve-release thresholds, cargo rerouting, maritime-security coordination and public market communication to clear diplomatic milestones, while defining an interim shipping protocol and conditions for reconvening talks.",
-      "takeAr": "الدلالة للحكومات: ينبغي أن يؤدي تعثر المسار الدبلوماسي إلى تفعيل إجراءات تشغيلية احتياطية، لا إلى تعليق القرار. يجب ربط عتبات استخدام الاحتياطيات وإعادة توجيه الشحنات والتنسيق الأمني البحري والاتصال بالأسواق بمحطات دبلوماسية واضحة، مع وضع بروتوكول مؤقت للملاحة وشروط محددة لاستئناف المحادثات.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/diplomacy-stumbles-with-postponement-meeting-strait-hormuz-proposal-2026-09-13/"
     }
   ],
-  "updatedAt": "2026-09-17T08:38:53.000Z"
+  "updatedAt": "2026-09-17T09:50:25.000Z"
 }
