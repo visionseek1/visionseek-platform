@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "حوكمة الذكاء الاصطناعي والبحث والتطوير الذاتي",
+      "categoryEn": "AI Governance + AI-Assisted R&D",
+      "id": "anthropic-claude-leads-26-percent-internal-ai-rd-2026",
+      "publishedAt": "2026-09-17T22:10:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17/",
+      "summaryAr": "أفادت Anthropic بأن Claude قاد 26% من أعمال البحث والتطوير المتعلقة بالذكاء الاصطناعي داخل الشركة في أغسطس، ارتفاعًا من 1% في مارس وفق مقياس طورته Epoch AI، بينما تعاون الذكاء الاصطناعي مع البشر في أكثر من 90% من العمل البحثي. وقالت الشركة إن أيًا من العمل المقاس لم يكن ذاتي التشغيل بالكامل، وإن نحو 30 ألف وكيل كانوا ينفذون أعمال البحث والهندسة في وقت واحد، مع فحص كل إجراء قبل تنفيذه.",
+      "summaryEn": "Anthropic reported that Claude led 26% of its internal AI research and development work in August, up from 1% in March on a scale developed by Epoch AI, while AI collaborated with humans on more than 90% of research work. The company said none of the measured work was fully autonomous and that about 30,000 agents were performing research and engineering tasks at any one time, with every action screened before execution.",
+      "takeAr": "على الحكومات التعامل مع استخدام الذكاء الاصطناعي لبناء نماذج ذكاء اصطناعي جديدة باعتباره قدرة رقابية مستقلة، لا مجرد أداة إنتاجية. ينبغي أن تتطلب قواعد الشراء والسلامة إفصاحًا دوريًا موحدًا عن مستوى الاستقلالية وحجم تشغيل الوكلاء وآليات فحص القرارات والتدخلات المحظورة وحصة موارد السلامة، مع اختبارات مستقلة ومسار تصعيد للحوادث قبل استخدام هذه الأنظمة في البنية التحتية أو الخدمات الحيوية.",
+      "takeEn": "Governments should treat AI systems used to build new AI models as a distinct oversight category, not merely a productivity tool. Procurement and safety rules should require standardized periodic disclosure of autonomy levels, agent scale, decision-screening controls, blocked interventions and safety-resource allocation, backed by independent testing and an incident-escalation path before such systems are used in critical infrastructure or public services.",
+      "titleAr": "Claude يقود 26% من أعمال Anthropic لبناء نماذج الذكاء الاصطناعي التالية",
+      "titleEn": "Claude leads 26% of Anthropic’s work building its next AI models"
+    },
+    {
       "categoryAr": "البنية التحتية للذكاء الاصطناعي وتخطيط الطاقة",
       "categoryEn": "AI Infrastructure + Energy Planning",
       "id": "crusoe-ai-infrastructure-series-f-6gw-capacity-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تنتقل الموافقة على بنية الذكاء الاصطناعي من تقديرات طوعية للموارد إلى إفصاح مُلزم يربط بين المرافق المختلفة. ينبغي للحكومات اشتراط خطوط أساس موحدة للكهرباء والمياه، وتوقعات مستقبلية للطلب، وتقارير قابلة للتحقق قبل منح التصاريح أو الربط بالشبكة، ثم ربط عدم الامتثال بإجراءات تصحيحية وعواقب واضحة على التصاريح.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/legal/litigation/texas-moves-penalize-data-centers-water-violations-2026-09-14/"
-    },
-    {
-      "id": "france-power-strike-65gw-nuclear-outages-2026",
-      "publishedAt": "2026-09-14T20:51:00Z",
-      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "الطاقة والبنية التحتية الحيوية",
-      "titleEn": "French power strike takes 6.5 GW offline across nuclear and other generation",
-      "titleAr": "إضراب الكهرباء الفرنسي يخرج 6.5 غيغاواط من التوليد النووي وغيره من الخدمة",
-      "summaryEn": "A French electricity-sector strike took 6.5 gigawatts of generation offline overnight, according to EDF data. Most of the reduction came from seven nuclear reactors, with additional gas-fired and hydroelectric capacity unavailable. The disruption was scheduled to last into early Tuesday, while the strike was expected to continue through the day, leaving scope for outages to resume or deepen.",
-      "summaryAr": "أخرج إضراب في قطاع الكهرباء الفرنسي 6.5 غيغاواط من قدرات التوليد من الخدمة خلال الليل، وفق بيانات شركة EDF. وجاء معظم الخفض من سبعة مفاعلات نووية، إلى جانب توقف قدرات إضافية تعمل بالغاز والطاقة الكهرومائية. وكان من المقرر استمرار الاضطراب حتى صباح الثلاثاء، فيما يُتوقع امتداد الإضراب خلال اليوم، ما يترك احتمال تجدد الانقطاعات أو اتساعها.",
-      "takeEn": "Government implication: workforce disputes can become immediate system-reliability events when generation is concentrated in a small number of strategic assets. Energy authorities should integrate labor-risk scenarios into reserve planning, cross-border trading, public communication and critical-service continuity, with explicit escalation thresholds if outages persist.",
-      "takeAr": "الدلالة للحكومات: يمكن أن تتحول نزاعات القوى العاملة فورًا إلى أزمة في موثوقية النظام عندما يتركز التوليد في عدد محدود من الأصول الاستراتيجية. ينبغي لسلطات الطاقة إدماج سيناريوهات مخاطر العمل في تخطيط الاحتياطيات والتجارة العابرة للحدود والتواصل العام واستمرارية الخدمات الحيوية، مع وضع عتبات تصعيد واضحة إذا استمرت حالات التوقف.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/french-power-sector-strike-takes-65-gigawatts-offline-overnight-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T20:12:53.000Z"
+  "updatedAt": "2026-09-17T22:34:54.000Z"
 }
