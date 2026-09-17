@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية الرقمية",
+      "categoryEn": "Digital Infrastructure",
+      "id": "us-fcc-spectrum-auctions-6g-ai-infrastructure-2028",
+      "publishedAt": "2026-09-17T01:58:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/us-official-says-upcoming-spectrum-auctions-could-generate-more-than-100-billion-2026-09-17/",
+      "summaryAr": "قال رئيس لجنة الاتصالات الفيدرالية الأميركية إن مزادات الطيف اللاسلكي المزمعة خلال العامين المقبلين قد تدر أكثر من 100 مليار دولار. وتشمل الخطة مزادًا في 2027 على 160 ميغاهرتز من النطاق C العلوي وثلاثة مزادات إضافية تستهدف الإدارة إكمالها بنهاية 2028 لدعم الطلب المتزايد من تقنيات مثل 6G والذكاء الاصطناعي والمركبات الذاتية وأجهزة الاستشعار والاتصال الفضائي.",
+      "summaryEn": "The U.S. Federal Communications Commission chair said planned wireless-spectrum auctions over the next two years could raise more than $100 billion. The pipeline includes a 2027 auction of 160 MHz in the Upper C-Band and three additional auctions targeted for completion by the end of 2028, supporting rising demand from 6G, AI, autonomous vehicles, sensors and space-based connectivity.",
+      "takeAr": "على الحكومات التعامل مع الطيف كأصل للبنية التحتية لا كمصدر إيراد فقط؛ فتصميم المزادات ينبغي أن يربط التخصيص بالمنافسة والتغطية والأمن السيبراني وسرعة نشر خدمات الجيل التالي، مع تنسيق واضح بين الاستخدامات الأرضية والفضائية.",
+      "takeEn": "Governments should treat spectrum as infrastructure, not only a revenue asset: auction design should link allocation to competition, coverage, cybersecurity and rapid next-generation deployment, with clear coordination between terrestrial and space-based uses.",
+      "titleAr": "الولايات المتحدة تضع مسارًا لأربعة مزادات طيف حتى 2028 لدعم 6G والذكاء الاصطناعي",
+      "titleEn": "US sets four-auction spectrum pipeline through 2028 for 6G and AI infrastructure"
+    },
+    {
       "categoryAr": "القدرة على الصمود المناخي",
       "categoryEn": "Climate Resilience",
       "id": "nepal-glacier-collapse-climate-attribution-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يجب أن تشمل خطط السلامة النووية حماية الحلقة الأخيرة في لوجستيات الطاقة الاحتياطية بوصفها بنية تحتية حيوية. وينبغي للسلطات والمراقبين الدوليين إنشاء ممرات إمداد موثقة، وحدود دنيا للوقود داخل الموقع، وتقارير مستقلة عن الحوادث، وإجراءات سريعة لمنع الاشتباك حتى لا تعطل العمليات العسكرية قدرة تبريد المفاعلات.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/russian-nuclear-head-says-ukraine-attacked-fuel-trucks-endangered-zaporizhzhia-2026-09-13/"
-    },
-    {
-      "id": "openai-ai-safety-pact-government-coordination-2026",
-      "publishedAt": "2026-09-12T20:38:00Z",
-      "categoryEn": "AI + GOVERNANCE",
-      "categoryAr": "الذكاء الاصطناعي والحوكمة",
-      "titleEn": "Frontier AI labs move toward a safety-pacing pact as government coordination gains urgency",
-      "titleAr": "مختبرات الذكاء الاصطناعي المتقدم تقترب من اتفاق لإبطاء القدرات مع تصاعد الحاجة إلى تنسيق حكومي",
-      "summaryEn": "OpenAI CEO Sam Altman said the company will not pursue a 2026 public listing while it addresses AI safety and alignment, and suggested leading AI developers may be close to an agreement to slow capability development and cooperate on safety risks. The statement comes as U.S. lawmakers call for stronger rules and industry leaders emphasize joint work with governments.",
-      "summaryAr": "قال سام ألتمان، الرئيس التنفيذي لـ«أوبن إيه آي»، إن الشركة لن تسعى إلى طرح عام خلال 2026 بينما تعالج قضايا سلامة الذكاء الاصطناعي ومواءمته، وأشار إلى أن كبار المطورين قد يقتربون من اتفاق لإبطاء تطوير القدرات والتعاون بشأن مخاطر السلامة. ويأتي ذلك مع دعوات مشرعين أمريكيين إلى قواعد أقوى وتشديد قادة الصناعة على العمل المشترك مع الحكومات.",
-      "takeEn": "Government implication: a voluntary industry pact can create a policy window, but public authorities should convert it into auditable safeguards. Governments should define measurable capability thresholds, require independent evaluations and incident disclosure, clarify competition-law boundaries for safety coordination, and establish escalation triggers before voluntary pacing becomes necessary.",
-      "takeAr": "الدلالة للحكومات: قد يفتح الاتفاق الطوعي بين الشركات نافذة للسياسة العامة، لكن ينبغي تحويله إلى ضمانات قابلة للتدقيق. ويتعين تحديد عتبات قابلة للقياس للقدرات، وفرض تقييمات مستقلة والإفصاح عن الحوادث، وتوضيح حدود قانون المنافسة أمام التنسيق المتعلق بالسلامة، ووضع محفزات للتصعيد قبل الحاجة إلى إبطاء طوعي.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/litigation/openai-ipo-will-not-happen-2026-amid-ai-safety-fears-altman-says-2026-09-12/"
     }
   ],
-  "updatedAt": "2026-09-17T01:36:10.000Z"
+  "updatedAt": "2026-09-17T02:44:07.000Z"
 }
