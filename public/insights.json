@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن المجال الجوي واقتصاد الطيران منخفض الارتفاع",
+      "categoryEn": "Airspace Security + Low-Altitude Economy",
+      "id": "china-beijing-permanent-airspace-security-zone-2026",
+      "publishedAt": "2026-09-17T16:12:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/china-creates-italy-sized-no-fly-zone-around-beijing-after-rare-crash-2026-09-17/",
+      "summaryAr": "تُنشئ الصين منطقة أمن جوي دائمة بعرض 600 كيلومتر حول بكين اعتبارًا من 20 سبتمبر، تحظر جميع الرحلات باستثناء الطيران التجاري ورحلات الأعمال المعتمدة والعمليات العسكرية والجمركية والشرطية والإنقاذية. تشمل القواعد الالتزام الصارم بخطط الطيران المعتمدة، والموافقة على أي انحراف، والاتصال اللاسلكي المستمر، وتجهيز الطائرات بأنظمة تعريف وتتبع إلكترونية، وذلك بعد حادث طائرة خفيفة نادر في العاصمة.",
+      "summaryEn": "China will establish a permanent 600-kilometre-wide airspace security zone around Beijing from September 20, barring all flights except commercial aviation, approved business flights and military, customs, police and rescue operations. Exempt flights must follow approved plans, obtain clearance for deviations, maintain continuous radio contact and carry electronic identification and tracking equipment, following a rare light-aircraft crash in the capital.",
+      "takeAr": "على الحكومات التي توسّع أمن المجال الجوي أن تربط القيود بتقييم مخاطر واضح وبنية تشغيلية للطيران منخفض الارتفاع: هوية رقمية وتتبع لحظي، ومسارات وتصاريح قابلة للتنفيذ، وآلية سريعة للطوارئ والانحرافات، وقياس أثر القيود على الطيران العام والمسيّرات والابتكار؛ فالحظر الجغرافي الواسع بلا إدارة دقيقة قد يحمي الأهداف لكنه يعطّل اقتصاد المجال الجوي الجديد.",
+      "takeEn": "Governments expanding airspace security should pair restrictions with a clear risk model and low-altitude operating infrastructure: digital identity and real-time tracking, workable corridors and permits, rapid emergency and deviation handling, and impact measurement for general aviation, drones and innovation. Broad geographic bans can protect critical sites but may also suppress the emerging low-altitude economy if not managed precisely.",
+      "titleAr": "الصين تنشئ منطقة أمن جوي دائمة واسعة حول بكين بعد حادث طائرة نادر",
+      "titleEn": "China creates a vast permanent airspace security zone around Beijing after rare crash"
+    },
+    {
       "categoryAr": "مساءلة الذكاء الاصطناعي وحماية المستهلك",
       "categoryEn": "AI Accountability + Consumer Protection",
       "id": "us-senators-ftc-ai-shopping-chatbots-origin-labels-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينقل الإلغاء تخطيط قطاع الكهرباء الأميركي نحو أولوية الإمداد قصير الأجل وتخفيف كلفة الامتثال، لكنه يعيد فتح عدم اليقين طويل الأجل بشأن الانبعاثات والاستثمار. ينبغي لجهات الطاقة والبيئة اختبار خطط التوليد والشبكات ورأس المال في ظل قواعد اتحادية أخف وقيود محتملة من الولايات أو القضاء، مع نشر المفاضلات بين الموثوقية والتكلفة والانبعاثات.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/legal/litigation/epa-undo-carbon-emission-limits-power-plants-g20-meeting-2026-09-14/"
-    },
-    {
-      "id": "us-trump-ai-existing-powers-no-slowdown-2026",
-      "publishedAt": "2026-09-14T14:06:00Z",
-      "categoryEn": "AI + GOVERNMENT POLICY",
-      "categoryAr": "الذكاء الاصطناعي والسياسة الحكومية",
-      "titleEn": "Trump says existing U.S. powers are sufficient to police AI and rejects slowdown calls",
-      "titleAr": "ترامب يؤكد كفاية السلطات الأميركية الحالية لضبط الذكاء الاصطناعي ويرفض دعوات الإبطاء",
-      "summaryEn": "U.S. President Donald Trump said the government already has substantial criminal and regulatory authority over AI companies, while dismissing industry leaders’ calls to slow development over safety risks. His comments signal continued federal support for rapid AI development and reliance on existing enforcement powers rather than a broad pause or new precautionary regime.",
-      "summaryAr": "قال الرئيس الأميركي دونالد ترامب إن الحكومة تمتلك بالفعل سلطات جنائية وتنظيمية واسعة على شركات الذكاء الاصطناعي، ورفض دعوات قادة القطاع إلى إبطاء التطوير بسبب مخاطر السلامة. وتشير تصريحاته إلى استمرار الدعم الفيدرالي للتطوير السريع والاعتماد على أدوات الإنفاذ الحالية بدلًا من توقف واسع أو نظام احترازي جديد.",
-      "takeEn": "Government implication: the U.S. policy path is leaning toward enforcement under existing law while preserving development speed. Agencies should publish a clear map of current authorities, identify uncovered frontier-model risks and define evidence-based intervention thresholds so confidence in existing powers can be tested against operational scenarios.",
-      "takeAr": "الدلالة للحكومات: يميل المسار الأميركي إلى الإنفاذ بموجب القوانين القائمة مع الحفاظ على سرعة التطوير. ينبغي للجهات الحكومية نشر خريطة واضحة لصلاحياتها الحالية، وتحديد مخاطر النماذج المتقدمة غير المغطاة، ووضع عتبات تدخل قائمة على الأدلة لاختبار مدى كفاية هذه الصلاحيات في سيناريوهات تشغيلية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/trump-says-there-is-sick-conspiracy-against-ai-data-centers-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T15:32:34.000Z"
+  "updatedAt": "2026-09-17T16:46:27.000Z"
 }
