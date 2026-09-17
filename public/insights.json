@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن الأجهزة القابلة للارتداء في الحكومة",
+      "categoryEn": "Government Wearables Security",
+      "id": "australia-government-smart-glasses-ban-review-2026",
+      "publishedAt": "2026-09-17T12:04:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/australia-considers-banning-use-smart-glasses-government-buildings-2026-09-17/",
+      "summaryAr": "تدرس أستراليا حظر النظارات الذكية المزودة بالكاميرات في أماكن العمل الحكومية بسبب مخاطر الخصوصية والأمن، في خطوة قد تكون الأولى من نوعها. طلبت وزيرة الخدمة العامة مشورة مفوضية الخدمة العامة، بينما تعتزم الحكومة التشاور مع كبار أصحاب العمل لوضع إرشادات لاستخدام الذكاء الاصطناعي في بيئة العمل.",
+      "summaryEn": "Australia is considering barring camera-equipped smart glasses from government workplaces over privacy and security risks, potentially the first restriction of its kind. The public service minister has asked the Public Service Commission for advice, while the government plans consultations with major employers on workplace AI guidance.",
+      "takeAr": "على الجهات الحكومية إدراج الأجهزة القابلة للارتداء المزودة بالكاميرات والذكاء الاصطناعي ضمن سياسات أمن المعلومات فورًا: تحديد المناطق المحظورة، وقواعد التسجيل والموافقة، وضوابط الوصول إلى البيانات، واستثناءات الإتاحة، وآلية موحدة للتفتيش والإنفاذ قبل انتشار هذه الأجهزة بين الموظفين والزوار.",
+      "takeEn": "Public bodies should bring camera- and AI-enabled wearables into information-security policy now: define restricted zones, recording and consent rules, data-access controls, accessibility exceptions, and a consistent inspection and enforcement process before the devices become common among staff and visitors.",
+      "titleAr": "أستراليا تدرس حظر النظارات الذكية المزودة بالكاميرات في أماكن العمل الحكومية",
+      "titleEn": "Australia weighs a first-of-its-kind smart-glasses ban in government workplaces"
+    },
+    {
       "categoryAr": "حوكمة الذكاء الاصطناعي والسيادة الدفاعية",
       "categoryEn": "AI Governance + Defence Sovereignty",
       "id": "thales-international-ai-framework-hexaforce-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: صدمات الطاقة والنقل تُضعف الآن عوائد المزارعين مباشرة خلال نافذة لوجستية حرجة. ينبغي لجهات الزراعة والنقل أن تراقب معًا انتقال رسوم الوقود وطاقة السكك الحديدية وفروق الأسعار الإقليمية، وأن تُدخل هيئات المنافسة ضغط التسعير الإضافي في تقييمها لاندماجات شركات السكك الحديدية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/retail-consumer/us-rail-fuel-surcharges-grain-hit-record-highs-squeezing-farmers-harvest-season-2026-09-14/"
-    },
-    {
-      "id": "korea-adb-critical-minerals-ai-energy-cooperation-2026",
-      "publishedAt": "2026-09-14T07:50:00Z",
-      "categoryEn": "AI + ENERGY + CRITICAL MINERALS",
-      "categoryAr": "الذكاء الاصطناعي والطاقة والمعادن الحرجة",
-      "titleEn": "Korea and ADB align critical-mineral, AI and regional energy cooperation",
-      "titleAr": "كوريا وبنك التنمية الآسيوي ينسقان التعاون في المعادن الحرجة والذكاء الاصطناعي والطاقة",
-      "summaryEn": "South Korean President Lee Jae Myung and Asian Development Bank President Masato Kanda agreed to deepen cooperation across three linked priorities: stabilizing critical-mineral supply chains in Central Asia, combining Korea’s AI capabilities with ADB’s development expertise, and expanding regional power infrastructure and nuclear cooperation. They also discussed using Korea’s technology and experience in ADB-backed initiatives including the ASEAN Power Grid and nuclear-financing policy.",
-      "summaryAr": "اتفق الرئيس الكوري الجنوبي لي جاي ميونغ ورئيس بنك التنمية الآسيوي ماساتو كاندا على تعميق التعاون في ثلاث أولويات مترابطة: استقرار سلاسل إمداد المعادن الحرجة في آسيا الوسطى، ودمج قدرات كوريا في الذكاء الاصطناعي مع خبرة البنك التنموية، وتوسيع البنية التحتية الإقليمية للكهرباء والتعاون النووي. كما ناقشا توظيف التقنية والخبرة الكورية في مبادرات يدعمها البنك، ومنها شبكة كهرباء الآسيان وسياسات تمويل الطاقة النووية.",
-      "takeEn": "Government implication: this creates a development-finance pathway that connects resource security, digital capability and power infrastructure instead of treating them as separate portfolios. Governments seeking participation should prepare bankable, cross-sector project pipelines with clear mineral-processing, AI deployment, grid-interconnection and financing roles before regional programmes are allocated.",
-      "takeAr": "الدلالة للحكومات: يفتح هذا مسارًا للتمويل التنموي يربط أمن الموارد والقدرات الرقمية والبنية التحتية للطاقة بدل إدارتها كملفات منفصلة. وعلى الحكومات الراغبة في المشاركة إعداد حزم مشروعات قابلة للتمويل تحدد أدوار معالجة المعادن ونشر الذكاء الاصطناعي وربط الشبكات والتمويل قبل توزيع البرامج الإقليمية.",
-      "source": "Republic of Korea Presidential Office",
-      "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148971844"
     }
   ],
-  "updatedAt": "2026-09-17T11:21:18.000Z"
+  "updatedAt": "2026-09-17T12:27:02.000Z"
 }
