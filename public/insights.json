@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن البنية التحتية + مكافحة المسيّرات",
+      "categoryEn": "Critical Infrastructure + Counter-Drone Security",
+      "id": "bulgaria-anti-drone-critical-infrastructure-protection-2026",
+      "publishedAt": "2026-09-18T10:24:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/bulgaria-start-supplying-anti-drone-systems-critical-infrastructure-minister-2026-09-18/",
+      "summaryAr": "قالت الحكومة البلغارية إنها ستبدأ تزويد منشآت البنية التحتية الحيوية بأنظمة مضادة للمسيّرات، بعد مراجعة ترتيبات الحماية، كما وجّهت الشرطة إلى تكثيف الدوريات حول مواقع إنتاج الأسلحة وتخزينها. جاء القرار بعد حريق في مستودع أسلحة تديره EMCO؛ وقد وصفت الشركة الحادث بأنه تخريب، من دون تحديد مشتبه بهم.",
+      "summaryEn": "Bulgaria’s government said it will begin equipping critical-infrastructure facilities with counter-drone systems after reviewing site security, while directing police to increase patrols around weapons production and storage locations. The decision followed a fire at an EMCO weapons depot; the company called the incident sabotage but identified no suspects.",
+      "takeAr": "تعكس الخطوة انتقال الحماية من المسيّرات إلى وظيفة أساسية لأمن البنية التحتية. على الحكومات ترتيب المواقع حسب المخاطر، وتحديد المسؤولية بين المشغلين والشرطة والجيش، واعتماد منظومات كشف واعتراض قابلة للتكامل، مع قواعد واضحة للاستجابة وجمع الأدلة وتمارين دورية قبل وقوع الحوادث.",
+      "takeEn": "The move treats counter-drone protection as a core critical-infrastructure function. Governments should rank sites by risk, define responsibilities across operators, police and the military, procure interoperable detection-and-defeat systems, and establish incident-response, evidence and exercise protocols before disruptions occur.",
+      "titleAr": "بلغاريا تبدأ نشر أنظمة مضادة للمسيّرات لحماية البنية التحتية الحيوية",
+      "titleEn": "Bulgaria moves to deploy counter-drone systems across critical infrastructure"
+    },
+    {
       "categoryAr": "أمن الغاز الطبيعي المسال والاستثمار الحكومي",
       "categoryEn": "LNG Security + State-Backed Investment",
       "id": "japan-jogmec-osaka-gas-australia-browse-lng-stake-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينبغي للدول المصدّرة ألا تفترض توافر إعفاء من آلية الكربون أثناء صدمات الأسعار. على وزارات التجارة والصناعة والمناخ أن ترسم خريطة مشتركة لصادرات الصلب والأسمدة والألومنيوم المعرضة، وتسرّع بيانات الانبعاثات القابلة للتحقق، وتجهز دعم الامتثال للمصدرين الأصغر، وتختبر سيناريوهَي التفاوض قبل إقرار القواعد الأوروبية النهائية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/environment/eu-lawmakers-move-scrap-carbon-border-levys-emergency-brake-2026-09-15/"
-    },
-    {
-      "id": "south-korea-kazakhstan-nuclear-critical-minerals-ai-cooperation-2026",
-      "publishedAt": "2026-09-15T10:13:00Z",
-      "categoryEn": "NUCLEAR ENERGY + CRITICAL MINERALS + AI COOPERATION",
-      "categoryAr": "الطاقة النووية والمعادن الحرجة والتعاون في الذكاء الاصطناعي",
-      "titleEn": "South Korea and Kazakhstan sign nuclear MoU and widen energy, mineral and AI cooperation",
-      "titleAr": "كوريا الجنوبية وكازاخستان توقعان مذكرة نووية وتوسعان التعاون في الطاقة والمعادن والذكاء الاصطناعي",
-      "summaryEn": "South Korea and Kazakhstan signed a memorandum of understanding on the peaceful use of nuclear energy as part of 13 cooperation documents concluded during their leaders’ meeting. The package also covers crude oil and science and technology, while the two governments discussed deeper cooperation in energy, artificial intelligence and critical minerals. Seoul separately encouraged joint work that combines Korean technology with Kazakhstan’s mineral resources to strengthen supply-chain resilience.",
-      "summaryAr": "وقعت كوريا الجنوبية وكازاخستان مذكرة تفاهم بشأن الاستخدام السلمي للطاقة النووية ضمن 13 وثيقة تعاون أُبرمت خلال لقاء قائدي البلدين. وتشمل الحزمة أيضًا النفط الخام والعلوم والتكنولوجيا، فيما ناقشت الحكومتان توسيع التعاون في الطاقة والذكاء الاصطناعي والمعادن الحرجة. كما شجعت سيول العمل المشترك الذي يجمع التكنولوجيا الكورية بالموارد المعدنية الكازاخستانية لتعزيز مرونة سلاسل الإمداد.",
-      "takeEn": "Government implication: the agreements create a cross-sector platform rather than a single project. Agencies should convert it into a joint delivery roadmap with named leads, nuclear-safety and safeguards gates, transparent mineral-traceability rules, and measurable milestones for exploration, technology transfer and supply commitments.",
-      "takeAr": "الدلالة للحكومات: تنشئ الاتفاقات منصة عابرة للقطاعات وليست مشروعًا منفردًا. ينبغي للجهات المعنية تحويلها إلى خارطة تنفيذ مشتركة تحدد المسؤوليات، وبوابات السلامة والضمانات النووية، وقواعد شفافة لتتبع المعادن، ومراحل قابلة للقياس للاستكشاف ونقل التكنولوجيا والتزامات الإمداد.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/asia-pacific/south-korea-kazakhstan-sign-mou-atomic-energy-explore-mineral-trade-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T07:57:17.000Z"
+  "updatedAt": "2026-09-18T10:45:56.000Z"
 }
