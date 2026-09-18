@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "المعادن الحرجة + السيطرة الصناعية للدولة",
+      "categoryEn": "Critical Minerals + State Industrial Control",
+      "id": "china-state-rare-earth-consolidation-mp-materials-link-2026",
+      "publishedAt": "2026-09-18T12:31:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/china-rare-earth-group-talks-buy-mp-materials-shareholder-shenghe-resources-2026-09-18/",
+      "summaryAr": "تجري مجموعة China Rare Earth Group المملوكة للدولة محادثات للاستحواذ على حصة مسيطرة في Shenghe Resources، وفق مصادر رويترز. ومن شأن إتمام الصفقة أن يعمق توحيد تعدين ومعالجة المعادن النادرة في الصين تحت سيطرة الدولة، وأن يضع استثمارات Shenghe الخارجية تحت سيطرة المجموعة، ومنها حصة 3% في MP Materials التي تُعد وزارة الدفاع الأميركية أكبر مساهم فيها. ولا يزال توقيت الصفقة ومصير الأصول الخارجية غير واضحين.",
+      "summaryEn": "State-owned China Rare Earth Group is in talks to acquire a controlling stake in Shenghe Resources, according to Reuters sources. A completed deal would further consolidate China’s rare-earth mining and refining sector under state control and place Shenghe’s overseas holdings—including a 3% stake in MP Materials, whose largest shareholder is the US Department of Defense—under the group’s control. The timing and treatment of foreign assets remain unclear.",
+      "takeAr": "على الحكومات التعامل مع روابط الملكية المؤسسية باعتبارها جزءًا من أمن المعادن الحرجة، لا مجرد هيكل سوقي. ينبغي رسم الملكية المستفيدة عبر المناجم والمصافي والحصص الخارجية، واختبار مخاطر الأمن القومي واستمرارية الإمداد، وربط الاستثمار العام والمشتريات والمخزونات الاستراتيجية بسيناريوهات واضحة للسيطرة والحصص التصديرية واتفاقات الشراء.",
+      "takeEn": "Governments should treat corporate ownership links as part of critical-minerals security, not merely market structure. They should map beneficial ownership across mines, processors and foreign equity stakes; test national-security and supply-continuity exposure; and tie public investment, procurement and stockpiling decisions to transparent control, quota and offtake scenarios.",
+      "titleAr": "مجموعة صينية حكومية تسعى للسيطرة على Shenghe وحصتها في MP Materials المدعومة أميركيًا",
+      "titleEn": "China’s state rare-earth group seeks control of Shenghe and its stake in US-backed MP Materials"
+    },
+    {
       "categoryAr": "حوكمة الذكاء الاصطناعي + السيادة الرقمية",
       "categoryEn": "AI Governance + Digital Sovereignty",
       "id": "europe-ai-slowdown-safety-competition-sovereignty-debate-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: قد يعزز الاعتراف العلني الردع، لكنه يرفع أيضًا مخاطر التصعيد وسوء التقدير. ينبغي للحكومات تحديث عقيدة أمن الفضاء، وتوضيح سلطة القيادة وحدود الاستخدام، والتمييز بين التأثيرات غير الحركية القابلة للعكس والأعمال المنتجة للحطام، وتعزيز مرونة الأقمار الصناعية والتشغيل البيني مع الحلفاء، وإنشاء قنوات اتصال للأزمات قبل وقوع حادث مداري.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/aerospace-defense/us-orbital-weapons-acknowledgement-landmark-move-us-space-command-official-says-2026-09-15/"
-    },
-    {
-      "id": "canada-private-airport-concessions-2026",
-      "publishedAt": "2026-09-15T13:23:00Z",
-      "categoryEn": "INFRASTRUCTURE + PUBLIC ASSET GOVERNANCE",
-      "categoryAr": "البنية التحتية وحوكمة الأصول العامة",
-      "titleEn": "Canada seeks private capital for long-term concessions at its four largest airports",
-      "titleAr": "كندا تستهدف رأس المال الخاص عبر امتيازات طويلة الأجل لأكبر أربعة مطارات",
-      "summaryEn": "Canada will seek private investment through long-term concessions to operate its four largest airports—Toronto, Montreal, Calgary and Vancouver—while retaining public ownership of the underlying land and assets. Prime Minister Mark Carney presented the model as a way to bring new capital and operational expertise into airport growth. Labour groups oppose privatization, warning that it could raise costs for travellers.",
-      "summaryAr": "ستسعى كندا لجذب استثمار خاص عبر امتيازات طويلة الأجل لتشغيل أكبر أربعة مطارات في تورونتو ومونتريال وكالغاري وفانكوفر، مع إبقاء ملكية الأراضي والأصول الأساسية للدولة. وقدّم رئيس الوزراء مارك كارني النموذج بوصفه وسيلة لجلب رأس مال وخبرة تشغيلية جديدين إلى توسع المطارات. وتعارض مجموعات عمالية الخصخصة محذرة من احتمال ارتفاع تكاليف المسافرين.",
-      "takeEn": "Government implication: retaining ownership does not by itself protect public value. Canada should make capital commitments, service and resilience standards, fee protections, competition rules, workforce obligations, open-book audit rights and termination triggers explicit before awarding concessions; other governments considering airport partnerships should use the same safeguards.",
-      "takeAr": "الدلالة للحكومات: الاحتفاظ بالملكية لا يحمي القيمة العامة بمفرده. ينبغي لكندا أن تحدد قبل منح الامتيازات التزامات الاستثمار، ومعايير الخدمة والمرونة، وضوابط الرسوم والمنافسة، والتزامات القوى العاملة، وحقوق التدقيق المفتوح، وشروط الإنهاء؛ وعلى الحكومات الأخرى التي تدرس شراكات المطارات اعتماد الضمانات نفسها.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/canada-seek-private-investment-major-airports-says-carney-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T12:47:11.000Z"
+  "updatedAt": "2026-09-18T13:13:16.000Z"
 }
