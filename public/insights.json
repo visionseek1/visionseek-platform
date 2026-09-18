@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية التحتية للطاقة + مرونة الشبكات",
+      "categoryEn": "Energy Infrastructure + Grid Resilience",
+      "id": "cuba-national-grid-total-collapse-2026",
+      "publishedAt": "2026-09-18T18:18:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/cuba-energy-grid-suffers-nationwide-collapse-2026-09-18/",
+      "summaryAr": "أعلنت وزارة الطاقة الكوبية أن شبكة الكهرباء تعرضت لانهيار كامل، ما تسبب في انقطاع شامل للتيار في الجزيرة التي يبلغ عدد سكانها نحو 9 ملايين نسمة. وكانت منظومة التوليد المتقادمة تعاني أصلًا من نقص الوقود وتدهور البنية التحتية والحصار النفطي الذي تفرضه الولايات المتحدة، مع انقطاعات دورية واسعة حتى أثناء عمل الشبكة.",
+      "summaryEn": "Cuba’s Energy Ministry said the national power grid suffered a total collapse, causing an island-wide blackout affecting a population of about 9 million. The ageing generation system was already under severe strain from fuel shortages, deteriorating infrastructure and the US-imposed oil blockade, with widespread rolling outages even when the grid was online.",
+      "takeAr": "ينبغي للحكومات التعامل مع الانهيار الشامل للشبكة باعتباره خطرًا متسلسلًا يهدد المياه والاتصالات والصحة والنقل، لا مجرد عطل كهربائي. الأولويات العملية هي تقييم كفاية التوليد والوقود، وتمويل الصيانة الوقائية، وتحديد أحمال الخدمات الحرجة، واختبار قدرات البدء الأسود وإعادة التشغيل الجزئي، وإجراء تمارين دورية مع بروتوكول موحد للتواصل العام وقياس زمن الاستعادة.",
+      "takeEn": "Governments should treat a total grid collapse as a cascading risk to water, communications, health and transport—not merely an electricity fault. Practical priorities are generation and fuel adequacy reviews, funded preventive maintenance, critical-load mapping, tested black-start and sectional restoration capability, recurring exercises, a unified public-communications protocol and recovery-time metrics.",
+      "titleAr": "انهيار كامل لشبكة الكهرباء في كوبا يتسبب في انقطاع شامل على مستوى البلاد",
+      "titleEn": "Cuba’s national power grid collapses, triggering an island-wide blackout"
+    },
+    {
       "categoryAr": "الفضاء + مرونة الوصول المأهول",
       "categoryEn": "Space + Crewed Access Resilience",
       "id": "nasa-spacex-crew-contract-extension-2030-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: نجاح الاختبار المداري قد يسرّع الإطلاق الثقيل القابل لإعادة الاستخدام ونشر تجمعات الأقمار الكبيرة معًا. ينبغي للجهات التنظيمية والعامة تنسيق تراخيص الإطلاق، وإغلاقات المجالين الجوي والبحري، والتزامات الطيف والتسجيل المداري، وخطط الطوارئ لإعادة الدخول والحطام، والتتبع المستقل، ومرونة الخدمات العامة التي قد تعتمد على تجمعات تجارية تتوسع سريعًا.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/media-telecom/spacex-targets-first-starship-orbital-test-september-22-2026-09-15/"
-    },
-    {
-      "id": "russia-us-orbital-arms-un-space-stability-2026",
-      "publishedAt": "2026-09-15T17:38:00Z",
-      "categoryEn": "SPACE SECURITY + STRATEGIC STABILITY",
-      "categoryAr": "أمن الفضاء والاستقرار الاستراتيجي",
-      "titleEn": "Russia answers US orbital-weapons disclosure with a UN diplomatic push",
-      "titleAr": "روسيا ترد على كشف الأسلحة المدارية الأميركية بتحرك دبلوماسي في الأمم المتحدة",
-      "summaryEn": "Russia’s Foreign Ministry said the US acknowledgement of weapons operating in orbit threatens the long-term stability of space activity and could endanger Earth-based services that depend on satellites. Moscow said it will co-sponsor resolutions at the UN General Assembly next month on preventing the deployment of space-based weapons and improving transparency in space operations. The response turns the US disclosure into an immediate contest over international space-security norms.",
-      "summaryAr": "قالت وزارة الخارجية الروسية إن الاعتراف الأميركي بوجود أسلحة تعمل في المدار يهدد الاستقرار طويل الأجل للأنشطة الفضائية وقد يعرض الخدمات الأرضية المعتمدة على الأقمار الصناعية للخطر. وأعلنت موسكو أنها ستشارك في تقديم قرارات إلى الجمعية العامة للأمم المتحدة الشهر المقبل لمنع نشر أسلحة في الفضاء وتعزيز شفافية العمليات الفضائية. وينقل الرد الكشف الأميركي مباشرة إلى ساحة التنافس على قواعد الأمن الفضائي الدولية.",
-      "takeEn": "Government implication: space-security planning must now connect diplomacy with operational resilience. Governments should define negotiating positions before the UN debate, map civilian and critical-infrastructure dependence on vulnerable satellites, strengthen redundancy and recovery arrangements, and establish crisis-communication rules that reduce misinterpretation of defensive, dual-use and hostile orbital activity.",
-      "takeAr": "الدلالة للحكومات: يجب أن يربط التخطيط لأمن الفضاء بين الدبلوماسية والمرونة التشغيلية. ينبغي للحكومات تحديد مواقفها التفاوضية قبل نقاش الأمم المتحدة، وحصر اعتماد الخدمات المدنية والبنية التحتية الحيوية على الأقمار المعرضة للخطر، وتعزيز بدائل التشغيل والتعافي، ووضع قواعد اتصال للأزمات تقلل سوء تفسير الأنشطة المدارية الدفاعية ومزدوجة الاستخدام والمعادية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/russia-says-us-acknowledgement-orbital-arms-ignores-space-conflict-consequences-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T17:41:23.000Z"
+  "updatedAt": "2026-09-18T19:04:02.000Z"
 }
