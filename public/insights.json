@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "سلامة الذكاء الاصطناعي + التقييم المستقل",
+      "categoryEn": "AI Safety + Independent Evaluation",
+      "id": "anthropic-accenture-embedded-ai-evaluation-2b-2026",
+      "publishedAt": "2026-09-18T21:02:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/anthropic-accenture-invest-2-billion-ai-model-evaluation-safety-concerns-rise-2026-09-18/",
+      "summaryAr": "أعلنت Anthropic شراكة مع وحدة Faculty التابعة لـAccenture لتقييم نماذجها المتقدمة بصورة مستقلة واختبارها هجوميًا، مع التزام كل شركة بما لا يقل عن مليار دولار خلال خمس سنوات لبناء قدرات التقييم. وسيعمل المقيمون داخل الشركة بصلاحيات وصول تقارب صلاحيات الموظفين لفحص المواءمة، واختبار الضمانات، والتحقق من التزامات السلامة، وكشف مواطن العمى والإبلاغ عن الحوادث. وتعتزم الشركتان توسيع النهج ليشمل جهات تقييم ومطوري ذكاء اصطناعي آخرين.",
+      "summaryEn": "Anthropic announced a partnership with Accenture’s Faculty unit to independently evaluate and red-team its frontier models, with each company committing at least $1 billion over five years to build evaluation capacity. Embedded evaluators will work inside the lab with employee-like access to assess alignment, test safeguards, verify safety commitments, identify blind spots and report incidents. The partners plan to extend the approach to other evaluators and AI developers.",
+      "takeAr": "يمكن للحكومات تحويل هذا النموذج إلى خط أساس تنظيمي وتعاقدي للأنظمة المتقدمة: استقلال موثق، ووصول محمي إلى النماذج والسجلات، وسيناريوهات اختبار موحدة، وإبلاغ إلزامي عن الحوادث، وإفصاح عن تضارب المصالح، ونشر النتائج الجوهرية. ولا يكفي أن يمول المطور جهة التقييم لإثبات استقلالها؛ بل يلزم اعتماد رسمي وحقوق تدقيق وقواعد واضحة للتقارير العامة.",
+      "takeEn": "Governments can turn this model into a regulatory and procurement baseline for advanced systems: documented independence, protected access to models and logs, standardized red-team scenarios, mandatory incident reporting, conflict-of-interest disclosure and publication of material findings. Developer funding alone does not establish evaluator independence; accreditation, audit rights and clear public-reporting rules are still required.",
+      "titleAr": "Anthropic وAccenture تخصصان ملياري دولار لتقييم مستقل ومضمّن للنماذج المتقدمة",
+      "titleEn": "Anthropic and Accenture commit $2 billion to embedded independent evaluation of frontier AI"
+    },
+    {
       "categoryAr": "تجارة الطاقة + أمن الغاز الطبيعي المسال",
       "categoryEn": "Energy Trade + LNG Security",
       "id": "us-china-lng-tariff-negotiations-xi-visit-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تحتاج قواعد الإبلاغ عن الخروقات والاستجابة للحوادث الآن إلى أدلة خاصة بالوكلاء وافتراضات أسرع للاحتواء. ينبغي للجهات التنظيمية إلزام المؤسسات بحفظ سجل أفعال الوكيل واستدعاءات الأدوات وبيانات الاعتماد والوصول، وتقسيم صلاحيات الأنظمة الذاتية، واختبار الإلغاء السريع، وتوضيح مسؤوليات المتحكمين والمعالجين ومزودي النماذج من دون افتراض أن استخدام نموذج يعني اختراق مزوده أو بنيته التحتية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/spanish-data-watchdog-publicises-first-ai-agent-linked-data-breach-report-2026-09-15/"
-    },
-    {
-      "id": "us-nrc-rule-overhaul-2027-reactor-licensing-2026",
-      "publishedAt": "2026-09-15T20:01:00Z",
-      "categoryEn": "NUCLEAR ENERGY + REGULATORY GOVERNANCE",
-      "categoryAr": "الطاقة النووية والحوكمة التنظيمية",
-      "titleEn": "US nuclear regulator extends reactor-licensing overhaul into 2027",
-      "titleAr": "الهيئة النووية الأميركية تمد إصلاح قواعد ترخيص المفاعلات إلى 2027",
-      "summaryEn": "The US Nuclear Regulatory Commission said its broad rule overhaul will continue well into 2027 as it works toward decisions on new nuclear facilities within 18 months. Final rules are expected to begin appearing late this year and continue through next year. Planned changes include a framework for factory-built microreactors, while the regulator said the faster timetable will not override safety judgments.",
-      "summaryAr": "قالت هيئة الرقابة النووية الأميركية إن إصلاحها الواسع للقواعد سيستمر حتى وقت متقدم من عام 2027، ضمن مسعى للوصول إلى قرارات بشأن المنشآت النووية الجديدة خلال 18 شهرًا. ومن المتوقع أن يبدأ صدور القواعد النهائية في أواخر هذا العام ويستمر خلال العام المقبل. وتشمل التغييرات المخططة إطارًا للمفاعلات الميكروية المصنّعة في المصانع، مع تأكيد الهيئة أن الجدول الأسرع لن يتجاوز اعتبارات السلامة.",
-      "takeEn": "Government implication: faster licensing will only translate into deployable capacity if regulatory deadlines are matched by qualified staff, standardized evidence, transparent safety gates and coordinated siting, grid and emergency-planning decisions. Governments should publish milestone dashboards and track review time, unresolved safety issues and post-approval delivery separately so speed does not become the sole performance measure.",
-      "takeAr": "الدلالة للحكومات: لن يتحول تسريع الترخيص إلى قدرة قابلة للنشر ما لم تقترن المهل التنظيمية بموظفين مؤهلين، وأدلة موحدة، وبوابات سلامة شفافة، وتنسيق قرارات المواقع والشبكة وخطط الطوارئ. ينبغي نشر مؤشرات مرحلية ومتابعة زمن المراجعة وقضايا السلامة غير المحسومة والتنفيذ بعد الموافقة بصورة منفصلة، حتى لا تصبح السرعة معيار الأداء الوحيد.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/us-nuclear-regulators-overhaul-rules-run-well-into-2027-its-chief-says-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T20:29:11.000Z"
+  "updatedAt": "2026-09-18T21:48:56.000Z"
 }
