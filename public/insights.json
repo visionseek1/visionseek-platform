@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "بنية الذكاء الاصطناعي + حوكمة مراكز البيانات",
+      "categoryEn": "AI Infrastructure + Data Center Governance",
+      "id": "virginia-data-center-accountability-framework-2026",
+      "publishedAt": "2026-09-18T15:42:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/us/virginia-tightens-data-center-restrictions-amid-political-backlash-2026-09-18/",
+      "summaryAr": "أعلنت ولاية فرجينيا إطارًا لمساءلة مراكز البيانات يشدد ضوابط الترخيص والجوانب التجارية والبيئية مع تصاعد الاعتراضات على التوسع السريع للبنية الحاسوبية المستخدمة في تدريب الذكاء الاصطناعي وتشغيله. وتشمل الخطة حظر اتفاقات عدم الإفصاح للمشروعات بقدرة 25 ميغاواط فأكثر، وتقديم حوافز لاستخدام الطاقة الشمسية والرياح لتوليد الكهرباء الاحتياطية بدل الغاز أو الديزل. وسيحتاج بعض عناصر الإطار إلى موافقة مشرّعي الولاية العام المقبل.",
+      "summaryEn": "Virginia announced a Data Center Accountability Framework that tightens permitting, commercial and environmental controls as opposition grows to the rapid expansion of computing infrastructure used to train and deploy AI. The plan would bar non-disclosure agreements for projects of 25 MW or more and offer incentives for solar- and wind-based backup power instead of gas or diesel. Some elements will require state legislative approval next year.",
+      "takeAr": "على الحكومات تحويل ترخيص مراكز البيانات إلى نظام مساءلة موحد يفرض الإفصاح المبكر، ويحدد آثار الشبكة والمياه والأسعار، ويوزع تكاليف التحديث بعدالة، ويضع شروطًا قابلة للإنفاذ للطاقة الاحتياطية والانبعاثات. كما ينبغي الفصل بوضوح بين الإجراءات التنفيذية النافذة والمقترحات التي تنتظر التشريع، مع نشر مؤشرات للأثر والامتثال على مستوى كل مشروع.",
+      "takeEn": "Governments should turn data-center permitting into a standardized accountability regime with early disclosure, quantified grid, water and rate impacts, fair upgrade-cost allocation, and enforceable backup-power and emissions conditions. They should also distinguish measures already in force from proposals awaiting legislation, while publishing project-level impact and compliance indicators.",
+      "titleAr": "فرجينيا تشدد ضوابط مراكز بيانات الذكاء الاصطناعي بإطار جديد للمساءلة",
+      "titleEn": "Virginia tightens AI data-center controls with a new accountability framework"
+    },
+    {
       "categoryAr": "البنية الرقمية العامة + سلامة الأطفال على الإنترنت",
       "categoryEn": "Public Digital Infrastructure + Child Online Safety",
       "id": "eu-kids-act-age-verification-public-infrastructure-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تقدير العودة يمثل نطاقًا للتخطيط وليس تأكيدًا لاستعادة القدرة التشغيلية. ينبغي للحكومات التحقق مستقلًا من مراحل الإصلاح والتدفقات الفعلية، والإبقاء على خيارات الاحتياطيات الاستراتيجية وإعادة التوجيه وإدارة الطلب جاهزة حتى استقرار الإمدادات، وشرح عدم اليقين بوضوح لأسواق الوقود ومشغلي الخدمات الحيوية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/us-energy-chief-says-saudi-arabia-oil-pipeline-should-be-back-within-days-2026-09-15/"
-    },
-    {
-      "id": "ukraine-underground-aid-logistics-drone-protection-2026",
-      "publishedAt": "2026-09-15T15:23:14Z",
-      "categoryEn": "AUTONOMOUS THREATS + RESILIENT INFRASTRUCTURE",
-      "categoryAr": "تهديدات الأنظمة الذاتية والبنية التحتية المرنة",
-      "titleEn": "UN considers moving Ukraine aid stocks underground as drone threats reshape humanitarian logistics",
-      "titleAr": "الأمم المتحدة تدرس نقل مخزونات الإغاثة في أوكرانيا تحت الأرض مع تغيّر لوجستيات الحماية من المسيّرات",
-      "summaryEn": "The United Nations is considering moving humanitarian supplies into underground bunkers in Ukraine after strikes hit 10 aid warehouses this year, including a major World Health Organization facility. It is also delaying purchases to reduce the time supplies remain exposed, investing in drone detection and armoured vehicles, and assessing requests for mobile drone shelters near public locations. These protective costs were not anticipated in the existing humanitarian budget.",
-      "summaryAr": "تدرس الأمم المتحدة نقل الإمدادات الإنسانية إلى مخازن محصنة تحت الأرض في أوكرانيا بعدما طالت الضربات عشرة مستودعات إغاثة هذا العام، بينها منشأة رئيسية لمنظمة الصحة العالمية. كما تؤخر المشتريات لتقليل مدة بقاء الإمدادات مكشوفة، وتستثمر في كشف المسيّرات والمركبات المدرعة، وتقيّم طلبات لإنشاء ملاجئ متنقلة ضد المسيّرات قرب المواقع العامة. ولم تكن تكاليف الحماية هذه محسوبة في الميزانية الإنسانية القائمة.",
-      "takeEn": "Government implication: drone exposure now requires civil logistics to be designed as protected critical infrastructure. Governments and aid agencies should distribute stocks across hardened sites, shorten replenishment cycles without weakening emergency reserves, integrate detection and alerting, pre-plan mobile shelters and alternate routes, and create contingency funding rules before attacks disrupt essential supplies.",
-      "takeAr": "الدلالة للحكومات: بات تعرض المنشآت للمسيّرات يفرض تصميم اللوجستيات المدنية كبنية تحتية حيوية محمية. ينبغي للحكومات وجهات الإغاثة توزيع المخزون بين مواقع محصنة، وتقليص دورات الإمداد من دون إضعاف احتياطيات الطوارئ، ودمج أنظمة الكشف والإنذار، والتخطيط المسبق للملاجئ المتنقلة والمسارات البديلة، ووضع قواعد تمويل احتياطية قبل أن تعطل الهجمات الإمدادات الأساسية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/europe/un-weighs-moving-ukraine-aid-supplies-underground-after-warehouse-hits-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T14:13:00.000Z"
+  "updatedAt": "2026-09-18T16:32:44.000Z"
 }
