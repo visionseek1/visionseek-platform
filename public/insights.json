@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الفضاء + مرونة الوصول المأهول",
+      "categoryEn": "Space + Crewed Access Resilience",
+      "id": "nasa-spacex-crew-contract-extension-2030-2026",
+      "publishedAt": "2026-09-18T17:12:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/media-telecom/spacex-fly-more-nasa-crews-space-station-under-expanded-592-billion-deal-2026-09-18/",
+      "summaryAr": "منحت ناسا شركة SpaceX عقدًا بقيمة 946 مليون دولار لتنفيذ ثلاث رحلات إضافية لرواد الفضاء إلى محطة الفضاء الدولية، ما يمدد رحلاتها المأهولة حتى 2030. وبذلك يرتفع عدد الرحلات ضمن العقد إلى 17 وتصل قيمته الإجمالية إلى 5.92 مليارات دولار. ويغطي العقد تجهيز الطواقم والمركبات والإطلاق والتشغيل في المدار والعودة واستعادة الكبسولة، إضافة إلى نقل الإمدادات واستخدام المركبة كوسيلة إخلاء طارئ أثناء وجودها في المحطة.",
+      "summaryEn": "NASA awarded SpaceX a $946 million contract for three additional astronaut missions to the International Space Station, extending its crewed flights through 2030. The award raises the contract to 17 missions and a total value of $5.92 billion. It covers crew and spacecraft preparation, launch, in-orbit operations, return and capsule recovery, plus cargo transport and use of the docked spacecraft as an emergency escape vehicle.",
+      "takeAr": "يوضح التوسع أن استمرارية الوصول الحكومي إلى الفضاء تعتمد حاليًا بدرجة كبيرة على مزود واحد، بينما تعمل ناسا على إبقاء Boeing خيارًا أميركيًا ثانيًا. ينبغي للحكومات أن تربط عقود الخدمات الحرجة بحد أدنى للتعدد التشغيلي، ومراحل جاهزية مستقلة، وخطط انتقال عند تعطل المزود، واحتياطي من الرحلات والمركبات، ومؤشرات معلنة تقيس الاعتمادية والتكلفة الفعلية لكل مهمة.",
+      "takeEn": "The expansion shows that government crew access currently depends heavily on one provider while NASA works to preserve Boeing as a second US option. Governments should tie critical-service contracts to minimum operational redundancy, independent readiness gates, provider-failure transition plans, mission and vehicle reserves, and published reliability and realized-cost metrics.",
+      "titleAr": "ناسا توسّع عقد SpaceX إلى 5.92 مليارات دولار لضمان رحلات الطواقم حتى 2030",
+      "titleEn": "NASA expands SpaceX crew contract to $5.92 billion, securing flights through 2030"
+    },
+    {
       "categoryAr": "بنية الذكاء الاصطناعي + حوكمة مراكز البيانات",
       "categoryEn": "AI Infrastructure + Data Center Governance",
       "id": "virginia-data-center-accountability-framework-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يجب أن يربط التخطيط لأمن الفضاء بين الدبلوماسية والمرونة التشغيلية. ينبغي للحكومات تحديد مواقفها التفاوضية قبل نقاش الأمم المتحدة، وحصر اعتماد الخدمات المدنية والبنية التحتية الحيوية على الأقمار المعرضة للخطر، وتعزيز بدائل التشغيل والتعافي، ووضع قواعد اتصال للأزمات تقلل سوء تفسير الأنشطة المدارية الدفاعية ومزدوجة الاستخدام والمعادية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/aerospace-defense/russia-says-us-acknowledgement-orbital-arms-ignores-space-conflict-consequences-2026-09-15/"
-    },
-    {
-      "id": "us-saudi-east-west-pipeline-restart-days-2026",
-      "publishedAt": "2026-09-15T16:04:55Z",
-      "categoryEn": "ENERGY SECURITY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "أمن الطاقة والبنية التحتية الحيوية",
-      "titleEn": "US energy chief expects Saudi East-West oil pipeline to restart within days",
-      "titleAr": "وزير الطاقة الأميركي يتوقع عودة خط النفط السعودي شرق–غرب خلال أيام",
-      "summaryEn": "US Energy Secretary Chris Wright said crude flows through Saudi Arabia’s East-West pipeline should resume within days, while a detailed assessment of damage from attacks is still under way. The pipeline had become a major bypass for the largely closed Strait of Hormuz before it was temporarily shut. Wright also said Saudi Arabia is taking steps, with US military assistance, to restore additional oil movements.",
-      "summaryAr": "قال وزير الطاقة الأميركي كريس رايت إن تدفقات الخام عبر خط الأنابيب السعودي شرق–غرب يُتوقع أن تعود خلال أيام، فيما لا يزال التقييم التفصيلي للأضرار الناجمة عن الهجمات جاريًا. وكان الخط قد أصبح مسارًا رئيسيًا لتجاوز مضيق هرمز شبه المغلق قبل توقفه المؤقت. وأضاف رايت أن السعودية تتخذ خطوات، بمساعدة عسكرية أميركية، لاستعادة مزيد من حركة النفط.",
-      "takeEn": "Government implication: the restart estimate is a planning range, not confirmed restored capacity. Governments should verify repair milestones and actual throughput independently, keep strategic-reserve, rerouting and demand-response options ready until flows stabilize, and communicate uncertainty clearly to fuel markets and critical-service operators.",
-      "takeAr": "الدلالة للحكومات: تقدير العودة يمثل نطاقًا للتخطيط وليس تأكيدًا لاستعادة القدرة التشغيلية. ينبغي للحكومات التحقق مستقلًا من مراحل الإصلاح والتدفقات الفعلية، والإبقاء على خيارات الاحتياطيات الاستراتيجية وإعادة التوجيه وإدارة الطلب جاهزة حتى استقرار الإمدادات، وشرح عدم اليقين بوضوح لأسواق الوقود ومشغلي الخدمات الحيوية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/us-energy-chief-says-saudi-arabia-oil-pipeline-should-be-back-within-days-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T16:32:44.000Z"
+  "updatedAt": "2026-09-18T17:41:23.000Z"
 }
