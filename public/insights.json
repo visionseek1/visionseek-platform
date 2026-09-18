@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن الغاز الطبيعي المسال والاستثمار الحكومي",
+      "categoryEn": "LNG Security + State-Backed Investment",
+      "id": "japan-jogmec-osaka-gas-australia-browse-lng-stake-2026",
+      "publishedAt": "2026-09-18T07:42:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/osaka-gas-buy-5-stake-australias-browse-gas-project-bp-2026-09-18/",
+      "summaryAr": "وافقت Osaka Gas اليابانية على شراء حصة 5% من BP في مشروع Browse للغاز قبالة غرب أستراليا عبر شركة ستملكها بالاشتراك مع منظمة JOGMEC المدعومة حكوميًا، رهناً بالموافقات التنظيمية وموافقة شركاء المشروع. لا يزال المشروع في مرحلة ما قبل التصميم الهندسي الأولي، وهو أكبر مورد غاز غير مطوّر في أستراليا؛ ويُتوقع أن ينتج نحو 11 مليون طن من الغاز الطبيعي المسال سنويًا، بما يمنح Osaka Gas قرابة 550 ألف طن سنويًا وفق الشركة.",
+      "summaryEn": "Japan’s Osaka Gas agreed to buy BP’s 5% stake in the Browse gas project off Western Australia through a company it will jointly own with state-backed JOGMEC, subject to regulatory and partner approvals. The project remains at pre-FEED stage and is Australia’s largest undeveloped gas resource; it is expected to produce about 11 million tonnes of LNG annually, giving Osaka Gas roughly 550,000 tonnes a year, the company said.",
+      "takeAr": "توضح الصفقة كيف يمكن للدولة استخدام استثمار مشترك محدود لتأمين إمدادات استراتيجية من مشروع خارجي، لكن مرحلة ما قبل التصميم تعني بقاء مخاطر التنفيذ مرتفعة. ينبغي ربط الدعم العام ببوابات قرار واضحة للتكلفة والجدول والانبعاثات والموافقات والبنية التحتية، وبحقوق توريد قابلة للتدقيق وخطة بديلة إذا تأخر المشروع، بدل اعتبار الحصة ضمانًا فوريًا للأمن الطاقي.",
+      "takeEn": "The deal shows how a government can use a limited co-investment to secure strategic supply from an overseas project, but pre-FEED status leaves substantial delivery risk. Public backing should therefore be tied to explicit gates for cost, schedule, emissions, approvals and infrastructure, plus auditable offtake rights and a fallback plan if the project slips, rather than treating the equity stake as immediate energy security.",
+      "titleAr": "اليابان تدخل مشروع Browse الأسترالي عبر استثمار مدعوم حكوميًا لتأمين الغاز المسال",
+      "titleEn": "Japan enters Australia’s Browse project through a state-backed investment to secure LNG"
+    },
+    {
       "categoryAr": "المركبات الكهربائية والبطاريات والدبلوماسية الصناعية",
       "categoryEn": "Electric Vehicles + Batteries + Industrial Diplomacy",
       "id": "china-us-xi-visit-ev-battery-tech-delegation-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تنشئ الاتفاقات منصة عابرة للقطاعات وليست مشروعًا منفردًا. ينبغي للجهات المعنية تحويلها إلى خارطة تنفيذ مشتركة تحدد المسؤوليات، وبوابات السلامة والضمانات النووية، وقواعد شفافة لتتبع المعادن، ومراحل قابلة للقياس للاستكشاف ونقل التكنولوجيا والتزامات الإمداد.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/asia-pacific/south-korea-kazakhstan-sign-mou-atomic-energy-explore-mineral-trade-2026-09-15/"
-    },
-    {
-      "id": "france-dunkirk-lng-strike-delivery-capacity-2026",
-      "publishedAt": "2026-09-15T06:24:00Z",
-      "categoryEn": "ENERGY + CRITICAL INFRASTRUCTURE",
-      "categoryAr": "الطاقة والبنية التحتية الحيوية",
-      "titleEn": "French strike cuts Dunkirk LNG sendout as Europe races to refill storage",
-      "titleAr": "الإضراب الفرنسي يخفض ضخ الغاز من محطة دونكيرك وسط سباق أوروبا لملء المخزونات",
-      "summaryEn": "A 24-hour energy-sector strike is expected to reduce sendout capacity at France’s Dunkirk LNG terminal to 4 gigawatt-hours per day from 07:00 UTC, compared with a normal minimum of 9.4 GWh per day, according to Fluxys data. No cargo arrivals were scheduled and no diversions were observed, while France’s other major terminals reported no disruption. The cut comes as Europe refills gas storage before winter and several gas-dependent countries remain behind EU targets.",
-      "summaryAr": "من المتوقع أن يخفض إضراب في قطاع الطاقة لمدة 24 ساعة قدرة ضخ الغاز من محطة دونكيرك الفرنسية للغاز الطبيعي المسال إلى 4 غيغاواط-ساعة يوميًا بدءًا من الساعة 07:00 بالتوقيت العالمي، مقابل حد أدنى معتاد يبلغ 9.4 غيغاواط-ساعة يوميًا، وفق بيانات Fluxys. ولم تكن هناك شحنات مجدولة للوصول أو تحويلات مرصودة، بينما لم تبلغ المحطات الفرنسية الرئيسية الأخرى عن اضطراب. ويأتي الخفض بينما تسابق أوروبا لملء مخزونات الغاز قبل الشتاء وتتأخر دول تعتمد على الغاز عن أهداف الاتحاد الأوروبي.",
-      "takeEn": "Government implication: the same labour action is now constraining both electricity generation and cross-border gas flexibility. Governments should monitor terminal sendout, storage progress and generation availability on one continuity dashboard, with pre-agreed minimum-flow thresholds, alternate-terminal options and cross-border balancing triggers when disruptions overlap.",
-      "takeAr": "الدلالة للحكومات: أصبح الإضراب نفسه يقيّد توليد الكهرباء ومرونة تدفقات الغاز العابرة للحدود معًا. ينبغي مراقبة ضخ المحطات وتقدم التخزين وتوافر التوليد في لوحة استمرارية موحدة، مع عتبات متفق عليها مسبقًا للحد الأدنى من التدفقات، وبدائل للمحطات، ومحفزات للموازنة عبر الحدود عند تداخل الاضطرابات.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/world-at-work/french-labour-strike-reduces-delivery-capacity-dunkirk-lng-terminal-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T07:35:54.000Z"
+  "updatedAt": "2026-09-18T07:57:17.000Z"
 }
