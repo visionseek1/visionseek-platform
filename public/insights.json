@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الهيدروجين الأخضر + تمويل البنية التحتية العامة",
+      "categoryEn": "Green Hydrogen + Public Infrastructure Finance",
+      "id": "austria-omv-green-hydrogen-masdar-exit-public-finance-2026",
+      "publishedAt": "2026-09-18T11:21:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/omv-go-ahead-alone-with-austrian-hydrogen-project-after-masdar-exit-2026-09-18/",
+      "summaryAr": "قالت OMV النمساوية إنها ستمضي في مشروع للهيدروجين الأخضر بقيمة تقديرية تبلغ 600 مليون يورو بعد انسحاب شركة مصدر المملوكة لأبوظبي بصورة غير متوقعة. لا يزال المشروع ممولًا إلى حد كبير، بما في ذلك قرض بقيمة 450 مليون يورو من بنك الاستثمار الأوروبي وتمويل عام أشارت إليه النمسا. ومن المخطط تشغيل محلل كهربائي بقدرة 140 ميغاواط بنهاية 2027 وإنتاج ما يصل إلى 23 ألف طن سنويًا.",
+      "summaryEn": "Austria’s OMV said it will proceed with a planned €600 million green-hydrogen project after Abu Dhabi state-owned Masdar unexpectedly withdrew. The project remains largely financed, including a €450 million European Investment Bank loan and indicated Austrian public funding. Its 140 MW electrolyser is planned for operation by the end of 2027 and output of up to 23,000 tonnes a year.",
+      "takeAr": "يوضح المشروع كيف يمكن للتمويل العام حماية قدرة استراتيجية للطاقة النظيفة عند انسحاب شريك رئيسي. ينبغي للحكومات اشتراط خطة لرأس المال البديل، وصرف التمويل بحسب مراحل قابلة للتحقق، وضمانات للمشتريات، وطلب تعاقدي واضح على الإنتاج قبل اعتبار الدعم العام ضمانًا للتنفيذ.",
+      "takeEn": "The project shows how public finance can preserve strategic clean-energy capacity when a major partner exits. Governments should require replacement-capital plans, milestone-linked disbursements, procurement safeguards and verified offtake demand before treating public backing as delivery security.",
+      "titleAr": "OMV تمضي في مشروع هيدروجين أخضر مدعوم نمساويًا بعد انسحاب شركة مصدر",
+      "titleEn": "Austria-backed OMV keeps major green-hydrogen project on track after Masdar exits"
+    },
+    {
       "categoryAr": "أمن البنية التحتية + مكافحة المسيّرات",
       "categoryEn": "Critical Infrastructure + Counter-Drone Security",
       "id": "bulgaria-anti-drone-critical-infrastructure-protection-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: إنشاء وحدة تنفيذ يمثل انتقالًا مفيدًا من الدبلوماسية إلى الإنجاز، لكن المصداقية ستعتمد الآن على وضوح التفويض والأدلة العلنية. ينبغي للكونغو نشر المسؤوليات، ومعايير اختيار المشروعات، ومتطلبات القيمة المحلية والتتبع، واعتماديات البنية التحتية، والمراحل الزمنية، وضوابط تضارب المصالح؛ وعلى الحكومات الشريكة ربط دعمها بهذه الضمانات التنفيذية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/china/congo-creates-task-force-us-minerals-deal-cabinet-minutes-say-2026-09-15/"
-    },
-    {
-      "id": "eu-cbam-emergency-brake-aluminium-coverage-2026",
-      "publishedAt": "2026-09-15T11:23:00Z",
-      "categoryEn": "CLIMATE + TRADE + INDUSTRIAL POLICY",
-      "categoryAr": "المناخ والتجارة والسياسة الصناعية",
-      "titleEn": "EU Parliament votes to remove CBAM emergency brake and tighten aluminium coverage",
-      "titleAr": "البرلمان الأوروبي يصوّت لإلغاء صمام تعليق ضريبة الكربون الحدودية وتشديد تغطية الألومنيوم",
-      "summaryEn": "The European Parliament voted to delete a clause that would allow the EU to suspend its carbon border levy when unforeseen circumstances sharply raise import prices. Lawmakers instead proposed using levy revenue to compensate affected industries and backed tighter coverage for smaller aluminium shipments and post-consumer scrap. The position is not final: Parliament must negotiate with EU member states, which want to retain an emergency suspension option.",
-      "summaryAr": "صوّت البرلمان الأوروبي لحذف بند كان سيسمح للاتحاد بتعليق رسم الكربون الحدودي عندما ترفع ظروف غير متوقعة أسعار الواردات بشدة. واقترح النواب بدلًا من ذلك استخدام إيرادات الرسم لتعويض الصناعات المتضررة، وأيدوا تشديد التغطية للشحنات الصغيرة من الألومنيوم وخردة ما بعد الاستهلاك. والموقف ليس نهائيًا؛ إذ يجب أن يتفاوض البرلمان مع الدول الأعضاء التي تريد الإبقاء على خيار التعليق الطارئ.",
-      "takeEn": "Government implication: exporting countries should not assume CBAM relief will be available during price shocks. Trade, industry and climate ministries should jointly map exposed steel, fertiliser and aluminium exports, accelerate verifiable product-emissions data, prepare compliance support for smaller exporters, and scenario-test both negotiated outcomes before the final EU rules are agreed.",
-      "takeAr": "الدلالة للحكومات: ينبغي للدول المصدّرة ألا تفترض توافر إعفاء من آلية الكربون أثناء صدمات الأسعار. على وزارات التجارة والصناعة والمناخ أن ترسم خريطة مشتركة لصادرات الصلب والأسمدة والألومنيوم المعرضة، وتسرّع بيانات الانبعاثات القابلة للتحقق، وتجهز دعم الامتثال للمصدرين الأصغر، وتختبر سيناريوهَي التفاوض قبل إقرار القواعد الأوروبية النهائية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/environment/eu-lawmakers-move-scrap-carbon-border-levys-emergency-brake-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T10:45:56.000Z"
+  "updatedAt": "2026-09-18T11:48:46.000Z"
 }
