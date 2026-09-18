@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "حوكمة الذكاء الاصطناعي + السيادة الرقمية",
+      "categoryEn": "AI Governance + Digital Sovereignty",
+      "id": "europe-ai-slowdown-safety-competition-sovereignty-debate-2026",
+      "publishedAt": "2026-09-18T12:24:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/europes-ai-firms-playing-catch-up-challenge-us-calls-slowdown-2026-09-18/",
+      "summaryAr": "عارضت Mistral وشركات أوروبية أخرى دعوة Anthropic إلى إبطاء تحسين النماذج المتقدمة ومنح المطورين الكبار إعفاءً من قواعد مكافحة الاحتكار للتنسيق بشأن السلامة، محذرة من أن القواعد التي يصوغها اللاعبون المهيمنون قد تكرّس اعتماد أوروبا على التقنية الأميركية. ووصف وزير المالية الفرنسي المقترح بأنه يخدم مصالح أصحابه، بينما قالت وزارة الشؤون الرقمية الألمانية إن وقف التطوير غير واقعي في ظل حاجة أوروبا إلى السيادة الرقمية.",
+      "summaryEn": "Mistral and other European companies opposed Anthropic’s call to slow improvements in advanced models and give leading developers an antitrust waiver to coordinate on safety, warning that incumbent-shaped rules could deepen Europe’s dependence on US technology. France’s finance minister called the proposal self-serving, while Germany’s digital ministry said stopping development was unrealistic given Europe’s need for digital sovereignty.",
+      "takeAr": "على الحكومات ألا تختار بين السلامة والمنافسة. ينبغي إنشاء تقييم مستقل بتفويض عام، ومعايير مخاطر شفافة، وضوابط لتعارض المصالح، ورقابة لمكافحة الاحتكار، ومسار امتثال متناسب للشركات الصاعدة؛ مع الفصل بين متطلبات السلامة الأساسية وأي قيود استثنائية على سرعة التطوير.",
+      "takeEn": "Governments should not treat safety and competition as a binary choice. They should establish independently mandated evaluation, transparent risk thresholds, conflict-of-interest controls, antitrust oversight and proportionate compliance paths for challengers, while separating baseline safety requirements from any exceptional limits on development speed.",
+      "titleAr": "أوروبا تربط جدل إبطاء الذكاء الاصطناعي بالسيادة الرقمية ومخاطر الاحتكار",
+      "titleEn": "Europe links the AI slowdown debate to digital sovereignty and competition risk"
+    },
+    {
       "categoryAr": "الهيدروجين الأخضر + تمويل البنية التحتية العامة",
       "categoryEn": "Green Hydrogen + Public Infrastructure Finance",
       "id": "austria-omv-green-hydrogen-masdar-exit-public-finance-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: الاحتفاظ بالملكية لا يحمي القيمة العامة بمفرده. ينبغي لكندا أن تحدد قبل منح الامتيازات التزامات الاستثمار، ومعايير الخدمة والمرونة، وضوابط الرسوم والمنافسة، والتزامات القوى العاملة، وحقوق التدقيق المفتوح، وشروط الإنهاء؛ وعلى الحكومات الأخرى التي تدرس شراكات المطارات اعتماد الضمانات نفسها.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/canada-seek-private-investment-major-airports-says-carney-2026-09-15/"
-    },
-    {
-      "id": "drc-us-critical-minerals-task-force-implementation-2026",
-      "publishedAt": "2026-09-15T12:27:00Z",
-      "categoryEn": "CRITICAL MINERALS + GOVERNMENT DELIVERY",
-      "categoryAr": "المعادن الحرجة والتنفيذ الحكومي",
-      "titleEn": "DR Congo creates task force to accelerate its US critical-minerals partnership",
-      "titleAr": "الكونغو الديمقراطية تنشئ فريق عمل لتسريع شراكتها مع الولايات المتحدة في المعادن الحرجة",
-      "summaryEn": "The Democratic Republic of Congo approved a dedicated task force to accelerate implementation of its strategic-minerals partnership with the United States. Cabinet minutes say the body is intended to turn partnership commitments into economic and security results, as Kinshasa seeks more Western investment in copper and cobalt and greater diversification beyond Chinese funding. The government has not yet disclosed the task force’s membership or priority-project list.",
-      "summaryAr": "وافقت جمهورية الكونغو الديمقراطية على إنشاء فريق عمل مخصص لتسريع تنفيذ شراكتها مع الولايات المتحدة في المعادن الاستراتيجية. وتوضح محاضر مجلس الوزراء أن الهيئة تهدف إلى تحويل التزامات الشراكة إلى نتائج اقتصادية وأمنية، مع سعي كينشاسا لجذب مزيد من الاستثمار الغربي في النحاس والكوبالت وتنويع التمويل بعيدًا عن الاعتماد الكبير على الصين. ولم تعلن الحكومة بعد تشكيل الفريق أو قائمة مشروعاته ذات الأولوية.",
-      "takeEn": "Government implication: creating an implementation unit is a useful shift from diplomacy to delivery, but credibility now depends on mandate clarity and public evidence. Congo should publish accountable leads, project-selection criteria, local-value and traceability requirements, infrastructure dependencies, milestones and conflict-of-interest controls; partner governments should tie support to those delivery safeguards.",
-      "takeAr": "الدلالة للحكومات: إنشاء وحدة تنفيذ يمثل انتقالًا مفيدًا من الدبلوماسية إلى الإنجاز، لكن المصداقية ستعتمد الآن على وضوح التفويض والأدلة العلنية. ينبغي للكونغو نشر المسؤوليات، ومعايير اختيار المشروعات، ومتطلبات القيمة المحلية والتتبع، واعتماديات البنية التحتية، والمراحل الزمنية، وضوابط تضارب المصالح؛ وعلى الحكومات الشريكة ربط دعمها بهذه الضمانات التنفيذية.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/congo-creates-task-force-us-minerals-deal-cabinet-minutes-say-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T11:48:46.000Z"
+  "updatedAt": "2026-09-18T12:47:11.000Z"
 }
