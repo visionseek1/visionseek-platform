@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أشباه الموصلات وسلاسل إمداد الذكاء الاصطناعي",
+      "categoryEn": "Semiconductors + AI Supply Chains",
+      "id": "china-cxmt-government-backed-nand-ai-memory-expansion-2026",
+      "publishedAt": "2026-09-18T05:23:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/chinas-cxmt-eyes-flash-memory-push-amid-global-shortage-firm-take-samsung-ymtc-2026-09-18/",
+      "summaryAr": "تستعد شركة CXMT الصينية لإنشاء خط بحث وتطوير لإنتاج ذاكرة NAND في مصنعها الجديد ببكين، بما يوسع نشاطها خارج سوق DRAM ويدخلها في منافسة مع YMTC وموردين عالميين. يأتي التحرك وسط نقص عالمي في الذاكرة غذّاه طلب خوادم الذكاء الاصطناعي، فيما نمت CXMT وYMTC بدعم من الصندوق الوطني الصيني لأشباه الموصلات وحكومات محلية.",
+      "summaryEn": "China’s CXMT is preparing a NAND flash research-and-development production line at its new Beijing plant, expanding beyond DRAM and into competition with YMTC and global suppliers. The move comes amid a global memory shortage fuelled by AI-server demand, while CXMT and YMTC have grown with backing from China’s national semiconductor fund and local governments.",
+      "takeAr": "على الحكومات التعامل مع الذاكرة والتخزين كطبقة سيادية في بنية الذكاء الاصطناعي، لا كسلع إلكترونية ثانوية. ينبغي رسم الاعتماديات عبر DRAM وHBM وNAND، وربط الحوافز بمراحل إنتاج قابلة للتحقق ونقل المهارات، وتنويع الموردين والمخزونات، ومراقبة مخاطر الإفراط في الدعم أو بناء طاقة غير ناضجة قبل الالتزام بالمشتريات العامة.",
+      "takeEn": "Governments should treat memory and storage as a sovereign layer of AI infrastructure, not as secondary electronics commodities. Policy should map dependencies across DRAM, HBM and NAND, tie incentives to verifiable production and skills milestones, diversify suppliers and reserves, and monitor subsidy and immature-capacity risks before committing public procurement.",
+      "titleAr": "CXMT المدعومة حكوميًا تتجه إلى ذاكرة NAND وسط نقص عالمي مدفوع بالذكاء الاصطناعي",
+      "titleEn": "State-backed CXMT moves into NAND as AI demand drives a global memory shortage"
+    },
+    {
       "categoryAr": "الزراعة وسياسة القوى العاملة والأمن الغذائي",
       "categoryEn": "Agriculture + Workforce Policy + Food Security",
       "id": "australia-migration-crackdown-wheat-harvest-labour-risk-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يحوّل الاعتماد المرتفع على الواردات الصدمات الخارجية إلى مشكلة استمرارية محددة بزمن. ينبغي الجمع بين دبلوماسية الموردين وعتبات واضحة للاحتياطي، وتنويع المسارات والعقود، ومحفزات لإدارة الطلب، ومعايير للاستجابة المالية، وتقارير عامة متكررة، بحيث يبدأ التحرك قبل وصول المخزون إلى مستويات حرجة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/australias-energy-minister-visit-saudi-arabia-middle-east-conflict-escalates-2026-09-15/"
-    },
-    {
-      "id": "us-ntsb-faa-aviation-safety-recommendations-gap-2026",
-      "publishedAt": "2026-09-14T22:14:00Z",
-      "categoryEn": "AVIATION INFRASTRUCTURE + SAFETY OVERSIGHT",
-      "categoryAr": "البنية التحتية للطيران والرقابة على السلامة",
-      "titleEn": "NTSB rejects one-third of FAA responses to post-crash safety recommendations",
-      "titleAr": "مجلس سلامة النقل الأميركي يرفض ثلث استجابات إدارة الطيران لتوصيات ما بعد الحادث",
-      "summaryEn": "The U.S. National Transportation Safety Board judged the Federal Aviation Administration’s responses to 11 of 33 recommendations issued after the 2025 Washington mid-air collision to be unacceptable. The FAA has not agreed to mandate ADS-B In, a cockpit safety system the NTSB says could have warned both crews before impact. The FAA reported route reviews in six major cities and a directive separating aircraft and helicopters, but did not indicate whether it would require the warning technology.",
-      "summaryAr": "اعتبر مجلس سلامة النقل الوطني الأميركي استجابات إدارة الطيران الفيدرالية لـ11 من أصل 33 توصية صدرت بعد حادث التصادم الجوي قرب واشنطن عام 2025 غير مقبولة. ولم توافق الإدارة على إلزام نظام ADS-B In، وهو نظام سلامة داخل قمرة القيادة يقول المجلس إنه كان يمكن أن ينبه الطاقمين قبل الاصطدام. وأفادت الإدارة بمراجعة مسارات المروحيات في ست مدن كبرى وإصدار توجيه للفصل بين الطائرات والمروحيات، لكنها لم توضح ما إذا كانت ستُلزم بتقنية التحذير.",
-      "takeEn": "Government implication: safety recommendations need a formal closure system, not an exchange of agency letters. Governments should assign an accountable owner, deadline, evidence standard and residual-risk decision to every recommendation, with automatic escalation to ministers or legislators when regulators reject, substitute or delay a critical safeguard.",
-      "takeAr": "الدلالة للحكومات: تحتاج توصيات السلامة إلى نظام رسمي للإغلاق والمتابعة، لا مجرد تبادل خطابات بين الجهات. ينبغي إسناد مالك مسؤول وموعد نهائي ومعيار أدلة وقرار واضح بشأن المخاطر المتبقية لكل توصية، مع تصعيد تلقائي إلى الوزراء أو المشرعين عندما ترفض الجهة التنظيمية إجراءً حاسمًا أو تستبدله أو تؤخره.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/us/us-ntsb-says-one-third-faa-answers-safety-recommendations-are-unacceptable-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-18T04:32:27.000Z"
+  "updatedAt": "2026-09-18T05:47:56.000Z"
 }
