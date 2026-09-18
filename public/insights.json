@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "تجارة الطاقة + أمن الغاز الطبيعي المسال",
+      "categoryEn": "Energy Trade + LNG Security",
+      "id": "us-china-lng-tariff-negotiations-xi-visit-2026",
+      "publishedAt": "2026-09-18T20:18:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/us-china-discuss-cutting-tariffs-us-lng-ahead-xi-visit-2026-09-18/",
+      "summaryAr": "تناقش الولايات المتحدة والصين خطة لخفض أو إلغاء الرسوم الصينية على الغاز الطبيعي المسال الأميركي ضمن حزمة أوسع للطاقة والزراعة قد تُعلن خلال زيارة الرئيس شي جين بينغ إلى واشنطن، وفق مصدرين مطلعين على المحادثات. وتشمل المناقشات إطارًا قد يخفض بموجبه الطرفان الرسوم على سلع بقيمة تقارب 30 مليار دولار لكل منهما، لكن الترتيبات لم تُحسم بعد. وكانت الصين قد فرضت رسمًا بنسبة 15% على الغاز الأميركي في فبراير 2025، ما أوقف التجارة الثنائية فيه فعليًا.",
+      "summaryEn": "The United States and China are discussing a plan to reduce or eliminate Chinese tariffs on US liquefied natural gas as part of a broader energy and agriculture package that could be announced during President Xi Jinping’s Washington visit, according to two people briefed on the talks. The discussions include a framework for each side to cut tariffs on about $30 billion of goods, but the arrangements are not final. China’s 15% tariff imposed in February 2025 had effectively halted bilateral LNG trade.",
+      "takeAr": "على الحكومات التعامل مع تخفيف رسوم الطاقة باعتباره أداة مشتركة للأمن الطاقي والسياسة الصناعية، لا تنازلًا تجاريًا منفصلًا. ينبغي ربط أي اتفاق نهائي بالتزامات شراء قابلة للقياس، ومعاملة متبادلة قابلة للتدقيق، واختبارات لمخاطر الاعتماد والأسعار والبنية التحتية، وبنود مراجعة عند تغير الإمدادات؛ مع عدم إدراج المنافع المتوقعة في الخطط الرسمية قبل توقيع الاتفاق وتحديد آليات التنفيذ.",
+      "takeEn": "Governments should treat energy-tariff relief as a joint energy-security and industrial-policy instrument, not an isolated trade concession. Any final deal should be tied to measurable purchase commitments, auditable reciprocity, dependency, price and infrastructure stress tests, and review clauses for supply shocks; expected benefits should not enter official plans until the agreement is signed and implementation mechanisms are defined.",
+      "titleAr": "واشنطن وبكين تناقشان إعادة فتح تجارة الغاز المسال عبر خفض الرسوم قبل زيارة شي",
+      "titleEn": "US and China discuss reopening LNG trade through tariff cuts ahead of Xi visit"
+    },
+    {
       "categoryAr": "البنية التحتية للطاقة + مرونة الشبكات",
       "categoryEn": "Energy Infrastructure + Grid Resilience",
       "id": "cuba-national-grid-total-collapse-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: لن يتحول تسريع الترخيص إلى قدرة قابلة للنشر ما لم تقترن المهل التنظيمية بموظفين مؤهلين، وأدلة موحدة، وبوابات سلامة شفافة، وتنسيق قرارات المواقع والشبكة وخطط الطوارئ. ينبغي نشر مؤشرات مرحلية ومتابعة زمن المراجعة وقضايا السلامة غير المحسومة والتنفيذ بعد الموافقة بصورة منفصلة، حتى لا تصبح السرعة معيار الأداء الوحيد.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/us-nuclear-regulators-overhaul-rules-run-well-into-2027-its-chief-says-2026-09-15/"
-    },
-    {
-      "id": "spacex-starship-first-orbital-test-starlink-v3-2026",
-      "publishedAt": "2026-09-15T18:49:00Z",
-      "categoryEn": "SPACE + LAUNCH INFRASTRUCTURE",
-      "categoryAr": "الفضاء والبنية التحتية للإطلاق",
-      "titleEn": "SpaceX targets Starship’s first orbital test and initial Starlink V3 deployment",
-      "titleAr": "سبيس إكس تستهدف أول اختبار مداري لـStarship ونشر الدفعة الأولى من Starlink V3",
-      "summaryEn": "SpaceX said it is preparing to launch Starship’s 14th flight test as soon as September 22, pending regulatory approval. The mission would place the vehicle into orbit for the first time, deploy the first batch of Starlink V3 satellites, fly for nearly 10 hours at roughly 275 kilometres altitude and complete about six orbits before a Pacific splashdown. It would also test booster launch, separation, return and splashdown procedures toward a reusable orbital system.",
-      "summaryAr": "قالت سبيس إكس إنها تستعد لإطلاق الاختبار الرابع عشر لـStarship في أقرب وقت يوم 22 سبتمبر، رهناً بالموافقة التنظيمية. وستضع المهمة المركبة في المدار للمرة الأولى، وتنشر الدفعة الأولى من أقمار Starlink V3، وتستمر قرابة عشر ساعات على ارتفاع يقارب 275 كيلومترًا مع نحو ست دورات حول الأرض قبل الهبوط في المحيط الهادئ. كما ستختبر إجراءات إطلاق المعزز وانفصاله وعودته وهبوطه ضمن مسار تطوير نظام مداري قابل لإعادة الاستخدام.",
-      "takeEn": "Government implication: a successful orbital test would accelerate both heavy reusable launch and large satellite deployment. Regulators and public agencies should coordinate launch licensing, air and maritime closures, spectrum and orbital-registration duties, re-entry and debris contingencies, independent tracking, and resilience plans for public services that may depend on rapidly expanding commercial constellations.",
-      "takeAr": "الدلالة للحكومات: نجاح الاختبار المداري قد يسرّع الإطلاق الثقيل القابل لإعادة الاستخدام ونشر تجمعات الأقمار الكبيرة معًا. ينبغي للجهات التنظيمية والعامة تنسيق تراخيص الإطلاق، وإغلاقات المجالين الجوي والبحري، والتزامات الطيف والتسجيل المداري، وخطط الطوارئ لإعادة الدخول والحطام، والتتبع المستقل، ومرونة الخدمات العامة التي قد تعتمد على تجمعات تجارية تتوسع سريعًا.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/media-telecom/spacex-targets-first-starship-orbital-test-september-22-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T19:04:02.000Z"
+  "updatedAt": "2026-09-18T20:29:11.000Z"
 }
