@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "البنية الرقمية العامة + سلامة الأطفال على الإنترنت",
+      "categoryEn": "Public Digital Infrastructure + Child Online Safety",
+      "id": "eu-kids-act-age-verification-public-infrastructure-2026",
+      "publishedAt": "2026-09-18T13:17:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/legal/litigation/how-eus-age-verification-app-children-would-work-2026-09-18/",
+      "summaryAr": "اقترحت المفوضية الأوروبية منع من هم دون 13 عامًا من استخدام شبكات التواصل، مع حسابات يشرف عليها الوالدان حتى سن 15، وربطت التنفيذ بتطبيق تحقق مجاني ومفتوح المصدر بنته بروكسل. يرسل التطبيق للمنصة إجابة بنعم أو لا حول بلوغ الحد العمري من دون كشف الهوية، ولا يحتفظ بقاعدة بيانات مركزية أو وثائق هوية أو بيانات بيومترية. يجري طرحه عبر سبع دول تجريبية، مع استهداف إتاحته في أنحاء الاتحاد بنهاية 2026، بينما يحتاج قانون الأطفال المقترح إلى موافقة الدول الأعضاء والبرلمان الأوروبي.",
+      "summaryEn": "The European Commission proposed barring children under 13 from social media, with parent-supervised accounts until 15, and tied enforcement to a free, open-source verification app built by Brussels. The app gives platforms a yes-or-no age-threshold result without revealing identity and retains no central age database, identity documents or biometric data. It is rolling out through seven pilot countries with EU-wide availability targeted by the end of 2026, while the proposed Kids Act still requires approval from member states and the European Parliament.",
+      "takeAr": "ينبغي للحكومات التعامل مع ضمان العمر كبنية رقمية عامة، لا كأداة امتثال منفردة تترك للمنصات. يتطلب ذلك جهات إصدار معتمدة، ومعايير تشغيل بيني موحدة، وتدقيقًا مستقلًا للخصوصية والأمن، ومسارات للطعن والاستثناء وإتاحة الخدمة، واختبارات للتناسب الدستوري، ومؤشرات تقيس التنفيذ الفعلي بدل الاكتفاء بتشريع حد عمري.",
+      "takeEn": "Governments should treat age assurance as public digital infrastructure, not a platform-by-platform compliance feature. Delivery requires accredited issuers, common interoperability standards, independent privacy and security audits, accessible appeal and exception paths, constitutional proportionality tests, and outcome metrics that measure actual enforcement rather than merely legislating an age threshold.",
+      "titleAr": "الاتحاد الأوروبي يبني تحققًا عمريًا عامًا يحفظ الخصوصية لتطبيق قيود المنصات على الأطفال",
+      "titleEn": "EU builds privacy-preserving public age verification to enforce children’s platform limits"
+    },
+    {
       "categoryAr": "المعادن الحرجة + السيطرة الصناعية للدولة",
       "categoryEn": "Critical Minerals + State Industrial Control",
       "id": "china-state-rare-earth-consolidation-mp-materials-link-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: بات تعرض المنشآت للمسيّرات يفرض تصميم اللوجستيات المدنية كبنية تحتية حيوية محمية. ينبغي للحكومات وجهات الإغاثة توزيع المخزون بين مواقع محصنة، وتقليص دورات الإمداد من دون إضعاف احتياطيات الطوارئ، ودمج أنظمة الكشف والإنذار، والتخطيط المسبق للملاجئ المتنقلة والمسارات البديلة، ووضع قواعد تمويل احتياطية قبل أن تعطل الهجمات الإمدادات الأساسية.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/europe/un-weighs-moving-ukraine-aid-supplies-underground-after-warehouse-hits-2026-09-15/"
-    },
-    {
-      "id": "us-orbital-space-control-weapons-acknowledgement-2026",
-      "publishedAt": "2026-09-15T14:55:00Z",
-      "categoryEn": "SPACE SECURITY + STRATEGIC STABILITY",
-      "categoryAr": "أمن الفضاء والاستقرار الاستراتيجي",
-      "titleEn": "US makes its strongest public acknowledgement yet of weapons operating in orbit",
-      "titleAr": "الولايات المتحدة تصدر أوضح اعتراف حتى الآن بامتلاك أسلحة تعمل في المدار",
-      "summaryEn": "US Air Force Secretary Troy Meink said Washington has on-orbit space-control weapons capable of defending the joint force against hostile action, the strongest public acknowledgement yet by a Pentagon official of US weapons in space. A US Space Command official described the disclosure as important to deterrence but declined to identify the systems or their capabilities. The statement marks a shift in public posture as the United States, Russia, China and allies prepare for conflict risks extending into space.",
-      "summaryAr": "قال وزير القوات الجوية الأميركي تروي مينك إن واشنطن تمتلك أسلحة للتحكم الفضائي تعمل في المدار وقادرة على حماية القوات المشتركة من الأعمال المعادية، في أوضح اعتراف علني حتى الآن من مسؤول في البنتاغون بوجود أسلحة أميركية في الفضاء. ووصف مسؤول في قيادة الفضاء الأميركية الإفصاح بأنه مهم للردع، لكنه امتنع عن تحديد الأنظمة أو قدراتها. ويمثل التصريح تحولًا في الموقف العلني مع استعداد الولايات المتحدة وروسيا والصين وحلفائها لاحتمال امتداد الصراع إلى الفضاء.",
-      "takeEn": "Government implication: public acknowledgement can strengthen deterrence but also raise escalation and miscalculation risks. Governments should update space-security doctrine, clarify command authority and thresholds for use, distinguish reversible non-kinetic effects from debris-producing actions, strengthen satellite resilience and allied interoperability, and establish crisis-communication channels before an orbital incident occurs.",
-      "takeAr": "الدلالة للحكومات: قد يعزز الاعتراف العلني الردع، لكنه يرفع أيضًا مخاطر التصعيد وسوء التقدير. ينبغي للحكومات تحديث عقيدة أمن الفضاء، وتوضيح سلطة القيادة وحدود الاستخدام، والتمييز بين التأثيرات غير الحركية القابلة للعكس والأعمال المنتجة للحطام، وتعزيز مرونة الأقمار الصناعية والتشغيل البيني مع الحلفاء، وإنشاء قنوات اتصال للأزمات قبل وقوع حادث مداري.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/aerospace-defense/us-orbital-weapons-acknowledgement-landmark-move-us-space-command-official-says-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T13:13:16.000Z"
+  "updatedAt": "2026-09-18T14:13:00.000Z"
 }
