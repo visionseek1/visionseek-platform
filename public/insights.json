@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "المركبات الكهربائية والبطاريات والدبلوماسية الصناعية",
+      "categoryEn": "Electric Vehicles + Batteries + Industrial Diplomacy",
+      "id": "china-us-xi-visit-ev-battery-tech-delegation-2026",
+      "publishedAt": "2026-09-18T07:22:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/autos-transportation/byd-catl-xiaomi-executives-may-join-xis-us-visit-sources-say-2026-09-18/",
+      "summaryAr": "تعمل واشنطن وبكين على وضع اللمسات الأخيرة على وفد أعمال قد يرافق الرئيس شي جين بينغ في زيارته إلى واشنطن في 24 سبتمبر. وتشمل الشركات قيد النظر BYD وXiaomi وCATL وGotion وبنك الصين؛ وبعضها يواجه رسومًا أو قيودًا تنظيمية أو تصنيفات أمنية أميركية. ولم تُحسم عضوية الوفد بعد، بينما تشمل أهداف القمة تمديد الهدنة التجارية والحصول على تراخيص إضافية لتصدير المعادن النادرة إلى الشركات الأميركية.",
+      "summaryEn": "Washington and Beijing are finalising a business delegation that may accompany President Xi Jinping on his September 24 visit to Washington. Companies under consideration include BYD, Xiaomi, CATL, Gotion and Bank of China; several face US tariffs, regulatory restrictions or security designations. Membership is not final, while summit objectives include extending the trade truce and securing additional rare-earth export licences for US companies.",
+      "takeAr": "على الحكومات تحويل مشاركة الشركات في قمم القادة إلى مسارات تفاوض قابلة للقياس، تفصل بين النفاذ إلى السوق ومخاطر الأمن القومي. ويشمل ذلك شروطًا واضحة لبيانات المركبات المتصلة، والتصنيع المحلي ونقل التقنية، والمعاملة بالمثل، وأي تخفيف للرسوم أو القوائم، مع مراحل تنفيذ وتدقيق بدل الاكتفاء بوعود سياسية عامة.",
+      "takeEn": "Governments should turn corporate participation in leaders’ summits into measurable negotiation tracks that separate market access from national-security risk. This requires explicit conditions for connected-vehicle data, local manufacturing and technology transfer, reciprocity, and any tariff or listing relief, backed by auditable delivery milestones rather than broad political assurances.",
+      "titleAr": "زيارة شي لواشنطن قد تفتح مسارًا تفاوضيًا لشركات السيارات والبطاريات الصينية المقيدة",
+      "titleEn": "Xi’s Washington visit may open a negotiation track for restricted Chinese EV and battery firms"
+    },
+    {
       "categoryAr": "أشباه الموصلات وسلاسل إمداد الذكاء الاصطناعي",
       "categoryEn": "Semiconductors + AI Supply Chains",
       "id": "china-cxmt-government-backed-nand-ai-memory-expansion-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: أصبح الإضراب نفسه يقيّد توليد الكهرباء ومرونة تدفقات الغاز العابرة للحدود معًا. ينبغي مراقبة ضخ المحطات وتقدم التخزين وتوافر التوليد في لوحة استمرارية موحدة، مع عتبات متفق عليها مسبقًا للحد الأدنى من التدفقات، وبدائل للمحطات، ومحفزات للموازنة عبر الحدود عند تداخل الاضطرابات.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/world-at-work/french-labour-strike-reduces-delivery-capacity-dunkirk-lng-terminal-2026-09-15/"
-    },
-    {
-      "id": "australia-saudi-fuel-security-diplomacy-2026",
-      "publishedAt": "2026-09-15T02:38:00Z",
-      "categoryEn": "ENERGY SECURITY + SUPPLY DIPLOMACY",
-      "categoryAr": "أمن الطاقة ودبلوماسية الإمدادات",
-      "titleEn": "Australia sends its energy minister to Saudi Arabia as fuel-security exposure sharpens",
-      "titleAr": "أستراليا ترسل وزير الطاقة إلى السعودية مع تصاعد انكشاف أمن الوقود",
-      "summaryEn": "Australian Energy Minister Chris Bowen will travel to Saudi Arabia next week to meet his counterpart as the Middle East conflict raises supply risks. Australia imported 84% of its petroleum-product demand last year and currently holds 41 days of petrol reserves. Bowen ruled out another fuel-tax cut and said Saudi policy would be important to fuel security over the coming weeks and months.",
-      "summaryAr": "يسافر وزير الطاقة الأسترالي كريس بوين إلى السعودية الأسبوع المقبل للقاء نظيره مع تصاعد مخاطر الإمداد بسبب الصراع في الشرق الأوسط. واستوردت أستراليا 84% من احتياجاتها من المنتجات البترولية العام الماضي، وتحتفظ حاليًا باحتياطيات بنزين تكفي 41 يومًا. واستبعد بوين خفضًا جديدًا لضريبة الوقود، وقال إن سياسة السعودية ستكون مهمة لأمن الوقود خلال الأسابيع والأشهر المقبلة.",
-      "takeEn": "Government implication: high import dependence turns external shocks into a time-bound continuity problem. Governments should pair supplier diplomacy with explicit reserve thresholds, diversified routes and contracts, demand-management triggers, fiscal-response criteria and frequent public reporting, so action starts before inventories reach critical levels.",
-      "takeAr": "الدلالة للحكومات: يحوّل الاعتماد المرتفع على الواردات الصدمات الخارجية إلى مشكلة استمرارية محددة بزمن. ينبغي الجمع بين دبلوماسية الموردين وعتبات واضحة للاحتياطي، وتنويع المسارات والعقود، ومحفزات لإدارة الطلب، ومعايير للاستجابة المالية، وتقارير عامة متكررة، بحيث يبدأ التحرك قبل وصول المخزون إلى مستويات حرجة.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/australias-energy-minister-visit-saudi-arabia-middle-east-conflict-escalates-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T05:47:56.000Z"
+  "updatedAt": "2026-09-18T07:35:54.000Z"
 }
