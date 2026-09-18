@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الزراعة وسياسة القوى العاملة والأمن الغذائي",
+      "categoryEn": "Agriculture + Workforce Policy + Food Security",
+      "id": "australia-migration-crackdown-wheat-harvest-labour-risk-2026",
+      "publishedAt": "2026-09-18T04:17:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/immigration-crackdown-puts-australias-wheat-harvest-risk-industry-groups-say-2026-09-18/",
+      "summaryAr": "حذرت مجموعات زراعية أسترالية من أن قيود الهجرة الجديدة قد تسبب نقصًا في العمالة قبل بدء حصاد المحاصيل الشتوية خلال أسابيع. ستقيد القواعد تمديد تأشيرات العمل والعطلات عبر نظام اقتراع، وترفع زمن المعالجة إلى ثلاثة أشهر بدلًا من بضعة أيام؛ ويشغل حاملو هذه التأشيرات وظيفة واحدة من كل سبع وظائف زراعية، بينما تعد أستراليا ثالث أكبر مصدر للقمح عالميًا.",
+      "summaryEn": "Australian farm groups warned that new immigration restrictions could create labour shortages before the winter-crop harvest begins within weeks. The rules will limit working-holiday visa extensions through a ballot and lengthen processing to three months from a few days; holders of these visas fill one in seven farm jobs, while Australia is the world’s third-largest wheat exporter.",
+      "takeAr": "على الحكومات اختبار آثار السياسات العابرة للوزارات قبل التنفيذ، خصوصًا عندما تتزامن قيود الهجرة مع مواسم حرجة للأمن الغذائي. عمليًا، ينبغي ربط التأشيرات الموسمية بتوقعات الطلب على العمالة، وتوفير مسار سريع للحصاد، وتحديد مؤشرات للنقص وخطط بديلة تشمل انتقال العمالة والميكنة، مع مراجعة دورية مشتركة بين وزارات الهجرة والزراعة والعمل.",
+      "takeEn": "Governments should stress-test cross-ministry policy impacts before implementation, especially when migration controls coincide with food-security-critical seasons. In practice, seasonal visas should be linked to labour-demand forecasts, with a harvest fast track, shortage triggers and contingency plans covering worker mobility and mechanisation, jointly reviewed by migration, agriculture and labour agencies.",
+      "titleAr": "قيود الهجرة الأسترالية تهدد جاهزية حصاد القمح بسبب نقص العمالة",
+      "titleEn": "Australia’s migration crackdown threatens wheat-harvest readiness through labour shortages"
+    },
+    {
       "categoryAr": "حوكمة الذكاء الاصطناعي والبحث والتطوير الذاتي",
       "categoryEn": "AI Governance + AI-Assisted R&D",
       "id": "anthropic-claude-leads-26-percent-internal-ai-rd-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تحتاج توصيات السلامة إلى نظام رسمي للإغلاق والمتابعة، لا مجرد تبادل خطابات بين الجهات. ينبغي إسناد مالك مسؤول وموعد نهائي ومعيار أدلة وقرار واضح بشأن المخاطر المتبقية لكل توصية، مع تصعيد تلقائي إلى الوزراء أو المشرعين عندما ترفض الجهة التنظيمية إجراءً حاسمًا أو تستبدله أو تؤخره.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/us/us-ntsb-says-one-third-faa-answers-safety-recommendations-are-unacceptable-2026-09-14/"
-    },
-    {
-      "id": "texas-ai-data-centers-water-reporting-enforcement-2026",
-      "publishedAt": "2026-09-14T21:26:00Z",
-      "categoryEn": "AI INFRASTRUCTURE + WATER GOVERNANCE",
-      "categoryAr": "بنية الذكاء الاصطناعي وحوكمة المياه",
-      "titleEn": "Texas moves to penalize data centers for failing to disclose water use",
-      "titleAr": "تكساس تتحرك لمعاقبة مراكز البيانات التي لا تفصح عن استهلاك المياه",
-      "summaryEn": "Texas Governor Greg Abbott directed state regulators to impose legal consequences on data centers and other large users that fail to meet water-reporting requirements. The Texas Water Development Board is surveying current and expected consumption; a data center that misses the response deadline can be denied new or renewed environmental permits. The action comes as the state reviews how rapidly expanding AI infrastructure affects both power and water systems.",
-      "summaryAr": "وجّه حاكم تكساس غريغ أبوت الجهات التنظيمية بفرض عواقب قانونية على مراكز البيانات وغيرها من كبار المستهلكين الذين لا يلتزمون بمتطلبات الإبلاغ عن استخدام المياه. ويجمع مجلس تنمية المياه في تكساس بيانات الاستهلاك الحالي والمتوقع، ويمكن حرمان مركز البيانات الذي لا يستجيب قبل الموعد المحدد من تصريح بيئي جديد أو مجدد. وتأتي الخطوة ضمن مراجعة الولاية لتأثير التوسع السريع في بنية الذكاء الاصطناعي على منظومتي الكهرباء والمياه.",
-      "takeEn": "Government implication: AI-infrastructure approval is shifting from voluntary resource estimates toward enforceable, cross-utility disclosure. Governments should require standardized power-and-water baselines, forward demand forecasts and verified reporting before permits or grid connections, then link non-compliance to clear corrective actions and permitting consequences.",
-      "takeAr": "الدلالة للحكومات: تنتقل الموافقة على بنية الذكاء الاصطناعي من تقديرات طوعية للموارد إلى إفصاح مُلزم يربط بين المرافق المختلفة. ينبغي للحكومات اشتراط خطوط أساس موحدة للكهرباء والمياه، وتوقعات مستقبلية للطلب، وتقارير قابلة للتحقق قبل منح التصاريح أو الربط بالشبكة، ثم ربط عدم الامتثال بإجراءات تصحيحية وعواقب واضحة على التصاريح.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/legal/litigation/texas-moves-penalize-data-centers-water-violations-2026-09-14/"
     }
   ],
-  "updatedAt": "2026-09-17T22:34:54.000Z"
+  "updatedAt": "2026-09-18T04:32:27.000Z"
 }
