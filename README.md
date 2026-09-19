@@ -6,10 +6,10 @@ ventures, and capabilities.
 
 ## Technology
 
-- Next.js-compatible App Router through vinext
+- Native Next.js App Router
 - React and TypeScript
 - Tailwind CSS
-- Cloudflare Workers deployment through ChatGPT Sites
+- Vercel preview and deployment support
 
 ## Local development
 
@@ -40,6 +40,6 @@ the hosting platform.
 
 ## Deployment
 
-Production is managed through ChatGPT Sites. The source is committed before
-each saved and deployed version so every release remains traceable and
-reversible.
+Deploy previews through the Vercel project connected to this repository. The
+custom domain is not changed by a preview deployment. Configure Supabase only
+through Vercel environment variables; never commit environment files or keys.
