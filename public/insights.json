@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "بنية الطاقة + المشاركة الحكومية",
+      "categoryEn": "Energy Infrastructure + State Participation",
+      "id": "suriname-granmorgu-offshore-output-2028-2026",
+      "publishedAt": "2026-09-19T15:34:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/totalenergies-offshore-project-suriname-track-first-output-mid-2028-2026-09-19/",
+      "summaryAr": "قالت شركة Staatsolie الحكومية في سورينام إن TotalEnergies وشركاءها ما زالوا على المسار لبدء إنتاج مشروع GranMorgu البحري للنفط والغاز في منتصف 2028. وتبلغ قيمة المشروع 12 مليار دولار، وقد أنفق الشركاء نحو نصف الاستثمار المخطط، فيما تستعد مكونات رؤوس الآبار وخطوط الأنابيب تحت البحر للتركيب ضمن أول تطوير لموارد سورينام البحرية الواسعة.",
+      "summaryEn": "Suriname’s state-run Staatsolie said TotalEnergies and its partners remain on track to start output from the $12 billion GranMorgu offshore oil and gas project in mid-2028. The partners have spent about half of the planned investment, while subsea wellhead and pipeline components are being prepared for installation in the country’s first development of its large offshore resources.",
+      "takeAr": "يمثل المشروع اختبارًا لقدرة الدولة على تحويل أول تطوير كبير لمواردها البحرية إلى قدرة وطنية مستدامة. ينبغي للحكومة ربط التقدم بمراحل علنية للتكلفة والجدول الزمني، وقواعد شفافة للإيرادات والمحتوى المحلي، ورقابة بيئية مستقلة، واحتياطيات مالية تحمي الميزانية من تقلب أسعار الطاقة؛ حتى لا يتحول نجاح الإنشاء إلى اعتماد مالي أو تشغيلي جديد.",
+      "takeEn": "The project is a test of whether the state can turn its first major offshore-resource development into durable national capacity. The government should tie progress to public cost and schedule milestones, transparent revenue and local-content rules, independent environmental oversight, and fiscal buffers against energy-price volatility so construction success does not create new financial or operational dependence.",
+      "titleAr": "مشروع GranMorgu البحري في سورينام بقيمة 12 مليار دولار يتجه للإنتاج منتصف 2028",
+      "titleEn": "Suriname’s $12 billion GranMorgu offshore project stays on track for mid-2028 output"
+    },
+    {
       "categoryAr": "سياسة الذكاء الاصطناعي + إعادة التوازن الاقتصادي",
       "categoryEn": "AI Policy + Economic Rebalancing",
       "id": "china-ai-supply-demand-imbalance-policy-2026",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: agricultural trade can be protected without choosing between blanket closure and unconditional reopening. A practical model is to use phased corridors tied to disease surveillance, published operating and shutdown triggers, rapid cross-border data sharing, and ready inspection and response capacity—protecting livestock while limiting supply disruption.",
       "titleAr": "الولايات المتحدة تستعد لإعادة فتح منفذ ماشية في نيو مكسيكو بضوابط قابلة للعكس لمواجهة الدودة الحلزونية",
       "titleEn": "US prepares to reopen New Mexico livestock port under reversible screwworm controls"
-    },
-    {
-      "categoryAr": "الزراعة الذكية مناخيًا وأسواق الكربون",
-      "categoryEn": "CLIMATE-SMART AGRICULTURE + CARBON MARKETS",
-      "id": "google-terradot-rice-methane-carbon-removal-2026",
-      "publishedAt": "2026-09-16T12:02:00Z",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/google-agrees-biggest-carbon-removal-deal-yet-aims-scale-new-model-2026-09-16/",
-      "summaryAr": "أبرمت Google أكبر صفقة لإزالة الكربون في تاريخها، لتمويل مشروع تقوده Terradot عبر أكثر من 200 ألف هكتار من حقول الأرز في البرازيل. يجمع المشروع، لأول مرة بهذا الحجم، بين خفض انبعاثات الميثان من زراعة الأرز وتسريع التجوية الصخرية لالتقاط ثاني أكسيد الكربون، مستهدفًا إصدار مليون طن من اعتمادات خفض الميثان بحلول 2030 ومليون طن من اعتمادات إزالة الكربون بحلول 2040 مع التحقق من المسارين بصورة منفصلة.",
-      "summaryEn": "Google signed its largest carbon-removal deal to date, funding a Terradot-led project across more than 200,000 hectares of Brazilian rice fields. The project is the first at this scale to pair rice-methane abatement with enhanced rock weathering for carbon removal, targeting one million tonnes of methane-abatement credits by 2030 and one million tonnes of carbon-removal credits by 2040, with the two outcomes verified separately.",
-      "takeAr": "الدلالة للحكومات: يمكن لتمويل الشركات أن يسرّع تحويل الممارسات الزراعية منخفضة الانبعاثات إلى بنية سوقية، لكن التوسع يحتاج قواعد عامة قوية. ينبغي للحكومات اختبار هذا النموذج عبر سجلات مستقلة، ومنهجيات منفصلة للميثان والإزالة، وضوابط إضافية وعدم ازدواج الاحتساب، ومراقبة آثار التربة والمياه والإنتاج الغذائي، وترتيبات عادلة لتقاسم العائد مع المزارعين قبل اعتماد الاعتمادات في السياسات المناخية.",
-      "takeEn": "Government implication: corporate offtake can help turn lower-emission farming practices into investable infrastructure, but scaling requires strong public rules. Governments should pilot the model with independent registries, separate methodologies for methane and removal, additionality and double-counting safeguards, monitoring of soil, water and food-production effects, and fair revenue-sharing with farmers before accepting the credits in climate policy.",
-      "titleAr": "Google تموّل نموذجًا واسعًا يجمع خفض ميثان الأرز وإزالة الكربون",
-      "titleEn": "Google backs large-scale rice methane and carbon-removal model"
     }
   ],
-  "updatedAt": "2026-09-19T11:12:20.000Z"
+  "updatedAt": "2026-09-19T16:32:58.665Z"
 }
