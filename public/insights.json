@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "سياسة الذكاء الاصطناعي + إعادة التوازن الاقتصادي",
+      "categoryEn": "AI Policy + Economic Rebalancing",
+      "id": "china-ai-supply-demand-imbalance-policy-2026",
+      "publishedAt": "2026-09-19T10:52:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/asia-pacific/china-central-bank-adviser-says-ai-could-deepen-supply-demand-imbalance-2026-09-19/",
+      "summaryAr": "حذّر هوانغ يي بينغ، عضو لجنة السياسة النقدية في بنك الشعب الصيني، من أن الانتشار الأوسع للذكاء الاصطناعي قد يعمّق اختلال الاقتصاد الصيني بين عرض قوي وطلب ضعيف، رغم دعمه للصادرات. ودعا إلى إصلاحات سوقية ترفع حصة دخل الأسر، وإلى اقتراض مركزي يساعد الحكومات المحلية والمؤسسات المالية والشركات على إصلاح ميزانياتها واستعادة قدرتها على النشاط الاقتصادي.",
+      "summaryEn": "Huang Yiping, a member of the People’s Bank of China’s monetary policy committee, warned that wider AI deployment could deepen China’s imbalance between strong supply and weak demand even as the technology supports exports. He called for market-oriented reforms that raise households’ share of income and for central-government borrowing to repair the balance sheets of local governments, financial institutions and companies.",
+      "takeAr": "الدلالة للحكومات هي أن سياسة الذكاء الاصطناعي لا ينبغي أن تقيس النجاح بالإنتاجية والطاقة التصديرية وحدهما. يجب ربط حوافز التبني بخطط لرفع دخول الأسر، وتحفيز الطلب المحلي، وإعادة تأهيل الميزانيات العامة والمحلية، ومراقبة أثر الأتمتة على الأسعار والوظائف والقدرة الاستيعابية؛ وإلا فقد توسّع التقنية القدرة الإنتاجية أسرع من قدرة الاقتصاد على استيعابها.",
+      "takeEn": "Government AI policy should not measure success through productivity and export capacity alone. Adoption incentives need to be linked to household-income growth, domestic-demand measures, balance-sheet repair and monitoring of automation’s effects on prices, jobs and absorptive capacity; otherwise technology may expand supply faster than the economy can absorb it.",
+      "titleAr": "مستشار بالبنك المركزي الصيني يحذّر من أن الذكاء الاصطناعي قد يعمّق اختلال العرض والطلب",
+      "titleEn": "China central-bank adviser warns AI could deepen the supply-demand imbalance"
+    },
+    {
       "categoryAr": "أمن الطاقة + إصلاح دعم الوقود",
       "categoryEn": "Energy Security + Fuel Subsidy Reform",
       "id": "bolivia-diesel-subsidy-unified-pricing-2026",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: corporate offtake can help turn lower-emission farming practices into investable infrastructure, but scaling requires strong public rules. Governments should pilot the model with independent registries, separate methodologies for methane and removal, additionality and double-counting safeguards, monitoring of soil, water and food-production effects, and fair revenue-sharing with farmers before accepting the credits in climate policy.",
       "titleAr": "Google تموّل نموذجًا واسعًا يجمع خفض ميثان الأرز وإزالة الكربون",
       "titleEn": "Google backs large-scale rice methane and carbon-removal model"
-    },
-    {
-      "categoryAr": "البنية التحتية للطاقة وتحديث الشبكات",
-      "categoryEn": "ENERGY INFRASTRUCTURE + GRID MODERNIZATION",
-      "id": "spain-grid-investment-17-billion-2030-2026",
-      "publishedAt": "2026-09-16T10:55:00Z",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/spain-ups-planned-power-grid-investment-over-17-bln-through-2030-2026-09-16/",
-      "summaryAr": "قررت الحكومة الإسبانية رفع استثمارات شبكة نقل الكهرباء إلى أكثر من 17 مليار يورو حتى 2030، بزيادة تقارب 30% عن الخطة الأصلية، استجابةً لتنامي الطلب الناتج عن الكهربة ومراكز البيانات والصناعة والإسكان ومشروعات الطاقة المتجددة والتخزين. وقالت وزيرة الطاقة إن الحكومة ستنشر قريبًا قواعد سوق للقدرة قائم على المزادات يتيح تعويض التوليد والتخزين وبعض المستهلكين مقابل دعم الشبكة وقت الذروة والضغط.",
-      "summaryEn": "Spain’s government decided to raise planned electricity-transmission investment to more than €17 billion through 2030, roughly 30% above the initial plan, as electrification and demand from data centres, industry, housing, renewables and storage increase connection needs. The energy minister also said auction-based capacity-market rules will be published shortly, allowing generation, storage and some consumers to be compensated for supporting the system during peaks and stress events.",
-      "takeAr": "الدلالة للحكومات: لم تعد خطط الشبكات قادرة على التعامل مع مراكز البيانات والكهربة كمشروعات منفصلة. ينبغي دمج توقعات الطلب الصناعي والرقمي والسكني مع قوائم ربط شفافة، واستثمارات نقل مرحلية، وآليات قدرة تكافئ التخزين والمرونة وخفض الأحمال، حتى لا تتحول قيود الشبكة إلى عنق زجاجة للاستثمار أو إلى تكلفة غير عادلة على المستهلكين.",
-      "takeEn": "Government implication: grid plans can no longer treat data centres and electrification as isolated projects. Governments should combine industrial, digital and residential demand forecasts with transparent connection queues, staged transmission investment and capacity mechanisms that reward storage, flexibility and demand reduction, preventing grid constraints from becoming an investment bottleneck or an unfair burden on consumers.",
-      "titleAr": "إسبانيا ترفع استثمارات شبكة الكهرباء إلى أكثر من 17 مليار يورو حتى 2030",
-      "titleEn": "Spain lifts 2030 power-grid investment plan above €17 billion"
     }
   ],
-  "updatedAt": "2026-09-19T05:36:53.000Z"
+  "updatedAt": "2026-09-19T11:12:20.000Z"
 }
