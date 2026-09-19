@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "حوكمة الذكاء الاصطناعي + إطلاق النماذج المتقدمة",
+      "categoryEn": "AI Governance + Frontier Model Releases",
+      "id": "anthropic-new-model-safety-competition-ipo-2026",
+      "publishedAt": "2026-09-19T00:05:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/anthropic-considers-releasing-new-ai-model-ahead-ipo-sources-say-2026-09-19/",
+      "summaryAr": "أفادت رويترز، نقلًا عن ثلاثة مصادر، بأن Anthropic تدرس طرح نموذج ذكاء اصطناعي جديد لمواجهة الزخم التجاري لنموذج GPT-6 Astra من OpenAI، بالتوازي مع استعدادات محتملة للطرح العام. وتأتي المداولات بعد دعوة الرئيس التنفيذي لـAnthropic إلى إبطاء وتيرة تحسين قدرات النماذج، وتشمل تقييم سلامة النموذج الجديد والموازنة بين المنافسة والربحية وهوية الشركة المرتبطة بالسلامة. ولم تؤكد الشركة قرار الإطلاق.",
+      "summaryEn": "Reuters reported, citing three sources, that Anthropic is considering releasing a new AI model to counter the enterprise momentum of OpenAI’s GPT-6 Astra while preparing for a potential IPO. The deliberations follow Anthropic’s CEO calling for a slower pace of capability development and include safety evaluation of the new model, competitive pressure, profitability and the company’s safety-focused identity. Anthropic has not confirmed a launch decision.",
+      "takeAr": "تكشف الإشارة حدود الاعتماد على التهدئة الطوعية عندما تدفع المنافسة والتمويل الشركات نحو إطلاق قدرات جديدة. ينبغي للحكومات اشتراط ملف سلامة قبل اعتماد أي نموذج متقدم، يتضمن تقييمات قدرات مستقلة، واختبارات إساءة الاستخدام، وخطة استجابة للحوادث، وإخطارًا بالتغييرات الجوهرية؛ مع إبقاء سياسات المشتريات مرنة لأن الإطلاق ما زال قيد الدراسة وليس قرارًا نهائيًا.",
+      "takeEn": "The signal shows the limits of relying on voluntary restraint when competition and financing push developers toward new capability releases. Governments should require a pre-adoption safety case for frontier models, including independent capability evaluations, misuse testing, incident-response plans and notice of material changes, while keeping procurement decisions flexible because the release remains under consideration rather than confirmed.",
+      "titleAr": "Anthropic تدرس إطلاق نموذج جديد رغم دعوتها إلى إبطاء سباق القدرات",
+      "titleEn": "Anthropic weighs a new model release despite calling for a slower capability race"
+    },
+    {
       "categoryAr": "الذكاء الاصطناعي الوكيلي + الأمن السيبراني",
       "categoryEn": "Agentic AI + Cybersecurity",
       "id": "google-gemini-autonomous-cyber-breakout-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: ينبغي تقييم مشروعات الذكاء الاصطناعي فائقة السعة بوصفها أنظمة بنية تحتية متكاملة، لا مشروعات عقارية عادية. ويجب مواءمة مراجعة الاستثمار الأجنبي، وإضافة قدرة كهربائية جديدة، وحدود المياه والأراضي، وقواعد المحتوى المحلي، وحماية المستهلكين من تحمل التكلفة، ومراحل التنفيذ الملزمة قبل اعتماد سعات بهذا الحجم.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/"
-    },
-    {
-      "id": "new-york-data-centers-community-investment-per-megawatt-2026",
-      "publishedAt": "2026-09-15T23:40:00Z",
-      "categoryEn": "AI INFRASTRUCTURE + COMMUNITY BENEFIT",
-      "categoryAr": "بنية الذكاء الاصطناعي والمنفعة المجتمعية",
-      "titleEn": "New York proposes $1 million per megawatt community investment for new data centers",
-      "titleAr": "نيويورك تقترح استثمارًا مجتمعيًا بمليون دولار لكل ميغاواط لمراكز البيانات الجديدة",
-      "summaryEn": "New York Governor Kathy Hochul recommended that local governments seek community investments of at least $1 million for each megawatt of utility demand from developers proposing new data centers. The recommendation, which is not a binding requirement, follows the state’s moratorium on large new data centers and reflects concern that these facilities can impose substantial power demand while generating fewer local jobs than traditional manufacturing.",
-      "summaryAr": "أوصت حاكمة نيويورك كاثي هوكول بأن تطلب الحكومات المحلية من مطوري مراكز البيانات الجديدة استثمارات مجتمعية لا تقل عن مليون دولار عن كل ميغاواط من الطلب على المرافق. وتأتي التوصية، التي لا تمثل التزامًا نافذًا، بعد وقف الولاية لمراكز البيانات الكبيرة الجديدة، وتعكس القلق من أن هذه المنشآت قد تفرض طلبًا كهربائيًا كبيرًا مع توليد وظائف محلية أقل من التصنيع التقليدي.",
-      "takeEn": "Government implication: data-center permitting is shifting toward capacity-linked community benefit. Governments should connect any contribution formula to transparent impact assessments, grid and water upgrades, ratepayer protection, local skills and verified delivery milestones, while keeping core environmental, infrastructure and decommissioning obligations separate rather than treating a payment as a substitute for mitigation.",
-      "takeAr": "الدلالة للحكومات: يتجه ترخيص مراكز البيانات نحو ربط السعة بمنفعة مجتمعية قابلة للقياس. ينبغي ربط أي صيغة مساهمة بتقييمات أثر شفافة، وتحديثات الشبكة والمياه، وحماية المشتركين، وتنمية المهارات المحلية، ومراحل تنفيذ قابلة للتحقق، مع إبقاء الالتزامات البيئية والبنية التحتية وإزالة المنشأة مستقلة، حتى لا تتحول المدفوعات إلى بديل عن تخفيف الأثر.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/retail-consumer/new-york-proposes-1-million-per-megawatt-community-investment-data-centers-2026-09-15/"
     }
   ],
-  "updatedAt": "2026-09-18T22:35:55.000Z"
+  "updatedAt": "2026-09-19T00:59:14.000Z"
 }
