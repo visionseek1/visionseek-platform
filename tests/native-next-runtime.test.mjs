@@ -1,8 +1,16 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
+const exists = async (path) => {
+  try {
+    await access(new URL(`../${path}`, import.meta.url));
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 test("uses native Next.js and Vercel configuration", async () => {
   const [packageJson, vercelJson] = await Promise.all([
@@ -15,9 +23,8 @@ test("uses native Next.js and Vercel configuration", async () => {
   assert.equal(pkg.scripts.build, "next build");
   assert.equal(pkg.scripts.start, "next start");
   assert.equal(vercel.framework, "nextjs");
-  assert.equal(pkg.dependencies.vinext, undefined);
-  assert.equal(pkg.devDependencies.vite, undefined);
-  assert.equal(pkg.devDependencies.wrangler, undefined);
+  assert.equal(await exists("vite.config.ts"), false);
+  assert.equal(await exists("worker/index.ts"), false);
 });
 
 test("does not embed Supabase configuration in the browser client", async () => {
