@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أنظمة الدفاع الذاتية + المشتريات الاستراتيجية",
+      "categoryEn": "Autonomous Defense Systems + Strategic Procurement",
+      "id": "us-taiwan-anduril-autonomous-arms-delay-2026",
+      "publishedAt": "2026-09-19T04:26:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/china/defence-firm-anduril-says-us-delay-taiwan-arms-sales-affecting-its-business-2026-09-19/",
+      "summaryAr": "قال مؤسس Anduril إن تأخر الرئيس الأميركي في إقرار حزمة أسلحة بقيمة 14 مليار دولار لتايوان يؤثر على أعمال الشركة ويعطل التقدم في مجالات أخرى. تستخدم تايوان طائرة Altius المسيّرة التابعة للشركة، كما كشفت سابقًا عن صاروخ Barracuda-500 الجوال منخفض التكلفة وذاتي التشغيل والمصنّع بالشراكة معها. وأبقت واشنطن الحزمة معلقة بعد قمة مايو مع الصين، ووصفها الرئيس دونالد ترامب بأنها ورقة تفاوضية.",
+      "summaryEn": "Anduril’s founder said the US president’s delay in approving a $14 billion arms package for Taiwan is affecting the company and holding back progress in other areas. Taiwan uses Anduril’s Altius drone and previously unveiled the jointly produced Barracuda-500, a low-cost autonomous cruise missile. Washington kept the package on hold after a May summit with China, with President Donald Trump describing it as a negotiating chip.",
+      "takeAr": "توضح الإشارة أن بناء قدرات الدفاع الذاتي قد يتعطل بفعل مساومات دبلوماسية وسلاسل إمداد استراتيجية حتى مع وجود الطلب والتقنية. ينبغي للحكومات وضع آجال واضحة للقرارات، وفصل احتياجات الجاهزية العاجلة عن الحزم السياسية الأوسع، ورسم تبعيات المعادن النادرة والموردين، وتمويل بدائل قابلة للتشغيل البيني، وتوثيق أسباب التأخير لتمييز القرار الاستراتيجي عن التعثر الفني أو المالي.",
+      "takeEn": "The signal shows that autonomous-defense capability can be delayed by diplomatic bargaining and strategic supply dependencies even when demand and technology exist. Governments should set decision deadlines, separate urgent readiness needs from broader political packages, map rare-earth and supplier dependencies, fund interoperable alternatives, and document delay rationales so strategic choices are distinguishable from technical or budget failure.",
+      "titleAr": "تأخر حزمة تسليح تايوان يضغط على أعمال Anduril ويبطئ التقدم في الأنظمة الذاتية",
+      "titleEn": "US delay on Taiwan arms package pressures Anduril and slows autonomous-systems progress"
+    },
+    {
       "categoryAr": "المناخ + مساءلة الاستجابة للكوارث",
       "categoryEn": "Climate + Disaster-Response Accountability",
       "id": "indonesia-forest-fire-class-action-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تتجه حوكمة الذكاء الاصطناعي المتقدم نحو تنسيق منظم بين الجهات التنظيمية والمطورين، لا الاكتفاء بالقواعد. ينبغي إنشاء بروتوكولات رسمية للحوار، وطلب أدلة مخاطر قابلة للمقارنة وتقارير عن الحوادث، وتحديد محفزات للتصعيد عند القفزات في القدرات، مع الحفاظ على الاختبارات المستقلة والإنفاذ حتى يكمّل الحوار الطوعي الرقابة بدل أن يحل محلها.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/eus-von-der-leyen-invite-frontier-labs-talks-tackling-ai-risks-2026-09-16/"
-    },
-    {
-      "id": "eu-critical-raw-materials-corporation-stockpiles-2026",
-      "publishedAt": "2026-09-16T07:29:00Z",
-      "categoryEn": "CRITICAL MINERALS + STRATEGIC RESERVES",
-      "categoryAr": "المعادن الحرجة والاحتياطيات الاستراتيجية",
-      "titleEn": "EU to create a critical-raw-materials corporation to procure and stockpile strategic supplies",
-      "titleAr": "الاتحاد الأوروبي ينشئ كيانًا للمعادن الحرجة لتأمين الإمدادات وبناء مخزونات استراتيجية",
-      "summaryEn": "European Commission President Ursula von der Leyen said the EU will establish a new European corporation for critical raw materials to help member states procure and stockpile strategic supplies, as the bloc seeks to reduce its dependence on China, particularly for rare earths. She paired the measure with a pledge to use the EU’s available trade tools to rebalance the relationship if dialogue does not produce results.",
-      "summaryAr": "قالت رئيسة المفوضية الأوروبية أورسولا فون دير لاين إن الاتحاد الأوروبي سينشئ كيانًا أوروبيًا جديدًا للمواد الخام الحرجة لمساعدة الدول الأعضاء على تأمين الإمدادات وبناء مخزونات استراتيجية، في إطار خفض الاعتماد على الصين، ولا سيما في العناصر الأرضية النادرة. وربطت الخطوة بتعهد باستخدام أدوات الاتحاد التجارية المتاحة لإعادة توازن العلاقة إذا لم تحقق المفاوضات نتائج.",
-      "takeEn": "Government implication: critical-mineral policy is moving from diversification targets toward shared procurement and physical reserves. Governments should now map strategic demand, define transparent stockpile-release rules, coordinate allied purchasing to avoid bidding wars, and require traceability and recycling plans so resilience measures do not simply shift supply risks elsewhere.",
-      "takeAr": "الدلالة للحكومات: تنتقل سياسة المعادن الحرجة من أهداف التنويع إلى الشراء المشترك والاحتياطيات المادية. ينبغي للحكومات تحديد الطلب الاستراتيجي، ووضع قواعد شفافة للسحب من المخزون، وتنسيق المشتريات مع الحلفاء لتجنب المنافسة السعرية، وفرض متطلبات للتتبع وإعادة التدوير حتى لا تنقل إجراءات المرونة مخاطر الإمداد إلى أماكن أخرى.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/china/eu-will-use-all-tools-cut-china-trade-deficit-von-der-leyen-says-2026-09-16/"
     }
   ],
-  "updatedAt": "2026-09-19T03:19:22.000Z"
+  "updatedAt": "2026-09-19T04:44:34.000Z"
 }
