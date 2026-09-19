@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "الأنظمة الذاتية + البنية التحتية للطيران",
+      "categoryEn": "Autonomous Systems + Aviation Infrastructure",
+      "id": "luxembourg-airport-drone-shutdown-2026",
+      "publishedAt": "2026-09-19T01:32:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/world/flights-resume-luxembourg-airport-after-temporary-shutdown-over-drone-activity-2026-09-19/",
+      "summaryAr": "استأنف مطار لوكسمبورغ الرحلات بعد تعليق العمليات مؤقتًا إثر رصد مسيّرات غير مصرح بها قرب المطار وفوقه. وقال المطار الدولي الوحيد في البلاد إن الإجراء الاحترازي استهدف حماية الركاب والطواقم والموظفين والطائرات؛ ولم تُعرف بعد جهة تشغيل المسيّرات أو مصدرها، وقد تستمر بعض التأخيرات.",
+      "summaryEn": "Luxembourg Airport resumed flights after temporarily suspending operations when unauthorized drones were detected near and over the aerodrome. The country’s only international airport said the precaution protected passengers, crews, staff and aircraft; the drones’ origin and operator remain unidentified, and residual delays may continue.",
+      "takeAr": "ينبغي للحكومات التعامل مع المسيّرات الصغيرة غير المصرح بها باعتبارها تهديدًا لاستمرارية الطيران، لا مسألة شرطية فقط. تحتاج المطارات إلى بروتوكولات مشتركة للكشف والتصنيف، وحدود مسبقة لتقييد المجال الجوي، وتنسيق سريع بين سلطات الطيران والشرطة والدفاع، وإجراءات لحفظ الأدلة، وخطط تعافٍ تقلل التعطل من دون المساس بالسلامة.",
+      "takeEn": "Governments should treat small unauthorized drones as an aviation-continuity threat, not only a policing issue. Airports need shared detection and classification protocols, predefined thresholds for restricting airspace, rapid coordination among aviation, police and defense authorities, evidence-preservation procedures, and recovery plans that minimize disruption without compromising safety.",
+      "titleAr": "مسيّرات غير مصرح بها توقف مؤقتًا مطار لوكسمبورغ الدولي الوحيد",
+      "titleEn": "Unauthorized drones temporarily shut Luxembourg’s only international airport"
+    },
+    {
       "categoryAr": "حوكمة الذكاء الاصطناعي + إطلاق النماذج المتقدمة",
       "categoryEn": "AI Governance + Frontier Model Releases",
       "id": "anthropic-new-model-safety-competition-ipo-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: يمكن تعزيز احتياطيات الطاقة الاستراتيجية عبر أدوات سوقية مشروطة بدل اللجوء فورًا إلى الشراء العام. ينبغي تحديد محفزات مناقصة شفافة، والتزامات الجاهزية والأداء، واختبارات ضغط للشتاء القارس، وقواعد التفعيل، وحدود التكلفة على المستهلكين، ومتطلبات الإفصاح قبل أن يفرض النقص تدخلًا طارئًا مرتفع التكلفة.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/business/energy/german-minister-plans-market-incentives-boost-gas-storage-source-says-2026-09-16/"
-    },
-    {
-      "id": "anthropic-australia-first-data-centre-lease-2026",
-      "publishedAt": "2026-09-16T03:49:48Z",
-      "categoryEn": "AI INFRASTRUCTURE + RESOURCE GOVERNANCE",
-      "categoryAr": "بنية الذكاء الاصطناعي وحوكمة الموارد",
-      "titleEn": "Anthropic signs its first Australian data-centre lease for a planned 2.16-gigawatt campus",
-      "titleAr": "أنثروبيك توقّع أول عقد لمركز بيانات في أستراليا ضمن مجمع مخطط بقدرة 2.16 غيغاواط",
-      "summaryEn": "Reuters reported, citing two people familiar with the agreement, that Anthropic signed its first Australian data-centre lease at a planned 2.16-gigawatt campus near Brisbane. The site is expected to begin operating in 2027 and would support AI inference rather than model training. The developers plan renewable-power procurement and closed-loop air cooling, while the transaction remains subject to approval by Australia’s Foreign Investment Review Board. Anthropic and the developer declined to comment.",
-      "summaryAr": "أفادت رويترز، نقلًا عن مصدرين مطلعين على الاتفاق، بأن أنثروبيك وقّعت أول عقد لها لمركز بيانات في أستراليا ضمن مجمع مخطط بقدرة 2.16 غيغاواط قرب بريزبن. يُتوقع بدء تشغيل الموقع في 2027، وسيُستخدم لاستدلال الذكاء الاصطناعي لا لتدريب النماذج. ويخطط المطورون لتأمين طاقة متجددة واستخدام تبريد هوائي مغلق الدورة، فيما تظل الصفقة خاضعة لموافقة مجلس مراجعة الاستثمار الأجنبي الأسترالي. وامتنعت أنثروبيك والمطور عن التعليق.",
-      "takeEn": "Government implication: hyperscale AI projects should be reviewed as integrated infrastructure systems, not ordinary property developments. Authorities should align foreign-investment screening, grid additionality, water and land limits, domestic-content rules, customer-cost protection and enforceable delivery milestones before approving capacity at this scale.",
-      "takeAr": "الدلالة للحكومات: ينبغي تقييم مشروعات الذكاء الاصطناعي فائقة السعة بوصفها أنظمة بنية تحتية متكاملة، لا مشروعات عقارية عادية. ويجب مواءمة مراجعة الاستثمار الأجنبي، وإضافة قدرة كهربائية جديدة، وحدود المياه والأراضي، وقواعد المحتوى المحلي، وحماية المستهلكين من تحمل التكلفة، ومراحل التنفيذ الملزمة قبل اعتماد سعات بهذا الحجم.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/"
     }
   ],
-  "updatedAt": "2026-09-19T00:59:14.000Z"
+  "updatedAt": "2026-09-19T02:30:58.000Z"
 }
