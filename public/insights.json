@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "المناخ + مساءلة الاستجابة للكوارث",
+      "categoryEn": "Climate + Disaster-Response Accountability",
+      "id": "indonesia-forest-fire-class-action-2026",
+      "publishedAt": "2026-09-19T02:58:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/environment/indigenous-civil-society-groups-sue-prabowo-over-forest-fire-response-2026-09-19/",
+      "summaryAr": "رفعت جماعات للسكان الأصليين والمجتمع المدني في كاليمانتان الغربية دعوى جماعية ضد الرئيس الإندونيسي برابوو سوبيانتو وسلطات أخرى، متهمة الحكومة بالإهمال والفشل في منع حرائق الغابات والأراضي المتكررة والتصدي لها. سُجلت القضية في محكمة بونتياناك وحددت أولى جلساتها في 7 أكتوبر، فيما تواجه إندونيسيا أعنف حرائقها منذ 11 عامًا وتحذر الحكومة من احتمال استمرارها حتى نوفمبر.",
+      "summaryEn": "Indigenous and civil-society groups in West Kalimantan filed a class action against Indonesian President Prabowo Subianto and other authorities, alleging government negligence and failure to prevent and address recurring forest and land fires. The case was registered in Pontianak court with its first hearing set for October 7, as Indonesia battles its most intense wildfires in 11 years and warns they may continue through November.",
+      "takeAr": "تُحوّل هذه القضية الاستجابة للحرائق المتكررة من مسألة تشغيلية إلى اختبار قانوني قابل للتدقيق. ينبغي للحكومات تحديد مسؤوليات وطنية ومحلية واضحة، ونشر محفزات الاستعداد والإنفاذ ومؤشرات زمن الاستجابة، وتوثيق تخصيص الموارد وبيانات الحرائق وجودة الهواء، وإجراء مراجعات مستقلة بعد الموسم؛ لأن ضعف السجلات والتنسيق قد يتحول إلى مسؤولية قضائية إلى جانب الخسائر البيئية والصحية.",
+      "takeEn": "The case turns recurring wildfire response from an operational issue into an auditable legal test. Governments should assign clear national and local duties, publish preparedness and enforcement triggers and response-time metrics, document resource allocation and fire and air-quality data, and conduct independent post-season reviews; weak records and coordination can create legal liability in addition to environmental and health losses.",
+      "titleAr": "جماعات أهلية وسكان أصليون يقاضون رئيس إندونيسيا بسبب الاستجابة لحرائق الغابات",
+      "titleEn": "Indigenous and civil-society groups sue Indonesia’s president over wildfire response"
+    },
+    {
       "categoryAr": "الأنظمة الذاتية + البنية التحتية للطيران",
       "categoryEn": "Autonomous Systems + Aviation Infrastructure",
       "id": "luxembourg-airport-drone-shutdown-2026",
@@ -685,21 +699,7 @@
       "takeAr": "الدلالة للحكومات: تنتقل سياسة المعادن الحرجة من أهداف التنويع إلى الشراء المشترك والاحتياطيات المادية. ينبغي للحكومات تحديد الطلب الاستراتيجي، ووضع قواعد شفافة للسحب من المخزون، وتنسيق المشتريات مع الحلفاء لتجنب المنافسة السعرية، وفرض متطلبات للتتبع وإعادة التدوير حتى لا تنقل إجراءات المرونة مخاطر الإمداد إلى أماكن أخرى.",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com/world/china/eu-will-use-all-tools-cut-china-trade-deficit-von-der-leyen-says-2026-09-16/"
-    },
-    {
-      "id": "germany-market-incentives-winter-gas-storage-2026",
-      "publishedAt": "2026-09-16T05:04:00Z",
-      "categoryEn": "ENERGY SECURITY + MARKET DESIGN",
-      "categoryAr": "أمن الطاقة وتصميم السوق",
-      "titleEn": "Germany plans market incentives to strengthen winter gas storage without direct state purchases",
-      "titleAr": "ألمانيا تخطط لحوافز سوقية لتعزيز مخزونات الغاز الشتوية دون شراء حكومي مباشر",
-      "summaryEn": "Reuters reported, citing a government source, that German Economy Minister Katherina Reiche plans to expand an autumn tender for Long Term Options, enabling the national gas-market coordinator to secure trader commitments for potential future deliveries rather than having the state buy gas directly. The government has also agreed with state-owned Uniper and SEFE that they will use their storage capacity more fully. German storage sites were about 53% full in early September, their lowest level for that point in the year in 15 years, while the additional tender volume has not yet been determined.",
-      "summaryAr": "أفادت رويترز، نقلًا عن مصدر حكومي، بأن وزيرة الاقتصاد الألمانية كاترينا رايش تخطط لتوسيع مناقصة خريفية لعقود الخيارات طويلة الأجل، بما يمكّن منسق سوق الغاز الوطني من تأمين التزامات من المتداولين لتوريدات مستقبلية محتملة بدل شراء الدولة للغاز مباشرة. كما اتفقت الحكومة مع شركتي يونايبر وSEFE المملوكتين للدولة على استخدام قدراتهما التخزينية بصورة أكمل. وكانت مواقع التخزين الألمانية ممتلئة بنحو 53% في أوائل سبتمبر، وهو أدنى مستوى مسجل لهذا التوقيت منذ 15 عامًا، فيما لم يُحدد بعد حجم الزيادة في المناقصة.",
-      "takeEn": "Government implication: strategic energy reserves can be strengthened through contingent market instruments rather than immediate public purchases. Governments should define transparent tender triggers, availability and performance obligations, cold-weather stress tests, activation rules, consumer-cost limits and reporting requirements before scarcity forces expensive emergency intervention.",
-      "takeAr": "الدلالة للحكومات: يمكن تعزيز احتياطيات الطاقة الاستراتيجية عبر أدوات سوقية مشروطة بدل اللجوء فورًا إلى الشراء العام. ينبغي تحديد محفزات مناقصة شفافة، والتزامات الجاهزية والأداء، واختبارات ضغط للشتاء القارس، وقواعد التفعيل، وحدود التكلفة على المستهلكين، ومتطلبات الإفصاح قبل أن يفرض النقص تدخلًا طارئًا مرتفع التكلفة.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/business/energy/german-minister-plans-market-incentives-boost-gas-storage-source-says-2026-09-16/"
     }
   ],
-  "updatedAt": "2026-09-19T02:30:58.000Z"
+  "updatedAt": "2026-09-19T03:19:22.000Z"
 }
