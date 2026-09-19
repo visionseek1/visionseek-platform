@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "categoryAr": "أمن الطاقة + إصلاح دعم الوقود",
+      "categoryEn": "Energy Security + Fuel Subsidy Reform",
+      "id": "bolivia-diesel-subsidy-unified-pricing-2026",
+      "publishedAt": "2026-09-19T04:46:00Z",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com/business/energy/bolivia-scraps-diesel-subsidy-combat-fuel-shortages-2026-09-19/",
+      "summaryAr": "أنهى الرئيس البوليفي رودريغو باز دعم الدولة للديزل وأطلق نموذج تسعير موحدًا لمعالجة النقص المزمن في الوقود. تستورد بوليفيا نحو 90% من احتياجاتها من الديزل، وقال باز إن الحكومة كانت تنفق قرابة 55 مليون دولار أسبوعيًا على الدعم. سترتبط الأسعار المحلية بالمؤشرات العالمية، مع تحويلات نقدية مباشرة وخطوط ائتمان تفضيلية لتخفيف الأثر على الأسر والقطاعات الرئيسية.",
+      "summaryEn": "Bolivian President Rodrigo Paz ended state diesel subsidies and introduced a unified pricing model aimed at easing chronic fuel shortages. Bolivia imports roughly 90% of its diesel and, according to Paz, was spending about $55 million a week on subsidies. Domestic prices will track global benchmarks, while direct cash transfers and preferential credit lines are intended to cushion households and key sectors.",
+      "takeAr": "ينبغي للحكومات التي تصلح دعم الوقود أن تقرن تصحيح الأسعار بدعم موجّه ومحدد المدة، مع مراقبة شفافة للنقص والتهريب وأثر الإصلاح على الأسر. ويتطلب الانتقال العملي قواعد تلقائية لربط السعر بالمؤشرات، وحماية النقل الأساسي وسلاسل الغذاء، والإفصاح عن الوفورات المالية، ومحفزات تدخل إذا هددت صدمات الأسعار التضخم أو استمرارية الخدمات.",
+      "takeEn": "Governments reforming fuel subsidies should pair price normalization with targeted, time-bound support and transparent monitoring of shortages, smuggling and household impacts. A practical transition needs automatic benchmark rules, protection for essential transport and food supply chains, public reporting on fiscal savings, and contingency triggers if price shocks threaten inflation or service continuity.",
+      "titleAr": "بوليفيا تنهي دعم الديزل وتنتقل إلى تسعير موحد مرتبط بالسوق",
+      "titleEn": "Bolivia ends diesel subsidies and adopts unified market-linked pricing"
+    },
+    {
       "categoryAr": "أنظمة الدفاع الذاتية + المشتريات الاستراتيجية",
       "categoryEn": "Autonomous Defense Systems + Strategic Procurement",
       "id": "us-taiwan-anduril-autonomous-arms-delay-2026",
@@ -685,21 +699,7 @@
       "takeEn": "Government implication: grid plans can no longer treat data centres and electrification as isolated projects. Governments should combine industrial, digital and residential demand forecasts with transparent connection queues, staged transmission investment and capacity mechanisms that reward storage, flexibility and demand reduction, preventing grid constraints from becoming an investment bottleneck or an unfair burden on consumers.",
       "titleAr": "إسبانيا ترفع استثمارات شبكة الكهرباء إلى أكثر من 17 مليار يورو حتى 2030",
       "titleEn": "Spain lifts 2030 power-grid investment plan above €17 billion"
-    },
-    {
-      "id": "eu-frontier-ai-labs-risk-dialogue-2026",
-      "publishedAt": "2026-09-16T07:47:00Z",
-      "categoryEn": "AI GOVERNANCE + FRONTIER SAFETY",
-      "categoryAr": "حوكمة الذكاء الاصطناعي وسلامة النماذج المتقدمة",
-      "titleEn": "EU to convene frontier AI labs on pacing advanced-model risks",
-      "titleAr": "الاتحاد الأوروبي يجمع مختبرات الذكاء الاصطناعي المتقدمة لبحث ضبط مخاطر النماذج",
-      "summaryEn": "European Commission President Ursula von der Leyen said she will invite leading frontier AI laboratories to discuss how public policy can support industry efforts to pace the development of the most advanced models. She presented the initiative as part of Europe’s effort to shape global AI-risk governance using its recently adopted regulatory framework.",
-      "summaryAr": "قالت رئيسة المفوضية الأوروبية أورسولا فون دير لاين إنها ستدعو أبرز مختبرات الذكاء الاصطناعي المتقدمة لبحث كيفية دعم السياسة العامة لجهود القطاع في ضبط وتيرة تطوير أقوى النماذج. وقدمت المبادرة باعتبارها جزءًا من سعي أوروبا لتشكيل الحوكمة العالمية لمخاطر الذكاء الاصطناعي بالاستناد إلى إطارها التنظيمي المعتمد حديثًا.",
-      "takeEn": "Government implication: frontier-AI governance is moving toward structured regulator–developer coordination, not rules alone. Governments should establish formal engagement protocols, require comparable risk evidence and incident reporting, define escalation triggers for capability jumps, and preserve independent testing and enforcement so voluntary dialogue complements rather than substitutes for oversight.",
-      "takeAr": "الدلالة للحكومات: تتجه حوكمة الذكاء الاصطناعي المتقدم نحو تنسيق منظم بين الجهات التنظيمية والمطورين، لا الاكتفاء بالقواعد. ينبغي إنشاء بروتوكولات رسمية للحوار، وطلب أدلة مخاطر قابلة للمقارنة وتقارير عن الحوادث، وتحديد محفزات للتصعيد عند القفزات في القدرات، مع الحفاظ على الاختبارات المستقلة والإنفاذ حتى يكمّل الحوار الطوعي الرقابة بدل أن يحل محلها.",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com/world/eus-von-der-leyen-invite-frontier-labs-talks-tackling-ai-risks-2026-09-16/"
     }
   ],
-  "updatedAt": "2026-09-19T04:44:34.000Z"
+  "updatedAt": "2026-09-19T05:36:53.000Z"
 }
