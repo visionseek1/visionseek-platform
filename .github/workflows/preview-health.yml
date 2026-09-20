@@ -20,12 +20,21 @@ jobs:
         id: preview
         env:
           GH_TOKEN: ${{ github.token }}
+          PULL_REQUEST: ${{ github.event.pull_request.number }}
           REPOSITORY: ${{ github.repository }}
           SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           for attempt in {1..36}; do
-            preview_url="$(gh api "repos/$REPOSITORY/commits/$SHA/check-runs" --jq '.check_runs[] | select((.name | test("vercel"; "i")) and .conclusion == "success" and (.details_url != null)) | .details_url' | head -n1)"
-            if [ -n "$preview_url" ]; then
+            vercel_state="$(gh api "repos/$REPOSITORY/commits/$SHA/status" --jq '.statuses[] | select(.context == "Vercel") | .state' | head -n1)"
+            if [ "$vercel_state" = "failure" ] || [ "$vercel_state" = "error" ]; then
+              echo "The Vercel deployment failed." >&2
+              exit 1
+            fi
+
+            preview_url="$(gh api "repos/$REPOSITORY/issues/$PULL_REQUEST/comments" --jq '.[] | select(.user.login == "vercel[bot]") | .body' \
+              | sed -nE 's#.*\[Preview\]\((https://[^)]+\.vercel\.app)\).*#\1#p' \
+              | tail -n1)"
+            if [ "$vercel_state" = "success" ] && [ -n "$preview_url" ]; then
               echo "url=$preview_url" >> "$GITHUB_OUTPUT"
               exit 0
             fi
