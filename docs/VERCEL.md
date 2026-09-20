@@ -1,11 +1,13 @@
-# Vercel
+# Vercel preview deployment
 
-This repository is a vinext + Cloudflare Worker app (ChatGPT Sites lineage).
-It does not emit `.next`.
+This repository runs as a native Next.js App Router application on Vercel.
 
-If Vercel auto-detects Next.js, the deploy fails with:
-`The Next.js output directory ".next" was not found`.
+Set these environment variables in the Vercel project for Preview and Production
+before enabling any Supabase-backed feature:
 
-In the Vercel project: Framework Preset = Other. Do not use the Next.js preset.
-A green build still does not mean the Worker/D1 portal runtime is on Vercel.
-Production cutover stays a land decision, not a preset toggle.
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+Do not commit environment files or keys. The Vercel project must use the
+Next.js framework preset. Preview deployment is independent from the
+`visionseek.org` custom domain.
