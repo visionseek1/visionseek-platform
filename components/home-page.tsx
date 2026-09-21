@@ -103,6 +103,10 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
             <Image src="/field-food.jpg" alt="صوب زراعية حديثة من الجو" fill sizes="(max-width: 850px) 100vw, 34vw" />
             <div className="field-caption"><span>07</span><h3>{ar ? "الزراعة والغذاء المستدام" : "AGRICULTURE & SUSTAINABLE FOOD"}</h3></div>
           </article>
+          <article className="field-card field-chips">
+            <Image src="/field-chips.jpg" alt="رقائق إلكترونية ومواد متقدمة" fill sizes="(max-width: 850px) 100vw, 66vw" />
+            <div className="field-caption"><span>08</span><h3>{ar ? "الرقائق والمواد" : "CHIPS & MATERIALS"}</h3></div>
+          </article>
         </div>
       </section>
 
