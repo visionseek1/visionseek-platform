@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import "./home-w01-preview.css";
 
 export default function HomePage({ locale }: { locale: "ar" | "en" }) {
   const ar = locale === "ar";
