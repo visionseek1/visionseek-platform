@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteHeader from "@/components/site-header";
 
 const sources = [
   {
@@ -103,14 +104,16 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
   return (
     <main className={`report-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <header className="topbar insights-topbar">
-        <Link className="insights-wordmark" href={base || "/"}>VISIONSEEK</Link>
-        <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
-          <Link href={`${base}/insights`}>{ar ? "الرؤى" : "INSIGHTS"}</Link>
-          <Link className="language-link" href={ar ? "/insights/physical-ai" : "/ar/insights/physical-ai"}>{ar ? "EN" : "العربية"}</Link>
-          <span className="nav-node" aria-hidden="true" />
-        </nav>
-      </header>
+      <SiteHeader
+        locale={locale}
+        solid
+        languageHref={ar ? "/insights/physical-ai" : "/ar/insights/physical-ai"}
+        items={[
+          { href: ar ? "/ar/insights" : "/insights", label: ar ? "الرؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
+          { href: base || "/", label: ar ? "الرئيسية" : "HOME" },
+        ]}
+      />
 
       <article>
         <header className="report-header">

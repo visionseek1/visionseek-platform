@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import initialInsights from "@/public/insights.json";
+import SiteHeader from "@/components/site-header";
 
 type Insight = (typeof initialInsights.items)[number];
 type InsightsData = { updatedAt: string; items: Insight[] };
@@ -34,25 +35,30 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
     return () => controller.abort();
   }, []);
 
+  const signals = useMemo(
+    () => [...data.items].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).slice(0, 8),
+    [data.items],
+  );
+
   return (
     <main className={`insights-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
-      <header className="topbar insights-topbar">
-        <Link className="insights-wordmark" href={ar ? "/ar" : "/"}>VISIONSEEK</Link>
-        <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
-          <Link href={ar ? "/ar" : "/"}>{ar ? "الرئيسية" : "HOME"}</Link>
-          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المجالات" : "FIELDS"}</Link>
-          <Link className="language-link" href={ar ? "/insights" : "/ar/insights"}>{ar ? "EN" : "العربية"}</Link>
-          <span className="nav-node" aria-hidden="true" />
-        </nav>
-      </header>
+      <SiteHeader
+        locale={locale}
+        solid
+        languageHref={ar ? "/insights" : "/ar/insights"}
+        items={[
+          { href: ar ? "/ar" : "/", label: ar ? "الرئيسية" : "HOME" },
+          { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
+        ]}
+      />
 
       <section className="insights-hero">
         <p>VISIONSEEK / {ar ? "رؤى للحكومات" : "GOVERNMENT INSIGHTS"}</p>
         <h1>{ar ? <>قرارات اليوم.<br />قدرات الغد.</> : <>TODAY&apos;S DECISIONS.<br />TOMORROW&apos;S CAPABILITIES.</>}</h1>
         <div className="insights-deck">
           {ar
-            ? "إحاطات وإشارات لصُنّاع القرار. تربط تحولات التكنولوجيا والعلم والصناعة بالسياسة والاستثمار والقدرة الوطنية."
-            : "Briefings and signals for public leaders. They connect shifts in technology, science, and industry to policy, investment, and national capability."}
+            ? "إحاطة واحدة، ثم أحدث الإشارات. للقراءة كمستشعر، لا كتعريف بالمؤسسة."
+            : "One brief, then the latest signals. Read this page as a sensor, not as a definition of the institution."}
         </div>
         <p className="insights-role">
           {ar ? (
@@ -79,9 +85,9 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
 
       <section className="insights-stream" aria-live="polite">
         <div className="stream-status">
-          <span className="live-dot" /> {ar ? "إشارات — ليست المنتج" : "SIGNALS — NOT THE PRODUCT"}
+          <span className="live-dot" /> {ar ? `آخر ${signals.length} إشارات` : `LATEST ${signals.length} SIGNALS`}
         </div>
-        {data.items.map((item, index) => {
+        {signals.map((item, index) => {
           const sourceUrl = safeSourceUrl(item.sourceUrl);
           return (
             <article className="insight-entry" key={item.id}>

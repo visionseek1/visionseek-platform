@@ -3,7 +3,7 @@ import ProjectsPage from "@/components/projects-page";
 
 export const metadata: Metadata = {
   title: "Fields We Explore | VisionSeek",
-  description: "Fields VisionSeek is exploring across aerospace, drones, cities, health, energy, robotics, and food. Not a list of delivered projects.",
+  description: "Seven fields VisionSeek is watching. No announced venture.",
   alternates: {
     canonical: "/projects",
     languages: { en: "/projects", ar: "/ar/projects" },

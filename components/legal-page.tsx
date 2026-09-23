@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "@/components/site-header";
 
 type LegalKind = "privacy" | "terms";
 
@@ -11,20 +11,15 @@ export default function LegalPage({ locale, kind }: { locale: "ar" | "en"; kind:
 
   return (
     <main className={`legal-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
-      <header className="topbar">
-        <Link className="logo" href={home} aria-label="VisionSeek home">
-          <Image src="/visionseek-logo-v2.png" alt="VisionSeek" width={1920} height={440} priority />
-        </Link>
-        <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
-          <Link href={home}>{ar ? "الرئيسية" : "HOME"}</Link>
-          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المجالات" : "FIELDS"}</Link>
-          <Link href={ar ? "/ar/insights" : "/insights"}>{ar ? "رؤى" : "INSIGHTS"}</Link>
-          <Link className="language-link" href={kind === "privacy" ? (ar ? "/privacy" : "/ar/privacy") : (ar ? "/terms" : "/ar/terms")}>
-            {ar ? "EN" : "العربية"}
-          </Link>
-          <span className="nav-node" aria-hidden="true" />
-        </nav>
-      </header>
+      <SiteHeader
+        locale={locale}
+        languageHref={kind === "privacy" ? (ar ? "/privacy" : "/ar/privacy") : (ar ? "/terms" : "/ar/terms")}
+        items={[
+          { href: home, label: ar ? "الرئيسية" : "HOME" },
+          { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
+          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
+        ]}
+      />
 
       <article className="legal-wrap">
         <p className="legal-kicker">VISIONSEEK / {kind === "privacy" ? (ar ? "الخصوصية" : "PRIVACY") : (ar ? "الشروط" : "TERMS")}</p>

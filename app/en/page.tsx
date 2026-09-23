@@ -3,7 +3,7 @@ import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
   title: "VisionSeek | Future Technology, Science & Venture Building",
-  description: "VisionSeek brings together technology, science, design, and entrepreneurship to turn emerging possibilities into scalable projects, products, and systems.",
+  description: "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
   alternates: {
     canonical: "/",
     languages: { en: "/", ar: "/ar" },

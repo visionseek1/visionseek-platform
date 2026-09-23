@@ -26,9 +26,13 @@ main { overflow:hidden; background:var(--black); }
 .logo,nav { pointer-events:auto; }
 .logo { width:13rem; height:3rem; position:relative; }
 .logo img { width:100%; height:100%; object-fit:contain; object-position:left center; }
-nav { display:flex; align-items:center; gap:1.6rem; font-family:Arial,sans-serif; font-size:.68rem; font-weight:800; letter-spacing:.04em; }
-nav a { opacity:.86; transition:opacity .2s ease; }
-nav a:hover { opacity:.45; }
+.desktop-nav { pointer-events:auto; display:flex; align-items:center; gap:1.6rem; font-family:Arial,sans-serif; font-size:.68rem; font-weight:800; letter-spacing:.04em; }
+.desktop-nav a { opacity:.86; transition:opacity .2s ease; }
+.desktop-nav a:hover { opacity:.45; }
+.nav-drawer { display:none; }
+.nav-drawer summary { list-style:none; cursor:pointer; color:var(--lime); font:800 .68rem Arial,sans-serif; letter-spacing:.14em; }
+.nav-drawer summary::-webkit-details-marker { display:none; }
+#vision,#founder,#contact,#fields,#top { scroll-margin-top:7.5rem; }
 .nav-node { width:.65rem; height:.65rem; border-radius:50%; background:var(--lime); box-shadow:0 0 0 .55rem rgba(207,255,0,.08); }
 
 .hero { min-height:120vh; position:relative; padding:12rem clamp(1.5rem,7vw,7rem) 9rem; }
@@ -126,7 +130,7 @@ nav a:hover { opacity:.45; }
 .founder-portrait span { position:absolute; z-index:2; right:-1px; bottom:-1px; width:24%; aspect-ratio:1; background:var(--lime); mix-blend-mode:screen; opacity:.88; }
 .founder-copy { position:relative; z-index:2; direction:ltr; }
 .founder-copy h2 { margin:0; font-size:clamp(3.3rem,6vw,6.7rem); line-height:1; font-weight:590; letter-spacing:-.05em; }
-.founder-role { margin:1.5rem 0 4rem; color:var(--lime); font-size:.72rem; letter-spacing:.14em; font-weight:850; }
+.founder-role { margin:1.2rem 0 2.5rem; color:var(--lime); font-size:.72rem; letter-spacing:.14em; font-weight:850; }
 .founder-bio { margin:0; max-width:46rem; color:rgba(255,255,255,.79); font-size:clamp(1.2rem,1.8vw,1.7rem); line-height:1.85; }
 .founder-name-ar { margin:.9rem 0 0; color:rgba(255,255,255,.68); font-size:1.1rem; }
 .founder-bio-ar { max-width:42rem; margin:1.5rem 0 0 auto; }
@@ -242,8 +246,12 @@ footer { min-height:8rem; padding:2.5rem clamp(1.5rem,5vw,5rem); display:flex; a
 .report-page.locale-ar .report-header h1{max-width:70rem;font-size:clamp(3rem,6.3vw,6.6rem);line-height:1.2;letter-spacing:-.035em}
 
 @media(max-width:850px){
-  .topbar{height:5.5rem}.logo{width:10rem;height:3.2rem}.topbar nav{gap:1rem}.topbar nav a{display:none}
-  .topbar nav .language-link{display:block}
+  .topbar{height:5.5rem}.logo{width:10rem;height:3.2rem}
+  .desktop-nav{display:none}
+  .nav-drawer{display:block;pointer-events:auto}
+  .nav-panel{position:fixed;z-index:40;top:5.5rem;right:0;left:0;display:flex;flex-direction:column;padding:.4rem 1.5rem 1.1rem;background:#070908;border-bottom:1px solid rgba(255,255,255,.14)}
+  .nav-panel a{display:flex;align-items:center;min-height:3rem;opacity:1;font:750 .92rem Arial,sans-serif;letter-spacing:.08em;border-top:1px solid rgba(255,255,255,.08)}
+  .nav-panel a:hover{opacity:1;color:var(--lime)}
   .hero{
     min-height:auto;
     display:flex;
