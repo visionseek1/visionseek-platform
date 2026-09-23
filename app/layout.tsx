@@ -48,8 +48,12 @@ export const metadata: Metadata = {
   description:
     "VisionSeek brings together technology, science, design, and entrepreneurship to turn emerging possibilities into scalable projects, products, and systems.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   alternates: {
     canonical: "/",

@@ -10,7 +10,7 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
           <Image src="/visionseek-logo-v2.png" alt="VisionSeek" width={1920} height={440} priority />
         </a>
         <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
-          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المشروعات" : "PROJECTS"}</Link>
+          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المجالات" : "FIELDS"}</Link>
           <Link href={ar ? "/ar/insights" : "/insights"}>{ar ? "رؤى" : "INSIGHTS"}</Link>
           <a href="#vision">{ar ? "الرؤية" : "VISION"}</a>
           <a href="#founder">{ar ? "المؤسس" : "FOUNDER"}</a>
@@ -164,6 +164,10 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
       <footer>
         <div className="footer-logo" aria-hidden="true" />
         <span>VISIONSEEK</span>
+        <nav className="footer-legal" aria-label={ar ? "روابط قانونية" : "Legal"}>
+          <Link href={ar ? "/ar/privacy" : "/privacy"}>{ar ? "الخصوصية" : "PRIVACY"}</Link>
+          <Link href={ar ? "/ar/terms" : "/terms"}>{ar ? "الشروط" : "TERMS"}</Link>
+        </nav>
       </footer>
     </main>
   );

@@ -11,6 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/insights", priority: 0.85 },
     { path: "/insights/physical-ai", priority: 0.8 },
     { path: "/ar/insights/physical-ai", priority: 0.8 },
+    { path: "/privacy", priority: 0.3 },
+    { path: "/ar/privacy", priority: 0.3 },
+    { path: "/terms", priority: 0.3 },
+    { path: "/ar/terms", priority: 0.3 },
   ];
 
   return entries.map(({ path, priority }) => ({
