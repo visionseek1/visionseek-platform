@@ -29,7 +29,7 @@ const topics = [
 ];
 
 const topicArabic: Record<string, string> = {
-  "All Projects": "كل المشروعات",
+  "All Projects": "كل المجالات",
   "Space + Aerospace": "الفضاء والطيران",
   "Computing + AI": "الحوسبة والذكاء الاصطناعي",
   Connectivity: "الاتصال",
@@ -45,10 +45,10 @@ const topicArabic: Record<string, string> = {
 export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
   const ar = locale === "ar";
   const [topic, setTopic] = useState("All Projects");
-  const [status, setStatus] = useState("Current");
+  const [status, setStatus] = useState("Exploring");
 
   const visibleProjects = useMemo(() => {
-    if (status === "Graduated") return [];
+    if (status === "Announced") return [];
     if (topic === "All Projects") return projects;
     return projects.filter((project) => project.topics.includes(topic));
   }, [status, topic]);
@@ -71,28 +71,28 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
       </header>
 
       <section className="projects-hero">
-        <p className="projects-kicker">VISIONSEEK / {ar ? "المشروعات" : "PROJECTS"}</p>
-        <h1>{ar ? "المشروعات" : "Projects"}</h1>
+        <p className="projects-kicker">VISIONSEEK / {ar ? "المجالات" : "FIELDS"}</p>
+        <h1>{ar ? "المجالات" : "Fields"}</h1>
         <div className="projects-intro single-language">
-          <p>{ar ? "مجالات نعمل على استكشافها الآن وتحويل الإمكانات داخلها إلى مبادرات ومشروعات قابلة للنمو." : "Explore the fields we are working in now — and the ideas we are developing into scalable ventures."}</p>
+          <p>{ar ? "مجالات نستكشفها الآن. هذه ليست مشروعات مُسلَّمة، ولا ادعاءً بأن العمل اكتمل." : "Fields we are exploring. These are not delivered projects, and not a claim that the work is finished."}</p>
         </div>
       </section>
 
       <section className="projects-index">
-        <aside className="project-filters" aria-label={ar ? "مرشحات المشروعات" : "Project filters"}>
+        <aside className="project-filters" aria-label={ar ? "مرشحات المجالات" : "Field filters"}>
           <div className="filter-block">
-            <h2>{ar ? "كل المشروعات" : "All Projects"}</h2>
-            <button className={topic === "All Projects" ? "active" : ""} onClick={() => setTopic("All Projects")}>{ar ? "كل المشروعات" : "All Projects"}</button>
+            <h2>{ar ? "المجالات" : "Fields"}</h2>
+            <button className={topic === "All Projects" ? "active" : ""} onClick={() => setTopic("All Projects")}>{ar ? "كل المجالات" : "All fields"}</button>
           </div>
           <div className="filter-block">
             <h2>{ar ? "الحالة" : "Status"}</h2>
-            <button className={status === "Current" ? "active" : ""} onClick={() => setStatus("Current")}>{ar ? "حالية" : "Current"}</button>
-            <button className={status === "Graduated" ? "active" : ""} onClick={() => setStatus("Graduated")}>{ar ? "متخرجة" : "Graduated"}</button>
+            <button className={status === "Exploring" ? "active" : ""} onClick={() => setStatus("Exploring")}>{ar ? "قيد الاستكشاف" : "Exploring"}</button>
+            <button className={status === "Announced" ? "active" : ""} onClick={() => setStatus("Announced")}>{ar ? "مُعلن" : "Announced"}</button>
           </div>
           <div className="filter-block">
             <h2>{ar ? "المجال" : "Topic"}</h2>
             {topics.slice(1).map((item) => (
-              <button key={item} className={topic === item ? "active" : ""} onClick={() => { setTopic(item); setStatus("Current"); }}>
+              <button key={item} className={topic === item ? "active" : ""} onClick={() => { setTopic(item); setStatus("Exploring"); }}>
                 {ar ? topicArabic[item] : item}
               </button>
             ))}
@@ -106,7 +106,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
                 <Image src={project.image} alt={ar ? project.title : project.english} fill sizes="(max-width: 850px) 100vw, 58vw" />
               </div>
               <div className="project-meta">
-                <span>{String(index + 1).padStart(2, "0")} / {ar ? "حالي" : "CURRENT"}</span>
+                <span>{String(index + 1).padStart(2, "0")} / {ar ? "مجال" : "FIELD"}</span>
                 <h2>{ar ? project.title : project.english}</h2>
                 <p>{ar ? project.description : project.englishDescription}</p>
                 <small>{project.topics.map((item) => ar ? topicArabic[item] : item).join(" · ")}</small>
@@ -114,9 +114,9 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
             </article>
           )) : (
             <div className="projects-empty">
-              <span>{ar ? "متخرجة" : "GRADUATED"}</span>
-              <h2>{ar ? "لا توجد مشروعات متخرجة نعلن عنها حتى الآن." : "Nothing announced here yet."}</h2>
-              <p>{ar ? "نحن نبني بعناية." : "We are building carefully."}</p>
+              <span>{ar ? "مُعلن" : "ANNOUNCED"}</span>
+              <h2>{ar ? "لا توجد مشروعات مُعلنة حتى الآن." : "No announced ventures yet."}</h2>
+              <p>{ar ? "هذه الصفحة تعرض مجالات الاستكشاف، لا تسليمًا مكتملًا." : "This page lists fields of exploration, not completed delivery."}</p>
             </div>
           )}
         </div>
@@ -125,6 +125,10 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
       <section className="projects-contact">
         <p>{ar ? "هل ترى فرصة يمكن أن نبنيها معًا؟" : "Do you see an opportunity we can build together?"}</p>
         <a href="mailto:abdelalim@visionseek.org">{ar ? "ابدأ محادثة" : "START A CONVERSATION"} <span>↗</span></a>
+        <nav className="footer-legal" aria-label={ar ? "روابط قانونية" : "Legal"}>
+          <Link href={ar ? "/ar/privacy" : "/privacy"}>{ar ? "الخصوصية" : "PRIVACY"}</Link>
+          <Link href={ar ? "/ar/terms" : "/terms"}>{ar ? "الشروط" : "TERMS"}</Link>
+        </nav>
       </section>
     </main>
   );

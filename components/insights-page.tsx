@@ -40,7 +40,7 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
         <Link className="insights-wordmark" href={ar ? "/ar" : "/"}>VISIONSEEK</Link>
         <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
           <Link href={ar ? "/ar" : "/"}>{ar ? "الرئيسية" : "HOME"}</Link>
-          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المشروعات" : "PROJECTS"}</Link>
+          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المجالات" : "FIELDS"}</Link>
           <Link className="language-link" href={ar ? "/insights" : "/ar/insights"}>{ar ? "EN" : "العربية"}</Link>
           <span className="nav-node" aria-hidden="true" />
         </nav>
@@ -51,9 +51,16 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
         <h1>{ar ? <>قرارات اليوم.<br />قدرات الغد.</> : <>TODAY&apos;S DECISIONS.<br />TOMORROW&apos;S CAPABILITIES.</>}</h1>
         <div className="insights-deck">
           {ar
-            ? "إحاطات أصلية لصُنّاع القرار تربط التحولات في التكنولوجيا والعلم والصناعة بالسياسات والاستثمار والقدرة الوطنية."
-            : "Original briefings for public leaders, connecting shifts in technology, science, and industry to policy, investment, and national capability."}
+            ? "إحاطات وإشارات لصُنّاع القرار. تربط تحولات التكنولوجيا والعلم والصناعة بالسياسة والاستثمار والقدرة الوطنية."
+            : "Briefings and signals for public leaders. They connect shifts in technology, science, and industry to policy, investment, and national capability."}
         </div>
+        <p className="insights-role">
+          {ar ? (
+            <>هذه الصفحة مستشعر، وليست المؤسسة. VisionSeek هي وصل القدرات في بنية حقيقية — تقنية، أو مشروع، أو نظام، أو برنامج. <Link href="/ar#vision">الرؤية</Link></>
+          ) : (
+            <>This page is a sensor, not the institution. VisionSeek is the work of connecting capabilities into a real structure — a technology, venture, system, or program. <Link href="/#vision">The vision</Link></>
+          )}
+        </p>
       </section>
 
       <section className="featured-report">
@@ -72,7 +79,7 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
 
       <section className="insights-stream" aria-live="polite">
         <div className="stream-status">
-          <span className="live-dot" /> {ar ? "إشارات لصُنّاع القرار" : "SIGNALS FOR PUBLIC LEADERS"}
+          <span className="live-dot" /> {ar ? "إشارات — ليست المنتج" : "SIGNALS — NOT THE PRODUCT"}
         </div>
         {data.items.map((item, index) => {
           const sourceUrl = safeSourceUrl(item.sourceUrl);
@@ -96,6 +103,10 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
 
       <footer className="insights-footer">
         <span>VISIONSEEK</span>
+        <nav className="footer-legal" aria-label={ar ? "روابط قانونية" : "Legal"}>
+          <Link href={ar ? "/ar/privacy" : "/privacy"}>{ar ? "الخصوصية" : "PRIVACY"}</Link>
+          <Link href={ar ? "/ar/terms" : "/terms"}>{ar ? "الشروط" : "TERMS"}</Link>
+        </nav>
         <small>{ar ? "إنتشون، كوريا الجنوبية" : "INCHEON, SOUTH KOREA"}</small>
       </footer>
     </main>

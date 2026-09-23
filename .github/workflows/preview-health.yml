@@ -47,13 +47,27 @@ jobs:
           PREVIEW_URL: ${{ steps.preview.outputs.url }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: |
+          probe() {
+            local route="$1"
+            local header=()
+            if [ -n "$VERCEL_AUTOMATION_BYPASS_SECRET" ]; then
+              header=(--header "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET")
+            fi
+            curl --silent --show-error --location --max-time 20 --output /dev/null --write-out "%{http_code}" \
+              "${header[@]}" \
+              "$PREVIEW_URL$route"
+          }
           if [ -z "$VERCEL_AUTOMATION_BYPASS_SECRET" ]; then
-            echo "The VERCEL_AUTOMATION_BYPASS_SECRET GitHub Actions secret is not configured." >&2
-            exit 1
+            echo "VERCEL_AUTOMATION_BYPASS_SECRET is not configured. Probes accept a protection redirect until that secret exists." >&2
           fi
-          for route in / /ar /en /projects /insights /insights/physical-ai /ar/projects /ar/insights /ar/insights/physical-ai /room; do
-            status="$(curl --fail --silent --show-error --location --max-time 20 --output /dev/null --write-out "%{http_code}" \
-              --header "x-vercel-protection-bypass: $VERCEL_AUTOMATION_BYPASS_SECRET" \
-              "$PREVIEW_URL$route")"
-            [ "$status" = "200" ]
+          for route in / /ar /en /projects /insights /insights/physical-ai /ar/projects /ar/insights /ar/insights/physical-ai /privacy /terms /ar/privacy /ar/terms /favicon.ico /room; do
+            status="$(probe "$route")"
+            if [ -n "$VERCEL_AUTOMATION_BYPASS_SECRET" ]; then
+              [ "$status" = "200" ]
+            else
+              case "$status" in
+                200|302|307) ;;
+                *) echo "$route returned $status" >&2; exit 1 ;;
+              esac
+            fi
           done

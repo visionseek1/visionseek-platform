@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import ProjectsPage from "@/components/projects-page";
 
 export const metadata: Metadata = {
-  title: "Future Technology & Innovation Projects | VisionSeek",
-  description: "Explore VisionSeek projects across aerospace, drones, AI, robotics, future cities, health, climate, energy, and sustainable agriculture.",
+  title: "Fields We Explore | VisionSeek",
+  description: "Fields VisionSeek is exploring across aerospace, drones, cities, health, energy, robotics, and food. Not a list of delivered projects.",
   alternates: {
     canonical: "/projects",
     languages: { en: "/projects", ar: "/ar/projects" },
