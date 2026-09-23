@@ -11,7 +11,7 @@ const structuredData = {
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-v2.png",
       description:
-        "A future-building institution combining technology, science, design, and entrepreneurship to create scalable products, ventures, and systems.",
+        "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
       email: "abdelalim@visionseek.org",
       telephone: "+82-10-4241-9606",
       address: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
   title: "VisionSeek | Future Technology, Science & Venture Building",
   description:
-    "VisionSeek brings together technology, science, design, and entrepreneurship to turn emerging possibilities into scalable projects, products, and systems.",
+    "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     siteName: "VisionSeek",
     title: "VisionSeek | Future Technology, Science & Venture Building",
     description:
-      "VisionSeek brings together technology, science, design, and entrepreneurship to turn emerging possibilities into scalable projects, products, and systems.",
+      "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
     url: "/",
     images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — We Build What Comes Next" }],
   },

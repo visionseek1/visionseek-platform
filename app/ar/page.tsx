@@ -3,7 +3,7 @@ import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
   title: "VisionSeek | بناء المستقبل بالتكنولوجيا والعلم وريادة الأعمال",
-  description: "VisionSeek مؤسسة عالمية في إنتشون تجمع التكنولوجيا والعلم والتصميم وريادة الأعمال لبناء مشروعات ومنتجات وأنظمة مستقبلية قابلة للتوسع.",
+  description: "تربط VisionSeek قدرات موجودة بالفعل في عمل تستطيع حكومة أو شركة أن تديره. إنتشون، كوريا الجنوبية.",
   alternates: {
     canonical: "/ar",
     languages: { en: "/", ar: "/ar" },

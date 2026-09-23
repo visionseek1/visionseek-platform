@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import SiteHeader from "@/components/site-header";
 
 const projects = [
   { id: "space", title: "الفضاء والصواريخ", english: "Space & Aerospace", description: "أنظمة وتقنيات تفتح فرصًا جديدة في الفضاء والطيران.", englishDescription: "Systems and technologies opening new possibilities across space and aerospace.", topics: ["Space + Aerospace"], image: "/field-space.jpg" },
@@ -55,26 +56,23 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
 
   return (
     <main className={`projects-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
-      <header className="topbar">
-        <Link className="logo" href={ar ? "/ar" : "/"} aria-label="VisionSeek home">
-          <Image src="/visionseek-logo-v2.png" alt="VisionSeek" width={1920} height={440} priority />
-        </Link>
-        <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
-          <Link href={ar ? "/ar" : "/"}>{ar ? "الرئيسية" : "HOME"}</Link>
-          <Link href={ar ? "/ar/insights" : "/insights"}>{ar ? "رؤى" : "INSIGHTS"}</Link>
-          <Link href={ar ? "/ar#vision" : "/#vision"}>{ar ? "الرؤية" : "VISION"}</Link>
-          <Link href={ar ? "/ar#founder" : "/#founder"}>{ar ? "المؤسس" : "FOUNDER"}</Link>
-          <Link href={ar ? "/ar#contact" : "/#contact"}>{ar ? "تواصل" : "CONTACT"}</Link>
-          <Link className="language-link" href={ar ? "/projects" : "/ar/projects"}>{ar ? "EN" : "العربية"}</Link>
-          <span className="nav-node" aria-hidden="true" />
-        </nav>
-      </header>
+      <SiteHeader
+        locale={locale}
+        languageHref={ar ? "/projects" : "/ar/projects"}
+        items={[
+          { href: ar ? "/ar" : "/", label: ar ? "الرئيسية" : "HOME" },
+          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
+          { href: ar ? "/ar#vision" : "/#vision", label: ar ? "الرؤية" : "VISION" },
+          { href: ar ? "/ar#founder" : "/#founder", label: ar ? "المؤسس" : "FOUNDER" },
+          { href: ar ? "/ar#contact" : "/#contact", label: ar ? "تواصل" : "CONTACT" },
+        ]}
+      />
 
       <section className="projects-hero">
         <p className="projects-kicker">VISIONSEEK / {ar ? "المجالات" : "FIELDS"}</p>
         <h1>{ar ? "المجالات" : "Fields"}</h1>
         <div className="projects-intro single-language">
-          <p>{ar ? "مجالات نستكشفها الآن. هذه ليست مشروعات مُسلَّمة، ولا ادعاءً بأن العمل اكتمل." : "Fields we are exploring. These are not delivered projects, and not a claim that the work is finished."}</p>
+          <p>{ar ? "سبعة مجالات ننظر إليها. لا يوجد على هذه الصفحة مشروع مُعلن." : "Seven fields we are watching. No announced venture."}</p>
         </div>
       </section>
 

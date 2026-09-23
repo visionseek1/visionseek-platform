@@ -1,24 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "@/components/site-header";
 
 export default function HomePage({ locale }: { locale: "ar" | "en" }) {
   const ar = locale === "ar";
   return (
     <main className={ar ? "locale-ar" : "locale-en"} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
-      <header className="topbar">
-        <a className="logo" href="#top" aria-label="VisionSeek home">
-          <Image src="/visionseek-logo-v2.png" alt="VisionSeek" width={1920} height={440} priority />
-        </a>
-        <nav aria-label={ar ? "التنقل الرئيسي" : "Primary navigation"}>
-          <Link href={ar ? "/ar/projects" : "/projects"}>{ar ? "المجالات" : "FIELDS"}</Link>
-          <Link href={ar ? "/ar/insights" : "/insights"}>{ar ? "رؤى" : "INSIGHTS"}</Link>
-          <a href="#vision">{ar ? "الرؤية" : "VISION"}</a>
-          <a href="#founder">{ar ? "المؤسس" : "FOUNDER"}</a>
-          <a href="#contact">{ar ? "تواصل" : "CONTACT"}</a>
-          <Link className="language-link" href={ar ? "/" : "/ar"}>{ar ? "EN" : "العربية"}</Link>
-          <span className="nav-node" aria-hidden="true" />
-        </nav>
-      </header>
+      <SiteHeader
+        locale={locale}
+        languageHref={ar ? "/" : "/ar"}
+        items={[
+          { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
+          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
+          { href: "#vision", label: ar ? "الرؤية" : "VISION" },
+          { href: "#founder", label: ar ? "المؤسس" : "FOUNDER" },
+          { href: "#contact", label: ar ? "تواصل" : "CONTACT" },
+        ]}
+      />
 
       <section className="hero" id="top">
         <div className="brand-mark" aria-hidden="true">
@@ -33,8 +31,8 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
           </div>
           <p className={ar ? "intro-copy primary-ar" : "intro-copy primary-en"}>
             {ar
-              ? <>تجمع VisionSeek بين التكنولوجيا والعلم والتصميم وريادة الأعمال لتحويل الإمكانات الجديدة إلى مشروعات ومنتجات وأنظمة قابلة للتنفيذ والتوسع.</>
-              : <>VisionSeek brings together technology, science, design, and entrepreneurship to turn emerging possibilities into scalable projects, products, and systems.</>}
+              ? <>تربط VisionSeek قدرات موجودة بالفعل — تكنولوجيا، وعلمًا، وتصميمًا، ومن يستطيع تشغيلها — في عمل تستطيع حكومة أو شركة أن تديره.</>
+              : <>VisionSeek connects capabilities that already exist — technology, science, design, and the people who can run them — into work a government or a company can actually operate.</>}
           </p>
         </div>
 
@@ -51,7 +49,6 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
       <section className="vision" id="vision">
         <div className="section-code">01 / {ar ? "رؤيتنا" : "OUR VISION"}</div>
         <div className="section-copy">
-          <p className={ar ? "arabic-label" : "section-label-en"}>{ar ? "رؤيتنا" : "OUR VISION"}</p>
           <h2 className={ar ? "primary-ar" : "primary-en"}>
             {ar
               ? <>أن نصبح مؤسسة عالمية تساعد الحكومات والشركات والقادة على اكتشاف فرص المستقبل وبناء القدرات اللازمة للاستفادة منها.</>
@@ -70,7 +67,6 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
       <section className="fields" id="fields">
         <div className="section-code">02 / {ar ? "مجالات نستكشفها" : "FIELDS WE EXPLORE"}</div>
         <div className="fields-heading">
-          <p className={ar ? "arabic-label" : "section-label-en"}>{ar ? "مساحات نبحث فيها" : "FIELDS WE EXPLORE"}</p>
           <h2 className={ar ? "primary-ar" : "primary-en"}>{ar ? "نبحث حيث يمكن للأفكار الجديدة أن تعيد تشكيل حياة الإنسان." : "We explore where new ideas can reshape human life."}</h2>
         </div>
 
@@ -113,7 +109,6 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
           <span aria-hidden="true" />
         </div>
         <div className="founder-copy">
-          <p className={ar ? "arabic-label" : "section-label-en"}>{ar ? "خلف الرؤية" : "BEHIND THE VISION"}</p>
           <h2 className={ar ? "primary-ar" : "primary-en"}>{ar ? "أحمد عبدالعليم" : "Ahmed Abdelalim"}</h2>
           <p className="founder-role">{ar ? "المؤسس · VISIONSEEK" : "FOUNDER · VISIONSEEK"}</p>
           <p className={ar ? "founder-bio primary-ar" : "founder-bio primary-en"}>
@@ -135,7 +130,6 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
       <section className="contact" id="contact">
         <div className="section-code">04 / {ar ? "ابدأ محادثة" : "START A CONVERSATION"}</div>
         <div className="contact-heading">
-          <p className={ar ? "arabic-label" : "section-label-en"}>{ar ? "تواصل معنا" : "START A CONVERSATION"}</p>
           <h2 className={ar ? "primary-ar" : "primary-en"}>{ar ? <>دعنا نبني<br />ما هو قادم.</> : <>LET&apos;S BUILD<br />WHAT COMES NEXT.</>}</h2>
         </div>
 
