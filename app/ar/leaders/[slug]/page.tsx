@@ -13,11 +13,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { slug } = await params;
   const entry = getBrief(slug);
-  const enPath = `/brief/${slug}`;
-  const arPath = `/ar/brief/${slug}`;
+  const enPath = `/leaders/${slug}`;
+  const arPath = `/ar/leaders/${slug}`;
   return {
-    title: entry ? `${entry.title.ar} | VisionSeek` : "إحاطة | VisionSeek",
-    description: entry?.summary.ar ?? "إشارات وإحاطات. قراءة عامة.",
+    title: entry ? `${entry.title.ar} | VisionSeek` : "بيت القادة | VisionSeek",
+    description: entry?.summary.ar ?? "قراءة عامة للقادة.",
     alternates: { canonical: arPath, languages: { en: enPath, ar: arPath } },
   };
 }

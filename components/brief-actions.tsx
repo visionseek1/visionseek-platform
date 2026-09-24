@@ -1,35 +1,28 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useSyncExternalStore } from "react";
 import { readSavedIds, readSavedServer, subscribeSaved, writeSavedIds, type Locale } from "@/lib/brief";
-
-function subscribeShare() {
-  return () => undefined;
-}
-
-function shareSupported() {
-  return typeof navigator.share === "function";
-}
 
 export default function BriefActions({
   locale,
   slug,
   path,
-  title,
-  compact = false,
+  readHref,
+  showRead = false,
+  onRead,
 }: {
   locale: Locale;
   slug: string;
   path: string;
-  title: string;
-  compact?: boolean;
+  readHref?: string;
+  showRead?: boolean;
+  onRead?: () => void;
 }) {
   const ar = locale === "ar";
   const [copied, setCopied] = useState<"idle" | "done" | "failed">("idle");
-  const canShare = useSyncExternalStore(subscribeShare, shareSupported, () => false);
   const savedIds = useSyncExternalStore(subscribeSaved, readSavedIds, readSavedServer);
   const isSaved = savedIds.includes(slug);
-  const canonicalUrl = `https://visionseek.org${path}`;
 
   function toggleSave() {
     const current = readSavedIds();
@@ -42,36 +35,36 @@ export default function BriefActions({
     try {
       await navigator.clipboard.writeText(pageUrl);
       setCopied("done");
+      return;
+    } catch {
+      /* Clipboard permission can be denied. Fall back to a selection copy. */
+    }
+    try {
+      const input = document.createElement("textarea");
+      input.value = pageUrl;
+      input.setAttribute("readonly", "");
+      input.style.position = "fixed";
+      input.style.opacity = "0";
+      document.body.appendChild(input);
+      input.select();
+      const ok = document.execCommand("copy");
+      input.remove();
+      setCopied(ok ? "done" : "failed");
     } catch {
       setCopied("failed");
     }
   }
 
-  async function shareDevice() {
-    const pageUrl = new URL(path, window.location.origin).toString();
-    try {
-      await navigator.share({ title, url: pageUrl });
-    } catch {
-      /* The share sheet was dismissed or is unavailable. */
-    }
-  }
-
-  const linkedIn = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonicalUrl)}`;
-  const copyLabel = copied === "done" ? (ar ? "تم نسخ الرابط" : "Link copied") : copied === "failed" ? (ar ? "تعذر النسخ" : "Copy failed") : (ar ? "نسخ الرابط" : "Copy link");
+  const copyLabel = copied === "done" ? (ar ? "تم نسخ الرابط" : "Link copied") : copied === "failed" ? (ar ? "تعذر النسخ" : "Copy failed") : (ar ? "مشاركة" : "Share");
 
   return (
-    <div className={`brief-actions ${compact ? "is-compact" : ""}`}>
+    <div className="brief-actions">
+      {showRead && readHref ? <Link href={readHref} onClick={onRead}>{ar ? "قراءة المزيد" : "Read more"}</Link> : null}
       <button type="button" aria-pressed={isSaved} onClick={toggleSave}>
         {isSaved ? (ar ? "محفوظ" : "Saved") : (ar ? "حفظ" : "Save")}
       </button>
-      <details>
-        <summary>{ar ? "مشاركة" : "Share"}</summary>
-        <div className="brief-share-menu">
-          <button type="button" onClick={copyLink}>{copyLabel}</button>
-          <a href={linkedIn} target="_blank" rel="noreferrer">LinkedIn</a>
-          {canShare ? <button type="button" onClick={shareDevice}>{ar ? "مشاركة الجهاز" : "Device share"}</button> : null}
-        </div>
-      </details>
+      <button type="button" onClick={copyLink}>{copyLabel}</button>
+      {isSaved ? <p className="leaders-saved-note">{ar ? "حُفظ على هذا الجهاز." : "Saved on this device."}</p> : null}
     </div>
   );
 }

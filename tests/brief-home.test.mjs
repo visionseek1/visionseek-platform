@@ -12,27 +12,47 @@ const exists = async (path) => {
   }
 };
 
-test("brief replaces the insights routes", async () => {
+test("leaders house replaces insights and the temporary brief routes", async () => {
   const config = await read("next.config.ts");
   assert.match(config, /source:\s*"\/insights"/);
-  assert.match(config, /destination:\s*"\/brief"/);
+  assert.match(config, /destination:\s*"\/leaders"/);
   assert.match(config, /source:\s*"\/ar\/insights"/);
-  assert.match(config, /destination:\s*"\/ar\/brief"/);
+  assert.match(config, /destination:\s*"\/ar\/leaders"/);
   assert.match(config, /source:\s*"\/insights\/:slug"/);
-  assert.match(config, /destination:\s*"\/brief\/:slug"/);
+  assert.match(config, /destination:\s*"\/leaders\/:slug"/);
   assert.match(config, /source:\s*"\/ar\/insights\/:slug"/);
-  assert.match(config, /destination:\s*"\/ar\/brief\/:slug"/);
+  assert.match(config, /destination:\s*"\/ar\/leaders\/:slug"/);
+  assert.match(config, /source:\s*"\/brief"/);
+  assert.match(config, /source:\s*"\/brief\/:slug"/);
+  assert.match(config, /source:\s*"\/ar\/brief"/);
+  assert.match(config, /source:\s*"\/ar\/brief\/:slug"/);
 
-  assert.equal(await exists("app/brief/page.tsx"), true);
-  assert.equal(await exists("app/ar/brief/page.tsx"), true);
-  assert.equal(await exists("app/brief/[slug]/page.tsx"), true);
-  assert.equal(await exists("app/ar/brief/[slug]/page.tsx"), true);
+  assert.equal(await exists("app/leaders/page.tsx"), true);
+  assert.equal(await exists("app/ar/leaders/page.tsx"), true);
+  assert.equal(await exists("app/leaders/[slug]/page.tsx"), true);
+  assert.equal(await exists("app/ar/leaders/[slug]/page.tsx"), true);
+  assert.equal(await exists("app/brief/page.tsx"), false);
+  assert.equal(await exists("app/ar/brief/page.tsx"), false);
   assert.equal(await exists("app/insights/page.tsx"), false);
   assert.equal(await exists("app/ar/insights/page.tsx"), false);
-  assert.equal(await exists("app/insights/physical-ai/page.tsx"), false);
 
   const home = await read("components/home-page.tsx");
-  assert.match(home, /\/brief/);
+  assert.match(home, /\/leaders/);
+  assert.match(home, /Leaders House/);
+  assert.match(home, /بيت القادة/);
   assert.doesNotMatch(home, /\/insights/);
-  assert.match(home, /BRIEF/);
+  assert.doesNotMatch(home, /\/brief/);
+
+  const feed = await read("components/brief-page.tsx");
+  const subscribe = await read("components/brief-subscribe.tsx");
+  assert.match(feed, /الأحدث/);
+  assert.match(feed, /المحفوظات/);
+  assert.match(feed, /عرض منشورات أقدم/);
+  assert.match(subscribe, /محتوى تجريبي/);
+  assert.match(subscribe, /لم يُحفظ البريد ولم يُرسَل شيء/);
+  assert.doesNotMatch(feed, /Useful/);
+  assert.doesNotMatch(feed, /قريبًا/);
+  assert.doesNotMatch(feed, /leaders-bar/);
+  assert.doesNotMatch(feed, /brief-grid/);
+  assert.doesNotMatch(subscribe, /mailto:/);
 });

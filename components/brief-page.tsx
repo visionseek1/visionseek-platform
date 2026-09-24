@@ -6,32 +6,38 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
-import BriefSubscribe from "@/components/brief-subscribe";
-import { fieldById, fields } from "@/lib/fields";
+import { SubscribeButton, SubscribeCta, SubscribeModal, useSubscribeHidden } from "@/components/brief-subscribe";
+import { fieldById } from "@/lib/fields";
 import {
   briefEntries,
   briefFeedUrl,
   briefHref,
   entriesFromInsights,
+  feedTopicsFor,
   readSavedIds,
   readSavedServer,
   subscribeSaved,
   type BriefEntry,
   type Locale,
 } from "@/lib/brief";
+const pageSize = 8;
+const returnKey = "visionseek.leaders.return";
+const scrollKey = "visionseek.leaders.scroll";
 
 function formatDate(locale: Locale, iso: string) {
   return new Intl.DateTimeFormat(locale === "ar" ? "ar" : "en", { dateStyle: "medium", timeZone: "Asia/Seoul" }).format(new Date(iso));
 }
 
-function readLabel(locale: Locale, minutes: number) {
-  return locale === "ar" ? `${minutes} دقائق` : `${minutes} min`;
+function isLong(entry: BriefEntry, locale: Locale) {
+  if (entry.kind === "report") return true;
+  const summary = locale === "ar" ? entry.summary.ar : entry.summary.en;
+  return summary.length > 180;
 }
 
-function fieldLabel(locale: Locale, id: string) {
-  const field = fieldById(id);
-  if (!field) return id;
-  return locale === "ar" ? field.title : field.english;
+function rememberFeed() {
+  const href = `${window.location.pathname}${window.location.search}`;
+  window.sessionStorage.setItem(returnKey, href);
+  window.sessionStorage.setItem(scrollKey, JSON.stringify({ href, y: window.scrollY }));
 }
 
 export default function BriefPage({ locale }: { locale: Locale }) {
@@ -40,9 +46,16 @@ export default function BriefPage({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [entries, setEntries] = useState<BriefEntry[]>(briefEntries);
+  const [failed, setFailed] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const saved = useSyncExternalStore(subscribeSaved, readSavedIds, readSavedServer);
-  const requested = searchParams.get("topic") ?? "all";
-  const topic = requested === "saved" || fields.some((field) => field.id === requested) ? requested : "all";
+  const ctaHidden = useSubscribeHidden();
+  const requestedTopic = searchParams.get("topic") ?? "all";
+  const tab = searchParams.get("tab") === "saved" ? "saved" : "latest";
+  const requestedMore = Number(searchParams.get("more"));
+  const shown = Number.isFinite(requestedMore) && requestedMore >= pageSize ? Math.floor(requestedMore) : pageSize;
+  const topics = useMemo(() => feedTopicsFor(entries), [entries]);
+  const topic = topics.some((field) => field.id === requestedTopic) ? requestedTopic : "all";
 
   useEffect(() => {
     const controller = new AbortController();
@@ -51,115 +64,182 @@ export default function BriefPage({ locale }: { locale: Locale }) {
       .then((payload: { items?: unknown }) => {
         if (!Array.isArray(payload.items) || payload.items.length === 0) return;
         setEntries(entriesFromInsights(payload.items));
+        setFailed(false);
       })
-      .catch(() => undefined);
+      .catch(() => setFailed(true));
     return () => controller.abort();
   }, []);
 
-  const visible = useMemo(() => {
-    if (topic === "saved") return entries.filter((entry) => saved.includes(entry.slug));
-    if (topic === "all") return entries;
-    return entries.filter((entry) => entry.fieldIds.includes(topic));
-  }, [entries, saved, topic]);
+  useEffect(() => {
+    const href = `${window.location.pathname}${window.location.search}`;
+    window.sessionStorage.setItem(returnKey, href);
+    const writeScroll = () => {
+      window.sessionStorage.setItem(scrollKey, JSON.stringify({ href, y: window.scrollY }));
+    };
+    window.addEventListener("scroll", writeScroll, { passive: true });
+    return () => window.removeEventListener("scroll", writeScroll);
+  }, [pathname, searchParams]);
 
-  function selectTopic(next: string) {
+  useEffect(() => {
+    const raw = window.sessionStorage.getItem(scrollKey);
+    if (!raw) return;
+    try {
+      const memory = JSON.parse(raw) as { href?: string; y?: number };
+      if (memory.href !== `${window.location.pathname}${window.location.search}`) return;
+      const y = typeof memory.y === "number" ? memory.y : 0;
+      requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+    } catch {
+      /* Ignore a damaged scroll note. */
+    }
+  }, [pathname, searchParams]);
+
+  const visible = useMemo(() => {
+    const filtered = entries.filter((entry) => {
+      if (tab === "saved" && !saved.includes(entry.slug)) return false;
+      if (topic !== "all" && !entry.fieldIds.includes(topic)) return false;
+      return true;
+    });
+    return filtered;
+  }, [entries, saved, tab, topic]);
+
+  const page = visible.slice(0, shown);
+
+  function replaceQuery(mutate: (params: URLSearchParams) => void) {
     const params = new URLSearchParams(searchParams.toString());
-    if (next === "all") params.delete("topic");
-    else params.set("topic", next);
+    mutate(params);
     const query = params.toString();
     router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
   }
 
+  function selectTopic(next: string) {
+    replaceQuery((params) => {
+      params.delete("more");
+      if (next === "all") params.delete("topic");
+      else params.set("topic", next);
+    });
+  }
+
+  function selectTab(next: "latest" | "saved") {
+    replaceQuery((params) => {
+      params.delete("more");
+      if (next === "latest") params.delete("tab");
+      else params.set("tab", "saved");
+    });
+  }
+
+  function showOlder() {
+    replaceQuery((params) => {
+      params.set("more", String(shown + pageSize));
+    });
+  }
+
   const otherLocale = ar ? "en" : "ar";
-  const languageHref = topic === "all" ? briefHref(otherLocale) : `${briefHref(otherLocale)}?topic=${encodeURIComponent(topic)}`;
+  const languageParams = new URLSearchParams();
+  if (topic !== "all") languageParams.set("topic", topic);
+  if (tab === "saved") languageParams.set("tab", "saved");
+  if (shown > pageSize) languageParams.set("more", String(shown));
+  const languageQuery = languageParams.toString();
+  const languageHref = languageQuery ? `${briefHref(otherLocale)}?${languageQuery}` : briefHref(otherLocale);
+  const name = ar ? "بيت القادة" : "Leaders House";
 
   return (
-    <main className={`brief-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
+    <main className={`brief-page leaders-feed ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
       <SiteHeader
         locale={locale}
         solid
         languageHref={languageHref}
         items={[
+          { href: briefHref(locale), label: name },
           { href: ar ? "/ar" : "/", label: ar ? "الرئيسية" : "HOME" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
         ]}
       />
 
-      <header className="brief-masthead">
-        <p className="brief-kicker">VISIONSEEK / {ar ? "إحاطة" : "BRIEF"}</p>
-        <h1>{ar ? "إحاطة" : "Brief"}</h1>
-        <p className="brief-deck">{ar ? "إشارات وإحاطات. قراءة عامة." : "Signals and briefings. Public reading."}</p>
-      </header>
+      <div className="leaders-column">
+        <header className="leaders-top">
+          <h1>{name}</h1>
+          <SubscribeButton locale={locale} onOpen={() => setModalOpen(true)} />
+        </header>
 
-      <section className="brief-index">
-        <div className="brief-filters" role="toolbar" aria-label={ar ? "الموضوعات" : "Topics"}>
+        <div className="leaders-tabs" role="tablist" aria-label={ar ? "عرض المنشورات" : "Post view"}>
+          <button type="button" role="tab" aria-selected={tab === "latest"} onClick={() => selectTab("latest")}>{ar ? "الأحدث" : "Latest"}</button>
+          <button type="button" role="tab" aria-selected={tab === "saved"} onClick={() => selectTab("saved")}>{ar ? "المحفوظات" : "Saved"}</button>
+        </div>
+
+        <div className="leaders-chips" role="toolbar" aria-label={ar ? "المجالات" : "Fields"}>
           <button type="button" aria-pressed={topic === "all"} onClick={() => selectTopic("all")}>{ar ? "الكل" : "All"}</button>
-          {fields.map((field) => (
+          {topics.map((field) => (
             <button key={field.id} type="button" aria-pressed={topic === field.id} onClick={() => selectTopic(field.id)}>
               {ar ? field.title : field.english}
             </button>
           ))}
-          <button type="button" aria-pressed={topic === "saved"} onClick={() => selectTopic("saved")}>{ar ? "المحفوظ" : "Saved"}</button>
         </div>
 
-        <nav className="brief-fields" aria-label={ar ? "المجالات" : "Fields"}>
-          <span>{ar ? "المجالات" : "Fields"}</span>
-          {fields.map((field) => (
-            <Link key={field.id} href={`${ar ? "/ar/projects" : "/projects"}#${field.id}`}>
-              {ar ? field.title : field.english}
-            </Link>
-          ))}
-        </nav>
-
-        <BriefSubscribe locale={locale} />
-
-        <div className="brief-grid" aria-live="polite">
-          {visible.length ? visible.map((entry, index) => {
-            const tags = entry.fieldIds.length ? entry.fieldIds : [];
-            const category = ar ? entry.category.ar : entry.category.en;
+        <div className="leaders-stream">
+          {failed && entries.length === 0 ? (
+            <p className="leaders-empty">{ar ? "تعذر تحميل المنشورات." : "Posts could not be loaded."}</p>
+          ) : page.length ? page.map((entry, index) => {
+            const title = ar ? entry.title.ar : entry.title.en;
+            const summary = ar ? entry.summary.ar : entry.summary.en;
+            const take = ar ? entry.take?.ar : entry.take?.en;
+            const long = isLong(entry, locale);
+            const href = briefHref(locale, entry.slug);
+            const field = fieldById(entry.fieldIds[0] ?? "");
             return (
-              <article className="brief-card" key={entry.slug}>
-                <Link className="brief-card-link" href={briefHref(locale, entry.slug)}>
-                  <div className="brief-card-media">
-                    <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 800px) 100vw, 33vw" priority={index < 2} />
+              <div key={entry.slug}>
+                <article className="leaders-card">
+                  <p className="leaders-id">
+                    <span>VisionSeek</span>
+                    {entry.category.en || entry.category.ar ? <span>{ar ? entry.category.ar : entry.category.en}</span> : null}
+                    <time dateTime={entry.publishedAt}>{formatDate(locale, entry.publishedAt)}</time>
+                    {field ? <span>{ar ? field.title : field.english}</span> : null}
+                  </p>
+                  <h2><Link href={href} onClick={rememberFeed}>{title}</Link></h2>
+                  <p className={long ? "leaders-excerpt" : "leaders-body"}>{summary}</p>
+                  {take ? <p className="leaders-take">{take}</p> : null}
+                  {entry.kind === "report" ? (
+                    <Link className="leaders-figure" href={href} onClick={rememberFeed}>
+                      <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" />
+                    </Link>
+                  ) : null}
+                  <div className="leaders-foot">
+                    {entry.source ? (
+                      <p className="leaders-source">
+                        {entry.sourceUrl ? <a href={entry.sourceUrl} target="_blank" rel="noreferrer">{entry.source}</a> : <span>{entry.source}</span>}
+                      </p>
+                    ) : null}
+                    <BriefActions locale={locale} slug={entry.slug} path={href} readHref={href} showRead={long} onRead={rememberFeed} />
                   </div>
-                  <div className="brief-card-body">
-                    <p className="brief-tags">
-                      {tags.map((id) => <span key={id}>{fieldLabel(locale, id)}</span>)}
-                      {category ? <span>{category}</span> : null}
-                    </p>
-                    <h2>{ar ? entry.title.ar : entry.title.en}</h2>
-                    <p>{ar ? entry.summary.ar : entry.summary.en}</p>
-                    <p className="brief-meta">
-                      <time dateTime={entry.publishedAt}>{formatDate(locale, entry.publishedAt)}</time>
-                      <span>{readLabel(locale, ar ? entry.readingMinutes.ar : entry.readingMinutes.en)}</span>
-                      {entry.source ? <span>{entry.source}</span> : null}
-                    </p>
-                  </div>
-                </Link>
-                <BriefActions
-                  compact
-                  locale={locale}
-                  slug={entry.slug}
-                  path={briefHref(locale, entry.slug)}
-                  title={ar ? entry.title.ar : entry.title.en}
-                />
-              </article>
+                </article>
+                {tab === "latest" && !ctaHidden && index === 3 ? <SubscribeCta locale={locale} onOpen={() => setModalOpen(true)} /> : null}
+              </div>
             );
           }) : (
-            <p className="brief-empty">{topic === "saved" ? (ar ? "لا شيء محفوظًا على هذا الجهاز." : "Nothing saved on this device.") : (ar ? "لا عناصر في هذا الموضوع." : "No items for this topic.")}</p>
+            <p className="leaders-empty">
+              {tab === "saved"
+                ? (ar ? "لا شيء محفوظًا على هذا الجهاز." : "Nothing saved on this device.")
+                : (ar ? "لا منشورات في هذا المجال." : "No posts in this topic.")}
+            </p>
           )}
         </div>
-      </section>
 
-      <footer className="insights-footer">
-        <span>VISIONSEEK</span>
-        <nav className="footer-legal" aria-label={ar ? "روابط قانونية" : "Legal"}>
-          <Link href={ar ? "/ar/privacy" : "/privacy"}>{ar ? "الخصوصية" : "PRIVACY"}</Link>
-          <Link href={ar ? "/ar/terms" : "/terms"}>{ar ? "الشروط" : "TERMS"}</Link>
-        </nav>
-        <small>{ar ? "إنتشون، كوريا الجنوبية" : "INCHEON, SOUTH KOREA"}</small>
-      </footer>
+        {page.length > 0 && visible.length > shown ? (
+          <button type="button" className="leaders-older" onClick={showOlder}>{ar ? "عرض منشورات أقدم" : "Older posts"}</button>
+        ) : null}
+        {page.length > 0 && visible.length <= shown ? (
+          <p className="leaders-end-note">{ar ? "لا توجد منشورات أقدم." : "No older posts."}</p>
+        ) : null}
+
+        <footer className="leaders-end">
+          <span>VISIONSEEK</span>
+          <nav aria-label={ar ? "روابط قانونية" : "Legal"}>
+            <Link href={ar ? "/ar/privacy" : "/privacy"}>{ar ? "الخصوصية" : "PRIVACY"}</Link>
+            <Link href={ar ? "/ar/terms" : "/terms"}>{ar ? "الشروط" : "TERMS"}</Link>
+          </nav>
+        </footer>
+      </div>
+
+      <SubscribeModal locale={locale} open={modalOpen} onClose={() => setModalOpen(false)} />
     </main>
   );
 }

@@ -1,50 +1,96 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { useEffect, useId, useRef, useState, useSyncExternalStore, type FormEvent } from "react";
 import type { Locale } from "@/lib/brief";
 
-export default function BriefSubscribe({ locale }: { locale: Locale }) {
-  const ar = locale === "ar";
-  const emailId = useId();
-  const noteId = useId();
-  const [prepared, setPrepared] = useState(false);
+const hideKey = "visionseek.leaders.subscribe-hide";
 
-  function prepare(event: FormEvent<HTMLFormElement>) {
+function subscribeHide(onChange: () => void) {
+  window.addEventListener("visionseek-leaders-subscribe-hide", onChange);
+  return () => window.removeEventListener("visionseek-leaders-subscribe-hide", onChange);
+}
+
+function readHide() {
+  return window.sessionStorage.getItem(hideKey) === "1";
+}
+
+export function useSubscribeHidden() {
+  return useSyncExternalStore(subscribeHide, readHide, () => false);
+}
+
+export function dismissSubscribeCta() {
+  window.sessionStorage.setItem(hideKey, "1");
+  window.dispatchEvent(new Event("visionseek-leaders-subscribe-hide"));
+}
+
+export function SubscribeButton({ locale, onOpen }: { locale: Locale; onOpen: () => void }) {
+  const ar = locale === "ar";
+  return (
+    <button type="button" className="leaders-subscribe" onClick={onOpen}>
+      {ar ? "اشترك" : "Subscribe"}
+    </button>
+  );
+}
+
+export function SubscribeCta({ locale, onOpen }: { locale: Locale; onOpen: () => void }) {
+  const ar = locale === "ar";
+  return (
+    <aside className="leaders-cta">
+      <p>{ar ? "محتوى تجريبي. الاشتراك لا يحفظ البريد ولا يرسل شيئًا." : "Demo content. Subscribe does not save an address or send anything."}</p>
+      <div>
+        <button type="button" onClick={onOpen}>{ar ? "اشترك" : "Subscribe"}</button>
+        <button type="button" onClick={dismissSubscribeCta}>{ar ? "إغلاق" : "Dismiss"}</button>
+      </div>
+    </aside>
+  );
+}
+
+export function SubscribeModal({ locale, open, onClose }: { locale: Locale; open: boolean; onClose: () => void }) {
+  const ar = locale === "ar";
+  const titleId = useId();
+  const noteId = useId();
+  const emailId = useId();
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [reviewed, setReviewed] = useState(false);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (open && !dialog.open) dialog.showModal();
+    if (!open && dialog.open) dialog.close();
+  }, [open]);
+
+  function close() {
+    setReviewed(false);
+    onClose();
+  }
+
+  function preview(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     if (!form.reportValidity()) return;
-    const data = new FormData(form);
-    const email = String(data.get("email") ?? "").trim();
-    if (!email) return;
-    const subject = encodeURIComponent(ar ? "اشتراك الإحاطة" : "Brief subscription");
-    const body = encodeURIComponent(email);
-    window.location.assign(`mailto:abdelalim@visionseek.org?subject=${subject}&body=${body}`);
-    setPrepared(true);
+    form.reset();
+    setReviewed(true);
   }
 
   return (
-    <section className="brief-subscribe" id="subscribe" aria-labelledby={`${emailId}-label`}>
-      <div>
-        <p className="brief-kicker">{ar ? "بريد" : "EMAIL"}</p>
-        <h2 id={`${emailId}-label`}>{ar ? "اشترك" : "Subscribe"}</h2>
-      </div>
-      <form action="mailto:abdelalim@visionseek.org" method="post" encType="text/plain" onSubmit={prepare} onChange={() => setPrepared(false)}>
-        <label className="sr-only" htmlFor={emailId}>{ar ? "البريد الإلكتروني" : "Email"}</label>
-        <input id={emailId} name="email" type="email" required maxLength={180} autoComplete="email" dir="ltr" placeholder={ar ? "البريد الإلكتروني" : "Email"} aria-describedby={noteId} />
-        <button type="submit">{ar ? "اشترك" : "Subscribe"}</button>
+    <dialog ref={dialogRef} className="leaders-modal" aria-labelledby={titleId} onClose={close}>
+      <form onSubmit={preview}>
+        <p className="leaders-mock">{ar ? "محتوى تجريبي" : "Demo content"}</p>
+        <h2 id={titleId}>{ar ? "اشترك" : "Subscribe"}</h2>
+        <p id={noteId}>{ar ? "معاينة فقط. لا يُحفظ البريد ولا يُرسَل شيء." : "Preview only. The address is not saved and nothing is sent."}</p>
+        <label htmlFor={emailId}>{ar ? "البريد الإلكتروني" : "Email"}</label>
+        <input id={emailId} name="email" type="email" required maxLength={180} autoComplete="email" dir="ltr" aria-describedby={noteId} />
+        <label className="leaders-check"><input type="checkbox" name="digest" />{ar ? "ملخص أسبوعي" : "Weekly digest"}</label>
+        <label className="leaders-check"><input type="checkbox" name="alerts" />{ar ? "تنبيهات مهمة فقط" : "Important alerts only"}</label>
+        <div className="leaders-modal-actions">
+          <button type="submit">{ar ? "مراجعة المعاينة" : "Review preview"}</button>
+          <button type="button" onClick={close}>{ar ? "إغلاق" : "Close"}</button>
+        </div>
+        {reviewed ? (
+          <p role="status">{ar ? "لم يُحفظ البريد ولم يُرسَل شيء. لست مشتركًا." : "Nothing was saved or sent. You are not subscribed."}</p>
+        ) : null}
       </form>
-      <p id={noteId} className="brief-note">
-        {ar
-          ? "يفتح الزر مسودة إلى abdelalim@visionseek.org. لا يُرسل شيء، ولا يكتمل الاشتراك، إلا عندما ترسل الرسالة من تطبيق البريد."
-          : "The button opens a draft to abdelalim@visionseek.org. Nothing is sent, and you are not subscribed, until you send that message from your mail app."}
-      </p>
-      {prepared ? (
-        <p role="status" className="brief-note">
-          {ar
-            ? "المسودة جاهزة إن فُتح تطبيق البريد. هذه الصفحة لم تسجّل اشتراكًا."
-            : "A draft is ready if your mail app opened. This page did not record a subscription."}
-        </p>
-      ) : null}
-    </section>
+    </dialog>
   );
 }

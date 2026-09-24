@@ -172,46 +172,65 @@ export function getBrief(slug: string) {
   return briefEntries.find((entry) => entry.slug === slug) ?? null;
 }
 
+/** At most five real fields that actually have posts. Empty fields stay off the row. */
+export function feedTopicsFor(entries: BriefEntry[]) {
+  const counts = new Map<string, number>();
+  for (const entry of entries) {
+    for (const id of entry.fieldIds) counts.set(id, (counts.get(id) ?? 0) + 1);
+  }
+  return fields
+    .filter((field) => (counts.get(field.id) ?? 0) > 0)
+    .sort((a, b) => (counts.get(b.id) ?? 0) - (counts.get(a.id) ?? 0) || fields.indexOf(a) - fields.indexOf(b))
+    .slice(0, 5);
+}
+
 export function briefHref(locale: Locale, slug?: string) {
-  const base = locale === "ar" ? "/ar/brief" : "/brief";
+  const base = locale === "ar" ? "/ar/leaders" : "/leaders";
   return slug ? `${base}/${slug}` : base;
 }
 
-const noSaved: string[] = [];
-let savedCache = "[]";
-let savedIds: string[] = noSaved;
-
-export function readSavedIds() {
-  if (typeof window === "undefined") return noSaved;
-  const raw = window.localStorage.getItem(savedStorageKey) ?? "[]";
-  if (raw === savedCache) return savedIds;
-  savedCache = raw;
-  try {
-    const parsed = JSON.parse(raw) as unknown;
-    savedIds = Array.isArray(parsed) ? parsed.filter((item): item is string => typeof item === "string") : noSaved;
-  } catch {
-    savedIds = noSaved;
-  }
-  return savedIds;
-}
-
-export function readSavedServer() {
-  return noSaved;
-}
-
-export function subscribeSaved(onChange: () => void) {
-  window.addEventListener("storage", onChange);
-  window.addEventListener("visionseek-brief-saved", onChange);
-  return () => {
-    window.removeEventListener("storage", onChange);
-    window.removeEventListener("visionseek-brief-saved", onChange);
+function idList(storageKey: string, eventName: string) {
+  const empty: string[] = [];
+  let cache = "[]";
+  let ids = empty;
+  return {
+    read() {
+      if (typeof window === "undefined") return empty;
+      const raw = window.localStorage.getItem(storageKey) ?? "[]";
+      if (raw === cache) return ids;
+      cache = raw;
+      try {
+        const parsed = JSON.parse(raw) as unknown;
+        ids = Array.isArray(parsed) ? parsed.filter((item): item is string => typeof item === "string") : empty;
+      } catch {
+        ids = empty;
+      }
+      return ids;
+    },
+    server() {
+      return empty;
+    },
+    subscribe(onChange: () => void) {
+      window.addEventListener("storage", onChange);
+      window.addEventListener(eventName, onChange);
+      return () => {
+        window.removeEventListener("storage", onChange);
+        window.removeEventListener(eventName, onChange);
+      };
+    },
+    write(next: string[]) {
+      const raw = JSON.stringify(next);
+      window.localStorage.setItem(storageKey, raw);
+      cache = raw;
+      ids = next;
+      window.dispatchEvent(new Event(eventName));
+    },
   };
 }
 
-export function writeSavedIds(ids: string[]) {
-  const raw = JSON.stringify(ids);
-  window.localStorage.setItem(savedStorageKey, raw);
-  savedCache = raw;
-  savedIds = ids;
-  window.dispatchEvent(new Event("visionseek-brief-saved"));
-}
+const savedList = idList(savedStorageKey, "visionseek-brief-saved");
+
+export const readSavedIds = () => savedList.read();
+export const readSavedServer = () => savedList.server();
+export const subscribeSaved = (onChange: () => void) => savedList.subscribe(onChange);
+export const writeSavedIds = (ids: string[]) => savedList.write(ids);

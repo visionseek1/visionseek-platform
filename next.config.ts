@@ -3,10 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      { source: "/insights", destination: "/brief", permanent: true },
-      { source: "/insights/:slug", destination: "/brief/:slug", permanent: true },
-      { source: "/ar/insights", destination: "/ar/brief", permanent: true },
-      { source: "/ar/insights/:slug", destination: "/ar/brief/:slug", permanent: true },
+      { source: "/insights", destination: "/leaders", permanent: true },
+      { source: "/insights/:slug", destination: "/leaders/:slug", permanent: true },
+      { source: "/ar/insights", destination: "/ar/leaders", permanent: true },
+      { source: "/ar/insights/:slug", destination: "/ar/leaders/:slug", permanent: true },
+      { source: "/brief", destination: "/leaders", permanent: true },
+      { source: "/brief/:slug", destination: "/leaders/:slug", permanent: true },
+      { source: "/ar/brief", destination: "/ar/leaders", permanent: true },
+      { source: "/ar/brief/:slug", destination: "/ar/leaders/:slug", permanent: true },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.visionseek.org" }],

@@ -11,7 +11,7 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
         languageHref={ar ? "/" : "/ar"}
         items={[
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
-          { href: ar ? "/ar/brief" : "/brief", label: ar ? "إحاطة" : "BRIEF" },
+          { href: ar ? "/ar/leaders" : "/leaders", label: ar ? "بيت القادة" : "Leaders House" },
           { href: "#vision", label: ar ? "الرؤية" : "VISION" },
           { href: "#founder", label: ar ? "المؤسس" : "FOUNDER" },
           { href: "#contact", label: ar ? "تواصل" : "CONTACT" },

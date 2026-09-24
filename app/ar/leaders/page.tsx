@@ -3,11 +3,11 @@ import { Suspense } from "react";
 import BriefPage from "@/components/brief-page";
 
 export const metadata: Metadata = {
-  title: "إحاطة | VisionSeek",
-  description: "إشارات وإحاطات. قراءة عامة.",
+  title: "بيت القادة | VisionSeek",
+  description: "قراءة عامة للقادة.",
   alternates: {
-    canonical: "/ar/brief",
-    languages: { en: "/brief", ar: "/ar/brief" },
+    canonical: "/ar/leaders",
+    languages: { en: "/leaders", ar: "/ar/leaders" },
   },
 };
 

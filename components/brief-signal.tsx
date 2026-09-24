@@ -1,7 +1,7 @@
 import Link from "next/link";
 import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
-import BriefSubscribe from "@/components/brief-subscribe";
+import LeadersReturnLink from "@/components/leaders-return";
 import { fieldById } from "@/lib/fields";
 import { briefHref, type BriefEntry, type Locale } from "@/lib/brief";
 
@@ -22,13 +22,13 @@ export function BriefStatus({ locale, message }: { locale: Locale; message: stri
         solid
         languageHref={briefHref(ar ? "en" : "ar")}
         items={[
-          { href: briefHref(locale), label: ar ? "إحاطة" : "BRIEF" },
+          { href: briefHref(locale), label: ar ? "بيت القادة" : "Leaders House" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
         ]}
       />
       <section className="brief-status">
         <p>{message}</p>
-        <Link href={briefHref(locale)}>{ar ? "العودة إلى الإحاطة" : "Back to Brief"}</Link>
+        <LeadersReturnLink locale={locale}>{ar ? "العودة إلى بيت القادة" : "Back to Leaders House"}</LeadersReturnLink>
       </section>
     </main>
   );
@@ -61,7 +61,7 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
         solid
         languageHref={briefHref(ar ? "en" : "ar", entry.slug)}
         items={[
-          { href: briefHref(locale), label: ar ? "إحاطة" : "BRIEF" },
+          { href: briefHref(locale), label: ar ? "بيت القادة" : "Leaders House" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
           { href: ar ? "/ar" : "/", label: ar ? "الرئيسية" : "HOME" },
         ]}
@@ -112,12 +112,11 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
         ) : null}
 
         <div className="brief-tools">
-          <BriefActions locale={locale} slug={entry.slug} path={path} title={title} />
-          <BriefSubscribe locale={locale} />
+          <BriefActions locale={locale} slug={entry.slug} path={path} />
         </div>
 
         <footer className="report-footer">
-          <Link href={briefHref(locale)}>{ar ? "العودة إلى الإحاطة" : "Back to Brief"}</Link>
+          <LeadersReturnLink locale={locale}>{ar ? "العودة إلى بيت القادة" : "Back to Leaders House"}</LeadersReturnLink>
         </footer>
       </article>
     </main>

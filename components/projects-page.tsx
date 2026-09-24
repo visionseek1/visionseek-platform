@@ -24,7 +24,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
         languageHref={ar ? "/projects" : "/ar/projects"}
         items={[
           { href: ar ? "/ar" : "/", label: ar ? "الرئيسية" : "HOME" },
-          { href: ar ? "/ar/brief" : "/brief", label: ar ? "إحاطة" : "BRIEF" },
+          { href: ar ? "/ar/leaders" : "/leaders", label: ar ? "بيت القادة" : "Leaders House" },
           { href: ar ? "/ar#vision" : "/#vision", label: ar ? "الرؤية" : "VISION" },
           { href: ar ? "/ar#founder" : "/#founder", label: ar ? "المؤسس" : "FOUNDER" },
           { href: ar ? "/ar#contact" : "/#contact", label: ar ? "تواصل" : "CONTACT" },
