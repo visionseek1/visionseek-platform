@@ -8,7 +8,6 @@ import SiteHeader from "@/components/site-header";
 type Insight = (typeof initialInsights.items)[number];
 type InsightsData = { updatedAt: string; items: Insight[] };
 
-const liveFeed = "https://raw.githubusercontent.com/visionseek1/visionseek-platform/main/public/insights.json";
 const approvedHosts = new Set(["mckinsey.com", "www.mckinsey.com", "bcg.com", "www.bcg.com", "nature.com", "www.nature.com", "mit.edu", "www.mit.edu", "oecd.org", "www.oecd.org", "weforum.org", "www.weforum.org"]);
 
 function safeSourceUrl(value: string) {
@@ -20,20 +19,21 @@ function safeSourceUrl(value: string) {
   }
 }
 
-export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
+export default function InsightsPage({ locale, feed }: { locale: "ar" | "en"; feed: string }) {
   const ar = locale === "ar";
   const [data, setData] = useState<InsightsData>(initialInsights);
 
   useEffect(() => {
+    // `feed` is chosen on the server. Preview must not receive raw main JSON.
     const controller = new AbortController();
-    fetch(`${liveFeed}?v=${Date.now()}`, { cache: "no-store", signal: controller.signal })
+    fetch(`${feed}?v=${Date.now()}`, { cache: "no-store", signal: controller.signal })
       .then((response) => response.ok ? response.json() : Promise.reject(new Error("Feed unavailable")))
       .then((next: InsightsData) => {
         if (Array.isArray(next.items) && next.items.length) setData(next);
       })
       .catch(() => undefined);
     return () => controller.abort();
-  }, []);
+  }, [feed]);
 
   const signals = useMemo(
     () => [...data.items].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt)).slice(0, 8),

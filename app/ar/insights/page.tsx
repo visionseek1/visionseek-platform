@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import InsightsPage from "@/components/insights-page";
+import { insightsFeedUrl } from "@/lib/insights-feed.mjs";
 
 export const metadata: Metadata = {
   title: "إشارات وإحاطات | VisionSeek",
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function ArabicInsights() {
-  return <InsightsPage locale="ar" />;
+  return <InsightsPage locale="ar" feed={insightsFeedUrl()} />;
 }
