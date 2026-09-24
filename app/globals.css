@@ -105,7 +105,7 @@ main { overflow:hidden; background:var(--black); }
 .fields-heading h2 { margin:0; max-width:62rem; font-size:clamp(3rem,6.1vw,6.4rem); line-height:1.02; font-weight:600; letter-spacing:-.055em; }
 .fields-heading > .secondary-ar { width:min(38rem,100%); margin:2rem 0 0 auto; }
 .fields-heading .english { width:min(38rem,100%); margin:2.5rem 0 0 auto; color:rgba(255,255,255,.7); font-size:clamp(1rem,1.25vw,1.2rem); line-height:1.55; font-weight:700; }
-.field-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(15,5.25vw); gap:clamp(.75rem,1.2vw,1.3rem); direction:ltr; }
+.field-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-template-rows:repeat(17,5.25vw); gap:clamp(.75rem,1.2vw,1.3rem); direction:ltr; }
 .field-card { position:relative; min-height:12rem; overflow:hidden; background:#171918; box-shadow:0 2rem 6rem rgba(0,0,0,.32); }
 .field-card::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.88)); z-index:1; }
 .field-card img { object-fit:cover; filter:saturate(.62) contrast(1.04); transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .7s ease; }
@@ -118,6 +118,7 @@ main { overflow:hidden; background:var(--black); }
 .field-energy { grid-column:1/6; grid-row:8/12; }
 .field-industry { grid-column:6/13; grid-row:10/14; }
 .field-food { grid-column:1/6; grid-row:12/16; transform:translateY(2.5rem); }
+.field-chips { grid-column:6/13; grid-row:14/18; }
 .field-caption { position:absolute; z-index:2; right:0; bottom:0; left:0; padding:1.4rem 1.5rem; color:#fff; }
 .field-caption span { float:left; padding-top:.3rem; color:var(--lime); font:800 .68rem Arial,sans-serif; }
 .field-caption h3 { margin:0; padding-left:2rem; direction:ltr; text-align:left; font:700 clamp(1.15rem,1.8vw,1.75rem)/1.08 Arial,sans-serif; letter-spacing:-.02em; }

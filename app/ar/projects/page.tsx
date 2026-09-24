@@ -3,7 +3,7 @@ import ProjectsPage from "@/components/projects-page";
 
 export const metadata: Metadata = {
   title: "المجالات التي نستكشفها | VisionSeek",
-  description: "سبعة مجالات تنظر إليها VisionSeek. لا يوجد مشروع مُعلن.",
+  description: "ثمانية مجالات تنظر إليها VisionSeek. لا يوجد مشروع مُعلن.",
   alternates: {
     canonical: "/ar/projects",
     languages: { en: "/projects", ar: "/ar/projects" },

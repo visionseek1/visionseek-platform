@@ -3,7 +3,7 @@ import ProjectsPage from "@/components/projects-page";
 
 export const metadata: Metadata = {
   title: "Fields We Explore | VisionSeek",
-  description: "Seven fields VisionSeek is watching. No announced venture.",
+  description: "Eight fields VisionSeek is watching. No announced venture.",
   alternates: {
     canonical: "/projects",
     languages: { en: "/projects", ar: "/ar/projects" },

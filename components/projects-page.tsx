@@ -13,6 +13,7 @@ const projects = [
   { id: "energy", title: "الطاقة والمناخ", english: "Energy & Climate", description: "أنظمة طاقة مرنة وحلول عملية لمستقبل منخفض الكربون.", englishDescription: "Resilient energy systems and practical solutions for a low-carbon future.", topics: ["Energy", "Sustainability"], image: "/field-energy.jpg" },
   { id: "robots", title: "الروبوتات والصناعة الذكية", english: "Robotics & Smart Industry", description: "روبوتات وذكاء اصطناعي يعيدان تشكيل الإنتاج والعمل.", englishDescription: "Robotics and artificial intelligence reshaping production and work.", topics: ["Robotics", "Computing + AI"], image: "/field-industry.jpg" },
   { id: "agriculture", title: "الزراعة والغذاء المستدام", english: "Agriculture & Sustainable Food", description: "تقنيات تعزز الإنتاج الزراعي وتبني نظمًا غذائية مستدامة.", englishDescription: "Technologies that strengthen agriculture and build sustainable food systems.", topics: ["Sustainability"], image: "/field-food.jpg" },
+  { id: "chips", title: "الرقائق والمواد", english: "Chips & Materials", description: "رقائق ومواد متقدمة تفتح قدرات جديدة في الحوسبة والتصنيع.", englishDescription: "Chips and advanced materials opening new capabilities in computing and manufacturing.", topics: ["Computing + AI"], image: "/field-chips.jpg" },
 ];
 
 const topics = [
@@ -72,7 +73,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
         <p className="projects-kicker">VISIONSEEK / {ar ? "المجالات" : "FIELDS"}</p>
         <h1>{ar ? "المجالات" : "Fields"}</h1>
         <div className="projects-intro single-language">
-          <p>{ar ? "سبعة مجالات ننظر إليها. لا يوجد على هذه الصفحة مشروع مُعلن." : "Seven fields we are watching. No announced venture."}</p>
+          <p>{ar ? "ثمانية مجالات ننظر إليها. لا يوجد على هذه الصفحة مشروع مُعلن." : "Eight fields we are watching. No announced venture."}</p>
         </div>
       </section>
 
