@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Oxanium } from "next/font/google";
+import { IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  adjustFontFallback: true,
+});
+
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-arabic",
   adjustFontFallback: true,
 });
 
@@ -95,7 +103,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" className={oxanium.variable}>
+    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable}`}>
       <body className="antialiased">
         <script
           type="application/ld+json"
