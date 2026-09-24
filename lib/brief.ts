@@ -96,7 +96,7 @@ function imageFor(fieldIds: string[]) {
     const field = fieldById(id);
     if (field) return { image: field.image, imageAlt: field.alt };
   }
-  return { image: "/visionseek-hero.png", imageAlt: "" };
+  return { image: "/leaders-placeholder.png", imageAlt: "VisionSeek" };
 }
 
 export function entryFromInsight(value: RawInsight): BriefEntry | null {

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
@@ -48,6 +49,7 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
     datePublished: entry.publishedAt,
     description: summary,
     inLanguage: ar ? "ar" : "en",
+    image: `https://visionseek.org${entry.image}`,
     author: { "@id": "https://visionseek.org/#organization" },
     publisher: { "@id": "https://visionseek.org/#organization" },
     mainEntityOfPage: `https://visionseek.org${path}`,
@@ -87,6 +89,10 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
             </p>
           ) : null}
         </header>
+
+        <figure className="leaders-article-photo">
+          <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 1100px) 100vw, 1088px" priority />
+        </figure>
 
         <section className="report-summary">
           <p className="report-eyebrow">{ar ? "الملخص" : "Summary"}</p>

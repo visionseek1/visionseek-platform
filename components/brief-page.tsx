@@ -197,11 +197,9 @@ export default function BriefPage({ locale }: { locale: Locale }) {
                   <h2><Link href={href} onClick={rememberFeed}>{title}</Link></h2>
                   <p className={long ? "leaders-excerpt" : "leaders-body"}>{summary}</p>
                   {take ? <p className="leaders-take">{take}</p> : null}
-                  {entry.kind === "report" ? (
-                    <Link className="leaders-figure" href={href} onClick={rememberFeed}>
-                      <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" />
-                    </Link>
-                  ) : null}
+                  <Link className="leaders-figure" href={href} onClick={rememberFeed}>
+                    <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority={index === 0} />
+                  </Link>
                   <div className="leaders-foot">
                     {entry.source ? (
                       <p className="leaders-source">

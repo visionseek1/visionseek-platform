@@ -455,6 +455,8 @@ footer { min-height:8rem; padding:2.5rem clamp(1.5rem,5vw,5rem); display:flex; a
 .leaders-take { margin:.7rem 0 0; padding:.55rem .75rem; border-inline-start:3px solid var(--lime); background:rgba(207,255,0,.08); color:#f7f8f5; font-size:.98rem; line-height:1.5; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 .leaders-figure { position:relative; display:block; aspect-ratio:2/1; margin-top:.8rem; border-radius:8px; overflow:hidden; background:#181c19; }
 .leaders-figure img { object-fit:cover; }
+.leaders-article-photo { position:relative; display:block; width:min(68rem,calc(100% - 3rem)); margin:0 auto; aspect-ratio:16/9; overflow:hidden; background:#121614; }
+.leaders-article-photo img { object-fit:cover; }
 .leaders-foot { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.45rem .8rem; margin-top:.8rem; }
 .leaders-source { margin:0; color:rgba(255,255,255,.55); font:700 .75rem Arial,sans-serif; }
 .leaders-source a { border-bottom:1px solid rgba(255,255,255,.35); }

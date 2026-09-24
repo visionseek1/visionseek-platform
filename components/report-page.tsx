@@ -1,6 +1,8 @@
+import Image from "next/image";
 import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
 import LeadersReturnLink from "@/components/leaders-return";
+import { physicalAiEntry } from "@/lib/brief";
 
 const sources = [
   {
@@ -122,6 +124,10 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
           <h1>{copy.title}</h1>
           <p>{copy.standfirst}</p>
         </header>
+
+        <figure className="leaders-article-photo">
+          <Image src={physicalAiEntry.image} alt={physicalAiEntry.imageAlt} fill sizes="(max-width: 1100px) 100vw, 1088px" priority />
+        </figure>
 
         <section className="report-summary">
           <p className="report-eyebrow">{copy.summaryLabel}</p>
