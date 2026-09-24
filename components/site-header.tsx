@@ -27,7 +27,7 @@ export default function SiteHeader({
   return (
     <header className={solid ? "topbar insights-topbar" : "topbar"}>
       <Link className="logo" href={home} aria-label="VisionSeek home">
-        <Image src="/visionseek-logo-v2.png" alt="VisionSeek" width={1920} height={440} priority />
+        <Image src="/visionseek-logo-v2.png" alt="VisionSeek" width={1911} height={589} priority />
       </Link>
       <nav className="desktop-nav" aria-label={ar ? "التنقل الرئيسي" : "Primary"}>
         {items.map((item) => (
