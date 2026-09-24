@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import { Oxanium } from "next/font/google";
 import "./globals.css";
+
+const oxanium = Oxanium({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+  adjustFontFallback: true,
+});
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -87,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={oxanium.variable}>
       <body className="antialiased">
         <script
           type="application/ld+json"

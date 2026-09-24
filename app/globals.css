@@ -294,3 +294,43 @@ footer { min-height:8rem; padding:2.5rem clamp(1.5rem,5vw,5rem); display:flex; a
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important}}
+
+/* Latin display titles only. Oxanium has no Arabic glyphs; locale-ar headings keep Segoe/Tahoma. */
+.locale-en :is(
+  .hero h1,
+  .section-copy h2,
+  .fields-heading h2,
+  .field-caption h3,
+  .founder-copy h2,
+  .finale > .primary-en,
+  .contact-heading h2,
+  .projects-hero h1,
+  .project-meta h2,
+  .projects-empty h2,
+  .projects-contact > p,
+  .insights-hero h1,
+  .featured-report h2,
+  .insight-body h2,
+  .legal-wrap h1,
+  .report-header h1,
+  .finding-grid h2,
+  .report-connection h2,
+  .report-actions h3,
+  .report-perspective blockquote
+) {
+  font-family: var(--font-display), "Segoe UI", Tahoma, Arial, Helvetica, sans-serif;
+}
+
+/* Ease the tightest English display tracking so Oxanium reads a little more extended. */
+.locale-en :is(
+  .hero h1,
+  .finale > .primary-en,
+  .contact-heading h2,
+  .projects-hero h1,
+  .insights-hero h1,
+  .featured-report h2,
+  .report-header h1,
+  .report-connection h2
+) {
+  letter-spacing: -0.04em;
+}
