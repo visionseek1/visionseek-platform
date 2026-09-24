@@ -244,7 +244,7 @@ footer { min-height:8rem; padding:2.5rem clamp(1.5rem,5vw,5rem); display:flex; a
 @keyframes spin { to{transform:rotate(360deg)} }
 @keyframes pulse { 0%,100%{transform:scale(.8);opacity:.55} 50%{transform:scale(1);opacity:1} }
 
-.report-page.locale-ar .report-header h1{max-width:70rem;font-size:clamp(3rem,6.3vw,6.6rem);line-height:1.2;letter-spacing:-.035em}
+.report-page.locale-ar .report-header h1{max-width:70rem;font-size:clamp(3rem,6.3vw,6.6rem);line-height:1.2;letter-spacing:normal}
 
 @media(max-width:850px){
   .topbar{height:5.5rem}.logo{width:10rem;height:3.2rem}
