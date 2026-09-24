@@ -1,5 +1,7 @@
 import Link from "next/link";
 import SiteHeader from "@/components/site-header";
+import BriefActions from "@/components/brief-actions";
+import BriefSubscribe from "@/components/brief-subscribe";
 
 const sources = [
   {
@@ -50,7 +52,7 @@ const report = {
     sourceLabel: "SELECTED SOURCES",
     sourceNote: "This brief is original VisionSeek analysis. Sources are provided for evidence and further reading; no source text is republished.",
     cta: "Discuss a government mission",
-    back: "Back to Insights",
+    back: "Back to Brief",
   },
   ar: {
     label: "إحاطة VISIONSEEK للحكومات / 01",
@@ -82,7 +84,7 @@ const report = {
     sourceLabel: "مصادر مختارة",
     sourceNote: "هذه إحاطة أصلية من VisionSeek. أُدرجت المصادر للاستدلال والقراءة الإضافية، ولم يُعاد نشر نصوصها.",
     cta: "ناقش مهمة حكومية معنا",
-    back: "العودة إلى الرؤى",
+    back: "العودة إلى الإحاطة",
   },
 };
 
@@ -98,7 +100,7 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
     inLanguage: ar ? "ar" : "en",
     author: { "@id": "https://visionseek.org/#organization" },
     publisher: { "@id": "https://visionseek.org/#organization" },
-    mainEntityOfPage: `https://visionseek.org${base}/insights/physical-ai`,
+    mainEntityOfPage: `https://visionseek.org${base}/brief/physical-ai`,
   };
 
   return (
@@ -107,9 +109,9 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
       <SiteHeader
         locale={locale}
         solid
-        languageHref={ar ? "/insights/physical-ai" : "/ar/insights/physical-ai"}
+        languageHref={ar ? "/brief/physical-ai" : "/ar/brief/physical-ai"}
         items={[
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "الرؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/brief" : "/brief", label: ar ? "إحاطة" : "BRIEF" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
           { href: base || "/", label: ar ? "الرئيسية" : "HOME" },
         ]}
@@ -156,8 +158,13 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
           <ol>{sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer"><span>{source.name}</span>{source.title} ↗</a></li>)}</ol>
         </section>
 
+        <div className="brief-tools">
+          <BriefActions locale={locale} slug="physical-ai" path={`${base}/brief/physical-ai`} title={copy.title} />
+          <BriefSubscribe locale={locale} />
+        </div>
+
         <footer className="report-footer">
-          <Link href={`${base}/insights`}>← {copy.back}</Link>
+          <Link href={`${base}/brief`}>{copy.back}</Link>
           <a href="mailto:abdelalim@visionseek.org?subject=Government%20mission%20briefing">{copy.cta} ↗</a>
         </footer>
       </article>

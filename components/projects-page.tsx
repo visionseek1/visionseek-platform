@@ -4,45 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import SiteHeader from "@/components/site-header";
-
-const projects = [
-  { id: "space", title: "الفضاء والصواريخ", english: "Space & Aerospace", description: "أنظمة وتقنيات تفتح فرصًا جديدة في الفضاء والطيران.", englishDescription: "Systems and technologies opening new possibilities across space and aerospace.", topics: ["Space + Aerospace"], image: "/field-space.jpg" },
-  { id: "drones", title: "الدرونز والأنظمة الجوية", english: "Drones & Aerial Systems", description: "منصات جوية ذكية للنقل والمراقبة والخدمات اللوجستية.", englishDescription: "Intelligent aerial platforms for transport, observation, and logistics.", topics: ["Transport", "Logistics"], image: "/field-drones.jpg" },
-  { id: "cities", title: "مدن المستقبل", english: "Future Cities", description: "بنية تحتية مترابطة تجعل المدن أكثر ذكاءً واستجابة.", englishDescription: "Connected infrastructure that makes cities more intelligent and responsive.", topics: ["Connectivity", "Computing + AI"], image: "/field-cities.jpg" },
-  { id: "science", title: "العلم والصحة", english: "Science & Health", description: "تحويل الاكتشاف العلمي إلى حلول تحسن صحة الإنسان.", englishDescription: "Turning scientific discovery into solutions that improve human health.", topics: ["Health"], image: "/field-science.jpg" },
-  { id: "energy", title: "الطاقة والمناخ", english: "Energy & Climate", description: "أنظمة طاقة مرنة وحلول عملية لمستقبل منخفض الكربون.", englishDescription: "Resilient energy systems and practical solutions for a low-carbon future.", topics: ["Energy", "Sustainability"], image: "/field-energy.jpg" },
-  { id: "robots", title: "الروبوتات والصناعة الذكية", english: "Robotics & Smart Industry", description: "روبوتات وذكاء اصطناعي يعيدان تشكيل الإنتاج والعمل.", englishDescription: "Robotics and artificial intelligence reshaping production and work.", topics: ["Robotics", "Computing + AI"], image: "/field-industry.jpg" },
-  { id: "agriculture", title: "الزراعة والغذاء المستدام", english: "Agriculture & Sustainable Food", description: "تقنيات تعزز الإنتاج الزراعي وتبني نظمًا غذائية مستدامة.", englishDescription: "Technologies that strengthen agriculture and build sustainable food systems.", topics: ["Sustainability"], image: "/field-food.jpg" },
-  { id: "chips", title: "الرقائق والمواد", english: "Chips & Materials", description: "رقائق ومواد متقدمة تفتح قدرات جديدة في الحوسبة والتصنيع.", englishDescription: "Chips and advanced materials opening new capabilities in computing and manufacturing.", topics: ["Computing + AI"], image: "/field-chips.jpg" },
-];
-
-const topics = [
-  "All Projects",
-  "Space + Aerospace",
-  "Computing + AI",
-  "Connectivity",
-  "Energy",
-  "Health",
-  "Logistics",
-  "Robotics",
-  "Sustainability",
-  "Transport",
-  "Waste",
-];
-
-const topicArabic: Record<string, string> = {
-  "All Projects": "كل المجالات",
-  "Space + Aerospace": "الفضاء والطيران",
-  "Computing + AI": "الحوسبة والذكاء الاصطناعي",
-  Connectivity: "الاتصال",
-  Energy: "الطاقة",
-  Health: "الصحة",
-  Logistics: "الخدمات اللوجستية",
-  Robotics: "الروبوتات",
-  Sustainability: "الاستدامة",
-  Transport: "النقل",
-  Waste: "المخلفات",
-};
+import { fields as projects, fieldTopics as topics, fieldTopicArabic as topicArabic } from "@/lib/fields";
 
 export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
   const ar = locale === "ar";
@@ -62,7 +24,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
         languageHref={ar ? "/projects" : "/ar/projects"}
         items={[
           { href: ar ? "/ar" : "/", label: ar ? "الرئيسية" : "HOME" },
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/brief" : "/brief", label: ar ? "إحاطة" : "BRIEF" },
           { href: ar ? "/ar#vision" : "/#vision", label: ar ? "الرؤية" : "VISION" },
           { href: ar ? "/ar#founder" : "/#founder", label: ar ? "المؤسس" : "FOUNDER" },
           { href: ar ? "/ar#contact" : "/#contact", label: ar ? "تواصل" : "CONTACT" },
