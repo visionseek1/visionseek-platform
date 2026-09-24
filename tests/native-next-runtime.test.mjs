@@ -27,6 +27,35 @@ test("uses native Next.js and Vercel configuration", async () => {
   assert.equal(await exists("worker/index.ts"), false);
 });
 
+test("insights preview feed does not read raw main JSON", async () => {
+  const [feed, client, englishPage, arabicPage] = await Promise.all([
+    read("lib/insights-feed.mjs"),
+    read("components/insights-page.tsx"),
+    read("app/insights/page.tsx"),
+    read("app/ar/insights/page.tsx"),
+  ]);
+
+  assert.match(feed, /Preview and development must not read raw main\/public\/insights\.json/);
+  assert.match(feed, /vercelEnv === "production"/);
+  assert.match(feed, /raw\.githubusercontent\.com\/visionseek1\/visionseek-platform\/main\/public\/insights\.json/);
+  assert.match(feed, /\/insights\.json/);
+  assert.doesNotMatch(client, /raw\.githubusercontent\.com/);
+  assert.doesNotMatch(client, /\/main\/public\/insights\.json/);
+  assert.match(englishPage, /insightsFeedUrl\(\)/);
+  assert.match(arabicPage, /insightsFeedUrl\(\)/);
+
+  const cases = [
+    ["production", "https://raw.githubusercontent.com/visionseek1/visionseek-platform/main/public/insights.json"],
+    ["preview", "/insights.json"],
+    ["development", "/insights.json"],
+    [undefined, "/insights.json"],
+  ];
+  const { insightsFeedUrl } = await import("../lib/insights-feed.mjs");
+  for (const [env, expected] of cases) {
+    assert.equal(insightsFeedUrl(env), expected);
+  }
+});
+
 test("does not embed Supabase configuration in the browser client", async () => {
   const client = await read("lib/supabase-browser.ts");
 
