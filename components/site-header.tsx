@@ -10,5 +10,5 @@ export default function SiteHeader({locale, languageHref}: {
   solid?: boolean;
 }) {
   const path = languageHref.replace(/^\/ar(?=\/|$)/, "").replace(/\/$/, "");
-  return <div className={`vs-site locale-${locale}`} dir={locale === "ar" ? "rtl" : "ltr"}><CapabilityHeader locale={locale} path={path}/></div>;
+  return <div className={`vs-site vs-legacy-header locale-${locale}`} dir={locale === "ar" ? "rtl" : "ltr"}><CapabilityHeader locale={locale} path={path}/></div>;
 }
