@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
+import LeadersContinue from "@/components/leaders-continue";
 import LeadersReturnLink from "@/components/leaders-return";
 import { physicalAiEntry } from "@/lib/brief";
 
@@ -166,6 +167,8 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
         <div className="brief-tools">
           <BriefActions locale={locale} slug="physical-ai" path={`${base}/leaders/physical-ai`} />
         </div>
+
+        <LeadersContinue locale={locale} slug="physical-ai" />
 
         <footer className="report-footer">
           <LeadersReturnLink locale={locale}>{copy.back}</LeadersReturnLink>

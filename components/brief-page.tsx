@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
+import FollowField from "@/components/follow-field";
 import { SubscribeButton, SubscribeCta, SubscribeModal, useSubscribeHidden } from "@/components/brief-subscribe";
 import { fieldById } from "@/lib/fields";
 import {
@@ -14,12 +15,25 @@ import {
   briefHref,
   entriesFromInsights,
   feedTopicsFor,
+  kindLabel,
+  readFollowedIds,
+  readFollowedServer,
+  readLearnProgress,
+  readLearnProgressServer,
   readSavedIds,
   readSavedServer,
+  readSeenPrev,
+  readSeenPrevServer,
+  seenAtKey,
+  seenPrevKey,
+  subscribeFollowed,
+  subscribeLearnProgress,
   subscribeSaved,
+  subscribeSeenPrev,
   type BriefEntry,
   type Locale,
 } from "@/lib/brief";
+
 const pageSize = 8;
 const returnKey = "visionseek.leaders.return";
 const scrollKey = "visionseek.leaders.scroll";
@@ -29,7 +43,7 @@ function formatDate(locale: Locale, iso: string) {
 }
 
 function isLong(entry: BriefEntry, locale: Locale) {
-  if (entry.kind === "report") return true;
+  if (entry.kind === "report" || entry.kind === "learn" || entry.kind === "weekly") return true;
   const summary = locale === "ar" ? entry.summary.ar : entry.summary.en;
   return summary.length > 180;
 }
@@ -45,13 +59,18 @@ export default function BriefPage({ locale }: { locale: Locale }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
   const [entries, setEntries] = useState<BriefEntry[]>(briefEntries);
   const [failed, setFailed] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const saved = useSyncExternalStore(subscribeSaved, readSavedIds, readSavedServer);
+  const followed = useSyncExternalStore(subscribeFollowed, readFollowedIds, readFollowedServer);
+  const progress = useSyncExternalStore(subscribeLearnProgress, readLearnProgress, readLearnProgressServer);
+  const seenPrev = useSyncExternalStore(subscribeSeenPrev, readSeenPrev, readSeenPrevServer);
   const ctaHidden = useSubscribeHidden();
   const requestedTopic = searchParams.get("topic") ?? "all";
-  const tab = searchParams.get("tab") === "saved" ? "saved" : "latest";
+  const requestedTab = searchParams.get("tab");
+  const tab = requestedTab === "saved" || requestedTab === "foryou" ? requestedTab : "latest";
   const requestedMore = Number(searchParams.get("more"));
   const shown = Number.isFinite(requestedMore) && requestedMore >= pageSize ? Math.floor(requestedMore) : pageSize;
   const topics = useMemo(() => feedTopicsFor(entries), [entries]);
@@ -93,16 +112,44 @@ export default function BriefPage({ locale }: { locale: Locale }) {
     }
   }, [pathname, searchParams]);
 
+  useEffect(() => {
+    const arrived = new Date().toISOString();
+    const stamp = () => {
+      window.localStorage.setItem(seenAtKey, arrived);
+      window.localStorage.setItem(seenPrevKey, arrived);
+    };
+    const timer = window.setTimeout(stamp, 15000);
+    window.addEventListener("pagehide", stamp);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("pagehide", stamp);
+      stamp();
+    };
+  }, []);
+
   const visible = useMemo(() => {
     const filtered = entries.filter((entry) => {
       if (tab === "saved" && !saved.includes(entry.slug)) return false;
+      if (tab === "foryou" && !entry.fieldIds.some((id) => followed.includes(id))) return false;
       if (topic !== "all" && !entry.fieldIds.includes(topic)) return false;
       return true;
     });
+    if (tab === "latest" && topic === "all" && followed.length) {
+      const first = filtered.filter((entry) => entry.fieldIds.some((id) => followed.includes(id)));
+      const rest = filtered.filter((entry) => !entry.fieldIds.some((id) => followed.includes(id)));
+      return [...first, ...rest];
+    }
     return filtered;
-  }, [entries, saved, tab, topic]);
+  }, [entries, followed, saved, tab, topic]);
 
   const page = visible.slice(0, shown);
+  const reordered = tab === "latest" && topic === "all" && followed.length > 0;
+  const learnItem = entries.find((entry) => entry.kind === "learn");
+  const publishedParts = learnItem?.series?.parts.filter((part) => part.slug) ?? [];
+  const startedLearn = publishedParts.some((part) => part.slug && progress.includes(part.slug));
+  const unfinishedLearn = publishedParts.some((part) => part.slug && !progress.includes(part.slug));
+  const resumeLearn = learnItem && startedLearn && unfinishedLearn ? learnItem : null;
+  const resumeSaved = entries.filter((entry) => saved.includes(entry.slug)).slice(0, 2);
 
   function replaceQuery(mutate: (params: URLSearchParams) => void) {
     const params = new URLSearchParams(searchParams.toString());
@@ -119,11 +166,11 @@ export default function BriefPage({ locale }: { locale: Locale }) {
     });
   }
 
-  function selectTab(next: "latest" | "saved") {
+  function selectTab(next: "latest" | "saved" | "foryou") {
     replaceQuery((params) => {
       params.delete("more");
       if (next === "latest") params.delete("tab");
-      else params.set("tab", "saved");
+      else params.set("tab", next);
     });
   }
 
@@ -133,14 +180,31 @@ export default function BriefPage({ locale }: { locale: Locale }) {
     });
   }
 
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node || visible.length <= shown) return;
+    let locked = false;
+    const observer = new IntersectionObserver((observed) => {
+      if (locked || !observed.some((item) => item.isIntersecting)) return;
+      locked = true;
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("more", String(shown + pageSize));
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    }, { rootMargin: "480px" });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [pathname, router, searchParams, shown, visible.length]);
+
   const otherLocale = ar ? "en" : "ar";
   const languageParams = new URLSearchParams();
   if (topic !== "all") languageParams.set("topic", topic);
-  if (tab === "saved") languageParams.set("tab", "saved");
+  if (tab !== "latest") languageParams.set("tab", tab);
   if (shown > pageSize) languageParams.set("more", String(shown));
   const languageQuery = languageParams.toString();
   const languageHref = languageQuery ? `${briefHref(otherLocale)}?${languageQuery}` : briefHref(otherLocale);
   const name = ar ? "بيت القادة" : "Leaders House";
+  const seenMark = seenPrev ? Date.parse(seenPrev) : NaN;
 
   return (
     <main className={`brief-page leaders-feed ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
@@ -161,8 +225,23 @@ export default function BriefPage({ locale }: { locale: Locale }) {
           <SubscribeButton locale={locale} onOpen={() => setModalOpen(true)} />
         </header>
 
+        {resumeLearn || resumeSaved.length ? (
+          <section className="leaders-resume" aria-label={ar ? "أكمل من حيث توقفت" : "Continue where you left off"}>
+            <p>{ar ? "أكمل من حيث توقفت" : "Continue where you left off"}</p>
+            <ul>
+              {resumeLearn ? (
+                <li><Link href={briefHref(locale, resumeLearn.slug)} onClick={rememberFeed}>{ar ? resumeLearn.title.ar : resumeLearn.title.en}</Link></li>
+              ) : null}
+              {resumeSaved.map((entry) => (
+                <li key={entry.slug}><Link href={briefHref(locale, entry.slug)} onClick={rememberFeed}>{ar ? entry.title.ar : entry.title.en}</Link></li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
         <div className="leaders-tabs" role="tablist" aria-label={ar ? "عرض المنشورات" : "Post view"}>
           <button type="button" role="tab" aria-selected={tab === "latest"} onClick={() => selectTab("latest")}>{ar ? "الأحدث" : "Latest"}</button>
+          <button type="button" role="tab" aria-selected={tab === "foryou"} onClick={() => selectTab("foryou")}>{ar ? "لك" : "For you"}</button>
           <button type="button" role="tab" aria-selected={tab === "saved"} onClick={() => selectTab("saved")}>{ar ? "المحفوظات" : "Saved"}</button>
         </div>
 
@@ -175,6 +254,8 @@ export default function BriefPage({ locale }: { locale: Locale }) {
           ))}
         </div>
 
+        {reordered ? <p className="leaders-follow-note">{ar ? "المجالات التي تتابعها تظهر أولًا." : "Fields you follow are listed first."}</p> : null}
+
         <div className="leaders-stream">
           {failed && entries.length === 0 ? (
             <p className="leaders-empty">{ar ? "تعذر تحميل المنشورات." : "Posts could not be loaded."}</p>
@@ -185,18 +266,42 @@ export default function BriefPage({ locale }: { locale: Locale }) {
             const long = isLong(entry, locale);
             const href = briefHref(locale, entry.slug);
             const field = fieldById(entry.fieldIds[0] ?? "");
+            const minutes = ar ? entry.readingMinutes.ar : entry.readingMinutes.en;
+            const newer = Number.isFinite(seenMark) && Date.parse(entry.publishedAt) > seenMark;
+            const previous = index > 0 ? page[index - 1] : null;
+            const previousNewer = previous ? Number.isFinite(seenMark) && Date.parse(previous.publishedAt) > seenMark : false;
+            const divider = tab === "latest" && !reordered && newer && !previousNewer;
             return (
               <div key={entry.slug}>
+                {divider ? <p className="leaders-new-divider" role="separator">{ar ? "جديد منذ آخر زيارة" : "New since your last visit"}</p> : null}
                 <article className="leaders-card">
                   <p className="leaders-id">
-                    <span>VisionSeek</span>
+                    <span className="leaders-kind">{kindLabel(entry.kind, locale)}</span>
+                    {entry.draft ? <span className="leaders-draft">{ar ? "مسودة" : "Draft"}</span> : null}
                     {entry.category.en || entry.category.ar ? <span>{ar ? entry.category.ar : entry.category.en}</span> : null}
                     <time dateTime={entry.publishedAt}>{formatDate(locale, entry.publishedAt)}</time>
+                    <span>{ar ? `${minutes} دقائق` : `${minutes} min`}</span>
                     {field ? <span>{ar ? field.title : field.english}</span> : null}
+                    {reordered && newer ? <span>{ar ? "جديد" : "New"}</span> : null}
                   </p>
                   <h2><Link href={href} onClick={rememberFeed}>{title}</Link></h2>
-                  <p className={long ? "leaders-excerpt" : "leaders-body"}>{summary}</p>
-                  {take ? <p className="leaders-take">{take}</p> : null}
+                  <p className={entry.kind === "weekly" || entry.kind === "learn" ? "leaders-body" : "leaders-excerpt"}>{summary}</p>
+                  {entry.weeklyItems?.length ? (
+                    <ol className="leaders-week">
+                      {entry.weeklyItems.map((item) => (
+                        <li key={item.slug}>
+                          <Link href={briefHref(locale, item.slug)} onClick={rememberFeed}>{ar ? item.title.ar : item.title.en}</Link>
+                          {item.sourceUrl ? <> · <a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.source}</a></> : null}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : null}
+                  {take ? (
+                    <div className="leaders-take">
+                      <p className="leaders-take-label">{ar ? "لماذا يهم مؤسستك" : "Why it matters to your institution"}</p>
+                      <p className="leaders-take-text">{take}</p>
+                    </div>
+                  ) : null}
                   <Link className="leaders-figure" href={href} onClick={rememberFeed}>
                     <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority={index === 0} />
                   </Link>
@@ -206,6 +311,7 @@ export default function BriefPage({ locale }: { locale: Locale }) {
                         {entry.sourceUrl ? <a href={entry.sourceUrl} target="_blank" rel="noreferrer">{entry.source}</a> : <span>{entry.source}</span>}
                       </p>
                     ) : null}
+                    {field ? <FollowField locale={locale} fieldId={field.id} /> : null}
                     <BriefActions locale={locale} slug={entry.slug} path={href} readHref={href} showRead={long} onRead={rememberFeed} />
                   </div>
                 </article>
@@ -216,7 +322,9 @@ export default function BriefPage({ locale }: { locale: Locale }) {
             <p className="leaders-empty">
               {tab === "saved"
                 ? (ar ? "لا شيء محفوظًا على هذا الجهاز." : "Nothing saved on this device.")
-                : (ar ? "لا منشورات في هذا المجال." : "No posts in this topic.")}
+                : tab === "foryou"
+                  ? (ar ? "لم تختر مجالًا بعد. من أي منشور تابع مجاله، فيظهر هنا." : "You have not followed a field yet. Follow one on a post and it will show here.")
+                  : (ar ? "لا منشورات في هذا المجال." : "No posts in this topic.")}
             </p>
           )}
         </div>
@@ -224,6 +332,7 @@ export default function BriefPage({ locale }: { locale: Locale }) {
         {page.length > 0 && visible.length > shown ? (
           <button type="button" className="leaders-older" onClick={showOlder}>{ar ? "عرض منشورات أقدم" : "Older posts"}</button>
         ) : null}
+        <div ref={sentinelRef} className="leaders-sentinel" aria-hidden="true" />
         {page.length > 0 && visible.length <= shown ? (
           <p className="leaders-end-note">{ar ? "لا توجد منشورات أقدم." : "No older posts."}</p>
         ) : null}
