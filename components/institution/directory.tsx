@@ -1,0 +1,13 @@
+"use client";
+import {useMemo,useState} from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import {ArrowRight,Search,X} from 'lucide-react';
+import {Input} from '@/components/ui/input';
+export type DirectoryItem={path:string;title:string;summary:string;category:string;status:string;image:string;code?:string};
+export default function Directory({items,ar,label}:{items:DirectoryItem[];ar:boolean;label:string}){
+ const [query,setQuery]=useState('');const [category,setCategory]=useState('');
+ const categories=useMemo(()=>Array.from(new Set(items.map(i=>i.category))),[items]);
+ const visible=useMemo(()=>items.filter(i=>(!category||i.category===category)&&`${i.title} ${i.summary} ${i.code??''} ${i.category}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase())),[items,query,category]);
+ return <div className="vs-directory"><div className="vs-directory-tools"><label className="vs-search-field"><span>{ar?'ابحث':'Search'}</span><div><Search size={18} aria-hidden="true"/><Input value={query} onChange={e=>setQuery(e.target.value)} placeholder={ar?`ابحث في ${label}`:`Search ${label.toLowerCase()}`} type="search"/></div></label><label className="vs-filter-field"><span>{ar?'النوع':'Category'}</span><select value={category} onChange={e=>setCategory(e.target.value)}><option value="">{ar?'كل الأنواع':'All categories'}</option>{categories.map(c=><option key={c} value={c}>{c}</option>)}</select></label></div><div className="vs-directory-results"><p role="status" aria-live="polite">{ar?`${visible.length} من ${items.length} نتيجة`:`${visible.length} of ${items.length} results`}</p>{(query||category)&&<button onClick={()=>{setQuery('');setCategory('');}}><X size={16}/>{ar?'مسح الفلاتر':'Clear filters'}</button>}</div><div className="vs-directory-grid">{visible.map(i=><Link key={i.path} id={i.path.split("/").pop()} href={i.path} className="vs-directory-card"><div className="vs-directory-picture"><Image src={i.image} alt="" fill sizes="(max-width:760px) 100vw, (max-width:1150px) 50vw, 35vw"/><span>{i.code??i.category}</span></div><div className="vs-directory-content"><span className="vs-status">{i.status}</span><h2>{i.title}</h2><p>{i.summary}</p><span className="vs-directory-cta">{ar?'التفاصيل':'Explore'}<ArrowRight size={19}/></span></div></Link>)}</div>{visible.length===0&&<div className="vs-directory-empty"><h2>{ar?'لا توجد نتائج مطابقة':'No matching results'}</h2><p>{ar?'جرّب كلمة أخرى أو امسح الفلاتر لاستكشاف جميع الصفحات.':'Try another keyword or clear filters to explore every page.'}</p><button className="vs-button" onClick={()=>{setQuery('');setCategory('');}}>{ar?'عرض الكل':'Show all'}</button></div>}</div>;
+}

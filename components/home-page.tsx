@@ -1,172 +1,36 @@
 import Image from "next/image";
+import InstitutionHome from "@/components/institution/home-sections";
 import Link from "next/link";
-import SiteHeader from "@/components/site-header";
+import { ArrowRight, Building2, Landmark, Microscope, Users, Factory, Network } from "lucide-react";
+import { CapabilityHeader } from "@/components/capability/navigation";
+import CapabilityFooter from "@/components/capability/footer";
+import CapabilityHero from "@/components/capability/hero";
+import MethodSpotlight from "@/components/capability/method-spotlight";
+import { communities, fields, type Locale } from "@/components/capability/content";
 
-export default function HomePage({ locale }: { locale: "ar" | "en" }) {
-  const ar = locale === "ar";
-  return (
-    <main className={ar ? "locale-ar" : "locale-en"} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
-      <SiteHeader
-        locale={locale}
-        languageHref={ar ? "/" : "/ar"}
-        items={[
-          { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
-          { href: "#vision", label: ar ? "الرؤية" : "VISION" },
-          { href: "#founder", label: ar ? "المؤسس" : "FOUNDER" },
-          { href: "#contact", label: ar ? "تواصل" : "CONTACT" },
-        ]}
-      />
+const icons = [Building2, Landmark, Microscope, Users, Factory, Network];
 
-      <section className="hero" id="top">
-        <div className="brand-mark" aria-hidden="true">
-          <Image src="/visionseek-symbol-v2.png" alt="" fill sizes="80px" priority />
-        </div>
-
-        <div className="hero-copy">
-          <div className="hero-title-lockup">
-            <h1 className={ar ? "primary-ar" : "primary-en"}>
-              {ar ? <><span>نحن نبني</span><br /><span>ما هو قادم</span></> : <>WE BUILD<br />WHAT COMES NEXT.</>}
-            </h1>
-          </div>
-          <p className={ar ? "intro-copy primary-ar" : "intro-copy primary-en"}>
-            {ar
-              ? <>تربط VisionSeek قدرات موجودة بالفعل — تكنولوجيا، وعلمًا، وتصميمًا، ومن يستطيع تشغيلها — في عمل تستطيع حكومة أو شركة أن تديره.</>
-              : <>VisionSeek connects capabilities that already exist — technology, science, design, and the people who can run them — into work a government or a company can actually operate.</>}
-          </p>
-        </div>
-
-        <div className="floating-world" aria-hidden="true">
-          <div className="tile tile-photo"><Image src="/visionseek-hero.png" alt="" fill sizes="280px" /></div>
-          <div className="tile tile-lime"><span>V</span></div>
-          <div className="tile tile-mist" />
-          <div className="tile tile-line"><i /><i /><i /></div>
-        </div>
-
-        <div className="scroll-cue" aria-hidden="true"><span /> {ar ? "مرّر" : "SCROLL"}</div>
+export default function HomePage({locale}: {locale:Locale}) {
+  const ar=locale==="ar";const p=ar?"/ar":"";
+  const reading=[
+    {href:"/insights/physical-ai",image:"industry",category:ar?"تقرير · بيت القادة":"REPORT · LEADERS HOUSE",title:ar?"عندما يغادر الذكاء الاصطناعي الشاشة":"When AI leaves the screen",text:ar?"قراءة في الذكاء الاصطناعي المادي وما يفتحه من قدرات.":"A perspective on physical AI and the capabilities it could unlock."},
+    {href:"/method#highest-level-one",image:"chips",category:ar?"مبدأ · منهجنا":"PRINCIPLE · OUR METHOD",title:"Highest Level One",text:ar?"أعلى مستوى ممكن باستخدام أفضل ما هو متاح اليوم.":"The highest achievable level using the best of what is possible today."},
+    {href:"/about#what-we-build",image:"cities",category:ar?"رؤية · ما نبنيه":"PERSPECTIVE · WHAT WE BUILD",title:ar?"الشكل يتبع القدرة":"The form follows the capability",text:ar?"منظومة، منصة، برنامج، شراكة أو شركة جديدة. نبدأ من القدرة.":"A system, platform, program, partnership or new company. Start with the capability."},
+  ];
+  return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar?"rtl":"ltr"}>
+    <CapabilityHeader locale={locale} overlay/>
+    <main id="main-content">
+      <CapabilityHero locale={locale}/>
+      <section className="vs-editorial" id="vision">
+        <article className="vs-mission-card"><div className="vs-mini-heading"><h2>{ar?"السؤال الذي نبدأ منه":"Where we begin"}</h2><Link href={`${p}/about`} aria-label={ar?"عن VisionSeek":"About VisionSeek"}><ArrowRight/></Link></div><div className="vs-editorial-image"><Image src="/field-industry.jpg" alt={ar?"قدرات التصنيع والروبوتات داخل مصنع":"Robotics and manufacturing capabilities inside a factory"} fill sizes="(max-width:760px) 100vw, 50vw"/></div><p className="vs-eyebrow">{ar?"سؤال واحد يفتح مسارًا جديدًا":"ONE QUESTION. A NEW PATH."}</p><h3>{ar?"ما القدرة المهمة التي يجب أن توجد، لكنها لا توجد اليوم؟":"What important capability should exist that does not exist today?"}</h3><p>{ar?"نبدأ من القدرة التي ينبغي أن توجد، ثم نكتشف لماذا لا توجد اليوم، ونجمع الأشخاص والمعرفة والتقنيات والفرص اللازمة لبنائها وتحويلها إلى واقع.":"We start with the capability that should exist. We discover why it does not exist today, then bring together the people, knowledge, technologies and opportunities needed to make it real."}</p><Link className="vs-text-link" href={`${p}/method`}>{ar?"اكتشف منهجنا":"Explore our method"}<ArrowRight size={20}/></Link></article>
+        <div className="vs-reading"><div className="vs-mini-heading"><h2>{ar?"من داخل VisionSeek":"Inside VisionSeek"}</h2><Link href={`${p}/insights`}>{ar?"بيت القادة":"Leaders House"}<ArrowRight size={18}/></Link></div>{reading.map(r=><Link className="vs-reading-row" href={`${p}${r.href}`} key={r.href}><div className="vs-reading-image"><Image src={`/field-${r.image}.jpg`} alt="" fill sizes="(max-width:760px) 30vw, 16vw"/></div><div><p className="vs-eyebrow">{r.category}</p><h3>{r.title}</h3><p>{r.text}</p><span className="vs-inline-arrow" aria-hidden="true">↗</span></div></Link>)}</div>
       </section>
-
-      <section className="vision" id="vision">
-        <div className="section-code">01 / {ar ? "رؤيتنا" : "OUR VISION"}</div>
-        <div className="section-copy">
-          <h2 className={ar ? "primary-ar" : "primary-en"}>
-            {ar
-              ? <>أن نصبح مؤسسة عالمية تساعد الحكومات والشركات والقادة على اكتشاف فرص المستقبل وبناء القدرات اللازمة للاستفادة منها.</>
-              : <>To become a global institution that helps governments, companies, and leaders discover future opportunities and build the capabilities to act on them.</>}
-          </h2>
-        </div>
-
-        <div className="vision-orbit" aria-hidden="true">
-          <span className="orbit-ring" />
-          <span className="orbit-node node-one" />
-          <span className="orbit-node node-two" />
-          <span className="orbit-node node-three" />
-        </div>
-      </section>
-
-      <section className="fields" id="fields">
-        <div className="section-code">02 / {ar ? "مجالات نستكشفها" : "FIELDS WE EXPLORE"}</div>
-        <div className="fields-heading">
-          <h2 className={ar ? "primary-ar" : "primary-en"}>{ar ? "نبحث حيث يمكن للأفكار الجديدة أن تعيد تشكيل حياة الإنسان." : "We explore where new ideas can reshape human life."}</h2>
-        </div>
-
-        <div className="field-grid">
-          <article className="field-card field-space">
-            <Image src="/field-space.jpg" alt="صاروخ ينطلق إلى الفضاء وقت الغروب" fill sizes="(max-width: 850px) 100vw, 58vw" />
-            <div className="field-caption"><span>01</span><h3>{ar ? "الفضاء والصواريخ" : "SPACE & ROCKETS"}</h3></div>
-          </article>
-          <article className="field-card field-drones">
-            <Image src="/field-drones.jpg" alt="درون حديث يحلق في الهواء" fill sizes="(max-width: 850px) 100vw, 42vw" />
-            <div className="field-caption"><span>02</span><h3>{ar ? "الدرونز والأنظمة الجوية" : "DRONES & AERIAL SYSTEMS"}</h3></div>
-          </article>
-          <article className="field-card field-cities">
-            <Image src="/field-cities.jpg" alt="شبكات رقمية ترمز إلى مدن المستقبل" fill sizes="(max-width: 850px) 100vw, 58vw" />
-            <div className="field-caption"><span>03</span><h3>{ar ? "مدن المستقبل" : "FUTURE CITIES"}</h3></div>
-          </article>
-          <article className="field-card field-science">
-            <Image src="/field-science.jpg" alt="باحث يعمل داخل مختبر حديث" fill sizes="(max-width: 850px) 100vw, 42vw" />
-            <div className="field-caption"><span>04</span><h3>{ar ? "العلم والصحة" : "SCIENCE & HEALTH"}</h3></div>
-          </article>
-          <article className="field-card field-energy">
-            <Image src="/field-energy.jpg" alt="ألواح شمسية وتوربينات رياح" fill sizes="(max-width: 850px) 100vw, 34vw" />
-            <div className="field-caption"><span>05</span><h3>{ar ? "الطاقة والمناخ" : "ENERGY & CLIMATE"}</h3></div>
-          </article>
-          <article className="field-card field-industry">
-            <Image src="/field-industry.jpg" alt="روبوتات داخل مصنع متقدم" fill sizes="(max-width: 850px) 100vw, 66vw" />
-            <div className="field-caption"><span>06</span><h3>{ar ? "الروبوتات والصناعة الذكية" : "ROBOTICS & SMART INDUSTRY"}</h3></div>
-          </article>
-          <article className="field-card field-food">
-            <Image src="/field-food.jpg" alt="صوب زراعية حديثة من الجو" fill sizes="(max-width: 850px) 100vw, 34vw" />
-            <div className="field-caption"><span>07</span><h3>{ar ? "الزراعة والغذاء المستدام" : "AGRICULTURE & SUSTAINABLE FOOD"}</h3></div>
-          </article>
-          <article className="field-card field-chips">
-            <Image src="/field-chips.jpg" alt="رقائق إلكترونية ومواد متقدمة" fill sizes="(max-width: 850px) 100vw, 66vw" />
-            <div className="field-caption"><span>08</span><h3>{ar ? "الرقائق والمواد" : "CHIPS & MATERIALS"}</h3></div>
-          </article>
-        </div>
-      </section>
-
-      <section className="founder" id="founder">
-        <div className="section-code">03 / {ar ? "خلف الرؤية" : "BEHIND THE VISION"}</div>
-        <div className="founder-portrait">
-          <Image src="/ahmed-abdelalim.jpg" alt="أحمد عبدالعليم" fill sizes="(max-width: 850px) 100vw, 45vw" />
-          <span aria-hidden="true" />
-        </div>
-        <div className="founder-copy">
-          <h2 className={ar ? "primary-ar" : "primary-en"}>{ar ? "أحمد عبدالعليم" : "Ahmed Abdelalim"}</h2>
-          <p className="founder-role">{ar ? "المؤسس · VISIONSEEK" : "FOUNDER · VISIONSEEK"}</p>
-          <p className={ar ? "founder-bio primary-ar" : "founder-bio primary-en"}>
-            {ar
-              ? <>أؤمن أن تغيير العالم لا يبدأ دائمًا باختراع شيء جديد، بل باكتشاف الرابط المفقود بين ما نعرفه وما نستطيع أن نصنعه. من خلال VisionSeek، أطمح إلى جمع التكنولوجيا والعلم والتصميم وريادة الأعمال في مشروعات تفتح إمكانات جديدة للإنسان والمجتمع.</>
-              : <>I believe changing the world does not always begin with inventing something new, but with discovering the missing connection between what we know and what we can build. Through VisionSeek, I aim to unite technology, science, design, and entrepreneurship in projects that unlock new possibilities for people and society.</>}
-          </p>
-          <blockquote className={ar ? "primary-ar" : "primary-en"}>
-            {ar ? "يبدأ التغيير الحقيقي عندما نربط ما هو موجود بالفعل، ونحوّله إلى ما هو قادم." : "Meaningful change begins when we connect what already exists — and turn it into what comes next."}
-          </blockquote>
-        </div>
-      </section>
-
-      <section className="finale">
-        <div className="final-node" aria-hidden="true" />
-        <p className={ar ? "primary-ar" : "primary-en"}>{ar ? <>المستقبل موجود بالفعل،<br />لكنه لم يُربط بعد.</> : <>The future is already here.<br />It simply has not been connected yet.</>}</p>
-      </section>
-
-      <section className="contact" id="contact">
-        <div className="section-code">04 / {ar ? "ابدأ محادثة" : "START A CONVERSATION"}</div>
-        <div className="contact-heading">
-          <h2 className={ar ? "primary-ar" : "primary-en"}>{ar ? <>دعنا نبني<br />ما هو قادم.</> : <>LET&apos;S BUILD<br />WHAT COMES NEXT.</>}</h2>
-        </div>
-
-        <div className="contact-grid">
-          <a className="contact-item" href="mailto:abdelalim@visionseek.org">
-            <span>{ar ? "البريد الإلكتروني" : "EMAIL"}</span>
-            <strong>abdelalim@visionseek.org</strong>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <a className="contact-item" href="https://wa.me/821042419606" target="_blank" rel="noreferrer">
-            <span>{ar ? "واتساب" : "WHATSAPP"}</span>
-            <strong>+82 10 4241 9606</strong>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <a className="contact-item" href="https://www.linkedin.com/in/ahmed-abdelalim-462491160/" target="_blank" rel="noreferrer">
-            <span>{ar ? "لينكدإن" : "LINKEDIN"}</span>
-            <strong>Ahmed Abdelalim</strong>
-            <i aria-hidden="true">↗</i>
-          </a>
-          <div className="contact-location">
-            <p>{ar ? "إنتشون، كوريا الجنوبية" : "INCHEON, SOUTH KOREA"}</p>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div className="footer-logo" aria-hidden="true" />
-        <span>VISIONSEEK</span>
-        <nav className="footer-legal" aria-label={ar ? "روابط قانونية" : "Legal"}>
-          <Link href={ar ? "/ar/privacy" : "/privacy"}>{ar ? "الخصوصية" : "PRIVACY"}</Link>
-          <Link href={ar ? "/ar/terms" : "/terms"}>{ar ? "الشروط" : "TERMS"}</Link>
-        </nav>
-      </footer>
-    </main>
-  );
+      <InstitutionHome locale={locale}/>
+      <MethodSpotlight locale={locale}/>
+      <section className="vs-section vs-communities" id="communities"><div className="vs-section-heading"><div><p className="vs-eyebrow">{ar?"الأشخاص والمؤسسات وراء القدرة":"THE PEOPLE BEHIND THE CAPABILITY"}</p><h2>{ar?"معًا، يصبح الممكن أكبر.":"Possibility grows together."}</h2></div><p>{ar?"المعرفة لا تجتمع كلها داخل مؤسسة واحدة. نبني حول القدرة الفريق والشراكات التي تحتاجها فعلًا.":"No single institution holds all the knowledge. We bring together the team and partnerships a capability actually needs."}</p></div><div className="vs-community-grid">{communities.map((c,i)=>{const Icon=icons[i];return <Link href={`${p}/work-with-us#${c.id}`} key={c.id} className="vs-community-card"><Icon size={40} strokeWidth={1.25}/><h3>{ar?c.ar:c.en}</h3><p>{ar?c.textAr:c.textEn}</p><ArrowRight className="vs-card-arrow" size={22}/></Link>;})}</div></section>
+      <section className="vs-section vs-fields" id="fields"><div className="vs-section-heading"><div><p className="vs-eyebrow">{ar?"مجالات نستكشفها":"FIELDS OF EXPLORATION"}</p><h2>{ar?"أين نبحث عن الممكن":"Where we look for possibility"}</h2></div><div><p>{ar?"من العلم والصناعة إلى البنية التحتية. مجالات نتابعها بحثًا عن قدرات تستحق البناء.":"From science and industry to infrastructure. Fields we explore for capabilities worth building."}</p><Link className="vs-text-link" href={`${p}/projects`}>{ar?"استكشف المجالات":"Explore the fields"}<ArrowRight size={20}/></Link></div></div><div className="vs-fields-grid">{fields.map(([id,en,arabic,img],i)=><Link href={`${p}/projects#${id}`} key={id} className="vs-field-card"><Image src={`/field-${img}.jpg`} alt="" fill sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 25vw"/><div><span>0{i+1}</span><h3>{ar?arabic:en}</h3><ArrowRight size={21}/></div></Link>)}</div></section>
+      <section className="vs-work-feature"><div className="vs-work-copy"><p className="vs-eyebrow">{ar?"اعمل مع VisionSeek":"WORK WITH VISIONSEEK"}</p><h2>{ar?"ابدأ بقدرة تستحق أن توجد.":"Begin with a capability worth building."}</h2><p>{ar?"قد تكون مؤسسة تعرف ما ينقصها، أو خبيرًا يملك معرفة مهمة، أو شريكًا يرى فرصة. البداية أن نحدد معًا ما الذي ينبغي أن يصبح ممكنًا.":"You may be an institution with an unmet need, an expert with deep knowledge, or a partner who sees an opportunity. Begin by defining what should become possible."}</p><Link className="vs-button" href={`${p}/start`}>{ar?"ابنِ قدرة معنا":"Build a capability with us"}<ArrowRight size={20}/></Link></div><div className="vs-work-image"><Image src="/field-energy.jpg" alt={ar?"بنية تحتية للطاقة المتجددة":"Renewable energy infrastructure"} fill sizes="(max-width:760px) 100vw, 50vw"/></div></section>
+      <section className="vs-section vs-contact" id="contact"><p className="vs-eyebrow">{ar?"ابدأ محادثة":"START A CONVERSATION"}</p><h2>{ar?"ما الذي يجب أن يصبح ممكنًا؟":"What should become possible?"}</h2><Link className="vs-button" href={`${p}/start`}>{ar?"ابنِ قدرة معنا":"Build a capability with us"}<ArrowRight size={20}/></Link><div className="vs-contact-links"><a href="mailto:abdelalim@visionseek.org"><span>{ar?"البريد الإلكتروني":"Email"}</span><strong>abdelalim@visionseek.org</strong><ArrowRight size={22}/></a><a href="https://wa.me/821042419606" target="_blank" rel="noreferrer"><span>{ar?"واتساب":"WhatsApp"}</span><strong dir="ltr">+82 10 4241 9606</strong><ArrowRight size={22}/></a><a href="https://www.linkedin.com/in/ahmed-abdelalim-462491160/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>{ar?"أحمد عبدالعليم":"Ahmed Abdelalim"}</strong><ArrowRight size={22}/></a></div><Link className="vs-founder-link" id="founder" href={`${p}/about#founder`}>{ar?"تعرّف على المؤسس والرؤية":"Meet the founder and explore the vision"}<ArrowRight size={18}/></Link></section>
+    </main><CapabilityFooter locale={locale}/>
+  </div>;
 }

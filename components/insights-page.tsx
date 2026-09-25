@@ -41,7 +41,7 @@ export default function InsightsPage({ locale }: { locale: "ar" | "en" }) {
   );
 
   return (
-    <main className={`insights-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
+    <main id="main-content" className={`insights-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
       <SiteHeader
         locale={locale}
         solid

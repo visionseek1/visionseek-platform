@@ -56,7 +56,7 @@ export default function ProjectsPage({ locale }: { locale: "ar" | "en" }) {
   }, [status, topic]);
 
   return (
-    <main className={`projects-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
+    <main id="main-content" className={`projects-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
       <SiteHeader
         locale={locale}
         languageHref={ar ? "/projects" : "/ar/projects"}
