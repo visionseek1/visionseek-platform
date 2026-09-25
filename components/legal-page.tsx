@@ -17,7 +17,7 @@ export default function LegalPage({ locale, kind }: { locale: "ar" | "en"; kind:
         items={[
           { href: home, label: ar ? "الرئيسية" : "HOME" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/leaders" : "/leaders", label: ar ? "بيت القادة" : "Leaders House" },
         ]}
       />
 
@@ -58,7 +58,7 @@ function Privacy({ ar }: { ar: boolean }) {
         </ul>
         <h2>إذا راسلتنا</h2>
         <p>البريد وواتساب يمرّان عبر تلك الخدمات ثم إلينا لنرد. نحتفظ بالمراسلة للرد والمتابعة، ونحذفها إذا طلبت ذلك على العنوان أعلاه، ما لم يلزمنا الاحتفاظ بها لالتزام قانوني.</p>
-        <h2>صفحة الرؤى</h2>
+        <h2>بيت القادة</h2>
         <p>متصفحك يطلب ملف إشارات عامًا من GitHub (<span dir="ltr">raw.githubusercontent.com</span>). هذا الطلب ظاهر لـ GitHub بحسب شروطهم. لا نضيف إليه اسمك.</p>
         <h2>سجلات التشغيل</h2>
         <p>الاستضافة على Vercel قد تسجّل عنوان الإنترنت ونوع المتصفح والصفحة المطلوبة لتشغيل الموقع وحمايته. لا نبيع هذه السجلات.</p>
@@ -81,7 +81,7 @@ function Privacy({ ar }: { ar: boolean }) {
       </ul>
       <h2>If you write to us</h2>
       <p>Email and WhatsApp pass through those services and then to us so we can reply. We keep the correspondence to answer and follow up, and we delete it if you ask at the address above, unless a legal duty requires us to keep it.</p>
-      <h2>Insights</h2>
+      <h2>Leaders House</h2>
       <p>Your browser requests a public signals file from GitHub (raw.githubusercontent.com). That request is visible to GitHub under their terms. We do not attach your name to it.</p>
       <h2>Operations logs</h2>
       <p>The site is hosted on Vercel, which may log IP address, browser type, and the page requested in order to run and protect the site. We do not sell those logs.</p>
@@ -98,7 +98,7 @@ function Terms({ ar }: { ar: boolean }) {
         <h1 className="primary-ar">الشروط</h1>
         <p className="legal-lead primary-ar">الموقع عرض لما هي عليه VisionSeek وما تستكشفه. ليس عقدًا، ولا عرضًا للاستثمار، ولا استشارة.</p>
         <h2>ما تقرأه</h2>
-        <p>صفحة المجالات تصف مساحات استكشاف، لا مشروعات مُسلَّمة، إلا إذا قال اتفاق مكتوب غير ذلك. صفحة الرؤى مستشعر: إشارات وإحاطات للمساعدة على الرؤية، لا نصيحة قانونية أو استثمارية أو قرارًا حكوميًا بالنيابة عنك.</p>
+        <p>صفحة المجالات تصف مساحات استكشاف، لا مشروعات مُسلَّمة، إلا إذا قال اتفاق مكتوب غير ذلك. صفحة بيت القادة مستشعر: إشارات وإحاطات للمساعدة على الرؤية، لا نصيحة قانونية أو استثمارية أو قرارًا حكوميًا بالنيابة عنك.</p>
         <h2>لا شراكة ضمنية</h2>
         <p>يمكنك الربط بالموقع. لا تستخدم الاسم أو الشعار بما يوحي بشراكة أو تفويض أو تمثيل حكومي.</p>
         <h2>المحتوى</h2>
@@ -116,7 +116,7 @@ function Terms({ ar }: { ar: boolean }) {
       <h1 className="primary-en">Terms</h1>
       <p className="legal-lead primary-en">The site shows what VisionSeek is and what it is exploring. It is not a contract, an investment offer, or advice.</p>
       <h2>What you are reading</h2>
-      <p>The fields page describes areas of exploration, not delivered projects, unless a written agreement says otherwise. Insights is a sensor: signals and briefings to help you see, not legal, investment, or policy advice, and not a decision made for you.</p>
+      <p>The fields page describes areas of exploration, not delivered projects, unless a written agreement says otherwise. The Leaders House page is a sensor: signals and briefings to help you see, not legal, investment, or policy advice, and not a decision made for you.</p>
       <h2>No implied partnership</h2>
       <p>You may link to the site. Do not use the name or mark to suggest a partnership, a mandate, or government representation.</p>
       <h2>Content</h2>

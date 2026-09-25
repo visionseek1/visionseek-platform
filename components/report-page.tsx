@@ -1,5 +1,9 @@
-import Link from "next/link";
+import Image from "next/image";
 import SiteHeader from "@/components/site-header";
+import BriefActions from "@/components/brief-actions";
+import LeadersContinue from "@/components/leaders-continue";
+import LeadersReturnLink from "@/components/leaders-return";
+import { getBrief } from "@/lib/brief";
 
 const sources = [
   {
@@ -50,7 +54,7 @@ const report = {
     sourceLabel: "SELECTED SOURCES",
     sourceNote: "This brief is original VisionSeek analysis. Sources are provided for evidence and further reading; no source text is republished.",
     cta: "Discuss a government mission",
-    back: "Back to Insights",
+    back: "Back to Leaders House",
   },
   ar: {
     label: "إحاطة VISIONSEEK للحكومات / 01",
@@ -82,11 +86,12 @@ const report = {
     sourceLabel: "مصادر مختارة",
     sourceNote: "هذه إحاطة أصلية من VisionSeek. أُدرجت المصادر للاستدلال والقراءة الإضافية، ولم يُعاد نشر نصوصها.",
     cta: "ناقش مهمة حكومية معنا",
-    back: "العودة إلى الرؤى",
+    back: "العودة إلى بيت القادة",
   },
 };
 
 export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
+  const photo = getBrief("physical-ai");
   const ar = locale === "ar";
   const copy = report[locale];
   const base = ar ? "/ar" : "";
@@ -98,7 +103,7 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
     inLanguage: ar ? "ar" : "en",
     author: { "@id": "https://visionseek.org/#organization" },
     publisher: { "@id": "https://visionseek.org/#organization" },
-    mainEntityOfPage: `https://visionseek.org${base}/insights/physical-ai`,
+    mainEntityOfPage: `https://visionseek.org${base}/leaders/physical-ai`,
   };
 
   return (
@@ -107,9 +112,9 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
       <SiteHeader
         locale={locale}
         solid
-        languageHref={ar ? "/insights/physical-ai" : "/ar/insights/physical-ai"}
+        languageHref={ar ? "/leaders/physical-ai" : "/ar/leaders/physical-ai"}
         items={[
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "الرؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/leaders" : "/leaders", label: ar ? "بيت القادة" : "Leaders House" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
           { href: base || "/", label: ar ? "الرئيسية" : "HOME" },
         ]}
@@ -121,6 +126,12 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
           <h1>{copy.title}</h1>
           <p>{copy.standfirst}</p>
         </header>
+
+        {photo?.image ? (
+          <figure className="leaders-article-photo">
+            <Image src={photo.image} alt={photo.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority />
+          </figure>
+        ) : null}
 
         <section className="report-summary">
           <p className="report-eyebrow">{copy.summaryLabel}</p>
@@ -156,8 +167,14 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
           <ol>{sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer"><span>{source.name}</span>{source.title} ↗</a></li>)}</ol>
         </section>
 
+        <div className="brief-tools">
+          <BriefActions locale={locale} slug="physical-ai" path={`${base}/leaders/physical-ai`} />
+        </div>
+
+        <LeadersContinue locale={locale} slug="physical-ai" />
+
         <footer className="report-footer">
-          <Link href={`${base}/insights`}>← {copy.back}</Link>
+          <LeadersReturnLink locale={locale}>{copy.back}</LeadersReturnLink>
           <a href="mailto:abdelalim@visionseek.org?subject=Government%20mission%20briefing">{copy.cta} ↗</a>
         </footer>
       </article>
