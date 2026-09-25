@@ -1,0 +1,21 @@
+"use client";
+import {useState,type FormEvent} from 'react';
+import {Input} from '@/components/ui/input';
+import {Textarea} from '@/components/ui/textarea';
+import {Download,Mail,ArrowRight} from 'lucide-react';
+const fields=[
+ ['capability','What should become possible?','ما الذي يجب أن يصبح ممكنًا؟'],
+ ['beneficiary','Who needs this capability, and why?','مَن يحتاج هذه القدرة، ولماذا؟'],
+ ['limit','What prevents it today? What evidence supports this?','ما الذي يمنعها اليوم؟ وما الدليل؟'],
+ ['approach','Your approach and contribution','مسارك المقترح ومساهمتك'],
+ ['proof','First test, baseline and success measures','الاختبار الأول وخط الأساس ومقاييس النجاح'],
+ ['resources','People, resources and estimated time','الأشخاص والموارد والوقت التقديري'],
+ ['risks','Risks, unknowns and stop conditions','المخاطر والمجهول وشروط التوقف'],
+ ['operator','Who could own and operate the result?','مَن يستطيع تحمّل مسؤولية النتيجة وتشغيلها؟'],
+];
+export default function ConceptForm({ar,context=''}:{ar:boolean;context?:string}){
+ const [note,setNote]=useState(''); const [prepared,setPrepared]=useState(false);
+ function build(event:FormEvent<HTMLFormElement>){event.preventDefault();const d=new FormData(event.currentTarget);const body=[`# VisionSeek — ${ar?'مذكرة تصور':'Concept note'}`,context?`\n${context}`:'',`\n${ar?'الاسم':'Name'}: ${String(d.get('name')).trim()}`,`Email: ${String(d.get('email')).trim()}`,...fields.map(([key,en,arabic])=>`\n## ${ar?arabic:en}\n${String(d.get(key)||'').trim()||(ar?'غير محدد':'Not yet specified')}`)].join('\n');setNote(body);setPrepared(false);}
+ function download(){const blob=new Blob([note],{type:'text/markdown;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='visionseek-concept-note.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ return <section className="vs-concept-form" id="concept-note"><h2>{ar?'جهّز مذكرتك':'Prepare your note'}</h2><p>{ar?'تعمل الأداة داخل المتصفح. لا تحفظ مدخلاتك على خادم ولا ترسلها تلقائيًا.':'This tool works in your browser. It does not store your inputs on a server or send them automatically.'}</p><form onSubmit={build} onChange={()=>{setNote('');setPrepared(false);}}><div className="vs-form-identity"><label>{ar?'الاسم':'Name'}<Input name="name" required maxLength={100} pattern=".*\S.*" autoComplete="name"/></label><label>{ar?'البريد الإلكتروني':'Email'}<Input name="email" type="email" required maxLength={180} autoComplete="email" dir="ltr"/></label></div>{fields.map(([key,en,arabic],i)=><label key={key}>{ar?arabic:en}{i<4?<span className="vs-required"> {ar?'(مطلوب)':'(required)'}</span>:null}<Textarea name={key} required={i<4} rows={3} maxLength={1500} onInput={e=>e.currentTarget.setCustomValidity(i<4&&!e.currentTarget.value.trim()?(ar?'اكتب إجابة غير فارغة.':'Please enter a non-empty answer.'):'')} dir="auto"/></label>)}<button type="submit" className="vs-button">{ar?'تجهيز المذكرة':'Prepare note'}<ArrowRight size={18}/></button></form>{note&&<div className="vs-note-result"><p role="status">{ar?'المذكرة جاهزة للمراجعة — لم تُرسل.':'Your note is ready to review — it has not been sent.'}</p><pre dir="auto">{note}</pre><div className="vs-note-actions"><button onClick={download} className="vs-button"><Download size={18}/>{ar?'تنزيل Markdown':'Download Markdown'}</button><a className="vs-secondary-button" href={`mailto:abdelalim@visionseek.org?subject=${encodeURIComponent(`VisionSeek — ${context||'Concept note'}`)}&body=${encodeURIComponent(note.length>2500?(ar?'أرفق مذكرة التصور التي نزّلتها من الموقع، ثم أكمل الإرسال.':'Please attach the concept note downloaded from the website, then complete sending.'):note)}`} onClick={()=>setPrepared(true)}><Mail size={18}/>{ar?'فتح مسودة بريد':'Open email draft'}</a></div>{note.length>2500&&<p>{ar?'المذكرة طويلة: نزّلها وأرفقها بالبريد. رابط البريد يفتح رسالة قصيرة فقط.':'This note is long: download it and attach it to the email. The email link opens a short message only.'}</p>}{prepared&&<p role="status">{ar?'أكمل المراجعة والإرسال في تطبيق البريد. إذا لم يفتح، راسل abdelalim@visionseek.org وأرفق المذكرة.':'Review and send in your email app. If it does not open, email abdelalim@visionseek.org and attach the note.'}</p>}</div>}</section>;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
+import "./institution.css";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
