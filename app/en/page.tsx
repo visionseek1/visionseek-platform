@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: "VisionSeek | Future Technology, Science & Venture Building",
-  description: "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
+  title: "VisionSeek | Make It Possible.",
+  description: "Opportunity engineering. We connect ideas, technology and people to turn what could be into capabilities that work.",
   alternates: {
     canonical: "/",
     languages: { en: "/", ar: "/ar" },
