@@ -27,7 +27,7 @@ const structuredData = {
       "@id": "https://visionseek.org/#organization",
       name: "VisionSeek",
       url: "https://visionseek.org/",
-      logo: "https://visionseek.org/visionseek-logo-v2.png",
+      logo: "https://visionseek.org/visionseek-logo-color.png",
       description:
         "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
       email: "abdelalim@visionseek.org",
@@ -66,12 +66,9 @@ export const metadata: Metadata = {
   description:
     "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    icon: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
+    shortcut: "/visionseek-symbol-color.png",
+    apple: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
   },
   alternates: {
     canonical: "/",
