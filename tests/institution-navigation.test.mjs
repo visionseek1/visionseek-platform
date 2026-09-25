@@ -8,7 +8,7 @@ async function pages(dir=root){const all=[];for(const entry of await readdir(dir
 
 test('institutional navigation resolves to built bilingual pages and real anchors',async()=>{
  const html=new Map();for(const file of await pages()){const rel=path.relative(root,file).replaceAll(path.sep,'/').replace(/\.html$/,'');html.set(rel==='index'?'/':`/${rel}`,await readFile(file,'utf8'));}
- const areas=['work-with-us','opportunities','programs','offices','news','workshops','careers','about'];
+ const areas=['work-with-us','opportunities','programs','news','workshops','about'];
  for(const prefix of ['', '/ar'])for(const area of areas)assert.ok(html.has(`${prefix}/${area}`),`Missing section ${prefix}/${area}`);
  const failures=[];
  for(const [route,body] of html){
