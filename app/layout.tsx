@@ -24,6 +24,7 @@ const structuredData = {
       "@type": "Organization",
       "@id": "https://visionseek.org/#organization",
       name: "VisionSeek",
+      slogan: "Make It Possible.",
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-v2.png",
       description:
@@ -60,7 +61,7 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
-  title: "VisionSeek | Future Technology, Science & Venture Building",
+  title: "VisionSeek | Make It Possible.",
   description:
     "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
   icons: {
@@ -81,11 +82,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "VisionSeek",
-    title: "VisionSeek | Future Technology, Science & Venture Building",
+    title: "VisionSeek | Make It Possible.",
     description:
       "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
     url: "/",
-    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — We Build What Comes Next" }],
+    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
   },
   robots: {
     index: true,
