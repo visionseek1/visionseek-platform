@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
+import "./capability.css";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ const structuredData = {
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-v2.png",
       description:
-        "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
+        "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
       email: "abdelalim@visionseek.org",
       telephone: "+82-10-4241-9606",
       address: {
@@ -60,9 +61,9 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
-  title: "VisionSeek | Future Technology, Science & Venture Building",
+  title: "VisionSeek | Make It Possible.",
   description:
-    "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
+    "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -81,11 +82,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "VisionSeek",
-    title: "VisionSeek | Future Technology, Science & Venture Building",
+    title: "VisionSeek | Make It Possible.",
     description:
-      "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
+      "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
     url: "/",
-    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — We Build What Comes Next" }],
+    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
   },
   robots: {
     index: true,

@@ -10,7 +10,7 @@ export default function LegalPage({ locale, kind }: { locale: "ar" | "en"; kind:
   const termsHref = ar ? "/ar/terms" : "/terms";
 
   return (
-    <main className={`legal-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
+    <main id="main-content" className={`legal-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
       <SiteHeader
         locale={locale}
         languageHref={kind === "privacy" ? (ar ? "/privacy" : "/ar/privacy") : (ar ? "/terms" : "/ar/terms")}

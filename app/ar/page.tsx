@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: "VisionSeek | بناء المستقبل بالتكنولوجيا والعلم وريادة الأعمال",
-  description: "تربط VisionSeek قدرات موجودة بالفعل في عمل تستطيع حكومة أو شركة أن تديره. إنتشون، كوريا الجنوبية.",
+  title: "VisionSeek | Make It Possible.",
+  description: "تبني VisionSeek قدرات جديدة للمؤسسات والحكومات. نحدد القدرة ونجمع أفضل الأشخاص والمعرفة والتقنيات، ثم نختبر ونشغّل ونطوّر.",
   alternates: {
     canonical: "/ar",
     languages: { en: "/", ar: "/ar" },

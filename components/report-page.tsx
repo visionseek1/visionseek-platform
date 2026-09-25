@@ -102,7 +102,7 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
   };
 
   return (
-    <main className={`report-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
+    <main id="main-content" className={`report-page ${ar ? "locale-ar" : "locale-en"}`} lang={ar ? "ar" : "en"} dir={ar ? "rtl" : "ltr"}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <SiteHeader
         locale={locale}

@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const entries = [
+    ...["method", "about", "work-with-us"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },
