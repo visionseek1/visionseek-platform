@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries = [
     ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:`/${s.id}`,priority:0.8},{path:`/ar/${s.id}`,priority:0.8}]),
     ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
-    ...["method", "about", "work-with-us"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
+    ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },
