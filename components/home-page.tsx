@@ -25,8 +25,8 @@ export default function HomePage({ locale }: { locale: "ar" | "en" }) {
 
         <div className="hero-copy">
           <div className="hero-title-lockup">
-            <h1 className={ar ? "primary-ar" : "primary-en"}>
-              {ar ? <><span>نحن نبني</span><br /><span>ما هو قادم</span></> : <>WE BUILD<br />WHAT COMES NEXT.</>}
+            <h1 className="primary-en" lang="en" dir="ltr" style={{ fontFamily: "var(--font-display), Arial, sans-serif" }}>
+              MAKE IT<br />POSSIBLE.
             </h1>
           </div>
           <p className={ar ? "intro-copy primary-ar" : "intro-copy primary-en"}>
