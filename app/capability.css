@@ -19,3 +19,5 @@
 .projects-page .projects-hero,.insights-page .insights-hero{padding-top:4rem;padding-bottom:4rem;background:#15171e}
 .projects-page .projects-hero h1,.insights-page .insights-hero h1{font-size:clamp(3rem,6vw,5.5rem)}
 .projects-page .projects-index{padding-top:4rem}.projects-page .project-row{margin-bottom:3rem}.projects-page .project-meta h2{font-size:clamp(1.8rem,3vw,2.5rem)}
+/* Keep the English brand line in its established face on Arabic pages too. */
+.vs-site.locale-ar :is(.vs-hero h1,.vs-footer-top strong,.vs-closing-line){font-family:var(--font-display),sans-serif!important}
