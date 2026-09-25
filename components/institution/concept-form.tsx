@@ -4,7 +4,7 @@ import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/textarea';
 import {Download,Mail,ArrowRight} from 'lucide-react';
 const fields=[
- ['capability','What should become possible?','ما الذي يجب أن يصبح ممكنًا؟'],
+ ['capability','What should become possible?','ما القدرة التي تريد أن تمتلكها؟'],
  ['beneficiary','Who needs this capability, and why?','مَن يحتاج هذه القدرة، ولماذا؟'],
  ['limit','What prevents it today? What evidence supports this?','ما الذي يمنعها اليوم؟ وما الدليل؟'],
  ['approach','Your approach and contribution','مسارك المقترح ومساهمتك'],
