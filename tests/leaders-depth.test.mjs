@@ -30,13 +30,14 @@ test("AI policy is not the chip lab, and the first eight cards do not repeat a c
   const china = rows.find((row) => row.slug === "china-ai-supply-demand-imbalance-policy-2026");
   assert.ok(china);
   assert.equal(china.fieldId, null);
-  assert.doesNotMatch(china.image, /field-chips/);
-  assert.doesNotMatch(china.image, /visionseek-hero/);
+  assert.equal(china.image, null);
 
-  const first = rows.slice(0, 8).map((row) => row.image);
+  const first = rows.slice(0, 8);
   assert.equal(first.length, 8);
   for (let index = 1; index < first.length; index += 1) {
-    assert.notEqual(first[index], first[index - 1]);
+    if (first[index].image && first[index - 1].image) {
+      assert.notEqual(first[index].image, first[index - 1].image);
+    }
   }
 });
 

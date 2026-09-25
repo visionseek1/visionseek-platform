@@ -1,9 +1,10 @@
 import insights from "@/public/insights.json";
 import { fields } from "@/lib/fields";
-import { agenticSeriesId, learnSeed } from "@/lib/learn-seed";
+import { learnCoverExtras, seriesList } from "./series-data.mjs";
+import { signalDepth } from "./signal-depth.mjs";
+import { weeklyPicks, weeklyRule, weeklyTitle } from "./weekly-picks.mjs";
 import {
   byNewest,
-  learnSlug,
   orderedCoverRows,
   physicalFieldId,
   physicalPublishedAt,
@@ -26,6 +27,8 @@ export type WeeklyItem = {
   title: { en: string; ar: string };
   sourceUrl: string | null;
   source: string;
+  fieldId: string | null;
+  why: { en: string; ar: string };
 };
 
 export type SeriesPart = {
@@ -53,6 +56,7 @@ export type BriefEntry = {
   sourceUrl: string | null;
   fieldIds: string[];
   seriesId: string | null;
+  seriesPart: number | null;
   category: { en: string; ar: string };
   title: { en: string; ar: string };
   summary: { en: string; ar: string };
@@ -61,11 +65,12 @@ export type BriefEntry = {
   glossary: GlossaryItem[] | null;
   questions: { en: string[]; ar: string[] } | null;
   figures: { en: string[]; ar: string[] };
+  figuresVerified: boolean;
   deeper: SourceLink[];
   weeklyItems: WeeklyItem[] | null;
   series: BriefSeries | null;
   readingMinutes: { en: number; ar: number };
-  image: string;
+  image: string | null;
   imageAlt: string;
 };
 
@@ -91,8 +96,6 @@ export const followedStorageKey = "visionseek.leaders.followed";
 export const learnProgressKey = "visionseek.leaders.learnProgress";
 export const seenAtKey = "visionseek.leaders.seenAt";
 export const seenPrevKey = "visionseek.leaders.seenPrev";
-
-const plate = { image: "/leaders-placeholder.png", imageAlt: "VisionSeek" };
 
 export function fieldIdsForCategory(categoryEn: string) {
   const id = primaryField(categoryEn);
@@ -134,8 +137,17 @@ export function entryFromInsight(value: RawInsight): BriefEntry | null {
   const takeAr = text(value.takeAr);
   const fieldIds = fieldIdsForCategory(categoryEn);
   const sourceUrl = safeSourceUrl(value.sourceUrl);
-  const seriesId = /agentic/i.test(`${categoryEn} ${titleEn}`) ? agenticSeriesId : null;
-  const deeper = sourceUrl ? [{ href: sourceUrl, label: { en: "Reuters", ar: "رويترز" } }] : [];
+  const depth = signalDepth[slug as keyof typeof signalDepth] as
+    | {
+        seriesId: string | null;
+        figures: { en: string[]; ar: string[] };
+        questions: { en: string[]; ar: string[] };
+        deeper: SourceLink[];
+      }
+    | undefined;
+  const seriesId = depth ? depth.seriesId : /agentic/i.test(`${categoryEn} ${titleEn}`) ? "agentic-ai" : null;
+  const reuters = sourceUrl ? [{ href: sourceUrl, label: { en: "Reuters", ar: "رويترز" } }] : [];
+  const deeper = depth ? depth.deeper.filter((link) => safeSourceUrl(link.href)) : reuters;
   return {
     slug,
     kind: "signal",
@@ -145,14 +157,16 @@ export function entryFromInsight(value: RawInsight): BriefEntry | null {
     sourceUrl,
     fieldIds,
     seriesId,
+    seriesPart: null,
     category: { en: categoryEn, ar: categoryAr },
     title: { en: titleEn, ar: titleAr },
     summary: { en: summaryEn, ar: summaryAr },
     take: takeEn || takeAr ? { en: takeEn, ar: takeAr } : null,
     body: null,
     glossary: null,
-    questions: null,
-    figures: { en: sentencesWithNumbers(summaryEn), ar: sentencesWithNumbers(summaryAr) },
+    questions: depth ? depth.questions : null,
+    figures: depth ? depth.figures : { en: sentencesWithNumbers(summaryEn), ar: sentencesWithNumbers(summaryAr) },
+    figuresVerified: Boolean(depth),
     deeper,
     weeklyItems: null,
     series: null,
@@ -160,8 +174,8 @@ export function entryFromInsight(value: RawInsight): BriefEntry | null {
       en: readingMinutes(`${summaryEn} ${takeEn}`),
       ar: readingMinutes(`${summaryAr} ${takeAr}`),
     },
-    image: plate.image,
-    imageAlt: plate.imageAlt,
+    image: null,
+    imageAlt: "",
   };
 }
 
@@ -189,6 +203,7 @@ export const physicalAiEntry: BriefEntry = {
   sourceUrl: null,
   fieldIds: [physicalFieldId, "chips"],
   seriesId: null,
+  seriesPart: null,
   category: { en: "Physical AI", ar: "الذكاء الاصطناعي المادي" },
   title: {
     en: "Physical AI is becoming national infrastructure",
@@ -203,95 +218,111 @@ export const physicalAiEntry: BriefEntry = {
   glossary: null,
   questions: null,
   figures: { en: [], ar: [] },
+  figuresVerified: false,
   deeper: physicalSources,
   weeklyItems: null,
   series: null,
   readingMinutes: { en: 8, ar: 8 },
-  image: plate.image,
-  imageAlt: plate.imageAlt,
+  image: null,
+  imageAlt: "",
 };
 
-function learnEntry(): BriefEntry {
-  const en = [learnSeed.summary.en, ...learnSeed.body.en].join(" ");
-  const ar = [learnSeed.summary.ar, ...learnSeed.body.ar].join(" ");
-  return {
-    slug: learnSeed.slug,
-    kind: "learn",
-    draft: learnSeed.draft,
-    publishedAt: learnSeed.publishedAt,
-    source: "OECD",
-    sourceUrl: learnSeed.deeper[0]?.href ?? null,
-    fieldIds: [],
-    seriesId: learnSeed.seriesId,
-    category: learnSeed.category,
-    title: learnSeed.title,
-    summary: learnSeed.summary,
-    take: null,
-    body: learnSeed.body,
-    glossary: learnSeed.glossary,
-    questions: learnSeed.questions,
-    figures: { en: [], ar: [] },
-    deeper: learnSeed.deeper,
-    weeklyItems: null,
-    series: learnSeed.series,
-    readingMinutes: { en: readingMinutes(en), ar: readingMinutes(ar) },
-    image: plate.image,
-    imageAlt: plate.imageAlt,
-  };
+function learnEntries(): BriefEntry[] {
+  return seriesList.flatMap((series) =>
+    series.parts.map((part) => {
+      const en = [part.summary.en, ...part.body.en].join(" ");
+      const ar = [part.summary.ar, ...part.body.ar].join(" ");
+      const seriesMeta = {
+        id: series.id,
+        title: series.title,
+        parts: series.parts.map((item) => ({ slug: item.slug, title: item.title })),
+      };
+      return {
+        slug: part.slug,
+        kind: "learn" as const,
+        draft: false,
+        publishedAt: part.publishedAt,
+        source: part.source,
+        sourceUrl: safeSourceUrl(part.deeper[0]?.href),
+        fieldIds: series.fieldId ? [series.fieldId] : [],
+        seriesId: series.id,
+        seriesPart: part.part,
+        category: series.category,
+        title: part.title,
+        summary: part.summary,
+        take: null,
+        body: part.body,
+        glossary: part.glossary,
+        questions: part.questions,
+        figures: { en: [], ar: [] },
+        figuresVerified: false,
+        deeper: part.deeper.filter((link) => safeSourceUrl(link.href)),
+        weeklyItems: null,
+        series: seriesMeta,
+        readingMinutes: { en: readingMinutes(en), ar: readingMinutes(ar) },
+        image: null,
+        imageAlt: "",
+      };
+    }),
+  );
 }
 
 function weeklyEntry(signals: BriefEntry[]): BriefEntry {
-  const five = [...signals].sort(byNewest).slice(0, 5);
-  const summary = {
-    en: "Draft. These are the five newest signals in the current file, not a judgment of which five mattered most. Each item opens its Reuters story. Choosing the week’s five is still for the owner.",
-    ar: "مسودة. هذه أحدث خمس إشارات في الملف الحالي، لا حكمًا بأنها أهم خمس في الأسبوع. كل بند يفتح خبر رويترز. اختيار أهم ما في الأسبوع ما زال لصاحب المنصة.",
-  };
+  const bySlug = new Map(signals.map((item) => [item.slug, item]));
+  const five = weeklyPicks.flatMap((pick) => {
+    const item = bySlug.get(pick.slug);
+    return item ? [{ item, why: pick.why }] : [];
+  });
   return {
     slug: weeklySlug,
     kind: "weekly",
-    draft: true,
+    draft: false,
     publishedAt: weeklyPublishedAt,
     source: "VisionSeek",
     sourceUrl: null,
     fieldIds: [],
     seriesId: null,
+    seriesPart: null,
     category: { en: "Weekly brief", ar: "موجز الأسبوع" },
-    title: { en: "Five newest signals — draft", ar: "أحدث خمس إشارات — مسودة" },
-    summary,
+    title: weeklyTitle,
+    summary: weeklyRule,
     take: null,
     body: null,
     glossary: null,
     questions: null,
     figures: { en: [], ar: [] },
-    deeper: five.flatMap((item) => (item.sourceUrl ? [{ href: item.sourceUrl, label: item.title }] : [])),
-    weeklyItems: five.map((item) => ({
+    figuresVerified: false,
+    deeper: five.flatMap(({ item }) => (item.sourceUrl ? [{ href: item.sourceUrl, label: item.title }] : [])),
+    weeklyItems: five.map(({ item, why }) => ({
       slug: item.slug,
       title: item.title,
       sourceUrl: item.sourceUrl,
       source: item.source || "Reuters",
+      fieldId: item.fieldIds[0] ?? null,
+      why,
     })),
     series: null,
     readingMinutes: {
-      en: readingMinutes(`${summary.en} ${five.map((item) => item.title.en).join(" ")}`),
-      ar: readingMinutes(`${summary.ar} ${five.map((item) => item.title.ar).join(" ")}`),
+      en: readingMinutes(`${weeklyRule.en} ${five.map(({ why }) => why.en).join(" ")}`),
+      ar: readingMinutes(`${weeklyRule.ar} ${five.map(({ why }) => why.ar).join(" ")}`),
     },
-    image: plate.image,
-    imageAlt: plate.imageAlt,
+    image: null,
+    imageAlt: "",
   };
 }
 
-export const learnArticle = learnEntry();
+const reservedSlugs = new Set([physicalSlug, weeklySlug, ...seriesList.flatMap((series) => series.parts.map((part) => part.slug))]);
 
 export function entriesFromInsights(items: unknown[]) {
   const signals = items
     .map((item) => entryFromInsight((item ?? {}) as RawInsight))
-    .filter((item): item is BriefEntry => item !== null && item.slug !== physicalSlug && item.slug !== learnSlug && item.slug !== weeklySlug);
-  const merged = [physicalAiEntry, learnArticle, weeklyEntry(signals), ...signals];
-  const covers = new Map(orderedCoverRows(items).map((row) => [row.slug, row]));
+    .filter((item): item is BriefEntry => item !== null && !reservedSlugs.has(item.slug));
+  const merged = [physicalAiEntry, ...learnEntries(), weeklyEntry(signals), ...signals];
+  const covers = new Map(orderedCoverRows(items, learnCoverExtras()).map((row) => [row.slug, row]));
   return merged
     .map((entry) => {
       const cover = covers.get(entry.slug);
-      return cover ? { ...entry, image: cover.image, imageAlt: cover.imageAlt } : entry;
+      return cover ? { ...entry, image: cover.image, imageAlt: cover.imageAlt || entry.imageAlt } : entry;
     })
     .sort(byNewest);
 }
@@ -337,7 +368,7 @@ export function continueFor(entry: BriefEntry, entries: BriefEntry[]) {
   if (related.length < 3 && next && !related.some((picked) => picked.slug === next.slug)) related.push(next);
   const learn = entry.kind === "learn" || !entry.seriesId
     ? null
-    : entries.find((item) => item.kind === "learn" && item.seriesId === entry.seriesId) ?? null;
+    : entries.find((item) => item.kind === "learn" && item.seriesId === entry.seriesId && item.seriesPart === 1) ?? null;
   return { next, related, learn };
 }
 

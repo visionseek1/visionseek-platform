@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import insights from "@/public/insights.json";
+import { learnSlugs } from "@/lib/series-data.mjs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -16,10 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/leaders", priority: 0.9 },
     { path: "/leaders/physical-ai", priority: 0.8 },
     { path: "/ar/leaders/physical-ai", priority: 0.8 },
-    { path: "/leaders/agentic-ai-what-it-is", priority: 0.7 },
-    { path: "/ar/leaders/agentic-ai-what-it-is", priority: 0.7 },
     { path: "/leaders/week-2026-09-19", priority: 0.7 },
     { path: "/ar/leaders/week-2026-09-19", priority: 0.7 },
+    ...learnSlugs.flatMap((slug) => [
+      { path: `/leaders/${slug}`, priority: 0.7 },
+      { path: `/ar/leaders/${slug}`, priority: 0.7 },
+    ]),
     ...signalEntries,
     { path: "/privacy", priority: 0.3 },
     { path: "/ar/privacy", priority: 0.3 },

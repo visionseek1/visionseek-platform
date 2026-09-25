@@ -59,7 +59,9 @@ test("leaders house replaces insights and the temporary brief routes", async () 
   assert.match(await read("components/report-page.tsx"), /leaders-article-photo/);
   const source = await read("lib/brief.ts");
   const rules = await read("lib/leaders-rules.mjs");
-  assert.match(rules, /\/leaders-placeholder\.png/);
+  assert.match(rules, /image: null/);
+  assert.doesNotMatch(rules, /leaders-placeholder/);
+  assert.doesNotMatch(rules, /plate-3/);
   assert.doesNotMatch(rules, /visionseek-hero\.png/);
   assert.doesNotMatch(source, /visionseek-hero\.png/);
   assert.doesNotMatch(subscribe, /mailto:/);

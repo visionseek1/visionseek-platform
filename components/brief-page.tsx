@@ -277,7 +277,6 @@ export default function BriefPage({ locale }: { locale: Locale }) {
                 <article className="leaders-card">
                   <p className="leaders-id">
                     <span className="leaders-kind">{kindLabel(entry.kind, locale)}</span>
-                    {entry.draft ? <span className="leaders-draft">{ar ? "مسودة" : "Draft"}</span> : null}
                     {entry.category.en || entry.category.ar ? <span>{ar ? entry.category.ar : entry.category.en}</span> : null}
                     <time dateTime={entry.publishedAt}>{formatDate(locale, entry.publishedAt)}</time>
                     <span>{ar ? `${minutes} دقائق` : `${minutes} min`}</span>
@@ -288,12 +287,17 @@ export default function BriefPage({ locale }: { locale: Locale }) {
                   <p className={entry.kind === "weekly" || entry.kind === "learn" ? "leaders-body" : "leaders-excerpt"}>{summary}</p>
                   {entry.weeklyItems?.length ? (
                     <ol className="leaders-week">
-                      {entry.weeklyItems.map((item) => (
-                        <li key={item.slug}>
-                          <Link href={briefHref(locale, item.slug)} onClick={rememberFeed}>{ar ? item.title.ar : item.title.en}</Link>
-                          {item.sourceUrl ? <> · <a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.source}</a></> : null}
-                        </li>
-                      ))}
+                      {entry.weeklyItems.map((item) => {
+                        const chip = fieldById(item.fieldId ?? "");
+                        return (
+                          <li key={item.slug}>
+                            <span className="leaders-chip">{chip ? (ar ? chip.title : chip.english) : (ar ? "سياسة" : "Policy")}</span>
+                            <Link href={briefHref(locale, item.slug)} onClick={rememberFeed}>{ar ? item.title.ar : item.title.en}</Link>
+                            {item.sourceUrl ? <> · <a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.source}</a></> : null}
+                            <p className="leaders-why">{ar ? item.why.ar : item.why.en}</p>
+                          </li>
+                        );
+                      })}
                     </ol>
                   ) : null}
                   {take ? (
@@ -302,9 +306,16 @@ export default function BriefPage({ locale }: { locale: Locale }) {
                       <p className="leaders-take-text">{take}</p>
                     </div>
                   ) : null}
-                  <Link className="leaders-figure" href={href} onClick={rememberFeed}>
-                    <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority={index === 0} />
-                  </Link>
+                  {entry.image ? (
+                    <Link className="leaders-figure" href={href} onClick={rememberFeed}>
+                      <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority={index === 0} />
+                    </Link>
+                  ) : entry.kind !== "weekly" ? (
+                    <Link className="leaders-typehead" href={href} onClick={rememberFeed}>
+                      <span>VisionSeek</span>
+                      <strong>{ar ? entry.category.ar : entry.category.en}</strong>
+                    </Link>
+                  ) : null}
                   <div className="leaders-foot">
                     {entry.source ? (
                       <p className="leaders-source">

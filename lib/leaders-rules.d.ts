@@ -11,11 +11,14 @@ declare module "./leaders-rules.mjs" {
   export function primaryField(categoryEn: string): string | null;
   export function hashSlug(slug: string): number;
   export function byNewest(a: { publishedAt: string; slug: string }, b: { publishedAt: string; slug: string }): number;
-  export function orderedCoverRows(items: readonly unknown[]): {
+  export function orderedCoverRows(
+    items: readonly unknown[],
+    extras?: readonly { slug: string; publishedAt: string; fieldId: string | null }[],
+  ): {
     slug: string;
     publishedAt: string;
     fieldId: string | null;
-    image: string;
+    image: string | null;
     imageAlt: string;
   }[];
 }

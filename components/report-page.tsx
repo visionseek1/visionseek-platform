@@ -3,7 +3,7 @@ import SiteHeader from "@/components/site-header";
 import BriefActions from "@/components/brief-actions";
 import LeadersContinue from "@/components/leaders-continue";
 import LeadersReturnLink from "@/components/leaders-return";
-import { physicalAiEntry } from "@/lib/brief";
+import { getBrief } from "@/lib/brief";
 
 const sources = [
   {
@@ -91,6 +91,7 @@ const report = {
 };
 
 export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
+  const photo = getBrief("physical-ai");
   const ar = locale === "ar";
   const copy = report[locale];
   const base = ar ? "/ar" : "";
@@ -126,9 +127,11 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
           <p>{copy.standfirst}</p>
         </header>
 
-        <figure className="leaders-article-photo">
-          <Image src={physicalAiEntry.image} alt={physicalAiEntry.imageAlt} fill sizes="(max-width: 1100px) 100vw, 1088px" priority />
-        </figure>
+        {photo?.image ? (
+          <figure className="leaders-article-photo">
+            <Image src={photo.image} alt={photo.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority />
+          </figure>
+        ) : null}
 
         <section className="report-summary">
           <p className="report-eyebrow">{copy.summaryLabel}</p>

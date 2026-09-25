@@ -55,7 +55,7 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
     datePublished: entry.publishedAt,
     description: summary,
     inLanguage: ar ? "ar" : "en",
-    image: `https://visionseek.org${entry.image}`,
+    ...(entry.image ? { image: `https://visionseek.org${entry.image}` } : {}),
     author: { "@id": "https://visionseek.org/#organization" },
     publisher: { "@id": "https://visionseek.org/#organization" },
     mainEntityOfPage: `https://visionseek.org${path}`,
@@ -84,7 +84,6 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
               {readLabel(locale, minutes)}
             </span>
           </div>
-          {entry.draft ? <p className="leaders-draft">{ar ? "مسودة" : "Draft"}</p> : null}
           <h1>{title}</h1>
           {entry.fieldIds.length ? (
             <p className="brief-inline-tags">
@@ -98,9 +97,16 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
           ) : null}
         </header>
 
-        <figure className="leaders-article-photo">
-          <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 1100px) 100vw, 1088px" priority />
-        </figure>
+        {entry.image ? (
+          <figure className="leaders-article-photo">
+            <Image src={entry.image} alt={entry.imageAlt} fill sizes="(max-width: 760px) 100vw, 720px" priority />
+          </figure>
+        ) : (
+          <div className="leaders-typehead">
+            <span>VisionSeek</span>
+            <strong>{ar ? entry.category.ar : entry.category.en}</strong>
+          </div>
+        )}
 
         <section className="report-summary">
           <p className="report-eyebrow">{ar ? "ماذا حدث" : "What happened"}</p>
@@ -150,7 +156,7 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
 
         {figures.length ? (
           <section className="brief-note-block">
-            <p className="report-eyebrow">{ar ? "أرقام وردت في هذا الملخص" : "Figures named in this summary"}</p>
+            <p className="report-eyebrow">{entry.figuresVerified ? (ar ? "أرقام أساسية" : "Key numbers") : (ar ? "أرقام وردت في هذا الملخص" : "Figures named in this summary")}</p>
             <ul>{figures.map((line) => <li key={line}>{line}</li>)}</ul>
             {entry.sourceUrl ? (
               <p><a href={entry.sourceUrl} target="_blank" rel="noreferrer">{ar ? "المصدر" : "Source"} ↗</a></p>
@@ -162,12 +168,17 @@ export default function BriefSignal({ locale, entry }: { locale: Locale; entry: 
           <section className="brief-note-block">
             <p className="report-eyebrow">{ar ? "الإشارات" : "Signals"}</p>
             <ol className="leaders-week">
-              {entry.weeklyItems.map((item) => (
-                <li key={item.slug}>
-                  <Link href={briefHref(locale, item.slug)}>{ar ? item.title.ar : item.title.en}</Link>
-                  {item.sourceUrl ? <> · <a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.source} ↗</a></> : null}
-                </li>
-              ))}
+              {entry.weeklyItems.map((item) => {
+                const chip = fieldById(item.fieldId ?? "");
+                return (
+                  <li key={item.slug}>
+                    <span className="leaders-chip">{chip ? (ar ? chip.title : chip.english) : (ar ? "سياسة" : "Policy")}</span>
+                    <Link href={briefHref(locale, item.slug)}>{ar ? item.title.ar : item.title.en}</Link>
+                    {item.sourceUrl ? <> · <a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.source} ↗</a></> : null}
+                    <p className="leaders-why">{ar ? item.why.ar : item.why.en}</p>
+                  </li>
+                );
+              })}
             </ol>
           </section>
         ) : null}

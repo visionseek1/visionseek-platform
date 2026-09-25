@@ -20,13 +20,11 @@ export default function LearnMark({ locale, series, slug }: { locale: Locale; se
     <section className="leaders-series">
       <p className="report-eyebrow">{ar ? series.title.ar : series.title.en}</p>
       <p className="leaders-analysis">
-        {ar
-          ? `على هذا الجهاز: ${readCount} من ${published.length} أجزاء منشورة. الأجزاء بلا متن ليست دروسًا.`
-          : `On this device: ${readCount} of ${published.length} published parts. Parts without a text are not lessons.`}
+        {ar ? `على هذا الجهاز: ${readCount} من ${series.parts.length}.` : `On this device: ${readCount} of ${series.parts.length}.`}
       </p>
       <ol>
         {series.parts.map((part, index) => (
-          <li key={part.title.en}>
+          <li key={part.slug ?? part.title.en}>
             {part.slug ? (
               <Link href={briefHref(locale, part.slug)} aria-current={part.slug === slug ? "page" : undefined}>
                 {index + 1}. {ar ? part.title.ar : part.title.en}
@@ -34,8 +32,6 @@ export default function LearnMark({ locale, series, slug }: { locale: Locale; se
             ) : (
               <span>
                 {index + 1}. {ar ? part.title.ar : part.title.en}
-                {" — "}
-                {ar ? "لم يُكتب بعد" : "Not written yet"}
               </span>
             )}
           </li>
