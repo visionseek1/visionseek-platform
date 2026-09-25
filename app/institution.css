@@ -25,3 +25,5 @@
 @media(min-width:1281px) and (max-width:1500px){.vs-expanded-header .vs-nav-wrap{gap:1rem}.vs-expanded-header .vs-logo{flex-basis:11rem}.vs-expanded-header .vs-desktop-nav{padding:.8rem;gap:.4rem}.vs-expanded-header .vs-nav-group>a{font-size:.75rem}.vs-start-nav{font-size:.75rem;padding:.7rem}}
 @media(max-width:760px){.vs-start-layout{grid-template-columns:1fr;gap:2rem}.vs-start-next ol{grid-template-columns:1fr}.vs-expanded-header .vs-nav-wrap{gap:.65rem;flex-wrap:wrap}.vs-expanded-header .vs-start-nav{margin-inline-start:auto;font-size:.75rem;padding:.65rem}.vs-start-hero{padding-top:2rem}.vs-start-direct,.vs-client-entry{padding:1.5rem}.vs-start-actions>a{width:100%;justify-content:center;white-space:normal}.vs-start-form .vs-form-identity{grid-template-columns:1fr}}
 @media(max-width:400px){.vs-expanded-header .vs-logo{flex-basis:8rem}.vs-expanded-header .vs-nav-wrap{padding-inline:1rem}.vs-menu-button span{display:none}}
+
+.vs-start-form textarea{min-height:9rem}
