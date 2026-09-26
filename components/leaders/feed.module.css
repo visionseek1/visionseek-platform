@@ -40,3 +40,4 @@
 }
 @media(max-width:360px){.mobileBrand strong{font-size:19px}.postCopy h2{font-size:18px}.storyItem{flex-basis:106px}.mobileHeader{padding-inline:12px}}
 @media(max-width:760px){.characterContentLabel{padding-inline:17px}.mobileHeader>div>a{width:40px;height:40px}}
+.sidebar nav .navActive:hover{background:#18251e;color:#fff}
