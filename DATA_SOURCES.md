@@ -47,6 +47,8 @@ MCP client references checked 2026-09-26: [OpenAI custom MCP apps](https://help.
 
 ## Existing paid services / infrastructure
 
+Additional candidates checked 2026-09-26: [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) (Apache-2.0; sandbox SDK/MCP and runtime options), [OpenLineage](https://github.com/OpenLineage/OpenLineage) (Apache-2.0; job/run/dataset lineage metadata), [Open Policy Agent](https://github.com/open-policy-agent/opa) (Apache-2.0; policy decisions enforced by our application). These are software candidates, not data feeds or hosted-service entitlements. No universal API quota applies to the libraries; runtime resources, image/asset licenses and any provider quotas need separate checks. No installed version, deployment or end-to-end compatibility has been verified. Their tasks and acceptance gates are in [frontier selection](docs/FRONTIER_CAPABILITY_SELECTION.md).
+
 Founder confirmed OpenRouter, Hetzner, Trigger.dev and n8n subscriptions on 2026-09-26. Their plans, balances, runtime identities and credentials have **not** been verified in this session. No new subscription or paid resource was ordered.
 
 | Service | Official verification | Intended role / limits / fallback |
@@ -60,10 +62,28 @@ Founder confirmed OpenRouter, Hetzner, Trigger.dev and n8n subscriptions on 2026
 
 ## Required connector evidence before marking connected
 
+### Institutional-method references added 2026-09-26
+
+These are public references for the [capability catalogue](docs/CAPABILITY_CATALOG.md), not selected API connectors or permission to republish source documents. No data feed was connected from them. Readability of a page does not establish a bulk-download license; no scheduled scraping or copying of reports was performed.
+
+| Reference | What the official source supports | Reuse / runtime status |
+|---|---|---|
+| [UK Red Teaming Handbook](https://www.gov.uk/government/publications/a-guide-to-red-teaming) | Public critical-review methods | Civilian method adaptation; check notices before reusing document text/media. No API, execution or rate limit claimed |
+| [IARPA ACE](https://www.iarpa.gov/research-programs/ace) | Research into eliciting, weighting and combining forecasts | Reference for evaluation design; model/calibration performance untested. No API integrated |
+| [CIA Tradecraft Primer](https://www.cia.gov/resources/csi/static/Tradecraft-Primer-apr09.pdf) | Structured analysis including methods also used in academia and the private sector | Reference and linked attribution; no automated ingestion or claim of intelligence-community exclusivity |
+| [NASA Lessons Learned](https://www.nasa.gov/nasa-lessons-learned/) | Event-linked lessons and recommendations | Methodological reference; copying datasets/documents would need its own terms and rate check |
+| [ARIA 2025–2026 report](https://www.gov.uk/government/publications/aria-annual-report-and-accounts-2025-to-2026--2/advanced-research-and-invention-agency-annual-report-and-accounts-2025-to-2026) | Tolerance of research failure with governance and controls | No inference of a mandated failure percentage; not a data integration |
+| [Destination Earth digital twins](https://destine.ecmwf.int/digital-twins/) | Climate/weather twin scope | Benchmark pattern only. Service-specific access/license/compute limits unverified; no whole-country economic model claimed |
+| [Singapore CSF](https://www.csf.gov.sg/our-work/cap-dev/) | Horizon scanning and scenario capability development | Method reference only; no workflow/content reuse entitlement inferred |
+| [FCA Regulatory Sandbox](https://www.fca.org.uk/firms/innovation/regulatory-sandbox) | Sandbox testing is not a general regulatory exemption | Jurisdiction-specific reference, not VisionSeek permission. Relevant regulator and applicable rules must be identified for an actual program |
+| [Confidential Computing Consortium](https://confidentialcomputing.io/) | Protection during processing and the role of trusted execution | No hardware/SDK selected; Hetzner TEE availability and attestation unverified. Data sovereignty is a separate requirement |
+
+### Connector acceptance
+
 1. Record tested endpoint, dataset scope, authentication method and permitted use, without keys.
 2. Run one real request and store source record ID, source timestamp, fetch timestamp and result count.
 3. Exercise timeout/429/error handling and verify a visible stale/unavailable state.
 4. Run the intended schedule once, record its run ID and confirm retry/deduplication behavior.
-5. Cite evidence for generated statements; review Arabic wording before public publication.
+5. Cite evidence for generated statements. All Capabilities Room inputs, queries and outputs remain founder-private under [the access design](docs/PRIVATE_ROOM_ACCESS.md), including outputs derived from public sources. Any later publication is a separate founder-approved export, with Arabic/evidence review and no private links or files.
 
 Initial selection: **OpenAlex → Horizon; FIRMS + Copernicus → Reality; Neo4j on existing Hetzner → Truth; Trigger.dev → collection schedules; n8n → internal review; OpenRouter → configurable model access.** These are proposed choices, not completed integrations.
