@@ -28,6 +28,7 @@ Updated: **2026-09-26**. Owner: Dr. Ahmed. Every merge requires founder approval
 
 ## Approved vs proposed
 
+- Founder clarified VisionSeek's institutional layer: strategic capability architecture, original development where needed, partner integration, program proof and transition to operation. [Portfolio](docs/CAPABILITY_PORTFOLIO.md) now assigns these responsibilities; [frontier research](docs/FRONTIER_INTELLIGENCE.md) must identify a mission, bottleneck, VisionSeek contribution, build/partner path and measurable first experiment. DARPA, Palantir and Anduril provide distinct reference roles, not a claim of current equivalence. Documentation refinement only; M0 scope and implementation/merge gates are unchanged.
 - Founder requirement: the entire Capabilities Room is private to Dr. Ahmed, with delegated assistant access only. [Private access design](docs/PRIVATE_ROOM_ACCESS.md) supersedes public navigation, anonymous data reads and automatic Room-to-Leaders publishing. Owner checks, RLS, private files, scoped MCP and negative-access tests are required for M0; none are implemented for the new Room yet.
 - Founder authorizes adding important discoveries to the private candidate catalogue during ongoing work. OpenSandbox, OpenLineage and OPA were added with official sources and acceptance gates; none is installed or running. Candidate discovery does not create a background monitoring job or bypass the existing implementation/merge gates.
 - Existing program cards remain **proposed, not launched or funded**.
