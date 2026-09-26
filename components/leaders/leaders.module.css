@@ -167,3 +167,5 @@
 .app .postActions button{min-width:44px;min-height:44px}
 @media(max-width:760px){.app .storyRail{border-radius:12px;padding:10px 12px 12px;margin-bottom:12px}.app .feedTop h1{font-size:19px}.app .feedTop{padding:12px 14px}.storyTrack{gap:8px}.storyTrack .storyItem{flex-basis:82px}.readerDialog h2,.postDialog h2{font-size:19px}.readerDialog{padding-top:24px!important}.orderBar{gap:5px;padding-bottom:12px}.orderBar button{font-size:12px;padding-inline:12px}.digestTrigger{padding:11px 14px}}
 @media(prefers-reduced-motion:reduce){.digestTrigger svg{transition:none}}
+
+.shareLabel{display:grid;gap:8px;font-size:13px;color:#56616a}.shareLabel input{width:100%;min-width:0;border:1px solid #ccd5dd;border-radius:8px;padding:12px;background:#f7f8fa;color:#25333f;font:13px monospace}.shareLabel input:focus{outline:2px solid #526f28;outline-offset:2px}

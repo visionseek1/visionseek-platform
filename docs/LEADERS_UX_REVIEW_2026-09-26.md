@@ -13,6 +13,7 @@
 | Expanded editorial digest occupies much of the initial viewport | Radix Collapsible, closed initially; sources remain accessible |
 | Stories repeat topic labels and require horizontal scrolling without explicit controls | Embla horizontal carousel, unique story titles, previous/next controls, RTL and reduced-motion options |
 | Feed cards contain hidden/inert video players with native controls under an entry overlay | Poster-only preview; neutral branded placeholder for uploads without posters; zero feed video elements |
+| Native sharing has no visible link fallback | Share dialog exposes a selectable URL, copy action and optional device sharing |
 | Shared video URLs open a text-only detail | Open vertical player; separately retain shared posts outside the loaded page |
 | No chronological ordering option | Explicit For you / Latest controls; Latest does not privilege featured posts |
 | Controlled dialogs have no Trigger to restore focus | Reader-specific Radix wrapper remembers and restores the opener; translated 44px close controls |
