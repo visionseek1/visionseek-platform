@@ -12,7 +12,7 @@ export const actionSchema=z.object({action:z.enum(['save','request_review','appr
 export function normalizeEvidence(value:string){return value.normalize('NFKC').replace(/\s+/gu,' ').trim();}
 export function validateDraft(value:unknown,source:string){const draft=draftSchema.parse(value);const evidence=normalizeEvidence(source);for(const c of draft.claims){if(!evidence.includes(normalizeEvidence(c.evidence_quote)))throw new Error('EVIDENCE_MISMATCH');}return draft;}
 export const sourceCatalog=[
- {id:'palantir-ontology',character_id:'tiko',label:'Palantir',title:'Ontology overview',url:'https://www.palantir.com/docs/foundry/ontology/overview/'},
+ {id:'palantir-ontology',character_id:'tiko',label:'Palantir',title:'Ontology overview',url:'https://www.palantir.com/docs/foundry/ontology/overview'},
  {id:'darpa-heilmeier',character_id:'labo',label:'DARPA',title:'The Heilmeier Catechism',url:'https://www.darpa.mil/about/heilmeier-catechism'},
  {id:'nasa-transfer',character_id:'labo',label:'NASA',title:'Technology licensing',url:'https://technology.nasa.gov/license'},
 ] as const;
