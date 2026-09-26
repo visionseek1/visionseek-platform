@@ -1,0 +1,33 @@
+name: Deploy Leaders House worker
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: leaders-trigger-deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: leaders-editorial
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          package-manager-cache: false
+      - run: npm ci
+      - name: Verify deployment configuration
+        env:
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+          TRIGGER_PROJECT_ID: ${{ vars.LEADERS_TRIGGER_PROJECT_ID }}
+        run: |
+          test -n "$TRIGGER_ACCESS_TOKEN" || { echo 'Missing deployment credential'; exit 1; }
+          test -n "$TRIGGER_PROJECT_ID" || { echo 'Missing editorial project reference'; exit 1; }
+      - name: Deploy private drafting task
+        env:
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
+          TRIGGER_PROJECT_ID: ${{ vars.LEADERS_TRIGGER_PROJECT_ID }}
+        run: npx trigger.dev@4.6.4 deploy --env prod --native-build
