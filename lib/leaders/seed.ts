@@ -1,0 +1,24 @@
+import type { LeaderPost } from './types';
+const base = {status:'published' as const, featured:false, highlight:false, media_type:'image/jpeg', published_at:'2026-09-26T06:00:00Z', expires_at:null, created_at:'2026-09-26T06:00:00Z', media_path:null, source_url:null, source_label:null, seed:true};
+export const seedPosts: LeaderPost[] = [
+ {...base,id:'vs-capability',kind:'image',topic:'capabilities',featured:true,media_url:'/field-industry.jpg',
+ title:'قد يسبقك منافسك بقدرة لم تبدأ التفكير فيها بعد.',title_en:'Your next competitor may be building a capability you haven’t considered.',
+ body:'ابدأ اجتماعك القادم بسؤال واحد: ما الشيء الذي لو استطعنا فعله، لتغيّر موقعنا في السوق؟\n\nاكتب إجابة محددة. ثم اسأل: ما الذي يمنعنا اليوم؟ اختر أصغر تجربة تكشف إن كان الطريق يستحق أن نكمله.\n\nخطوة اليوم: حوّل طموحًا واحدًا إلى قدرة قابلة للاختبار.',
+ body_en:'Start your next meeting with one question: what could we do that would change our position in the market?\n\nWrite a specific answer. Identify what stands in the way. Choose the smallest experiment that will show whether the path deserves more investment.\n\nToday’s action: turn one ambition into a testable capability.'},
+ {...base,id:'vs-ai-decision',kind:'note',topic:'ai',media_type:null,title:'قبل أن تشتري أداة ذكاء اصطناعي، حدّد القرار الذي تريد تحسينه.',title_en:'Before buying an AI tool, name the decision you want to improve.',
+ body:'اختر قرارًا يتكرر داخل مؤسستك. ما البيانات التي يعتمد عليها؟ كم يستغرق؟ وماذا يحدث عندما يكون خاطئًا؟\n\nاختبر الأداة على هذا القرار بمعيار واضح: دقة أعلى، وقت أقل، أو أخطاء أقل. اجعل مسؤولية القرار واضحة، وراجع النتائج قبل توسيع الاستخدام.',
+ body_en:'Choose a recurring decision. What data does it depend on? How long does it take? What happens when it is wrong?\n\nTest the tool against a clear measure: better accuracy, less time, or fewer errors. Keep responsibility explicit and review the results before expanding its use.'},
+ {...base,id:'vs-leadership',kind:'image',topic:'leadership',media_url:'/field-cities.jpg',title:'أي قرار ينتظر توقيعك… ولا يحتاج إليك؟',title_en:'Which decision is waiting for you when it doesn’t need to?',
+ body:'راجع ثلاثة قرارات تأخرت هذا الأسبوع. هل احتاجت حكمك فعلًا، أم أن الفريق لم يعرف حدود صلاحياته؟\n\nحدّد صاحب القرار، والمعلومات اللازمة، ومتى يلزم الرجوع إليك. ثم جرّب ذلك على قرار واحد، وراجع النتيجة مع الفريق.',
+ body_en:'Review three decisions delayed this week. Did they need your judgment, or did the team lack clear authority?\n\nDefine the decision owner, the information required, and when to escalate. Try this with one decision and review the outcome together.'},
+ {...base,id:'vs-experiment',kind:'note',topic:'innovation',media_type:null,title:'ما الدليل الذي سيجعلك تغيّر رأيك؟',title_en:'What evidence would change your mind?',
+ body:'قبل أن تبدأ تجربة جديدة، اكتب النتيجة التي تعني الاستمرار، والنتيجة التي تعني التوقف أو تغيير المسار.\n\nإذا كان كل احتمال يؤكد فكرتك، فالتجربة لا تختبرها بعد. أعطِ الفريق مساحة ليعود بنتيجة تخالف التوقعات.',
+ body_en:'Before starting an experiment, write down what would justify continuing and what would make you stop or change direction.\n\nIf every possible result confirms the idea, the experiment is not testing it yet. Give the team room to report an unexpected result.'},
+ {...base,id:'vs-physical-ai',kind:'image',topic:'ai',media_url:'/field-drones.jpg',title:'حين يخرج الذكاء الاصطناعي من الشاشة إلى الواقع.',title_en:'When AI moves beyond the screen.',
+ body:'الروبوت الذي يعمل في العرض يحتاج منظومة كاملة ليعمل كل يوم: بيانات، وتشغيل، وصيانة، وأشخاص يعرفون كيف يتعاملون مع الخطأ.\n\nاقرأ إحاطة VisionSeek عن تحويل الذكاء الاصطناعي المادي إلى قدرة تشغيلية.',
+ body_en:'A robot that works in a demonstration needs an entire system to work every day: data, operations, maintenance, and people who know how to respond when it fails.\n\nRead the VisionSeek brief on turning physical AI into operational capability.',source_url:'/ar/insights/physical-ai',source_label:'إحاطة VisionSeek / VisionSeek brief'},
+ {...base,id:'vs-strategy',kind:'image',topic:'strategy',media_url:'/field-space.jpg',title:'ما الذي ستتوقف عنه لتمنح أولويتك فرصة؟',title_en:'What will you stop doing to give your priority a chance?',
+ body:'اختر أهم قدرة تريد بناءها خلال الأشهر القادمة. ثم سمّ النشاط الذي ستقلل وقته أو موارده لصالحها.\n\nالأولوية التي لا يتغير معها توزيع الوقت والموارد ستظل جملة في عرض تقديمي.',
+ body_en:'Choose the most important capability you want to build in the coming months. Name the activity whose time or resources you will reduce to support it.\n\nA priority needs a change in how time and resources are allocated.'},
+];
+export const seedStories: LeaderPost[] = seedPosts.filter(p => ['vs-ai-decision','vs-experiment','vs-strategy'].includes(p.id)).map(p => ({...p,id:`story-${p.id}`,kind:'story',highlight:true}));
