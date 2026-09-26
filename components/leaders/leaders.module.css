@@ -94,3 +94,48 @@
  .app .quoteCard h2{font-size:28px}
  .app .feed{gap:12px}
 }
+
+/* Distinct social-feed layers, including on small screens. */
+.app{--lh-bg:#e9ecf0;--lh-line:#d6dbe1;background:var(--lh-bg)}
+.app .mainColumn{padding-top:22px;padding-bottom:30px}
+.app .feedTop{background:#fff;border:1px solid #d8dde3;border-radius:14px;padding:19px 22px;margin-bottom:18px;box-shadow:0 2px 5px #22304409}
+.app .feedTop h1{font-size:23px}
+.app .stories{background:#fff;border:1px solid #d8dde3;border-radius:14px;padding:19px 20px;margin-bottom:18px;box-shadow:0 2px 5px #22304409}
+.app .editionPanel{background:linear-gradient(120deg,#f3f7e8,#ffffff 70%);border:1px solid #cfd9bf;border-top:3px solid #a9c75c;border-radius:14px;margin-bottom:18px;padding:18px 22px;box-shadow:0 2px 5px #22304409}
+.app .editionPanel h2{font-size:19px;margin:10px 0}
+.app .editionPanel>button{padding:11px 0}
+.app .filters{border:0;margin-bottom:18px;padding-bottom:0}
+.app .filters button{border-radius:20px;box-shadow:0 1px 2px #22304408}
+.app .feed{gap:20px}
+.app .post{background:#fff;border:1px solid #d5dbe2;border-radius:14px;box-shadow:0 2px 5px #22304412}
+.app .postActions{margin:0 18px;padding:9px 0;border-bottom:1px solid #e8ebee;gap:19px}
+.app .postCaption{padding-top:13px}
+.app .quoteCard{background:#e2edce}
+.app .quoteCard.ai{background:#e2dcf2}
+.app .quoteCard.innovation{background:#e9edc9}
+.app .quoteCard.leadership{background:#dce9df}
+.app .quoteCard.strategy{background:#d2e6e0}
+.app .dailyQuestion{border-color:#d5dbe2;box-shadow:0 2px 5px #2230440d;border-top:3px solid #a9c75c}
+.app .authorCard{padding:17px;background:#fff;border:1px solid #d5dbe2;border-radius:14px;margin-bottom:18px}
+.app .topicList{padding:18px;background:#f7f8fa;border:1px solid #d7dde3;border-radius:14px;margin-top:18px}
+.app .topicList h3{margin-top:0}
+.app .topicList button:last-child{border-bottom:0}
+.app .sidebar nav .navActive{background:#dde8c8;box-shadow:inset -3px 0 #6c892d}
+.app[dir=ltr] .sidebar nav .navActive{box-shadow:inset 3px 0 #6c892d}
+@media(max-width:760px){
+ .app .mainColumn{padding:12px 10px 20px}
+ .app .feedTop{padding:15px 14px;margin-bottom:12px;border-radius:12px}
+ .app .feedTop h1{font-size:21px}
+ .app .stories{padding:15px 12px;margin-bottom:12px;border-radius:12px}
+ .app .editionPanel{margin:0 0 14px;padding:15px;border-radius:12px}
+ .app .filters{padding:0 2px 3px;margin:0 0 13px}
+ .app .feed{gap:15px}
+ .app .post{border:1px solid #d5dbe2;border-radius:12px;box-shadow:0 2px 5px #22304412}
+ .app .postHeader{padding:14px}
+ .app .postCaption{padding-inline:15px}
+ .app .quoteCard{padding:25px 20px;min-height:280px}
+ .app .quoteCard h2{font-size:27px}
+ .app .search,.app .empty{margin-inline:0}
+ .app .videoShelf{padding:0}
+ .app .rankingHint{padding-inline:5px}
+}
