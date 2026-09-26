@@ -7,7 +7,7 @@ export type LeaderPost = {
   source_url: string | null; source_label: string | null;
   status: 'draft' | 'published' | 'archived'; featured: boolean; highlight: boolean;
   published_at: string | null; expires_at: string | null; created_at: string; author_id?: string;
-  media_url?: string; seed?: boolean;
+  media_url?: string; media_url_en?: string; poster_url?: string; poster_url_en?: string; caption_url?: string; caption_url_en?: string; seed?: boolean;
 };
 export const topics: {id: Topic; ar: string; en: string}[] = [
   {id:'leadership', ar:'القيادة', en:'Leadership'}, {id:'ai', ar:'الذكاء الاصطناعي', en:'AI'},
