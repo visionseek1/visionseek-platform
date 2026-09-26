@@ -283,3 +283,15 @@
  .app .mobileNav .navActive{background:#e5f0d2;color:#2d481c;box-shadow:inset 0 3px #7da836}
  .app .mobileNav a img{width:32px;height:32px;padding:3px;background:#14221a;border:1px solid #8bb245;border-radius:8px}
 }
+
+/* The feed should lead with a useful idea, while its detail stays one tap away. */
+.app .readBrief{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:#3b5e28;font-weight:600;font-size:13px;padding:7px 0;text-align:start}
+.app .readBrief:hover{text-decoration:underline}
+@media(max-width:760px){
+ .app .feedTop{padding-top:9px;padding-bottom:6px}
+ .app .storyRail{padding-top:7px;padding-bottom:8px}
+ .app .digest{margin-bottom:7px}
+ .app .digestTrigger{min-height:44px}
+ .app .digestTrigger small{display:none}
+ .app .postCaption .applyLink{margin-top:10px}
+}
