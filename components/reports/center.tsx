@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import SiteHeader from '@/components/site-header';
 import { references, toolkit, publishedReports } from '@/lib/reports/catalog';
 import styles from './reports.module.css';
@@ -24,17 +25,36 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
         <Link href={ar ? '/ar/insights' : '/insights'}>{t('بيت القادة', 'Leaders House')}</Link>
       </nav>
       <header className={styles.hero}>
+        <div className={styles.masthead}><span>VISIONSEEK RESEARCH</span><span>{t('نربط المعرفة بما يمكن تحقيقه.', 'Connecting knowledge to what comes next.')}</span></div>
         <p className={styles.eyebrow}>VISIONSEEK / {t('البحث والتحليل', 'RESEARCH & ANALYSIS')}</p>
-        <h1>{methodology ? t('كيف نبني الدليل.', 'How we build evidence.') : t('معرفة تُبنى عليها القرارات.', 'Evidence for consequential decisions.')}</h1>
+        <h1>{methodology ? t('كيف نبني الدليل.', 'How we build evidence.') : t('التقارير', 'Research & reports')}</h1>
         <p className={styles.lead}>{methodology ? t('معايير القسم المقترحة: من سؤال البحث إلى تقرير يمكن فحص نتائجه وفهم حدوده.', 'Proposed department standards: from a research question to findings that can be inspected and understood in context.') : t('تقارير عن القدرات والتقنيات والفرص التي تغيّر المؤسسات والأسواق. للمسؤول الذي يقرر، والباحث الذي يتحقق، والصحفي الذي يشرح.', 'Research on the capabilities, technologies and opportunities reshaping institutions and markets. For decision-makers, researchers and journalists.')}</p>
       </header>
       {!methodology ? <>
+        <section className={styles.feature} aria-labelledby="featured-report">
+          <Link className={styles.featureImage} href={ar ? '/ar/insights/physical-ai' : '/insights/physical-ai'} aria-label={t('قراءة إحاطة الذكاء الاصطناعي المادي', 'Read the Physical AI brief')}>
+            <Image src="/field-industry.jpg" alt={t('صورة توضيحية للصناعة والتقنيات المادية', 'Illustrative industrial technology image')} fill sizes="(max-width: 760px) 100vw, 55vw" priority />
+            <div className={styles.coverCaption}><span>VISIONSEEK</span><strong>PHYSICAL<br/>AI</strong><span>GOVERNMENT BRIEF / 01</span></div>
+          </Link>
+          <div className={styles.featureCopy}>
+            <div className={styles.meta}><span>{t('إحاطة استراتيجية', 'STRATEGIC BRIEF')}</span><span>{t('سبتمبر 2026', 'SEPTEMBER 2026')}</span></div>
+            <h2 id="featured-report">{t('عندما يصبح الذكاء الاصطناعي بنية تحتية وطنية', 'When AI becomes national infrastructure')}</h2>
+            <p>{t('من الموانئ والمصانع إلى الخدمات العامة: كيف نفكر في التقنيات المادية باعتبارها قدرة متكاملة، وما الذي يعنيه ذلك لصانع القرار؟', 'From ports and factories to public services: how can physical technologies become an integrated capability, and what does that mean for decision-makers?')}</p>
+            <Link className={styles.cta} href={ar ? '/ar/insights/physical-ai' : '/insights/physical-ai'}>{t('اقرأ الإحاطة', 'Read the brief')} <span aria-hidden>↗</span></Link>
+            <p className={styles.reviewNote}>{t('من أرشيف VisionSeek · لم تُثبت مراجعتها المستقلة وفق معايير القسم الجديدة.', 'From the VisionSeek archive · Independent review under the new department standards has not been established.')}</p>
+          </div>
+        </section>
+        <section className={styles.editorialBand}>
+          <span className={styles.label}>{t('عدسة VisionSeek', 'THE VISIONSEEK LENS')}</span>
+          <h2>{t('ما الذي أصبح ممكنًا، وما الذي يمنع تحققه؟', 'What is now possible—and what stands in its way?')}</h2>
+          <p>{t('نصل الأفكار والتقنيات والأشخاص والأسواق والمؤسسات، لنكشف الفجوات ونحدد الفرص التي تستحق البحث والبناء.', 'We connect ideas, technologies, people, markets and institutions to uncover gaps and opportunities worth investigating and building.')}</p>
+        </section>
         <section className={styles.library} aria-labelledby="library-title">
           <div className={styles.sectionHead}><h2 id="library-title">{t('مكتبة التقارير', 'Research library')}</h2><span>{t('إصدارات موثقة', 'Documented editions')}</span></div>
-          {publishedReports.length === 0 && <div className={styles.empty}><span className={styles.label}>{t('القسم قيد التأسيس', 'DEPARTMENT IN DEVELOPMENT')}</span><h3>{t('التقرير الأول يبدأ بسؤال واضح.', 'The first report starts with a clear question.')}</h3><p>{t('لم يُدرج بعد تقرير مستوفٍ لمعايير المراجعة في هذه المكتبة. ستظهر الإصدارات مع مصادرها ومنهجها وحالة مراجعتها وحدود نتائجها.', 'No report meeting this library’s review requirements has been added yet. Editions will include sources, methods, review status and limitations.')}</p><Link className={styles.cta} href={`${root}/methodology`}>{t('اطّلع على معايير القسم', 'Explore our research standards')} <span aria-hidden>↗</span></Link></div>}
+          {publishedReports.length === 0 && <div className={styles.empty}><span className={styles.label}>{t('القسم قيد التأسيس', 'DEPARTMENT IN DEVELOPMENT')}</span><h3>{t('الإصدارات البحثية المراجعة', 'Reviewed research editions')}</h3><p>{t('لم يُدرج بعد تقرير مستوفٍ لمعايير المراجعة في هذه المكتبة. ستظهر الإصدارات مع مصادرها ومنهجها وحالة مراجعتها وحدود نتائجها.', 'No report meeting this library’s review requirements has been added yet. Editions will include sources, methods, review status and limitations.')}</p><Link className={styles.cta} href={`${root}/methodology`}>{t('اطّلع على معايير القسم', 'Explore our research standards')} <span aria-hidden>↗</span></Link></div>}
           {publishedReports.map(report => <article key={report.id} className={styles.empty}><p>{report.id} · {report.version}</p><h3>{report.title[locale]}</h3><p>{report.question}</p><a href={report.evidencePackage}>{t('حزمة الأدلة', 'Evidence package')}</a></article>)}
         </section>
-        <section className={styles.archive}><div><span className={styles.label}>{t('من أرشيف VisionSeek', 'FROM THE VISIONSEEK ARCHIVE')}</span><h2>{t('الذكاء الاصطناعي المادي يتحول إلى بنية تحتية وطنية', 'Physical AI is becoming national infrastructure')}</h2><p>{t('إحاطة منشورة سابقًا. لم تُثبت لها مراجعة مستقلة وفق معايير القسم الجديدة؛ ليست ضمن التقارير المراجعة أعلاه.', 'A previously published brief. Independent review under the new department standards has not been established; it is not part of the reviewed catalogue above.')}</p></div><Link className={styles.cta} href={ar ? '/ar/insights/physical-ai' : '/insights/physical-ai'}>{t('قراءة الإحاطة', 'Read the brief')} <span aria-hidden>↗</span></Link></section>
+
         <section className={styles.principles}><h2>{t('كل تقرير، وأساسه معاه.', 'Every report comes with its foundations.')}</h2><div className={styles.grid}>{[
           [t('دليل يمكن تتبعه', 'Traceable evidence'), t('مصدر كل دعوى مهمة، وتعريف كل مؤشر، وتاريخ البيانات المستخدمة.', 'A source for each material claim, definitions for indicators and dates for the data.')],
           [t('نتائج بحدود واضحة', 'Findings with clear limits'), t('نفصل ما قيس فعلًا عما استُنتج، ونوضح المجهول وعدم اليقين.', 'Separate measurements from inferences and disclose uncertainty and unknowns.')],

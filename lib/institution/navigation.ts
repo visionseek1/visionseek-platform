@@ -1,4 +1,5 @@
 export const institutionNav = [
+ {path:'/reports',en:'Reports',ar:'التقارير',children:[['/reports','Research & reports','الأبحاث والتقارير'],['/reports/methodology','Methods & standards','المنهج والمعايير']]},
  {path:'/programs',en:'Programs',ar:'البرامج',children:[['/programs','Program concepts','تصورات البرامج'],['/programs/ideas','Ideas under exploration','أفكار قيد الاستكشاف'],['/programs/challenges','Challenges','التحديات'],['/programs/spotlights','Research spotlights','تحت المجهر'],['/programs/program-lifecycle','How programs work','كيف تعمل البرامج؟']]},
  {path:'/opportunities',en:'R&D Opportunities',ar:'فرص البحث والتطوير',children:[['/opportunities','Explore opportunities','استكشف الفرص'],['/work-with-us/how-to-respond','Response guide','دليل المشاركة'],['/work-with-us/prepare-a-concept','Prepare your note','جهّز مذكرتك']]},
  {path:'/workshops',en:'Workshops',ar:'ورش العمل',children:[['/workshops','Weekly workshops','الورش الأسبوعية'],['/workshops/how-workshops-work','How it works','كيف تعمل الورش؟'],['/workshops/rewinds','Notes & outcomes','السجلات والمخرجات']]},

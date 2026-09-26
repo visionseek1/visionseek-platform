@@ -36,3 +36,7 @@ Track claim type, evidence status and review status separately. AI assists extra
 - DuckDB: https://duckdb.org/ — analytical SQL over tabular files; MIT license documented on official site.
 - Quarto: https://quarto.org/ — scientific publishing from a reusable source.
 These are selected candidate capabilities, not a claim they are universally the strongest. Initial evaluation: same public dataset, identical result, clean rerun, documented version/license, Arabic export, cost and review effort. QGIS/KNIME/Superset and other tools are future candidates only when a question needs them.
+
+## Design revision — founder feedback, 27 September
+The founder rejected the initial visual treatment and requested Reports in the primary navigation. Revision restores the existing black/white/lime tokens and fonts. Reports is a full top-level navigation section, including the existing mobile menu. Removed duplicated utility link.
+Reference review: MGI research themes (https://www.mckinsey.com/mgi/our-research/all-research), OECD publication taxonomy (https://www.oecd.org/en/publications.html), World Bank research/publications (https://www.worldbank.org/ext/en/research-publications). World Bank was also visually inspected in-browser: a leading publication with prominent title, cover and direct reading/download action. Adapted publication hierarchy and editorial spacing, not their brand assets or claims. Reused existing VisionSeek industrial image as illustrative cover; no source data or invented research added.
