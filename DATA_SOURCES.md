@@ -62,6 +62,22 @@ Founder confirmed OpenRouter, Hetzner, Trigger.dev and n8n subscriptions on 2026
 
 ## Required connector evidence before marking connected
 
+### Frontier discovery sources — checked 2026-09-26
+
+Task mapping, opportunity hypotheses and acceptance experiments are in [FD-01–08](docs/FRONTIER_DISCOVERY.md). All are NOT_CONNECTED. Published intelligence research is distinct from declassified historical data; neither implies access to currently classified material.
+
+| Source | Verified availability / terms | Gate before use |
+|---|---|---|
+| [USGS Declass-1 / CORONA](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-declassified-data-declassified-satellite-imagery-1) | Historical 1960–1972 imagery declassified in 1995; existing digitized files downloadable at no charge, unscanned frames listed at $30/frame. [Dataset catalog](https://data.usgs.gov/datacatalog/data/USGS%3AEROS5e839febdccb64b3) search record labels public domain; direct catalog open returned an error. Official EROS/NASA pages remain readable | No imagery downloaded; EarthExplorer account/API quota untested. Inspect coverage, cloud and georeferencing error; no assumption of geometric correction. Begin with already digitized data; no scan purchase |
+| [IARPA FUSE](https://www.iarpa.gov/research-programs/fuse) | Public program description, released 2010, solicitation closed; evidence-based emergence analysis of literature/patents | Method reference only; no available runtime, model rights or program API established. Implement measurable indicators through separately licensed data |
+| [IARPA ARCADE](https://www.iarpa.gov/research-programs/arcade) | Public research goals for component-document extraction and selection; release 2026-04-29, solicitation CLOSED at inspection | Not an installed product or open funding claim. Source-document rights, engineering validation and our own adapter required |
+| [RAND RDM](https://www.rand.org/topics/robust-decision-making.html) / [EMA Workbench](https://github.com/quaquel/EMAworkbench) | Public method reference; separate Delft software BSD-3-Clause | Domain model, independent scenarios and runtime benchmark required; not a RAND software license or a guarantee of valid policy outcomes |
+| [Meta Ax](https://github.com/facebook/Ax) | MIT adaptive experimentation software | Pin compatible release at implementation; equal-budget repeated comparison required. No hosted-service quota inferred; runtime/model costs separate |
+| [OpenROAD](https://github.com/The-OpenROAD-Project/OpenROAD) | BSD-3-Clause main project; physical digital-design tooling with DARPA IDEA origin | PDK, cell libraries, dependencies, compute and engineering sign-off separately checked. No fabrication entitlement; no installed version selected |
+| [NASA T2 licensing](https://technology.nasa.gov/license) / [MSC-TOPS-53](https://technology.nasa.gov/patent/MSC-TOPS-53) | Official licensing channel and specific technology listing; commercial applications from international organizations described | Not open-source or free technology rights. Eligibility, export/geography, fees and evaluation terms specific to chosen technology and entity; no application submitted or bulk-feed rights assumed |
+| [KIAT / NTB 2026 notice](https://www.kiat.or.kr/front/board/boardContentsView.do?MenuId=&board_id=90&contents_id=ad927463fbf646db919e53a3aa7dd0f6) | Official description of technology-transfer and commercialization information services; referenced call closed 2026-05-22 | Current catalog access/API/quota/bulk reuse and individual IP rights untested. Do not present the notice as a currently open grant |
+| [DARPA ASKEM](https://www.darpa.mil/research/programs/automating-scientific-knowledge-extraction-modeling) / [Terarium](https://github.com/DARPA-ASKEM/terarium) | Program reference; inspected repository archived 2025-04-07 | Design reference only. No license/dependency review for installing that stack; do not infer all ASKEM components are archived |
+
 ### Institutional-method references added 2026-09-26
 
 These are public references for the [capability catalogue](docs/CAPABILITY_CATALOG.md), not selected API connectors or permission to republish source documents. No data feed was connected from them. Readability of a page does not establish a bulk-download license; no scheduled scraping or copying of reports was performed.
