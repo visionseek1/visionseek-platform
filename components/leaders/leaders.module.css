@@ -15,3 +15,82 @@
 .readerDialog,.reelsDialog{--lh-lime:#d1ff37;--lh-bg:#101211;--lh-panel:#181b19;--lh-text:#f5f6f1;--lh-muted:#a8b0a8;--lh-line:#2b302c}.postDialog,.storyDialog,.previewDialog{min-height:0}.reelSlide .playButton{inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0}
 
 .videoEntry{position:absolute;inset:0;z-index:3;width:100%;height:100%;border:0;background:linear-gradient(transparent 65%,#071007b8);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center}.videoEntryPlay{display:grid;place-items:center;width:70px;height:70px;border:1px solid #ffffff65;border-radius:50%;background:#142011bb;backdrop-filter:blur(5px)}.videoEntryHint{position:absolute;bottom:20px;inset-inline:15px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:13px}.videoEntry:focus-visible{outline:3px solid #d2ff42!important;outline-offset:-5px!important}.reelRail{min-height:0;touch-action:pan-y pinch-zoom}.reelScrollHint{position:absolute;top:65px;inset-inline:0;display:flex;align-items:center;justify-content:center;gap:6px;z-index:4;pointer-events:none;color:#d6e4c9;font-size:11px;text-shadow:0 1px 5px #000}.reelHeader>span{max-width:75%}@media(max-width:760px){.reelScrollHint{top:max(65px,calc(55px + env(safe-area-inset-top)))}}
+
+/* Light reader surfaces: brand lime remains an accent, never body text on white. */
+.app,.readerDialog,.postDialog{
+ --lh-bg:#f4f5f7;--lh-panel:#ffffff;--lh-line:#dfe3e7;
+ --lh-text:#20252b;--lh-muted:#606973;--lh-lime:#d1ff37;
+ background:var(--lh-bg);color:var(--lh-text);color-scheme:light;
+}
+.app{gap:28px}
+.app .sidebar{border-color:transparent}
+.app .sidebar nav button,.app .sidebar nav a{color:#46505a}
+.app .sidebar nav button:hover{background:#e8ebee}
+.app .sidebar nav .navActive,.app .mobileNav .navActive{background:#eaf2d7;color:#344b13}
+.app .sidebarBottom,.app .sidebarBottom p,.app .smallLinks{color:#606973}
+.app .brandSymbol{background:#fff;border:1px solid #e1e5da}
+.app .feedTop p{color:#465f24}
+.app .feedTop h1{font-weight:600}
+.app .stories{padding-top:6px}
+.app .storyRing{background:#fff;border-color:#88aa38;box-shadow:none}
+.app .storyRing.seen{border-color:#c5ccd2}
+.app .storyThumb{background:#eef4de;color:#415721}
+.app .storyThumb.ai{background:#eeebfa;color:#59477d}
+.app .storyThumb.innovation{background:#f2f5df;color:#555f1d}
+.app .storyThumb.strategy{background:#e6f1ee;color:#2d6055}
+.app .filters button{background:#fff;border-color:#dfe3e7;color:#505a65;min-height:40px}
+.app .filters button.filterActive{background:#eaf2d7;border-color:#b3c48e;color:#344b13}
+.app .search{background:#fff;border-color:#dfe3e7}
+.app .search:focus-within{outline:2px solid #577329;outline-offset:2px}
+.app .search input::placeholder{color:#6b737d}
+.app .post{background:#fff;border:1px solid #e1e5e9;box-shadow:0 2px 7px #17232c06}
+.app .postHeader{padding-block:18px}
+.app .postHeader .featured{color:#466020;background:#f1f6e5;border-color:#d7e3bf}
+.app .postActions button{color:#505a65}
+.app .postActions button:hover,.app .postActions button.saved{color:#47641d}
+.app .postActions button.liked{color:#bb3359}
+.app .postCaption p{color:#3c454f;line-height:1.95}
+.app .postCaption small{color:#66717b}
+.app .textButton{color:#52602f;font-weight:600}
+.app .source,.postDialog .source{color:#45611b!important}
+.app .applyLink,.postDialog .applyLink{color:#405b18!important;border-color:#e3e8dc}
+.app .quoteCard{background:#f0f5e7;min-height:300px}
+.app .quoteCard.ai{background:#f1eef8;color:#373047}
+.app .quoteCard.innovation{background:#f4f6e9;color:#394426}
+.app .quoteCard.leadership{background:#eef3ef;color:#304337}
+.app .quoteCard.strategy{background:#eaf3f1;color:#284a42}
+.app .quoteCard h2{font-size:30px;line-height:1.75}
+.app .dailyQuestion{background:#fff;border-color:#dfe3e7}
+.app .dailyQuestion>span,.app .dailyQuestion a{color:#496325}
+.app .topicList h3{color:#505a65}
+.app .topicList button{color:#37414c;border-color:#dfe3e7}
+.app .topicList button>span,.app .topicList button svg{color:#68727c}
+.app .feedEnd,.app .loading,.app .rankingHint{color:#626c76}
+.app .feedEnd svg{color:#54712b}
+.app .empty{background:#fff;border-color:#dfe3e7}
+.app .empty>span{background:#f0f5e5;color:#506c26}
+.app .connectionNotice{background:#fff8e7;border-color:#e8d7aa;color:#665326}
+.app .connectionNotice button{color:#556a2c}
+.app .toast{background:#fff;color:#344b13;border-color:#bdcba3;box-shadow:0 8px 30px #2637221c}
+.app .interestsButton,.app .postMenu{color:#56616b;border-color:#dfe3e7;background:#fff}
+.app .postMenu{border:0}
+.app .editionPanel{background:#fff;border-color:#dfe3e7;box-shadow:0 2px 7px #17232c06}
+.app .editionPanel>div,.app .editionPanel>p{color:#606c75}
+.app .editionPanel>div>span,.app .editionPanel>button>span{color:#4c6627}
+.app .editionPanel>button{color:#27313a;border-color:#edf0f2}
+.app .editionPanel>button:hover{background:#f7f9f3}
+.readerDialog,.postDialog{background:#fff!important;color:#20252b!important;border-color:#dfe3e7!important;color-scheme:light;box-shadow:0 16px 60px #15212d26}
+.readerDialog p,.postDialog>p,.postDialog .detailBody{color:#505b65}
+.readerDialog .collectionChoice,.readerDialog .topicPreference{border-color:#dfe3e7}
+.readerDialog .collectionChoice:has(input:checked){background:#f0f5e5;border-color:#b2c48b}
+.readerDialog .collectionChoice input{accent-color:#4b6823}
+.readerDialog .topicPreference button,.readerDialog .secondary,.postDialog .detailActions button{background:#f5f6f7;color:#45505a;border-color:#d6dce2}
+.readerDialog .topicPreference button[aria-pressed=true]{background:#eaf2d7;color:#344b13;border-color:#aabd83}
+.app button:focus-visible,.app a:focus-visible,.readerDialog button:focus-visible,.postDialog button:focus-visible,.postDialog a:focus-visible{outline-color:#526f28}
+@media(max-width:760px){
+ .app .mobileNav{background:#fffffffa;border-color:#dfe3e7;box-shadow:0 -3px 16px #17232c06}
+ .app .mobileNav button,.app .mobileNav a{color:#626c76;min-height:44px}
+ .app .post{border-inline:0;box-shadow:none}
+ .app .quoteCard h2{font-size:28px}
+ .app .feed{gap:12px}
+}
