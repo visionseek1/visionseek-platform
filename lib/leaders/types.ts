@@ -7,6 +7,7 @@ export type LeaderPost = {
   source_url: string | null; source_label: string | null;
   status: 'draft' | 'published' | 'archived'; featured: boolean; highlight: boolean;
   published_at: string | null; expires_at: string | null; created_at: string; author_id?: string;
+  character_id?: string | null; sector_ids?: string[];
   cover_url?: string; media_url?: string; media_url_en?: string; poster_url?: string; poster_url_en?: string; caption_url?: string; caption_url_en?: string; seed?: boolean;
 };
 export const topics: {id: Topic; ar: string; en: string}[] = [

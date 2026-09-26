@@ -1,4 +1,5 @@
 /* Reader surface. Kept separate from the studio and immersive players. */
+.sidebar nav>a{display:flex;align-items:center;gap:13px;min-height:52px;text-align:start;padding:12px 17px;border-radius:12px;font-size:16px;color:#59665f}.sidebar nav>a:hover{background:#e8ebea}.sidebar nav>a svg{width:22px;height:22px;stroke-width:1.7}.characterContentLabel{font-size:14px;color:#5f6f60;margin:0 0 12px;font-weight:600}.detailAuthor{display:flex;align-items:center;gap:9px;color:#426137;font-size:14px;margin:10px 0}
 .app{--lh-bg:#f2f4f5;--lh-panel:#fff;--lh-line:#e1e5e6;--lh-text:#18221d;--lh-muted:#68726d;--lh-lime:#c9f544;min-height:100dvh;display:grid;grid-template-columns:218px minmax(0,600px) 270px;gap:28px;justify-content:center;padding:0 24px 48px;background:var(--lh-bg);color:var(--lh-text);font-family:var(--font-arabic),sans-serif;font-size:15px;line-height:1.65;color-scheme:light}
 .app *{box-sizing:border-box}.app button{cursor:pointer;font:inherit}.app a{color:inherit;text-decoration:none}.app button:disabled{opacity:.4;cursor:default}.app :is(button,a,input):focus-visible{outline:3px solid #769e16;outline-offset:3px}.app button{touch-action:manipulation}.app svg{flex-shrink:0}
 .skip{position:fixed;top:-100px;padding:12px 20px;background:#c9f544;color:#18221d;z-index:110}.skip:focus{top:10px}
@@ -38,3 +39,4 @@
  .videoShelf{padding:0 10px;gap:9px}.videoTile strong{font-size:14px}.videoTile>span{padding:13px}.videoTile small{font-size:9px}.savedHint,.connectionNotice{margin-inline:10px;font-size:11px}.empty{margin:0 10px}.feedEnd{padding:25px 15px}
 }
 @media(max-width:360px){.mobileBrand strong{font-size:19px}.postCopy h2{font-size:18px}.storyItem{flex-basis:106px}.mobileHeader{padding-inline:12px}}
+@media(max-width:760px){.characterContentLabel{padding-inline:17px}.mobileHeader>div>a{width:40px;height:40px}}
