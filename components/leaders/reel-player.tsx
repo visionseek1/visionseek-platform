@@ -14,7 +14,7 @@ export function ReelPlayer({posts,start,locale,savedIds,blocked,onClose,onSave,o
   <div className={styles.reelHeader}><span>LEADERS HOUSE <small>{index+1} / {posts.length}</small></span><button aria-label={ar?'إغلاق الفيديوهات':'Close videos'} onClick={onClose}><X/></button></div>
   <div className={styles.reelRail} aria-label={ar?'اسحب لأعلى للفيديو التالي، ولأسفل للسابق':'Swipe up for the next video, down for the previous'} ref={setRail} onScroll={e=>{const el=e.currentTarget;setIndex(Math.min(posts.length-1,Math.max(0,Math.round(el.scrollTop/el.clientHeight))));}}>
    {posts.map((p,i)=><article key={p.id} className={styles.reelSlide} aria-label={postText(p,locale).title} aria-hidden={i!==index} inert={i!==index}>
-    <PostMedia post={p} locale={locale} immersive paused={i!==index||blocked} muted={muted} onMuteChange={setMuted}/>
+    {Math.abs(i-index)<=1&&<PostMedia post={p} locale={locale} immersive preload={i===index||i===index+1?'auto':'metadata'} paused={i!==index||blocked} muted={muted} onMuteChange={setMuted}/>}
     <div className={styles.reelCaption}><p>{ar?'من تحرير VisionSeek':'VisionSeek editorial'}</p><h2>{postText(p,locale).title}</h2><div><button onClick={()=>onRead(p)}><FileText size={18}/>{ar?'الفكرة والمصدر':'Brief & source'}</button><button aria-label={ar?'حفظ في مجموعة':'Save to collection'} onClick={()=>onSave(p)}><Bookmark fill={savedIds.includes(p.id)?'currentColor':'none'} size={21}/></button><button aria-label={ar?'مشاركة الفيديو':'Share video'} onClick={()=>onShare(p)}><Send size={21}/></button></div></div>
    </article>)}
   </div>

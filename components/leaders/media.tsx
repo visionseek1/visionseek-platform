@@ -4,7 +4,7 @@ import {useEffect,useRef,useState} from 'react';
 import {Play,Volume2,VolumeX,RotateCcw} from 'lucide-react';
 import {postText,type LeaderPost,type Locale} from '@/lib/leaders/types';
 import styles from './leaders.module.css';
-export function PostMedia({post,locale,immersive=false,onProgress,onEnded,paused=false,muted:controlledMuted,onMuteChange}:{post:LeaderPost;locale:Locale;immersive?:boolean;onProgress?:(value:number)=>void;onEnded?:()=>void;paused?:boolean;muted?:boolean;onMuteChange?:(value:boolean)=>void}) {
+export function PostMedia({post,locale,immersive=false,preload="metadata",onProgress,onEnded,paused=false,muted:controlledMuted,onMuteChange}:{post:LeaderPost;locale:Locale;immersive?:boolean;preload?:"none"|"metadata"|"auto";onProgress?:(value:number)=>void;onEnded?:()=>void;paused?:boolean;muted?:boolean;onMuteChange?:(value:boolean)=>void}) {
  const video=useRef<HTMLVideoElement>(null);const [localMuted,setLocalMuted]=useState(true);const [playing,setPlaying]=useState(false);const [failed,setFailed]=useState(false);
  const muted=controlledMuted??localMuted;const ar=locale==='ar';const t=postText(post,locale);
  const src=locale==='en'&&post.media_url_en?post.media_url_en:post.media_url;
@@ -28,7 +28,7 @@ export function PostMedia({post,locale,immersive=false,onProgress,onEnded,paused
  function toggleMute(){const next=!muted;setLocalMuted(next);onMuteChange?.(next);}
  return <div className={`${styles.media} ${immersive?styles.immersiveMedia:''}`}>
   {isVideo?<>
-   <video ref={video} src={src} poster={poster} playsInline muted={muted} controls preload="metadata" onPlay={e=>{setPlaying(true);document.dispatchEvent(new CustomEvent('leaders-video-play',{detail:e.currentTarget}));}} onPause={()=>setPlaying(false)} onError={()=>setFailed(true)} onLoadedData={()=>setFailed(false)} onVolumeChange={e=>{const next=e.currentTarget.muted;setLocalMuted(next);onMuteChange?.(next);}} onTimeUpdate={e=>{const v=e.currentTarget;if(v.duration)onProgress?.(v.currentTime/v.duration*100);}} onEnded={onEnded} aria-label={t.title}>
+   <video ref={video} src={src} poster={poster} playsInline muted={muted} controls preload={preload} onPlay={e=>{setPlaying(true);document.dispatchEvent(new CustomEvent('leaders-video-play',{detail:e.currentTarget}));}} onPause={()=>setPlaying(false)} onError={()=>setFailed(true)} onLoadedData={()=>setFailed(false)} onVolumeChange={e=>{const next=e.currentTarget.muted;setLocalMuted(next);onMuteChange?.(next);}} onTimeUpdate={e=>{const v=e.currentTarget;if(v.duration)onProgress?.(v.currentTime/v.duration*100);}} onEnded={onEnded} aria-label={t.title}>
     {caption&&<track kind="captions" src={caption} srcLang={locale} label={ar?'العربية':'English'}/>}
    </video>
    {!playing&&!failed&&<button className={styles.playButton} aria-label={ar?'تشغيل الفيديو':'Play video'} onClick={()=>void video.current?.play().catch(()=>{})}><Play fill="currentColor"/></button>}
