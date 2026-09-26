@@ -1,6 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { createSupabaseBrowserClient } from '@/lib/supabase-browser';
 import { LeaderPost, MEDIA_BUCKET, MEDIA_TYPES, MAX_MEDIA_BYTES } from './types';
+import { safeMediaUrl } from './media-url';
 let instance: SupabaseClient | null = null;
 export function leadersClient() {
   if (!instance) instance = createSupabaseBrowserClient();
@@ -28,8 +29,12 @@ export function validateMedia(file: File) {
   if (!file.size) throw new Error('الملف فارغ.');
 }
 export async function videoDuration(file: File): Promise<number> {
+  validateMedia(file);
+  if (file.type !== 'video/mp4' && file.type !== 'video/webm') throw new Error('اختر ملف فيديو MP4 أو WebM.');
   return new Promise((resolve,reject) => {
-    const video=document.createElement('video'); const url=URL.createObjectURL(file);
+    const video=document.createElement('video'); const objectUrl=URL.createObjectURL(file);
+    const url=safeMediaUrl(objectUrl,window.location.origin);
+    if(!url){URL.revokeObjectURL(objectUrl);reject(new Error('تعذر إنشاء معاينة آمنة للفيديو.'));return;}
     const done=()=>{URL.revokeObjectURL(url);video.removeAttribute('src');clearTimeout(timeout);};
     const timeout=setTimeout(()=>{done();reject(new Error('تعذر قراءة الفيديو. جرّب ملف MP4 متوافقًا.'));},10000);
     video.preload='metadata'; video.onloadedmetadata=()=>{const d=video.duration;done();if(Number.isFinite(d))resolve(d);else reject(new Error('تعذر قراءة مدة الفيديو.'));};

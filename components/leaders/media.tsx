@@ -3,13 +3,15 @@ import Image from 'next/image';
 import {useEffect,useRef,useState} from 'react';
 import {Play,Volume2,VolumeX,RotateCcw} from 'lucide-react';
 import {postText,type LeaderPost,type Locale} from '@/lib/leaders/types';
+import {safeMediaUrl} from '@/lib/leaders/media-url';
 import styles from './leaders.module.css';
 export function PostMedia({post,locale,immersive=false,preview=false,preload="metadata",onProgress,onEnded,paused=false,muted:controlledMuted,onMuteChange}:{post:LeaderPost;locale:Locale;immersive?:boolean;preview?:boolean;preload?:"none"|"metadata"|"auto";onProgress?:(value:number)=>void;onEnded?:()=>void;paused?:boolean;muted?:boolean;onMuteChange?:(value:boolean)=>void}) {
  const video=useRef<HTMLVideoElement>(null);const [localMuted,setLocalMuted]=useState(true);const [playing,setPlaying]=useState(false);const [failed,setFailed]=useState(false);
  const muted=controlledMuted??localMuted;const ar=locale==='ar';const t=postText(post,locale);
- const src=locale==='en'&&post.media_url_en?post.media_url_en:post.media_url;
- const poster=locale==='en'&&post.poster_url_en?post.poster_url_en:post.poster_url;
- const caption=locale==='en'?post.caption_url_en:post.caption_url;
+ const origin=typeof window==='undefined'?undefined:window.location.origin;
+ const src=safeMediaUrl(locale==='en'&&post.media_url_en?post.media_url_en:post.media_url,origin);
+ const poster=safeMediaUrl(locale==='en'&&post.poster_url_en?post.poster_url_en:post.poster_url,origin);
+ const caption=safeMediaUrl(locale==='en'?post.caption_url_en:post.caption_url,origin);
  const isVideo=post.media_type?.startsWith('video/');
  useEffect(()=>{
   const el=video.current;if(!el||preview)return;
