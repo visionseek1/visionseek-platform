@@ -41,6 +41,8 @@ Updated: **2026-09-26**. Owner: Dr. Ahmed. Every merge requires founder approval
 
 ## Verification limits
 
+- Founder corrected discovery scope beyond generally available tools: [frontier intelligence design](docs/FRONTIER_INTELLIGENCE.md) defines nine private research domains, evidence timelines, independent-source checks, alternative hypotheses, access classifications and eight preliminary dossiers. They are source reviews, not discoveries of classified facts or installed capabilities. Public defense references are analyzed at a high level. AlphaEvolve is recorded as publicly announced GA in July 2026, not still private preview; account access remains untested.
+
 - [Frontier discovery batch](docs/FRONTIER_DISCOVERY.md): eight source-backed candidates/opportunity paths (FD-01–08) added on 2026-09-26, with domain mapping, owner, dependencies and proposed acceptance experiments. Sources include declassified CORONA imagery, public IARPA FUSE/ARCADE, EMA Workbench, Ax, OpenROAD and NASA/KIAT technology-transfer channels. No datasets downloaded, accounts connected, candidate code installed, messages sent or rights acquired. Terarium is recorded as an archived design reference. Public source verification is not operational validation or proof of customer demand.
 
 - Leaders House browser verification used a desktop viewport. Responsive CSS is implemented; physical mobile device testing remains a review item.
