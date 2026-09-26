@@ -1,0 +1,13 @@
+{
+ "name":"VisionSeek — Leaders House daily drafting",
+ "active":false,
+ "nodes":[
+  {"id":"leaders-manual","name":"Run a test cycle","type":"n8n-nodes-base.manualTrigger","typeVersion":1,"position":[0,0],"parameters":{}},
+  {"id":"leaders-schedule","name":"Daily at 10 Seoul","type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.2,"position":[0,220],"parameters":{"rule":{"interval":[{"field":"cronExpression","expression":"0 10 * * *"}]}}},
+  {"id":"leaders-request","name":"Queue private drafts","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[300,100],"parameters":{"method":"POST","url":"https://visionseek.org/api/leaders/automation/tick","authentication":"genericCredentialType","genericAuthType":"httpHeaderAuth","options":{"redirect":{"redirect":{"followRedirects":false}},"timeout":65000}},"retryOnFail":true,"maxTries":3,"waitBetweenTries":5000,"onError":"stopWorkflow"},
+  {"id":"leaders-note","name":"Connection setup","type":"n8n-nodes-base.stickyNote","typeVersion":1,"position":[260,-230],"parameters":{"height":240,"width":470,"content":"## Private drafting only\nSelect an HTTP Header Auth credential on Queue private drafts.\nName: Authorization\nValue: Bearer followed by LEADERS_AUTOMATION_SECRET.\nEnter the secret only in n8n Credentials.\nDeploy the site and Trigger task, test once, then activate this workflow.\nThe room controls enabled/paused state and the two-draft daily cap.\nThis workflow never approves or publishes content."}}
+ ],
+ "connections":{"Run a test cycle":{"main":[[{"node":"Queue private drafts","type":"main","index":0}]]},"Daily at 10 Seoul":{"main":[[{"node":"Queue private drafts","type":"main","index":0}]]}},
+ "settings":{"executionOrder":"v1","timezone":"Asia/Seoul","saveDataSuccessExecution":"none","saveDataErrorExecution":"all","executionTimeout":300},
+ "pinData":{}
+}
