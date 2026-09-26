@@ -241,3 +241,45 @@
  .storyTop{top:max(28px,calc(16px + env(safe-area-inset-top)))}
  .storyTop button,.storyBottom button,.muteButton{width:44px;height:44px}
 }
+
+/* The reel has its own Radix surface. It must never inherit the centred sheet translation. */
+.reelOverlay{position:fixed;inset:0;z-index:60;background:#060b09e8}
+.reelsDialog{position:fixed;z-index:61;top:50%;left:50%;transform:translate(-50%,-50%);translate:none;box-sizing:border-box;display:block;outline:none;box-shadow:0 24px 100px #0009}
+.reelsDialog *{box-sizing:border-box}
+@media(max-width:760px){
+ .reelsDialog{position:fixed!important;inset:0!important;top:0!important;left:0!important;right:0!important;bottom:0!important;transform:none!important;translate:none!important;width:100%!important;max-width:none!important;height:100dvh!important;max-height:none!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none;animation:none!important}
+ .reelOverlay{background:#050905}
+
+ /* Distinct discovery cards and a framed brand mark on small screens. */
+ .app{background:#e8ecee}
+ .app .mainColumn{background:#e8ecee}
+ .mobileHeader{padding-inline:14px;border-bottom:1px solid #dce2e4;box-shadow:0 2px 6px #1c342a0d}
+ .mobileBrand{gap:10px}
+ .mobileBrand img{width:40px;height:40px;padding:5px;background:#14221a;border:2px solid #81ad35;border-radius:12px;box-shadow:inset 0 0 0 2px #ffffff24}
+ .mobileBrand strong{font-size:19px}
+ .app .feedTop{background:transparent;padding:14px 16px 10px}
+ .app .feedTop h1{color:#273b2f;font-size:18px}
+ .app .storyRail{margin:0 10px 10px;padding:10px 0 14px;border:1px solid #d8dedf;border-radius:14px;background:#f9faf9;box-shadow:0 2px 7px #1b352810}
+ .railHeading{display:flex;padding-inline:14px;margin-bottom:6px;font-size:13px;color:#33473a}
+ .railHeading>div{display:none}
+ .storyViewport{padding-inline:12px}
+ .storyTrack{gap:8px}
+ .storyTrack .storyItem{flex:0 0 162px;flex-direction:row;align-items:center;gap:9px;height:72px;padding:8px;border:1px solid #dce5d7;border-radius:12px;background:white;color:#27362b;box-shadow:0 1px 3px #1d32230c}
+ .storyRing{flex:0 0 46px;width:46px;height:46px;padding:2px;border-width:1px;background:#eef4e4}
+ .storyThumb{width:38px;height:38px}
+ .storyThumb svg{width:19px;height:19px}
+ .storyLabel{height:auto;max-height:44px;font-size:11px;line-height:1.55;text-align:start}
+ .app .digest{margin:0 10px 10px;border:1px solid #d6e1cb;border-radius:11px;background:#f7faf3}
+ .digestTrigger{padding:8px 12px}
+ .orderBar{margin:0 10px 10px;padding:7px 8px;border:1px solid #d9dfe2;border-radius:12px;box-shadow:0 1px 4px #172e240b}
+ .orderBar button[aria-pressed=true]{background:#e4eed6;color:#27421c}
+ .app .feed{gap:12px}
+ .app .post{margin-inline:10px;border:1px solid #d8dee0;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px #213d3014}
+ .app .postHeader{border-bottom:1px solid #edf0ed}
+ .app .postHeader .avatar{width:42px;height:42px;background:#14221a;border:1px solid #93bd4c;border-radius:12px;overflow:hidden}
+ .app .postHeader .avatar img{width:34px;height:34px;object-fit:contain}
+ .app .postActions{border-bottom:1px solid #e8ece8}
+ .app .mobileNav{border-top:1px solid #d4ddcf;box-shadow:0 -3px 15px #132e200f}
+ .app .mobileNav .navActive{background:#e5f0d2;color:#2d481c;box-shadow:inset 0 3px #7da836}
+ .app .mobileNav a img{width:32px;height:32px;padding:3px;background:#14221a;border:1px solid #8bb245;border-radius:8px}
+}

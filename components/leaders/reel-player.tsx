@@ -1,17 +1,16 @@
 'use client';
 import {useCallback,useRef,useState} from 'react';
 import {ArrowDown,ArrowUp,Bookmark,FileText,Send,X} from 'lucide-react';
-import {Dialog,DialogDescription,DialogTitle} from '@/components/ui/dialog';
+import {Dialog} from 'radix-ui';
 import {postText,type LeaderPost,type Locale} from '@/lib/leaders/types';
 import {PostMedia} from './media';
 import styles from './leaders.module.css';
-import {ReaderDialogContent as DialogContent} from './reader-dialog';
 export function ReelPlayer({posts,start,locale,savedIds,blocked,onClose,onSave,onShare,onRead}:{posts:LeaderPost[];start:number;locale:Locale;savedIds:string[];blocked:boolean;onClose:()=>void;onSave:(p:LeaderPost)=>void;onShare:(p:LeaderPost)=>void;onRead:(p:LeaderPost)=>void}){
  const [index,setIndex]=useState(start);const [muted,setMuted]=useState(true);const rail=useRef<HTMLDivElement>(null);const ar=locale==='ar';
  const setRail=useCallback((el:HTMLDivElement|null)=>{rail.current=el;if(el)el.scrollTop=start*el.clientHeight;},[start]);
  function move(next:number){if(next<0||next>=posts.length)return;const el=rail.current;if(el)el.scrollTo({top:next*el.clientHeight,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
- return <Dialog open onOpenChange={open=>{if(!open)onClose();}}><DialogContent showCloseButton={false} className={styles.reelsDialog} dir={ar?'rtl':'ltr'} onKeyDown={e=>{if(blocked)return;if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();move(index+(e.key==='ArrowDown'?1:-1));}}}>
-  <DialogTitle className="sr-only">{ar?'فيديوهات بيت القادة':'Leaders House videos'}</DialogTitle><DialogDescription className="sr-only">{ar?'اسحب لأعلى أو استخدم الأسهم للتنقل. أغلق للعودة إلى مكانك في الموجز.':'Swipe up or use the arrows. Close to return to your place in the feed.'}</DialogDescription>
+ return <Dialog.Root open onOpenChange={open=>{if(!open)onClose();}}><Dialog.Portal><Dialog.Overlay className={styles.reelOverlay}/><Dialog.Content className={styles.reelsDialog} dir={ar?'rtl':'ltr'} onKeyDown={e=>{if(blocked)return;if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();move(index+(e.key==='ArrowDown'?1:-1));}}}>
+  <Dialog.Title className="sr-only">{ar?'فيديوهات بيت القادة':'Leaders House videos'}</Dialog.Title><Dialog.Description className="sr-only">{ar?'اسحب لأعلى أو استخدم الأسهم للتنقل. أغلق للعودة إلى مكانك في الموجز.':'Swipe up or use the arrows. Close to return to your place in the feed.'}</Dialog.Description>
   <div className={styles.reelHeader}><span>LEADERS HOUSE <small>{index+1} / {posts.length}</small></span><button aria-label={ar?'إغلاق الفيديوهات':'Close videos'} onClick={onClose}><X/></button></div>
   <div className={styles.reelRail} aria-label={ar?'اسحب لأعلى للفيديو التالي، ولأسفل للسابق':'Swipe up for the next video, down for the previous'} ref={setRail} onScroll={e=>{const el=e.currentTarget;setIndex(Math.min(posts.length-1,Math.max(0,Math.round(el.scrollTop/el.clientHeight))));}}>
    {posts.map((p,i)=><article key={p.id} className={styles.reelSlide} aria-label={postText(p,locale).title} aria-hidden={i!==index} inert={i!==index}>
@@ -20,5 +19,5 @@ export function ReelPlayer({posts,start,locale,savedIds,blocked,onClose,onSave,o
    </article>)}
   </div>
   <div className={styles.reelScrollHint} aria-live="polite">{index<posts.length-1?<><ArrowDown size={14}/>{ar?'اسحب لأعلى · أو مرّر لأسفل':'Swipe up · or scroll down'}</>:ar?'وصلت إلى آخر فيديو':'You’ve reached the last video'}</div><div className={styles.reelStepper}><button disabled={index===0} aria-label={ar?'الفيديو السابق':'Previous video'} onClick={()=>move(index-1)}><ArrowUp size={19}/></button><button disabled={index===posts.length-1} aria-label={ar?'الفيديو التالي':'Next video'} onClick={()=>move(index+1)}><ArrowDown size={19}/></button></div>
- </DialogContent></Dialog>;
+ </Dialog.Content></Dialog.Portal></Dialog.Root>;
 }
