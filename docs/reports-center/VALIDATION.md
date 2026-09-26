@@ -1,24 +1,26 @@
 # Branch handoff — 2026-09-27
 
-Implemented: bilingual reports library and methodology pages, existing-site navigation links and sitemap entries, versioned report metadata contract, explicit historical-brief classification, operational brief and official reference links.
+Implemented: bilingual reports library and methodology pages; Reports immediately before News in main navigation; searchable index and publication-type filters; dedicated reader with contents, references, citation copy and print; private reports studio with authenticated persistent drafts. Historical Physical AI content stays unchanged and is not described as independently reviewed research.
 
-Verified:
+## Verified
 - npm ci with existing lockfile: success; no package changes.
-- TypeScript noEmit: passed.
-- ESLint for all changed application files: passed.
-- Next production build: passed, 171 static pages generated including all four new routes. Used dummy local Supabase values solely for build; no live data access.
-- Three catalogue-contract tests: passed. These validate required metadata, not scientific accuracy or reviewer identity.
-- Runtime HTTP check incomplete: server announced ready, but subsequent localhost request was refused. Build output confirms prerendering, not a verified HTTP response.
+- TypeScript noEmit and targeted ESLint: passed.
+- Next production build: passed; 176 static pages plus the private draft API routes. Dummy local Supabase values used only for build.
+- Seven tests passed: three catalogue-contract tests and four draft-schema/security/readiness tests. These check software behavior, not scientific accuracy.
+- Supabase transaction test passed: authorized editor inserts revision 0, updates to revision 1; stale revision matches no rows; non-editor cannot read or insert. Test fixtures rolled back; zero reports left in the new table.
+- RLS and grants checked: anonymous read denied; authenticated DELETE/TRUNCATE denied; owner/editor policies installed. Revision trigger prevents ownership or identity changes.
+- Supabase security advisor: no report-table finding. Existing project warning for disabled leaked-password protection remains unchanged.
 - git diff --check: passed.
 
-Limitations:
-- Browser visual/interaction QA incomplete: agent-browser daemon failed at startup. No claim of verified responsive rendering.
-- No report ingestion backend, editorial authentication/workspace, running analysis integrations or commissioned scientific report delivered in this increment.
-- Tools are documented candidates, not installed integrations or globally ranked products.
-- Independent scientific editor/reviewer and first commissioned question remain unassigned.
-- Catalogue is intentionally empty. Existing Physical AI brief is linked as historical material, not reclassified as reviewed research.
-- Report schema enforces presence of fields; human review must verify records, independence, rights and scientific merit.
-- Shared navigation changes are two additive links; reconcile with other active website branches before merge.
-- Branch only: no main merge or deliberate production deployment. Repository automation may create a preview on push.
+## Preview verification
+Current revision awaits automatic branch deployment and browser checks. Earlier branch revision was visually inspected in the cloud browser.
 
-Next execution unit: select a first question within an editorial agenda; acquire licensed source data; benchmark candidate tools by reproducing one documented result; attach reviewable evidence before admitting a report to the catalogue.
+## Limitations
+- Authenticated browser create/save has not been exercised; authorization/storage tested at database layer.
+- No direct file upload: cover/PDF and source assets are HTTPS links.
+- Draft storage is private to each editor. Ready for review is a workflow label; it does not publish or certify a report.
+- The reviewed report catalogue remains empty; the only indexed publication is the real historical Physical AI brief.
+- Analysis tools are documented candidates, not installed integrations or globally ranked products. Independent scientific roles and first commissioned report remain unassigned.
+- Branch only: no main merge or deliberate production website deployment. The additive private-draft schema is already installed in the connected database; existing content and memberships were not changed.
+
+Next scientific execution unit: choose a question within the editorial agenda, obtain licensed source data, reproduce a documented result and complete independent review before admitting a report to the reviewed catalogue.
