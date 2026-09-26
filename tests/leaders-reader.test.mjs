@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import ts from 'typescript';
 const source=await fs.readFile(new URL('../lib/leaders/reader.ts',import.meta.url),'utf8');
 const compiled=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
-const {normalizePreferences,toggleCollection,setTopicPreference,rankPosts,emptyPreferences,capabilityLink}=await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const {normalizePreferences,toggleCollection,setTopicPreference,rankPosts,sortByNewest,emptyPreferences,capabilityLink}=await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 test('legacy saves migrate once; removing the last collection does not resurrect them',()=>{
  let p=normalizePreferences(null,['post-1']);assert.deepEqual(p.collections['post-1'],['later']);
  p=toggleCollection(p,'post-1','later');
@@ -27,4 +27,10 @@ test('explicit topic choices rank a copy without hiding other topics',()=>{
 test('context links preserve Arabic and cannot change the destination',()=>{
  const p={title:'طاقة & قرار؟ #1',title_en:'An idea & a choice'};const link=capabilityLink(p,'ar');
  const url=new URL(link,'https://visionseek.org');assert.equal(url.pathname,'/ar/start');assert.equal(url.searchParams.get('idea'),p.title);assert.equal(url.searchParams.get('from'),'leaders');
+});
+
+test('latest ignores featured priority and remains deterministic for ties and invalid dates',()=>{
+ const posts=[{id:'old',featured:true,created_at:'2020-01-01'},{id:'b',created_at:'2026-09-26'},{id:'a',created_at:'2026-09-26'},{id:'invalid',created_at:'bad'}];
+ assert.deepEqual(sortByNewest(posts).map(p=>p.id),['a','b','old','invalid']);
+ assert.equal(posts[0].id,'old');
 });

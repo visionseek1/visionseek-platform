@@ -4,7 +4,7 @@ import {useEffect,useRef,useState} from 'react';
 import {Play,Volume2,VolumeX,RotateCcw} from 'lucide-react';
 import {postText,type LeaderPost,type Locale} from '@/lib/leaders/types';
 import styles from './leaders.module.css';
-export function PostMedia({post,locale,immersive=false,preload="metadata",onProgress,onEnded,paused=false,muted:controlledMuted,onMuteChange}:{post:LeaderPost;locale:Locale;immersive?:boolean;preload?:"none"|"metadata"|"auto";onProgress?:(value:number)=>void;onEnded?:()=>void;paused?:boolean;muted?:boolean;onMuteChange?:(value:boolean)=>void}) {
+export function PostMedia({post,locale,immersive=false,preview=false,preload="metadata",onProgress,onEnded,paused=false,muted:controlledMuted,onMuteChange}:{post:LeaderPost;locale:Locale;immersive?:boolean;preview?:boolean;preload?:"none"|"metadata"|"auto";onProgress?:(value:number)=>void;onEnded?:()=>void;paused?:boolean;muted?:boolean;onMuteChange?:(value:boolean)=>void}) {
  const video=useRef<HTMLVideoElement>(null);const [localMuted,setLocalMuted]=useState(true);const [playing,setPlaying]=useState(false);const [failed,setFailed]=useState(false);
  const muted=controlledMuted??localMuted;const ar=locale==='ar';const t=postText(post,locale);
  const src=locale==='en'&&post.media_url_en?post.media_url_en:post.media_url;
@@ -12,7 +12,7 @@ export function PostMedia({post,locale,immersive=false,preload="metadata",onProg
  const caption=locale==='en'?post.caption_url_en:post.caption_url;
  const isVideo=post.media_type?.startsWith('video/');
  useEffect(()=>{
-  const el=video.current;if(!el)return;
+  const el=video.current;if(!el||preview)return;
   if(paused)el.pause();
   const observer=new IntersectionObserver(([entry])=>{
    if(entry.isIntersecting&&!paused&&!document.hidden&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)void el.play().catch(()=>{});
@@ -23,8 +23,9 @@ export function PostMedia({post,locale,immersive=false,preload="metadata",onProg
   const exclusive=(event:Event)=>{if((event as CustomEvent).detail!==el)el.pause();};
   document.addEventListener('visibilitychange',stop);document.addEventListener('leaders-video-play',exclusive);
   return()=>{observer.disconnect();document.removeEventListener('visibilitychange',stop);document.removeEventListener('leaders-video-play',exclusive);el.pause();};
- },[src,paused]);
+ },[src,paused,preview]);
  if(!src)return null;
+ if(preview)return <div className={styles.media} aria-hidden="true">{poster?<Image src={poster} alt="" fill sizes="(max-width:760px) 100vw,620px" unoptimized={poster.startsWith('https:')}/>:<div className={styles.videoPlaceholder}><span>VISIONSEEK</span></div>}</div>;
  function toggleMute(){const next=!muted;setLocalMuted(next);onMuteChange?.(next);}
  return <div className={`${styles.media} ${immersive?styles.immersiveMedia:''}`}>
   {isVideo?<>

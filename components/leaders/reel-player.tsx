@@ -1,10 +1,11 @@
 'use client';
 import {useCallback,useRef,useState} from 'react';
 import {ArrowDown,ArrowUp,Bookmark,FileText,Send,X} from 'lucide-react';
-import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
+import {Dialog,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {postText,type LeaderPost,type Locale} from '@/lib/leaders/types';
 import {PostMedia} from './media';
 import styles from './leaders.module.css';
+import {ReaderDialogContent as DialogContent} from './reader-dialog';
 export function ReelPlayer({posts,start,locale,savedIds,blocked,onClose,onSave,onShare,onRead}:{posts:LeaderPost[];start:number;locale:Locale;savedIds:string[];blocked:boolean;onClose:()=>void;onSave:(p:LeaderPost)=>void;onShare:(p:LeaderPost)=>void;onRead:(p:LeaderPost)=>void}){
  const [index,setIndex]=useState(start);const [muted,setMuted]=useState(true);const rail=useRef<HTMLDivElement>(null);const ar=locale==='ar';
  const setRail=useCallback((el:HTMLDivElement|null)=>{rail.current=el;if(el)el.scrollTop=start*el.clientHeight;},[start]);

@@ -43,3 +43,8 @@ export function rankPosts(posts:LeaderPost[],p:ReaderPreferences):LeaderPost[] {
 export function capabilityLink(post:LeaderPost,locale:'ar'|'en') {
   return `${locale==='ar'?'/ar':''}/start?from=leaders&idea=${encodeURIComponent((locale==='en'&&post.title_en?post.title_en:post.title).slice(0,180))}`;
 }
+
+export function sortByNewest(posts:LeaderPost[]):LeaderPost[] {
+ const time=(p:LeaderPost)=>{const value=Date.parse(p.published_at||p.created_at);return Number.isFinite(value)?value:0;};
+ return [...posts].sort((a,b)=>time(b)-time(a)||a.id.localeCompare(b.id));
+}

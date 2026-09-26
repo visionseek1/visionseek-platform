@@ -1,10 +1,11 @@
 'use client';
 import {useCallback,useEffect,useRef,useState} from 'react';
 import {ChevronLeft,ChevronRight,Pause,Play,X} from 'lucide-react';
-import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
+import {Dialog,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {LeaderPost,Locale,postText,topics} from '@/lib/leaders/types';
 import {PostMedia} from './media';
 import styles from './leaders.module.css';
+import {ReaderDialogContent as DialogContent} from './reader-dialog';
 export function StoryPlayer({posts,index,onClose,onIndex,locale}:{posts:LeaderPost[];index:number;onClose:()=>void;onIndex:(n:number)=>void;locale:Locale}){
  const post=posts[index];const [paused,setPaused]=useState(false);const [progress,setProgress]=useState(0);const touch=useRef<number|null>(null);const ar=locale==='ar';
  const next=useCallback(()=>{if(index+1<posts.length)onIndex(index+1);else onClose();},[index,posts.length,onIndex,onClose]);
