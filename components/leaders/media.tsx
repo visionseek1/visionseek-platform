@@ -25,7 +25,7 @@ export function PostMedia({post,locale,immersive=false,preview=false,preload="me
   return()=>{observer.disconnect();document.removeEventListener('visibilitychange',stop);document.removeEventListener('leaders-video-play',exclusive);el.pause();};
  },[src,paused,preview]);
  if(!src)return null;
- if(preview)return <div className={styles.media} aria-hidden="true">{poster?<Image src={poster} alt="" fill sizes="(max-width:760px) 100vw,620px" unoptimized={poster.startsWith('https:')}/>:<div className={styles.videoPlaceholder}><span>VISIONSEEK</span></div>}</div>;
+ if(preview)return <div className={`${styles.media} ${styles.videoPreview}`} aria-hidden="true">{poster?<Image src={poster} alt="" fill sizes="(max-width:760px) 100vw,620px" unoptimized={poster.startsWith('https:')}/>:<div className={styles.videoPlaceholder}><span>VISIONSEEK</span></div>}</div>;
  function toggleMute(){const next=!muted;setLocalMuted(next);onMuteChange?.(next);}
  return <div className={`${styles.media} ${immersive?styles.immersiveMedia:''}`}>
   {isVideo?<>

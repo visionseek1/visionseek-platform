@@ -40,3 +40,12 @@
 
 ## Validation record
 Local checks and exact deployed-head browser results are recorded in PR29 after the preview is ready. Do not infer successful browser testing from a passing build.
+
+
+## Mobile follow-up after founder feedback
+
+Outcome: make the reader layout fit phone use. Owner: Codex. Acceptor: Dr. Ahmed. Checkpoint: 2026-09-26.
+
+Changes: dedicated compact mobile brand/language/interests header; smaller discovery area; collapsible topic filters; full-width feed cards with gray separators; contain-fit video posters to preserve embedded text; 44px touch targets; bottom-sheet reading/saving/sharing dialogs; safe-area-aware navigation and fullscreen media. No packages, permissions or backend changes.
+
+Validation: ESLint, TypeScript and production compilation passed. Browser runtime has no supported viewport/device emulation; UI zoom did not change its viewport. A local static layout fixture could not be opened because browser policy permits HTTP(S) only. No browser-policy workaround was attempted. Therefore 360/390/430px visual checks, touch gestures, keyboard opening and iOS Safari remain NOT VERIFIED. Desktop checks cannot substitute for those. The founder should review the new preview on a phone before production acceptance.
