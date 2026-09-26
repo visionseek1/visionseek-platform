@@ -60,7 +60,7 @@ jobs:
           if [ -z "$VERCEL_AUTOMATION_BYPASS_SECRET" ]; then
             echo "VERCEL_AUTOMATION_BYPASS_SECRET is not configured. Probes accept a protection redirect until that secret exists." >&2
           fi
-          for route in / /ar /en /projects /insights /insights/physical-ai /ar/projects /ar/insights /ar/insights/physical-ai /privacy /terms /ar/privacy /ar/terms /favicon.ico /room; do
+          for route in / /ar /en /projects /insights /insights/studio /insights/physical-ai /ar/projects /ar/insights /ar/insights/studio /ar/insights/physical-ai /privacy /terms /ar/privacy /ar/terms /favicon.ico /room; do
             status="$(probe "$route")"
             if [ -n "$VERCEL_AUTOMATION_BYPASS_SECRET" ]; then
               [ "$status" = "200" ]
