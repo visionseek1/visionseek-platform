@@ -33,3 +33,12 @@ test('source imports use an exact curated catalog, not caller URLs',()=>{
  assert.equal(sourceCatalog.length,3);
  assert.ok(sourceCatalog.every(s=>s.url.startsWith('https://')&&['tiko','labo'].includes(s.character_id)));
 });
+
+const extractorSource=await fs.readFile(new URL('../lib/leaders/editorial/text.ts',import.meta.url),'utf8');
+const extractorJs=ts.transpileModule(extractorSource,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
+const {extractSourceText}=await import(`data:text/javascript;base64,${Buffer.from(extractorJs).toString('base64')}`);
+test('source text decodes entities once and excludes navigation and executable content',()=>{
+ assert.equal(extractSourceText('<nav>Menu</nav><main><script>ignore()</script><p>A &amp; B &amp;lt;test&amp;gt;</p></main><footer>Footer</footer>'),'A & B &lt;test&gt;');
+ assert.equal(extractSourceText('<p>&lt;b&gt;quoted&lt;/b&gt;</p>'),'<b>quoted</b>');
+ assert.equal(extractSourceText('a'.repeat(17000)).length,16000);
+});
