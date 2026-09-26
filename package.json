@@ -10,11 +10,13 @@
     "build": "next build",
     "start": "next start",
     "test": "npm run lint && NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1 NEXT_PUBLIC_SUPABASE_ANON_KEY=test-anon-key npm run build && node --test tests/*.test.mjs",
-    "lint": "eslint . --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern .next",
+    "test:mcp": "node --import tsx --test checks/leaders-mcp.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@hookform/resolvers": "^5.7.1",
+    "@modelcontextprotocol/sdk": "1.30.1",
     "@shadcn/react": "^0.3.0",
     "@supabase/supabase-js": "2.116.0",
     "@trigger.dev/sdk": "4.6.4",
@@ -62,10 +64,18 @@
   },
   "type": "module",
   "overrides": {
-    "giget@1.2.5": {"tar": "7.5.22"},
-    "engine.io-client": {"ws": "8.22.0"},
-    "@prisma/config": {"deepmerge-ts": "8.0.2"},
-    "trigger.dev": {"esbuild": "0.28.2"}
+    "giget@1.2.5": {
+      "tar": "7.5.22"
+    },
+    "engine.io-client": {
+      "ws": "8.22.0"
+    },
+    "@prisma/config": {
+      "deepmerge-ts": "8.0.2"
+    },
+    "trigger.dev": {
+      "esbuild": "0.28.2"
+    }
   },
   "displayName": "VisionSeek BCGX Redesign"
 }
