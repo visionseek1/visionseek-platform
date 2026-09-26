@@ -30,6 +30,9 @@ Updated: **2026-09-26**. Owner: Dr. Ahmed. Every merge requires founder approval
 
 - Existing program cards remain **proposed, not launched or funded**.
 - [Step 0 report](docs/CAPABILITIES_STEP0.md) and [source registry](DATA_SOURCES.md) are proposals for review.
+- Founder clarification incorporated in [capability portfolio](docs/CAPABILITY_PORTFOLIO.md): integrate reusable capabilities for sensing, understanding, decision optimization, program proof and execution. OR-Tools, MLflow and optional industrial robotics simulation are candidate extensions, not installed integrations or automatic M0 scope.
+- [MCP integration design](docs/MCP_INTEGRATION.md) incorporates the founder's requirement to expose capabilities to existing assistants and consume suitable external tools. Feature selection compares against direct chat with its available connectors. MCP server/client compatibility and account entitlement remain untested; proposed M0 acceptance includes one real read via MCP after Step 0 approval.
+- [Advanced capability selection](docs/FRONTIER_CAPABILITY_SELECTION.md) records official Palantir/Microsoft/Google/NVIDIA candidates and the founder-confirmed Cursor/Grok/Claude resources. No integration, assistant delegation, new subscription or scheduled discovery job has been run. Current TimesFM 3.0 weights are excluded from commercial production under their documented license; a suitable earlier release or alternative needs benchmarking.
 - No Capabilities source is presented as live, no AI calls were made for it, no DNS changes, no direct push to main.
 - Proposed sequence: approve Step 0 → M0 with one verified source → individual PRs for M1–M5.
 
