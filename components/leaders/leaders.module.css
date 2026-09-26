@@ -295,3 +295,5 @@
  .app .digestTrigger small{display:none}
  .app .postCaption .applyLink{margin-top:10px}
 }
+
+.editorialStudio{background:#f2f4f5;min-height:100dvh;--lh-line:#dce2df}.editorialStudio .studioHeader{max-width:1320px}.editorialStudio .brand strong{color:#213329}.editorialStudio .brand small{color:#6d7e69}.editorialStudio .studioHeader>div>a,.editorialStudio .studioHeader button{color:#4f6745}@media(max-width:680px){.editorialStudio{padding-inline:12px}.editorialStudio .studioHeader{flex-wrap:wrap}.editorialStudio .studioHeader>div{width:100%;justify-content:space-between;padding-block:8px}.editorialStudio .studioHeader>div>a{max-width:none}}
