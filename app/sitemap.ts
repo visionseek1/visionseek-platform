@@ -5,6 +5,7 @@ import {characters,characterPath} from '@/lib/leaders/characters';
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const entries = [
+    ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology"].map(path => ({path, priority: 0.7})),
     ...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
     {path:'/insights/characters',priority:0.7},{path:'/ar/insights/characters',priority:0.7},
     ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:`/${s.id}`,priority:0.8},{path:`/ar/${s.id}`,priority:0.8}]),
