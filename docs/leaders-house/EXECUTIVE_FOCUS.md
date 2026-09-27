@@ -30,3 +30,11 @@ Acceptance: Arabic and English audience positioning visible on mobile and deskto
 - Desktop browser review: Arabic and English home pages rendered correctly at 1363 CSS pixels. The labelled reading dialog displayed the original reference, institutional implication, action and source; saving to a team-discussion collection and closing worked. Video opened and advanced from 1/2 to 2/2. Sector directory, local follow and Tiko profile navigation worked.
 - Remaining verification: a real mobile viewport/device and touch gestures were not available in this cloud browser; mobile rules were reviewed in code but are not claimed as visually verified. Local server started successfully, but the cloud browser cannot open this workspace's loopback address.
 - No database changes, generated model drafts, scheduled jobs or production publishing performed.
+
+## Visible public entry — founder follow-up, 27 September 2026
+
+Outcome: make Leaders House immediately discoverable from the public website. An icon alone is not required; visibility and a clear destination are the priorities.
+
+Implementation: promote the existing utility link into a named, lime-colored button with a supporting people icon. It appears first in the utility links on every page using the shared public header, outside the mobile menu, and preserves the Arabic/English destination. No additional navigation section or floating overlay is introduced.
+
+Owner: this workspace. Delivery: the same independent review branch/PR; no release date agreed. Acceptance: the link is visually distinct, keyboard accessible, at least 44px tall and opens the correct language of Leaders House. Public deployment remains pending founder release approval.
