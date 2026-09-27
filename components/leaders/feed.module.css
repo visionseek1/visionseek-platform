@@ -41,3 +41,26 @@
 @media(max-width:360px){.mobileBrand strong{font-size:19px}.postCopy h2{font-size:18px}.storyItem{flex-basis:106px}.mobileHeader{padding-inline:12px}}
 @media(max-width:760px){.characterContentLabel{padding-inline:17px}.mobileHeader>div>a{width:40px;height:40px}}
 .sidebar nav .navActive:hover{background:#18251e;color:#fff}
+
+/* Executive positioning stays visible on small screens without becoming a large hero. */
+.feedTop>div{min-width:0}
+.feedTop p{font-family:inherit;font-size:11px;letter-spacing:0;font-weight:600;color:#46583c}
+.feedTop .feedIntro{font-size:13px;font-weight:400;line-height:1.8;color:#607065;margin:7px 0 0;max-width:50ch}
+.homeIntro{padding:18px 20px;background:#fff;border:1px solid #dce3dc;border-inline-start:3px solid #b1d738;border-radius:12px}
+.briefSections{display:grid;gap:16px;margin:20px 0}
+.briefSections section{min-width:0}
+.briefSections h3{margin:0 0 6px;font-size:14px;font-weight:700;color:#29432a}
+.briefSections p{margin:0;white-space:pre-line;font-size:15px;line-height:1.95;color:#48554d}
+.briefAction{padding:15px;border:1px solid #d9e5c2;background:#f6f9ef;border-radius:10px}
+.discussionPrompt{padding:15px 0;border-block:1px solid #e1e6df;margin:8px 0 18px}
+.discussionPrompt span{font-size:11px;font-weight:600;color:#61714e}
+.discussionPrompt p{color:#263e2b;font-size:16px;font-weight:600;line-height:1.85;margin:7px 0 0}
+@media(max-width:760px){
+ .feedTop.homeIntro{position:static;width:auto;height:auto;overflow:visible;clip-path:none;margin:10px 12px;padding:13px 14px}
+ .homeIntro p{display:block;font-size:10px;margin-bottom:3px}
+ .homeIntro h1{font-size:21px;line-height:1.55}
+ .homeIntro .feedIntro{display:block;font-size:12px;line-height:1.7;margin-top:5px}
+ .orderBar .mobileTopicsToggle{max-width:56%}
+ .briefSections p{font-size:14px}
+ .discussionPrompt p{font-size:15px}
+}

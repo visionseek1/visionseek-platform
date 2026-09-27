@@ -1,0 +1,40 @@
+# Leaders House — executive focus
+
+Brief, 27 September 2026. Founder request: orient Leaders House to CEOs, institutional leaders and decision makers while retaining and improving its approachable social reading experience.
+
+Outcome: readers immediately understand whom the product serves, find relevant sectors and leadership topics, and distinguish evidence, institutional implications and proposed action when the post supplies those sections.
+
+Scope: bilingual reader positioning, sector-first character discovery, leadership topic labels, structured reading of existing labelled briefs, editorial guidance. Existing names, portraits, public reading, videos, vertical swipe, stories, saves, sharing and follows remain. Target audience does not imply a membership restriction.
+
+Owner: this implementation workspace. Approval and publication: Dr. Ahmed Abdelalim. Delivery: independent branch and reviewable preview; no agreed deadline. Reports, programs, shared management room, database schemas, publishing schedules and MCP activation are outside this change.
+
+Editorial criteria:
+- Address a decision, responsibility or opportunity for someone leading an organization. Identify the affected function or sector when the evidence supports it.
+- Explain what changes in operations, resource allocation, capabilities, competitiveness or resilience. Do not fabricate cost savings, urgency, results or threats to make content seem relevant.
+- Follow opportunity engineering: connect a real need with available knowledge, people or technology, then propose a bounded way to test its value.
+- Preserve room for original research, meaningful disagreement and limits of evidence. Label provider claims and editorial suggestions accordingly.
+- Keep writing natural, clear and engaging; institutional does not mean bureaucratic. No requirement that every post repeat one fixed template.
+- Short formats retain their sources and limitations. Characters are editorial identities, not human experts or proof of professional credentials.
+- Health, education and youth are covered through the responsibilities of institutional leaders, rather than generic consumer tips. Sector names and approved identities remain stable.
+
+This is product/editorial guidance, not a replacement for the separately maintained writing methodology. Future approved style rules should be linked by version rather than copied into a competing source of truth.
+
+Acceptance: Arabic and English audience positioning visible on mobile and desktop; sector navigation and existing social controls work; labelled brief sections preserve source text and free-form posts remain readable; existing saved topic/character IDs remain valid. No publication or model calls are performed by this task.
+
+## Verification — 27 September 2026
+
+- TypeScript and targeted ESLint: passed.
+- Production build with placeholder public database configuration: passed (167 generated routes). This establishes build compatibility, not a live database integration test.
+- Twelve targeted tests passed: brief parsing and text preservation, reader preferences/collections, character identities and validation.
+- Branch preview: https://visionseek-platform-8u24-95qum5zru-visionseek.vercel.app/ar/insights — Vercel READY, code revision `13ab0c3fe2a36b9a6bfe3df41a97f6a35897678f`, PR https://github.com/visionseek1/visionseek-platform/pull/39. Access may require the owner's Vercel session.
+- Desktop browser review: Arabic and English home pages rendered correctly at 1363 CSS pixels. The labelled reading dialog displayed the original reference, institutional implication, action and source; saving to a team-discussion collection and closing worked. Video opened and advanced from 1/2 to 2/2. Sector directory, local follow and Tiko profile navigation worked.
+- Remaining verification: a real mobile viewport/device and touch gestures were not available in this cloud browser; mobile rules were reviewed in code but are not claimed as visually verified. Local server started successfully, but the cloud browser cannot open this workspace's loopback address.
+- No database changes, generated model drafts, scheduled jobs or production publishing performed.
+
+## Visible public entry — founder follow-up, 27 September 2026
+
+Outcome: make Leaders House immediately discoverable from the public website. An icon alone is not required; visibility and a clear destination are the priorities.
+
+Implementation: promote the existing utility link into a named, lime-colored button with a supporting people icon. It appears first in the utility links on every page using the shared public header, outside the mobile menu, and preserves the Arabic/English destination. No additional navigation section or floating overlay is introduced.
+
+Owner: this workspace. Delivery: the same independent review branch/PR; no release date agreed. Acceptance: the link is visually distinct, keyboard accessible, at least 44px tall and opens the correct language of Leaders House. Public deployment remains pending founder release approval.

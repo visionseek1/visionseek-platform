@@ -28,3 +28,12 @@
 @media(max-width:400px){.vs-expanded-header .vs-logo{flex-basis:8rem}.vs-expanded-header .vs-nav-wrap{padding-inline:1rem}.vs-menu-button span{display:none}}
 
 .vs-start-form textarea{min-height:9rem}
+
+/* Give Leaders House a named entry that remains visible outside the mobile menu. */
+.vs-expanded-header .vs-utility{height:auto;min-height:56px;padding-block:6px}
+.vs-expanded-header .vs-utility nav{align-items:center}
+.vs-expanded-header .vs-utility nav .vs-leaders-entry{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 14px;border:1px solid var(--lime);border-radius:6px;background:var(--lime);color:#10150b;font-size:13px;font-weight:700;line-height:1.4;letter-spacing:0;white-space:nowrap;flex-shrink:0}
+.vs-expanded-header .vs-utility nav .vs-leaders-entry:hover{background:#fff;border-color:#fff;color:#10150b}
+.vs-expanded-header .vs-utility nav .vs-leaders-entry:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.vs-leaders-entry svg{flex-shrink:0}
+@media(max-width:760px){.vs-expanded-header .vs-utility{padding-inline:16px}.vs-expanded-header .vs-utility nav{gap:8px;font-size:11px;flex-wrap:wrap}.vs-expanded-header .vs-utility nav .vs-leaders-entry{padding-inline:10px;font-size:12px}}

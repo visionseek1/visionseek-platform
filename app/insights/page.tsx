@@ -3,7 +3,7 @@ import InsightsPage from "@/components/insights-page";
 
 export const metadata: Metadata = {
   title: "Leaders House | VisionSeek",
-  description: "Short videos, stories, and practical ideas for leaders and decision makers.",
+  description: "A daily home for executives, institutional leaders and decision makers. Explore shifts, opportunities and capabilities through posts, short videos and stories.",
   alternates: {
     canonical: "/insights",
     languages: { en: "/insights", ar: "/ar/insights" },
