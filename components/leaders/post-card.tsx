@@ -22,7 +22,7 @@ function PostText({body,contentId,locale}:{body:string;contentId:string;locale:L
   observer.observe(el);return()=>observer.disconnect();
  },[body,expanded]);
  if(!body.trim())return null;
- return <><p id={contentId} ref={ref} className={`${styles.body} ${expanded?'':styles.collapsed}`} dir="auto">{body}</p>{(expanded||overflows)&&<button className={styles.more} aria-expanded={expanded} aria-controls={contentId} onClick={()=>setExpanded(!expanded)}>{locale==='ar'?(expanded?'عرض أقل':'… عرض المزيد'):(expanded?'Show less':'… see more')}</button>}</>;
+ return <><p id={contentId} ref={ref} className={`${styles.body} ${expanded?'':styles.collapsed}`} dir="auto">{body.split(/(\*\*[^*]+\*\*)/g).map((part,i)=>part.startsWith('**')&&part.endsWith('**')?<strong key={i}>{part.slice(2,-2)}</strong>:part)}</p>{(expanded||overflows)&&<button className={styles.more} aria-expanded={expanded} aria-controls={contentId} onClick={()=>setExpanded(!expanded)}>{locale==='ar'?(expanded?'عرض أقل':'… عرض المزيد'):(expanded?'Show less':'… see more')}</button>}</>;
 }
 
 export function PostCard({post,locale,saved,liked,onSave,onLike,onShare,onOpen,onVideo,onImage,onOptions}:Props) {
