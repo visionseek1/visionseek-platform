@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/navigation';
 import {useCallback,useEffect,useMemo,useState} from 'react';
-import {ArrowUpRight,Bookmark,Check,ChevronDown,Clapperboard,Compass,Heart,Home,MoreHorizontal,Play,Search,Send,SlidersHorizontal,FileText,ExternalLink,UsersRound,X} from 'lucide-react';
+import {ArrowUpRight,Bookmark,Check,ChevronDown,Clapperboard,Compass,Home,Play,Search,Send,SlidersHorizontal,UsersRound,X} from 'lucide-react';
 import {Dialog,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {LeaderPost,Locale,Topic,isVisible,postText,safeLink,topics} from '@/lib/leaders/types';
-import {executivePositioning,briefSections,briefSummary,discussionQuestion} from '@/lib/leaders/executive';
+import {executivePositioning,briefSections,discussionQuestion} from '@/lib/leaders/executive';
 import {seedPosts} from '@/lib/leaders/seed';
 import {editionAll,editionDate,editionPosts} from '@/lib/leaders/edition';
 import {capabilityLink,collectionOptions,emptyPreferences,normalizePreferences,rankPosts,sortByNewest,setTopicPreference,toggleCollection,type CollectionId,type ReaderPreferences} from '@/lib/leaders/reader';
@@ -14,6 +14,8 @@ import {leadersClient,loadPosts,withMedia} from '@/lib/leaders/client';
 import {characterById,characterAuthor,characterPath,normalizeCharacterFollows,postsForCharacter} from '@/lib/leaders/characters';
 import {CharacterDirectory,CharacterProfile,CharacterPortrait,CharacterRail} from './characters';
 import {PostMedia} from './media';
+import {PostCard} from './post-card';
+import {PhotoViewer} from './photo-viewer';
 import {StoryPlayer} from './story-player';
 import {ReelPlayer} from './reel-player';
 import sharedStyles from './leaders.module.css';
@@ -24,34 +26,6 @@ import {ReaderDialogContent as DialogContent} from './reader-dialog';
 type View='feed'|'reels'|'saved'|'explore';
 const STORAGE='vs-leaders-reader-v1';
 function readList(key:string):string[]{try{const a=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(a)?a.filter(v=>typeof v==='string'):[];}catch{return [];}}
-function PostCard({post,locale,saved,liked,onSave,onLike,onShare,onOpen,onVideo,onOptions}:{post:LeaderPost;locale:Locale;saved:boolean;liked:boolean;paused:boolean;onSave:()=>void;onLike:()=>void;onShare:()=>void;onOpen:()=>void;onVideo:()=>void;onOptions:()=>void}){
- const ar=locale==='ar',t=postText(post,locale),source=safeLink(post.source_url),topic=topics.find(i=>i.id===post.topic),video=post.kind==='video';
- const character=characterAuthor(post);
- const cover=post.cover_url||(video?(locale==='en'?post.poster_url_en:post.poster_url)||post.poster_url:post.media_url);
- const summary=briefSummary(t.body);
- const date=post.published_at?new Intl.DateTimeFormat(ar?'ar':'en',{day:'numeric',month:'short',timeZone:'Asia/Seoul'}).format(new Date(post.published_at)):'';
- return <article className={styles.post} id={`post-${post.id}`}>
-  <header className={styles.postHeader}>
-   {character?<Link href={characterPath(character.id,locale)} aria-label={character.name[locale]}><CharacterPortrait character={character} size={38}/></Link>:<span className={styles.avatar}><Image src="/visionseek-symbol-color.png" width={30} height={30} alt=""/></span>}
-   <div className={styles.authorMeta}><strong>{character?<Link href={characterPath(character.id,locale)}>{character.name[locale]}</Link>:'VisionSeek'} <span className={styles.editorialBadge}>{character?(ar?'شخصية تحريرية':'Editorial character'):(ar?'تحرير':'Editorial')}</span></strong><span>{character?.sector[locale]||topic?.[locale]}{date&&<> · <time dateTime={post.published_at!}>{date}</time></>}</span></div>
-   <button className={styles.postMenu} aria-label={ar?'تفضيلات هذا الموضوع':'Topic preferences'} onClick={onOptions}><MoreHorizontal size={22}/></button>
-  </header>
-  <div className={styles.postCopy}>
-   <h2><button className={styles.titleButton} onClick={video?onVideo:onOpen}>{t.title}</button></h2>
-   {!video&&<><p className={styles.captionClamp}>{summary}</p><button className={styles.readBrief} onClick={onOpen}>{ar?'اقرأ الفكرة وأثرها':'Read the implications'}<ArrowUpRight size={15}/></button></>}
-  </div>
-  {cover?<button className={`${styles.visual} ${video?styles.videoVisual:''}`} onClick={video?onVideo:onOpen} aria-label={`${video?(ar?'شاهد الفيديو':'Watch video'):(ar?'اقرأ الفكرة':'Read brief')}: ${t.title}`}>
-   <Image src={cover} alt="" fill sizes="(max-width:760px) 100vw,600px" unoptimized={cover.startsWith('https:')}/>
-   {video&&<><span className={styles.videoShade}/><span className={styles.videoEntryPlay}><Play fill="currentColor" size={24}/></span><span className={styles.videoEntryHint}><Clapperboard size={16}/>{ar?'فيديو قصير':'Short video'}<span>{ar?'شاهد الفكرة':'Watch the idea'}</span></span></>}
-  </button>:video?<button className={`${styles.visual} ${styles.videoFallback}`} onClick={onVideo}><Play size={30}/><span>{ar?'شاهد الفيديو':'Watch video'}</span></button>:null}
-  {source&&<a className={styles.sourceLine} href={locale==='en'&&source.startsWith('/ar/')?source.slice(3):source} target={source.startsWith('https:')?'_blank':undefined} rel="noopener noreferrer"><FileText size={15}/><span>{post.source_label||(ar?'المصدر':'Source')}</span><ExternalLink size={13}/></a>}
-  <div className={styles.postActions}>
-   <button aria-label={liked?(ar?'إلغاء الإعجاب':'Unlike'):(ar?'أعجبني':'Like')} aria-pressed={liked} className={liked?styles.liked:''} onClick={onLike}><Heart size={20} fill={liked?'currentColor':'none'}/><span>{ar?'أعجبني':'Like'}</span></button>
-   <button aria-label={ar?'حفظ في مجموعة':'Save to collection'} aria-pressed={saved} className={saved?styles.saved:''} onClick={onSave}><Bookmark size={20} fill={saved?'currentColor':'none'}/><span>{saved?(ar?'محفوظ':'Saved'):(ar?'حفظ':'Save')}</span></button>
-   <button aria-label={ar?'مشاركة المنشور':'Share post'} onClick={onShare}><Send size={19}/><span>{ar?'مشاركة':'Share'}</span></button>
-  </div>
- </article>;
-}
 export default function LeadersFeed({locale,characterId,directory=false}:{locale:Locale;characterId?:string;directory?:boolean}){
  const ar=locale==='ar',base=ar?'/ar':'',positioning=executivePositioning[locale];
  const router=useRouter();const character=characterById(characterId);const characterSuffix=character?`/characters/${character.id}`:directory?'/characters':'';const [following,setFollowing]=useState<string[]>([]);
@@ -59,6 +33,7 @@ export default function LeadersFeed({locale,characterId,directory=false}:{locale
  const [live,setLive]=useState<LeaderPost[]>([]);const [savedPosts,setSavedPosts]=useState<LeaderPost[]>([]);const [connected,setConnected]=useState(false);
  const [savedReload,setSavedReload]=useState(0);
  const [prefs,setPrefs]=useState<ReaderPreferences>(emptyPreferences);const [liked,setLiked]=useState<string[]>([]);const [seen,setSeen]=useState<string[]>([]);
+ const [photo,setPhoto]=useState<{url:string;title:string}|null>(null);
  const [story,setStory]=useState(-1);const [reel,setReel]=useState<string|null>(null);const [detail,setDetail]=useState<LeaderPost|null>(null);
  const [savePost,setSavePost]=useState<LeaderPost|null>(null);const [optionsPost,setOptionsPost]=useState<LeaderPost|null>(null);const [settings,setSettings]=useState(false);const [collection,setCollection]=useState<CollectionId|'all'>('all');
  const [shareItem,setShareItem]=useState<{post:LeaderPost;url:string}|null>(null);const [notice,setNotice]=useState('');const [loadError,setLoadError]=useState(false);const [savedError,setSavedError]=useState(false);const [busy,setBusy]=useState(true);const [hasMore,setHasMore]=useState(false);const [cursor,setCursor]=useState<string>();const [now,setNow]=useState(()=>Date.now());
@@ -87,7 +62,7 @@ export default function LeadersFeed({locale,characterId,directory=false}:{locale
  const scopedPosts=character?postsForCharacter(posts,character.id):posts;
  const filtered=(view==='saved'?sortByNewest:orderPosts)(scopedPosts.filter(p=>(view!=='saved'||!!prefs.collections[p.id]?.length)&&(view!=='reels'||p.kind==='video')&&(topic==='all'||p.topic===topic)&&(view!=='saved'||collection==='all'||prefs.collections[p.id]?.includes(collection))&&(!query||`${postText(p,locale).title} ${postText(p,locale).body}`.toLocaleLowerCase().includes(query.toLocaleLowerCase()))));
  const videos=orderPosts(scopedPosts.filter(p=>p.kind==='video'&&!!p.media_url));
- const paused=story>=0||!!detail||!!reel||!!savePost||!!optionsPost||settings||!!shareItem;
+
  function persist(next:ReaderPreferences){setPrefs(next);try{localStorage.setItem(STORAGE,JSON.stringify(next));localStorage.setItem('vs-leaders-saved',JSON.stringify(Object.keys(next.collections)));}catch{setNotice(ar?'تعذر الحفظ على هذا الجهاز.':'Could not save on this device.');}}
  function prefer(t:Topic,choice:'more'|'less'|'neutral'){persist(setTopicPreference(prefs,t,choice));setOptionsPost(null);setNotice(ar?'تم تحديث ترتيب الموضوعات.':'Topic ranking updated.');}
  function like(id:string){const next=liked.includes(id)?liked.filter(x=>x!==id):[...liked,id];setLiked(next);try{localStorage.setItem('vs-leaders-liked',JSON.stringify(next));}catch{}}
@@ -123,13 +98,14 @@ export default function LeadersFeed({locale,characterId,directory=false}:{locale
     {view==='saved'&&<p className={styles.savedHint}>{ar?'مجموعاتك محفوظة على هذا المتصفح. قد تختفي المواد المؤرشفة أو غير المتاحة.':'Collections stay in this browser. Archived or unavailable posts may disappear.'}</p>}
     {(loadError||(view==='saved'&&savedError))&&<div className={styles.connectionNotice}><span>{ar?'تعذر جلب بعض المنشورات. المختارات التحريرية متاحة.':'Some posts could not load. The editorial selection is available.'}</span><button onClick={()=>void refresh()}>{ar?'إعادة المحاولة':'Retry'}</button></div>}
     {!filtered.length&&!busy&&<div className={styles.empty}><Bookmark size={28}/><h2>{character?(ar?'مساحة جديدة تبدأ من هنا':'A new space starts here'):view==='saved'?(ar?'ابدأ بمجموعة لفكرتك القادمة':'Start a collection for your next idea'):(ar?'لا توجد نتائج في هذا الموضوع بعد':'No results for this topic yet')}</h2><p>{character?(ar?`ستظهر مواد ${character.name.ar} ومختارات ${character.sector.ar} هنا عند نشرها.`:`${character.name.en}’s posts and selections for ${character.sector.en.toLowerCase()} will appear here when published.`):(ar?'تصفح المختارات واحفظ ما يستحق العودة إليه.':'Browse the selection and save what is worth revisiting.')}</p><button onClick={()=>navigate('feed')}>{ar?'تصفح الأفكار':'Browse ideas'}</button></div>}
-    {view==='reels'?<div className={styles.videoShelf}>{filtered.map(p=><button className={styles.videoTile} key={p.id} onClick={()=>setReel(p.id)}>{(p.cover_url||p.poster_url||p.media_type?.startsWith('image/'))&&<Image src={p.cover_url||(locale==='en'?p.poster_url_en:p.poster_url)||p.poster_url||p.media_url!} alt="" fill sizes="(max-width:760px) 50vw, 290px"/>}<span><Play size={26}/><strong>{postText(p,locale).title}</strong><small>{ar?'افتح واسحب بين المقاطع':'Open and swipe between clips'}</small></span></button>)}</div>:filtered.map(p=><PostCard key={p.id} post={p} locale={locale} paused={paused} saved={!!prefs.collections[p.id]?.length} liked={liked.includes(p.id)} onSave={()=>setSavePost(p)} onLike={()=>like(p.id)} onShare={()=>void share(p)} onOpen={()=>openDetail(p)} onVideo={()=>setReel(p.id)} onOptions={()=>setOptionsPost(p)}/>)}
+    {view==='reels'?<div className={styles.videoShelf}>{filtered.map(p=><button className={styles.videoTile} key={p.id} onClick={()=>setReel(p.id)}>{(p.cover_url||p.poster_url||p.media_type?.startsWith('image/'))&&<Image src={p.cover_url||(locale==='en'?p.poster_url_en:p.poster_url)||p.poster_url||p.media_url!} alt="" fill sizes="(max-width:760px) 50vw, 290px"/>}<span><Play size={26}/><strong>{postText(p,locale).title}</strong><small>{ar?'افتح واسحب بين المقاطع':'Open and swipe between clips'}</small></span></button>)}</div>:filtered.map(p=><PostCard key={p.id} post={p} locale={locale} saved={!!prefs.collections[p.id]?.length} liked={liked.includes(p.id)} onSave={()=>setSavePost(p)} onLike={()=>like(p.id)} onShare={()=>void share(p)} onOpen={()=>openDetail(p)} onImage={url=>setPhoto({url,title:postText(p,locale).title})} onVideo={()=>setReel(p.id)} onOptions={()=>setOptionsPost(p)}/>)}
     {busy&&<div className={styles.loading} role="status">{ar?'جاري تحميل المحتوى…':'Loading…'}</div>}{hasMore&&<button className={styles.loadMore} onClick={()=>void more()} disabled={busy}>{ar?'المزيد من الأفكار':'More ideas'}</button>}{filtered.length>0&&!hasMore&&!busy&&<div className={styles.feedEnd}><Check size={20}/><h3>{ar?'ما الفكرة التي ستأخذها إلى فريقك؟':'Which idea will you take to your team?'}</h3><p>{ar?'احفظها في مجموعة، أو شاركها لبدء النقاش.':'Save it to a collection or share it to start a conversation.'}</p></div>}
    </section>
    </>}
   </div>
   <aside className={styles.contextColumn}><section className={styles.editorialPicks}><div className={styles.picksHeading}><span>{ar?'من اختيارنا':'THE EDITOR’S PICKS'}</span><time dateTime={editionDate}>{new Intl.DateTimeFormat(ar?'ar':'en',{day:'numeric',month:'long'}).format(new Date(editionDate))}</time></div>{editionPosts.map((p,i)=><button key={p.id} onClick={()=>openDetail(p)}><span>0{i+1}</span><strong>{postText(p,locale).title}</strong><ArrowUpRight size={15}/></button>)}</section><div className={styles.authorCard}><Image src="/ahmed-abdelalim.jpg" alt={ar?'د. أحمد عبد العليم':'Dr. Ahmed Abdelalim'} width={52} height={52}/><div><strong>{ar?'د. أحمد عبد العليم':'Dr. Ahmed Abdelalim'}</strong><span>{ar?'مؤسس VisionSeek':'Founder, VisionSeek'}</span></div></div><div className={styles.dailyQuestion}><span>{ar?'من الفكرة إلى الحل':'FROM IDEA TO SOLUTION'}</span><h2>{ar?'أي فرصة تستحق أن تتحرك مؤسستك نحوها؟':'Which opportunity deserves your organization’s next move?'}</h2><Link href={`${base}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowUpRight size={18}/></Link></div><div className={styles.topicList}><h3>{ar?'وسّع زاوية رؤيتك':'Widen your lens'}</h3>{topics.map((t,i)=><button key={t.id} onClick={()=>{if(character||directory){router.push(`${base}/insights?topic=${t.id}`);return;}setTopic(t.id);setView('feed');setQuery('');}}><span>0{i+1}</span><strong>{t[locale]}</strong><ArrowUpRight size={16}/></button>)}</div><div className={styles.smallLinks}><Link href={`${base}/about`}>{ar?'عن VisionSeek':'About'}</Link><Link href={`${base}/privacy`}>{ar?'الخصوصية':'Privacy'}</Link><Link href={`${base}/terms`}>{ar?'الشروط':'Terms'}</Link><span>© VisionSeek 2026</span></div></aside>
   <nav className={styles.mobileNav} aria-label={ar?'التنقل السريع':'Quick navigation'}>{nav.map(n=><button key={n.id} aria-label={n.label} aria-current={!directory&&!character&&view===n.id?'page':undefined} className={!directory&&!character&&view===n.id?styles.navActive:''} onClick={()=>navigate(n.id)}><n.icon/><span>{n.label}</span></button>)}<Link href={`${base}/insights/characters`} className={directory||character?styles.navActive:''} aria-current={directory||character?'page':undefined}><UsersRound/><span>{ar?'المجالات':'Sectors'}</span></Link></nav>
+  <PhotoViewer photo={photo} locale={locale} onClose={()=>setPhoto(null)}/>
   {story>=0&&<StoryPlayer key={stories[story]?.id} posts={stories} index={story} onIndex={openStory} onClose={()=>setStory(-1)} locale={locale}/>}
   {reel&&videos.some(p=>p.id===reel)&&<ReelPlayer key={reel} posts={videos} start={Math.max(0,videos.findIndex(p=>p.id===reel))} locale={locale} savedIds={Object.keys(prefs.collections)} blocked={!!detail||!!savePost||!!shareItem} onClose={()=>setReel(null)} onSave={setSavePost} onShare={p=>void share(p)} onRead={openDetail}/>}
   <Dialog open={!!detail} onOpenChange={open=>{if(!open)closeDetail();}}><DialogContent className={styles.postDialog} dir={ar?'rtl':'ltr'}><DialogTitle>{detail?postText(detail,locale).title:''}</DialogTitle><DialogDescription>{ar?'الفكرة، وما تعنيه لمؤسستك، وما يستحق التجربة.':'The idea, its implications for your organization, and what is worth testing.'}</DialogDescription>{detail&&<>{characterAuthor(detail)&&<Link className={styles.detailAuthor} href={characterPath(characterAuthor(detail)!.id,locale)}><CharacterPortrait character={characterAuthor(detail)!} size={36}/>{characterAuthor(detail)!.name[locale]} · {ar?'شخصية تحريرية':'Editorial character'}</Link>}{detail.media_url&&<PostMedia post={detail} locale={locale} paused={!!savePost||!!shareItem}/>}<div className={styles.briefSections}>{briefSections(postText(detail,locale).body).map((section,i)=><section key={i} className={section.kind==='action'?styles.briefAction:undefined}>{section.label&&<h3>{section.label}</h3>}<p>{section.text}</p></section>)}</div><aside className={styles.discussionPrompt}><span>{ar?'سؤال من VisionSeek لنقاش الفريق':'A VISIONSEEK QUESTION FOR YOUR TEAM'}</span><p>{discussionQuestion(detail.topic,locale)}</p></aside>{safeLink(detail.source_url)&&<a className={styles.source} href={safeLink(detail.source_url)} target={detail.source_url?.startsWith('https:')?'_blank':undefined} rel="noopener noreferrer">{detail.source_label|| (ar?'المصدر':'Source')}<ArrowUpRight size={16}/></a>}<div className={styles.detailActions}><button onClick={()=>setSavePost(detail)}><Bookmark size={18}/>{ar?'حفظ في مجموعة':'Save to collection'}</button><button onClick={()=>void share(detail)}><Send size={18}/>{ar?'مشاركة':'Share'}</button></div><Link className={styles.applyLink} href={capabilityLink(detail,locale)}>{ar?'ناقش تطبيق الفكرة في مؤسستك':'Explore this for your organization'}<ArrowUpRight size={17}/></Link></>}</DialogContent></Dialog>

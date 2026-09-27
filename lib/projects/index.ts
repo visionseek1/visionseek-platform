@@ -5,6 +5,7 @@ export type Sector = {slug:string; title:Text; intro:Text; icon:'energy'|'chips'
 export type Track = {slug:string; sector:string; title:Text; intro:Text};
 export type Project = {
   id:string; slug:string; sector:string; track:string; kind:'supply'|'containment';
+  status:'concept'|'active'|'completed'; featuredOrder?:number;
   title:Text; summary:Text; ambition:Text; idea:Text; beneficiary:Text;
   outcomes:{title:Text;text:Text}[];
 };
@@ -28,6 +29,7 @@ export const tracks:Track[] = [
 export const projects:Project[] = [
   {
     id:'VS-P07',slug:'sovereign-floating-gas-supply',sector:'energy',track:'lng',kind:'supply',
+    status:'concept',featuredOrder:1,
     title:t('سيادة الإمداد العائم','Sovereign control of floating gas supply'),
     summary:t('تمكين مؤسسة مستوردة من تقرير كيف يصل الغاز من وحدات التغييز العائمة إلى الشبكة الوطنية: استئجار، أو تحويل ناقلة، أو امتلاك وتشغيل — قبل ذروة الطلب التالية.', 'Enable an importing institution to decide how floating regasification supplies the national grid — charter, carrier conversion, or owned operation — before the next seasonal peak.'),
     ambition:t('أن تملك المؤسسة قرار الإمداد.', 'Put the supply decision in the institution’s hands.'),
@@ -41,6 +43,7 @@ export const projects:Project[] = [
   },
   {
     id:'VS-P08',slug:'second-lng-containment-standard',sector:'energy',track:'lng',kind:'containment',
+    status:'concept',featuredOrder:2,
     title:t('معيار ثانٍ لاحتواء الغاز المسال','A second standard for LNG containment'),
     summary:t('تمكين مالك أسطول من التفاوض على تصميم خزانات الغاز المسال على مستوى الأسطول: ترخيص شامل، أو إثبات معيار بديل على أول ناقلة كبيرة، بدلًا من ترخيص منفصل لكل سفينة.', 'Enable a fleet owner to treat cargo-tank design as a negotiable standard — licensed at fleet scale, or proven on a first large ship — rather than a royalty paid hull by hull.'),
     ambition:t('أن يصبح المعيار نفسه مجالًا للاختيار.', 'Make the standard itself a matter of choice.'),
@@ -54,6 +57,12 @@ export const projects:Project[] = [
   },
 ];
 export const prefix = (locale:Locale) => locale==='ar'?'/ar':'';
+export const projectStatus:Record<Project['status'],Text> = {
+  concept:t('تصوّر مقترح','Proposed concept'),
+  active:t('قيد التنفيذ','In progress'),
+  completed:t('مكتمل','Completed'),
+};
+export const featuredProjects = projects.filter(p=>p.featuredOrder!==undefined).sort((a,b)=>a.featuredOrder!-b.featuredOrder!);
 export const sectorBySlug = (slug:string) => sectors.find(item=>item.slug===slug);
 export const projectBySlug = (slug:string) => projects.find(item=>item.slug===slug);
 export const sectorPath = (slug:string,locale:Locale) => `${prefix(locale)}/projects/${slug}`;
