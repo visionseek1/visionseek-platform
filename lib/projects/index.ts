@@ -1,60 +1,75 @@
 export type Locale = 'ar' | 'en';
-type Text = Record<Locale, string>;
+export type Text = Record<Locale, string>;
 const t = (ar: string, en: string): Text => ({ar, en});
+export type Sector = {slug:string; title:Text; intro:Text; icon:'energy'|'chips'|'flight'|'defense'|'robotics'|'health'|'agriculture'|'cities'; anchors:string[]; focus:Text[]};
+export type Track = {slug:string; sector:string; title:Text; intro:Text};
 export type Project = {
-  id: string; slug: string; kind: 'supply' | 'fleet'; stage: Text; region: Text;
-  title: Text; summary: Text; question: Text; idea: Text; significance: Text;
-  vision: Text; beneficiary: Text; promise: Text;
-  possibilities: {title: Text; text: Text}[];
-  sources: {title: Text; publisher: string; date: string; url: string; note: Text}[];
+  id:string; slug:string; sector:string; track:string; kind:'supply'|'containment';
+  title:Text; summary:Text; ambition:Text; idea:Text; beneficiary:Text;
+  outcomes:{title:Text;text:Text}[];
 };
+export const conceptNotice = t('تصوّرات مقترحة — لم تُطلق أو تُموّل كبرامج.', 'Proposed concepts — not launched or funded programs.');
 
-// Public portfolio content only. Delivery plans and commercial targeting do not belong here.
-export const projects: Project[] = [
+export const sectors:Sector[] = [
+  {slug:'energy',title:t('الطاقة والمناخ','Energy & Climate'),icon:'energy',anchors:['energy'],intro:t('حلول تمنح المؤسسات تحكمًا أكبر في إمدادات الطاقة والبنية التي تعتمد عليها.', 'Solutions that give institutions greater control over energy supply and the infrastructure behind it.'),focus:[t('الغاز المسال','Liquefied natural gas'),t('منظومات الطاقة','Energy systems'),t('تقنيات المناخ','Climate technologies')]},
+  {slug:'semiconductors',title:t('الرقائق وأشباه الموصلات','Chips & Semiconductors'),icon:'chips',anchors:['chips'],intro:t('من تصميم الشريحة إلى الوصول إلى التصنيع: أين تستطيع المؤسسة أن تمتلك دورًا مؤثرًا في سلسلة القيمة؟', 'From chip design to manufacturing access: where can an institution build a meaningful position in the value chain?'),focus:[t('تصميم الرقائق','Chip design'),t('التغليف والمواد','Packaging & materials'),t('سلاسل التوريد','Supply chains')]},
+  {slug:'drones-aviation',title:t('الدرونز والطيران','Drones & Aviation'),icon:'flight',anchors:['drones','space'],intro:t('أنظمة جوية تربط الاستقلالية بمهام واضحة في الفحص والنقل والخدمات.', 'Aerial systems connecting autonomy to defined inspection, transport and service missions.'),focus:[t('الدرونز','Uncrewed aircraft'),t('الطيران والفضاء','Aviation & aerospace'),t('الخدمات الجوية','Aerial services')]},
+  {slug:'defense',title:t('الدفاع والأمن','Defense & Security'),icon:'defense',anchors:['defense'],intro:t('حماية البنية الحيوية ورفع الوعي بالموقف وربط المعلومات بالقرار.', 'Protecting critical infrastructure, improving situational awareness and connecting information to decisions.'),focus:[t('حماية البنية الحيوية','Infrastructure protection'),t('الوعي بالموقف','Situational awareness'),t('مرونة المؤسسات','Institutional resilience')]},
+  {slug:'robotics',title:t('الروبوتات والصناعة','Robotics & Industry'),icon:'robotics',anchors:['robots'],intro:t('ربط الروبوتات والإدراك الآلي بمهام إنتاج وفحص يمكن تنفيذها في الواقع.', 'Connecting robotics and machine perception to real production and inspection tasks.'),focus:[t('الأنظمة الذاتية','Autonomous systems'),t('التصنيع','Manufacturing'),t('الفحص والصيانة','Inspection & maintenance')]},
+  {slug:'health',title:t('الطب والصحة','Medicine & Health'),icon:'health',anchors:['science'],intro:t('وصل البحث والتقنية باحتياجات الرعاية، من المعرفة الطبية إلى خدمات أفضل.', 'Connecting research and technology to care needs, from medical knowledge to better services.'),focus:[t('التقنيات الطبية','Medical technologies'),t('منظومات الرعاية','Care systems'),t('البحث التطبيقي','Applied research')]},
+  {slug:'agriculture',title:t('الزراعة والأمن الغذائي','Agriculture & Food Security'),icon:'agriculture',anchors:['agriculture'],intro:t('إنتاج أكثر مرونة، واستخدام أدق للموارد، وسلاسل غذاء أقرب إلى احتياجاتها.', 'More resilient production, better resource use and food systems connected to the needs they serve.'),focus:[t('الإنتاج الزراعي','Agricultural production'),t('المياه والموارد','Water & resources'),t('سلاسل الغذاء','Food supply chains')]},
+  {slug:'infrastructure',title:t('المدن والبنية التحتية','Cities & Infrastructure'),icon:'cities',anchors:['cities'],intro:t('ربط أصول المدن وبياناتها وخدماتها لتحسين قدرة المؤسسات على إدارتها.', 'Connecting city assets, data and services to improve institutions’ ability to manage them.'),focus:[t('المدن','Cities'),t('النقل','Transport'),t('البنية المترابطة','Connected infrastructure')]},
+];
+export const tracks:Track[] = [
+  {slug:'lng',sector:'energy',title:t('الغاز الطبيعي المسال','Liquefied Natural Gas'),intro:t('تحكم أكبر في الإمداد، وخيارات أوسع في التقنية التي يقوم عليها الأسطول.', 'Greater control over supply. More choice in the technology a fleet depends on.')},
+];
+
+// Founder-defined public concepts. No country mandate, client or delivered technology is asserted.
+export const projects:Project[] = [
   {
-    id: 'VS-E01', slug: 'egypt-lng-supply', kind: 'supply',
-    stage: t('فكرة قيد الاستكشاف', 'Concept under exploration'),
-    region: t('مصر', 'Egypt'),
-    title: t('أمن إمدادات الغاز المسال في مصر', 'Floating LNG supply security in Egypt'),
-    summary: t('تصور لمنظومة تربط قدرات التغييز العائمة باحتياجات الشبكة، وتفتح خيارات أوسع أمام تأمين إمدادات الطاقة.', 'A concept connecting floating regasification capacity to grid needs, opening more possibilities for resilient energy supply.'),
-    question: t('ماذا لو امتلكت منظومة الإمداد خيارات أوسع حين تتغير احتياجاتها؟', 'What if a supply system had more options when its needs change?'),
-    idea: t('نستكشف كيف يمكن ربط وحدات التخزين والتغييز العائمة والموانئ والخبرات العالمية في منظومة تمنح المؤسسات مرونة أكبر في تأمين الغاز. يبدأ التصور من مصر، حيث تلتقي البنية البحرية باحتياجات الكهرباء والصناعة.', 'We are exploring how floating storage and regasification units, ports and global expertise could connect into a system that gives institutions greater supply flexibility. The concept starts with Egypt, where maritime infrastructure meets electricity and industrial demand.'),
-    significance: t('أمن الطاقة يرتبط بقدرة المنظومة على الاستجابة لتغيّر الطلب ومصادر الإمداد. التكامل بين الميناء والوحدة العائمة والشبكة يفتح مجالًا للنظر إلى هذه الأصول كقدرة واحدة.', 'Energy security depends on a system’s ability to respond to changing demand and supply. Connecting the port, floating unit and grid creates an opportunity to consider these assets as one capability.'),
-    vision: t('ننظر إلى مصر بوصفها نقطة انطلاق لفكرة أوسع: وصل احتياجات الطاقة بالقدرات البحرية والتقنية المتاحة عالميًا، ومنها الخبرات الكورية، لبناء خيارات تناسب المؤسسة وظروفها.', 'Egypt is the starting point for a wider idea: connecting energy needs with global maritime and technical capabilities, including Korean expertise, to create options suited to each institution and its context.'),
-    beneficiary: t('منظومات الطاقة ومؤسسات استيراد الغاز والبنية التحتية.', 'Energy systems, gas import institutions and infrastructure organizations.'),
-    promise: t('مرونة أكبر من البحر إلى الشبكة.', 'Greater flexibility from vessel to grid.'),
-    possibilities: [
-      {title:t('استجابة لتغيّر الاحتياج', 'Respond to changing needs'),text:t('استكشاف كيف يمكن لقدرات التغييز العائمة أن تدعم مرونة الإمداد عبر ظروف مختلفة.', 'Explore how floating regasification capacity could support supply flexibility across different conditions.')},
-      {title:t('تكامل الأصول', 'Connected assets'),text:t('النظر إلى السفينة والميناء والشبكة والعلاقات التشغيلية كأجزاء من قدرة مترابطة.', 'Consider the vessel, port, grid and operating relationships as parts of a connected capability.')},
-      {title:t('خيارات عالمية أقرب', 'Global possibilities, within reach'),text:t('ربط الاحتياج المحلي بالخبرات والتقنيات والقدرات البحرية الموجودة حول العالم.', 'Connect local needs to existing global expertise, technology and maritime capabilities.')},
-    ],
-    sources: [
-      {publisher:'وزارة البترول والثروة المعدنية المصرية',date:'2026-06-12',url:'https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_12062026_01.aspx',title:t('منظومة استيراد الغاز والتغييز في مصر', 'Egypt’s LNG import and regasification system'),note:t('بيان رسمي يصف دور وحدات التغييز في السخنة ودمياط في دعم إمدادات الغاز.', 'An official release describes the supply role of regasification units at Ain Sokhna and Damietta.')},
-      {publisher:'Höegh Evi',date:'2025-05-12',url:'https://hoeghevi.com/hoegh-evi-signs-fsru-charter-with-egas-supporting-egypts-role-as-energy-hub-in-the-middle-east/',title:t('تحويل ناقلة إلى قدرة استيراد عائمة', 'Converting a carrier into floating import capacity'),note:t('أعلنت الشركة عقد غاندريا مع إيجاس وتحويلها إلى وحدة تغييز، مع نشر مخطط في الربع الأخير من 2026. الموعد المذكور خطة معلنة، وليس تأكيدًا للتسليم.', 'The company announced the Gandria charter with EGAS and conversion to an FSRU, with deployment planned for Q4 2026. That date is an announced plan, not confirmation of delivery.')},
+    id:'VS-P07',slug:'sovereign-floating-gas-supply',sector:'energy',track:'lng',kind:'supply',
+    title:t('سيادة الإمداد العائم','Sovereign control of floating gas supply'),
+    summary:t('تمكين مؤسسة مستوردة من تقرير كيف يصل الغاز من وحدات التغييز العائمة إلى الشبكة الوطنية: استئجار، أو تحويل ناقلة، أو امتلاك وتشغيل — قبل ذروة الطلب التالية.', 'Enable an importing institution to decide how floating regasification supplies the national grid — charter, carrier conversion, or owned operation — before the next seasonal peak.'),
+    ambition:t('أن تملك المؤسسة قرار الإمداد.', 'Put the supply decision in the institution’s hands.'),
+    idea:t('تصور يجمع خيارات الوحدات العائمة والموانئ والتشغيل حول احتياج المؤسسة إلى الغاز. الغرض أن تستطيع اختيار نموذج الإمداد الذي يخدم شبكتها وأولوياتها، مع مساحة أكبر للتحكم في التوقيت والتشغيل والاعتماد على الأطراف الأخرى.', 'A concept bringing floating units, ports and operating options around an institution’s gas needs. The aim is to enable a supply model that serves its grid and priorities, with greater control over timing, operations and external dependencies.'),
+    beneficiary:t('مؤسسات استيراد الغاز ومشغلو الشبكات وجهات أمن الطاقة.', 'Gas importing institutions, grid operators and energy security organizations.'),
+    outcomes:[
+      {title:t('اختيار نموذج الإمداد','Choice of supply model'),text:t('المفاضلة بين استئجار وحدة، أو تحويل ناقلة، أو امتلاك قدرة التشغيل بحسب احتياج الشبكة.', 'The ability to choose between chartering a unit, converting a carrier or owning the operating capability around grid needs.')},
+      {title:t('تحكم في العلاقة مع الشبكة','Control at the grid interface'),text:t('ربط قدرة الوحدة العائمة بأولوية الإمداد ومتطلبات الميناء والشبكة الوطنية.', 'Align floating capacity with supply priorities, port requirements and the national grid.')},
+      {title:t('استعداد قبل الذروة','Readiness before peak demand'),text:t('توسيع خيارات المؤسسة قبل أن يفرض ضغط الموسم قرارها.', 'Give the institution more options before seasonal pressure dictates its decision.')},
     ],
   },
   {
-    id:'VS-E02',slug:'gulf-lng-fleet',kind:'fleet',
-    stage:t('تصور مستقبلي', 'Future concept'),region:t('الخليج', 'Gulf region'),
-    title:t('كفاءة ومرونة أساطيل الغاز المسال', 'LNG fleet efficiency and resilience'),
-    summary:t('تصور لربط السفن والتقنيات والخبرات داخل أساطيل الغاز، حتى تتحول قوة الأصول إلى قدرة تشغيلية أكثر ترابطًا.', 'A concept connecting vessels, technologies and expertise across LNG fleets, turning the strength of individual assets into a more connected operating capability.'),
-    question:t('ماذا يمكن أن يحقق الأسطول عندما تتصل قدراته؟', 'What could a fleet achieve when its capabilities connect?'),
-    idea:t('نستكشف كيف يمكن للأساطيل التي تجمع سفنًا وتقنيات من مصادر مختلفة أن تستفيد من المعرفة والتكامل بينها. التركيز على العلاقة بين الأصول والفرق والموردين، وما قد تفتحه من فرص للأداء والمرونة.', 'We are exploring how fleets with vessels and technologies from different sources could benefit from shared knowledge and integration. The focus is on connections between assets, teams and suppliers, and the opportunities they may open for performance and resilience.'),
-    significance:t('كل سفينة تحمل قدرات وخبرات مختلفة. الفكرة أن ننظر إلى ما يستطيع الأسطول تحقيقه ككل، وكيف تصل المعرفة المناسبة إلى الأشخاص والقرارات التي تحتاجها.', 'Every vessel brings different capabilities and expertise. The idea is to consider what the fleet could achieve as a whole, and how the right knowledge can reach the people and decisions that need it.'),
-    vision:t('نرى فرصة لربط احتياجات المؤسسات الخليجية بخبرات الصناعة البحرية العالمية، ومنها كوريا، واستكشاف قدرات تتجاوز حدود كل أصل منفرد. هذا تصور مستقبلي ضمن اهتمامنا بالطاقة والنقل البحري.', 'We see an opportunity to connect Gulf institutions’ needs with global maritime expertise, including Korea, and explore capabilities beyond any single asset. This is a future concept within our energy and maritime interests.'),
-    beneficiary:t('ملاك ومشغلو أساطيل الغاز ومؤسسات النقل البحري للطاقة.', 'Gas fleet owners, operators and maritime energy organizations.'),
-    promise:t('أصول متعددة. قدرة أكثر ترابطًا.', 'Multiple assets. A more connected capability.'),
-    possibilities:[
-      {title:t('معرفة تتصل', 'Connected knowledge'),text:t('استكشاف ما تتيحه مشاركة الخبرة بين السفن والفرق والتقنيات المختلفة.', 'Explore what shared expertise could make possible across vessels, teams and technologies.')},
-      {title:t('نظرة للأسطول كله', 'A fleet-wide perspective'),text:t('فهم العلاقات بين جاهزية الأصول ومتطلبات التشغيل وأولويات المؤسسة.', 'Understand the relationships between asset readiness, operating needs and institutional priorities.')},
-      {title:t('استعداد للمستقبل', 'Readiness for what comes next'),text:t('متابعة ما تفتحه التطورات البحرية والتقنية من خيارات للأساطيل القائمة والجديدة.', 'Explore the options that maritime and technological advances open for existing and new fleets.')},
-    ],
-    sources:[
-      {publisher:'ADNOC Logistics & Services',date:'2026-04-27',url:'https://adnocls.ae/en/news-and-media/press-releases/2026/al-taweelah-delivery-of-sixth-next-generation-lng-carrier',title:t('توسع أساطيل الغاز عبر قدرات عالمية', 'LNG fleet expansion through global capabilities'),note:t('أعلنت أدنوك للإمداد والخدمات استلام ناقلة سادسة من جيانغنان، وأشارت إلى طلبات بناء في كوريا. يوضح الخبر السياق الصناعي؛ ولا يثبت وجود فجوة تشغيلية.', 'ADNOC L&S reported a sixth Jiangnan delivery and referenced Korean newbuild orders. This illustrates the industrial context; it does not establish an operating gap.')},
+    id:'VS-P08',slug:'second-lng-containment-standard',sector:'energy',track:'lng',kind:'containment',
+    title:t('معيار ثانٍ لاحتواء الغاز المسال','A second standard for LNG containment'),
+    summary:t('تمكين مالك أسطول من التفاوض على تصميم خزانات الغاز المسال على مستوى الأسطول: ترخيص شامل، أو إثبات معيار بديل على أول ناقلة كبيرة، بدلًا من ترخيص منفصل لكل سفينة.', 'Enable a fleet owner to treat cargo-tank design as a negotiable standard — licensed at fleet scale, or proven on a first large ship — rather than a royalty paid hull by hull.'),
+    ambition:t('أن يصبح المعيار نفسه مجالًا للاختيار.', 'Make the standard itself a matter of choice.'),
+    idea:t('تصور يضع تقنية احتواء الغاز وحقوق استخدامها ضمن قرار الأسطول ككل. الطموح فتح مساحة للتفاوض على الترخيص بحجم الأسطول، أو لتأهيل معيار بديل يمكن إثباته على ناقلة كبيرة، بما يوسّع خيارات المالك التقنية والتجارية.', 'A concept that brings LNG containment technology and usage rights into the fleet-wide decision. The ambition is to open room for fleet-scale licensing, or for qualifying an alternative standard that can be proven on a large carrier, broadening the owner’s technical and commercial choices.'),
+    beneficiary:t('ملاك أساطيل الغاز المسال ومطورو تقنيات الاحتواء وشركاء الصناعة البحرية.', 'LNG fleet owners, containment technology developers and maritime industry partners.'),
+    outcomes:[
+      {title:t('قوة تفاوض الأسطول','Fleet-scale negotiating power'),text:t('جمع احتياجات السفن في تصور ترخيص يعكس حجم الأسطول وطموحه.', 'Bring vessel requirements into a licensing proposition that reflects the scale and ambition of the fleet.')},
+      {title:t('بديل يستند إلى إثبات','An alternative backed by proof'),text:t('فتح إمكانية إثبات معيار احتواء آخر على ناقلة كبيرة، ليصبح خيارًا يمكن تقييمه.', 'Open the possibility of proving another containment standard on a large carrier so it becomes an option that can be evaluated.')},
+      {title:t('خيارات تقنية أوسع','Wider technology choices'),text:t('منح المالك مساحة أكبر لاختيار التقنية وحقوق استخدامها عبر عمر الأسطول.', 'Give the owner greater choice over technology and usage rights across the fleet’s life.')},
     ],
   },
 ];
+export const prefix = (locale:Locale) => locale==='ar'?'/ar':'';
+export const sectorBySlug = (slug:string) => sectors.find(item=>item.slug===slug);
+export const projectBySlug = (slug:string) => projects.find(item=>item.slug===slug);
+export const sectorPath = (slug:string,locale:Locale) => `${prefix(locale)}/projects/${slug}`;
+export const trackPath = (track:Track,locale:Locale) => `${sectorPath(track.sector,locale)}/${track.slug}`;
+export const projectPath = (slug:string,locale:Locale) => {const project=projectBySlug(slug);if(!project)throw new Error(`Unknown project: ${slug}`);return `${sectorPath(project.sector,locale)}/${project.track}/${project.slug}`;};
+export const projectInquiry = (project:Project,locale:Locale) => `${prefix(locale)}/start?${new URLSearchParams({from:'projects',idea:`${project.id} — ${project.title[locale]}`})}`;
+export const projectRoutes = [
+  ...sectors.map(item=>[item.slug]),
+  ...tracks.map(item=>[item.sector,item.slug]),
+  ...projects.map(item=>[item.sector,item.track,item.slug]),
+];
+export type ProjectRoute = {kind:'sector';data:Sector}|{kind:'track';data:Track}|{kind:'project';data:Project};
+export function resolveProjectRoute(parts:string[]):ProjectRoute|undefined {
+  if(parts.length===1){const data=sectorBySlug(parts[0]);if(data)return {kind:'sector',data};}
+  if(parts.length===2){const data=tracks.find(item=>item.sector===parts[0]&&item.slug===parts[1]);if(data)return {kind:'track',data};}
+  if(parts.length===3){const data=projects.find(item=>item.sector===parts[0]&&item.track===parts[1]&&item.slug===parts[2]);if(data)return {kind:'project',data};}
+}
 
-export const projectBySlug = (slug: string) => projects.find(project => project.slug === slug);
-export const projectPath = (slug: string, locale: Locale) => `${locale === 'ar' ? '/ar' : ''}/projects/${slug}`;
-export const projectInquiry = (project: Project, locale: Locale) => `${locale === 'ar' ? '/ar' : ''}/start?${new URLSearchParams({from:'projects', idea:`${project.id} — ${project.title[locale]}`})}`;
+export const conceptCount = (count:number,locale:Locale) => locale==='ar'?(count===2?'تصوّران مقترحان':`${new Intl.NumberFormat('ar').format(count)} تصوّرات مقترحة`):`${count} proposed concept${count===1?'':'s'}`;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {useState,useEffect,useRef} from 'react';
 import {Menu,ChevronDown,ArrowRight,UsersRound} from 'lucide-react';
 import {Sheet,SheetContent,SheetTitle,SheetDescription,SheetTrigger} from '@/components/ui/sheet';
-import {institutionNav} from '@/lib/institution/navigation';
+import {institutionHeaderNav as institutionNav} from '@/lib/institution/navigation';
 import type {Locale} from './content';
 export function CapabilityHeader({locale,path='',overlay=false}:{locale:Locale;path?:string;overlay?:boolean}){
  const ar=locale==='ar';const p=ar?'/ar':'';const [open,setOpen]=useState(false);const [expanded,setExpanded]=useState<string|null>(null);const ref=useRef<HTMLElement>(null);

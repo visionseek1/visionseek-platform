@@ -47,3 +47,13 @@ Other independent workstreams: Leaders House PR39, reports, programs and managem
 ## Founder follow-up — 28 September 2026 KST
 
 Change the public invitation from «ابنِ قدرة معنا» to «ابنِ حلولك معنا». Applied to shared navigation, home and section CTAs, Leaders House and the manual intake journey in both languages. Intake now starts from an institutional challenge, opportunity or desired outcome. The underlying capability-building methodology and existing form field identifiers remain intact. Preview includes this copy change; no contact message was sent.
+
+## Superseding direction — 28 September 2026, 01:43 KST
+
+Founder requests an actual domain taxonomy: Projects → sector → specialty → concept. The active public LNG concepts are now VS-P07 (Sovereign control of floating gas supply) and VS-P08 (A second standard for LNG containment), within Energy & Climate → LNG. This supersedes the Egypt-specific framing and the former Gulf fleet efficiency concept; containment is no longer only a horizon item for this public portfolio. Earlier research and implementation notes above are historical context, not the current public specification.
+
+Owner/executor: this workspace. Approver: Dr. Ahmed. Timing: this revision, no external delivery deadline promised. Outputs: bilingual sector pages, Energy/LNG collection and two concept pages with concise capability/outcome copy. Public pages do not expose operational plans or suggest an existing client, funded program, licensed technology or delivered standard. Show “Proposed concepts — not launched or funded programs.” beneath the pair.
+
+Acceptance: all sectors have destinations; Energy contains LNG; both current concepts appear with the requested IDs; the old country-specific framing is absent from active public copy; old preview URLs redirect; main's published Reports entry and Leaders House remain intact; navigation/build/browser checks pass. Other sectors are areas of interest, not fabricated active projects. Existing field fragments remain available for home-page links.
+
+Implementation for this revision: eight sector destinations, one LNG specialty and two replacement concepts in both languages; preserves the existing cities/infrastructure area as the eighth sector. Hierarchical metadata/sitemap and redirects for the four old localized preview URLs are included. Public geographic targeting and previous fleet-efficiency copy removed. Latest published main integrated at 8feafd696046dece5fa7da3a69572efb4a3a8c81 (Reports retained before News, header-only). Targeted ESLint, TypeScript and Next build passed (198 generated routes); preview review is recorded in PR40.

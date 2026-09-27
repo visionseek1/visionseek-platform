@@ -1,92 +1,117 @@
+import type {ReactNode} from 'react';
 import Link from 'next/link';
-import {ArrowUpRight, ArrowRight, ExternalLink, Fuel, Ship, Waves} from 'lucide-react';
+import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {projects, projectPath, projectInquiry, type Project, type Locale} from '@/lib/projects';
-import {explorationFields} from '@/lib/projects/fields';
+import {sectors, tracks, projects, conceptNotice, conceptCount, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, type Sector, type Track, type Project, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 
-function EnergyVisual({kind, locale}: {kind: Project['kind']; locale: Locale}) {
-  const ar = locale === 'ar';
-  return <div className={`${styles.visual} ${kind === 'fleet' ? styles.fleetVisual : ''}`}>
-    <div className={styles.visualTop}><span>VISIONSEEK / ENERGY</span><span>{kind === 'supply' ? '01' : '02'}</span></div>
-    <svg viewBox="0 0 640 320" fill="none" aria-hidden="true" className={styles.shipDrawing}>
-      <path d="M0 245H640M0 265H640M0 285H640" stroke="currentColor" strokeOpacity=".13"/>
-      <path d="M52 206H457L422 242H112L52 206Z" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity=".06"/>
-      <path d="M91 205V168H139V205M104 168V148H126V168M115 148V132" stroke="currentColor" strokeWidth="2"/>
-      {[164, 238, 312].map(x => <g key={x}><rect x={x} y="156" width="58" height="50" rx="15" stroke="currentColor" strokeWidth="2"/><path d={`M${x + 10} 156V140H${x + 48}V156`} stroke="currentColor" strokeOpacity=".6"/></g>)}
-      <path d="M140 183H406M406 183V206M474 242V110H609V242M487 111V75H597V111M509 74V51M569 74V51" stroke="currentColor" strokeOpacity=".5" strokeWidth="2"/>
-      <path d="M373 165H438V130H490M551 160H618" stroke="currentColor" strokeWidth="3" strokeDasharray={kind === 'fleet' ? '6 7' : undefined}/>
-      <circle cx="438" cy="165" r="5" fill="currentColor"/><circle cx="551" cy="160" r="5" fill="currentColor"/>
-      <path d="M53 63H308M53 77H199M53 91H244" stroke="currentColor" strokeOpacity=".18"/>
-      {kind === 'fleet' && <path d="M328 59H440V101H377V135" stroke="currentColor" strokeOpacity=".7" strokeDasharray="4 6"/>}
-    </svg>
-    <div className={styles.visualCaption}><span>{kind === 'supply' ? (ar ? 'من البحر إلى الشبكة' : 'FROM VESSEL TO GRID') : (ar ? 'من الأصول إلى الأداء' : 'FROM ASSETS TO PERFORMANCE')}</span><small>{ar ? 'رسم توضيحي' : 'CONCEPT ILLUSTRATION'}</small></div>
+const icons = {energy:Zap,chips:Cpu,flight:Plane,defense:ShieldCheck,robotics:Bot,health:HeartPulse,agriculture:Wheat,cities:Building2};
+
+function Frame({locale,path,children}:{locale:Locale;path:string;children:ReactNode}) {
+  return <div className={`vs-site locale-${locale} ${styles.page}`} dir={locale==='ar'?'rtl':'ltr'} lang={locale}>
+    <CapabilityHeader locale={locale} path={path}/><main id="main-content">{children}</main><CapabilityFooter locale={locale}/>
   </div>;
 }
+function Breadcrumb({locale,sector,track,code}:{locale:Locale;sector?:Sector;track?:Track;code?:string}) {
+  const ar=locale==='ar';
+  return <nav className={styles.breadcrumb} aria-label={ar?'مسار الصفحة':'Breadcrumb'}>
+    <Link href={`${prefix(locale)}/projects`}>{ar?'المشاريع':'Projects'}</Link>
+    {sector&&<><span>/</span><Link href={sectorPath(sector.slug,locale)}>{sector.title[locale]}</Link></>}
+    {track&&<><span>/</span><Link href={trackPath(track,locale)}>{track.title[locale]}</Link></>}
+    {code&&<><span>/</span><span dir="ltr">{code}</span></>}
+  </nav>;
+}
+function Notice({locale}:{locale:Locale}) {return <p className={styles.notice}>{conceptNotice[locale]}</p>;}
 
-function ProjectCard({project, locale}: {project: Project; locale: Locale}) {
-  const ar = locale === 'ar';
+function EnergyVisual({kind,locale}:{kind:Project['kind'];locale:Locale}) {
+  const ar=locale==='ar';const supply=kind==='supply';
+  return <div className={`${styles.visual} ${supply?'':styles.containmentVisual}`}>
+    <div className={styles.visualTop}><span>VISIONSEEK / LNG</span><span>{supply?'VS-P07':'VS-P08'}</span></div>
+    <svg viewBox="0 0 640 320" fill="none" aria-hidden="true" className={styles.drawing}>
+      {supply?<>
+        <path d="M0 248H640M0 269H640M0 290H640" stroke="currentColor" strokeOpacity=".12"/>
+        <path d="M53 205H445L413 242H110L53 205Z" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity=".04"/>
+        <path d="M88 205V164H135V205M101 164V144H123V164M113 144V123" stroke="currentColor" strokeWidth="2"/>
+        {[160,232,304].map(x=><rect key={x} x={x} y="156" width="57" height="49" rx="13" stroke="currentColor" strokeWidth="2"/>)}
+        <path d="M377 169H438V117H490M487 242V96H603V242M506 96V66M576 96V66" stroke="currentColor" strokeOpacity=".65" strokeWidth="2"/>
+        <path d="M547 160H638" stroke="currentColor" strokeWidth="3"/><circle cx="547" cy="160" r="5" fill="currentColor"/>
+        <path d="M57 59H286M57 75H190M57 91H245" stroke="currentColor" strokeOpacity=".18"/>
+      </>:<>
+        <path d="M66 259H574M90 278H550" stroke="currentColor" strokeOpacity=".2"/>
+        <path d="M92 107L133 65H251L292 107V210L251 250H133L92 210Z" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity=".03"/>
+        <path d="M108 114L140 81H244L276 114V204L244 234H140L108 204Z" stroke="currentColor" strokeOpacity=".5" strokeDasharray="5 6"/>
+        <path d="M350 107L391 65H509L550 107V210L509 250H391L350 210Z" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity=".07"/>
+        <path d="M366 114L398 81H502L534 114V204L502 234H398L366 204Z" stroke="currentColor" strokeOpacity=".7"/>
+        <path d="M311 150H333M322 139V161M92 172H292M350 172H550" stroke="currentColor" strokeOpacity=".45"/>
+        <circle cx="450" cy="158" r="40" stroke="currentColor" strokeOpacity=".3"/>
+      </>}
+    </svg>
+    <div className={styles.visualCaption}><span>{supply?(ar?'التحكم في الإمداد':'CONTROL OVER SUPPLY'):(ar?'الاختيار على مستوى الأسطول':'CHOICE AT FLEET SCALE')}</span><small>{ar?'رسم تصوري':'CONCEPT ILLUSTRATION'}</small></div>
+  </div>;
+}
+function ProjectCard({project,locale}:{project:Project;locale:Locale}) {
   return <article className={styles.projectCard}>
-    <Link className={styles.visualLink} href={projectPath(project.slug, locale)} aria-label={project.title[locale]}><EnergyVisual kind={project.kind} locale={locale}/></Link>
+    <Link href={projectPath(project.slug,locale)} className={styles.visualLink} aria-label={project.title[locale]}><EnergyVisual kind={project.kind} locale={locale}/></Link>
     <div className={styles.cardBody}>
-      <div className={styles.cardMeta}><span>{project.id}</span><span className={styles.stage}>{project.stage[locale]}</span></div>
-      <p className={styles.location}>{project.region[locale]}</p>
-      <h2><Link href={projectPath(project.slug, locale)}>{project.title[locale]}</Link></h2>
+      <p className={styles.eyebrow} dir="ltr">{project.id}</p>
+      <h3><Link href={projectPath(project.slug,locale)}>{project.title[locale]}</Link></h3>
       <p className={styles.summary}>{project.summary[locale]}</p>
-      <div className={styles.cardOutput}><span>{ar ? 'ما نطمح إليه' : 'THE POSSIBILITY'}</span><p>{project.promise[locale]}</p></div>
-      <Link className={styles.openLink} href={projectPath(project.slug, locale)}>{ar ? 'تعرّف على الفكرة' : 'Explore the idea'}<ArrowUpRight size={21}/></Link>
+      <Link className={styles.openLink} href={projectPath(project.slug,locale)}>{locale==='ar'?'استكشف التصور':'Explore the concept'}<ArrowUpRight size={20}/></Link>
     </div>
   </article>;
 }
-
-export function ProjectsIndex({locale}: {locale: Locale}) {
-  const ar = locale === 'ar';
-  const base = ar ? '/ar' : '';
-  return <div className={`vs-site locale-${locale} ${styles.page}`} dir={ar ? 'rtl' : 'ltr'} lang={locale}>
-    <CapabilityHeader locale={locale} path="/projects"/>
-    <main id="main-content">
-      <section className={styles.hero}>
-        <p className={styles.eyebrow}>{ar ? 'المشاريع / هندسة الفرص' : 'PROJECTS / ENGINEERING OPPORTUNITIES'}</p>
-        <h1>{ar ? <>نختار أين<br/><em>نصنع الفارق.</em></> : <>Choose where<br/><em>to make a difference.</em></>}</h1>
-        <div className={styles.heroBottom}><p>{ar ? 'نرى في القدرات الموجودة حول العالم فرصًا لبناء شيء أكبر. هنا نعرض أفكار VisionSeek ومشاريعها، وما نسعى من خلالها إلى إتاحته للمؤسسات والدول.' : 'Global capabilities open opportunities to build something greater. Explore VisionSeek’s ideas and projects, and what they could make possible for institutions and countries.'}</p><a href="#project-files" className={styles.heroAnchor}>{ar ? 'استكشف المشاريع' : 'Explore projects'}<ArrowRight size={22}/></a></div>
-      </section>
-      <section id="project-files" className={styles.portfolio}>
-        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar ? 'البداية من الطاقة' : 'STARTING WITH ENERGY'}</p><h2>{ar ? 'الغاز الطبيعي المسال' : 'Liquefied natural gas'}</h2></div><span className={styles.count}>02 <small>{ar ? 'تصوران' : 'CONCEPTS'}</small></span></div>
-        <p className={styles.portfolioNote}>{ar ? 'تصوران تستكشفهما VisionSeek في الطاقة والغاز المسال، مع توضيح المرحلة الحالية لكل فكرة.' : 'Two VisionSeek concepts in energy and LNG, each presented with its current stage of exploration.'}</p>
-        <div className={styles.projectList}>{projects.map(project => <ProjectCard key={project.id} project={project} locale={locale}/>)}</div>
-      </section>
-      <section className={styles.methodBand}><span className={styles.methodNumber}>×</span><div><h2>{ar ? 'القدرات موجودة. والفرصة في اتصالها.' : 'Capabilities exist. Opportunity connects them.'}</h2><p>{ar ? 'قد تكمن الفرصة في وصل احتياج محلي بتقنية في بلد آخر، أو جمع خبرات متفرقة حول طموح واحد. هذه هي الزاوية التي ننظر منها إلى مشاريعنا.' : 'An opportunity may connect a local need with technology from another country, or bring separate fields of expertise around a shared ambition. This is the perspective behind our projects.'}</p><Link href={`${base}/about`}>{ar ? 'عن VisionSeek' : 'About VisionSeek'}<ArrowUpRight size={18}/></Link></div></section>
-      <section id="fields" className={styles.fields}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar ? 'مجالات الاستكشاف' : 'EXPLORATION FIELDS'}</p><h2>{ar ? 'مجال أوسع لما قد نبنيه.' : 'A wider field of possibility.'}</h2></div></div><p>{ar ? 'مجالات نبحث فيها عن فرص تفتح آفاقًا جديدة للمؤسسات والدول.' : 'Fields where we explore opportunities to open new horizons for institutions and countries.'}</p><div className={styles.fieldGrid}>{explorationFields.map(field => <article id={field.id} key={field.id}><span>{ar ? 'قيد الاستكشاف' : 'EXPLORING'}</span><h3>{ar ? field.title : field.english}</h3><p>{ar ? field.description : field.englishDescription}</p>{field.id === 'energy' && <a href="#project-files">{ar ? 'أفكار الطاقة' : 'Energy concepts'}<ArrowUpRight size={17}/></a>}</article>)}</div></section>
-      <section className={styles.indexCta}><Fuel size={30}/><div><h2>{ar ? 'هل ترى فرصة نبنيها معًا؟' : 'See an opportunity we could build together?'}</h2><p>{ar ? 'شاركنا اهتمامك بهذه الأفكار، أو فرصة ترى أنها تستحق أن تتحول إلى واقع.' : 'Share your interest in these ideas, or an opportunity you would like to bring to life.'}</p></div><Link className="vs-button" href={`${base}/start`}>{ar ? 'ناقش فرصة معنا' : 'Discuss an opportunity'}<ArrowRight size={19}/></Link></section>
-    </main>
-    <CapabilityFooter locale={locale}/>
-  </div>;
+function ConceptCollection({items,locale}:{items:Project[];locale:Locale}) {
+  return <><div className={styles.projectList}>{items.map(project=><ProjectCard key={project.id} project={project} locale={locale}/>)}</div><Notice locale={locale}/></>;
 }
-
-export function ProjectDetail({project, locale}: {project: Project; locale: Locale}) {
-  const ar = locale === 'ar';
-  const base = ar ? '/ar' : '';
-  const next = projects.find(item => item.id !== project.id)!;
-  return <div className={`vs-site locale-${locale} ${styles.page}`} dir={ar ? 'rtl' : 'ltr'} lang={locale}>
-    <CapabilityHeader locale={locale} path={`/projects/${project.slug}`}/>
-    <main id="main-content">
-      <section className={styles.detailHero}>
-        <nav className={styles.breadcrumb} aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}><Link href={`${base}/projects`}>{ar ? 'المشاريع' : 'Projects'}</Link><span>/</span><Link href={`${base}/projects#project-files`}>{ar ? 'الطاقة' : 'Energy'}</Link><span>/</span><span>{project.id}</span></nav>
-        <div className={styles.detailHeroGrid}><div><p className={styles.eyebrow}>{project.region[locale]} / LNG</p><h1>{project.title[locale]}</h1><p className={styles.detailSummary}>{project.summary[locale]}</p><span className={styles.stage}>{project.stage[locale]}</span></div><EnergyVisual kind={project.kind} locale={locale}/></div>
-      </section>
-      <nav className={styles.anchorNav} aria-label={ar ? 'داخل المشروع' : 'In this project'}><a href="#idea">{ar ? 'الفكرة' : 'The idea'}</a><a href="#potential">{ar ? 'القيمة المنشودة' : 'The potential'}</a><a href="#vision">{ar ? 'رؤية VisionSeek' : 'Our perspective'}</a><a href="#context">{ar ? 'السياق والمراجع' : 'Context & references'}</a></nav>
-      <div className={styles.detailLayout}>
-        <aside className={styles.projectFacts}><span className={styles.eyebrow}>{ar ? 'عن التصور' : 'ABOUT THE CONCEPT'}</span><dl><div><dt>{ar ? 'المجال' : 'FIELD'}</dt><dd>{ar ? 'الطاقة / الغاز الطبيعي المسال' : 'Energy / Liquefied natural gas'}</dd></div><div><dt>{ar ? 'النطاق الجغرافي' : 'REGION'}</dt><dd>{project.region[locale]}</dd></div><div><dt>{ar ? 'المرحلة' : 'STAGE'}</dt><dd>{project.stage[locale]}</dd></div><div><dt>{ar ? 'لمن تهم هذه الفكرة؟' : 'WHO IS THIS FOR?'}</dt><dd>{project.beneficiary[locale]}</dd></div></dl><Link className="vs-button" href={projectInquiry(project,locale)}>{ar ? 'ناقش هذه الفكرة' : 'Discuss this idea'}<ArrowRight size={18}/></Link></aside>
-        <div className={styles.detailBody}>
-          <section id="idea"><span className={styles.sectionNumber}>01 / {ar ? 'الفكرة' : 'THE IDEA'}</span><h2>{project.question[locale]}</h2><p>{project.idea[locale]}</p></section>
-          <section id="potential"><span className={styles.sectionNumber}>02 / {ar ? 'القيمة المنشودة' : 'THE POTENTIAL'}</span><h2>{project.promise[locale]}</h2><p>{project.significance[locale]}</p><div className={styles.optionGrid}>{project.possibilities.map((possibility,i) => <article key={possibility.title.en}><span>0{i+1}</span><h3>{possibility.title[locale]}</h3><p>{possibility.text[locale]}</p></article>)}</div></section>
-          <section id="vision"><span className={styles.sectionNumber}>03 / {ar ? 'رؤية VisionSeek' : 'OUR PERSPECTIVE'}</span><h2>{ar ? 'ما الذي نراه في هذه الفرصة؟' : 'What do we see in this opportunity?'}</h2><div className={styles.role}><p>{project.vision[locale]}</p></div></section>
-          <section id="context"><span className={styles.sectionNumber}>04 / {ar ? 'السياق والمراجع' : 'CONTEXT & REFERENCES'}</span><h2>{ar ? 'الفكرة في سياقها.' : 'The idea in context.'}</h2><p>{ar ? 'مراجع عامة تشرح خلفية الفكرة. الجهات المذكورة مصادر للمعلومات وليست شركاء معلنين في المشروع.' : 'Public references providing background to the concept. The named organizations are information sources, not announced project partners.'}</p><div className={styles.sources}>{project.sources.map(source => <article key={source.url}><div><span>{source.publisher}</span><time dateTime={source.date}>{source.date}</time></div><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title[locale]}<ExternalLink size={17}/></a><p>{source.note[locale]}</p></article>)}</div><p className={styles.reviewDate}>{ar ? 'آخر مراجعة للمراجع: 27 سبتمبر 2026.' : 'References last reviewed: 27 September 2026.'}</p></section>
-        </div>
-      </div>
-      <section className={styles.nextProject}><div>{project.kind === 'supply' ? <Ship size={28}/> : <Waves size={28}/>}<p>{ar ? 'فكرة مرتبطة' : 'RELATED CONCEPT'}</p><h2>{next.title[locale]}</h2><span>{next.stage[locale]}</span></div><Link href={projectPath(next.slug,locale)}>{ar ? 'استكشف الفكرة' : 'Explore the idea'}<ArrowUpRight size={22}/></Link></section>
-    </main>
-    <CapabilityFooter locale={locale}/>
-  </div>;
+function SectorGrid({locale}:{locale:Locale}) {
+  const ar=locale==='ar';
+  return <div className={styles.sectorGrid}>{sectors.map((sector,i)=>{
+    const Icon=icons[sector.icon];const count=projects.filter(p=>p.sector===sector.slug).length;
+    return <article className={styles.sectorCard} key={sector.slug}>
+      {sector.anchors.map(anchor=><span className={styles.anchor} id={anchor} key={anchor}/>)}
+      <Link href={sectorPath(sector.slug,locale)}>
+        <div className={styles.sectorTop}><Icon size={32} strokeWidth={1.3}/><span dir="ltr">0{i+1}</span></div>
+        <h3>{sector.title[locale]}</h3><p>{sector.intro[locale]}</p>
+        <div className={styles.sectorBottom}><span>{count?conceptCount(count,locale):(ar?'مجال استكشاف':'Exploration area')}</span><ArrowUpRight size={19}/></div>
+      </Link>
+    </article>;
+  })}</div>;
+}
+function Contact({locale}:{locale:Locale}) {
+  const ar=locale==='ar';
+  return <section className={styles.contact}><div><p className={styles.eyebrow}>{ar?'من الفرصة إلى الحل':'FROM OPPORTUNITY TO SOLUTION'}</p><h2>{ar?'ما الذي تريد تغييره في مؤسستك؟':'What do you want to change in your institution?'}</h2></div><Link className="vs-button" href={`${prefix(locale)}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={20}/></Link></section>;
+}
+export function ProjectsIndex({locale}:{locale:Locale}) {
+  const ar=locale==='ar';
+  return <Frame locale={locale} path="/projects">
+    <section className={styles.hero}><p className={styles.eyebrow}>{ar?'VISIONSEEK / المشاريع':'VISIONSEEK / PROJECTS'}</p><h1>{ar?<>مشاريع تفتح<br/><em>خيارات جديدة.</em></>:<>Projects that open<br/><em>new possibilities.</em></>}</h1><div className={styles.heroBottom}><p>{ar?'من الطاقة والرقائق إلى الطب والطيران. تصوّرات لما تستطيع المؤسسات امتلاكه عندما تتصل المعرفة والتقنيات والشراكات المناسبة.':'From energy and chips to medicine and aviation. Concepts for what institutions could achieve by connecting the right knowledge, technologies and partnerships.'}</p><a href="#fields">{ar?'اختر المجال':'Choose a sector'}<ArrowRight size={21}/></a></div></section>
+    <section id="fields" className={styles.section}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'المشاريع حسب المجال':'PROJECTS BY SECTOR'}</p><h2>{ar?'أين نصنع الفارق؟':'Where can we make a difference?'}</h2></div><span className={styles.count}>{String(sectors.length).padStart(2,'0')}</span></div><SectorGrid locale={locale}/></section>
+    <section id="project-files" className={`${styles.section} ${styles.featured}`}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'الطاقة والمناخ / الغاز الطبيعي المسال':'ENERGY & CLIMATE / LNG'}</p><h2>{ar?'من التحكم في الإمداد إلى اختيار المعيار.':'From control over supply to choice of standard.'}</h2></div><Link className={styles.textLink} href={trackPath(tracks[0],locale)}>{ar?'استكشف الغاز المسال':'Explore LNG'}<ArrowUpRight size={19}/></Link></div><ConceptCollection items={projects} locale={locale}/></section>
+    <Contact locale={locale}/>
+  </Frame>;
+}
+export function SectorPage({sector,locale}:{sector:Sector;locale:Locale}) {
+  const ar=locale==='ar';const children=tracks.filter(track=>track.sector===sector.slug);const Icon=icons[sector.icon];
+  return <Frame locale={locale} path={sectorPath(sector.slug,'en')}>
+    <section className={styles.sectorHero}><Breadcrumb locale={locale}/><div className={styles.sectorHeroBody}><div><p className={styles.eyebrow}>{ar?'مجال المشاريع':'PROJECT SECTOR'}</p><h1>{sector.title[locale]}</h1><p>{sector.intro[locale]}</p></div><Icon className={styles.sectorEmblem} size={112} strokeWidth={.8} aria-hidden="true"/></div></section>
+    {children.length?<section className={styles.section}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'داخل المجال':'WITHIN THE SECTOR'}</p><h2>{ar?'استكشف التخصصات':'Explore specialties'}</h2></div></div><div className={styles.trackList}>{children.map(track=><Link key={track.slug} href={trackPath(track,locale)} className={styles.trackCard}><div><span className={styles.eyebrow}>LNG</span><h2>{track.title[locale]}</h2><p>{track.intro[locale]}</p><span className={styles.trackCount}>{conceptCount(projects.filter(p=>p.sector===track.sector&&p.track===track.slug).length,locale)}</span></div><ArrowUpRight size={32}/></Link>)}</div><Notice locale={locale}/></section>:<section className={styles.section}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'نطاق الاهتمام':'AREAS OF INTEREST'}</p><h2>{ar?'آفاق هذا المجال':'Within this field'}</h2></div></div><div className={styles.focusGrid}>{sector.focus.map((focus,i)=><div key={focus.en}><span>0{i+1}</span><h3>{focus[locale]}</h3></div>)}</div><div className={styles.emptyState}><h3>{ar?'مساحة للمشاريع القادمة.':'Space for future projects.'}</h3><p>{ar?'لم تُدرج تصوّرات مشاريع في هذا المجال بعد. تُضاف هنا عند اعتمادها.':'No project concepts have been listed in this sector yet. They will appear here once approved.'}</p></div></section>}
+    <Contact locale={locale}/>
+  </Frame>;
+}
+export function TrackPage({track,locale}:{track:Track;locale:Locale}) {
+  const ar=locale==='ar';const sector=sectorBySlug(track.sector)!;const items=projects.filter(p=>p.sector===track.sector&&p.track===track.slug);
+  return <Frame locale={locale} path={trackPath(track,'en')}>
+    <section className={styles.sectorHero}><Breadcrumb locale={locale} sector={sector}/><p className={styles.eyebrow}>{ar?'الطاقة والمناخ / LNG':'ENERGY & CLIMATE / LNG'}</p><h1>{track.title[locale]}</h1><p>{track.intro[locale]}</p></section>
+    <section className={styles.section}><div className={styles.sectionHeading}><h2>{ar?'التصوّرات المقترحة':'Proposed concepts'}</h2><span className={styles.count}>{String(items.length).padStart(2,'0')}</span></div><ConceptCollection items={items} locale={locale}/></section>
+    <Contact locale={locale}/>
+  </Frame>;
+}
+export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) {
+  const ar=locale==='ar';const sector=sectorBySlug(project.sector)!;const track=tracks.find(t=>t.sector===project.sector&&t.slug===project.track)!;const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
+  return <Frame locale={locale} path={projectPath(project.slug,'en')}>
+    <section className={styles.detailHero}><Breadcrumb locale={locale} sector={sector} track={track} code={project.id}/><div className={styles.detailHeroGrid}><div><p className={styles.eyebrow} dir="ltr">{project.id}</p><h1>{project.title[locale]}</h1><p className={styles.detailSummary}>{project.summary[locale]}</p><span className={styles.stage}>{ar?'تصور مقترح':'Proposed concept'}</span></div><EnergyVisual kind={project.kind} locale={locale}/></div><Notice locale={locale}/></section>
+    <div className={styles.detailLayout}><aside className={styles.projectFacts}><p className={styles.eyebrow}>{ar?'بطاقة التصور':'CONCEPT PROFILE'}</p><dl><div><dt>{ar?'المجال':'SECTOR'}</dt><dd><Link href={sectorPath(sector.slug,locale)}>{sector.title[locale]}</Link></dd></div><div><dt>{ar?'التخصص':'SPECIALTY'}</dt><dd><Link href={trackPath(track,locale)}>{track.title[locale]}</Link></dd></div><div><dt>{ar?'لمن؟':'FOR WHOM?'}</dt><dd>{project.beneficiary[locale]}</dd></div></dl><Link className="vs-button" href={projectInquiry(project,locale)}>{ar?'ناقش التصور':'Discuss the concept'}<ArrowRight size={18}/></Link></aside><div className={styles.detailBody}><p className={styles.eyebrow}>{ar?'القدرة المستهدفة':'THE INTENDED CAPABILITY'}</p><h2>{project.ambition[locale]}</h2><p>{project.idea[locale]}</p><div className={styles.outcomes}>{project.outcomes.map(outcome=><article key={outcome.title.en}><h3>{outcome.title[locale]}</h3><p>{outcome.text[locale]}</p></article>)}</div></div></div>
+    {related.length>0&&<section className={`${styles.section} ${styles.related}`}><div className={styles.sectionHeading}><h2>{ar?'في التخصص نفسه':'In the same specialty'}</h2><Link className={styles.textLink} href={trackPath(track,locale)}>{ar?'كل تصوّرات الغاز المسال':'All LNG concepts'}<ArrowUpRight size={19}/></Link></div>{related.map(p=><Link className={styles.relatedLink} href={projectPath(p.slug,locale)} key={p.id}><span dir="ltr">{p.id}</span><h3>{p.title[locale]}</h3><ArrowUpRight size={26}/></Link>)}</section>}
+  </Frame>;
 }
