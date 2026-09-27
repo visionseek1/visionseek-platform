@@ -43,3 +43,7 @@ Other independent workstreams: Leaders House PR39, reports, programs and managem
 - Inquiry prefill reuses the existing manual contact form; no automatic message or database write is introduced.
 - Production Leaders House PR39 was independently verified on visionseek.org in both languages after release: named lime header link, 44px height, Arabic click-through to the executive feed.
 - Preview browser review and final navigation check are recorded on the feature PR. Real mobile viewport/touch verification remains unavailable in this browser session.
+
+## Founder follow-up — 28 September 2026 KST
+
+Change the public invitation from «ابنِ قدرة معنا» to «ابنِ حلولك معنا». Applied to shared navigation, home and section CTAs, Leaders House and the manual intake journey in both languages. Intake now starts from an institutional challenge, opportunity or desired outcome. The underlying capability-building methodology and existing form field identifiers remain intact. Preview includes this copy change; no contact message was sent.
