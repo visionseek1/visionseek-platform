@@ -46,3 +46,18 @@ connections or replace Supabase advisors.
 
 Read-only catalog inspection in the earlier session (2026-09-27) found manage_snapshot and
 manage_private.principals absent. That is time-bound evidence, not a current installation claim.
+
+## Prepared isolated activation proposal — not executed
+
+Parent project: VisionSeek (lckngioonokzxkrdwkez). Proposed branch: manage-room-test.
+The connected organization is bdrcfvcwvkjwstiwrgtq; provider tools require user confirmation of
+that organization before quoting, and confirmation of the quoted branch cost before creation.
+There are currently no existing development branches to reuse (read-only inspection, 28 Sep KST).
+
+After those confirmations: create the isolated branch without production records; verify its
+new project_ref; install the reviewed room SQL there; create only synthetic test identities and
+explicit test grants; run authenticated save/reopen, access and advisor checks. Bind only the
+feat/manage-room-20260927 Vercel preview environment to that branch's public Supabase settings.
+Keep production environment settings and existing founder/editor identities unchanged. Hosted
+browser validation still requires the normal Vercel sign-in. Merge and production activation
+remain a later reviewable action after these checks.

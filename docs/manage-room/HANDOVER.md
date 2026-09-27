@@ -31,3 +31,9 @@ into this branch; the Reports manifest now links to its existing studio without 
 its permissions, data or editor. Live health through this room remains unknown.
 
 Draft PR: https://github.com/visionseek1/visionseek-platform/pull/41
+
+Continuation: session races and confirmed-save/failed-refresh handling are fixed; 80 local tests
+pass. Session regression tests and complete form/API/SQL tests are included. Room concurrency
+CI adds native PostgreSQL lock/replay checks. See VALIDATION.md and PR for exact execution results.
+An isolated hosted activation proposal is prepared in DATABASE-PLAN.md; provider organization
+and cost confirmation are still needed. Production database and identities remain unchanged.

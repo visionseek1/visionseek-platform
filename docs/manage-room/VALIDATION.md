@@ -47,3 +47,30 @@ Hosted isolated schema/identity setup, Supabase advisors, real concurrent reques
 authenticated mobile/desktop browser end-to-end, and Leaders editor save/reopen.
 Reports save/reopen through this room and Programs handover remain with their owners. MCP remains deferred.
 No live DB or production data writes, auth provisioning, DNS/secrets changes are performed.
+
+## Continuation — 28 September 2026 (Asia/Seoul)
+
+The browser session hook had reproducible races: a late mutation could reload a previous
+account, an initial session read could overwrite a newer auth event, and same-tick saves
+could send twice. Five new regression cases failed before the fix. The hook now binds
+operations to an account generation, verifies the current session before submitting, ignores
+retired callbacks and prevents duplicate pending operations. Token refresh keeps draft identity.
+A confirmed successful write is still reported as saved when only its subsequent refresh fails,
+so the UI closes the submitted form instead of inviting a duplicate create.
+
+- Full lint and production build: passed.
+- Local suite: 80 passed, 0 failed, including 12 session tests and 3 room integration tests.
+- The room integration tests use the actual React forms, session hook, API handlers and SQL in
+  isolated PGlite; Auth/Data transport is mocked. They cover create, deliver, founder acceptance,
+  reopen with retained history, revision comparison preserving unsaved text, and account changes.
+  Next links/images and Dialog are DOM adapters: these tests do not prove browser layout/focus.
+- Added Room concurrency CI using disposable PostgreSQL 17.6 and independent psql connections.
+  It requires both writers to be observed waiting on database locks before release, then checks
+  revision conflict, identical-key replay and differing-payload idempotency rejection. It accepts
+  only a loopback URL with database name visionseek_manage_test. Its execution result is in PR.
+- Read-only Supabase inspection: VisionSeek has no development branches; manage_snapshot and
+  manage_private.principals are absent. No live schema, identity, role or grant changed.
+
+Hosted Supabase authentication, advisors after installation, mobile/desktop visual checks and
+real unit-editor save/reopen through the room remain separate acceptance gates. CI PostgreSQL
+and PGlite do not substitute for those checks.
