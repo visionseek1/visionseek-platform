@@ -72,7 +72,7 @@ test('Arabic report entry, reload, preview, review, archive and restore preserve
 test('field-level errors do not submit or echo private URL values',async t=>{
  await mount(t);await click('تقرير جديد');await click('حفظ مسودة');
  assert.match(container.querySelector('.saveBar [role=alert]').textContent,/أضف عنوانًا/);
- await input('العنوان ·','عنوان');await input('رابط صورة الغلاف','https://secret:credential@example.org');await click('حفظ مسودة');
+ await input('العنوان ·','عنوان');assert.equal(container.querySelector('.saveBar [role=alert]'),null);await input('رابط صورة الغلاف','https://secret:credential@example.org');await click('حفظ مسودة');
  const message=container.querySelector('.saveBar [role=alert]').textContent;
  assert.match(message,/رابط الغلاف/);assert.doesNotMatch(message,/secret|credential/);assert.equal(requests.filter(r=>r.method==='POST').length,0);
 });

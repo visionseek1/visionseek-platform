@@ -23,7 +23,7 @@ Code commit 02b65af8316ca63194c603c88832379e074a256c deployed READY at https://v
 - Preview has Vercel access protection in addition to the editor account gate.
 
 ## Limitations
-- Authenticated browser create/save has not been exercised; authorization/storage tested at database layer. Mobile viewport and print output not visually verified.
+- Authenticated browser create/save and the draft lifecycle were subsequently verified (see resumed live checks below). Mobile viewport and print output are not visually verified.
 - No direct file upload: cover/PDF and source assets are HTTPS links.
 - Draft storage is private to each editor. Ready for review is a workflow label; it does not publish or certify a report.
 - The reviewed report catalogue remains empty; the only indexed publication is the real historical Physical AI brief.
@@ -37,4 +37,13 @@ The founder resumed branch work after pausing. Added precise bilingual field err
 
 Verification: 14 report tests pass (3 catalogue, 4 draft contract, 7 studio component/readiness tests). Studio tests exercise the real React component in JSDOM with mocked auth and an in-memory API: create/edit/reload/preview/review/archive/restore, invalid fields, cancelled and pending refresh, duplicate saves, revision conflicts, and account changes before and after submission. These are local integration tests, not a claim of live authenticated browser persistence. TypeScript, targeted ESLint and diff checks pass. Production build passed before the final auth-response guard; automatic Vercel build will verify the exact published commit. Added JSDOM 26.1.0 as a development-only dependency compatible with the existing Node minimum.
 
-Remaining live check: authenticate through the browser's secure credential flow, then save and reopen a clearly labelled test draft. Do not create an editor account, change a password, widen membership, or bypass authentication for testing.
+## Resumed live browser checks
+Code commit 6166424 deployed READY. Secure browser authentication succeeded using the existing editor account. No credentials were exposed to the agent; no identity, password or role was created/changed.
+- Created the labelled private test draft “اختبار تقني — إدارة التقارير — 27 سبتمبر 2026”.
+- Empty-title validation appeared in the save area. Entered Arabic title, summary, section, methods, limitations and a clearly labelled placeholder reference.
+- Saved revision 0, reloaded the whole page, reopened the draft and verified the body persisted.
+- Added English content and verified its preview; ready-for-review save produced revision 1.
+- Archived, restored, then archived again: final revision 4, state archived. The test fixture remains private in the editor archive and is not a research publication. No other draft existed in the visible account queue and none was changed.
+- Browser revealed stale validation text while correcting a field and animated scrolling during long-form interaction; follow-up clears validation text on edits and uses instant scrolling within the studio route. Keyboard interaction worked throughout.
+
+Stable branch preview: https://visionseek-platform-8u24-git-feat-reports-cen-9bfc88-visionseek.vercel.app/ar/reports/studio. Access requires the existing editor account. Main remains unmerged.
