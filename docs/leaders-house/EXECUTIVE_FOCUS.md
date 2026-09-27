@@ -26,5 +26,7 @@ Acceptance: Arabic and English audience positioning visible on mobile and deskto
 - TypeScript and targeted ESLint: passed.
 - Production build with placeholder public database configuration: passed (167 generated routes). This establishes build compatibility, not a live database integration test.
 - Twelve targeted tests passed: brief parsing and text preservation, reader preferences/collections, character identities and validation.
-- Visual and interaction review: pending on the branch preview. Local server started successfully; the cloud browser cannot open this workspace's loopback address.
+- Branch preview: https://visionseek-platform-8u24-95qum5zru-visionseek.vercel.app/ar/insights — Vercel READY, code revision `13ab0c3fe2a36b9a6bfe3df41a97f6a35897678f`, PR https://github.com/visionseek1/visionseek-platform/pull/39. Access may require the owner's Vercel session.
+- Desktop browser review: Arabic and English home pages rendered correctly at 1363 CSS pixels. The labelled reading dialog displayed the original reference, institutional implication, action and source; saving to a team-discussion collection and closing worked. Video opened and advanced from 1/2 to 2/2. Sector directory, local follow and Tiko profile navigation worked.
+- Remaining verification: a real mobile viewport/device and touch gestures were not available in this cloud browser; mobile rules were reviewed in code but are not claimed as visually verified. Local server started successfully, but the cloud browser cannot open this workspace's loopback address.
 - No database changes, generated model drafts, scheduled jobs or production publishing performed.
