@@ -68,13 +68,16 @@ export const modules = validateRegistry([
     description: "الأبحاث والتقارير ومراجعة الأدلة.",
     icon: "chart",
     sortOrder: 20,
-    publicRoutes: [],
+    publicRoutes: ["/ar/reports", "/reports"],
     adminEntryPoint: "/ar/reports/studio",
-    readiness: "development",
-    editorAvailable: false,
-    codeRef:
-      "feat/reports-center-20260927 @ 616642494b864f802bda2c670d85dcf846f7a455",
-    capabilities: pending,
+    readiness: "review",
+    editorAvailable: true,
+    codeRef: "main @ 8feafd696046dece5fa7da3a69572efb4a3a8c81",
+    capabilities: ["read", "createDraft", "editDraft", "archive"].map(
+      (action) => ({ action, enabled: true, disabledReason: null }),
+    ),
+    dependencies: ["صلاحيات محرر التقارير مستقلة عن الغرفة"],
+    acceptanceEvidence: ["كود المحرر مدمج؛ الحفظ الحي عبر الغرفة غير متحقق."],
   },
   {
     ...base,

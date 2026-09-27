@@ -34,7 +34,7 @@ test("unmerged editors unavailable and no agent tools registered", () => {
   );
   assert.ok(
     modules
-      .filter((m) => ["reports", "programs", "training"].includes(m.moduleId))
+      .filter((m) => ["programs", "training"].includes(m.moduleId))
       .every((m) => !m.editorAvailable),
   );
 });

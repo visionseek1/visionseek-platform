@@ -6,3 +6,7 @@ export const institutionNav = [
  {path:'/work-with-us',en:'Work with Us',ar:'اعمل معنا',children:[['/start','Build a capability with us','ابنِ قدرة معنا'],['/work-with-us/new-to-visionseek','New to VisionSeek','ابدأ مع VisionSeek'],['/work-with-us/how-to-respond','How to respond','كيف تشارك؟'],['/work-with-us/prepare-a-concept','Prepare a concept','جهّز تصورًا'],['/work-with-us/review-and-selection','Review & selection','المراجعة والاختيار'],['/work-with-us/transition','Transition to use','النقل للتشغيل']]},
  {path:'/about',en:'About',ar:'عن VisionSeek',children:[['/about','Our vision','رؤيتنا'],['/method','Our method','منهجنا'],['/about/operating-model','Operating model','نموذج التشغيل'],['/about/program-questions','Program questions','أسئلة البرنامج'],['/about/people','People','الأشخاص'],['/about/governance','Governance','الحوكمة'],['/about/learning-from-darpa','Learning from DARPA','التعلم من DARPA']]},
 ];
+
+// Reports belongs in the header; preserve the existing footer navigation.
+const reportsNav = {path:'/reports',en:'Reports',ar:'التقارير',children:[['/reports','Research & reports','الأبحاث والتقارير'],['/reports/methodology','Methods & standards','المنهج والمعايير']]};
+export const institutionHeaderNav = institutionNav.flatMap(item => item.path === '/news' ? [reportsNav, item] : [item]);

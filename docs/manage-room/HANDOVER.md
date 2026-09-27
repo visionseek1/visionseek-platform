@@ -25,3 +25,9 @@ No live DB writes, permissions, DNS, secrets or production deployment are part o
 Recovery note: automated cleanup removed unpushed local work. This branch reconstructs it
 against newer main and is verified afresh. User authorized public branch publication and PR/
 preview on 2026-09-28 (Asia/Seoul). Production activation remains separately reviewable.
+
+Integration update: Reports entered main 8feafd6 during publication. That revision is merged
+into this branch; the Reports manifest now links to its existing studio without changing
+its permissions, data or editor. Live health through this room remains unknown.
+
+Draft PR: https://github.com/visionseek1/visionseek-platform/pull/41

@@ -13,7 +13,7 @@ opens, saves, then reopens the same unit output through the room.
 | Unit | Evidence | Behavior | Next owner handover |
 |---|---|---|---|
 | Leaders | main 108c883 has existing studio | Existing editor link, own editor permissions | Save/reopen evidence |
-| Reports | separate branch 6166424 | Editor disabled here | Manifest, auth adapter, reviewed integration |
+| Reports | main 8feafd6 has existing studio | Existing editor link, own editor permissions | Save/reopen through the room |
 | Programs | branch at dcaa5eb | Editor unavailable | Deliver actual editor and contract |
 | Training | test registration only | Planned; mutations disabled | Future implementation and evidence |
 

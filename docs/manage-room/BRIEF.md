@@ -14,6 +14,7 @@ then verifies the Vercel preview. Acceptance gates: identity/scoped access; revi
 version-bound review; mobile/RTL; existing editors unchanged. Dates are evidence timestamps,
 not invented deadlines.
 
-Preserve /room and existing unit-owned editors and records. Reports remains a separate
-branch (6166424); program branch remains dcaa5eb. No MCP, agent credentials, automatic
+Preserve /room and existing unit-owned editors and records. Reports was merged into main
+8feafd6 during publication; this branch integrates that main revision without changing its
+unit-owned files. The room links to its existing studio. Program branch remains dcaa5eb. No MCP, agent credentials, automatic
 execution/publishing, DNS/secrets changes, production database writes or live grants.
