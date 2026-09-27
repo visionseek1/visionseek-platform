@@ -47,3 +47,10 @@ Code commit 6166424 deployed READY. Secure browser authentication succeeded usin
 - Browser revealed stale validation text while correcting a field and animated scrolling during long-form interaction; follow-up clears validation text on edits and uses instant scrolling within the studio route. Keyboard interaction worked throughout.
 
 Stable branch preview: https://visionseek-platform-8u24-git-feat-reports-cen-9bfc88-visionseek.vercel.app/ar/reports/studio. Access requires the existing editor account. Main remains unmerged.
+
+## Production integration — 27 September 2026
+The founder subsequently authorized publishing the reports section to the main website, with Reports in the top header and no other changes to the existing site. This authorization supersedes the earlier branch-only handoff.
+
+Integration uses main 108c883f3e47653d06e5245070b7b68c9ef9a209, retaining the latest Leaders House work. Header navigation has a separate Reports insertion before News; the existing footer navigation stays unchanged. The original Insights report component is also retained byte-for-byte. Existing page bodies, shared styles, footer, and Leaders House files match this main revision. Reports pages, their private studio/API, and sitemap entries remain additive.
+
+The 14 report tests and targeted header/navigation lint pass on this combined version. No database, identity, membership or existing public-content changes are part of this publication step. Final deployment status and production URL checks are recorded in the pull request.

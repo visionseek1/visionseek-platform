@@ -11,9 +11,9 @@ export type LeaderPost = {
   cover_url?: string; media_url?: string; media_url_en?: string; poster_url?: string; poster_url_en?: string; caption_url?: string; caption_url_en?: string; seed?: boolean;
 };
 export const topics: {id: Topic; ar: string; en: string}[] = [
-  {id:'leadership', ar:'القيادة', en:'Leadership'}, {id:'ai', ar:'الذكاء الاصطناعي', en:'AI'},
-  {id:'strategy', ar:'الاستراتيجية', en:'Strategy'}, {id:'capabilities', ar:'بناء القدرات', en:'Capabilities'},
-  {id:'innovation', ar:'الابتكار', en:'Innovation'},
+  {id:'leadership', ar:'القيادة والقرار', en:'Leadership & decisions'}, {id:'ai', ar:'الذكاء الاصطناعي للمؤسسات', en:'AI for organizations'},
+  {id:'strategy', ar:'الاستراتيجية والنمو', en:'Strategy & growth'}, {id:'capabilities', ar:'بناء القدرات', en:'Capabilities'},
+  {id:'innovation', ar:'الابتكار والتجريب', en:'Innovation & experiments'},
 ];
 export function postText(post: LeaderPost, locale: Locale) {
   return {title: locale === 'en' && post.title_en ? post.title_en : post.title,

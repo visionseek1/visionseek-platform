@@ -83,4 +83,3 @@ export const report = {
     back: "العودة إلى الرؤى",
   },
 };
-
