@@ -31,3 +31,10 @@ Code commit 02b65af8316ca63194c603c88832379e074a256c deployed READY at https://v
 - Branch only: no main merge or deliberate production website deployment. The additive private-draft schema is already installed in the connected database; existing content and memberships were not changed.
 
 Next scientific execution unit: choose a question within the editorial agenda, obtain licensed source data, reproduce a documented result and complete independent review before admitting a report to the reviewed catalogue.
+
+## Resume — 27 September 2026
+The founder resumed branch work after pausing. Added precise bilingual field errors next to save actions, a review-readiness checklist, and synchronous request guards. Refresh locks editing until it settles; repeated saves send one request. Auth transitions clear the previous editor's state, reject a session mismatch before sending content, and ignore late responses from a different account. No role membership or database change in this increment.
+
+Verification: 14 report tests pass (3 catalogue, 4 draft contract, 7 studio component/readiness tests). Studio tests exercise the real React component in JSDOM with mocked auth and an in-memory API: create/edit/reload/preview/review/archive/restore, invalid fields, cancelled and pending refresh, duplicate saves, revision conflicts, and account changes before and after submission. These are local integration tests, not a claim of live authenticated browser persistence. TypeScript, targeted ESLint and diff checks pass. Production build passed before the final auth-response guard; automatic Vercel build will verify the exact published commit. Added JSDOM 26.1.0 as a development-only dependency compatible with the existing Node minimum.
+
+Remaining live check: authenticate through the browser's secure credential flow, then save and reopen a clearly labelled test draft. Do not create an editor account, change a password, widen membership, or bypass authentication for testing.
