@@ -6,6 +6,7 @@ import CapabilityFooter from '@/components/capability/footer';
 import {sectors, tracks, projects, featuredProjects, projectStatus, conceptNotice, conceptCount, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, type Sector, type Track, type Project, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 import {ProjectRail} from './project-rail';
+import {projectFileById, publicProjectUpdates} from '@/lib/projects/project-files';
 
 const icons = {energy:Zap,chips:Cpu,flight:Plane,defense:ShieldCheck,robotics:Bot,health:HeartPulse,agriculture:Wheat,cities:Building2};
 
@@ -58,7 +59,7 @@ function ProjectCard({project,locale}:{project:Project;locale:Locale}) {
       <p className={styles.eyebrow} dir="ltr">{project.id}</p>
       <h3><Link href={projectPath(project.slug,locale)}>{project.title[locale]}</Link></h3>
       <p className={styles.summary}>{project.summary[locale]}</p>
-      <Link className={styles.openLink} href={projectPath(project.slug,locale)}>{locale==='ar'?'استكشف التصور':'Explore the concept'}<ArrowUpRight size={20}/></Link>
+      <Link className={styles.openLink} href={projectPath(project.slug,locale)}>{locale==='ar'?'افتح ملف المشروع':'View project file'}<ArrowUpRight size={20}/></Link>
     </div>
   </article>;
 }
@@ -108,15 +109,55 @@ export function TrackPage({track,locale}:{track:Track;locale:Locale}) {
   const ar=locale==='ar';const sector=sectorBySlug(track.sector)!;const items=projects.filter(p=>p.sector===track.sector&&p.track===track.slug);
   return <Frame locale={locale} path={trackPath(track,'en')}>
     <section className={styles.sectorHero}><Breadcrumb locale={locale} sector={sector}/><p className={styles.eyebrow}>{ar?'الطاقة والمناخ / LNG':'ENERGY & CLIMATE / LNG'}</p><h1>{track.title[locale]}</h1><p>{track.intro[locale]}</p></section>
-    <section className={styles.section}><div className={styles.sectionHeading}><h2>{ar?'التصوّرات المقترحة':'Proposed concepts'}</h2><span className={styles.count}>{String(items.length).padStart(2,'0')}</span></div><ConceptCollection items={items} locale={locale}/></section>
+    <section className={styles.section}><div className={styles.sectionHeading}><h2>{ar?'ملفات المشاريع':'Project files'}</h2><span className={styles.count}>{String(items.length).padStart(2,'0')}</span></div><ConceptCollection items={items} locale={locale}/></section>
     <Contact locale={locale}/>
   </Frame>;
 }
 export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) {
-  const ar=locale==='ar';const sector=sectorBySlug(project.sector)!;const track=tracks.find(t=>t.sector===project.sector&&t.slug===project.track)!;const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
+  const ar=locale==='ar';const sector=sectorBySlug(project.sector)!;
+  const track=tracks.find(t=>t.sector===project.sector&&t.slug===project.track)!;
+  const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
+  const file=projectFileById(project.id);
+  const date=(value:string)=>new Intl.DateTimeFormat(ar?'ar':'en',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T12:00:00Z`));
+  const tabs=ar?[['overview','المشروع'],['scope','مسارات العمل'],['engagement','التعاون والتكليف'],['progress','تطور المشروع']]:[['overview','Project'],['scope','Workstreams'],['engagement','Work with us'],['progress','Project updates']];
   return <Frame locale={locale} path={projectPath(project.slug,'en')}>
-    <section className={styles.detailHero}><Breadcrumb locale={locale} sector={sector} track={track} code={project.id}/><div className={styles.detailHeroGrid}><div><p className={styles.eyebrow} dir="ltr">{project.id}</p><h1>{project.title[locale]}</h1><p className={styles.detailSummary}>{project.summary[locale]}</p><span className={styles.stage}>{projectStatus[project.status][locale]}</span></div><EnergyVisual kind={project.kind} locale={locale}/></div><Notice locale={locale}/></section>
-    <div className={styles.detailLayout}><aside className={styles.projectFacts}><p className={styles.eyebrow}>{ar?'بطاقة التصور':'CONCEPT PROFILE'}</p><dl><div><dt>{ar?'المجال':'SECTOR'}</dt><dd><Link href={sectorPath(sector.slug,locale)}>{sector.title[locale]}</Link></dd></div><div><dt>{ar?'التخصص':'SPECIALTY'}</dt><dd><Link href={trackPath(track,locale)}>{track.title[locale]}</Link></dd></div><div><dt>{ar?'لمن؟':'FOR WHOM?'}</dt><dd>{project.beneficiary[locale]}</dd></div></dl><Link className="vs-button" href={projectInquiry(project,locale)}>{ar?'ناقش التصور':'Discuss the concept'}<ArrowRight size={18}/></Link></aside><div className={styles.detailBody}><p className={styles.eyebrow}>{ar?'القدرة المستهدفة':'THE INTENDED CAPABILITY'}</p><h2>{project.ambition[locale]}</h2><p>{project.idea[locale]}</p><div className={styles.outcomes}>{project.outcomes.map(outcome=><article key={outcome.title.en}><h3>{outcome.title[locale]}</h3><p>{outcome.text[locale]}</p></article>)}</div></div></div>
-    {related.length>0&&<section className={`${styles.section} ${styles.related}`}><div className={styles.sectionHeading}><h2>{ar?'في التخصص نفسه':'In the same specialty'}</h2><Link className={styles.textLink} href={trackPath(track,locale)}>{ar?'كل تصوّرات الغاز المسال':'All LNG concepts'}<ArrowUpRight size={19}/></Link></div>{related.map(p=><Link className={styles.relatedLink} href={projectPath(p.slug,locale)} key={p.id}><span dir="ltr">{p.id}</span><h3>{p.title[locale]}</h3><ArrowUpRight size={26}/></Link>)}</section>}
+    <section className={`${styles.detailHero} ${styles.dossierHero}`}>
+      <Breadcrumb locale={locale} sector={sector} track={track} code={project.id}/>
+      <div className={styles.detailHeroGrid}><div>
+        <div className={styles.projectIdentity}><span dir="ltr">{project.id}</span><span>{projectStatus[project.status][locale]}</span></div>
+        <h1>{project.title[locale]}</h1><p className={styles.detailSummary}>{project.summary[locale]}</p>
+        <div className={styles.heroActions}><Link className="vs-button" href={projectInquiry(project,locale)}>{ar?'ناقش تكليف المشروع':'Discuss a project mandate'}<ArrowUpRight size={18}/></Link><a className={styles.secondaryAction} href="#progress">{ar?'تابع تطور المشروع':'Follow project progress'}<ArrowRight size={17}/></a></div>
+      </div><EnergyVisual kind={project.kind} locale={locale}/></div>
+      {file&&<div className={styles.projectSnapshot}><div><span>{ar?'لمن هذا المشروع؟':'WHO IS IT FOR?'}</span><p>{project.beneficiary[locale]}</p></div><div><span>{ar?'المرحلة الحالية':'CURRENT STAGE'}</span><p>{file.stage[locale]}</p></div><div><span>{ar?'آخر تحديث للملف':'PROFILE UPDATED'}</span><p><time dateTime={file.updatedAt}>{date(file.updatedAt)}</time><small dir="ltr">v{file.version}</small></p></div></div>}
+    </section>
+    <nav className={styles.projectTabs} aria-label={ar?'داخل المشروع':'Within this project'}>{tabs.map(([id,title])=><a key={id} href={`#${id}`}>{title}</a>)}</nav>
+    <section id="overview" className={`${styles.section} ${styles.overviewSection}`}>
+      <div><p className={styles.eyebrow}>{ar?'النتيجة التي نبني من أجلها':'THE OUTCOME WE ARE WORKING TOWARD'}</p><h2>{project.ambition[locale]}</h2><p>{file?.challenge[locale]||project.idea[locale]}</p></div>
+      <aside className={styles.roleCard}><p className={styles.eyebrow}>{ar?'دور VisionSeek':'VISIONSEEK’S ROLE'}</p><p>{file?.role[locale]||project.idea[locale]}</p></aside>
+    </section>
+    {file&&<>
+      <section id="scope" className={`${styles.section} ${styles.workSection}`}>
+        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'نطاق المشروع':'PROJECT SCOPE'}</p><h2>{ar?'ما الذي نطوّره في هذا المشروع؟':'What are we developing?'}</h2></div><span className={styles.scopeLabel}>{ar?'مسارات العمل المطروحة':'Proposed workstreams'}</span></div>
+        <div className={styles.workstreamGrid}>{file.workstreams.map((work,i)=><article key={work.id}><span dir="ltr">0{i+1}</span><h3>{work.title[locale]}</h3><p>{work.body[locale]}</p></article>)}</div>
+      </section>
+      <section id="engagement" className={`${styles.section} ${styles.engagementSection}`}>
+        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'للحكومات والمؤسسات والشركات':'FOR GOVERNMENTS, INSTITUTIONS & COMPANIES'}</p><h2>{ar?'كيف يمكن أن نعمل مع مؤسستك؟':'How can we work with your institution?'}</h2></div></div>
+        <p className={styles.engagementIntro}>{file.engagement[locale]}</p>
+        <h3 className={styles.deliverableHeading}>{ar?'مخرجات يمكن أن يشملها التكليف الأول':'Potential outputs of an initial mandate'}</h3>
+        <div className={styles.deliverables}>{file.deliverables.map((item,i)=><article key={item.title.en}><span>0{i+1}</span><div><h3>{item.title[locale]}</h3><p>{item.body[locale]}</p></div></article>)}</div>
+        <div className={styles.engagementActions}><div><h3>{ar?'لديك احتياج يرتبط بهذا المشروع؟':'Does this project connect to your needs?'}</h3><p>{ar?'نبدأ بمناقشة احتياج مؤسستك، ثم نحدد نطاق التكليف ومخرجاته ومسؤولياته ووقته وتكلفته قبل الاتفاق.':'We begin with your institution’s needs, then define scope, outputs, responsibilities, timing and cost before agreement.'}</p></div><Link className="vs-button" href={projectInquiry(project,locale)}>{ar?'اطلب مناقشة نطاق التعاقد':'Discuss commissioning this work'}<ArrowUpRight size={19}/></Link></div>
+        <div className={styles.partnerPanel}><div><p className={styles.eyebrow}>{ar?'مسار الشركاء':'PARTNER PATH'}</p><h3>{ar?'لديك قدرة يحتاجها المشروع؟':'Can you contribute a capability?'}</h3><ul>{file.partnerNeeds.map(item=><li key={item.en}>{item[locale]}</li>)}</ul></div><Link className={styles.secondaryAction} href={projectInquiry(project,locale,'partner')}>{ar?'ناقش الانضمام كشريك':'Discuss a project partnership'}<ArrowUpRight size={18}/></Link></div>
+      </section>
+      <section id="progress" className={`${styles.section} ${styles.progressSection}`}>
+        <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'تطور المشروع':'PROJECT DEVELOPMENT'}</p><h2>{ar?'أين وصلنا؟ وما الذي يأتي بعد ذلك؟':'Where are we now? What comes next?'}</h2></div></div>
+        <div className={styles.currentStage}><span>{ar?'المرحلة الحالية':'CURRENT STAGE'}</span><h3>{file.stage[locale]}</h3><p>{file.stageNote[locale]}</p></div>
+        <ol className={styles.milestones}>{file.milestones.map(step=><li key={step.id} data-state={step.state}><span className={styles.milestoneState}>{step.state==='current'?(ar?'الحالية':'Current'):step.state==='completed'?(ar?'مكتملة':'Complete'):(ar?'لاحقًا':'Planned')}</span><h3>{step.title[locale]}</h3><p>{step.description[locale]}</p>{step.evidenceUrl&&<a href={step.evidenceUrl}>{ar?'اطّلع على الدليل':'View evidence'}</a>}</li>)}</ol>
+        <div className={styles.updatesHeading}><h3>{ar?'سجل التحديثات':'Project updates'}</h3><span>{ar?'التحديثات المنشورة والأدلة المتاحة':'Published updates and available evidence'}</span></div>
+        <div className={styles.updateList}>{publicProjectUpdates(file).map(update=><article key={update.id} id={update.id}><div><time dateTime={update.date}>{date(update.date)}</time><span>{update.kind==='scope'?(ar?'تحديث نطاق المشروع':'Scope update'):update.kind==='test'?(ar?'اختبار':'Test'):update.kind==='research'?(ar?'بحث':'Research'):update.kind==='partnership'?(ar?'شراكة':'Partnership'):(ar?'تنفيذ':'Delivery')}</span></div><h3>{update.title[locale]}</h3><p>{update.body[locale]}</p>{update.evidenceUrl&&<a href={update.evidenceUrl}>{ar?'اطّلع على المخرج المرتبط':'View the related output'}<ArrowUpRight size={17}/></a>}</article>)}</div>
+        <p className={styles.progressNote}>{ar?'تُضاف نتائج الدراسات والشراكات والاختبارات والتنفيذ هنا عند توفر مخرجات قابلة للنشر. التحديث الحالي يخص تعريف المشروع ونطاقه.':'Studies, partnerships, tests and delivery results will be recorded here when publishable outputs are available. The current update concerns the project definition and scope.'}</p>
+        <Notice locale={locale}/>
+      </section>
+    </>}
+    {related.length>0&&<section className={`${styles.section} ${styles.related}`}><div className={styles.sectionHeading}><h2>{ar?'مشروع مرتبط':'Related project'}</h2><Link className={styles.textLink} href={trackPath(track,locale)}>{ar?'كل مشاريع الغاز المسال':'All LNG projects'}<ArrowUpRight size={19}/></Link></div>{related.map(p=><Link className={styles.relatedLink} href={projectPath(p.slug,locale)} key={p.id}><span dir="ltr">{p.id}</span><h3>{p.title[locale]}</h3><ArrowUpRight size={26}/></Link>)}</section>}
   </Frame>;
 }

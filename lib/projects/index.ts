@@ -58,7 +58,7 @@ export const projects:Project[] = [
 ];
 export const prefix = (locale:Locale) => locale==='ar'?'/ar':'';
 export const projectStatus:Record<Project['status'],Text> = {
-  concept:t('تصوّر مقترح','Proposed concept'),
+  concept:t('قيد التأسيس','In development'),
   active:t('قيد التنفيذ','In progress'),
   completed:t('مكتمل','Completed'),
 };
@@ -68,7 +68,8 @@ export const projectBySlug = (slug:string) => projects.find(item=>item.slug===sl
 export const sectorPath = (slug:string,locale:Locale) => `${prefix(locale)}/projects/${slug}`;
 export const trackPath = (track:Track,locale:Locale) => `${sectorPath(track.sector,locale)}/${track.slug}`;
 export const projectPath = (slug:string,locale:Locale) => {const project=projectBySlug(slug);if(!project)throw new Error(`Unknown project: ${slug}`);return `${sectorPath(project.sector,locale)}/${project.track}/${project.slug}`;};
-export const projectInquiry = (project:Project,locale:Locale) => `${prefix(locale)}/start?${new URLSearchParams({from:'projects',idea:`${project.id} — ${project.title[locale]}`})}`;
+export type ProjectInquiryIntent='commission'|'partner';
+export const projectInquiry = (project:Project,locale:Locale,intent:ProjectInquiryIntent='commission') => `${prefix(locale)}/start?${new URLSearchParams({from:'projects',project:project.id,intent,idea:`${project.id} — ${project.title[locale]}`})}`;
 export const projectRoutes = [
   ...sectors.map(item=>[item.slug]),
   ...tracks.map(item=>[item.sector,item.slug]),
