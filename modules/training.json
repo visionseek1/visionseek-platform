@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "training",
+  "nameAr": "التدريب",
+  "nameEn": "Training",
+  "description": "وحدة تجريبية لاختبار إضافة أقسام جديدة.",
+  "icon": "graduation",
+  "sortOrder": 40,
+  "publicRoutes": [],
+  "adminEntryPoint": null,
+  "owner": "مساحة التدريب — بانتظار التأسيس",
+  "codeRef": "docs/manage-room/MODULE-CONTRACT.md",
+  "docsUrl": null,
+  "readiness": "planned",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": false,
+      "disabledReason": "لا توجد عمليات تشغيلية."
+    }
+  ],
+  "permissions": [
+    "read"
+  ],
+  "agentTools": [],
+  "editorAvailable": false,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [],
+  "workflowEnabled": false
+}

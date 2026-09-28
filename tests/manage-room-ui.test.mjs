@@ -65,6 +65,7 @@ const Room = compile("../components/manage/room.tsx", {
   "next/image": block("img"),
   "@/lib/manage/contracts": contract,
   "./use-room": hook,
+  "./integrations": { __esModule: true, default: () => null },
   "./room.module.css": {
     __esModule: true,
     default: new Proxy({}, { get: (_, k) => String(k) }),

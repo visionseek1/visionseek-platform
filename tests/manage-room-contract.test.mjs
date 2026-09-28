@@ -4,9 +4,9 @@ import { contractsUrl, registryUrl } from "./manage-imports.mjs";
 const { commandSchema, manifestSchema } = await import(contractsUrl),
   { modules, validateRegistry } = await import(registryUrl);
 test("module expansion, duplicate IDs and unsafe routes", () => {
-  assert.equal(modules.length, 4);
+  assert.ok(modules.some(m => m.moduleId === "projects"));
   const next = { ...modules[3], moduleId: "new-unit" };
-  assert.equal(validateRegistry([...modules, next]).length, 5);
+  assert.equal(validateRegistry([...modules, next]).length, modules.length + 1);
   assert.throws(
     () => validateRegistry([...modules, modules[0]]),
     /DUPLICATE_MODULE/,

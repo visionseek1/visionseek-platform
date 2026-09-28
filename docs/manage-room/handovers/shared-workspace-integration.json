@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "shared-workspace-integration",
+  "moduleIds": ["management", "projects", "website", "leaders", "reports", "programs", "training", "opportunities", "workshops", "collaboration"],
+  "workspace": "مساحة غرفة الإدارة",
+  "summary": "ربط الوحدات والتسليمات بمصدر مشترك، ورصد طلبات التغيير وآخر تحديثات main تلقائيًا داخل الغرفة.",
+  "changedPaths": ["app/manage/", "app/api/manage/", "components/manage/", "lib/manage/", "db/visionseek-manage.sql", "modules/"],
+  "acceptance": ["كل وحدة تُكتشف من ملف تسجيلها دون تعديل قائمة في الغرفة.", "تظهر طلبات التغيير الحالية وتحديثات main بحالتها الفعلية.", "قراءة التكامل متاحة للمؤسس بعد التحقق من حسابه وصلاحيته الحالية.", "طلب تغيير الكود أو دمجه لا يعني نشره أو اعتماده تشغيليًا."],
+  "evidence": ["https://github.com/visionseek1/visionseek-platform/pull/41", "https://github.com/visionseek1/visionseek-platform/blob/main/docs/projects/MANAGEMENT_ROOM_INTEGRATION.md"],
+  "dependencies": ["GitHub العام للمشروع", "حساب Supabase الحالي", "التزام مساحات العمل بعقد التسليم المشترك"],
+  "remaining": ["مراجعة الواجهة بحساب المؤسس عبر حماية Vercel.", "محرر تحديثات المشروعات يحتاج تسليمًا مستقلًا وفق عقده.", "محتوى محادثات GPT لا ينتقل تلقائيًا؛ تُودع المخرجات في المستودع أو في مهمة بالغرفة."]
+}

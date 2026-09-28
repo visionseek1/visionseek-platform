@@ -34,6 +34,7 @@ import {
   type Deliverable,
 } from "@/lib/manage/contracts";
 import { useRoom } from "./use-room";
+import Integrations from "./integrations";
 import styles from "./room.module.css";
 export type View =
   | "overview"
@@ -41,10 +42,12 @@ export type View =
   | "tasks"
   | "approvals"
   | "activity"
-  | "agents";
+  | "agents"
+  | "integrations";
 const nav = [
   { id: "overview", name: "نظرة عامة", icon: LayoutGrid },
   { id: "modules", name: "الوحدات", icon: Compass },
+  { id: "integrations", name: "تكامل مساحات العمل", icon: Workflow },
   { id: "tasks", name: "المهام والتسليمات", icon: ListTodo },
   { id: "approvals", name: "الاعتمادات", icon: CheckCheck },
   { id: "activity", name: "سجل النشاط", icon: Workflow },
@@ -176,7 +179,7 @@ function RoomView({
       setUnit(
         data?.modules.find(
           (m) =>
-            !["planned", "paused"].includes(m.readiness) &&
+            m.workflowEnabled && !["planned", "paused"].includes(m.readiness) &&
             can(m.moduleId, "createTask"),
         )?.moduleId || "",
       );
@@ -270,6 +273,11 @@ function RoomView({
                 ? "اجتاز"
                 : "لم يجتز"}
           </small>
+        </div>
+        <div className={styles.moduleLinks}>
+          {m.publicRoutes[0] && <Link href={m.publicRoutes[0]}>عرض الوحدة ↗</Link>}
+          {m.docsUrl && <a href={m.docsUrl} target="_blank" rel="noopener noreferrer">مرجع التكامل ↗</a>}
+          {!m.workflowEnabled && <small>التكليفات داخل الغرفة لم تُفعّل لهذه الوحدة بعد.</small>}
         </div>
       </article>
     );
@@ -464,7 +472,7 @@ function RoomView({
         </Link>
         <p className={styles.navLabel}>مساحة العمل</p>
         <nav aria-label="أقسام غرفة الإدارة">
-          {nav.map((n) => (
+          {nav.filter(n => n.id !== "integrations" || data.principal.kind === "founder").map((n) => (
             <Link
               key={n.id}
               href={n.id === "overview" ? "/manage" : `/manage/${n.id}`}
@@ -541,6 +549,8 @@ function RoomView({
                   ? "راجع التسليمات، حرّك العمل، وافتح الوحدة التي تحتاجك."
                   : view === "approvals"
                     ? "راجع المخرج والأدلة قبل اعتماد هذه النسخة."
+                    : view === "integrations"
+                      ? "الشغل الجاري والتسليمات القادمة من مساحات VisionSeek."
                     : view === "modules"
                       ? "لكل وحدة محررها وبياناتها. الغرفة تجمع متابعة العمل."
                       : view === "agents"
@@ -553,7 +563,7 @@ function RoomView({
             {["overview", "tasks"].includes(view) &&
               data.modules.some(
                 (m) =>
-                  !["planned", "paused"].includes(m.readiness) &&
+                  m.workflowEnabled && !["planned", "paused"].includes(m.readiness) &&
                   can(m.moduleId, "createTask"),
               ) && (
                 <button
@@ -632,6 +642,9 @@ function RoomView({
               </section>
             </>
           )}
+          {view === "integrations" && (data.principal.kind === "founder" && session
+            ? <Integrations key={session.user.id} session={session} />
+            : <p className={styles.note}>متابعة التكامل المؤسسي متاحة للمؤسس.</p>)}
           {view === "tasks" && (
             <>
               <div className={styles.filters}>
@@ -832,7 +845,7 @@ function RoomView({
                     {data.modules
                       .filter(
                         (m) =>
-                          !["planned", "paused"].includes(m.readiness) &&
+                          m.workflowEnabled && !["planned", "paused"].includes(m.readiness) &&
                           can(
                             m.moduleId,
                             modal.type === "edit" ? "editTask" : "createTask",

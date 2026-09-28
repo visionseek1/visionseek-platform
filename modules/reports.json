@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "reports",
+  "nameAr": "التقارير",
+  "nameEn": "Reports",
+  "description": "الأبحاث والتقارير ومراجعة الأدلة.",
+  "icon": "chart",
+  "sortOrder": 20,
+  "publicRoutes": [
+    "/ar/reports",
+    "/reports"
+  ],
+  "adminEntryPoint": "/ar/reports/studio",
+  "owner": "مساحة التقارير",
+  "codeRef": "main @ 8feafd696046dece5fa7da3a69572efb4a3a8c81",
+  "docsUrl": null,
+  "readiness": "review",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "createDraft",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "editDraft",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "archive",
+      "enabled": true,
+      "disabledReason": null
+    }
+  ],
+  "permissions": [
+    "read",
+    "createDraft",
+    "editDraft",
+    "review",
+    "publish",
+    "archive"
+  ],
+  "agentTools": [],
+  "editorAvailable": true,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [
+    "صلاحيات محرر التقارير مستقلة عن الغرفة"
+  ],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [
+    "كود المحرر مدمج؛ الحفظ الحي عبر الغرفة غير متحقق."
+  ],
+  "workflowEnabled": true
+}

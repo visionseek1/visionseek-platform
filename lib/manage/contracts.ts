@@ -75,6 +75,7 @@ export const manifestSchema = z
     ),
     agentTools: z.array(z.never()),
     editorAvailable: z.boolean(),
+    workflowEnabled: z.boolean().default(false),
     healthEvidence: z.object({
       check: z.string(),
       checkedAt: z.string().datetime().nullable(),

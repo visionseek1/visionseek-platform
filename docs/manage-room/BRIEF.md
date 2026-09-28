@@ -16,5 +16,13 @@ not invented deadlines.
 
 Preserve /room and existing unit-owned editors and records. Reports was merged into main
 8feafd6 during publication; this branch integrates that main revision without changing its
-unit-owned files. The room links to its existing studio. Program branch remains dcaa5eb. No MCP, agent credentials, automatic
-execution/publishing, DNS/secrets changes, production database writes or live grants.
+unit-owned files. The room links to its existing studio. Program branch remains dcaa5eb.
+Subsequently, the user authorized installation in the existing Supabase project and founder
+account provisioning; see DATABASE-PLAN.md. MCP, agent execution, automatic publication and
+DNS/secrets changes remain outside this implementation.
+
+Integration extension, 28 September 2026: the founder requires future workspace outputs to
+join the room. WORKSPACE-INTEGRATION.md defines the operating brief, owners, sources and
+measurable acceptance. Current main ed7cb36 is integrated into this branch, preserving the
+new project files and positioning work from other workspaces. New unit discovery, handover
+coverage checks and a live repository activity view provide the shared delivery path.

@@ -6,6 +6,11 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "manage:registry": "node scripts/generate-manage-registry.mjs",
+    "manage:check": "node scripts/generate-manage-registry.mjs --check",
+    "manage:handover": "node scripts/check-manage-registration.mjs",
+    "predev": "npm run manage:registry",
+    "prebuild": "npm run manage:registry",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

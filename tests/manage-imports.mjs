@@ -20,11 +20,14 @@ export const contractsUrl = await compile("../lib/manage/contracts.ts", {
 });
 export const registryUrl = await compile("../lib/manage/registry.ts", {
   "./contracts": contractsUrl,
+  "./integration-contract": await compile("../lib/manage/integration-contract.ts", { zod: import.meta.resolve("zod") }),
+  "./catalog.generated": await compile("../lib/manage/catalog.generated.ts"),
 });
-const serverUrl = await compile("../lib/manage/server.ts", {
+export const serverUrl = await compile("../lib/manage/server.ts", {
   "@supabase/supabase-js": import.meta.resolve("@supabase/supabase-js"),
   zod: import.meta.resolve("zod"),
 });
+export { compile };
 export const apiUrl = await compile("../app/api/manage/route.ts", {
   "@/lib/manage/contracts": contractsUrl,
   "@/lib/manage/registry": registryUrl,

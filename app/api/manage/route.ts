@@ -48,6 +48,7 @@ export async function POST(request: Request) {
       !modules.some(
         (m) =>
           m.moduleId === command.moduleId &&
+          m.workflowEnabled &&
           !["planned", "paused"].includes(m.readiness),
       )
     )

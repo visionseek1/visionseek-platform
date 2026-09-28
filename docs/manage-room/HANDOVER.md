@@ -44,3 +44,11 @@ existing site login; it matched one confirmed active auth record. One enabled fo
 is now linked to that account. Founder snapshot/command authorization passed SQL checks; direct
 table access remains denied. No task or test audit data was retained. Hosted browser verification
 still requires the user's normal Vercel and site sign-in. The PR is still a draft.
+
+Shared workspace extension: see WORKSPACE-INTEGRATION.md and root AGENTS.md. The module
+sources are now modules/*.json, discovered by npm run manage:registry. Ten existing/planned
+units are registered; registration alone does not activate their room tasks. /manage/integrations
+and its founder-only read API show live repository PR/main activity and the versioned handover
+ledger. The Room registration CI check requires updated handovers for changed application code.
+This integrates current main ed7cb36, including the other workspace's project files and HLO
+positioning; no unit-owned source was rewritten. Chat/Notion text is not automatically synced.

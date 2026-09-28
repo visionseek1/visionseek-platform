@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ManageRoom, { type View } from "@/components/manage/room";
-const views = ["modules", "tasks", "approvals", "activity", "agents"];
+const views = ["modules", "tasks", "approvals", "activity", "agents", "integrations"];
 export const dynamicParams = false;
 export function generateStaticParams() {
   return views.map((view) => ({ view }));

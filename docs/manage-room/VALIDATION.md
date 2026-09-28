@@ -127,3 +127,26 @@ tasks, activity and request records. Auth account count and editor-membership ch
 the pre-provisioning baseline. The founder uses the existing role-based room scope; unit-editor
 membership was not changed. These checks validate SQL authorization, not a hosted JWT or browser
 login. Authenticated browser/mobile flows remain pending normal Vercel/site sign-in.
+
+## Shared workspace integration — 28 September 2026
+
+Integrated main ed7cb367779b30d8fe17d92bf8020786b6176605 into the room branch. Other workspaces'
+project dossiers, positioning/HLO pages and Leaders presentation changes remain intact.
+
+- 91 local tests passed, zero failed. New tests exercise automatic manifest discovery,
+  stale generated catalogs, missing handover coverage, source-state parsing, safe links,
+  partial failure/stale expiry, concurrent cache reads, malformed/oversized responses,
+  live founder revocation, plain-text title rendering and retired-account responses.
+- Full lint and production build passed with isolated loopback Supabase placeholders;
+  the build output contains /manage/integrations. No credential used for local checks.
+- The actual GitHub reader succeeded against all three fixed public endpoints at 10:39 UTC:
+  15 open PRs (complete page), 20 closed PRs and 20 main commits (both explicitly limited).
+  An initial 8-second timeout was too short in the tool environment; the bounded request
+  timeout is now 15 seconds. Failure/stale states were verified rather than hidden.
+- No live database/auth/grant or infrastructure changes in this extension. UI discovery
+  leaves new modules workflowEnabled=false. Existing enabled module workflows are preserved.
+- GitHub metadata discovery is automatic for deposited PR/main work, not for unseen GPT
+  chats/local branches. CI coverage applies across the repository after this branch merges;
+  branch-protection settings were not changed. Code merge never becomes a publication claim.
+- JSDOM UI checks do not establish visual/mobile layout or hosted authentication. Existing
+  Vercel access protection remains; real authenticated browser review is still outstanding.
