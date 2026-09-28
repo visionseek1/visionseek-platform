@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import type { Locale } from '@/components/capability/content';
 import { CapabilityHeader } from '@/components/capability/navigation';
@@ -14,8 +15,8 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
     <div className={styles.homeIntro}>
       <p className={styles.eyebrow}>{ar?'VISIONSEEK / هندسة الفرص':'VISIONSEEK / ENGINEERING OPPORTUNITIES'}</p>
       <h2 id="visionseek-explained">{ar?'نصل مؤسستك بما وصل إليه العالم.':'Connect your institution to what the world has made possible.'}</h2>
-      <p>{ar?'VisionSeek استوديو للفرص والمشروعات. نكتشف ما يمكن أن يغيّر واقع مؤسستك، ونجمع التقنية والمعرفة والأشخاص والشركاء لتحويله إلى حل قابل للتنفيذ.':'VisionSeek is an opportunity and project studio. We discover what could change your institution’s future, then bring together technology, knowledge, people and partners to shape an executable solution.'}</p>
-      <Link className={styles.textLink} href={`${base}${positioningPath}`}>{ar?'كيف تعمل VisionSeek؟':'How does VisionSeek work?'}<ArrowRight size={21}/></Link>
+      <p>{ar?'نبني VisionSeek لتمكين المؤسسات العربية من المنافسة عالميًا. نكتشف الفرص التي يمكن أن تغيّر موقع مؤسستك، ونجمع التقنية والمعرفة والأشخاص والشركاء لتحويلها إلى حلول قابلة للتنفيذ.':'We are building VisionSeek to help Arab institutions compete globally. We discover opportunities that could change your institution’s position, then assemble technology, knowledge, people and partners into executable solutions.'}</p>
+      <Link className={styles.textLink} href={`${base}${positioningPath}`}>{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={21}/></Link>
     </div>
     <div className={styles.homeHlo}>
       <div className={styles.hloWord} aria-hidden="true">HLO<span>↗</span></div>
@@ -28,23 +29,23 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
 }
 
 const models=[
-  {name:'BCG X',ar:'بناء المنتجات والخدمات والأعمال',en:'Building products, services and businesses',bodyAr:'يجمع نموذجها التقنية والتصميم وريادة الأعمال لتحويل الفرص إلى منتجات وخدمات وأعمال جديدة.',bodyEn:'Combines technology, design and entrepreneurship to turn opportunities into new products, services and businesses.',url:'https://www.bcg.com/x/'},
-  {name:'Leap by McKinsey',ar:'تأسيس أعمال جديدة وتوسيعها',en:'Creating and scaling new businesses',bodyAr:'يعمل مع المؤسسات القائمة على تصور أعمال جديدة وبنائها وإطلاقها وتوسيعها، وتكوين الفريق الذي يحملها.',bodyEn:'Works with established organizations to imagine, build, launch and scale new businesses, including the teams that sustain them.',url:'https://www.mckinsey.com/about-us/new-at-mckinsey-blog/why-every-day-is-leap-day-at-mckinsey'},
-  {name:'Palantir',ar:'ربط البيانات بالقرار والتشغيل',en:'Connecting data, decisions and operations',bodyAr:'تربط منصتها البيانات والمنطق والإجراءات، لتدعم قرارات المؤسسة وتطبيق الذكاء الاصطناعي داخل عملياتها.',bodyEn:'Connects data, logic and actions to support institutional decisions and apply AI within real operations.',url:'https://www.palantir.com/docs/foundry/platform-overview'},
+  {name:'BCG X',logo:'/positioning/bcg-x.svg',logoAlt:'BCG X',ar:'بناء المنتجات والخدمات والأعمال',en:'Building products, services and businesses',bodyAr:'يجمع نموذجها التقنية والتصميم وريادة الأعمال لتحويل الفرص إلى منتجات وخدمات وأعمال جديدة.',bodyEn:'Combines technology, design and entrepreneurship to turn opportunities into new products, services and businesses.',url:'https://www.bcg.com/x/'},
+  {name:'Leap by McKinsey',logo:'/positioning/mckinsey.png',logoAlt:'McKinsey & Company',ar:'تأسيس أعمال جديدة وتوسيعها',en:'Creating and scaling new businesses',bodyAr:'يعمل مع المؤسسات القائمة على تصور أعمال جديدة وبنائها وإطلاقها وتوسيعها، وتكوين الفريق الذي يحملها.',bodyEn:'Works with established organizations to imagine, build, launch and scale new businesses, including the teams that sustain them.',url:'https://www.mckinsey.com/about-us/new-at-mckinsey-blog/why-every-day-is-leap-day-at-mckinsey'},
+  {name:'Palantir',logo:'/positioning/palantir.svg',logoAlt:'Palantir',ar:'ربط البيانات بالقرار والتشغيل',en:'Connecting data, decisions and operations',bodyAr:'تربط منصتها البيانات والمنطق والإجراءات، لتدعم قرارات المؤسسة وتطبيق الذكاء الاصطناعي داخل عملياتها.',bodyEn:'Connects data, logic and actions to support institutional decisions and apply AI within real operations.',url:'https://www.palantir.com/docs/foundry/platform-overview'},
 ];
 
 export default function PositioningPage({locale}:{locale:Locale}) {
   const ar=locale==='ar';const base=ar?'/ar':'';
   const principles=ar?[
-    ['نبدأ من الفرصة','نفهم ما يحدث داخل المؤسسة وحولها، ونبحث عن فرص قد لا تظهر من داخل تخصص واحد.'],
-    ['نبني على أفضل المتاح','نختار ما يخدم النتيجة من تقنيات وخبرات وشراكات، ونبني الأجزاء الناقصة عند الحاجة.'],
-    ['نجمع العناصر حول نتيجة','نربط التقنية بالسوق والبيانات والأشخاص ومن سيتولى التشغيل. قيمة الحل في قدرة هذه العناصر على العمل معًا.'],
-    ['نتقدم بالدليل','نختبر الفرضيات في سياق المؤسسة، ثم نحدد ما يستحق التنفيذ والتوسع.'],
+    ['طموح مؤسستك أولًا','نبحث معك عمّا يمكن أن ينقل المؤسسة إلى موقع أقوى. يكشف HLO الفرص التي لم تدخل حساباتها بعد، ثم يحدد ما يستحق التجربة والاستثمار.'],
+    ['العالم مصدر حلولك','نجمع ما يناسبك من تقنيات وخبرات ومعرفة مفتوحة وترخيص وشراكات. نبني على التقدم الذي تحقق حول العالم، ونطوّر ما ينقص الحل.'],
+    ['نبني بعقلية عصر الذكاء الاصطناعي','نصمم طريقة عملنا لتجمع حكم الخبراء بقدرة النماذج والوكلاء على البحث والتحليل والبناء. نختبر بسرعة، ونراجع النتائج، ونطوّر المسار مع كل دليل جديد.'],
+    ['المنافسة العربية هي الرسالة','نريد للمؤسسات العربية أن تمتلك المعرفة والقدرة على تطوير حلولها واتخاذ قراراتها. هذا الطموح يوجّه ما نختاره من فرص، وما نريد أن يبقى داخل المؤسسة بعد كل مشروع.'],
   ]:[
-    ['Start with the opportunity','Understand what is happening inside and around the institution, and look for opportunities that a single discipline may overlook.'],
-    ['Build on the best available','Choose technology, expertise and partnerships that serve the outcome. Build the missing pieces where needed.'],
-    ['Assemble around an outcome','Connect technology to markets, data, people and those who will operate it. Value comes from making these elements work together.'],
-    ['Advance with evidence','Test assumptions in the institution’s context, then decide what merits delivery and expansion.'],
+    ['Your institution’s ambition comes first','Explore what could move your institution into a stronger position. HLO reveals opportunities it has yet to consider, then identifies what merits testing and investment.'],
+    ['Draw on what the world has built','Assemble the right technology, expertise, open knowledge, licenses and partnerships. Build on global progress and develop the pieces your solution still needs.'],
+    ['Build for the age of AI','We are designing our way of working around expert judgment and the research, analysis and building capabilities of models and agents. Test quickly, review results and adapt as evidence develops.'],
+    ['Arab competitiveness is the mission','We want Arab institutions to own the knowledge and capability to develop their solutions and make their decisions. This ambition guides the opportunities we choose and what each project should leave within the institution.'],
   ];
   return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar?'rtl':'ltr'}>
     <CapabilityHeader locale={locale} path={positioningPath}/>
@@ -54,7 +55,7 @@ export default function PositioningPage({locale}:{locale:Locale}) {
         <p className={styles.eyebrow}>{ar?'استوديو للفرص والمشروعات':'AN OPPORTUNITY AND PROJECT STUDIO'}</p>
         <h1>{ar?'ابدأ من حيث وصل العالم.':'Build on the world’s progress.'}</h1>
         <p className={styles.heroLead}>{ar?'هناك تقنيات ومعرفة وفرص يمكن أن تغيّر ما تستطيع مؤسستك فعله. دور VisionSeek أن تكشف ما يناسبك منها، وتجمع عناصره، وتصنع معه مسارًا للتطبيق.':'Technology, knowledge and opportunities can change what your institution is able to do. VisionSeek discovers what fits your needs, connects the right elements and shapes a path to application.'}</p>
-        <div className={styles.heroActions}><a className={styles.primary} href="#hlo">{ar?'كيف يساعدك HLO؟':'How can HLO help?'}<ArrowRight size={20}/></a><a className={styles.textLink} href="#position">{ar?'موقعنا في هذا المجال':'Our place in this field'}<ArrowRight size={19}/></a></div>
+        <div className={styles.heroActions}><a className={styles.primary} href="#hlo">{ar?'كيف يساعدك HLO؟':'How can HLO help?'}<ArrowRight size={20}/></a><a className={styles.textLink} href="#position">{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={19}/></a></div>
         <div className={styles.connection} aria-label={ar?'نربط ما لدى العالم باحتياج مؤسستك من خلال هندسة الفرص':'Engineering Opportunities connects global capabilities with your institution’s needs'}>
           <div><span className={styles.smallLabel}>{ar?'ما لدى العالم':'WHAT THE WORLD OFFERS'}</span><p>{ar?'معرفة · تقنيات · خبرات · أسواق':'Knowledge · Technology · Expertise · Markets'}</p></div>
           <div className={styles.connector}><span>VisionSeek</span><strong>{ar?'هندسة الفرص':'Engineering Opportunities'}</strong></div>
@@ -62,16 +63,42 @@ export default function PositioningPage({locale}:{locale:Locale}) {
         </div>
       </section>
 
+      <section className={styles.global} id="position">
+        <div className={styles.sectionHead}><p className={styles.eyebrow}>{ar?'VISIONSEEK في المشهد العالمي':'VISIONSEEK IN THE GLOBAL LANDSCAPE'}</p><h2>{ar?'طموحنا عالمي. ورسالتنا تبدأ من العالم العربي.':'Global ambition. A mission rooted in the Arab world.'}</h2><p>{ar?'بناء الأعمال الجديدة وربط التقنية بالقرار مجال تصنع فيه مؤسسات عالمية أثرًا واسعًا. نبني VisionSeek داخل هذا المجال برسالة واضحة: أن تصل مؤسساتنا إلى ما يتيح لها المنافسة، وأن تحوّله إلى حلول تملك القدرة على تطويرها.':'Building new businesses and connecting technology to decisions is a field shaped by major global institutions. We are building VisionSeek in this field with a clear mission: help our institutions access what they need to compete, and turn it into solutions they can develop further.'}</p></div>
+        <div className={styles.modelGrid}>
+          <article className={styles.visionseekModel}>
+            <div className={styles.brandAsset}><Image src="/visionseek-logo-color.png" width={210} height={70} alt="VisionSeek" sizes="210px"/></div>
+            <p className={styles.modelName} dir="ltr">VisionSeek</p>
+            <h3>{ar?'هندسة الفرص للمؤسسات العربية':'Engineering opportunities for Arab institutions'}</h3>
+            <p>{ar?'نربط طموح المؤسسة بما وصل إليه العالم. نكشف الفرصة عبر HLO، ثم نجمع المعرفة والتقنية والأشخاص والشركاء حول حل يناسبها.':'Connect institutional ambition with global progress. Discover the opportunity through HLO, then assemble knowledge, technology, people and partners around a fitting solution.'}</p>
+            <a href="#our-role">{ar?'لماذا تختارنا؟':'Why choose us?'}<ArrowRight size={17}/></a>
+          </article>
+          {models.map(model=><article key={model.name}>
+            <div className={styles.brandAsset}><Image src={model.logo} width={180} height={60} alt={model.logoAlt} sizes="180px" className={model.name==='Leap by McKinsey'?styles.mckinseyLogo:undefined}/></div>
+            <p className={styles.modelName} dir="ltr">{model.name}</p><h3>{ar?model.ar:model.en}</h3><p>{ar?model.bodyAr:model.bodyEn}</p><a href={model.url} target="_blank" rel="noreferrer">{ar?'المصدر الرسمي':'Official source'}<ArrowUpRight size={17}/></a>
+          </article>)}
+        </div>
+        <p className={styles.referenceNote}>{ar?'نماذج عمل في مجال مشترك؛ لكل مؤسسة نطاقها وخبرتها. الشعارات للتعريف بالمؤسسات المذكورة، ولا تشير إلى شراكة أو تأييد.':'Operating models in a shared field, each with its own scope and experience. Logos identify the organizations discussed and do not indicate partnership or endorsement.'}</p>
+      </section>
+
       <section className={styles.principles} id="our-role">
-        <div className={styles.sectionHead}><p className={styles.eyebrow}>{ar?'دورنا':'OUR ROLE'}</p><h2>{ar?'نكتشف الفرصة. ونبني لها طريقًا إلى الواقع.':'Discover the opportunity. Build its path into reality.'}</h2><p>{ar?'ندخل المساحات التي لم تتضح فيها الفرصة بعد. نفهم التقنية والسوق والمؤسسة، ثم نحدد الشكل المناسب: حل تشغيلي، منتج، شراكة، مشروع أو عمل جديد.':'We work where the opportunity is not yet clear. Understand the technology, market and institution, then determine the right form: an operating solution, product, partnership, project or new business.'}</p></div>
+        <div className={styles.sectionHead}><p className={styles.eyebrow}>{ar?'اختيارات تشكّل هويتنا':'THE CHOICES THAT DEFINE US'}</p><h2>{ar?'لماذا تختار VisionSeek؟':'Why choose VisionSeek?'}</h2><p>{ar?'لأن ما نبنيه يبدأ بسؤال يخص مستقبلك: ما الذي يمكن أن تمتلكه مؤسستك اليوم ليغيّر موقعها غدًا؟ هذه هي الاختيارات التي نبني عليها إجابتنا.':'Because our work begins with a question about your future: what could your institution gain today that changes where it stands tomorrow? These choices shape our answer.'}</p></div>
         <div className={styles.principleGrid}>{principles.map(([title,body],i)=><article key={title}><span className={styles.index}>0{i+1}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
       </section>
 
-      <section className={styles.global} id="position">
-        <div className={styles.sectionHead}><p className={styles.eyebrow}>{ar?'نماذج عالمية لفهم نوع العمل':'GLOBAL MODELS THAT HELP EXPLAIN THE WORK'}</p><h2>{ar?'بين الاستراتيجية والبناء والتشغيل.':'Across strategy, building and operations.'}</h2><p>{ar?'تعمل مؤسسات عالمية عند نقاط مختلفة من هذه الرحلة. هذه أمثلة توضّح المجال الذي نبني فيه VisionSeek.':'Global organizations work at different points along this journey. These examples help explain the field in which we are building VisionSeek.'}</p></div>
-        <div className={styles.modelGrid}>{models.map(model=><article key={model.name}><p className={styles.modelName} dir="ltr">{model.name}</p><h3>{ar?model.ar:model.en}</h3><p>{ar?model.bodyAr:model.bodyEn}</p><a href={model.url} target="_blank" rel="noreferrer">{ar?'عن النموذج — المصدر الرسمي':'About the model — official source'}<ArrowUpRight size={17}/></a></article>)}</div>
-        <div className={styles.ourPosition}><div><p className={styles.eyebrow}>VISIONSEEK</p><h3>{ar?'هندسة الفرص':'Engineering Opportunities'}</h3></div><p>{ar?'نضع اكتشاف الفرصة في بداية العمل، ثم نربط ما تملكه المؤسسة بما يمكن الوصول إليه في العالم. من هنا نحدد ما يستحق الاختبار، وما يجب تجميعه أو بناؤه، وكيف تنتقل النتيجة إلى الاستخدام. HLO هو برنامجنا لتطبيق هذا المنهج مع المؤسسة.':'We place opportunity discovery at the start, connecting an institution’s existing assets to what it can access globally. From there, we identify what deserves testing, what needs assembling or building, and how the outcome could enter use. HLO is our program for applying this approach with an institution.'}</p></div>
-        <p className={styles.referenceNote}>{ar?'هذه مقارنة في نماذج العمل، وليست ترتيبًا للحجم أو النتائج. الأسماء المذكورة مراجع مستقلة ولا تعني وجود شراكة.':'This is a comparison of operating models, not a ranking of scale or results. The named organizations are independent references, not stated partners.'}</p>
+      <section className={styles.founder} id="founder">
+        <figure className={styles.founderPortrait}>
+          <Image src="/ahmed-abdelalim.jpg" width={923} height={892} alt={ar?'د. أحمد عبدالعليم، مؤسس VisionSeek':'Dr. Ahmed Abdelalim, founder of VisionSeek'} sizes="(max-width: 760px) 90vw, 40vw"/>
+          <figcaption><strong>{ar?'د. أحمد عبدالعليم':'Dr. Ahmed Abdelalim'}</strong><span>{ar?'مؤسس VisionSeek · كوريا الجنوبية':'Founder of VisionSeek · South Korea'}</span></figcaption>
+        </figure>
+        <div className={styles.founderStory}>
+          <p className={styles.eyebrow}>{ar?'الفكرة التي تقود المؤسسة':'THE CONVICTION BEHIND VISIONSEEK'}</p>
+          <h2>{ar?'من كوريا الجنوبية، برسالة إلى العالم العربي.':'From South Korea, with a mission for the Arab world.'}</h2>
+          <p className={styles.founderMission}>{ar?'أن تمتلك مؤسساتنا القدرة على البناء والمنافسة إلى جانب عمالقة التكنولوجيا والذكاء الاصطناعي.':'For our institutions to build and compete alongside the world’s technology and AI leaders.'}</p>
+          <p>{ar?'يقيم د. أحمد عبدالعليم في كوريا الجنوبية، ويحمل إلى VisionSeek قناعة بأن العالم العربي يستحق أن يصنع موقعه في مقدمة هذا التحول. رسالته هي تمكين مؤسساته من المعرفة والتقنيات والفرص التي تساعدها على المنافسة من موقع الندّية.':'Based in South Korea, Dr. Ahmed Abdelalim brings to VisionSeek the conviction that the Arab world should help lead this transformation. His mission is to enable its institutions to access the knowledge, technology and opportunities needed to compete on equal footing.'}</p>
+          <div className={styles.founderBelief}><h3>{ar?'هذه لحظة تستحق أن نتحرك.':'This is a moment to act.'}</h3><p>{ar?'يؤمن د. أحمد بأن الذكاء الاصطناعي فتح بابًا واسعًا أمام من يملك الرؤية والجرأة على البناء. يرى فيه فرصة لتقليص المسافة مع الكبار، بالوصول إلى المعرفة وتسريع التجربة وجمع قدرات كانت متفرقة. ومن هذه القناعة يأتي HLO: أن ترى المؤسسة الفرصة، وتختبرها، وتبدأ في بناء موقع جديد لها.':'Dr. Ahmed believes AI has opened a major opportunity for those with the vision and courage to build. He sees a chance to close the gap with established leaders through access to knowledge, faster experimentation and the assembly of previously disconnected capabilities. HLO brings this conviction into an institutional process: see the opportunity, test it and begin building a stronger position.'}</p></div>
+          <a className={styles.textLink} href="#hlo">{ar?'من هذه الرؤية إلى برنامج HLO':'From this vision to HLO'}<ArrowRight size={20}/></a>
+        </div>
       </section>
 
       <section className={styles.hlo} id="hlo">

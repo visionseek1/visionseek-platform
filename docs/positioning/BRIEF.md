@@ -33,6 +33,22 @@ The HLO drafts disagree on durations (6–8 weeks versus 10–22), number of gat
 
 No verified HLO client or completed pilot was provided. Describe program design and how to discuss an initial mandate. Do not invent outcomes, partners, program availability, comparative superiority or an entitlement to another institution's technology. Benefit from the world's research through available technology, open knowledge, licensing and partnerships with appropriate access. Do not publish numerical savings or repeat investment/headcount statistics without a specific need.
 
+## Founder revision — 2026-09-28
+
+Place VisionSeek alongside the three named models, with each institution's authentic visual identity. Explain VisionSeek's own choices and why a client would choose it, rather than merely describing the other organizations. Emphasize an Arab-world mission with a global horizon, opportunity discovery through HLO, combining the best accessible capabilities, and AI as part of how the institution is being built.
+
+Founder-supplied biographical facts: Dr. Ahmed Abdelalim is based in South Korea; his mission is to help the Arab world compete on equal footing with global technology and AI leaders. His belief is that AI has opened a major opportunity for new entrants. Present this as a founding conviction and ambition, not proof of equal access, resources, guaranteed outcomes, or present-day scale parity. Do not fabricate a direct quotation or Korean institutional partnerships.
+
+The founder supplied a portrait (IMG_0001(1).jpg) and the black/lime VisionSeek mark. Use the portrait unchanged and the matching existing clean brand asset. Competitor logos identify the referenced organizations in an editorial comparison; they do not imply affiliation. Preserve primary-source links and record logo provenance. Update both Arabic and English. These revisions remain in preview for editorial review.
+
+## Visual sources — checked 2026-09-28
+
+- `public/ahmed-abdelalim.jpg`: byte-identical to the founder's newly supplied `IMG_0001(1).jpg`; reused unchanged. Identity and South Korea residence are founder-provided facts.
+- `public/visionseek-logo-color.png`: existing clean black/lime lockup matching the supplied symbol. No recoloring.
+- `public/positioning/bcg-x.svg`: the `bcgx-logo` vector symbol from https://www.bcg.com/x/ wrapped as a standalone SVG. Geometry preserved.
+- `public/positioning/palantir.svg`: the official `logoSvg` value embedded in https://www.palantir.com/; preserved unchanged.
+- `public/positioning/mckinsey.png`: rendered from the EPS provided by https://www.mckinsey.com/about-us/media at https://www.mckinsey.com/~/media/mckinsey/about%20us/media%20center/McK-ScriptMark-RGB-McKDeepBlue.eps . Original colors and geometry preserved. This is McKinsey's corporate mark; the adjacent text identifies Leap by McKinsey. The media page carries a prior-permission notice; no separate brand permission has been obtained by this workspace. Assets identify the institutions in the sourced editorial comparison, not a partner/client logo strip.
+
 ## Handoff
 
 Program owner can later replace the explanatory HLO anchor with the approved canonical program page. The public page is code-backed. The operating room and its permissions remain the separate workspace's responsibility. The founder approves public positioning; this work does not change the program's decision rights.
