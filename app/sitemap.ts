@@ -7,6 +7,7 @@ import {projectRoutes} from '@/lib/projects';
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const entries = [
+    {path:"/about/what-we-do",priority:0.9},{path:"/ar/about/what-we-do",priority:0.9},
     ...projectRoutes.flatMap(parts=>['','/ar'].map(prefix=>({path:`${prefix}/projects/${parts.join('/')}`,priority:0.8}))),
     ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology"].map(path => ({path, priority: 0.7})),
     ...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
