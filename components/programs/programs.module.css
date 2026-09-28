@@ -40,6 +40,7 @@
 .programTop .status{background:#24351d;color:#d4e7b8;border-color:#58733f}
 .detail .filmHero{padding-top:44px;padding-bottom:52px;background:radial-gradient(ellipse at 0 20%,#21331d,transparent 58%),#0c130e}
 .filmHeading{display:grid;grid-template-columns:.62fr 1.38fr;gap:60px;align-items:center}
+.filmHeading .eyebrow{color:#bed88a}
 .filmHeading h1{font-size:clamp(100px,13vw,190px);font-weight:700;line-height:1;letter-spacing:-.06em;color:#d1ff00;margin:0 0 16px;direction:ltr;text-align:start}
 .filmHeading h2{font-size:clamp(25px,2.8vw,43px);line-height:1.45;margin:0 0 22px;max-width:940px}
 .filmHeading h2 span{display:block;color:#d1ff00}
