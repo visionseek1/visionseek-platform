@@ -19,9 +19,9 @@ export async function buildCatalog(root) {
   const modules = await readEntries("modules", manifestSchema, "moduleId");
   const handovers = await readEntries("docs/manage-room/handovers", handoverSchema, "id");
   const ids = new Set(modules.map(m => m.moduleId));
-  for (const module of modules) if (module.editorAvailable) {
-    const entry = path.join(root, "app", module.adminEntryPoint, "page.tsx");
-    await access(entry).catch(() => { throw new Error(`Editor route is missing: ${module.moduleId}`); });
+  for (const manifest of modules) if (manifest.editorAvailable) {
+    const entry = path.join(root, "app", manifest.adminEntryPoint, "page.tsx");
+    await access(entry).catch(() => { throw new Error(`Editor route is missing: ${manifest.moduleId}`); });
   }
   for (const handover of handovers) for (const id of handover.moduleIds)
     if (!ids.has(id)) throw new Error(`Unknown handover module: ${id}`);
