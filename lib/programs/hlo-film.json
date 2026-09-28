@@ -1,0 +1,13 @@
+{
+  "duration": 56,
+  "chapters": [
+    {"start":0,"key":"world","ar":{"label":"العالم أوسع","title":"العالم يتقدّم.\nهل تتقدّم مؤسستك معه؟","body":"قدرات وفرص موجودة بالفعل.\nبعضها لم يصل إلى مجال رؤيتك."},"en":{"label":"A wider world","title":"The world is moving.\nIs your institution?","body":"Capabilities and opportunities already exist.\nSome have yet to enter your field of vision."}},
+    {"start":7,"key":"ambition","ar":{"label":"نبدأ بطموحك","title":"طموحك هو نقطة البداية.","body":"نحدّد النتيجة التي تريدها، وما يحدّك اليوم."},"en":{"label":"Your ambition","title":"Your ambition is the starting point.","body":"Define the outcome you want and what holds you back today."}},
+    {"start":14,"key":"discover","ar":{"label":"نكشف الفرص","title":"نوسّع مجال رؤيتك.","body":"نرصد التقنيات والمعرفة والشراكات المرتبطة بهدفك."},"en":{"label":"Reveal opportunities","title":"Expand your field of vision.","body":"Find the technology, knowledge and partners relevant to your goal."}},
+    {"start":21,"key":"select","ar":{"label":"نختار الأنسب","title":"نختار ما يصنع الفرق.","body":"نقيّم الملاءمة، وإمكانية الوصول، والأثر المتوقع."},"en":{"label":"Choose what fits","title":"Choose what makes a difference.","body":"Assess fit, access and potential impact."}},
+    {"start":28,"key":"assemble","ar":{"label":"نركّب الحل","title":"نركّب الحل حول مؤسستك.","body":"نربط الأشخاص والبيانات والتقنية والشركاء في مسار واحد."},"en":{"label":"Assemble the solution","title":"Build the solution around you.","body":"Connect people, data, technology and partners into one working path."}},
+    {"start":35,"key":"prove","ar":{"label":"نختبر القيمة","title":"نختبر القيمة في الواقع.","body":"نتفق على مقياس للنجاح. ونبني قرارنا على الدليل."},"en":{"label":"Prove the value","title":"Test the value in the real world.","body":"Agree what success means. Let evidence guide the decision."}},
+    {"start":42,"key":"operate","ar":{"label":"نحوّلها إلى عمل","title":"من فرصة إلى قدرة تعمل.","body":"نحدّد الموارد والمسؤوليات ومسار التشغيل، ونطوّر ما أثبت قيمته."},"en":{"label":"Put it to work","title":"From opportunity to operating capability.","body":"Define resources, owners and the operating path. Evolve what proves its value."}},
+    {"start":49,"key":"hlo","ar":{"label":"Highest Level One","title":"أعلى مستوى تستطيع مؤسستك بلوغه.","body":"بأفضل ما يتيحه العالم، وما يناسب واقعك."},"en":{"label":"Highest Level One","title":"The highest level your institution can reach.","body":"With the best the world offers, applied to your reality."}}
+  ]
+}

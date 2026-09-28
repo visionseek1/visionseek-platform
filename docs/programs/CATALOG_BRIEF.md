@@ -2,6 +2,8 @@
 
 Date: 2026-09-28. Founder/approver: Dr. Ahmed Abdelalim. Executor: Codex, website workspace. Delivery target: a reviewable preview in this session; publication follows founder approval.
 
+**Superseding founder correction, later 2026-09-28:** HLO is an existing VisionSeek program. Replace the development/first-pilot framing below with program presentation and an explanatory film. See [HLO_FILM_BRIEF.md](HLO_FILM_BRIEF.md). Earlier statements below remain the history of this first catalogue revision, not the current public positioning.
+
 ## Required outcome
 
 Remove the public R&D Opportunities section and make Programs the home of programs VisionSeek is actually developing. HLO is the first program. This changes public presentation, not program delivery, management-room permissions or automation.
