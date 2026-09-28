@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import type { Locale } from '@/components/capability/content';
 import { CapabilityHeader } from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import HloPath from './hlo-path';
+import HloSection from './hlo-section';
 import styles from './positioning.module.css';
 
 export const positioningPath='/about/what-we-do';
@@ -23,7 +23,7 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
       <p className={styles.eyebrow}>HIGHEST LEVEL ONE</p>
       <h3>{ar?'ابدأ من الفرص التي لا تراها بعد.':'Start with the opportunities you have yet to see.'}</h3>
       <p>{ar?'برنامج يربط طموح مؤسستك بالقدرات المتاحة في العالم، ويحدد معك ما يستحق التطبيق وكيف نختبره.':'A program connecting your institution’s ambition with global capabilities, to identify what is worth applying and how to test it.'}</p>
-      <Link className={styles.textLink} href={`${base}${positioningPath}#hlo`}>{ar?'اكتشف برنامج HLO':'Explore the HLO program'}<ArrowRight size={20}/></Link>
+      <Link className={styles.textLink} href={`${base}/programs/hlo`}>{ar?'اكتشف برنامج HLO':'Explore the HLO program'}<ArrowRight size={20}/></Link>
     </div>
   </section>;
 }
@@ -101,14 +101,8 @@ export default function PositioningPage({locale}:{locale:Locale}) {
         </div>
       </section>
 
-      <section className={styles.hlo} id="hlo">
-        <div className={styles.hloHeader}><div><p className={styles.eyebrow}>{ar?'برنامج VISIONSEEK':'A VISIONSEEK PROGRAM'}</p><h2>HLO</h2><p lang="en">Highest Level One</p></div><div><h3>{ar?'ارفع سقف ما تستطيع مؤسستك فعله.':'Raise the ceiling of what your institution can do.'}</h3><p>{ar?'قد لا تعرف المؤسسة أن قدرة ما أصبحت متاحة. وقد تعرفها، لكنها لا ترى كيف تستفيد منها. HLO يربط بين ما وصلت إليه مؤسستك وما يمكن أن تصل إليه باستخدام الفرص والقدرات المناسبة لها.':'An institution may not know a capability is available. Or it may know about it without seeing how it could help. HLO connects where your institution stands with what it could achieve using opportunities and capabilities that fit its needs.'}</p></div></div>
-        <div className={styles.worldInvestment}><strong>{ar?'استفد من التقدم الذي تحقق بالفعل.':'Build on progress that already exists.'}</strong><p>{ar?'سنوات من البحث والتطوير والاستثمار حول العالم أنتجت تقنيات ومعرفة ومنصات. نبحث عن أفضل ما تستطيع مؤسستك الوصول إليه واستخدامه، عبر الأدوات المتاحة والمعرفة المفتوحة والترخيص والشراكات، ثم نختبر ملاءمته لواقعها.':'Years of global research, development and investment have produced technology, knowledge and platforms. We seek the best your institution can access and use through available tools, open knowledge, licensing and partnerships, then test their fit in its context.'}</p></div>
-        <div className={styles.hloIntro}><h3>{ar?'من رؤية الفرص إلى قرار بالتطبيق.':'From seeing opportunities to deciding how to apply them.'}</h3><p>{ar?'نبدأ بنتيجة واحدة وقرار مهم ووحدة عمل محددة. نستهدف أعلى مستوى واقعي يمكن بلوغه، ثم نختبر الخطوة التي تقرّب المؤسسة منه.':'Begin with one outcome, an important decision and a defined work unit. Aim for the highest realistically achievable level, then test the step that moves the institution toward it.'}</p></div>
-        <HloPath locale={locale}/>
-        <div className={styles.deliverables}><h3>{ar?'ما الذي تحصل عليه المؤسسة؟':'What does the institution receive?'}</h3><ol>{(ar?['خريطة فرص تناسب احتياجها.','قرار أولوية يوضح أين تبدأ ولماذا.','خطة اختبار ودليل على نتيجته.','مسار تشغيل، أو قرار مسبب بالتوقف.']:['An opportunity map tailored to its need.','A priority decision explaining where to start and why.','A test plan and evidence of its outcome.','An operating path, or a reasoned decision to stop.']).map(item=><li key={item}>{item}</li>)}</ol></div>
-        <p className={styles.programNote}>{ar?'البرنامج في مرحلة إعداد التجربة الأولى. يُتفق على نطاق التكليف ومدته وتكلفته قبل البدء، وعلى التنفيذ اللاحق بصورة مستقلة.':'The program is preparing its first pilot. Scope, timing and cost are agreed before starting; subsequent delivery is commissioned separately.'}</p>
-      </section>
+      <HloSection locale={locale}/>
+      <div className={styles.programLink}><Link className={styles.textLink} href={`${base}/programs/hlo`}>{ar?'زيارة صفحة برنامج HLO':'Visit the HLO program page'}<ArrowRight size={20}/></Link></div>
 
       <section className={styles.contact}>
         <p className={styles.eyebrow}>{ar?'ابدأ من مؤسستك':'START WITH YOUR INSTITUTION'}</p><h2>{ar?'ما الفرصة التي يمكن أن تغيّر موقع مؤسستك؟':'What opportunity could change your institution’s position?'}</h2><p>{ar?'شاركنا النتيجة التي تريد الوصول إليها أو القرار الذي يشغلك. نبدأ بتحديد ما إذا كان HLO هو المدخل المناسب.':'Tell us the outcome you want or the decision on your mind. Start by exploring whether HLO is the right entry point.'}</p>
