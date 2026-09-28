@@ -8,7 +8,11 @@ async function pages(dir=root){const all=[];for(const entry of await readdir(dir
 
 test('institutional navigation resolves to built bilingual pages and real anchors',async()=>{
  const html=new Map();for(const file of await pages()){const rel=path.relative(root,file).replaceAll(path.sep,'/').replace(/\.html$/,'');html.set(rel==='index'?'/':`/${rel}`,await readFile(file,'utf8'));}
- const areas=['projects','work-with-us','opportunities','programs','news','workshops','about','start'];
+ const areas=['projects','work-with-us','programs','news','workshops','about','start'];
+ for(const prefix of ['', '/ar']){
+  assert.ok(html.has(`${prefix}/programs/hlo`),'HLO needs a real program page in each language');
+  assert.ok(![...html.keys()].some(route=>route===`${prefix}/opportunities`||route.startsWith(`${prefix}/opportunities/`)),'Retired opportunity pages must not be generated');
+ }
  for(const prefix of ['', '/ar'])for(const area of areas)assert.ok(html.has(`${prefix}/${area}`),`Missing section ${prefix}/${area}`);
  const failures=[];
  for(const [route,body] of html){

@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...['', '/ar'].flatMap(prefix => [
+        {source: `${prefix}/opportunities/:path*`, destination: `${prefix}/work-with-us`, permanent: true},
+        ...['institutional-ai','industrial-autonomy','trusted-sourcing','resource-resilience','science-to-capability','compute-capability'].map(slug=>({source:`${prefix}/programs/${slug}`,destination:`${prefix}/programs`,permanent:true})),
         {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
       ]),
