@@ -39,5 +39,8 @@ CI adds native PostgreSQL lock/replay checks. See VALIDATION.md and PR for exact
 The separate hosted project/branch proposal was superseded by the user's instruction to reuse
 the existing Supabase project. Migration 20260928100405 installed the eight private room tables
 and scoped RPCs there. Pre/post checks confirmed existing public schema and editor membership
-unchanged. No additional resource or auth identity was created. Founder principal provisioning
-awaits verification of the user's existing site login; room access remains denied until then.
+unchanged. No additional resource or auth identity was created. The user then supplied their
+existing site login; it matched one confirmed active auth record. One enabled founder principal
+is now linked to that account. Founder snapshot/command authorization passed SQL checks; direct
+table access remains denied. No task or test audit data was retained. Hosted browser verification
+still requires the user's normal Vercel and site sign-in. The PR is still a draft.

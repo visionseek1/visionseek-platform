@@ -26,14 +26,16 @@ client-callable. No service-role key is used by web code.
    project. Migration: 20260928100405_install_visionseek_manage_room. Do not rerun the installer:
    it intentionally fails instead of hiding schema drift. Keep manage_private out of exposed
    Data API schemas. Existing Vercel/Supabase settings were not changed.
-3. Verify which existing site auth account belongs to the founder, then explicitly create one
-   enabled founder principal referencing its verified auth.users UUID. This step is pending.
-   Never infer founder authority from browser metadata, email alone, or leaders_editors.
+3. Completed founder provisioning after the user explicitly supplied their existing site login.
+   Matched exactly one confirmed, non-anonymous, active auth.users record and created one enabled
+   founder principal referencing its UUID. No auth account was created or modified. Authority
+   came from the founder's explicit instruction, not metadata or leaders_editors membership.
 4. Provision additional human principals and per-module grants only when approved. Keep agents off.
 5. Security advisors and live SQL denial checks passed as documented in VALIDATION.md. Existing
    tables, columns, policies, function definitions/ACLs, editor membership and row counts matched
-   their pre-installation baseline. No auth user or room principal was created.
-6. Complete authenticated browser checks after founder account verification and normal Vercel
+   their pre-installation baseline. The installer did not create a principal; step 3 added it
+   separately. Subsequent SQL checks confirmed founder RPC access and unchanged editor membership.
+6. Complete authenticated browser checks using the existing account and normal Vercel
    sign-in. Review merging/publishing the room separately; the PR remains a draft.
 
 ## Rollback and limits

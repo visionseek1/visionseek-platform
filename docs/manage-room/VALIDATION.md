@@ -103,7 +103,27 @@ The SQL body is unchanged from the tested implementation; only its header commen
 - No new project/branch, paid resource, auth identity, room principal, DNS/secret change or
   production web deployment. Existing public site tables and editor access were preserved.
 
-Next: verify the founder's existing site account, provision its room principal, then verify
-authenticated browser use through normal Vercel access. No separate hosted project is needed.
+At installation time, founder account verification/provisioning and authenticated browser use
+were still pending. No separate hosted project is needed.
 The PR remains a draft. Native PostgreSQL concurrency run 36335231064 passed previously;
 the prior 80-test/lint/build results still apply to the unchanged application and SQL body.
+
+## Founder account activation — 28 September 2026 (Asia/Seoul)
+
+The user supplied the existing site login for room founder access. The exact account lookup
+returned one confirmed, non-anonymous, non-deleted and non-banned auth record, without a room
+principal. Inserted one enabled founder principal referencing that verified UUID, conditional
+on the account still meeting those checks. No auth record was created or modified. Account
+identifiers and provisioning SQL containing the email are intentionally omitted from public docs.
+
+Transaction-local SQL checks under the authenticated role with the verified subject confirmed:
+- manage_snapshot returns an enabled founder and the expected principal list.
+- An invalid manage_command reaches input validation (INVALID_INPUT), proving actor
+  authorization passes while retaining no business write.
+- Direct task-table reads remain denied, including for the founder.
+
+The verification transaction rolled back. Post-check: one room principal, zero room grants,
+tasks, activity and request records. Auth account count and editor-membership checksum matched
+the pre-provisioning baseline. The founder uses the existing role-based room scope; unit-editor
+membership was not changed. These checks validate SQL authorization, not a hosted JWT or browser
+login. Authenticated browser/mobile flows remain pending normal Vercel/site sign-in.
