@@ -1,4 +1,4 @@
-# Database plan — separate activation gate
+# Database plan — existing VisionSeek project
 
 Installer: db/visionseek-manage.sql. It creates eight tables in manage_private, two public
 SECURITY INVOKER RPC wrappers, and private workflow helpers. No existing unit table is
@@ -18,18 +18,23 @@ re-check actor/scope. The privileged transaction is necessary to enforce immutab
 submissions, version-bound decisions, audit and idempotency atomically. Helpers are not
 client-callable. No service-role key is used by web code.
 
-## Activation sequence (not executed)
+## Activation sequence and current state
 
-1. Confirm isolated hosted test database/branch and backup plan; do not assume Vercel preview
-   has a separate DB. Review SQL, function owner, grants, FK checks and test results.
-2. Run installer once through the authorized migration mechanism. It intentionally fails on
-   re-run instead of hiding schema drift. Keep manage_private out of exposed Data API schemas.
-3. Verify founder's existing auth.users UUID out of band, then explicitly create one enabled
-   founder principal. Never derive founder authority from browser email or leaders_editors.
-4. Provision approved human principals and per-module room grants separately. Keep agents off.
-5. Run Supabase advisors and authenticated save/reopen, cross-module, concurrent request and
-   review tests in the isolated environment before reviewing production activation.
-6. Review merge and live installation separately. A PR or preview is not activation approval.
+1. The user directed reuse of the existing VisionSeek Supabase project and approved continuing
+   on that basis on 28 September 2026. No new project, branch or paid resource is required.
+2. Reviewed and installed db/visionseek-manage.sql once through apply_migration in the existing
+   project. Migration: 20260928100405_install_visionseek_manage_room. Do not rerun the installer:
+   it intentionally fails instead of hiding schema drift. Keep manage_private out of exposed
+   Data API schemas. Existing Vercel/Supabase settings were not changed.
+3. Verify which existing site auth account belongs to the founder, then explicitly create one
+   enabled founder principal referencing its verified auth.users UUID. This step is pending.
+   Never infer founder authority from browser metadata, email alone, or leaders_editors.
+4. Provision additional human principals and per-module grants only when approved. Keep agents off.
+5. Security advisors and live SQL denial checks passed as documented in VALIDATION.md. Existing
+   tables, columns, policies, function definitions/ACLs, editor membership and row counts matched
+   their pre-installation baseline. No auth user or room principal was created.
+6. Complete authenticated browser checks after founder account verification and normal Vercel
+   sign-in. Review merging/publishing the room separately; the PR remains a draft.
 
 ## Rollback and limits
 
@@ -47,17 +52,9 @@ connections or replace Supabase advisors.
 Read-only catalog inspection in the earlier session (2026-09-27) found manage_snapshot and
 manage_private.principals absent. That is time-bound evidence, not a current installation claim.
 
-## Prepared isolated activation proposal — not executed
+## Superseded proposal
 
-Parent project: VisionSeek (lckngioonokzxkrdwkez). Proposed branch: manage-room-test.
-The connected organization is bdrcfvcwvkjwstiwrgtq; provider tools require user confirmation of
-that organization before quoting, and confirmation of the quoted branch cost before creation.
-There are currently no existing development branches to reuse (read-only inspection, 28 Sep KST).
-
-After those confirmations: create the isolated branch without production records; verify its
-new project_ref; install the reviewed room SQL there; create only synthetic test identities and
-explicit test grants; run authenticated save/reopen, access and advisor checks. Bind only the
-feat/manage-room-20260927 Vercel preview environment to that branch's public Supabase settings.
-Keep production environment settings and existing founder/editor identities unchanged. Hosted
-browser validation still requires the normal Vercel sign-in. Merge and production activation
-remain a later reviewable action after these checks.
+An earlier proposal suggested a separate hosted test branch/project. It was never created.
+The user rejected that direction and requested the existing project instead. Do not request
+branch cost approval or create another resource to continue this work. Disposable PGlite and
+native PostgreSQL CI remain available for synthetic workflow and concurrency tests.

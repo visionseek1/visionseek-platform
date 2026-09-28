@@ -1,4 +1,5 @@
--- Additive reviewed installer. No production execution or founder provisioning in this PR.
+-- Additive reviewed room installer. Existing tables and auth users are preserved.
+-- Founder provisioning is a separate step after verifying the existing account.
 begin;
 create schema if not exists manage_private;
 revoke all on schema manage_private from public,anon,authenticated;

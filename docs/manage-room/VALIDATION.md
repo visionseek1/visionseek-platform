@@ -41,7 +41,7 @@ A cloud-browser visit reached Vercel sign-in, and authenticated connector fetch 
 an SSO redirect. Deployment access protection is preserved. This is not evidence of an
 app rendering or authenticated workflow check. Final deployment status is recorded in PR.
 
-## Remaining acceptance gates
+## Acceptance gates recorded before database installation
 
 Hosted isolated schema/identity setup, Supabase advisors, real concurrent requests,
 authenticated mobile/desktop browser end-to-end, and Leaders editor save/reopen.
@@ -74,3 +74,36 @@ so the UI closes the submitted form instead of inviting a duplicate create.
 Hosted Supabase authentication, advisors after installation, mobile/desktop visual checks and
 real unit-editor save/reopen through the room remain separate acceptance gates. CI PostgreSQL
 and PGlite do not substitute for those checks.
+
+## Existing-project installation — 28 September 2026, 19:04 KST
+
+The user corrected the earlier separate-project proposal, requested reuse of the existing
+Supabase project, and approved continuing. Applied the reviewed additive installer using
+apply_migration; migration version 20260928100405, name install_visionseek_manage_room.
+Installer SHA-256: a8ff2569b3e1a37be253084fc39e6cd94b2d27568100c2d1b79d391442fc656a.
+The SQL body is unchanged from the tested implementation; only its header comment was updated.
+
+- All eight manage_private tables have RLS enabled. Direct anon/authenticated table reads and
+  authenticated inserts are denied. Public wrappers remain SECURITY INVOKER; private workflow
+  entrypoints have empty search_path, qualified references and live principal checks.
+- Before/after hashes match for public table ACL/RLS configuration, columns, policies, existing
+  function definitions/ACLs and editor membership. All 13 existing table row counts and the
+  existing auth account count also match. This is schema/permission/count evidence, not a
+  content-by-content checksum of every existing data row.
+- Transaction-local SQL checks denied anonymous snapshot/command execution, unprovisioned
+  authenticated snapshot/command calls, and direct task reads. The checks rolled back and
+  created no identity, principal, task or audit record. These are DB authorization checks,
+  not proof of a hosted JWT/browser login flow.
+- Security advisors show eight informational RLS-without-policy entries: intentional default
+  denial for RPC-only private tables. No new WARN/ERROR findings. Reference:
+  https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy
+- The pre-existing leaked-password-protection warning remains unchanged; auth configuration
+  was not altered. Reference:
+  https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection
+- No new project/branch, paid resource, auth identity, room principal, DNS/secret change or
+  production web deployment. Existing public site tables and editor access were preserved.
+
+Next: verify the founder's existing site account, provision its room principal, then verify
+authenticated browser use through normal Vercel access. No separate hosted project is needed.
+The PR remains a draft. Native PostgreSQL concurrency run 36335231064 passed previously;
+the prior 80-test/lint/build results still apply to the unchanged application and SQL body.

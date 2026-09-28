@@ -20,11 +20,12 @@ token refresh; clears private state on account change.
 
 Workspace labels on submissions are human-entered provenance, not authenticated agent identity.
 No messages were sent to other workspaces. Give unit owners MODULE-CONTRACT before integration.
-No live DB writes, permissions, DNS, secrets or production deployment are part of this PR.
+The room schema was subsequently installed in the existing project with user authorization;
+see DATABASE-PLAN.md. Existing unit permissions, DNS and secrets were not changed.
 
 Recovery note: automated cleanup removed unpushed local work. This branch reconstructs it
 against newer main and is verified afresh. User authorized public branch publication and PR/
-preview on 2026-09-28 (Asia/Seoul). Production activation remains separately reviewable.
+preview on 2026-09-28 (Asia/Seoul). Merging/publishing the room remains separately reviewable.
 
 Integration update: Reports entered main 8feafd6 during publication. That revision is merged
 into this branch; the Reports manifest now links to its existing studio without changing
@@ -35,5 +36,8 @@ Draft PR: https://github.com/visionseek1/visionseek-platform/pull/41
 Continuation: session races and confirmed-save/failed-refresh handling are fixed; 80 local tests
 pass. Session regression tests and complete form/API/SQL tests are included. Room concurrency
 CI adds native PostgreSQL lock/replay checks. See VALIDATION.md and PR for exact execution results.
-An isolated hosted activation proposal is prepared in DATABASE-PLAN.md; provider organization
-and cost confirmation are still needed. Production database and identities remain unchanged.
+The separate hosted project/branch proposal was superseded by the user's instruction to reuse
+the existing Supabase project. Migration 20260928100405 installed the eight private room tables
+and scoped RPCs there. Pre/post checks confirmed existing public schema and editor membership
+unchanged. No additional resource or auth identity was created. Founder principal provisioning
+awaits verification of the user's existing site login; room access remains denied until then.
