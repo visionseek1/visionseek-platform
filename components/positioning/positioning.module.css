@@ -48,7 +48,7 @@
 .modelGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .modelGrid article{background:#f9faf6;border:1px solid #c3ceb8;padding:26px;display:flex;flex-direction:column;align-items:flex-start;min-width:0}
 .brandAsset{height:94px;width:100%;display:flex;align-items:center;justify-content:center;background:#fff;border-bottom:1px solid #e4e8de;margin-bottom:24px;padding:12px}
-.brandAsset img{width:auto;height:auto;max-width:100%;max-height:64px;object-fit:contain}
+.brandAsset img{width:180px;height:60px;max-width:100%;object-fit:contain}
 .brandAsset img.mckinseyLogo{max-height:60px;max-width:150px}
 .modelGrid .visionseekModel{background:#f4f9db;border:2px solid #769724;border-top:5px solid #a8d900;padding:22px 25px 25px}
 .visionseekModel .brandAsset{margin-top:0;background:#fff}
