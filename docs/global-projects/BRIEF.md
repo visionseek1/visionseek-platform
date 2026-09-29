@@ -33,3 +33,8 @@ Owner supplies evidence of the relationship, public-safe project description, ex
 “ما تكتبش تفاصيل عن اي مشروع … نظهر الجهات اللي بنشتغل معاها”. Remove all project details, titles, IDs, dates, expanders and project links from the strip. Render official marks/names only. The earlier design description above is historical and superseded.
 For the sole evidenced candidate, MIT Solve, use the accurate group heading “جهات ومبادرات نستهدفها / Organizations & initiatives in our sights”. It is not a collaboration/client strip: no actual relationship is evidenced. Real collaborators need their own evidence-backed grouping when supplied. No duplicated or speculative logos.
 Keep internal evidence/approval in the brief. No public project research and no claim of application/partnership. Logo permission and founder publication approval remain outstanding.
+
+
+## Founder-approved heading — 2026-09-29 21:28 KST
+
+Approved copy: «جهات نطوّر لها حلولًا» / Organizations we develop solutions for. Founder requested implementation and institutional logos. Only commissioned work qualifies for this relationship heading; preparing/submitted/selected opportunities do not by themselves establish work for the organizer. The current MIT Solve entry remains preparing and is excluded in every environment. Until actual qualifying organizations are supplied, the entire strip is hidden rather than displaying an empty or misleading client strip. Existing mark permission rules still apply. No production publication requested or performed.
