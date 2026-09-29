@@ -38,3 +38,7 @@ Keep internal evidence/approval in the brief. No public project research and no 
 ## Founder-approved heading — 2026-09-29 21:28 KST
 
 Approved copy: «جهات نطوّر لها حلولًا» / Organizations we develop solutions for. Founder requested implementation and institutional logos. Only commissioned work qualifies for this relationship heading; preparing/submitted/selected opportunities do not by themselves establish work for the organizer. The current MIT Solve entry remains preparing and is excluded in every environment. Until actual qualifying organizations are supplied, the entire strip is hidden rather than displaying an empty or misleading client strip. Existing mark permission rules still apply. No production publication requested or performed.
+
+
+## Superseding approval — 2026-09-29 21:32 KST
+Founder approved «نطوّر حلولًا لتحدياتها» / Developing solutions to their challenges, with institution logos only and immediate implementation. This describes work responding to challenges rather than work commissioned by organizers. Restore the existing MIT Solve mark to protected review; its stage remains preparing, with no application, partnership or endorsement claimed. Mark permission remains pending, excluded from Production builds. No additional institutions inferred. No production publication.
