@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: { remotePatterns: [{ protocol: "https", hostname: "info.solve.mit.edu", pathname: "/hs-fs/hubfs/MIT%20Solve%20Logo%20White-1.png" }] },
   async redirects() {
     return [
       ...['', '/ar'].flatMap(prefix => [
