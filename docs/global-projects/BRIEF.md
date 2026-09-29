@@ -28,3 +28,8 @@ https://solve.mit.edu/terms-of-service (TRADEMARKS) states prior written permiss
 
 ## Next additions
 Owner supplies evidence of the relationship, public-safe project description, exact organization name, official mark and use permission. “Submitted” needs an actual receipt; “selected” needs a selection decision; “commissioned” needs a documented mandate. Dates/statuses are explicitly reviewed, not auto-upgraded. Research comparison logos (Palantir/BCG/McKinsey) are not project relationships and must not be copied into this strip.
+
+## Superseding founder direction — 29 September 2026, 21:07 KST
+“ما تكتبش تفاصيل عن اي مشروع … نظهر الجهات اللي بنشتغل معاها”. Remove all project details, titles, IDs, dates, expanders and project links from the strip. Render official marks/names only. The earlier design description above is historical and superseded.
+For the sole evidenced candidate, MIT Solve, use the accurate group heading “جهات ومبادرات نستهدفها / Organizations & initiatives in our sights”. It is not a collaboration/client strip: no actual relationship is evidenced. Real collaborators need their own evidence-backed grouping when supplied. No duplicated or speculative logos.
+Keep internal evidence/approval in the brief. No public project research and no claim of application/partnership. Logo permission and founder publication approval remain outstanding.
