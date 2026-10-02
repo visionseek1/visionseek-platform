@@ -19,11 +19,10 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
       <Link className={styles.textLink} href={`${base}${positioningPath}`}>{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={21}/></Link>
     </div>
     <div className={styles.homeHlo}>
-      <div className={styles.hloWord} aria-hidden="true">HLO<span>↗</span></div>
-      <p className={styles.eyebrow}>HIGHEST LEVEL ONE</p>
-      <h3>{ar?'ابدأ من الفرص التي لا تراها بعد.':'Start with the opportunities you have yet to see.'}</h3>
-      <p>{ar?'برنامج يربط طموح مؤسستك بالقدرات المتاحة في العالم، ويحدد معك ما يستحق التطبيق وكيف نختبره.':'A program connecting your institution’s ambition with global capabilities, to identify what is worth applying and how to test it.'}</p>
-      <Link className={styles.textLink} href={`${base}${positioningPath}#hlo`}>{ar?'اكتشف برنامج HLO':'Explore the HLO program'}<ArrowRight size={20}/></Link>
+      <p className={styles.eyebrow}>CRITICAL CAPABILITY TRANSFER</p>
+      <h3>{ar?'ننقل القدرات المتقدمة من العالم إلى مؤسستك.':'We move critical capabilities to where they need to exist.'}</h3>
+      <p>{ar?'قد توجد التقنية التي تحتاجها داخل شركة أو مركز بحثي في مكان آخر. نحدد ما يناسب احتياج مؤسستك، ونصمم طريق نقل المعرفة وتكييف التقنية، ونجمع الشركاء والبنية التحتية والتنفيذ، ثم نختبرها في واقعك حتى تصبح قدرة تستطيع تشغيلها.':'The technology you need may already exist in a company or research lab elsewhere. We identify what fits your institution’s needs, design the knowledge transfer and technology adaptation, connect partners, infrastructure and implementation, then validate it in your setting as a capability you can operate.'}</p>
+      <Link className={styles.textLink} href={`${base}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={20}/></Link>
     </div>
   </section>;
 }
