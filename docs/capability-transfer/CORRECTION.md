@@ -1,0 +1,2 @@
+# Superseding founder correction — 2026-10-03
+Founder rejected the broad homepage redesign. Restore the original homepage in full. Only update the first hero slide description and replace the HLO promotional card in the immediately following homepage band with Critical Capability Transfer explanation. Keep all other homepage sections, slides, navigation and the dedicated HLO page unchanged. Preview only, no production publication. This supersedes REVIEW.md and the six-section proposal.
