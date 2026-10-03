@@ -1,0 +1,39 @@
+name: Room concurrency
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'db/visionseek-manage.sql'
+      - 'scripts/check-manage-concurrency.mjs'
+      - '.github/workflows/manage-room-concurrency.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  postgres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    services:
+      postgres:
+        image: postgres:17.6
+        env:
+          POSTGRES_USER: room_test
+          POSTGRES_PASSWORD: test-only-in-ci
+          POSTGRES_DB: visionseek_manage_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - name: Verify row locking and idempotency with independent connections
+        env:
+          MANAGE_TEST_DATABASE_URL: postgres://room_test:test-only-in-ci@127.0.0.1:5432/visionseek_manage_test
+        run: node scripts/check-manage-concurrency.mjs

@@ -6,6 +6,11 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "manage:registry": "node scripts/generate-manage-registry.mjs",
+    "manage:check": "node scripts/generate-manage-registry.mjs --check",
+    "manage:handover": "node scripts/check-manage-registration.mjs",
+    "predev": "npm run manage:registry",
+    "prebuild": "npm run manage:registry",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -42,6 +47,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.54.2",
+    "@electric-sql/pglite": "0.5.8",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",

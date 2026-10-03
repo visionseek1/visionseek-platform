@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "collaboration",
+  "nameAr": "اعمل معنا",
+  "nameEn": "Work with us",
+  "description": "مسارات التعاون وطلب بناء القدرات.",
+  "icon": "graduation",
+  "sortOrder": 90,
+  "publicRoutes": [
+    "/ar/work-with-us"
+  ],
+  "adminEntryPoint": null,
+  "owner": "مساحة اعمل معنا",
+  "codeRef": "main @ ed7cb36",
+  "docsUrl": null,
+  "readiness": "development",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": false,
+      "disabledReason": "المحرر التشغيلي لم يُسلّم بعد."
+    }
+  ],
+  "permissions": [
+    "read"
+  ],
+  "agentTools": [],
+  "editorAvailable": false,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [],
+  "workflowEnabled": false
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "leaders",
+  "nameAr": "بيت القادة",
+  "nameEn": "Leaders House",
+  "description": "المحتوى والمنشورات والشخصيات التحريرية.",
+  "icon": "newspaper",
+  "sortOrder": 10,
+  "publicRoutes": [
+    "/ar/insights"
+  ],
+  "adminEntryPoint": "/ar/insights/studio",
+  "owner": "مساحة بيت القادة",
+  "codeRef": "main @ 108c883",
+  "docsUrl": null,
+  "readiness": "review",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "createDraft",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "editDraft",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "publish",
+      "enabled": true,
+      "disabledReason": null
+    },
+    {
+      "action": "archive",
+      "enabled": true,
+      "disabledReason": null
+    }
+  ],
+  "permissions": [
+    "read",
+    "createDraft",
+    "editDraft",
+    "review",
+    "publish",
+    "archive"
+  ],
+  "agentTools": [],
+  "editorAvailable": true,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [
+    "صلاحيات leaders_editors مستقلة عن الغرفة"
+  ],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [
+    "كود المحرر موجود؛ الحفظ الحي عبر الغرفة غير متحقق."
+  ],
+  "workflowEnabled": true
+}
