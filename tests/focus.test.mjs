@@ -14,10 +14,11 @@ test('analytics removes all query data and excludes every private route',()=>{
 });
 const types=await readFile('lib/leaders/types.ts','utf8');
 const {isMedicalPublication}=await moduleAt('lib/leaders/medical-focus.ts',s=>types+'\n'+s.replace(/import .* from '.\/types';/,''));
-test('medical editorial focus does not expose drafts, scheduled, expired, unrelated or historical posts',()=>{
+test('medical editorial focus does not expose drafts, scheduled, expired, or unrelated posts',()=>{
  const p={character_id:'medo',status:'published',published_at:'2026-10-03T01:00:00Z',expires_at:null};const now=Date.parse('2026-10-04T00:00:00Z');
  assert.ok(isMedicalPublication(p,now));
- for(const patch of [{status:'draft'},{status:'archived'},{character_id:'tiko'},{published_at:'2026-09-30T01:00:00Z'},{published_at:'2026-10-05T01:00:00Z'},{expires_at:'2026-10-03T20:00:00Z'}])assert.equal(isMedicalPublication({...p,...patch},now),false);
+ assert.ok(isMedicalPublication({...p,published_at:'2026-09-20T01:00:00Z'},now),'Previously published medical content remains visible');
+ for(const patch of [{status:'draft'},{status:'archived'},{character_id:'tiko'},{published_at:'2026-10-05T01:00:00Z'},{expires_at:'2026-10-03T20:00:00Z'}])assert.equal(isMedicalPublication({...p,...patch},now),false);
 });
 const manifest=JSON.parse(await readFile('.next/routes-manifest.json','utf8'));
 const routeRedirect=path=>manifest.redirects.find(r=>!r.has&&new RegExp(r.regex).test(path));
@@ -32,7 +33,7 @@ test('three homepages have the same short section order, empty achievements and 
  for(const [locale,file,prefix] of [['en','index',''],['ar','ar','/ar'],['ko','ko','/ko']]){
   const doc=new JSDOM(await readFile(`.next/server/app/${file}.html`,'utf8')).window.document;
   const main=doc.querySelector('main');
-  assert.deepEqual([...main.children].map(n=>n.id||'hero'),['hero','pharmaceuticals','founder','achievements','contact']);
+  assert.deepEqual([...main.children].map(n=>n.id||'hero'),['hero','pharmaceuticals','leaders-house','founder','achievements','contact']);
   assert.ok(doc.querySelector('#achievements').hidden);
   assert.ok(doc.querySelector(`a[href="${prefix}/start?audience=institution"]`));
   assert.ok(doc.querySelector(`a[href="${prefix}/start?audience=korean-company"]`));
