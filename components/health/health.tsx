@@ -1,0 +1,47 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import {ArrowRight} from 'lucide-react';
+import {CapabilityHeader} from '@/components/capability/navigation';
+import CapabilityFooter from '@/components/capability/footer';
+import type {Locale} from '@/components/capability/content';
+import styles from './health.module.css';
+
+export function HealthCard({locale}:{locale:Locale}) {
+ const ar=locale==='ar';const p=ar?'/ar':'';
+ return <section className={styles.card} aria-labelledby="health-entry-title"><div><p className={styles.eyebrow}>VISIONSEEK HEALTH</p><p className={styles.kicker}>Advanced Health Capability Transfer</p><h2 id="health-entry-title">{ar?'من قدرات صحية تعمل في كوريا، إلى مؤسسات تحتاجها في منطقتنا.':'From health capabilities working in Korea to institutions that need them in our region.'}</h2><p>{ar?'نبدأ بالصحة. نكتشف التقنيات والخبرات المتقدمة، ونجمع الشركاء والمعرفة والتدريب ومتطلبات التشغيل، لنقلها وتكييفها واختبارها داخل المؤسسات الصحية في الخليج والمنطقة العربية.':'Health is our first focus. We discover advanced technologies and expertise, then connect partners, knowledge, training and operating requirements to transfer, adapt and test them in health institutions across the Gulf and the Arab world.'}</p><Link className={styles.link} href={`${p}/health`}>{ar?'اكتشف VisionSeek Health':'Explore VisionSeek Health'}<ArrowRight size={20}/></Link></div><div className={styles.image}><Image src="/field-science.jpg" alt={ar?'بحث علمي في بيئة مختبرية':'Scientific research in a laboratory'} fill sizes="(max-width:760px) 100vw, 35vw"/></div></section>;
+}
+
+export default function HealthPage({locale}:{locale:Locale}) {
+ const ar=locale==='ar';const p=ar?'/ar':'';
+ const fields=ar?[
+ ['الذكاء الاصطناعي الصحي والتشخيص','نستكشف أدوات تدعم التشخيص وسير العمل الصحي، ونفحص الأدلة وملاءمتها للبيانات والبيئة المحلية.'],
+ ['الأجهزة والروبوتات الطبية','نبحث في إمكان نقل التقنية مع التدريب والصيانة والتكامل الذي يحتاجه استخدامها داخل المؤسسة.'],
+ ['الأدوية والتصنيع الحيوي','نستكشف فرص نقل المعرفة والتطوير والتصنيع، وما تتطلبه من شركاء وتجهيزات واعتمادات.']
+ ]:[
+ ['Health AI & diagnostics','Explore tools supporting diagnosis and health workflows, evaluating evidence and fit with local data and conditions.'],
+ ['Medical devices & robotics','Explore technology transfer together with the training, maintenance and integration its institutional use requires.'],
+ ['Medicines & biomanufacturing','Explore knowledge transfer, development and manufacturing opportunities, including partners, facilities and approvals.']
+ ];
+ const steps=ar?[
+ ['نفهم الاحتياج','نحدد النتيجة التي تحتاجها المؤسسة، والقدرة المتاحة لديها، والفجوة التي تستحق العمل.'],
+ ['نقيّم القدرة والدليل','نبحث عن القدرات المناسبة، ونراجع ما ثبت منها، وحدودها، ومن يملك التقنية والمعرفة.'],
+ ['نصمم مسار النقل','نحدد الشركاء والتكييف والتدريب ومتطلبات الاعتماد والبيانات والبنية التحتية اللازمة.'],
+ ['نختبر في نطاق محدد','نصمم تجربة بمقياس نجاح واضح ومتطلبات سلامة وموافقات مناسبة قبل التنفيذ.'],
+ ['نجهّز التشغيل','نحدد مسؤوليات الفريق والتدريب والصيانة وقياس الأداء، والقرار المناسب بشأن التوسع.']
+ ]:[
+ ['Understand the need','Define the required outcome, existing capability and the gap worth addressing.'],
+ ['Evaluate capability and evidence','Find suitable capabilities and assess what is demonstrated, its limits and who owns the technology and knowledge.'],
+ ['Design the transfer','Identify partners, adaptation, training, approvals, data and infrastructure requirements.'],
+ ['Test within a defined scope','Design a pilot with clear success measures and appropriate safety requirements and approvals before implementation.'],
+ ['Prepare for operation','Define team responsibilities, training, maintenance and performance measurement, then decide whether to scale.']
+ ];
+ const email=(partner:boolean)=>`mailto:abdelalim@visionseek.org?subject=${encodeURIComponent(`VisionSeek Health — ${partner?'Technology & knowledge contribution':'Institutional need'}`)}&body=${encodeURIComponent(ar?(partner?'مرحبًا VisionSeek Health،\n\nالجهة:\nالتقنية أو الخبرة التي نملكها:\nالأدلة أو التطبيقات القائمة:\nما يمكننا نقله من معرفة وتدريب:\nالسوق المستهدف:\nبيانات التواصل:':'مرحبًا VisionSeek Health،\n\nالمؤسسة والدولة:\nالنتيجة الصحية أو التشغيلية المطلوبة:\nالوضع الحالي:\nالقدرة التي نحتاجها:\nبيانات التواصل:'):(partner?'Hello VisionSeek Health,\n\nOrganization:\nTechnology or expertise we own:\nEvidence or existing applications:\nKnowledge and training we can transfer:\nTarget market:\nContact details:':'Hello VisionSeek Health,\n\nInstitution and country:\nRequired health or operational outcome:\nCurrent situation:\nCapability needed:\nContact details:'))}`;
+ return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar?'rtl':'ltr'}><CapabilityHeader locale={locale} path="/health"/><main id="main-content" className={styles.page}>
+ <section className={styles.hero}><Link className={styles.link} href={p||'/'}>{ar?'الرئيسية':'Home'}</Link><p className={styles.eyebrow}>VISIONSEEK HEALTH</p><h1>Advanced Health Capability Transfer</h1><p className={styles.lead}>{ar?'نكتشف قدرات صحية متقدمة تعمل بالفعل، ثم نصمم طريق نقلها وتكييفها واختبارها وتشغيلها داخل أنظمة ومؤسسات صحية تحتاجها.':'We discover advanced health capabilities already working, then design the path to transfer, adapt, validate and operate them within health systems and institutions that need them.'}</p><a className={styles.button} href="#health-contact">{ar?'ناقش احتياجك أو مساهمتك':'Discuss your need or contribution'}<ArrowRight size={20}/></a></section>
+ <section className={styles.section}><p className={styles.eyebrow}>{ar?'أول اتجاه تطبيقي لفيجن سيك':'VISIONSEEK’S FIRST APPLIED FOCUS'}</p><h2>{ar?'قدرة تستطيع مؤسستك تشغيلها والاستفادة منها.':'A capability your institution can operate and use.'}</h2><p>{ar?'نربط التقنية بالمعرفة والتدريب والشركاء ومتطلبات التشغيل. نبدأ من النتيجة التي تحتاجها المؤسسة، ونحدد ما يلزم حتى تصبح القدرة جزءًا من عملها اليومي.':'We connect technology with knowledge, training, partners and operating requirements. We start with the outcome the institution needs and determine what it takes to make the capability part of its everyday work.'}</p><div className={styles.bridge}><strong>South Korea</strong><span>↔ VisionSeek Health ↔</span><strong>{ar?'الخليج والمنطقة العربية':'Gulf & Arab world'}</strong></div><p>{ar?'وجودنا في كوريا الجنوبية هو نقطة انطلاق للبحث عن القدرات وأصحابها وربطها باحتياجات مؤسسات المنطقة.':'Our base in South Korea is a starting point for finding capabilities and their owners and connecting them with institutional needs in the region.'}</p></section>
+ <section className={`${styles.section} ${styles.light}`}><h2>{ar?'ما القدرات التي نستكشفها؟':'Which capabilities are we exploring?'}</h2><p>{ar?'هذه مجالات للاستكشاف وتطوير ملفات العمل. تُقيّم كل قدرة وفق احتياج المؤسسة والدليل ومتطلبات استخدامها.':'These are exploration areas for developing work opportunities. Each capability is assessed against institutional need, evidence and requirements for use.'}</p><div className={styles.grid}>{fields.map(([title,body])=><article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></section>
+ <section className={styles.section}><h2>{ar?'كيف ننقل القدرة؟':'How do we transfer a capability?'}</h2><ol className={styles.steps}>{steps.map(([title,body],i)=><li key={title}><span>0{i+1}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol></section>
+ <section className={`${styles.section} ${styles.light}`}><h2>{ar?'ما الذي يجري الآن؟':'What is happening now?'}</h2><p>{ar?'نبدأ باستكشاف القدرات الصحية في كوريا، وتحديد ما يمكن نقله من تقنية ومعرفة وتدريب إلى مؤسسات المنطقة. سنعرض ملفات العمل وتطوراتها هنا عندما تصبح جاهزة للنشر.':'We are starting by exploring health capabilities in Korea and identifying technology, knowledge and training that could transfer to institutions in the region. Work dossiers and progress will appear here when ready for publication.'}</p><p className={styles.note}>{ar?'لا تعني مجالات الاستكشاف وجود منتجات متاحة لدينا أو شراكات أو تجارب سريرية قائمة.':'Exploration areas do not imply available products, established partnerships or ongoing clinical trials.'}</p></section>
+ <section className={styles.section} id="health-contact"><h2>{ar?'ابدأ من احتياجك. أو من القدرة التي تملكها.':'Start with your need. Or the capability you own.'}</h2><div className={styles.contacts}><article><h3>{ar?'للمؤسسات الصحية':'For health institutions'}</h3><p>{ar?'ما النتيجة التي تريد تحقيقها، وما الذي يمنعك اليوم؟':'What outcome do you need, and what stands in the way today?'}</p><a className={styles.button} href={email(false)}>{ar?'ناقش احتياج مؤسستك':'Discuss your institution’s need'}<ArrowRight size={18}/></a></article><article><h3>{ar?'للشركات والمراكز البحثية':'For companies & research centers'}</h3><p>{ar?'ما التقنية أو المعرفة التي تملكها، وما الدليل على فائدتها؟':'What technology or knowledge do you own, and what evidence supports its value?'}</p><a className={styles.button} href={email(true)}>{ar?'انقل قدرتك الصحية إلى المنطقة':'Bring your health capability to the region'}<ArrowRight size={18}/></a></article></div><p className={styles.note}>{ar?'يفتح كل زر مسودة في تطبيق بريدك لمراجعتها وإرسالها. شارك معلومات مؤسسية عامة دون بيانات مرضى.':'Each button opens a draft in your email app for you to review and send. Share general institutional information without patient data.'}</p></section>
+ </main><CapabilityFooter locale={locale}/></div>;
+}
