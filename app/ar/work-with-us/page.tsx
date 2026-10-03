@@ -1,6 +1,21 @@
-import type {Metadata} from 'next';
-import {SectionPage} from '@/components/institution/pages';
-import {getSection} from '@/lib/institution';
-const section = getSection('work-with-us')!;
-export const metadata:Metadata={title:section.title.ar+' | VisionSeek',description:section.intro.ar,alternates:{canonical:'/ar/work-with-us',languages:{en:'/work-with-us',ar:'/ar/work-with-us'}},openGraph:{title:section.title.ar+' | VisionSeek',url:'/ar/work-with-us'}};
-export default function Page(){return <SectionPage locale="ar" sectionId="work-with-us"/>;}
+import type {Metadata} from "next";
+import {WorkPage} from "@/components/focus/pages";
+export const metadata:Metadata={
+  "title": "اعمل معنا | VisionSeek",
+  "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+  "alternates": {
+    "canonical": "/ar/work-with-us",
+    "languages": {
+      "ar": "/ar/work-with-us",
+      "en": "/work-with-us",
+      "ko": "/ko/work-with-us"
+    }
+  },
+  "openGraph": {
+    "title": "اعمل معنا | VisionSeek",
+    "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+    "url": "/ar/work-with-us",
+    "locale": "ar_EG"
+  }
+};
+export default function Page(){return <WorkPage locale="ar"/>;}

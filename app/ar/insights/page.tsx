@@ -1,15 +1,21 @@
-import type { Metadata } from "next";
-import InsightsPage from "@/components/insights-page";
-
-export const metadata: Metadata = {
-  title: "بيت القادة | VisionSeek",
-  description: "بيت يومي للمديرين التنفيذيين والقادة وصنّاع القرار: تحولات وفرص وأفكار لبناء القدرات، في منشورات وفيديوهات وقصص قصيرة.",
-  alternates: {
-    canonical: "/ar/insights",
-    languages: { en: "/insights", ar: "/ar/insights" },
+import type {Metadata} from "next";
+import FocusLeaders from "@/components/focus/leaders";
+export const metadata:Metadata={
+  "title": "بيت القادة | الصحة والدواء",
+  "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+  "alternates": {
+    "canonical": "/ar/insights",
+    "languages": {
+      "ar": "/ar/insights",
+      "en": "/insights",
+      "ko": "/ko/insights"
+    }
   },
+  "openGraph": {
+    "title": "بيت القادة | الصحة والدواء",
+    "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+    "url": "/ar/insights",
+    "locale": "ar_EG"
+  }
 };
-
-export default function ArabicInsights() {
-  return <InsightsPage locale="ar" />;
-}
+export default function Page(){return <FocusLeaders locale="ar"/>;}

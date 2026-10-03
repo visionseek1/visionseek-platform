@@ -1,15 +1,21 @@
-import type { Metadata } from "next";
-import LegalPage from "@/components/legal-page";
-
-export const metadata: Metadata = {
-  title: "الخصوصية | VisionSeek",
-  description: "كيف يتعامل موقع VisionSeek العام مع الزيارة والرسائل. لا حسابات، ولا ملفات إعلانية، ولا بيع للبيانات.",
-  alternates: {
-    canonical: "/ar/privacy",
-    languages: { en: "/privacy", ar: "/ar/privacy" },
+import type {Metadata} from "next";
+import FocusLegal from "@/components/focus/legal";
+export const metadata:Metadata={
+  "title": "الخصوصية والبيانات | VisionSeek",
+  "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+  "alternates": {
+    "canonical": "/ar/privacy",
+    "languages": {
+      "ar": "/ar/privacy",
+      "en": "/privacy",
+      "ko": "/ko/privacy"
+    }
   },
+  "openGraph": {
+    "title": "الخصوصية والبيانات | VisionSeek",
+    "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+    "url": "/ar/privacy",
+    "locale": "ar_EG"
+  }
 };
-
-export default function ArabicPrivacyPage() {
-  return <LegalPage locale="ar" kind="privacy" />;
-}
+export default function Page(){return <FocusLegal locale="ar" kind="privacy"/>;}

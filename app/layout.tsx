@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PublicAnalytics from "@/components/focus/analytics";
 import { IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
@@ -29,7 +30,7 @@ const structuredData = {
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-color.png",
       description:
-        "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
+        "VisionSeek transfers critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
       email: "abdelalim@visionseek.org",
       telephone: "+82-10-4241-9606",
       address: {
@@ -54,7 +55,7 @@ const structuredData = {
       "@id": "https://visionseek.org/#website",
       name: "VisionSeek",
       url: "https://visionseek.org/",
-      inLanguage: ["en", "ar"],
+      inLanguage: ["en", "ar", "ko"],
       publisher: { "@id": "https://visionseek.org/#organization" },
     },
   ],
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
   title: "VisionSeek | Make It Possible.",
   description:
-    "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
+    "VisionSeek transfers critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
   icons: {
     icon: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
     shortcut: "/visionseek-symbol-color.png",
@@ -75,6 +76,7 @@ export const metadata: Metadata = {
     languages: {
       en: "/",
       ar: "/ar",
+      ko: "/ko",
     },
   },
   openGraph: {
@@ -82,7 +84,7 @@ export const metadata: Metadata = {
     siteName: "VisionSeek",
     title: "VisionSeek | Make It Possible.",
     description:
-      "VisionSeek builds new capabilities for institutions and governments. See what could be. Make it possible.",
+      "VisionSeek transfers critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
     url: "/",
     images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
   },
@@ -109,6 +111,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        {process.env.VERCEL_ENV === "production" && <PublicAnalytics/>}
       </body>
     </html>
   );

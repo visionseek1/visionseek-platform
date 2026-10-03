@@ -1,38 +1,5 @@
-import type { MetadataRoute } from "next";
-import {entries as institutionEntries, sections, entryPath} from "@/lib/institution";
-import {characters,characterPath} from '@/lib/leaders/characters';
-
-import {projectRoutes} from '@/lib/projects';
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-  const entries = [
-    {path:"/about/what-we-do",priority:0.9},{path:"/ar/about/what-we-do",priority:0.9},
-    ...projectRoutes.flatMap(parts=>['','/ar'].map(prefix=>({path:`${prefix}/projects/${parts.join('/')}`,priority:0.8}))),
-    ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology"].map(path => ({path, priority: 0.7})),
-    ...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
-    {path:'/insights/characters',priority:0.7},{path:'/ar/insights/characters',priority:0.7},
-    ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:`/${s.id}`,priority:0.8},{path:`/ar/${s.id}`,priority:0.8}]),
-    ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
-    ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
-    { path: "", priority: 1 },
-    { path: "/ar", priority: 0.9 },
-    { path: "/projects", priority: 0.8 },
-    { path: "/ar/projects", priority: 0.8 },
-    { path: "/insights", priority: 0.85 },
-    { path: "/ar/insights", priority: 0.85 },
-    { path: "/insights/physical-ai", priority: 0.8 },
-    { path: "/ar/insights/physical-ai", priority: 0.8 },
-    { path: "/privacy", priority: 0.3 },
-    { path: "/ar/privacy", priority: 0.3 },
-    { path: "/terms", priority: 0.3 },
-    { path: "/ar/terms", priority: 0.3 },
-  ];
-
-  return entries.map(({ path, priority }) => ({
-    url: `https://visionseek.org${path}`,
-    lastModified,
-    changeFrequency: "monthly" as const,
-    priority,
-  }));
+import type {MetadataRoute} from 'next';
+const routes=['','/about','/about/what-we-do','/pharmaceuticals','/insights','/reports','/work-with-us','/start','/privacy','/terms'];
+export default function sitemap():MetadataRoute.Sitemap {
+ return [...routes.flatMap(route=>['','/ar','/ko'].map(prefix=>({url:`https://visionseek.org${prefix}${route}`,changeFrequency:'monthly' as const,priority:route?0.7:1,alternates:{languages:{en:`https://visionseek.org${route}`,ar:`https://visionseek.org/ar${route}`,ko:`https://visionseek.org/ko${route}`}}}))),...['','/ar'].map(prefix=>({url:`https://visionseek.org${prefix}/reports/physical-ai`,changeFrequency:'yearly' as const,priority:0.3}))];
 }

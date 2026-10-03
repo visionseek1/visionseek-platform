@@ -1,0 +1,32 @@
+export const focusCopy = {
+  ar: {
+    title: 'نقل القدرات الحرجة',
+    direction: 'من كوريا إلى مصر والخليج',
+    description: 'ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج، مع التقنية والمعرفة والخبرات اللازمة للاستفادة منها محليًا.',
+    pharmaTitle: 'قدرات دوائية متقدمة، أقرب إلى مؤسستك.',
+    pharmaDescription: 'نقل القدرات الحرجة في الصناعة الدوائية هو أول تخصص نطبّق فيه دور VisionSeek: ربط ما يعمل بالفعل في كوريا بما تحتاجه المؤسسات في مصر والخليج.',
+    founder: 'د. أحمد عبدالعليم',
+    founderBio: 'صيدلي من جامعة الأزهر، ومستثمر أجنبي مقيم في كوريا الجنوبية. أسّس VisionSeek لربط القدرات المتقدمة في كوريا باحتياجات المؤسسات في مصر والخليج.',
+    founderMission: 'رسالته أن تمتلك مؤسسات المنطقة المعرفة والتقنية التي تمكّنها من تطوير أعمالها وبناء قدراتها محليًا.',
+  },
+  en: {
+    title: 'Critical Capability Transfer',
+    direction: 'From Korea to Egypt & the Gulf',
+    description: 'We transfer critical capabilities already working in Korea to institutions in Egypt and the Gulf, together with the technology, knowledge and expertise needed to use them locally.',
+    pharmaTitle: 'Advanced pharmaceutical capabilities. Closer to your institution.',
+    pharmaDescription: 'Pharmaceuticals is our first area of specialization: connecting capabilities already working in Korea with institutional needs in Egypt and the Gulf.',
+    founder: 'Dr. Ahmed Abdelalim',
+    founderBio: 'An Al-Azhar University pharmacy graduate and a foreign investor based in South Korea. He founded VisionSeek to connect advanced Korean capabilities with institutional needs in Egypt and the Gulf.',
+    founderMission: 'His mission is for institutions in the region to gain the knowledge and technology to develop their operations and build local capabilities.',
+  },
+  ko: {
+    title: '핵심 역량 이전',
+    direction: '한국에서 이집트와 걸프 지역으로',
+    description: '한국에서 실제로 활용되고 있는 핵심 역량을 이집트와 걸프 지역 기관으로 이전합니다. 현지 활용에 필요한 기술, 지식, 전문성을 함께 연결합니다.',
+    pharmaTitle: '첨단 제약 역량을 귀 기관 가까이.',
+    pharmaDescription: '제약은 VisionSeek의 첫 번째 전문 분야입니다. 한국에서 실제로 활용되는 역량을 이집트와 걸프 지역 기관의 필요와 연결합니다.',
+    founder: '아흐메드 압델알림 박사',
+    founderBio: '알아즈하르대학교에서 약학을 전공한 약사이자 한국에 거주하는 외국인 투자자입니다. 한국의 첨단 역량과 이집트·걸프 지역 기관의 필요를 연결하기 위해 VisionSeek을 설립했습니다.',
+    founderMission: '현지 기관이 사업을 발전시키고 자체 역량을 구축하는 데 필요한 지식과 기술을 갖추도록 하는 것이 그의 목표입니다.',
+  },
+};
