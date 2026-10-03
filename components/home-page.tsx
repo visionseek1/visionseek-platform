@@ -1,3 +1,4 @@
+import {HealthCard} from "@/components/health/health";
 import Image from "next/image";
 import InstitutionHome from "@/components/institution/home-sections";
 import Link from "next/link";
@@ -23,6 +24,7 @@ export default function HomePage({locale}: {locale:Locale}) {
     <main id="main-content">
       <CapabilityHero locale={locale}/>
       <InstitutionExplainer locale={locale}/>
+      <HealthCard locale={locale}/>
       <section className="vs-editorial" id="vision">
         <article className="vs-mission-card"><div className="vs-mini-heading"><h2>{ar?"السؤال الذي نبدأ منه":"Where we begin"}</h2><Link href={`${p}/about`} aria-label={ar?"عن VisionSeek":"About VisionSeek"}><ArrowRight/></Link></div><div className="vs-editorial-image"><Image src="/field-industry.jpg" alt={ar?"قدرات التصنيع والروبوتات داخل مصنع":"Robotics and manufacturing capabilities inside a factory"} fill sizes="(max-width:760px) 100vw, 50vw"/></div><p className="vs-eyebrow">{ar?"سؤال واحد يفتح مسارًا جديدًا":"ONE QUESTION. A NEW PATH."}</p><h3>{ar?"ما الذي أصبح ممكنًا اليوم، وقد يسبقك به غيرك غدًا؟":"What important capability should exist that does not exist today?"}</h3><p>{ar?"العالم مليء بالتقنيات والخبرات والفرص التي يمكن أن تنقل مؤسستك إلى مستوى جديد. وبينما تتأخر في استكشافها، قد يبني بها غيرك تفوقه. نكتشف معك الفرص التي تصنع الفارق، ونحوّلها إلى قدرات تمتلكها مؤسستك وتنافس بها.":"We start with the capability that should exist. We discover why it does not exist today, then bring together the people, knowledge, technologies and opportunities needed to make it real."}</p><Link className="vs-text-link" href={`${p}/method`}>{ar?"اكتشف منهجنا":"Explore our method"}<ArrowRight size={20}/></Link></article>
         <div className="vs-reading"><div className="vs-mini-heading"><h2>{ar?"من داخل VisionSeek":"Inside VisionSeek"}</h2><Link href={`${p}/insights`}>{ar?"بيت القادة":"Leaders House"}<ArrowRight size={18}/></Link></div>{reading.map(r=><Link className="vs-reading-row" href={`${p}${r.href}`} key={r.href}><div className="vs-reading-image"><Image src={`/field-${r.image}.jpg`} alt="" fill sizes="(max-width:760px) 30vw, 16vw"/></div><div><p className="vs-eyebrow">{r.category}</p><h3>{r.title}</h3><p>{r.text}</p><span className="vs-inline-arrow" aria-hidden="true">↗</span></div></Link>)}</div>
