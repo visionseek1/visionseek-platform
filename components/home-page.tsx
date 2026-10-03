@@ -1,4 +1,5 @@
 import Image from "next/image";
+import GlobalProjectStrip from "@/components/global-projects/project-strip";
 import InstitutionHome from "@/components/institution/home-sections";
 import Link from "next/link";
 import { ArrowRight, Building2, Landmark, Microscope, Users, Factory, Network } from "lucide-react";
@@ -22,6 +23,7 @@ export default function HomePage({locale}: {locale:Locale}) {
     <CapabilityHeader locale={locale} overlay/>
     <main id="main-content">
       <CapabilityHero locale={locale}/>
+      <GlobalProjectStrip locale={locale}/>
       <InstitutionExplainer locale={locale}/>
       <section className="vs-editorial" id="vision">
         <article className="vs-mission-card"><div className="vs-mini-heading"><h2>{ar?"السؤال الذي نبدأ منه":"Where we begin"}</h2><Link href={`${p}/about`} aria-label={ar?"عن VisionSeek":"About VisionSeek"}><ArrowRight/></Link></div><div className="vs-editorial-image"><Image src="/field-industry.jpg" alt={ar?"قدرات التصنيع والروبوتات داخل مصنع":"Robotics and manufacturing capabilities inside a factory"} fill sizes="(max-width:760px) 100vw, 50vw"/></div><p className="vs-eyebrow">{ar?"سؤال واحد يفتح مسارًا جديدًا":"ONE QUESTION. A NEW PATH."}</p><h3>{ar?"ما الذي أصبح ممكنًا اليوم، وقد يسبقك به غيرك غدًا؟":"What important capability should exist that does not exist today?"}</h3><p>{ar?"العالم مليء بالتقنيات والخبرات والفرص التي يمكن أن تنقل مؤسستك إلى مستوى جديد. وبينما تتأخر في استكشافها، قد يبني بها غيرك تفوقه. نكتشف معك الفرص التي تصنع الفارق، ونحوّلها إلى قدرات تمتلكها مؤسستك وتنافس بها.":"We start with the capability that should exist. We discover why it does not exist today, then bring together the people, knowledge, technologies and opportunities needed to make it real."}</p><Link className="vs-text-link" href={`${p}/method`}>{ar?"اكتشف منهجنا":"Explore our method"}<ArrowRight size={20}/></Link></article>
