@@ -3,9 +3,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      ...['', '/ar'].flatMap(prefix => [
-        {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
-        {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
+      ...['', '/ar', '/ko'].flatMap(prefix => [
+        ...['projects','programs','opportunities','workshops','news'].map(section => ({source: `${prefix}/${section}/:path*`, destination: `${prefix}/about`, permanent: false})),
+        {source: `${prefix}/method`, destination: `${prefix}/about/what-we-do`, permanent: false},
+        {source: `${prefix}/health`, destination: `${prefix}/pharmaceuticals`, permanent: false},
+        {source: `${prefix}/reports/methodology`, destination: `${prefix}/reports`, permanent: false},
+        {source: `${prefix}/insights/characters/:path*`, destination: `${prefix}/insights`, permanent: false},
+        {source: `${prefix}/insights/physical-ai`, destination: prefix==='/ko'?'/ko/reports':`${prefix}/reports/physical-ai`, permanent: false},
+        {source: `${prefix}/work-with-us/:slug`, destination: `${prefix}/work-with-us`, permanent: false},
+        ...['operating-model','governance','program-questions','people','learning-from-darpa'].map(slug => ({source: `${prefix}/about/${slug}`, destination: `${prefix}/about${slug==='people'?'#founder':''}`, permanent: false})),
       ]),
       {
         source: "/:path*",

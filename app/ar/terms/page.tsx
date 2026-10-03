@@ -1,15 +1,21 @@
-import type { Metadata } from "next";
-import LegalPage from "@/components/legal-page";
-
-export const metadata: Metadata = {
-  title: "الشروط | VisionSeek",
-  description: "شروط استخدام موقع VisionSeek. المجالات استكشاف، والرؤى مستشعر، ولا ينشأ التزام إلا باتفاق مكتوب.",
-  alternates: {
-    canonical: "/ar/terms",
-    languages: { en: "/terms", ar: "/ar/terms" },
+import type {Metadata} from "next";
+import FocusLegal from "@/components/focus/legal";
+export const metadata:Metadata={
+  "title": "شروط الاستخدام | VisionSeek",
+  "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+  "alternates": {
+    "canonical": "/ar/terms",
+    "languages": {
+      "ar": "/ar/terms",
+      "en": "/terms",
+      "ko": "/ko/terms"
+    }
   },
+  "openGraph": {
+    "title": "شروط الاستخدام | VisionSeek",
+    "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+    "url": "/ar/terms",
+    "locale": "ar_EG"
+  }
 };
-
-export default function ArabicTermsPage() {
-  return <LegalPage locale="ar" kind="terms" />;
-}
+export default function Page(){return <FocusLegal locale="ar" kind="terms"/>;}

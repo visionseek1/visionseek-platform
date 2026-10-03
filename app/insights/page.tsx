@@ -1,15 +1,21 @@
-import type { Metadata } from "next";
-import InsightsPage from "@/components/insights-page";
-
-export const metadata: Metadata = {
-  title: "Leaders House | VisionSeek",
-  description: "A daily home for executives, institutional leaders and decision makers. Explore shifts, opportunities and capabilities through posts, short videos and stories.",
-  alternates: {
-    canonical: "/insights",
-    languages: { en: "/insights", ar: "/ar/insights" },
+import type {Metadata} from "next";
+import FocusLeaders from "@/components/focus/leaders";
+export const metadata:Metadata={
+  "title": "Leaders House | Health & pharmaceuticals",
+  "description": "We transfer critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
+  "alternates": {
+    "canonical": "/insights",
+    "languages": {
+      "ar": "/ar/insights",
+      "en": "/insights",
+      "ko": "/ko/insights"
+    }
   },
+  "openGraph": {
+    "title": "Leaders House | Health & pharmaceuticals",
+    "description": "We transfer critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
+    "url": "/insights",
+    "locale": "en_US"
+  }
 };
-
-export default function Insights() {
-  return <InsightsPage locale="en" />;
-}
+export default function Page(){return <FocusLeaders locale="en"/>;}

@@ -1,16 +1,21 @@
-import type { Metadata } from "next";
-import LegalPage from "@/components/legal-page";
-
-export const metadata: Metadata = {
-  title: "Terms | VisionSeek",
-  description: "Terms for using the public VisionSeek website. Fields are exploration, insights are a sensor, and no obligation arises without a written agreement.",
-  alternates: {
-    canonical: "/terms",
-    languages: { en: "/terms", ar: "/ar/terms" },
+import type {Metadata} from "next";
+import FocusLegal from "@/components/focus/legal";
+export const metadata:Metadata={
+  "title": "Terms | VisionSeek",
+  "description": "We transfer critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
+  "alternates": {
+    "canonical": "/terms",
+    "languages": {
+      "ar": "/ar/terms",
+      "en": "/terms",
+      "ko": "/ko/terms"
+    }
   },
-  robots: { index: true, follow: true },
+  "openGraph": {
+    "title": "Terms | VisionSeek",
+    "description": "We transfer critical capabilities already working in Korea to institutions in Egypt and the Gulf. Pharmaceuticals is our first specialization.",
+    "url": "/terms",
+    "locale": "en_US"
+  }
 };
-
-export default function TermsPage() {
-  return <LegalPage locale="en" kind="terms" />;
-}
+export default function Page(){return <FocusLegal locale="en" kind="terms"/>;}

@@ -1,4 +1,21 @@
-import type {Metadata} from 'next';
-import StartPage from '@/components/institution/start-page';
-export const metadata:Metadata={title:'ابنِ حلولك معنا | VisionSeek',description:'ناقش تحديات مؤسستك والحلول التي تريد بناءها مع VisionSeek عبر واتساب أو البريد.',alternates:{canonical:'/ar/start',languages:{en:'/start',ar:'/ar/start'}}};
-export default function Page(){return <StartPage locale="ar"/>;}
+import type {Metadata} from "next";
+import FocusContact from "@/components/focus/contact-form";
+export const metadata:Metadata={
+  "title": "ناقش احتياجك أو عرّفنا بقدرتك",
+  "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+  "alternates": {
+    "canonical": "/ar/start",
+    "languages": {
+      "ar": "/ar/start",
+      "en": "/start",
+      "ko": "/ko/start"
+    }
+  },
+  "openGraph": {
+    "title": "ناقش احتياجك أو عرّفنا بقدرتك",
+    "description": "ننقل القدرات الحرجة التي تعمل بالفعل في كوريا إلى مؤسسات في مصر والخليج. الصناعة الدوائية أول تخصص نركز عليه.",
+    "url": "/ar/start",
+    "locale": "ar_EG"
+  }
+};
+export default function Page(){return <FocusContact locale="ar"/>;}
