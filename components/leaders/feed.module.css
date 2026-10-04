@@ -64,3 +64,5 @@
  .briefSections p{font-size:14px}
  .discussionPrompt p{font-size:15px}
 }
+
+.dailyQuestion>p{font-size:14px;line-height:1.9;color:#dce7d8;margin:0 0 20px}

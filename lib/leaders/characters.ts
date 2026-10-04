@@ -5,8 +5,8 @@ export type LeaderCharacter = {id:string; name:Text; sector:Text; bio:Text; beat
 
 /** Founder-approved identities. Publishing methods and automation are not active yet. */
 export const characters:LeaderCharacter[] = [
- {id:'medo',name:{ar:'ميدو',en:'Medo'},sector:{ar:'الصحة',en:'Health'},portrait:0,
-  bio:{ar:'لقادة المؤسسات الصحية: تقييم تقنيات الرعاية، تطوير التشغيل، وربط الاستثمار بتحسّن يمكن قياسه في الخدمة.',en:'For healthcare leaders: assess care technologies, improve operations and connect investment to measurable service outcomes.'},beats:{ar:['تقنيات الرعاية','البحث الطبي','تطوير المؤسسات الصحية'],en:['Care technology','Medical research','Health institutions']}},
+ {id:'medo',name:{ar:'كبسولة',en:'Kapsula'},sector:{ar:'الصحة والدواء',en:'Health & pharma'},portrait:0,
+  bio:{ar:'قراءات موثقة لقادة المؤسسات الصحية ومصانع الدواء: قدرات تستحق الانتباه، ومعرفة تنتقل، وتقنيات ندرس ما تعنيه لمؤسساتنا.',en:'Sourced readings for health institutions and pharmaceutical manufacturers: capabilities worth noticing, knowledge transfer and technologies worth understanding.'},beats:{ar:['نقل التقنية','التصنيع الدوائي','الذكاء الاصطناعي في الدواء'],en:['Technology transfer','Pharma manufacturing','AI in pharma']}},
  {id:'nori',name:{ar:'نوري',en:'Nori'},sector:{ar:'التعليم',en:'Education'},portrait:1,
   bio:{ar:'لقادة التعليم: اختيار ما يستحق الاستثمار في التعلم، تطوير قدرات المعلمين، وقياس أثر التقنية داخل المؤسسة.',en:'For education leaders: choose learning investments, develop teacher capabilities and assess technology’s impact within the institution.'},beats:{ar:['تجارب التعلم','قدرات المعلمين','تقنيات التعليم'],en:['Learning experiences','Teacher capabilities','Education technology']}},
  {id:'tiko',name:{ar:'تيكو',en:'Tiko'},sector:{ar:'الذكاء الاصطناعي والتقنية',en:'AI & technology'},portrait:2,
@@ -37,8 +37,10 @@ export const characters:LeaderCharacter[] = [
   bio:{ar:'لقادة البحث والابتكار: اختيار الأسئلة المهمة، تصميم التجارب، وتحديد متى تستحق المعرفة الانتقال إلى الاستثمار والتطبيق.',en:'For research and innovation leaders: choose consequential questions, design experiments and assess when knowledge merits investment and application.'},beats:{ar:['مناهج البحث','تصميم التجارب','نقل المعرفة إلى التطبيق'],en:['Research methods','Experimental design','Knowledge into practice']}},
 ];
 
-export function characterById(id:unknown){return characters.find(c=>c.id===id);}
-export function characterPath(id:string,locale:Locale){return `${locale==='ar'?'/ar':''}/insights/characters/${id}`;}
+export const publicCharacters = characters.filter(c=>c.id==='medo');
+export function characterById(id:unknown){return characters.find(c=>c.id===(id==='kapsula'?'medo':id));}
+export function isPublicCharacter(id:unknown){return id==='medo'||id==='kapsula';}
+export function characterPath(id:string,locale:Locale){return `${locale==='ar'?'/ar':''}/insights/characters/${id==='medo'?'kapsula':id}`;}
 export function normalizeCharacterFollows(raw:unknown):string[]{return Array.isArray(raw)?[...new Set(raw.filter((id):id is string=>typeof id==='string'&&!!characterById(id)))]:[];}
 export function postsForCharacter(posts:LeaderPost[],id:string){return characterById(id)?posts.filter(p=>p.character_id===id||p.sector_ids?.includes(id)):[];}
 export function characterAuthor(post:LeaderPost){return characterById(post.character_id);}

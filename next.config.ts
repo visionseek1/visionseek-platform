@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...['', '/ar'].flatMap(prefix => [
+        {source: `${prefix}/about/learning-from-darpa`, destination: `${prefix}/insights?archived=learning`, permanent: false},
         {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
       ]),

@@ -2,6 +2,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import { createSupabaseBrowserClient } from '@/lib/supabase-browser';
 import { LeaderPost, MEDIA_BUCKET, MEDIA_TYPES, MAX_MEDIA_BYTES } from './types';
 import { safeMediaUrl } from './media-url';
+import {medicalPostFilter} from './medical-scope';
 let instance: SupabaseClient | null = null;
 export function leadersClient() {
   if (!instance) instance = createSupabaseBrowserClient();
@@ -17,7 +18,7 @@ export async function withMedia(posts: LeaderPost[]) {
 }
 export async function loadPosts({studio = false, before, limit = 24}: {studio?: boolean; before?: string; limit?:number} = {}) {
   let query = leadersClient().from('leaders_posts').select('*').order('created_at', {ascending:false}).limit(limit);
-  if (!studio) query = query.eq('status','published');
+  if (!studio) query = query.eq('status','published').or(medicalPostFilter);
   if (before) query = query.lt('created_at',before);
   const {data,error} = await query;
   if (error) throw error;

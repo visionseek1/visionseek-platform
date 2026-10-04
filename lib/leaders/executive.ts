@@ -3,14 +3,14 @@ import type {Locale, Topic} from './types';
 // Product positioning; the separate editorial style methodology remains authoritative.
 export const executivePositioning = {
  ar: {
-  audience: 'للمديرين التنفيذيين والقادة وصنّاع القرار',
-  headline: 'رؤية أوسع. قرار أوضح.',
-  description: 'تحولات تستحق انتباهك، وفرص تستحق الدراسة، وأفكار تأخذها إلى فريقك.',
+  audience: 'لقادة المؤسسات الصحية ومصانع الدواء',
+  headline: 'ما أصبح ممكنًا في الصحة والدواء.',
+  description: 'قراءات موثقة في التقنيات والمعرفة والقدرات التي قد تفتح لمؤسستك طريقًا جديدًا.',
  },
  en: {
-  audience: 'FOR EXECUTIVES, LEADERS & DECISION MAKERS',
-  headline: 'See further. Decide with clarity.',
-  description: 'Understand the shifts, examine opportunities, and bring new ideas to your team.',
+  audience: 'FOR HEALTH & PHARMA LEADERS',
+  headline: 'New possibilities in health and pharma.',
+  description: 'Sourced readings on technologies, knowledge and capabilities that could open a new path for your institution.',
  },
 };
 
@@ -29,7 +29,7 @@ export type BriefSection = {kind:'context'|'evidence'|'implication'|'action'; la
 const labels = [
  {kind:'evidence' as const,pattern:/^(المرجع|المصدر|The reference|Source):\s*/i},
  {kind:'implication' as const,pattern:/^(ما يهم مؤسستك|لماذا يهم|Why it matters):\s*/i},
- {kind:'action' as const,pattern:/^(خطوة عملية|الخطوة التالية|Try this|Next step):\s*/i},
+ {kind:'action' as const,pattern:/^(خطوة عملية|الخطوة التالية|ما الذي يستحق الدراسة|Try this|Next step|Worth exploring):\s*/i},
 ];
 /** Only present sections explicitly supplied by the author. Never infer facts or rewrite claims. */
 export function briefSections(body:string):BriefSection[]{

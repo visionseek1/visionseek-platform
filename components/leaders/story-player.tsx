@@ -2,7 +2,9 @@
 import {useCallback,useEffect,useRef,useState} from 'react';
 import {ChevronLeft,ChevronRight,Pause,Play,X} from 'lucide-react';
 import {Dialog,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {LeaderPost,Locale,postText,topics} from '@/lib/leaders/types';
+import {LeaderPost,Locale,postText} from '@/lib/leaders/types';
+import Link from 'next/link';
+import {medicalTopics as topics} from '@/lib/leaders/medical-scope';
 import {characterAuthor} from '@/lib/leaders/characters';
 import {PostMedia} from './media';
 import styles from './leaders.module.css';
@@ -24,7 +26,7 @@ export function StoryPlayer({posts,index,onClose,onIndex,locale}:{posts:LeaderPo
    <div className={styles.storyProgress} dir="ltr">{posts.map((p,i)=><span key={p.id}><i style={{width:`${i<index?100:i===index?progress:0}%`}}/></span>)}</div>
    <div className={styles.storyTop}><span>{characterAuthor(post)?.name[locale]||'VISIONSEEK'} <small>{post.highlight?(ar?'مختارات':'Highlights'):(ar?'ستوري':'Story')}</small></span><div><button aria-label={paused?(ar?'متابعة':'Resume'):(ar?'إيقاف مؤقت':'Pause')} onClick={()=>setPaused(!paused)}>{paused?<Play size={20}/>:<Pause size={20}/>}</button><button aria-label={ar?'إغلاق':'Close'} onClick={onClose}><X/></button></div></div>
    {post.media_url && <PostMedia key={post.id} post={post} locale={locale} immersive paused={paused} onProgress={setProgress} onEnded={next}/>}
-   <div className={`${styles.storyText} ${post.media_url?styles.withStoryMedia:''}`}><span>{topics.find(t=>t.id===post.topic)?.[locale]}</span><h2>{text.title}</h2><p>{text.body}</p></div>
+   <div className={`${styles.storyText} ${post.media_url?styles.withStoryMedia:''}`}><span>{topics.find(t=>t.id===post.topic)?.[locale]}</span><h2>{text.title}</h2><p>{text.body}</p>{post.id.startsWith('story-kapsula-')&&<Link className={styles.storyReadLink} href={`${ar?'/ar':''}/insights?post=${post.id.slice(6)}`}>{ar?'اقرأ الفكرة ومصدرها':'Read the brief & source'}</Link>}</div>
    <div className={styles.storyBottom}><button onClick={prev} disabled={!index} aria-label={ar?'السابق':'Previous'}>{ar?<ChevronRight/>:<ChevronLeft/>}</button><span>{index+1} / {posts.length}</span><button onClick={next} aria-label={ar?'التالي':'Next'}>{ar?<ChevronLeft/>:<ChevronRight/>}</button></div>
   </div>
  </DialogContent></Dialog>;

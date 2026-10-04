@@ -4,10 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {useEffect,useRef,useState} from 'react';
 import {Bookmark,Clapperboard,ExternalLink,FileText,Globe2,MoreHorizontal,Play,Share2,ThumbsUp} from 'lucide-react';
-import {postText,safeLink,topics,type LeaderPost,type Locale} from '@/lib/leaders/types';
+import {postText,safeLink,type LeaderPost,type Locale} from '@/lib/leaders/types';
 import {characterAuthor,characterPath} from '@/lib/leaders/characters';
 import {CharacterPortrait} from './characters';
 import styles from './post-card.module.css';
+import {medicalTopics as topics} from '@/lib/leaders/medical-scope';
 
 type Props={post:LeaderPost;locale:Locale;saved:boolean;liked:boolean;onSave:()=>void;onLike:()=>void;onShare:()=>void;onOpen:()=>void;onVideo:()=>void;onImage:(url:string)=>void;onOptions:()=>void};
 
@@ -29,7 +30,7 @@ export function PostCard({post,locale,saved,liked,onSave,onLike,onShare,onOpen,o
  const ar=locale==='ar',t=postText(post,locale),character=characterAuthor(post),video=post.kind==='video';
  const topic=topics.find(item=>item.id===post.topic);
  const source=safeLink(post.source_url);
- const cover=post.cover_url||(video?(locale==='en'?post.poster_url_en:post.poster_url)||post.poster_url:post.media_url);
+ const cover=post.cover_url||(video?(locale==='en'?post.poster_url_en:post.poster_url)||post.poster_url:(locale==='en'?post.media_url_en:post.media_url)||post.media_url);
  const [failed,setFailed]=useState(false);
  const published=post.published_at?new Date(post.published_at):null;
  const validDate=published&&!Number.isNaN(published.getTime())?published:null;
@@ -41,7 +42,7 @@ export function PostCard({post,locale,saved,liked,onSave,onLike,onShare,onOpen,o
    {character?<Link className={styles.avatarLink} href={characterPath(character.id,locale)} aria-label={character.name[locale]}><CharacterPortrait character={character} size={44}/></Link>:<span className={styles.avatar}><Image src="/visionseek-symbol-color.png" width={32} height={32} alt=""/></span>}
    <div className={styles.author}>
     <strong>{character?<Link href={characterPath(character.id,locale)}>{character.name[locale]}</Link>:'VisionSeek'}</strong>
-    <span>{character?`${character.sector[locale]} · ${ar?'شخصية تحريرية':'Editorial character'}`:(ar?'فريق تحرير بيت القادة':'Leaders House editorial team')}</span>
+    <span>{character?`${character.sector[locale]} · ${ar?'شخصية تحريرية':'Editorial character'}`:(ar?'تحرير كبسولة':'Kapsula editorial')}</span>
     <div className={styles.meta}><button onClick={onOpen} title={fullDate||undefined} aria-label={ar?'فتح المنشور':'Open post'}>{date?<time dateTime={post.published_at!}>{date}</time>:(ar?'عرض المنشور':'View post')}</button><span aria-hidden="true">·</span><Globe2 size={12} aria-label={ar?'منشور عام':'Public post'}/><span className={styles.topic}>· {topic?.[locale]}</span></div>
    </div>
    <button className={styles.menu} aria-label={ar?'تفضيلات هذا الموضوع':'Topic preferences'} onClick={onOptions}><MoreHorizontal size={23}/></button>

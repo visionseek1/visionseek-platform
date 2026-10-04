@@ -2,9 +2,10 @@
 import Link from 'next/link';
 import {useEffect,useState,type CSSProperties} from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import {ArrowUpRight,Check,ChevronLeft,ChevronRight,Plus,Search} from 'lucide-react';
-import {characters,characterPath,type LeaderCharacter} from '@/lib/leaders/characters';
-import type {Locale} from '@/lib/leaders/types';
+import {ArrowUpRight,Check,ChevronLeft,ChevronRight,Plus,Factory,BrainCircuit,ShieldCheck,Microscope,Network} from 'lucide-react';
+import {characterById,characterPath,type LeaderCharacter} from '@/lib/leaders/characters';
+import type {Locale,Topic} from '@/lib/leaders/types';
+import {medicalTopics} from '@/lib/leaders/medical-scope';
 import styles from './characters.module.css';
 
 // Display the founder's artwork directly. No generated replacement characters.
@@ -16,30 +17,26 @@ function FollowButton({character,locale,following,onFollow}:{character:LeaderCha
  const ar=locale==='ar';
  return <button className={`${styles.follow} ${following?styles.following:''}`} aria-pressed={following} aria-label={`${following?(ar?'إلغاء متابعة':'Unfollow'):(ar?'متابعة':'Follow')} ${character.name[locale]}`} onClick={onFollow}>{following?<Check size={16}/>:<Plus size={16}/>}<span>{following?(ar?'متابَع':'Following'):(ar?'متابعة':'Follow')}</span></button>;
 }
-export function CharacterRail({locale,following}:{locale:Locale;following:string[]}){
+const topicIcons={capabilities:Network,strategy:Factory,ai:BrainCircuit,leadership:ShieldCheck,innovation:Microscope};
+export function CharacterRail({locale,activeTopic,onTopic}:{locale:Locale;activeTopic:Topic|'all';onTopic:(topic:Topic)=>void}){
  const ar=locale==='ar';
  const [ref,api]=useEmblaCarousel({direction:ar?'rtl':'ltr',align:'start',dragFree:true,containScroll:'trimSnaps',breakpoints:{'(prefers-reduced-motion: reduce)':{duration:0}}});
  const [edges,setEdges]=useState({prev:false,next:false});
  useEffect(()=>{if(!api)return;const sync=()=>setEdges({prev:api.canScrollPrev(),next:api.canScrollNext()});sync();api.on('select',sync).on('reInit',sync);return()=>{api.off('select',sync).off('reInit',sync);};},[api]);
- const ordered=[...characters].sort((a,b)=>Number(following.includes(b.id))-Number(following.includes(a.id)));
- return <section className={styles.rail} aria-label={ar?'شخصيات بيت القادة':'Leaders House characters'}>
-  <div className={styles.railTitle}><strong>{ar?'تابع ما يهم مؤسستك':'Follow your organization’s sectors'}</strong><div><Link href={`${ar?'/ar':''}/insights/characters`}>{ar?'كل المجالات':'All sectors'}<ArrowUpRight size={14}/></Link><button aria-label={ar?'الشخصيات السابقة':'Previous characters'} disabled={!edges.prev} onClick={()=>api?.scrollPrev()}>{ar?<ChevronRight size={16}/>:<ChevronLeft size={16}/>}</button><button aria-label={ar?'الشخصيات التالية':'Next characters'} disabled={!edges.next} onClick={()=>api?.scrollNext()}>{ar?<ChevronLeft size={16}/>:<ChevronRight size={16}/>}</button></div></div>
-  <div ref={ref} className={styles.railViewport}><div className={styles.railTrack}>{ordered.map(c=><Link key={c.id} href={characterPath(c.id,locale)} className={styles.railCharacter} aria-label={`${c.name[locale]} — ${c.sector[locale]}`}><CharacterPortrait character={c} size={40}/><strong>{c.sector[locale]}</strong><span>{c.name[locale]}</span>{following.includes(c.id)&&<Check className={styles.followMark} size={14}/>}</Link>)}</div></div>
+ return <section className={styles.rail} aria-label={ar?'موضوعات الصحة والدواء':'Health and pharma topics'}>
+  <div className={styles.railTitle}><strong>{ar?'تابع ما يهم مؤسستك':'Follow what matters to your institution'}</strong><div><Link href={`${ar?'/ar':''}/insights/characters`}>{ar?'كل الموضوعات':'All topics'}<ArrowUpRight size={14}/></Link><button aria-label={ar?'الموضوعات السابقة':'Previous topics'} disabled={!edges.prev} onClick={()=>api?.scrollPrev()}>{ar?<ChevronRight size={16}/>:<ChevronLeft size={16}/>}</button><button aria-label={ar?'الموضوعات التالية':'Next topics'} disabled={!edges.next} onClick={()=>api?.scrollNext()}>{ar?<ChevronLeft size={16}/>:<ChevronRight size={16}/>}</button></div></div>
+  <div ref={ref} className={styles.railViewport}><div className={styles.railTrack}><Link href={characterPath('medo',locale)} className={styles.railCharacter}><CharacterPortrait character={characterById('medo')!} size={40}/><strong>{ar?'كبسولة':'Kapsula'}</strong><span>{ar?'الصحة والدواء':'Health & pharma'}</span></Link>{medicalTopics.map(t=>{const Icon=topicIcons[t.id];return <button key={t.id} className={`${styles.railCharacter} ${styles.topicCard}`} aria-pressed={activeTopic===t.id} onClick={()=>onTopic(t.id)}><span className={styles.topicIcon}><Icon size={23}/></span><strong>{t[locale]}</strong><span>{ar?'استكشف القراءات':'Explore readings'}</span></button>;})}</div></div>
  </section>;
 }
 export function CharacterDirectory({locale,following,onFollow}:{locale:Locale;following:string[];onFollow:(id:string)=>void}){
- const [query,setQuery]=useState('');const [onlyFollowing,setOnlyFollowing]=useState(false);const ar=locale==='ar';
- const visible=characters.filter(c=>(!onlyFollowing||following.includes(c.id))&&`${c.name.ar} ${c.name.en} ${c.sector.ar} ${c.sector.en}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
- return <section className={styles.directory} aria-label={ar?'دليل الشخصيات':'Character directory'}>
-  <p className={styles.intro}>{ar?'15 مجالًا من زاوية القائد: قرارات التشغيل والاستثمار وبناء القدرات. لكل مجال شخصية تحريرية، ولك أن تتابع ما يخدم مسؤوليتك.':'15 sectors through a leader’s lens: operations, investment and capability decisions. Each has an editorial character. Follow the fields relevant to your responsibilities.'}</p>
-  <p className={styles.disclosure}>{ar?'شخصيات تحريرية من VisionSeek. المتابعة محفوظة في هذا المتصفح.':'Editorial characters by VisionSeek. Your follows are saved in this browser.'}</p>
-  <label className={styles.search}><Search size={19}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder={ar?'ابحث بالاسم أو المجال':'Search by name or field'} aria-label={ar?'ابحث عن شخصية':'Search characters'}/></label>
-  <div className={styles.tabs}><button aria-pressed={!onlyFollowing} onClick={()=>setOnlyFollowing(false)}>{ar?'كل المجالات':'All sectors'} <span>15</span></button><button aria-pressed={onlyFollowing} onClick={()=>setOnlyFollowing(true)}>{ar?'أتابعهم':'Following'} <span>{following.length}</span></button></div>
-  <div className={styles.grid}>{visible.map(c=><article className={styles.card} key={c.id}><Link href={characterPath(c.id,locale)} className={styles.cardIdentity}><CharacterPortrait character={c} size={76}/><h2>{c.name[locale]} <small>{ar?c.name.en:c.name.ar}</small></h2><p>{c.sector[locale]}</p></Link><p className={styles.cardBio}>{c.bio[locale]}</p><div className={styles.cardActions}><FollowButton character={c} locale={locale} following={following.includes(c.id)} onFollow={()=>onFollow(c.id)}/><Link href={characterPath(c.id,locale)} aria-label={`${ar?'صفحة':'View'} ${c.name[locale]}`}>{ar?'الصفحة':'Profile'}<ArrowUpRight size={16}/></Link></div></article>)}</div>
-  {!visible.length&&<div className={styles.empty}><h2>{onlyFollowing?(ar?'اختر أول شخصية تتابعها':'Choose your first character'):(ar?'لم نجد شخصية بهذا البحث':'No characters match this search')}</h2><button onClick={()=>{setOnlyFollowing(false);setQuery('');}}>{ar?'عرض كل الشخصيات':'Show all characters'}</button></div>}
+ const ar=locale==='ar';const c=characterById('medo')!;
+ return <section className={styles.directory} aria-label={ar?'موضوعات كبسولة':'Kapsula topics'}>
+  <p className={styles.intro}>{ar?'اختر الموضوع الذي يشغل مؤسستك. كل قراءة تبدأ من مصدر، وتوضح ما نعرفه وما يستحق الدراسة.':'Choose what matters to your institution. Each reading starts with a source and distinguishes what we know from what is worth exploring.'}</p>
+  <div className={styles.grid}>{medicalTopics.map(t=>{const Icon=topicIcons[t.id];return <Link className={styles.card} key={t.id} href={`${ar?'/ar':''}/insights?topic=${t.id}`}><Icon size={28}/><h2>{t[locale]}</h2><p className={styles.cardBio}>{t.description[locale]}</p><span>{ar?'اقرأ المختارات':'Explore readings'} <ArrowUpRight size={15}/></span></Link>;})}<article className={styles.card}><Link className={styles.cardIdentity} href={characterPath(c.id,locale)}><CharacterPortrait character={c} size={76}/><h2>{c.name[locale]}</h2></Link><p className={styles.cardBio}>{c.bio[locale]}</p><FollowButton character={c} locale={locale} following={following.includes(c.id)} onFollow={()=>onFollow(c.id)}/></article></div>
+  <p className={styles.disclosure}>{ar?'كبسولة شخصية تحريرية من VisionSeek. المتابعة محفوظة في هذا المتصفح.':'Kapsula is a VisionSeek editorial character. Follows stay in this browser.'}</p>
  </section>;
 }
 export function CharacterProfile({character,locale,following,onFollow}:{character:LeaderCharacter;locale:Locale;following:boolean;onFollow:()=>void}){
  const ar=locale==='ar';
- return <section className={styles.profile} aria-label={`${ar?'عن':'About'} ${character.name[locale]}`}><div className={styles.profileIdentity}><CharacterPortrait character={character} size={104}/><div><span className={styles.eyebrow}>{ar?'للقادة وصنّاع القرار في القطاع':'FOR SECTOR LEADERS & DECISION MAKERS'}</span><h1>{character.name[locale]} <small>{ar?character.name.en:character.name.ar}</small></h1><strong>{character.sector[locale]}</strong></div></div><p className={styles.profileBio}>{character.bio[locale]}</p><div className={styles.beats}>{character.beats[locale].map(b=><span key={b}>{b}</span>)}</div><div className={styles.profileActions}><FollowButton character={character} locale={locale} following={following} onFollow={onFollow}/><Link href={`${ar?'/ar':''}/insights/characters`}>{ar?'كل المجالات':'All sectors'}<ArrowUpRight size={16}/></Link></div><p className={styles.disclosure}>{ar?'شخصية تحريرية من VisionSeek · المتابعة على هذا المتصفح.':'An editorial character by VisionSeek · Follows stay in this browser.'}</p></section>;
+ return <section className={styles.profile} aria-label={`${ar?'عن':'About'} ${character.name[locale]}`}><div className={styles.profileIdentity}><CharacterPortrait character={character} size={104}/><div><span className={styles.eyebrow}>{ar?'للقادة وصنّاع القرار في القطاع':'FOR SECTOR LEADERS & DECISION MAKERS'}</span><h1>{character.name[locale]} <small>{ar?character.name.en:character.name.ar}</small></h1><strong>{character.sector[locale]}</strong></div></div><p className={styles.profileBio}>{character.bio[locale]}</p><div className={styles.beats}>{character.beats[locale].map(b=><span key={b}>{b}</span>)}</div><div className={styles.profileActions}><FollowButton character={character} locale={locale} following={following} onFollow={onFollow}/><Link href={`${ar?'/ar':''}/insights/characters`}>{ar?'كل الموضوعات':'All topics'}<ArrowUpRight size={16}/></Link></div><p className={styles.disclosure}>{ar?'شخصية تحريرية من VisionSeek · المتابعة على هذا المتصفح.':'An editorial character by VisionSeek · Follows stay in this browser.'}</p></section>;
 }
