@@ -7,6 +7,7 @@ import {Bookmark,Clapperboard,ExternalLink,FileText,Globe2,MoreHorizontal,Play,S
 import {postText,safeLink,topics,type LeaderPost,type Locale} from '@/lib/leaders/types';
 import {characterAuthor,characterPath} from '@/lib/leaders/characters';
 import {CharacterPortrait} from './characters';
+import {showPublicCharacters} from '@/lib/leaders/presentation';
 import styles from './post-card.module.css';
 
 type Props={post:LeaderPost;locale:Locale;saved:boolean;liked:boolean;onSave:()=>void;onLike:()=>void;onShare:()=>void;onOpen:()=>void;onVideo:()=>void;onImage:(url:string)=>void;onOptions:()=>void};
@@ -26,7 +27,7 @@ function PostText({body,contentId,locale}:{body:string;contentId:string;locale:L
 }
 
 export function PostCard({post,locale,saved,liked,onSave,onLike,onShare,onOpen,onVideo,onImage,onOptions}:Props) {
- const ar=locale==='ar',t=postText(post,locale),character=characterAuthor(post),video=post.kind==='video';
+ const ar=locale==='ar',t=postText(post,locale),character=showPublicCharacters?characterAuthor(post):undefined,video=post.kind==='video';
  const topic=topics.find(item=>item.id===post.topic);
  const source=safeLink(post.source_url);
  const cover=post.cover_url||(video?(locale==='en'?post.poster_url_en:post.poster_url)||post.poster_url:post.media_url);
