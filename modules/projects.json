@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "projects",
+  "nameAr": "المشروعات",
+  "nameEn": "Projects",
+  "description": "ملفات المشروعات وتحديثاتها العامة؛ تحريرها التشغيلي قيد التكامل.",
+  "icon": "graduation",
+  "sortOrder": 50,
+  "publicRoutes": [
+    "/ar/projects",
+    "/projects"
+  ],
+  "adminEntryPoint": null,
+  "owner": "مساحة المشروعات",
+  "codeRef": "main @ ed7cb36",
+  "docsUrl": "https://github.com/visionseek1/visionseek-platform/blob/main/docs/projects/MANAGEMENT_ROOM_INTEGRATION.md",
+  "readiness": "development",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": false,
+      "disabledReason": "المحرر التشغيلي لم يُسلّم بعد."
+    }
+  ],
+  "permissions": [
+    "read"
+  ],
+  "agentTools": [],
+  "editorAvailable": false,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [
+    "معرّفات المشروعات ثابتة: VS-P07 وVS-P08",
+    "المصدر العام: lib/projects؛ لا نسخ للسجلات الخاصة"
+  ],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [
+    "ملفات المشروعات موجودة في main؛ محرر المسودات والنشر لم يُبنَ بعد."
+  ],
+  "workflowEnabled": false
+}
