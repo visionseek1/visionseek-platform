@@ -26,3 +26,7 @@ At 02:14 Korea on 2026-10-06, the founder asked to foreground “Cross-sector Op
 ## Founder wording correction — 2026-10-06, 03:10 Korea
 
 The founder added “والحلول العابرة للقطاعات”. The current Arabic identity is “استوديو الفرص والقدرات والحلول العابرة للقطاعات”, with English “Cross-sector Opportunity, Capability & Solutions Studio”. Apply this correction to the existing hero, short homepage explanation and metadata only. Keep Make It Possible, the current preview scope and no-production restriction.
+
+## Homepage copy placement — 2026-10-06, 03:34 Korea
+
+The founder requested deleting only the first-slide explanatory sentence, with no replacement in the hero, and placing the proposed inspirational copy elsewhere. Remove the AR sentence beginning “نكتشف الفرص عند التقاء القطاعات” and its EN equivalent from the first slide; do not render an empty paragraph. Keep the studio identity, Make It Possible, Korea line and CTA. Put the approved proposal (heading, paragraph and closing line) in the existing InstitutionExplainer immediately below the hero, in AR/EN, replacing its earlier introduction. Keep all other sections and slides unchanged. This remains preview-only; no production authorization. Owner: site agent; delivery: this round. Acceptance: the old sentence and proposed copy are absent from the hero, while the proposal is present below it.

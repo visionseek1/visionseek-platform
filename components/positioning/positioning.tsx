@@ -14,8 +14,9 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
   return <><section className={styles.homeBand} aria-labelledby="visionseek-explained">
     <div className={styles.homeIntro}>
       <p className={styles.eyebrow} dir="ltr" lang="en">Cross-sector Opportunity, Capability &amp; Solutions Studio</p>
-      <h2 id="visionseek-explained">{ar?'نصل مؤسستك بما وصل إليه العالم.':'Connect your institution to what the world has made possible.'}</h2>
-      <p>{ar?'VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات. نبحث عمّا يمكن أن تفتحه تقنية أو معرفة من مجال ما داخل مجال آخر، ونجمع العناصر اللازمة لتحويل الفرصة إلى مشروع أو قدرة أو حل يخدم مؤسستك.':'VisionSeek is a cross-sector opportunity, capability and solutions studio. We explore what technology or knowledge from one field can make possible in another, and bring together what is needed to turn that opportunity into a project, capability or solution for your institution.'}</p>
+      <h2 id="visionseek-explained">{ar?'مؤسستك قادرة على أكثر مما ترى اليوم.':'Your institution can do more than you see today.'}</h2>
+      <p>{ar?'في العالم اليوم تقنيات وحلول وقدرات قد تغيّر موقع مؤسستك بالكامل. نكشف لك ما لم تره بعد، ونصمّم الطريق لتصبح هذه الإمكانات قوة حقيقية داخل مؤسستك. ومع طفرة الذكاء الاصطناعي، تتّسع فرصتك لتقليص الفارق مع الشركات العالمية وامتلاك قدرات كانت حكرًا على الكبار.':'Technologies, solutions and capabilities around the world could transform your institution’s position. We reveal what you have yet to see and design a path to make those possibilities a real strength within your institution. Advances in AI are expanding your opportunity to close the gap with global companies and access capabilities once reserved for the largest players.'}</p>
+      <p><strong>{ar?'ما أصبح ممكنًا في العالم، يمكن أن يفتح فصلًا جديدًا لمؤسستك.':'What is now possible in the world could open a new chapter for your institution.'}</strong></p>
       <Link className={styles.textLink} href={`${base}${positioningPath}`}>{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={21}/></Link>
     </div>
     <div className={styles.homeHlo}>
