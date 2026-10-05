@@ -3,7 +3,7 @@ import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
   title: "VisionSeek | Make It Possible.",
-  description: "VisionSeek استوديو للفرص والقدرات عبر القطاعات. نكتشف الفرص عند التقاء القطاعات، ونجمع التقنيات والمعرفة والشركاء لتحويلها إلى مشروعات وقدرات قابلة للتنفيذ.",
+  description: "VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات. نكتشف الفرص عند التقاء القطاعات، ونجمع التقنيات والمعرفة والشركاء لتحويلها إلى مشروعات وقدرات وحلول قابلة للتنفيذ.",
   alternates: {
     canonical: "/ar",
     languages: { en: "/", ar: "/ar" },

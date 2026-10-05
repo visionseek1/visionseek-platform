@@ -22,3 +22,7 @@ At 02:14 Korea on 2026-10-06, the founder asked to foreground “Cross-sector Op
 - Existing homepage explainer: describe the studio umbrella. Keep Critical Capability Transfer in the adjacent existing panel and keep Korea–MENA presence.
 - Update matching home descriptions/organization metadata. No reordering, section removal, methodology publication or claims of completed work.
 - Other hero slides, homepage sections and the rest of the platform remain the production baseline.
+
+## Founder wording correction — 2026-10-06, 03:10 Korea
+
+The founder added “والحلول العابرة للقطاعات”. The current Arabic identity is “استوديو الفرص والقدرات والحلول العابرة للقطاعات”, with English “Cross-sector Opportunity, Capability & Solutions Studio”. Apply this correction to the existing hero, short homepage explanation and metadata only. Keep Make It Possible, the current preview scope and no-production restriction.

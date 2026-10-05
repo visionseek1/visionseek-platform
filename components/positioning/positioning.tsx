@@ -13,9 +13,9 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
   const ar=locale==='ar';const base=ar?'/ar':'';
   return <><section className={styles.homeBand} aria-labelledby="visionseek-explained">
     <div className={styles.homeIntro}>
-      <p className={styles.eyebrow} dir="ltr" lang="en">Cross-sector Opportunity &amp; Capability Studio</p>
+      <p className={styles.eyebrow} dir="ltr" lang="en">Cross-sector Opportunity, Capability &amp; Solutions Studio</p>
       <h2 id="visionseek-explained">{ar?'نصل مؤسستك بما وصل إليه العالم.':'Connect your institution to what the world has made possible.'}</h2>
-      <p>{ar?'VisionSeek استوديو للفرص والقدرات عبر القطاعات. نبحث عمّا يمكن أن تفتحه تقنية أو معرفة من مجال ما داخل مجال آخر، ونجمع العناصر اللازمة لتحويل الفرصة إلى مشروع أو قدرة تخدم مؤسستك.':'VisionSeek is a cross-sector opportunity and capability studio. We explore what technology or knowledge from one field can make possible in another, and bring together what is needed to turn that opportunity into a project or capability for your institution.'}</p>
+      <p>{ar?'VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات. نبحث عمّا يمكن أن تفتحه تقنية أو معرفة من مجال ما داخل مجال آخر، ونجمع العناصر اللازمة لتحويل الفرصة إلى مشروع أو قدرة أو حل يخدم مؤسستك.':'VisionSeek is a cross-sector opportunity, capability and solutions studio. We explore what technology or knowledge from one field can make possible in another, and bring together what is needed to turn that opportunity into a project, capability or solution for your institution.'}</p>
       <Link className={styles.textLink} href={`${base}${positioningPath}`}>{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={21}/></Link>
     </div>
     <div className={styles.homeHlo}>

@@ -29,7 +29,7 @@ const structuredData = {
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-color.png",
       description:
-        "VisionSeek is a Cross-sector Opportunity & Capability Studio. We connect technology, knowledge and partners across sectors to develop projects and capabilities. Make It Possible.",
+        "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
       email: "abdelalim@visionseek.org",
       telephone: "+82-10-4241-9606",
       address: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
   title: "VisionSeek | Make It Possible.",
   description:
-    "VisionSeek is a Cross-sector Opportunity & Capability Studio. We connect technology, knowledge and partners across sectors to develop projects and capabilities. Make It Possible.",
+    "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
   icons: {
     icon: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
     shortcut: "/visionseek-symbol-color.png",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     siteName: "VisionSeek",
     title: "VisionSeek | Make It Possible.",
     description:
-      "VisionSeek is a Cross-sector Opportunity & Capability Studio. We connect technology, knowledge and partners across sectors to develop projects and capabilities. Make It Possible.",
+      "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
     url: "/",
     images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
   },
