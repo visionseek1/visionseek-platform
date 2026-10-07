@@ -58,7 +58,7 @@ export const projects:Project[] = [
 ];
 export const prefix = (locale:Locale) => locale==='ar'?'/ar':'';
 export const projectStatus:Record<Project['status'],Text> = {
-  concept:t('قيد التأسيس','In development'),
+  concept:t('مفهوم','Concept'),
   active:t('قيد التنفيذ','In progress'),
   completed:t('مكتمل','Completed'),
 };

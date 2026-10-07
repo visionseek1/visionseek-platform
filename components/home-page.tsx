@@ -14,7 +14,6 @@ const icons = [Building2, Landmark, Microscope, Users, Factory, Network];
 export default function HomePage({locale}: {locale:Locale}) {
   const ar=locale==="ar";const p=ar?"/ar":"";
   const reading=[
-    {href:"/insights/physical-ai",image:"industry",category:ar?"تقرير · بيت القادة":"REPORT · LEADERS HOUSE",title:ar?"عندما يغادر الذكاء الاصطناعي الشاشة":"When AI leaves the screen",text:ar?"قراءة في الذكاء الاصطناعي المادي وما يفتحه من قدرات.":"A perspective on physical AI and the capabilities it could unlock."},
     {href:"/about/what-we-do#hlo",image:"chips",category:ar?"برنامج · HLO":"PROGRAM · HLO",title:"Highest Level One",text:ar?"نربط مؤسستك بالفرص والقدرات المناسبة لها، ونختبر ما يستحق التطبيق.":"Connect your institution with relevant global opportunities and capabilities, and test what is worth applying."},
     {href:"/about#what-we-build",image:"cities",category:ar?"رؤية · ما نبنيه":"PERSPECTIVE · WHAT WE BUILD",title:ar?"الشكل يتبع القدرة":"The form follows the capability",text:ar?"منظومة، منصة، برنامج، شراكة أو شركة جديدة. نبدأ من القدرة.":"A system, platform, program, partnership or new company. Start with the capability."},
   ];
