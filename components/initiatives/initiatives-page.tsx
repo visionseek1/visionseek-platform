@@ -4,38 +4,44 @@ import { CapabilityHeader } from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 
 type Locale = 'ar' | 'en';
+
+const tracks = [
+  {
+    ar: { name: 'التنقّل والمركبات', items: 'سيارات، سيارات كهرباء، قوارب، سفن، معدات نقل.', status: 'قيد التجهيز', note: 'المسار الأول. ما نبيعه تدريب وأدوات ومسار عمل، لا مركبات ولا تصدير.' },
+    en: { name: 'Mobility', items: 'Cars, electric cars, boats, ships, transport equipment.', status: 'In preparation', note: 'The first path. We sell training, tools, and a way of working, not vehicles and not export.' },
+  },
+  {
+    ar: { name: 'الصناعة والتصنيع', items: 'مصانع، معدات، روبوتات، طاقة.', status: 'قريبًا', note: 'نفس المنهج، لم يبدأ بعد.' },
+    en: { name: 'Industry', items: 'Factories, equipment, robotics, energy.', status: 'Coming soon', note: 'The same method. Not started.' },
+  },
+  {
+    ar: { name: 'التكنولوجيا والذكاء الاصطناعي', items: 'ذكاء اصطناعي، برمجيات، منتجات ذكية.', status: 'قريبًا', note: 'نفس المنهج، لم يبدأ بعد.' },
+    en: { name: 'Tech & AI', items: 'Artificial intelligence, software, smart products.', status: 'Coming soon', note: 'The same method. Not started.' },
+  },
+];
+
 const copy = {
   ar: {
     home: 'الرئيسية',
     section: 'المبادرات',
-    purpose: 'جهد طويل تبني به VisionSeek أناسًا ومؤسسات قادرة في سوق، لا مهمة لعميل واحد.',
-    not: 'ليست برنامجًا محدودًا، ولا مشروعًا لجهة، ولا ورشة، ولا تقريرًا.',
-    cardName: 'تمكين القدرة من كوريا',
-    cardProblem: 'مؤسسات وأناس في مصر والخليج يريدون العمل في مجالات لها ممارسة شغالة في كوريا، وليس عندهم مسار يرون منه العمل ويتحققون منه ثم ينفذونه.',
-    cardBuild: 'نبني شبكة ممارسين يتعلمون العمل من الصفر داخل نظام واضح، ثم يعملون معنا.',
-    cardWho: 'متدربون يبدأون من الصفر، ومؤسسات شريكة في السعودية والخليج.',
-    cardFirst: 'التطبيق الأول: المركبات. ليست هوية VisionSeek، ولا نبيع مركبات ولا نصدّرها.',
+    purpose: 'مش مهمة لعميل واحد. دي مسار طويل: ناس يتعلموا الشغل من كوريا، وبعدين يعملوه هم.',
+    not: 'مش برنامج، ومش مشروع، ومش ورشة، ومش تقرير. التخصص المنهجية، مش قطاع.',
+    mark: 'by VisionSeek · من كوريا',
     status: 'قيد التجهيز',
-    join: 'حدّثنا',
-    open: 'افتح المبادرة',
-    hlo: 'HLO هو دخول VisionSeek إلى المؤسسة. المبادرة تبني الناس الذين يمكن أن يعملوا داخل هذا الدخول لاحقًا. لا توجد دفعة قائمة اليوم.',
-    programs: 'البرامج مسار قدرة محدود. المبادرة تبقى وتكوّن الممارسين.',
+    open: 'ادخل Forge',
+    blurb: 'المسار الأول التنقّل والمركبات. الصناعة والتكنولوجيا بعده. السعودية الأول، والخليج مرحلة تالية.',
+    hlo: 'HLO دخول المؤسسة. Forge يبني الناس اللي يمكن يشتغلوا جواه بعدين. مفيش دفعة قائمة النهاردة.',
   },
   en: {
     home: 'Home',
     section: 'Initiatives',
-    purpose: 'A long-running VisionSeek effort that creates capable people and organizations in a market, not a one-off client engagement.',
-    not: 'Not a bounded program, not a project for one institution, not a workshop, and not a report.',
-    cardName: 'Korea Capability Empowerment',
-    cardProblem: 'People and institutions in Egypt and the Gulf want to work in fields that already operate in Korea, without a path to see the work, verify it, and then do it.',
-    cardBuild: 'We build a network of practitioners who learn the work from zero inside a clear system, then work with us.',
-    cardWho: 'Trainees starting from zero, and partner organizations in Saudi Arabia and the Gulf.',
-    cardFirst: 'First application: vehicles. This is not VisionSeek’s identity, and we do not sell or export vehicles.',
+    purpose: 'Not a one-off job for one client. A long path: people learn the work from Korea, then do it themselves.',
+    not: 'Not a program, not a project, not a workshop, and not a report. The specialty is the method, not a sector.',
+    mark: 'by VisionSeek · from Korea',
     status: 'In preparation',
-    join: 'Talk to us',
-    open: 'Open the initiative',
-    hlo: 'HLO is how VisionSeek enters an institution. The initiative builds people who can later work inside that engagement. No cohort is running today.',
-    programs: 'A program is a bounded capability path. An initiative stays, and forms the practitioners.',
+    open: 'Enter Forge',
+    blurb: 'Mobility is the first path. Industry and technology come after. Saudi Arabia first. The Gulf is a later stage.',
+    hlo: 'HLO is how we enter an institution. Forge builds the people who can later work inside it. No cohort is running today.',
   },
 } as const;
 
@@ -68,11 +74,9 @@ export function InitiativesIndex({ locale }: { locale: Locale }) {
       <div className="vs-institution-layout">
         <article className="vs-detail-body">
           <span className="vs-status">{t.status}</span>
-          <h2><Link href={`${p}/initiatives/korea-capability`}>{t.cardName}</Link></h2>
-          <p>{t.cardProblem}</p>
-          <p>{t.cardBuild}</p>
-          <p>{t.cardWho}</p>
-          <p>{t.cardFirst}</p>
+          <h2><Link href={`${p}/initiatives/korea-capability`}>Forge</Link></h2>
+          <p>{t.mark}</p>
+          <p>{t.blurb}</p>
           <p><Link className="vs-button" href={`${p}/initiatives/korea-capability`}>{t.open}<ArrowRight size={18} /></Link></p>
         </article>
       </div>
@@ -80,65 +84,64 @@ export function InitiativesIndex({ locale }: { locale: Locale }) {
         <div>
           <p className="vs-eyebrow">HLO</p>
           <h2>{t.hlo}</h2>
-          <p>{t.programs}</p>
         </div>
-        <Link href={`${p}/about/what-we-do#hlo`} className="vs-button">{locale === 'ar' ? 'HLO' : 'HLO'}<ArrowRight size={18} /></Link>
+        <Link href={`${p}/about/what-we-do#hlo`} className="vs-button">HLO<ArrowRight size={18} /></Link>
       </section>
     </Frame>
   );
 }
 
-const korea = {
+const page = {
   ar: {
-    hero: 'نبني قدرة الناس على رؤية العمل والتحقق منه ثم تشغيله، من ممارسة شغالة في كوريا.',
-    problemTitle: 'المشكلة',
-    problem: 'الشراء من وسيط لا يترك عند المؤسسة من يرى المجال ويتحقق منه ويعمل فيه. المبادرة تبني هذا المسار لأناس ومؤسسات في مصر والخليج، بدل أن تبيع لهم صفقة.',
-    methodTitle: 'المنهج',
+    hero: 'تتعلّم الشغل من الصفر، من حاجة شغالة فعلًا في كوريا. بعدين تعمله أنت.',
+    where: 'السعودية الأول. الخليج مرحلة تالية.',
+    problemTitle: 'ليه المسار',
+    problem: 'الشراء من وسيط مش بيبني حد يشوف الشغل ويتأكد منه ويعمله. Forge يبني الناس دول ما يبيعش الصفقة.',
+    methodTitle: 'منهج واحد، تلات مسارات',
     steps: [
-      'نرى المجال من مصدر شغال في كوريا.',
-      'نتحقق مما هو حقيقي قبل أن نعلّمه.',
-      'يتعلم الممارس العمل من الصفر داخل نظام واضح.',
-      'نعمل معًا، ثم يقوم هو بالعمل.',
-      'نفس المنهج ينتقل إلى مجال تالٍ، ولا نبدأ من الصفر كل مرة.',
+      'نشوف الشغل من مصدر شغال في كوريا.',
+      'نتحقق قبل ما نعلّم.',
+      'نتعلّم من الصفر جوه نظام.',
+      'نشتغل سوا.',
+      'بعدين هما يشتغلوا لوحدهم.',
     ],
-    appTitle: 'التطبيق الأول، ثم ما بعده',
-    app: 'المركبات هي التطبيق الأول فقط. ما نبيعه هو التدريب والأدوات ومسار العمل، لا المركبات. بعدها، حين يثبت المسار: القوارب والسفن، والمعدات البحرية والصناعية، وما يشبهها مما هو متاح في كوريا.',
-    whoTitle: 'من ينضم',
-    who: 'متدرب يبدأ من الصفر ويريد أن يتعلم العمل ثم يمارسه معنا. أو مؤسسة تريد أن تبني هذه القدرة عندها. النطاق الذي نجهزه: السعودية والخليج. لا دفعة مفتوحة اليوم.',
-    getTitle: 'ماذا يحصلون عليه',
-    get: 'تدريب، وأدوات، ومسار عمل مكتوب. حين يوجد مقابل، يكون أجرًا ثابتًا ومعلنًا. أي حصة لشريك تُكتب. لا عمولة خفية ولا ربا. لا أسعار في هذه الصفحة.',
+    tracksTitle: 'كوريا قوية هنا. المنهج هو هو.',
+    whoTitle: 'مين يدخل',
+    who: 'واحد يبدأ من الصفر وعايز يتعلّم الشغل ويعمله معنا. أو مؤسسة عايزة القدرة دي عندها. السعودية الأول. الخليج مرحلة تالية. مفيش دفعة مفتوحة النهاردة.',
+    getTitle: 'اللي تاخده',
+    get: 'تدريب، وأدوات، ومسار شغل مكتوب. حين يبقى فيه مقابل، يكون أجرًا ثابتًا ومعلنًا. أي حصة لشريك تتكتب. مفيش عمولة خفية ولا ربا. مفيش أسعار هنا.',
     statusTitle: 'الحالة',
-    statusBody: 'قيد التجهيز. لا خريجون، ولا نتائج، ولا شركاء معلنون. الاسم العام لم يُحسم بعد.',
-    cta: 'حدّثنا عن المبادرة',
-    ctaNote: 'الزر يجهّز رسالة. لا يعني أن الطلب سُجّل.',
+    statusBody: 'قيد التجهيز. مفيش خريجين، ولا نتائج، ولا شركاء.',
+    cta: 'احكيلنا عن Forge',
+    ctaNote: 'الزر يجهّز رسالة. مش معناه إن الطلب اتسجل.',
   },
   en: {
-    hero: 'We build people’s capability to see the work, verify it, and operate it, from a practice that already runs in Korea.',
-    problemTitle: 'The problem',
-    problem: 'Buying through a middleman does not leave an institution with people who can see a field, verify it, and work in it. The initiative builds that path for people and organizations in Egypt and the Gulf, instead of selling them a deal.',
-    methodTitle: 'The method',
+    hero: 'Learn the work from zero, from something that already runs in Korea. Then you do it.',
+    where: 'Saudi Arabia first. The Gulf is a later stage.',
+    problemTitle: 'Why this path',
+    problem: 'Buying through a middleman does not build someone who can see the work, check it, and do it. Forge builds the person. It does not sell the deal.',
+    methodTitle: 'One method. Three paths.',
     steps: [
-      'See the field from a working source in Korea.',
-      'Verify what is real before teaching it.',
-      'The practitioner learns the work from zero inside a clear system.',
-      'We do the work together, then they do it.',
-      'The same method moves to the next field. We do not start from zero each time.',
+      'We see the work from a source that already runs in Korea.',
+      'We verify it before we teach it.',
+      'You learn it from zero, inside a system.',
+      'We work it together.',
+      'Then you work it on your own.',
     ],
-    appTitle: 'First application, then the next',
-    app: 'Vehicles are only the first application. What we sell is training, tools, and a working path, not vehicles. After the path holds: boats and ships, marine and industrial equipment, and similar fields available in Korea.',
-    whoTitle: 'Who joins',
-    who: 'A trainee who starts from zero and wants to learn the work and then practice it with us. Or an organization that wants this capability in-house. The scope we are preparing: Saudi Arabia and the Gulf. No cohort is open today.',
-    getTitle: 'What they receive',
-    get: 'Training, tools, and a written operating path. When a fee exists, it is fixed and disclosed. Any partner share is written down. No hidden commission and no interest. No prices on this page.',
+    tracksTitle: 'Korea is strong here. The method is the point.',
+    whoTitle: 'Who comes in',
+    who: 'Someone starting from zero who wants to learn the work and do it with us. Or an organization that wants the capability in-house. Saudi Arabia first. The Gulf comes later. No cohort is open today.',
+    getTitle: 'What you get',
+    get: 'Training, tools, and a written way of working. When there is a fee, it is fixed and stated. Any partner share is written down. No hidden commission and no interest. No prices on this page.',
     statusTitle: 'Status',
-    statusBody: 'In preparation. No graduates, no results, and no announced partners. The public name is not settled.',
-    cta: 'Talk to us about the initiative',
+    statusBody: 'In preparation. No graduates, no results, and no partners.',
+    cta: 'Talk to us about Forge',
     ctaNote: 'The button prepares a message. It does not mean the request was registered.',
   },
 } as const;
 
 export function KoreaInitiative({ locale }: { locale: Locale }) {
-  const t = korea[locale];
+  const t = page[locale];
   const p = locale === 'ar' ? '/ar' : '';
   const path = '/initiatives/korea-capability';
   return (
@@ -148,17 +151,33 @@ export function KoreaInitiative({ locale }: { locale: Locale }) {
           <nav className="vs-breadcrumb">
             <Link href={p || '/'}>{copy[locale].home}</Link><span>/</span>
             <Link href={`${p}/initiatives`}>{copy[locale].section}</Link><span>/</span>
-            <span>{copy[locale].cardName}</span>
+            <span>Forge</span>
           </nav>
-          <span className="vs-status">{copy[locale].status}</span>
-          <h1>{copy[locale].cardName}</h1>
+          <p className="vs-eyebrow">{copy[locale].mark}</p>
+          <h1>Forge</h1>
           <p>{t.hero}</p>
+          <p className="vs-directory-notice">{t.where}</p>
         </div>
       </section>
       <article className="vs-detail-body">
         <section id="problem"><h2>{t.problemTitle}</h2><p>{t.problem}</p></section>
         <section id="method"><h2>{t.methodTitle}</h2><ol>{t.steps.map(step => <li key={step}>{step}</li>)}</ol></section>
-        <section id="application"><h2>{t.appTitle}</h2><p>{t.app}</p></section>
+        <section id="tracks">
+          <h2>{t.tracksTitle}</h2>
+          <div className="vs-grid">
+            {tracks.map(track => {
+              const item = track[locale];
+              return (
+                <article key={item.name}>
+                  <span className="vs-status">{item.status}</span>
+                  <h3>{item.name}</h3>
+                  <p>{item.items}</p>
+                  <p>{item.note}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
         <section id="who"><h2>{t.whoTitle}</h2><p>{t.who}</p></section>
         <section id="receive"><h2>{t.getTitle}</h2><p>{t.get}</p></section>
         <section id="status"><h2>{t.statusTitle}</h2><p>{t.statusBody}</p></section>
