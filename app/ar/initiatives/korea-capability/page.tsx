@@ -1,13 +1,5 @@
-import type { Metadata } from 'next';
-import { KoreaInitiative } from '@/components/initiatives/initiatives-page';
-
-export const metadata: Metadata = {
-  title: 'Forge | VisionSeek',
-  description: 'Forge by VisionSeek من كوريا. قيد التجهيز. تدريب وأدوات ومسار شغل. ليست تجارة مركبات.',
-  alternates: { canonical: '/ar/initiatives/korea-capability', languages: { en: '/initiatives/korea-capability', ar: '/ar/initiatives/korea-capability' } },
-  robots: { index: false, follow: false },
-};
+import { redirect } from 'next/navigation';
 
 export default function Page() {
-  return <KoreaInitiative locale="ar" />;
+  redirect('/ar/initiatives/level-up-korea');
 }
