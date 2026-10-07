@@ -101,7 +101,7 @@ export const innovations:Innovation[] = [
       {claim:t('A Seoul National University Hospital study on 134 patients: agreement with the Holter at R²=0.995','دراسة بمستشفى جامعة سيول الوطنية على 134 مريضًا: تطابق مع الهولتر بمعامل R²=0.995'),url:'https://www.jmir.org/2024/1/e46098'},
     ],
     region:{note:t('In the region:','في المنطقة:'),links:[
-      {claim:t('A three-year distribution contract worth around 22 billion won with One Health, part of the UAE’s PureHealth, a proof of concept at SSMC Hospital in Abu Dhabi, and Saudi Arabia and Oman announced as the next step','عقد توزيع لثلاث سنوات بنحو 22 مليار وون مع One Health التابعة لـPureHealth الإماراتية، وإثبات مفهوم في مستشفى SSMC بأبوظبي، والسعودية وعُمان معلنتان خطوةً تالية'),url:'https://www.biospectator.com/news/view/28630'},
+      {claim:t('A three-year distribution contract worth around 22 billion won with One Health, part of the UAE’s PureHealth, a proof of concept at SSMC Hospital in Abu Dhabi for the company’s thynC monitoring platform, and Saudi Arabia and Oman announced as the next step','عقد توزيع لثلاث سنوات بنحو 22 مليار وون مع One Health التابعة لـPureHealth الإماراتية، وإثبات مفهوم في مستشفى SSMC بأبوظبي لمنصة المراقبة thynC التابعة للشركة، والسعودية وعُمان معلنتان خطوةً تالية'),url:'https://www.biospectator.com/news/view/28630'},
     ]},
   },
   {
@@ -116,11 +116,11 @@ export const innovations:Innovation[] = [
     ),
     evidence:[
       {claim:t('Approval: Korean MFDS (2021), CE MDR and UKCA (May 2025), and an FDA Breakthrough Device designation (2023)','الاعتماد: MFDS الكورية (2021)، وCE MDR وUKCA (مايو 2025)، وتصنيف «جهاز اختراقي» من FDA (2023)'),url:'https://www.biospectrumasia.com/news/27/26018/south-korea-based-vunos-ai-powered-cardiac-arrest-risk-management-system-earns-ce-mdr-and-ukca-certifications.html'},
-      {claim:t('More than 50,000 beds across more than 20 tertiary hospitals in Korea','أكثر من 50 ألف سرير في أكثر من 20 مستشفى من الدرجة الثالثة في كوريا'),url:'https://www.koreaherald.com/article/10615300'},
+      {claim:t('About 50,000 beds in Korea (August 2025)','نحو 50 ألف سرير في كوريا (أغسطس 2025)'),url:'https://www.biospectator.com/news/view/26041',perCompany:true},
       {claim:t('A multicentre study in Critical Care (2023): prediction accuracy of 0.869 against 0.767 for the standard NEWS score','دراسة متعددة المراكز في Critical Care (2023): دقة التنبؤ 0.869 مقابل 0.767 لمقياس NEWS المعتاد'),url:'https://link.springer.com/article/10.1186/s13054-023-04609-0'},
     ],
     region:{note:t('In the region:','في المنطقة:'),links:[
-      {claim:t('The Saudi healthcare sandbox (2024), and live trials under way in hospitals in Egypt and Kuwait (first-quarter 2026 results)','البيئة التجريبية للرعاية الصحية السعودية (2024)، وتجارب تشغيل جارية في مستشفيات بمصر والكويت (نتائج الربع الأول 2026)'),url:'https://mobile.newsis.com/view/NISX20260515_0003631668',perCompany:true},
+      {claim:t('The Saudi healthcare sandbox (2024), and demonstrations with local validation at hospitals in Egypt and Kuwait (first-quarter 2026 results). Not yet approved in Egypt','البيئة التجريبية للرعاية الصحية السعودية (2024)، وعروض وتحقق محلي مع مستشفيات في مصر والكويت (نتائج الربع الأول 2026). لا اعتماد مصري للمنتج بعد'),url:'https://www.newsis.com/view/NISX20260515_0003631668',perCompany:true},
     ]},
   },
 ];
