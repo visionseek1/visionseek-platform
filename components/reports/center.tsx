@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import SiteHeader from '@/components/site-header';
 import { references, toolkit } from '@/lib/reports/catalog';
 import styles from './reports.module.css';
 import ReportsLibrary from './library';
-import { report, sources } from '@/lib/reports/physical-ai';
 
 type Locale = 'ar' | 'en';
 export default function ReportsCenter({ locale, methodology = false }: { locale: Locale; methodology?: boolean }) {
@@ -35,18 +33,13 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
       {!methodology ? <>
         <section className={styles.feature} aria-labelledby="featured-report">
           <div className={styles.featureCopy}>
-            <div className={styles.meta}><span>{t('من أرشيفنا', 'FROM OUR ARCHIVE')}</span><span>{t('إحاطة استراتيجية · سبتمبر 2026', 'STRATEGIC BRIEF · SEPTEMBER 2026')}</span></div>
-            <h2 id="featured-report">{report[locale].title}</h2>
-            <p>{t('حين تنتقل قدرات الذكاء الاصطناعي إلى الموانئ والمصانع والخدمات العامة، يصبح السؤال: كيف نبني منظومة متكاملة حولها؟', 'As AI capabilities move into ports, factories and public services, the question becomes: how do we build an integrated system around them?')}</p>
-            <div className={styles.featureLinks}><Link className={styles.cta} href={`${root}/physical-ai`}>{t('اقرأ الإحاطة', 'Read the brief')} <span aria-hidden>↗</span></Link><Link className={styles.secondaryLink} href={`${root}/physical-ai#references`}>{t('المراجع وبيانات الإصدار', 'Sources & publication record')}</Link></div>
-            <p className={styles.reviewNote}>{t('منظور استراتيجي من الأرشيف. المراجعة المستقلة غير مثبتة.', 'An archival strategic perspective. Independent review is not established.')}</p>
+            <div className={styles.meta}><span>{t('حالة القسم', 'SECTION STATUS')}</span><span>{t('أكتوبر 2026', 'OCTOBER 2026')}</span></div>
+            <h2 id="featured-report">{t('لا يوجد إصدار منشور بعد.', 'No publication is available yet.')}</h2>
+            <p>{t('قسم البحث قائم، وما ينقصه إصدار استوفى أدلته ومراجعته واعتماد نشره. حين يستوفي أول تقرير هذه الشروط يظهر هنا باسمه وتاريخه وبيانات إصداره كاملة.', 'The research department exists; what it does not yet have is a publication that has completed its evidence, review and publication approval. The first report to meet those conditions will appear here with its title, date and full publication record.')}</p>
+            <div className={styles.featureLinks}><Link className={styles.cta} href={`${root}/methodology`}>{t('اقرأ المنهج والمعايير', 'Read the methods & standards')} <span aria-hidden>↗</span></Link></div>
+            <p className={styles.reviewNote}>{t('لا نعرض هنا مسودة ولا عملًا قيد الإعداد. ما يُعرض يكون قد صدر.', 'Drafts and work in preparation are not listed here. What appears here has been released.')}</p>
           </div>
-          <Link className={styles.featureImage} href={`${root}/physical-ai`} aria-label={t('قراءة إحاطة الذكاء الاصطناعي المادي', 'Read the Physical AI brief')}>
-            <Image src="/field-industry.jpg" alt={t('صورة توضيحية لخط إنتاج صناعي', 'Illustrative industrial production line')} fill sizes="(max-width: 760px) 100vw, 40vw" priority />
-            <div className={styles.coverCaption}><span>VISIONSEEK / 01</span><strong>PHYSICAL<br/>AI</strong><span>{t('من التقنية إلى القدرة', 'FROM TECHNOLOGY TO CAPABILITY')}</span></div>
-          </Link>
         </section>
-        <div className={styles.issueStrip}><span>{t('إحاطة استراتيجية', 'Strategic brief')}</span><span>{t('العربية / English', 'English / العربية')}</span><span>{sources.length} {t('مراجع مختارة', 'selected references')}</span><Link href={`${root}/physical-ai#publication-record`}>{t('افحص بيانات الإصدار', 'Inspect the publication record')} ↗</Link></div>
         <ReportsLibrary locale={locale} />
         <section className={styles.editorialBand}>
           <div><span className={styles.label}>{t('عدسة VisionSeek', 'THE VISIONSEEK LENS')}</span><h2>{t('نبحث فيما يمكن أن يصبح ممكنًا.', 'Researching what could become possible.')}</h2></div>
