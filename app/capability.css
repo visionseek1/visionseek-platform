@@ -21,3 +21,27 @@
 .projects-page .projects-index{padding-top:4rem}.projects-page .project-row{margin-bottom:3rem}.projects-page .project-meta h2{font-size:clamp(1.8rem,3vw,2.5rem)}
 /* Keep the English brand line in its established face on Arabic pages too. */
 .vs-site.locale-ar :is(.vs-hero h1,.vs-footer-top strong,.vs-closing-line){font-family:var(--font-display),sans-serif!important}
+
+/* Health & Care on the home page — text-first, no logos or product imagery. */
+.vs-health-strip{background:#151920}
+.vs-health-strip-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--vs-line,#2a3038);margin-top:2rem}
+.vs-health-chip{display:flex;flex-direction:column;gap:.5rem;background:#151920;padding:1.6rem 1.2rem;min-width:0;min-height:100%}
+.vs-health-chip:hover,.vs-health-chip:focus-visible{background:#1b2028}
+.vs-health-chip h3{font-size:1.05rem;line-height:1.4;overflow-wrap:anywhere}
+.vs-health-chip-line{color:var(--grey,#b9c0b4);line-height:1.7;font-size:.92rem;flex:1}
+.vs-health-chip-note{font-size:.7rem;letter-spacing:.03em;color:#8a9484;line-height:1.6;border-top:1px solid var(--vs-line,#2a3038);padding-top:.7rem}
+.vs-field-lead{display:block;background:#1b2028;border-inline-start:3px solid var(--lime,#d1ff00);padding:clamp(1.5rem,3vw,2.6rem);margin-top:2rem}
+.vs-field-lead:hover,.vs-field-lead:focus-visible{background:#20262f}
+.vs-field-lead h3{font-size:clamp(1.6rem,2.8vw,2.4rem);margin:.5rem 0 .7rem}
+.vs-field-lead p:not(.vs-eyebrow){color:var(--grey,#b9c0b4);line-height:1.85;max-width:60ch}
+.vs-field-lead .vs-text-link{margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem}
+.vs-fields-subhead{margin:2.6rem 0 1rem;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:#8a9484}
+.vs-field-card-quiet{background:#141820;border:1px solid var(--vs-line,#2a3038);min-height:112px;display:flex;align-items:stretch}
+.vs-field-card-quiet>div{display:flex;align-items:center;gap:.8rem;padding:1.1rem;width:100%;position:static}
+.vs-field-card-quiet h3{font-size:1rem;line-height:1.45;flex:1;min-width:0}
+.vs-field-card-quiet span{color:#8a9484;font-size:.8rem;flex-shrink:0}
+.vs-field-card-quiet:hover,.vs-field-card-quiet:focus-visible{background:#1b2028}
+.vs-fields-quiet{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
+.vs-work-feature-text{grid-template-columns:1fr}
+@media(max-width:1100px){.vs-health-strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vs-fields-quiet{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.vs-health-strip-grid{grid-template-columns:1fr}.vs-fields-quiet{grid-template-columns:1fr}}

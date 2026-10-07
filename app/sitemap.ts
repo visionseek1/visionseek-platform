@@ -9,7 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const entries = [
     {path:"/about/what-we-do",priority:0.9},{path:"/ar/about/what-we-do",priority:0.9},
-    ...projectRoutes.flatMap(parts=>['','/ar'].map(prefix=>({path:`${prefix}/projects/${parts.join('/')}`,priority:0.8}))),
+    // Defense is not surfaced publicly; its pages still resolve on their own URLs.
+    ...projectRoutes.filter(parts=>parts[0]!=='defense').flatMap(parts=>['','/ar'].map(prefix=>({path:`${prefix}/projects/${parts.join('/')}`,priority:0.8}))),
     ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology"].map(path => ({path, priority: 0.7})),
     ...(showPublicCharacters?[...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
       {path:'/insights/characters',priority:0.7},{path:'/ar/insights/characters',priority:0.7}]:[]),
@@ -20,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },
     { path: "/ar/projects", priority: 0.8 },
+    { path: "/health", priority: 0.95 },
+    { path: "/ar/health", priority: 0.95 },
     { path: "/insights", priority: 0.85 },
     { path: "/ar/insights", priority: 0.85 },
     { path: "/privacy", priority: 0.3 },

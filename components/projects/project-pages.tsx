@@ -66,16 +66,22 @@ function ProjectCard({project,locale}:{project:Project;locale:Locale}) {
 function ConceptCollection({items,locale}:{items:Project[];locale:Locale}) {
   return <><div className={styles.projectList}>{items.map(project=><ProjectCard key={project.id} project={project} locale={locale}/>)}</div><Notice locale={locale}/></>;
 }
+// Health leads and points at its own section. Defense is not surfaced; its pages still resolve.
+export const visibleSectors = [
+  ...sectors.filter(s=>s.slug==='health'),
+  ...sectors.filter(s=>s.slug!=='health'&&s.slug!=='defense'),
+];
 function SectorGrid({locale}:{locale:Locale}) {
   const ar=locale==='ar';
-  return <div className={styles.sectorGrid}>{sectors.map((sector,i)=>{
+  return <div className={styles.sectorGrid}>{visibleSectors.map((sector,i)=>{
     const Icon=icons[sector.icon];const count=projects.filter(p=>p.sector===sector.slug).length;
+    const health=sector.slug==='health';
     return <article className={styles.sectorCard} key={sector.slug}>
       {sector.anchors.map(anchor=><span className={styles.anchor} id={anchor} key={anchor}/>)}
-      <Link href={sectorPath(sector.slug,locale)}>
+      <Link href={health?`${locale==='ar'?'/ar':''}/health`:sectorPath(sector.slug,locale)}>
         <div className={styles.sectorTop}><Icon size={32} strokeWidth={1.3}/><span dir="ltr">0{i+1}</span></div>
-        <h3>{sector.title[locale]}</h3><p>{sector.intro[locale]}</p>
-        <div className={styles.sectorBottom}><span>{count?conceptCount(count,locale):(ar?'مجال استكشاف':'Exploration area')}</span><ArrowUpRight size={19}/></div>
+        <h3>{health?(ar?'الصحة والرعاية':'Health & Care'):sector.title[locale]}</h3><p>{health?(ar?'خمسة ابتكارات كورية مرصودة، كل واحد بدليله ومصدره.':'Five observed Korean innovations, each with its evidence and sources.'):sector.intro[locale]}</p>
+        <div className={styles.sectorBottom}><span>{health?(ar?'القطاع الأول':'Where we begin'):count?conceptCount(count,locale):(ar?'استكشاف':'Exploration')}</span><ArrowUpRight size={19}/></div>
       </Link>
     </article>;
   })}</div>;
@@ -93,7 +99,7 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
       <div className={styles.spotlightTop}><span className={`${styles.projectStatus} ${project.status==='active'?styles.activeStatus:''}`}>{projectStatus[project.status][locale]}</span><span dir="ltr">{project.id}</span></div>
       <div className={styles.spotlightCopy}><p>{sectorBySlug(project.sector)?.title[locale]} <span> / LNG</span></p><h3>{project.title[locale]}</h3><div className={styles.spotlightFooter}><span>{ar?'استكشف المشروع':'Explore project'}</span><ArrowUpRight size={22}/></div></div>
     </Link>)}</ProjectRail>{featuredProjects.some(p=>p.status==='concept')&&<div className={styles.spotlightNotice}><Notice locale={locale}/></div>}</>}
-    <section id="fields" className={styles.section}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'المشاريع حسب المجال':'PROJECTS BY SECTOR'}</p><h2>{ar?'أين نصنع الفارق؟':'Where can we make a difference?'}</h2></div><span className={styles.count}>{String(sectors.length).padStart(2,'0')}</span></div><SectorGrid locale={locale}/></section>
+    <section id="fields" className={styles.section}><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>{ar?'المشاريع حسب المجال':'PROJECTS BY SECTOR'}</p><h2>{ar?'أين نصنع الفارق؟':'Where can we make a difference?'}</h2></div><span className={styles.count}>{String(visibleSectors.length).padStart(2,'0')}</span></div><SectorGrid locale={locale}/></section>
     <Contact locale={locale}/>
   </Frame>;
 }
