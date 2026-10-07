@@ -35,8 +35,13 @@ test('VS-P03 renders the K-Beauty first application and the deal boundary in bot
     assert.doesNotMatch(html, internal);
   }
 
-  assert.equal((enList.match(/Proposed · not launched/g) || []).length, 5);
-  assert.equal((arList.match(/مقترح · لم يُطلق/g) || []).length, 5);
+  const statusText = (html) => [...html.matchAll(/<span class="vs-status">([^<]*)<\/span>/g)].map((match) => match[1]);
+  const enStatuses = statusText(enList);
+  const arStatuses = statusText(arList);
+  assert.equal(enStatuses.filter((status) => status === 'Proposed · not launched').length, 5);
+  assert.equal(enStatuses.filter((status) => status === 'Working offer · first application').length, 1);
+  assert.equal(arStatuses.filter((status) => status === 'مقترح · لم يُطلق').length, 5);
+  assert.equal(arStatuses.filter((status) => status === 'عرض قائم · التطبيق الأول').length, 1);
   assert.doesNotMatch(en, /Proposed · not launched/);
   assert.doesNotMatch(ar, /مقترح · لم يُطلق/);
   assert.match(en, /What are we trying to do\?/);
