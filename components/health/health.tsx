@@ -16,7 +16,7 @@ export default function HealthPage({locale}:{locale:Locale}){
    <header className={styles.hero}>
     <p className="vs-eyebrow">{ar?'الصحة والرعاية':'HEALTH & CARE'}</p>
     <h1>{ar?'ما جرّبته كوريا في رعاية الإنسان، نضعه أمام احتياج مصر والخليج.':'Korean health innovations, proven in practice, read against the needs of Egypt and the Gulf.'}</h1>
-    <p className={styles.lead}>{ar?'نرصد ابتكارات كورية في الصحة والرعاية، معتمدة ومُختبرة على الأرض، ونقرأ كل واحد منها بدليله ومصدره. بدأنا بالصحة، والمنهج نفسه يمتد إلى قطاعات أخرى.':'We track approved, field-tested Korean innovations in health and care, each shown with its evidence and sources. Health is where we begin; the same method extends to other sectors.'}</p>
+    <p className={styles.lead}>{ar?'نرصد ابتكارات كورية في الصحة والرعاية، مُختبرة على الأرض، ونقرأ كل واحد منها بدليله ومصدره. بدأنا بالصحة، والمنهج نفسه يمتد إلى قطاعات أخرى.':'We track Korean innovations in health and care that have been tested in real operation, each shown with its evidence and sources. Health is where we begin; the same method extends to other sectors.'}</p>
     <p className={styles.heroNote}>{pick(disclaimer)}</p>
    </header>
 
