@@ -55,6 +55,11 @@ test('VS-P03 renders the K-Beauty first application and the deal boundary in bot
   assert.match(en, /kbeautyexpo\.com\/fairContents\.do\?FAIRMENU_IDX=11815/);
   assert.match(en, /Request a sourcing-route verification/);
   assert.match(ar, /اطلب تحقق مسار توريد/);
+  assert.match(en, /vs-sourcing-cover/);
+  assert.match(en, /Sourcing-route verification · K-Beauty skincare/);
+  assert.match(ar, /vs-sourcing-cover/);
+  assert.match(ar, /تحقق مسار توريد · عناية بالبشرة الكورية/);
+  for (const html of [enList, arList, en, ar]) assert.doesNotMatch(html, /field-drones\.jpg/);
   assert.match(enList, /mailto:abdelalim@visionseek\.org/);
   assert.match(enList, /wa\.me\/821042419606/);
   assert.match(arList, /mailto:abdelalim@visionseek\.org/);
