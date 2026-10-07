@@ -4,6 +4,7 @@ import SiteHeader from '@/components/site-header';
 import { references, toolkit } from '@/lib/reports/catalog';
 import styles from './reports.module.css';
 import ReportsLibrary from './library';
+import PipelineShelf from './pipeline-shelf';
 import { report, sources } from '@/lib/reports/physical-ai';
 
 type Locale = 'ar' | 'en';
@@ -47,6 +48,7 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
           </Link>
         </section>
         <div className={styles.issueStrip}><span>{t('إحاطة استراتيجية', 'Strategic brief')}</span><span>{t('العربية / English', 'English / العربية')}</span><span>{sources.length} {t('مراجع مختارة', 'selected references')}</span><Link href={`${root}/physical-ai#publication-record`}>{t('افحص بيانات الإصدار', 'Inspect the publication record')} ↗</Link></div>
+        <PipelineShelf locale={locale} />
         <ReportsLibrary locale={locale} />
         <section className={styles.editorialBand}>
           <div><span className={styles.label}>{t('عدسة VisionSeek', 'THE VISIONSEEK LENS')}</span><h2>{t('نبحث فيما يمكن أن يصبح ممكنًا.', 'Researching what could become possible.')}</h2></div>
