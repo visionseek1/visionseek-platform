@@ -22,8 +22,8 @@ export type Innovation = {
 };
 
 export const disclaimer = t(
-  'Observed Korean innovation — no existing partnership with VisionSeek',
-  'ابتكار كوري مرصود — لا شراكة قائمة مع VisionSeek',
+  'A Korean innovation we follow — VisionSeek has no partnership with its maker',
+  'ابتكار كوري نتابعه — ولا شراكة قائمة بين VisionSeek والشركة المنتجة',
 );
 export const perCompanyLabel = t('per the company', 'بحسب الشركة');
 export const inferenceLabel = t('Inference', 'استنتاج');
@@ -34,7 +34,7 @@ export const innovations:Innovation[] = [
     field:t('AI diagnostics','التشخيص بالذكاء الاصطناعي'),
     name:'Lunit INSIGHT MMG',
     company:t('Lunit, Seoul','Lunit، سيول'),
-    challenge:t('Early detection','الكشف المبكر'),
+    challenge:t('Breast cancer found too late','سرطان ثدي يُكتشف متأخرًا'),
     description:t(
       'Breast screening assumes two radiologists read every image, and the region does not have that many breast radiologists. Lunit built an AI second reader that marks suspicious areas with a probability score, catching what a tired eye can miss while sending fewer women back for unnecessary recalls.',
       'الكشف المبكر عن سرطان الثدي يحتاج عينَي طبيبَين على كل صورة، والمنطقة لا تملك أطباء أشعة ثدي بهذا العدد. بنت Lunit قارئًا ذكيًا يقف بجانب الطبيب، يلوّن المواضع المشتبهة ويعطي كلًّا منها درجة احتمال، فيلتقط ما قد يفوت العين المتعبة ويقلّل استدعاء النساء بلا داعٍ.',
@@ -55,7 +55,7 @@ export const innovations:Innovation[] = [
     field:t('Elderly care','رعاية كبار السن'),
     name:'CLOVA CareCall',
     company:t('Naver Cloud','Naver Cloud'),
-    challenge:t('Older people living alone','كبار السن الوحيدون'),
+    challenge:t('Older people living alone','مسنّون يعيشون وحدهم'),
     description:t(
       'Once a week, an AI voice calls an older person who lives alone, asks how they are eating, sleeping and feeling, remembers what they said last time, and alerts a social worker at the first sign of trouble. No device, no app — an ordinary phone is enough.',
       'مكالمة واحدة في الأسبوع من صوت ذكي يسأل المسنّ الذي يعيش وحده عن صحته وأكله ونومه، ويتذكّر ما قاله في المرة السابقة، ويبلّغ الأخصائي الاجتماعي عند أول علامة خطر. لا جهاز ولا تطبيق — الهاتف العادي يكفي.',
@@ -73,7 +73,7 @@ export const innovations:Innovation[] = [
     field:t('Rehabilitation','التأهيل الحركي'),
     name:'Morning Walk S200',
     company:t('Curexo','Curexo'),
-    challenge:t('Rehabilitation after a stroke','التأهيل بعد الجلطة'),
+    challenge:t('Walking again after a stroke','مريض جلطة يريد أن يمشي من جديد'),
     description:t(
       'A stroke patient needs thousands of repeated steps to relearn walking, more than any therapist can physically guide. The patient sits on the robot while two powered footplates move the legs in a natural gait pattern, with no overhead harness, and a session starts in about three minutes.',
       'مريض الجلطة يحتاج آلاف الخطوات المتكررة ليستعيد مشيه، والمعالج الطبيعي لا يستطيع أن يحمل ساقيه كل تلك الخطوات. المريض يجلس على الروبوت، ودوّاستان آليتان تحرّكان ساقيه في نمط مشي طبيعي، بلا حزام تعليق، والجلسة تبدأ في حوالي ثلاث دقائق.',
@@ -90,7 +90,7 @@ export const innovations:Innovation[] = [
     field:t('Remote monitoring','المراقبة الصحية عن بُعد'),
     name:'mobiCARE',
     company:t('Seers Technology','Seers Technology'),
-    challenge:t('Heart-rhythm disorders that come and go','اضطرابات القلب التي تظهر وتختفي'),
+    challenge:t('Heart rhythms that vanish before they are caught','خفقانٌ يأتي ويختفي قبل أن يُسجَّل'),
     description:t(
       'Heart-rhythm disorders come and go, and a bulky Holter monitor records for a single day. A small chest patch records for days while the patient lives at home, then AI reads the recording and finds what a one-day test would miss.',
       'اضطرابات نبض القلب تظهر وتختفي، وجهاز الهولتر الكبير يسجّل يومًا واحدًا فقط. لاصقة صغيرة على الصدر تسجّل أيامًا والمريض في بيته، ثم يقرأ الذكاء الاصطناعي التسجيل ويستخرج ما فاته فحص اليوم الواحد.',
@@ -109,7 +109,7 @@ export const innovations:Innovation[] = [
     field:t('Smart hospital','المستشفى الذكي'),
     name:'VUNO Med-DeepCARS',
     company:t('VUNO','VUNO'),
-    challenge:t('Sudden deterioration on the wards','التدهور المفاجئ في الأقسام'),
+    challenge:t('Patients who deteriorate unnoticed on the ward','مريض يتدهور في القسم ولا أحد يلحظ'),
     description:t(
       'Most cardiac arrests on general wards are preceded by warning signs in vital signs hours earlier, but a nurse covering dozens of patients cannot catch them all. The system reads four vital signs from the electronic record and alerts the team before the patient deteriorates, running on top of the hospital’s existing system.',
       'أغلب حالات توقف القلب في الأقسام العادية تسبقها علامات في المؤشرات الحيوية بساعات، لكن الممرضة المسؤولة عن عشرات المرضى لا تلحظها. يقرأ النظام أربع علامات حيوية من الملف الإلكتروني وينذر الفريق قبل أن يسوء الحال، ويعمل فوق نظام المستشفى القائم.',
