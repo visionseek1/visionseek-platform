@@ -1,6 +1,6 @@
 export const institutionNav = [
  {path:'/programs',en:'Programs',ar:'البرامج',children:[['/about/what-we-do#hlo','HLO — Highest Level One','برنامج HLO'],['/programs','Program concepts','تصورات البرامج'],['/programs/ideas','Ideas under exploration','أفكار قيد الاستكشاف'],['/programs/challenges','Challenges','التحديات'],['/programs/spotlights','Research spotlights','تحت المجهر'],['/programs/program-lifecycle','How programs work','كيف تعمل البرامج؟']]},
- {path:'/projects',en:'Projects',ar:'المشاريع',children:[['/projects','All sectors','كل المجالات'],['/projects/energy','Energy & Climate','الطاقة والمناخ'],['/projects/semiconductors','Chips & Semiconductors','الرقائق وأشباه الموصلات'],['/projects/drones-aviation','Drones & Aviation','الدرونز والطيران'],['/projects/defense','Defense & Security','الدفاع والأمن'],['/projects/robotics','Robotics & Industry','الروبوتات والصناعة'],['/projects/health','Medicine & Health','الطب والصحة'],['/projects/agriculture','Agriculture & Food Security','الزراعة والأمن الغذائي'],['/projects/infrastructure','Cities & Infrastructure','المدن والبنية التحتية']]} ,
+ {path:'/projects',en:'Projects',ar:'المشاريع',children:[['/projects/health','Medicine & Health','الطب والصحة']]},
  {path:'/opportunities',en:'R&D Opportunities',ar:'فرص البحث والتطوير',children:[['/opportunities','Explore opportunities','استكشف الفرص'],['/work-with-us/how-to-respond','Response guide','دليل المشاركة'],['/work-with-us/prepare-a-concept','Prepare your note','جهّز مذكرتك']]},
  {path:'/workshops',en:'Workshops',ar:'ورش العمل',children:[['/workshops','Weekly workshops','الورش الأسبوعية'],['/workshops/how-workshops-work','How it works','كيف تعمل الورش؟'],['/workshops/rewinds','Notes & outcomes','السجلات والمخرجات']]},
  {path:'/news',en:'News',ar:'الأخبار',children:[['/news','All news & notes','كل الأخبار والمقالات'],['/insights','Leaders House','بيت القادة'],['/news/media','Media & inquiries','الإعلام والاستفسارات']]},
@@ -8,6 +8,5 @@ export const institutionNav = [
  {path:'/about',en:'About',ar:'عن VisionSeek',children:[['/about/what-we-do','How VisionSeek works','كيف تعمل VisionSeek؟'],['/about','Our vision','رؤيتنا'],['/method','Our method','منهجنا'],['/about/operating-model','Operating model','نموذج التشغيل'],['/about/program-questions','Program questions','أسئلة البرنامج'],['/about/people','People','الأشخاص'],['/about/governance','Governance','الحوكمة'],['/about/learning-from-darpa','Learning from DARPA','التعلم من DARPA']]},
 ];
 
-// Reports belongs in the header; preserve the existing footer navigation.
 const reportsNav = {path:'/reports',en:'Reports',ar:'التقارير',children:[['/reports','Research & reports','الأبحاث والتقارير'],['/reports/methodology','Methods & standards','المنهج والمعايير']]};
 export const institutionHeaderNav = institutionNav.flatMap(item => item.path === '/news' ? [reportsNav, item] : [item]);
