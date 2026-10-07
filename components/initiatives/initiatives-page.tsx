@@ -4,6 +4,7 @@ import { CapabilityHeader } from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 
 type Locale = 'ar' | 'en';
+const initiativePath = '/initiatives/level-up-korea';
 
 const tracks = [
   {
@@ -28,9 +29,9 @@ const copy = {
     not: 'مش برنامج، ومش مشروع، ومش ورشة، ومش تقرير. التخصص المنهجية، مش قطاع.',
     mark: 'by VisionSeek · من كوريا',
     status: 'قيد التجهيز',
-    open: 'ادخل Forge',
+    open: 'ادخل Level Up Korea',
     blurb: 'المسار الأول التنقّل والمركبات. الصناعة والتكنولوجيا بعده. السعودية الأول، والخليج مرحلة تالية.',
-    hlo: 'HLO دخول المؤسسة. Forge يبني الناس اللي يمكن يشتغلوا جواه بعدين. مفيش دفعة قائمة النهاردة.',
+    hlo: 'HLO دخول المؤسسة. Level Up Korea يبني الناس اللي يمكن يشتغلوا جواه بعدين. مفيش دفعة قائمة النهاردة.',
   },
   en: {
     home: 'Home',
@@ -39,9 +40,9 @@ const copy = {
     not: 'Not a program, not a project, not a workshop, and not a report. The specialty is the method, not a sector.',
     mark: 'by VisionSeek · from Korea',
     status: 'In preparation',
-    open: 'Enter Forge',
+    open: 'Enter Level Up Korea',
     blurb: 'Mobility is the first path. Industry and technology come after. Saudi Arabia first. The Gulf is a later stage.',
-    hlo: 'HLO is how we enter an institution. Forge builds the people who can later work inside it. No cohort is running today.',
+    hlo: 'HLO is how we enter an institution. Level Up Korea builds the people who can later work inside it. No cohort is running today.',
   },
 } as const;
 
@@ -74,10 +75,10 @@ export function InitiativesIndex({ locale }: { locale: Locale }) {
       <div className="vs-institution-layout">
         <article className="vs-detail-body">
           <span className="vs-status">{t.status}</span>
-          <h2><Link href={`${p}/initiatives/korea-capability`}>Forge</Link></h2>
+          <h2><Link href={`${p}${initiativePath}`}>Level Up Korea</Link></h2>
           <p>{t.mark}</p>
           <p>{t.blurb}</p>
-          <p><Link className="vs-button" href={`${p}/initiatives/korea-capability`}>{t.open}<ArrowRight size={18} /></Link></p>
+          <p><Link className="vs-button" href={`${p}${initiativePath}`}>{t.open}<ArrowRight size={18} /></Link></p>
         </article>
       </div>
       <section className="vs-institution-cta">
@@ -96,7 +97,7 @@ const page = {
     hero: 'تتعلّم الشغل من الصفر، من حاجة شغالة فعلًا في كوريا. بعدين تعمله أنت.',
     where: 'السعودية الأول. الخليج مرحلة تالية.',
     problemTitle: 'ليه المسار',
-    problem: 'الشراء من وسيط مش بيبني حد يشوف الشغل ويتأكد منه ويعمله. Forge يبني الناس دول ما يبيعش الصفقة.',
+    problem: 'الشراء من وسيط مش بيبني حد يشوف الشغل ويتأكد منه ويعمله. Level Up Korea يبني الناس دول ما يبيعش الصفقة.',
     methodTitle: 'منهج واحد، تلات مسارات',
     steps: [
       'نشوف الشغل من مصدر شغال في كوريا.',
@@ -112,14 +113,14 @@ const page = {
     get: 'تدريب، وأدوات، ومسار شغل مكتوب. حين يبقى فيه مقابل، يكون أجرًا ثابتًا ومعلنًا. أي حصة لشريك تتكتب. مفيش عمولة خفية ولا ربا. مفيش أسعار هنا.',
     statusTitle: 'الحالة',
     statusBody: 'قيد التجهيز. مفيش خريجين، ولا نتائج، ولا شركاء.',
-    cta: 'احكيلنا عن Forge',
+    cta: 'احكيلنا عن Level Up Korea',
     ctaNote: 'الزر يجهّز رسالة. مش معناه إن الطلب اتسجل.',
   },
   en: {
     hero: 'Learn the work from zero, from something that already runs in Korea. Then you do it.',
     where: 'Saudi Arabia first. The Gulf is a later stage.',
     problemTitle: 'Why this path',
-    problem: 'Buying through a middleman does not build someone who can see the work, check it, and do it. Forge builds the person. It does not sell the deal.',
+    problem: 'Buying through a middleman does not build someone who can see the work, check it, and do it. Level Up Korea builds the person. It does not sell the deal.',
     methodTitle: 'One method. Three paths.',
     steps: [
       'We see the work from a source that already runs in Korea.',
@@ -135,7 +136,7 @@ const page = {
     get: 'Training, tools, and a written way of working. When there is a fee, it is fixed and stated. Any partner share is written down. No hidden commission and no interest. No prices on this page.',
     statusTitle: 'Status',
     statusBody: 'In preparation. No graduates, no results, and no partners.',
-    cta: 'Talk to us about Forge',
+    cta: 'Talk to us about Level Up Korea',
     ctaNote: 'The button prepares a message. It does not mean the request was registered.',
   },
 } as const;
@@ -143,18 +144,17 @@ const page = {
 export function KoreaInitiative({ locale }: { locale: Locale }) {
   const t = page[locale];
   const p = locale === 'ar' ? '/ar' : '';
-  const path = '/initiatives/korea-capability';
   return (
-    <Frame locale={locale} path={path}>
+    <Frame locale={locale} path={initiativePath}>
       <section className="vs-institution-hero">
         <div className="vs-institution-hero-copy">
           <nav className="vs-breadcrumb">
             <Link href={p || '/'}>{copy[locale].home}</Link><span>/</span>
             <Link href={`${p}/initiatives`}>{copy[locale].section}</Link><span>/</span>
-            <span>Forge</span>
+            <span>Level Up Korea</span>
           </nav>
           <p className="vs-eyebrow">{copy[locale].mark}</p>
-          <h1>Forge</h1>
+          <h1>Level Up Korea</h1>
           <p>{t.hero}</p>
           <p className="vs-directory-notice">{t.where}</p>
         </div>
