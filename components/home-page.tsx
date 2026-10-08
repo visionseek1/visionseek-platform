@@ -8,6 +8,7 @@ import CapabilityHero from "@/components/capability/hero";
 import { InstitutionExplainer } from "@/components/positioning/positioning";
 import MethodSpotlight from "@/components/capability/method-spotlight";
 import { communities, fields, type Locale } from "@/components/capability/content";
+import { isArchived } from "@/lib/visibility";
 import {site, whatsappUrl} from '@/lib/site';
 import {home} from '@/lib/home';
 
@@ -25,7 +26,7 @@ export default function HomePage({locale}: {locale:Locale}) {
       <InstitutionExplainer locale={locale}/>
       <section className="vs-editorial" id="vision">
         <article className="vs-mission-card"><div className="vs-mini-heading"><h2>{tx(mission.heading)}</h2><Link href={`${p}/about`} aria-label={ar?"عن VisionSeek":"About VisionSeek"}><ArrowRight/></Link></div><div className="vs-editorial-image"><Image src={mission.image} alt={tx(mission.imageAlt)} fill sizes="(max-width:760px) 100vw, 50vw"/></div><p className="vs-eyebrow">{tx(mission.eyebrow)}</p><h3>{tx(mission.title)}</h3><p>{tx(mission.text)}</p><Link className="vs-text-link" href={`${p}/method`}>{tx(mission.link)}<ArrowRight size={20}/></Link></article>
-        <div className="vs-reading"><div className="vs-mini-heading"><h2>{tx(readingCopy.heading)}</h2><Link href={`${p}/insights`}>{tx(readingCopy.headingLink)}<ArrowRight size={18}/></Link></div>{reading.map(r=><Link className="vs-reading-row" href={`${p}${r.href}`} key={r.href}><div className="vs-reading-image"><Image src={`/field-${r.image}.jpg`} alt="" fill sizes="(max-width:760px) 30vw, 16vw"/></div><div><p className="vs-eyebrow">{r.category}</p><h3>{r.title}</h3><p>{r.text}</p><span className="vs-inline-arrow" aria-hidden="true">↗</span></div></Link>)}</div>
+        <div className="vs-reading"><div className="vs-mini-heading"><h2>{tx(readingCopy.heading)}</h2>{!isArchived('/insights')&&<Link href={`${p}/insights`}>{tx(readingCopy.headingLink)}<ArrowRight size={18}/></Link>}</div>{reading.map(r=><Link className="vs-reading-row" href={`${p}${r.href}`} key={r.href}><div className="vs-reading-image"><Image src={`/field-${r.image}.jpg`} alt="" fill sizes="(max-width:760px) 30vw, 16vw"/></div><div><p className="vs-eyebrow">{r.category}</p><h3>{r.title}</h3><p>{r.text}</p><span className="vs-inline-arrow" aria-hidden="true">↗</span></div></Link>)}</div>
       </section>
       <InstitutionHome locale={locale}/>
       <MethodSpotlight locale={locale}/>
