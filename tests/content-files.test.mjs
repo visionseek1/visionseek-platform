@@ -151,3 +151,20 @@ test('the Physical AI brief keeps its three signals, five actions and three sour
   }
   assert.equal(brief.en.title, brief.en.title.trim());
 });
+
+test('the archive list only holds pages offered in /admin, and never the protected pages', () => {
+  const {archived} = read('visibility.json');
+  const offered = [...readFileSync(join(root, 'public/admin/config.yml'), 'utf8').matchAll(/value: "([^"]+)"/g)].map(m => m[1]);
+  const nav = read('navigation.json');
+  for (const section of [...nav.sections, nav.reports]) {
+    assert.ok(offered.includes(section.path), `missing archive option ${section.path}`);
+    for (const link of section.children) {
+      const path = link.href.split('#')[0];
+      if (path !== section.path) assert.ok(offered.includes(path), `missing archive option ${path}`);
+    }
+  }
+  for (const item of archived) {
+    assert.ok(offered.includes(item.path), item.path);
+    assert.ok(!['/', '/about', '/start', '/privacy', '/terms'].includes(item.path), item.path);
+  }
+});

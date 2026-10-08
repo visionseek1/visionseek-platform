@@ -5,6 +5,7 @@ import {characters,characterPath} from '@/lib/leaders/characters';
 import {showPublicCharacters} from '@/lib/leaders/presentation';
 
 import {projectRoutes} from '@/lib/projects';
+import {isArchived} from '@/lib/visibility';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -30,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/terms", priority: 0.3 },
   ];
 
-  return entries.map(({ path, priority }) => ({
+  return entries.filter(({path}) => !isArchived(path || '/')).map(({ path, priority }) => ({
     url: `https://visionseek.org${path}`,
     lastModified,
     changeFrequency: "monthly" as const,
