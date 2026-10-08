@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
+import { Alexandria, IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
 import "./institution.css";
@@ -16,6 +16,16 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   weight: ["400", "500", "600", "700"],
   display: "swap",
   variable: "--font-arabic",
+  adjustFontFallback: true,
+});
+
+// Arabic display face for headings: drawn from Egypt's own street lettering,
+// so Arabic titles stop falling back to a system font under the Latin-only Oxanium.
+const alexandria = Alexandria({
+  subsets: ["arabic", "latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-arabic-display",
   adjustFontFallback: true,
 });
 
@@ -102,7 +112,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable}`}>
+    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable} ${alexandria.variable}`}>
       <body className="antialiased">
         <script
           type="application/ld+json"
