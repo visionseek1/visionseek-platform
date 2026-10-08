@@ -1,8 +1,10 @@
-import {readContentDir, readContentFile} from '@/lib/institution/content-files';
+import {readdirSync, readFileSync} from 'node:fs';
+import {join} from 'node:path';
 
 /**
  * Sectors, tracks and the public project concepts. Edited from /admin («المشاريع: المجالات والمسارات» و«تصوّرات المشاريع»).
  * Server-side only (node:fs). Client components receive what they need as props; see components/institution/start-page.tsx.
+ * Reads content/ directly (no project-internal imports) so tests can load this module on its own.
  */
 export type Locale = 'ar' | 'en';
 export type Text = Record<Locale, string>;
@@ -30,12 +32,21 @@ export type Project = {
 };
 type Catalog = {conceptNotice:Text; status:Record<ProjectStatus,Text>; sectors:Sector[]; tracks:Track[]};
 
-const catalog = readContentFile<Catalog>('projects/catalog.json');
+const contentRoot = join(process.cwd(), 'content', 'projects');
+const readJson = <T,>(...parts:string[]):T => JSON.parse(readFileSync(join(contentRoot, ...parts), 'utf8')) as T;
+const readConcepts = ():Project[] =>
+  readdirSync(join(contentRoot, 'concepts'))
+    .filter(name => name.endsWith('.json'))
+    .sort()
+    .map(name => readJson<Project>('concepts', name))
+    .sort((a, b) => (a.position ?? 0) - (b.position ?? 0));
+
+const catalog = readJson<Catalog>('catalog.json');
 export const conceptNotice:Text = catalog.conceptNotice;
 export const sectors:Sector[] = catalog.sectors;
 export const tracks:Track[] = catalog.tracks;
 // Founder-defined public concepts. No country mandate, client or delivered technology is asserted.
-export const projects:Project[] = readContentDir<Project>('projects/concepts');
+export const projects:Project[] = readConcepts();
 
 export const prefix = (locale:Locale) => locale==='ar'?'/ar':'';
 export const projectStatus:Record<ProjectStatus,Text> = catalog.status;
@@ -60,6 +71,11 @@ export function resolveProjectRoute(parts:string[]):ProjectRoute|undefined {
 }
 
 export const conceptCount = (count:number,locale:Locale) => locale==='ar'?(count===2?'تصوّران مقترحان':`${new Intl.NumberFormat('ar').format(count)} تصوّرات مقترحة`):`${count} proposed concept${count===1?'':'s'}`;
+
+/** The public dossiers by project id (content/projects/concepts/<slug>.json, key `file`). */
+export const projectFiles:Record<string,ProjectFile> = Object.fromEntries(projects.flatMap(project => project.file ? [[project.id, project.file]] : []));
+export const projectFileById=(id:string):ProjectFile|undefined=>projectFiles[id];
+export const publicProjectUpdates=(file:ProjectFile)=>file.updates.filter(update=>update.visibility==='public').sort((a,b)=>b.date.localeCompare(a.date));
 
 /** What the enquiry page needs to label an inbound project link; passed from the server page into the client form. */
 export type ProjectOption = {id:string; title:Text};

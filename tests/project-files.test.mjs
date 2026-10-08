@@ -3,8 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import ts from 'typescript';
 async function sourceModule(path){const source=await fs.readFile(new URL(path,import.meta.url),'utf8');const compiled=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;return import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);}
-const {projectFiles,publicProjectUpdates}=await sourceModule('../lib/projects/project-files.ts');
-const {projects,projectInquiry}=await sourceModule('../lib/projects/index.ts');
+const {projects,projectInquiry,projectFiles,publicProjectUpdates}=await sourceModule('../lib/projects/index.ts');
 test('draft updates never appear in the public timeline and chronology does not mutate the catalog',()=>{
  const file={...projectFiles['VS-P07'],updates:[
   {id:'older',date:'2026-08-01',visibility:'public'},
