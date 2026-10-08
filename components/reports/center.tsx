@@ -3,6 +3,7 @@ import SiteHeader from '@/components/site-header';
 import { references, toolkit } from '@/lib/reports/catalog';
 import styles from './reports.module.css';
 import ReportsLibrary from './library';
+import { brief } from '@/lib/reports/agent-governance';
 
 type Locale = 'ar' | 'en';
 export default function ReportsCenter({ locale, methodology = false }: { locale: Locale; methodology?: boolean }) {
@@ -33,11 +34,11 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
       {!methodology ? <>
         <section className={styles.feature} aria-labelledby="featured-report">
           <div className={styles.featureCopy}>
-            <div className={styles.meta}><span>{t('حالة القسم', 'SECTION STATUS')}</span><span>{t('أكتوبر 2026', 'OCTOBER 2026')}</span></div>
-            <h2 id="featured-report">{t('لا يوجد إصدار منشور بعد.', 'No publication is available yet.')}</h2>
-            <p>{t('قسم البحث قائم، وما ينقصه إصدار استوفى أدلته ومراجعته واعتماد نشره. حين يستوفي أول تقرير هذه الشروط يظهر هنا باسمه وتاريخه وبيانات إصداره كاملة.', 'The research department exists; what it does not yet have is a publication that has completed its evidence, review and publication approval. The first report to meet those conditions will appear here with its title, date and full publication record.')}</p>
-            <div className={styles.featureLinks}><Link className={styles.cta} href={`${root}/methodology`}>{t('اقرأ المنهج والمعايير', 'Read the methods & standards')} <span aria-hidden>↗</span></Link></div>
-            <p className={styles.reviewNote}>{t('لا نعرض هنا مسودة ولا عملًا قيد الإعداد. ما يُعرض يكون قد صدر.', 'Drafts and work in preparation are not listed here. What appears here has been released.')}</p>
+            <div className={styles.meta}><span>{t('أحدث إحاطة', 'LATEST BRIEF')}</span><span>{brief.dateLabel[locale]}</span></div>
+            <h2 id="featured-report">{brief.title[locale]}</h2>
+            <p>{brief.subtitle[locale]}</p>
+            <div className={styles.featureLinks}><Link className={styles.cta} href={`${root}/agent-governance`}>{t('اقرأ الإحاطة', 'Read the brief')} <span aria-hidden>↗</span></Link><Link className={styles.secondaryLink} href={`${root}/methodology`}>{t('المنهج والمعايير', 'Methods & standards')} ↗</Link></div>
+            <p className={styles.reviewNote}>{t('الإحاطة قراءة موثّقة المصادر، وليست تقريرًا مرّ بمراجعة مستقلة. كل دعوى فيها مربوطة بمصدرها.', 'A brief is a sourced reading, not an independently reviewed report. Every claim in it links to its source.')}</p>
           </div>
         </section>
         <ReportsLibrary locale={locale} />
