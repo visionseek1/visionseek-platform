@@ -3,7 +3,7 @@ export const newsEntries:Entry[]=[
  {section:'news',slug:'egypt-health-in-numbers',
   title:t('Egypt’s health in numbers: where the need presses hardest','صحة مصر بالأرقام: أين تضغط الحاجة اليوم'),
   summary:t('Eight million Egyptians live with diabetes without knowing it. The widest gaps are not in disease itself but in how late the system reaches it.','في مصر ثمانية ملايين إنسان يعيشون بالسكر ولا يعرفون. الفجوة الأوسع ليست في المرض نفسه، بل في تأخر وصول المنظومة إليه.'),
-  image:'science',category:t('Health in numbers','الصحة بالأرقام'),status:t('Source-based analysis','تحليل مسند'),
+  image:'https://images.unsplash.com/photo-1583248793469-0b3360f27876?auto=format&fit=crop&w=1600&q=80',imageCredit:{name:'Omar Elsharawy',url:'https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-_RlE7M_w8Ho'},category:t('Health in numbers','الصحة بالأرقام'),status:t('Source-based analysis','تحليل مسند'),
   facts:[
    {label:t('Adults with undiagnosed diabetes','بالغون بسكر غير مشخَّص'),value:t('≈ 8.2 million (2024)','≈ 8.2 مليون (2024)')},
    {label:t('Hypertension under control','ضغط مضبوط'),value:t('19% of patients (2019)','19% من المرضى (2019)')},

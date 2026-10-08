@@ -9,6 +9,10 @@ export type Entry = {
   facts?:{label:Text;value:Text}[];
   source?:{title:string;url:string};
   references?:{title:string;url:string}[];
+  imageCredit?:{name:string;url:string};
   action?:'concept'|'interest'|'workshop';
 };
 export type Section = {id:SectionId;title:Text;eyebrow:Text;intro:Text;image:string;notice?:Text;links:{href:string;label:Text}[]};
+
+/** Entry images are either a local field key ("science" → /field-science.jpg) or an absolute licensed URL. */
+export const entryImage = (image:string) => image.startsWith('https://') ? image : `/field-${image}.jpg`;
