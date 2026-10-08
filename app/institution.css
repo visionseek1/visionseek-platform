@@ -118,7 +118,7 @@
 .vs-wl-kicker span{font-family:var(--font-display),sans-serif;font-weight:700;letter-spacing:.16em;font-size:.8rem;color:var(--lime)}
 .vs-wl-kicker i{width:1.6rem;height:1px;background:#3a4033}
 .vs-wl-kicker em{font-style:normal}
-.vs-wl-hero h1{font-size:clamp(3.4rem,8vw,7rem);line-height:1.02;letter-spacing:-.01em}
+.vs-wl-hero h1{font-size:clamp(2.4rem,4.8vw,4.4rem);line-height:1.2;letter-spacing:-.01em;max-width:34rem}
 .vs-wl-with{margin:0;font-size:1.35rem;color:var(--lime);font-weight:500}
 .vs-wl-actions{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
 .vs-wl-hero-image{position:relative;min-height:32rem;overflow:hidden}
@@ -171,7 +171,7 @@
 .vs-wl-check-result{display:flex;flex-direction:column;gap:.6rem;padding:1.6rem;border:1px solid var(--wl-line);border-radius:18px;min-height:6rem}
 .vs-wl-check-result strong{font-size:1.6rem;line-height:1.3}
 .vs-wl-check-result p{margin:0;color:var(--wl-ink);line-height:1.7}
-.vs-wl-check-progress{color:var(--wl-soft)!important;font-family:var(--font-display)}
+.vs-wl-check-progress{color:var(--wl-soft)!important;font-family:var(--font-display);direction:ltr;text-align:center}
 .vs-wl-check-reset{background:transparent;border:0;color:var(--wl-soft);font:inherit;font-size:.95rem;cursor:pointer;text-decoration:underline;min-height:44px;padding:0 .4rem}
 .vs-wl-check-reset:hover{color:var(--white)}
 /* Method */
