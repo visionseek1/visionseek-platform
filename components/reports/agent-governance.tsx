@@ -31,7 +31,7 @@ export default function AgentGovernanceBrief({locale}:{locale:'ar'|'en'}) {
         <div className={styles.workGrid}>{brief.changed.map(item=><article key={item.en}><p>{item[locale]}</p><Sources items={item.sources}/></article>)}</div>
       </div></section>
       <section id="risk" className={styles.section}><div className={styles.wrap}>
-        <p className={styles.eyebrow}>{t('الخطر','THE RISK')}</p><h2 className={styles.h2}>{t('ما الذي يُبقي المسؤول مستيقظًا؟','What keeps the person in charge awake?')}</h2>
+        <p className={styles.eyebrow}>{t('الخطر','THE RISK')}</p><h2 className={styles.h2}>{t('حين يخطئ الوكيل، أنت من يدفع','When the agent gets it wrong, you pay for it')}</h2>
         <div className={styles.fears}>{brief.fears.map((fear,i)=><article key={fear.title.en}>
           <div className={styles.fearTop}><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span>{fear.figure&&<strong>{fear.figure[locale]}</strong>}</div>
           <h3>{fear.title[locale]}</h3><p>{fear[locale]}</p><Sources items={fear.sources}/>
