@@ -1,0 +1,81 @@
+{
+  "slug": "leader-office",
+  "title": {
+    "en": "The leader's desk",
+    "ar": "مكتب القائد"
+  },
+  "status": {
+    "en": "In design · Not yet held",
+    "ar": "قيد التصميم · لم يُعقد بعد"
+  },
+  "stamp": {
+    "en": "Illustrative example",
+    "ar": "مثال توضيحي"
+  },
+  "lede": {
+    "en": "One minute. Three papers a leader can leave with: a morning brief, a decision sheet, and a reply. All of it is made up. No institution here is real, and no person here is real.",
+    "ar": "دقيقة واحدة. ثلاث ورقات يخرج بها القائد: موجز صباحي، وورقة قرار، ورد جاهز. كلها أمثلة. لا جهة حقيقية هنا، ولا شخص حقيقي."
+  },
+  "note": {
+    "en": "In the session the paper is yours. This page only shows the shape.",
+    "ar": "في القعدة تكون الورقة ورقتك. هذه الصفحة تُريك الشكل فقط."
+  },
+  "pieces": [
+    {
+      "id": "brief",
+      "label": {
+        "en": "Morning brief",
+        "ar": "الموجز الصباحي"
+      },
+      "blocks": [
+        {"kind": "stamp", "text": {"en": "Illustrative example", "ar": "مثال توضيحي"}},
+        {"kind": "heading", "text": {"en": "Monday morning, before the building fills", "ar": "صباح الاثنين، قبل أن يمتلئ المبنى"}},
+        {"kind": "line", "text": {"en": "Three things are on the desk before noon.", "ar": "ثلاثة أمور على المكتب قبل الظهر."}},
+        {"kind": "line", "text": {"en": "A delivery is a week late. The note gives the cause as missing parts, not missing people. Nobody has checked that with the store this morning.", "ar": "تسليم متأخر أسبوعًا. المذكرة تكتب السبب نقص قطع، لا نقص أشخاص. لم يراجع أحد المخزن هذا الصباح."}},
+        {"kind": "line", "text": {"en": "The four o'clock meeting wants a choice: hold the launch for two weeks, or open it to one team only.", "ar": "اجتماع الرابعة يريد اختيارًا: تأجيل الإطلاق أسبوعين، أو فتحه لفريق واحد فقط."}},
+        {"kind": "line", "text": {"en": "A note from the follow-up desk is waiting for a reply today. A draft is in the third paper. Do not send it until you have read it.", "ar": "ورقة من مكتب المتابعة تنتظر ردًا اليوم. المسودة في الورقة الثالثة. لا ترسلها قبل أن تقرأها."}},
+        {"kind": "heading", "text": {"en": "Can wait", "ar": "يمكن تأجيله"}},
+        {"kind": "line", "text": {"en": "The monthly activity note. No decision is hanging on it.", "ar": "مذكرة النشاط الشهري. لا قرار معلّق عليها."}},
+        {"kind": "heading", "text": {"en": "Still unknown", "ar": "ما زال مجهولًا"}},
+        {"kind": "line", "text": {"en": "Are the parts still missing? The tool is not connected to the store. A person has to ask.", "ar": "هل القطع ما زالت ناقصة؟ الأداة غير متصلة بالمخزن. لا بد من إنسان يسأل."}}
+      ]
+    },
+    {
+      "id": "decision",
+      "label": {
+        "en": "Decision sheet",
+        "ar": "ورقة القرار"
+      },
+      "blocks": [
+        {"kind": "stamp", "text": {"en": "Illustrative example", "ar": "مثال توضيحي"}},
+        {"kind": "heading", "text": {"en": "The question", "ar": "السؤال"}},
+        {"kind": "line", "text": {"en": "Do we hold the service for two weeks until the team's training is finished, or open it this week to one team only?", "ar": "نؤجّل الخدمة أسبوعين حتى يكتمل تدريب الفريق، أم نفتحها هذا الأسبوع لفريق واحد فقط؟"}},
+        {"kind": "heading", "text": {"en": "First option", "ar": "الخيار الأول"}},
+        {"kind": "line", "text": {"en": "Hold for two weeks. Training finishes. The date you already said moves. The office waiting for the service feels it.", "ar": "تأجيل أسبوعين. التدريب يكتمل. الموعد الذي أُعلن يتأخر. المكتب الذي ينتظر الخدمة يتأثر."}},
+        {"kind": "heading", "text": {"en": "Second option", "ar": "الخيار الثاني"}},
+        {"kind": "line", "text": {"en": "Open it to one team. The service starts moving while training continues. The risk: the first complaint arrives before you have agreed how to answer it.", "ar": "فتحها لفريق واحد. الخدمة تتحرك والتدريب يستمر. المخاطرة: الشكوى الأولى تصل قبل أن تتفقوا على طريقة الرد."}},
+        {"kind": "heading", "text": {"en": "Not checked", "ar": "لم يُفحص"}},
+        {"kind": "line", "text": {"en": "How many people have finished the training. That is a count, not a guess.", "ar": "كم شخصًا أتمّ التدريب. هذا عدّ، لا تقدير."}},
+        {"kind": "line", "text": {"en": "Whether the narrow opening has one named owner.", "ar": "هل للفتح الضيق مسؤول واحد بعينه."}},
+        {"kind": "line", "text": {"en": "What you will tell the people still waiting for the full service.", "ar": "ماذا تقول لمن ما زال ينتظر الخدمة كاملة."}},
+        {"kind": "heading", "text": {"en": "Where you sign", "ar": "مكان التوقيع"}},
+        {"kind": "line", "text": {"en": "The choice is yours. This sheet prepares the decision. It does not take it.", "ar": "الاختيار لك. هذه الورقة تحضّر القرار، ولا تأخذه."}}
+      ]
+    },
+    {
+      "id": "reply",
+      "label": {
+        "en": "A reply",
+        "ar": "رد على مراسلة"
+      },
+      "blocks": [
+        {"kind": "stamp", "text": {"en": "Illustrative example", "ar": "مثال توضيحي"}},
+        {"kind": "heading", "text": {"en": "To the follow-up desk", "ar": "إلى مكتب المتابعة"}},
+        {"kind": "line", "text": {"en": "Subject: the late delivery.", "ar": "الموضوع: تأخير التسليم."}},
+        {"kind": "line", "text": {"en": "Your note reached me. The delay is one week. The cause written on our side is missing parts, not a short team. That cause has not been checked with the store, so I will not fix it in this reply.", "ar": "وصلتني ملاحظتكم. التأخير أسبوع. السبب المكتوب عندنا نقص قطع، لا نقص في الفريق. لم يُراجع هذا السبب مع المخزن، لذلك لا أُثبّته في هذا الرد."}},
+        {"kind": "line", "text": {"en": "Today I will ask operations to confirm the parts before the day ends. Tomorrow I will come back with a clear account, or with a new date if the cause has changed.", "ar": "اليوم أطلب من التشغيل أن يؤكد حالة القطع قبل نهاية الدوام. غدًا أعود بحساب واضح، أو بموعد جديد إن تغيّر السبب."}},
+        {"kind": "line", "text": {"en": "No promise before the check. The signature stays with you.", "ar": "لا وعد قبل الفحص. التوقيع يبقى لكم."}}
+      ]
+    }
+  ]
+}

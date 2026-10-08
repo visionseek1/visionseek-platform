@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import {entries as institutionEntries, sections, entryPath} from "@/lib/institution";
 import {workshops} from "@/lib/institution/workshops";
+import {leaderOfficePath, masterclassPath} from "@/lib/institution/masterclass";
 import {characters,characterPath} from '@/lib/leaders/characters';
 import {showPublicCharacters} from '@/lib/leaders/presentation';
 
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:`/${s.id}`,priority:0.8},{path:`/ar/${s.id}`,priority:0.8}]),
     ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
     ...workshops.flatMap(item=>[{path:`/workshops/${item.slug}`,priority:0.75},{path:`/ar/workshops/${item.slug}`,priority:0.75}]),
+    ...[masterclassPath, leaderOfficePath].flatMap(path=>[{path,priority:0.75},{path:`/ar${path}`,priority:0.75}]),
     ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },

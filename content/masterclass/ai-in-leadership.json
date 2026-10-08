@@ -1,0 +1,427 @@
+{
+  "slug": "ai-in-leadership",
+  "title": {
+    "en": "AI in leadership",
+    "ar": "الذكاء الاصطناعي في القيادة"
+  },
+  "status": {
+    "en": "In design · Not yet held",
+    "ar": "قيد التصميم · لم يُعقد بعد"
+  },
+  "hero": {
+    "en": "The person who signs should be able to use the tool. Most still send it downstairs.",
+    "ar": "صاحب التوقيع هو الذي يستعمل الأداة. أكثرهم ما زالوا يبعثونها لغيرهم كي يجرّبها."
+  },
+  "intro": {
+    "en": "Leaders are now judged on whether they can actually work with the tool, and most cannot. This page is the design of two shapes. Nothing on it has been held, and nothing on it is a client story.",
+    "ar": "صارت القيادات تُسأل عن إتقانها للأداة، وأكثرهم لا يحسنون استعمالها في شغلهم. هذه الصفحة تصميم لشكلين. لم يُعقد شيء منها، وليست حكاية عميل."
+  },
+  "shapes": [
+    {
+      "id": "masterclass",
+      "name": {
+        "en": "The masterclass",
+        "ar": "الماستر كلاس"
+      },
+      "body": {
+        "en": "An ordered curriculum, split by seat. The leader's seat is written below. The manager's seat and the staff seat are a structure only, and their status is not written yet.",
+        "ar": "منهج مترتب، ومقسوم على المقعد. مقعد القائد مكتوب تحت. مقعد المدير ومقعد الموظف هيكل فقط، وحالتهما قريبًا."
+      }
+    },
+    {
+      "id": "workshop",
+      "name": {
+        "en": "The live seat",
+        "ar": "القعدة"
+      },
+      "body": {
+        "en": "One sitting on the leader's real tasks, then thirty days of follow-up, then a short report of what changed. No number is published before it is measured.",
+        "ar": "قعدة واحدة على مهام القائد الحقيقية، وبعدها متابعة ثلاثين يومًا، وفي الآخر تقرير قصير بما تغيّر. لا رقم يُنشر قبل أن يُقاس."
+      }
+    }
+  ],
+  "workshopHref": "/workshops/leader-seat",
+  "sampleHref": "/workshops/leader-office",
+  "sampleLabel": {
+    "en": "See it in a minute: the leader's desk",
+    "ar": "شوفه في دقيقة: مكتب القائد"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "price": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "unsetNote": {
+    "en": "Duration and price are not set. This page does not borrow a number from anyone else's programme.",
+    "ar": "المدة والسعر لم يُحدَّدا. الصفحة لا تستعير رقمًا من برنامج غيرنا."
+  },
+  "placement": {
+    "doorNote": {
+      "en": "Two shapes under this door: an ordered curriculum, and a live hour on your own work.",
+      "ar": "تحت هذا الباب شكلان: منهج مترتب، وقعدة على شغلك أنت."
+    },
+    "links": [
+      {
+        "href": "/workshops/ai-in-leadership",
+        "label": {
+          "en": "The masterclass",
+          "ar": "الماستر كلاس"
+        }
+      },
+      {
+        "href": "/workshops/leader-office",
+        "label": {
+          "en": "The leader's desk · a sample",
+          "ar": "مكتب القائد · عيّنة"
+        }
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "id": "leaders",
+      "name": {
+        "en": "Leaders",
+        "ar": "القادة"
+      },
+      "promise": {
+        "en": "You decide and you lead with the tool. You do not become an engineer.",
+        "ar": "تقرر وتقود بالأداة. لا تتحول إلى مهندس."
+      },
+      "status": {
+        "en": "In design · Not yet held",
+        "ar": "قيد التصميم · لم يُعقد بعد"
+      },
+      "written": true,
+      "units": [
+        {
+          "id": "desk",
+          "title": {
+            "en": "The tool on your desk",
+            "ar": "الأداة على مكتب القائد"
+          },
+          "outcome": {
+            "en": "You can stand over a task from your own day and say which part the tool may prepare, and which part stays with you.",
+            "ar": "تقف على مهمة من يومك وتقول: هذه تحضّرها الأداة، وهذه تبقى عندك."
+          },
+          "exercise": {
+            "en": "Take three tasks from this week. Mark each one: prepare it, or do not hand it over.",
+            "ar": "خذ ثلاث مهام من هذا الأسبوع. علّم كل واحدة: تُحضَّر، أو لا تُسلَّم."
+          },
+          "tool": {
+            "en": "A writing assistant you open yourself. Nothing is connected to the institution's systems, and no file goes in except the one you paste.",
+            "ar": "مساعد كتابة تفتحه أنت. لا ربط بأنظمة المؤسسة، ولا ملف إلا الذي تلصقه بيدك."
+          }
+        },
+        {
+          "id": "brief",
+          "title": {
+            "en": "The daily brief and the decision sheet",
+            "ar": "الموجز اليومي وورقة القرار"
+          },
+          "outcome": {
+            "en": "You leave with a one-page brief before the day starts, and a decision sheet you can walk into the meeting with: the question, the two options, and what is still unchecked.",
+            "ar": "تخرج بموجز من صفحة قبل أن يبدأ يومك، وبورقة قرار تدخل بها الاجتماع: السؤال، والخياران، وما لم يُفحص بعد."
+          },
+          "exercise": {
+            "en": "Bring the decision that is actually waiting on you. Leave with its sheet, not with an example of ours.",
+            "ar": "أحضِر القرار الذي ينتظرك فعلًا. اخرج بورقته، لا بمثال من عندنا."
+          },
+          "tool": {
+            "en": "The same assistant, on the text you choose. You read the sheet before the meeting.",
+            "ar": "المساعد نفسه، على النص اللي تختاره. تقرأ الورقة قبل الاجتماع."
+          }
+        },
+        {
+          "id": "letter",
+          "title": {
+            "en": "The letter and the meeting",
+            "ar": "المراسلة والاجتماع"
+          },
+          "outcome": {
+            "en": "You send a reply that sounds like you, not like the tool, and you enter the meeting with a short page: why you are there, and what will not be settled in the room.",
+            "ar": "ترسل ردًا بصوتك، لا بصوت الأداة، وتدخل الاجتماع بورقة قصيرة: لماذا اجتمعنا، وما الذي لن يُحسم في الغرفة."
+          },
+          "exercise": {
+            "en": "One letter you owe, and one meeting already sitting in your week.",
+            "ar": "رسالة واحدة عليك ردّها، واجتماع واحد موجود في أسبوعك."
+          },
+          "tool": {
+            "en": "The assistant drafts. You are the one who sends, after you have read it.",
+            "ar": "المساعد يمسود. أنت الذي تُرسل، بعد أن تقرأ."
+          }
+        },
+        {
+          "id": "people",
+          "title": {
+            "en": "The people, before the tool",
+            "ar": "الناس قبل الأداة"
+          },
+          "outcome": {
+            "en": "You can tell your team what changes, what does not, and where the tool helps them instead of watching them.",
+            "ar": "تقول لفريقك ما الذي يتغيّر، وما الذي يبقى، وأين تساعدهم الأداة بدل أن تراقبهم."
+          },
+          "exercise": {
+            "en": "Write the first note to the people who work with you. A boundary, and a next step. Not a slogan.",
+            "ar": "اكتب أول رسالة لمن يعملون معك. حد، وخطوة تالية. ليست شعارًا."
+          },
+          "tool": {
+            "en": "The assistant drafts the note. The words are said by you, not by a screen in the room.",
+            "ar": "المساعد يمسود الرسالة. الكلام يخرج منك، لا من شاشة في الاجتماع."
+          }
+        },
+        {
+          "id": "limit",
+          "title": {
+            "en": "When you do not rely on it",
+            "ar": "متى لا نعتمد عليه"
+          },
+          "outcome": {
+            "en": "You keep a stop-list: what is confidential, what needs a source, which figure you will not sign until a person has checked it, and which decision never leaves your hand.",
+            "ar": "معك قائمة توقف: ما هو سرّي، وما يلزمه مصدر، وأي رقم لا توقّع عليه قبل أن يراجعه إنسان، وأي قرار لا يخرج من يدك."
+          },
+          "exercise": {
+            "en": "Take a brief the tool wrote, and mark every line that still needs a person.",
+            "ar": "خذ موجزًا كتبته الأداة، وعلّم كل سطر ما زال يحتاج إنسانًا."
+          },
+          "tool": {
+            "en": "The assistant, plus the list you keep in writing. The tool does not grade its own work.",
+            "ar": "المساعد، ومعه القائمة مكتوبة عندك. الأداة لا تصحّح نفسها."
+          }
+        },
+        {
+          "id": "week",
+          "title": {
+            "en": "A week you can repeat",
+            "ar": "إيقاع الأسبوع"
+          },
+          "outcome": {
+            "en": "One page for your week: the morning brief, one decision sheet, the letters, and the line you will not cross. You can run it without a trainer in the room.",
+            "ar": "صفحة واحدة لأسبوعك: موجز الصباح، وورقة قرار، والمراسلات، والحد الذي لا تعبره. تمشي به من غير مدرّب في الغرفة."
+          },
+          "exercise": {
+            "en": "Lay the rhythm on next week's calendar. Name the hour, not the theory.",
+            "ar": "ضع الإيقاع على تقويم الأسبوع القادم. سمِّ الساعة، لا النظرية."
+          },
+          "tool": {
+            "en": "The assistant drafts the page. The calendar stays yours.",
+            "ar": "المساعد يمسود الصفحة. التقويم يبقى عندك."
+          }
+        }
+      ]
+    },
+    {
+      "id": "managers",
+      "name": {
+        "en": "Managers",
+        "ar": "المديرون"
+      },
+      "promise": {
+        "en": "You run the team with the tool. You do not keep it as a private trick.",
+        "ar": "تشغّل فريقك بالأداة، ولا تُبقيها حيلة خاصة بك."
+      },
+      "status": {
+        "en": "Not written yet",
+        "ar": "قريبًا"
+      },
+      "written": false,
+      "laterNote": {
+        "en": "The curriculum is not written. The titles are here so the shape is visible, not so it can be taught.",
+        "ar": "المنهج لم يُكتب بعد. العناوين هنا حتى يُرى الشكل، لا ليُدرَّس."
+      },
+      "units": [
+        {
+          "id": "where",
+          "title": {
+            "en": "Where the tool enters the team's work",
+            "ar": "أين تدخل الأداة في شغل الفريق"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        },
+        {
+          "id": "split",
+          "title": {
+            "en": "What you ask of the team, and what stays with you",
+            "ar": "ما تطلبه من الفريق، وما يبقى عندك"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        },
+        {
+          "id": "review",
+          "title": {
+            "en": "Reading the team's output before you accept it",
+            "ar": "قراءة مخرجات الفريق قبل أن تعتمدها"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        },
+        {
+          "id": "stop",
+          "title": {
+            "en": "The line the department does not cross",
+            "ar": "الحد الذي لا تعبره الإدارة"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        }
+      ]
+    },
+    {
+      "id": "staff",
+      "name": {
+        "en": "Staff",
+        "ar": "الموظفون"
+      },
+      "promise": {
+        "en": "You finish the work that lands on your desk, and you check it before it goes out.",
+        "ar": "تخلّص الشغل الذي يصل إلى مكتبك، وتراجعه قبل أن يخرج."
+      },
+      "status": {
+        "en": "Not written yet",
+        "ar": "قريبًا"
+      },
+      "written": false,
+      "laterNote": {
+        "en": "The curriculum is not written. The titles are here so the shape is visible, not so it can be taught.",
+        "ar": "المنهج لم يُكتب بعد. العناوين هنا حتى يُرى الشكل، لا ليُدرَّس."
+      },
+      "units": [
+        {
+          "id": "task",
+          "title": {
+            "en": "The daily task, from the ask to the draft",
+            "ar": "المهمة اليومية، من الطلب للمسودة"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        },
+        {
+          "id": "mail",
+          "title": {
+            "en": "The letter you write yourself",
+            "ar": "المراسلة التي تكتبها أنت"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        },
+        {
+          "id": "check",
+          "title": {
+            "en": "The check before you send",
+            "ar": "المراجعة قبل الإرسال"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        },
+        {
+          "id": "ask",
+          "title": {
+            "en": "When you stop and ask",
+            "ar": "متى تقف وتسأل"
+          },
+          "outcome": {"en": "", "ar": ""},
+          "exercise": {"en": "", "ar": ""},
+          "tool": {"en": "", "ar": ""}
+        }
+      ]
+    }
+  ],
+  "sourcesNote": {
+    "en": "Outside references for the shape of executive programmes: a separate place for people, a separate place for the limit, and practice on the participant's own work. Not a partnership, and not their content.",
+    "ar": "مراجع خارجية لشكل البرامج التنفيذية: مكان لوحده للناس، ومكان لوحده للحد، وتمرين على شغل المشارك نفسه. ليست شراكة، وليست محتواهم."
+  },
+  "sources": [
+    {
+      "title": "MIT Sloan Executive Education · Leading the AI-Driven Organization",
+      "url": "https://executive.mit.edu/course/leading-the-ai-driven-organization/a054v00000r9U5cAAE.html",
+      "date": {
+        "en": "9–13 November 2026",
+        "ar": "9–13 نوفمبر 2026"
+      },
+      "dateNote": {
+        "en": "The next date printed on the page. The page does not show a separate publication date.",
+        "ar": "الموعد القادم المكتوب على الصفحة. الصفحة لا تعرض تاريخ نشر مستقل."
+      },
+      "usedFor": {
+        "en": "The page shows a five-day in-person sample schedule. Day 1 is business impact, day 3 includes expectation versus reality, and day 4 is titled Human Elements. We took that separation, not the syllabus.",
+        "ar": "الصفحة تعرض جدولًا عيّنيًا من خمسة أيام حضورًا. اليوم الأول أثر الأداة على العمل، واليوم الثالث فيه التوقّع في مقابل الواقع، واليوم الرابع عنوانه العنصر البشري. أخذنا هذا الفصل، لا المنهج نفسه."
+      }
+    },
+    {
+      "title": "Saïd Business School · AI Strategy and Leadership Programme",
+      "url": "https://www.sbs.ox.ac.uk/programmes/executive-education/person-programmes/ai-strategy-and-leadership-programme",
+      "date": {
+        "en": "18 January 2027, 8 March 2027, 10 May 2027",
+        "ar": "18 يناير 2027، 8 مارس 2027، 10 مايو 2027"
+      },
+      "dateNote": {
+        "en": "The start dates printed on the page. The page does not show a separate publication date.",
+        "ar": "تواريخ البدء المكتوبة على الصفحة. الصفحة لا تعرض تاريخ نشر مستقل."
+      },
+      "usedFor": {
+        "en": "Five days on the page. Day 2 is a workshop on the participant's own organisation. Day 3 includes leading the change. Day 4 is responsible use. Day 5 ends in a personal action plan. We took that order, not the cases.",
+        "ar": "خمسة أيام على الصفحة. اليوم الثاني ورشة على مؤسسة المشارك نفسه. اليوم الثالث يتضمن قيادة التغيير. اليوم الرابع عن الاستعمال المسؤول. اليوم الخامس ينتهي بخطة عمل شخصية. أخذنا هذا الترتيب، لا الحالات."
+      }
+    },
+    {
+      "title": "Saïd Business School · Leading AI Implementation Programme",
+      "url": "https://www.sbs.ox.ac.uk/programmes/online-learning/oxford-leading-ai-implementation-programme",
+      "date": {
+        "en": "30 September 2026, 27 January 2027, 7 April 2027",
+        "ar": "30 سبتمبر 2026، 27 يناير 2027، 7 أبريل 2027"
+      },
+      "dateNote": {
+        "en": "The start dates printed on the page. The page does not show a separate publication date.",
+        "ar": "تواريخ البدء المكتوبة على الصفحة. الصفحة لا تعرض تاريخ نشر مستقل."
+      },
+      "usedFor": {
+        "en": "Four modules on the page. The second is about the people who have to carry the work: who helps, who resists, and how the message is said. We took that as its own unit, not as a footnote.",
+        "ar": "أربع وحدات على الصفحة. الثانية عن الناس اللي هيشيلوا الشغل: مين يساعد، ومين يقاوم، والكلام يتقال إزاي. أخذناها وحدة لوحدها، لا هامشًا."
+      }
+    },
+    {
+      "title": "Wharton Executive Education · The Leadership Blueprint for an AI-Powered World",
+      "url": "https://executiveeducation.wharton.upenn.edu/thought-leadership/wharton-at-work/2025/08/leadership-blueprint-for-ai-powered-world/",
+      "date": {
+        "en": "August 2025",
+        "ar": "أغسطس 2025"
+      },
+      "dateNote": {
+        "en": "The date printed on the article.",
+        "ar": "التاريخ المكتوب على المقال."
+      },
+      "usedFor": {
+        "en": "The article, dated August 2025, describes four modules and says the exercises use scenarios from the participant's own organisation. It quotes the line that the point is augmentation, not automation. We took the exercise on your own work, and the idea that the tool widens the leader rather than replacing the team.",
+        "ar": "المقال، ومؤرَّخ أغسطس 2025، يصف أربع وحدات ويقول إن التمرين على سيناريو من مؤسسة المشارك نفسه. والمنقول فيه أن الفكرة توسيع لا إحلال. أخذنا التمرين على شغلك أنت، وفكرة أن الأداة توسّع القائد ولا تستبدل الفريق."
+      }
+    },
+    {
+      "title": "AI+ programme launch announcement",
+      "url": "https://www.digitaldubai.ae/ar/newsroom/news/%D8%AF%D8%A8%D9%8A-%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8A%D8%A9-%D8%AA%D8%B7%D9%84%D9%82-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-(ai-)",
+      "date": {
+        "en": "15 April 2026",
+        "ar": "15 أبريل 2026"
+      },
+      "dateNote": {
+        "en": "The date printed on the announcement.",
+        "ar": "التاريخ المكتوب على البيان."
+      },
+      "usedFor": {
+        "en": "The announcement, dated 15 April 2026, splits the programme by seat. Leaders get sessions and a roundtable on opportunity and risk. Department managers get adoption inside the department. Staff get daily use. We took the three seats, not the programme.",
+        "ar": "البيان، ومؤرَّخ 15 أبريل 2026، يفصل البرنامج على المقعد. القيادات جلسات ونقاش عن الفرصة والحد. مديرو الإدارات التبنّي داخل الإدارة. الموظفون الاستعمال اليومي. أخذنا المقاعد الثلاثة، لا البرنامج."
+      }
+    }
+  ]
+}

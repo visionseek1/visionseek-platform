@@ -35,6 +35,7 @@ export type Workshop = {
   format: Bi;
   duration: Bi;
   size: Bi;
+  price?: Bi;
   faq: WorkshopFaq[];
   status: Bi;
 };

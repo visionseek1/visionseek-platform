@@ -20,6 +20,10 @@
     "en": "[To be set]",
     "ar": "[تُحدَّد]"
   },
+  "price": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
   "status": {
     "en": "In design · No workshop has been held",
     "ar": "قيد التصميم · لم تُعقد ورشة بعد"
@@ -68,8 +72,8 @@
     "ar": "نشتغل على مادتك: مذكرة عليك كتابتها، أو رقم لم تطمئن إليه، أو قرار ستدخله إلى اجتماع. لا مثال جاهز."
   },
   "after": {
-    "en": "Thirty days later, two measures only: time taken off the tasks we touched, and which tools you still actually open. No number is claimed before it is measured.",
-    "ar": "بعد ثلاثين يومًا مقياسَان فقط: الوقت الذي خرج من المهام التي لمسناها، والأدوات التي ما زلت تفتحها فعلًا. لا رقم قبل القياس."
+    "en": "Thirty days later, a short report of two measures only: time taken off the tasks we touched, and which tools you still actually open. The report shows what changed for you. No number is published before it is measured.",
+    "ar": "بعد ثلاثين يومًا تقرير قصير بمقياسين فقط: الوقت الذي خرج من المهام التي لمسناها، والأدوات التي ما زلت تفتحها فعلًا. التقرير يُثبت ما تغيّر عندك. لا رقم يُنشر قبل أن يُقاس."
   },
   "questions": [
     {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {ArrowRight, ArrowUpRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
+import {masterclass} from '@/lib/institution/masterclass';
 import {
   getWorkshop,
   workshopSection,
@@ -113,6 +114,19 @@ function Door({locale, prefix, kind, workshop, pathClass}: {locale: Locale; pref
         {locale === 'ar' ? 'ادخل الورشة' : 'Open the workshop'}
         <ArrowRight size={18} />
       </Link>
+      {kind === 'leader' && (
+        <>
+          <p className="vs-ws-door-note">{text(locale, masterclass.placement.doorNote)}</p>
+          <div className="vs-ws-door-links">
+            {masterclass.placement.links.map(link => (
+              <Link className="vs-text-link" href={`${prefix}${link.href}`} key={link.href}>
+                {text(locale, link.label)}
+                <ArrowRight size={18} />
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
     </article>
   );
 }
@@ -131,6 +145,7 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
     {label: ar ? 'الشكل' : 'Format', value: workshop.format},
     {label: ar ? 'المدة' : 'Duration', value: workshop.duration},
     {label: ar ? 'العدد' : 'Group size', value: workshop.size},
+    ...(workshop.price ? [{label: ar ? 'السعر' : 'Price', value: workshop.price}] : []),
   ];
 
   return (
@@ -241,6 +256,16 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
             <ArrowRight size={18} />
           </Link>
         </p>
+        {slug === 'leader-seat' && (
+          <div className="vs-ws-door-links">
+            {masterclass.placement.links.map(link => (
+              <Link className="vs-text-link" href={`${prefix}${link.href}`} key={link.href}>
+                {text(locale, link.label)}
+                <ArrowRight size={18} />
+              </Link>
+            ))}
+          </div>
+        )}
       </article>
     </Frame>
   );

@@ -321,6 +321,14 @@ collections:
         fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
+      - label: السعر
+        name: price
+        widget: object
+        required: false
+        hint: "إن وُجد، اترك [تُحدَّد] و [To be set]. لا تكتب سعرًا."
+        fields:
+          - {label: English, name: en, widget: string, required: false}
+          - {label: العربية, name: ar, widget: string, required: false}
       - label: أسئلة شائعة
         name: faq
         widget: list
@@ -450,3 +458,234 @@ collections:
             fields:
               - {label: English, name: en, widget: string}
               - {label: العربية, name: ar, widget: string}
+
+  # ماستر كلاس القيادة وعيّنة المكتب. الحفظ يفتح فرعًا وطلب دمج، مثل الأخبار. لا كتابة على main.
+  - name: leader_masterclass
+    label: ماستر كلاس القيادة
+    files:
+      - label: المنهج
+        name: program
+        file: content/masterclass/ai-in-leadership.json
+        fields:
+          - {label: الرابط, name: slug, widget: string}
+          - label: العنوان
+            name: title
+            widget: object
+            fields: &bi
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الحالة
+            name: status
+            widget: object
+            hint: "قيد التصميم · لم يُعقد بعد"
+            fields: *bi
+          - label: الجملة الأولى
+            name: hero
+            widget: object
+            fields: *bi
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: الشكلان
+            name: shapes
+            widget: list
+            fields:
+              - {label: المعرّف, name: id, widget: string}
+              - label: الاسم
+                name: name
+                widget: object
+                fields: *bi
+              - label: النص
+                name: body
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - {label: رابط القعدة, name: workshopHref, widget: string}
+          - {label: رابط العيّنة, name: sampleHref, widget: string}
+          - label: عبارة العيّنة
+            name: sampleLabel
+            widget: object
+            fields: *bi
+          - label: المدة
+            name: duration
+            widget: object
+            hint: "[تُحدَّد] و [To be set]"
+            fields: *bi
+          - label: السعر
+            name: price
+            widget: object
+            hint: "[تُحدَّد] و [To be set]. لا تكتب سعرًا."
+            fields: *bi
+          - label: تنبيه المدة والسعر
+            name: unsetNote
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: موضع الباب
+            name: placement
+            widget: object
+            fields:
+              - label: سطر الباب
+                name: doorNote
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الروابط
+                name: links
+                widget: list
+                fields:
+                  - {label: المسار, name: href, widget: string}
+                  - label: الاسم
+                    name: label
+                    widget: object
+                    fields: *bi
+          - label: المقاعد
+            name: tracks
+            widget: list
+            fields:
+              - {label: المعرّف, name: id, widget: string}
+              - label: الاسم
+                name: name
+                widget: object
+                fields: *bi
+              - label: الوعد
+                name: promise
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الحالة
+                name: status
+                widget: object
+                fields: *bi
+              - {label: المنهج مكتوب, name: written, widget: boolean}
+              - label: ملاحظة «قريبًا»
+                name: laterNote
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: text, required: false}
+                  - {label: العربية, name: ar, widget: text, required: false}
+              - label: الوحدات
+                name: units
+                widget: list
+                fields:
+                  - {label: المعرّف, name: id, widget: string}
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields: *bi
+                  - label: بعدها يقدر
+                    name: outcome
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: English, name: en, widget: text, required: false}
+                      - {label: العربية, name: ar, widget: text, required: false}
+                  - label: التمرين
+                    name: exercise
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: English, name: en, widget: text, required: false}
+                      - {label: العربية, name: ar, widget: text, required: false}
+                  - label: الأداة
+                    name: tool
+                    widget: object
+                    required: false
+                    fields:
+                      - {label: English, name: en, widget: text, required: false}
+                      - {label: العربية, name: ar, widget: text, required: false}
+          - label: تنبيه المصادر
+            name: sourcesNote
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: المصادر
+            name: sources
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: العنوان, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string}
+              - label: التاريخ المكتوب على الصفحة
+                name: date
+                widget: object
+                fields: *bi
+              - label: ما هو هذا التاريخ
+                name: dateNote
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: ماذا أُخذ
+                name: usedFor
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+      - label: مكتب القائد
+        name: office
+        file: content/masterclass/leader-office.json
+        fields:
+          - {label: الرابط, name: slug, widget: string}
+          - label: العنوان
+            name: title
+            widget: object
+            fields: *bi
+          - label: الحالة
+            name: status
+            widget: object
+            fields: *bi
+          - label: الختم
+            name: stamp
+            widget: object
+            hint: "مثال توضيحي"
+            fields: *bi
+          - label: المقدمة
+            name: lede
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: التنبيه
+            name: note
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: الأوراق
+            name: pieces
+            widget: list
+            summary: "{{fields.label.ar}}"
+            fields:
+              - {label: المعرّف, name: id, widget: string}
+              - label: الاسم
+                name: label
+                widget: object
+                fields: *bi
+              - label: السطور
+                name: blocks
+                widget: list
+                fields:
+                  - label: النوع
+                    name: kind
+                    widget: select
+                    options:
+                      - {label: ختم, value: stamp}
+                      - {label: عنوان, value: heading}
+                      - {label: سطر, value: line}
+                  - label: النص
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+
