@@ -1,3 +1,5 @@
 {
-  "archived": []
+  "archived": [
+    {"path": "/insights", "note": "test"}
+  ]
 }
