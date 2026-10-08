@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: "VisionSeek | Future Technology, Science & Venture Building",
-  description: "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
+  title: "VisionSeek | The Highest Level One",
+  description:
+    "VisionSeek builds capabilities for institutions, especially AI, through Highest Level One: assembled in-house between engineering teams and decision-makers. A multi-sector studio for Egypt and the Gulf.",
+  openGraph: {
+    title: "VisionSeek | The Highest Level One",
+    description:
+      "VisionSeek builds capabilities for institutions, especially AI, through Highest Level One: assembled in-house between engineering teams and decision-makers. A multi-sector studio for Egypt and the Gulf.",
+  },
   alternates: {
     canonical: "/",
     languages: { en: "/", ar: "/ar" },
