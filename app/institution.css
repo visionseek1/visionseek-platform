@@ -121,8 +121,8 @@
 .vs-wl-hero h1{font-size:clamp(2.4rem,4.8vw,4.4rem);line-height:1.2;letter-spacing:-.01em;max-width:34rem}
 .vs-wl-with{margin:0;font-size:1.35rem;color:var(--lime);font-weight:500}
 .vs-wl-actions{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
-.vs-wl-hero-image{position:relative;min-height:32rem;overflow:hidden}
-.vs-wl-hero-image img{object-fit:cover;object-position:center 15%;transition:transform 1.2s ease}
+.vs-wl-hero-image{position:relative;min-height:32rem;height:100%;overflow:hidden;isolation:isolate}
+.vs-wl-hero-image img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 15%;transition:transform 1.2s ease}
 .vs-wl-hero:hover .vs-wl-hero-image img{transform:scale(1.04)}
 .vs-wl-hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,var(--wl-bg) 0%,rgba(11,13,11,0) 38%),linear-gradient(to top,var(--wl-bg) 0%,rgba(11,13,11,0) 30%)}
 .vs-site[dir=rtl] .vs-wl-hero-image::after{background:linear-gradient(to left,var(--wl-bg) 0%,rgba(11,13,11,0) 38%),linear-gradient(to top,var(--wl-bg) 0%,rgba(11,13,11,0) 30%)}
@@ -133,9 +133,9 @@
 #wl-chip-all:checked~.vs-wl-chips label[for=wl-chip-all],#wl-chip-leader:checked~.vs-wl-chips label[for=wl-chip-leader],#wl-chip-institution:checked~.vs-wl-chips label[for=wl-chip-institution],#wl-chip-development:checked~.vs-wl-chips label[for=wl-chip-development]{background:var(--white);color:#0b0d0b;border-color:var(--white);font-weight:600}
 /* Doors */
 .vs-wl-door-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
-.vs-wl-door{position:relative;display:flex;flex-direction:column;min-height:32rem;overflow:hidden;border-radius:22px;border:1px solid var(--wl-line);background:#161a15;color:var(--white);text-decoration:none;transition:transform .35s ease,border-color .35s ease,opacity .35s ease}
+.vs-wl-door{position:relative;isolation:isolate;display:flex;flex-direction:column;min-height:32rem;overflow:hidden;border-radius:22px;border:1px solid var(--wl-line);background:#161a15;color:var(--white);text-decoration:none;transition:transform .35s ease,border-color .35s ease,opacity .35s ease}
 .vs-wl-door:hover{transform:translateY(-8px);border-color:var(--lime)}
-.vs-wl-door img{object-fit:cover;object-position:center 20%;transition:transform 1.2s ease}
+.vs-wl-door img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform 1.2s ease}
 .vs-wl-door:hover img{transform:scale(1.06)}
 .vs-wl-door.door-leader img{object-position:center 12%}
 .vs-wl-door::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--wl-bg) 10%,rgba(11,13,11,.6) 50%,rgba(11,13,11,.15) 100%)}
@@ -188,6 +188,14 @@
 .vs-wl-inst-lines span{color:var(--wl-soft)}
 .vs-wl-inst-lines strong{color:var(--white);font-weight:700}
 .vs-wl-institutions .vs-wl-close{margin-bottom:2rem;max-width:52rem}
+/* Founder */
+.vs-wl-founder{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:3rem;align-items:center;background:var(--wl-panel);border-top:1px solid #1e231c;border-bottom:1px solid #1e231c}
+.vs-wl-founder-image{position:relative;isolation:isolate;aspect-ratio:1;max-width:28rem;width:100%;overflow:hidden;border-radius:24px;border:1px solid var(--wl-line)}
+.vs-wl-founder-image img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.vs-wl-founder-body{display:flex;flex-direction:column;gap:.9rem;max-width:38rem}
+.vs-wl-founder-body h2{font-size:clamp(1.9rem,3.4vw,2.8rem)}
+.vs-wl-founder-body>p:not(.vs-wl-code):not(.vs-wl-with):not(.vs-wl-close){margin:0;font-size:1.12rem;line-height:1.95;color:var(--wl-ink)}
+.vs-wl-founder-body .vs-text-link{margin-top:.4rem}
 .vs-wl-founder-questions{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.3rem}
 .vs-wl-founder-questions li{font-size:1.35rem;line-height:1.5;font-weight:700;color:var(--white)}
 .vs-wl-door-text{font-size:.98rem;line-height:1.7;color:var(--wl-ink)}
