@@ -1,0 +1,260 @@
+{
+  "sections": [
+    {
+      "path": "/programs",
+      "en": "Programs",
+      "ar": "البرامج",
+      "children": [
+        {
+          "href": "/about/what-we-do#hlo",
+          "en": "HLO — Highest Level One",
+          "ar": "برنامج HLO"
+        },
+        {
+          "href": "/programs",
+          "en": "Program concepts",
+          "ar": "تصورات البرامج"
+        },
+        {
+          "href": "/programs/ideas",
+          "en": "Ideas under exploration",
+          "ar": "أفكار قيد الاستكشاف"
+        },
+        {
+          "href": "/programs/challenges",
+          "en": "Challenges",
+          "ar": "التحديات"
+        },
+        {
+          "href": "/programs/spotlights",
+          "en": "Research spotlights",
+          "ar": "تحت المجهر"
+        },
+        {
+          "href": "/programs/program-lifecycle",
+          "en": "How programs work",
+          "ar": "كيف تعمل البرامج؟"
+        }
+      ]
+    },
+    {
+      "path": "/projects",
+      "en": "Projects",
+      "ar": "المشاريع",
+      "children": [
+        {
+          "href": "/projects",
+          "en": "All sectors",
+          "ar": "كل المجالات"
+        },
+        {
+          "href": "/projects/energy",
+          "en": "Energy & Climate",
+          "ar": "الطاقة والمناخ"
+        },
+        {
+          "href": "/projects/semiconductors",
+          "en": "Chips & Semiconductors",
+          "ar": "الرقائق وأشباه الموصلات"
+        },
+        {
+          "href": "/projects/drones-aviation",
+          "en": "Drones & Aviation",
+          "ar": "الدرونز والطيران"
+        },
+        {
+          "href": "/projects/defense",
+          "en": "Defense & Security",
+          "ar": "الدفاع والأمن"
+        },
+        {
+          "href": "/projects/robotics",
+          "en": "Robotics & Industry",
+          "ar": "الروبوتات والصناعة"
+        },
+        {
+          "href": "/projects/health",
+          "en": "Medicine & Health",
+          "ar": "الطب والصحة"
+        },
+        {
+          "href": "/projects/agriculture",
+          "en": "Agriculture & Food Security",
+          "ar": "الزراعة والأمن الغذائي"
+        },
+        {
+          "href": "/projects/infrastructure",
+          "en": "Cities & Infrastructure",
+          "ar": "المدن والبنية التحتية"
+        }
+      ]
+    },
+    {
+      "path": "/opportunities",
+      "en": "R&D Opportunities",
+      "ar": "فرص البحث والتطوير",
+      "children": [
+        {
+          "href": "/opportunities",
+          "en": "Explore opportunities",
+          "ar": "استكشف الفرص"
+        },
+        {
+          "href": "/work-with-us/how-to-respond",
+          "en": "Response guide",
+          "ar": "دليل المشاركة"
+        },
+        {
+          "href": "/work-with-us/prepare-a-concept",
+          "en": "Prepare your note",
+          "ar": "جهّز مذكرتك"
+        }
+      ]
+    },
+    {
+      "path": "/workshops",
+      "en": "Workshops",
+      "ar": "ورش العمل",
+      "children": [
+        {
+          "href": "/workshops",
+          "en": "Weekly workshops",
+          "ar": "الورش الأسبوعية"
+        },
+        {
+          "href": "/workshops/how-workshops-work",
+          "en": "How it works",
+          "ar": "كيف تعمل الورش؟"
+        },
+        {
+          "href": "/workshops/rewinds",
+          "en": "Notes & outcomes",
+          "ar": "السجلات والمخرجات"
+        }
+      ]
+    },
+    {
+      "path": "/news",
+      "en": "News",
+      "ar": "الأخبار",
+      "children": [
+        {
+          "href": "/news",
+          "en": "All news & notes",
+          "ar": "كل الأخبار والمقالات"
+        },
+        {
+          "href": "/insights",
+          "en": "Leaders House",
+          "ar": "بيت القادة"
+        },
+        {
+          "href": "/news/media",
+          "en": "Media & inquiries",
+          "ar": "الإعلام والاستفسارات"
+        }
+      ]
+    },
+    {
+      "path": "/work-with-us",
+      "en": "Work with Us",
+      "ar": "اعمل معنا",
+      "children": [
+        {
+          "href": "/start",
+          "en": "Build your solutions with us",
+          "ar": "ابنِ حلولك معنا"
+        },
+        {
+          "href": "/work-with-us/new-to-visionseek",
+          "en": "New to VisionSeek",
+          "ar": "ابدأ مع VisionSeek"
+        },
+        {
+          "href": "/work-with-us/how-to-respond",
+          "en": "How to respond",
+          "ar": "كيف تشارك؟"
+        },
+        {
+          "href": "/work-with-us/prepare-a-concept",
+          "en": "Prepare a concept",
+          "ar": "جهّز تصورًا"
+        },
+        {
+          "href": "/work-with-us/review-and-selection",
+          "en": "Review & selection",
+          "ar": "المراجعة والاختيار"
+        },
+        {
+          "href": "/work-with-us/transition",
+          "en": "Transition to use",
+          "ar": "النقل للتشغيل"
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "en": "About",
+      "ar": "عن VisionSeek",
+      "children": [
+        {
+          "href": "/about/what-we-do",
+          "en": "How VisionSeek works",
+          "ar": "كيف تعمل VisionSeek؟"
+        },
+        {
+          "href": "/about",
+          "en": "Our vision",
+          "ar": "رؤيتنا"
+        },
+        {
+          "href": "/method",
+          "en": "Our method",
+          "ar": "منهجنا"
+        },
+        {
+          "href": "/about/operating-model",
+          "en": "Operating model",
+          "ar": "نموذج التشغيل"
+        },
+        {
+          "href": "/about/program-questions",
+          "en": "Program questions",
+          "ar": "أسئلة البرنامج"
+        },
+        {
+          "href": "/about/people",
+          "en": "People",
+          "ar": "الأشخاص"
+        },
+        {
+          "href": "/about/governance",
+          "en": "Governance",
+          "ar": "الحوكمة"
+        },
+        {
+          "href": "/about/learning-from-darpa",
+          "en": "Learning from DARPA",
+          "ar": "التعلم من DARPA"
+        }
+      ]
+    }
+  ],
+  "reports": {
+    "path": "/reports",
+    "en": "Reports",
+    "ar": "التقارير",
+    "children": [
+      {
+        "href": "/reports",
+        "en": "Research & reports",
+        "ar": "الأبحاث والتقارير"
+      },
+      {
+        "href": "/reports/methodology",
+        "en": "Methods & standards",
+        "ar": "المنهج والمعايير"
+      }
+    ]
+  }
+}

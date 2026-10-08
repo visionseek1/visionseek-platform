@@ -1,0 +1,62 @@
+{
+  "position": 6,
+  "section": "programs",
+  "slug": "program-lifecycle",
+  "title": {
+    "en": "How a program works",
+    "ar": "كيف يعمل البرنامج؟"
+  },
+  "summary": {
+    "en": "A bounded mission with evidence, ownership and a route to use.",
+    "ar": "مهمة محددة لها أدلة ومسؤول ومسار إلى الاستخدام."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "From idea to program",
+        "ar": "من الفكرة إلى البرنامج"
+      },
+      "items": [
+        {
+          "en": "Explore: gather signals and understand the unmet capability.",
+          "ar": "استكشاف: جمع الإشارات وفهم القدرة غير المتحققة."
+        },
+        {
+          "en": "Incubate: challenge assumptions with users and specialists.",
+          "ar": "إنضاج: نقد الافتراضات مع المستفيدين والمتخصصين."
+        },
+        {
+          "en": "Authorize: approve the owner, baseline, scope, resources and tests.",
+          "ar": "اعتماد: إقرار المسؤول وخط الأساس والنطاق والموارد والاختبارات."
+        },
+        {
+          "en": "Execute: work in phases with evidence reviews.",
+          "ar": "تنفيذ: العمل على مراحل تتخللها مراجعات أدلة."
+        },
+        {
+          "en": "Transition or close: transfer a usable capability, or preserve what was learned.",
+          "ar": "نقل أو إغلاق: تسليم قدرة قابلة للاستخدام أو حفظ ما تعلمناه."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The program record",
+        "ar": "ملف البرنامج"
+      },
+      "body": {
+        "en": "Keep one versioned record of the capability, accountable owner, team, milestones, evidence, decisions, budget assumptions, risks and intended acceptor. An unresolved critical dependency should be visible, not hidden by progress reporting.",
+        "ar": "احتفظ بملف ذي نسخ للقدرة والمسؤول والفريق والمراحل والأدلة والقرارات وافتراضات الميزانية والمخاطر وجهة القبول. يجب إظهار الاعتماديات الحرجة غير المحسومة، لا إخفاؤها بتقارير النشاط."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/about/program-questions"
+    },
+    {
+      "href": "/work-with-us/transition"
+    }
+  ]
+}

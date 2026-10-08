@@ -1,0 +1,41 @@
+{
+  "position": 15,
+  "section": "about",
+  "slug": "people",
+  "title": {
+    "en": "People & leadership",
+    "ar": "الأشخاص والقيادة"
+  },
+  "summary": {
+    "en": "A founder-led vision and a team assembled around each capability.",
+    "ar": "رؤية يقودها المؤسس وفريق يُجمع حول كل قدرة."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "Dr. Ahmed Abdelalim",
+        "ar": "د. أحمد عبدالعليم"
+      },
+      "body": {
+        "en": "Founder of VisionSeek; responsible for vision and strategy. Based in Incheon, South Korea.",
+        "ar": "مؤسس VisionSeek ومسؤول الرؤية والاستراتيجية. مقيم في إنتشون بكوريا الجنوبية."
+      }
+    },
+    {
+      "title": {
+        "en": "Program leadership",
+        "ar": "قيادة البرامج"
+      },
+      "body": {
+        "en": "Program-manager appointments are not yet published. The operating model describes proposed responsibilities, not appointed staff.",
+        "ar": "لم تُنشر تعيينات مديري البرامج. يشرح نموذج التشغيل المسؤوليات المقترحة، ولا يمثل موظفين معينين."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/about#founder"
+    }
+  ]
+}

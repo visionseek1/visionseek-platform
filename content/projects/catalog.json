@@ -1,0 +1,269 @@
+{
+  "conceptNotice": {
+    "ar": "تصوّرات مقترحة — لم تُطلق أو تُموّل كبرامج.",
+    "en": "Proposed concepts — not launched or funded programs."
+  },
+  "status": {
+    "concept": {
+      "ar": "مفهوم",
+      "en": "Concept"
+    },
+    "active": {
+      "ar": "قيد التنفيذ",
+      "en": "In progress"
+    },
+    "completed": {
+      "ar": "مكتمل",
+      "en": "Completed"
+    }
+  },
+  "sectors": [
+    {
+      "slug": "energy",
+      "title": {
+        "ar": "الطاقة والمناخ",
+        "en": "Energy & Climate"
+      },
+      "icon": "energy",
+      "anchors": [
+        "energy"
+      ],
+      "intro": {
+        "ar": "حلول تمنح المؤسسات تحكمًا أكبر في إمدادات الطاقة والبنية التي تعتمد عليها.",
+        "en": "Solutions that give institutions greater control over energy supply and the infrastructure behind it."
+      },
+      "focus": [
+        {
+          "ar": "الغاز المسال",
+          "en": "Liquefied natural gas"
+        },
+        {
+          "ar": "منظومات الطاقة",
+          "en": "Energy systems"
+        },
+        {
+          "ar": "تقنيات المناخ",
+          "en": "Climate technologies"
+        }
+      ]
+    },
+    {
+      "slug": "semiconductors",
+      "title": {
+        "ar": "الرقائق وأشباه الموصلات",
+        "en": "Chips & Semiconductors"
+      },
+      "icon": "chips",
+      "anchors": [
+        "chips"
+      ],
+      "intro": {
+        "ar": "من تصميم الشريحة إلى الوصول إلى التصنيع: أين تستطيع المؤسسة أن تمتلك دورًا مؤثرًا في سلسلة القيمة؟",
+        "en": "From chip design to manufacturing access: where can an institution build a meaningful position in the value chain?"
+      },
+      "focus": [
+        {
+          "ar": "تصميم الرقائق",
+          "en": "Chip design"
+        },
+        {
+          "ar": "التغليف والمواد",
+          "en": "Packaging & materials"
+        },
+        {
+          "ar": "سلاسل التوريد",
+          "en": "Supply chains"
+        }
+      ]
+    },
+    {
+      "slug": "drones-aviation",
+      "title": {
+        "ar": "الدرونز والطيران",
+        "en": "Drones & Aviation"
+      },
+      "icon": "flight",
+      "anchors": [
+        "drones",
+        "space"
+      ],
+      "intro": {
+        "ar": "أنظمة جوية تربط الاستقلالية بمهام واضحة في الفحص والنقل والخدمات.",
+        "en": "Aerial systems connecting autonomy to defined inspection, transport and service missions."
+      },
+      "focus": [
+        {
+          "ar": "الدرونز",
+          "en": "Uncrewed aircraft"
+        },
+        {
+          "ar": "الطيران والفضاء",
+          "en": "Aviation & aerospace"
+        },
+        {
+          "ar": "الخدمات الجوية",
+          "en": "Aerial services"
+        }
+      ]
+    },
+    {
+      "slug": "defense",
+      "title": {
+        "ar": "الدفاع والأمن",
+        "en": "Defense & Security"
+      },
+      "icon": "defense",
+      "anchors": [
+        "defense"
+      ],
+      "intro": {
+        "ar": "حماية البنية الحيوية ورفع الوعي بالموقف وربط المعلومات بالقرار.",
+        "en": "Protecting critical infrastructure, improving situational awareness and connecting information to decisions."
+      },
+      "focus": [
+        {
+          "ar": "حماية البنية الحيوية",
+          "en": "Infrastructure protection"
+        },
+        {
+          "ar": "الوعي بالموقف",
+          "en": "Situational awareness"
+        },
+        {
+          "ar": "مرونة المؤسسات",
+          "en": "Institutional resilience"
+        }
+      ]
+    },
+    {
+      "slug": "robotics",
+      "title": {
+        "ar": "الروبوتات والصناعة",
+        "en": "Robotics & Industry"
+      },
+      "icon": "robotics",
+      "anchors": [
+        "robots"
+      ],
+      "intro": {
+        "ar": "ربط الروبوتات والإدراك الآلي بمهام إنتاج وفحص يمكن تنفيذها في الواقع.",
+        "en": "Connecting robotics and machine perception to real production and inspection tasks."
+      },
+      "focus": [
+        {
+          "ar": "الأنظمة الذاتية",
+          "en": "Autonomous systems"
+        },
+        {
+          "ar": "التصنيع",
+          "en": "Manufacturing"
+        },
+        {
+          "ar": "الفحص والصيانة",
+          "en": "Inspection & maintenance"
+        }
+      ]
+    },
+    {
+      "slug": "health",
+      "title": {
+        "ar": "الطب والصحة",
+        "en": "Medicine & Health"
+      },
+      "icon": "health",
+      "anchors": [
+        "science"
+      ],
+      "intro": {
+        "ar": "وصل البحث والتقنية باحتياجات الرعاية، من المعرفة الطبية إلى خدمات أفضل.",
+        "en": "Connecting research and technology to care needs, from medical knowledge to better services."
+      },
+      "focus": [
+        {
+          "ar": "التقنيات الطبية",
+          "en": "Medical technologies"
+        },
+        {
+          "ar": "منظومات الرعاية",
+          "en": "Care systems"
+        },
+        {
+          "ar": "البحث التطبيقي",
+          "en": "Applied research"
+        }
+      ]
+    },
+    {
+      "slug": "agriculture",
+      "title": {
+        "ar": "الزراعة والأمن الغذائي",
+        "en": "Agriculture & Food Security"
+      },
+      "icon": "agriculture",
+      "anchors": [
+        "agriculture"
+      ],
+      "intro": {
+        "ar": "إنتاج أكثر مرونة، واستخدام أدق للموارد، وسلاسل غذاء أقرب إلى احتياجاتها.",
+        "en": "More resilient production, better resource use and food systems connected to the needs they serve."
+      },
+      "focus": [
+        {
+          "ar": "الإنتاج الزراعي",
+          "en": "Agricultural production"
+        },
+        {
+          "ar": "المياه والموارد",
+          "en": "Water & resources"
+        },
+        {
+          "ar": "سلاسل الغذاء",
+          "en": "Food supply chains"
+        }
+      ]
+    },
+    {
+      "slug": "infrastructure",
+      "title": {
+        "ar": "المدن والبنية التحتية",
+        "en": "Cities & Infrastructure"
+      },
+      "icon": "cities",
+      "anchors": [
+        "cities"
+      ],
+      "intro": {
+        "ar": "ربط أصول المدن وبياناتها وخدماتها لتحسين قدرة المؤسسات على إدارتها.",
+        "en": "Connecting city assets, data and services to improve institutions’ ability to manage them."
+      },
+      "focus": [
+        {
+          "ar": "المدن",
+          "en": "Cities"
+        },
+        {
+          "ar": "النقل",
+          "en": "Transport"
+        },
+        {
+          "ar": "البنية المترابطة",
+          "en": "Connected infrastructure"
+        }
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "slug": "lng",
+      "sector": "energy",
+      "title": {
+        "ar": "الغاز الطبيعي المسال",
+        "en": "Liquefied Natural Gas"
+      },
+      "intro": {
+        "ar": "تحكم أكبر في الإمداد، وخيارات أوسع في التقنية التي يقوم عليها الأسطول.",
+        "en": "Greater control over supply. More choice in the technology a fleet depends on."
+      }
+    }
+  ]
+}

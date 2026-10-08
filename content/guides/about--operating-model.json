@@ -1,0 +1,68 @@
+{
+  "position": 12,
+  "section": "about",
+  "slug": "operating-model",
+  "title": {
+    "en": "Our operating model",
+    "ar": "نموذج تشغيلنا"
+  },
+  "summary": {
+    "en": "A proposed institution organized around capabilities and accountable programs.",
+    "ar": "مؤسسة مقترحة التنظيم حول القدرات والبرامج واضحة المسؤولية."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "Four connected layers",
+        "ar": "أربع طبقات مترابطة"
+      },
+      "items": [
+        {
+          "en": "Strategy chooses the important capability and the reason to pursue it.",
+          "ar": "الاستراتيجية تختار القدرة المهمة وسبب العمل عليها."
+        },
+        {
+          "en": "Specialists contribute domain knowledge and independent review.",
+          "ar": "يساهم المتخصصون بمعرفة المجال والمراجعة المستقلة."
+        },
+        {
+          "en": "Program managers own the path, team, tests and evidence.",
+          "ar": "مديرو البرامج مسؤولون عن المسار والفريق والاختبارات والأدلة."
+        },
+        {
+          "en": "Operating partners accept and sustain capabilities in the real world.",
+          "ar": "شركاء التشغيل يقبلون القدرات ويحافظون عليها في الواقع."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "What happens each week",
+        "ar": "ماذا يحدث كل أسبوع؟"
+      },
+      "body": {
+        "en": "Review the evidence and blockers for each authorized mission. Run a focused workshop or experiment. Update the program record, obtain required decisions and assign the next measurable step. Reconsider whether the mission remains worth pursuing.",
+        "ar": "تُراجع الأدلة والعوائق لكل مهمة معتمدة. تُنفذ ورشة مركزة أو تجربة. يُحدّث ملف البرنامج وتُطلب القرارات اللازمة وتُعيّن الخطوة التالية القابلة للقياس. ويُعاد النظر في استحقاق المهمة للاستمرار."
+      }
+    },
+    {
+      "title": {
+        "en": "Continuity without the founder",
+        "ar": "الاستمرار دون حضور المؤسس"
+      },
+      "body": {
+        "en": "Each authorized program needs a responsible owner, an approval substitute, a current evidence record and a documented refusal or escalation path. These assignments must be real before independent operation is claimed.",
+        "ar": "يحتاج كل برنامج معتمد إلى مسؤول وبديل للاعتماد وسجل أدلة محدث ومسار رفض أو تصعيد موثق. يجب تثبيت هذه الأدوار فعليًا قبل الادعاء بالتشغيل المستقل."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/programs/program-lifecycle"
+    },
+    {
+      "href": "/about/governance"
+    }
+  ]
+}

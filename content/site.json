@@ -1,0 +1,28 @@
+{
+  "email": "abdelalim@visionseek.org",
+  "whatsapp": "821042419606",
+  "phoneDisplay": "+82 10 4241 9606",
+  "phoneE164": "+82-10-4241-9606",
+  "linkedinUrl": "https://www.linkedin.com/in/ahmed-abdelalim-462491160/",
+  "linkedinName": {
+    "en": "Ahmed Abdelalim",
+    "ar": "أحمد عبدالعليم"
+  },
+  "location": {
+    "en": "Incheon, South Korea",
+    "ar": "إنتشون، كوريا الجنوبية"
+  },
+  "locationHint": {
+    "en": "Incheon, South Korea · UTC+9",
+    "ar": "إنتشون، كوريا الجنوبية · UTC+9"
+  },
+  "footerLocation": {
+    "en": "Incheon, South Korea · Working across Korea and the Arab world",
+    "ar": "إنتشون، كوريا الجنوبية · نعمل عبر كوريا والعالم العربي"
+  },
+  "tagline": "Make It Possible.",
+  "footerBlurb": {
+    "en": "We discover what becomes possible when ideas, technologies, people, markets and institutions connect. Then we find the right form to make it real.",
+    "ar": "نكتشف ما يصبح ممكنًا عندما تتصل الأفكار والتقنيات والأشخاص والأسواق والمؤسسات، ثم نحدد الشكل الصحيح لجعله واقعًا."
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "sections": [
+    {
+      "id": "work-with-us",
+      "title": {
+        "en": "Work with Us",
+        "ar": "اعمل معنا"
+      },
+      "eyebrow": {
+        "en": "CONNECT · CONTRIBUTE · BUILD",
+        "ar": "تواصل · ساهم · ابنِ"
+      },
+      "intro": {
+        "en": "Bring an important need, a deep expertise or a capability the world should use. Find your path into a mission.",
+        "ar": "قدّم احتياجًا مهمًا أو خبرة عميقة أو قدرة تستحق الاستخدام. اكتشف مسارك للمشاركة في مهمة."
+      },
+      "image": "industry",
+      "links": [
+        {
+          "href": "/start",
+          "label": {
+            "en": "Build your solutions with us",
+            "ar": "ابنِ حلولك معنا"
+          }
+        },
+        {
+          "href": "/work-with-us/new-to-visionseek",
+          "label": {
+            "en": "New to VisionSeek",
+            "ar": "ابدأ مع VisionSeek"
+          }
+        },
+        {
+          "href": "/work-with-us/how-to-respond",
+          "label": {
+            "en": "How to respond",
+            "ar": "كيف تشارك؟"
+          }
+        },
+        {
+          "href": "/work-with-us/prepare-a-concept",
+          "label": {
+            "en": "Prepare a concept",
+            "ar": "جهّز تصورًا"
+          }
+        },
+        {
+          "href": "/work-with-us/review-and-selection",
+          "label": {
+            "en": "Review & selection",
+            "ar": "المراجعة والاختيار"
+          }
+        },
+        {
+          "href": "/work-with-us/transition",
+          "label": {
+            "en": "Transition to use",
+            "ar": "النقل للتشغيل"
+          }
+        }
+      ]
+    },
+    {
+      "id": "opportunities",
+      "title": {
+        "en": "R&D Opportunities",
+        "ar": "فرص البحث والتطوير"
+      },
+      "eyebrow": {
+        "en": "BRING THE CAPABILITY CLOSER",
+        "ar": "قرّب القدرة من الواقع"
+      },
+      "intro": {
+        "en": "Find a question where your research, expertise, technology or operating context could make a difference.",
+        "ar": "اكتشف سؤالًا يمكن لبحثك أو خبرتك أو تقنيتك أو سياق التشغيل لديك أن يساهم في حله."
+      },
+      "image": "chips",
+      "notice": {
+        "en": "Exploratory expressions of interest. No funded calls, awards or deadlines are announced.",
+        "ar": "مسارات لإبداء الاهتمام الاستكشافي. لا توجد دعوات ممولة أو جوائز أو مواعيد نهائية معلنة."
+      },
+      "links": [
+        {
+          "href": "/opportunities",
+          "label": {
+            "en": "All opportunities",
+            "ar": "كل الفرص"
+          }
+        },
+        {
+          "href": "/work-with-us/how-to-respond",
+          "label": {
+            "en": "How to respond",
+            "ar": "كيف تشارك؟"
+          }
+        },
+        {
+          "href": "/work-with-us/review-and-selection",
+          "label": {
+            "en": "Review process",
+            "ar": "مسار المراجعة"
+          }
+        },
+        {
+          "href": "/work-with-us/prepare-a-concept",
+          "label": {
+            "en": "Prepare your note",
+            "ar": "جهّز مذكرتك"
+          }
+        }
+      ]
+    },
+    {
+      "id": "programs",
+      "title": {
+        "en": "Programs",
+        "ar": "البرامج"
+      },
+      "eyebrow": {
+        "en": "MISSIONS THAT EXPAND POSSIBILITY",
+        "ar": "مهام توسّع الممكن"
+      },
+      "intro": {
+        "en": "From an important capability question to a bounded program with people, tests and a route to operation.",
+        "ar": "من سؤال قدرة مهم إلى برنامج محدد بأشخاص واختبارات ومسار إلى التشغيل."
+      },
+      "image": "space",
+      "notice": {
+        "en": "The six program concepts are proposed for exploration. They are not launched or funded programs.",
+        "ar": "تصورات البرامج الستة مقترحة للاستكشاف، وليست برامج أُطلقت أو اعتُمد تمويلها."
+      },
+      "links": [
+        {
+          "href": "/programs",
+          "label": {
+            "en": "All programs",
+            "ar": "كل البرامج"
+          }
+        },
+        {
+          "href": "/programs/ideas",
+          "label": {
+            "en": "Ideas under exploration",
+            "ar": "أفكار قيد الاستكشاف"
+          }
+        },
+        {
+          "href": "/programs/challenges",
+          "label": {
+            "en": "Challenges",
+            "ar": "التحديات"
+          }
+        },
+        {
+          "href": "/programs/spotlights",
+          "label": {
+            "en": "Research spotlights",
+            "ar": "تحت المجهر"
+          }
+        },
+        {
+          "href": "/programs/program-lifecycle",
+          "label": {
+            "en": "How programs work",
+            "ar": "كيف تعمل البرامج؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "news",
+      "title": {
+        "en": "News",
+        "ar": "الأخبار"
+      },
+      "eyebrow": {
+        "en": "IDEAS · RESEARCH · INSTITUTIONAL LEARNING",
+        "ar": "أفكار · بحث · تعلم مؤسسي"
+      },
+      "intro": {
+        "en": "VisionSeek perspectives and attributed research references on building what should become possible.",
+        "ar": "رؤى VisionSeek ومراجع بحثية منسوبة إلى مصادرها حول بناء ما ينبغي أن يصبح ممكنًا."
+      },
+      "image": "science",
+      "links": [
+        {
+          "href": "/news",
+          "label": {
+            "en": "All news & notes",
+            "ar": "كل الأخبار والمقالات"
+          }
+        },
+        {
+          "href": "/news/media",
+          "label": {
+            "en": "Media & inquiries",
+            "ar": "الإعلام والاستفسارات"
+          }
+        },
+        {
+          "href": "/insights",
+          "label": {
+            "en": "Leaders House",
+            "ar": "بيت القادة"
+          }
+        },
+        {
+          "href": "/programs/spotlights",
+          "label": {
+            "en": "Research spotlights",
+            "ar": "تحت المجهر"
+          }
+        }
+      ]
+    },
+    {
+      "id": "workshops",
+      "title": {
+        "en": "Workshops",
+        "ar": "ورش العمل"
+      },
+      "eyebrow": {
+        "en": "ONE WEEK. ONE QUESTION. ONE USEFUL OUTPUT.",
+        "ar": "كل أسبوع. سؤال محدد. مخرج مفيد."
+      },
+      "intro": {
+        "en": "A weekly working rhythm to frame capabilities, assemble knowledge, design proof and learn from reality.",
+        "ar": "إيقاع عمل أسبوعي لصياغة القدرات وتجميع المعرفة وتصميم الإثبات والتعلم من الواقع."
+      },
+      "image": "industry",
+      "notice": {
+        "en": "No workshop is scheduled yet. The method below describes how a session is run; a session is listed only once its format, host and date are confirmed.",
+        "ar": "لا توجد ورشة مُقررة بعد. ما تقرأه أدناه وصف لطريقة إدارة الجلسة، ولا تُدرج جلسة هنا إلا بعد تثبيت صيغتها وميسّرها وموعدها."
+      },
+      "links": [
+        {
+          "href": "/workshops",
+          "label": {
+            "en": "The weekly cycle",
+            "ar": "الدورة الأسبوعية"
+          }
+        },
+        {
+          "href": "/workshops/how-workshops-work",
+          "label": {
+            "en": "How it works",
+            "ar": "كيف تعمل الورش؟"
+          }
+        },
+        {
+          "href": "/workshops/rewinds",
+          "label": {
+            "en": "Notes & outcomes",
+            "ar": "السجلات والمخرجات"
+          }
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "title": {
+        "en": "About",
+        "ar": "عن VisionSeek"
+      },
+      "eyebrow": {
+        "en": "SEE WHAT COULD BE. MAKE IT POSSIBLE.",
+        "ar": "نرى ما يمكن أن يكون. ونجعله ممكنًا."
+      },
+      "intro": {
+        "en": "The vision, people and operating principles behind VisionSeek.",
+        "ar": "الرؤية والأشخاص ومبادئ التشغيل وراء VisionSeek."
+      },
+      "image": "space",
+      "links": [
+        {
+          "href": "/about",
+          "label": {
+            "en": "Our vision",
+            "ar": "رؤيتنا"
+          }
+        },
+        {
+          "href": "/method",
+          "label": {
+            "en": "Our method",
+            "ar": "منهجنا"
+          }
+        },
+        {
+          "href": "/about/operating-model",
+          "label": {
+            "en": "Operating model",
+            "ar": "نموذج التشغيل"
+          }
+        },
+        {
+          "href": "/about/program-questions",
+          "label": {
+            "en": "Program questions",
+            "ar": "أسئلة البرنامج"
+          }
+        },
+        {
+          "href": "/about/people",
+          "label": {
+            "en": "People",
+            "ar": "الأشخاص"
+          }
+        },
+        {
+          "href": "/about/governance",
+          "label": {
+            "en": "Governance",
+            "ar": "الحوكمة"
+          }
+        },
+        {
+          "href": "/about/learning-from-darpa",
+          "label": {
+            "en": "Learning from DARPA",
+            "ar": "التعلم من DARPA"
+          }
+        }
+      ]
+    }
+  ]
+}

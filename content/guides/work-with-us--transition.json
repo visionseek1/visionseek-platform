@@ -1,0 +1,58 @@
+{
+  "position": 5,
+  "section": "work-with-us",
+  "slug": "transition",
+  "title": {
+    "en": "From proof to operation",
+    "ar": "من الإثبات إلى التشغيل"
+  },
+  "summary": {
+    "en": "Plan for the institution that will use the capability from the beginning.",
+    "ar": "خطط منذ البداية للمؤسسة التي ستستخدم القدرة."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "Before handover",
+        "ar": "قبل التسليم"
+      },
+      "items": [
+        {
+          "en": "Name the operating owner and the person authorized to accept the result.",
+          "ar": "سمِّ مسؤول التشغيل والشخص المخول بقبول النتيجة."
+        },
+        {
+          "en": "Agree the operating envelope, performance measures and known limitations.",
+          "ar": "اتفق على حدود التشغيل ومقاييس الأداء والقيود المعروفة."
+        },
+        {
+          "en": "Document training, maintenance, costs, access rights and support responsibilities.",
+          "ar": "وثق التدريب والصيانة والتكاليف والصلاحيات ومسؤوليات الدعم."
+        },
+        {
+          "en": "Test fallback, incident response and continuity when a key person is absent.",
+          "ar": "اختبر البديل والاستجابة للحوادث والاستمرار عند غياب شخص أساسي."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Acceptance and learning",
+        "ar": "القبول والتعلم"
+      },
+      "body": {
+        "en": "A demonstration is not acceptance. The operator reviews evidence in the intended context and records a decision. After acceptance, the capability enters an agreed measurement and improvement cycle.",
+        "ar": "العرض التجريبي ليس قبولًا. يراجع المشغّل الأدلة في السياق المستهدف ويسجل قراره. بعد القبول تدخل القدرة دورة قياس وتطوير متفقًا عليها."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/workshops/how-workshops-work"
+    },
+    {
+      "href": "/method#operate"
+    }
+  ]
+}

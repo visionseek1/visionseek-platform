@@ -1,0 +1,38 @@
+{
+  "position": 3,
+  "slug": "trusted-sourcing",
+  "code": "VS-P03",
+  "title": {
+    "en": "Evidence-led cross-border sourcing",
+    "ar": "توريد عابر للحدود تقوده الأدلة"
+  },
+  "summary": {
+    "en": "Help a buyer determine whether a sourcing path is eligible, verifiable and worth pursuing before committing resources.",
+    "ar": "مساعدة المشتري على تحديد أهلية مسار التوريد وقابليته للتحقق وجدواه قبل الالتزام بالموارد."
+  },
+  "image": "drones",
+  "beneficiary": {
+    "en": "Institutional buyers and specialist sourcing teams.",
+    "ar": "المشترون المؤسسيون وفرق التوريد المتخصصة."
+  },
+  "constraint": {
+    "en": "A listing, an indicative price and a supplier claim are easily mistaken for available stock, a complete landed cost or proven suitability.",
+    "ar": "قد يُخلط بين الإعلان والمخزون المتاح، وبين السعر المبدئي والتكلفة الكاملة، وبين ادعاء المورد والملاءمة المثبتة."
+  },
+  "hypothesis": {
+    "en": "Eligibility-first research and structured evidence can eliminate unsuitable paths earlier and make quote comparison more reliable.",
+    "ar": "يمكن للبحث الذي يبدأ بالأهلية والأدلة المنظمة استبعاد المسارات غير المناسبة مبكرًا وتحسين مقارنة العروض."
+  },
+  "test": {
+    "en": "Proposed test: use synthetic or permissioned historical requests. Track evidence completeness, unresolved cost items, disqualified paths and review time. No live purchase is required.",
+    "ar": "اختبار مقترح: طلبات اصطناعية أو تاريخية مصرح بها. نقيس اكتمال الأدلة وعناصر التكلفة المجهولة والمسارات المستبعدة وزمن المراجعة، دون شراء فعلي."
+  },
+  "stop": {
+    "en": "Pause when eligibility, product identity, availability or a material cost remains unknown.",
+    "ar": "تعليق المسار عندما تبقى الأهلية أو هوية المنتج أو التوافر أو تكلفة مؤثرة مجهولة."
+  },
+  "transfer": {
+    "en": "A sourcing owner accepts the evidence checklist, named pricing points and specialist review requirements.",
+    "ar": "يعتمد مسؤول التوريد قائمة الأدلة ونقاط التسعير المسماة ومتطلبات المراجعة المتخصصة."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "position": 8,
+  "section": "programs",
+  "slug": "challenges",
+  "title": {
+    "en": "Challenges & proof sprints",
+    "ar": "التحديات وتجارب الإثبات"
+  },
+  "summary": {
+    "en": "Create a fair test around a hard, clearly defined capability.",
+    "ar": "صمم اختبارًا عادلًا لقدرة صعبة ومحددة بوضوح."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "A proposed challenge format",
+        "ar": "صيغة تحدٍ مقترحة"
+      },
+      "items": [
+        {
+          "en": "One task, a clear baseline and a shared evaluation environment.",
+          "ar": "مهمة واحدة وخط أساس واضح وبيئة تقييم مشتركة."
+        },
+        {
+          "en": "Published success measures and known operating limits.",
+          "ar": "مقاييس نجاح معلنة وحدود تشغيل معروفة."
+        },
+        {
+          "en": "Independent review and evidence that can be checked.",
+          "ar": "مراجعة مستقلة وأدلة يمكن فحصها."
+        },
+        {
+          "en": "A plan for what a successful result would enable next.",
+          "ar": "خطة لما تتيحه النتيجة الناجحة لاحقًا."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Initial proof sprint",
+        "ar": "تجربة إثبات أولى"
+      },
+      "body": {
+        "en": "Suggested exercise: compare two approaches to preparing a sourced institutional decision brief on the same non-sensitive cases. Measure time, evidence traceability and reviewer corrections. This is a proposed exercise, not an announced competition or prize.",
+        "ar": "تمرين مقترح: مقارنة مسارين لإعداد مذكرة قرار مؤسسي مسندة على الحالات غير الحساسة نفسها. نقيس الزمن وقابلية تتبع الأدلة وتصحيحات المراجع. هذا تمرين مقترح وليس مسابقة أو جائزة معلنة."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/workshops/how-workshops-work"
+    },
+    {
+      "href": "/programs/institutional-ai"
+    }
+  ]
+}

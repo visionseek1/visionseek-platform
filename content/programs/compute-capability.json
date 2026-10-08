@@ -1,0 +1,38 @@
+{
+  "position": 6,
+  "slug": "compute-capability",
+  "code": "VS-P06",
+  "title": {
+    "en": "Compute and industrial capability pathways",
+    "ar": "مسارات قدرات الحوسبة والصناعة"
+  },
+  "summary": {
+    "en": "Identify a realistic first capability in chips, materials or compute infrastructure by connecting global expertise and local demand.",
+    "ar": "تحديد قدرة أولى واقعية في الرقائق أو المواد أو بنية الحوسبة عبر ربط الخبرات العالمية بالطلب المحلي."
+  },
+  "image": "chips",
+  "beneficiary": {
+    "en": "Industrial strategy teams and capability-building institutions.",
+    "ar": "فرق الاستراتيجية الصناعية ومؤسسات بناء القدرات."
+  },
+  "constraint": {
+    "en": "Large ambitions often skip the demand, skills, supply dependencies and economics needed for a credible first step.",
+    "ar": "قد تتجاوز الطموحات الكبيرة الطلب والمهارات واعتماديات التوريد والاقتصاديات اللازمة لخطوة أولى قابلة للتنفيذ."
+  },
+  "hypothesis": {
+    "en": "A focused capability map can reveal an achievable entry point in design, testing, packaging, materials or infrastructure.",
+    "ar": "قد تكشف خريطة مركّزة للقدرات عن نقطة دخول ممكنة في التصميم أو الاختبار أو التغليف أو المواد أو البنية التحتية."
+  },
+  "test": {
+    "en": "Proposed test: compare three candidate entry points using verified demand, expert review, supplier dependencies and a cost range supported by sources.",
+    "ar": "اختبار مقترح: مقارنة ثلاث نقاط دخول عبر طلب موثّق ومراجعة خبراء واعتماديات الموردين ونطاق تكلفة مسند بمصادر."
+  },
+  "stop": {
+    "en": "Reject paths without a credible user, accessible expertise or a viable first demonstration.",
+    "ar": "استبعاد المسارات التي لا تملك مستفيدًا واضحًا أو خبرة يمكن الوصول إليها أو تجربة أولى قابلة للتنفيذ."
+  },
+  "transfer": {
+    "en": "A sponsoring institution must accept the capability roadmap and resource assumptions before any investment program is proposed.",
+    "ar": "تتبنى جهة راعية خريطة القدرة وافتراضات الموارد قبل اقتراح أي برنامج استثماري."
+  }
+}

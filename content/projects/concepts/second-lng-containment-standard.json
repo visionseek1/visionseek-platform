@@ -1,0 +1,245 @@
+{
+  "position": 2,
+  "id": "VS-P08",
+  "slug": "second-lng-containment-standard",
+  "sector": "energy",
+  "track": "lng",
+  "kind": "containment",
+  "status": "concept",
+  "featuredOrder": 2,
+  "title": {
+    "ar": "معيار ثانٍ لاحتواء الغاز المسال",
+    "en": "A second standard for LNG containment"
+  },
+  "summary": {
+    "ar": "تمكين مالك أسطول من التفاوض على تصميم خزانات الغاز المسال على مستوى الأسطول: ترخيص شامل، أو إثبات معيار بديل على أول ناقلة كبيرة، بدلًا من ترخيص منفصل لكل سفينة.",
+    "en": "Enable a fleet owner to treat cargo-tank design as a negotiable standard — licensed at fleet scale, or proven on a first large ship — rather than a royalty paid hull by hull."
+  },
+  "ambition": {
+    "ar": "أن يصبح المعيار نفسه مجالًا للاختيار.",
+    "en": "Make the standard itself a matter of choice."
+  },
+  "idea": {
+    "ar": "تصور يضع تقنية احتواء الغاز وحقوق استخدامها ضمن قرار الأسطول ككل. الطموح فتح مساحة للتفاوض على الترخيص بحجم الأسطول، أو لتأهيل معيار بديل يمكن إثباته على ناقلة كبيرة، بما يوسّع خيارات المالك التقنية والتجارية.",
+    "en": "A concept that brings LNG containment technology and usage rights into the fleet-wide decision. The ambition is to open room for fleet-scale licensing, or for qualifying an alternative standard that can be proven on a large carrier, broadening the owner’s technical and commercial choices."
+  },
+  "beneficiary": {
+    "ar": "ملاك أساطيل الغاز المسال ومطورو تقنيات الاحتواء وشركاء الصناعة البحرية.",
+    "en": "LNG fleet owners, containment technology developers and maritime industry partners."
+  },
+  "outcomes": [
+    {
+      "title": {
+        "ar": "قوة تفاوض الأسطول",
+        "en": "Fleet-scale negotiating power"
+      },
+      "text": {
+        "ar": "جمع احتياجات السفن في تصور ترخيص يعكس حجم الأسطول وطموحه.",
+        "en": "Bring vessel requirements into a licensing proposition that reflects the scale and ambition of the fleet."
+      }
+    },
+    {
+      "title": {
+        "ar": "بديل يستند إلى إثبات",
+        "en": "An alternative backed by proof"
+      },
+      "text": {
+        "ar": "فتح إمكانية إثبات معيار احتواء آخر على ناقلة كبيرة، ليصبح خيارًا يمكن تقييمه.",
+        "en": "Open the possibility of proving another containment standard on a large carrier so it becomes an option that can be evaluated."
+      }
+    },
+    {
+      "title": {
+        "ar": "خيارات تقنية أوسع",
+        "en": "Wider technology choices"
+      },
+      "text": {
+        "ar": "منح المالك مساحة أكبر لاختيار التقنية وحقوق استخدامها عبر عمر الأسطول.",
+        "en": "Give the owner greater choice over technology and usage rights across the fleet’s life."
+      }
+    }
+  ],
+  "file": {
+    "version": "0.2",
+    "updatedAt": "2026-09-28",
+    "stage": {
+      "ar": "تحديد نطاق المشروع",
+      "en": "Project scoping"
+    },
+    "stageNote": {
+      "ar": "مسار تطوير مقترح لمناقشته مع مالك أسطول وشركاء تقنية. لا يوجد معيار بديل أثبتته VisionSeek أو ترخيص حصلت عليه حتى الآن.",
+      "en": "A proposed development path for discussion with a fleet owner and technology partners. VisionSeek has not yet proven an alternative standard or obtained a technology licence."
+    },
+    "challenge": {
+      "ar": "يريد مالك الأسطول مساحة أكبر للاختيار في تقنية احتواء الغاز وحقوق استخدامها. المشروع يدرس كيف تتحول احتياجات الأسطول إلى مسار تفاوض وترخيص، أو إلى مشروع لتأهيل بديل تقني وإثباته.",
+      "en": "A fleet owner wants greater choice in LNG containment technology and usage rights. This project examines how fleet requirements can support a licensing negotiation or a program to qualify and prove a technical alternative."
+    },
+    "role": {
+      "ar": "نصمم المشروع حول احتياج مالك الأسطول، ونجمع مسار التقنية والترخيص والإثبات وشركاء الصناعة. يتولى المطورون والجهات المتخصصة أعمال التصميم والاختبار والتقييم ضمن مسؤوليات واتفاقات محددة.",
+      "en": "We shape the project around the fleet owner’s needs, connecting technology, licensing, validation and industry partners. Developers and specialist organizations undertake design, testing and assessment under defined responsibilities and agreements."
+    },
+    "engagement": {
+      "ar": "تكليف أول لتطوير خيارات الاحتواء على مستوى الأسطول، وتحديد جدوى مسار الترخيص أو تأهيل البديل، وما يتطلبه كل منهما قبل إطلاق مشروع إثبات مستقل.",
+      "en": "An initial mandate to develop fleet-level containment options and examine the viability and prerequisites of licensing or qualifying an alternative before commissioning a separate validation project."
+    },
+    "workstreams": [
+      {
+        "id": "fleet-needs",
+        "title": {
+          "ar": "متطلبات الأسطول",
+          "en": "Fleet requirements"
+        },
+        "body": {
+          "ar": "صياغة الاحتياج التقني والتشغيلي الذي ستُقيّم الخيارات على أساسه.",
+          "en": "Define the technical and operating needs against which options will be assessed."
+        }
+      },
+      {
+        "id": "technology-options",
+        "title": {
+          "ar": "التقنية وحقوق استخدامها",
+          "en": "Technology and usage rights"
+        },
+        "body": {
+          "ar": "تحديد الخيارات التي يمكن تقييمها ومتطلبات الوصول إلى حقوق استخدامها وتطويرها.",
+          "en": "Identify assessable options and the requirements for accessing usage and development rights."
+        }
+      },
+      {
+        "id": "qualification",
+        "title": {
+          "ar": "الإثبات والتأهيل",
+          "en": "Validation and qualification"
+        },
+        "body": {
+          "ar": "تصميم مسار التحقق الفني والتصنيف المطلوب مع الجهات المختصة قبل الاستخدام.",
+          "en": "Develop the technical validation and classification path with relevant specialists before use."
+        }
+      },
+      {
+        "id": "industrial-coalition",
+        "title": {
+          "ar": "الشراكة الصناعية",
+          "en": "Industrial partnership"
+        },
+        "body": {
+          "ar": "ربط مالك الأسطول بمطور التقنية والحوض والخبرات اللازمة لمسار التطوير.",
+          "en": "Connect the fleet owner, technology developer, shipyard and expertise needed for development."
+        }
+      }
+    ],
+    "deliverables": [
+      {
+        "title": {
+          "ar": "ملف خيارات الأسطول",
+          "en": "Fleet options dossier"
+        },
+        "body": {
+          "ar": "احتياج الأسطول والخيارات المحتملة وحدود المعرفة والحقوق التي تحتاج تحققًا.",
+          "en": "Fleet needs, potential options, knowledge gaps and rights that require verification."
+        }
+      },
+      {
+        "title": {
+          "ar": "تصور الترخيص أو التأهيل",
+          "en": "Licensing or qualification proposition"
+        },
+        "body": {
+          "ar": "تحديد ما يمكن التفاوض عليه وما يحتاج تطويرًا وإثباتًا قبل اعتباره خيارًا عمليًا.",
+          "en": "Define what can be negotiated and what needs development and proof before becoming a practical option."
+        }
+      },
+      {
+        "title": {
+          "ar": "نطاق مشروع الإثبات",
+          "en": "Validation project scope"
+        },
+        "body": {
+          "ar": "الأطراف والمخرجات وأدلة القبول المطلوبة لتكليف مرحلة تطوير لاحقة عند ملاءمتها.",
+          "en": "Participants, deliverables and acceptance evidence for a separately commissioned development stage, where appropriate."
+        }
+      }
+    ],
+    "partnerNeeds": [
+      {
+        "ar": "مالك أسطول يرغب في تطوير خياراته التقنية والترخيصية.",
+        "en": "A fleet owner seeking to develop technology and licensing options."
+      },
+      {
+        "ar": "مطورو تقنيات احتواء الغاز وأصحاب حقوقها.",
+        "en": "LNG containment technology developers and rights holders."
+      },
+      {
+        "ar": "أحواض بناء سفن وجهات تصنيف وخبراء اختبار وتقييم.",
+        "en": "Shipyards, classification bodies, testing specialists and assessors."
+      }
+    ],
+    "milestones": [
+      {
+        "id": "define",
+        "state": "current",
+        "title": {
+          "ar": "تحديد احتياج الأسطول",
+          "en": "Define the fleet need"
+        },
+        "description": {
+          "ar": "بلورة المتطلبات وحدود المشروع مع مالك أسطول محتمل.",
+          "en": "Frame requirements and project boundaries with a prospective fleet owner."
+        }
+      },
+      {
+        "id": "map",
+        "state": "planned",
+        "title": {
+          "ar": "تقييم الخيارات والحقوق",
+          "en": "Assess options and rights"
+        },
+        "description": {
+          "ar": "تقييم الخيارات المتاحة وشروط الوصول إلى التقنية والمعرفة اللازمة.",
+          "en": "Assess options and access requirements for technology and know-how."
+        }
+      },
+      {
+        "id": "qualify",
+        "state": "planned",
+        "title": {
+          "ar": "تكوين مشروع الإثبات",
+          "en": "Shape the validation project"
+        },
+        "description": {
+          "ar": "تحديد الشركاء ومسار الاختبار والتقييم ومعايير القبول.",
+          "en": "Identify partners, testing and assessment paths, and acceptance criteria."
+        }
+      },
+      {
+        "id": "prove",
+        "state": "planned",
+        "title": {
+          "ar": "إثبات النطاق المتفق عليه",
+          "en": "Validate the agreed scope"
+        },
+        "description": {
+          "ar": "تنفيذ الإثبات عند اعتماد نطاقه وتمويله وشراكاته؛ ثم تقييم الانتقال إلى الاستخدام.",
+          "en": "Run validation once scope, funding and partnerships are agreed, then assess transition to use."
+        }
+      }
+    ],
+    "updates": [
+      {
+        "id": "p08-scope-v02",
+        "date": "2026-09-28",
+        "kind": "scope",
+        "visibility": "public",
+        "title": {
+          "ar": "إصدار ملف المشروع ومسار التأهيل المقترح",
+          "en": "Project profile and proposed qualification path issued"
+        },
+        "body": {
+          "ar": "تحدد هذه النسخة العلاقة بين متطلبات الأسطول والترخيص وتأهيل التقنية والشراكة الصناعية، والمخرجات التي يمكن مناقشة تكليفها. لا تتضمن نتائج اختبار أو موافقات أو حقوق تقنية حصلت عليها VisionSeek.",
+          "en": "This revision connects fleet requirements, licensing, technology qualification and industrial partnership, and defines outputs that can be discussed for commissioning. It does not report tests, approvals or technology rights obtained by VisionSeek."
+        },
+        "evidenceUrl": "#scope"
+      }
+    ]
+  }
+}

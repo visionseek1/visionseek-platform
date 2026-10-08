@@ -151,3 +151,1615 @@ collections:
         fields:
           - {label: المسار, name: href, widget: string}
 
+
+  - name: site
+    label: بيانات الموقع
+    description: "البريد وواتساب ولينكدإن والموقع الجغرافي، كما تظهر في كل صفحات الموقع."
+    files:
+      - label: بيانات التواصل
+        name: site
+        file: content/site.json
+        fields:
+          - {label: البريد الإلكتروني, name: email, widget: string}
+          - {label: رقم واتساب (بصيغة دولية بلا علامات، مثل 821042419606), name: whatsapp, widget: string}
+          - {label: الرقم كما يُعرض, name: phoneDisplay, widget: string}
+          - {label: الرقم بصيغة E.164 (لمحركات البحث), name: phoneE164, widget: string}
+          - {label: رابط لينكدإن, name: linkedinUrl, widget: string}
+          - label: الاسم على لينكدإن
+            name: linkedinName
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الموقع الجغرافي
+            name: location
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الموقع مع التوقيت (صفحة ابدأ)
+            name: locationHint
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: سطر الموقع في التذييل
+            name: footerLocation
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - {label: الشعار النصي, name: tagline, widget: string}
+          - label: فقرة التذييل
+            name: footerBlurb
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+
+  - name: programs
+    label: البرامج
+    label_singular: برنامج
+    description: "تصورات البرامج الستة. الهيكل الثابت لكل صفحة برنامج (مراحل القرار، الفريق، أسئلة الفرص) يبقى في الكود؛ من هنا تُعدَّل نصوص التصور نفسه."
+    folder: content/programs
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{code}} — {{title.ar}}"
+    preview_path: "ar/programs/{{slug}}"
+    sortable_fields: [position, code]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط بعد /programs/ و/opportunities/. لا تغيّره بعد النشر."}
+      - {label: الرمز, name: code, widget: string, hint: "مثل VS-P07. رمز الفرصة المقابلة يُشتق منه تلقائيًا (VS-O07)."}
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - {label: الصورة, name: image, widget: image, choose_url: true, hint: "مفتاح جاهز مثل chips أو مسار محلي يبدأ بـ /."}
+      - label: القدرة والمستفيد
+        name: beneficiary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الحد الحالي
+        name: constraint
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الفرضية المطلوب اختبارها
+        name: hypothesis
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: التقييم المقترح
+        name: test
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: متى نوقف المسار أو نغيره
+        name: stop
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: من سيشغّل القدرة
+        name: transfer
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+
+  - name: guides
+    label: صفحات الدليل وعن VisionSeek
+    label_singular: صفحة
+    description: "صفحات «اعمل معنا» و«كيف تعمل البرامج» و«عن VisionSeek» (نموذج التشغيل، الحوكمة، الأشخاص، التعلم من DARPA) وصفحة الإعلام. الصفحات الست الخاصة بالمجتمعات تُولَّد من الكود."
+    folder: content/guides
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.section}}--{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{section}} / {{slug}} — {{title.ar}}"
+    preview_path: "ar/{{section}}/{{slug}}"
+    sortable_fields: [position, section, slug]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - label: القسم
+        name: section
+        widget: select
+        options: [work-with-us, programs, workshops, about, news, opportunities]
+        hint: "القسم الذي تظهر الصفحة تحته. لا تغيّره بعد النشر لأن الرابط يتغير."
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط بعد اسم القسم. لا تغيّره بعد النشر."}
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - {label: الصورة, name: image, widget: image, choose_url: true, required: false, hint: "مفتاح جاهز مثل cities. اتركها فارغة للصورة الافتراضية."}
+      - label: أقسام الصفحة
+        name: blocks
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+          - label: عنوان القسم
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: نص
+            name: body
+            widget: object
+            required: false
+            hint: "اتركه فارغًا إذا كان القسم قائمة."
+            fields:
+              - {label: English, name: en, widget: text, required: false}
+              - {label: العربية, name: ar, widget: text, required: false}
+          - label: قائمة
+            name: items
+            widget: list
+            required: false
+            hint: "اتركها فارغة إذا كان القسم نصًا."
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: مصدر مرجعي
+        name: source
+        widget: object
+        required: false
+        fields:
+          - {label: العنوان, name: title, widget: string, required: false}
+          - {label: الرابط, name: url, widget: string, required: false}
+      - label: روابط ذات صلة
+        name: related
+        widget: list
+        required: false
+        fields:
+          - {label: المسار, name: href, widget: string}
+
+  - name: sections
+    label: أقسام الموقع
+    description: "عناوين الأقسام الستة ومقدماتها والروابط التي تظهر في صفحة كل قسم وفي القائمة الكبيرة."
+    files:
+      - label: الأقسام الستة
+        name: sections
+        file: content/sections.json
+        fields:
+          - label: الأقسام
+            name: sections
+            widget: list
+            allow_add: false
+            summary: "{{fields.id}} — {{fields.title.ar}}"
+            fields:
+              - {label: المعرّف, name: id, widget: string, hint: "ثابت: work-with-us, opportunities, programs, news, workshops, about."}
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر العلوي
+                name: eyebrow
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - {label: الصورة, name: image, widget: image, choose_url: true, hint: "مفتاح جاهز مثل space أو مسار يبدأ بـ /."}
+              - label: تنبيه (اختياري)
+                name: notice
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الروابط
+                name: links
+                widget: list
+                summary: "{{fields.label.ar}}"
+                fields:
+                  - {label: المسار, name: href, widget: string}
+                  - label: النص
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+
+
+  - name: home
+    label: الصفحة الرئيسية
+    description: شرائح الغلاف، وبطاقة السؤال، وقسم «من داخل VisionSeek»، وعناوين الأقسام، وقسم المنهج، وقسم العمل معنا، والتواصل.
+    files:
+    - label: الصفحة الرئيسية
+      name: home
+      file: content/home.json
+      fields:
+      - label: الغلاف (شرائح العرض)
+        name: hero
+        widget: object
+        fields:
+        - label: الشرائح
+          name: slides
+          widget: list
+          allow_add: false
+          summary: '{{fields.label.ar}}'
+          fields:
+          - label: الصورة
+            name: image
+            widget: image
+            choose_url: true
+            hint: مسار يبدأ بـ / مثل /field-space.jpg أو /uploads/photo.jpg
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: السطر الثاني
+            name: sub
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: النص (اختياري)
+            name: text
+            widget: object
+            required: false
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+          - label: الرابط
+            name: href
+            widget: string
+          - label: نص الزر
+            name: link
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+        - label: سطر تحت الشريحة الأولى
+          name: firstSlideNote
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+      - label: بطاقة السؤال الذي نبدأ منه
+        name: mission
+        widget: object
+        fields:
+        - label: عنوان البطاقة
+          name: heading
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: الصورة
+          name: image
+          widget: image
+          choose_url: true
+          hint: مسار يبدأ بـ / مثل /field-space.jpg أو /uploads/photo.jpg
+        - label: وصف الصورة
+          name: imageAlt
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: نص الرابط
+          name: link
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: من داخل VisionSeek
+        name: reading
+        widget: object
+        fields:
+        - label: العنوان
+          name: heading
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: رابط العنوان
+          name: headingLink
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: الصفوف
+          name: rows
+          widget: list
+          summary: '{{fields.title.ar}}'
+          fields:
+          - label: الرابط
+            name: href
+            widget: string
+          - label: مفتاح الصورة (مثل chips)
+            name: image
+            widget: string
+          - label: التصنيف
+            name: category
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: النص
+            name: text
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+      - label: قسم الأشخاص والمؤسسات
+        name: communities
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+      - label: قسم المجالات
+        name: fields
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: نص الرابط
+          name: link
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: قسم اعمل مع VisionSeek
+        name: work
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: نص الزر
+          name: button
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: الصورة
+          name: image
+          widget: image
+          choose_url: true
+          hint: مسار يبدأ بـ / مثل /field-space.jpg أو /uploads/photo.jpg
+        - label: وصف الصورة
+          name: imageAlt
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: قسم التواصل
+        name: contact
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: نص الزر
+          name: button
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: رابط المؤسس
+          name: founderLink
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: قسم المنهج
+        name: method
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: رابط المنهج الكامل
+          name: link
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: رابط المراحل
+          name: stageLink
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: المراحل الثلاث
+          name: parts
+          widget: list
+          allow_add: false
+          summary: '{{fields.label.ar}}'
+          fields:
+          - label: المعرّف
+            name: id
+            widget: string
+            hint: 'ثابت: define, people, prove'
+          - label: اسم التبويب
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: النص
+            name: text
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+          - label: الصورة
+            name: image
+            widget: image
+            choose_url: true
+            hint: مسار يبدأ بـ / مثل /field-space.jpg أو /uploads/photo.jpg
+          - label: التعليق
+            name: caption
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+
+  - name: about
+    label: عن VisionSeek والمنهج
+    description: رأس صفحات «عن VisionSeek» و«منهجنا» و«اعمل معنا»، والرؤية، وما نبنيه، والمؤسس، والخاتمة.
+    files:
+    - label: عن VisionSeek والمنهج
+      name: about
+      file: content/about.json
+      fields:
+      - label: رؤوس الصفحات
+        name: pages
+        widget: object
+        fields:
+        - label: منهجنا
+          name: method
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+        - label: عن VisionSeek
+          name: about
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+        - label: اعمل معنا
+          name: work-with-us
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+      - label: رؤيتنا
+        name: vision
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+      - label: ما نبنيه
+        name: builds
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: القائمة
+          name: items
+          widget: list
+          summary: '{{fields.ar}}'
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: المؤسس
+        name: founder
+        widget: object
+        fields:
+        - label: الصورة
+          name: image
+          widget: image
+          choose_url: true
+          hint: مسار يبدأ بـ / مثل /ahmed-abdelalim.jpg أو /uploads/photo.jpg
+        - label: وصف الصورة
+          name: imageAlt
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: الاسم
+          name: name
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: الاقتباس
+          name: quote
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+      - label: ملاحظة «اعمل معنا»
+        name: workNote
+        widget: object
+        fields:
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: نص الرابط
+          name: link
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: الخاتمة
+        name: closing
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: نص الزر
+          name: button
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: السطر الأخير
+          name: line
+          widget: string
+
+  - name: method
+    label: المنهج والمجتمعات والمجالات
+    description: "خطوات المنهج التسع في صفحة «منهجنا»، والمجتمعات الست وبطاقات المجالات الثمانية في الرئيسية. لا تغيّر المعرّفات (id) لأن الروابط تعتمد عليها."
+    files:
+      - label: المنهج والمجتمعات والمجالات
+        name: method
+        file: content/method.json
+        fields:
+          - label: خطوات المنهج
+            name: steps
+            widget: list
+            summary: "{{fields.ar}}"
+            fields:
+              - {label: المعرّف (لا يتغيّر), name: id, widget: string}
+              - {label: العنوان English, name: en, widget: string}
+              - {label: العنوان بالعربية, name: ar, widget: string}
+              - {label: السؤال English, name: questionEn, widget: string}
+              - {label: السؤال بالعربية, name: questionAr, widget: string}
+              - {label: النص English, name: textEn, widget: text}
+              - {label: النص بالعربية, name: textAr, widget: text}
+              - {label: المخرج English, name: outputEn, widget: string}
+              - {label: المخرج بالعربية, name: outputAr, widget: string}
+          - label: المجتمعات
+            name: communities
+            widget: list
+            summary: "{{fields.ar}}"
+            fields:
+              - {label: المعرّف (لا يتغيّر), name: id, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - {label: السطر English, name: textEn, widget: string}
+              - {label: السطر بالعربية, name: textAr, widget: string}
+              - {label: التفصيل English, name: detailEn, widget: text}
+              - {label: التفصيل بالعربية, name: detailAr, widget: text}
+          - label: بطاقات المجالات (الرئيسية)
+            name: fields
+            widget: list
+            summary: "{{fields.ar}}"
+            hint: "الصورة مفتاح من public/field-*.jpg مثل cities أو energy."
+            fields:
+              - {label: المعرّف (رابط القسم في صفحة المشاريع), name: id, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - {label: مفتاح الصورة, name: image, widget: string}
+
+  - name: navigation
+    label: القائمة والتذييل
+    description: "أقسام القائمة العلوية وروابطها الفرعية، كما تظهر في القائمة وخريطة التذييل. المسارات بلا بادئة اللغة (/ar تُضاف تلقائيًا). لا تضع رابطًا لصفحة غير موجودة."
+    files:
+      - label: القائمة
+        name: navigation
+        file: content/navigation.json
+        fields:
+          - label: الأقسام
+            name: sections
+            widget: list
+            summary: "{{fields.ar}} — {{fields.path}}"
+            fields:
+              - {label: مسار القسم, name: path, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - label: الروابط الفرعية
+                name: children
+                widget: list
+                summary: "{{fields.ar}} — {{fields.href}}"
+                fields:
+                  - {label: المسار (يبدأ بـ /), name: href, widget: string}
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: التقارير (في القائمة العلوية فقط)
+            name: reports
+            widget: object
+            fields:
+              - {label: مسار القسم, name: path, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - label: الروابط الفرعية
+                name: children
+                widget: list
+                summary: "{{fields.ar}} — {{fields.href}}"
+                fields:
+                  - {label: المسار (يبدأ بـ /), name: href, widget: string}
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+
+  - name: legal
+    label: الخصوصية والشروط
+    description: "نص صفحتي الخصوصية والشروط باللغتين، وتاريخ السريان."
+    files:
+      - label: الخصوصية والشروط
+        name: legal
+        file: content/legal.json
+        fields:
+          - label: تاريخ السريان
+            name: effectiveDate
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الخصوصية
+            name: privacy
+            widget: object
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر الأول
+                name: lead
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الفقرات
+                name: sections
+                widget: list
+                summary: "{{fields.heading.ar}}"
+                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط، و{{ltr:نص}} لإبقاء مقطع لاتيني من اليسار إلى اليمين داخل العربية."
+                fields:
+                  - label: العنوان الفرعي
+                    name: heading
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الفقرات
+                    name: paragraphs
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: النقاط
+                    name: bullets
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+          - label: الشروط
+            name: terms
+            widget: object
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر الأول
+                name: lead
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الفقرات
+                name: sections
+                widget: list
+                summary: "{{fields.heading.ar}}"
+                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط، و{{ltr:نص}} لإبقاء مقطع لاتيني من اليسار إلى اليمين داخل العربية."
+                fields:
+                  - label: العنوان الفرعي
+                    name: heading
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الفقرات
+                    name: paragraphs
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: النقاط
+                    name: bullets
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+
+  - name: projects_catalog
+    label: "المشاريع: المجالات والمسارات"
+    description: "المجالات الثمانية ومسارات العمل داخلها، وتنبيه «تصوّرات مقترحة»، وأسماء الحالات. المعرّفات (slug) تبني الروابط؛ لا تغيّرها بعد النشر."
+    files:
+      - label: المجالات والمسارات
+        name: catalog
+        file: content/projects/catalog.json
+        fields:
+          - label: تنبيه التصوّرات
+            name: conceptNotice
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: أسماء الحالات
+            name: status
+            widget: object
+            fields:
+              - label: مفهوم
+                name: concept
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: قيد التنفيذ
+                name: active
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: مكتمل
+                name: completed
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: المجالات
+            name: sectors
+            widget: list
+            summary: "{{fields.title.ar}} — {{fields.slug}}"
+            fields:
+              - {label: المعرّف (slug), name: slug, widget: string}
+              - label: الاسم
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - {label: الأيقونة, name: icon, widget: select, options: [energy, chips, flight, defense, robotics, health, agriculture, cities]}
+              - {label: مفاتيح بطاقات الرئيسية المرتبطة, name: anchors, widget: list, hint: "مثل energy أو chips. افصل بفاصلة."}
+              - label: محاور التركيز
+                name: focus
+                widget: list
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: المسارات
+            name: tracks
+            widget: list
+            summary: "{{fields.title.ar}} — {{fields.sector}}/{{fields.slug}}"
+            fields:
+              - {label: المعرّف (slug), name: slug, widget: string}
+              - {label: المجال (slug المجال), name: sector, widget: string}
+              - label: الاسم
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+
+  - name: project_concepts
+    label: تصوّرات المشاريع
+    label_singular: تصوّر مشروع
+    description: "المشاريع العامة داخل المجالات (مثل VS-P07). كل تصوّر يبقى بحالته الحقيقية؛ لا عميل ولا دولة ولا تقنية مسلَّمة إلا باتفاق مكتوب."
+    folder: content/projects/concepts
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{id}} — {{title.ar}}"
+    preview_path: "ar/projects/{{sector}}/{{track}}/{{slug}}"
+    sortable_fields: [position, id]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - {label: الرمز, name: id, widget: string, hint: "مثل VS-P09."}
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط الأخير. لا تغيّره بعد النشر."}
+      - {label: المجال (slug المجال), name: sector, widget: string, hint: "من ملف المجالات والمسارات، مثل energy."}
+      - {label: المسار (slug المسار), name: track, widget: string, hint: "مثل lng."}
+      - {label: النوع, name: kind, widget: select, options: [supply, containment]}
+      - {label: الحالة, name: status, widget: select, options: [concept, active, completed], hint: "الحالة الحقيقية فقط."}
+      - {label: ترتيب الظهور في الواجهة (اختياري), name: featuredOrder, widget: number, value_type: int, required: false, hint: "اتركه فارغًا كي لا يظهر في شريط الواجهة."}
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الطموح
+        name: ambition
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الفكرة
+        name: idea
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: المستفيد
+        name: beneficiary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: النتائج المستهدفة
+        name: outcomes
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+            - label: العنوان
+              name: title
+              widget: object
+              fields:
+                - {label: English, name: en, widget: string}
+                - {label: العربية, name: ar, widget: string}
+            - label: النص
+              name: text
+              widget: object
+              fields:
+                - {label: English, name: en, widget: text}
+                - {label: العربية, name: ar, widget: text}
+      - label: ملف المشروع العام (اختياري)
+        name: file
+        widget: object
+        required: false
+        hint: "يظهر في صفحة المشروع كملف علني: المرحلة، التحدي، الدور، مسارات العمل، المخرجات، المعالم، التحديثات. لا تفاصيل عملاء ولا مهام داخلية."
+        fields:
+          - {label: الإصدار, name: version, widget: string}
+          - {label: آخر تحديث (YYYY-MM-DD), name: updatedAt, widget: string}
+          - label: المرحلة
+            name: stage
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: ملاحظة المرحلة
+            name: stageNote
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: التحدي
+            name: challenge
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: دور VisionSeek
+            name: role
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: شكل التعاون
+            name: engagement
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: مسارات العمل
+            name: workstreams
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+                - {label: المعرّف, name: id, widget: string}
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: النص
+                  name: body
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+          - label: المخرجات
+            name: deliverables
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: النص
+                  name: body
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+          - label: ما نحتاجه من الشركاء
+            name: partnerNeeds
+            widget: list
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: المعالم
+            name: milestones
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+                - {label: المعرّف, name: id, widget: string}
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: الوصف
+                  name: description
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+                - {label: الحالة, name: state, widget: select, options: [current, planned, completed]}
+                - {label: رابط الدليل (اختياري), name: evidenceUrl, widget: string, required: false}
+          - label: التحديثات
+            name: updates
+            widget: list
+            summary: "{{fields.date}} — {{fields.title.ar}}"
+            fields:
+                - {label: المعرّف, name: id, widget: string}
+                - {label: التاريخ (YYYY-MM-DD), name: date, widget: string}
+                - {label: النوع, name: kind, widget: select, options: [scope, research, partnership, test, delivery]}
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: النص
+                  name: body
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+                - {label: الظهور, name: visibility, widget: select, options: [public, draft], hint: "draft لا يظهر على الموقع."}
+                - {label: رابط الدليل (اختياري), name: evidenceUrl, widget: string, required: false}
+
+  - name: reports
+    label: تقرير الذكاء الاصطناعي المادي
+    description: "نص الإحاطة الحكومية الأولى كما يظهر في /reports/physical-ai و/insights/physical-ai، ومصادرها. تحليل أصلي من VisionSeek؛ لا يُنسب رقم أو نتيجة إلى مصدر لم يذكرها."
+    files:
+      - label: الإحاطة ومصادرها
+        name: physical_ai
+        file: content/reports/physical-ai.json
+        fields:
+          - label: المصادر
+            name: sources
+            widget: list
+            summary: "{{fields.name}} — {{fields.title}}"
+            fields:
+              - {label: الجهة, name: name, widget: string}
+              - {label: عنوان المصدر, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string}
+          - label: English
+            name: en
+            widget: object
+            fields:
+              - {label: السطر العلوي, name: label, widget: string}
+              - {label: التاريخ كما يُعرض, name: date, widget: string}
+              - {label: مدة القراءة, name: read, widget: string}
+              - {label: العنوان, name: title, widget: string}
+              - {label: المقدمة, name: standfirst, widget: text}
+              - {label: عنوان الملخص, name: summaryLabel, widget: string}
+              - {label: الملخص, name: summary, widget: text}
+              - {label: عنوان الإشارات, name: findingsLabel, widget: string}
+              - label: الإشارات
+                name: findings
+                widget: list
+                summary: "{{fields.number}} — {{fields.title}}"
+                fields:
+                  - {label: الرقم, name: number, widget: string}
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان الفجوة, name: connectionLabel, widget: string}
+              - {label: جملة الفجوة, name: connectionTitle, widget: string}
+              - {label: نص الفجوة, name: connection, widget: text}
+              - {label: عنوان الأجندة, name: actionLabel, widget: string}
+              - label: الأجندة
+                name: actions
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان المنظور, name: perspectiveLabel, widget: string}
+              - {label: المنظور, name: perspective, widget: text}
+              - {label: عنوان المصادر, name: sourceLabel, widget: string}
+              - {label: ملاحظة المصادر, name: sourceNote, widget: text}
+              - {label: زر الدعوة, name: cta, widget: string}
+              - {label: رابط الرجوع, name: back, widget: string}
+          - label: العربية
+            name: ar
+            widget: object
+            fields:
+              - {label: السطر العلوي, name: label, widget: string}
+              - {label: التاريخ كما يُعرض, name: date, widget: string}
+              - {label: مدة القراءة, name: read, widget: string}
+              - {label: العنوان, name: title, widget: string}
+              - {label: المقدمة, name: standfirst, widget: text}
+              - {label: عنوان الملخص, name: summaryLabel, widget: string}
+              - {label: الملخص, name: summary, widget: text}
+              - {label: عنوان الإشارات, name: findingsLabel, widget: string}
+              - label: الإشارات
+                name: findings
+                widget: list
+                summary: "{{fields.number}} — {{fields.title}}"
+                fields:
+                  - {label: الرقم, name: number, widget: string}
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان الفجوة, name: connectionLabel, widget: string}
+              - {label: جملة الفجوة, name: connectionTitle, widget: string}
+              - {label: نص الفجوة, name: connection, widget: text}
+              - {label: عنوان الأجندة, name: actionLabel, widget: string}
+              - label: الأجندة
+                name: actions
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان المنظور, name: perspectiveLabel, widget: string}
+              - {label: المنظور, name: perspective, widget: text}
+              - {label: عنوان المصادر, name: sourceLabel, widget: string}
+              - {label: ملاحظة المصادر, name: sourceNote, widget: text}
+              - {label: زر الدعوة, name: cta, widget: string}
+              - {label: رابط الرجوع, name: back, widget: string}

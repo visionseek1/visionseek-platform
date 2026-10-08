@@ -3,10 +3,9 @@ import Link from 'next/link';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {sectors, tracks, projects, featuredProjects, projectStatus, conceptNotice, conceptCount, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, type Sector, type Track, type Project, type Locale} from '@/lib/projects';
+import {sectors, tracks, projects, featuredProjects, projectStatus, conceptNotice, conceptCount, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, publicProjectUpdates, type Sector, type Track, type Project, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 import {ProjectRail} from './project-rail';
-import {projectFileById, publicProjectUpdates} from '@/lib/projects/project-files';
 
 const icons = {energy:Zap,chips:Cpu,flight:Plane,defense:ShieldCheck,robotics:Bot,health:HeartPulse,agriculture:Wheat,cities:Building2};
 

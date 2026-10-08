@@ -1,0 +1,306 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "image": "/field-space.jpg",
+        "label": {
+          "en": "VISIONSEEK",
+          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
+        },
+        "title": {
+          "en": "Make It Possible.",
+          "ar": "Make It Possible."
+        },
+        "sub": {
+          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
+          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
+        },
+        "text": {
+          "en": "",
+          "ar": ""
+        },
+        "href": "/start",
+        "link": {
+          "en": "Build your solutions with us",
+          "ar": "ابنِ حلولك معنا"
+        }
+      },
+      {
+        "image": "/field-industry.jpg",
+        "label": {
+          "en": "THE VISIONSEEK QUESTION",
+          "ar": "سؤال VisionSeek"
+        },
+        "title": {
+          "en": "What solution could move your institution ahead?",
+          "ar": "ما الذي أصبح ممكنًا اليوم، وقد يسبقك به غيرك غدًا؟"
+        },
+        "sub": {
+          "en": "Start with the capability that should exist.",
+          "ar": "اكتشف القدرة التي قد تغيّر موقعك غدًا."
+        },
+        "text": {
+          "en": "Understand the limit. Find the path. Put it to the test.",
+          "ar": "افهم الحد الحقيقي. اكتشف المسار. واختبره في الواقع."
+        },
+        "href": "/method",
+        "link": {
+          "en": "Explore our method",
+          "ar": "اكتشف منهجنا"
+        }
+      },
+      {
+        "image": "/field-chips.jpg",
+        "label": {
+          "en": "HIGHEST LEVEL ONE",
+          "ar": "HIGHEST LEVEL ONE"
+        },
+        "title": {
+          "en": "The best of what is possible.",
+          "ar": "نبني على أفضل ما توصّل إليه العالم."
+        },
+        "sub": {
+          "en": "The right people. The best available capabilities.",
+          "ar": "الخبرات المناسبة. والتقنيات الأكثر ملاءمة للمهمة."
+        },
+        "text": {
+          "en": "Connect the world’s knowledge, technologies and opportunities around a mission.",
+          "ar": "نختار ما تحتاجه المهمة من معرفة وتقنيات وشركاء، ونضعه في خدمة القدرة التي نبنيها."
+        },
+        "href": "/about/what-we-do#hlo",
+        "link": {
+          "en": "Explore the HLO program",
+          "ar": "اكتشف برنامج HLO"
+        }
+      }
+    ],
+    "firstSlideNote": {
+      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
+      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
+    }
+  },
+  "mission": {
+    "heading": {
+      "en": "Where we begin",
+      "ar": "السؤال الذي نبدأ منه"
+    },
+    "image": "/field-industry.jpg",
+    "imageAlt": {
+      "en": "Robotics and manufacturing capabilities inside a factory",
+      "ar": "قدرات التصنيع والروبوتات داخل مصنع"
+    },
+    "eyebrow": {
+      "en": "ONE QUESTION. A NEW PATH.",
+      "ar": "سؤال واحد يفتح مسارًا جديدًا"
+    },
+    "title": {
+      "en": "What important capability should exist that does not exist today?",
+      "ar": "ما الذي أصبح ممكنًا اليوم، وقد يسبقك به غيرك غدًا؟"
+    },
+    "text": {
+      "en": "We start with the capability that should exist. We discover why it does not exist today, then bring together the people, knowledge, technologies and opportunities needed to make it real.",
+      "ar": "العالم مليء بالتقنيات والخبرات والفرص التي يمكن أن تنقل مؤسستك إلى مستوى جديد. وبينما تتأخر في استكشافها، قد يبني بها غيرك تفوقه. نكتشف معك الفرص التي تصنع الفارق، ونحوّلها إلى قدرات تمتلكها مؤسستك وتنافس بها."
+    },
+    "link": {
+      "en": "Explore our method",
+      "ar": "اكتشف منهجنا"
+    }
+  },
+  "reading": {
+    "heading": {
+      "en": "Inside VisionSeek",
+      "ar": "من داخل VisionSeek"
+    },
+    "headingLink": {
+      "en": "Leaders House",
+      "ar": "بيت القادة"
+    },
+    "rows": [
+      {
+        "href": "/about/what-we-do#hlo",
+        "image": "chips",
+        "category": {
+          "en": "PROGRAM · HLO",
+          "ar": "برنامج · HLO"
+        },
+        "title": {
+          "en": "Highest Level One",
+          "ar": "Highest Level One"
+        },
+        "text": {
+          "en": "Connect your institution with relevant global opportunities and capabilities, and test what is worth applying.",
+          "ar": "نربط مؤسستك بالفرص والقدرات المناسبة لها، ونختبر ما يستحق التطبيق."
+        }
+      },
+      {
+        "href": "/about#what-we-build",
+        "image": "cities",
+        "category": {
+          "en": "PERSPECTIVE · WHAT WE BUILD",
+          "ar": "رؤية · ما نبنيه"
+        },
+        "title": {
+          "en": "The form follows the capability",
+          "ar": "الشكل يتبع القدرة"
+        },
+        "text": {
+          "en": "A system, platform, program, partnership or new company. Start with the capability.",
+          "ar": "منظومة، منصة، برنامج، شراكة أو شركة جديدة. نبدأ من القدرة."
+        }
+      }
+    ]
+  },
+  "communities": {
+    "eyebrow": {
+      "en": "THE PEOPLE BEHIND THE CAPABILITY",
+      "ar": "الأشخاص والمؤسسات وراء القدرة"
+    },
+    "title": {
+      "en": "Possibility grows together.",
+      "ar": "معًا، يصبح الممكن أكبر."
+    },
+    "text": {
+      "en": "No single institution holds all the knowledge. We bring together the team and partnerships a capability actually needs.",
+      "ar": "المعرفة لا تجتمع كلها داخل مؤسسة واحدة. نبني حول القدرة الفريق والشراكات التي تحتاجها فعلًا."
+    }
+  },
+  "fields": {
+    "eyebrow": {
+      "en": "FIELDS OF EXPLORATION",
+      "ar": "مجالات نستكشفها"
+    },
+    "title": {
+      "en": "Where we look for possibility",
+      "ar": "أين نبحث عن الممكن"
+    },
+    "text": {
+      "en": "From science and industry to infrastructure. Fields we explore for capabilities worth building.",
+      "ar": "من العلم والصناعة إلى البنية التحتية. مجالات نتابعها بحثًا عن قدرات تستحق البناء."
+    },
+    "link": {
+      "en": "Explore the fields",
+      "ar": "استكشف المجالات"
+    }
+  },
+  "work": {
+    "eyebrow": {
+      "en": "WORK WITH VISIONSEEK",
+      "ar": "اعمل مع VisionSeek"
+    },
+    "title": {
+      "en": "Your challenge. A solution we build together.",
+      "ar": "تحدّيك اليوم. حلّ نصنعه معًا."
+    },
+    "text": {
+      "en": "Your institution may face a challenge or see an opportunity that calls for a new solution. Together, we bring the right expertise and technology to build a solution that serves your goals and works in your context.",
+      "ar": "قد تواجه مؤسستك تحديًا، أو ترى فرصة تحتاج إلى حل جديد. نجمع معك الخبرات والتقنيات المناسبة لبناء حل يخدم أهدافك ويعمل في واقعك."
+    },
+    "button": {
+      "en": "Build your solutions with us",
+      "ar": "ابنِ حلولك معنا"
+    },
+    "image": "/field-energy.jpg",
+    "imageAlt": {
+      "en": "Renewable energy infrastructure",
+      "ar": "بنية تحتية للطاقة المتجددة"
+    }
+  },
+  "contact": {
+    "eyebrow": {
+      "en": "START A CONVERSATION",
+      "ar": "ابدأ محادثة"
+    },
+    "title": {
+      "en": "What solution could move your institution ahead?",
+      "ar": "ما الحل الذي سيمنح مؤسستك السبق؟"
+    },
+    "button": {
+      "en": "Build your solutions with us",
+      "ar": "ابنِ حلولك معنا"
+    },
+    "founderLink": {
+      "en": "Meet the founder and explore the vision",
+      "ar": "تعرّف على المؤسس والرؤية"
+    }
+  },
+  "method": {
+    "eyebrow": {
+      "en": "ENGINEERING OPPORTUNITIES",
+      "ar": "هندسة الفرص"
+    },
+    "title": {
+      "en": "How we make it possible",
+      "ar": "كيف نجعلها ممكنة"
+    },
+    "link": {
+      "en": "Our full method",
+      "ar": "المنهج كاملًا"
+    },
+    "stageLink": {
+      "en": "Explore these stages",
+      "ar": "اكتشف هذه المراحل"
+    },
+    "parts": [
+      {
+        "id": "define",
+        "label": {
+          "en": "Define the capability",
+          "ar": "حدد القدرة"
+        },
+        "title": {
+          "en": "Start with what should become possible.",
+          "ar": "نبدأ بما يجب أن يصبح ممكنًا."
+        },
+        "text": {
+          "en": "Who should become capable of doing what? Define the capability, understand why it does not exist today, and find the path that can change that limit.",
+          "ar": "مَن يجب أن يصبح قادرًا على فعل ماذا؟ نحدد القدرة، ونفهم ما يمنع وجودها اليوم، ونبحث عن المسار الذي يغير حدود الممكن."
+        },
+        "image": "/field-cities.jpg",
+        "caption": {
+          "en": "01—03 / CAPABILITY · LIMIT · PATH",
+          "ar": "01—03 / القدرة · الحد · المسار"
+        }
+      },
+      {
+        "id": "people",
+        "label": {
+          "en": "Assemble the right elements",
+          "ar": "اجمع العناصر الصحيحة"
+        },
+        "title": {
+          "en": "The right people. The best of what exists.",
+          "ar": "أفضل الأشخاص. وأفضل ما هو متاح."
+        },
+        "text": {
+          "en": "Assemble the team the mission needs. Find the best knowledge, technology and opportunities available globally. Then design how those elements work as one capability.",
+          "ar": "نجمع الفريق الذي تحتاجه المهمة، ونبحث عن أفضل المعرفة والتقنيات والفرص المتاحة عالميًا. ثم نصمم كيف تعمل هذه العناصر كقدرة واحدة."
+        },
+        "image": "/field-chips.jpg",
+        "caption": {
+          "en": "04—06 / PEOPLE · HLO · ARCHITECTURE",
+          "ar": "04—06 / الأشخاص · HLO · المنظومة"
+        }
+      },
+      {
+        "id": "prove",
+        "label": {
+          "en": "Prove, operate and evolve",
+          "ar": "اختبر وشغّل وطوّر"
+        },
+        "title": {
+          "en": "An idea is not a capability until it works.",
+          "ar": "الفكرة ليست قدرة حتى تعمل."
+        },
+        "text": {
+          "en": "Turn assumptions into measurable tests. Put the capability into real operations with clear responsibilities and governance. Keep learning as the boundaries of possibility change.",
+          "ar": "نحوّل الافتراضات إلى اختبارات مقاسة. نضع القدرة في العمليات الحقيقية بمسؤوليات وحوكمة واضحة، ثم نتعلم ونطوّر باستمرار."
+        },
+        "image": "/field-industry.jpg",
+        "caption": {
+          "en": "07—09 / PROOF · OPERATION · EVOLUTION",
+          "ar": "07—09 / الإثبات · التشغيل · التطوير"
+        }
+      }
+    ]
+  }
+}
