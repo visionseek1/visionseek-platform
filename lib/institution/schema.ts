@@ -14,5 +14,5 @@ export type Entry = {
 };
 export type Section = {id:SectionId;title:Text;eyebrow:Text;intro:Text;image:string;notice?:Text;links:{href:string;label:Text}[]};
 
-/** Entry images are either a local field key ("science" → /field-science.jpg) or an absolute licensed URL. */
-export const entryImage = (image:string) => image.startsWith('https://') ? image : `/field-${image}.jpg`;
+/** Entry images are a field key ("science" → /field-science.jpg), a site path ("/uploads/a.jpg" or "/name.jpg"), or an absolute https URL. */
+export const entryImage = (image:string) => image.startsWith('https://') || image.startsWith('/') ? image : `/field-${image}.jpg`;

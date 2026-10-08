@@ -1,0 +1,62 @@
+{
+  "position": 4,
+  "section": "news",
+  "slug": "capability-before-solution",
+  "title": {
+    "en": "Start with a capability, not a predetermined solution",
+    "ar": "ابدأ بقدرة قبل أن تحدد الحل"
+  },
+  "summary": {
+    "en": "Why VisionSeek begins by asking what should become possible.",
+    "ar": "لماذا تبدأ VisionSeek بالسؤال عمّا يجب أن يصبح ممكنًا؟"
+  },
+  "image": "cities",
+  "category": {
+    "en": "VisionSeek perspective",
+    "ar": "رؤية VisionSeek"
+  },
+  "status": {
+    "en": "Editorial",
+    "ar": "محتوى تحريري"
+  },
+  "blocks": [
+    {
+      "title": {
+        "en": "The starting point changes the work",
+        "ar": "نقطة البداية تغيّر العمل"
+      },
+      "body": {
+        "en": "A request for a tool can conceal a more important need: an institution wants to become able to do something it cannot do today. Naming that capability keeps the work open to better combinations of people, systems and technology.",
+        "ar": "قد يخفي طلب أداة احتياجًا أهم: مؤسسة تريد أن تصبح قادرة على فعل لا تستطيع فعله اليوم. تسمية القدرة تبقي العمل مفتوحًا لتركيبات أفضل من الأشخاص والأنظمة والتكنولوجيا."
+      }
+    },
+    {
+      "title": {
+        "en": "The form follows the capability",
+        "ar": "الشكل يتبع القدرة"
+      },
+      "body": {
+        "en": "The result may be a platform, operating model, partnership, applied-research effort or company. Choosing that form is a consequence of understanding the capability and proving a viable path.",
+        "ar": "قد تكون النتيجة منصة أو نموذج تشغيل أو شراكة أو بحثًا تطبيقيًا أو شركة. اختيار الشكل يأتي بعد فهم القدرة وإثبات مسار قابل للتنفيذ."
+      }
+    },
+    {
+      "title": {
+        "en": "A useful first step",
+        "ar": "خطوة أولى مفيدة"
+      },
+      "body": {
+        "en": "Write one sentence: who should become capable of doing what? Then identify the strongest evidence for the current limit. This is the starting artifact for the first VisionSeek workshop.",
+        "ar": "اكتب جملة واحدة: مَن يجب أن يصبح قادرًا على فعل ماذا؟ ثم حدد أقوى دليل على الحد الحالي. هذه هي ورقة البداية للورشة الأولى في VisionSeek."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/method"
+    },
+    {
+      "href": "/workshops"
+    }
+  ]
+}

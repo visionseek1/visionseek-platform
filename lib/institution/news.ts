@@ -1,180 +1,70 @@
-import {t,type Entry} from './schema';
-export const newsEntries:Entry[]=[
- {section:'news',slug:'ksp-official-route',
-  title:t('Korea pays for the expertise: the official route to a KSP project','خبرة كورية بلا فاتورة: الطريق الرسمي إلى برنامج KSP'),
-  summary:t('Korea funds its own experts to work on a problem your government chooses. The door is open, but there is only one door, and it opens once a year.','تموّل كوريا خبراءها ليدرسوا مشكلة تختارها حكومتك. الباب مفتوح، لكنه باب واحد، وموعده مرة في السنة.'),
-  image:'cities',category:t('Development cooperation','التعاون الإنمائي'),status:t('Source-based analysis','تحليل مسند'),
-  facts:[
-   {label:t('KSP advisory projects in its first 20 years','مشاريع KSP الاستشارية في عشرين عامًا'),value:t('761 in 102 countries','761 في 102 دولة')},
-   {label:t('Budget per project','ميزانية المشروع الواحد'),value:t('USD 250,000–500,000','250 إلى 500 ألف دولار')},
-   {label:t('Last cycle’s deadline','آخر موعد في الدورة الماضية'),value:t('24 October 2025','24 أكتوبر 2025')},
-  ],
-  blocks:[
-   {title:t('What KSP is','الفكرة في سطرين'),
-    body:t('Since 2004, Korea’s finance ministry has run the Knowledge Sharing Program to share the country’s development experience. Over its first twenty years it delivered 761 advisory projects in 102 countries. The partner government defines the problem; Korean experts do the work; Korea covers the cost for eligible ODA-recipient countries.',
-           'منذ عام 2004 تدير وزارة المالية والاقتصاد الكورية برنامجًا تنقل به ما تعلّمته في رحلة تنميتها إلى الدول الشريكة: 761 مشروعًا استشاريًا في 102 دولة خلال عشرين عامًا. الحكومة الشريكة تحدد المشكلة، والخبراء كوريون، والكلفة تتحملها كوريا للدول المؤهلة للمساعدة الإنمائية.')},
-   {title:t('What an institution receives','ماذا تأخذ المؤسسة بالضبط؟'),
-    body:t('A one-year policy consultation spread across two calendar years. It produces a recommendation report built around the specific problem and a five-day capacity-building workshop for officials. Projects are budgeted at USD 250,000–500,000 and span 18 fields, from planning and public finance to health and medicine, education and HR development, energy and public administration. KSP funds knowledge; it does not accept projects that directly finance infrastructure construction or software systems.',
-           'استشارة سياسات مدتها عام واحد تمتد على عامين تقويميين، تنتهي بتقرير توصيات مفصّل على مقاس المشكلة، وورشة لبناء القدرات مدتها خمسة أيام للمسؤولين. ميزانية المشروع بين 250 و500 ألف دولار، والمجالات ثمانية عشر مجالًا: من التخطيط والمالية العامة، إلى الصحة والطب، والتعليم وتنمية الموارد البشرية، والطاقة، والإدارة العامة. البرنامج يموّل المعرفة، ولا يقبل مشاريع تموّل مباشرةً بناء بنية تحتية أو شراء أنظمة برمجية.')},
-   {title:t('One route, and only one','طريق واحد، ولا طريق غيره'),
-    body:t('A government institution writes the proposal and submits it to its country’s coordinating institution, usually the body responsible for development or economic cooperation with Korea. The coordinating institution ranks all proposals in a priority list and sends them, with an official letter, to the Korean Embassy, which forwards them to the ministry in Korea. Proposals that skip the coordinating institution are not reviewed.',
-           'الجهة الحكومية المستفيدة تكتب مقترحها وتسلّمه للجهة المنسّقة في دولتها، أي الجهة المسؤولة عن التعاون الإنمائي أو الاقتصادي مع كوريا. هذه تجمع الطلبات، وترتبها في قائمة أولويات، وترسلها مع خطاب رسمي إلى السفارة الكورية، والسفارة تحملها إلى الوزارة في كوريا. المقترح الذي يقفز فوق الجهة المنسّقة لا يُقرأ أصلًا، مهما كانت جودته.')},
-   {title:t('The clock runs once a year','الساعة تدقّ مرة في العام'),
-    body:t('In the last cycle, proposals were due at Korean embassies by 24 October 2025. Appraisal runs through 2026, approved projects are announced by the first quarter of 2027, and implementation runs 2027–2028. A decision taken this autumn shows results two years later, and a month’s delay can cost a full year. We could not find a public announcement of the next deadline at the time of writing; calls are often sent through embassies rather than published. A fast-track route exists for urgent matters such as emergency response or key state-led policies.',
-           'في الدورة الماضية كان آخر موعد لوصول الطلبات إلى السفارات 24 أكتوبر 2025. تُقيَّم الطلبات خلال 2026، ويُعلَن المقبول منها في الربع الأول من 2027، ويُنفَّذ بين 2027 و2028. معنى ذلك أن قرارًا تتخذه مؤسسة هذا الخريف يظهر أثره بعد عامين، وأن التأجيل شهرًا قد يعني خسارة عام كامل. لم نعثر على إعلان علني لموعد الدورة التالية حتى كتابة هذه السطور، وكثيرًا ما تُرسَل الدعوة عبر السفارات لا علنًا. وللملفات العاجلة، كالاستجابة للطوارئ أو السياسات الكبرى التي تقودها الدولة، مسار سريع بتقييم مختصر.')},
-   {title:t('What changed in 2026','ما الذي تغيّر في 2026؟'),
-    items:[
-     t('Four priority areas: supply chains, AI and digital, green transition, and culture — set in Korea’s first medium-term KSP plan (2026–2028), approved in June 2026.','أربعة مجالات ذات أولوية: سلاسل الإمداد، والذكاء الاصطناعي والتحول الرقمي، والتحول الأخضر، والثقافة، في أول خطة متوسطة المدى للبرنامج (2026–2028) أقرّتها كوريا في يونيو 2026.'),
-     t('From demand to strategy: more than 60% of new projects are to be strategic-planning projects by 2030, up from about 30%.','من انتظار الطلب إلى التخطيط: أن تكون أكثر من 60% من المشاريع الجديدة مشاريع تخطيط استراتيجي بحلول 2030، بعد أن كانت نحو 30%.'),
-     t('From report to financing: more than 30% of projects are to be linked to EDCF or multilateral development bank financing by 2030, up from under 10%.','من التقرير إلى التمويل: أن يرتبط أكثر من 30% من المشاريع بتمويل صندوق التعاون الاقتصادي الإنمائي الكوري (EDCF) أو بنوك التنمية متعددة الأطراف بحلول 2030، بعد أن كانت أقل من 10%.'),
-     t('Our reading: the strongest proposals will frame their problem in these priority areas and show from the start what happens after the report — who implements it and how it is financed. This is our inference from the published plan, not an announced criterion.','قراءتنا: المقترح الأقوى في السنوات القادمة هو الذي يقرأ مشكلته بلغة هذه الأولويات، ويرسم من الآن ما بعد التقرير: من سينفّذ، وبأي تمويل. هذا استنتاج منا من الخطة المنشورة، وليس معيارًا معلنًا.'),
-    ]},
-   {title:t('Examples from other countries','أمثلة من دول أخرى'),
-    items:[
-     t('Indonesia (2018/19): a joint consultation with the OECD on universal health coverage, carried out by Korea’s National Health Insurance Service.','إندونيسيا (2018/19): استشارة مشتركة مع منظمة OECD في التغطية الصحية الشاملة، تولّاها الصندوق الوطني للتأمين الصحي الكوري.'),
-     t('Chile (2023/24): digital tools to cut patient waiting times, with Kangbuk Samsung Hospital signing the letter of intent on behalf of the Korea Development Institute (KDI).','تشيلي (2023/24): أدوات رقمية لتقليص انتظار المرضى، وقّع خطاب نواياها مستشفى كانغبوك سامسونج نيابةً عن معهد التنمية الكوري (KDI).'),
-     t('In both cases the request was not for Korean technology but for a Korean way of working, transferred to a specific institution.','في الحالتين لم يكن المطلوب «تقنية كورية»، بل طريقة عمل كورية تُنقل إلى مؤسسة بعينها.'),
-    ]},
-   {title:t('Five reliable ways to get rejected','خمس طرق مؤكدة لإسقاط الطلب'),
-    items:[
-     t('Sending the proposal straight to the embassy or ministry, bypassing the coordinating institution.','أن يذهب المقترح مباشرة إلى السفارة أو الوزارة متجاوزًا الجهة المنسّقة.'),
-     t('Asking for direct financing of infrastructure construction or software systems, or for a commercial, for-profit project.','أن يطلب تمويلًا مباشرًا لبناء بنية تحتية أو شراء أنظمة برمجية، أو يكون مشروعًا تجاريًا هادفًا للربح.'),
-     t('Duplicating an existing or past project instead of building on it.','أن يكرر مشروعًا قائمًا أو سابقًا بدل أن يكمّله.'),
-     t('Describing the problem vaguely, without making the case for necessity or the intervention.','أن يصف المشكلة بعمومية، فلا يقنع بضرورته ولا يشرح التدخل المطلوب.'),
-     t('Detaching the request from the national plan, so it reads as one agency’s wish rather than a national priority.','أن ينفصل عن الخطة الوطنية، فيبدو رغبة جهة لا أولوية دولة.'),
-    ]},
-   {title:t('Limits of this article','حدود هذا المقال'),
-    body:t('VisionSeek is independent and does not speak for the Korean government. Information comes from the official 2027/28 guideline and Korean press coverage of the new plan; the next cycle may change details. The final reference is always your country’s coordinating institution and the Korean Embassy.',
-           'VisionSeek جهة مستقلة، لا تتبع الحكومة الكورية ولا تتحدث باسمها. المعلومات مأخوذة من الدليل الرسمي لدورة 2027/28 ومن تغطية صحفية كورية للخطة الجديدة، وقد تغيّر الدورة القادمة بعض التفاصيل. المرجع النهائي دائمًا هو الجهة المنسّقة في دولتك والسفارة الكورية.')},
-  ],
-  references:[
-   {title:'KSP — Application Procedure',url:'https://www.ksp.go.kr/english/pageView/application-procedure'},
-   {title:'KSP — 2027/28 Project Proposal Guideline for ODA Recipient Countries (rev. Aug 2025)',url:'https://www.ksp.go.kr/resources/contents/1.%2027-28%20KSP%20for%20ODA%20Countries_Guideline.pdf'},
-   {title:'Herald Economy — KSP 2026–2028 medium-term plan (18 Jun 2026)',url:'https://www.heraldk.com/article/2026061817251777449'},
-   {title:'Medigate News — Indonesia KSP on universal health coverage',url:'https://medigatenews.com/news/2396829397'},
-   {title:'MINSAL Chile — KSP 2023–2024 letter of intent',url:'https://www.minsal.cl/subsecretaria-de-redes-asistenciales-y-corea-del-sur-firman-carta-de-intencion-para-el-desarrollo-del-proyecto-ksp-2023-2024/'},
-  ]},
- {section:'news',slug:'virtual-hospital-not-enough',
-  title:t('Why a virtual hospital alone is not enough','لماذا لا يكفي المستشفى الافتراضي وحده'),
-  summary:t('A virtual hospital is not a building without walls. It is a whole system behind the screen — and the evidence shows which parts decide whether it works.','المستشفى الافتراضي ليس مبنى بلا جدران، بل منظومة كاملة خلف الشاشة. والتجارب تكشف أي أجزائها تحسم نجاحه.'),
-  image:'science',category:t('Health systems','المنظومات الصحية'),status:t('Source-based analysis','تحليل مسند'),
-  facts:[
-   {label:t('Units in Egypt’s Ismailia virtual hospital','وحدات المستشفى الافتراضي بالإسماعيلية'),value:t('119 (announced July 2026)','119 (أُعلن يوليو 2026)')},
-   {label:t('Hospitals linked to Saudi Arabia’s Seha','مستشفيات مرتبطة بـ«صحة» السعودي'),value:t('130+ at launch, 170+ reported','130+ عند الافتتاح، 170+ بحسب تقاريره')},
-   {label:t('Tele-ICU mortality reduction (meta-analyses)','انخفاض الوفيات في العناية المركزة عن بُعد'),value:t('≈ 17–26% relative','≈ 17–26% نسبيًا')},
-  ],
-  blocks:[
-   {title:t('One sentence that holds the whole argument','جملة تختصر المقال'),
-    body:t('In July 2026 Egypt announced the first virtual hospital in Africa: 119 digital units in Ismailia, from electronic triage to remote intensive care. The chairman of the Egypt Healthcare Authority said that technology “can only improve healthcare outcomes when supported by well-trained professionals.” That sentence is the whole argument — and older experiences explain why.',
-           'في يوليو 2026 أعلنت مصر أول مستشفى افتراضي في القارة: 119 وحدة رقمية في الإسماعيلية، من الفرز الإلكتروني إلى العناية المركزة عن بُعد. وقال رئيس الهيئة العامة للرعاية الصحية إن التقنية «لا تحسّن النتائج إلا إذا دعمها مهنيون مدرَّبون». هذه الجملة هي المقال كله، والتجارب الأقدم تشرح لماذا.')},
-   {title:t('What the region’s largest experience tells us','ما تقوله التجربة الأكبر في المنطقة'),
-    body:t('Saudi Arabia opened the Seha Virtual Hospital in February 2022, linked to more than 130 hospitals, and its own reports now cite more than 170. A peer-reviewed policy analysis published in June 2026 found that the available evidence shows “national-scale feasibility”, but does not yet establish whether the hospital has improved clinical outcomes or system performance, and that it should not yet be treated as a settled model of effectiveness until mortality, readmissions, length of stay and cost are independently assessed. The same paper describes Seha surrounded by whole layers: a personal health record, a triage hotline, e-prescribing and an appointments and referral system.',
-           'افتتحت السعودية مستشفى «صحة» الافتراضي في فبراير 2022 مرتبطًا بأكثر من 130 مستشفى، ويتجاوز اليوم 170 مستشفى بحسب تقاريره. لكن ورقة سياسات محكّمة نُشرت في يونيو 2026 خلصت إلى أن ما هو متاح يُثبت «الجدوى على مستوى وطني»، ولا يُثبت بعد أن المستشفى حسّن النتائج السريرية أو أداء المنظومة، وأنه لا ينبغي اعتباره نموذجًا محسومًا للفاعلية قبل تقييم مستقل للوفيات وإعادة الدخول ومدة الإقامة والكلفة. واللافت أن الورقة تصف «صحة» محاطًا بطبقات كاملة: سجل صحي شخصي، وخط فرز هاتفي، ووصفات إلكترونية، ونظام مواعيد وإحالة.')},
-   {title:t('What longer experiences tell us','ما تقوله تجارب أطول عمرًا'),
-    items:[
-     t('Virtual wards in England: an independent 2024 study found that “studies disagree on whether virtual wards perform better than inpatient care”, and that it is not known how many patients would have been admitted at all. The success factor staff named most: timely access to hospital if a patient’s condition changed.','الأجنحة الافتراضية في إنجلترا: دراسة مستقلة في 2024 وجدت أن الأبحاث «تختلف حول ما إذا كانت أفضل من الرعاية داخل المستشفى»، وأنه لا يُعرف كم من المرضى كان سيدخل المستشفى أصلًا. وأهم شرط للنجاح بحسب العاملين: الوصول السريع إلى المستشفى إذا تغيّرت حالة المريض.'),
-     t('Evaluations commissioned by the system itself found services keeping records on spreadsheets, and that “the temporary nature of funding has created issues with staff recruitment.”','تقييمات مموّلة من النظام نفسه وجدت خدمات تدير سجلاتها على جداول بيانات، وأن «الطبيعة المؤقتة للتمويل خلقت مشكلات في توظيف الكوادر».'),
-     t('A 2026 study in BMJ Quality & Safety: “safe care depends on more than technology” — part of the monitoring work shifts to patients and their families, especially at night.','دراسة في BMJ Quality & Safety (2026): «الرعاية الآمنة تعتمد على أكثر من التقنية»، فجزء من عمل المراقبة ينتقل إلى المريض وأسرته، خصوصًا ليلًا.'),
-     t('Tele-ICU has the strongest evidence: two meta-analyses found relative mortality reductions of about 17–26%, though from non-randomised US studies, at roughly USD 50–100 thousand per bed in the first year.','العناية المركزة عن بُعد هي الأقوى دليلًا: تحليلان تجميعيان وجدا انخفاضًا نسبيًا في الوفيات بنحو 17 إلى 26%، لكن من دراسات أمريكية غير عشوائية، وبكلفة 50 إلى 100 ألف دولار للسرير في السنة الأولى.'),
-    ]},
-   {title:t('Five conditions that recur in every experience','خمسة شروط تتكرر في كل التجارب'),
-    items:[
-     t('An integrated health record, so the remote doctor sees what the doctor at the bedside sees.','سجل صحي متكامل، يرى فيه الطبيب البعيد ما يراه الطبيب القريب.'),
-     t('A clear physical escalation path: a real bed waiting when the screen is not enough.','مسار تصعيد مادي واضح: سرير حقيقي ينتظر حين لا تكفي الشاشة.'),
-     t('Trained, stable staff — not temporary funding.','كوادر مدرّبة ومستقرة، لا تمويل مؤقت.'),
-     t('A payment model that rewards remote care instead of penalising it.','نموذج دفع يكافئ الرعاية عن بُعد بدل أن يعاقبها.'),
-     t('Outcomes measured from day one — deaths, readmissions, length of stay and cost, not just the number of consultations.','قياس النتائج منذ اليوم الأول: الوفيات، وإعادة الدخول، ومدة الإقامة، والكلفة، لا عدد الاستشارات فقط.'),
-    ]},
-   {title:t('And what holds lower- and middle-income countries back','وما يعطّل الدول متوسطة الدخل'),
-    body:t('A 2025 umbrella review of 973 studies across 63 countries adds the obstacles specific to these settings: interrupted electricity and internet, scarce digital skills, poor interoperability between systems, and the absence of sustainable funding. The World Health Organization notes that even countries with robust health systems struggle to secure routine use and long-term access to telemedicine.',
-           'مراجعة شاملة لـ973 دراسة في 63 دولة (2025) تضيف عوائق خاصة بهذه البيئات: انقطاع الكهرباء والإنترنت، ونقص المهارات الرقمية، وضعف التوافق بين الأنظمة، وغياب التمويل المستدام. وتلاحظ منظمة الصحة العالمية أن حتى الدول ذات المنظومات الصحية القوية تجد صعوبة في ضمان الاستخدام المنتظم والمستدام للطب عن بُعد.')},
-   {title:t('The reading','القراءة'),
-    body:t('A virtual hospital is not a building without walls; it is a whole system behind the screen. Egypt starts from a better position than many: fully digital primary care in the Universal Health Insurance governorates, and a stated understanding that people come before technology. The question now is not how many units to open, but how to know — in numbers — that each unit saved time, a bed and a life.',
-           'المستشفى الافتراضي ليس مبنى بلا جدران، بل منظومة كاملة خلف الشاشة. ومصر بدأت من موقع أفضل من كثيرين: رعاية أولية رقمية بالكامل في محافظات التأمين الصحي الشامل، وإدراك معلَن بأن الإنسان قبل التقنية. السؤال الآن ليس كم وحدة نفتح، بل كيف نعرف بالأرقام أن كل وحدة وفّرت وقتًا وسريرًا وحياة.')},
-   {title:t('Limits of this article','حدود هذا المقال'),
-    body:t('A source-based compilation of public sources, not reviewed by an independent expert. Seha’s figures come from its own reports, and most evaluations of England’s virtual wards are qualitative. This article does not assess the Egyptian project; it reads what other experiences have learned.',
-           'تجميع مسند لمصادر عامة، لم يخضع لمراجعة خبير مستقل. أرقام «صحة» من تقاريره الذاتية، وتقييمات الأجنحة الافتراضية في إنجلترا نوعية في أغلبها. والمقال لا يقيّم المشروع المصري، بل يقرأ ما تعلّمته تجارب أخرى.')},
-  ],
-  references:[
-   {title:'Ahram Online — Egypt’s virtual hospital in Ismailia (17 Jul 2026)',url:'https://english.ahram.org.eg/News/572969.aspx'},
-   {title:'Saudi Ministry of Health — Launch of Seha Virtual Hospital (2022)',url:'https://www.moh.gov.sa/en/ministry/mediacenter/news/pages/news-2022-02-28-003.aspx'},
-   {title:'JMIR 2026 — Policy considerations for national virtual hospitals and the Seha model',url:'https://www.jmir.org/2026/1/e89276'},
-   {title:'Health Foundation 2024 — What do virtual wards look like in England?',url:'https://www.health.org.uk/sites/default/files/upload/publications/2024/What%20do%20virtual%20wards%20look%20like%20in%20England.pdf'},
-   {title:'Warwick Business School for NHSE Midlands — Virtual wards findings (2024)',url:'https://www.arc-wm.nihr.ac.uk/wp-content/uploads/2025/05/25-01-23-NHSE-VW-final-findings.pdf'},
-   {title:'University of Manchester / BMJ Quality & Safety 2026 — Safety in virtual wards',url:'https://www.manchester.ac.uk/about/news/new-study-examines-how-safety-is-delivered-in-nhs-virtual-wards/'},
-   {title:'Critical Care 2012 — Tele-ICU meta-analysis',url:'https://ccforum.biomedcentral.com/articles/10.1186/cc11429'},
-   {title:'Journal of Intensive Care Medicine 2018 — Tele-ICU clinical and economic outcomes',url:'https://pubmed.ncbi.nlm.nih.gov/28826282/'},
-   {title:'JMIR 2025 — Umbrella review of telehealth implementation',url:'https://www.jmir.org/2025/1/e70276'},
-   {title:'WHO 2022 — Consolidated telemedicine implementation guide',url:'https://www.who.int/news/item/10-11-2022-who-issues-new-guide-to-running-effective-telemedicine-services'},
-  ]},
- {section:'news',slug:'egypt-health-in-numbers',
-  title:t('Egypt’s health in numbers: where the need presses hardest','صحة مصر بالأرقام: أين تضغط الحاجة اليوم'),
-  summary:t('Eight million Egyptians live with diabetes without knowing it. The widest gaps are not in disease itself but in how late the system reaches it.','في مصر ثمانية ملايين إنسان يعيشون بالسكر ولا يعرفون. الفجوة الأوسع ليست في المرض نفسه، بل في تأخر وصول المنظومة إليه.'),
-  image:'https://images.unsplash.com/photo-1583248793469-0b3360f27876?auto=format&fit=crop&w=1600&q=80',imageCredit:{name:'Omar Elsharawy',url:'https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-_RlE7M_w8Ho'},category:t('Health in numbers','الصحة بالأرقام'),status:t('Source-based analysis','تحليل مسند'),
-  facts:[
-   {label:t('Adults with undiagnosed diabetes','بالغون بسكر غير مشخَّص'),value:t('≈ 8.2 million (2024)','≈ 8.2 مليون (2024)')},
-   {label:t('Hypertension under control','ضغط مضبوط'),value:t('19% of patients (2019)','19% من المرضى (2019)')},
-   {label:t('Average wait for an ICU bed','انتظار سرير الرعاية المركزة'),value:t('13 hours (June 2025)','13 ساعة (يونيو 2025)')},
-   {label:t('Liver cancer deaths','وفيات سرطان الكبد'),value:t('21,018 (2024 estimate)','21,018 (تقدير 2024)')},
-  ],
-  blocks:[
-   {title:t('Why look at gaps, not diseases','لماذا نقرأ الفجوات لا الأمراض'),
-    body:t('Ranking diseases by how common they are tells you what Egypt suffers from. It does not tell you where effort changes outcomes. This article looks instead for the distance between the size of a problem and the system’s ability to reach it in time — because that distance, not the disease, is what technology, organisation and systems can actually move.',
-           'ترتيب الأمراض حسب انتشارها يخبرك بما تعانيه مصر، لكنه لا يخبرك أين يغيّر الجهد النتيجة. هذا المقال يبحث عن شيء آخر: المسافة بين حجم المشكلة وقدرة المنظومة على الوصول إليها في الوقت المناسب. فهذه المسافة، لا المرض نفسه، هي ما تستطيع التقنية والتنظيم والأنظمة أن تحرّكه.')},
-   {title:t('Gap one: detection — the disease is there, and no one sees it','الفجوة الأولى: الكشف — المرض موجود ولا أحد يراه'),
-    items:[
-     t('Diabetes: 13.2 million adults aged 20–79, an age-standardised prevalence of 22.4%, and 62% of them undiagnosed — about 8.2 million people. 72,000 deaths and USD 3.1 billion in related health spending (2024 estimates, IDF Diabetes Atlas).','السكري: 13.2 مليون بالغ بين 20 و79 سنة، بانتشار معيّر 22.4%، و62% منهم غير مشخَّصين — نحو 8.2 مليون إنسان. 72 ألف وفاة منسوبة إليه، و3.1 مليار دولار إنفاقًا صحيًا مرتبطًا به (تقديرات 2024، أطلس الاتحاد الدولي للسكري).'),
-     t('Hypertension: 14.5 million adults aged 30–79. 53% diagnosed, 44% treated, and only 19% controlled (2019 data, WHO).','الضغط: 14.5 مليون بالغ بين 30 و79 سنة. شُخّص منهم 53%، وعولج 44%، وضُبط 19% فقط (بيانات 2019، منظمة الصحة العالمية).'),
-     t('Breast cancer: 26,052 new cases and 9,717 deaths; 37.3% of all cancers in women (GLOBOCAN 2024).','سرطان الثدي: 26,052 حالة جديدة و9,717 وفاة، وهو 37.3% من سرطانات النساء (GLOBOCAN 2024).'),
-     t('The quiet driver: adult obesity at 44.3% in 2022, up from 37.4% in 2012 — the highest among Arab states (WHO data via FAO).','المحرّك الصامت: السمنة عند 44.3% من البالغين في 2022 مقابل 37.4% في 2012، الأعلى عربيًا (بيانات منظمة الصحة عبر الفاو).'),
-    ]},
-   {title:t('Gap two: time — hours between the patient and the bed','الفجوة الثانية: الوقت — ساعات تفصل المريض عن السرير'),
-    items:[
-     t('Intensive care: the average wait for a bed fell from 26 to 13 hours, and for neonatal incubators from 20 to 7 hours (June 2024 to June 2025), across 561,720 ICU requests and 136,711 incubator requests. A real improvement — still measured in hours (Ministry of Health).','الرعاية المركزة: متوسط انتظار السرير انخفض من 26 إلى 13 ساعة، والحضانات من 20 إلى 7 ساعات (يونيو 2024 إلى يونيو 2025)، عبر 561,720 طلب رعاية مركزة و136,711 طلب حضانة. تحسّن حقيقي، لكنه ما زال يُقاس بالساعات (وزارة الصحة).'),
-     t('Stroke: 150,000 to 210,000 new cases a year, accounting for 6.4% of deaths (Ministry of Health, May 2026).','الجلطات الدماغية: 150 إلى 210 آلاف إصابة سنويًا، وتمثّل 6.4% من الوفيات (وزارة الصحة، مايو 2026).'),
-     t('Roads: 5,829 deaths and 84,553 injuries in 2025, with deaths up 10.8% (CAPMAS).','الطرق: 5,829 وفاة و84,553 مصابًا في 2025، بزيادة 10.8% في الوفيات (الجهاز المركزي للتعبئة والإحصاء).'),
-    ]},
-   {title:t('Gap three: the recurring cost — a bill paid every week','الفجوة الثالثة: الكلفة المتكررة — فاتورة تُدفع كل أسبوع'),
-    items:[
-     t('Dialysis: about 59,000 patients, 9.2 million sessions a year and roughly EGP 5.3 billion borne by the state (April 2024 figures). Much of it is the end of a road that began with diabetes or hypertension no one detected.','الغسيل الكلوي: نحو 59 ألف مريض، و9.2 مليون جلسة سنويًا، ونحو 5.3 مليار جنيه تتحملها الدولة (بيانات أبريل 2024). وكثير منه نهاية طريق بدأ بسكر أو ضغط لم يكتشفه أحد.'),
-     t('Liver cancer: 23,287 cases and 21,018 deaths — still the leading cancer killer, despite Egypt’s exceptional success against hepatitis C, because those already treated need lifelong follow-up (GLOBOCAN 2024; WHO EMRO on Egypt’s 2025–2030 sustainability plan).','سرطان الكبد: 23,287 حالة و21,018 وفاة — ما زال أول قاتل سرطاني رغم نجاح مصر الاستثنائي في فيروس C، لأن من عولجوا يحتاجون متابعة مدى الحياة (GLOBOCAN 2024؛ ومنظمة الصحة عن خطة الاستدامة 2025–2030).'),
-    ]},
-   {title:t('Gap four: the people who treat','الفجوة الرابعة: الناس الذين يعالِجون'),
-    items:[
-     t('164,016 doctors and dentists and 238,280 nursing staff in 2024; doctors in government hospitals fell 1.7% to 120,400 (CAPMAS).','164,016 طبيبًا وطبيب أسنان و238,280 فرد تمريض في 2024، وأطباء المستشفيات الحكومية تراجعوا 1.7% إلى 120,400 (الجهاز المركزي للتعبئة والإحصاء).'),
-     t('About 6.7 doctors per 10,000 people (2020, WHO data via the World Bank).','نحو 6.7 طبيب لكل 10 آلاف نسمة (2020، بيانات منظمة الصحة عبر البنك الدولي).'),
-    ]},
-   {title:t('What the state is already doing — and it is a lot','ما تفعله الدولة — وهو كثير'),
-    items:[
-     t('Universal Health Insurance covers six governorates; Minya began a pilot in June 2026 as the first of phase two, with a budget above EGP 115 billion for more than 12 million citizens.','التأمين الصحي الشامل يغطي ست محافظات، والمنيا بدأت تجريبيًا في يونيو 2026 كأول محافظات المرحلة الثانية، بميزانية تتجاوز 115 مليار جنيه لأكثر من 12 مليون مواطن.'),
-     t('More than six million unified electronic medical records already exist.','أكثر من ستة ملايين سجل طبي إلكتروني موحَّد قائمة بالفعل.'),
-    ]},
-   {title:t('The reading','القراءة'),
-    body:t('Egypt’s health system does not lack will or initiatives. What it needs is to arrive earlier — before diabetes becomes dialysis, hypertension becomes a stroke, and a tumour is found too late — and to multiply the reach of every doctor who stayed rather than try to replace those who left. These are capability gaps, and capabilities can be built.',
-           'المنظومة الصحية المصرية لا تفتقر إلى الإرادة ولا إلى المبادرات. ما تحتاجه أن تصل أبكر: قبل أن يصير السكر غسيلًا، والضغط جلطة، والورم متأخرًا. وأن تضاعف أثر كل طبيب بقي، لا أن تحاول تعويض من رحل. هذه فجوات قدرة، والقدرات تُبنى.')},
-   {title:t('Limits of this article','حدود هذا المقال'),
-    body:t('This is a source-based compilation of public figures, each checked against its source on 8 October 2026. It has not undergone independent expert review, so it is published as an article rather than as a VisionSeek research report. Figures come from different years and methods and are not directly comparable with one another.',
-           'هذا تجميع مسند لأرقام عامة، كل رقم فيه طوبق مع مصدره في 8 أكتوبر 2026. لم يخضع لمراجعة خبير مستقل، ولذلك يُنشر مقالًا لا تقرير بحث من VisionSeek. والأرقام من سنوات ومناهج مختلفة، فلا تُقارن ببعضها مباشرة.')},
-  ],
-  references:[
-   {title:'IDF Diabetes Atlas — Egypt',url:'https://diabetesatlas.org/data-by-location/country/egypt/'},
-   {title:'WHO — Hypertension country profile, Egypt (2023)',url:'https://cdn.who.int/media/docs/default-source/country-profiles/hypertension/hypertension-2023/hypertension_egy_2023.pdf'},
-   {title:'IARC GLOBOCAN 2024 — Egypt fact sheet',url:'https://gco.iarc.who.int/media/globocan/factsheets/populations/818-egypt-fact-sheet.pdf'},
-   {title:'FAO SOFI RNE 2024 — Adult obesity (WHO data)',url:'https://openknowledge.fao.org/server/api/core/bitstreams/b64a7d04-6d70-488d-95e8-8a9beabb7483/content/sofi-statistics-rne-2024/adult-obesity.html'},
-   {title:'Ministry of Health via Al-Bawaba — ICU and incubator waits',url:'https://www.albawabhnews.com/5253876'},
-   {title:'Ministry of Health via El Watan — Stroke (May 2026)',url:'https://www.elwatannews.com/news/details/8280791'},
-   {title:'CAPMAS via Ahram Online — Road traffic 2025',url:'https://english.ahram.org.eg/News/571613.aspx'},
-   {title:'Youm7 — Dialysis digitisation (April 2024)',url:'https://www.youm7.com/6533365'},
-   {title:'WHO EMRO — Hepatitis elimination sustainability plan',url:'https://www.emro.who.int/egy/egypt-news/towards-full-elimination-of-hepatitis-by-2030-egypt-launches-its-hepatitis-elimination-sustainability-plan.html'},
-   {title:'CAPMAS — Annual health services bulletin 2024',url:'https://censusinfo.capmas.gov.eg/metadata-ar-v4.2/index.php/catalog/1944/download/7028'},
-   {title:'CAPMAS via Amwal Al Ghad — Government hospital doctors',url:'https://amwalalghad.com/byql'},
-   {title:'World Bank — Physicians per 1,000 people, Egypt',url:'https://api.worldbank.org/v2/country/EGY/indicator/SH.MED.PHYS.ZS?format=json'},
-   {title:'Masrawy — Minya joins Universal Health Insurance (June 2026)',url:'https://www.masrawy.com/news/news_regions/details/2026/6/1/2996292/'},
-   {title:'Cabinet via El Watan — Phase two budget',url:'https://www.elwatannews.com/news/details/8269015'},
-   {title:'Al Mal — Unified electronic records',url:'https://almalnews.com/2086739/'},
-  ]},
- {section:'news',slug:'capability-before-solution',title:t('Start with a capability, not a predetermined solution','ابدأ بقدرة قبل أن تحدد الحل'),summary:t('Why VisionSeek begins by asking what should become possible.','لماذا تبدأ VisionSeek بالسؤال عمّا يجب أن يصبح ممكنًا؟'),image:'cities',category:t('VisionSeek perspective','رؤية VisionSeek'),status:t('Editorial','محتوى تحريري'),blocks:[{title:t('The starting point changes the work','نقطة البداية تغيّر العمل'),body:t('A request for a tool can conceal a more important need: an institution wants to become able to do something it cannot do today. Naming that capability keeps the work open to better combinations of people, systems and technology.','قد يخفي طلب أداة احتياجًا أهم: مؤسسة تريد أن تصبح قادرة على فعل لا تستطيع فعله اليوم. تسمية القدرة تبقي العمل مفتوحًا لتركيبات أفضل من الأشخاص والأنظمة والتكنولوجيا.')},{title:t('The form follows the capability','الشكل يتبع القدرة'),body:t('The result may be a platform, operating model, partnership, applied-research effort or company. Choosing that form is a consequence of understanding the capability and proving a viable path.','قد تكون النتيجة منصة أو نموذج تشغيل أو شراكة أو بحثًا تطبيقيًا أو شركة. اختيار الشكل يأتي بعد فهم القدرة وإثبات مسار قابل للتنفيذ.')},{title:t('A useful first step','خطوة أولى مفيدة'),body:t('Write one sentence: who should become capable of doing what? Then identify the strongest evidence for the current limit. This is the starting artifact for the first VisionSeek workshop.','اكتب جملة واحدة: مَن يجب أن يصبح قادرًا على فعل ماذا؟ ثم حدد أقوى دليل على الحد الحالي. هذه هي ورقة البداية للورشة الأولى في VisionSeek.')}],related:['/method','/workshops']},
- {section:'news',slug:'program-manager-model',title:t('The program manager as a builder of capability','مدير البرنامج بوصفه بانيًا للقدرة'),summary:t('An institutional lesson from DARPA, adapted to VisionSeek’s proposed model.','درس مؤسسي من DARPA نكيّفه لنموذج VisionSeek المقترح.'),image:'industry',category:t('Institutional learning','تعلم مؤسسي'),status:t('Source-based analysis','تحليل مسند'),source:{title:'DARPA · Become a program manager',url:'https://www.darpa.mil/careers/program-manager'},blocks:[{title:t('What the reference shows','ما الذي يعرضه المرجع؟'),body:t('DARPA describes program managers as people who develop research programs, coordinate research teams and manage technical milestones. Its public description emphasizes a time-limited appointment and engagement with intended users.','تصف DARPA مدير البرنامج بأنه يطور برامج البحث وينسق الفرق ويدير المراحل التقنية. ويؤكد وصفها المنشور مدة التعيين المحددة والتفاعل مع المستخدمين المستهدفين.')},{title:t('Our proposed application','تطبيقنا المقترح'),body:t('For VisionSeek, the role should own the capability question, evidence and next decision. The manager assembles expertise rather than claiming to contain it all, and identifies the future operator before treating a prototype as a success. This is our design choice, not a statement of DARPA policy.','في VisionSeek، نقترح أن يكون الدور مسؤولًا عن سؤال القدرة والأدلة والقرار التالي. يجمع المدير الخبرات بدل افتراض امتلاكها كلها، ويحدد المشغّل المستقبلي قبل اعتبار النموذج نجاحًا. هذا اختيار تصميمي لنا، وليس وصفًا لسياسة DARPA.')},{title:t('What must be in place','ما الذي يجب تثبيته؟'),body:t('A role description alone is insufficient. Each appointment needs an accepted mandate, scope, resources, review cadence, decision limits and a transition plan.','وصف الدور وحده لا يكفي. يحتاج كل تعيين إلى اختصاص مقبول ونطاق وموارد وإيقاع مراجعة وحدود قرار وخطة نقل للتشغيل.')}],related:['/programs/program-lifecycle','/about/operating-model']},
- {section:'news',slug:'learning-from-challenges',title:t('What a challenge should prove','ما الذي ينبغي أن يثبته التحدي؟'),summary:t('Move from an impressive demonstration to a decision-changing test.','الانتقال من عرض مبهر إلى اختبار يغيّر القرار.'),image:'drones',category:t('Research reference','مرجع بحثي'),status:t('Source-based analysis','تحليل مسند'),source:{title:'DARPA · Challenges',url:'https://www.darpa.mil/research/challenges'},blocks:[{title:t('The reference','المرجع'),body:t('DARPA’s public challenge portfolio includes work on autonomous vehicles, robotics for difficult environments and automated cybersecurity. These examples show how a concrete task can focus contributions from different teams.','تتضمن محفظة تحديات DARPA المنشورة أعمالًا في المركبات الذاتية وروبوتات البيئات الصعبة والأمن السيبراني الآلي. وتوضح الأمثلة كيف تجمع المهمة المحددة مساهمات فرق مختلفة.')},{title:t('Our interpretation','قراءتنا'),body:t('The reusable lesson is the evaluation structure: specify the task, baseline, conditions and evidence that would justify moving forward. VisionSeek can begin with a small proof sprint around one institutional workflow before considering a larger challenge.','الدرس الذي نستفيد منه هو بنية التقييم: تحديد المهمة وخط الأساس والظروف والأدلة التي تبرر التقدم. يمكن لـVisionSeek البدء بتجربة إثبات صغيرة حول عملية مؤسسية واحدة قبل التفكير في تحدٍ أكبر.')},{title:t('From enthusiasm to evidence','من الحماس إلى الدليل'),body:t('A useful test allows an unfavorable answer. Agree in advance what would count as a miss, when to repeat the experiment and when to stop. No prize or competition is being announced by this article.','يسمح الاختبار المفيد بإجابة غير مواتية. اتفق مسبقًا على ما يُعد إخفاقًا، ومتى تُعاد التجربة، ومتى نتوقف. هذا المقال لا يعلن جائزة أو مسابقة.')}],related:['/programs/challenges','/workshops']},
- {section:'news',slug:'ideas-before-programs',title:t('Give ideas a place before they become programs','امنح الفكرة مكانًا قبل أن تصبح برنامجًا'),summary:t('Why exploration, incubation and authorized execution should remain distinct.','لماذا نفصل بين الاستكشاف والإنضاج والتنفيذ المعتمد؟'),image:'science',category:t('Institutional learning','تعلم مؤسسي'),status:t('Source-based analysis','تحليل مسند'),source:{title:'DARPA · Ideas Under Incubation',url:'https://www.darpa.mil/research/ideas'},blocks:[{title:t('The reference','المرجع'),body:t('DARPA publishes ideas under incubation to gather context from specialists and prospective users before a formal program. Its page explicitly separates these discussions from formal solicitations.','تنشر DARPA أفكارًا تحت الإنضاج لجمع السياق من المتخصصين والمستخدمين المحتملين قبل البرنامج الرسمي. وتفصل الصفحة صراحة بين هذه المناقشات والدعوات الرسمية.')},{title:t('The VisionSeek design','تصميم VisionSeek'),body:t('Our program concepts are questions and proposed paths. They become operating programs only when a responsible owner, test, resources and intended beneficiary are confirmed. Showing the early work can invite useful expertise without inventing institutional maturity.','تصورات برامجنا أسئلة ومسارات مقترحة. تصبح برامج تشغيلية عند تثبيت مسؤول واختبار وموارد ومستفيد مستهدف. يتيح إظهار العمل المبكر استقبال خبرات مفيدة دون اختلاق نضج مؤسسي.')},{title:t('An actionable contribution','مساهمة قابلة للاستخدام'),body:t('Bring evidence that changes the question: a stronger baseline, a technical limit, an available capability or an operator willing to define a test.','قدّم دليلًا يغيّر السؤال: خط أساس أقوى، أو حدًا تقنيًا، أو قدرة متاحة، أو مشغّلًا مستعدًا لتحديد اختبار.')}],related:['/programs/ideas','/opportunities','/work-with-us/prepare-a-concept']},
-];
+import {readdirSync, readFileSync} from 'node:fs';
+import {join} from 'node:path';
+import type {Block, Entry, Text} from './schema';
+
+type LooseText = Partial<Text> | null | undefined;
+type LooseBlock = {title: Text; body?: LooseText; items?: LooseText[]};
+type NewsFile = {
+  position?: number;
+  section: Entry['section'];
+  slug: string;
+  title: Text;
+  summary: Text;
+  category: Text;
+  status: Text;
+  image: string;
+  code?: string;
+  blocks: LooseBlock[];
+  related?: Array<string | {href?: string}>;
+  facts?: Entry['facts'];
+  source?: Partial<NonNullable<Entry['source']>>;
+  references?: Entry['references'];
+  imageCredit?: Partial<NonNullable<Entry['imageCredit']>>;
+  action?: Entry['action'];
+};
+
+const textOrNone = (value: LooseText): Text | undefined => {
+  if (!value?.en && !value?.ar) return undefined;
+  return {en: value?.en ?? '', ar: value?.ar ?? ''};
+};
+
+const cleanBlock = (block: LooseBlock): Block => {
+  const body = textOrNone(block.body);
+  const items = block.items?.map(textOrNone).filter((item): item is Text => Boolean(item));
+  return {title: block.title, ...(body ? {body} : {}), ...(items?.length ? {items} : {})};
+};
+
+const clean = (raw: NewsFile): Entry => {
+  const entry: Entry = {
+    section: raw.section,
+    slug: raw.slug,
+    title: raw.title,
+    summary: raw.summary,
+    category: raw.category,
+    status: raw.status,
+    image: raw.image,
+    blocks: raw.blocks.map(cleanBlock),
+  };
+  if (raw.code) entry.code = raw.code;
+  if (raw.action) entry.action = raw.action;
+  if (raw.facts?.length) entry.facts = raw.facts;
+  if (raw.references?.length) entry.references = raw.references;
+  if (raw.imageCredit?.name && raw.imageCredit.url) entry.imageCredit = {name: raw.imageCredit.name, url: raw.imageCredit.url};
+  if (raw.source?.title && raw.source.url) entry.source = {title: raw.source.title, url: raw.source.url};
+  const related = raw.related
+    ?.map(item => (typeof item === 'string' ? item : item.href))
+    .filter((href): href is string => Boolean(href));
+  if (related?.length) entry.related = related;
+  return entry;
+};
+
+const loadNews = (): Entry[] => {
+  const dir = join(process.cwd(), 'content/news');
+  return readdirSync(dir)
+    .filter(name => name.endsWith('.json'))
+    .map(name => JSON.parse(readFileSync(join(dir, name), 'utf8')) as NewsFile)
+    .sort((a, b) => (a.position ?? 0) - (b.position ?? 0) || a.slug.localeCompare(b.slug))
+    .map(clean);
+};
+
+export const newsEntries: Entry[] = loadNews();
