@@ -1,43 +1,6 @@
 {
   "sections": [
     {
-      "path": "/programs",
-      "en": "Programs",
-      "ar": "البرامج",
-      "children": [
-        {
-          "href": "/about/what-we-do#hlo",
-          "en": "HLO — Highest Level One",
-          "ar": "برنامج HLO"
-        },
-        {
-          "href": "/programs",
-          "en": "Program concepts",
-          "ar": "تصورات البرامج"
-        },
-        {
-          "href": "/programs/ideas",
-          "en": "Ideas under exploration",
-          "ar": "أفكار قيد الاستكشاف"
-        },
-        {
-          "href": "/programs/challenges",
-          "en": "Challenges",
-          "ar": "التحديات"
-        },
-        {
-          "href": "/programs/spotlights",
-          "en": "Research spotlights",
-          "ar": "تحت المجهر"
-        },
-        {
-          "href": "/programs/program-lifecycle",
-          "en": "How programs work",
-          "ar": "كيف تعمل البرامج؟"
-        }
-      ]
-    },
-    {
       "path": "/projects",
       "en": "Projects",
       "ar": "المشاريع",
@@ -135,6 +98,43 @@
           "href": "/workshops/develop-the-institution",
           "en": "The institution and AI",
           "ar": "المؤسسة والذكاء الاصطناعي"
+        }
+      ]
+    },
+    {
+      "path": "/programs",
+      "en": "Programs",
+      "ar": "البرامج",
+      "children": [
+        {
+          "href": "/about/what-we-do#hlo",
+          "en": "HLO — Highest Level One",
+          "ar": "برنامج HLO"
+        },
+        {
+          "href": "/programs",
+          "en": "Program concepts",
+          "ar": "تصورات البرامج"
+        },
+        {
+          "href": "/programs/ideas",
+          "en": "Ideas under exploration",
+          "ar": "أفكار قيد الاستكشاف"
+        },
+        {
+          "href": "/programs/challenges",
+          "en": "Challenges",
+          "ar": "التحديات"
+        },
+        {
+          "href": "/programs/spotlights",
+          "en": "Research spotlights",
+          "ar": "تحت المجهر"
+        },
+        {
+          "href": "/programs/program-lifecycle",
+          "en": "How programs work",
+          "ar": "كيف تعمل البرامج؟"
         }
       ]
     },
