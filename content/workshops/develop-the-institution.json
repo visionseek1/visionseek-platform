@@ -52,11 +52,11 @@
     "ar": "أكثر الجهد يُعامل كشراء تقنية. ثم تكتشف المؤسسة أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
   },
   "whyEvidence": {
-    "en": "BCG, on 6 January 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards. These are BCG's figures, not results of a VisionSeek workshop.",
-    "ar": "كتب BCG في 6 يناير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين. هذه أرقام BCG، ليست نتائج ورشة لـVisionSeek."
+    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards. These are BCG's figures, not results of a VisionSeek workshop.",
+    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين. هذه أرقام BCG، ليست نتائج ورشة لـVisionSeek."
   },
   "source": {
-    "title": "BCG · AI Transformation Is a Workforce Transformation · 6 January 2026",
+    "title": "BCG · AI Transformation Is a Workforce Transformation · 4 February 2026",
     "url": "https://www.bcg.com/publications/2026/ai-transformation-is-a-workforce-transformation"
   },
   "before": {
@@ -111,7 +111,7 @@
     {
       "q": {
         "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
+        "ar": "هل عُعقدت هذه الورشة؟"
       },
       "a": {
         "en": "No. It is in design. No workshop has been held, and this page is not a client story.",

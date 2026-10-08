@@ -84,11 +84,11 @@
     "ar": "الناس تستعمل الأدوات أصلًا. والشركة لم تحسم فيما تُصرَف الساعة الموفَّرة، فتختفي الساعة في المزيد من الشيء نفسه."
   },
   "whyEvidence": {
-    "en": "In BCG's AI at Work, dated 10 November 2025, 74% of frontline employees said they use AI every day or several times a week, up 23 points from 2025. Among regular users, 42% report saving eight hours a week. BCG's point is the one that matters here: most organizations have not figured out how to turn that time into value.",
-    "ar": "في مقال BCG المعنون AI at Work، بتاريخ 10 نوفمبر 2025، قال 74% من موظفي الصف الأول إنهم يستعملون الذكاء الاصطناعي كل يوم أو عدة مرات في الأسبوع، بزيادة 23 نقطة عن 2025. ومن المنتظمين، 42% يقولون إنهم يوفّرون ثماني ساعات في الأسبوع. والنقطة التي تهم هنا هي التي قالها BCG: أكثر المؤسسات لم تعرف بعد كيف تحوّل هذا الوقت إلى قيمة."
+    "en": "In BCG's AI at Work, dated 3 June 2026, 74% of frontline employees said they use AI every day or several times a week, up 23 points from 2025. Among regular users, 42% report saving eight hours a week. BCG's point is the one that matters here: most organizations have not figured out how to turn that time into value.",
+    "ar": "في مقال BCG المعنون AI at Work، بتاريخ 3 يونيو 2026، قال 74% من موظفي الصف الأول إنهم يستعملون الذكاء الاصطناعي كل يوم أو عدة مرات في الأسبوع، بزيادة 23 نقطة عن 2025. ومن المنتظمين، 42% يقولون إنهم يوفّرون ثماني ساعات في الأسبوع. والنقطة التي تهم هنا هي التي قالها BCG: أكثر المؤسسات لم تعرف بعد كيف تحوّل هذا الوقت إلى قيمة."
   },
   "source": {
-    "title": "BCG · AI at Work: Why Strategy Matters More Than Tools · 10 November 2025",
+    "title": "BCG · AI at Work: Why Strategy Matters More Than Tools · 3 June 2026",
     "url": "https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools"
   },
   "before": {
@@ -143,7 +143,7 @@
     {
       "q": {
         "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
+        "ar": "هل عُعقدت هذه الورشة؟"
       },
       "a": {
         "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
