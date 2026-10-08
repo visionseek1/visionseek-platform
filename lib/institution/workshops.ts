@@ -46,11 +46,15 @@ export type WorkshopDoorCard = {code: string; image: string};
 /** Copy for the live section page. Every key is editable from /admin. */
 export type WorkshopLive = {
   kicker: string;
+  /** Masterclass: the teacher's name leads the page, then what he teaches. */
+  instructor: Bi;
+  teaches: Bi;
+  /** Introduction video. Empty `video` shows a designed placeholder with `pending`. */
+  trailer: {video: string; label: Bi; pending: Bi};
   heroQuote: Bi;
   heroTitle: Bi;
   heroLede: Bi;
   heroCustom: Bi;
-  heroWith: Bi;
   heroImage: string;
   heroImageAlt: Bi;
   heroImageLabel: string;
@@ -58,6 +62,10 @@ export type WorkshopLive = {
   doorsLabel: Bi;
   doorCards: Record<WorkshopKind, WorkshopDoorCard>;
   openDoor: Bi;
+  cardTeacher: Bi;
+  leavesLabel: Bi;
+  cardMeta: Bi;
+  institutionPick: Bi;
   howLabel: Bi;
   howTitle: Bi;
   howSteps: {title: Bi; line: Bi}[];

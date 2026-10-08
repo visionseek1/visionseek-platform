@@ -1,7 +1,7 @@
 {
   "title": {
-    "en": "Workshops",
-    "ar": "الورش"
+    "en": "Masterclass",
+    "ar": "ماستركلاس"
   },
   "hero": {
     "en": "It is not enough to learn how to use it.",
@@ -12,8 +12,8 @@
     "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
   },
   "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "en": "In design · No masterclass has been held",
+    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "rolesHeading": {
     "en": "Start from the seat you hold",
@@ -27,8 +27,8 @@
         "ar": "قيادة عليا"
       },
       "note": {
-        "en": "Your path is the leader's own session, then the work of developing the institution. The team workshops are for the people who report to you.",
-        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ورش المؤسسات لفريقك، لا لك وحدك."
+        "en": "Your path is the leader's own session, then the work of developing the institution. The team masterclasses are for the people who report to you.",
+        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ماستركلاس المؤسسات لفريقك، لا لك وحدك."
       }
     },
     {
@@ -38,8 +38,8 @@
         "ar": "مديرون"
       },
       "note": {
-        "en": "Your path is the institution workshop for the kind of organization you run. You bring the team's real cases, not a sample from somewhere else.",
-        "ar": "مسارك ورشة مؤسستك. تحضر حالات فريقك الحقيقية، لا نموذجًا مستعارًا."
+        "en": "Your path is the institution masterclass for the kind of organization you run. You bring the team's real cases, not a sample from somewhere else.",
+        "ar": "مسارك ماستركلاس مؤسستك. تحضر حالات فريقك الحقيقية، لا نموذجًا مستعارًا."
       }
     },
     {
@@ -49,8 +49,8 @@
         "ar": "موظفون"
       },
       "note": {
-        "en": "Your path is the same institution workshop, from the desk where the work actually lands. The point is a faster, cleaner hand on today's tasks.",
-        "ar": "مسارك ورشة المؤسسة نفسها، من المكتب الذي يصل إليه الشغل. المقصود يد أسرع وأنظف على مهام اليوم."
+        "en": "Your path is the same institution masterclass, from the desk where the work actually lands. The point is a faster, cleaner hand on today's tasks.",
+        "ar": "مسارك ماستركلاس المؤسسة نفسه، من المكتب الذي يصل إليه الشغل. المقصود يد أسرع وأنظف على مهام اليوم."
       }
     }
   ],
@@ -132,7 +132,26 @@
     "ar": "الأنواع الخمسة"
   },
   "live": {
-    "kicker": "VISIONSEEK WORKSHOPS",
+    "kicker": "VISIONSEEK MASTERCLASS",
+    "instructor": {
+      "ar": "د. أحمد عبدالعليم",
+      "en": "Dr. Ahmed Abdelalim"
+    },
+    "teaches": {
+      "ar": "يعلّمك كيف يوسّع الذكاء الاصطناعي قدرتك على الفهم، والتفكير، والعمل.",
+      "en": "Teaches you how AI widens your ability to understand, to think, and to act."
+    },
+    "trailer": {
+      "video": "",
+      "label": {
+        "ar": "شاهد المقدمة",
+        "en": "Watch the introduction"
+      },
+      "pending": {
+        "ar": "المقدمة قيد التصميم",
+        "en": "The introduction is being made"
+      }
+    },
     "heroQuote": {
       "en": "AI will not only change how we work. It will change the limits of what we can do.",
       "ar": "الذكاء الاصطناعي لن يغيّر طريقة عملنا فقط. سيغيّر حدود ما نستطيع أن نفعله."
@@ -146,22 +165,18 @@
       "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
     },
     "heroCustom": {
-      "ar": "كل ورشة تُصمَّم لك أنت: لعملك، ولمؤسستك، ولما تريد أن تصل إليه.",
-      "en": "Every workshop is designed for you: for your work, your institution, and where you want to get to."
+      "ar": "كل ماستركلاس يُصمَّم لك أنت: لعملك، ولمؤسستك، ولما تريد أن تصل إليه.",
+      "en": "Every masterclass is designed for you: for your work, your institution, and where you want to get to."
     },
-    "heroWith": {
-      "en": "With Dr. Ahmed Abdelalim",
-      "ar": "مع د. أحمد عبدالعليم"
-    },
-    "heroImage": "/workshops/ahmed-abdelalim.jpg",
+    "heroImage": "/masterclass/ahmed-abdelalim.jpg",
     "heroImageAlt": {
       "en": "Dr. Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
     },
     "heroImageLabel": "VISIONSEEK · MAKE IT POSSIBLE",
     "ctaPrimary": {
-      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
-      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
+      "ar": "اطلب ماستركلاس خاصًا مع د. أحمد عبدالعليم",
+      "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     },
     "doorsLabel": {
       "en": "The three doors",
@@ -170,7 +185,7 @@
     "doorCards": {
       "leader": {
         "code": "01",
-        "image": "/workshops/ahmed-abdelalim.jpg"
+        "image": "/masterclass/ahmed-abdelalim.jpg"
       },
       "institution": {
         "code": "02",
@@ -185,19 +200,35 @@
       "en": "Open the door",
       "ar": "ادخل من هنا"
     },
+    "cardTeacher": {
+      "ar": "د. أحمد عبدالعليم يعلّم",
+      "en": "Dr. Ahmed Abdelalim teaches"
+    },
+    "leavesLabel": {
+      "ar": "ستخرج بـ",
+      "en": "You leave with"
+    },
+    "cardMeta": {
+      "ar": "جلسة مباشرة · على مادتك أنت · المدة تُحدَّد معك",
+      "en": "Live session · On your own material · Length set with you"
+    },
+    "institutionPick": {
+      "ar": "اختر مؤسستك",
+      "en": "Choose your institution"
+    },
     "howLabel": {
       "ar": "التخصيص هو ميزتنا",
       "en": "Made for you is the point"
     },
     "howTitle": {
-      "ar": "كيف تحصل على ورشتك",
-      "en": "How you get your workshop"
+      "ar": "كيف تطلب الماستركلاس",
+      "en": "How you get your masterclass"
     },
     "howSteps": [
       {
         "title": {
-          "ar": "اطلب ورشتك",
-          "en": "Request your workshop"
+          "ar": "اطلب الماستركلاس",
+          "en": "Request your masterclass"
         },
         "line": {
           "ar": "قل لنا من أنت، وماذا تعمل.",
@@ -216,12 +247,12 @@
       },
       {
         "title": {
-          "ar": "ورشة مصممة لك",
-          "en": "A workshop designed for you"
+          "ar": "ماستركلاس مصمَّم لك",
+          "en": "A masterclass designed for you"
         },
         "line": {
-          "ar": "ورشة خاصة مع مؤسس VisionSeek شخصيًا، د. أحمد عبدالعليم، على عملك الحقيقي وبالأدوات التي تناسبك.",
-          "en": "A private workshop with the founder of VisionSeek himself, Dr. Ahmed Abdelalim, on your real work and with the tools that fit you."
+          "ar": "ماستركلاس خاص مع مؤسس VisionSeek شخصيًا، د. أحمد عبدالعليم، على عملك الحقيقي وبالأدوات التي تناسبك.",
+          "en": "A private masterclass with the founder of VisionSeek himself, Dr. Ahmed Abdelalim, on your real work and with the tools that fit you."
         }
       }
     ],
@@ -256,8 +287,8 @@
       }
     ],
     "closingCta": {
-      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
-      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
+      "ar": "اطلب ماستركلاس خاصًا مع د. أحمد عبدالعليم",
+      "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     }
   }
 }

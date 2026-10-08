@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight} from 'lucide-react';
+import {ArrowRight, ArrowUpRight, Check, Play} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {
@@ -31,15 +31,15 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
   const leader = workshops.find(item => item.kind === 'leader');
   const development = workshops.find(item => item.kind === 'development');
   const doorHref = (kind: WorkshopKind) => {
-    if (kind === 'leader' && leader) return `${prefix}/workshops/${leader.slug}`;
-    if (kind === 'development' && development) return `${prefix}/workshops/${development.slug}`;
+    if (kind === 'leader' && leader) return `${prefix}/masterclass/${leader.slug}`;
+    if (kind === 'development' && development) return `${prefix}/masterclass/${development.slug}`;
     return '#institutions';
   };
   const kinds: WorkshopKind[] = ['leader', 'institution', 'development'];
   const institutionWorkshops = workshops.filter(item => item.kind === 'institution');
 
   return (
-    <Frame locale={locale} path="/workshops">
+    <Frame locale={locale} path="/masterclass">
       <div className="vs-wl">
         <section className="vs-wl-hero">
           <div className="vs-wl-hero-text">
@@ -48,20 +48,38 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
               <span>/</span>
               <span>{text(locale, section.title)}</span>
             </nav>
-            <blockquote className="vs-wl-quote">{text(locale, live.heroQuote)}</blockquote>
-            <h1>{text(locale, live.heroTitle)}</h1>
-            <p className="vs-wl-lede">{text(locale, live.heroLede)}</p>
-            <p className="vs-wl-custom">{text(locale, live.heroCustom)}</p>
-            <p className="vs-wl-with">{text(locale, live.heroWith)}</p>
+            <p className="vs-wl-lockup" dir="ltr">
+              <Image src="/visionseek-symbol-color.png" alt="" width={36} height={36} />
+              <span><small>VISIONSEEK</small><b>MASTERCLASS</b></span>
+            </p>
+            <h1 className="vs-wl-instructor">{text(locale, live.instructor)}</h1>
+            <p className="vs-wl-teaches">{text(locale, live.teaches)}</p>
             <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
             <div className="vs-wl-actions">
               <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
             </div>
           </div>
           <div className="vs-wl-hero-image">
-            <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
+            {live.trailer.video ? (
+              <video className="vs-wl-trailer" src={live.trailer.video} poster={live.heroImage} controls playsInline preload="none" aria-label={text(locale, live.trailer.label)} />
+            ) : (
+              <>
+                <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
+                <p className="vs-wl-trailer-soon">
+                  <span className="vs-wl-play" aria-hidden><Play size={20} /></span>
+                  <span><b>{text(locale, live.trailer.label)}</b><small>{text(locale, live.trailer.pending)}</small></span>
+                </p>
+              </>
+            )}
             <span>{live.heroImageLabel}</span>
           </div>
+        </section>
+
+        <section className="vs-wl-why">
+          <blockquote className="vs-wl-quote">{text(locale, live.heroQuote)}</blockquote>
+          <h2>{text(locale, live.heroTitle)}</h2>
+          <p className="vs-wl-lede">{text(locale, live.heroLede)}</p>
+          <p className="vs-wl-custom">{text(locale, live.heroCustom)}</p>
         </section>
 
         <section className="vs-wl-doors" id="doors">
@@ -71,23 +89,37 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           <div className="vs-wl-door-grid">
             {kinds.map(kind => {
               const card = live.doorCards[kind];
+              const linked = kind === 'leader' ? leader : kind === 'development' ? development : undefined;
               return (
-                <Link className={`vs-wl-door door-${kind}`} href={doorHref(kind)} key={kind}>
+                <article className={`vs-wl-door door-${kind}`} key={kind}>
                   <Image src={card.image} alt="" width={1200} height={1200} sizes="(max-width: 860px) 100vw, 33vw" />
-                  <span className="vs-wl-door-body">
+                  <div className="vs-wl-door-body">
                     <span className="vs-wl-code">{card.code}</span>
-                    <strong>{text(locale, section.doors[kind].name)}</strong>
+                    <span className="vs-wl-door-teacher">{text(locale, live.cardTeacher)}</span>
+                    <h3><Link href={doorHref(kind)}>{text(locale, section.doors[kind].name)}</Link></h3>
                     <span className="vs-wl-door-line">{text(locale, section.doors[kind].line)}</span>
-                    <span className="vs-wl-door-open">{text(locale, live.openDoor)}<ArrowRight size={16} aria-hidden /></span>
-                  </span>
-                </Link>
+                    {linked ? (
+                      <div className="vs-wl-door-leaves">
+                        <b>{text(locale, live.leavesLabel)}</b>
+                        <ul>{linked.leavesWith.map(item => <li key={item.en}><Check size={16} aria-hidden />{text(locale, item)}</li>)}</ul>
+                      </div>
+                    ) : (
+                      <div className="vs-wl-door-leaves">
+                        <b>{text(locale, live.institutionPick)}</b>
+                        <ul className="vs-wl-door-chips">{institutionWorkshops.map(item => <li key={item.slug}><Link href={`${prefix}/masterclass/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link></li>)}</ul>
+                      </div>
+                    )}
+                    <span className="vs-wl-door-meta">{text(locale, live.cardMeta)}</span>
+                    {linked && <Link className="vs-wl-door-open" href={doorHref(kind)}>{text(locale, live.openDoor)}<ArrowRight size={16} aria-hidden /></Link>}
+                  </div>
+                </article>
               );
             })}
           </div>
           <nav className="vs-wl-inst-links" id="institutions" aria-label={text(locale, section.doors.institution.name)}>
             <span>{text(locale, section.doors.institution.name)}:</span>
             {institutionWorkshops.map(item => (
-              <Link key={item.slug} href={`${prefix}/workshops/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link>
+              <Link key={item.slug} href={`${prefix}/masterclass/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link>
             ))}
           </nav>
         </section>
@@ -155,12 +187,12 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
   ];
 
   return (
-    <Frame locale={locale} path={`/workshops/${slug}`}>
+    <Frame locale={locale} path={`/masterclass/${slug}`}>
       <article className="vs-ws-page">
         <nav className="vs-breadcrumb" aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}>
           <Link href={prefix || '/'}>{ar ? 'الرئيسية' : 'Home'}</Link>
           <span>/</span>
-          <Link href={`${prefix}/workshops`}>{text(locale, workshopSection.title)}</Link>
+          <Link href={`${prefix}/masterclass`}>{text(locale, workshopSection.title)}</Link>
           <span>/</span>
           <span>{text(locale, kindName)}</span>
         </nav>

@@ -3,8 +3,8 @@
   "section": "workshops",
   "slug": "rewinds",
   "title": {
-    "en": "Workshop notes & outcomes",
-    "ar": "سجلات الورش ومخرجاتها"
+    "en": "Masterclass notes and outcomes",
+    "ar": "سجلات الماستركلاس ومخرجاته"
   },
   "summary": {
     "en": "A place for the evidence created by completed sessions.",
@@ -18,8 +18,8 @@
         "ar": "قبل الجلسة الأولى"
       },
       "body": {
-        "en": "Nothing is published here yet: no workshop has been held, so there is no record to show. This page stays open so that the first record appears in a place that was waiting for it.",
-        "ar": "لا يوجد هنا شيء بعد: لم تنعقد ورشة، فلا سجل يُعرض. تبقى هذه الصفحة قائمة ليظهر أول سجل في مكان كان ينتظره."
+        "en": "Nothing is published here yet: no masterclass has been held, so there is no record to show. This page stays open so that the first record appears in a place that was waiting for it.",
+        "ar": "لا يوجد هنا شيء بعد: لم ينعقد ماستركلاس، فلا سجل يُعرض. تبقى هذه الصفحة قائمة ليظهر أول سجل في مكان كان ينتظره."
       }
     },
     {
@@ -45,10 +45,10 @@
   ],
   "related": [
     {
-      "href": "/workshops"
+      "href": "/masterclass"
     },
     {
-      "href": "/workshops/how-workshops-work"
+      "href": "/masterclass/how-workshops-work"
     }
   ]
 }

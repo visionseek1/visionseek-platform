@@ -24,8 +24,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     return {
       title: `${workshop.outcome.en} | VisionSeek`,
       description: workshop.summary.en,
-      alternates: {canonical: `/workshops/${slug}`, languages: {en: `/workshops/${slug}`, ar: `/ar/workshops/${slug}`}},
-      openGraph: {title: `${workshop.outcome.en} | VisionSeek`, description: workshop.summary.en, url: `/workshops/${slug}`},
+      alternates: {canonical: `/masterclass/${slug}`, languages: {en: `/masterclass/${slug}`, ar: `/ar/masterclass/${slug}`}},
+      openGraph: {title: `${workshop.outcome.en} | VisionSeek`, description: workshop.summary.en, url: `/masterclass/${slug}`},
     };
   }
   const entry = getEntry('workshops', slug);
@@ -33,8 +33,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   return {
     title: `${entry.title.en} | VisionSeek`,
     description: entry.summary.en,
-    alternates: {canonical: `/workshops/${slug}`, languages: {en: `/workshops/${slug}`, ar: `/ar/workshops/${slug}`}},
-    openGraph: {title: `${entry.title.en} | VisionSeek`, description: entry.summary.en, url: `/workshops/${slug}`},
+    alternates: {canonical: `/masterclass/${slug}`, languages: {en: `/masterclass/${slug}`, ar: `/ar/masterclass/${slug}`}},
+    openGraph: {title: `${entry.title.en} | VisionSeek`, description: entry.summary.en, url: `/masterclass/${slug}`},
   };
 }
 

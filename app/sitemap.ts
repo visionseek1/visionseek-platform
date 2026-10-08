@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import {entries as institutionEntries, sections, entryPath} from "@/lib/institution";
+import {entries as institutionEntries, sections, entryPath, sectionPath} from "@/lib/institution";
 import {workshops} from "@/lib/institution/workshops";
 import {characters,characterPath} from '@/lib/leaders/characters';
 import {showPublicCharacters} from '@/lib/leaders/presentation';
@@ -15,9 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology", "/reports/agent-governance", "/ar/reports/agent-governance"].map(path => ({path, priority: 0.7})),
     ...(showPublicCharacters?[...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
       {path:'/insights/characters',priority:0.7},{path:'/ar/insights/characters',priority:0.7}]:[]),
-    ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:`/${s.id}`,priority:0.8},{path:`/ar/${s.id}`,priority:0.8}]),
+    ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:sectionPath(s.id),priority:0.8},{path:`/ar${sectionPath(s.id)}`,priority:0.8}]),
     ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
-    ...workshops.flatMap(item=>[{path:`/workshops/${item.slug}`,priority:0.75},{path:`/ar/workshops/${item.slug}`,priority:0.75}]),
+    ...workshops.flatMap(item=>[{path:`/masterclass/${item.slug}`,priority:0.75},{path:`/ar/masterclass/${item.slug}`,priority:0.75}]),
     ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },

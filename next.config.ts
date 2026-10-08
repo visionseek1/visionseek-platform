@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
       ...['', '/ar'].flatMap(prefix => [
         {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
+        // «الورش» became «ماستركلاس» (9 Oct 2026): old links keep working.
+        {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
+        {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
       ]),
       {
         source: "/:path*",

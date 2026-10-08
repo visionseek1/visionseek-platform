@@ -40,21 +40,16 @@ collections:
                 widget: select
                 options:
                 # archive-options:start
-                  - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
-                  - {label: "الورش (القسم كله)  /workshops", value: "/workshops"}
+                  - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
+                  - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
                   - {label: "بيت القادة (القسم كله)  /insights", value: "/insights"}
                   - {label: "منهجنا  /method", value: "/method"}
-                  - {label: "البرامج ← برنامج HLO  /about/what-we-do", value: "/about/what-we-do"}
-                  - {label: "البرامج ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
-                  - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
-                  - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
-                  - {label: "البرامج ← كيف تعمل البرامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
                   - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
                   - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
                   - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
@@ -65,8 +60,13 @@ collections:
                   - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
                   - {label: "فرص البحث والتطوير ← دليل المشاركة  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
-                  - {label: "الورش ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /workshops/leader-seat", value: "/workshops/leader-seat"}
-                  - {label: "الورش ← المؤسسة والذكاء الاصطناعي  /workshops/develop-the-institution", value: "/workshops/develop-the-institution"}
+                  - {label: "ماستركلاس ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
+                  - {label: "ماستركلاس ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
+                  - {label: "البرامج ← برنامج HLO  /about/what-we-do", value: "/about/what-we-do"}
+                  - {label: "البرامج ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
+                  - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
+                  - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
+                  - {label: "البرامج ← كيف تعمل البرامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
                   - {label: "الأخبار ← الإعلام والاستفسارات  /news/media", value: "/news/media"}
                   - {label: "اعمل معنا ← ابنِ حلولك معنا  /start", value: "/start"}
                   - {label: "اعمل معنا ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
@@ -84,8 +84,8 @@ collections:
                   - {label: "البرامج ← تشغيل مرن للموارد  /programs/resource-resilience", value: "/programs/resource-resilience"}
                   - {label: "البرامج ← من الدليل العلمي إلى القدرة  /programs/science-to-capability", value: "/programs/science-to-capability"}
                   - {label: "البرامج ← توريد عابر للحدود تقوده الأدلة  /programs/trusted-sourcing", value: "/programs/trusted-sourcing"}
-                  - {label: "workshops ← كيف تعمل الورش الأسبوعية؟  /workshops/how-workshops-work", value: "/workshops/how-workshops-work"}
-                  - {label: "workshops ← سجلات الورش ومخرجاتها  /workshops/rewinds", value: "/workshops/rewinds"}
+                  - {label: "masterclass ← كيف يعمل الماستركلاس الأسبوعي؟  /masterclass/how-workshops-work", value: "/masterclass/how-workshops-work"}
+                  - {label: "masterclass ← سجلات الماستركلاس ومخرجاته  /masterclass/rewinds", value: "/masterclass/rewinds"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}
@@ -93,11 +93,11 @@ collections:
                   - {label: "الأخبار ← ما الذي ينبغي أن يثبته التحدي؟  /news/learning-from-challenges", value: "/news/learning-from-challenges"}
                   - {label: "الأخبار ← مدير البرنامج بوصفه بانيًا للقدرة  /news/program-manager-model", value: "/news/program-manager-model"}
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
-                  - {label: "الورش ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /workshops/airport-teams", value: "/workshops/airport-teams"}
-                  - {label: "الورش ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /workshops/company-teams", value: "/workshops/company-teams"}
-                  - {label: "الورش ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /workshops/hospital-administration", value: "/workshops/hospital-administration"}
-                  - {label: "الورش ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /workshops/police-citizen-service", value: "/workshops/police-citizen-service"}
-                  - {label: "الورش ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /workshops/university-teams", value: "/workshops/university-teams"}
+                  - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
+                  - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
+                  - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
+                  - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
+                  - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /insights/physical-ai", value: "/insights/physical-ai"}
@@ -117,7 +117,7 @@ collections:
               - {label: "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»", value: "home.explainer"}
               - {label: "الرئيسية ← الرسالة وما نقرأه", value: "home.vision"}
               - {label: "الرئيسية ← البرامج", value: "home.programs"}
-              - {label: "الرئيسية ← الورش والأخبار", value: "home.updates"}
+              - {label: "الرئيسية ← ماستركلاس والأخبار", value: "home.updates"}
               - {label: "الرئيسية ← المنهج", value: "home.method"}
               - {label: "الرئيسية ← المجتمعات", value: "home.communities"}
               - {label: "الرئيسية ← المجالات", value: "home.fields"}
@@ -1312,10 +1312,10 @@ collections:
           - {label: العربية, name: ar, widget: text}
 
   - name: workshops
-    label: الورش
-    description: "صفحات الورش. كل ورشة بحالتها الحقيقية؛ لا موعد ولا شريك قبل أن يُتفق عليه."
+    label: ماستركلاس
+    description: "صفحات الماستركلاس. كل ماستركلاس بحالته الحقيقية؛ لا موعد ولا شريك قبل أن يُتفق عليه."
     editor: {preview: false}
-    label_singular: ورشة
+    label_singular: ماستركلاس
     folder: content/workshops
     create: true
     extension: json
@@ -1323,20 +1323,20 @@ collections:
     slug: "{{fields.slug}}"
     identifier_field: slug
     summary: "{{outcome.ar}} — {{slug}}"
-    preview_path: "ar/workshops/{{slug}}"
+    preview_path: "ar/masterclass/{{slug}}"
     sortable_fields: [position, slug]
     fields:
       - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 10}
       - label: الرابط (slug)
         name: slug
         widget: string
-        hint: "جزء الرابط بعد /workshops/. لا تغيّره بعد النشر."
+        hint: "جزء الرابط بعد /masterclass/. لا تغيّره بعد النشر."
       - label: النوع
         name: kind
         widget: select
         options:
           - {label: قعدة القائد, value: leader}
-          - {label: ورش المؤسسات, value: institution}
+          - {label: ماستركلاس المؤسسات, value: institution}
           - {label: تطوير المؤسسة, value: development}
       - label: نوع المؤسسة
         name: institution
@@ -1499,15 +1499,15 @@ collections:
       - label: الحالة
         name: status
         widget: object
-        hint: "لا تغيّرها. الصيغة: قيد التصميم · لم تُعقد ورشة بعد"
+        hint: "لا تغيّرها. الصيغة: قيد التصميم · لم يُعقد ماستركلاس بعد"
         fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
 
   - name: workshops_section
-    label: صفحة قسم الورش
-    description: "رأس صفحة /workshops ونصوصها العامة."
-    preview_path: "ar/workshops"
+    label: صفحة قسم ماستركلاس
+    description: "رأس صفحة /masterclass ونصوصها العامة: اسم المدرّس، وفيديو المقدمة، والأبواب الثلاثة."
+    preview_path: "ar/masterclass"
     editor: {preview: false}
     files:
       - label: صفحة القسم
@@ -1581,7 +1581,7 @@ collections:
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
-              - label: ورش المؤسسات
+              - label: ماستركلاس المؤسسات
                 name: institution
                 widget: object
                 fields: *door
@@ -1618,6 +1618,36 @@ collections:
             hint: "أسماء الأبواب وسطورها في «الأبواب» فوق، والحالة في «الحالة»."
             fields:
               - {label: الرمز اللاتيني, name: kicker, widget: string}
+              - label: اسم المدرّس (العنوان الكبير)
+                name: instructor
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: ماذا يعلّم
+                name: teaches
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: فيديو المقدمة
+                name: trailer
+                widget: object
+                hint: "ارفع الفيديو (mp4) هنا فيظهر مكان الصورة في أعلى الصفحة. فارغ = غلاف «المقدمة قيد التصميم»."
+                fields:
+                  - {label: الفيديو, name: video, widget: file, required: false, default: ""}
+                  - label: نص الزر
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: النص قبل رفع الفيديو
+                    name: pending
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
               - label: اقتباس الغلاف
                 name: heroQuote
                 widget: object
@@ -1642,12 +1672,6 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: مع من
-                name: heroWith
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
               - {label: صورة الغلاف, name: heroImage, widget: image}
               - label: وصف الصورة
                 name: heroImageAlt
@@ -1692,13 +1716,37 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: سطر «كيف تحصل على ورشتك»
+              - label: سطر المدرّس فوق كل باب
+                name: cardTeacher
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان «ستخرج بـ»
+                name: leavesLabel
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: سطر الشكل والمدة تحت كل باب
+                name: cardMeta
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان «اختر مؤسستك»
+                name: institutionPick
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: سطر «كيف تطلب الماستركلاس»
                 name: howLabel
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: عنوان «كيف تحصل على ورشتك»
+              - label: عنوان «كيف تطلب الماستركلاس»
                 name: howTitle
                 widget: object
                 fields:

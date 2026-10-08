@@ -21,8 +21,8 @@
     "ar": "[تُحدَّد]"
   },
   "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "en": "In design · No masterclass has been held",
+    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "position": 1,
   "slug": "leader-seat",
@@ -110,12 +110,12 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
+        "en": "Has this masterclass been held?",
+        "ar": "هل عُقد هذا الماستركلاس؟"
       },
       "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
+        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
       }
     },
     {

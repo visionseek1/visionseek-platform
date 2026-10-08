@@ -3,8 +3,8 @@
   "section": "workshops",
   "slug": "how-workshops-work",
   "title": {
-    "en": "How the weekly workshops work",
-    "ar": "كيف تعمل الورش الأسبوعية؟"
+    "en": "How the weekly masterclass works",
+    "ar": "كيف يعمل الماستركلاس الأسبوعي؟"
   },
   "summary": {
     "en": "A recurring working rhythm that produces evidence and decisions.",
@@ -18,8 +18,8 @@
         "ar": "دورة من ستة أسابيع"
       },
       "body": {
-        "en": "The proposed cadence is one 90-minute workshop each week: frame the capability, map the limit, assemble the best available, design proof, plan operation, and review learning. Dates, hosts and delivery format are announced only after confirmation.",
-        "ar": "الإيقاع المقترح ورشة واحدة مدتها 90 دقيقة كل أسبوع: صياغة القدرة، ورسم الحد، وتجميع أفضل المتاح، وتصميم الإثبات، والتخطيط للتشغيل، ثم مراجعة التعلم. تُعلن المواعيد والميسّر وطريقة الانعقاد بعد التأكيد."
+        "en": "The proposed cadence is one 90-minute masterclass session each week: frame the capability, map the limit, assemble the best available, design proof, plan operation, and review learning. Dates, hosts and delivery format are announced only after confirmation.",
+        "ar": "الإيقاع المقترح جلسة ماستركلاس واحدة مدتها 90 دقيقة كل أسبوع: صياغة القدرة، ورسم الحد، وتجميع أفضل المتاح، وتصميم الإثبات، والتخطيط للتشغيل، ثم مراجعة التعلم. تُعلن المواعيد والميسّر وطريقة الانعقاد بعد التأكيد."
       }
     },
     {
@@ -59,10 +59,10 @@
   ],
   "related": [
     {
-      "href": "/workshops"
+      "href": "/masterclass"
     },
     {
-      "href": "/workshops/rewinds"
+      "href": "/masterclass/rewinds"
     }
   ]
 }

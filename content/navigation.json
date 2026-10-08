@@ -75,27 +75,27 @@
       ]
     },
     {
-      "path": "/workshops",
-      "en": "Workshops",
-      "ar": "الورش",
+      "path": "/masterclass",
+      "en": "Masterclass",
+      "ar": "ماستركلاس",
       "children": [
         {
-          "href": "/workshops",
+          "href": "/masterclass",
           "en": "The three doors",
           "ar": "الأبواب الثلاثة"
         },
         {
-          "href": "/workshops/leader-seat",
+          "href": "/masterclass/leader-seat",
           "en": "Management and leadership in the age of AI",
           "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
         },
         {
-          "href": "/workshops#institutions",
+          "href": "/masterclass#institutions",
           "en": "Working with AI",
           "ar": "العمل مع الذكاء الاصطناعي"
         },
         {
-          "href": "/workshops/develop-the-institution",
+          "href": "/masterclass/develop-the-institution",
           "en": "The institution and AI",
           "ar": "المؤسسة والذكاء الاصطناعي"
         }

@@ -3,7 +3,7 @@
     {"id": "home.explainer", "page": "/", "label": "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»"},
     {"id": "home.vision", "page": "/", "label": "الرئيسية ← الرسالة وما نقرأه"},
     {"id": "home.programs", "page": "/", "label": "الرئيسية ← البرامج"},
-    {"id": "home.updates", "page": "/", "label": "الرئيسية ← الورش والأخبار"},
+    {"id": "home.updates", "page": "/", "label": "الرئيسية ← ماستركلاس والأخبار"},
     {"id": "home.method", "page": "/", "label": "الرئيسية ← المنهج"},
     {"id": "home.communities", "page": "/", "label": "الرئيسية ← المجتمعات"},
     {"id": "home.fields", "page": "/", "label": "الرئيسية ← المجالات"},

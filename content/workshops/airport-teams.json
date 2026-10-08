@@ -32,12 +32,12 @@
     }
   ],
   "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No masterclass has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الماستركلاس، من عمل المؤسسة نفسه. ليست نتائج. لم يُعقد ماستركلاس بعد."
   },
   "boundary": {
-    "en": "Passenger information and internal coordination only. Security screening, identity systems, and biometrics are out of this workshop.",
-    "ar": "إعلام المسافر والتنسيق الداخلي فقط. التفتيش الأمني وأنظمة الهوية والبصمات خارج هذه الورشة."
+    "en": "Passenger information and internal coordination only. Security screening, identity systems, and biometrics are out of this masterclass.",
+    "ar": "إعلام المسافر والتنسيق الداخلي فقط. التفتيش الأمني وأنظمة الهوية والبصمات خارج هذا الماستركلاس."
   },
   "format": {
     "en": "[To be set]",
@@ -52,8 +52,8 @@
     "ar": "[تُحدَّد]"
   },
   "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "en": "In design · No masterclass has been held",
+    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "position": 4,
   "slug": "airport-teams",
@@ -84,8 +84,8 @@
     "ar": "حين تتحرك رحلة، يُعاد شرحها في أكثر من غرفة، ويسمع المسافر جملة مختلفة عند كل مكتب."
   },
   "whyEvidence": {
-    "en": "IATA's Global Passenger Survey, released on 5 November 2025, found that 78% of passengers want a smartphone that can book, pay, and navigate airport processes. The public already expects the airport's words to travel with them. This workshop is about those words and the note behind them. It is not a biometrics program and not a security program.",
-    "ar": "في استبيان المسافرين العالمي لاتحاد النقل الجوي (IATA)، الصادر في 5 نوفمبر 2025، يريد 78% من المسافرين هاتفًا ينجز به الحجز والدفع والتنقل داخل إجراءات المطار. الجمهور ينتظر أن تمشي كلمة المطار معه. هذه الورشة عن تلك الكلمة وعن المذكرة التي وراءها. وليست برنامج بصمات ولا برنامج أمن."
+    "en": "IATA's Global Passenger Survey, released on 5 November 2025, found that 78% of passengers want a smartphone that can book, pay, and navigate airport processes. The public already expects the airport's words to travel with them. This masterclass is about those words and the note behind them. It is not a biometrics program and not a security program.",
+    "ar": "في استبيان المسافرين العالمي لاتحاد النقل الجوي (IATA)، الصادر في 5 نوفمبر 2025، يريد 78% من المسافرين هاتفًا ينجز به الحجز والدفع والتنقل داخل إجراءات المطار. الجمهور ينتظر أن تمشي كلمة المطار معه. هذا الماستركلاس عن تلك الكلمة وعن المذكرة التي وراءها. وليست برنامج بصمات ولا برنامج أمن."
   },
   "source": {
     "title": "IATA · Global Passenger Survey 2025 · 5 November 2025",
@@ -142,18 +142,18 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
+        "en": "Has this masterclass been held?",
+        "ar": "هل عُقد هذا الماستركلاس؟"
       },
       "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
+        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
       }
     },
     {
       "q": {
         "en": "Is this about airport security or biometrics?",
-        "ar": "هل هذه الورشة عن أمن المطار أو البصمات؟"
+        "ar": "هل هذا الماستركلاس عن أمن المطار أو البصمات؟"
       },
       "a": {
         "en": "No. The session does not design screening, identity, or biometrics. It works on what passengers are told, and on the note behind that message.",

@@ -21,8 +21,8 @@
     "ar": "[تُحدَّد]"
   },
   "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "en": "In design · No masterclass has been held",
+    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "position": 7,
   "slug": "develop-the-institution",
@@ -52,8 +52,8 @@
     "ar": "أكثر الجهد يُعامل كشراء تقنية. ثم تكتشف المؤسسة أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
   },
   "whyEvidence": {
-    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards. These are BCG's figures, not results of a VisionSeek workshop.",
-    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين. هذه أرقام BCG، ليست نتائج ورشة لـVisionSeek."
+    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards. These are BCG's figures, not results of a VisionSeek masterclass.",
+    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين. هذه أرقام BCG، ليست نتائج ماستركلاس لـVisionSeek."
   },
   "source": {
     "title": "BCG · AI Transformation Is a Workforce Transformation · 4 February 2026",
@@ -110,12 +110,12 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُعقدت هذه الورشة؟"
+        "en": "Has this masterclass been held?",
+        "ar": "هل عُقد هذا الماستركلاس؟"
       },
       "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
+        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
       }
     },
     {
@@ -134,8 +134,8 @@
         "ar": "هل نسبة الـ70% نتيجتكم؟"
       },
       "a": {
-        "en": "No. It is BCG's, from the article linked on this page. We have held no workshop, so we have no result of our own to show.",
-        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ورشة، فلا نتيجة لنا نعرضها."
+        "en": "No. It is BCG's, from the article linked on this page. We have held no masterclass, so we have no result of our own to show.",
+        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ماستركلاس، فلا نتيجة لنا نعرضها."
       }
     }
   ]

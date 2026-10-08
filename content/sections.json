@@ -216,39 +216,39 @@
     {
       "id": "workshops",
       "title": {
-        "en": "Workshops",
-        "ar": "الورش"
+        "en": "Masterclass",
+        "ar": "ماستركلاس"
       },
       "eyebrow": {
         "en": "THREE DOORS. A RESULT, NOT A COURSE NAME.",
         "ar": "ثلاثة أبواب. نتيجة، لا اسم دورة."
       },
       "intro": {
-        "en": "No workshop has been held. The doors name who the session is for and what the person leaves able to do. Format, duration and group size are not set.",
-        "ar": "لم تُعقد ورشة بعد. الأبواب تسمّي لمن الجلسة، وبماذا يخرج منها. الشكل والمدة والعدد لم تُحدَّد."
+        "en": "No masterclass has been held. The doors name who the session is for and what the person leaves able to do. Format, duration and group size are not set.",
+        "ar": "لم يُعقد ماستركلاس بعد. الأبواب تسمّي لمن الجلسة، وبماذا يخرج منها. الشكل والمدة والعدد لم تُحدَّد."
       },
       "image": "industry",
       "notice": {
-        "en": "In design. No workshop has been held.",
-        "ar": "قيد التصميم. لم تُعقد ورشة بعد."
+        "en": "In design. No masterclass has been held.",
+        "ar": "قيد التصميم. لم يُعقد ماستركلاس بعد."
       },
       "links": [
         {
-          "href": "/workshops/leader-seat",
+          "href": "/masterclass/leader-seat",
           "label": {
             "en": "Management and leadership in the age of AI",
             "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
           }
         },
         {
-          "href": "/workshops#institutions",
+          "href": "/masterclass#institutions",
           "label": {
             "en": "Working with AI",
             "ar": "العمل مع الذكاء الاصطناعي"
           }
         },
         {
-          "href": "/workshops/develop-the-institution",
+          "href": "/masterclass/develop-the-institution",
           "label": {
             "en": "The institution and AI",
             "ar": "المؤسسة والذكاء الاصطناعي"

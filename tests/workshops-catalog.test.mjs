@@ -9,9 +9,9 @@ const workshops = files.map(name => JSON.parse(readFileSync(join(dir, name), 'ut
 const section = JSON.parse(readFileSync(join(process.cwd(), 'content/workshop-section.json'), 'utf8'));
 
 const unset = {en: '[To be set]', ar: '[تُحدَّد]'};
-const status = {en: 'In design · No workshop has been held', ar: 'قيد التصميم · لم تُعقد ورشة بعد'};
+const status = {en: 'In design · No masterclass has been held', ar: 'قيد التصميم · لم يُعقد ماستركلاس بعد'};
 
-test('seven designed workshops, none of them held', () => {
+test('seven designed masterclasses, none of them held', () => {
   assert.equal(workshops.length, 7);
   assert.deepEqual(workshops.map(item => item.slug).sort(), [
     'airport-teams',
@@ -58,11 +58,23 @@ test('the live section page is short: hero, three doors, founder, closing', () =
   assert.equal(live.closingLines.length, 3);
   assert.match(live.founderStatement.ar, /لبلادنا العربية/);
   assert.equal(live.howSteps.length, 3);
-  assert.match(live.ctaPrimary.ar, /ورشة خاصة مع د\. أحمد عبدالعليم/);
+  assert.match(live.ctaPrimary.ar, /ماستركلاس خاصًا مع د\. أحمد عبدالعليم/);
   assert.equal(section.doors.leader.name.ar, 'الإدارة والقيادة في عصر الذكاء الاصطناعي');
   assert.equal(section.doors.institution.name.ar, 'العمل مع الذكاء الاصطناعي');
   assert.equal(section.doors.development.name.ar, 'المؤسسة والذكاء الاصطناعي');
   for (const gone of ['ideaLines', 'methodChain', 'institutionsLines', 'selfCheck', 'founderQuestions']) assert.equal(gone in live, false, gone);
   const joined = JSON.stringify(live);
   for (const word of ['شهادة', 'شركاؤنا', 'عملاؤنا', '%', 'certified', 'قعدة']) assert.equal(joined.includes(word), false, word);
+});
+
+test('masterclass: the teacher leads, the introduction video has a slot, and the old wording is gone', () => {
+  const live = section.live;
+  assert.equal(live.instructor.ar, 'د. أحمد عبدالعليم');
+  assert.equal(live.instructor.en, 'Dr. Ahmed Abdelalim');
+  for (const key of ['teaches', 'cardTeacher', 'leavesLabel', 'cardMeta', 'institutionPick']) assert.ok(live[key].ar && live[key].en, key);
+  assert.equal(typeof live.trailer.video, 'string');
+  assert.ok(live.trailer.label.ar && live.trailer.pending.ar);
+  assert.equal('heroWith' in live, false);
+  assert.equal(section.title.ar, 'ماستركلاس');
+  for (const item of [section, ...workshops]) assert.equal(/ورشة|ورش |الورش|[Ww]orkshop/.test(JSON.stringify(item)), false, item.slug ?? 'section');
 });
