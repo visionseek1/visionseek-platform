@@ -78,12 +78,63 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about']) {
+  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {
       if (path.endsWith('.json')) assert.ok(readFileSync(join(root, path)), path);
       else assert.ok(readdirSync(join(root, path)).some(n => n.endsWith('.json')), path);
+    }
+  }
+});
+
+test('method.json keeps the nine steps, six communities and eight field cards with their ids', () => {
+  const method = read('method.json');
+  assert.deepEqual(method.steps.map(s => s.id), ['define', 'limit', 'path', 'people', 'highest-level-one', 'architect', 'prove', 'operate', 'evolve']);
+  assert.equal(method.communities.length, 6);
+  assert.deepEqual(method.fields.map(f => f.id), ['space', 'drones', 'cities', 'science', 'energy', 'robots', 'agriculture', 'chips']);
+  for (const field of method.fields) assert.ok(readFileSync(join(root, 'public', `field-${field.image}.jpg`)), field.id);
+  for (const step of method.steps) for (const key of ['en', 'ar', 'questionEn', 'questionAr', 'textEn', 'textAr']) assert.equal(typeof step[key], 'string', `${step.id}.${key}`);
+});
+
+test('navigation.json keeps the seven header sections and site-relative paths', () => {
+  const nav = read('navigation.json');
+  assert.deepEqual(nav.sections.map(s => s.path), ['/programs', '/projects', '/opportunities', '/workshops', '/news', '/work-with-us', '/about']);
+  for (const section of [...nav.sections, nav.reports]) {
+    assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);
+    assert.ok(section.children.length >= 2, section.path);
+    for (const link of section.children) assert.ok(link.href.startsWith('/') && !link.href.startsWith('/ar') && link.en && link.ar, `${section.path} ${link.href}`);
+  }
+});
+
+test('legal.json carries both documents with headed sections', () => {
+  const legal = read('legal.json');
+  assert.ok(isText(legal.effectiveDate));
+  for (const kind of ['privacy', 'terms']) {
+    assert.ok(isText(legal[kind].title) && isText(legal[kind].lead), kind);
+    assert.ok(legal[kind].sections.length >= 5, kind);
+    for (const section of legal[kind].sections) {
+      assert.ok(isText(section.heading), kind);
+      assert.ok(section.paragraphs.length + section.bullets.length >= 1, `${kind}: ${section.heading.en}`);
+    }
+  }
+});
+
+test('project concepts resolve to a real sector and track, with public dossiers only', () => {
+  const catalog = read('projects/catalog.json');
+  const concepts = readDir('projects/concepts');
+  assert.equal(catalog.sectors.length, 8);
+  assert.ok(isText(catalog.conceptNotice));
+  for (const key of ['concept', 'active', 'completed']) assert.ok(isText(catalog.status[key]), key);
+  for (const track of catalog.tracks) assert.ok(catalog.sectors.some(s => s.slug === track.sector), track.slug);
+  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P07', 'VS-P08']);
+  for (const project of concepts) {
+    assert.ok(catalog.tracks.some(t => t.slug === project.track && t.sector === project.sector), project.id);
+    assert.ok(['concept', 'active', 'completed'].includes(project.status), project.id);
+    for (const key of ['title', 'summary', 'ambition', 'idea', 'beneficiary']) assert.ok(isText(project[key]), `${project.id}.${key}`);
+    if (project.file) {
+      for (const update of project.file.updates) assert.ok(['public', 'draft'].includes(update.visibility), `${project.id} ${update.id}`);
+      for (const milestone of project.file.milestones) assert.ok(['current', 'planned', 'completed'].includes(milestone.state), `${project.id} ${milestone.id}`);
     }
   }
 });

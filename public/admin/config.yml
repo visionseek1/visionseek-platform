@@ -1219,3 +1219,456 @@ collections:
         - label: السطر الأخير
           name: line
           widget: string
+
+  - name: method
+    label: المنهج والمجتمعات والمجالات
+    description: "خطوات المنهج التسع في صفحة «منهجنا»، والمجتمعات الست وبطاقات المجالات الثمانية في الرئيسية. لا تغيّر المعرّفات (id) لأن الروابط تعتمد عليها."
+    files:
+      - label: المنهج والمجتمعات والمجالات
+        name: method
+        file: content/method.json
+        fields:
+          - label: خطوات المنهج
+            name: steps
+            widget: list
+            summary: "{{fields.ar}}"
+            fields:
+              - {label: المعرّف (لا يتغيّر), name: id, widget: string}
+              - {label: العنوان English, name: en, widget: string}
+              - {label: العنوان بالعربية, name: ar, widget: string}
+              - {label: السؤال English, name: questionEn, widget: string}
+              - {label: السؤال بالعربية, name: questionAr, widget: string}
+              - {label: النص English, name: textEn, widget: text}
+              - {label: النص بالعربية, name: textAr, widget: text}
+              - {label: المخرج English, name: outputEn, widget: string}
+              - {label: المخرج بالعربية, name: outputAr, widget: string}
+          - label: المجتمعات
+            name: communities
+            widget: list
+            summary: "{{fields.ar}}"
+            fields:
+              - {label: المعرّف (لا يتغيّر), name: id, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - {label: السطر English, name: textEn, widget: string}
+              - {label: السطر بالعربية, name: textAr, widget: string}
+              - {label: التفصيل English, name: detailEn, widget: text}
+              - {label: التفصيل بالعربية, name: detailAr, widget: text}
+          - label: بطاقات المجالات (الرئيسية)
+            name: fields
+            widget: list
+            summary: "{{fields.ar}}"
+            hint: "الصورة مفتاح من public/field-*.jpg مثل cities أو energy."
+            fields:
+              - {label: المعرّف (رابط القسم في صفحة المشاريع), name: id, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - {label: مفتاح الصورة, name: image, widget: string}
+
+  - name: navigation
+    label: القائمة والتذييل
+    description: "أقسام القائمة العلوية وروابطها الفرعية، كما تظهر في القائمة وخريطة التذييل. المسارات بلا بادئة اللغة (/ar تُضاف تلقائيًا). لا تضع رابطًا لصفحة غير موجودة."
+    files:
+      - label: القائمة
+        name: navigation
+        file: content/navigation.json
+        fields:
+          - label: الأقسام
+            name: sections
+            widget: list
+            summary: "{{fields.ar}} — {{fields.path}}"
+            fields:
+              - {label: مسار القسم, name: path, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - label: الروابط الفرعية
+                name: children
+                widget: list
+                summary: "{{fields.ar}} — {{fields.href}}"
+                fields:
+                  - {label: المسار (يبدأ بـ /), name: href, widget: string}
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: التقارير (في القائمة العلوية فقط)
+            name: reports
+            widget: object
+            fields:
+              - {label: مسار القسم, name: path, widget: string}
+              - {label: الاسم English, name: en, widget: string}
+              - {label: الاسم بالعربية, name: ar, widget: string}
+              - label: الروابط الفرعية
+                name: children
+                widget: list
+                summary: "{{fields.ar}} — {{fields.href}}"
+                fields:
+                  - {label: المسار (يبدأ بـ /), name: href, widget: string}
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+
+  - name: legal
+    label: الخصوصية والشروط
+    description: "نص صفحتي الخصوصية والشروط باللغتين، وتاريخ السريان."
+    files:
+      - label: الخصوصية والشروط
+        name: legal
+        file: content/legal.json
+        fields:
+          - label: تاريخ السريان
+            name: effectiveDate
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الخصوصية
+            name: privacy
+            widget: object
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر الأول
+                name: lead
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الفقرات
+                name: sections
+                widget: list
+                summary: "{{fields.heading.ar}}"
+                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط."
+                fields:
+                  - label: العنوان الفرعي
+                    name: heading
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الفقرات
+                    name: paragraphs
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: النقاط
+                    name: bullets
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+          - label: الشروط
+            name: terms
+            widget: object
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر الأول
+                name: lead
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الفقرات
+                name: sections
+                widget: list
+                summary: "{{fields.heading.ar}}"
+                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط."
+                fields:
+                  - label: العنوان الفرعي
+                    name: heading
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الفقرات
+                    name: paragraphs
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: النقاط
+                    name: bullets
+                    widget: list
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+
+  - name: projects_catalog
+    label: "المشاريع: المجالات والمسارات"
+    description: "المجالات الثمانية ومسارات العمل داخلها، وتنبيه «تصوّرات مقترحة»، وأسماء الحالات. المعرّفات (slug) تبني الروابط؛ لا تغيّرها بعد النشر."
+    files:
+      - label: المجالات والمسارات
+        name: catalog
+        file: content/projects/catalog.json
+        fields:
+          - label: تنبيه التصوّرات
+            name: conceptNotice
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: أسماء الحالات
+            name: status
+            widget: object
+            fields:
+              - label: مفهوم
+                name: concept
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: قيد التنفيذ
+                name: active
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: مكتمل
+                name: completed
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: المجالات
+            name: sectors
+            widget: list
+            summary: "{{fields.title.ar}} — {{fields.slug}}"
+            fields:
+              - {label: المعرّف (slug), name: slug, widget: string}
+              - label: الاسم
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - {label: الأيقونة, name: icon, widget: select, options: [energy, chips, flight, defense, robotics, health, agriculture, cities]}
+              - {label: مفاتيح بطاقات الرئيسية المرتبطة, name: anchors, widget: list, hint: "مثل energy أو chips. افصل بفاصلة."}
+              - label: محاور التركيز
+                name: focus
+                widget: list
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: المسارات
+            name: tracks
+            widget: list
+            summary: "{{fields.title.ar}} — {{fields.sector}}/{{fields.slug}}"
+            fields:
+              - {label: المعرّف (slug), name: slug, widget: string}
+              - {label: المجال (slug المجال), name: sector, widget: string}
+              - label: الاسم
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+
+  - name: project_concepts
+    label: تصوّرات المشاريع
+    label_singular: تصوّر مشروع
+    description: "المشاريع العامة داخل المجالات (مثل VS-P07). كل تصوّر يبقى بحالته الحقيقية؛ لا عميل ولا دولة ولا تقنية مسلَّمة إلا باتفاق مكتوب."
+    folder: content/projects/concepts
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{id}} — {{title.ar}}"
+    preview_path: "ar/projects/{{sector}}/{{track}}/{{slug}}"
+    sortable_fields: [position, id]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - {label: الرمز, name: id, widget: string, hint: "مثل VS-P09."}
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط الأخير. لا تغيّره بعد النشر."}
+      - {label: المجال (slug المجال), name: sector, widget: string, hint: "من ملف المجالات والمسارات، مثل energy."}
+      - {label: المسار (slug المسار), name: track, widget: string, hint: "مثل lng."}
+      - {label: النوع, name: kind, widget: select, options: [supply, containment]}
+      - {label: الحالة, name: status, widget: select, options: [concept, active, completed], hint: "الحالة الحقيقية فقط."}
+      - {label: ترتيب الظهور في الواجهة (اختياري), name: featuredOrder, widget: number, value_type: int, required: false, hint: "اتركه فارغًا كي لا يظهر في شريط الواجهة."}
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الطموح
+        name: ambition
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الفكرة
+        name: idea
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: المستفيد
+        name: beneficiary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: النتائج المستهدفة
+        name: outcomes
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+            - label: العنوان
+              name: title
+              widget: object
+              fields:
+                - {label: English, name: en, widget: string}
+                - {label: العربية, name: ar, widget: string}
+            - label: النص
+              name: text
+              widget: object
+              fields:
+                - {label: English, name: en, widget: text}
+                - {label: العربية, name: ar, widget: text}
+      - label: ملف المشروع العام (اختياري)
+        name: file
+        widget: object
+        required: false
+        hint: "يظهر في صفحة المشروع كملف علني: المرحلة، التحدي، الدور، مسارات العمل، المخرجات، المعالم، التحديثات. لا تفاصيل عملاء ولا مهام داخلية."
+        fields:
+          - {label: الإصدار, name: version, widget: string}
+          - {label: آخر تحديث (YYYY-MM-DD), name: updatedAt, widget: string}
+          - label: المرحلة
+            name: stage
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: ملاحظة المرحلة
+            name: stageNote
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: التحدي
+            name: challenge
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: دور VisionSeek
+            name: role
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: شكل التعاون
+            name: engagement
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: مسارات العمل
+            name: workstreams
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+                - {label: المعرّف, name: id, widget: string}
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: النص
+                  name: body
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+          - label: المخرجات
+            name: deliverables
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: النص
+                  name: body
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+          - label: ما نحتاجه من الشركاء
+            name: partnerNeeds
+            widget: list
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: المعالم
+            name: milestones
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+                - {label: المعرّف, name: id, widget: string}
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: الوصف
+                  name: description
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+                - {label: الحالة, name: state, widget: select, options: [current, planned, completed]}
+                - {label: رابط الدليل (اختياري), name: evidenceUrl, widget: string, required: false}
+          - label: التحديثات
+            name: updates
+            widget: list
+            summary: "{{fields.date}} — {{fields.title.ar}}"
+            fields:
+                - {label: المعرّف, name: id, widget: string}
+                - {label: التاريخ (YYYY-MM-DD), name: date, widget: string}
+                - {label: النوع, name: kind, widget: select, options: [scope, research, partnership, test, delivery]}
+                - label: العنوان
+                  name: title
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: string}
+                    - {label: العربية, name: ar, widget: string}
+                - label: النص
+                  name: body
+                  widget: object
+                  fields:
+                    - {label: English, name: en, widget: text}
+                    - {label: العربية, name: ar, widget: text}
+                - {label: الظهور, name: visibility, widget: select, options: [public, draft], hint: "draft لا يظهر على الموقع."}
+                - {label: رابط الدليل (اختياري), name: evidenceUrl, widget: string, required: false}

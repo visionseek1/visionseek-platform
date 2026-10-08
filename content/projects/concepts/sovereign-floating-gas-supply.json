@@ -1,0 +1,245 @@
+{
+  "position": 1,
+  "id": "VS-P07",
+  "slug": "sovereign-floating-gas-supply",
+  "sector": "energy",
+  "track": "lng",
+  "kind": "supply",
+  "status": "concept",
+  "featuredOrder": 1,
+  "title": {
+    "ar": "سيادة الإمداد العائم",
+    "en": "Sovereign control of floating gas supply"
+  },
+  "summary": {
+    "ar": "تمكين مؤسسة مستوردة من تقرير كيف يصل الغاز من وحدات التغييز العائمة إلى الشبكة الوطنية: استئجار، أو تحويل ناقلة، أو امتلاك وتشغيل — قبل ذروة الطلب التالية.",
+    "en": "Enable an importing institution to decide how floating regasification supplies the national grid — charter, carrier conversion, or owned operation — before the next seasonal peak."
+  },
+  "ambition": {
+    "ar": "أن تملك المؤسسة قرار الإمداد.",
+    "en": "Put the supply decision in the institution’s hands."
+  },
+  "idea": {
+    "ar": "تصور يجمع خيارات الوحدات العائمة والموانئ والتشغيل حول احتياج المؤسسة إلى الغاز. الغرض أن تستطيع اختيار نموذج الإمداد الذي يخدم شبكتها وأولوياتها، مع مساحة أكبر للتحكم في التوقيت والتشغيل والاعتماد على الأطراف الأخرى.",
+    "en": "A concept bringing floating units, ports and operating options around an institution’s gas needs. The aim is to enable a supply model that serves its grid and priorities, with greater control over timing, operations and external dependencies."
+  },
+  "beneficiary": {
+    "ar": "مؤسسات استيراد الغاز ومشغلو الشبكات وجهات أمن الطاقة.",
+    "en": "Gas importing institutions, grid operators and energy security organizations."
+  },
+  "outcomes": [
+    {
+      "title": {
+        "ar": "اختيار نموذج الإمداد",
+        "en": "Choice of supply model"
+      },
+      "text": {
+        "ar": "المفاضلة بين استئجار وحدة، أو تحويل ناقلة، أو امتلاك قدرة التشغيل بحسب احتياج الشبكة.",
+        "en": "The ability to choose between chartering a unit, converting a carrier or owning the operating capability around grid needs."
+      }
+    },
+    {
+      "title": {
+        "ar": "تحكم في العلاقة مع الشبكة",
+        "en": "Control at the grid interface"
+      },
+      "text": {
+        "ar": "ربط قدرة الوحدة العائمة بأولوية الإمداد ومتطلبات الميناء والشبكة الوطنية.",
+        "en": "Align floating capacity with supply priorities, port requirements and the national grid."
+      }
+    },
+    {
+      "title": {
+        "ar": "استعداد قبل الذروة",
+        "en": "Readiness before peak demand"
+      },
+      "text": {
+        "ar": "توسيع خيارات المؤسسة قبل أن يفرض ضغط الموسم قرارها.",
+        "en": "Give the institution more options before seasonal pressure dictates its decision."
+      }
+    }
+  ],
+  "file": {
+    "version": "0.2",
+    "updatedAt": "2026-09-28",
+    "stage": {
+      "ar": "تحديد نطاق المشروع",
+      "en": "Project scoping"
+    },
+    "stageNote": {
+      "ar": "ملف أولي لمناقشة التكليف مع جهة مستوردة. لم يُعلن بعد عن عميل أو وحدة متعاقد عليها أو تشغيل ميداني.",
+      "en": "An initial project file for discussing a mandate with an importing institution. No client, contracted unit or field operation has been announced."
+    },
+    "challenge": {
+      "ar": "تحتاج المؤسسة إلى إمداد غاز يمكن الاعتماد عليه، وإلى قرار واضح بشأن الوحدة العائمة والميناء ونموذج التشغيل. المشروع يربط هذه القرارات في مسار واحد يناسب احتياج الشبكة وأولويات المؤسسة.",
+      "en": "An institution needs dependable gas supply and a coherent decision on the floating unit, port and operating model. This project connects those decisions around grid needs and institutional priorities."
+    },
+    "role": {
+      "ar": "نطوّر تصور المشروع مع المؤسسة، ونربط الاحتياج بالخيارات التقنية والتشغيلية، ونحدد الخبرات والشركاء اللازمين. يتوسع دور التنفيذ وفق النطاق المتفق عليه ومع الجهات المتخصصة في الوحدات والموانئ والشبكات.",
+      "en": "We develop the project proposition with the institution, connect its needs to technical and operating options, and identify the expertise and partners required. Delivery responsibilities expand under an agreed scope with specialists in floating units, ports and grids."
+    },
+    "engagement": {
+      "ar": "تكليف أول لتطوير نموذج الإمداد وملف القرار. يحدد مع المؤسسة البدائل التي تستحق التطوير، والمخرجات المطلوبة للانتقال إلى التفاوض أو التصميم التفصيلي أو التنفيذ مع الشركاء.",
+      "en": "An initial mandate to develop the supply model and decision package. With the institution, it identifies which alternatives merit development and what is needed to proceed to negotiation, detailed design or delivery with partners."
+    },
+    "workstreams": [
+      {
+        "id": "supply-model",
+        "title": {
+          "ar": "نموذج الإمداد",
+          "en": "Supply model"
+        },
+        "body": {
+          "ar": "دراسة بدائل الاستئجار وتحويل ناقلة والامتلاك والتشغيل في ضوء احتياج المؤسسة.",
+          "en": "Assess charter, carrier conversion and ownership/operation options against institutional needs."
+        }
+      },
+      {
+        "id": "grid-interface",
+        "title": {
+          "ar": "الوحدة والميناء والشبكة",
+          "en": "Unit, port and grid"
+        },
+        "body": {
+          "ar": "تحديد المتطلبات والواجهات التي ينبغي أن تعمل معًا ليصل الغاز إلى الشبكة.",
+          "en": "Define the requirements and interfaces that must work together to supply the grid."
+        }
+      },
+      {
+        "id": "delivery-partners",
+        "title": {
+          "ar": "منظومة الشركاء",
+          "en": "Delivery partners"
+        },
+        "body": {
+          "ar": "تحديد الأدوار المطلوبة من ملاك الوحدات والمشغلين والخبراء وشركاء الصناعة.",
+          "en": "Define the roles required from unit owners, operators, specialists and industry partners."
+        }
+      },
+      {
+        "id": "operating-readiness",
+        "title": {
+          "ar": "الجاهزية للتنفيذ",
+          "en": "Delivery readiness"
+        },
+        "body": {
+          "ar": "ربط كل بديل بما يحتاجه من بيانات وتحقق واتفاقات قبل الانتقال إلى التنفيذ.",
+          "en": "Connect each option to the data, validation and agreements needed before delivery."
+        }
+      }
+    ],
+    "deliverables": [
+      {
+        "title": {
+          "ar": "ملف قرار الإمداد",
+          "en": "Supply decision package"
+        },
+        "body": {
+          "ar": "مقارنة للبدائل وافتراضاتها ومتطلباتها والمفاضلات التي تحتاج المؤسسة إلى حسمها.",
+          "en": "An options comparison with assumptions, requirements and the trade-offs the institution must resolve."
+        }
+      },
+      {
+        "title": {
+          "ar": "تصور المنظومة المطلوبة",
+          "en": "System proposition"
+        },
+        "body": {
+          "ar": "خريطة أولية تربط الوحدة والميناء والشبكة والتشغيل وتوضح ما يحتاج دراسة متخصصة.",
+          "en": "An initial map of the unit, port, grid and operations, identifying where specialist studies are needed."
+        }
+      },
+      {
+        "title": {
+          "ar": "مسار تطوير قابل للتكليف",
+          "en": "A commissionable development scope"
+        },
+        "body": {
+          "ar": "مخرجات المرحلة التالية وأدوار الشركاء ومتطلبات الانتقال إليها، لتحديد نطاق اتفاق منفصل.",
+          "en": "Next-stage outputs, partner roles and prerequisites that can form a separately agreed delivery scope."
+        }
+      }
+    ],
+    "partnerNeeds": [
+      {
+        "ar": "مؤسسة مستوردة أو جهة مسؤولة عن أمن إمداد الغاز.",
+        "en": "An importing institution or organization responsible for gas supply security."
+      },
+      {
+        "ar": "ملاك وحدات عائمة ومشغلون وخبراء موانئ وشبكات.",
+        "en": "Floating-unit owners, operators, port specialists and grid experts."
+      },
+      {
+        "ar": "شركاء هندسة وتحويل وصيانة بحسب النموذج المختار.",
+        "en": "Engineering, conversion and maintenance partners appropriate to the chosen model."
+      }
+    ],
+    "milestones": [
+      {
+        "id": "define",
+        "state": "current",
+        "title": {
+          "ar": "تحديد النطاق المؤسسي",
+          "en": "Define the institutional scope"
+        },
+        "description": {
+          "ar": "تحديد الجهة واحتياج الإمداد وحدود التكليف والمخرجات المتفق عليها.",
+          "en": "Identify the institution, supply need, mandate boundaries and agreed deliverables."
+        }
+      },
+      {
+        "id": "compare",
+        "state": "planned",
+        "title": {
+          "ar": "تطوير الخيارات",
+          "en": "Develop the options"
+        },
+        "description": {
+          "ar": "تحليل البدائل ومتطلبات المنظومة بالبيانات المتاحة والمعتمدة.",
+          "en": "Develop alternatives and system requirements using available, agreed data."
+        }
+      },
+      {
+        "id": "align",
+        "state": "planned",
+        "title": {
+          "ar": "تكوين مسار التنفيذ",
+          "en": "Assemble the delivery path"
+        },
+        "description": {
+          "ar": "تحديد الشركاء ومسؤولياتهم والتحقق المطلوب قبل الالتزام.",
+          "en": "Identify partners, responsibilities and validation required before commitment."
+        }
+      },
+      {
+        "id": "deliver",
+        "state": "planned",
+        "title": {
+          "ar": "تنفيذ النطاق المتفق عليه",
+          "en": "Deliver the agreed scope"
+        },
+        "description": {
+          "ar": "الانتقال إلى التنفيذ والمتابعة بعد اتفاق المؤسسة والشركاء.",
+          "en": "Proceed to delivery and monitoring after agreement with the institution and partners."
+        }
+      }
+    ],
+    "updates": [
+      {
+        "id": "p07-scope-v02",
+        "date": "2026-09-28",
+        "kind": "scope",
+        "visibility": "public",
+        "title": {
+          "ar": "إصدار ملف المشروع ونطاق التعاون",
+          "en": "Project profile and engagement scope issued"
+        },
+        "body": {
+          "ar": "تحدد هذه النسخة غرض المشروع ومسارات العمل ومخرجات التكليف الأول وأدوار الشركاء المطلوبة. هذا تحديث لملف المشروع؛ لا يمثل بدء تشغيل أو تعاقدًا مع عميل.",
+          "en": "This revision defines the project purpose, workstreams, initial engagement outputs and required partner roles. It is a project-profile update, not an operating launch or a client contract."
+        },
+        "evidenceUrl": "#scope"
+      }
+    ]
+  }
+}

@@ -1,67 +1,44 @@
+import {readContentDir, readContentFile} from '@/lib/institution/content-files';
+
+/**
+ * Sectors, tracks and the public project concepts. Edited from /admin («المشاريع: المجالات والمسارات» و«تصوّرات المشاريع»).
+ * Server-side only (node:fs). Client components receive what they need as props; see components/institution/start-page.tsx.
+ */
 export type Locale = 'ar' | 'en';
 export type Text = Record<Locale, string>;
-const t = (ar: string, en: string): Text => ({ar, en});
-export type Sector = {slug:string; title:Text; intro:Text; icon:'energy'|'chips'|'flight'|'defense'|'robotics'|'health'|'agriculture'|'cities'; anchors:string[]; focus:Text[]};
+export type SectorIcon = 'energy'|'chips'|'flight'|'defense'|'robotics'|'health'|'agriculture'|'cities';
+export type Sector = {slug:string; title:Text; intro:Text; icon:SectorIcon; anchors:string[]; focus:Text[]};
 export type Track = {slug:string; sector:string; title:Text; intro:Text};
+export type ProjectKind = 'supply'|'containment';
+export type ProjectStatus = 'concept'|'active'|'completed';
+export type ProjectMilestone={id:string;title:Text;description:Text;state:'current'|'planned'|'completed';evidenceUrl?:string};
+export type ProjectUpdate={id:string;date:string;kind:'scope'|'research'|'partnership'|'test'|'delivery';title:Text;body:Text;visibility:'draft'|'public';evidenceUrl?:string};
+/** The public dossier of a concept. Internal tasks and client details never belong here. */
+export type ProjectFile={
+ version:string;updatedAt:string;stage:Text;stageNote:Text;challenge:Text;role:Text;engagement:Text;
+ workstreams:{id:string;title:Text;body:Text}[];
+ deliverables:{title:Text;body:Text}[];
+ partnerNeeds:Text[];milestones:ProjectMilestone[];updates:ProjectUpdate[];
+};
 export type Project = {
-  id:string; slug:string; sector:string; track:string; kind:'supply'|'containment';
-  status:'concept'|'active'|'completed'; featuredOrder?:number;
+  position?:number;
+  id:string; slug:string; sector:string; track:string; kind:ProjectKind;
+  status:ProjectStatus; featuredOrder?:number;
   title:Text; summary:Text; ambition:Text; idea:Text; beneficiary:Text;
   outcomes:{title:Text;text:Text}[];
+  file?:ProjectFile;
 };
-export const conceptNotice = t('تصوّرات مقترحة — لم تُطلق أو تُموّل كبرامج.', 'Proposed concepts — not launched or funded programs.');
+type Catalog = {conceptNotice:Text; status:Record<ProjectStatus,Text>; sectors:Sector[]; tracks:Track[]};
 
-export const sectors:Sector[] = [
-  {slug:'energy',title:t('الطاقة والمناخ','Energy & Climate'),icon:'energy',anchors:['energy'],intro:t('حلول تمنح المؤسسات تحكمًا أكبر في إمدادات الطاقة والبنية التي تعتمد عليها.', 'Solutions that give institutions greater control over energy supply and the infrastructure behind it.'),focus:[t('الغاز المسال','Liquefied natural gas'),t('منظومات الطاقة','Energy systems'),t('تقنيات المناخ','Climate technologies')]},
-  {slug:'semiconductors',title:t('الرقائق وأشباه الموصلات','Chips & Semiconductors'),icon:'chips',anchors:['chips'],intro:t('من تصميم الشريحة إلى الوصول إلى التصنيع: أين تستطيع المؤسسة أن تمتلك دورًا مؤثرًا في سلسلة القيمة؟', 'From chip design to manufacturing access: where can an institution build a meaningful position in the value chain?'),focus:[t('تصميم الرقائق','Chip design'),t('التغليف والمواد','Packaging & materials'),t('سلاسل التوريد','Supply chains')]},
-  {slug:'drones-aviation',title:t('الدرونز والطيران','Drones & Aviation'),icon:'flight',anchors:['drones','space'],intro:t('أنظمة جوية تربط الاستقلالية بمهام واضحة في الفحص والنقل والخدمات.', 'Aerial systems connecting autonomy to defined inspection, transport and service missions.'),focus:[t('الدرونز','Uncrewed aircraft'),t('الطيران والفضاء','Aviation & aerospace'),t('الخدمات الجوية','Aerial services')]},
-  {slug:'defense',title:t('الدفاع والأمن','Defense & Security'),icon:'defense',anchors:['defense'],intro:t('حماية البنية الحيوية ورفع الوعي بالموقف وربط المعلومات بالقرار.', 'Protecting critical infrastructure, improving situational awareness and connecting information to decisions.'),focus:[t('حماية البنية الحيوية','Infrastructure protection'),t('الوعي بالموقف','Situational awareness'),t('مرونة المؤسسات','Institutional resilience')]},
-  {slug:'robotics',title:t('الروبوتات والصناعة','Robotics & Industry'),icon:'robotics',anchors:['robots'],intro:t('ربط الروبوتات والإدراك الآلي بمهام إنتاج وفحص يمكن تنفيذها في الواقع.', 'Connecting robotics and machine perception to real production and inspection tasks.'),focus:[t('الأنظمة الذاتية','Autonomous systems'),t('التصنيع','Manufacturing'),t('الفحص والصيانة','Inspection & maintenance')]},
-  {slug:'health',title:t('الطب والصحة','Medicine & Health'),icon:'health',anchors:['science'],intro:t('وصل البحث والتقنية باحتياجات الرعاية، من المعرفة الطبية إلى خدمات أفضل.', 'Connecting research and technology to care needs, from medical knowledge to better services.'),focus:[t('التقنيات الطبية','Medical technologies'),t('منظومات الرعاية','Care systems'),t('البحث التطبيقي','Applied research')]},
-  {slug:'agriculture',title:t('الزراعة والأمن الغذائي','Agriculture & Food Security'),icon:'agriculture',anchors:['agriculture'],intro:t('إنتاج أكثر مرونة، واستخدام أدق للموارد، وسلاسل غذاء أقرب إلى احتياجاتها.', 'More resilient production, better resource use and food systems connected to the needs they serve.'),focus:[t('الإنتاج الزراعي','Agricultural production'),t('المياه والموارد','Water & resources'),t('سلاسل الغذاء','Food supply chains')]},
-  {slug:'infrastructure',title:t('المدن والبنية التحتية','Cities & Infrastructure'),icon:'cities',anchors:['cities'],intro:t('ربط أصول المدن وبياناتها وخدماتها لتحسين قدرة المؤسسات على إدارتها.', 'Connecting city assets, data and services to improve institutions’ ability to manage them.'),focus:[t('المدن','Cities'),t('النقل','Transport'),t('البنية المترابطة','Connected infrastructure')]},
-];
-export const tracks:Track[] = [
-  {slug:'lng',sector:'energy',title:t('الغاز الطبيعي المسال','Liquefied Natural Gas'),intro:t('تحكم أكبر في الإمداد، وخيارات أوسع في التقنية التي يقوم عليها الأسطول.', 'Greater control over supply. More choice in the technology a fleet depends on.')},
-];
-
+const catalog = readContentFile<Catalog>('projects/catalog.json');
+export const conceptNotice:Text = catalog.conceptNotice;
+export const sectors:Sector[] = catalog.sectors;
+export const tracks:Track[] = catalog.tracks;
 // Founder-defined public concepts. No country mandate, client or delivered technology is asserted.
-export const projects:Project[] = [
-  {
-    id:'VS-P07',slug:'sovereign-floating-gas-supply',sector:'energy',track:'lng',kind:'supply',
-    status:'concept',featuredOrder:1,
-    title:t('سيادة الإمداد العائم','Sovereign control of floating gas supply'),
-    summary:t('تمكين مؤسسة مستوردة من تقرير كيف يصل الغاز من وحدات التغييز العائمة إلى الشبكة الوطنية: استئجار، أو تحويل ناقلة، أو امتلاك وتشغيل — قبل ذروة الطلب التالية.', 'Enable an importing institution to decide how floating regasification supplies the national grid — charter, carrier conversion, or owned operation — before the next seasonal peak.'),
-    ambition:t('أن تملك المؤسسة قرار الإمداد.', 'Put the supply decision in the institution’s hands.'),
-    idea:t('تصور يجمع خيارات الوحدات العائمة والموانئ والتشغيل حول احتياج المؤسسة إلى الغاز. الغرض أن تستطيع اختيار نموذج الإمداد الذي يخدم شبكتها وأولوياتها، مع مساحة أكبر للتحكم في التوقيت والتشغيل والاعتماد على الأطراف الأخرى.', 'A concept bringing floating units, ports and operating options around an institution’s gas needs. The aim is to enable a supply model that serves its grid and priorities, with greater control over timing, operations and external dependencies.'),
-    beneficiary:t('مؤسسات استيراد الغاز ومشغلو الشبكات وجهات أمن الطاقة.', 'Gas importing institutions, grid operators and energy security organizations.'),
-    outcomes:[
-      {title:t('اختيار نموذج الإمداد','Choice of supply model'),text:t('المفاضلة بين استئجار وحدة، أو تحويل ناقلة، أو امتلاك قدرة التشغيل بحسب احتياج الشبكة.', 'The ability to choose between chartering a unit, converting a carrier or owning the operating capability around grid needs.')},
-      {title:t('تحكم في العلاقة مع الشبكة','Control at the grid interface'),text:t('ربط قدرة الوحدة العائمة بأولوية الإمداد ومتطلبات الميناء والشبكة الوطنية.', 'Align floating capacity with supply priorities, port requirements and the national grid.')},
-      {title:t('استعداد قبل الذروة','Readiness before peak demand'),text:t('توسيع خيارات المؤسسة قبل أن يفرض ضغط الموسم قرارها.', 'Give the institution more options before seasonal pressure dictates its decision.')},
-    ],
-  },
-  {
-    id:'VS-P08',slug:'second-lng-containment-standard',sector:'energy',track:'lng',kind:'containment',
-    status:'concept',featuredOrder:2,
-    title:t('معيار ثانٍ لاحتواء الغاز المسال','A second standard for LNG containment'),
-    summary:t('تمكين مالك أسطول من التفاوض على تصميم خزانات الغاز المسال على مستوى الأسطول: ترخيص شامل، أو إثبات معيار بديل على أول ناقلة كبيرة، بدلًا من ترخيص منفصل لكل سفينة.', 'Enable a fleet owner to treat cargo-tank design as a negotiable standard — licensed at fleet scale, or proven on a first large ship — rather than a royalty paid hull by hull.'),
-    ambition:t('أن يصبح المعيار نفسه مجالًا للاختيار.', 'Make the standard itself a matter of choice.'),
-    idea:t('تصور يضع تقنية احتواء الغاز وحقوق استخدامها ضمن قرار الأسطول ككل. الطموح فتح مساحة للتفاوض على الترخيص بحجم الأسطول، أو لتأهيل معيار بديل يمكن إثباته على ناقلة كبيرة، بما يوسّع خيارات المالك التقنية والتجارية.', 'A concept that brings LNG containment technology and usage rights into the fleet-wide decision. The ambition is to open room for fleet-scale licensing, or for qualifying an alternative standard that can be proven on a large carrier, broadening the owner’s technical and commercial choices.'),
-    beneficiary:t('ملاك أساطيل الغاز المسال ومطورو تقنيات الاحتواء وشركاء الصناعة البحرية.', 'LNG fleet owners, containment technology developers and maritime industry partners.'),
-    outcomes:[
-      {title:t('قوة تفاوض الأسطول','Fleet-scale negotiating power'),text:t('جمع احتياجات السفن في تصور ترخيص يعكس حجم الأسطول وطموحه.', 'Bring vessel requirements into a licensing proposition that reflects the scale and ambition of the fleet.')},
-      {title:t('بديل يستند إلى إثبات','An alternative backed by proof'),text:t('فتح إمكانية إثبات معيار احتواء آخر على ناقلة كبيرة، ليصبح خيارًا يمكن تقييمه.', 'Open the possibility of proving another containment standard on a large carrier so it becomes an option that can be evaluated.')},
-      {title:t('خيارات تقنية أوسع','Wider technology choices'),text:t('منح المالك مساحة أكبر لاختيار التقنية وحقوق استخدامها عبر عمر الأسطول.', 'Give the owner greater choice over technology and usage rights across the fleet’s life.')},
-    ],
-  },
-];
+export const projects:Project[] = readContentDir<Project>('projects/concepts');
+
 export const prefix = (locale:Locale) => locale==='ar'?'/ar':'';
-export const projectStatus:Record<Project['status'],Text> = {
-  concept:t('مفهوم','Concept'),
-  active:t('قيد التنفيذ','In progress'),
-  completed:t('مكتمل','Completed'),
-};
+export const projectStatus:Record<ProjectStatus,Text> = catalog.status;
 export const featuredProjects = projects.filter(p=>p.featuredOrder!==undefined).sort((a,b)=>a.featuredOrder!-b.featuredOrder!);
 export const sectorBySlug = (slug:string) => sectors.find(item=>item.slug===slug);
 export const projectBySlug = (slug:string) => projects.find(item=>item.slug===slug);
@@ -83,3 +60,7 @@ export function resolveProjectRoute(parts:string[]):ProjectRoute|undefined {
 }
 
 export const conceptCount = (count:number,locale:Locale) => locale==='ar'?(count===2?'تصوّران مقترحان':`${new Intl.NumberFormat('ar').format(count)} تصوّرات مقترحة`):`${count} proposed concept${count===1?'':'s'}`;
+
+/** What the enquiry page needs to label an inbound project link; passed from the server page into the client form. */
+export type ProjectOption = {id:string; title:Text};
+export const projectOptions:ProjectOption[] = projects.map(({id,title})=>({id,title}));

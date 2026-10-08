@@ -1,0 +1,177 @@
+{
+  "effectiveDate": {
+    "en": "23 September 2026",
+    "ar": "23 سبتمبر 2026"
+  },
+  "privacy": {
+    "title": {
+      "en": "Privacy",
+      "ar": "الخصوصية"
+    },
+    "lead": {
+      "en": "This public VisionSeek site does not open accounts, sell data, or run advertising.",
+      "ar": "موقع VisionSeek العام لا يفتح حسابات، ولا يبيع بيانات، ولا يشغّل إعلانات."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "Who",
+          "ar": "من نحن"
+        },
+        "paragraphs": [
+          {
+            "en": "VisionSeek is operated by Ahmed Abdelalim from Incheon, South Korea. Contact: {{email}}.",
+            "ar": "VisionSeek مؤسسة يعمل عليها أحمد عبدالعليم من إنتشون، كوريا الجنوبية. للتواصل: {{email}}."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "What this site does not collect",
+          "ar": "ما الذي لا نجمعه هنا"
+        },
+        "paragraphs": [],
+        "bullets": [
+          {
+            "en": "No accounts, and no forms that store personal data on our servers.",
+            "ar": "لا حسابات، ولا نماذج تخزّن بيانات على خوادمنا."
+          },
+          {
+            "en": "No advertising cookies and no tracking pixel.",
+            "ar": "لا ملفات تعريف ارتباط إعلانية، ولا بكسل تتبّع."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "en": "If you write to us",
+          "ar": "إذا راسلتنا"
+        },
+        "paragraphs": [
+          {
+            "en": "Email and WhatsApp pass through those services and then to us so we can reply. We keep the correspondence to answer and follow up, and we delete it if you ask at the address above, unless a legal duty requires us to keep it.",
+            "ar": "البريد وواتساب يمرّان عبر تلك الخدمات ثم إلينا لنرد. نحتفظ بالمراسلة للرد والمتابعة، ونحذفها إذا طلبت ذلك على العنوان أعلاه، ما لم يلزمنا الاحتفاظ بها لالتزام قانوني."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "Insights",
+          "ar": "صفحة الرؤى"
+        },
+        "paragraphs": [
+          {
+            "en": "Your browser requests a public signals file from GitHub (raw.githubusercontent.com). That request is visible to GitHub under their terms. We do not attach your name to it.",
+            "ar": "متصفحك يطلب ملف إشارات عامًا من GitHub (raw.githubusercontent.com). هذا الطلب ظاهر لـ GitHub بحسب شروطهم. لا نضيف إليه اسمك."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "Operations logs",
+          "ar": "سجلات التشغيل"
+        },
+        "paragraphs": [
+          {
+            "en": "The site is hosted on Vercel, which may log IP address, browser type, and the page requested in order to run and protect the site. We do not sell those logs.",
+            "ar": "الاستضافة على Vercel قد تسجّل عنوان الإنترنت ونوع المتصفح والصفحة المطلوبة لتشغيل الموقع وحمايته. لا نبيع هذه السجلات."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "Children",
+          "ar": "الأطفال"
+        },
+        "paragraphs": [
+          {
+            "en": "The site is not directed at children.",
+            "ar": "الموقع غير موجّه للأطفال."
+          }
+        ],
+        "bullets": []
+      }
+    ]
+  },
+  "terms": {
+    "title": {
+      "en": "Terms",
+      "ar": "الشروط"
+    },
+    "lead": {
+      "en": "The site shows what VisionSeek is and what it is exploring. It is not a contract, an investment offer, or advice.",
+      "ar": "الموقع عرض لما هي عليه VisionSeek وما تستكشفه. ليس عقدًا، ولا عرضًا للاستثمار، ولا استشارة."
+    },
+    "sections": [
+      {
+        "heading": {
+          "en": "What you are reading",
+          "ar": "ما تقرأه"
+        },
+        "paragraphs": [
+          {
+            "en": "The fields page describes areas of exploration, not delivered projects, unless a written agreement says otherwise. Insights is a sensor: signals and briefings to help you see, not legal, investment, or policy advice, and not a decision made for you.",
+            "ar": "صفحة المجالات تصف مساحات استكشاف، لا مشروعات مُسلَّمة، إلا إذا قال اتفاق مكتوب غير ذلك. صفحة الرؤى مستشعر: إشارات وإحاطات للمساعدة على الرؤية، لا نصيحة قانونية أو استثمارية أو قرارًا حكوميًا بالنيابة عنك."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "No implied partnership",
+          "ar": "لا شراكة ضمنية"
+        },
+        "paragraphs": [
+          {
+            "en": "You may link to the site. Do not use the name or mark to suggest a partnership, a mandate, or government representation.",
+            "ar": "يمكنك الربط بالموقع. لا تستخدم الاسم أو الشعار بما يوحي بشراكة أو تفويض أو تمثيل حكومي."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "Content",
+          "ar": "المحتوى"
+        },
+        "paragraphs": [
+          {
+            "en": "Text, images, and the mark on this site belong to VisionSeek unless another source is named. Briefings may compress public news; the cited source remains the source of the fact.",
+            "ar": "النصوص والصور والعلامة على هذا الموقع لـ VisionSeek ما لم يُنسب مصدر آخر. الإحاطات قد تختصر أخبارًا عامة؛ المصدر المذكور يبقى مصدر الواقعة."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "Availability",
+          "ar": "التوافر"
+        },
+        "paragraphs": [
+          {
+            "en": "We try to keep the site available. We do not guarantee that it will be uninterrupted or error-free.",
+            "ar": "نسعى لأن يبقى الموقع متاحًا، دون ضمان عدم الانقطاع أو خلوّه من الخطأ."
+          }
+        ],
+        "bullets": []
+      },
+      {
+        "heading": {
+          "en": "A real obligation",
+          "ar": "أي التزام حقيقي"
+        },
+        "paragraphs": [
+          {
+            "en": "No duty of money, delivery, or representation arises except in a written agreement. Questions: {{email}}.",
+            "ar": "لا ينشأ التزام مال أو تسليم أو تمثيل إلا باتفاق مكتوب. للأسئلة: {{email}}."
+          }
+        ],
+        "bullets": []
+      }
+    ]
+  }
+}

@@ -7,9 +7,9 @@ import CapabilityFooter from '@/components/capability/footer';
 import {Input} from '@/components/ui/input';
 import {Textarea} from '@/components/ui/textarea';
 import type {Locale} from '@/lib/institution/schema';
-import {projects,type ProjectInquiryIntent} from '@/lib/projects';
+import type {ProjectInquiryIntent,ProjectOption} from '@/lib/projects';
 import {site, whatsappUrl} from '@/lib/site';
-export default function StartPage({locale}:{locale:Locale}){
+export default function StartPage({locale,projects=[]}:{locale:Locale;projects?:ProjectOption[]}){
  const ar=locale==='ar'; const p=ar?'/ar':''; const [message,setMessage]=useState(''); const result=useRef<HTMLDivElement>(null); const capability=useRef<HTMLTextAreaElement>(null); const [idea,setIdea]=useState('');const [inboundProject,setInboundProject]=useState(false);const [inboundHlo,setInboundHlo]=useState(false);const [projectIntent,setProjectIntent]=useState<ProjectInquiryIntent>('commission');
  // Read the inbound browser URL after hydration, without sending or saving the enquiry.
  useEffect(()=>{
@@ -22,7 +22,7 @@ export default function StartPage({locale}:{locale:Locale}){
   if(title){setIdea(title);setInboundProject(isProject);setInboundHlo(isHlo);setProjectIntent(params.get('intent')==='partner'?'partner':'commission');
    if(capability.current)capability.current.value=isHlo?(ar?'نود مناقشة تطبيق برنامج HLO في مؤسستنا. النتيجة التي نسعى إليها: ':'We would like to discuss HLO for our institution. The outcome we seek: '):isProject?(ar?`نود بحث هذا المشروع لمؤسستنا: ${title}`:`We would like to explore this project for our organization: ${title}`):(ar?`أود استكشاف تطبيق هذه الفكرة في مؤسستنا: ${title}`:`I would like to explore this idea for our organization: ${title}`);
   }
- },[ar,locale]);
+ },[ar,locale,projects]);
  useEffect(()=>{if(message)result.current?.focus();},[message]);
  const intentLabel=projectIntent==='partner'?(ar?'شراكة تقنية أو تنفيذية':'Technical or delivery partnership'):(ar?'مناقشة نطاق التعاقد':'Project commissioning discussion');
  function prepare(event:FormEvent<HTMLFormElement>){event.preventDefault();const data=new FormData(event.currentTarget);const get=(key:string)=>String(data.get(key)||'').trim();setMessage([
