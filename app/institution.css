@@ -37,3 +37,4 @@
 .vs-expanded-header .vs-utility nav .vs-leaders-entry:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .vs-leaders-entry svg{flex-shrink:0}
 @media(max-width:760px){.vs-expanded-header .vs-utility{padding-inline:16px}.vs-expanded-header .vs-utility nav{gap:8px;font-size:11px;flex-wrap:wrap}.vs-expanded-header .vs-utility nav .vs-leaders-entry{padding-inline:10px;font-size:12px}}
+.vs-reference-list{margin:.8rem 0 1rem;padding-inline-start:1.3rem;display:grid;gap:.55rem}.vs-reference-list li{font-size:.95rem!important;line-height:1.6!important}.vs-reference-list a{display:inline-flex;align-items:center;gap:.5rem;color:var(--white);overflow-wrap:anywhere}.vs-reference-list a:hover{color:var(--lime)}.vs-reference-list svg{flex-shrink:0;color:var(--lime)}
