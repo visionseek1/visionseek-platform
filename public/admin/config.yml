@@ -1660,12 +1660,6 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: سطر الغلاف
-                name: heroLede
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
               - label: سطر التخصيص
                 name: heroCustom
                 widget: object

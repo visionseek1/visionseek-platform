@@ -53,7 +53,6 @@ export type WorkshopLive = {
   trailer: {video: string; label: Bi; pending: Bi};
   heroQuote: Bi;
   heroTitle: Bi;
-  heroLede: Bi;
   heroCustom: Bi;
   heroImage: string;
   heroImageAlt: Bi;

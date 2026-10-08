@@ -78,7 +78,6 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
         <section className="vs-wl-why">
           <blockquote className="vs-wl-quote">{text(locale, live.heroQuote)}</blockquote>
           <h2>{text(locale, live.heroTitle)}</h2>
-          <p className="vs-wl-lede">{text(locale, live.heroLede)}</p>
           <p className="vs-wl-custom">{text(locale, live.heroCustom)}</p>
         </section>
 
