@@ -15,6 +15,11 @@ export const sourcingBoundary: Text = t(
   'يدفع العميل للمورد مباشرة. VisionSeek لا تحتفظ بالأموال، ولا تتاجر، ولا تضمن صفقة.',
 );
 
+export const sourcingFee: Text = t(
+  'The service runs on a fixed fee. There are no commissions except those disclosed up front.',
+  'الخدمة بأجر ثابت. لا عمولات إلا ما يُفصح عنه قبل البدء.',
+);
+
 const requestBody: Text = t(
   'I am requesting a sourcing-route verification for Korean skincare (K-Beauty), for an importer in Egypt or the Gulf. Skincare only, not makeup.',
   'أطلب تحقق مسار توريد للعناية بالبشرة الكورية (K-Beauty)، لمستورد في مصر أو الخليج. العناية بالبشرة فقط، بلا مكياج.',
@@ -40,15 +45,16 @@ export function workingSourcingOffer(base: Entry): Entry {
     code: base.code,
     title: base.title,
     image: base.image,
-    category: t('Working offer', 'عرض قائم'),
-    status: t('Working offer · first application', 'عرض قائم · التطبيق الأول'),
+    category: t('Preview only', 'معاينة فقط'),
+    status: t('Preview only', 'معاينة فقط'),
     summary: t(
-      'Working offer for importers in Egypt and the Gulf. First application: sourcing-route verification for Korean skincare (K-Beauty), skincare only and not makeup. The client pays the supplier directly. VisionSeek does not hold funds, does not trade, and does not guarantee a deal.',
-      'عرض قائم لمستوردي مصر والخليج. التطبيق الأول: تحقق مسار توريد للعناية بالبشرة الكورية (K-Beauty)، والعناية بالبشرة فقط ولا يشمل المكياج. يدفع العميل للمورد مباشرة. VisionSeek لا تحتفظ بالأموال، ولا تتاجر، ولا تضمن صفقة.',
+      `Preview only, for importers in Egypt and the Gulf. It describes sourcing-route verification for Korean skincare (K-Beauty), skincare only and not makeup. ${sourcingFee.en} ${sourcingBoundary.en}`,
+      `معاينة فقط لمستوردي مصر والخليج. تصف تحقق مسار توريد للعناية بالبشرة الكورية (K-Beauty)، والعناية بالبشرة فقط ولا تشمل المكياج. ${sourcingFee.ar} ${sourcingBoundary.ar}`,
     ),
     facts: [
       {label: t('First application', 'التطبيق الأول'), value: t('Korean skincare (K-Beauty) for importers in Egypt and the Gulf. Skincare only; makeup is outside this application.', 'العناية بالبشرة الكورية (K-Beauty) لمستوردي مصر والخليج. العناية بالبشرة فقط، والمكياج خارج هذا التطبيق.')},
       {label: t('First window', 'النافذة الأولى'), value: t('K-Beauty Expo Korea, 15–17 October 2026, KINTEX, Goyang.', 'معرض K-Beauty Expo Korea، ١٥–١٧ أكتوبر ٢٠٢٦، كينتكس، غويانغ.')},
+      {label: t('Fee', 'الأجر'), value: sourcingFee},
       {label: t('Boundary', 'الحد'), value: sourcingBoundary},
     ],
     blocks: [
@@ -64,7 +70,7 @@ export function workingSourcingOffer(base: Entry): Entry {
         t('Regulatory notes for the destination market.', 'ملاحظات تنظيمية لسوق الوصول.'),
         t('An Arabic report within 48 hours.', 'تقرير بالعربية خلال ٤٨ ساعة.'),
       ]},
-      {title: t('Boundaries', 'الحدود'), body: t(`${sourcingBoundary.en} Wholesale price and minimum order quantity are collected for the requesting buyer and are not published on this site.`, `${sourcingBoundary.ar} سعر الجملة والحد الأدنى للطلب يُجمعان للمشتري صاحب الطلب، ولا يُنشران على هذا الموقع.`)},
+      {title: t('Boundaries', 'الحدود'), body: t(`${sourcingFee.en} ${sourcingBoundary.en} Wholesale price and minimum order quantity are collected for the requesting buyer and are not published on this site.`, `${sourcingFee.ar} ${sourcingBoundary.ar} سعر الجملة والحد الأدنى للطلب يُجمعان للمشتري صاحب الطلب، ولا يُنشران على هذا الموقع.`)},
       {title: t('The first window', 'النافذة الأولى'), body: t('The first window is K-Beauty Expo Korea, 15–17 October 2026, at KINTEX in Goyang, from 10:00 to 17:00. The organiser’s show-information page was reviewed on 7 October 2026. This application covers skincare only. Makeup stays outside it, including where the exhibition lists other categories.', 'النافذة الأولى هي معرض K-Beauty Expo Korea، من ١٥ إلى ١٧ أكتوبر ٢٠٢٦، في كينتكس بغويانغ، من العاشرة صباحًا إلى الخامسة مساءً. جرت مراجعة صفحة معلومات المعرض لدى الجهة المنظمة في ٧ أكتوبر ٢٠٢٦. هذا التطبيق للعناية بالبشرة فقط. المكياج يبقى خارج نطاقه، حتى حين يعرض المعرض فئات أخرى.')},
       {title: t('Heilmeier questions', 'أسئلة Heilmeier'), items: [
         t('What are we trying to do? Establish, for an importer in Egypt or the Gulf, whether a Korean skincare sourcing route can be identified and used before money or a purchase order is committed.', 'ما الذي نحاول فعله؟ أن يتبين لمستورد في مصر أو الخليج إن كان مسار توريد للعناية بالبشرة من كوريا معروفًا وقابلًا للاستخدام، قبل أن يلتزم بمال أو بأمر شراء.'),
