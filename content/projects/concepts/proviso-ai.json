@@ -1,0 +1,310 @@
+{
+  "position": 3,
+  "id": "VS-P09",
+  "slug": "proviso-ai",
+  "sector": "institutional-ai",
+  "track": "agent-governance",
+  "kind": "governance",
+  "status": "concept",
+  "title": {
+    "ar": "Proviso AI",
+    "en": "Proviso AI"
+  },
+  "summary": {
+    "ar": "أداة تجعل وكلاء الذكاء الاصطناعي في المؤسسة يعملون بلغة القانون الذي تعيش فيه. نحوّل لوائح الذكاء الاصطناعي وإرشاداته في الخليج ومصر إلى قواعد عربية جاهزة، كل قاعدة مربوطة بمادّتها. وقبل أن يتحرك الوكيل، يُحسم الأمر: مسموح، أو يحتاج إنسانًا، أو ممنوع.",
+    "en": "Proviso AI lets an institution's AI agents act within the law it actually operates under. Gulf and Egyptian AI regulations become ready-to-run rules, each traced to its source article. Before an agent acts, every step is settled: allowed, needs a human, or blocked."
+  },
+  "ambition": {
+    "ar": "ألّا يخطو وكيلٌ خطوةً بلا سند.",
+    "en": "No agent action without a basis in law."
+  },
+  "idea": {
+    "ar": "تصوّر لأداة من أربع طبقات: سجلّ لوكلاء المؤسسة، ومكتبة قواعد مستمدة من لوائح بلدها، وبوابة تحسم كل خطوة قبل وقوعها، وملف جاهزية يقيس ما تحقق وما ينقص. وتُركَّب الأداة على أدوات الحماية القائمة، لا تحلّ محلها.",
+    "en": "A concept for a four-layer tool: a registry of the institution's agents, a rule library drawn from its country's regulations, a gate that settles each step before it happens, and a readiness file that measures what is in place and what is missing. It is designed to sit on top of existing guardrail tools, not to replace them."
+  },
+  "beneficiary": {
+    "ar": "الجهات الحكومية والشركات التي تشغّل وكلاء ذكاء اصطناعي في الإمارات والسعودية ومصر، وفرق الأمن والامتثال فيها.",
+    "en": "Government entities and companies running AI agents in the UAE, Saudi Arabia and Egypt — and their security and compliance teams."
+  },
+  "outcomes": [
+    {
+      "title": {
+        "ar": "سجلّ لكل وكيل",
+        "en": "An agent registry"
+      },
+      "text": {
+        "ar": "ماذا يفعل كل وكيل، وما البيانات التي يلمسها، وما درجة خطره.",
+        "en": "What each agent does, which data it touches, and how much risk it carries."
+      }
+    },
+    {
+      "title": {
+        "ar": "قانونٌ محلي لا قالبٌ مستورد",
+        "en": "Local law, not imported templates"
+      },
+      "text": {
+        "ar": "قواعد مستمدة من لوائح المنطقة نفسها، لا من القوانين الأوروبية والأمريكية وحدها.",
+        "en": "Rules drawn from the region's own regulations, not from European and American frameworks alone."
+      }
+    },
+    {
+      "title": {
+        "ar": "جاهزية تُقاس",
+        "en": "Measurable readiness"
+      },
+      "text": {
+        "ar": "درجة لكل وكيل، وما ينقصه، وسجلّ عربي لكل قرار.",
+        "en": "A score for every agent, what it still lacks, and an Arabic record of every decision."
+      }
+    }
+  ],
+  "whyNow": {
+    "paragraphs": [
+      {
+        "ar": "لم يعد الذكاء الاصطناعي في حكومات المنطقة تجربةً على الهامش. ففي أبريل 2026 أعلنت الإمارات أنّ نصف قطاعات حكومتها الاتحادية وخدماتها وعملياتها سينتقل إلى الوكلاء الأذكياء خلال عامين. وفي أكتوبر بدأت 33 جهة حكومية في دبي تمحيص أكثر من 300 حالة استخدام لتختار منها ما يُبنى أولًا. وفي مصر يناقش المجلس الوطني للذكاء الاصطناعي إرشادات لاستخدام الذكاء التوليدي في الجهات الحكومية، وأخرى لشرائه.",
+        "en": "AI in the region's governments is no longer a side experiment. In April 2026 the UAE said half of its federal government's sectors, services and operations would move to agentic AI within two years. In October, 33 Dubai government entities began screening more than 300 use cases to decide what gets built first. In Egypt, the national AI council is discussing guidelines for generative AI in government and for buying AI systems."
+      },
+      {
+        "ar": "لكن الوكيل لا يكتفي بأن يجيب، بل يتصرف: يفتح الأنظمة، ويقرأ البيانات، وينفّذ. والسرعة تسبق الاستعداد، وهذا ما قالته Microsoft صراحةً عن السوق الإماراتية في سبتمبر 2026.",
+        "en": "Agents don't just answer — they act. They open systems, read data and carry out tasks. And adoption is outrunning readiness, as Microsoft said plainly of the UAE market in September 2026."
+      },
+      {
+        "ar": "والسؤال الذي لا يجيب عنه أحد بعد: بأي قانون يتحرك هذا الوكيل؟ لا بقواعد كُتبت لبيئة أخرى، بل بلوائح بلده هو، وبلغته.",
+        "en": "The question nobody has answered yet: under which law does the agent act? Not rules written for somewhere else — its own country's regulations, in its own language."
+      }
+    ],
+    "sources": [
+      {
+        "title": "UAE Cabinet — agentic AI across 50% of government (Apr 2026)",
+        "url": "https://uaecabinet.ae/en/news/under-directives-of-uae-president-and-in-world-first-mohammed-bin-rashid-reveals-new-uae-government-framework-to-deploy-agentic-ai-across-50-of-government-sectors-operations-within-two-years"
+      },
+      {
+        "title": "The National — Dubai agentic AI accelerator (Oct 2026)",
+        "url": "https://www.thenationalnews.com/news/uae/2026/10/05/dubai-launches-agentic-ai-accelerator-to-transform-public-facing-government-services/"
+      },
+      {
+        "title": "Microsoft — Agent 365 in the UAE (Sep 2026)",
+        "url": "https://news.microsoft.com/source/emea/2026/09/agent-365-availability-in-the-uae/"
+      },
+      {
+        "title": "TechAfrica News — Egypt's AI council (Sep 2026)",
+        "url": "https://techafricanews.com/2026/09/25/egypt-ai-council-national-ai-strategy-quantum-computing/"
+      }
+    ]
+  },
+  "profile": {
+    "audiences": [
+      "government",
+      "institution",
+      "company"
+    ],
+    "facts": [
+      {
+        "kind": "trend",
+        "title": {
+          "ar": "وكلاء الحراسة",
+          "en": "Guardian agents"
+        },
+        "detail": {
+          "ar": "تتوقع Gartner أن تبلغ تقنيات «وكلاء الحراسة» التي تراقب الوكلاء وتوقفهم 10–15% على الأقل من سوق الذكاء الاصطناعي الوكيلي بحلول 2030 (يونيو 2025).",
+          "en": "Gartner predicts guardian-agent technologies — which oversee, redirect or block other agents — will make up at least 10–15% of agentic AI markets by 2030 (June 2025)."
+        },
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-11-gartner-predicts-that-guardian-agents-will-capture-10-15-percent-of-the-agentic-ai-market-by-2030"
+      },
+      {
+        "kind": "trend",
+        "title": {
+          "ar": "القانون كشيفرة",
+          "en": "Law as Code"
+        },
+        "detail": {
+          "ar": "منظمة التعاون الاقتصادي والتنمية (OECD) تستشير الدول في 2026 حول إطار مشترك لتحويل القوانين النافذة إلى صيغ تنفّذها الآلة.",
+          "en": "In 2026 the OECD is consulting on a shared reference framework for turning enacted law into machine-executable form."
+        },
+        "url": "https://www.oecd.org/en/events/public-consultations/2026/07/consultation-on-the-digital-provision-of-law-towards-a-shared-reference-framework-for-law-as-code.html"
+      },
+      {
+        "kind": "exhibition",
+        "title": {
+          "ar": "جيتكس جلوبال 2026",
+          "en": "GITEX GLOBAL 2026"
+        },
+        "detail": {
+          "ar": "7–11 ديسمبر 2026، مركز دبي للمعارض، إكسبو سيتي دبي.",
+          "en": "7–11 December 2026, Dubai Exhibition Centre, Expo City Dubai."
+        },
+        "url": "https://mediaoffice.ae/en/news/2025/october/08-10/gitex-global-to-begin-a-new-chapter-at-expo-city-dubai-in-2026"
+      }
+    ]
+  },
+  "file": {
+    "version": "0.1",
+    "updatedAt": "2026-10-08",
+    "stage": {
+      "ar": "مفهوم",
+      "en": "Concept"
+    },
+    "stageNote": {
+      "ar": "تصوّر حدّدته VisionSeek من قراءة قرارات ولوائح منشورة. لم تُبنَ الأداة بعد، ولم تُطبَّق لدى أي جهة.",
+      "en": "A concept VisionSeek defined from published decisions and regulations. The tool has not been built yet and is not in use at any institution."
+    },
+    "challenge": {
+      "ar": "تتجه المؤسسات إلى وكلاء ينفّذون ولا يكتفون بالإجابة، وكل خطوة ينفّذها الوكيل تحتاج أن تُحسم قبل وقوعها، وفق لوائح البلد الذي تعمل فيه وبلغته.",
+      "en": "Institutions are moving to agents that act, not just answer — and every step an agent takes needs to be settled before it happens, under the regulations of the country it operates in, and in its language."
+    },
+    "role": {
+      "ar": "نبني مكتبة القواعد من نصوص اللوائح الرسمية، ونصمم الأداة لتُركَّب على أدوات الحماية القائمة. وتبقى قرارات الامتثال النهائية لفرق المؤسسة القانونية.",
+      "en": "We build the rule library from official regulatory texts and design the tool to sit on existing guardrail tools. Final compliance decisions stay with the institution's own legal teams."
+    },
+    "engagement": {
+      "ar": "تكليف أول مع جهة واحدة: نسجّل وكلاءها، ونطبّق قواعد بلدها على خطواتهم، ونسلّم ملف جاهزية، قبل أي توسّع.",
+      "en": "An initial mandate with one institution: we register its agents, apply its country's rules to their steps, and deliver a readiness file before anything wider."
+    },
+    "workstreams": [
+      {
+        "id": "registry",
+        "title": {
+          "ar": "سجل الوكلاء",
+          "en": "Agent registry"
+        },
+        "body": {
+          "ar": "كل وكيل في المؤسسة: ماذا يفعل، وما البيانات التي يلمسها، وما درجة خطره.",
+          "en": "Every agent in the institution: what it does, which data it touches, and its level of risk."
+        }
+      },
+      {
+        "id": "rule-library",
+        "title": {
+          "ar": "مكتبة القواعد",
+          "en": "Rule library"
+        },
+        "body": {
+          "ar": "لوائح الإمارات والسعودية ومصر قواعدَ عربية، كل قاعدة مربوطة بمادّتها.",
+          "en": "UAE, Saudi and Egyptian regulations as Arabic rules, each linked to its source article."
+        }
+      },
+      {
+        "id": "gate",
+        "title": {
+          "ar": "البوابة",
+          "en": "The gate"
+        },
+        "body": {
+          "ar": "قبل كل خطوة: مسموح، أو يحتاج إنسانًا، أو ممنوع، على أدوات الحماية الموجودة.",
+          "en": "Before every step: allowed, needs a human, or blocked — running on existing guardrail tools."
+        }
+      },
+      {
+        "id": "readiness",
+        "title": {
+          "ar": "ملف الجاهزية",
+          "en": "Readiness file"
+        },
+        "body": {
+          "ar": "درجة لكل وكيل، وما ينقصه، وسجل عربي لكل قرار.",
+          "en": "A score for every agent, what it still lacks, and an Arabic record of every decision."
+        }
+      }
+    ],
+    "deliverables": [
+      {
+        "title": {
+          "ar": "سجل وكلاء الجهة",
+          "en": "The institution's agent registry"
+        },
+        "body": {
+          "ar": "خريطة الوكلاء العاملين أو المخطط لهم، ودرجة خطر كل منهم.",
+          "en": "A map of the agents in use or planned, with each one's risk level."
+        }
+      },
+      {
+        "title": {
+          "ar": "حزمة قواعد بلدها",
+          "en": "Its country's rule pack"
+        },
+        "body": {
+          "ar": "القواعد المنطبقة على وكلاء الجهة، كل قاعدة بمادّتها.",
+          "en": "The rules that apply to the institution's agents, each with its source article."
+        }
+      },
+      {
+        "title": {
+          "ar": "ملف الجاهزية",
+          "en": "The readiness file"
+        },
+        "body": {
+          "ar": "ما هو جاهز، وما ينقص، وما يحتاج قرارًا بشريًا.",
+          "en": "What is ready, what is missing, and what needs a human decision."
+        }
+      }
+    ],
+    "partnerNeeds": [
+      {
+        "ar": "خبرة قانونية في لوائح الذكاء الاصطناعي في الإمارات والسعودية ومصر",
+        "en": "Legal expertise in UAE, Saudi and Egyptian AI regulation"
+      },
+      {
+        "ar": "منصات حماية للوكلاء تقبل حزم قواعد خارجية",
+        "en": "Agent guardrail platforms that accept external rule packs"
+      },
+      {
+        "ar": "جهة تشغّل وكلاء ذكاء اصطناعي وتريد اختبار القواعد على عملها",
+        "en": "An institution running AI agents that wants to test the rules on its own work"
+      }
+    ],
+    "milestones": [
+      {
+        "id": "definition",
+        "title": {
+          "ar": "تعريف الأداة ونطاقها",
+          "en": "Define the tool and its scope"
+        },
+        "description": {
+          "ar": "الطبقات الأربع، ومصادر اللوائح، وحدود ما تفعله الأداة.",
+          "en": "The four layers, the regulatory sources, and the limits of what the tool does."
+        },
+        "state": "current"
+      },
+      {
+        "id": "first-pack",
+        "title": {
+          "ar": "حزمة قواعد أولى لبلد واحد",
+          "en": "A first rule pack for one country"
+        },
+        "description": {
+          "ar": "لوائح بلد واحد محوّلة إلى قواعد قابلة للتشغيل ومراجَعة قانونيًا.",
+          "en": "One country's regulations turned into runnable rules, with legal review."
+        },
+        "state": "planned"
+      },
+      {
+        "id": "first-institution",
+        "title": {
+          "ar": "تطبيق مع جهة أولى",
+          "en": "A first institution"
+        },
+        "description": {
+          "ar": "تطبيق الطبقات الأربع على وكلاء جهة واحدة عند طلبها.",
+          "en": "The four layers applied to one institution's agents, at its request."
+        },
+        "state": "planned"
+      }
+    ],
+    "updates": [
+      {
+        "id": "concept-published",
+        "date": "2026-10-08",
+        "kind": "scope",
+        "title": {
+          "ar": "نشر التصوّر",
+          "en": "Concept published"
+        },
+        "body": {
+          "ar": "عرّفنا Proviso AI وطبقاته الأربع، وحدّدنا لماذا تحتاجه المؤسسات الآن.",
+          "en": "We defined Proviso AI and its four layers, and why institutions need it now."
+        },
+        "visibility": "public"
+      }
+    ]
+  }
+}

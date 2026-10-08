@@ -123,11 +123,11 @@ test('legal.json carries both documents with headed sections', () => {
 test('project concepts resolve to a real sector and track, with public dossiers only', () => {
   const catalog = read('projects/catalog.json');
   const concepts = readDir('projects/concepts');
-  assert.equal(catalog.sectors.length, 8);
+  assert.equal(catalog.sectors.length, 9);
   assert.ok(isText(catalog.conceptNotice));
   for (const key of ['concept', 'active', 'completed']) assert.ok(isText(catalog.status[key]), key);
   for (const track of catalog.tracks) assert.ok(catalog.sectors.some(s => s.slug === track.sector), track.slug);
-  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P07', 'VS-P08']);
+  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P07', 'VS-P08', 'VS-P09']);
   for (const project of concepts) {
     assert.ok(catalog.tracks.some(t => t.slug === project.track && t.sector === project.sector), project.id);
     assert.ok(['concept', 'active', 'completed'].includes(project.status), project.id);

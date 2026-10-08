@@ -250,6 +250,35 @@
           "en": "Connected infrastructure"
         }
       ]
+    },
+    {
+      "slug": "institutional-ai",
+      "title": {
+        "ar": "الذكاء الاصطناعي في المؤسسات",
+        "en": "AI in Institutions"
+      },
+      "icon": "ai",
+      "anchors": [
+        "institutional-ai"
+      ],
+      "intro": {
+        "ar": "من القائمة إلى التشغيل: كيف تنتقل المؤسسة من أفكار الذكاء الاصطناعي إلى عملٍ يُقاس أثره.",
+        "en": "From the list to the live system: how an institution turns AI ideas into work whose impact can be measured."
+      },
+      "focus": [
+        {
+          "ar": "حوكمة الوكلاء الأذكياء",
+          "en": "AI agent governance"
+        },
+        {
+          "ar": "تشغيل حالات الاستخدام",
+          "en": "Putting use cases to work"
+        },
+        {
+          "ar": "جاهزية المؤسسة",
+          "en": "Institutional readiness"
+        }
+      ]
     }
   ],
   "tracks": [
@@ -263,6 +292,20 @@
       "intro": {
         "ar": "تحكم أكبر في الإمداد، وخيارات أوسع في التقنية التي يقوم عليها الأسطول.",
         "en": "Greater control over supply. More choice in the technology a fleet depends on."
+      },
+      "label": "LNG"
+    },
+    {
+      "slug": "agent-governance",
+      "sector": "institutional-ai",
+      "label": "AGENTS",
+      "title": {
+        "ar": "حوكمة الوكلاء الأذكياء",
+        "en": "AI Agent Governance"
+      },
+      "intro": {
+        "ar": "وكلاء ينفّذون داخل المؤسسة، وقواعد تحسم كل خطوة قبل أن تقع.",
+        "en": "Agents that act inside the institution, and rules that settle every step before it happens."
       }
     }
   ]

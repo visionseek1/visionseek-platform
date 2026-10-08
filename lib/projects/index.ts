@@ -8,11 +8,19 @@ import {join} from 'node:path';
  */
 export type Locale = 'ar' | 'en';
 export type Text = Record<Locale, string>;
-export type SectorIcon = 'energy'|'chips'|'flight'|'defense'|'robotics'|'health'|'agriculture'|'cities';
+export type SectorIcon = 'energy'|'chips'|'flight'|'defense'|'robotics'|'health'|'agriculture'|'cities'|'ai';
 export type Sector = {slug:string; title:Text; intro:Text; icon:SectorIcon; anchors:string[]; focus:Text[]};
-export type Track = {slug:string; sector:string; title:Text; intro:Text};
-export type ProjectKind = 'supply'|'containment';
+export type Track = {slug:string; sector:string; title:Text; intro:Text; label?:string};
+export type ProjectKind = 'supply'|'containment'|'governance';
 export type ProjectStatus = 'concept'|'active'|'completed';
+export type ProjectAudience = 'government'|'institution'|'company'|'individual';
+export type ProjectFact = {kind:'exhibition'|'trend'; title:Text; detail:Text; url:string};
+export const audienceLabels:Record<ProjectAudience,Text> = {
+  government:{ar:'الحكومات',en:'Governments'},
+  institution:{ar:'المؤسسات',en:'Institutions'},
+  company:{ar:'الشركات',en:'Companies'},
+  individual:{ar:'الأفراد',en:'Individuals'},
+};
 export type ProjectMilestone={id:string;title:Text;description:Text;state:'current'|'planned'|'completed';evidenceUrl?:string};
 export type ProjectUpdate={id:string;date:string;kind:'scope'|'research'|'partnership'|'test'|'delivery';title:Text;body:Text;visibility:'draft'|'public';evidenceUrl?:string};
 /** The public dossier of a concept. Internal tasks and client details never belong here. */
@@ -28,6 +36,10 @@ export type Project = {
   status:ProjectStatus; featuredOrder?:number;
   title:Text; summary:Text; ambition:Text; idea:Text; beneficiary:Text;
   outcomes:{title:Text;text:Text}[];
+  /** Why institutions need this now: public, dated facts only, each backed by a listed source. */
+  whyNow?:{paragraphs:Text[];sources:{title:string;url:string}[]};
+  /** The project's identity card: who it is designed for, and dated public facts (major exhibitions, the global trend). */
+  profile?:{audiences:ProjectAudience[];facts:ProjectFact[]};
   file?:ProjectFile;
 };
 type Catalog = {conceptNotice:Text; status:Record<ProjectStatus,Text>; sectors:Sector[]; tracks:Track[]};
@@ -70,7 +82,8 @@ export function resolveProjectRoute(parts:string[]):ProjectRoute|undefined {
   if(parts.length===3){const data=projects.find(item=>item.sector===parts[0]&&item.track===parts[1]&&item.slug===parts[2]);if(data)return {kind:'project',data};}
 }
 
-export const conceptCount = (count:number,locale:Locale) => locale==='ar'?(count===2?'تصوّران مقترحان':`${new Intl.NumberFormat('ar').format(count)} تصوّرات مقترحة`):`${count} proposed concept${count===1?'':'s'}`;
+export const trackLabel = (track:Track) => track.label ?? track.slug.toUpperCase();
+export const conceptCount = (count:number,locale:Locale) => locale==='ar'?(count===1?'تصوّر مقترح واحد':count===2?'تصوّران مقترحان':`${new Intl.NumberFormat('ar').format(count)} تصوّرات مقترحة`):`${count} proposed concept${count===1?'':'s'}`;
 
 /** The public dossiers by project id (content/projects/concepts/<slug>.json, key `file`). */
 export const projectFiles:Record<string,ProjectFile> = Object.fromEntries(projects.flatMap(project => project.file ? [[project.id, project.file]] : []));

@@ -32,3 +32,21 @@ test('each advertised project has a bilingual dossier and no unsupported complet
   for(const update of publicProjectUpdates(file))assert.ok(update.title.ar&&update.title.en&&update.body.ar&&update.body.en);
  }
 });
+test('every project carries an identity card with sourced, bilingual facts',()=>{
+ const audiences=new Set(['government','institution','company','individual']);
+ for(const project of projects){
+  assert.ok(project.profile,`${project.id} needs a project card`);
+  assert.ok(project.profile.audiences.length,`${project.id} needs an audience`);
+  for(const item of project.profile.audiences)assert.ok(audiences.has(item),`${project.id}: unknown audience ${item}`);
+  for(const fact of project.profile.facts){
+   assert.ok(['exhibition','trend'].includes(fact.kind));
+   assert.ok(fact.title.ar&&fact.title.en&&fact.detail.ar&&fact.detail.en);
+   assert.match(fact.url,/^https:\/\//);
+  }
+  if(project.whyNow){
+   for(const p of project.whyNow.paragraphs)assert.ok(p.ar&&p.en);
+   assert.ok(project.whyNow.sources.length,'why-now claims need sources');
+   for(const s of project.whyNow.sources)assert.match(s.url,/^https:\/\//);
+  }
+ }
+});
