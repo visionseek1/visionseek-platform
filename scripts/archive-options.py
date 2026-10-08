@@ -1,4 +1,4 @@
-"""Regenerate the page list offered by /admin «الأرشيف». Run after adding a section or page:
+"""Regenerate the page list and the page-section list offered by /admin «إظهار وإخفاء». Run after adding a section, a page or a hideable block (lib/page-blocks.json):
 python3 scripts/archive-options.py   (rewrites the options block in public/admin/config.yml)"""
 import glob, json, re
 
@@ -38,5 +38,9 @@ lines = ''.join(f"                  - {{label: {q(l + '  ' + p)}, value: {q(p)}}
 cfg = open('public/admin/config.yml', encoding='utf-8').read()
 start = '                # archive-options:start\n'; end = '                # archive-options:end\n'
 cfg = re.sub(re.escape(start) + r'.*?' + re.escape(end), start + lines + end, cfg, flags=re.S)
+blocks = load('lib/page-blocks.json')['blocks']
+block_lines = ''.join(f"              - {{label: {q(b['label'])}, value: {q(b['id'])}}}\n" for b in blocks)
+bstart = '                # block-options:start\n'; bend = '                # block-options:end\n'
+cfg = re.sub(re.escape(bstart) + r'.*?' + re.escape(bend), bstart + block_lines + bend, cfg, flags=re.S)
 open('public/admin/config.yml', 'w', encoding='utf-8').write(cfg)
-print(len(opts), 'pages')
+print(len(opts), 'pages,', len(blocks), 'page sections')
