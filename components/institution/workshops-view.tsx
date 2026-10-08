@@ -78,7 +78,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             </div>
           </div>
           <div className="vs-wl-hero-image">
-            <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} fill priority sizes="(max-width: 860px) 100vw, 50vw" />
+            <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
             <span>{live.heroImageLabel}</span>
           </div>
         </section>
@@ -109,7 +109,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
               const card = live.doorCards[kind];
               return (
                 <Link className={`vs-wl-door door-${kind}`} href={doorHref(kind)} key={kind}>
-                  <Image src={card.image} alt="" fill sizes="(max-width: 860px) 100vw, 33vw" />
+                  <Image src={card.image} alt="" width={1200} height={1200} sizes="(max-width: 860px) 100vw, 33vw" />
                   <span className="vs-wl-door-body">
                     <span className="vs-wl-code">{card.code}</span>
                     <strong>{text(locale, section.doors[kind].name)}</strong>
@@ -193,7 +193,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
 
         <section className="vs-wl-founder" id="founder">
           <div className="vs-wl-founder-image">
-            <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} fill sizes="(max-width: 860px) 100vw, 40vw" />
+            <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} sizes="(max-width: 860px) 100vw, 40vw" />
           </div>
           <div className="vs-wl-founder-body">
             <h2>{text(locale, live.founderName)}</h2>
