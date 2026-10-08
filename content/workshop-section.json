@@ -1,0 +1,263 @@
+{
+  "title": {
+    "en": "Workshops",
+    "ar": "الورش"
+  },
+  "hero": {
+    "en": "It is not enough to learn how to use it.",
+    "ar": "لا يكفي أن تتعلم استخدامه."
+  },
+  "intro": {
+    "en": "Learn how it widens your ability to understand, to think, and to act.",
+    "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "rolesHeading": {
+    "en": "Start from the seat you hold",
+    "ar": "ابدأ بالمنصب الذي تجلس عليه"
+  },
+  "roles": [
+    {
+      "id": "senior",
+      "label": {
+        "en": "Senior leadership",
+        "ar": "قيادة عليا"
+      },
+      "note": {
+        "en": "Your path is the leader's own session, then the work of developing the institution. The team workshops are for the people who report to you.",
+        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ورش المؤسسات لفريقك، لا لك وحدك."
+      }
+    },
+    {
+      "id": "manager",
+      "label": {
+        "en": "Managers",
+        "ar": "مديرون"
+      },
+      "note": {
+        "en": "Your path is the institution workshop for the kind of organization you run. You bring the team's real cases, not a sample from somewhere else.",
+        "ar": "مسارك ورشة مؤسستك. تحضر حالات فريقك الحقيقية، لا نموذجًا مستعارًا."
+      }
+    },
+    {
+      "id": "staff",
+      "label": {
+        "en": "Staff",
+        "ar": "موظفون"
+      },
+      "note": {
+        "en": "Your path is the same institution workshop, from the desk where the work actually lands. The point is a faster, cleaner hand on today's tasks.",
+        "ar": "مسارك ورشة المؤسسة نفسها، من المكتب الذي يصل إليه الشغل. المقصود يد أسرع وأنظف على مهام اليوم."
+      }
+    }
+  ],
+  "doors": {
+    "leader": {
+      "name": {
+        "en": "Management and leadership in the age of AI",
+        "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
+      },
+      "line": {
+        "en": "A manager and leader who sees more, understands faster, and decides better.",
+        "ar": "مدير وقائد يرى أكثر، ويفهم أسرع، ويتخذ قرارات أفضل."
+      }
+    },
+    "institution": {
+      "name": {
+        "en": "Working with AI",
+        "ar": "العمل مع الذكاء الاصطناعي"
+      },
+      "line": {
+        "en": "A more capable person, not a person who works more.",
+        "ar": "إنسان أكثر قدرة، لا إنسان يعمل أكثر."
+      }
+    },
+    "development": {
+      "name": {
+        "en": "The institution and AI",
+        "ar": "المؤسسة والذكاء الاصطناعي"
+      },
+      "line": {
+        "en": "An institution that learns faster, moves faster, and can do more.",
+        "ar": "مؤسسة تتعلم أسرع، وتتحرك أسرع، وتستطيع أكثر."
+      }
+    }
+  },
+  "institutionsHeading": {
+    "en": "Choose the institution",
+    "ar": "اختر نوع المؤسسة"
+  },
+  "institutionTypes": [
+    {
+      "id": "police",
+      "label": {
+        "en": "Police",
+        "ar": "الشرطة"
+      }
+    },
+    {
+      "id": "university",
+      "label": {
+        "en": "Universities",
+        "ar": "الجامعات"
+      }
+    },
+    {
+      "id": "airport",
+      "label": {
+        "en": "Airports",
+        "ar": "المطارات"
+      }
+    },
+    {
+      "id": "hospital",
+      "label": {
+        "en": "Hospitals",
+        "ar": "المستشفيات"
+      }
+    },
+    {
+      "id": "company",
+      "label": {
+        "en": "Companies",
+        "ar": "الشركات"
+      }
+    }
+  ],
+  "allInstitutions": {
+    "en": "All five",
+    "ar": "الأنواع الخمسة"
+  },
+  "live": {
+    "kicker": "VISIONSEEK WORKSHOPS",
+    "heroQuote": {
+      "en": "AI will not only change how we work. It will change the limits of what we can do.",
+      "ar": "الذكاء الاصطناعي لن يغيّر طريقة عملنا فقط. سيغيّر حدود ما نستطيع أن نفعله."
+    },
+    "heroTitle": {
+      "en": "So it is not enough to learn how to use it.",
+      "ar": "لذلك، لا يكفي أن تتعلم استخدامه."
+    },
+    "heroLede": {
+      "en": "Learn how it widens your ability to understand, to think, and to act.",
+      "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
+    },
+    "heroCustom": {
+      "ar": "كل ورشة تُصمَّم لك أنت: لعملك، ولمؤسستك، ولما تريد أن تصل إليه.",
+      "en": "Every workshop is designed for you: for your work, your institution, and where you want to get to."
+    },
+    "heroWith": {
+      "en": "With Dr. Ahmed Abdelalim",
+      "ar": "مع د. أحمد عبدالعليم"
+    },
+    "heroImage": "/workshops/ahmed-abdelalim.jpg",
+    "heroImageAlt": {
+      "en": "Dr. Ahmed Abdelalim",
+      "ar": "د. أحمد عبدالعليم"
+    },
+    "heroImageLabel": "VISIONSEEK · MAKE IT POSSIBLE",
+    "ctaPrimary": {
+      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
+      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
+    },
+    "doorsLabel": {
+      "en": "The three doors",
+      "ar": "الأبواب الثلاثة"
+    },
+    "doorCards": {
+      "leader": {
+        "code": "01",
+        "image": "/workshops/ahmed-abdelalim.jpg"
+      },
+      "institution": {
+        "code": "02",
+        "image": "/field-industry.jpg"
+      },
+      "development": {
+        "code": "03",
+        "image": "/field-cities.jpg"
+      }
+    },
+    "openDoor": {
+      "en": "Open the door",
+      "ar": "ادخل من هنا"
+    },
+    "howLabel": {
+      "ar": "التخصيص هو ميزتنا",
+      "en": "Made for you is the point"
+    },
+    "howTitle": {
+      "ar": "كيف تحصل على ورشتك",
+      "en": "How you get your workshop"
+    },
+    "howSteps": [
+      {
+        "title": {
+          "ar": "اطلب ورشتك",
+          "en": "Request your workshop"
+        },
+        "line": {
+          "ar": "قل لنا من أنت، وماذا تعمل.",
+          "en": "Tell us who you are and what you do."
+        }
+      },
+      {
+        "title": {
+          "ar": "نفهم عملك",
+          "en": "We understand your work"
+        },
+        "line": {
+          "ar": "نجلس معك لنعرف تفاصيل عملك، ونضع لك حلولًا على أساسها.",
+          "en": "We sit with you to learn the details of your work, and build solutions on them."
+        }
+      },
+      {
+        "title": {
+          "ar": "ورشة مصممة لك",
+          "en": "A workshop designed for you"
+        },
+        "line": {
+          "ar": "ورشة خاصة مع مؤسس VisionSeek شخصيًا، د. أحمد عبدالعليم، على عملك الحقيقي وبالأدوات التي تناسبك.",
+          "en": "A private workshop with the founder of VisionSeek himself, Dr. Ahmed Abdelalim, on your real work and with the tools that fit you."
+        }
+      }
+    ],
+    "founderName": {
+      "en": "Dr. Ahmed Abdelalim",
+      "ar": "د. أحمد عبدالعليم"
+    },
+    "founderKicker": {
+      "ar": "مؤسس VisionSeek · كوريا الجنوبية",
+      "en": "Founder of VisionSeek · South Korea"
+    },
+    "founderStatement": {
+      "ar": "أرى الذكاء الاصطناعي فرصة لبلادنا العربية. ليس لنتفوّق في سباق التكنولوجيا، بل لنمتلك التقنيات الحساسة التي صار امتلاكها اليوم أسهل من أي وقت مضى: الصناعات الدفاعية، والرقائق، والطاقة، وغيرها.",
+      "en": "I see AI as an opportunity for our Arab countries. Not to win a technology race, but to own the sensitive technologies that are now easier to own than ever before: defence industries, chips, energy, and more."
+    },
+    "founderLink": {
+      "en": "Meet the founder",
+      "ar": "تعرّف على المؤسس"
+    },
+    "closingLines": [
+      {
+        "en": "Perhaps the greatest value of AI",
+        "ar": "ربما تكون أكبر قيمة للذكاء الاصطناعي"
+      },
+      {
+        "en": "is not in what it does instead of you…",
+        "ar": "ليست فيما يفعله بدلًا منك…"
+      },
+      {
+        "en": "but in what it makes you able to do.",
+        "ar": "بل فيما يجعلك قادرًا على فعله أنت."
+      }
+    ],
+    "closingCta": {
+      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
+      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
+    }
+  }
+}

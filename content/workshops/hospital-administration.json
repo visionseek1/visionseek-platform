@@ -1,0 +1,174 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "An appointment message",
+        "ar": "رسالة موعد"
+      },
+      "body": {
+        "en": "Time, place, what to bring, and who to call if the day changes. No medical advice inside it.",
+        "ar": "الوقت والمكان وماذا يُحضر، ومن يُتصل به إن تغيّر اليوم. بلا نصيحة طبية داخلها."
+      }
+    },
+    {
+      "title": {
+        "en": "A department note",
+        "ar": "مذكرة قسم"
+      },
+      "body": {
+        "en": "What was agreed in the administrative meeting, in language the next shift can use.",
+        "ar": "ما اتُفق عليه في الاجتماع الإداري، بلغة تستطيع النوبة التالية استعمالها."
+      }
+    },
+    {
+      "title": {
+        "en": "A family question",
+        "ar": "سؤال أهل"
+      },
+      "body": {
+        "en": "A recurring non-clinical question — visiting hours, a document, a queue — answered once, clearly, and checked before it is sent.",
+        "ar": "سؤال غير سريري يتكرر: مواعيد الزيارة، أو مستند، أو دور الانتظار. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
+  },
+  "boundary": {
+    "en": "Administration only. The workshop does not diagnose, prescribe, interpret a result, or replace a clinician.",
+    "ar": "الإدارة فقط. الورشة لا تشخّص، ولا تصف، ولا تفسّر نتيجة، ولا تحل محل طبيب."
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 5,
+  "slug": "hospital-administration",
+  "kind": "institution",
+  "institution": "hospital",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "Appointment messages, internal notes, and the paper behind a meeting move faster, while the clinical decision stays with the clinician.",
+    "ar": "رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع تتحرك أسرع، والقرار السريري يبقى عند الطبيب."
+  },
+  "summary": {
+    "en": "For the administrative floor of a hospital. Not for diagnosis, prescription, or any decision that belongs to a clinician.",
+    "ar": "للطابق الإداري في المستشفى. ليست للتشخيص، ولا للوصفة، ولا لأي قرار يملكه الطبيب."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in appointments, medical records administration, and department coordination.",
+    "ar": "مديرو وموظفو المواعيد، وإدارة السجلات، وتنسيق الأقسام."
+  },
+  "audienceInstitution": {
+    "en": "A hospital. The material is administrative. If a sentence would change a patient's care, it does not leave the room without the clinician who owns it.",
+    "ar": "مستشفى. المادة إدارية. إن كانت الجملة ستغيّر رعاية مريض فهي لا تخرج إلا مع الطبيب الذي يملكها."
+  },
+  "whyProblem": {
+    "en": "Patients wait on a sentence the administration already knows. Staff retype the same appointment, the same instruction, the same internal update.",
+    "ar": "المريض ينتظر جملة تعرفها الإدارة أصلًا. والموظف يعيد كتابة الموعد نفسه والتعليم نفسه والتحديث الداخلي نفسه."
+  },
+  "whyEvidence": {
+    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This workshop follows that line on the administrative floor. It does not diagnose and it does not prescribe.",
+    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الورشة تمشي على هذا الخط في الطابق الإداري. لا تشخّص ولا تصف دواء."
+  },
+  "source": {
+    "title": "WHO · Ethics and governance of artificial intelligence for health · 28 June 2021",
+    "url": "https://www.who.int/publications/i/item/9789240029200"
+  },
+  "before": {
+    "en": "Five questions about administrative work. No patient case is used as a clinical example.",
+    "ar": "خمسة أسئلة عن الشغل الإداري. لا تُستخدم حالة مريض كمثال سريري."
+  },
+  "during": {
+    "en": "The team drafts from its own administrative work. A named person reviews anything a patient or a clinician will read.",
+    "ar": "الفريق يسوّد من شغله الإداري. شخص مسمّى يراجع كل ما سيقرأه مريض أو طبيب."
+  },
+  "after": {
+    "en": "After 30 days we measure time returned on those administrative tasks, and which tools staff still open. Clinical outcomes are not what this workshop claims, because it does not touch them.",
+    "ar": "بعد 30 يومًا نقيس الوقت العائد في المهام الإدارية، وأي أدوات ما زال الموظفون يفتحونها. النتائج السريرية ليست ما تدّعيه هذه الورشة، لأنها لا تمسّها."
+  },
+  "questions": [
+    {
+      "en": "Which appointment message is retyped because the template never quite fits?",
+      "ar": "أي رسالة موعد تُعاد كتابتها لأن النموذج لا يطابق الحالة؟"
+    },
+    {
+      "en": "Which internal update is copied between wards by hand?",
+      "ar": "أي تحديث داخلي يُنسخ بين الأقسام يدويًا؟"
+    },
+    {
+      "en": "Which meeting note arrives too late to be useful?",
+      "ar": "أي محضر اجتماع يصل متأخرًا عن فائدته؟"
+    },
+    {
+      "en": "Where does a coordinator answer the same family question all day?",
+      "ar": "أين يجيب المنسق سؤال الأهل نفسه طوال اليوم؟"
+    },
+    {
+      "en": "Which sentence must a clinician still own before it reaches a patient?",
+      "ar": "أي جملة يجب أن يملكها طبيب قبل أن تصل إلى مريض؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A clearer appointment message, reviewed by the person who sends it today.",
+      "ar": "رسالة موعد أوضح، يراجعها من يرسلها اليوم."
+    },
+    {
+      "en": "A one-page internal note from a real department meeting.",
+      "ar": "مذكرة داخلية من صفحة، خرجت من اجتماع قسم حقيقي."
+    },
+    {
+      "en": "A written boundary: the tool may draft administration, and it may not make a clinical call.",
+      "ar": "حد مكتوب: الأداة تسوّد الإدارة، ولا تتخذ قرارًا سريريًا."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Will this touch patient care decisions?",
+        "ar": "هل تمس الورشة قرارات الرعاية؟"
+      },
+      "a": {
+        "en": "No. If a sentence would change care, it belongs to the clinician. The session stays on administration.",
+        "ar": "لا. إن كانت الجملة ستغيّر الرعاية فهي للطبيب. الجلسة تبقى في الإدارة."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you store patient files?",
+        "ar": "هل تحفظون ملفات مرضى؟"
+      },
+      "a": {
+        "en": "No. The website takes nothing. A session uses only what the hospital agrees to bring, and clinical records are not the material.",
+        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق المستشفى على إحضاره، والسجل السريري ليس المادة."
+      }
+    }
+  ]
+}

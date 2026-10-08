@@ -1,0 +1,174 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A delay notice",
+        "ar": "إعلان تأخير"
+      },
+      "body": {
+        "en": "One paragraph a passenger can act on: the new time, where to wait, and who to ask. The duty manager approves it.",
+        "ar": "فقرة يستطيع المسافر أن يتصرف بها: الموعد الجديد، وأين ينتظر، ومن يسأل. مدير النوبة يعتمدها."
+      }
+    },
+    {
+      "title": {
+        "en": "A shift note",
+        "ar": "مذكرة نوبة"
+      },
+      "body": {
+        "en": "What the last shift already told passengers, so the next shift does not invent a second story.",
+        "ar": "ما قالته النوبة السابقة للمسافرين، حتى لا تخترع النوبة التالية حكاية ثانية."
+      }
+    },
+    {
+      "title": {
+        "en": "A service reply",
+        "ar": "رد خدمة"
+      },
+      "body": {
+        "en": "An answer to a recurring passenger question about baggage, a connection, or a meeting point. Not a security instruction.",
+        "ar": "جواب عن سؤال مسافر يتكرر: أمتعة، أو ترانزيت، أو نقطة التقاء. ليس تعليمًا أمنيًا."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
+  },
+  "boundary": {
+    "en": "Passenger information and internal coordination only. Security screening, identity systems, and biometrics are out of this workshop.",
+    "ar": "إعلام المسافر والتنسيق الداخلي فقط. التفتيش الأمني وأنظمة الهوية والبصمات خارج هذه الورشة."
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 4,
+  "slug": "airport-teams",
+  "kind": "institution",
+  "institution": "airport",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "Passenger information and the internal note that coordinates it are written once, clearly, by the team that owns them.",
+    "ar": "معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُكتب مرة واحدة وبوضوح، على يد الفريق الذي يملكها."
+  },
+  "summary": {
+    "en": "For the people who tell passengers what is happening, and who write the note that keeps the terminal aligned. Not for security screening.",
+    "ar": "لمن يخبر المسافر بما يجري، ويكتب المذكرة التي تُبقي المبنى على خط واحد. ليست لتفتيش أمني."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in passenger information, irregular operations communication, and terminal coordination.",
+    "ar": "مديرو وموظفو إعلام المسافرين، والتواصل عند اضطراب التشغيل، وتنسيق المبنى."
+  },
+  "audienceInstitution": {
+    "en": "An airport. The cases are public information and internal coordination. Identity systems and security screening stay out.",
+    "ar": "مطار. الحالات معلومة للجمهور وتنسيق داخلي. أنظمة الهوية والتفتيش الأمني خارجها."
+  },
+  "whyProblem": {
+    "en": "When a flight moves, the explanation is rewritten in several rooms, and the passenger hears a different sentence at each desk.",
+    "ar": "حين تتحرك رحلة، يُعاد شرحها في أكثر من غرفة، ويسمع المسافر جملة مختلفة عند كل مكتب."
+  },
+  "whyEvidence": {
+    "en": "IATA's Global Passenger Survey, released on 5 November 2025, found that 78% of passengers want a smartphone that can book, pay, and navigate airport processes. The public already expects the airport's words to travel with them. This workshop is about those words and the note behind them. It is not a biometrics program and not a security program.",
+    "ar": "في استبيان المسافرين العالمي لاتحاد النقل الجوي (IATA)، الصادر في 5 نوفمبر 2025، يريد 78% من المسافرين هاتفًا ينجز به الحجز والدفع والتنقل داخل إجراءات المطار. الجمهور ينتظر أن تمشي كلمة المطار معه. هذه الورشة عن تلك الكلمة وعن المذكرة التي وراءها. وليست برنامج بصمات ولا برنامج أمن."
+  },
+  "source": {
+    "title": "IATA · Global Passenger Survey 2025 · 5 November 2025",
+    "url": "https://www.iata.org/en/pressroom/2025-releases/2025-11-05-02/"
+  },
+  "before": {
+    "en": "Five questions about the messages the terminal already struggles to keep consistent.",
+    "ar": "خمسة أسئلة عن الرسائل التي يصعب على المبنى أن يوحّدها اليوم."
+  },
+  "during": {
+    "en": "The team rewrites its own notices and coordination notes. A duty manager still approves what the passenger will read.",
+    "ar": "الفريق يعيد كتابة إعلاناته ومذكرات التنسيق. مدير النوبة يبقى من يعتمد ما سيقرأه المسافر."
+  },
+  "after": {
+    "en": "After 30 days: how long a notice now takes, and whether the same tool is still used on a disrupted day. No figure is advertised in advance.",
+    "ar": "بعد 30 يومًا: كم يأخذ الإعلان الآن، وهل الأداة نفسها ما زالت تُستخدم في يوم مضطرب. لا رقم يُعلن مسبقًا."
+  },
+  "questions": [
+    {
+      "en": "Which passenger notice is rewritten differently in two halls?",
+      "ar": "أي إعلان للمسافر يُعاد بصيغتين في صالتين؟"
+    },
+    {
+      "en": "Which delay explanation takes too long to leave the operations room?",
+      "ar": "أي شرح لتأخير يتأخر خروجه من غرفة التشغيل؟"
+    },
+    {
+      "en": "Which internal note fails to tell the next shift what was already said?",
+      "ar": "أي مذكرة داخلية لا تقول للنوبة التالية ماذا قيل أصلًا؟"
+    },
+    {
+      "en": "Where do staff answer the same question at the desk, by phone, and in writing?",
+      "ar": "أين يجيب الموظفون السؤال نفسه عند المكتب وفي الهاتف وكتابةً؟"
+    },
+    {
+      "en": "What must a duty manager still approve before it is shown to passengers?",
+      "ar": "ما الذي يجب أن يعتمده مدير النوبة قبل أن يراه المسافر؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A pattern for a disruption notice: what changed, what the passenger does, and what is still unknown.",
+      "ar": "نمط لإعلان اضطراب: ما الذي تغيّر، وماذا يفعل المسافر، وما الذي لم يُعرف بعد."
+    },
+    {
+      "en": "One coordination note the next shift can read in a minute.",
+      "ar": "مذكرة تنسيق تقرأها النوبة التالية في دقيقة."
+    },
+    {
+      "en": "A rule for what is never drafted by the tool: security instructions and identity decisions.",
+      "ar": "قاعدة لما لا تسوّده الأداة أبدًا: تعليمات الأمن وقرارات الهوية."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Is this about airport security or biometrics?",
+        "ar": "هل هذه الورشة عن أمن المطار أو البصمات؟"
+      },
+      "a": {
+        "en": "No. The session does not design screening, identity, or biometrics. It works on what passengers are told, and on the note behind that message.",
+        "ar": "لا. الجلسة لا تصمم تفتيشًا ولا هوية ولا بصمات. هي تشتغل على ما يُقال للمسافر، وعلى المذكرة وراء تلك الرسالة."
+      }
+    },
+    {
+      "q": {
+        "en": "Who approves what the passenger reads?",
+        "ar": "من يعتمد ما يقرأه المسافر؟"
+      },
+      "a": {
+        "en": "The duty manager who approves it today. The tool does not publish.",
+        "ar": "مدير النوبة الذي يعتمده اليوم. الأداة لا تنشر."
+      }
+    }
+  ]
+}
