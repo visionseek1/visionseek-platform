@@ -78,7 +78,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts']) {
+  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {
@@ -137,4 +137,17 @@ test('project concepts resolve to a real sector and track, with public dossiers 
       for (const milestone of project.file.milestones) assert.ok(['current', 'planned', 'completed'].includes(milestone.state), `${project.id} ${milestone.id}`);
     }
   }
+});
+
+test('the Physical AI brief keeps its three signals, five actions and three sources in both languages', () => {
+  const brief = read('reports/physical-ai.json');
+  assert.equal(brief.sources.length, 3);
+  for (const source of brief.sources) assert.ok(source.url.startsWith('https://') && source.name && source.title, source.url);
+  for (const locale of ['en', 'ar']) {
+    const copy = brief[locale];
+    assert.equal(copy.findings.length, 3, locale);
+    assert.equal(copy.actions.length, 5, locale);
+    for (const key of ['title', 'standfirst', 'summary', 'connection', 'perspective', 'sourceNote', 'cta']) assert.equal(typeof copy[key], 'string', `${locale}.${key}`);
+  }
+  assert.equal(brief.en.title, brief.en.title.trim());
 });

@@ -1672,3 +1672,94 @@ collections:
                     - {label: العربية, name: ar, widget: text}
                 - {label: الظهور, name: visibility, widget: select, options: [public, draft], hint: "draft لا يظهر على الموقع."}
                 - {label: رابط الدليل (اختياري), name: evidenceUrl, widget: string, required: false}
+
+  - name: reports
+    label: تقرير الذكاء الاصطناعي المادي
+    description: "نص الإحاطة الحكومية الأولى كما يظهر في /reports/physical-ai و/insights/physical-ai، ومصادرها. تحليل أصلي من VisionSeek؛ لا يُنسب رقم أو نتيجة إلى مصدر لم يذكرها."
+    files:
+      - label: الإحاطة ومصادرها
+        name: physical_ai
+        file: content/reports/physical-ai.json
+        fields:
+          - label: المصادر
+            name: sources
+            widget: list
+            summary: "{{fields.name}} — {{fields.title}}"
+            fields:
+              - {label: الجهة, name: name, widget: string}
+              - {label: عنوان المصدر, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string}
+          - label: English
+            name: en
+            widget: object
+            fields:
+              - {label: السطر العلوي, name: label, widget: string}
+              - {label: التاريخ كما يُعرض, name: date, widget: string}
+              - {label: مدة القراءة, name: read, widget: string}
+              - {label: العنوان, name: title, widget: string}
+              - {label: المقدمة, name: standfirst, widget: text}
+              - {label: عنوان الملخص, name: summaryLabel, widget: string}
+              - {label: الملخص, name: summary, widget: text}
+              - {label: عنوان الإشارات, name: findingsLabel, widget: string}
+              - label: الإشارات
+                name: findings
+                widget: list
+                summary: "{{fields.number}} — {{fields.title}}"
+                fields:
+                  - {label: الرقم, name: number, widget: string}
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان الفجوة, name: connectionLabel, widget: string}
+              - {label: جملة الفجوة, name: connectionTitle, widget: string}
+              - {label: نص الفجوة, name: connection, widget: text}
+              - {label: عنوان الأجندة, name: actionLabel, widget: string}
+              - label: الأجندة
+                name: actions
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان المنظور, name: perspectiveLabel, widget: string}
+              - {label: المنظور, name: perspective, widget: text}
+              - {label: عنوان المصادر, name: sourceLabel, widget: string}
+              - {label: ملاحظة المصادر, name: sourceNote, widget: text}
+              - {label: زر الدعوة, name: cta, widget: string}
+              - {label: رابط الرجوع, name: back, widget: string}
+          - label: العربية
+            name: ar
+            widget: object
+            fields:
+              - {label: السطر العلوي, name: label, widget: string}
+              - {label: التاريخ كما يُعرض, name: date, widget: string}
+              - {label: مدة القراءة, name: read, widget: string}
+              - {label: العنوان, name: title, widget: string}
+              - {label: المقدمة, name: standfirst, widget: text}
+              - {label: عنوان الملخص, name: summaryLabel, widget: string}
+              - {label: الملخص, name: summary, widget: text}
+              - {label: عنوان الإشارات, name: findingsLabel, widget: string}
+              - label: الإشارات
+                name: findings
+                widget: list
+                summary: "{{fields.number}} — {{fields.title}}"
+                fields:
+                  - {label: الرقم, name: number, widget: string}
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان الفجوة, name: connectionLabel, widget: string}
+              - {label: جملة الفجوة, name: connectionTitle, widget: string}
+              - {label: نص الفجوة, name: connection, widget: text}
+              - {label: عنوان الأجندة, name: actionLabel, widget: string}
+              - label: الأجندة
+                name: actions
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: النص, name: body, widget: text}
+              - {label: عنوان المنظور, name: perspectiveLabel, widget: string}
+              - {label: المنظور, name: perspective, widget: text}
+              - {label: عنوان المصادر, name: sourceLabel, widget: string}
+              - {label: ملاحظة المصادر, name: sourceNote, widget: text}
+              - {label: زر الدعوة, name: cta, widget: string}
+              - {label: رابط الرجوع, name: back, widget: string}
