@@ -30,9 +30,10 @@ test('site.json carries the contact details once, for the whole site', () => {
   for (const key of ['linkedinName', 'location', 'locationHint', 'footerLocation', 'footerBlurb']) assert.ok(isText(site[key]), key);
 });
 
+// Order is the editor's choice in /admin; the tests check what is there, not where.
 test('the six section headers keep their ids and links', () => {
   const {sections} = read('sections.json');
-  assert.deepEqual(sections.map(s => s.id), ['work-with-us', 'opportunities', 'programs', 'news', 'workshops', 'about']);
+  assert.deepEqual(sections.map(s => s.id).sort(), ['about', 'news', 'opportunities', 'programs', 'work-with-us', 'workshops']);
   for (const section of sections) {
     for (const key of ['title', 'eyebrow', 'intro']) assert.ok(isText(section[key]), `${section.id}.${key}`);
     assert.ok(section.links.length >= 3, section.id);
@@ -92,14 +93,15 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
   const method = read('method.json');
   assert.deepEqual(method.steps.map(s => s.id), ['define', 'limit', 'path', 'people', 'highest-level-one', 'architect', 'prove', 'operate', 'evolve']);
   assert.equal(method.communities.length, 6);
-  assert.deepEqual(method.fields.map(f => f.id), ['space', 'drones', 'cities', 'science', 'energy', 'robots', 'agriculture', 'chips']);
+  assert.deepEqual(method.fields.map(f => f.id).sort(), ['agriculture', 'chips', 'cities', 'drones', 'energy', 'robots', 'science', 'space']);
   for (const field of method.fields) assert.ok(readFileSync(join(root, 'public', `field-${field.image}.jpg`)), field.id);
   for (const step of method.steps) for (const key of ['en', 'ar', 'questionEn', 'questionAr', 'textEn', 'textAr']) assert.equal(typeof step[key], 'string', `${step.id}.${key}`);
 });
 
 test('navigation.json keeps the seven header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path), ['/programs', '/projects', '/opportunities', '/workshops', '/news', '/work-with-us', '/about']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/news', '/opportunities', '/programs', '/projects', '/work-with-us', '/workshops']);
+  assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);
     assert.ok(section.children.length >= 2, section.path);
@@ -194,4 +196,15 @@ test('page sections hidden from /admin exist, and /admin offers every hideable s
     const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
     assert.ok(used, `${id} is listed but no section checks it`);
   }
+});
+
+test('/admin loads the Arabic interface and its helpers before it starts', () => {
+  const route = readFileSync(join(root, 'app/admin/route.ts'), 'utf8');
+  const order = ['/admin/decap-cms.js', '/admin/ar-locale.js', '/admin/admin-ui.js', 'window.CMS.init()'].map(s => route.indexOf(s));
+  assert.ok(order.every(i => i > 0), 'a script is missing from /admin');
+  assert.deepEqual([...order].sort((a, b) => a - b), order, 'the locale and helpers must load after Decap and before CMS.init()');
+  for (const file of ['ar-locale.js', 'admin-ui.js', 'admin-ui.css', 'preview.css']) assert.ok(readFileSync(join(root, 'public/admin', file), 'utf8').length, file);
+  assert.ok(configLines.includes('locale: ar'), 'config.yml sets locale: ar');
+  assert.ok(configLines.includes('  preview_context: VisionSeek preview'), 'config.yml reads the preview status that preview-health.yml posts');
+  assert.match(readFileSync(join(root, '.github/workflows/preview-health.yml'), 'utf8'), /context="VisionSeek preview"/);
 });

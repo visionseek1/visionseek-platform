@@ -2,7 +2,7 @@ import {readdirSync, readFileSync} from 'node:fs';
 import {join} from 'node:path';
 
 /**
- * Sectors, tracks and the public project concepts. Edited from /admin («المشاريع: المجالات والمسارات» و«تصوّرات المشاريع»).
+ * Sectors, tracks and the public project concepts. Edited from /admin («المشاريع: المجالات والمسارات» و«صفحات المشاريع»).
  * Server-side only (node:fs). Client components receive what they need as props; see components/institution/start-page.tsx.
  * Reads content/ directly (no project-internal imports) so tests can load this module on its own.
  */
