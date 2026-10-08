@@ -6,17 +6,19 @@ const post = (kind: "success" | "error", payload: unknown) => {
   return new Response(htmlPage("غرفة التحكم", `<p>${kind === "success" ? "تم تسجيل الدخول. أغلق هذه النافذة إن بقيت مفتوحة." : "تعذر تسجيل الدخول."}</p>
 <script>
 (function () {
+  var site = ${JSON.stringify(DECAP_SITE_ORIGIN)};
   var handshake = "authorizing:github";
   var result = ${JSON.stringify(message)};
   window.addEventListener("message", function (event) {
+    if (event.origin !== site) return;
     if (!window.opener || event.source !== window.opener || event.data !== handshake) return;
-    window.opener.postMessage(result, event.origin);
+    window.opener.postMessage(result, site);
   });
   if (!window.opener) {
     document.body.insertAdjacentHTML("beforeend", "<p>لم نجد نافذة اللوحة. افتح الغرفة من جديد.</p>");
     return;
   }
-  window.opener.postMessage(handshake, "*");
+  window.opener.postMessage(handshake, site);
 })();
 </script>`), {
     headers: {
