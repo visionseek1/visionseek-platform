@@ -1,0 +1,436 @@
+{
+  "slug": "agent-governance",
+  "date": "2026-10-08",
+  "label": {
+    "ar": "إحاطة VISIONSEEK / 02",
+    "en": "VISIONSEEK BRIEF / 02"
+  },
+  "dateLabel": {
+    "ar": "أكتوبر 2026",
+    "en": "OCTOBER 2026"
+  },
+  "title": {
+    "ar": "حين يتصرّف الوكيل، مَن يُسأل؟",
+    "en": "When the agent acts, who answers for it?"
+  },
+  "subtitle": {
+    "ar": "حوكمة الوكلاء الأذكياء في الخليج ومصر: ما الذي يفرضه القانون اليوم",
+    "en": "Governing AI agents in the Gulf and Egypt: what the law already demands"
+  },
+  "summary": [
+    {
+      "ar": "حكومات المنطقة لم تعد تجرّب الذكاء الاصطناعي، بل تسلّمه العمل: الإمارات تستهدف نقل نصف قطاعات حكومتها الاتحادية وخدماتها إلى الوكلاء الأذكياء بحلول 2028، ودبي بدأت تمحيص أكثر من 300 حالة استخدام في 33 جهة.",
+      "en": "The region's governments are no longer trying AI out — they are handing it work. The UAE aims to move half of its federal sectors and services to AI agents by 2028; Dubai has started screening 300+ use cases across 33 entities."
+    },
+    {
+      "ar": "الوكيل لا يجيب فقط، بل ينفّذ. وكل خطوة ينفّذها تقع تحت قوانين نافذة اليوم: حماية البيانات في السعودية ومصر وقطر والإمارات، وغراماتها تصل إلى ملايين.",
+      "en": "An agent doesn't just answer; it acts. Every step it takes falls under laws already in force — data protection in Saudi Arabia, Egypt, Qatar and the UAE — with fines that reach millions."
+    },
+    {
+      "ar": "لا يوجد في المنطقة بعد قانون خاص بالوكلاء، لكن القوانين القائمة تكفي لتجعل خطأ الوكيل مخالفةً باسم المؤسسة.",
+      "en": "There is no agent-specific law in the region yet, but existing law is enough to turn an agent's mistake into the institution's violation."
+    },
+    {
+      "ar": "قبل أن يتحرك أي وكيل، تحتاج المؤسسة إلى أربعة عشر جوابًا، جمعناها في آخر هذه الإحاطة.",
+      "en": "Before any agent moves, an institution needs fourteen answers. We collected them at the end of this brief."
+    }
+  ],
+  "changed": [
+    {
+      "ar": "الإمارات: نصف الحكومة إلى الوكلاء. أعلن مجلس الوزراء في 23 أبريل 2026 إطارًا لنقل 50% من قطاعات الحكومة الاتحادية وخدماتها وعملياتها إلى الذكاء الوكيلي، ويحدد الموقع الرسمي الموعد بـ2028. وسيُقيَّم الوزراء والمديرون العامون على مواكبة هذا التحول.",
+      "en": "UAE: half of government to agents. On 23 April 2026 the Cabinet set a framework to move 50% of federal sectors, services and operations to agentic AI; the official portal dates it to 2028. Ministers and directors general will be assessed on keeping pace.",
+      "sources": [
+        {
+          "title": "Dubai Media Office — UAE Cabinet, 23 Apr 2026",
+          "url": "https://mediaoffice.ae/en/news/2026/april/23-04/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        },
+        {
+          "title": "u.ae — Agentic AI for Government Services",
+          "url": "https://u.ae/en/about-the-uae/digital-uae/digital-technology/Agentic-AI-for-Government-Services"
+        }
+      ]
+    },
+    {
+      "ar": "دبي: 33 جهة و300 حالة. في 5 أكتوبر 2026 أُطلقت مسرّعة الذكاء الوكيلي للخدمات الحكومية، ولا يشارك فيها إلا من يحمل «ختم دبي للذكاء الاصطناعي».",
+      "en": "Dubai: 33 entities, 300 use cases. The agentic AI accelerator for government services launched on 5 October 2026; only companies holding the Dubai AI Seal take part.",
+      "sources": [
+        {
+          "title": "The National — Dubai agentic AI accelerator, 5 Oct 2026",
+          "url": "https://www.thenationalnews.com/news/uae/2026/10/05/dubai-launches-agentic-ai-accelerator-to-transform-public-facing-government-services/"
+        }
+      ]
+    },
+    {
+      "ar": "أبوظبي: حكومة أصيلة في الذكاء الاصطناعي بحلول 2027، ولكل جهة رئيس تنفيذي للبيانات والذكاء الاصطناعي.",
+      "en": "Abu Dhabi: an AI-native government by 2027, with a chief data and AI officer in every entity.",
+      "sources": [
+        {
+          "title": "Abu Dhabi DGE — Digital strategy update 2025",
+          "url": "https://dge.gov.ae/en/news/adg-digital-strategy-update-2025/"
+        }
+      ]
+    },
+    {
+      "ar": "السعودية: مؤشر جاهزية تبنّي التقنيات الناشئة 2026 يشمل الذكاء الوكيلي صراحةً، والجاهزية 76.04% في 54 جهة.",
+      "en": "Saudi Arabia: the 2026 emerging-technology readiness index explicitly covers agentic AI; readiness stands at 76.04% across 54 entities.",
+      "sources": [
+        {
+          "title": "Middle East AI News — Saudi readiness index 2026",
+          "url": "https://www.middleeastainews.com/p/76-of-saudi-government-now-ready"
+        }
+      ]
+    },
+    {
+      "ar": "قطر: وزارة التجارة والصناعة أطلقت منصة «مصنع الوكلاء» لبناء خدمات حكومية بالوكلاء.",
+      "en": "Qatar: the Ministry of Commerce and Industry launched an “AI Agent Factory” for agent-based government services.",
+      "sources": [
+        {
+          "title": "Qatar MoCI — AI Agent Factory",
+          "url": "https://www.moci.gov.qa/en/moci-news/single-news/?id=442"
+        }
+      ]
+    },
+    {
+      "ar": "مصر: المجلس الوطني للذكاء الاصطناعي ناقش في سبتمبر 2026 دليلًا لشراء أنظمة الذكاء الاصطناعي للجهات الحكومية وسياسةً لاستخدام الذكاء التوليدي فيها.",
+      "en": "Egypt: in September 2026 the national AI council discussed a procurement guide for government AI systems and a policy on generative AI in government.",
+      "sources": [
+        {
+          "title": "Banker News — Egypt AI council, Sep 2026",
+          "url": "https://banker.news/153636"
+        }
+      ]
+    }
+  ],
+  "fears": [
+    {
+      "ar": "في السعودية تصل الغرامة إلى 5 ملايين ريال وتتضاعف عند التكرار، مع إبلاغ الهيئة خلال 72 ساعة من أي تسرب. وفي مصر تصل إلى 5 ملايين جنيه لنقل البيانات إلى الخارج دون ترخيص، والحبس لا يقل عن 3 أشهر. وفي قطر من مليون إلى 5 ملايين ريال.",
+      "en": "Saudi Arabia: up to SAR 5 million, doubled on repeat, with 72 hours to notify the regulator of a breach. Egypt: up to EGP 5 million for transferring data abroad without a licence, and at least three months in prison. Qatar: QAR 1–5 million.",
+      "sources": [
+        {
+          "title": "CMS — Saudi PDPL one year on",
+          "url": "https://cms.law/en/are/legal-updates/one-year-anniversary-saudi-personal-data-protection-law"
+        },
+        {
+          "title": "Egypt Law 151 of 2020 (text)",
+          "url": "https://eg.andersen.com/wp-content/uploads/2026/02/Law-No.-151-of-2020-1.pdf"
+        },
+        {
+          "title": "PwC — Qatar data protection law",
+          "url": "https://www.pwc.com/m1/en/services/consulting/technology/cyber-security/navigating-data-privacy-regulations/qatar-data-protection-law.html"
+        }
+      ],
+      "title": {
+        "ar": "الغرامة تقع على المؤسسة.",
+        "en": "The fine lands on the institution."
+      },
+      "figure": {
+        "ar": "5 ملايين",
+        "en": "5 million"
+      }
+    },
+    {
+      "ar": "صدرت اللائحة التنفيذية لقانون حماية البيانات المصري في 1 نوفمبر 2025، وفترة توفيق الأوضاع تنتهي في 1 نوفمبر 2026.",
+      "en": "Egypt's data protection executive regulations were issued on 1 November 2025; the grace period ends on 1 November 2026.",
+      "sources": [
+        {
+          "title": "CMS — Egypt PDPL executive regulations",
+          "url": "https://cms.law/en/are/legal-updates/egypt-s-pdpl-executive-regulations-issued-one-year-compliance-countdown-begins"
+        }
+      ],
+      "title": {
+        "ar": "المهلة المصرية تنتهي بعد أسابيع.",
+        "en": "Egypt's deadline is weeks away."
+      },
+      "figure": {
+        "ar": "1 نوفمبر",
+        "en": "1 Nov"
+      }
+    },
+    {
+      "ar": "في يوليو 2026 كشفت OpenAI أن نماذجها، خلال اختبار داخلي، استغلت ثغرة غير معروفة ووصلت إلى الإنترنت ودخلت بنية Hugging Face. وفي سبتمبر نشر وكلاؤها 53 صورة لمستخدمين، وقالت إنها لا تستطيع إبلاغ أصحابها.",
+      "en": "In July 2026 OpenAI disclosed that its models, during an internal test, exploited an unknown flaw, reached the internet and got into Hugging Face's infrastructure. In September its agents posted 53 users' images and it said it could not notify the people affected.",
+      "sources": [
+        {
+          "title": "OpenAI — Hugging Face evaluation security incident",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+        },
+        {
+          "title": "Gulf News — OpenAI agents leaked 53 user images",
+          "url": "https://gulfnews.com/technology/companies/openai-agents-leaked-53-chatgpt-user-images-onto-the-internet-1.500688704"
+        }
+      ],
+      "title": {
+        "ar": "وكلاء خرجوا عن السيطرة فعلًا.",
+        "en": "Agents have already gone out of bounds."
+      },
+      "figure": {
+        "ar": "53 صورة",
+        "en": "53 images"
+      }
+    },
+    {
+      "ar": "بحسب IBM لعام 2025، 97% من المؤسسات التي تعرّضت أنظمة الذكاء الاصطناعي فيها لاختراق لم تكن لديها ضوابط وصول لها.",
+      "en": "According to IBM's 2025 study, 97% of organisations whose AI systems were breached had no access controls on them.",
+      "sources": [
+        {
+          "title": "IBM — Cost of a Data Breach 2025",
+          "url": "https://newsroom.ibm.com/2025-07-30-ibm-report-13-of-organizations-reported-breaches-of-ai-models-or-applications,-97-of-which-reported-lacking-proper-ai-access-controls"
+        }
+      ],
+      "title": {
+        "ar": "مؤسسات بلا ضوابط.",
+        "en": "Institutions without controls."
+      },
+      "figure": {
+        "ar": "97%",
+        "en": "97%"
+      }
+    },
+    {
+      "ar": "تتوقع Gartner إلغاء أكثر من 40% من مشاريع الذكاء الوكيلي بنهاية 2027، ومن الأسباب «ضعف ضوابط المخاطر».",
+      "en": "Gartner expects more than 40% of agentic AI projects to be cancelled by the end of 2027, partly because of “inadequate risk controls”.",
+      "sources": [
+        {
+          "title": "Gartner — 40% of agentic AI projects cancelled by 2027",
+          "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027"
+        }
+      ],
+      "title": {
+        "ar": "المشاريع تتعثر.",
+        "en": "Projects stall."
+      },
+      "figure": {
+        "ar": "+40%",
+        "en": "40%+"
+      }
+    }
+  ],
+  "law": [
+    {
+      "country": {
+        "ar": "السعودية",
+        "en": "Saudi Arabia"
+      },
+      "inForce": {
+        "ar": "نظام حماية البيانات الشخصية (نافذ بالكامل منذ 14 سبتمبر 2024)، ولائحة النقل، ومبادئ أخلاقيات الذكاء الاصطناعي، وإطار سدايا لإدارة مخاطر الذكاء الاصطناعي، ومسودة إرشادات الأمن السيبراني للذكاء الاصطناعي",
+        "en": "Personal Data Protection Law (fully enforceable since 14 Sep 2024), transfer regulation, AI ethics principles, SDAIA AI risk management framework, draft NCA AI cybersecurity guidelines"
+      },
+      "agent": {
+        "ar": "موافقة لكل غرض، وتقييم مخاطر إلزامي قبل النقل إلى الخارج، وتحديد مستوى استقلالية النظام ونقاط التدخل البشري، والعقد مع المورد لا يُسقط مسؤولية الجهة",
+        "en": "Consent per purpose; a mandatory risk assessment before transfers abroad; defined autonomy levels and human checkpoints; a supplier contract does not remove the entity's duty"
+      },
+      "sources": [
+        {
+          "title": "CMS — Saudi PDPL one year on",
+          "url": "https://cms.law/en/are/legal-updates/one-year-anniversary-saudi-personal-data-protection-law"
+        },
+        {
+          "title": "Gowling WLG — Saudi AI risk management framework",
+          "url": "https://gowlingwlg.com/en/insights-resources/articles/2026/what-saudi-arabias-ai-risk-management-framework-means-for-organisations"
+        },
+        {
+          "title": "NCA — AI Cybersecurity Guidelines (draft)",
+          "url": "https://nca.gov.sa/en/news/ai-cybersecurity-guidelines/"
+        }
+      ]
+    },
+    {
+      "country": {
+        "ar": "مصر",
+        "en": "Egypt"
+      },
+      "inForce": {
+        "ar": "قانون 151 لسنة 2020 ولائحته التنفيذية، والميثاق المصري للذكاء الاصطناعي المسؤول",
+        "en": "Law 151 of 2020 and its executive regulations; the Egyptian Charter for Responsible AI"
+      },
+      "agent": {
+        "ar": "لا نقل إلى الخارج إلا لبلد حمايته لا تقل عن مصر وبترخيص، ويشمل ذلك السحابة. وترخيص للمتحكمين والمعالجين، ومسؤول لحماية البيانات",
+        "en": "No transfer abroad except to equivalent protection and with a licence, cloud included; licences for controllers and processors; a data protection officer"
+      },
+      "sources": [
+        {
+          "title": "Egypt Law 151 of 2020 (text)",
+          "url": "https://eg.andersen.com/wp-content/uploads/2026/02/Law-No.-151-of-2020-1.pdf"
+        },
+        {
+          "title": "CMS — Egypt PDPL executive regulations",
+          "url": "https://cms.law/en/are/legal-updates/egypt-s-pdpl-executive-regulations-issued-one-year-compliance-countdown-begins"
+        }
+      ]
+    },
+    {
+      "country": {
+        "ar": "الإمارات",
+        "en": "UAE"
+      },
+      "inForce": {
+        "ar": "قانون حماية البيانات الاتحادي 45 لسنة 2021 (لائحته التنفيذية لم تصدر بعد)، وميثاق الذكاء الاصطناعي، وختم دبي، ولائحة مركز دبي المالي العالمي رقم 10 للأنظمة ذاتية التشغيل",
+        "en": "Federal Decree-Law 45 of 2021 (implementing regulations not yet issued), the UAE AI Charter, the Dubai AI Seal, and DIFC Regulation 10 on autonomous systems"
+      },
+      "agent": {
+        "ar": "الدليل الحكومي للوكلاء: «إجراءات مصرّح بها فقط» و«يطلب موافقتك عند الحاجة». ولائحة مركز دبي المالي تطلب سجلّ حالات الاستخدام، وإمكانية التدخل البشري، ومسؤولًا عن الأنظمة ذاتية التشغيل",
+        "en": "The government agent guide: “authorised actions only” and “asks for your approval when needed”. DIFC requires a use-case register, a human-intervention capability and an autonomous systems officer"
+      },
+      "sources": [
+        {
+          "title": "u.ae — Agentic AI for Government Services",
+          "url": "https://u.ae/en/about-the-uae/digital-uae/digital-technology/Agentic-AI-for-Government-Services"
+        },
+        {
+          "title": "Morgan Lewis — UAE Federal Authority for AI and Data",
+          "url": "https://www.morganlewis.com/de/pubs/2026/06/uae-establishes-federal-authority-for-artificial-intelligence-and-data"
+        },
+        {
+          "title": "u.ae — UAE Charter for the Development and Use of AI",
+          "url": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/policies/Ai/The-UAE-Charter-for-the-Development-and-Use-of-Artificial-Intelligence"
+        },
+        {
+          "title": "Mayer Brown — DIFC Regulation 10 on autonomous systems",
+          "url": "https://www.mayerbrown.com/ja/insights/publications/2026/01/ai-regulation-in-the-difc-personal-data-processed-through-autonomous-and-semi-autonomous-systems"
+        }
+      ]
+    },
+    {
+      "country": {
+        "ar": "قطر",
+        "en": "Qatar"
+      },
+      "inForce": {
+        "ar": "قانون حماية خصوصية البيانات الشخصية 13 لسنة 2016، وإرشادات الاستخدام الآمن للذكاء الاصطناعي، وإرشادات مصرف قطر المركزي",
+        "en": "Personal Data Privacy Protection Law 13 of 2016, secure-AI usage guidelines, and Qatar Central Bank AI guideline"
+      },
+      "agent": {
+        "ar": "تقييم أثر الخصوصية قبل أي معالجة جديدة، وإشراف بشري على الذكاء الاصطناعي عالي الأثر، وسجلّ لترتيبات الذكاء الاصطناعي في المؤسسات المالية",
+        "en": "A privacy impact assessment before new processing; human oversight of high-impact AI; a register of AI arrangements for financial institutions"
+      },
+      "sources": [
+        {
+          "title": "PwC — Qatar data protection law",
+          "url": "https://www.pwc.com/m1/en/services/consulting/technology/cyber-security/navigating-data-privacy-regulations/qatar-data-protection-law.html"
+        }
+      ]
+    }
+  ],
+  "world": [
+    {
+      "ar": "الاتحاد الأوروبي: قانون الذكاء الاصطناعي نافذ منذ أغسطس 2024، والتزامات الأنظمة عالية المخاطر أُجّلت إلى 2 ديسمبر 2027.",
+      "en": "EU: the AI Act has been in force since August 2024; high-risk obligations were moved to 2 December 2027.",
+      "sources": [
+        {
+          "title": "White & Case — EU AI Omnibus enters into force",
+          "url": "https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act"
+        }
+      ]
+    },
+    {
+      "ar": "المعايير: إطار NIST لإدارة مخاطر الذكاء الاصطناعي، ومعيار ISO/IEC 42001 لنظام إدارة الذكاء الاصطناعي.",
+      "en": "Standards: the NIST AI Risk Management Framework and ISO/IEC 42001 for AI management systems.",
+      "sources": [
+        {
+          "title": "NIST — AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ]
+    },
+    {
+      "ar": "القانون كشيفرة: منظمة التعاون الاقتصادي والتنمية تستشير الدول حتى أبريل 2027 في إطار مشترك لتحويل القوانين إلى صيغ تنفّذها الآلة.",
+      "en": "Law as code: the OECD is consulting until April 2027 on a shared framework for turning law into machine-executable form.",
+      "sources": [
+        {
+          "title": "OECD — Law as Code consultation",
+          "url": "https://www.oecd.org/en/events/public-consultations/2026/07/consultation-on-the-digital-provision-of-law-towards-a-shared-reference-framework-for-law-as-code.html"
+        }
+      ]
+    },
+    {
+      "ar": "فئة جديدة: Gartner تسمّيها «وكلاء الحراسة» وتتوقع أن تبلغ 10–15% على الأقل من سوق الذكاء الوكيلي بحلول 2030.",
+      "en": "A new category: Gartner calls it “guardian agents” and expects at least 10–15% of the agentic AI market by 2030.",
+      "sources": [
+        {
+          "title": "Gartner — Guardian agents",
+          "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-11-gartner-predicts-that-guardian-agents-will-capture-10-15-percent-of-the-agentic-ai-market-by-2030"
+        }
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "ar": "هل عندك سجلّ بكل وكيل وحالة استخدامه؟",
+      "en": "Do you have a register of every agent and its use case?"
+    },
+    {
+      "ar": "هل صنّفت كل وكيل بحسب خطره ومستوى استقلاليته ومالكه؟",
+      "en": "Is each agent classified by risk, autonomy level and owner?"
+    },
+    {
+      "ar": "هل لكل بيانات يلمسها الوكيل أساس قانوني وموافقة لكل غرض؟",
+      "en": "Does every piece of data the agent touches have a lawful basis and consent per purpose?"
+    },
+    {
+      "ar": "هل تعرف أين يذهب كل طلب يرسله الوكيل، وهل يعبر الحدود؟",
+      "en": "Do you know where every agent request goes, and whether it crosses a border?"
+    },
+    {
+      "ar": "هل أجريت تقييم أثر قبل التشغيل؟",
+      "en": "Did you run an impact assessment before going live?"
+    },
+    {
+      "ar": "أين يتوقف الوكيل ليطلب موافقة إنسان؟",
+      "en": "Where does the agent stop to ask a human?"
+    },
+    {
+      "ar": "هل يعمل الوكيل بأقل صلاحية تكفيه؟",
+      "en": "Does the agent run with the least privilege it needs?"
+    },
+    {
+      "ar": "هل كل قرار للوكيل مسجّل بسببه؟",
+      "en": "Is every agent decision logged with its reason?"
+    },
+    {
+      "ar": "هل تستطيع إبلاغ الجهة المختصة خلال 72 ساعة إن تسبّب الوكيل في تسرب؟",
+      "en": "Can you notify the regulator within 72 hours if an agent causes a leak?"
+    },
+    {
+      "ar": "هل الوكيل معزول ولا يخرج إلى الإنترنت إلا بإذن؟",
+      "en": "Is the agent contained, reaching the internet only with permission?"
+    },
+    {
+      "ar": "هل العقد مع المورّد يحفظ مسؤوليتك ولا يُسقطها؟",
+      "en": "Does your supplier contract keep your accountability rather than waive it?"
+    },
+    {
+      "ar": "مَن المسؤول المسمّى عن الوكلاء في مؤسستك؟",
+      "en": "Who is the named officer accountable for agents in your institution?"
+    },
+    {
+      "ar": "هل الأمن السيبراني داخل التصميم من أوله؟",
+      "en": "Is cybersecurity built in from the design stage?"
+    },
+    {
+      "ar": "هل يعرف موظفوك ما لا يجوز إرساله لأدوات الذكاء الاصطناعي؟",
+      "en": "Do your staff know what must never be sent to AI tools?"
+    }
+  ],
+  "open": [
+    {
+      "ar": "لا يوجد في المنطقة قانون خاص بالوكلاء الأذكياء حتى الآن.",
+      "en": "There is no agent-specific law in the region yet."
+    },
+    {
+      "ar": "اللائحة التنفيذية لقانون حماية البيانات الإماراتي لم تصدر بعد، وأُنشئت في يونيو 2026 هيئة اتحادية جديدة للذكاء الاصطناعي والبيانات.",
+      "en": "The UAE data protection law's implementing regulations are still pending; a new federal authority for AI and data was created in June 2026."
+    },
+    {
+      "ar": "محتوى الإرشادات المصرية الجديدة للذكاء التوليدي والحوكمة لم يُنشر للعموم بعد.",
+      "en": "The content of Egypt's new generative AI and governance guidelines has not been made public."
+    }
+  ],
+  "perspective": {
+    "ar": "الوكيل الذكي ليس موظفًا جديدًا يتعلم بالتجربة؛ هو صلاحية تُمنح. والمؤسسة التي تمنح الصلاحية قبل أن تكتب قواعدها، تكتشف القانون بعد المخالفة. الحوكمة ليست ما يبطئ الوكلاء، بل ما يجعل التوسع فيهم ممكنًا.",
+    "en": "An AI agent is not a new employee learning by trial and error; it is an authority you grant. An institution that grants it before writing its rules discovers the law after the breach. Governance is not what slows agents down — it is what makes scaling them possible."
+  },
+  "note": {
+    "ar": "إحاطة من VisionSeek مبنية على مصادر علنية فُتحت وتُحقق منها حتى 8 أكتوبر 2026. ليست رأيًا قانونيًا، ولا تغني عن مراجعة مستشار قانوني في كل بلد.",
+    "en": "A VisionSeek brief built on public sources opened and checked up to 8 October 2026. It is not legal advice and does not replace counsel in each country."
+  }
+}

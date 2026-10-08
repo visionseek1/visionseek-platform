@@ -168,3 +168,15 @@ test('the archive list only holds pages offered in /admin, and never the protect
     assert.ok(!['/', '/about', '/start', '/privacy', '/terms'].includes(item.path), item.path);
   }
 });
+
+test('the agent governance brief is bilingual and every claim carries an https source', () => {
+  const brief = read('reports/agent-governance.json');
+  for (const key of ['label', 'dateLabel', 'title', 'subtitle', 'perspective', 'note']) assert.ok(isText(brief[key]), key);
+  for (const group of ['changed', 'fears', 'world']) for (const item of brief[group]) {
+    assert.ok(item.ar && item.en, group);
+    assert.ok(item.sources.length, `${group} needs sources`);
+    for (const s of item.sources) assert.match(s.url, /^https:\/\//);
+  }
+  for (const row of brief.law) { assert.ok(isText(row.country) && isText(row.inForce) && isText(row.agent)); assert.ok(row.sources.length); }
+  assert.equal(brief.checklist.length, 14);
+});
