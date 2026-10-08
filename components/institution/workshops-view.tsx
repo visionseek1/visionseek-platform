@@ -51,10 +51,11 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             <blockquote className="vs-wl-quote">{text(locale, live.heroQuote)}</blockquote>
             <h1>{text(locale, live.heroTitle)}</h1>
             <p className="vs-wl-lede">{text(locale, live.heroLede)}</p>
+            <p className="vs-wl-custom">{text(locale, live.heroCustom)}</p>
             <p className="vs-wl-with">{text(locale, live.heroWith)}</p>
             <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
             <div className="vs-wl-actions">
-              <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, section.title)})}`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
+              <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
             </div>
           </div>
           <div className="vs-wl-hero-image">
@@ -91,6 +92,25 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           </nav>
         </section>
 
+        <section className="vs-wl-how" id="how">
+          <div className="vs-wl-head">
+            <div>
+              <p className="vs-wl-code">{text(locale, live.howLabel)}</p>
+              <h2>{text(locale, live.howTitle)}</h2>
+            </div>
+          </div>
+          <ol className="vs-wl-how-steps">
+            {live.howSteps.map((step, index) => (
+              <li key={step.title.en}>
+                <span className="vs-wl-step-n">{String(index + 1).padStart(2, '0')}</span>
+                <strong>{text(locale, step.title)}</strong>
+                <p>{text(locale, step.line)}</p>
+              </li>
+            ))}
+          </ol>
+          <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
+        </section>
+
         <section className="vs-wl-founder" id="founder">
           <div className="vs-wl-founder-image">
             <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} sizes="(max-width: 860px) 100vw, 40vw" />
@@ -111,7 +131,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             {live.closingLines.map((line, index) => <span key={line.en} className={index === live.closingLines.length - 1 ? 'is-accent' : undefined}>{text(locale, line)}</span>)}
           </h2>
           <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
-          <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, section.title)})}`}>{text(locale, live.closingCta)}<ArrowRight size={18} aria-hidden /></Link>
+          <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`}>{text(locale, live.closingCta)}<ArrowRight size={18} aria-hidden /></Link>
         </section>
       </div>
     </Frame>

@@ -57,6 +57,8 @@ test('the live section page is short: hero, three doors, founder, closing', () =
   assert.deepEqual(Object.keys(live.doorCards).sort(), ['development', 'institution', 'leader']);
   assert.equal(live.closingLines.length, 3);
   assert.match(live.founderStatement.ar, /لبلادنا العربية/);
+  assert.equal(live.howSteps.length, 3);
+  assert.match(live.ctaPrimary.ar, /ورشة خاصة مع د\. أحمد عبدالعليم/);
   assert.equal(section.doors.leader.name.ar, 'الإدارة والقيادة في عصر الذكاء الاصطناعي');
   assert.equal(section.doors.institution.name.ar, 'العمل مع الذكاء الاصطناعي');
   assert.equal(section.doors.development.name.ar, 'المؤسسة والذكاء الاصطناعي');

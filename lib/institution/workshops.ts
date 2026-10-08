@@ -49,6 +49,7 @@ export type WorkshopLive = {
   heroQuote: Bi;
   heroTitle: Bi;
   heroLede: Bi;
+  heroCustom: Bi;
   heroWith: Bi;
   heroImage: string;
   heroImageAlt: Bi;
@@ -57,6 +58,9 @@ export type WorkshopLive = {
   doorsLabel: Bi;
   doorCards: Record<WorkshopKind, WorkshopDoorCard>;
   openDoor: Bi;
+  howLabel: Bi;
+  howTitle: Bi;
+  howSteps: {title: Bi; line: Bi}[];
   founderName: Bi;
   founderKicker: Bi;
   founderStatement: Bi;

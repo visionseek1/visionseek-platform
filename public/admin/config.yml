@@ -2084,6 +2084,12 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
+              - label: سطر التخصيص
+                name: heroCustom
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
               - label: مع من
                 name: heroWith
                 widget: object
@@ -2134,6 +2140,35 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
+              - label: سطر «كيف تحصل على ورشتك»
+                name: howLabel
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان «كيف تحصل على ورشتك»
+                name: howTitle
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الخطوات
+                name: howSteps
+                widget: list
+                summary: "{{fields.title.ar}}"
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: السطر
+                    name: line
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
               - label: اسم المؤسس
                 name: founderName
                 widget: object

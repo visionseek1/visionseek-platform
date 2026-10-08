@@ -145,6 +145,10 @@
       "en": "Learn how it widens your ability to understand, to think, and to act.",
       "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
     },
+    "heroCustom": {
+      "ar": "كل ورشة تُصمَّم لك أنت: لعملك، ولمؤسستك، ولما تريد أن تصل إليه.",
+      "en": "Every workshop is designed for you: for your work, your institution, and where you want to get to."
+    },
     "heroWith": {
       "en": "With Dr. Ahmed Abdelalim",
       "ar": "مع د. أحمد عبدالعليم"
@@ -156,8 +160,8 @@
     },
     "heroImageLabel": "VISIONSEEK · MAKE IT POSSIBLE",
     "ctaPrimary": {
-      "en": "Start",
-      "ar": "ابدأ"
+      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
+      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
     },
     "doorsLabel": {
       "en": "The three doors",
@@ -181,6 +185,46 @@
       "en": "Open the door",
       "ar": "ادخل من هنا"
     },
+    "howLabel": {
+      "ar": "التخصيص هو ميزتنا",
+      "en": "Made for you is the point"
+    },
+    "howTitle": {
+      "ar": "كيف تحصل على ورشتك",
+      "en": "How you get your workshop"
+    },
+    "howSteps": [
+      {
+        "title": {
+          "ar": "اطلب ورشتك",
+          "en": "Request your workshop"
+        },
+        "line": {
+          "ar": "قل لنا من أنت، وماذا تعمل.",
+          "en": "Tell us who you are and what you do."
+        }
+      },
+      {
+        "title": {
+          "ar": "نفهم عملك",
+          "en": "We understand your work"
+        },
+        "line": {
+          "ar": "نجلس معك لنعرف تفاصيل عملك، ونضع لك حلولًا على أساسها.",
+          "en": "We sit with you to learn the details of your work, and build solutions on them."
+        }
+      },
+      {
+        "title": {
+          "ar": "ورشة مصممة لك",
+          "en": "A workshop designed for you"
+        },
+        "line": {
+          "ar": "ورشة خاصة مع مؤسس VisionSeek شخصيًا، د. أحمد عبدالعليم، على عملك الحقيقي وبالأدوات التي تناسبك.",
+          "en": "A private workshop with the founder of VisionSeek himself, Dr. Ahmed Abdelalim, on your real work and with the tools that fit you."
+        }
+      }
+    ],
     "founderName": {
       "en": "Dr. Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
@@ -212,8 +256,8 @@
       }
     ],
     "closingCta": {
-      "en": "Discover what could become possible.",
-      "ar": "اكتشف ما يمكن أن يصبح ممكنًا."
+      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
+      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
     }
   }
 }
