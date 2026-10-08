@@ -1128,7 +1128,67 @@ collections:
           - label: العربية
             name: ar
             widget: string
-        - label: النص
+        - label: التعريف
+          name: bio
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: زاوية النظر
+          name: lens
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: تمهيد السؤال
+          name: questionLead
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: السؤال
+          name: question
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: تمهيد القيمة
+          name: valueLead
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: القيمة
+          name: value
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: فقرة «أؤمن…»
           name: text
           widget: object
           fields:

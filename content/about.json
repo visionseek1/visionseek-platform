@@ -106,7 +106,7 @@
     ]
   },
   "founder": {
-    "image": "/ahmed-abdelalim.jpg",
+    "image": "/ahmed-abdelalim-2026.jpg",
     "imageAlt": {
       "en": "Dr. Ahmed Abdelalim, founder of VisionSeek",
       "ar": "د. أحمد عبدالعليم، مؤسس VisionSeek"
@@ -118,6 +118,30 @@
     "name": {
       "en": "Dr. Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
+    },
+    "bio": {
+      "ar": "مؤسس VisionSeek، وباحث ورائد أعمال ومستثمر، خاض تجارب في البحث العلمي، والأعمال، والتجارة الدولية، والاستثمار في مصر والإمارات وكوريا الجنوبية.",
+      "en": "Founder of VisionSeek. A researcher, entrepreneur and investor, with experience across scientific research, business, international trade and investment in Egypt, the UAE and South Korea."
+    },
+    "lens": {
+      "ar": "تعلّم من العلم أن يرى ما وراء الظاهر، ومن الأعمال أن يرى ما يمكن أن يصنع قيمة، ومن العمل بين دول وقطاعات مختلفة أن يرى الروابط التي لا تظهر من زاوية واحدة.",
+      "en": "Science taught him to look beneath the surface. Business taught him to see what can create value. Working across countries and sectors taught him to see the connections no single angle reveals."
+    },
+    "questionLead": {
+      "ar": "وظل قريبًا من الابتكارات والتقنيات الجديدة، يبحث دائمًا عن السؤال الأهم:",
+      "en": "He has stayed close to new innovations and technologies, always looking for the question that matters most:"
+    },
+    "question": {
+      "ar": "ماذا يمكن أن يصبح ممكنًا عندما تتصل الأشياء التي نراها منفصلة؟",
+      "en": "What becomes possible when the things we see as separate are connected?"
+    },
+    "valueLead": {
+      "ar": "وهذه هي القيمة التي ينقلها إلى من يعمل معه:",
+      "en": "That is the value he brings to the people he works with:"
+    },
+    "value": {
+      "ar": "أن يرى أبعد، ويربط أكثر، ويكتشف فرصًا لم تكن ظاهرة من قبل.",
+      "en": "to see further, connect more, and find opportunities that were not visible before."
     },
     "text": {
       "en": "I believe changing the world does not always begin with inventing something new, but with discovering the missing connection between what we know and what we can build. Through VisionSeek, I aim to unite technology, science, design and entrepreneurship in projects that unlock new possibilities for people and society.",
