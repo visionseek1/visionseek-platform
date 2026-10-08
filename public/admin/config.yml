@@ -2497,8 +2497,8 @@ collections:
                   - {label: "الورش ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /workshops/hospital-administration", value: "/workshops/hospital-administration"}
                   - {label: "الورش ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /workshops/police-citizen-service", value: "/workshops/police-citizen-service"}
                   - {label: "الورش ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /workshops/university-teams", value: "/workshops/university-teams"}
-                  - {label: "المشاريع ← VS-P08 معيار ثانٍ لاحتواء الغاز المسال  /projects/energy/lng/second-lng-containment-standard", value: "/projects/energy/lng/second-lng-containment-standard"}
-                  - {label: "المشاريع ← VS-P07 سيادة الإمداد العائم  /projects/energy/lng/sovereign-floating-gas-supply", value: "/projects/energy/lng/sovereign-floating-gas-supply"}
+                  - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
+                  - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /insights/physical-ai", value: "/insights/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
                 # archive-options:end

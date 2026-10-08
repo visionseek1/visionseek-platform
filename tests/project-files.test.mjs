@@ -5,7 +5,7 @@ import ts from 'typescript';
 async function sourceModule(path){const source=await fs.readFile(new URL(path,import.meta.url),'utf8');const compiled=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;return import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);}
 const {projects,projectInquiry,projectFiles,publicProjectUpdates}=await sourceModule('../lib/projects/index.ts');
 test('draft updates never appear in the public timeline and chronology does not mutate the catalog',()=>{
- const file={...projectFiles['VS-P07'],updates:[
+ const file={...projectFiles['VS-P09'],updates:[
   {id:'older',date:'2026-08-01',visibility:'public'},
   {id:'private-work',date:'2026-09-28',visibility:'draft',body:{ar:'Private client details',en:'Private client details'}},
   {id:'newer',date:'2026-09-01',visibility:'public'},

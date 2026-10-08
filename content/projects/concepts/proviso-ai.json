@@ -350,8 +350,8 @@
           "en": "The fine lands on the institution, not the agent."
         },
         "body": {
-          "ar": "في السعودية تصل غرامة مخالفة حماية البيانات إلى 5 ملايين ريال للمخالفة الواحدة. وفي مصر تصل إلى 5 ملايين جنيه، ومهلة الالتزام تنتهي هذا الشهر: أكتوبر 2026.",
-          "en": "In Saudi Arabia, a data protection breach can cost up to SAR 5 million per violation. In Egypt, up to EGP 5 million — and the compliance deadline is this month, October 2026."
+          "ar": "في السعودية تصل غرامة مخالفة حماية البيانات إلى 5 ملايين ريال، وتتضاعف عند التكرار. وفي مصر تصل إلى 5 ملايين جنيه، ومهلة الالتزام بالقانون تنتهي بعد أسابيع: مطلع نوفمبر 2026.",
+          "en": "In Saudi Arabia, a data protection breach can cost up to SAR 5 million, doubled for repeat offences. In Egypt, up to EGP 5 million — and the compliance grace period ends within weeks, at the start of November 2026."
         },
         "figure": {
           "ar": "5 ملايين",
@@ -359,12 +359,12 @@
         },
         "sources": [
           {
-            "title": "A&O Shearman — Enforcement of the Saudi PDPL",
-            "url": "https://www.aoshearman.com/en/insights/enforcement-of-the-saudi-personal-data-protection-law"
+            "title": "CMS — Saudi PDPL one year on",
+            "url": "https://cms.law/en/are/legal-updates/one-year-anniversary-saudi-personal-data-protection-law"
           },
           {
-            "title": "Kennedys — Egypt's PDPL compliance countdown",
-            "url": "https://www.kennedyslaw.com/en/thought-leadership/article/2026/egypt-s-personal-data-protection-law-the-compliance-countdown-has-begun"
+            "title": "CMS — Egypt's PDPL executive regulations issued",
+            "url": "https://cms.law/en/are/legal-updates/egypt-s-pdpl-executive-regulations-issued-one-year-compliance-countdown-begins"
           }
         ]
       },
@@ -374,33 +374,37 @@
           "en": "Data crosses a border in a second."
         },
         "body": {
-          "ar": "القانون المصري لا يسمح بنقل البيانات إلى بلدٍ حمايته أقل، إلا بشروط. والوكيل لا يعرف هذا، ويرسل الملف دون أن يسأل.",
-          "en": "Egyptian law does not allow personal data to move to a country with weaker protection, except under conditions. The agent doesn't know that — it sends the file without asking."
+          "ar": "القانون المصري لا يسمح بنقل البيانات الشخصية إلى الخارج إلا إلى بلدٍ حمايته لا تقل عن مصر، وبترخيص من مركز حماية البيانات. والوكيل لا يعرف هذا، ويرسل الملف دون أن يسأل.",
+          "en": "Egyptian law allows personal data to leave the country only to a destination with protection no lower than Egypt's, and with a licence from the data protection centre. The agent doesn't know that — it sends the file without asking."
         },
         "sources": [
           {
-            "title": "Kennedys — Egypt's PDPL compliance countdown",
-            "url": "https://www.kennedyslaw.com/en/thought-leadership/article/2026/egypt-s-personal-data-protection-law-the-compliance-countdown-has-begun"
+            "title": "Egypt Law 151 of 2020 — Article 14 (text)",
+            "url": "https://eg.andersen.com/wp-content/uploads/2026/02/Law-No.-151-of-2020-1.pdf"
           }
         ]
       },
       {
         "title": {
-          "ar": "وكيلٌ خرج عن السيطرة.",
-          "en": "An agent that got out of control."
+          "ar": "وكلاء خرجوا عن السيطرة.",
+          "en": "Agents that got out of control."
         },
         "body": {
-          "ar": "في سبتمبر 2026 نُشر أن وكيلًا من OpenAI أفلت من بيئة الاختبار المعزولة واخترق عدة شركات. إن حدث هذا لشركة بحجمها، فكيف بوكلاء تشغّلهم مؤسستك؟",
-          "en": "In September 2026 it was reported that an OpenAI agent escaped its sandboxed test environment and hacked several companies. If that can happen to a company of that size, what about the agents your institution runs?"
+          "ar": "في يوليو 2026 كشفت OpenAI أن نماذجها، خلال اختبار داخلي، استغلت ثغرة لم تكن معروفة، وخرجت إلى الإنترنت، ودخلت بنية Hugging Face. وفي سبتمبر نشر وكلاؤها 53 صورة لمستخدمين على الإنترنت. إن حدث هذا لشركة بحجمها، فكيف بوكلاء تشغّلهم مؤسستك؟",
+          "en": "In July 2026 OpenAI disclosed that its models, during an internal test, exploited an unknown vulnerability, reached the internet and got into Hugging Face's infrastructure. In September its agents posted 53 users' images online. If this happens to a company of that size, what about the agents your institution runs?"
         },
         "figure": {
-          "ar": "سبتمبر 2026",
-          "en": "Sept 2026"
+          "ar": "53 صورة",
+          "en": "53 images"
         },
         "sources": [
           {
-            "title": "TechCrunch — OpenAI launches Astra (Sep 2026)",
-            "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/"
+            "title": "OpenAI — Hugging Face evaluation security incident",
+            "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+          },
+          {
+            "title": "Gulf News — OpenAI agents leaked 53 user images",
+            "url": "https://gulfnews.com/technology/companies/openai-agents-leaked-53-chatgpt-user-images-onto-the-internet-1.500688704"
           }
         ]
       },
