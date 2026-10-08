@@ -29,3 +29,4 @@
 .vs-site.locale-ar .vs-hero-copy :is(h1,h2){line-height:1.32}
 .vs-site.locale-ar :is(.vs-hero-sub,.vs-hero-description){line-height:1.85}
 .vs-site.locale-ar :is(h1,h2,h3)[dir=ltr]{font-family:var(--font-display),sans-serif!important}
+.vs-founder p{margin:0 0 1rem;line-height:1.85}.vs-founder .vs-founder-bio{color:var(--white);font-size:1.2rem}.vs-founder .vs-founder-question{color:var(--lime);font-size:clamp(1.25rem,2vw,1.55rem);font-weight:700;line-height:1.6}.vs-founder .vs-founder-value{color:var(--white);font-size:1.2rem;font-weight:700}.vs-founder-image img{object-position:center 15%}

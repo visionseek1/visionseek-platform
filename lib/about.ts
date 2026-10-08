@@ -7,7 +7,7 @@ export type About = {
   pages: {method: InteriorHead; about: InteriorHead; 'work-with-us': InteriorHead};
   vision: {eyebrow: Bi; title: Bi; text: Bi};
   builds: {eyebrow: Bi; title: Bi; text: Bi; items: Bi[]};
-  founder: {image: string; imageAlt: Bi; eyebrow: Bi; name: Bi; text: Bi; quote: Bi};
+  founder: {image: string; imageAlt: Bi; eyebrow: Bi; name: Bi; bio: Bi; lens: Bi; questionLead: Bi; question: Bi; valueLead: Bi; value: Bi; text: Bi; quote: Bi};
   workNote: {title: Bi; text: Bi; link: Bi};
   closing: {eyebrow: Bi; title: Bi; button: Bi; line: string};
 };
