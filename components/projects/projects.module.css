@@ -165,3 +165,9 @@
 .projectName{display:inline-flex;align-items:center;gap:12px}
 .projectLogo{display:inline-block;vertical-align:middle;margin-inline-end:12px;border-radius:10px}
 .cardLogo{background:#0F1720;border-color:color-mix(in srgb,var(--tone) 60%,transparent)}
+/* Offered programs (/programs/<slug>): a quiet real-status pill, the key and optional stages, the entry conditions. */
+.statusQuiet{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted);font-size:13px}
+.stageKey{border-color:color-mix(in srgb,var(--tone) 60%,var(--line))!important}
+.stageOptional{border-style:dashed!important}.stageOptional .mono{color:var(--dim)!important}
+.conditionsLabel{margin:28px 0 10px!important}
+.conditions{margin:0!important}

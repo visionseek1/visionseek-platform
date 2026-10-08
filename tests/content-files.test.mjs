@@ -78,7 +78,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
+  for (const name of ['news', 'site', 'programs', 'offered_programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {
@@ -179,4 +179,27 @@ test('the agent governance brief is bilingual and every claim carries an https s
   }
   for (const row of brief.law) { assert.ok(isText(row.country) && isText(row.inForce) && isText(row.agent)); assert.ok(row.sources.length); }
   assert.equal(brief.checklist.length, 14);
+});
+
+test('offered programs show their real status, speak both languages, and source every figure', () => {
+  const programs = readDir('offered-programs');
+  assert.ok(programs.length >= 1);
+  const codes = new Set([...readDir('programs'), ...readDir('projects/concepts'), ...readDir('projects/archived').filter(p => p.id)].map(p => p.code ?? p.id));
+  for (const program of programs) {
+    assert.match(program.code, /^VS-P\d{2}$/);
+    assert.ok(!codes.has(program.code), `${program.code} is already used`);
+    for (const key of ['status', 'summary', 'hook', 'question', 'promise', 'risksTitle', 'cta', 'contactTitle']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
+    assert.ok(program.fears.length >= 3, `${program.slug} needs at least three fears`);
+    for (const fear of program.fears) {
+      assert.ok(isText(fear.title) && isText(fear.body));
+      if (fear.figure) assert.ok(fear.sources?.length, `${program.slug}: a figure needs a source`);
+      for (const s of fear.sources ?? []) assert.match(s.url, /^https:\/\//);
+    }
+    for (const fact of program.profile.facts) { assert.ok(isText(fact.title) && isText(fact.detail)); assert.match(fact.url, /^https:\/\//); }
+    for (const s of [...program.whyNow.sources, ...program.edges.flatMap(e => e.sources ?? [])]) assert.match(s.url, /^https:\/\//);
+    for (const key of ['title', 'setup', 'without', 'with', 'note']) assert.ok(isText(program.scenario[key]), `${program.slug}.scenario.${key}`);
+    assert.deepEqual(program.stages.map(stage => stage.id), ['gate', 'proof', 'run', 'integration']);
+    for (const stage of program.stages) assert.ok(isText(stage.name) && isText(stage.duration) && isText(stage.body));
+    assert.ok(program.conditions.length >= 6 && program.conditions.every(isText));
+  }
 });

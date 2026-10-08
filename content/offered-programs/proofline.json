@@ -1,0 +1,419 @@
+{
+  "position": 1,
+  "slug": "proofline",
+  "code": "VS-P10",
+  "name": "Proofline",
+  "logo": "/programs/proofline.svg",
+  "tone": "#3FE0B5",
+  "image": "industry",
+  "status": {
+    "en": "Proposed · not launched",
+    "ar": "مقترح · لم يُطلق"
+  },
+  "summary": {
+    "en": "Out of all your institution's AI ideas, we prove the one process worth it, with numbers, in eight days. Within thirty, your own team runs it.",
+    "ar": "من بين كل أفكار مؤسستك للذكاء الاصطناعي، نثبت بالأرقام في ثمانية أيام الإجراء الوحيد الذي يستحق، وفي ثلاثين يومًا يعمل بيد فريقك."
+  },
+  "hook": {
+    "en": "A hundred ideas on the table. Not one process changed.",
+    "ar": "مئة فكرة على الطاولة، ولم يتغيّر إجراء واحد."
+  },
+  "question": {
+    "en": "And when someone asks what AI has actually done for you, a list of ideas won't be an answer.",
+    "ar": "وحين يُطرح السؤال: ماذا حقّق الذكاء الاصطناعي عندكم؟ لن تكون قائمة الأفكار جوابًا."
+  },
+  "promise": {
+    "en": "We help you pick the one process worth it, prove it with numbers in eight days, and have your own team running it within thirty. At every stop there is a written decision: continue, adjust, or stop.",
+    "ar": "نختار معك الإجراء الوحيد الذي يستحق، ونثبته بالأرقام في ثمانية أيام، ثم يعمل بيد فريقك في ثلاثين يومًا. وفي كل محطة قرارٌ مكتوب: نُكمل، أو نُعدّل، أو نتوقف."
+  },
+  "profile": {
+    "audiences": [
+      "government",
+      "institution",
+      "company"
+    ],
+    "facts": [
+      {
+        "kind": "trend",
+        "title": {
+          "en": "Half of UAE government services through AI agents",
+          "ar": "نصف الخدمات الحكومية في الإمارات بالوكلاء الأذكياء"
+        },
+        "detail": {
+          "en": "The UAE aims to deliver half of its government services with agentic AI within two years. A ministerial council reviewed the rollout in July 2026.",
+          "ar": "تستهدف الإمارات تقديم نصف خدماتها الحكومية بالوكلاء الأذكياء خلال عامين، وراجع مجلس وزاري خطة التنفيذ في يوليو 2026."
+        },
+        "url": "https://www.thenationalnews.com/news/uae/2026/07/01/sheikh-mansour-reviews-uaes-use-of-agentic-ai/"
+      },
+      {
+        "kind": "trend",
+        "title": {
+          "en": "2026, Saudi Arabia's Year of AI",
+          "ar": "2026 عام الذكاء الاصطناعي في السعودية"
+        },
+        "detail": {
+          "en": "Saudi Arabia's Council of Ministers designated 2026 as the Year of Artificial Intelligence.",
+          "ar": "أقرّ مجلس الوزراء السعودي تسمية 2026 عامًا للذكاء الاصطناعي."
+        },
+        "url": "https://www.middleeastainews.com/p/saudi-designates-2026-as-year-of"
+      },
+      {
+        "kind": "exhibition",
+        "value": "7–11 DEC 2026",
+        "title": {
+          "en": "GITEX Global 2026",
+          "ar": "جيتكس جلوبال 2026"
+        },
+        "detail": {
+          "en": "At Expo City Dubai.",
+          "ar": "في مدينة إكسبو دبي."
+        },
+        "url": "https://mediaoffice.ae/en/news/2025/october/08-10/gitex-global-to-begin-a-new-chapter-at-expo-city-dubai-in-2026"
+      },
+      {
+        "kind": "exhibition",
+        "value": "1–3 FEB 2027",
+        "title": {
+          "en": "World Governments Summit 2027",
+          "ar": "القمة العالمية للحكومات 2027"
+        },
+        "detail": {
+          "en": "Dates announced by the Dubai Media Office.",
+          "ar": "أعلن مكتب دبي الإعلامي موعد الدورة القادمة."
+        },
+        "url": "https://mediaoffice.ae/en/news/2026/february/08-02/guided-by-the-vision-of-uae-president-and-mohammed-bin-rashid-wgs2027-set-from-1-to-3-feb"
+      }
+    ]
+  },
+  "risksTitle": {
+    "en": "What putting it off is costing you",
+    "ar": "هذا ما تدفعه وأنت تؤجّل"
+  },
+  "fears": [
+    {
+      "figure": {
+        "en": "4 of 33",
+        "ar": "4 من 33"
+      },
+      "title": {
+        "en": "Pilots multiply. Operations never arrive.",
+        "ar": "تجارب تتكاثر، وتشغيلٌ لا يأتي."
+      },
+      "body": {
+        "en": "Of every 33 AI pilots, only four reach production.",
+        "ar": "من كل 33 تجربة ذكاء اصطناعي، أربع فقط تبلغ التشغيل."
+      },
+      "sources": [
+        {
+          "title": "CIO — 88% of AI pilots fail to reach production (IDC)",
+          "url": "https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html"
+        }
+      ]
+    },
+    {
+      "figure": {
+        "en": "95%",
+        "ar": "95%"
+      },
+      "title": {
+        "en": "Money goes out. Returns don't come back.",
+        "ar": "مالٌ يُنفق، وعائدٌ لا يعود."
+      },
+      "body": {
+        "en": "95% of enterprise generative AI pilots have delivered no return.",
+        "ar": "95% من تجارب الذكاء الاصطناعي التوليدي في المؤسسات لم تحقق عائدًا."
+      },
+      "sources": [
+        {
+          "title": "Computing — MIT report: 95% of corporate generative AI pilots fail",
+          "url": "https://www.computing.co.uk/news/2025/ai/mit-report-95pc-corporate-generative-ai-pilots-fail"
+        }
+      ]
+    },
+    {
+      "figure": {
+        "en": "40%+",
+        "ar": "+40%"
+      },
+      "title": {
+        "en": "Projects that die halfway.",
+        "ar": "مشروعٌ يسقط في منتصف الطريق."
+      },
+      "body": {
+        "en": "More than 40% of agentic AI projects will be cancelled by the end of 2027: rising costs, unclear value, risks left uncontrolled.",
+        "ar": "أكثر من 40% من مشاريع الوكلاء الأذكياء ستُلغى قبل نهاية 2027: تكلفة تتصاعد، وقيمة غامضة، ومخاطر بلا ضوابط."
+      },
+      "sources": [
+        {
+          "title": "Gartner — Over 40% of agentic AI projects will be canceled by end of 2027",
+          "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027"
+        }
+      ]
+    },
+    {
+      "figure": {
+        "en": "1 in 5",
+        "ar": "1 من 5"
+      },
+      "title": {
+        "en": "Results nobody owns.",
+        "ar": "نتيجةٌ بلا صاحب."
+      },
+      "body": {
+        "en": "One in five enterprises pursuing AI agents is still working out who owns the outcome.",
+        "ar": "مؤسسة من كل خمس تسعى إلى الوكلاء الأذكياء ما زالت تبحث عمّن يملك النتيجة."
+      },
+      "sources": [
+        {
+          "title": "Infosys — Why enterprise agentic AI programs stall before they scale",
+          "url": "https://www.infosys.com/iki/perspectives/enterprise-agentic-ai-programs-stall.html"
+        }
+      ]
+    }
+  ],
+  "scenario": {
+    "title": {
+      "en": "A year without it. Weeks with it.",
+      "ar": "عامٌ من دونه، وأسابيع معه"
+    },
+    "setup": {
+      "en": "A government entity has gathered sixty AI ideas from its departments.",
+      "ar": "جهة حكومية جمعت ستين فكرة للذكاء الاصطناعي من إداراتها."
+    },
+    "without": {
+      "en": "Committees, a priority matrix, six pilots running at once. A year later: polished demos, no process changed, and every department still waiting its turn.",
+      "ar": "لجان، ومصفوفة أولويات، وست تجارب تجري معًا. وبعد عام: عروض لامعة، ولم يتغيّر إجراء، وكل إدارة تنتظر دورها."
+    },
+    "with": {
+      "en": "Within a week, the gate produces one qualifying process, permit requests, and a stop list that says when each other idea can come back. In eight days: before-and-after numbers on real cases. In thirty: the entity's own team runs the new process.",
+      "ar": "في أسبوع، تخرج البوابة بإجراء واحد مستوفٍ، هو طلبات التصاريح، وبقائمة إيقاف مكتوبٍ أمام كل فكرة فيها متى تعود. في ثمانية أيام: أرقام قبل وبعد على حالات حقيقية. وفي ثلاثين يومًا: فريق الجهة يدير الإجراء الجديد بنفسه."
+    },
+    "note": {
+      "en": "An illustrative example.",
+      "ar": "مثال توضيحي."
+    }
+  },
+  "gains": [
+    {
+      "who": {
+        "en": "Leadership",
+        "ar": "القيادة"
+      },
+      "text": {
+        "en": "A signed decision backed by numbers: protection from scaling without evidence, and from the charge of hesitating.",
+        "ar": "قرارٌ موقّع بالأرقام، يحميها من توسّعٍ بلا دليل، ومن تهمة التردد."
+      }
+    },
+    {
+      "who": {
+        "en": "The AI and transformation lead",
+        "ar": "مسؤول الذكاء الاصطناعي والتحوّل"
+      },
+      "text": {
+        "en": "A process that works, counted in their favour, instead of a list of use cases counted against them.",
+        "ar": "إجراءٌ يعمل يُحسب له، بدل قائمة حالات استخدام تُحسب عليه."
+      }
+    },
+    {
+      "who": {
+        "en": "The process owner and team",
+        "ar": "صاحب الإجراء وفريقه"
+      },
+      "text": {
+        "en": "A process redesigned with them, not imposed on them, and an assistant that takes the repetitive work and leaves the decisions to them.",
+        "ar": "إجراءٌ أُعيد تصميمه معهم لا عليهم، ومساعدٌ يرفع عنهم المتكرر ويترك لهم القرار."
+      }
+    },
+    {
+      "who": {
+        "en": "Finance",
+        "ar": "المالية"
+      },
+      "text": {
+        "en": "The cost of each outcome against the cost of doing it by hand, before anything is spent on scaling.",
+        "ar": "تكلفة كل نتيجة مقابل تكلفة العمل اليدوي، قبل أي إنفاق على التوسع."
+      }
+    }
+  ],
+  "whyNow": {
+    "highlights": [
+      {
+        "value": {
+          "en": "Half",
+          "ar": "النصف"
+        },
+        "text": {
+          "en": "of UAE government services through AI agents within two years.",
+          "ar": "من الخدمات الحكومية في الإمارات بالوكلاء الأذكياء خلال عامين."
+        }
+      },
+      {
+        "value": {
+          "en": "2026",
+          "ar": "2026"
+        },
+        "text": {
+          "en": "Saudi Arabia's Year of Artificial Intelligence.",
+          "ar": "عام الذكاء الاصطناعي في السعودية."
+        }
+      },
+      {
+        "value": {
+          "en": "49%",
+          "ar": "49%"
+        },
+        "text": {
+          "en": "of respondents in a Gartner survey named estimating and proving AI's value as the top barrier.",
+          "ar": "من المشاركين في استطلاع Gartner قالوا إن العقبة الأولى هي تقدير قيمة الذكاء الاصطناعي وإثباتها."
+        }
+      }
+    ],
+    "paragraph": {
+      "en": "The season of collecting ideas is over. The question every entity now faces is simple: what actually works? Whoever cannot answer it this year will be asked again next year, less politely.",
+      "ar": "انتهى زمن جمع الأفكار. السؤال الذي يُطرح اليوم في كل جهة: ماذا يعمل فعلًا؟ ومن لم يُجب عنه هذا العام، سيُسأل عنه العام القادم بلهجةٍ أشد."
+    },
+    "sources": [
+      {
+        "title": "The National — Sheikh Mansour reviews UAE's use of agentic AI",
+        "url": "https://www.thenationalnews.com/news/uae/2026/07/01/sheikh-mansour-reviews-uaes-use-of-agentic-ai/"
+      },
+      {
+        "title": "Middle East AI News — Saudi designates 2026 as Year of AI",
+        "url": "https://www.middleeastainews.com/p/saudi-designates-2026-as-year-of"
+      },
+      {
+        "title": "Gartner — Survey: generative AI is now the most frequently deployed AI solution",
+        "url": "https://gartner.com/en/newsroom/press-releases/2024-05-07-gartner-survey-finds-generative-ai-is-now-the-most-frequently-deployed-ai-solution-in-organizations"
+      }
+    ]
+  },
+  "edges": [
+    {
+      "en": "We redesign the process itself instead of placing an agent on top of the old one, something only 21% of organisations in McKinsey's survey have done.",
+      "ar": "نعيد تصميم الإجراء نفسه، ولا نضع وكيلًا فوق القديم. وهذا ما لم تفعله إلا 21% من المؤسسات في استطلاع McKinsey.",
+      "sources": [
+        {
+          "title": "HPCwire — McKinsey: 21% have fundamentally redesigned some workflows",
+          "url": "https://www.hpcwire.com/aiwire/2025/03/18/mckinsey-highlights-how-organizations-are-rewiring-for-ai-success/"
+        }
+      ]
+    },
+    {
+      "en": "We are not tied to any cloud or model provider, so we can say: stop.",
+      "ar": "لسنا تابعين لمزوّد سحابة أو نموذج، لذلك نملك أن نقول: توقّفوا."
+    },
+    {
+      "en": "A stop list that saves face: no idea is thrown away; it is parked with a written condition.",
+      "ar": "قائمة إيقاف تحفظ ماء الوجه: لا تُرمى فكرة، بل تُؤجَّل بشرطٍ مكتوب."
+    },
+    {
+      "en": "An assistant beside the employee, never an automated decision about a citizen or public money.",
+      "ar": "مساعدٌ بجانب الموظف، لا قرارٌ آلي على مواطن أو مالٍ عام."
+    },
+    {
+      "en": "In the end, your team owns the process, not us.",
+      "ar": "وفي النهاية، فريقك يملك الإجراء، لا نحن."
+    }
+  ],
+  "stages": [
+    {
+      "id": "gate",
+      "name": {
+        "en": "The gate",
+        "ar": "البوابة"
+      },
+      "duration": {
+        "en": "5–10 days",
+        "ar": "5–10 أيام"
+      },
+      "body": {
+        "en": "Every idea comes in. The entry conditions filter them, and one executive sponsor approves.",
+        "ar": "كل الأفكار تدخل، والشروط تفلترها، والراعي التنفيذي يعتمد."
+      }
+    },
+    {
+      "id": "proof",
+      "name": {
+        "en": "The proof",
+        "ar": "الإثبات"
+      },
+      "duration": {
+        "en": "8 days",
+        "ar": "8 أيام"
+      },
+      "body": {
+        "en": "A redesigned process and an assistant on real cases, ending in a signed decision.",
+        "ar": "إعادة تصميم ومساعد على حالات حقيقية، وورقة قرار موقّعة."
+      }
+    },
+    {
+      "id": "run",
+      "name": {
+        "en": "The run",
+        "ar": "التشغيل"
+      },
+      "duration": {
+        "en": "30 days",
+        "ar": "30 يومًا"
+      },
+      "body": {
+        "en": "It runs beside your staff, then your team takes it over.",
+        "ar": "يعمل بجانب الموظفين، ثم يتسلّمه فريقك."
+      }
+    },
+    {
+      "id": "integration",
+      "optional": true,
+      "name": {
+        "en": "Integration",
+        "ar": "الربط"
+      },
+      "duration": {
+        "en": "+30 days, if needed",
+        "ar": "+30 يومًا عند الحاجة"
+      },
+      "body": {
+        "en": "Connecting it to your systems.",
+        "ar": "الربط بأنظمتكم."
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "en": "One owner for the process",
+      "ar": "مالكٌ واحد للإجراء"
+    },
+    {
+      "en": "A “before” number that already exists",
+      "ar": "رقم «قبل» موجود"
+    },
+    {
+      "en": "A real data sample and written permission",
+      "ar": "عيّنة بيانات حقيقية وإذن مكتوب"
+    },
+    {
+      "en": "Three systems or fewer",
+      "ar": "ثلاثة أنظمة أو أقل"
+    },
+    {
+      "en": "Enough cases to measure",
+      "ar": "حالات تتكرر بما يكفي للقياس"
+    },
+    {
+      "en": "An assistant, not an automated decision",
+      "ar": "مساعدٌ لا قرارٌ آلي"
+    },
+    {
+      "en": "Not solved by an off-the-shelf product",
+      "ar": "لا يحلّها منتج جاهز"
+    }
+  ],
+  "cta": {
+    "en": "Start with a conversation",
+    "ar": "ابدأ بمحادثة"
+  },
+  "contactTitle": {
+    "en": "Which of your ideas deserves to work first?",
+    "ar": "أيّ أفكارك يستحق أن يعمل أولًا؟"
+  }
+}
