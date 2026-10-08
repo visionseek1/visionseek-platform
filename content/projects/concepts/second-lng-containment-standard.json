@@ -241,5 +241,51 @@
         "evidenceUrl": "#scope"
       }
     ]
+  },
+  "profile": {
+    "audiences": [
+      "company"
+    ],
+    "facts": [
+      {
+        "kind": "trend",
+        "title": {
+          "ar": "موجة الغاز المسال",
+          "en": "The LNG wave"
+        },
+        "detail": {
+          "ar": "تتوقع وكالة الطاقة الدولية نمو المعروض العالمي من الغاز المسال بأكثر من 7% في 2026، أي نحو 40 مليار متر مكعب، وهو الأسرع منذ 2019 (يناير 2026).",
+          "en": "The IEA expects global LNG supply to grow by more than 7% in 2026 — about 40 bcm, the fastest pace since 2019 (January 2026)."
+        },
+        "url": "https://www.iea.org/news/growth-in-global-demand-for-natural-gas-is-set-to-accelerate-in-2026-as-lng-wave-spreads-through-markets",
+        "value": "+7%"
+      },
+      {
+        "kind": "exhibition",
+        "title": {
+          "ar": "أديبك 2026",
+          "en": "ADIPEC 2026"
+        },
+        "detail": {
+          "ar": "2–5 نوفمبر 2026، مركز أدنيك، أبوظبي.",
+          "en": "2–5 November 2026, ADNEC, Abu Dhabi."
+        },
+        "url": "https://petroleumaustralia.com.au/events/adipec/",
+        "value": "2–5 NOV 2026"
+      },
+      {
+        "kind": "exhibition",
+        "title": {
+          "ar": "غاستك 2026",
+          "en": "Gastech 2026"
+        },
+        "detail": {
+          "ar": "14–17 سبتمبر 2026، مركز BITEC، بانكوك.",
+          "en": "14–17 September 2026, BITEC, Bangkok."
+        },
+        "url": "https://www.dnv.com/events/gastech-2026/",
+        "value": "14–17 SEP 2026"
+      }
+    ]
   }
 }

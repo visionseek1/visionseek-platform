@@ -1462,7 +1462,7 @@ collections:
 
   - name: projects_catalog
     label: "المشاريع: المجالات والمسارات"
-    description: "المجالات الثمانية ومسارات العمل داخلها، وتنبيه «تصوّرات مقترحة»، وأسماء الحالات. المعرّفات (slug) تبني الروابط؛ لا تغيّرها بعد النشر."
+    description: "مجالات المشاريع ومسارات العمل داخلها، وتنبيه «تصوّرات مقترحة»، وأسماء الحالات. المعرّفات (slug) تبني الروابط؛ لا تغيّرها بعد النشر."
     files:
       - label: المجالات والمسارات
         name: catalog
@@ -1514,7 +1514,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - {label: الأيقونة, name: icon, widget: select, options: [energy, chips, flight, defense, robotics, health, agriculture, cities]}
+              - {label: الأيقونة, name: icon, widget: select, options: [energy, chips, flight, defense, robotics, health, agriculture, cities, ai]}
               - {label: مفاتيح بطاقات الرئيسية المرتبطة, name: anchors, widget: list, hint: "مثل energy أو chips. افصل بفاصلة."}
               - label: محاور التركيز
                 name: focus
@@ -1529,6 +1529,7 @@ collections:
             fields:
               - {label: المعرّف (slug), name: slug, widget: string}
               - {label: المجال (slug المجال), name: sector, widget: string}
+              - {label: "الوسم القصير (مثل LNG)", name: label, widget: string, required: false, hint: "يظهر فوق اسم المسار. إن تُرك فارغًا يُستعمل المعرّف بأحرف كبيرة."}
               - label: الاسم
                 name: title
                 widget: object
@@ -1561,8 +1562,9 @@ collections:
       - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط الأخير. لا تغيّره بعد النشر."}
       - {label: المجال (slug المجال), name: sector, widget: string, hint: "من ملف المجالات والمسارات، مثل energy."}
       - {label: المسار (slug المسار), name: track, widget: string, hint: "مثل lng."}
-      - {label: النوع, name: kind, widget: select, options: [supply, containment]}
+      - {label: النوع, name: kind, widget: select, options: [supply, containment, governance], hint: "يحدد الرسم التصوري: supply و containment للغاز المسال، governance لحوكمة الوكلاء."}
       - {label: الحالة, name: status, widget: select, options: [concept, active, completed], hint: "الحالة الحقيقية فقط."}
+      - {label: "لوجو الأداة (اختياري)", name: logo, widget: image, required: false, hint: "نسخة تصلح على خلفية غامقة (SVG أو PNG مربع). يظهر على كارت المشروع وأعلى صفحته."}
       - {label: ترتيب الظهور في الواجهة (اختياري), name: featuredOrder, widget: number, value_type: int, required: false, hint: "اتركه فارغًا كي لا يظهر في شريط الواجهة."}
       - label: العنوان
         name: title
@@ -1611,6 +1613,158 @@ collections:
               fields:
                 - {label: English, name: en, widget: text}
                 - {label: العربية, name: ar, widget: text}
+      - label: "عرض المشروع: الخوف والفائدة (اختياري)"
+        name: pitch
+        widget: object
+        required: false
+        hint: "منهج العرض في docs/project-page-method.md: سؤال مقلق، ثم المخاوف بأرقامها ومصادرها، ثم مثال، ثم الفائدة لكل طرف، ثم ما يميّزه."
+        fields:
+          - label: السؤال المقلق
+            name: hook
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الوعد
+            name: promise
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: المخاوف
+            name: fears
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: النص
+                name: body
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: "الرقم البارز (اختياري)"
+                name: figure
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المصادر
+                name: sources
+                widget: list
+                required: false
+                fields:
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: الرابط, name: url, widget: string}
+          - label: "مثال: من دونه / معه"
+            name: scenario
+            widget: object
+            required: false
+            fields:
+              - label: الموقف
+                name: setup
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: من دونه
+                name: without
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: معه
+                name: with
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: الفائدة لكل طرف
+            name: gains
+            widget: list
+            fields:
+              - {label: الطرف, name: audience, widget: select, options: [{label: الحكومات, value: government}, {label: المؤسسات, value: institution}, {label: الشركات, value: company}, {label: الأفراد, value: individual}]}
+              - label: الفائدة
+                name: text
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: ما الذي يميّزه
+            name: edges
+            widget: list
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+      - label: "بطاقة المشروع (اختياري)"
+        name: profile
+        widget: object
+        required: false
+        hint: "تظهر أعلى صفحة المشروع: لمن صُمم، وحقائق علنية مؤرخة (المعارض الدولية الكبرى، الاتجاه العالمي). كل حقيقة بمصدرها."
+        fields:
+          - {label: مصمَّم لـ, name: audiences, widget: select, multiple: true, options: [{label: الحكومات, value: government}, {label: المؤسسات, value: institution}, {label: الشركات, value: company}, {label: الأفراد, value: individual}]}
+          - label: الحقائق
+            name: facts
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+              - {label: النوع, name: kind, widget: select, options: [{label: معرض دولي, value: exhibition}, {label: الاتجاه العالمي, value: trend}]}
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: التفاصيل
+                name: detail
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - {label: "الرقم البارز (اختياري)", name: value, widget: string, required: false}
+              - {label: رابط المصدر, name: url, widget: string}
+      - label: "لماذا الآن (اختياري)"
+        name: whyNow
+        widget: object
+        required: false
+        hint: "حقائق علنية مؤرخة فقط، وكل فقرة مسنودة بمصدر في القائمة."
+        fields:
+          - label: الأرقام البارزة
+            name: highlights
+            widget: list
+            required: false
+            fields:
+              - label: الرقم
+                name: value
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الشرح
+                name: text
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: الفقرات
+            name: paragraphs
+            widget: list
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: المصادر
+            name: sources
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: العنوان, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string}
       - label: ملف المشروع العام (اختياري)
         name: file
         widget: object
