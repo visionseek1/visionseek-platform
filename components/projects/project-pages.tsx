@@ -180,7 +180,7 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
     <nav className={styles.tabs} aria-label={ar?'داخل المشروع':'Within this project'}><div className={styles.wrap}>{tabs.map(([id,title])=><a key={id} href={`#${id}`}>{title}</a>)}</div></nav>
     {pitch&&<>
       <section id="risks" className={styles.section}><div className={styles.wrap}>
-        <Eyebrow>{ar?'الخطر':'THE RISK'}</Eyebrow><h2 className={styles.h2}>{ar?'ما الذي يُبقي المسؤول مستيقظًا؟':'What keeps the person in charge awake?'}</h2>
+        <Eyebrow>{ar?'الخطر':'THE RISK'}</Eyebrow><h2 className={styles.h2}>{pitch.risksTitle[locale]}</h2>
         <div className={styles.fears}>{pitch.fears.map((fear,i)=><article key={fear.title.en}>
           <div className={styles.fearTop}><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span>{fear.figure&&<strong>{fear.figure[locale]}</strong>}</div>
           <h3>{fear.title[locale]}</h3><p>{fear.body[locale]}</p>

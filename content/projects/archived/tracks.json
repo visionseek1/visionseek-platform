@@ -1,0 +1,18 @@
+{
+  "note": "Archived from the site on 8 Oct 2026 at Dr. Ahmed's request. To restore: move the concept files back to content/projects/concepts/ and put this track back in catalog.json tracks.",
+  "tracks": [
+    {
+      "slug": "lng",
+      "sector": "energy",
+      "title": {
+        "ar": "الغاز الطبيعي المسال",
+        "en": "Liquefied Natural Gas"
+      },
+      "intro": {
+        "ar": "تحكم أكبر في الإمداد، وخيارات أوسع في التقنية التي يقوم عليها الأسطول.",
+        "en": "Greater control over supply. More choice in the technology a fleet depends on."
+      },
+      "label": "LNG"
+    }
+  ]
+}

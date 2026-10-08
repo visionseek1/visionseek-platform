@@ -127,7 +127,7 @@ test('project concepts resolve to a real sector and track, with public dossiers 
   assert.ok(isText(catalog.conceptNotice));
   for (const key of ['concept', 'active', 'completed']) assert.ok(isText(catalog.status[key]), key);
   for (const track of catalog.tracks) assert.ok(catalog.sectors.some(s => s.slug === track.sector), track.slug);
-  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P07', 'VS-P08', 'VS-P09']);
+  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P09']);
   for (const project of concepts) {
     assert.ok(catalog.tracks.some(t => t.slug === project.track && t.sector === project.sector), project.id);
     assert.ok(['concept', 'active', 'completed'].includes(project.status), project.id);

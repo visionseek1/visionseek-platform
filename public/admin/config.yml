@@ -1617,7 +1617,7 @@ collections:
         name: pitch
         widget: object
         required: false
-        hint: "منهج العرض في docs/project-page-method.md: سؤال مقلق، ثم المخاوف بأرقامها ومصادرها، ثم مثال، ثم الفائدة لكل طرف، ثم ما يميّزه."
+        hint: "منهج العرض في docs/project-page-method.md: سؤال مقلق، ثم عنوان خطر يسمّي ما يفعله القارئ، ثم المخاوف بأرقامها ومصادرها، ثم مثال، ثم الفائدة لكل طرف، ثم ما يميّزه."
         fields:
           - label: السؤال المقلق
             name: hook
@@ -1631,6 +1631,13 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
+          - label: عنوان قسم الخطر
+            name: risksTitle
+            widget: object
+            hint: "خاص بهذا المشروع: يسمّي ما يفعله القارئ نفسه الآن. لا سؤال عام ولا تعبير مترجم."
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
           - label: المخاوف
             name: fears
             widget: list
@@ -2499,8 +2506,6 @@ collections:
                   - {label: "الورش ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /workshops/university-teams", value: "/workshops/university-teams"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
-                  - {label: "المشاريع ← VS-P08 معيار ثانٍ لاحتواء الغاز المسال  /projects/energy/lng/second-lng-containment-standard", value: "/projects/energy/lng/second-lng-containment-standard"}
-                  - {label: "المشاريع ← VS-P07 سيادة الإمداد العائم  /projects/energy/lng/sovereign-floating-gas-supply", value: "/projects/energy/lng/sovereign-floating-gas-supply"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /insights/physical-ai", value: "/insights/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}

@@ -5,7 +5,7 @@ import ts from 'typescript';
 async function sourceModule(path){const source=await fs.readFile(new URL(path,import.meta.url),'utf8');const compiled=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;return import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);}
 const {projects,projectInquiry,projectFiles,publicProjectUpdates}=await sourceModule('../lib/projects/index.ts');
 test('draft updates never appear in the public timeline and chronology does not mutate the catalog',()=>{
- const file={...projectFiles['VS-P07'],updates:[
+ const file={...projectFiles['VS-P09'],updates:[
   {id:'older',date:'2026-08-01',visibility:'public'},
   {id:'private-work',date:'2026-09-28',visibility:'draft',body:{ar:'Private client details',en:'Private client details'}},
   {id:'newer',date:'2026-09-01',visibility:'public'},
@@ -54,7 +54,7 @@ test('a project pitch names its fears with sources and speaks to real audiences'
  const audiences=new Set(['government','institution','company','individual']);
  for(const project of projects){
   const pitch=project.pitch;if(!pitch)continue;
-  for(const t of [pitch.hook,pitch.promise])assert.ok(t.ar&&t.en,project.id);
+  for(const t of [pitch.hook,pitch.promise,pitch.risksTitle])assert.ok(t?.ar&&t?.en,`${project.id} needs a hook, a promise and its own risk heading`);
   assert.ok(pitch.fears.length>=3,`${project.id} needs at least three fears`);
   for(const fear of pitch.fears){
    assert.ok(fear.title.ar&&fear.title.en&&fear.body.ar&&fear.body.en);
