@@ -18,6 +18,8 @@ export type ProjectFact = {kind:'exhibition'|'trend'; title:Text; detail:Text; u
 export type ProjectSource = {title:string; url:string};
 export type ProjectPitch = {
   hook:Text; promise:Text;
+  /** Heading of the risk section, written for this project: it names what the reader is doing now, never a generic question. */
+  risksTitle:Text;
   fears:{title:Text; body:Text; figure?:Text; sources?:ProjectSource[]}[];
   scenario?:{setup:Text; without:Text; with:Text};
   gains:{audience:ProjectAudience; text:Text}[];

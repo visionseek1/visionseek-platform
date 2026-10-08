@@ -283,19 +283,6 @@
   ],
   "tracks": [
     {
-      "slug": "lng",
-      "sector": "energy",
-      "title": {
-        "ar": "الغاز الطبيعي المسال",
-        "en": "Liquefied Natural Gas"
-      },
-      "intro": {
-        "ar": "تحكم أكبر في الإمداد، وخيارات أوسع في التقنية التي يقوم عليها الأسطول.",
-        "en": "Greater control over supply. More choice in the technology a fleet depends on."
-      },
-      "label": "LNG"
-    },
-    {
       "slug": "agent-governance",
       "sector": "institutional-ai",
       "label": "AGENTS",
