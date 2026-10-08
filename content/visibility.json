@@ -1,4 +1,6 @@
 {
   "archived": [],
-  "hiddenBlocks": []
+  "hiddenBlocks": [
+    "home.communities"
+  ]
 }
