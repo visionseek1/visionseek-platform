@@ -114,22 +114,27 @@
     {
       "path": "/workshops",
       "en": "Workshops",
-      "ar": "ورش العمل",
+      "ar": "الورش",
       "children": [
         {
           "href": "/workshops",
-          "en": "Weekly workshops",
-          "ar": "الورش الأسبوعية"
+          "en": "The three doors",
+          "ar": "الأبواب الثلاثة"
         },
         {
-          "href": "/workshops/how-workshops-work",
-          "en": "How it works",
-          "ar": "كيف تعمل الورش؟"
+          "href": "/workshops/leader-seat",
+          "en": "Management and leadership in the age of AI",
+          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
         },
         {
-          "href": "/workshops/rewinds",
-          "en": "Notes & outcomes",
-          "ar": "السجلات والمخرجات"
+          "href": "/workshops#institutions",
+          "en": "Working with AI",
+          "ar": "العمل مع الذكاء الاصطناعي"
+        },
+        {
+          "href": "/workshops/develop-the-institution",
+          "en": "The institution and AI",
+          "ar": "المؤسسة والذكاء الاصطناعي"
         }
       ]
     },

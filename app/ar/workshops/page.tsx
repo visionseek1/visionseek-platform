@@ -1,6 +1,14 @@
 import type {Metadata} from 'next';
-import {SectionPage} from '@/components/institution/pages';
-import {getSection} from '@/lib/institution';
-const section = getSection('workshops')!;
-export const metadata:Metadata={title:section.title.ar+' | VisionSeek',description:section.intro.ar,alternates:{canonical:'/ar/workshops',languages:{en:'/workshops',ar:'/ar/workshops'}},openGraph:{title:section.title.ar+' | VisionSeek',url:'/ar/workshops'}};
-export default function Page(){return <SectionPage locale="ar" sectionId="workshops"/>;}
+import {WorkshopsIndex} from '@/components/institution/workshops-view';
+import {workshopSection} from '@/lib/institution/workshops';
+
+export const metadata: Metadata = {
+  title: `${workshopSection.title.ar} | VisionSeek`,
+  description: workshopSection.intro.ar,
+  alternates: {canonical: '/ar/workshops', languages: {en: '/workshops', ar: '/ar/workshops'}},
+  openGraph: {title: `${workshopSection.title.ar} | VisionSeek`, description: workshopSection.intro.ar, url: '/ar/workshops'},
+};
+
+export default function Page() {
+  return <WorkshopsIndex locale="ar" />;
+}

@@ -1,0 +1,142 @@
+{
+  "examples": [],
+  "examplesNote": {
+    "en": "",
+    "ar": ""
+  },
+  "boundary": {
+    "en": "",
+    "ar": ""
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 7,
+  "slug": "develop-the-institution",
+  "kind": "development",
+  "institution": "",
+  "roles": [
+    "senior"
+  ],
+  "outcome": {
+    "en": "You see what the institution can already do with the people and money it has, and what it is not yet looking at.",
+    "ar": "ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم، وما لا تنظر إليه بعد."
+  },
+  "summary": {
+    "en": "For the senior table. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building. Nothing outside has been arranged.",
+    "ar": "لمائدة القيادة العليا. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى. لم يُرتَّب شيء في الخارج."
+  },
+  "audienceRole": {
+    "en": "Senior leadership: the people who can say yes to a change in how the institution works.",
+    "ar": "القيادة العليا: من يستطيع أن يقول نعم لتغيير طريقة عمل المؤسسة."
+  },
+  "audienceInstitution": {
+    "en": "One institution, looked at as a whole. Not a single team, and not a tool demonstration.",
+    "ar": "مؤسسة واحدة، تُنظر إليها كاملة. ليست فريقًا واحدًا، وليست عرض أداة."
+  },
+  "whyProblem": {
+    "en": "Most of the effort is treated as a technology purchase. The institution then discovers that the people and the way of working were the larger part, and that it cannot see the next capability from inside the building alone.",
+    "ar": "أكثر الجهد يُعامل كشراء تقنية. ثم تكتشف المؤسسة أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
+  },
+  "whyEvidence": {
+    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards. These are BCG's figures, not results of a VisionSeek workshop.",
+    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين. هذه أرقام BCG، ليست نتائج ورشة لـVisionSeek."
+  },
+  "source": {
+    "title": "BCG · AI Transformation Is a Workforce Transformation · 4 February 2026",
+    "url": "https://www.bcg.com/publications/2026/ai-transformation-is-a-workforce-transformation"
+  },
+  "before": {
+    "en": "Five questions about what the institution can carry now, and what it keeps missing.",
+    "ar": "خمسة أسئلة عما تستطيع المؤسسة حمله الآن، وعما يفوتها."
+  },
+  "during": {
+    "en": "We map the work that current people and current money can already change. Then we name what is not visible from inside: a capability, an opportunity, or a route to funding. No outside party is contacted in the session, and none is promised.",
+    "ar": "نرسم الشغل الذي يستطيع الناس الحاليون والمال الحالي تغييره. ثم نسمّي ما لا يُرى من الداخل: قدرة، أو فرصة، أو طريق تمويل. لا تُخاطَب جهة خارجية في الجلسة، ولا يُوعد بواحدة."
+  },
+  "after": {
+    "en": "After 30 days we look at what the institution actually started with its own resources, and which of the outside items it chose to pursue. Pursuit is not a deal. No partner is named because no partner exists.",
+    "ar": "بعد 30 يومًا ننظر فيما بدأته المؤسسة فعلًا بمواردها، وأي البنود الخارجية اختارت أن تسعى إليها. السعي ليس اتفاقًا. لا تُذكر جهة لأن لا جهة قائمة."
+  },
+  "questions": [
+    {
+      "en": "What can your teams finish this month without a new budget?",
+      "ar": "ما الذي تستطيع فرقك إنهاءه هذا الشهر من غير ميزانية جديدة؟"
+    },
+    {
+      "en": "Which repeated procedure still eats the leadership's week?",
+      "ar": "أي إجراء يتكرر وما زال يأكل أسبوع القيادة؟"
+    },
+    {
+      "en": "Which capability do you need and do not have inside the house?",
+      "ar": "أي قدرة تحتاجها وليست داخل البيت؟"
+    },
+    {
+      "en": "Which outside opportunity have you heard of and never examined?",
+      "ar": "أي فرصة خارجية سمعتها ولم تُفحص؟"
+    },
+    {
+      "en": "What, if it is still unseen in ninety days, should be dropped?",
+      "ar": "ما الذي إن بقي غير مرئي بعد تسعين يومًا فالأولى تركه؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A map of what can be done with the people and money already in the building.",
+      "ar": "خريطة لما يُنجز بالناس والمال الموجودين في المبنى."
+    },
+    {
+      "en": "A short list of what the leadership is not seeing: capability, opportunity, funding route.",
+      "ar": "قائمة قصيرة بما لا تراه القيادة: قدرة، وفرصة، وطريق تمويل."
+    },
+    {
+      "en": "A first move that does not wait for an outside party, and a second move that does not pretend one is already there.",
+      "ar": "خطوة أولى لا تنتظر جهة خارجية، وخطوة ثانية لا تدّعي أن الجهة موجودة."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُعقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you bring funding or a partner to the first session?",
+        "ar": "هل تحضرون تمويلًا أو شريكًا إلى الجلسة الأولى؟"
+      },
+      "a": {
+        "en": "No. The first work is what you can already do. Outside capability, opportunity, and funding are named as a search, not as a deal. Nothing has been arranged with any institution or country.",
+        "ar": "لا. الشغل الأول هو ما تستطيعون فعله أصلًا. القدرة والفرصة والتمويل من الخارج تُسمّى بوصفها بحثًا، لا اتفاقًا. لم يُرتَّب شيء مع أي مؤسسة أو دولة."
+      }
+    },
+    {
+      "q": {
+        "en": "Is the 70% figure your result?",
+        "ar": "هل نسبة الـ70% نتيجتكم؟"
+      },
+      "a": {
+        "en": "No. It is BCG's, from the article linked on this page. We have held no workshop, so we have no result of our own to show.",
+        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ورشة، فلا نتيجة لنا نعرضها."
+      }
+    }
+  ]
+}

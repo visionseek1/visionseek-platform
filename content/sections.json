@@ -217,41 +217,41 @@
       "id": "workshops",
       "title": {
         "en": "Workshops",
-        "ar": "ورش العمل"
+        "ar": "الورش"
       },
       "eyebrow": {
-        "en": "ONE WEEK. ONE QUESTION. ONE USEFUL OUTPUT.",
-        "ar": "كل أسبوع. سؤال محدد. مخرج مفيد."
+        "en": "THREE DOORS. A RESULT, NOT A COURSE NAME.",
+        "ar": "ثلاثة أبواب. نتيجة، لا اسم دورة."
       },
       "intro": {
-        "en": "A weekly working rhythm to frame capabilities, assemble knowledge, design proof and learn from reality.",
-        "ar": "إيقاع عمل أسبوعي لصياغة القدرات وتجميع المعرفة وتصميم الإثبات والتعلم من الواقع."
+        "en": "No workshop has been held. The doors name who the session is for and what the person leaves able to do. Format, duration and group size are not set.",
+        "ar": "لم تُعقد ورشة بعد. الأبواب تسمّي لمن الجلسة، وبماذا يخرج منها. الشكل والمدة والعدد لم تُحدَّد."
       },
       "image": "industry",
       "notice": {
-        "en": "No workshop is scheduled yet. The method below describes how a session is run; a session is listed only once its format, host and date are confirmed.",
-        "ar": "لا توجد ورشة مُقررة بعد. ما تقرأه أدناه وصف لطريقة إدارة الجلسة، ولا تُدرج جلسة هنا إلا بعد تثبيت صيغتها وميسّرها وموعدها."
+        "en": "In design. No workshop has been held.",
+        "ar": "قيد التصميم. لم تُعقد ورشة بعد."
       },
       "links": [
         {
-          "href": "/workshops",
+          "href": "/workshops/leader-seat",
           "label": {
-            "en": "The weekly cycle",
-            "ar": "الدورة الأسبوعية"
+            "en": "Management and leadership in the age of AI",
+            "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
           }
         },
         {
-          "href": "/workshops/how-workshops-work",
+          "href": "/workshops#institutions",
           "label": {
-            "en": "How it works",
-            "ar": "كيف تعمل الورش؟"
+            "en": "Working with AI",
+            "ar": "العمل مع الذكاء الاصطناعي"
           }
         },
         {
-          "href": "/workshops/rewinds",
+          "href": "/workshops/develop-the-institution",
           "label": {
-            "en": "Notes & outcomes",
-            "ar": "السجلات والمخرجات"
+            "en": "The institution and AI",
+            "ar": "المؤسسة والذكاء الاصطناعي"
           }
         }
       ]

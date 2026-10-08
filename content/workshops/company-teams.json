@@ -1,0 +1,174 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A management note",
+        "ar": "مذكرة إدارة"
+      },
+      "body": {
+        "en": "The weekly picture a director needs: what moved, what stuck, and what needs a decision. Written from the team's own notes.",
+        "ar": "الصورة الأسبوعية التي يحتاجها المدير: ما تحرّك، وما وقف، وما يحتاج قرارًا. مكتوبة من ملاحظات الفريق."
+      }
+    },
+    {
+      "title": {
+        "en": "A meeting page",
+        "ar": "صفحة اجتماع"
+      },
+      "body": {
+        "en": "One page after the meeting, not a transcript. Decision, name, date.",
+        "ar": "صفحة بعد الاجتماع، لا تفريغًا كاملًا. قرار، واسم، وموعد."
+      }
+    },
+    {
+      "title": {
+        "en": "A letter the owner signs",
+        "ar": "خطاب يوقّعه صاحبه"
+      },
+      "body": {
+        "en": "A first draft of a letter to a customer or a partner. The person whose name is at the bottom still reads it.",
+        "ar": "مسودة أولى لخطاب إلى عميل أو شريك. صاحب الاسم في الأسفل ما زال يقرأه."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
+  },
+  "boundary": {
+    "en": "",
+    "ar": ""
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 6,
+  "slug": "company-teams",
+  "kind": "institution",
+  "institution": "company",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "The team gets hours back on the writing it already does, and those hours are pointed at work that matters.",
+    "ar": "الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا، وتُوجَّه هذه الساعات إلى شغل له قيمة."
+  },
+  "summary": {
+    "en": "For managers and staff inside a company. The cases are theirs: a management note, a meeting, a letter the owner still signs.",
+    "ar": "لمديرين وموظفين داخل شركة. الحالات لهم: مذكرة إدارة، أو اجتماع، أو خطاب ما زال صاحبه يوقعه."
+  },
+  "audienceRole": {
+    "en": "Managers and the staff who draft, summarize, and prepare the work a manager will stand behind.",
+    "ar": "المديرون والموظفون الذين يسوّدون ويلخّصون ويجهّزون شغلًا سيقف المدير وراءه."
+  },
+  "audienceInstitution": {
+    "en": "A company. Private or public. The workshop uses the company's own files, not a case from a textbook.",
+    "ar": "شركة. خاصة أو عامة. الورشة تستعمل ملفات الشركة، لا حالة من كتاب."
+  },
+  "whyProblem": {
+    "en": "People are already using the tools. The company has not decided what the saved hour is for, so the hour disappears into more of the same.",
+    "ar": "الناس تستعمل الأدوات أصلًا. والشركة لم تحسم فيما تُصرَف الساعة الموفَّرة، فتختفي الساعة في المزيد من الشيء نفسه."
+  },
+  "whyEvidence": {
+    "en": "In BCG's AI at Work, dated 3 June 2026, 74% of frontline employees said they use AI every day or several times a week, up 23 points from 2025. Among regular users, 42% report saving eight hours a week. BCG's point is the one that matters here: most organizations have not figured out how to turn that time into value.",
+    "ar": "في مقال BCG المعنون AI at Work، بتاريخ 3 يونيو 2026، قال 74% من موظفي الصف الأول إنهم يستعملون الذكاء الاصطناعي كل يوم أو عدة مرات في الأسبوع، بزيادة 23 نقطة عن 2025. ومن المنتظمين، 42% يقولون إنهم يوفّرون ثماني ساعات في الأسبوع. والنقطة التي تهم هنا هي التي قالها BCG: أكثر المؤسسات لم تعرف بعد كيف تحوّل هذا الوقت إلى قيمة."
+  },
+  "source": {
+    "title": "BCG · AI at Work: Why Strategy Matters More Than Tools · 3 June 2026",
+    "url": "https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools"
+  },
+  "before": {
+    "en": "Five questions about the writing and preparation the team already repeats.",
+    "ar": "خمسة أسئلة عن الكتابة والتجهيز اللذين يكرّرهما الفريق أصلًا."
+  },
+  "during": {
+    "en": "We sit with the company's cases. A manager leaves with a draft they are willing to sign, not with a tour of features.",
+    "ar": "نجلس مع حالات الشركة. يخرج المدير بمسودة يقبل أن يوقعها، لا بجولة في الخصائص."
+  },
+  "after": {
+    "en": "Thirty days later we measure time returned, and which tools are still open on a normal Tuesday. The eight hours in the BCG survey are their finding, not ours. We do not borrow it as a promise.",
+    "ar": "بعد ثلاثين يومًا نقيس الوقت العائد، وأي أدوات ما زالت مفتوحة في ثلاثاء عادي. ساعات BCG الثماني نتيجتهم لا نتيجتنا. لا نستعيرها كوعد."
+  },
+  "questions": [
+    {
+      "en": "Which note does a manager rewrite every time before it can leave the team?",
+      "ar": "أي مذكرة يعيد المدير كتابتها كل مرة قبل أن تخرج من الفريق؟"
+    },
+    {
+      "en": "Which meeting produces talk and no page anyone can use the next day?",
+      "ar": "أي اجتماع ينتج كلامًا ولا ينتج صفحة يستعملها أحد في اليوم التالي؟"
+    },
+    {
+      "en": "Which client or partner letter waits because the first draft is not safe to send?",
+      "ar": "أي خطاب لعميل أو شريك ينتظر لأن المسودة الأولى لا تُرسَل بأمان؟"
+    },
+    {
+      "en": "Where is the tool already open, with no agreement on what the saved hour is for?",
+      "ar": "أين الأداة مفتوحة أصلًا، من غير اتفاق على أين تذهب الساعة الموفَّرة؟"
+    },
+    {
+      "en": "What must still be signed by a named person?",
+      "ar": "ما الذي يجب أن يوقّعه شخص باسمه؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A management note the manager can actually send.",
+      "ar": "مذكرة إدارة يستطيع المدير أن يرسلها فعلًا."
+    },
+    {
+      "en": "A meeting page: the decision, the owner, and the open question.",
+      "ar": "صفحة اجتماع: القرار، وصاحبه، والسؤال المفتوح."
+    },
+    {
+      "en": "An agreement on where a saved hour goes, instead of letting it vanish.",
+      "ar": "اتفاق على أين تذهب الساعة الموفَّرة، بدل أن تختفي."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُعقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Will you promise the eight hours BCG reported?",
+        "ar": "هل تعدون بساعات BCG الثماني؟"
+      },
+      "a": {
+        "en": "No. That figure is theirs, from their survey. We measure the tasks we actually touch, after 30 days, and we do not announce a number before that.",
+        "ar": "لا. الرقم لهم، من مسحهم. نحن نقيس المهام التي نلمسها فعلًا، بعد 30 يومًا، ولا نعلن رقمًا قبل ذلك."
+      }
+    },
+    {
+      "q": {
+        "en": "Is this a software license?",
+        "ar": "هل هذه رخصة برنامج؟"
+      },
+      "a": {
+        "en": "No. The session is about how the team works. The tool is whatever the company already has, or a choice made in the introductory conversation. Nothing is sold on this page.",
+        "ar": "لا. الجلسة عن طريقة شغل الفريق. الأداة هي ما عند الشركة أصلًا، أو اختيار يُحسم في جلسة التعارف. لا شيء يُباع في هذه الصفحة."
+      }
+    }
+  ]
+}

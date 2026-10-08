@@ -1,0 +1,174 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A citizen's written request",
+        "ar": "طلب مواطن مكتوب"
+      },
+      "body": {
+        "en": "Turn a long complaint into a clear reply: what was received, what the office can do, and what happens next. The staff member edits and sends it.",
+        "ar": "تحويل شكوى طويلة إلى رد واضح: ماذا وصل، وماذا يستطيع المكتب، وما الخطوة التالية. الموظف يعدّل ويرسل."
+      }
+    },
+    {
+      "title": {
+        "en": "An internal administrative record",
+        "ar": "محضر إداري داخلي"
+      },
+      "body": {
+        "en": "Turn scattered meeting notes into a one-page record of what was agreed in the office. Not an operational report.",
+        "ar": "تحويل ملاحظات اجتماع متفرقة إلى محضر من صفحة بما اتُفق عليه في الديوان. ليس تقرير عمليات."
+      }
+    },
+    {
+      "title": {
+        "en": "A service notice",
+        "ar": "إعلان خدمة"
+      },
+      "body": {
+        "en": "Rewrite a procedure the public needs to follow, in language a visitor can use without a second visit.",
+        "ar": "إعادة كتابة إجراء يحتاجه الجمهور، بلغة يستطيع معها المراجع أن يتمه من غير زيارة ثانية."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
+  },
+  "boundary": {
+    "en": "Administration and citizen service only. Investigation, surveillance, monitoring, and every security function are out. If a task is operational, it does not enter the room.",
+    "ar": "الإدارة وخدمة المواطن فقط. التحقيق والمراقبة والمتابعة وكل وظيفة أمنية خارج الورشة. إن كانت المهمة عملياتية فهي لا تدخل الغرفة."
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 2,
+  "slug": "police-citizen-service",
+  "kind": "institution",
+  "institution": "police",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "Citizen replies move faster, and internal administration gets clearer, without the session ever touching security work.",
+    "ar": "ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوضح، والجلسة لا تقترب من أي عمل أمني."
+  },
+  "summary": {
+    "en": "For the desks that answer people and run the office. Not for operations, and not for watching anyone.",
+    "ar": "لمكاتب ترد على الناس وتدير الديوان. ليست للعمليات، وليست لمراقبة أحد."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in administration and citizen service.",
+    "ar": "مديرو وموظفو الإدارة وخدمة المواطن."
+  },
+  "audienceInstitution": {
+    "en": "A police institution, limited to the administrative side and the citizen's request. Security work is outside this workshop.",
+    "ar": "مؤسسة شرطية، في جانبها الإداري وطلب المواطن فقط. العمل الأمني خارج هذه الورشة."
+  },
+  "whyProblem": {
+    "en": "The same citizen question is rewritten several times. The internal note is assembled by hand from scattered comments. The delay is in the writing, not in a missing system.",
+    "ar": "سؤال المواطن نفسه يُعاد صياغته أكثر من مرة. المذكرة الداخلية تُجمع يدويًا من تعليقات متفرقة. التأخير في الكتابة، لا في نظام ناقص."
+  },
+  "whyEvidence": {
+    "en": "The OECD's Governing with Artificial Intelligence report, published on 18 September 2025, describes government use of AI to tailor internal processes and public services, and to improve the job quality and learning of public servants. That is the only lane this workshop uses.",
+    "ar": "تقرير OECD المعنون Governing with Artificial Intelligence، المنشور في 18 سبتمبر 2025، يصف استعمال الحكومات للذكاء الاصطناعي في تكييف الإجراءات الداخلية والخدمات العامة، وفي تحسين جودة عمل الموظف العام وتعلّمه. هذا هو المسار الوحيد لهذه الورشة."
+  },
+  "source": {
+    "title": "OECD · Governing with Artificial Intelligence · 18 September 2025",
+    "url": "https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en.html"
+  },
+  "before": {
+    "en": "Five questions about the office and the citizen desk. Nothing about an operation, a case, or a person under watch.",
+    "ar": "خمسة أسئلة عن الديوان ومكتب المواطن. لا شيء عن عملية، أو قضية، أو شخص تحت نظر."
+  },
+  "during": {
+    "en": "The team works on its own administrative cases: a reply, a short record, a service notice. A person still reads and sends whatever leaves the building.",
+    "ar": "الفريق يشتغل على حالاته الإدارية: رد، أو محضر قصير، أو إعلان خدمة. الإنسان يقرأ ويرسل كل ما يخرج من المبنى."
+  },
+  "after": {
+    "en": "After 30 days we look at two things: time taken off those administrative tasks, and which tools are still in daily use. We do not publish a result before that.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام الإدارية، والأدوات التي ما زالت تُستعمل كل يوم. لا ننشر نتيجة قبل ذلك."
+  },
+  "questions": [
+    {
+      "en": "Which citizen reply is rewritten because the first draft is never clear enough?",
+      "ar": "أي رد على مواطن يُعاد لأن المسودة الأولى لا تخرج واضحة؟"
+    },
+    {
+      "en": "Which administrative report is stitched together from scattered notes?",
+      "ar": "أي تقرير إداري يُجمع من ملاحظات متفرقة؟"
+    },
+    {
+      "en": "Which question from visitors is answered from scratch every time?",
+      "ar": "أي سؤال من المراجعين يُجاب في كل مرة من الصفر؟"
+    },
+    {
+      "en": "Where do hours go into copying the same words from one form to another?",
+      "ar": "أين تضيع الساعات في نقل الكلام نفسه من نموذج إلى نموذج؟"
+    },
+    {
+      "en": "What must a person still check before any reply goes out?",
+      "ar": "ما الذي يجب أن يراجعه إنسان قبل خروج أي رد؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A reply pattern for recurring citizen requests, still signed by the officer who owns it.",
+      "ar": "نمط رد للطلبات المتكررة من المواطنين، ويبقى التوقيع لصاحب الاختصاص."
+    },
+    {
+      "en": "One administrative note produced from the team's own material.",
+      "ar": "مذكرة إدارية واحدة خرجت من مادة الفريق نفسه."
+    },
+    {
+      "en": "A short list of tasks that stay human, written down so the tool does not wander.",
+      "ar": "قائمة قصيرة بالمهام التي تبقى للإنسان، مكتوبة حتى لا تشرد الأداة."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Does this cover security work?",
+        "ar": "هل تشمل الورشة العمل الأمني؟"
+      },
+      "a": {
+        "en": "No. Not investigation, not surveillance, not monitoring. The door is the citizen desk and the administrative office.",
+        "ar": "لا. لا تحقيق، ولا مراقبة، ولا متابعة. الباب هو مكتب المواطن والديوان الإداري."
+      }
+    },
+    {
+      "q": {
+        "en": "Who sends the reply?",
+        "ar": "من يرسل الرد؟"
+      },
+      "a": {
+        "en": "The person who already owns it. The tool drafts. It does not speak for the institution.",
+        "ar": "صاحبه الأصلي. الأداة تُسوّد. وهي لا تتكلم باسم المؤسسة."
+      }
+    }
+  ]
+}

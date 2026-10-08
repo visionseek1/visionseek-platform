@@ -1,0 +1,174 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A student-service letter",
+        "ar": "خطاب شؤون طلاب"
+      },
+      "body": {
+        "en": "Answer a recurring request — a transcript question, a deadline, a missing document — in language the student can act on.",
+        "ar": "الرد على طلب يتكرر: سؤال عن بيان، أو موعد، أو مستند ناقص، بلغة يستطيع الطالب أن يتصرف بها."
+      }
+    },
+    {
+      "title": {
+        "en": "A committee brief",
+        "ar": "مذكرة لجنة"
+      },
+      "body": {
+        "en": "Pull the question, the options, and the open points into two pages, from papers the department already has.",
+        "ar": "جمع السؤال والخيارات والنقاط المفتوحة في صفحتين، من أوراق يملكها القسم أصلًا."
+      }
+    },
+    {
+      "title": {
+        "en": "A course note",
+        "ar": "ملاحظة منهج"
+      },
+      "body": {
+        "en": "A lecturer's rough points become a clean note for students. The lecturer decides what is taught. The tool only clears the writing.",
+        "ar": "نقاط أستاذ متفرقة تصبح ملاحظة مرتبة للطلاب. الأستاذ يقرر ماذا يُدرَّس. الأداة ترتب الكتابة فقط."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
+  },
+  "boundary": {
+    "en": "",
+    "ar": ""
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 3,
+  "slug": "university-teams",
+  "kind": "institution",
+  "institution": "university",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "The team finishes the paper, the student letter, and the committee brief without handing judgment to the tool.",
+    "ar": "الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من غير أن يسلّم الحكم للأداة."
+  },
+  "summary": {
+    "en": "For faculty support, student services, and the people who prepare the meeting. Academic judgment stays with the academic.",
+    "ar": "لمساندة هيئة التدريس، وخدمات الطلاب، ومن يجهّز الاجتماع. الحكم العلمي يبقى لصاحبه."
+  },
+  "audienceRole": {
+    "en": "Managers and staff: department coordinators, student-service officers, and the people who draft for a committee.",
+    "ar": "مديرون وموظفون: منسقو الأقسام، وموظفو شؤون الطلاب، ومن يسوّد للجنة."
+  },
+  "audienceInstitution": {
+    "en": "A university. The cases come from its own term: a syllabus note, a student letter, a committee paper.",
+    "ar": "جامعة. الحالات من فصلها هي: ملاحظة منهج، أو خطاب طالب، أو ورقة لجنة."
+  },
+  "whyProblem": {
+    "en": "The same explanation is written ten times for ten students. The committee paper is assembled the night before. The academic still has to decide, and the drafting eats the week.",
+    "ar": "الشرح نفسه يُكتب عشر مرات لعشرة طلاب. ورقة اللجنة تُجمع في الليلة السابقة. صاحب العلم ما زال يقرر، والمسودة تأكل الأسبوع."
+  },
+  "whyEvidence": {
+    "en": "On 8 August 2024 UNESCO published an AI competency framework for teachers: 15 competencies across five dimensions, including AI for professional learning. It is a public reference for what teaching staff need to master. It is not a program we run in UNESCO's name.",
+    "ar": "في 8 أغسطس 2024 نشرت اليونسكو إطار كفايات للمعلمين في الذكاء الاصطناعي: 15 كفاية في خمسة أبعاد، منها الذكاء الاصطناعي للتعلّم المهني. مرجع عام لما يحتاج عضو هيئة التدريس أن يتقنه. وليس برنامجًا نديره باسم اليونسكو."
+  },
+  "source": {
+    "title": "UNESCO · AI competency framework for teachers · 8 August 2024",
+    "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers"
+  },
+  "before": {
+    "en": "Five questions about the work already on the team's desk this term.",
+    "ar": "خمسة أسئلة عن الشغل الموجود فعلًا على مكتب الفريق هذا الفصل."
+  },
+  "during": {
+    "en": "We open the university's own cases. A person who owns the academic or administrative decision reviews every page before it moves.",
+    "ar": "نفتح حالات الجامعة نفسها. من يملك القرار العلمي أو الإداري يراجع كل صفحة قبل أن تتحرك."
+  },
+  "after": {
+    "en": "Thirty days later we measure time returned on those tasks, and which tools are still open on a normal week. Nothing is reported as a result before then.",
+    "ar": "بعد ثلاثين يومًا نقيس الوقت العائد في هذه المهام، وأي أدوات ما زالت مفتوحة في أسبوع عادي. لا شيء يُروى كنتيجة قبل ذلك."
+  },
+  "questions": [
+    {
+      "en": "Which student letter is rewritten because the first version is too cold or too vague?",
+      "ar": "أي خطاب لطالب يُعاد لأن النسخة الأولى باردة أو غامضة؟"
+    },
+    {
+      "en": "Which committee paper is built from old files the night before the meeting?",
+      "ar": "أي ورقة لجنة تُبنى من ملفات قديمة في الليلة السابقة للاجتماع؟"
+    },
+    {
+      "en": "Which explanation do teachers repeat, and could a first draft carry the repetition?",
+      "ar": "أي شرح يعيده الأساتذة، وهل تستطيع مسودة أولى أن تحمل التكرار؟"
+    },
+    {
+      "en": "Where does a coordinator lose a day moving text between forms?",
+      "ar": "أين يضيع على المنسق يوم في نقل النص بين النماذج؟"
+    },
+    {
+      "en": "Which judgment must never leave the academic who owns it?",
+      "ar": "أي حكم لا يجوز أن يغادر صاحبه من هيئة التدريس؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A first-draft habit for student letters, with the sender still responsible for the sentence that goes out.",
+      "ar": "عادة مسودة أولى لخطابات الطلاب، والمرسل يبقى مسؤولًا عن الجملة التي تخرج."
+    },
+    {
+      "en": "One committee brief prepared from the department's real papers.",
+      "ar": "مذكرة لجنة واحدة جُهزت من أوراق القسم الحقيقية."
+    },
+    {
+      "en": "A written line between drafting help and academic judgment.",
+      "ar": "حد مكتوب بين مساعدة المسودة والحكم العلمي."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Does the tool grade or decide academic matters?",
+        "ar": "هل تصحّح الأداة أو تحسم أمرًا علميًا؟"
+      },
+      "a": {
+        "en": "No. It drafts. Grades, admissions, and academic judgment stay with the people who hold them today.",
+        "ar": "لا. هي تسوّد. الدرجات والقبول والحكم العلمي تبقى عند أصحابها اليوم."
+      }
+    },
+    {
+      "q": {
+        "en": "Is this a UNESCO program?",
+        "ar": "هل هذا برنامج لليونسكو؟"
+      },
+      "a": {
+        "en": "No. UNESCO's framework is a public source for the problem. We are not delivering it, and we are not affiliated with UNESCO.",
+        "ar": "لا. إطار اليونسكو مصدر عام للمسألة. نحن لا نقدمه، ولسنا جهة تابعة لليونسكو."
+      }
+    }
+  ]
+}
