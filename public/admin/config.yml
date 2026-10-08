@@ -1617,7 +1617,7 @@ collections:
         name: pitch
         widget: object
         required: false
-        hint: "منهج العرض في docs/project-page-method.md: سؤال مقلق، ثم المخاوف بأرقامها ومصادرها، ثم مثال، ثم الفائدة لكل طرف، ثم ما يميّزه."
+        hint: "منهج العرض في docs/project-page-method.md: سؤال مقلق، ثم عنوان خطر يسمّي ما يفعله القارئ، ثم المخاوف بأرقامها ومصادرها، ثم مثال، ثم الفائدة لكل طرف، ثم ما يميّزه."
         fields:
           - label: السؤال المقلق
             name: hook
@@ -1631,6 +1631,13 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
+          - label: عنوان قسم الخطر
+            name: risksTitle
+            widget: object
+            hint: "خاص بهذا المشروع: يسمّي ما يفعله القارئ نفسه الآن. لا سؤال عام ولا تعبير مترجم."
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
           - label: المخاوف
             name: fears
             widget: list

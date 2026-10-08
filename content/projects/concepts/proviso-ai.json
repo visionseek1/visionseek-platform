@@ -343,6 +343,10 @@
       "ar": "الوكلاء الأذكياء لم يعودوا يجيبون فقط، صاروا ينفّذون: يفتحون الأنظمة، ويرسلون البيانات، ويتخذون الإجراء. الوكيل يتصرف، والتوقيع باسمك. وProviso AI حارسٌ يقف قبل كل خطوة، ويسأل سؤالًا واحدًا: هل يسمح قانون بلدك بهذا؟",
       "en": "AI agents no longer just answer — they act. They open systems, send data and take decisions. The agent acts; the signature is yours. Proviso AI stands before every step and asks one question: does your country's law allow this?"
     },
+    "risksTitle": {
+      "ar": "هذا ما يفعله وكيلك الآن، باسمك",
+      "en": "What your agent is doing right now, in your name"
+    },
     "fears": [
       {
         "title": {
