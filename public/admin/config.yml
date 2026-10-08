@@ -151,3 +151,238 @@ collections:
         fields:
           - {label: المسار, name: href, widget: string}
 
+
+  - name: site
+    label: بيانات الموقع
+    description: "البريد وواتساب ولينكدإن والموقع الجغرافي، كما تظهر في كل صفحات الموقع."
+    files:
+      - label: بيانات التواصل
+        name: site
+        file: content/site.json
+        fields:
+          - {label: البريد الإلكتروني, name: email, widget: string}
+          - {label: رقم واتساب (بصيغة دولية بلا علامات، مثل 821042419606), name: whatsapp, widget: string}
+          - {label: الرقم كما يُعرض, name: phoneDisplay, widget: string}
+          - {label: الرقم بصيغة E.164 (لمحركات البحث), name: phoneE164, widget: string}
+          - {label: رابط لينكدإن, name: linkedinUrl, widget: string}
+          - label: الاسم على لينكدإن
+            name: linkedinName
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الموقع الجغرافي
+            name: location
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الموقع مع التوقيت (صفحة ابدأ)
+            name: locationHint
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: سطر الموقع في التذييل
+            name: footerLocation
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - {label: الشعار النصي, name: tagline, widget: string}
+
+  - name: programs
+    label: البرامج
+    label_singular: برنامج
+    description: "تصورات البرامج الستة. الهيكل الثابت لكل صفحة برنامج (مراحل القرار، الفريق، أسئلة الفرص) يبقى في الكود؛ من هنا تُعدَّل نصوص التصور نفسه."
+    folder: content/programs
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{code}} — {{title.ar}}"
+    preview_path: "ar/programs/{{slug}}"
+    sortable_fields: [position, code]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط بعد /programs/ و/opportunities/. لا تغيّره بعد النشر."}
+      - {label: الرمز, name: code, widget: string, hint: "مثل VS-P07. رمز الفرصة المقابلة يُشتق منه تلقائيًا (VS-O07)."}
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - {label: الصورة, name: image, widget: image, choose_url: true, hint: "مفتاح جاهز مثل chips أو مسار محلي يبدأ بـ /."}
+      - label: القدرة والمستفيد
+        name: beneficiary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الحد الحالي
+        name: constraint
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الفرضية المطلوب اختبارها
+        name: hypothesis
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: التقييم المقترح
+        name: test
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: متى نوقف المسار أو نغيره
+        name: stop
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: من سيشغّل القدرة
+        name: transfer
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+
+  - name: guides
+    label: صفحات الدليل وعن VisionSeek
+    label_singular: صفحة
+    description: "صفحات «اعمل معنا» و«كيف تعمل البرامج» و«عن VisionSeek» (نموذج التشغيل، الحوكمة، الأشخاص، التعلم من DARPA) وصفحة الإعلام. الصفحات الست الخاصة بالمجتمعات تُولَّد من الكود."
+    folder: content/guides
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.section}}--{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{section}} / {{slug}} — {{title.ar}}"
+    preview_path: "ar/{{section}}/{{slug}}"
+    sortable_fields: [position, section, slug]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - label: القسم
+        name: section
+        widget: select
+        options: [work-with-us, programs, workshops, about, news, opportunities]
+        hint: "القسم الذي تظهر الصفحة تحته. لا تغيّره بعد النشر لأن الرابط يتغير."
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط بعد اسم القسم. لا تغيّره بعد النشر."}
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - {label: الصورة, name: image, widget: image, choose_url: true, required: false, hint: "مفتاح جاهز مثل cities. اتركها فارغة للصورة الافتراضية."}
+      - label: أقسام الصفحة
+        name: blocks
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+          - label: عنوان القسم
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: نص
+            name: body
+            widget: object
+            required: false
+            hint: "اتركه فارغًا إذا كان القسم قائمة."
+            fields:
+              - {label: English, name: en, widget: text, required: false}
+              - {label: العربية, name: ar, widget: text, required: false}
+          - label: قائمة
+            name: items
+            widget: list
+            required: false
+            hint: "اتركها فارغة إذا كان القسم نصًا."
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: مصدر مرجعي
+        name: source
+        widget: object
+        required: false
+        fields:
+          - {label: العنوان, name: title, widget: string, required: false}
+          - {label: الرابط, name: url, widget: string, required: false}
+      - label: روابط ذات صلة
+        name: related
+        widget: list
+        required: false
+        fields:
+          - {label: المسار, name: href, widget: string}
+
+  - name: sections
+    label: أقسام الموقع
+    description: "عناوين الأقسام الستة ومقدماتها والروابط التي تظهر في صفحة كل قسم وفي القائمة الكبيرة."
+    files:
+      - label: الأقسام الستة
+        name: sections
+        file: content/sections.json
+        fields:
+          - label: الأقسام
+            name: sections
+            widget: list
+            allow_add: false
+            summary: "{{fields.id}} — {{fields.title.ar}}"
+            fields:
+              - {label: المعرّف, name: id, widget: string, hint: "ثابت: work-with-us, opportunities, programs, news, workshops, about."}
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر العلوي
+                name: eyebrow
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - {label: الصورة, name: image, widget: image, choose_url: true, hint: "مفتاح جاهز مثل space أو مسار يبدأ بـ /."}
+              - label: تنبيه (اختياري)
+                name: notice
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الروابط
+                name: links
+                widget: list
+                summary: "{{fields.label.ar}}"
+                fields:
+                  - {label: المسار, name: href, widget: string}
+                  - label: النص
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}

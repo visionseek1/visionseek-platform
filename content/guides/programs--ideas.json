@@ -1,0 +1,57 @@
+{
+  "position": 7,
+  "section": "programs",
+  "slug": "ideas",
+  "title": {
+    "en": "Ideas under exploration",
+    "ar": "أفكار قيد الاستكشاف"
+  },
+  "summary": {
+    "en": "Questions worth investigating before committing to a program.",
+    "ar": "أسئلة تستحق البحث قبل الالتزام ببرنامج."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "The incubation record",
+        "ar": "ملف إنضاج الفكرة"
+      },
+      "body": {
+        "en": "An idea begins with a capability question, an initial evidence map and the people who could challenge it. The next step should remove an important uncertainty. An idea becomes a program only after ownership, a test and resources are authorized.",
+        "ar": "تبدأ الفكرة بسؤال قدرة وخريطة أدلة أولية وأشخاص يستطيعون نقدها. تزيل الخطوة التالية وجهًا مهمًا لعدم اليقين. لا تصبح الفكرة برنامجًا إلا بعد اعتماد المسؤول والاختبار والموارد."
+      }
+    },
+    {
+      "title": {
+        "en": "Questions currently proposed for exploration",
+        "ar": "أسئلة مقترحة للاستكشاف"
+      },
+      "items": [
+        {
+          "en": "Can an institution operate a bounded AI workflow with traceable evidence?",
+          "ar": "هل تستطيع مؤسسة تشغيل مسار ذكاء اصطناعي محدود بأدلة قابلة للتتبع؟"
+        },
+        {
+          "en": "Can an existing industrial capability solve a task in a new market?",
+          "ar": "هل تحل قدرة صناعية موجودة مهمة في سوق جديد؟"
+        },
+        {
+          "en": "Which first capability makes a larger compute or materials ambition credible?",
+          "ar": "ما القدرة الأولى التي تجعل طموح الحوسبة أو المواد الأكبر قابلًا للتصديق؟"
+        }
+      ]
+    }
+  ],
+  "related": [
+    {
+      "href": "/programs/institutional-ai"
+    },
+    {
+      "href": "/programs/trusted-sourcing"
+    },
+    {
+      "href": "/programs/compute-capability"
+    }
+  ]
+}

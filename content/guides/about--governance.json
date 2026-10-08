@@ -1,0 +1,86 @@
+{
+  "position": 13,
+  "section": "about",
+  "slug": "governance",
+  "title": {
+    "en": "Evidence, governance & decision rights",
+    "ar": "الأدلة والحوكمة وحقوق القرار"
+  },
+  "summary": {
+    "en": "Make ownership and authority as explicit as the technical ambition.",
+    "ar": "اجعل المسؤولية والصلاحية واضحتين مثل الطموح التقني."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "Roles that must be named",
+        "ar": "أدوار يجب تسميتها"
+      },
+      "items": [
+        {
+          "en": "Owner: accountable for the capability and its value.",
+          "ar": "المالك: مسؤول عن القدرة وقيمتها."
+        },
+        {
+          "en": "Executor: performs the scoped work and records the evidence.",
+          "ar": "المنفذ: يؤدي العمل المحدد ويوثق الأدلة."
+        },
+        {
+          "en": "Reviewer: challenges the evidence and declares conflicts.",
+          "ar": "المراجع: ينقد الأدلة ويعلن التعارضات."
+        },
+        {
+          "en": "Approver: authorizes a defined decision within explicit limits.",
+          "ar": "المعتمد: يجيز قرارًا محددًا ضمن حدود صريحة."
+        },
+        {
+          "en": "Acceptor and operator: accept the result and sustain real use.",
+          "ar": "جهة القبول والمشغّل: يقبلان النتيجة ويحافظان على استخدامها الفعلي."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Evidence labels",
+        "ar": "حالات الأدلة"
+      },
+      "items": [
+        {
+          "en": "Verified: independently checked against an identified source.",
+          "ar": "مثبت: فُحص بصورة مستقلة مقابل مصدر محدد."
+        },
+        {
+          "en": "Confirmed by the responsible party: stated by an accountable person.",
+          "ar": "مؤكد من المسؤول: صرّح به شخص مسؤول."
+        },
+        {
+          "en": "Hypothesis: a proposition to be tested.",
+          "ar": "فرضية: طرح يحتاج اختبارًا."
+        },
+        {
+          "en": "Unknown: evidence is missing or conflicting.",
+          "ar": "مجهول: الأدلة ناقصة أو متعارضة."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Human decision points",
+        "ar": "قرارات بشرية"
+      },
+      "body": {
+        "en": "Financial commitments, hiring, policy exceptions, specialist judgments and public claims require a named human authority. An AI recommendation is not an approval. Proposed responsibilities are activated only when assigned and accepted.",
+        "ar": "الالتزامات المالية والتوظيف واستثناءات السياسات والأحكام المتخصصة والادعاءات العامة تحتاج صاحب صلاحية بشريًا محددًا. توصية الذكاء الاصطناعي ليست اعتمادًا. تُفعّل المسؤوليات المقترحة بعد تعيينها وقبولها."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/work-with-us/review-and-selection"
+    },
+    {
+      "href": "/about/operating-model"
+    }
+  ]
+}

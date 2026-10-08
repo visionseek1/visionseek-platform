@@ -1,0 +1,62 @@
+{
+  "position": 4,
+  "section": "work-with-us",
+  "slug": "review-and-selection",
+  "title": {
+    "en": "Review & selection",
+    "ar": "المراجعة والاختيار"
+  },
+  "summary": {
+    "en": "A proposed evidence-led path from first contact to an authorized test.",
+    "ar": "مسار مقترح تقوده الأدلة من التواصل الأول إلى اختبار معتمد."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "Five review gates",
+        "ar": "خمس بوابات للمراجعة"
+      },
+      "items": [
+        {
+          "en": "Fit: an important capability, identifiable beneficiary and alignment with VisionSeek.",
+          "ar": "الملاءمة: قدرة مهمة ومستفيد محدد واتساق مع VisionSeek."
+        },
+        {
+          "en": "Evidence: a real constraint and a plausible way to change it.",
+          "ar": "الأدلة: مانع حقيقي ومسار معقول لتغييره."
+        },
+        {
+          "en": "Team: the expertise and access needed to attempt the work.",
+          "ar": "الفريق: الخبرة والوصول اللازمان لمحاولة التنفيذ."
+        },
+        {
+          "en": "Test: measurable outcomes, baseline and stop conditions.",
+          "ar": "الاختبار: نتائج مقاسة وخط أساس وشروط توقف."
+        },
+        {
+          "en": "Authorization: an owner, scope, resources, terms and explicit approvals.",
+          "ar": "الاعتماد: مسؤول ونطاق وموارد وشروط واعتمادات صريحة."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Decision record",
+        "ar": "سجل القرار"
+      },
+      "body": {
+        "en": "Each review should record accept, decline, clarify or hold; the evidence used; the responsible reviewer; unresolved conditions; and the next action. Conflicted reviewers do not approve their own work. No response-time guarantee has been adopted.",
+        "ar": "تسجل المراجعة قبولًا أو رفضًا أو طلب توضيح أو تعليقًا، والأدلة المستخدمة والمراجع المسؤول والشروط غير المحسومة والخطوة التالية. لا يعتمد صاحب التعارض عمله بنفسه. لم يُعتمد ضمان لزمن الرد."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/about/governance"
+    },
+    {
+      "href": "/programs/program-lifecycle"
+    }
+  ]
+}

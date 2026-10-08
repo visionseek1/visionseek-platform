@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SiteHeader from "@/components/site-header";
+import {site} from '@/lib/site';
 
 type LegalKind = "privacy" | "terms";
 
@@ -25,7 +26,7 @@ export default function LegalPage({ locale, kind }: { locale: "ar" | "en"; kind:
         <p className="legal-kicker">VISIONSEEK / {kind === "privacy" ? (ar ? "الخصوصية" : "PRIVACY") : (ar ? "الشروط" : "TERMS")}</p>
         {kind === "privacy" ? <Privacy ar={ar} /> : <Terms ar={ar} />}
         <p className="legal-meta">
-          {ar ? "ساري من 23 سبتمبر 2026 · إنتشون، كوريا الجنوبية" : "EFFECTIVE 23 SEPTEMBER 2026 · INCHEON, SOUTH KOREA"}
+          {ar ? `ساري من 23 سبتمبر 2026 · ${site.location.ar}` : `EFFECTIVE 23 SEPTEMBER 2026 · ${site.location.en.toUpperCase()}`}
           {" · "}
           <Link href={kind === "privacy" ? termsHref : privacyHref}>{kind === "privacy" ? (ar ? "الشروط" : "Terms") : (ar ? "الخصوصية" : "Privacy")}</Link>
         </p>
@@ -50,7 +51,7 @@ function Privacy({ ar }: { ar: boolean }) {
         <h1 className="primary-ar">الخصوصية</h1>
         <p className="legal-lead primary-ar">موقع VisionSeek العام لا يفتح حسابات، ولا يبيع بيانات، ولا يشغّل إعلانات.</p>
         <h2>من نحن</h2>
-        <p>VisionSeek مؤسسة يعمل عليها أحمد عبدالعليم من إنتشون، كوريا الجنوبية. للتواصل: <a href="mailto:abdelalim@visionseek.org">abdelalim@visionseek.org</a>.</p>
+        <p>VisionSeek مؤسسة يعمل عليها أحمد عبدالعليم من إنتشون، كوريا الجنوبية. للتواصل: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
         <h2>ما الذي لا نجمعه هنا</h2>
         <ul>
           <li>لا حسابات، ولا نماذج تخزّن بيانات على خوادمنا.</li>
@@ -73,7 +74,7 @@ function Privacy({ ar }: { ar: boolean }) {
       <h1 className="primary-en">Privacy</h1>
       <p className="legal-lead primary-en">This public VisionSeek site does not open accounts, sell data, or run advertising.</p>
       <h2>Who</h2>
-      <p>VisionSeek is operated by Ahmed Abdelalim from Incheon, South Korea. Contact: <a href="mailto:abdelalim@visionseek.org">abdelalim@visionseek.org</a>.</p>
+      <p>VisionSeek is operated by Ahmed Abdelalim from Incheon, South Korea. Contact: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
       <h2>What this site does not collect</h2>
       <ul>
         <li>No accounts, and no forms that store personal data on our servers.</li>
@@ -106,7 +107,7 @@ function Terms({ ar }: { ar: boolean }) {
         <h2>التوافر</h2>
         <p>نسعى لأن يبقى الموقع متاحًا، دون ضمان عدم الانقطاع أو خلوّه من الخطأ.</p>
         <h2>أي التزام حقيقي</h2>
-        <p>لا ينشأ التزام مال أو تسليم أو تمثيل إلا باتفاق مكتوب. للأسئلة: <a href="mailto:abdelalim@visionseek.org">abdelalim@visionseek.org</a>.</p>
+        <p>لا ينشأ التزام مال أو تسليم أو تمثيل إلا باتفاق مكتوب. للأسئلة: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
       </>
     );
   }
@@ -124,7 +125,7 @@ function Terms({ ar }: { ar: boolean }) {
       <h2>Availability</h2>
       <p>We try to keep the site available. We do not guarantee that it will be uninterrupted or error-free.</p>
       <h2>A real obligation</h2>
-      <p>No duty of money, delivery, or representation arises except in a written agreement. Questions: <a href="mailto:abdelalim@visionseek.org">abdelalim@visionseek.org</a>.</p>
+      <p>No duty of money, delivery, or representation arises except in a written agreement. Questions: <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
     </>
   );
 }

@@ -1,0 +1,90 @@
+{
+  "position": 14,
+  "section": "about",
+  "slug": "program-questions",
+  "title": {
+    "en": "Questions before a program",
+    "ar": "أسئلة تسبق البرنامج"
+  },
+  "summary": {
+    "en": "Make the ambition understandable and the proof assessable.",
+    "ar": "اجعل الطموح مفهومًا والإثبات قابلًا للتقييم."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "The core questions",
+        "ar": "الأسئلة الأساسية"
+      },
+      "items": [
+        {
+          "en": "What should someone become able to do, and why does it matter?",
+          "ar": "ما الذي يجب أن يصبح شخص أو مؤسسة قادرًا عليه، ولماذا يهم؟"
+        },
+        {
+          "en": "What happens today, and where is the actual limit?",
+          "ar": "ماذا يحدث اليوم، وأين الحد الحقيقي؟"
+        },
+        {
+          "en": "What change in approach could overcome that limit?",
+          "ar": "ما التغيير في المسار الذي قد يتجاوز الحد؟"
+        },
+        {
+          "en": "What evidence, risks, resources and time does the attempt involve?",
+          "ar": "ما أدلة المحاولة ومخاطرها ومواردها ووقتها؟"
+        },
+        {
+          "en": "Which intermediate and final tests would justify the next decision?",
+          "ar": "ما الاختبارات المرحلية والنهائية التي تبرر القرار التالي؟"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The VisionSeek extension",
+        "ar": "إضافة VisionSeek"
+      },
+      "items": [
+        {
+          "en": "Who are the best people to assemble around the capability?",
+          "ar": "مَن أفضل الأشخاص الذين ينبغي جمعهم حول القدرة؟"
+        },
+        {
+          "en": "What is the best usable knowledge, technology and opportunity already available?",
+          "ar": "ما أفضل معرفة وتقنية وفرصة متاحة يمكن توظيفها؟"
+        },
+        {
+          "en": "Who will own and operate the capability after proof?",
+          "ar": "مَن سيمتلك مسؤولية القدرة ويشغّلها بعد الإثبات؟"
+        },
+        {
+          "en": "How will operating evidence change the next iteration?",
+          "ar": "كيف ستغيّر أدلة التشغيل دورة التطوير التالية؟"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Learning reference",
+        "ar": "مرجع التعلم"
+      },
+      "body": {
+        "en": "DARPA publishes the Heilmeier Catechism as a way to assess proposed research programs. The questions above are a VisionSeek adaptation, not a claim of affiliation or a replacement for its nine-stage method.",
+        "ar": "تنشر DARPA أسئلة Heilmeier لتقييم البرامج البحثية المقترحة. الأسئلة هنا تكييف لـVisionSeek، وليست ادعاء ارتباط مؤسسي أو بديلًا عن منهجها ذي المراحل التسع."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/method"
+    },
+    {
+      "href": "/work-with-us/prepare-a-concept"
+    }
+  ],
+  "source": {
+    "title": "DARPA · The Heilmeier Catechism",
+    "url": "https://www.darpa.mil/about/heilmeier-catechism"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "position": 4,
+  "slug": "resource-resilience",
+  "code": "VS-P04",
+  "title": {
+    "en": "Resilient resource operations",
+    "ar": "تشغيل مرن للموارد"
+  },
+  "summary": {
+    "en": "Give an operator a testable way to detect and reduce avoidable energy or water loss in one bounded process.",
+    "ar": "تمكين مشغّل من اكتشاف وتقليل فاقد الطاقة أو المياه القابل للتجنب في عملية محددة."
+  },
+  "image": "energy",
+  "beneficiary": {
+    "en": "Infrastructure operators, campuses and production facilities.",
+    "ar": "مشغلو البنية التحتية والمجمعات والمنشآت الإنتاجية."
+  },
+  "constraint": {
+    "en": "Data exists in separate systems, while baselines and responsibility for interventions remain unclear.",
+    "ar": "توجد البيانات في أنظمة منفصلة، بينما يبقى خط الأساس ومسؤول التدخل غير واضحين."
+  },
+  "hypothesis": {
+    "en": "Combining existing metering, process knowledge and decision rules may reveal a practical intervention before new infrastructure is needed.",
+    "ar": "قد يكشف ربط القياس الموجود ومعرفة العملية وقواعد القرار عن تدخل عملي قبل الحاجة لبنية جديدة."
+  },
+  "test": {
+    "en": "Proposed test: establish a representative baseline, simulate interventions and measure normalized resource use, false alerts and operator response time.",
+    "ar": "اختبار مقترح: تأسيس خط أساس ممثل، ومحاكاة التدخلات، وقياس استهلاك الموارد بعد ضبط ظروف التشغيل والإنذارات الخاطئة وزمن استجابة المشغّل."
+  },
+  "stop": {
+    "en": "Do not advance where savings cannot be distinguished from changes in weather, occupancy or production volume.",
+    "ar": "لا نتقدم عندما يتعذر فصل أثر التدخل عن تغير الطقس أو الإشغال أو حجم الإنتاج."
+  },
+  "transfer": {
+    "en": "The asset owner accepts the measurement method, intervention permissions and ongoing verification plan.",
+    "ar": "يعتمد مالك الأصل منهج القياس وصلاحيات التدخل وخطة التحقق المستمر."
+  }
+}
