@@ -47,12 +47,22 @@ const nextConfig: NextConfig = {
           "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https:; form-action 'self' https://github.com",
       },
     ];
+    const oauth = [
+      ...shared,
+      { key: "X-Frame-Options", value: "DENY" },
+      { key: "Cross-Origin-Opener-Policy", value: "unsafe-none" },
+      {
+        key: "Content-Security-Policy",
+        value:
+          "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https:; form-action 'self' https://github.com",
+      },
+    ];
     return [
       { source: "/:path((?!admin$|admin/|api/decap-oauth).*)", headers: site },
       { source: "/admin", headers: controlRoom },
       { source: "/admin/:path*", headers: controlRoom },
-      { source: "/api/decap-oauth", headers: controlRoom },
-      { source: "/api/decap-oauth/:path*", headers: controlRoom },
+      { source: "/api/decap-oauth", headers: oauth },
+      { source: "/api/decap-oauth/:path*", headers: oauth },
     ];
   },
 };
