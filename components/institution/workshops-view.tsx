@@ -1,14 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight, Briefcase, Building2, GraduationCap, Plane, Shield} from 'lucide-react';
+import {ArrowRight, ArrowUpRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
-import {WorkshopSelfCheck} from '@/components/institution/workshop-self-check';
 import CapabilityFooter from '@/components/capability/footer';
 import {
   getWorkshop,
   workshopSection,
   workshops,
-  type InstitutionKind,
   type Locale,
   type WorkshopKind,
 } from '@/lib/institution/workshops';
@@ -30,36 +28,19 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
   const prefix = ar ? '/ar' : '';
   const section = workshopSection;
   const live = section.live;
-  const institutionWorkshops = workshops.filter(item => item.kind === 'institution');
   const leader = workshops.find(item => item.kind === 'leader');
   const development = workshops.find(item => item.kind === 'development');
   const doorHref = (kind: WorkshopKind) => {
     if (kind === 'leader' && leader) return `${prefix}/workshops/${leader.slug}`;
     if (kind === 'development' && development) return `${prefix}/workshops/${development.slug}`;
-    return `${prefix}/workshops#institutions`;
-  };
-  /** The enquiry page reads these and opens with the workshop named, so the visitor never starts from a blank form. */
-  const startHref = (kind: WorkshopKind) => `${prefix}/start?${new URLSearchParams({from: 'workshops', workshop: kind, idea: section.doors[kind].name[locale]})}`;
-  const institutionIcon: Record<InstitutionKind, React.ReactNode> = {
-    police: <Shield size={28} strokeWidth={1.6} aria-hidden />,
-    university: <GraduationCap size={28} strokeWidth={1.6} aria-hidden />,
-    airport: <Plane size={28} strokeWidth={1.6} aria-hidden />,
-    hospital: <Building2 size={28} strokeWidth={1.6} aria-hidden />,
-    company: <Briefcase size={28} strokeWidth={1.6} aria-hidden />,
+    return '#institutions';
   };
   const kinds: WorkshopKind[] = ['leader', 'institution', 'development'];
+  const institutionWorkshops = workshops.filter(item => item.kind === 'institution');
 
   return (
     <Frame locale={locale} path="/workshops">
       <div className="vs-wl">
-        <input className="vs-ws-radio" type="radio" name="wl-chip" id="wl-chip-all" defaultChecked />
-        {kinds.map(kind => (
-          <input className="vs-ws-radio" type="radio" name="wl-chip" id={`wl-chip-${kind}`} key={kind} />
-        ))}
-        {section.institutionTypes.map((type, index) => (
-          <input className="vs-ws-radio" type="radio" name="wl-inst" id={`wl-inst-${type.id}`} key={type.id} defaultChecked={index === 0} />
-        ))}
-
         <section className="vs-wl-hero">
           <div className="vs-wl-hero-text">
             <nav className="vs-breadcrumb" aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}>
@@ -71,33 +52,15 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             <h1>{text(locale, live.heroTitle)}</h1>
             <p className="vs-wl-lede">{text(locale, live.heroLede)}</p>
             <p className="vs-wl-with">{text(locale, live.heroWith)}</p>
-            <p className="vs-wl-kicker"><span>{live.kicker}</span></p>
             <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
             <div className="vs-wl-actions">
-              <Link className="vs-wl-btn is-lime" href={`${prefix}/start`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
+              <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, section.title)})}`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
             </div>
           </div>
           <div className="vs-wl-hero-image">
             <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
             <span>{live.heroImageLabel}</span>
           </div>
-        </section>
-
-        <nav className="vs-wl-chips" aria-label={ar ? 'أقسام الورش' : 'Workshop sections'}>
-          <label htmlFor="wl-chip-all">{text(locale, live.chipAll)}</label>
-          {kinds.map(kind => (
-            <label htmlFor={`wl-chip-${kind}`} key={kind}>{text(locale, section.doors[kind].name)}</label>
-          ))}
-        </nav>
-
-        <section className="vs-wl-idea" id="idea">
-          <p className="vs-wl-code">{text(locale, live.ideaLabel)}</p>
-          <h2>{text(locale, live.ideaTitle)}</h2>
-          <p className="vs-wl-sub">{text(locale, live.ideaSub)}</p>
-          <ul className="vs-wl-idea-lines">
-            {live.ideaLines.map(line => <li key={line.en}>{text(locale, line)}</li>)}
-          </ul>
-          <p className="vs-wl-close">{text(locale, live.ideaClose)}</p>
         </section>
 
         <section className="vs-wl-doors" id="doors">
@@ -114,81 +77,18 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
                     <span className="vs-wl-code">{card.code}</span>
                     <strong>{text(locale, section.doors[kind].name)}</strong>
                     <span className="vs-wl-door-line">{text(locale, section.doors[kind].line)}</span>
-                    <span className="vs-wl-door-who">{text(locale, card.who)}</span>
-                    <span className="vs-wl-door-text">{text(locale, card.body)}</span>
-                    <span className="vs-wl-door-close">{text(locale, card.close)}</span>
                     <span className="vs-wl-door-open">{text(locale, live.openDoor)}<ArrowRight size={16} aria-hidden /></span>
                   </span>
                 </Link>
               );
             })}
           </div>
-        </section>
-
-        <WorkshopSelfCheck
-          locale={locale}
-          copy={live.selfCheck}
-          doors={{
-            leader: {name: section.doors.leader.name, line: section.doors.leader.line, href: doorHref('leader'), startHref: startHref('leader')},
-            institution: {name: section.doors.institution.name, line: section.doors.institution.line, href: doorHref('institution'), startHref: startHref('institution')},
-            development: {name: section.doors.development.name, line: section.doors.development.line, href: doorHref('development'), startHref: startHref('development')},
-          }}
-        />
-
-        <section className="vs-wl-method" id="method">
-          <div className="vs-wl-method-intro">
-            <p className="vs-wl-code">{text(locale, live.methodLabel)}</p>
-            <h2>{text(locale, live.methodTitle)}</h2>
-            <p className="vs-wl-sub">{text(locale, live.methodSub)}</p>
-            <p className="vs-wl-lede">{text(locale, live.methodLine)}</p>
-          </div>
-          <ol className="vs-wl-chain">
-            {live.methodChain.map((step, index) => (
-              <li key={step.en}>
-                <span className="vs-wl-step-n">{String(index + 1).padStart(2, '0')}</span>
-                <strong>{text(locale, step)}</strong>
-              </li>
+          <nav className="vs-wl-inst-links" id="institutions" aria-label={text(locale, section.doors.institution.name)}>
+            <span>{text(locale, section.doors.institution.name)}:</span>
+            {institutionWorkshops.map(item => (
+              <Link key={item.slug} href={`${prefix}/workshops/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link>
             ))}
-          </ol>
-        </section>
-
-        <section className="vs-wl-institutions" id="institutions">
-          <div className="vs-wl-head">
-            <div>
-              <p className="vs-wl-code">{text(locale, live.institutionsLabel)}</p>
-              <h2>{text(locale, live.institutionsTitle)}</h2>
-            </div>
-          </div>
-          <ul className="vs-wl-inst-lines">
-            {live.institutionsLines.map(line => (
-              <li key={line.kind.en}><span>{text(locale, line.kind)}:</span> <strong>{text(locale, line.gain)}</strong></li>
-            ))}
-          </ul>
-          <p className="vs-wl-close">{text(locale, live.institutionsClose)}</p>
-          <div className="vs-wl-inst-row">
-            {section.institutionTypes.map(type => {
-              const workshop = institutionWorkshops.find(item => item.institution === type.id);
-              return (
-                <label className={`vs-wl-inst inst-${type.id}`} htmlFor={`wl-inst-${type.id}`} key={type.id}>
-                  <span className="vs-wl-inst-icon">{institutionIcon[type.id]}</span>
-                  <strong>{text(locale, type.label)}</strong>
-                  {workshop && <em>{text(locale, workshop.outcome)}</em>}
-                </label>
-              );
-            })}
-          </div>
-          {institutionWorkshops.map(item => (
-            <div className={`vs-wl-inst-limit limit-${item.institution}`} key={item.slug}>
-              <p>
-                <strong>{text(locale, item.boundary.ar ? live.institutionsLimit : live.institutionsFor)} {section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}:</strong>{' '}
-                {text(locale, item.boundary.ar ? item.boundary : item.audienceInstitution)}
-              </p>
-              <Link className="vs-text-link" href={`${prefix}/workshops/${item.slug}`}>
-                {text(locale, live.institutionsOpen)}
-                <ArrowRight size={18} aria-hidden />
-              </Link>
-            </div>
-          ))}
+          </nav>
         </section>
 
         <section className="vs-wl-founder" id="founder">
@@ -198,12 +98,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           <div className="vs-wl-founder-body">
             <h2>{text(locale, live.founderName)}</h2>
             <p className="vs-wl-with">{text(locale, live.founderKicker)}</p>
-            <p>{text(locale, live.founderIntro)}</p>
-            <ul className="vs-wl-founder-questions">
-              {live.founderQuestions.map(q => <li key={q.en}>{text(locale, q)}</li>)}
-            </ul>
-            <p>{text(locale, live.founderMid)}</p>
-            <p className="vs-wl-close">{text(locale, live.founderClose)}</p>
+            <blockquote className="vs-wl-statement">{text(locale, live.founderStatement)}</blockquote>
             <Link className="vs-text-link" href={`${prefix}/about#founder`}>
               {text(locale, live.founderLink)}
               <ArrowRight size={18} aria-hidden />
@@ -216,7 +111,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             {live.closingLines.map((line, index) => <span key={line.en} className={index === live.closingLines.length - 1 ? 'is-accent' : undefined}>{text(locale, line)}</span>)}
           </h2>
           <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
-          <Link className="vs-wl-btn is-lime" href={`${prefix}/start`}>{text(locale, live.closingCta)}<ArrowRight size={18} aria-hidden /></Link>
+          <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, section.title)})}`}>{text(locale, live.closingCta)}<ArrowRight size={18} aria-hidden /></Link>
         </section>
       </div>
     </Frame>

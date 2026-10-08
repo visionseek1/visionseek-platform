@@ -159,48 +159,6 @@
       "en": "Start",
       "ar": "ابدأ"
     },
-    "chipAll": {
-      "en": "All",
-      "ar": "الكل"
-    },
-    "ideaLabel": {
-      "en": "The idea",
-      "ar": "الفكرة"
-    },
-    "ideaTitle": {
-      "en": "AI may give you more time.",
-      "ar": "قد يمنحك الذكاء الاصطناعي وقتًا أكثر."
-    },
-    "ideaSub": {
-      "en": "But its real value is that it may give you more capability.",
-      "ar": "لكن قيمته الحقيقية أنه قد يمنحك قدرة أكبر."
-    },
-    "ideaLines": [
-      {
-        "en": "To understand more.",
-        "ar": "أن تفهم أكثر."
-      },
-      {
-        "en": "To learn faster.",
-        "ar": "أن تتعلم أسرع."
-      },
-      {
-        "en": "To see possibilities you could not see.",
-        "ar": "أن ترى احتمالات لم تكن تراها."
-      },
-      {
-        "en": "To handle harder problems.",
-        "ar": "أن تعالج مسائل أعقد."
-      },
-      {
-        "en": "And to turn what you know into work and value, faster.",
-        "ar": "وأن تحوّل ما تعرفه إلى عمل وقيمة أسرع."
-      }
-    ],
-    "ideaClose": {
-      "en": "That is the benefit we are after.",
-      "ar": "هذه هي الفائدة التي نبحث عنها."
-    },
     "doorsLabel": {
       "en": "The three doors",
       "ar": "الأبواب الثلاثة"
@@ -208,162 +166,20 @@
     "doorCards": {
       "leader": {
         "code": "01",
-        "body": {
-          "en": "AI can widen the capacity of management and leadership to read information, test ideas, explore possibilities, and turn scattered knowledge into a clearer view.",
-          "ar": "الذكاء الاصطناعي يمكن أن يوسّع قدرة الإدارة والقيادة على قراءة المعلومات، واختبار الأفكار، واستكشاف الاحتمالات، وتحويل المعرفة المتناثرة إلى رؤية أوضح."
-        },
-        "close": {
-          "en": "Technology becomes an extension of the manager's and the leader's capability, not merely a tool in their hands.",
-          "ar": "فتصبح التكنولوجيا امتدادًا لقدرة المدير والقائد، لا مجرد أداة في يده."
-        },
-        "image": "/workshops/ahmed-abdelalim.jpg",
-        "who": {
-          "en": "For management, leadership, and decision-makers",
-          "ar": "للإدارة والقيادة وصناعة القرار"
-        }
+        "image": "/workshops/ahmed-abdelalim.jpg"
       },
       "institution": {
         "code": "02",
-        "body": {
-          "en": "AI can raise your capacity to research, analyse, write, learn, solve problems, and finish the work that used to consume your time.",
-          "ar": "الذكاء الاصطناعي يمكن أن يرفع قدرتك على البحث، والتحليل، والكتابة، والتعلّم، وحل المشكلات، وإنجاز الأعمال التي كانت تستهلك وقتك."
-        },
-        "close": {
-          "en": "And above all: it frees more of your energy for what needs your expertise, your judgement, and your creativity.",
-          "ar": "والأهم: أن يحرر قدرًا أكبر من طاقتك لما يحتاج خبرتك، وحكمك، وإبداعك."
-        },
-        "image": "/field-industry.jpg",
-        "who": {
-          "en": "For individuals and teams in any institution",
-          "ar": "للأفراد وفرق العمل في أي مؤسسة"
-        }
+        "image": "/field-industry.jpg"
       },
       "development": {
         "code": "03",
-        "body": {
-          "en": "When AI becomes part of how the work is done, an institution can draw more widely on what its people know, speed up the movement of knowledge, raise its capacity to analyse and decide, and build capabilities it never had before. The result may not be only a better version of today's work.",
-          "ar": "حين يصبح الذكاء الاصطناعي جزءًا من طريقة العمل، يمكن للمؤسسة أن تستفيد بصورة أوسع من معرفة موظفيها، وتسرّع انتقال المعرفة، وترفع قدرتها على التحليل واتخاذ القرار، وتبني قدرات لم تكن متاحة لها من قبل. وقد لا تكون النتيجة تحسين العمل الحالي فقط."
-        },
-        "close": {
-          "en": "The institution may become able to do things that were never possible before.",
-          "ar": "قد تصبح المؤسسة قادرة على القيام بأشياء جديدة أصلًا."
-        },
-        "image": "/field-cities.jpg",
-        "who": {
-          "en": "For the institution as a whole, and the leadership that wants more for it",
-          "ar": "للمؤسسة ككل، وللقيادة التي تريد لها أكثر"
-        }
+        "image": "/field-cities.jpg"
       }
     },
     "openDoor": {
       "en": "Open the door",
       "ar": "ادخل من هنا"
-    },
-    "methodLabel": {
-      "en": "The VisionSeek method",
-      "ar": "منهج VisionSeek"
-    },
-    "methodTitle": {
-      "en": "We do not ask first: which tool do we use?",
-      "ar": "لا نسأل أولًا: ما الأداة التي نستخدمها؟"
-    },
-    "methodSub": {
-      "en": "We ask: which capability do we want to build?",
-      "ar": "نسأل: ما القدرة التي نريد أن نبنيها؟"
-    },
-    "methodLine": {
-      "en": "Then we look for how AI can raise it.",
-      "ar": "ثم نبحث كيف يمكن للذكاء الاصطناعي أن يرفعها."
-    },
-    "methodChain": [
-      {
-        "en": "From real work",
-        "ar": "من العمل الحقيقي"
-      },
-      {
-        "en": "To the capability",
-        "ar": "إلى القدرة"
-      },
-      {
-        "en": "To the right use",
-        "ar": "إلى الاستخدام الصحيح"
-      },
-      {
-        "en": "To new possibilities",
-        "ar": "إلى إمكانات جديدة"
-      }
-    ],
-    "institutionsLabel": {
-      "en": "Institutions",
-      "ar": "المؤسسات"
-    },
-    "institutionsTitle": {
-      "en": "Every institution has a different turning point.",
-      "ar": "لكل مؤسسة نقطة تحول مختلفة."
-    },
-    "institutionsLines": [
-      {
-        "kind": {
-          "en": "In a company",
-          "ar": "في شركة"
-        },
-        "gain": {
-          "en": "more capacity to grow, decide, and innovate.",
-          "ar": "قدرة أكبر على النمو والقرار والابتكار."
-        }
-      },
-      {
-        "kind": {
-          "en": "In a university",
-          "ar": "في جامعة"
-        },
-        "gain": {
-          "en": "more capacity for knowledge, teaching, and research.",
-          "ar": "قدرة أكبر على المعرفة والتعليم والبحث."
-        }
-      },
-      {
-        "kind": {
-          "en": "In a hospital",
-          "ar": "في مستشفى"
-        },
-        "gain": {
-          "en": "more capacity to run the work and serve people.",
-          "ar": "قدرة أكبر على إدارة العمل وخدمة الناس."
-        }
-      },
-      {
-        "kind": {
-          "en": "In an airport",
-          "ar": "في مطار"
-        },
-        "gain": {
-          "en": "more capacity to coordinate and respond.",
-          "ar": "قدرة أكبر على التنسيق والاستجابة."
-        }
-      },
-      {
-        "kind": {
-          "en": "In a government body",
-          "ar": "في مؤسسة حكومية"
-        },
-        "gain": {
-          "en": "more capacity to serve, to understand, and to decide.",
-          "ar": "قدرة أكبر على الخدمة والفهم واتخاذ القرار."
-        }
-      }
-    ],
-    "institutionsClose": {
-      "en": "The opportunity does not start from the sector. It starts from knowing what the institution could become capable of.",
-      "ar": "والفرصة لا تبدأ من القطاع. تبدأ من معرفة ما الذي يمكن أن تصبح المؤسسة قادرة عليه."
-    },
-    "institutionsLimit": {
-      "en": "Where this workshop stops in",
-      "ar": "حدود الورشة في"
-    },
-    "institutionsOpen": {
-      "en": "Open the workshop",
-      "ar": "ادخل الورشة"
     },
     "founderName": {
       "en": "Dr. Ahmed Abdelalim",
@@ -373,31 +189,9 @@
       "en": "From Egypt to the Gulf to South Korea",
       "ar": "من مصر إلى الخليج إلى كوريا الجنوبية"
     },
-    "founderIntro": {
-      "en": "Dr. Ahmed looks at AI from an angle wider than tools:",
-      "ar": "ينظر د. أحمد إلى الذكاء الاصطناعي من زاوية أوسع من الأدوات:"
-    },
-    "founderQuestions": [
-      {
-        "en": "How do we raise a person's capability?",
-        "ar": "كيف نرفع قدرة الإنسان؟"
-      },
-      {
-        "en": "How do we raise the capability of management and leadership?",
-        "ar": "كيف نرفع قدرة الإدارة والقيادة؟"
-      },
-      {
-        "en": "How do we raise the capability of the institution?",
-        "ar": "كيف نرفع قدرة المؤسسة؟"
-      }
-    ],
-    "founderMid": {
-      "en": "That is the core of VisionSeek.",
-      "ar": "وهذا هو جوهر VisionSeek."
-    },
-    "founderClose": {
-      "en": "We do not only teach you to use AI. We help you discover what could become possible because of it.",
-      "ar": "لا نعلّمك استخدام الذكاء الاصطناعي فقط. نساعدك على اكتشاف ما يمكن أن يصبح ممكنًا بسببه."
+    "founderStatement": {
+      "ar": "أرى الذكاء الاصطناعي فرصة لبلادنا العربية. ليس لنتفوّق في سباق التكنولوجيا، بل لنمتلك التقنيات الحساسة التي صار امتلاكها اليوم أسهل من أي وقت مضى: الصناعات الدفاعية، والرقائق، والطاقة، وغيرها.",
+      "en": "I see AI as an opportunity for our Arab countries. Not to win a technology race, but to own the sensitive technologies that are now easier to own than ever before: defence industries, chips, energy, and more."
     },
     "founderLink": {
       "en": "Meet the founder",
@@ -420,158 +214,6 @@
     "closingCta": {
       "en": "Discover what could become possible.",
       "ar": "اكتشف ما يمكن أن يصبح ممكنًا."
-    },
-    "institutionsFor": {
-      "en": "Who it is for in",
-      "ar": "لمن في"
-    },
-    "selfCheck": {
-      "label": {
-        "en": "Not sure which door?",
-        "ar": "لست متأكدًا من بابك؟"
-      },
-      "title": {
-        "en": "Four questions, and the nearest door appears.",
-        "ar": "أربعة أسئلة، ويظهر لك الباب الأقرب."
-      },
-      "intro": {
-        "en": "Nothing is sent or saved. The answers only point you to the right place on this page.",
-        "ar": "لا يُرسل شيء ولا يُحفظ. الإجابات تدلّك فقط على المكان الصحيح في هذه الصفحة."
-      },
-      "questions": [
-        {
-          "q": {
-            "en": "Where do you sit today?",
-            "ar": "أين تجلس اليوم؟"
-          },
-          "options": [
-            {
-              "door": "leader",
-              "label": {
-                "en": "I run an institution or a department, and decisions end with me.",
-                "ar": "أدير مؤسسة أو إدارة، والقرار ينتهي عندي."
-              }
-            },
-            {
-              "door": "institution",
-              "label": {
-                "en": "I work inside a team, with daily tasks of my own.",
-                "ar": "أعمل داخل فريق، ولي مهام يومية."
-              }
-            },
-            {
-              "door": "development",
-              "label": {
-                "en": "I am responsible for developing the institution as a whole.",
-                "ar": "مسؤول عن تطوير المؤسسة كلها."
-              }
-            }
-          ]
-        },
-        {
-          "q": {
-            "en": "What takes most of your time?",
-            "ar": "ما الذي يأخذ معظم وقتك؟"
-          },
-          "options": [
-            {
-              "door": "leader",
-              "label": {
-                "en": "Reading, deciding, and meetings that do not end.",
-                "ar": "القراءة والقرار واجتماعات لا تنتهي."
-              }
-            },
-            {
-              "door": "institution",
-              "label": {
-                "en": "Writing, research, analysis, and repeated tasks.",
-                "ar": "الكتابة والبحث والتحليل والمهام المتكررة."
-              }
-            },
-            {
-              "door": "development",
-              "label": {
-                "en": "Looking for capabilities and opportunities we do not have yet.",
-                "ar": "البحث عن قدرات وفرص لا نملكها بعد."
-              }
-            }
-          ]
-        },
-        {
-          "q": {
-            "en": "What do you want to change first?",
-            "ar": "ما الذي تريد أن يتغيّر أولًا؟"
-          },
-          "options": [
-            {
-              "door": "leader",
-              "label": {
-                "en": "To see more clearly and decide better.",
-                "ar": "أن أرى أوضح وأقرر أفضل."
-              }
-            },
-            {
-              "door": "institution",
-              "label": {
-                "en": "To get more done with less effort.",
-                "ar": "أن أنجز أكثر بجهد أقل."
-              }
-            },
-            {
-              "door": "development",
-              "label": {
-                "en": "For the institution to be able to do what it could not.",
-                "ar": "أن تستطيع المؤسسة ما لم تكن تستطيعه."
-              }
-            }
-          ]
-        },
-        {
-          "q": {
-            "en": "How do you deal with AI today?",
-            "ar": "كيف تتعامل مع الذكاء الاصطناعي اليوم؟"
-          },
-          "options": [
-            {
-              "door": "leader",
-              "label": {
-                "en": "I ask someone else to try it.",
-                "ar": "أطلب من غيري أن يجرّبه."
-              }
-            },
-            {
-              "door": "institution",
-              "label": {
-                "en": "I use it sometimes, and I am not sure I really benefit.",
-                "ar": "أستخدمه أحيانًا، ولا أعرف هل أستفيد منه حقًا."
-              }
-            },
-            {
-              "door": "development",
-              "label": {
-                "en": "We want it inside how the institution works, not only on individual devices.",
-                "ar": "نريده داخل طريقة عمل المؤسسة، لا على أجهزة الأفراد فقط."
-              }
-            }
-          ]
-        }
-      ],
-      "resultLabel": {
-        "en": "The nearest door to you",
-        "ar": "الباب الأقرب إليك"
-      },
-      "openDoor": {
-        "en": "Open the door",
-        "ar": "ادخل من هنا"
-      },
-      "start": {
-        "en": "Start from here",
-        "ar": "ابدأ من هنا"
-      },
-      "restart": {
-        "en": "Answer again",
-        "ar": "أجب من جديد"
-      }
     }
   }
 }

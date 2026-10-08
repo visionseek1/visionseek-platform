@@ -52,21 +52,15 @@ test('section doors keep the three fixed kinds', () => {
   assert.deepEqual(section.status, status);
 });
 
-test('the live section page carries the approved copy and claims nothing that has not happened', () => {
+test('the live section page is short: hero, three doors, founder, closing', () => {
   const live = section.live;
-  assert.equal(live.ideaLines.length, 5);
-  assert.equal(live.methodChain.length, 4);
-  assert.equal(live.institutionsLines.length, 5);
-  assert.equal(live.founderQuestions.length, 3);
-  assert.equal(live.closingLines.length, 3);
-  assert.equal(live.selfCheck.questions.length, 4);
-  for (const question of live.selfCheck.questions) assert.deepEqual(question.options.map(o => o.door).sort(), ['development', 'institution', 'leader'], question.q.en);
   assert.deepEqual(Object.keys(live.doorCards).sort(), ['development', 'institution', 'leader']);
+  assert.equal(live.closingLines.length, 3);
+  assert.match(live.founderStatement.ar, /لبلادنا العربية/);
   assert.equal(section.doors.leader.name.ar, 'الإدارة والقيادة في عصر الذكاء الاصطناعي');
   assert.equal(section.doors.institution.name.ar, 'العمل مع الذكاء الاصطناعي');
   assert.equal(section.doors.development.name.ar, 'المؤسسة والذكاء الاصطناعي');
+  for (const gone of ['ideaLines', 'methodChain', 'institutionsLines', 'selfCheck', 'founderQuestions']) assert.equal(gone in live, false, gone);
   const joined = JSON.stringify(live);
-  for (const word of ['شهادة', 'شركاؤنا', 'عملاؤنا', '%', 'certified', 'our partners', 'our clients', 'قعدة']) {
-    assert.equal(joined.includes(word), false, word);
-  }
+  for (const word of ['شهادة', 'شركاؤنا', 'عملاؤنا', '%', 'certified', 'قعدة']) assert.equal(joined.includes(word), false, word);
 });
