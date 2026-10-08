@@ -1,0 +1,189 @@
+.page {
+  background: var(--black);
+  color: var(--white);
+}
+
+.column {
+  width: min(880px, 100%);
+  margin-inline: auto;
+  padding: 3.5rem 1.5rem 5.5rem;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0 0 2.75rem;
+  color: var(--grey);
+  font-size: 0.8rem;
+}
+
+.breadcrumb a:hover {
+  color: var(--lime);
+}
+
+.hero h1 {
+  max-width: 18ch;
+  margin: 0 0 1.4rem;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.15;
+}
+
+.promise {
+  margin: 0;
+  max-width: 42rem;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.75;
+}
+
+.audience {
+  margin: 1.35rem 0 0;
+  max-width: 40rem;
+  color: var(--grey);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.how,
+.offerSection,
+.cta {
+  margin-top: 4.25rem;
+}
+
+.how h2,
+.cta h2 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  line-height: 1.35;
+}
+
+.blocks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blocks li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 0.35rem 1rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--vs-line);
+}
+
+.blocks li:last-child {
+  border-bottom: 1px solid var(--vs-line);
+}
+
+.index {
+  color: var(--lime);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.blocks h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.25rem;
+  line-height: 1.45;
+}
+
+.blocks p {
+  margin: 0;
+  color: var(--grey);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.offer {
+  background: #15171e;
+  border: 1px solid var(--vs-line);
+  padding: 1.75rem 1.6rem 1.9rem;
+}
+
+.status {
+  margin: 0 0 1rem;
+  color: var(--lime);
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.offer h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  line-height: 1.45;
+}
+
+.offer dl {
+  margin: 0;
+}
+
+.offer dt {
+  margin: 1.15rem 0 0.3rem;
+  color: var(--lime);
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.offer dd {
+  margin: 0;
+  color: var(--grey);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.channels a {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+  min-height: 3.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vs-line);
+}
+
+.channels a:hover {
+  color: var(--lime);
+}
+
+.channels span {
+  color: var(--grey);
+  font-size: 0.85rem;
+}
+
+.channels strong {
+  font-size: 1rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .column {
+    padding: 2.25rem 1.25rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .how,
+  .offerSection,
+  .cta {
+    margin-top: 3.25rem;
+  }
+
+  .blocks li {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.25rem 0.75rem;
+  }
+
+  .channels {
+    grid-template-columns: 1fr;
+  }
+}
