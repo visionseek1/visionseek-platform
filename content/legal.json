@@ -64,7 +64,7 @@
         "paragraphs": [
           {
             "en": "Your browser requests a public signals file from GitHub (raw.githubusercontent.com). That request is visible to GitHub under their terms. We do not attach your name to it.",
-            "ar": "متصفحك يطلب ملف إشارات عامًا من GitHub (raw.githubusercontent.com). هذا الطلب ظاهر لـ GitHub بحسب شروطهم. لا نضيف إليه اسمك."
+            "ar": "متصفحك يطلب ملف إشارات عامًا من GitHub ({{ltr:raw.githubusercontent.com}}). هذا الطلب ظاهر لـ GitHub بحسب شروطهم. لا نضيف إليه اسمك."
           }
         ],
         "bullets": []

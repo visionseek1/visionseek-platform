@@ -1339,7 +1339,7 @@ collections:
                 name: sections
                 widget: list
                 summary: "{{fields.heading.ar}}"
-                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط."
+                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط، و{{ltr:نص}} لإبقاء مقطع لاتيني من اليسار إلى اليمين داخل العربية."
                 fields:
                   - label: العنوان الفرعي
                     name: heading
@@ -1379,7 +1379,7 @@ collections:
                 name: sections
                 widget: list
                 summary: "{{fields.heading.ar}}"
-                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط."
+                hint: "اكتب {{email}} داخل النص ليظهر البريد الرسمي كرابط، و{{ltr:نص}} لإبقاء مقطع لاتيني من اليسار إلى اليمين داخل العربية."
                 fields:
                   - label: العنوان الفرعي
                     name: heading
