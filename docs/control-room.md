@@ -25,6 +25,7 @@
 | عن VisionSeek والمنهج | `content/about.json` | رؤوس صفحات «عن» و«منهجنا» و«اعمل معنا»، الرؤية، ما نبنيه، المؤسس، الخاتمة |
 | أقسام الموقع | `content/sections.json` | عناوين الأقسام الستة ومقدماتها وروابطها |
 | البرامج | `content/programs/*.json` | تصورات البرامج الستة. الهيكل الثابت لصفحة البرنامج وصفحة الفرصة يبقى في `lib/institution/programs.ts` |
+| البرامج المقدَّمة | `content/offered-programs/*.json` | برامج تقدّمها VisionSeek للمؤسسات، مثل Proofline. لكل برنامج صفحة بتصميم المشاريع على `/programs/<slug>` (المكوّن `components/programs/offered-program.tsx`)، وبطاقة في دليل البرامج، وحالته الحقيقية ظاهرة |
 | صفحات الدليل وعن VisionSeek | `content/guides/*.json` | 17 صفحة: اعمل معنا، كيف تعمل البرامج، نموذج التشغيل، الحوكمة، الأشخاص، التعلم من DARPA، الإعلام. صفحات المجتمعات الست تُولَّد من `components/capability/content.ts` |
 
 القاعدة التقنية: الملفات التي تقرأها مكوّنات `"use client"` (الرئيسية، الغلاف، بيانات الموقع، عن) تُستورد كـJSON مباشرة. الباقي يُقرأ بـ`node:fs` عبر `lib/institution/content-files.ts` من مكوّنات الخادم فقط.

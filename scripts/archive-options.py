@@ -17,6 +17,8 @@ for s in nav['sections'] + [nav['reports']]:
     for c in s['children']:
         h = c['href'].split('#')[0]
         if h and h != s['path']: add(h, f"{s['ar']} ← {c['ar']}")
+for f in sorted(glob.glob('content/offered-programs/*.json')):
+    d = load(f); add(f"/programs/{d['slug']}", f"البرامج ← برنامج {d['name']}")
 for f in sorted(glob.glob('content/programs/*.json')):
     d = load(f); add(f"/programs/{d['slug']}", f"البرامج ← {d['title']['ar']}")
 for f in sorted(glob.glob('content/guides/*.json')):

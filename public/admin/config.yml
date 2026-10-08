@@ -264,6 +264,266 @@ collections:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
 
+  - name: offered_programs
+    label: البرامج المقدَّمة
+    label_singular: برنامج مقدَّم
+    description: "برامج تقدّمها VisionSeek للمؤسسات، مثل Proofline. لكل برنامج صفحة بتصميم المشاريع على /programs/الرابط. منهج العرض في docs/project-page-method.md: الخوف أولًا، وكل رقم بمصدره، والحالة الحقيقية ظاهرة."
+    folder: content/offered-programs
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{code}} — {{name}}"
+    preview_path: "ar/programs/{{slug}}"
+    sortable_fields: [position, code]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 100}
+      - {label: الرابط (slug), name: slug, widget: string, hint: "جزء الرابط بعد /programs/. لا تغيّره بعد النشر."}
+      - {label: الرمز, name: code, widget: string, hint: "مثل VS-P10. لا يتكرر مع البرامج أو المشاريع."}
+      - {label: الاسم, name: name, widget: string, hint: "اسم البرنامج كما يظهر، بالإنجليزية."}
+      - {label: الشعار, name: logo, widget: image, hint: "ملف SVG بألوان فاتحة للخلفية الداكنة."}
+      - {label: لون البرنامج, name: tone, widget: string, hint: "لون واحد بصيغة #RRGGBB."}
+      - {label: صورة البطاقة في دليل البرامج, name: image, widget: image, choose_url: true, hint: "مفتاح جاهز مثل industry أو مسار محلي يبدأ بـ /."}
+      - label: الحالة الحقيقية
+        name: status
+        widget: object
+        hint: "الحالة كما هي. لا تُكتب «يعمل» قبل أن يعمل."
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: ملخص البطاقة
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: السؤال المقلق
+        name: hook
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: السطر الثاني
+        name: question
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الوعد
+        name: promise
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: بطاقة البرنامج
+        name: profile
+        widget: object
+        fields:
+          - {label: مصمَّم لـ, name: audiences, widget: select, multiple: true, options: [{label: الحكومات, value: government}, {label: المؤسسات, value: institution}, {label: الشركات, value: company}, {label: الأفراد, value: individual}]}
+          - label: حقائق مؤرخة
+            name: facts
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+              - {label: النوع, name: kind, widget: select, options: [{label: الاتجاه العالمي, value: trend}, {label: معرض دولي, value: exhibition}]}
+              - {label: القيمة (اختياري), name: value, widget: string, required: false}
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: التفاصيل
+                name: detail
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - {label: رابط المصدر, name: url, widget: string, hint: "رابط https فُتح فعلًا."}
+      - label: عنوان قسم الخطر
+        name: risksTitle
+        widget: object
+        hint: "يسمّي ما يفعله القارئ نفسه الآن. لا سؤال عام ولا تعبير مترجم."
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: المخاوف
+        name: fears
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+          - label: الرقم (اختياري)
+            name: figure
+            widget: object
+            required: false
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: النص
+            name: body
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: المصادر
+            name: sources
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: العنوان, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string, hint: "رابط https فُتح فعلًا."}
+      - label: المثال
+        name: scenario
+        widget: object
+        fields:
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الموقف
+            name: setup
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: من دونه
+            name: without
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: معه
+            name: with
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: ملاحظة
+            name: note
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+      - label: ماذا يكسب كل طرف
+        name: gains
+        widget: list
+        summary: "{{fields.who.ar}}"
+        fields:
+          - label: الطرف
+            name: who
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: ما يكسبه
+            name: text
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: لماذا الآن
+        name: whyNow
+        widget: object
+        fields:
+          - label: أرقام بارزة
+            name: highlights
+            widget: list
+            summary: "{{fields.value.ar}}"
+            fields:
+              - label: الرقم
+                name: value
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: النص
+                name: text
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: الفقرة
+            name: paragraph
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: المصادر
+            name: sources
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: العنوان, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string, hint: "رابط https فُتح فعلًا."}
+      - label: ما الذي يميّزه
+        name: edges
+        widget: list
+        summary: "{{fields.ar}}"
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+          - label: المصادر (عند وجود رقم)
+            name: sources
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - {label: العنوان, name: title, widget: string}
+              - {label: الرابط, name: url, widget: string, hint: "رابط https فُتح فعلًا."}
+      - label: المراحل
+        name: stages
+        widget: list
+        summary: "{{fields.name.ar}}"
+        fields:
+          - {label: المعرّف, name: id, widget: string, hint: "gate أو proof أو run أو integration."}
+          - {label: مرحلة اختيارية, name: optional, widget: boolean, required: false, default: false}
+          - label: الاسم
+            name: name
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: المدة
+            name: duration
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: ما يحدث فيها
+            name: body
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: شروط الدخول
+        name: conditions
+        widget: list
+        summary: "{{fields.ar}}"
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: زر التواصل
+        name: cta
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: سؤال الخاتمة
+        name: contactTitle
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+
   - name: guides
     label: صفحات الدليل وعن VisionSeek
     label_singular: صفحة
@@ -2457,6 +2717,7 @@ collections:
                   - {label: "بيت القادة (القسم كله)  /insights", value: "/insights"}
                   - {label: "منهجنا  /method", value: "/method"}
                   - {label: "البرامج ← برنامج HLO  /about/what-we-do", value: "/about/what-we-do"}
+                  - {label: "البرامج ← برنامج Proofline  /programs/proofline", value: "/programs/proofline"}
                   - {label: "البرامج ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
                   - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
                   - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
