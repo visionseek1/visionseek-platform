@@ -1612,6 +1612,95 @@ collections:
               fields:
                 - {label: English, name: en, widget: text}
                 - {label: العربية, name: ar, widget: text}
+      - label: "عرض المشروع: الخوف والفائدة (اختياري)"
+        name: pitch
+        widget: object
+        required: false
+        hint: "منهج العرض في docs/project-page-method.md: سؤال مقلق، ثم المخاوف بأرقامها ومصادرها، ثم مثال، ثم الفائدة لكل طرف، ثم ما يميّزه."
+        fields:
+          - label: السؤال المقلق
+            name: hook
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الوعد
+            name: promise
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: المخاوف
+            name: fears
+            widget: list
+            summary: "{{fields.title.ar}}"
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: النص
+                name: body
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: "الرقم البارز (اختياري)"
+                name: figure
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المصادر
+                name: sources
+                widget: list
+                required: false
+                fields:
+                  - {label: العنوان, name: title, widget: string}
+                  - {label: الرابط, name: url, widget: string}
+          - label: "مثال: من دونه / معه"
+            name: scenario
+            widget: object
+            required: false
+            fields:
+              - label: الموقف
+                name: setup
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: من دونه
+                name: without
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: معه
+                name: with
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: الفائدة لكل طرف
+            name: gains
+            widget: list
+            fields:
+              - {label: الطرف, name: audience, widget: select, options: [{label: الحكومات, value: government}, {label: المؤسسات, value: institution}, {label: الشركات, value: company}, {label: الأفراد, value: individual}]}
+              - label: الفائدة
+                name: text
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: ما الذي يميّزه
+            name: edges
+            widget: list
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
       - label: "بطاقة المشروع (اختياري)"
         name: profile
         widget: object
@@ -1637,6 +1726,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
+              - {label: "الرقم البارز (اختياري)", name: value, widget: string, required: false}
               - {label: رابط المصدر, name: url, widget: string}
       - label: "لماذا الآن (اختياري)"
         name: whyNow
@@ -1644,6 +1734,23 @@ collections:
         required: false
         hint: "حقائق علنية مؤرخة فقط، وكل فقرة مسنودة بمصدر في القائمة."
         fields:
+          - label: الأرقام البارزة
+            name: highlights
+            widget: list
+            required: false
+            fields:
+              - label: الرقم
+                name: value
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الشرح
+                name: text
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
           - label: الفقرات
             name: paragraphs
             widget: list

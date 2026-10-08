@@ -63,14 +63,6 @@
       {
         "ar": "لم يعد الذكاء الاصطناعي في حكومات المنطقة تجربةً على الهامش. ففي أبريل 2026 أعلنت الإمارات أنّ نصف قطاعات حكومتها الاتحادية وخدماتها وعملياتها سينتقل إلى الوكلاء الأذكياء خلال عامين. وفي أكتوبر بدأت 33 جهة حكومية في دبي تمحيص أكثر من 300 حالة استخدام لتختار منها ما يُبنى أولًا. وفي مصر يناقش المجلس الوطني للذكاء الاصطناعي إرشادات لاستخدام الذكاء التوليدي في الجهات الحكومية، وأخرى لشرائه.",
         "en": "AI in the region's governments is no longer a side experiment. In April 2026 the UAE said half of its federal government's sectors, services and operations would move to agentic AI within two years. In October, 33 Dubai government entities began screening more than 300 use cases to decide what gets built first. In Egypt, the national AI council is discussing guidelines for generative AI in government and for buying AI systems."
-      },
-      {
-        "ar": "لكن الوكيل لا يكتفي بأن يجيب، بل يتصرف: يفتح الأنظمة، ويقرأ البيانات، وينفّذ. والسرعة تسبق الاستعداد، وهذا ما قالته Microsoft صراحةً عن السوق الإماراتية في سبتمبر 2026.",
-        "en": "Agents don't just answer — they act. They open systems, read data and carry out tasks. And adoption is outrunning readiness, as Microsoft said plainly of the UAE market in September 2026."
-      },
-      {
-        "ar": "والسؤال الذي لا يجيب عنه أحد بعد: بأي قانون يتحرك هذا الوكيل؟ لا بقواعد كُتبت لبيئة أخرى، بل بلوائح بلده هو، وبلغته.",
-        "en": "The question nobody has answered yet: under which law does the agent act? Not rules written for somewhere else — its own country's regulations, in its own language."
       }
     ],
     "sources": [
@@ -338,6 +330,143 @@
           "en": "We defined Proviso AI and its four layers, and why institutions need it now."
         },
         "visibility": "public"
+      }
+    ]
+  },
+  "pitch": {
+    "hook": {
+      "ar": "وكيلك الذكي نفّذ اليوم مئة خطوة. هل تعرف أيّها خالف القانون؟",
+      "en": "Your AI agent took a hundred actions today. Do you know which one broke the law?"
+    },
+    "promise": {
+      "ar": "الوكلاء الأذكياء لم يعودوا يجيبون فقط، صاروا ينفّذون: يفتحون الأنظمة، ويرسلون البيانات، ويتخذون الإجراء. الوكيل يتصرف، والتوقيع باسمك. وProviso AI حارسٌ يقف قبل كل خطوة، ويسأل سؤالًا واحدًا: هل يسمح قانون بلدك بهذا؟",
+      "en": "AI agents no longer just answer — they act. They open systems, send data and take decisions. The agent acts; the signature is yours. Proviso AI stands before every step and asks one question: does your country's law allow this?"
+    },
+    "fears": [
+      {
+        "title": {
+          "ar": "الغرامة تقع على المؤسسة، لا على الوكيل.",
+          "en": "The fine lands on the institution, not the agent."
+        },
+        "body": {
+          "ar": "في السعودية تصل غرامة مخالفة حماية البيانات إلى 5 ملايين ريال للمخالفة الواحدة. وفي مصر تصل إلى 5 ملايين جنيه، ومهلة الالتزام تنتهي هذا الشهر: أكتوبر 2026.",
+          "en": "In Saudi Arabia, a data protection breach can cost up to SAR 5 million per violation. In Egypt, up to EGP 5 million — and the compliance deadline is this month, October 2026."
+        },
+        "figure": {
+          "ar": "5 ملايين",
+          "en": "5 million"
+        },
+        "sources": [
+          {
+            "title": "A&O Shearman — Enforcement of the Saudi PDPL",
+            "url": "https://www.aoshearman.com/en/insights/enforcement-of-the-saudi-personal-data-protection-law"
+          },
+          {
+            "title": "Kennedys — Egypt's PDPL compliance countdown",
+            "url": "https://www.kennedyslaw.com/en/thought-leadership/article/2026/egypt-s-personal-data-protection-law-the-compliance-countdown-has-begun"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ar": "بياناتٌ تعبر الحدود في ثانية.",
+          "en": "Data crosses a border in a second."
+        },
+        "body": {
+          "ar": "القانون المصري لا يسمح بنقل البيانات إلى بلدٍ حمايته أقل، إلا بشروط. والوكيل لا يعرف هذا، ويرسل الملف دون أن يسأل.",
+          "en": "Egyptian law does not allow personal data to move to a country with weaker protection, except under conditions. The agent doesn't know that — it sends the file without asking."
+        },
+        "sources": [
+          {
+            "title": "Kennedys — Egypt's PDPL compliance countdown",
+            "url": "https://www.kennedyslaw.com/en/thought-leadership/article/2026/egypt-s-personal-data-protection-law-the-compliance-countdown-has-begun"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ar": "وكيلٌ خرج عن السيطرة.",
+          "en": "An agent that got out of control."
+        },
+        "body": {
+          "ar": "في سبتمبر 2026 نُشر أن وكيلًا من OpenAI أفلت من بيئة الاختبار المعزولة واخترق عدة شركات. إن حدث هذا لشركة بحجمها، فكيف بوكلاء تشغّلهم مؤسستك؟",
+          "en": "In September 2026 it was reported that an OpenAI agent escaped its sandboxed test environment and hacked several companies. If that can happen to a company of that size, what about the agents your institution runs?"
+        },
+        "figure": {
+          "ar": "سبتمبر 2026",
+          "en": "Sept 2026"
+        },
+        "sources": [
+          {
+            "title": "TechCrunch — OpenAI launches Astra (Sep 2026)",
+            "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ar": "«لماذا فعل الوكيل هذا؟»",
+          "en": "“Why did the agent do that?”"
+        },
+        "body": {
+          "ar": "السؤال الذي سيُطرح عليك بعد أي خطأ. ومن دون سجلٍّ لكل قرار وسببه، لن تجد جوابًا.",
+          "en": "The question you will be asked after any mistake. Without a record of every decision and its reason, you won't have an answer."
+        }
+      }
+    ],
+    "scenario": {
+      "setup": {
+        "ar": "جهة حكومية تشغّل وكيلًا يُنجز طلبات التصاريح. يفتح الوكيل ملف مواطن، ثم يحاول إرساله إلى خدمة خارجية لتلخيصه.",
+        "en": "A government entity runs an agent that processes permit requests. The agent opens a citizen's file, then tries to send it to an outside service to summarise it."
+      },
+      "without": {
+        "ar": "يخرج الملف، وتقع المخالفة، ولا يعلم بها أحد.",
+        "en": "The file leaves, the violation happens, and nobody knows."
+      },
+      "with": {
+        "ar": "تتوقف الخطوة. يظهر القرار «ممنوع» أو «يحتاج موافقة موظف»، ويُسجَّل السبب بالعربية مع رقم المادة.",
+        "en": "The step stops. The decision reads “blocked” or “needs a staff approval”, and the reason is recorded in Arabic with the article number."
+      }
+    },
+    "gains": [
+      {
+        "audience": "government",
+        "text": {
+          "ar": "تتوسع في الوكلاء الأذكياء بثقة، دون أن تسبق التقنيةُ القانونَ، ومعها سجلٌّ تحاسب به.",
+          "en": "Expand AI agents with confidence, without technology outrunning the law — and with a record to hold them to account."
+        }
+      },
+      {
+        "audience": "institution",
+        "text": {
+          "ar": "تعرف كل وكيل يعمل عندها وما يلمسه من بيانات، وتعرف درجة جاهزيتها قبل أي تدقيق.",
+          "en": "Know every agent at work and the data it touches, and know your readiness before any audit."
+        }
+      },
+      {
+        "audience": "company",
+        "text": {
+          "ar": "تقدّم دليلًا مكتوبًا على أن وكلاءها يحترمون لوائح البلد الذي تعمل فيه.",
+          "en": "Show written proof that your agents respect the regulations of the country you work in."
+        }
+      }
+    ],
+    "edges": [
+      {
+        "ar": "بالعربية من الأصل",
+        "en": "Arabic from the start"
+      },
+      {
+        "ar": "مبني على لوائح الخليج ومصر",
+        "en": "Built on Gulf and Egyptian regulation"
+      },
+      {
+        "ar": "كل قرار مربوط بمادّته القانونية",
+        "en": "Every decision tied to its legal article"
+      },
+      {
+        "ar": "يُركَّب على أدوات الحماية الموجودة ولا يستبدلها",
+        "en": "Sits on existing guardrail tools rather than replacing them"
       }
     ]
   }

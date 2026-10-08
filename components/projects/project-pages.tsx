@@ -153,9 +153,11 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
   const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
   const file=projectFileById(project.id);const color=sectorColors[sector.icon];
   const date=(value:string)=>new Intl.DateTimeFormat(ar?'ar':'en',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T12:00:00Z`));
+  const pitch=project.pitch;
   const tabs:[string,string][]=[
+    ...(pitch?[['risks',ar?'الخطر':'The risk'],['gains',ar?'الفائدة':'What you gain']] as [string,string][]:[]),
     ...(project.whyNow?[['why-now',ar?'لماذا الآن':'Why now'] as [string,string]]:[]),
-    ['overview',ar?'المشروع':'Project'],
+    ...(pitch?[]:[['overview',ar?'المشروع':'Project'] as [string,string]]),
     ...(file?[['scope',ar?'مسارات العمل':'Workstreams'],['engagement',ar?'التعاون والتكليف':'Work with us'],['progress',ar?'تطوّر المشروع':'Progress']] as [string,string][]:[]),
   ];
   return <Frame locale={locale} path={projectPath(project.slug,'en')}>
@@ -164,29 +166,61 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
       <div className={styles.detailGrid}>
         <div className={styles.detailMain}>
           <div className={styles.identity}><span dir="ltr" className={styles.code}>{project.id}</span><Status project={project} locale={locale}/><span className={styles.mono} style={{color}}>{trackLabel(track)}</span></div>
-          <h1>{project.title[locale]}</h1>
-          <p className={styles.ambition}>{project.ambition[locale]}</p>
-          <p className={styles.lede}>{project.summary[locale]}</p>
+          {project.pitch?<>
+            <p className={styles.projectName}>{project.title[locale]}</p>
+            <h1 className={styles.hook}>{project.pitch.hook[locale]}</h1>
+            <p className={styles.lede}>{project.pitch.promise[locale]}</p>
+          </>:<>
+            <h1>{project.title[locale]}</h1>
+            <p className={styles.ambition}>{project.ambition[locale]}</p>
+            <p className={styles.lede}>{project.summary[locale]}</p>
+          </>}
           <div className={styles.actions}><Link className={styles.primary} href={projectInquiry(project,locale)}>{ar?'ناقش تكليف المشروع':'Discuss a project mandate'}<ArrowUpRight size={18} aria-hidden="true"/></Link>{file&&<a className={styles.secondary} href="#progress">{ar?'تابع تطوّر المشروع':'Follow project progress'}</a>}</div>
         </div>
         <ProfileCard project={project} locale={locale}/>
       </div>
     </div></section>
     <nav className={styles.tabs} aria-label={ar?'داخل المشروع':'Within this project'}><div className={styles.wrap}>{tabs.map(([id,title])=><a key={id} href={`#${id}`}>{title}</a>)}</div></nav>
+    {pitch&&<>
+      <section id="risks" className={styles.section}><div className={styles.wrap}>
+        <Eyebrow>{ar?'الخطر':'THE RISK'}</Eyebrow><h2 className={styles.h2}>{ar?'ما الذي يُبقي المسؤول مستيقظًا؟':'What keeps the person in charge awake?'}</h2>
+        <div className={styles.fears}>{pitch.fears.map((fear,i)=><article key={fear.title.en}>
+          <div className={styles.fearTop}><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span>{fear.figure&&<strong>{fear.figure[locale]}</strong>}</div>
+          <h3>{fear.title[locale]}</h3><p>{fear.body[locale]}</p>
+          {fear.sources&&<ul className={styles.fearSources}>{fear.sources.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" dir="ltr">{source.title}<ArrowUpRight size={13} aria-hidden="true"/></a></li>)}</ul>}
+        </article>)}</div>
+      </div></section>
+      {pitch.scenario&&<section id="example" className={`${styles.section} ${styles.band}`}><div className={styles.wrap}>
+        <Eyebrow>{ar?'مثال':'AN EXAMPLE'}</Eyebrow><h2 className={styles.h2}>{ar?'لحظة واحدة تكفي':'One moment is enough'}</h2>
+        <p className={styles.prose}>{pitch.scenario.setup[locale]}</p>
+        <div className={styles.scenario}>
+          <div className={styles.without}><span>{ar?'من دونه':'Without it'}</span><p>{pitch.scenario.without[locale]}</p></div>
+          <div className={styles.withIt}><span>{ar?'معه':'With it'}</span><p>{pitch.scenario.with[locale]}</p></div>
+        </div>
+      </div></section>}
+      <section id="gains" className={styles.section}><div className={styles.wrap}>
+        <Eyebrow>{ar?'الفائدة':'WHAT YOU GAIN'}</Eyebrow><h2 className={styles.h2}>{ar?'ماذا يكسب كل طرف؟':'What does each side gain?'}</h2>
+        <div className={styles.workGrid}>{pitch.gains.map(gain=><article key={gain.audience}><span className={styles.mono}>{audienceLabels[gain.audience][locale]}</span><p className={styles.gainText}>{gain.text[locale]}</p></article>)}</div>
+      </div></section>
+    </>}
     {project.whyNow&&<section id="why-now" className={styles.section}><div className={styles.wrap}>
       <Eyebrow>{ar?'لماذا الآن':'WHY NOW'}</Eyebrow><h2 className={styles.h2}>{ar?'لماذا تحتاجه المؤسسات الآن؟':'Why institutions need this now'}</h2>
       {project.whyNow.highlights&&<div className={styles.highlights}>{project.whyNow.highlights.map(h=><div key={h.text.en}><strong>{h.value[locale]}</strong><p>{h.text[locale]}</p></div>)}</div>}
-      <div className={styles.prose}>{project.whyNow.paragraphs.map(p=><p key={p.en}>{p[locale]}</p>)}</div>
+      {project.whyNow.paragraphs.length>0&&<div className={styles.prose}>{project.whyNow.paragraphs.map(p=><p key={p.en}>{p[locale]}</p>)}</div>}
       <p className={styles.sourceNote}>{ar?'مصادر علنية، وليست شراكات ولا تكليفات.':'Public sources — not partnerships or engagements.'}</p>
       <ul className={styles.sources}>{project.whyNow.sources.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" dir="ltr">{source.title}<ArrowUpRight size={14} aria-hidden="true"/></a></li>)}</ul>
     </div></section>}
-    <section id="overview" className={`${styles.section} ${styles.band}`}><div className={`${styles.wrap} ${styles.split}`}>
+    {pitch&&pitch.edges.length>0&&<section className={`${styles.section} ${styles.band}`}><div className={styles.wrap}>
+      <Eyebrow>{ar?'ما الذي يميّزه':'WHAT SETS IT APART'}</Eyebrow>
+      <ul className={styles.edges}>{pitch.edges.map(edge=><li key={edge.en}>{edge[locale]}</li>)}</ul>
+    </div></section>}
+    {!pitch&&<section id="overview" className={`${styles.section} ${styles.band}`}><div className={`${styles.wrap} ${styles.split}`}>
       <div><Eyebrow>{ar?'التحدي':'THE CHALLENGE'}</Eyebrow><p className={styles.big}>{file?.challenge[locale]||project.idea[locale]}</p></div>
       <div className={styles.panel}><Eyebrow>{ar?'دور VisionSeek':'VISIONSEEK’S ROLE'}</Eyebrow><p>{file?.role[locale]||project.idea[locale]}</p><Eyebrow>{ar?'لمن':'WHO IT IS FOR'}</Eyebrow><p>{project.beneficiary[locale]}</p></div>
-    </div></section>
+    </div></section>}
     {file&&<>
       <section id="scope" className={styles.section}><div className={styles.wrap}>
-        <Eyebrow>{ar?'نطاق المشروع':'PROJECT SCOPE'}</Eyebrow><h2 className={styles.h2}>{ar?'ما الذي نطوّره؟':'What are we developing?'}</h2>
+        <Eyebrow>{ar?'كيف يعمل':'HOW IT WORKS'}</Eyebrow><h2 className={styles.h2}>{ar?'ما الذي نطوّره؟':'What are we developing?'}</h2>
         <div className={styles.workGrid}>{file.workstreams.map((work,i)=><article key={work.id}><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span><h3>{work.title[locale]}</h3><p>{work.body[locale]}</p></article>)}</div>
       </div></section>
       <section id="engagement" className={`${styles.section} ${styles.band}`}><div className={styles.wrap}>

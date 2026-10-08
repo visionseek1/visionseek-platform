@@ -15,6 +15,14 @@ export type ProjectKind = 'supply'|'containment'|'governance';
 export type ProjectStatus = 'concept'|'active'|'completed';
 export type ProjectAudience = 'government'|'institution'|'company'|'individual';
 export type ProjectFact = {kind:'exhibition'|'trend'; title:Text; detail:Text; url:string; value?:string};
+export type ProjectSource = {title:string; url:string};
+export type ProjectPitch = {
+  hook:Text; promise:Text;
+  fears:{title:Text; body:Text; figure?:Text; sources?:ProjectSource[]}[];
+  scenario?:{setup:Text; without:Text; with:Text};
+  gains:{audience:ProjectAudience; text:Text}[];
+  edges:Text[];
+};
 export const audienceLabels:Record<ProjectAudience,Text> = {
   government:{ar:'الحكومات',en:'Governments'},
   institution:{ar:'المؤسسات',en:'Institutions'},
@@ -38,6 +46,11 @@ export type Project = {
   outcomes:{title:Text;text:Text}[];
   /** Why institutions need this now: public, dated facts only, each backed by a listed source. */
   whyNow?:{highlights?:{value:Text;text:Text}[];paragraphs:Text[];sources:{title:string;url:string}[]};
+  /**
+   * How a project is presented (docs/project-page-method.md): a hook that names the fear, the fears themselves
+   * backed by dated facts, one concrete scenario with and without the project, what each audience gains, and what sets it apart.
+   */
+  pitch?:ProjectPitch;
   /** The project's identity card: who it is designed for, and dated public facts (major exhibitions, the global trend). */
   profile?:{audiences:ProjectAudience[];facts:ProjectFact[]};
   file?:ProjectFile;

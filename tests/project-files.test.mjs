@@ -50,3 +50,18 @@ test('every project carries an identity card with sourced, bilingual facts',()=>
   }
  }
 });
+test('a project pitch names its fears with sources and speaks to real audiences',()=>{
+ const audiences=new Set(['government','institution','company','individual']);
+ for(const project of projects){
+  const pitch=project.pitch;if(!pitch)continue;
+  for(const t of [pitch.hook,pitch.promise])assert.ok(t.ar&&t.en,project.id);
+  assert.ok(pitch.fears.length>=3,`${project.id} needs at least three fears`);
+  for(const fear of pitch.fears){
+   assert.ok(fear.title.ar&&fear.title.en&&fear.body.ar&&fear.body.en);
+   if(fear.figure)assert.ok(fear.sources?.length,`${project.id}: a figure needs a source`);
+   for(const s of fear.sources??[])assert.match(s.url,/^https:\/\//);
+  }
+  for(const gain of pitch.gains)assert.ok(audiences.has(gain.audience)&&gain.text.ar&&gain.text.en);
+  for(const edge of pitch.edges)assert.ok(edge.ar&&edge.en);
+ }
+});
