@@ -2,7 +2,7 @@ import data from '@/content/site.json';
 
 /**
  * Contact details and the few lines repeated across the site.
- * Edited from /admin («بيانات الموقع»). Safe to import from client components: plain JSON, no fs.
+ * Edited from /admin («بيانات التواصل (كل الصفحات)»). Safe to import from client components: plain JSON, no fs.
  */
 export type SiteText = {en: string; ar: string};
 export type Site = {

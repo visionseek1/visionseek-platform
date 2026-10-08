@@ -2,7 +2,7 @@ import data from '@/content/navigation.json';
 import {isArchived} from '@/lib/visibility';
 
 /**
- * The header menu and the footer map. Edited from /admin («القائمة والتذييل»).
+ * The header menu and the footer map. Edited from /admin («الشريط العلوي والتذييل»).
  * Plain JSON import: safe for the client-side header. Paths are site-relative; the locale prefix is added where rendered.
  */
 export type NavLink = {href: string; en: string; ar: string};

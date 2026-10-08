@@ -11,11 +11,15 @@ const html = `<!doctype html>
     /* Decap's layout is left-to-right only; dir="rtl" on the page overlaps the sidebar and hides the entry list.
        Keep the shell LTR and let each field and label pick its own direction from its first strong character. */
     input, textarea, [contenteditable], label, h1, h2, h3, li, p, span, a, button { unicode-bidi: plaintext; }
+    body, input, textarea, button, select { font-family: "Segoe UI", "IBM Plex Sans Arabic", "Noto Sans Arabic", "Geeza Pro", Tahoma, Arial, sans-serif; }
   </style>
+  <link rel="stylesheet" href="/admin/admin-ui.css">
   <script>window.CMS_MANUAL_INIT = true;</script>
 </head>
 <body>
   <script src="/admin/decap-cms.js"></script>
+  <script src="/admin/ar-locale.js"></script>
+  <script src="/admin/admin-ui.js"></script>
   <script>
     window.CMS.init();
   </script>
