@@ -31,6 +31,7 @@ for f in sorted(glob.glob('content/projects/concepts/*.json')):
     d = load(f); add(f"/projects/{d['sector']}/{d['track']}/{d['slug']}", f"المشاريع ← {d['id']} {d['title']['ar']}")
 add('/insights/physical-ai', 'بيت القادة ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/physical-ai', 'التقارير ← إحاطة الذكاء الاصطناعي المادي')
+add('/reports/agent-governance', 'التقارير ← حوكمة الوكلاء الأذكياء')
 
 def q(s): return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 lines = ''.join(f"                  - {{label: {q(l + '  ' + p)}, value: {q(p)}}}\n" for p, l in opts)

@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries = [
     {path:"/about/what-we-do",priority:0.9},{path:"/ar/about/what-we-do",priority:0.9},
     ...projectRoutes.flatMap(parts=>['','/ar'].map(prefix=>({path:`${prefix}/projects/${parts.join('/')}`,priority:0.8}))),
-    ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology"].map(path => ({path, priority: 0.7})),
+    ...["/reports", "/ar/reports", "/reports/methodology", "/ar/reports/methodology", "/reports/agent-governance", "/ar/reports/agent-governance"].map(path => ({path, priority: 0.7})),
     ...(showPublicCharacters?[...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
       {path:'/insights/characters',priority:0.7},{path:'/ar/insights/characters',priority:0.7}]:[]),
     ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:`/${s.id}`,priority:0.8},{path:`/ar/${s.id}`,priority:0.8}]),
