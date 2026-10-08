@@ -20,5 +20,9 @@
     "en": "Incheon, South Korea · Working across Korea and the Arab world",
     "ar": "إنتشون، كوريا الجنوبية · نعمل عبر كوريا والعالم العربي"
   },
-  "tagline": "Make It Possible."
+  "tagline": "Make It Possible.",
+  "footerBlurb": {
+    "en": "We discover what becomes possible when ideas, technologies, people, markets and institutions connect. Then we find the right form to make it real.",
+    "ar": "نكتشف ما يصبح ممكنًا عندما تتصل الأفكار والتقنيات والأشخاص والأسواق والمؤسسات، ثم نحدد الشكل الصحيح لجعله واقعًا."
+  }
 }

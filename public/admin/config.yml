@@ -190,6 +190,12 @@ collections:
               - {label: English, name: en, widget: string}
               - {label: العربية, name: ar, widget: string}
           - {label: الشعار النصي, name: tagline, widget: string}
+          - label: فقرة التذييل
+            name: footerBlurb
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
 
   - name: programs
     label: البرامج
@@ -889,3 +895,327 @@ collections:
             - label: العربية
               name: ar
               widget: string
+
+  - name: about
+    label: عن VisionSeek والمنهج
+    description: رأس صفحات «عن VisionSeek» و«منهجنا» و«اعمل معنا»، والرؤية، وما نبنيه، والمؤسس، والخاتمة.
+    files:
+    - label: عن VisionSeek والمنهج
+      name: about
+      file: content/about.json
+      fields:
+      - label: رؤوس الصفحات
+        name: pages
+        widget: object
+        fields:
+        - label: منهجنا
+          name: method
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+        - label: عن VisionSeek
+          name: about
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+        - label: اعمل معنا
+          name: work-with-us
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: text
+            - label: العربية
+              name: ar
+              widget: text
+      - label: رؤيتنا
+        name: vision
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+      - label: ما نبنيه
+        name: builds
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: القائمة
+          name: items
+          widget: list
+          summary: '{{fields.ar}}'
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: المؤسس
+        name: founder
+        widget: object
+        fields:
+        - label: الصورة
+          name: image
+          widget: image
+          choose_url: true
+          hint: مسار يبدأ بـ / مثل /ahmed-abdelalim.jpg أو /uploads/photo.jpg
+        - label: وصف الصورة
+          name: imageAlt
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: الاسم
+          name: name
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: الاقتباس
+          name: quote
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+      - label: ملاحظة «اعمل معنا»
+        name: workNote
+        widget: object
+        fields:
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: النص
+          name: text
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: نص الرابط
+          name: link
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: الخاتمة
+        name: closing
+        widget: object
+        fields:
+        - label: السطر العلوي
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: نص الزر
+          name: button
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: السطر الأخير
+          name: line
+          widget: string

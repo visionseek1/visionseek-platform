@@ -16,6 +16,7 @@ export type Site = {
   locationHint: SiteText;
   footerLocation: SiteText;
   tagline: string;
+  footerBlurb: SiteText;
 };
 
 export const site: Site = data;

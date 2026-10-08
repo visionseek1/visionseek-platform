@@ -1,0 +1,160 @@
+{
+  "pages": {
+    "method": {
+      "label": {
+        "en": "ENGINEERING OPPORTUNITIES",
+        "ar": "هندسة الفرص"
+      },
+      "title": {
+        "en": "From a capability that should exist to one that works.",
+        "ar": "من القدرة المطلوبة إلى واقع يعمل."
+      },
+      "intro": {
+        "en": "Define what should become possible. Bring together the right people and the best available capabilities. Test, operate and keep evolving.",
+        "ar": "نكتشف القدرة التي يمكن أن تصنع الفارق لمؤسستك، ونفهم ما ينقصك لامتلاكها، ثم نبنيها ونختبرها ونطوّرها معك."
+      }
+    },
+    "about": {
+      "label": {
+        "en": "ABOUT VISIONSEEK",
+        "ar": "عن VisionSeek"
+      },
+      "title": {
+        "en": "See what could be. Make it possible.",
+        "ar": "نرى ما يمكن أن يكون. ونجعله ممكنًا."
+      },
+      "intro": {
+        "en": "We discover what becomes possible when ideas, technologies, people, markets and institutions connect. Then we find the right form to make it real.",
+        "ar": "نكتشف ما يصبح ممكنًا عندما تتصل الأفكار والتقنيات والأشخاص والأسواق والمؤسسات، ثم نحدد الشكل الصحيح لجعله واقعًا."
+      }
+    },
+    "work-with-us": {
+      "label": {
+        "en": "WORK WITH VISIONSEEK",
+        "ar": "اعمل معنا"
+      },
+      "title": {
+        "en": "Important capabilities need the right people.",
+        "ar": "القدرة الكبيرة تحتاج الأشخاص المناسبين."
+      },
+      "intro": {
+        "en": "Start with a question: what important capability should exist that does not exist today? Build the right team, knowledge, technologies and partnerships around it.",
+        "ar": "نبدأ بتحديد القدرة التي يمكن أن تغيّر موقع مؤسستك، ثم نجمع الخبرات والتقنيات والشركاء اللازمين لبنائها."
+      }
+    }
+  },
+  "vision": {
+    "eyebrow": {
+      "en": "OUR VISION",
+      "ar": "رؤيتنا"
+    },
+    "title": {
+      "en": "Build a global institution that expands what becomes possible.",
+      "ar": "أن نبني مؤسسة عالمية توسّع ما يصبح ممكنًا."
+    },
+    "text": {
+      "en": "We help institutions and governments define the important capabilities that should exist and design the paths to make them real. Based in South Korea, we connect knowledge, technologies, expertise and opportunities across borders.",
+      "ar": "نساعد المؤسسات والحكومات على تحديد القدرات المهمة التي يجب أن توجد وتصميم المسارات التي تجعلها واقعًا. ننطلق من كوريا الجنوبية، ونربط المعرفة والتقنيات والخبرات والفرص عبر الحدود."
+    }
+  },
+  "builds": {
+    "eyebrow": {
+      "en": "WHAT VISIONSEEK BUILDS",
+      "ar": "ما نبنيه"
+    },
+    "title": {
+      "en": "The form follows the capability.",
+      "ar": "الشكل يتبع القدرة."
+    },
+    "text": {
+      "en": "We do not decide the form of a solution before understanding the capability. We choose the form that makes it testable, operational and able to evolve.",
+      "ar": "لا نحدد شكل الحل قبل فهم القدرة. نختار الشكل الذي يجعلها قابلة للتحقق والتشغيل والتطور."
+    },
+    "items": [
+      {
+        "en": "A new operating system",
+        "ar": "منظومة تشغيل جديدة"
+      },
+      {
+        "en": "An institutional or technical capability",
+        "ar": "قدرة مؤسسية أو تقنية"
+      },
+      {
+        "en": "A platform or product",
+        "ar": "منصة أو منتج"
+      },
+      {
+        "en": "A national program",
+        "ar": "برنامج وطني"
+      },
+      {
+        "en": "An AI system",
+        "ar": "نظام ذكاء اصطناعي"
+      },
+      {
+        "en": "A partnership or new company",
+        "ar": "شراكة أو شركة جديدة"
+      },
+      {
+        "en": "A research initiative",
+        "ar": "مبادرة بحثية"
+      },
+      {
+        "en": "An entirely new infrastructure",
+        "ar": "بنية كاملة لم تكن موجودة"
+      }
+    ]
+  },
+  "founder": {
+    "image": "/ahmed-abdelalim.jpg",
+    "imageAlt": {
+      "en": "Dr. Ahmed Abdelalim, founder of VisionSeek",
+      "ar": "د. أحمد عبدالعليم، مؤسس VisionSeek"
+    },
+    "eyebrow": {
+      "en": "FOUNDER · VISION & STRATEGY",
+      "ar": "المؤسس · الرؤية والاستراتيجية"
+    },
+    "name": {
+      "en": "Dr. Ahmed Abdelalim",
+      "ar": "د. أحمد عبدالعليم"
+    },
+    "text": {
+      "en": "I believe changing the world does not always begin with inventing something new, but with discovering the missing connection between what we know and what we can build. Through VisionSeek, I aim to unite technology, science, design and entrepreneurship in projects that unlock new possibilities for people and society.",
+      "ar": "أؤمن أن تغيير العالم لا يبدأ دائمًا باختراع شيء جديد، بل باكتشاف الرابط المفقود بين ما نعرفه وما نستطيع أن نصنعه. من خلال VisionSeek، أطمح إلى جمع التكنولوجيا والعلم والتصميم وريادة الأعمال في مشروعات تفتح إمكانات جديدة للإنسان والمجتمع."
+    },
+    "quote": {
+      "en": "The future is already here. It simply has not been connected yet.",
+      "ar": "المستقبل موجود بالفعل… لكنه لم يُربط بعد."
+    }
+  },
+  "workNote": {
+    "title": {
+      "en": "What should you share first?",
+      "ar": "ماذا تخبرنا في البداية؟"
+    },
+    "text": {
+      "en": "The capability you have in mind, who needs it, what prevents it today, and the expertise or resources you can contribute. A short message is enough to begin.",
+      "ar": "القدرة المطلوبة، ومَن يحتاجها، وما الذي يمنعها اليوم، والخبرة أو الموارد التي يمكنك المساهمة بها. رسالة قصيرة تكفي لبدء النقاش."
+    },
+    "link": {
+      "en": "Start a conversation",
+      "ar": "ابدأ محادثة"
+    }
+  },
+  "closing": {
+    "eyebrow": {
+      "en": "THE NEXT QUESTION",
+      "ar": "السؤال التالي"
+    },
+    "title": {
+      "en": "What solution could move your institution ahead?",
+      "ar": "ما الحل الذي سيمنح مؤسستك السبق؟"
+    },
+    "button": {
+      "en": "Build your solutions with us",
+      "ar": "ابنِ حلولك معنا"
+    },
+    "line": "Make It Possible."
+  }
+}
