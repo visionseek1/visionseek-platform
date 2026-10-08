@@ -151,3 +151,302 @@ collections:
         fields:
           - {label: المسار, name: href, widget: string}
 
+
+  # المرحلة 2 — الورش. مجموعة الأخبار أعلاه لم تُغيَّر.
+  # الحفظ على هذه المجموعة يفتح فرعًا وطلب دمج، مثل الأخبار. لا كتابة على main.
+  - name: workshops
+    label: الورش
+    label_singular: ورشة
+    folder: content/workshops
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{outcome.ar}} — {{slug}}"
+    preview_path: "ar/workshops/{{slug}}"
+    sortable_fields: [position, slug]
+    fields:
+      - {label: ترتيب العرض, name: position, widget: number, value_type: int, min: 1, default: 10}
+      - label: الرابط (slug)
+        name: slug
+        widget: string
+        hint: "جزء الرابط بعد /workshops/. لا تغيّره بعد النشر."
+      - label: النوع
+        name: kind
+        widget: select
+        options:
+          - {label: قعدة القائد, value: leader}
+          - {label: ورش المؤسسات, value: institution}
+          - {label: تطوير المؤسسة, value: development}
+      - label: نوع المؤسسة
+        name: institution
+        widget: select
+        required: false
+        options:
+          - {label: بلا, value: ""}
+          - {label: الشرطة, value: police}
+          - {label: الجامعات, value: university}
+          - {label: المطارات, value: airport}
+          - {label: المستشفيات, value: hospital}
+          - {label: الشركات, value: company}
+      - label: المناصب
+        name: roles
+        widget: select
+        multiple: true
+        options:
+          - {label: قيادة عليا, value: senior}
+          - {label: مديرون, value: manager}
+          - {label: موظفون, value: staff}
+      - label: النتيجة (عنوان الصفحة)
+        name: outcome
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: المنصب
+        name: audienceRole
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: المؤسسة
+        name: audienceInstitution
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: المشكلة
+        name: whyProblem
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: الدليل
+        name: whyEvidence
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: المصدر
+        name: source
+        widget: object
+        fields:
+          - {label: العنوان, name: title, widget: string}
+          - {label: الرابط, name: url, widget: string}
+      - label: قبلها
+        name: before
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: جواها
+        name: during
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: بعدها
+        name: after
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: أسئلة التشخيص
+        name: questions
+        widget: list
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: تخرج بماذا
+        name: leavesWith
+        widget: list
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: أمثلة الشغل
+        name: examples
+        widget: list
+        required: false
+        fields:
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: النص
+            name: body
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: تنبيه الأمثلة
+        name: examplesNote
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: text, required: false}
+          - {label: العربية, name: ar, widget: text, required: false}
+      - label: الحد
+        name: boundary
+        widget: object
+        required: false
+        hint: "في الشرطة: الإدارة وخدمة المواطن فقط. لا عمل أمني."
+        fields:
+          - {label: English, name: en, widget: text, required: false}
+          - {label: العربية, name: ar, widget: text, required: false}
+      - label: الشكل
+        name: format
+        widget: object
+        hint: "اترك [تُحدَّد] و [To be set] إلى أن يقرر د. أحمد."
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: المدة
+        name: duration
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: العدد
+        name: size
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: أسئلة شائعة
+        name: faq
+        widget: list
+        fields:
+          - label: السؤال
+            name: q
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: الجواب
+            name: a
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: الحالة
+        name: status
+        widget: object
+        hint: "لا تغيّرها. الصيغة: قيد التصميم · لم تُعقد ورشة بعد"
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+
+  - name: workshops_section
+    label: صفحة قسم الورش
+    files:
+      - label: صفحة القسم
+        name: section
+        file: content/workshop-section.json
+        fields:
+          - label: اسم القسم
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: عنوان الصفحة
+            name: hero
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: المقدمة
+            name: intro
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+          - label: الحالة
+            name: status
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: عنوان المسار
+            name: rolesHeading
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: المناصب
+            name: roles
+            widget: list
+            fields:
+              - {label: المعرّف, name: id, widget: string}
+              - label: الاسم
+                name: label
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: ملاحظة المسار
+                name: note
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: الأبواب
+            name: doors
+            widget: object
+            fields:
+              - label: قعدة القائد
+                name: leader
+                widget: object
+                fields: &door
+                  - label: الاسم
+                    name: name
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الجملة
+                    name: line
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+              - label: ورش المؤسسات
+                name: institution
+                widget: object
+                fields: *door
+              - label: تطوير المؤسسة
+                name: development
+                widget: object
+                fields: *door
+          - label: عنوان اختيار المؤسسة
+            name: institutionsHeading
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: أنواع المؤسسات
+            name: institutionTypes
+            widget: list
+            fields:
+              - {label: المعرّف, name: id, widget: string}
+              - label: الاسم
+                name: label
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: كل الأنواع
+            name: allInstitutions
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}

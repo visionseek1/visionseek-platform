@@ -1,0 +1,134 @@
+{
+  "title": {
+    "en": "Workshops",
+    "ar": "الورش"
+  },
+  "hero": {
+    "en": "Three doors. Each one names a result, not a course.",
+    "ar": "ثلاثة أبواب. كل باب يسمّي نتيجة، لا اسم دورة."
+  },
+  "intro": {
+    "en": "No workshop has been held. What follows is the design: who it is for, why it matters now, how a session runs, and what you leave holding. Format, length, and numbers are not set.",
+    "ar": "لم تُعقد ورشة بعد. الذي تقرأه تصميم: لمن، ولماذا الآن، وكيف تمشي الجلسة، وبماذا تخرج. الشكل والمدة والعدد لم تُحدَّد."
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "rolesHeading": {
+    "en": "Start from the seat you hold",
+    "ar": "ابدأ بالمنصب الذي تجلس عليه"
+  },
+  "roles": [
+    {
+      "id": "senior",
+      "label": {
+        "en": "Senior leadership",
+        "ar": "قيادة عليا"
+      },
+      "note": {
+        "en": "Your path is the leader's own session, then the work of developing the institution. The team workshops are for the people who report to you.",
+        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ورش المؤسسات لفريقك، لا لك وحدك."
+      }
+    },
+    {
+      "id": "manager",
+      "label": {
+        "en": "Managers",
+        "ar": "مديرون"
+      },
+      "note": {
+        "en": "Your path is the institution workshop for the kind of organization you run. You bring the team's real cases, not a sample from somewhere else.",
+        "ar": "مسارك ورشة مؤسستك. تحضر حالات فريقك الحقيقية، لا نموذجًا مستعارًا."
+      }
+    },
+    {
+      "id": "staff",
+      "label": {
+        "en": "Staff",
+        "ar": "موظفون"
+      },
+      "note": {
+        "en": "Your path is the same institution workshop, from the desk where the work actually lands. The point is a faster, cleaner hand on today's tasks.",
+        "ar": "مسارك ورشة المؤسسة نفسها، من المكتب الذي يصل إليه الشغل. المقصود يد أسرع وأنظف على مهام اليوم."
+      }
+    }
+  ],
+  "doors": {
+    "leader": {
+      "name": {
+        "en": "The leader's seat",
+        "ar": "قعدة القائد"
+      },
+      "line": {
+        "en": "You run an entire institution, and the strongest tool of your time still sits on your desk like a calculator.",
+        "ar": "تدير مؤسسة كاملة، وأقوى أداة في عصرك تستعملها كآلة حاسبة."
+      }
+    },
+    "institution": {
+      "name": {
+        "en": "Institution workshops",
+        "ar": "ورش المؤسسات"
+      },
+      "line": {
+        "en": "Your people do not need a longer day. They need a second hand on the work they already own.",
+        "ar": "فريقك لا يحتاج أن يعمل أكثر. يحتاج أن يعمل بيد أخرى."
+      }
+    },
+    "development": {
+      "name": {
+        "en": "Develop the institution",
+        "ar": "تطوير المؤسسة"
+      },
+      "line": {
+        "en": "The institution in front of you can carry more than today's picture of it allows.",
+        "ar": "مؤسستك تقدر على أكثر بكثير مما تراه اليوم."
+      }
+    }
+  },
+  "institutionsHeading": {
+    "en": "Choose the institution",
+    "ar": "اختر نوع المؤسسة"
+  },
+  "institutionTypes": [
+    {
+      "id": "police",
+      "label": {
+        "en": "Police",
+        "ar": "الشرطة"
+      }
+    },
+    {
+      "id": "university",
+      "label": {
+        "en": "Universities",
+        "ar": "الجامعات"
+      }
+    },
+    {
+      "id": "airport",
+      "label": {
+        "en": "Airports",
+        "ar": "المطارات"
+      }
+    },
+    {
+      "id": "hospital",
+      "label": {
+        "en": "Hospitals",
+        "ar": "المستشفيات"
+      }
+    },
+    {
+      "id": "company",
+      "label": {
+        "en": "Companies",
+        "ar": "الشركات"
+      }
+    }
+  ],
+  "allInstitutions": {
+    "en": "All five",
+    "ar": "الأنواع الخمسة"
+  }
+}

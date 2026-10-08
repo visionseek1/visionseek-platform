@@ -1,0 +1,142 @@
+{
+  "examples": [],
+  "examplesNote": {
+    "en": "",
+    "ar": ""
+  },
+  "boundary": {
+    "en": "",
+    "ar": ""
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No workshop has been held",
+    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+  },
+  "position": 1,
+  "slug": "leader-seat",
+  "kind": "leader",
+  "institution": "",
+  "roles": [
+    "senior"
+  ],
+  "outcome": {
+    "en": "You draft, test, and prepare the decision yourself, on work that is actually yours.",
+    "ar": "تكتب وتحلّل وتحضّر قرارك بيدك، على مهامك أنت."
+  },
+  "summary": {
+    "en": "A private session for the person who signs. Not a tour of tools, and not a case borrowed from another institution.",
+    "ar": "جلسة للقائد نفسه، لا جولة في الأدوات، ولا حالة مستعارة من مؤسسة ثانية."
+  },
+  "audienceRole": {
+    "en": "The leader in person: a chief executive, a deputy, or a director-general.",
+    "ar": "القائد نفسه: رئيس مؤسسة، أو وكيل، أو مدير عام."
+  },
+  "audienceInstitution": {
+    "en": "Any institution. The hour is spent on your memos, your numbers, and the decision waiting for you.",
+    "ar": "أي مؤسسة. الساعة تمضي على مذكراتك وأرقامك والقرار الذي ينتظرك."
+  },
+  "whyProblem": {
+    "en": "The tool has reached the building. The leader still asks someone else to try it. The signature stays upstairs, and the habit does not move.",
+    "ar": "الأداة وصلت المبنى، والقائد ما زال يطلب من غيره أن يجرّبها. التوقيع يبقى فوق، والعادة لا تتحرك."
+  },
+  "whyEvidence": {
+    "en": "BCG research published on 4 February 2026 found that executives who spend at least 10% of their time learning to use AI in their own work are 1.7 times likelier to lead organizations with more mature AI systems.",
+    "ar": "في بحث BCG المنشور في 4 فبراير 2026، المديرون الذين يقضون 10% على الأقل من وقتهم في تعلّم استعمال الذكاء الاصطناعي داخل شغلهم هم أنفسهم أقرب بـ1.7 مرة إلى قيادة مؤسسات أنضج في هذا المجال."
+  },
+  "source": {
+    "title": "BCG · The Three Dimensions of Leadership for the AI Era · 4 February 2026",
+    "url": "https://www.bcg.com/publications/2026/three-leadership-roles-ceos-ai"
+  },
+  "before": {
+    "en": "A short diagnosis: five questions about your real week, before anyone opens a tool.",
+    "ar": "تشخيص قصير: خمسة أسئلة عن أسبوعك الحقيقي، قبل أن تُفتح أداة."
+  },
+  "during": {
+    "en": "We work on your material. A note you have to write, a figure you do not yet trust, or a decision you have to walk into a room with. No prepared example.",
+    "ar": "نشتغل على مادتك: مذكرة عليك كتابتها، أو رقم لم تطمئن إليه، أو قرار ستدخله إلى اجتماع. لا مثال جاهز."
+  },
+  "after": {
+    "en": "Thirty days later, two measures only: time taken off the tasks we touched, and which tools you still actually open. No number is claimed before it is measured.",
+    "ar": "بعد ثلاثين يومًا مقياسَان فقط: الوقت الذي خرج من المهام التي لمسناها، والأدوات التي ما زلت تفتحها فعلًا. لا رقم قبل القياس."
+  },
+  "questions": [
+    {
+      "en": "Which decision is waiting on you this week?",
+      "ar": "أي قرار ينتظرك هذا الأسبوع؟"
+    },
+    {
+      "en": "Which note do you still write by hand, and why does it take that long?",
+      "ar": "أي مذكرة ما زلت تكتبها بيدك، ولماذا تأخذ هذا الوقت؟"
+    },
+    {
+      "en": "Where do you send the tool downstairs for someone else to try?",
+      "ar": "أين ترسل الأداة إلى غيرك ليجرّبها نيابة عنك؟"
+    },
+    {
+      "en": "Which figure or fact do you want checked before you sign?",
+      "ar": "أي رقم أو واقعة تريد فحصها قبل أن توقع؟"
+    },
+    {
+      "en": "What will you never hand to the tool?",
+      "ar": "ما الذي لن تسلّمه للأداة أبدًا؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A way of using the tool for writing, testing, and preparing a decision, fitted to how you already work.",
+      "ar": "طريقة لاستعمال الأداة في الكتابة والفحص وتحضير القرار، على طريقتك لا على قالب عام."
+    },
+    {
+      "en": "Three pieces of your own work, advanced in the session. Not a classroom exercise.",
+      "ar": "ثلاث مهام من شغلك تقدّمت داخل الجلسة. ليست تمرينًا دراسيًا."
+    },
+    {
+      "en": "A line between what stays with you and what can later move to the team.",
+      "ar": "حد واضح بين ما يبقى عندك وما يمكن أن ينتقل إلى الفريق لاحقًا."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this workshop been held?",
+        "ar": "هل عُقدت هذه الورشة؟"
+      },
+      "a": {
+        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
+        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Do I need a technical background?",
+        "ar": "هل أحتاج خلفية تقنية؟"
+      },
+      "a": {
+        "en": "No. You need to be the person who owns the decision. The session does not turn you into an engineer.",
+        "ar": "لا. المطلوب أن تكون صاحب القرار. الجلسة لا تحوّلك إلى مهندس."
+      }
+    },
+    {
+      "q": {
+        "en": "Will my files be stored on the website?",
+        "ar": "هل تُحفظ ملفاتي على الموقع؟"
+      },
+      "a": {
+        "en": "No. The website does not take your documents. What is used in a session stays in that session, under an arrangement we agree before it starts.",
+        "ar": "لا. الموقع لا يستلم وثائقك. ما يُستخدم في الجلسة يبقى فيها، باتفاق يُحسم قبل أن تبدأ."
+      }
+    }
+  ]
+}
