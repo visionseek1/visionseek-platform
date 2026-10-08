@@ -1,0 +1,153 @@
+# غرفة التحكم — المرحلة 1: الأخبار والصور.
+# الحفظ لا يكتب على main. Decap يفتح فرعًا وطلب دمج، ود. أحمد هو من يدمج.
+backend:
+  name: github
+  repo: visionseek1/visionseek-platform
+  branch: main
+  base_url: https://visionseek.org
+  auth_endpoint: api/decap-oauth
+  site_domain: visionseek.org
+
+publish_mode: editorial_workflow
+site_url: https://visionseek.org
+display_url: https://visionseek.org
+logo_url: /visionseek-symbol-color.png
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: news
+    label: الأخبار
+    label_singular: خبر
+    folder: content/news
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.slug}}"
+    identifier_field: slug
+    summary: "{{title.ar}} — {{slug}}"
+    preview_path: "news/{{slug}}"
+    sortable_fields: [position, slug]
+    fields:
+      - label: ترتيب العرض
+        name: position
+        widget: number
+        value_type: int
+        min: 1
+        default: 100
+        hint: "الرقم الأصغر يظهر أولًا. لا تغيّر الترتيب إلا إذا أردت نقل الخبر."
+      - label: القسم
+        name: section
+        widget: hidden
+        default: news
+      - label: الرابط (slug)
+        name: slug
+        widget: string
+        hint: "جزء الرابط بعد /news/. لا تغيّره بعد النشر لأن الرابط نفسه يتغير."
+      - label: العنوان
+        name: title
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الملخص
+        name: summary
+        widget: object
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: التصنيف
+        name: category
+        widget: object
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الحالة
+        name: status
+        widget: object
+        hint: "اكتب الحالة كما هي. لا توحّد الصيغ من هنا."
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الصورة
+        name: image
+        widget: image
+        choose_url: true
+        required: true
+        hint: "مفتاح جاهز مثل cities، أو مسار محلي يبدأ بـ / مثل /uploads/photo.jpg أو /name.jpg، أو رابط https كامل. ارفع الملف من زر اختيار الصورة."
+      - label: اسم المصوّر
+        name: imageCredit
+        widget: object
+        required: false
+        fields:
+          - {label: الاسم, name: name, widget: string, required: false}
+          - {label: رابط المصوّر أو الصورة, name: url, widget: string, required: false}
+      - label: حقائق
+        name: facts
+        widget: list
+        required: false
+        summary: "{{fields.label.ar}}"
+        fields:
+          - label: التسمية
+            name: label
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: القيمة
+            name: value
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+      - label: أقسام المقال
+        name: blocks
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+          - label: عنوان القسم
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: نص
+            name: body
+            widget: object
+            required: false
+            hint: "اتركه فارغًا إذا كان القسم قائمة."
+            fields:
+              - {label: English, name: en, widget: text, required: false}
+              - {label: العربية, name: ar, widget: text, required: false}
+          - label: قائمة
+            name: items
+            widget: list
+            required: false
+            hint: "اتركها فارغة إذا كان القسم نصًا."
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+      - label: مصادر
+        name: references
+        widget: list
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - {label: عنوان المصدر, name: title, widget: string}
+          - {label: الرابط, name: url, widget: string}
+      - label: مصدر مرجعي واحد
+        name: source
+        widget: object
+        required: false
+        hint: "لبعض المقالات مصدر واحد بدل قائمة المصادر. لا تملأ الاثنين إلا إذا كانا موجودين أصلًا."
+        fields:
+          - {label: العنوان, name: title, widget: string, required: false}
+          - {label: الرابط, name: url, widget: string, required: false}
+      - label: روابط ذات صلة
+        name: related
+        widget: list
+        required: false
+        fields:
+          - {label: المسار, name: href, widget: string}
+

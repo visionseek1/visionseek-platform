@@ -1,0 +1,66 @@
+{
+  "position": 6,
+  "section": "news",
+  "slug": "learning-from-challenges",
+  "title": {
+    "en": "What a challenge should prove",
+    "ar": "ما الذي ينبغي أن يثبته التحدي؟"
+  },
+  "summary": {
+    "en": "Move from an impressive demonstration to a decision-changing test.",
+    "ar": "الانتقال من عرض مبهر إلى اختبار يغيّر القرار."
+  },
+  "image": "drones",
+  "category": {
+    "en": "Research reference",
+    "ar": "مرجع بحثي"
+  },
+  "status": {
+    "en": "Source-based analysis",
+    "ar": "تحليل مسند"
+  },
+  "source": {
+    "title": "DARPA · Challenges",
+    "url": "https://www.darpa.mil/research/challenges"
+  },
+  "blocks": [
+    {
+      "title": {
+        "en": "The reference",
+        "ar": "المرجع"
+      },
+      "body": {
+        "en": "DARPA’s public challenge portfolio includes work on autonomous vehicles, robotics for difficult environments and automated cybersecurity. These examples show how a concrete task can focus contributions from different teams.",
+        "ar": "تتضمن محفظة تحديات DARPA المنشورة أعمالًا في المركبات الذاتية وروبوتات البيئات الصعبة والأمن السيبراني الآلي. وتوضح الأمثلة كيف تجمع المهمة المحددة مساهمات فرق مختلفة."
+      }
+    },
+    {
+      "title": {
+        "en": "Our interpretation",
+        "ar": "قراءتنا"
+      },
+      "body": {
+        "en": "The reusable lesson is the evaluation structure: specify the task, baseline, conditions and evidence that would justify moving forward. VisionSeek can begin with a small proof sprint around one institutional workflow before considering a larger challenge.",
+        "ar": "الدرس الذي نستفيد منه هو بنية التقييم: تحديد المهمة وخط الأساس والظروف والأدلة التي تبرر التقدم. يمكن لـVisionSeek البدء بتجربة إثبات صغيرة حول عملية مؤسسية واحدة قبل التفكير في تحدٍ أكبر."
+      }
+    },
+    {
+      "title": {
+        "en": "From enthusiasm to evidence",
+        "ar": "من الحماس إلى الدليل"
+      },
+      "body": {
+        "en": "A useful test allows an unfavorable answer. Agree in advance what would count as a miss, when to repeat the experiment and when to stop. No prize or competition is being announced by this article.",
+        "ar": "يسمح الاختبار المفيد بإجابة غير مواتية. اتفق مسبقًا على ما يُعد إخفاقًا، ومتى تُعاد التجربة، ومتى نتوقف. هذا المقال لا يعلن جائزة أو مسابقة."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/programs/challenges"
+    },
+    {
+      "href": "/workshops"
+    }
+  ]
+}
