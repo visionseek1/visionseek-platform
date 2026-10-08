@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2, BrainCircuit} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {sectors, tracks, projects, projectStatus, conceptNotice, conceptCount, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, publicProjectUpdates, trackLabel, audienceLabels, type Sector, type SectorIcon, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
+import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, type Sector, type SectorIcon, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 import {ProjectFilter, type ProjectCardData} from './project-filter';
 
@@ -11,6 +11,7 @@ const icons = {energy:Zap,chips:Cpu,flight:Plane,defense:ShieldCheck,robotics:Bo
 /** One colour per sector, so every field reads at a glance. */
 export const sectorColors:Record<SectorIcon,string> = {energy:'#FFB347',chips:'#2FD3C7',flight:'#7AA7FF',defense:'#A3B1C6',robotics:'#FF7A59',health:'#FF6B8B',agriculture:'#9BD66B',cities:'#C9A6FF',ai:'#5B8CFF'};
 const allAudiences:ProjectAudience[] = ['government','institution','company','individual'];
+const projectCount = (count:number,locale:Locale) => locale==='ar'?(count===1?'مشروع واحد':count===2?'مشروعان':`${new Intl.NumberFormat('ar').format(count)} مشاريع`):`${count} project${count===1?'':'s'}`;
 const colorOf = (sectorSlug:string) => sectorColors[sectorBySlug(sectorSlug)?.icon ?? 'ai'];
 const tone = (color:string) => ({'--tone':color} as CSSProperties);
 const trackOf = (project:Project) => tracks.find(t=>t.sector===project.sector&&t.slug===project.track);
@@ -29,10 +30,6 @@ function Breadcrumb({locale,sector,track,code}:{locale:Locale;sector?:Sector;tra
     {code&&<><span aria-hidden="true">/</span><span dir="ltr">{code}</span></>}
   </nav>;
 }
-function Notice({locale}:{locale:Locale}) {return <p className={styles.notice}>{conceptNotice[locale]}</p>;}
-function Status({project,locale}:{project:Project;locale:Locale}) {
-  return <span className={`${styles.status} ${project.status==='concept'?'':styles.statusActive}`}><span aria-hidden="true"/>{projectStatus[project.status][locale]}</span>;
-}
 function Eyebrow({children}:{children:ReactNode}) {return <p className={styles.eyebrow}>{children}</p>;}
 
 /** What a project card needs; plain data so the client-side filter can render it. */
@@ -41,7 +38,7 @@ function cardData(project:Project,locale:Locale):ProjectCardData {
   return {
     id:project.id, href:projectPath(project.slug,locale), title:project.title[locale], summary:project.summary[locale],
     sector:sectorBySlug(project.sector)?.title[locale] ?? '', track:track?trackLabel(track):'', color:colorOf(project.sector),
-    mark:project.title.en.trim().charAt(0).toUpperCase(), status:projectStatus[project.status][locale], active:project.status!=='concept',
+    mark:project.title.en.trim().charAt(0).toUpperCase(),
     audiences:project.profile?.audiences ?? [], audienceText:(project.profile?.audiences ?? []).map(a=>audienceLabels[a][locale]),
   };
 }
@@ -54,7 +51,7 @@ function SectorGrid({locale}:{locale:Locale}) {
       <Link href={sectorPath(sector.slug,locale)}>
         <div className={styles.sectorTop}><span className={styles.sectorBar} aria-hidden="true"/><Icon size={22} strokeWidth={1.5} aria-hidden="true"/><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span></div>
         <h3>{sector.title[locale]}</h3>
-        <span className={count?styles.sectorCountLive:styles.sectorCount}>{count?conceptCount(count,locale):(ar?'مجال استكشاف':'Exploration area')}</span>
+        <span className={count?styles.sectorCountLive:styles.sectorCount}>{count?projectCount(count,locale):(ar?'مجال عمل':'Field of work')}</span>
       </Link>
     </article>;
   })}</div>;
@@ -76,16 +73,16 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
     <GridHero>
       <p className={styles.live}><span aria-hidden="true"/>VISIONSEEK / PROJECTS</p>
       <h1>{ar?<>مشاريع تفتح <em>خيارات جديدة.</em></>:<>Projects that open <em>new possibilities.</em></>}</h1>
-      <p className={styles.lede}>{ar?'أفكار نبنيها من قراءة ما تحتاجه المؤسسات الآن، وكل مشروع بحالته الحقيقية.':'Ideas we build from what institutions need right now — each project shown at its real stage.'}</p>
+      <p className={styles.lede}>{ar?'أدوات وحلول نبنيها من قراءة ما تحتاجه المؤسسات الآن.':'Tools and solutions we build from what institutions need right now.'}</p>
       <dl className={styles.stats}>
-        <div><dt>{ar?'تصوّرات مشاريع':'Project concepts'}</dt><dd dir="ltr">{String(projects.length).padStart(2,'0')}</dd></div>
+        <div><dt>{ar?'مشاريع':'Projects'}</dt><dd dir="ltr">{String(projects.length).padStart(2,'0')}</dd></div>
         <div><dt>{ar?'مجالات عمل':'Sectors'}</dt><dd dir="ltr">{String(sectors.length).padStart(2,'0')}</dd></div>
-        <div><dt>{ar?'الحالة الحقيقية لكل مشروع':'Every project at its real stage'}</dt><dd dir="ltr" className={styles.liveText}>LIVE</dd></div>
+        <div><dt>{ar?'لمن نصمّم':'Designed for'}</dt><dd className={styles.liveText}>{ar?'حكومات · مؤسسات · شركات':'Gov · Institutions · Companies'}</dd></div>
       </dl>
     </GridHero>
     <section className={styles.section} id="project-files"><div className={styles.wrap}>
       <ProjectFilter locale={locale} cards={projects.map(p=>cardData(p,locale))} audiences={allAudiences.map(a=>({id:a,label:audienceLabels[a][locale]}))}/>
-      <Notice locale={locale}/>
+      
     </div></section>
     <section id="fields" className={styles.section}><div className={styles.wrap}>
       <div className={styles.heading}><h2>{ar?'المجالات':'Sectors'}</h2><span className={styles.count} dir="ltr">{String(sectors.length).padStart(2,'0')}</span></div>
@@ -105,13 +102,13 @@ export function SectorPage({sector,locale}:{sector:Sector;locale:Locale}) {
     </GridHero>
     {children.length?<section className={styles.section}><div className={styles.wrap}>
       <div className={styles.heading}><h2>{ar?'التخصصات داخل المجال':'Specialties in this sector'}</h2></div>
-      <div className={styles.trackList}>{children.map(track=><Link key={track.slug} href={trackPath(track,locale)} className={styles.trackCard} style={tone(color)}><div><span className={styles.mono}>{trackLabel(track)}</span><h3>{track.title[locale]}</h3><p>{track.intro[locale]}</p><span className={styles.sectorCountLive}>{conceptCount(projects.filter(p=>p.sector===track.sector&&p.track===track.slug).length,locale)}</span></div><ArrowUpRight size={26} aria-hidden="true"/></Link>)}</div>
+      <div className={styles.trackList}>{children.map(track=><Link key={track.slug} href={trackPath(track,locale)} className={styles.trackCard} style={tone(color)}><div><span className={styles.mono}>{trackLabel(track)}</span><h3>{track.title[locale]}</h3><p>{track.intro[locale]}</p><span className={styles.sectorCountLive}>{projectCount(projects.filter(p=>p.sector===track.sector&&p.track===track.slug).length,locale)}</span></div><ArrowUpRight size={26} aria-hidden="true"/></Link>)}</div>
       {items.length>0&&<div className={styles.cardsBelow}><ProjectFilter locale={locale} cards={items.map(p=>cardData(p,locale))} audiences={[]}/></div>}
-      <Notice locale={locale}/>
+      
     </div></section>:<section className={styles.section}><div className={styles.wrap}>
       <div className={styles.heading}><h2>{ar?'آفاق هذا المجال':'Within this field'}</h2></div>
       <div className={styles.focusGrid}>{sector.focus.map((focus,i)=><div key={focus.en} style={tone(color)}><span dir="ltr" className={styles.mono}>0{i+1}</span><h3>{focus[locale]}</h3></div>)}</div>
-      <div className={styles.emptyState}><h3>{ar?'مساحة للمشاريع القادمة.':'Space for future projects.'}</h3><p>{ar?'لا يوجد بعد تصوّر مشروع في هذا المجال. يُضاف هنا عند اعتماده.':'No project concept has been listed in this sector yet. It will appear here once approved.'}</p></div>
+      <div className={styles.emptyState}><h3>{ar?'مساحة للمشاريع القادمة.':'Space for future projects.'}</h3><p>{ar?'لا توجد مشاريع معروضة في هذا المجال بعد.':'No projects are shown in this sector yet.'}</p></div>
     </div></section>}
     <Contact locale={locale}/>
   </Frame>;
@@ -127,7 +124,7 @@ export function TrackPage({track,locale}:{track:Track;locale:Locale}) {
     </GridHero>
     <section className={styles.section}><div className={styles.wrap}>
       <ProjectFilter locale={locale} cards={items.map(p=>cardData(p,locale))} audiences={[]}/>
-      <Notice locale={locale}/>
+      
     </div></section>
     <Contact locale={locale}/>
   </Frame>;
@@ -152,20 +149,19 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
   const ar=locale==='ar';const sector=sectorBySlug(project.sector)!;const track=trackOf(project)!;
   const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
   const file=projectFileById(project.id);const color=sectorColors[sector.icon];
-  const date=(value:string)=>new Intl.DateTimeFormat(ar?'ar':'en',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${value}T12:00:00Z`));
   const pitch=project.pitch;
   const tabs:[string,string][]=[
     ...(pitch?[['risks',ar?'الخطر':'The risk'],['gains',ar?'الفائدة':'What you gain']] as [string,string][]:[]),
     ...(project.whyNow?[['why-now',ar?'لماذا الآن':'Why now'] as [string,string]]:[]),
     ...(pitch?[]:[['overview',ar?'المشروع':'Project'] as [string,string]]),
-    ...(file?[['scope',ar?'مسارات العمل':'Workstreams'],['engagement',ar?'التعاون والتكليف':'Work with us'],['progress',ar?'تطوّر المشروع':'Progress']] as [string,string][]:[]),
+    ...(file?[['scope',ar?'مسارات العمل':'Workstreams'],['engagement',ar?'التعاون والتكليف':'Work with us']] as [string,string][]:[]),
   ];
   return <Frame locale={locale} path={projectPath(project.slug,'en')}>
     <section className={styles.hero} style={tone(color)}><div className={styles.heroGrid} aria-hidden="true"/><div className={styles.heroGlow} aria-hidden="true"/><div className={styles.wrap}>
       <Breadcrumb locale={locale} sector={sector} track={track} code={project.id}/>
       <div className={styles.detailGrid}>
         <div className={styles.detailMain}>
-          <div className={styles.identity}><span dir="ltr" className={styles.code}>{project.id}</span><Status project={project} locale={locale}/><span className={styles.mono} style={{color}}>{trackLabel(track)}</span></div>
+          <div className={styles.identity}><span dir="ltr" className={styles.code}>{project.id}</span><span className={styles.mono} style={{color}}>{trackLabel(track)}</span></div>
           {project.pitch?<>
             <p className={styles.projectName}>{project.title[locale]}</p>
             <h1 className={styles.hook}>{project.pitch.hook[locale]}</h1>
@@ -175,7 +171,7 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
             <p className={styles.ambition}>{project.ambition[locale]}</p>
             <p className={styles.lede}>{project.summary[locale]}</p>
           </>}
-          <div className={styles.actions}><Link className={styles.primary} href={projectInquiry(project,locale)}>{ar?'ناقش تكليف المشروع':'Discuss a project mandate'}<ArrowUpRight size={18} aria-hidden="true"/></Link>{file&&<a className={styles.secondary} href="#progress">{ar?'تابع تطوّر المشروع':'Follow project progress'}</a>}</div>
+          <div className={styles.actions}><Link className={styles.primary} href={projectInquiry(project,locale)}>{ar?'ناقش تكليف المشروع':'Discuss a project mandate'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div>
         </div>
         <ProfileCard project={project} locale={locale}/>
       </div>
@@ -231,14 +227,6 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
           <div className={styles.panel}><h3>{ar?'لديك احتياج يرتبط بهذا المشروع؟':'Does this project connect to your needs?'}</h3><p>{ar?'نبدأ بمناقشة احتياج مؤسستك، ثم نحدد نطاق التكليف ومخرجاته ومسؤولياته ووقته وتكلفته قبل الاتفاق.':'We begin with your institution’s needs, then define scope, outputs, responsibilities, timing and cost before agreement.'}</p><Link className={styles.primary} href={projectInquiry(project,locale)}>{ar?'اطلب مناقشة نطاق التعاقد':'Discuss commissioning this work'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div>
           <div className={styles.panel}><h3>{ar?'لديك قدرة يحتاجها المشروع؟':'Can you contribute a capability?'}</h3><ul className={styles.list}>{file.partnerNeeds.map(item=><li key={item.en}>{item[locale]}</li>)}</ul><Link className={styles.secondary} href={projectInquiry(project,locale,'partner')}>{ar?'ناقش الانضمام كشريك':'Discuss a project partnership'}</Link></div>
         </div>
-      </div></section>
-      <section id="progress" className={styles.section}><div className={styles.wrap}>
-        <Eyebrow>{ar?'تطوّر المشروع':'PROJECT DEVELOPMENT'}</Eyebrow><h2 className={styles.h2}>{ar?'أين وصلنا؟':'Where are we now?'}</h2>
-        <div className={styles.stage}><span>{ar?'المرحلة الحالية':'CURRENT STAGE'}</span><strong>{file.stage[locale]}</strong><p>{file.stageNote[locale]}</p><small>{ar?'آخر تحديث للملف':'Profile updated'} · <time dateTime={file.updatedAt}>{date(file.updatedAt)}</time> · <span dir="ltr">v{file.version}</span></small></div>
-        <ol className={styles.milestones}>{file.milestones.map(step=><li key={step.id} data-state={step.state}><span>{step.state==='current'?(ar?'الحالية':'Current'):step.state==='completed'?(ar?'مكتملة':'Complete'):(ar?'لاحقًا':'Planned')}</span><h3>{step.title[locale]}</h3><p>{step.description[locale]}</p>{step.evidenceUrl&&<a href={step.evidenceUrl}>{ar?'اطّلع على الدليل':'View evidence'}</a>}</li>)}</ol>
-        <h3 className={styles.h3}>{ar?'سجل التحديثات':'Project updates'}</h3>
-        <div className={styles.updates}>{publicProjectUpdates(file).map(update=><article key={update.id} id={update.id}><div><time dateTime={update.date}>{date(update.date)}</time><span>{update.kind==='scope'?(ar?'تحديث نطاق المشروع':'Scope update'):update.kind==='test'?(ar?'اختبار':'Test'):update.kind==='research'?(ar?'بحث':'Research'):update.kind==='partnership'?(ar?'شراكة':'Partnership'):(ar?'تنفيذ':'Delivery')}</span></div><h4>{update.title[locale]}</h4><p>{update.body[locale]}</p>{update.evidenceUrl&&<a href={update.evidenceUrl}>{ar?'اطّلع على المخرج المرتبط':'View the related output'}<ArrowUpRight size={14} aria-hidden="true"/></a>}</article>)}</div>
-        <Notice locale={locale}/>
       </div></section>
     </>}
     {related.length>0&&<section className={styles.section}><div className={styles.wrap}>

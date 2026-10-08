@@ -7,7 +7,7 @@ import styles from './projects.module.css';
 
 export type ProjectCardData = {
   id:string; href:string; title:string; summary:string; sector:string; track:string; color:string; mark:string;
-  status:string; active:boolean; audiences:ProjectAudience[]; audienceText:string[];
+  audiences:ProjectAudience[]; audienceText:string[];
 };
 
 /** The project cards, with an audience filter when audiences are given. */
@@ -28,7 +28,7 @@ export function ProjectFilter({locale,cards,audiences}:{locale:Locale;cards:Proj
         <span className={styles.cardMark}>{card.mark}</span>
       </div>
       <div className={styles.cardBody}>
-        <div className={styles.cardMeta}><span className={`${styles.status} ${card.active?styles.statusActive:''}`}><span aria-hidden="true"/>{card.status}</span><span>{card.sector}</span></div>
+        <div className={styles.cardMeta}><span>{card.sector}</span></div>
         <h3>{card.title}</h3>
         <p>{card.summary}</p>
         {card.audienceText.length>0&&<ul className={styles.chips} aria-label={ar?'مصمَّم لـ':'Designed for'}>{card.audienceText.map(text=><li key={text}>{text}</li>)}</ul>}
