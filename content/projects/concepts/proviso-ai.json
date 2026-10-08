@@ -90,6 +90,38 @@
         "title": "TechAfrica News — Egypt's AI council (Sep 2026)",
         "url": "https://techafricanews.com/2026/09/25/egypt-ai-council-national-ai-strategy-quantum-computing/"
       }
+    ],
+    "highlights": [
+      {
+        "value": {
+          "ar": "50%",
+          "en": "50%"
+        },
+        "text": {
+          "ar": "من قطاعات الحكومة الاتحادية الإماراتية وخدماتها إلى الوكلاء الأذكياء خلال عامين · أبريل 2026",
+          "en": "of UAE federal government sectors and services moving to agentic AI within two years · April 2026"
+        }
+      },
+      {
+        "value": {
+          "ar": "33 · 300+",
+          "en": "33 · 300+"
+        },
+        "text": {
+          "ar": "جهة حكومية في دبي تمحّص أكثر من 300 حالة استخدام · أكتوبر 2026",
+          "en": "Dubai government entities screening more than 300 use cases · October 2026"
+        }
+      },
+      {
+        "value": {
+          "ar": "السرعة تسبق الاستعداد",
+          "en": "Adoption outruns readiness"
+        },
+        "text": {
+          "ar": "قالتها Microsoft عن السوق الإماراتية · سبتمبر 2026",
+          "en": "Microsoft on the UAE market · September 2026"
+        }
+      }
     ]
   },
   "profile": {
@@ -109,7 +141,8 @@
           "ar": "تتوقع Gartner أن تبلغ تقنيات «وكلاء الحراسة» التي تراقب الوكلاء وتوقفهم 10–15% على الأقل من سوق الذكاء الاصطناعي الوكيلي بحلول 2030 (يونيو 2025).",
           "en": "Gartner predicts guardian-agent technologies — which oversee, redirect or block other agents — will make up at least 10–15% of agentic AI markets by 2030 (June 2025)."
         },
-        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-11-gartner-predicts-that-guardian-agents-will-capture-10-15-percent-of-the-agentic-ai-market-by-2030"
+        "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-11-gartner-predicts-that-guardian-agents-will-capture-10-15-percent-of-the-agentic-ai-market-by-2030",
+        "value": "10–15%"
       },
       {
         "kind": "trend",
@@ -133,7 +166,8 @@
           "ar": "7–11 ديسمبر 2026، مركز دبي للمعارض، إكسبو سيتي دبي.",
           "en": "7–11 December 2026, Dubai Exhibition Centre, Expo City Dubai."
         },
-        "url": "https://mediaoffice.ae/en/news/2025/october/08-10/gitex-global-to-begin-a-new-chapter-at-expo-city-dubai-in-2026"
+        "url": "https://mediaoffice.ae/en/news/2025/october/08-10/gitex-global-to-begin-a-new-chapter-at-expo-city-dubai-in-2026",
+        "value": "7–11 DEC 2026"
       }
     ]
   },

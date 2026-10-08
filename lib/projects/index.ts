@@ -14,7 +14,7 @@ export type Track = {slug:string; sector:string; title:Text; intro:Text; label?:
 export type ProjectKind = 'supply'|'containment'|'governance';
 export type ProjectStatus = 'concept'|'active'|'completed';
 export type ProjectAudience = 'government'|'institution'|'company'|'individual';
-export type ProjectFact = {kind:'exhibition'|'trend'; title:Text; detail:Text; url:string};
+export type ProjectFact = {kind:'exhibition'|'trend'; title:Text; detail:Text; url:string; value?:string};
 export const audienceLabels:Record<ProjectAudience,Text> = {
   government:{ar:'الحكومات',en:'Governments'},
   institution:{ar:'المؤسسات',en:'Institutions'},
@@ -37,7 +37,7 @@ export type Project = {
   title:Text; summary:Text; ambition:Text; idea:Text; beneficiary:Text;
   outcomes:{title:Text;text:Text}[];
   /** Why institutions need this now: public, dated facts only, each backed by a listed source. */
-  whyNow?:{paragraphs:Text[];sources:{title:string;url:string}[]};
+  whyNow?:{highlights?:{value:Text;text:Text}[];paragraphs:Text[];sources:{title:string;url:string}[]};
   /** The project's identity card: who it is designed for, and dated public facts (major exhibitions, the global trend). */
   profile?:{audiences:ProjectAudience[];facts:ProjectFact[]};
   file?:ProjectFile;
