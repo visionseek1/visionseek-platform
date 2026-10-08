@@ -180,3 +180,18 @@ test('the agent governance brief is bilingual and every claim carries an https s
   for (const row of brief.law) { assert.ok(isText(row.country) && isText(row.inForce) && isText(row.agent)); assert.ok(row.sources.length); }
   assert.equal(brief.checklist.length, 14);
 });
+
+test('page sections hidden from /admin exist, and /admin offers every hideable section', () => {
+  const {blocks} = JSON.parse(readFileSync(join(root, 'lib/page-blocks.json'), 'utf8'));
+  const ids = blocks.map(block => block.id);
+  assert.equal(new Set(ids).size, ids.length, 'block ids are unique');
+  for (const block of blocks) assert.ok(block.id && block.page.startsWith('/') && block.label, block.id);
+  const {hiddenBlocks = []} = read('visibility.json');
+  for (const id of hiddenBlocks) assert.ok(ids.includes(id), `unknown hidden section ${id}`);
+  const offered = [...readFileSync(join(root, 'public/admin/config.yml'), 'utf8').matchAll(/value: "([^"]+)"/g)].map(m => m[1]);
+  for (const id of ids) assert.ok(offered.includes(id), `/admin does not offer ${id}; run scripts/archive-options.py`);
+  for (const id of ids) {
+    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
+    assert.ok(used, `${id} is listed but no section checks it`);
+  }
+});

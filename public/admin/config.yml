@@ -2428,10 +2428,10 @@ collections:
                   - {label: العربية, name: ar, widget: string}
 
   - name: visibility
-    label: الأرشيف (إظهار وإخفاء الصفحات)
-    description: "اختر أي قسم أو صفحة لأرشفتها: تختفي من القائمة والتذييل وخريطة الموقع، ومن يفتح رابطها يذهب إلى الرئيسية. المحتوى لا يُحذف؛ احذفها من القائمة هنا فتعود كما كانت. أرشفة قسم كامل تؤرشف كل صفحاته الفرعية."
+    label: إظهار وإخفاء (الصفحات والأقسام)
+    description: "مكان واحد لإخفاء أي شيء من الموقع وإرجاعه، دون حذف أي محتوى. (1) الصفحات والأقسام الكاملة: تختفي من القائمة والتذييل وخريطة الموقع، ومن يفتح رابطها يذهب إلى الرئيسية. (2) الأقسام داخل الصفحة، مثل «المجتمعات» في الرئيسية: لا تُعرض، وتبقى الصفحة كما هي. للإرجاع: احذف العنصر من القائمة. التغيير يظهر على الموقع بعد الدمج."
     files:
-      - label: الصفحات المؤرشفة
+      - label: ما هو مخفي الآن
         name: visibility
         file: content/visibility.json
         fields:
@@ -2511,3 +2511,22 @@ collections:
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}
                 # archive-options:end
               - {label: ملاحظة لنفسك (اختياري), name: note, widget: string, required: false}
+          - label: أقسام مخفية داخل الصفحات
+            name: hiddenBlocks
+            widget: select
+            multiple: true
+            required: false
+            default: []
+            hint: "اختر القسم ليختفي من صفحته، واحذفه من هنا ليعود. الغلاف أعلى الرئيسية لا يُخفى."
+            options:
+                # block-options:start
+              - {label: "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»", value: "home.explainer"}
+              - {label: "الرئيسية ← الرسالة وما نقرأه", value: "home.vision"}
+              - {label: "الرئيسية ← البرامج", value: "home.programs"}
+              - {label: "الرئيسية ← الورش والأخبار", value: "home.updates"}
+              - {label: "الرئيسية ← المنهج", value: "home.method"}
+              - {label: "الرئيسية ← المجتمعات", value: "home.communities"}
+              - {label: "الرئيسية ← المجالات", value: "home.fields"}
+              - {label: "الرئيسية ← اعمل معنا", value: "home.work"}
+              - {label: "الرئيسية ← التواصل", value: "home.contact"}
+                # block-options:end
