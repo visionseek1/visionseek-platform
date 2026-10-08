@@ -41,7 +41,12 @@ export type Workshop = {
 
 export type WorkshopRole = {id: RoleId; label: Bi; note: Bi};
 export type WorkshopInstitutionType = {id: InstitutionKind; label: Bi};
-export type WorkshopDoorCard = {code: string; body: Bi; close: Bi; image: string};
+export type WorkshopDoorCard = {code: string; who: Bi; body: Bi; close: Bi; image: string};
+export type WorkshopSelfCheck = {
+  label: Bi; title: Bi; intro: Bi;
+  questions: {q: Bi; options: {door: WorkshopKind; label: Bi}[]}[];
+  resultLabel: Bi; openDoor: Bi; start: Bi; restart: Bi;
+};
 export type WorkshopInstitutionLine = {kind: Bi; gain: Bi};
 
 /** Copy for the live section page. Every key is editable from /admin. */
@@ -74,7 +79,9 @@ export type WorkshopLive = {
   institutionsLines: WorkshopInstitutionLine[];
   institutionsClose: Bi;
   institutionsLimit: Bi;
+  institutionsFor: Bi;
   institutionsOpen: Bi;
+  selfCheck: WorkshopSelfCheck;
   founderName: Bi;
   founderKicker: Bi;
   founderIntro: Bi;

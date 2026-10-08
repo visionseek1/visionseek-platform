@@ -216,7 +216,11 @@
           "en": "Technology becomes an extension of the manager's and the leader's capability, not merely a tool in their hands.",
           "ar": "فتصبح التكنولوجيا امتدادًا لقدرة المدير والقائد، لا مجرد أداة في يده."
         },
-        "image": "/workshops/ahmed-abdelalim.jpg"
+        "image": "/workshops/ahmed-abdelalim.jpg",
+        "who": {
+          "en": "For management, leadership, and decision-makers",
+          "ar": "للإدارة والقيادة وصناعة القرار"
+        }
       },
       "institution": {
         "code": "02",
@@ -228,7 +232,11 @@
           "en": "And above all: it frees more of your energy for what needs your expertise, your judgement, and your creativity.",
           "ar": "والأهم: أن يحرر قدرًا أكبر من طاقتك لما يحتاج خبرتك، وحكمك، وإبداعك."
         },
-        "image": "/field-industry.jpg"
+        "image": "/field-industry.jpg",
+        "who": {
+          "en": "For individuals and teams in any institution",
+          "ar": "للأفراد وفرق العمل في أي مؤسسة"
+        }
       },
       "development": {
         "code": "03",
@@ -240,7 +248,11 @@
           "en": "The institution may become able to do things that were never possible before.",
           "ar": "قد تصبح المؤسسة قادرة على القيام بأشياء جديدة أصلًا."
         },
-        "image": "/field-cities.jpg"
+        "image": "/field-cities.jpg",
+        "who": {
+          "en": "For the institution as a whole, and the leadership that wants more for it",
+          "ar": "للمؤسسة ككل، وللقيادة التي تريد لها أكثر"
+        }
       }
     },
     "openDoor": {
@@ -408,6 +420,158 @@
     "closingCta": {
       "en": "Discover what could become possible.",
       "ar": "اكتشف ما يمكن أن يصبح ممكنًا."
+    },
+    "institutionsFor": {
+      "en": "Who it is for in",
+      "ar": "لمن في"
+    },
+    "selfCheck": {
+      "label": {
+        "en": "Not sure which door?",
+        "ar": "لست متأكدًا من بابك؟"
+      },
+      "title": {
+        "en": "Four questions, and the nearest door appears.",
+        "ar": "أربعة أسئلة، ويظهر لك الباب الأقرب."
+      },
+      "intro": {
+        "en": "Nothing is sent or saved. The answers only point you to the right place on this page.",
+        "ar": "لا يُرسل شيء ولا يُحفظ. الإجابات تدلّك فقط على المكان الصحيح في هذه الصفحة."
+      },
+      "questions": [
+        {
+          "q": {
+            "en": "Where do you sit today?",
+            "ar": "أين تجلس اليوم؟"
+          },
+          "options": [
+            {
+              "door": "leader",
+              "label": {
+                "en": "I run an institution or a department, and decisions end with me.",
+                "ar": "أدير مؤسسة أو إدارة، والقرار ينتهي عندي."
+              }
+            },
+            {
+              "door": "institution",
+              "label": {
+                "en": "I work inside a team, with daily tasks of my own.",
+                "ar": "أعمل داخل فريق، ولي مهام يومية."
+              }
+            },
+            {
+              "door": "development",
+              "label": {
+                "en": "I am responsible for developing the institution as a whole.",
+                "ar": "مسؤول عن تطوير المؤسسة كلها."
+              }
+            }
+          ]
+        },
+        {
+          "q": {
+            "en": "What takes most of your time?",
+            "ar": "ما الذي يأخذ معظم وقتك؟"
+          },
+          "options": [
+            {
+              "door": "leader",
+              "label": {
+                "en": "Reading, deciding, and meetings that do not end.",
+                "ar": "القراءة والقرار واجتماعات لا تنتهي."
+              }
+            },
+            {
+              "door": "institution",
+              "label": {
+                "en": "Writing, research, analysis, and repeated tasks.",
+                "ar": "الكتابة والبحث والتحليل والمهام المتكررة."
+              }
+            },
+            {
+              "door": "development",
+              "label": {
+                "en": "Looking for capabilities and opportunities we do not have yet.",
+                "ar": "البحث عن قدرات وفرص لا نملكها بعد."
+              }
+            }
+          ]
+        },
+        {
+          "q": {
+            "en": "What do you want to change first?",
+            "ar": "ما الذي تريد أن يتغيّر أولًا؟"
+          },
+          "options": [
+            {
+              "door": "leader",
+              "label": {
+                "en": "To see more clearly and decide better.",
+                "ar": "أن أرى أوضح وأقرر أفضل."
+              }
+            },
+            {
+              "door": "institution",
+              "label": {
+                "en": "To get more done with less effort.",
+                "ar": "أن أنجز أكثر بجهد أقل."
+              }
+            },
+            {
+              "door": "development",
+              "label": {
+                "en": "For the institution to be able to do what it could not.",
+                "ar": "أن تستطيع المؤسسة ما لم تكن تستطيعه."
+              }
+            }
+          ]
+        },
+        {
+          "q": {
+            "en": "How do you deal with AI today?",
+            "ar": "كيف تتعامل مع الذكاء الاصطناعي اليوم؟"
+          },
+          "options": [
+            {
+              "door": "leader",
+              "label": {
+                "en": "I ask someone else to try it.",
+                "ar": "أطلب من غيري أن يجرّبه."
+              }
+            },
+            {
+              "door": "institution",
+              "label": {
+                "en": "I use it sometimes, and I am not sure I really benefit.",
+                "ar": "أستخدمه أحيانًا، ولا أعرف هل أستفيد منه حقًا."
+              }
+            },
+            {
+              "door": "development",
+              "label": {
+                "en": "We want it inside how the institution works, not only on individual devices.",
+                "ar": "نريده داخل طريقة عمل المؤسسة، لا على أجهزة الأفراد فقط."
+              }
+            }
+          ]
+        }
+      ],
+      "resultLabel": {
+        "en": "The nearest door to you",
+        "ar": "الباب الأقرب إليك"
+      },
+      "openDoor": {
+        "en": "Open the door",
+        "ar": "ادخل من هنا"
+      },
+      "start": {
+        "en": "Start from here",
+        "ar": "ابدأ من هنا"
+      },
+      "restart": {
+        "en": "Answer again",
+        "ar": "أجب من جديد"
+      }
     }
   }
 }

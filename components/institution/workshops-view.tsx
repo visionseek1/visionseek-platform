@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {ArrowRight, ArrowUpRight, Briefcase, Building2, GraduationCap, Plane, Shield} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
+import {WorkshopSelfCheck} from '@/components/institution/workshop-self-check';
 import CapabilityFooter from '@/components/capability/footer';
 import {
   getWorkshop,
@@ -35,8 +36,10 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
   const doorHref = (kind: WorkshopKind) => {
     if (kind === 'leader' && leader) return `${prefix}/workshops/${leader.slug}`;
     if (kind === 'development' && development) return `${prefix}/workshops/${development.slug}`;
-    return '#institutions';
+    return `${prefix}/workshops#institutions`;
   };
+  /** The enquiry page reads these and opens with the workshop named, so the visitor never starts from a blank form. */
+  const startHref = (kind: WorkshopKind) => `${prefix}/start?${new URLSearchParams({from: 'workshops', workshop: kind, idea: section.doors[kind].name[locale]})}`;
   const institutionIcon: Record<InstitutionKind, React.ReactNode> = {
     police: <Shield size={28} strokeWidth={1.6} aria-hidden />,
     university: <GraduationCap size={28} strokeWidth={1.6} aria-hidden />,
@@ -111,6 +114,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
                     <span className="vs-wl-code">{card.code}</span>
                     <strong>{text(locale, section.doors[kind].name)}</strong>
                     <span className="vs-wl-door-line">{text(locale, section.doors[kind].line)}</span>
+                    <span className="vs-wl-door-who">{text(locale, card.who)}</span>
                     <span className="vs-wl-door-text">{text(locale, card.body)}</span>
                     <span className="vs-wl-door-close">{text(locale, card.close)}</span>
                     <span className="vs-wl-door-open">{text(locale, live.openDoor)}<ArrowRight size={16} aria-hidden /></span>
@@ -120,6 +124,16 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             })}
           </div>
         </section>
+
+        <WorkshopSelfCheck
+          locale={locale}
+          copy={live.selfCheck}
+          doors={{
+            leader: {name: section.doors.leader.name, line: section.doors.leader.line, href: doorHref('leader'), startHref: startHref('leader')},
+            institution: {name: section.doors.institution.name, line: section.doors.institution.line, href: doorHref('institution'), startHref: startHref('institution')},
+            development: {name: section.doors.development.name, line: section.doors.development.line, href: doorHref('development'), startHref: startHref('development')},
+          }}
+        />
 
         <section className="vs-wl-method" id="method">
           <div className="vs-wl-method-intro">
@@ -166,7 +180,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           {institutionWorkshops.map(item => (
             <div className={`vs-wl-inst-limit limit-${item.institution}`} key={item.slug}>
               <p>
-                <strong>{text(locale, live.institutionsLimit)} {section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}:</strong>{' '}
+                <strong>{text(locale, item.boundary.ar ? live.institutionsLimit : live.institutionsFor)} {section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}:</strong>{' '}
                 {text(locale, item.boundary.ar ? item.boundary : item.audienceInstitution)}
               </p>
               <Link className="vs-text-link" href={`${prefix}/workshops/${item.slug}`}>
@@ -328,7 +342,7 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
         </section>
 
         <p className="vs-ws-cta">
-          <Link className="vs-button" href={`${prefix}/start`}>
+          <Link className="vs-button" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', workshop: workshop.slug, idea: `${text(locale, kindName)} — ${text(locale, workshop.outcome)}`.slice(0, 180)})}`}>
             {ar ? 'اطلب جلسة تعارف' : 'Request an introductory session'}
             <ArrowRight size={18} />
           </Link>

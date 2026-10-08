@@ -153,6 +153,27 @@
 .vs-wl-idea-lines li{font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.5;font-weight:600;color:var(--white)}
 .vs-wl-close{margin:.4rem 0 0;font-size:1.15rem;line-height:1.8;font-weight:700;color:var(--white)}
 .vs-wl-quote{margin:0;padding-inline-start:1rem;border-inline-start:3px solid var(--lime);font-size:clamp(1.15rem,1.8vw,1.45rem);line-height:1.7;color:var(--wl-ink);font-weight:500}
+/* Self-check */
+.vs-wl-check{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3rem;align-items:start}
+.vs-wl-check-intro{position:sticky;top:5.5rem;display:flex;flex-direction:column;gap:1rem}
+.vs-wl-check h2{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.25}
+.vs-wl-check-body{display:flex;flex-direction:column;gap:1.2rem}
+.vs-wl-check-q{margin:0;padding:1.4rem;border:1px solid var(--wl-line);border-radius:18px;background:var(--wl-panel)}
+.vs-wl-check-q legend{display:flex;align-items:center;gap:.8rem;padding:0 .4rem;font-size:1.15rem;font-weight:700}
+.vs-wl-check-q legend .vs-wl-step-n{font-size:1.1rem;min-width:0}
+.vs-wl-check-options{display:grid;gap:.6rem;margin-top:.9rem}
+.vs-wl-check-options label{position:relative;display:flex;align-items:center;gap:.8rem;min-height:44px;padding:.8rem 1rem;border:1px solid var(--wl-line);border-radius:12px;background:var(--wl-bg);cursor:pointer;font-size:1rem;line-height:1.6;color:var(--wl-ink);transition:border-color .25s ease,background .25s ease}
+.vs-wl-check-options label:hover{border-color:#5a6648}
+.vs-wl-check-options label.is-on{border-color:var(--lime);background:#161c10;color:var(--white)}
+.vs-wl-check-options input{appearance:none;width:1rem;height:1rem;flex:none;border-radius:50%;border:1px solid #5a6648;background:transparent;margin:0}
+.vs-wl-check-options input:checked{border-color:var(--lime);background:var(--lime);box-shadow:inset 0 0 0 3px var(--wl-bg)}
+.vs-wl-check-options input:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.vs-wl-check-result{display:flex;flex-direction:column;gap:.6rem;padding:1.6rem;border:1px solid var(--wl-line);border-radius:18px;min-height:6rem}
+.vs-wl-check-result strong{font-size:1.6rem;line-height:1.3}
+.vs-wl-check-result p{margin:0;color:var(--wl-ink);line-height:1.7}
+.vs-wl-check-progress{color:var(--wl-soft)!important;font-family:var(--font-display)}
+.vs-wl-check-reset{background:transparent;border:0;color:var(--wl-soft);font:inherit;font-size:.95rem;cursor:pointer;text-decoration:underline;min-height:44px;padding:0 .4rem}
+.vs-wl-check-reset:hover{color:var(--white)}
 /* Method */
 .vs-wl-method{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:3rem;align-items:center;background:var(--wl-panel);border-top:1px solid #1e231c;border-bottom:1px solid #1e231c}
 .vs-wl-method-intro{display:flex;flex-direction:column;gap:1rem}
@@ -190,6 +211,6 @@
 .vs-wl-closing{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.2rem;padding-top:5.5rem!important;padding-bottom:6rem!important;border-top:1px solid #1e231c}
 .vs-wl-closing h2{font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.2;font-weight:900}
 .vs-wl-closing>p{margin:0;font-size:1.15rem;line-height:1.9;color:var(--wl-ink);max-width:36rem}
-@media(max-width:1100px){.vs-wl-door-grid{grid-template-columns:1fr;gap:1rem}.vs-wl-door{min-height:22rem}.vs-wl-method,.vs-wl-founder{grid-template-columns:1fr;gap:2rem}}
+@media(max-width:1100px){.vs-wl-door-grid{grid-template-columns:1fr;gap:1rem}.vs-wl-door{min-height:22rem}.vs-wl-method,.vs-wl-founder,.vs-wl-check{grid-template-columns:1fr;gap:2rem}.vs-wl-check-intro{position:static}}
 @media(max-width:860px){.vs-wl section{padding-inline:1.5rem}.vs-wl-hero{grid-template-columns:1fr;min-height:0}.vs-wl-hero-image{order:-1;min-height:22rem}.vs-wl-hero-image::after,.vs-site[dir=rtl] .vs-wl-hero-image::after{background:linear-gradient(to top,var(--wl-bg) 0%,rgba(11,13,11,0) 45%)}.vs-wl-hero-text{padding:1.5rem 1.5rem 3.5rem}.vs-wl-chips{padding-inline:1.5rem}.vs-wl-step-n{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){.vs-wl *{transition:none!important;animation:none!important}}

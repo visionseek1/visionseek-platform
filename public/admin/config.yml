@@ -2155,6 +2155,12 @@ collections:
                     widget: object
                     fields: &doorcard
                       - {label: الرقم, name: code, widget: string}
+                      - label: لمن
+                        name: who
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
                       - label: الفقرة
                         name: body
                         widget: object
@@ -2253,12 +2259,88 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
+              - label: عبارة «لمن في» (حين لا توجد حدود)
+                name: institutionsFor
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
               - label: زر فتح ورشة المؤسسة
                 name: institutionsOpen
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
+              - label: "اختبار الباب الأقرب (أربعة أسئلة)"
+                name: selfCheck
+                widget: object
+                hint: "أسئلة توجيهية فقط؛ لا تُرسل ولا تُحفظ. كل خيار يشير إلى باب: leader أو institution أو development."
+                fields:
+                  - label: السطر الصغير
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: المقدمة
+                    name: intro
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: الأسئلة
+                    name: questions
+                    widget: list
+                    summary: "{{fields.q.ar}}"
+                    fields:
+                      - label: السؤال
+                        name: q
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: الخيارات
+                        name: options
+                        widget: list
+                        summary: "{{fields.door}} — {{fields.label.ar}}"
+                        fields:
+                          - {label: الباب, name: door, widget: select, options: [leader, institution, development]}
+                          - label: النص
+                            name: label
+                            widget: object
+                            fields:
+                              - {label: English, name: en, widget: string}
+                              - {label: العربية, name: ar, widget: string}
+                  - label: عنوان النتيجة
+                    name: resultLabel
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: زر فتح الباب
+                    name: openDoor
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: زر البداية
+                    name: start
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: إعادة الإجابة
+                    name: restart
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
               - label: اسم المؤسس
                 name: founderName
                 widget: object
