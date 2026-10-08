@@ -162,3 +162,6 @@
 .gainText{font-size:16.5px!important;line-height:1.85!important;color:var(--soft)!important;margin-top:10px!important}
 .edges{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
 .edges li{padding:18px 20px;border-radius:14px;border:1px solid color-mix(in srgb,var(--tone) 40%,var(--line));background:color-mix(in srgb,var(--tone) 7%,var(--surface));font-size:16px;font-weight:500}
+.projectName{display:inline-flex;align-items:center;gap:12px}
+.projectLogo{display:inline-block;vertical-align:middle;margin-inline-end:12px;border-radius:10px}
+.cardLogo{background:#0F1720;border-color:color-mix(in srgb,var(--tone) 60%,transparent)}

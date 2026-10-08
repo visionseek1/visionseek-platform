@@ -1,5 +1,6 @@
 import type {CSSProperties, ReactNode} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2, BrainCircuit} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
@@ -38,7 +39,7 @@ function cardData(project:Project,locale:Locale):ProjectCardData {
   return {
     id:project.id, href:projectPath(project.slug,locale), title:project.title[locale], summary:project.summary[locale],
     sector:sectorBySlug(project.sector)?.title[locale] ?? '', track:track?trackLabel(track):'', color:colorOf(project.sector),
-    mark:project.title.en.trim().charAt(0).toUpperCase(),
+    mark:project.title.en.trim().charAt(0).toUpperCase(), logo:project.logo,
     audiences:project.profile?.audiences ?? [], audienceText:(project.profile?.audiences ?? []).map(a=>audienceLabels[a][locale]),
   };
 }
@@ -163,11 +164,11 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
         <div className={styles.detailMain}>
           <div className={styles.identity}><span dir="ltr" className={styles.code}>{project.id}</span><span className={styles.mono} style={{color}}>{trackLabel(track)}</span></div>
           {project.pitch?<>
-            <p className={styles.projectName}>{project.title[locale]}</p>
+            <p className={styles.projectName}>{project.logo&&<Image src={project.logo} alt="" width={44} height={44} unoptimized className={styles.projectLogo}/>}<span dir="ltr">{project.title[locale]}</span></p>
             <h1 className={styles.hook}>{project.pitch.hook[locale]}</h1>
             <p className={styles.lede}>{project.pitch.promise[locale]}</p>
           </>:<>
-            <h1>{project.title[locale]}</h1>
+            <h1>{project.logo&&<Image src={project.logo} alt="" width={64} height={64} unoptimized className={styles.projectLogo}/>}{project.title[locale]}</h1>
             <p className={styles.ambition}>{project.ambition[locale]}</p>
             <p className={styles.lede}>{project.summary[locale]}</p>
           </>}

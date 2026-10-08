@@ -2,11 +2,12 @@
 
 import {useState, type CSSProperties} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type {Locale, ProjectAudience} from '@/lib/projects';
 import styles from './projects.module.css';
 
 export type ProjectCardData = {
-  id:string; href:string; title:string; summary:string; sector:string; track:string; color:string; mark:string;
+  id:string; href:string; title:string; summary:string; sector:string; track:string; color:string; mark:string; logo?:string;
   audiences:ProjectAudience[]; audienceText:string[];
 };
 
@@ -25,7 +26,7 @@ export function ProjectFilter({locale,cards,audiences}:{locale:Locale;cards:Proj
     {shown.length?<div className={styles.cards}>{shown.map(card=><Link key={card.id} href={card.href} className={styles.card} style={{'--tone':card.color} as CSSProperties}>
       <div className={styles.cardArt} aria-hidden="true">
         <div className={styles.cardTop}><span>{card.track}</span><span dir="ltr">{card.id}</span></div>
-        <span className={styles.cardMark}>{card.mark}</span>
+        {card.logo?<span className={`${styles.cardMark} ${styles.cardLogo}`}><Image src={card.logo} alt="" width={40} height={40} unoptimized/></span>:<span className={styles.cardMark}>{card.mark}</span>}
       </div>
       <div className={styles.cardBody}>
         <div className={styles.cardMeta}><span>{card.sector}</span></div>

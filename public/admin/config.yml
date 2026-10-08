@@ -1564,6 +1564,7 @@ collections:
       - {label: المسار (slug المسار), name: track, widget: string, hint: "مثل lng."}
       - {label: النوع, name: kind, widget: select, options: [supply, containment, governance], hint: "يحدد الرسم التصوري: supply و containment للغاز المسال، governance لحوكمة الوكلاء."}
       - {label: الحالة, name: status, widget: select, options: [concept, active, completed], hint: "الحالة الحقيقية فقط."}
+      - {label: "لوجو الأداة (اختياري)", name: logo, widget: image, required: false, hint: "نسخة تصلح على خلفية غامقة (SVG أو PNG مربع). يظهر على كارت المشروع وأعلى صفحته."}
       - {label: ترتيب الظهور في الواجهة (اختياري), name: featuredOrder, widget: number, value_type: int, required: false, hint: "اتركه فارغًا كي لا يظهر في شريط الواجهة."}
       - label: العنوان
         name: title

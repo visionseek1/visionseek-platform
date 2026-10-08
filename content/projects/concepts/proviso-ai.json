@@ -10,6 +10,7 @@
     "ar": "Proviso AI",
     "en": "Proviso AI"
   },
+  "logo": "/projects/proviso-ai.svg",
   "summary": {
     "ar": "أداة تجعل وكلاء الذكاء الاصطناعي في المؤسسة يعملون بلغة القانون الذي تعيش فيه. نحوّل لوائح الذكاء الاصطناعي وإرشاداته في الخليج ومصر إلى قواعد عربية جاهزة، كل قاعدة مربوطة بمادّتها. وقبل أن يتحرك الوكيل، يُحسم الأمر: مسموح، أو يحتاج إنسانًا، أو ممنوع.",
     "en": "Proviso AI lets an institution's AI agents act within the law it actually operates under. Gulf and Egyptian AI regulations become ready-to-run rules, each traced to its source article. Before an agent acts, every step is settled: allowed, needs a human, or blocked."

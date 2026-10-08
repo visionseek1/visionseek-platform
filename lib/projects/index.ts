@@ -43,6 +43,8 @@ export type Project = {
   id:string; slug:string; sector:string; track:string; kind:ProjectKind;
   status:ProjectStatus; featuredOrder?:number;
   title:Text; summary:Text; ambition:Text; idea:Text; beneficiary:Text;
+  /** Optional tool logo for dark backgrounds, e.g. /projects/proviso-ai.svg */
+  logo?:string;
   outcomes:{title:Text;text:Text}[];
   /** Why institutions need this now: public, dated facts only, each backed by a listed source. */
   whyNow?:{highlights?:{value:Text;text:Text}[];paragraphs:Text[];sources:{title:string;url:string}[]};
