@@ -4,7 +4,8 @@ import type {Entry, Locale} from './schema';
 
 export type {Locale};
 export type Bi = {en: string; ar: string};
-export type WorkshopKind = 'leader' | 'institution' | 'development';
+/** Two doors (9 Oct 2026): one person, or one institution. Sector pages sit under the institution door. */
+export type WorkshopKind = 'individual' | 'institution';
 export type InstitutionKind =
   | 'police' | 'university' | 'airport' | 'hospital' | 'company'
   | 'customs' | 'finance' | 'justice' | 'education' | 'energy' | 'municipality' | 'civilservice';
@@ -49,6 +50,17 @@ export type Workshop = {
 export type WorkshopRole = {id: RoleId; label: Bi; note: Bi};
 export type WorkshopInstitutionType = {id: InstitutionKind; label: Bi};
 export type WorkshopDoorCard = {code: string; image: string};
+/** A door on /masterclass: a real, sourced quote, then what happens to whoever waits, then who it is for and what we do. */
+export type WorkshopDoor = {
+  name: Bi;
+  quote: Bi;
+  quoteBy: Bi;
+  quoteSource: {title: string; url: string};
+  consequence: Bi;
+  for: Bi;
+  body: Bi;
+  meta: Bi;
+};
 
 /** Copy for the live section page. Every key is editable from /admin. */
 export type WorkshopLive = {
@@ -59,18 +71,17 @@ export type WorkshopLive = {
   /** Introduction video. Empty `video` shows a designed placeholder with `pending`. */
   trailer: {video: string; label: Bi; pending: Bi};
   heroQuote: Bi;
-  heroTitle: Bi;
-  heroCustom: Bi;
+  /** The opening paragraphs under the quote, in order. */
+  opening: Bi[];
   heroImage: string;
   heroImageAlt: Bi;
   heroImageLabel: string;
   ctaPrimary: Bi;
   doorsLabel: Bi;
+  doorsLine: Bi;
   doorCards: Record<WorkshopKind, WorkshopDoorCard>;
   openDoor: Bi;
   cardTeacher: Bi;
-  leavesLabel: Bi;
-  cardMeta: Bi;
   institutionPick: Bi;
   howLabel: Bi;
   howTitle: Bi;
@@ -90,7 +101,7 @@ export type WorkshopSection = {
   status: Bi;
   rolesHeading: Bi;
   roles: WorkshopRole[];
-  doors: Record<WorkshopKind, {name: Bi; line: Bi}>;
+  doors: Record<WorkshopKind, WorkshopDoor>;
   institutionsHeading: Bi;
   institutionTypes: WorkshopInstitutionType[];
   allInstitutions: Bi;

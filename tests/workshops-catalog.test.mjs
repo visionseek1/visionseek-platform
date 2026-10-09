@@ -53,26 +53,34 @@ test('police workshop stays on administration and citizen service', () => {
   }
 });
 
-test('section doors keep the three fixed kinds', () => {
-  assert.deepEqual(Object.keys(section.doors).sort(), ['development', 'institution', 'leader']);
+test('two doors: one person, or one institution with its sectors', () => {
+  assert.deepEqual(Object.keys(section.doors).sort(), ['individual', 'institution']);
+  assert.equal(section.doors.individual.name.ar, 'لك أنت');
+  assert.equal(section.doors.institution.name.ar, 'لمؤسستك');
+  for (const door of Object.values(section.doors)) {
+    for (const key of ['quote', 'quoteBy', 'consequence', 'for', 'body', 'meta']) assert.ok(door[key].ar && door[key].en, key);
+    assert.match(door.quoteSource.url, /^https:\/\//);
+    assert.match(door.quoteSource.title, /\d{4}/, 'the quote source carries its year');
+  }
+  for (const item of workshops) assert.ok(['individual', 'institution'].includes(item.kind), `${item.slug}: unknown door ${item.kind}`);
+  assert.equal(workshops.filter(w => w.kind === 'individual').length, 1, 'one page behind the individual door');
+  assert.equal(workshops.filter(w => w.kind === 'institution' && !w.institution).length, 1, 'one general page behind the institution door');
   assert.equal(section.institutionTypes.length, 12);
   const types = section.institutionTypes.map(type => type.id);
-  for (const item of workshops.filter(w => w.kind === 'institution')) assert.ok(types.includes(item.institution), `${item.slug}: unknown sector ${item.institution}`);
+  for (const item of workshops.filter(w => w.kind === 'institution' && w.institution)) assert.ok(types.includes(item.institution), `${item.slug}: unknown sector ${item.institution}`);
   for (const id of types) assert.equal(workshops.filter(w => w.institution === id).length, 1, `one masterclass per sector: ${id}`);
   assert.deepEqual(section.status, status);
 });
 
-test('the live section page is short: hero, three doors, founder, closing', () => {
+test('the live section page is short: hero, two doors, founder, closing', () => {
   const live = section.live;
-  assert.deepEqual(Object.keys(live.doorCards).sort(), ['development', 'institution', 'leader']);
+  assert.deepEqual(Object.keys(live.doorCards).sort(), ['individual', 'institution']);
+  assert.ok(live.opening.length >= 3 && live.opening.every(line => line.ar && line.en), 'opening paragraphs');
   assert.equal(live.closingLines.length, 3);
   assert.match(live.founderStatement.ar, /لبلادنا العربية/);
   assert.equal(live.howSteps.length, 3);
   assert.match(live.ctaPrimary.ar, /ماستركلاس خاصًا مع د\. أحمد عبدالعليم/);
-  assert.equal(section.doors.leader.name.ar, 'الإدارة والقيادة في عصر الذكاء الاصطناعي');
-  assert.equal(section.doors.institution.name.ar, 'العمل مع الذكاء الاصطناعي');
-  assert.equal(section.doors.development.name.ar, 'المؤسسة والذكاء الاصطناعي');
-  for (const gone of ['ideaLines', 'methodChain', 'institutionsLines', 'selfCheck', 'founderQuestions']) assert.equal(gone in live, false, gone);
+  for (const gone of ['ideaLines', 'methodChain', 'institutionsLines', 'selfCheck', 'founderQuestions', 'heroTitle', 'heroCustom', 'leavesLabel', 'cardMeta']) assert.equal(gone in live, false, gone);
   const joined = JSON.stringify(live);
   for (const word of ['شهادة', 'شركاؤنا', 'عملاؤنا', '%', 'certified', 'قعدة']) assert.equal(joined.includes(word), false, word);
 });
@@ -81,7 +89,7 @@ test('masterclass: the teacher leads, the introduction video has a slot, and the
   const live = section.live;
   assert.equal(live.instructor.ar, 'د. أحمد عبدالعليم');
   assert.equal(live.instructor.en, 'Dr. Ahmed Abdelalim');
-  for (const key of ['teaches', 'cardTeacher', 'leavesLabel', 'cardMeta', 'institutionPick']) assert.ok(live[key].ar && live[key].en, key);
+  for (const key of ['teaches', 'cardTeacher', 'doorsLine', 'institutionPick']) assert.ok(live[key].ar && live[key].en, key);
   assert.equal(typeof live.trailer.video, 'string');
   assert.ok(live.trailer.label.ar && live.trailer.pending.ar);
   assert.equal('heroWith' in live, false);

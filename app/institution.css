@@ -278,3 +278,20 @@
 .vs-ws-shift-grid strong{font-size:1.15rem;line-height:1.5;font-weight:600}
 .vs-ws-page .vs-ws-shift-grid p{margin:0;font-size:.98rem;line-height:1.8;color:var(--grey)}
 .vs-ws-shift-grid a{margin-top:auto;font-size:.85rem;line-height:1.5}
+
+/* Masterclass, two doors (9 Oct 2026): opening paragraphs, a sourced quote and its consequence on each door. */
+.vs-wl-opening{display:flex;flex-direction:column;gap:1rem;max-width:46rem}
+.vs-wl-opening p{margin:0;font-size:1.12rem;line-height:1.95;color:var(--wl-ink)}
+.vs-wl-opening p:last-child{color:var(--white);font-weight:700}
+.vs-wl-doors .vs-wl-head{flex-direction:column;align-items:flex-start}
+.vs-wl-doors-line{margin:0;color:var(--wl-soft);font-size:1.1rem}
+.vs-wl-door-grid.is-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vs-wl-door-quote{margin:.4rem 0 0;padding-inline-start:.9rem;border-inline-start:3px solid var(--lime)}
+.vs-wl-door-quote blockquote{margin:0;font-size:1.15rem;line-height:1.75;font-weight:600;color:var(--white)}
+.vs-wl-door-quote figcaption{margin-top:.35rem;font-size:.8rem}
+.vs-wl-door-quote figcaption a{position:relative;z-index:2;display:inline-flex;align-items:center;gap:.25rem;color:var(--wl-soft);text-decoration:none}
+.vs-wl-door-quote figcaption a:hover{color:var(--lime)}
+.vs-wl-door-consequence{margin:.2rem 0 0;font-size:1.05rem;line-height:1.75;font-weight:700;color:var(--lime)}
+.vs-wl-door-for{margin:.2rem 0 0;font-size:.9rem;color:var(--wl-soft)}
+.vs-wl-door-body .vs-wl-door-text{margin:0}
+@media(max-width:1100px){.vs-wl-door-grid.is-two{grid-template-columns:1fr}}

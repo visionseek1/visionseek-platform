@@ -1342,9 +1342,8 @@ collections:
         name: kind
         widget: select
         options:
-          - {label: قعدة القائد, value: leader}
-          - {label: ماستركلاس المؤسسات, value: institution}
-          - {label: تطوير المؤسسة, value: development}
+          - {label: لك أنت (فرد), value: individual}
+          - {label: لمؤسستك, value: institution}
       - label: نوع المؤسسة
         name: institution
         widget: select
@@ -1559,7 +1558,7 @@ collections:
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس
-    description: "رأس صفحة /masterclass ونصوصها العامة: اسم المدرّس، وفيديو المقدمة، والأبواب الثلاثة."
+    description: "رأس صفحة /masterclass ونصوصها العامة: اسم المدرّس، وفيديو المقدمة، والبابان (لك أنت، ولمؤسستك)."
     preview_path: "ar/masterclass"
     editor: {preview: false}
     files:
@@ -1614,12 +1613,13 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-          - label: الأبواب
+          - label: البابان
             name: doors
             widget: object
+            hint: "كل باب: مقولة حقيقية من كبار المجال، ثم جملة تبيّن أن من لا يتعلّم سيسبقه غيره، ثم لمن، ثم ماذا نفعل."
             fields:
-              - label: قعدة القائد
-                name: leader
+              - label: لك أنت
+                name: individual
                 widget: object
                 fields: &door
                   - label: الاسم
@@ -1628,18 +1628,51 @@ collections:
                     fields:
                       - {label: English, name: en, widget: string}
                       - {label: العربية, name: ar, widget: string}
-                  - label: الجملة
-                    name: line
+                  - label: المقولة (حقيقية، بمعناها الأمين)
+                    name: quote
                     widget: object
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
-              - label: ماستركلاس المؤسسات
+                  - label: صاحب المقولة وتاريخها
+                    name: quoteBy
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: مصدر المقولة
+                    name: quoteSource
+                    widget: object
+                    hint: "رابط اتفتح فعلًا، وفي عنوانه السنة."
+                    fields:
+                      - {label: العنوان, name: title, widget: string}
+                      - {label: الرابط, name: url, widget: string}
+                  - label: جملة العاقبة (اللي هيتأخر)
+                    name: consequence
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: لمن
+                    name: for
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: ماذا نفعل
+                    name: body
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: سطر الشكل تحت الباب
+                    name: meta
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+              - label: لمؤسستك
                 name: institution
-                widget: object
-                fields: *door
-              - label: تطوير المؤسسة
-                name: development
                 widget: object
                 fields: *door
           - label: عنوان اختيار المؤسسة
@@ -1668,7 +1701,7 @@ collections:
           - label: الصفحة الحية
             name: live
             widget: object
-            hint: "أسماء الأبواب وسطورها في «الأبواب» فوق، والحالة في «الحالة»."
+            hint: "نص البابين في «البابان» فوق، والحالة في «الحالة»."
             fields:
               - {label: الرمز اللاتيني, name: kicker, widget: string}
               - label: اسم المدرّس (العنوان الكبير)
@@ -1707,15 +1740,10 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: عنوان الغلاف
-                name: heroTitle
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: سطر التخصيص
-                name: heroCustom
-                widget: object
+              - label: فقرات الافتتاح (تحت الاقتباس، بالترتيب)
+                name: opening
+                widget: list
+                summary: "{{fields.ar}}"
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
@@ -1733,8 +1761,14 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: عنوان الأبواب
+              - label: عنوان البابين
                 name: doorsLabel
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر تحت عنوان البابين
+                name: doorsLine
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
@@ -1743,18 +1777,14 @@ collections:
                 name: doorCards
                 widget: object
                 fields:
-                  - label: الإدارة والقيادة
-                    name: leader
+                  - label: لك أنت
+                    name: individual
                     widget: object
                     fields: &doorcard
                       - {label: الرقم, name: code, widget: string}
                       - {label: الصورة, name: image, widget: image}
-                  - label: العمل مع الذكاء الاصطناعي
+                  - label: لمؤسستك
                     name: institution
-                    widget: object
-                    fields: *doorcard
-                  - label: المؤسسة والذكاء الاصطناعي
-                    name: development
                     widget: object
                     fields: *doorcard
               - label: نص فتح الباب
@@ -1765,18 +1795,6 @@ collections:
                   - {label: العربية, name: ar, widget: string}
               - label: سطر المدرّس فوق كل باب
                 name: cardTeacher
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: عنوان «ستخرج بـ»
-                name: leavesLabel
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: سطر الشكل والمدة تحت كل باب
-                name: cardMeta
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight, Check, Play} from 'lucide-react';
+import {ArrowRight, ArrowUpRight, Play} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {
@@ -28,15 +28,14 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
   const prefix = ar ? '/ar' : '';
   const section = workshopSection;
   const live = section.live;
-  const leader = workshops.find(item => item.kind === 'leader');
-  const development = workshops.find(item => item.kind === 'development');
+  const individual = workshops.find(item => item.kind === 'individual');
+  const general = workshops.find(item => item.kind === 'institution' && !item.institution);
+  const kinds: WorkshopKind[] = ['individual', 'institution'];
+  const institutionWorkshops = workshops.filter(item => item.kind === 'institution' && item.institution);
   const doorHref = (kind: WorkshopKind) => {
-    if (kind === 'leader' && leader) return `${prefix}/masterclass/${leader.slug}`;
-    if (kind === 'development' && development) return `${prefix}/masterclass/${development.slug}`;
-    return '#institutions';
+    const page = kind === 'individual' ? individual : general;
+    return page ? `${prefix}/masterclass/${page.slug}` : '#institutions';
   };
-  const kinds: WorkshopKind[] = ['leader', 'institution', 'development'];
-  const institutionWorkshops = workshops.filter(item => item.kind === 'institution');
 
   return (
     <Frame locale={locale} path="/masterclass">
@@ -77,39 +76,44 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
 
         <section className="vs-wl-why">
           <blockquote className="vs-wl-quote">{text(locale, live.heroQuote)}</blockquote>
-          <h2>{text(locale, live.heroTitle)}</h2>
-          <p className="vs-wl-custom">{text(locale, live.heroCustom)}</p>
+          <div className="vs-wl-opening">
+            {live.opening.map(paragraph => <p key={paragraph.en}>{text(locale, paragraph)}</p>)}
+          </div>
         </section>
 
         <section className="vs-wl-doors" id="doors">
           <div className="vs-wl-head">
             <h2>{text(locale, live.doorsLabel)}</h2>
+            <p className="vs-wl-doors-line">{text(locale, live.doorsLine)}</p>
           </div>
-          <div className="vs-wl-door-grid">
+          <div className="vs-wl-door-grid is-two">
             {kinds.map(kind => {
               const card = live.doorCards[kind];
-              const linked = kind === 'leader' ? leader : kind === 'development' ? development : undefined;
+              const door = section.doors[kind];
               return (
                 <article className={`vs-wl-door door-${kind}`} key={kind}>
-                  <Image src={card.image} alt="" width={1200} height={1200} sizes="(max-width: 860px) 100vw, 33vw" />
+                  <Image src={card.image} alt="" width={1200} height={1200} sizes="(max-width: 860px) 100vw, 50vw" />
                   <div className="vs-wl-door-body">
                     <span className="vs-wl-code">{card.code}</span>
                     <span className="vs-wl-door-teacher">{text(locale, live.cardTeacher)}</span>
-                    <h3><Link href={doorHref(kind)}>{text(locale, section.doors[kind].name)}</Link></h3>
-                    <span className="vs-wl-door-line">{text(locale, section.doors[kind].line)}</span>
-                    {linked ? (
-                      <div className="vs-wl-door-leaves">
-                        <b>{text(locale, live.leavesLabel)}</b>
-                        <ul>{linked.leavesWith.map(item => <li key={item.en}><Check size={16} aria-hidden />{text(locale, item)}</li>)}</ul>
-                      </div>
-                    ) : (
+                    <h3><Link href={doorHref(kind)}>{text(locale, door.name)}</Link></h3>
+                    <figure className="vs-wl-door-quote">
+                      <blockquote>{text(locale, door.quote)}</blockquote>
+                      <figcaption>
+                        <a href={door.quoteSource.url} target="_blank" rel="noreferrer">{text(locale, door.quoteBy)}<ArrowUpRight size={14} aria-hidden /></a>
+                      </figcaption>
+                    </figure>
+                    <p className="vs-wl-door-consequence">{text(locale, door.consequence)}</p>
+                    <p className="vs-wl-door-for">{text(locale, door.for)}</p>
+                    <p className="vs-wl-door-text">{text(locale, door.body)}</p>
+                    {kind === 'institution' && (
                       <div className="vs-wl-door-leaves">
                         <b>{text(locale, live.institutionPick)}</b>
                         <ul className="vs-wl-door-chips">{institutionWorkshops.map(item => <li key={item.slug}><Link href={`${prefix}/masterclass/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link></li>)}</ul>
                       </div>
                     )}
-                    <span className="vs-wl-door-meta">{text(locale, live.cardMeta)}</span>
-                    {linked && <Link className="vs-wl-door-open" href={doorHref(kind)}>{text(locale, live.openDoor)}<ArrowRight size={16} aria-hidden /></Link>}
+                    <span className="vs-wl-door-meta">{text(locale, door.meta)}</span>
+                    <Link className="vs-wl-door-open" href={doorHref(kind)}>{text(locale, live.openDoor)}<ArrowRight size={16} aria-hidden /></Link>
                   </div>
                 </article>
               );
