@@ -31,29 +31,9 @@
       }
     }
   ],
-  "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
-  },
   "boundary": {
-    "en": "Administration only. The workshop does not diagnose, prescribe, interpret a result, or replace a clinician.",
-    "ar": "الإدارة فقط. الورشة لا تشخّص، ولا تصف، ولا تفسّر نتيجة، ولا تحل محل طبيب."
-  },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "en": "Administration only. The masterclass does not diagnose, prescribe, interpret a result, or replace a clinician.",
+    "ar": "الإدارة فقط. الماستركلاس لا يشخّص، ولا يصف، ولا يفسّر نتيجة، ولا يحل محل طبيب."
   },
   "position": 5,
   "slug": "hospital-administration",
@@ -84,8 +64,8 @@
     "ar": "المريض ينتظر جملة تعرفها الإدارة أصلًا. والموظف يعيد كتابة الموعد نفسه والتعليم نفسه والتحديث الداخلي نفسه."
   },
   "whyEvidence": {
-    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This workshop follows that line on the administrative floor. It does not diagnose and it does not prescribe.",
-    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الورشة تمشي على هذا الخط في الطابق الإداري. لا تشخّص ولا تصف دواء."
+    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This masterclass follows that line on the administrative floor. It does not diagnose and it does not prescribe.",
+    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الماستركلاس يمشي على هذا الخط في الطابق الإداري. لا تشخّص ولا تصف دواء."
   },
   "source": {
     "title": "WHO · Ethics and governance of artificial intelligence for health · 28 June 2021",
@@ -100,8 +80,8 @@
     "ar": "الفريق يسوّد من شغله الإداري. شخص مسمّى يراجع كل ما سيقرأه مريض أو طبيب."
   },
   "after": {
-    "en": "After 30 days we measure time returned on those administrative tasks, and which tools staff still open. Clinical outcomes are not what this workshop claims, because it does not touch them.",
-    "ar": "بعد 30 يومًا نقيس الوقت العائد في المهام الإدارية، وأي أدوات ما زال الموظفون يفتحونها. النتائج السريرية ليست ما تدّعيه هذه الورشة، لأنها لا تمسّها."
+    "en": "After 30 days we measure time returned on those administrative tasks, and which tools staff still open. Clinical outcomes are not what this masterclass claims, because it does not touch them.",
+    "ar": "بعد 30 يومًا نقيس الوقت العائد في المهام الإدارية، وأي أدوات ما زال الموظفون يفتحونها. النتائج السريرية ليست ما يدّعيه هذا الماستركلاس، لأنه لا يمسّها."
   },
   "questions": [
     {
@@ -142,18 +122,8 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
-      },
-      "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
-    {
-      "q": {
         "en": "Will this touch patient care decisions?",
-        "ar": "هل تمس الورشة قرارات الرعاية؟"
+        "ar": "هل يمس الماستركلاس قرارات الرعاية؟"
       },
       "a": {
         "en": "No. If a sentence would change care, it belongs to the clinician. The session stays on administration.",

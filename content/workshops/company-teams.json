@@ -31,29 +31,9 @@
       }
     }
   ],
-  "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
-  },
   "boundary": {
     "en": "",
     "ar": ""
-  },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
   },
   "position": 6,
   "slug": "company-teams",
@@ -76,8 +56,8 @@
     "ar": "المديرون والموظفون الذين يسوّدون ويلخّصون ويجهّزون شغلًا سيقف المدير وراءه."
   },
   "audienceInstitution": {
-    "en": "A company. Private or public. The workshop uses the company's own files, not a case from a textbook.",
-    "ar": "شركة. خاصة أو عامة. الورشة تستعمل ملفات الشركة، لا حالة من كتاب."
+    "en": "A company. Private or public. The masterclass uses the company's own files, not a case from a textbook.",
+    "ar": "شركة. خاصة أو عامة. الماستركلاس يستعمل ملفات الشركة، لا حالة من كتاب."
   },
   "whyProblem": {
     "en": "People are already using the tools. The company has not decided what the saved hour is for, so the hour disappears into more of the same.",
@@ -142,22 +122,12 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُعقدت هذه الورشة؟"
-      },
-      "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
-    {
-      "q": {
         "en": "Will you promise the eight hours BCG reported?",
         "ar": "هل تعدون بساعات BCG الثماني؟"
       },
       "a": {
-        "en": "No. That figure is theirs, from their survey. We measure the tasks we actually touch, after 30 days, and we do not announce a number before that.",
-        "ar": "لا. الرقم لهم، من مسحهم. نحن نقيس المهام التي نلمسها فعلًا، بعد 30 يومًا، ولا نعلن رقمًا قبل ذلك."
+        "en": "No. That figure is theirs, from their survey. We measure the tasks we actually touch, after 30 days.",
+        "ar": "لا. الرقم لهم، من مسحهم. نحن نقيس المهام التي نلمسها فعلًا، بعد 30 يومًا."
       }
     },
     {

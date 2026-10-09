@@ -1,32 +1,12 @@
 {
   "examples": [],
-  "examplesNote": {
-    "en": "",
-    "ar": ""
-  },
   "boundary": {
     "en": "",
     "ar": ""
   },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
-  },
   "position": 7,
   "slug": "develop-the-institution",
-  "kind": "development",
+  "kind": "institution",
   "institution": "",
   "roles": [
     "senior"
@@ -36,8 +16,8 @@
     "ar": "ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم، وما لا تنظر إليه بعد."
   },
   "summary": {
-    "en": "For the senior table. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building. Nothing outside has been arranged.",
-    "ar": "لمائدة القيادة العليا. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى. لم يُرتَّب شيء في الخارج."
+    "en": "For the senior table. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building.",
+    "ar": "لمائدة القيادة العليا. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى."
   },
   "audienceRole": {
     "en": "Senior leadership: the people who can say yes to a change in how the institution works.",
@@ -52,8 +32,8 @@
     "ar": "أكثر الجهد يُعامل كشراء تقنية. ثم تكتشف المؤسسة أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
   },
   "whyEvidence": {
-    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards. These are BCG's figures, not results of a VisionSeek workshop.",
-    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين. هذه أرقام BCG، ليست نتائج ورشة لـVisionSeek."
+    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards.",
+    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين."
   },
   "source": {
     "title": "BCG · AI Transformation Is a Workforce Transformation · 4 February 2026",
@@ -110,22 +90,12 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُعقدت هذه الورشة؟"
-      },
-      "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
-    {
-      "q": {
         "en": "Do you bring funding or a partner to the first session?",
         "ar": "هل تحضرون تمويلًا أو شريكًا إلى الجلسة الأولى؟"
       },
       "a": {
-        "en": "No. The first work is what you can already do. Outside capability, opportunity, and funding are named as a search, not as a deal. Nothing has been arranged with any institution or country.",
-        "ar": "لا. الشغل الأول هو ما تستطيعون فعله أصلًا. القدرة والفرصة والتمويل من الخارج تُسمّى بوصفها بحثًا، لا اتفاقًا. لم يُرتَّب شيء مع أي مؤسسة أو دولة."
+        "en": "No. The first work is what you can already do. Outside capability, opportunity, and funding are named as a search, not as a deal.",
+        "ar": "لا. الشغل الأول هو ما تستطيعون فعله أصلًا. القدرة والفرصة والتمويل من الخارج تُسمّى بوصفها بحثًا، لا اتفاقًا."
       }
     },
     {
@@ -134,8 +104,8 @@
         "ar": "هل نسبة الـ70% نتيجتكم؟"
       },
       "a": {
-        "en": "No. It is BCG's, from the article linked on this page. We have held no workshop, so we have no result of our own to show.",
-        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ورشة، فلا نتيجة لنا نعرضها."
+        "en": "No. It is BCG's, from the article linked on this page. We have held no masterclass, so we have no result of our own to show.",
+        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ماستركلاس، فلا نتيجة لنا نعرضها."
       }
     }
   ]

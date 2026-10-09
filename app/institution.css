@@ -91,7 +91,7 @@
 #ws-role-senior:checked ~ .vs-ws-doors .for-senior .vs-ws-path,#ws-role-manager:checked ~ .vs-ws-doors .for-team .vs-ws-path,#ws-role-staff:checked ~ .vs-ws-doors .for-team .vs-ws-path{display:inline-block;margin-bottom:.6rem}
 #ws-inst-all:checked ~ .vs-ws-doors label[for="ws-inst-all"],#ws-inst-police:checked ~ .vs-ws-doors label[for="ws-inst-police"],#ws-inst-university:checked ~ .vs-ws-doors label[for="ws-inst-university"],#ws-inst-airport:checked ~ .vs-ws-doors label[for="ws-inst-airport"],#ws-inst-hospital:checked ~ .vs-ws-doors label[for="ws-inst-hospital"],#ws-inst-company:checked ~ .vs-ws-doors label[for="ws-inst-company"]{border-color:var(--lime);color:var(--lime)}
 #ws-inst-police:checked ~ .vs-ws-doors a.vs-ws-example:not(.inst-police),#ws-inst-university:checked ~ .vs-ws-doors a.vs-ws-example:not(.inst-university),#ws-inst-airport:checked ~ .vs-ws-doors a.vs-ws-example:not(.inst-airport),#ws-inst-hospital:checked ~ .vs-ws-doors a.vs-ws-example:not(.inst-hospital),#ws-inst-company:checked ~ .vs-ws-doors a.vs-ws-example:not(.inst-company){display:none}
-/* Workshops: the live section page (/workshops). Radios at the top of .vs-wl drive the chips and the institution pick. */
+/* Masterclass (formerly Workshops): the live section page (/masterclass). Radios at the top of .vs-wl drive the chips and the institution pick. */
 .vs-wl{--wl-bg:#0b0d0b;--wl-panel:#111411;--wl-line:#262c23;--wl-soft:#a9b0a2;--wl-ink:#dde1d6;position:relative;background:var(--wl-bg);color:var(--white)}
 .vs-wl h1,.vs-wl h2,.vs-wl h3{margin:0}
 .vs-wl-code{margin:0;font-family:var(--font-display),sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--lime)}
@@ -126,24 +126,55 @@
 .vs-wl-hero:hover .vs-wl-hero-image img{transform:scale(1.04)}
 .vs-wl-hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,var(--wl-bg) 0%,rgba(11,13,11,0) 38%),linear-gradient(to top,var(--wl-bg) 0%,rgba(11,13,11,0) 30%)}
 .vs-site[dir=rtl] .vs-wl-hero-image::after{background:linear-gradient(to left,var(--wl-bg) 0%,rgba(11,13,11,0) 38%),linear-gradient(to top,var(--wl-bg) 0%,rgba(11,13,11,0) 30%)}
-.vs-wl-hero-image span{position:absolute;bottom:1.6rem;inset-inline-end:1.6rem;z-index:2;font-family:var(--font-display),sans-serif;font-weight:700;letter-spacing:.14em;font-size:.72rem;color:var(--wl-soft)}
+.vs-wl-hero-image>span{position:absolute;bottom:1.6rem;inset-inline-end:1.6rem;z-index:2;font-family:var(--font-display),sans-serif;font-weight:700;letter-spacing:.14em;font-size:.72rem;color:var(--wl-soft)}
+
+/* Masterclass hero: the lockup, the teacher's name first, then what he teaches; the introduction video sits on the photo. */
+.vs-wl-lockup{display:inline-flex;align-items:center;gap:.7rem;margin:0;align-self:flex-start}
+.vs-wl-lockup img{width:2.2rem;height:2.2rem}
+.vs-wl-lockup span{display:flex;flex-direction:column;line-height:1.1;font-family:var(--font-display),sans-serif}
+.vs-wl-lockup small{font-size:.7rem;letter-spacing:.2em;color:var(--wl-soft)}
+.vs-wl-lockup b{font-size:1.15rem;letter-spacing:.18em;color:var(--lime)}
+.vs-wl-hero h1.vs-wl-instructor{font-size:clamp(2.8rem,5.6vw,5.2rem);line-height:1.1}
+.vs-wl-teaches{margin:0;max-width:32rem;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.6;color:var(--wl-ink)}
+.vs-wl-trailer{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;z-index:3}
+.vs-wl-trailer-soon{position:absolute;z-index:3;inset-inline-start:clamp(1.5rem,4vw,3rem);bottom:clamp(4rem,9vw,6rem);display:flex;align-items:center;gap:.9rem;margin:0;padding:.7rem 1.2rem .7rem .7rem;border-radius:999px;background:rgba(11,13,11,.72);border:1px solid #3a4033;backdrop-filter:blur(6px)}
+.vs-site[dir=rtl] .vs-wl-trailer-soon{padding:.7rem .7rem .7rem 1.2rem}
+.vs-wl-play{display:grid;place-items:center;width:2.8rem;height:2.8rem;border-radius:50%;background:var(--lime);color:#0b0d0b}
+.vs-wl-trailer-soon>span:last-child{display:flex;flex-direction:column;gap:.15rem}
+.vs-wl-trailer-soon b{font-size:1rem}
+.vs-wl-trailer-soon small{font-size:.8rem;color:var(--wl-soft)}
+.vs-wl-why{display:flex;flex-direction:column;gap:1.1rem;max-width:56rem;border-bottom:1px solid #1e231c}
+.vs-wl-why h2{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.25}
+.vs-wl-custom{margin:0;font-size:1.1rem;line-height:1.8;color:var(--lime)}
 /* Chips */
 .vs-wl-chips{position:sticky;top:0;z-index:5;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;padding:.9rem clamp(1.5rem,5vw,6rem);background:rgba(11,13,11,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1e231c}
 .vs-wl-chips label{min-height:44px;display:inline-flex;align-items:center;padding:.6rem 1.25rem;border-radius:999px;border:1px solid #3a4033;color:var(--wl-ink);font-size:.95rem;cursor:pointer;transition:background .25s ease,color .25s ease}
 #wl-chip-all:checked~.vs-wl-chips label[for=wl-chip-all],#wl-chip-leader:checked~.vs-wl-chips label[for=wl-chip-leader],#wl-chip-institution:checked~.vs-wl-chips label[for=wl-chip-institution],#wl-chip-development:checked~.vs-wl-chips label[for=wl-chip-development]{background:var(--white);color:#0b0d0b;border-color:var(--white);font-weight:600}
 /* Doors */
 .vs-wl-door-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
-.vs-wl-door{position:relative;isolation:isolate;display:flex;flex-direction:column;min-height:32rem;overflow:hidden;border-radius:22px;border:1px solid var(--wl-line);background:#161a15;color:var(--white);text-decoration:none;transition:transform .35s ease,border-color .35s ease,opacity .35s ease}
+.vs-wl-door{position:relative;isolation:isolate;display:flex;flex-direction:column;min-height:40rem;overflow:hidden;border-radius:22px;border:1px solid var(--wl-line);background:#161a15;color:var(--white);text-decoration:none;transition:transform .35s ease,border-color .35s ease,opacity .35s ease}
 .vs-wl-door:hover{transform:translateY(-8px);border-color:var(--lime)}
 .vs-wl-door img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform 1.2s ease}
 .vs-wl-door:hover img{transform:scale(1.06)}
 .vs-wl-door.door-leader img{object-position:center 12%}
 .vs-wl-door::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--wl-bg) 10%,rgba(11,13,11,.6) 50%,rgba(11,13,11,.15) 100%)}
 .vs-wl-door-body{position:relative;z-index:2;margin-top:auto;display:flex;flex-direction:column;gap:.55rem;padding:1.8rem}
-.vs-wl-door-body strong{font-size:2rem;line-height:1.2;font-weight:800}
+.vs-wl-door-body h3{font-size:2rem;line-height:1.2;font-weight:800}
+.vs-wl-door-body h3 a{color:inherit;text-decoration:none}
+.vs-wl-door-body h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.vs-wl-door-teacher{font-size:.9rem;color:var(--lime)}
+.vs-wl-door-leaves{position:relative;z-index:2;display:flex;flex-direction:column;gap:.5rem;margin-top:.4rem;padding-top:.9rem;border-top:1px solid #3a4033}
+.vs-wl-door-leaves b{font-size:.85rem;color:var(--wl-soft);font-weight:600}
+.vs-wl-door-leaves ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.45rem}
+.vs-wl-door-leaves li{display:flex;gap:.5rem;align-items:flex-start;font-size:.95rem;line-height:1.6;color:var(--wl-ink)}
+.vs-wl-door-leaves li svg{flex:none;margin-top:.3rem;color:var(--lime)}
+.vs-wl-door-leaves .vs-wl-door-chips{flex-direction:row;flex-wrap:wrap;gap:.5rem}
+.vs-wl-door-chips a{display:inline-flex;align-items:center;min-height:40px;padding:.4rem 1rem;border-radius:999px;border:1px solid #3a4033;color:var(--white);text-decoration:none;font-size:.9rem}
+.vs-wl-door-chips a:hover{border-color:var(--lime);color:var(--lime)}
+.vs-wl-door-meta{font-size:.82rem;color:var(--wl-soft)}
 .vs-wl-door-line{font-size:1.05rem;line-height:1.7;color:var(--wl-ink)}
 .vs-wl-door-who{font-size:.85rem;color:var(--wl-soft);padding-top:.3rem}
-.vs-wl-door-open{display:inline-flex;align-items:center;gap:.4rem;margin-top:.6rem;color:var(--lime);font-size:.9rem}
+.vs-wl-door-open{position:relative;z-index:2;display:inline-flex;align-items:center;gap:.4rem;margin-top:.6rem;color:var(--lime);font-size:.9rem;text-decoration:none}
 #wl-chip-leader:checked~.vs-wl-doors .vs-wl-door:not(.door-leader),#wl-chip-institution:checked~.vs-wl-doors .vs-wl-door:not(.door-institution),#wl-chip-development:checked~.vs-wl-doors .vs-wl-door:not(.door-development){opacity:.3}
 /* Idea */
 .vs-wl-idea{display:flex;flex-direction:column;gap:1rem;max-width:52rem}
@@ -233,3 +264,54 @@
 @media(max-width:1100px){.vs-wl-door-grid{grid-template-columns:1fr;gap:1rem}.vs-wl-door{min-height:22rem}.vs-wl-method,.vs-wl-founder,.vs-wl-check{grid-template-columns:1fr;gap:2rem}.vs-wl-check-intro{position:static}}
 @media(max-width:860px){.vs-wl section{padding-inline:1.5rem}.vs-wl-hero{grid-template-columns:1fr;min-height:0}.vs-wl-hero-image{order:-1;min-height:22rem}.vs-wl-hero-image::after,.vs-site[dir=rtl] .vs-wl-hero-image::after{background:linear-gradient(to top,var(--wl-bg) 0%,rgba(11,13,11,0) 45%)}.vs-wl-hero-text{padding:1.5rem 1.5rem 3.5rem}.vs-wl-chips{padding-inline:1.5rem}.vs-wl-step-n{font-size:2rem}}
 @media(prefers-reduced-motion:reduce){.vs-wl *{transition:none!important;animation:none!important}}
+/* Masterclass door cards: the photo sits above the text so a face is never under a paragraph. */
+.vs-wl-door{min-height:0;background:var(--wl-panel)}
+.vs-wl-door img{position:relative;inset:auto;height:15rem;flex:none}
+.vs-wl-door::after{display:none}
+.vs-wl-door-body{margin-top:0;flex:1}
+.vs-wl-door-meta{margin-top:auto;padding-top:.4rem}
+/* Masterclass sector pages: documented shifts in the sector, each card with its figure and its source. */
+.vs-ws-teacher{margin:.4rem 0 0;color:var(--white);font-size:1rem}
+.vs-ws-shift-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:1.2rem}
+.vs-ws-shift-grid>div{display:flex;flex-direction:column;gap:.5rem;padding:1.3rem;background:#10151a;border:1px solid #2c3138;border-top:3px solid var(--lime)}
+.vs-ws-shift-grid b{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.25;color:var(--lime);font-weight:700}
+.vs-ws-shift-grid strong{font-size:1.15rem;line-height:1.5;font-weight:600}
+.vs-ws-page .vs-ws-shift-grid p{margin:0;font-size:.98rem;line-height:1.8;color:var(--grey)}
+.vs-ws-shift-grid a{margin-top:auto;font-size:.85rem;line-height:1.5}
+
+/* Masterclass, two doors (9 Oct 2026): opening paragraphs, a sourced quote and its consequence on each door. */
+.vs-wl-opening{display:flex;flex-direction:column;gap:1rem;max-width:46rem}
+.vs-wl-opening p{margin:0;font-size:1.12rem;line-height:1.95;color:var(--wl-ink)}
+.vs-wl-opening p:last-child{color:var(--white);font-weight:700}
+.vs-wl-doors .vs-wl-head{flex-direction:column;align-items:flex-start}
+.vs-wl-doors-line{margin:0;color:var(--wl-soft);font-size:1.1rem}
+.vs-wl-door-grid.is-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vs-wl-door-quote{margin:.4rem 0 0;padding-inline-start:.9rem;border-inline-start:3px solid var(--lime)}
+.vs-wl-door-quote blockquote{margin:0;font-size:1.15rem;line-height:1.75;font-weight:600;color:var(--white)}
+.vs-wl-door-quote figcaption{margin-top:.35rem;font-size:.8rem}
+.vs-wl-door-quote figcaption a{position:relative;z-index:2;display:inline-flex;align-items:center;gap:.25rem;color:var(--wl-soft);text-decoration:none}
+.vs-wl-door-quote figcaption a:hover{color:var(--lime)}
+.vs-wl-door-consequence{margin:.2rem 0 0;font-size:1.05rem;line-height:1.75;font-weight:700;color:var(--lime)}
+.vs-wl-door-for{margin:.2rem 0 0;font-size:.9rem;color:var(--wl-soft)}
+.vs-wl-door-body .vs-wl-door-text{margin:0}
+@media(max-width:1100px){.vs-wl-door-grid.is-two{grid-template-columns:1fr}}
+
+/* Masterclass: «نعلّمك، لا نربطك بنا» — the point Dr. Ahmed asked to make clearest. */
+.vs-wl-own{display:flex;flex-direction:column;gap:.9rem;max-width:56rem;border-bottom:1px solid #1e231c}
+.vs-wl-own .vs-wl-code{margin:0;color:var(--lime);font-size:1rem;font-weight:700}
+.vs-wl-own h2{font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.45;font-weight:800}
+.vs-wl-own>p:not(.vs-wl-code){margin:0;font-size:1.15rem;line-height:1.9;color:var(--wl-ink);max-width:44rem}
+.vs-wl-own>p:nth-last-child(2){font-size:1.3rem;font-weight:700;color:var(--white)}
+.vs-wl-own>p:last-child{color:var(--lime);font-weight:700}
+
+/* Masterclass: «ثمن الاعتماد الكلي» — documented cases, each with its lesson and source. */
+.vs-wl-price h2{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.3;margin-bottom:1.4rem}
+.vs-wl-price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.vs-wl-price-grid article{display:flex;flex-direction:column;gap:.6rem;padding:1.4rem;border-radius:18px;border:1px solid var(--wl-line);background:var(--wl-panel)}
+.vs-wl-price-date{font-size:.85rem;color:var(--lime)}
+.vs-wl-price-grid h3{font-size:1.25rem;line-height:1.5;font-weight:800;color:var(--white)}
+.vs-wl-price-grid p{margin:0;font-size:1rem;line-height:1.85;color:var(--wl-ink)}
+.vs-wl-price-grid .vs-wl-price-lesson{padding-top:.7rem;border-top:1px solid #3a4033;font-weight:700;color:var(--white)}
+.vs-wl-price-grid a{margin-top:auto;display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;line-height:1.5;color:var(--wl-soft);text-decoration:none}
+.vs-wl-price-grid a:hover{color:var(--lime)}
+@media(max-width:1100px){.vs-wl-price-grid{grid-template-columns:1fr}}

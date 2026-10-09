@@ -1,32 +1,12 @@
 {
   "examples": [],
-  "examplesNote": {
-    "en": "",
-    "ar": ""
-  },
   "boundary": {
     "en": "",
     "ar": ""
   },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
-  },
   "position": 1,
   "slug": "leader-seat",
-  "kind": "leader",
+  "kind": "individual",
   "institution": "",
   "roles": [
     "senior"
@@ -110,16 +90,6 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
-      },
-      "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
-    {
-      "q": {
         "en": "Do I need a technical background?",
         "ar": "هل أحتاج خلفية تقنية؟"
       },
@@ -136,6 +106,84 @@
       "a": {
         "en": "No. The website does not take your documents. What is used in a session stays in that session, under an arrangement we agree before it starts.",
         "ar": "لا. الموقع لا يستلم وثائقك. ما يُستخدم في الجلسة يبقى فيها، باتفاق يُحسم قبل أن تبدأ."
+      }
+    }
+  ],
+  "shiftsTitle": {
+    "en": "The faster leader of this era learns new skills",
+    "ar": "المدير الأسرع في هذا الزمن يتعلّم مهارات جديدة"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "About 25% faster",
+        "ar": "أسرع بنحو 25%"
+      },
+      "title": {
+        "en": "A quarter faster, and wrong when the tool was out of its depth",
+        "ar": "أسرع بالربع… وأخطأ حين تجاوز حدود الأداة"
+      },
+      "body": {
+        "en": "In a Harvard Business School experiment with 758 BCG consultants, those who used AI on tasks it suits completed 12.2% more tasks, about 25% faster, at about 32% higher quality. On a task beyond it, their correct answers fell from 84.5% to 70.6%. The skill is not using the tool; it is knowing when to trust it.",
+        "ar": "في تجربة لهارفارد للأعمال مع 758 مستشارًا من «BCG»: من استخدموا الذكاء الاصطناعي في مهام تناسبه أنجزوا 12.2% مهام أكثر، وأسرع بنحو 25%، وبجودة أعلى بنحو 32%. وفي مهمة خارج قدرته، نزلت إجاباتهم الصحيحة من 84.5% إلى 70.6%. المهارة ليست في استخدام الأداة، بل في معرفة متى تثق بها ومتى لا."
+      },
+      "source": {
+        "title": "HBS AI Institute · Navigating the Jagged Technological Frontier · September 2023",
+        "url": "https://aiinstitute.hbs.edu/back-to-the-beginnings-of-ai-at-work/"
+      }
+    },
+    {
+      "figure": {
+        "en": "66% of leaders",
+        "ar": "66% من القادة"
+      },
+      "title": {
+        "en": "Two in three leaders won’t hire without it",
+        "ar": "ثلثا القادة لا يوظفون من لا يعرفه"
+      },
+      "body": {
+        "en": "66% of business leaders said they would not hire someone without AI skills, and 71% would rather hire a less experienced candidate who has them. Experience alone is no longer enough.",
+        "ar": "66% من قادة الأعمال قالوا إنهم لن يوظفوا شخصًا بلا مهارات في الذكاء الاصطناعي، و71% يفضّلون مرشحًا أقل خبرة يملكها على مرشح أكثر خبرة لا يملكها. الخبرة وحدها لم تعد كافية."
+      },
+      "source": {
+        "title": "Microsoft and LinkedIn · 2024 Work Trend Index · 1 July 2024",
+        "url": "https://news.microsoft.com/en-xm/2024/07/01/microsofts-2024-work-trend-index-report-showcases-increased-appetite-for-ai-at-work-highlights-opportunity-for-leaders-to-transform-enthusiasm-into-productivity-gains/"
+      }
+    },
+    {
+      "figure": {
+        "en": "39% of skills",
+        "ar": "39% من المهارات"
+      },
+      "title": {
+        "en": "Today’s skills date before 2030",
+        "ar": "مهارات اليوم تتقادم قبل 2030"
+      },
+      "body": {
+        "en": "The World Economic Forum says around 39% of existing skill sets will be transformed or become outdated between 2025 and 2030, and 59 in every 100 workers will need training. Whoever does not learn now will be managing in five years with skills past their date.",
+        "ar": "يقول المنتدى الاقتصادي العالمي إن نحو 39% من المهارات الحالية ستتحول أو تتقادم بين 2025 و2030، وإن 59 من كل 100 عامل سيحتاجون إلى تدريب. من لا يتعلّم الآن، سيدير بعد خمس سنوات بمهارات انتهت صلاحيتها."
+      },
+      "source": {
+        "title": "World Economic Forum · The Future of Jobs Report 2025 · 7 January 2025",
+        "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/"
+      }
+    },
+    {
+      "figure": {
+        "en": "319 knowledge workers",
+        "ar": "319 موظفًا"
+      },
+      "title": {
+        "en": "The more you trust the tool, the less you think",
+        "ar": "كلما زادت الثقة في الأداة، قلّ التفكير"
+      },
+      "body": {
+        "en": "A Microsoft and Carnegie Mellon study of 319 knowledge workers who use AI found that more confidence in it went with less critical-thinking effort. Total reliance weakens the very skill you need to check the tool.",
+        "ar": "دراسة لـ«مايكروسوفت» وجامعة «كارنيجي ميلون» على 319 موظفًا يستخدمون الذكاء الاصطناعي: الثقة الزائدة فيه ارتبطت بجهد أقل في التفكير النقدي. الاعتماد الكلي يُضعف المهارة نفسها التي تحتاجها لتراقب الأداة."
+      },
+      "source": {
+        "title": "Lee et al. · The Impact of Generative AI on Critical Thinking · CHI 2025",
+        "url": "https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf"
       }
     }
   ]

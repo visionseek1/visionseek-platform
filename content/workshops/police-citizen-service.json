@@ -31,29 +31,9 @@
       }
     }
   ],
-  "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No workshop has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الورشة، من عمل المؤسسة نفسه. ليست نتائج. لم تُعقد ورشة بعد."
-  },
   "boundary": {
     "en": "Administration and citizen service only. Investigation, surveillance, monitoring, and every security function are out. If a task is operational, it does not enter the room.",
-    "ar": "الإدارة وخدمة المواطن فقط. التحقيق والمراقبة والمتابعة وكل وظيفة أمنية خارج الورشة. إن كانت المهمة عملياتية فهي لا تدخل الغرفة."
-  },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "ar": "الإدارة وخدمة المواطن فقط. التحقيق والمراقبة والمتابعة وكل وظيفة أمنية خارج الماستركلاس. إن كانت المهمة عملياتية فهي لا تدخل الغرفة."
   },
   "position": 2,
   "slug": "police-citizen-service",
@@ -76,16 +56,16 @@
     "ar": "مديرو وموظفو الإدارة وخدمة المواطن."
   },
   "audienceInstitution": {
-    "en": "A police institution, limited to the administrative side and the citizen's request. Security work is outside this workshop.",
-    "ar": "مؤسسة شرطية، في جانبها الإداري وطلب المواطن فقط. العمل الأمني خارج هذه الورشة."
+    "en": "A police institution, limited to the administrative side and the citizen's request. Security work is outside this masterclass.",
+    "ar": "مؤسسة شرطية، في جانبها الإداري وطلب المواطن فقط. العمل الأمني خارج هذا الماستركلاس."
   },
   "whyProblem": {
     "en": "The same citizen question is rewritten several times. The internal note is assembled by hand from scattered comments. The delay is in the writing, not in a missing system.",
     "ar": "سؤال المواطن نفسه يُعاد صياغته أكثر من مرة. المذكرة الداخلية تُجمع يدويًا من تعليقات متفرقة. التأخير في الكتابة، لا في نظام ناقص."
   },
   "whyEvidence": {
-    "en": "The OECD's Governing with Artificial Intelligence report, published on 18 September 2025, describes government use of AI to tailor internal processes and public services, and to improve the job quality and learning of public servants. That is the only lane this workshop uses.",
-    "ar": "تقرير OECD المعنون Governing with Artificial Intelligence، المنشور في 18 سبتمبر 2025، يصف استعمال الحكومات للذكاء الاصطناعي في تكييف الإجراءات الداخلية والخدمات العامة، وفي تحسين جودة عمل الموظف العام وتعلّمه. هذا هو المسار الوحيد لهذه الورشة."
+    "en": "The OECD's Governing with Artificial Intelligence report, published on 18 September 2025, describes government use of AI to tailor internal processes and public services, and to improve the job quality and learning of public servants. That is the only lane this masterclass uses.",
+    "ar": "تقرير OECD المعنون Governing with Artificial Intelligence، المنشور في 18 سبتمبر 2025، يصف استعمال الحكومات للذكاء الاصطناعي في تكييف الإجراءات الداخلية والخدمات العامة، وفي تحسين جودة عمل الموظف العام وتعلّمه. هذا هو المسار الوحيد لهذا الماستركلاس."
   },
   "source": {
     "title": "OECD · Governing with Artificial Intelligence · 18 September 2025",
@@ -100,8 +80,8 @@
     "ar": "الفريق يشتغل على حالاته الإدارية: رد، أو محضر قصير، أو إعلان خدمة. الإنسان يقرأ ويرسل كل ما يخرج من المبنى."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those administrative tasks, and which tools are still in daily use. We do not publish a result before that.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام الإدارية، والأدوات التي ما زالت تُستعمل كل يوم. لا ننشر نتيجة قبل ذلك."
+    "en": "After 30 days we look at two things: time taken off those administrative tasks, and which tools are still in daily use.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام الإدارية، والأدوات التي ما زالت تُستعمل كل يوم."
   },
   "questions": [
     {
@@ -142,18 +122,8 @@
   "faq": [
     {
       "q": {
-        "en": "Has this workshop been held?",
-        "ar": "هل عُقدت هذه الورشة؟"
-      },
-      "a": {
-        "en": "No. It is in design. No workshop has been held, and this page is not a client story.",
-        "ar": "لا. الورشة قيد التصميم. لم تُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
-    {
-      "q": {
         "en": "Does this cover security work?",
-        "ar": "هل تشمل الورشة العمل الأمني؟"
+        "ar": "هل يشمل الماستركلاس العمل الأمني؟"
       },
       "a": {
         "en": "No. Not investigation, not surveillance, not monitoring. The door is the citizen desk and the administrative office.",

@@ -5,8 +5,8 @@ import {workshopSection} from '@/lib/institution/workshops';
 export const metadata: Metadata = {
   title: `${workshopSection.title.ar} | VisionSeek`,
   description: workshopSection.intro.ar,
-  alternates: {canonical: '/ar/workshops', languages: {en: '/workshops', ar: '/ar/workshops'}},
-  openGraph: {title: `${workshopSection.title.ar} | VisionSeek`, description: workshopSection.intro.ar, url: '/ar/workshops'},
+  alternates: {canonical: '/ar/masterclass', languages: {en: '/masterclass', ar: '/ar/masterclass'}},
+  openGraph: {title: `${workshopSection.title.ar} | VisionSeek`, description: workshopSection.intro.ar, url: '/ar/masterclass'},
 };
 
 export default function Page() {

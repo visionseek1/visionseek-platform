@@ -46,8 +46,8 @@
         "ar": "خطوة أولى مفيدة"
       },
       "body": {
-        "en": "Write one sentence: who should become capable of doing what? Then identify the strongest evidence for the current limit. This is the starting artifact for the first VisionSeek workshop.",
-        "ar": "اكتب جملة واحدة: مَن يجب أن يصبح قادرًا على فعل ماذا؟ ثم حدد أقوى دليل على الحد الحالي. هذه هي ورقة البداية للورشة الأولى في VisionSeek."
+        "en": "Write one sentence: who should become capable of doing what? Then identify the strongest evidence for the current limit. This is the starting artifact for the first VisionSeek masterclass.",
+        "ar": "اكتب جملة واحدة: مَن يجب أن يصبح قادرًا على فعل ماذا؟ ثم حدد أقوى دليل على الحد الحالي. هذه هي ورقة البداية لأول ماستركلاس في VisionSeek."
       }
     }
   ],
@@ -56,7 +56,7 @@
       "href": "/method"
     },
     {
-      "href": "/workshops"
+      "href": "/masterclass"
     }
   ]
 }

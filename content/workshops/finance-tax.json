@@ -1,0 +1,205 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A reply to a taxpayer",
+        "ar": "رد على ممول"
+      },
+      "body": {
+        "en": "A taxpayer asks about a late-filing penalty notice. Draft a clear, courteous reply that explains the notice and the routes of appeal from published guidance. The officer checks, edits and signs; the tool decides nothing in the case.",
+        "ar": "ممول يسأل عن إخطار بغرامة تأخير. صياغة رد واضح ومهذب يشرح الإخطار وطرق التظلم من الإرشادات المنشورة. الموظف يراجع ويعدّل ويوقّع، والأداة لا تقرر شيئًا في الحالة."
+      }
+    },
+    {
+      "title": {
+        "en": "A new regulation for staff",
+        "ar": "لائحة جديدة للموظفين"
+      },
+      "body": {
+        "en": "Turn a new circular or executive regulation into one internal page for frontline staff. Every line is checked against the official text.",
+        "ar": "تحويل تعميم أو لائحة تنفيذية جديدة إلى صفحة داخلية واحدة لموظفي الصف الأول. كل سطر يُراجع على النص الرسمي."
+      }
+    },
+    {
+      "title": {
+        "en": "A budget variance memo",
+        "ar": "مذكرة انحراف عن الموازنة"
+      },
+      "body": {
+        "en": "From a table the team provides to a short memo for the minister's office explaining why a line item differs from its allocation, with options to discuss. Analysts check every figure.",
+        "ar": "من جدول يقدّمه الفريق إلى مذكرة قصيرة لمكتب الوزير تشرح لماذا اختلف بند عن اعتماده، مع خيارات للنقاش. المحللون يراجعون كل رقم."
+      }
+    }
+  ],
+  "boundary": {
+    "en": "No automated tax decision, no assessment, no audit. No real taxpayer data is used under their name. An analyst checks every figure in a budget memo before it leaves.",
+    "ar": "لا قرار ضريبي آلي، ولا ربط، ولا فحص. ولا تُستعمل بيانات ممول حقيقي باسمه. وكل رقم في مذكرة الموازنة يراجعه محلل قبل أن يخرج."
+  },
+  "position": 9,
+  "slug": "finance-tax",
+  "draft": true,
+  "kind": "institution",
+  "institution": "finance",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "Taxpayers understand the reply the first time, the budget memo reaches the minister's office clear, and every tax decision stays with the officer who owns it.",
+    "ar": "الممول يفهم الرد من أول مرة، ومذكرة الموازنة تصل إلى مكتب الوزير واضحة، والقرار الضريبي يبقى لصاحبه."
+  },
+  "summary": {
+    "en": "For the people who write to taxpayers, explain new rules to staff, and prepare budget memos. No tax decision is issued by a tool.",
+    "ar": "لمن يكتب للممول، ويشرح اللائحة الجديدة للموظفين، ويجهّز مذكرة الموازنة. لا قرار ضريبي يصدر من أداة."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in taxpayer service, legal affairs, budgeting, and leadership offices.",
+    "ar": "مديرو وموظفو خدمة الممولين، والشؤون القانونية، والموازنة، ومكاتب القيادات."
+  },
+  "audienceInstitution": {
+    "en": "A finance ministry or tax administration, in its written work: replies, explanations, memos. Assessment, audit, and tax decisions are outside this masterclass.",
+    "ar": "وزارة مالية أو مصلحة ضرائب، في شغلها المكتوب: الرد، والشرح، والمذكرة. الربط والفحص والقرار الضريبي خارج هذا الماستركلاس."
+  },
+  "whyProblem": {
+    "en": "Taxpayers write twice because the first reply was unclear. A new regulation reaches staff as a long text, so each answers by their own reading. The budget variance memo gets written the night before.",
+    "ar": "الممول يكتب مرتين لأن الرد الأول لم يكن واضحًا. اللائحة الجديدة تصل الموظفين نصًا طويلًا، فيجيب كل واحد بفهمه. ومذكرة الانحراف عن الموازنة تُكتب في آخر ليلة."
+  },
+  "whyEvidence": {
+    "en": "On 21 November 2024 the IMF published a technical note on understanding AI in tax and customs administration. It says the governance and management of AI is an institutional responsibility that extends far beyond the IT department, and that staff, senior leadership in particular, must proactively understand its benefits, limitations, and potential consequences. That is where this masterclass starts.",
+    "ar": "في 21 نوفمبر 2024 نشر صندوق النقد الدولي مذكرة فنية عن فهم الذكاء الاصطناعي في إدارات الضرائب والجمارك. تقول إن حوكمة الذكاء الاصطناعي وإدارته مسؤولية المؤسسة كلها، وتتجاوز كثيرًا حدود إدارة تقنية المعلومات، وإن على الموظفين، والقيادات العليا خاصة، أن يبادروا إلى فهم فوائده وحدوده وعواقبه المحتملة. من هنا يبدأ هذا الماستركلاس."
+  },
+  "source": {
+    "title": "IMF · Understanding Artificial Intelligence in Tax and Customs Administration · 21 November 2024",
+    "url": "https://www.imf.org/en/Publications/TNM/Issues/2024/11/21/Understanding-Artificial-Intelligence-in-Tax-and-Customs-Administration-555097"
+  },
+  "shiftsTitle": {
+    "en": "Seven in ten tax administrations have already started",
+    "ar": "سبع من كل عشر إدارات ضرائب بدأت بالفعل"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "69%",
+        "ar": "69%"
+      },
+      "title": {
+        "en": "AI is now the rule, not the exception",
+        "ar": "الذكاء الاصطناعي صار القاعدة لا الاستثناء"
+      },
+      "body": {
+        "en": "According to the OECD's Tax Administration 2025, as reported by CIAT, around 69% of the administrations assessed already use AI, and another 24% are in the implementation phase.",
+        "ar": "بحسب تقرير «إدارة الضرائب 2025» لمنظمة التعاون الاقتصادي والتنمية، كما نقله مركز CIAT، نحو 69% من الإدارات التي شملها التقييم تستخدم الذكاء الاصطناعي بالفعل، و24% أخرى في مرحلة التطبيق."
+      },
+      "source": {
+        "title": "CIAT, citing OECD Tax Administration 2025 · 2 December 2025",
+        "url": "https://ciat.org/ai-is-already-here/?lang=en"
+      }
+    },
+    {
+      "figure": {
+        "en": "26% → 98%",
+        "ar": "من 26% إلى 98%"
+      },
+      "title": {
+        "en": "Korea: as if it had hired a thousand staff",
+        "ar": "كوريا: كأنها عيّنت ألف موظف"
+      },
+      "body": {
+        "en": "Korea's AI Tax Helpline, a voice-recognition phone service with a virtual assistant, successfully handled 98% of calls in 2024, against 26% the year before. CIAT says that is equivalent, in service capacity, to hiring a thousand additional employees.",
+        "ar": "خط المساعدة الضريبي الكوري بالذكاء الاصطناعي، وهو خدمة هاتفية تتعرّف على الصوت ومعها مساعد افتراضي، أدار بنجاح 98% من المكالمات في 2024، مقابل 26% في العام السابق. ويقول المركز إن ذلك يساوي، في قدرة الخدمة، تعيين ألف موظف إضافي."
+      },
+      "source": {
+        "title": "CIAT · AI is already here · 2 December 2025",
+        "url": "https://ciat.org/ai-is-already-here/?lang=en"
+      }
+    },
+    {
+      "figure": {
+        "en": "2 of 6",
+        "ar": "2 من 6"
+      },
+      "title": {
+        "en": "The tool alone is not enough",
+        "ar": "الأداة وحدها لا تكفي"
+      },
+      "body": {
+        "en": "When Canada's Auditor General tested the Canada Revenue Agency's chatbot, it answered only 2 of 6 questions accurately, while public web-based AI tools answered 5 of 6. The lesson: having a tool does not mean the institution knows how to run it.",
+        "ar": "حين اختبر المراجع العام الكندي روبوت المحادثة لدى وكالة الإيرادات الكندية، وجد أنه أجاب إجابة صحيحة عن سؤالين فقط من ستة، بينما أجابت أدوات ذكاء اصطناعي عامة عن خمسة من ستة. والدرس: وجود الأداة لا يعني أن المؤسسة تعرف كيف تديرها."
+      },
+      "source": {
+        "title": "Office of the Auditor General of Canada · Canada Revenue Agency Contact Centres · October 2025",
+        "url": "https://www.canada.ca/content/dam/oag-bvg/audit-reports/documents/parl_oag_202510_01_e.pdf"
+      }
+    }
+  ],
+  "before": {
+    "en": "Five questions about the writing that repeats in taxpayer service and the budget offices. No individual taxpayer file.",
+    "ar": "خمسة أسئلة عن الكتابة التي تتكرر في خدمة الممولين ومكاتب الموازنة. لا ملف ممول بعينه."
+  },
+  "during": {
+    "en": "The team works on its own material: a reply to a taxpayer, a new regulation turned into a one-page staff brief, or a budget variance memo. The officer checks and signs; an analyst checks every figure.",
+    "ar": "الفريق يشتغل على مادته: رد على ممول، أو لائحة جديدة تتحول إلى صفحة للموظفين، أو مذكرة انحراف عن الموازنة. الموظف يراجع ويوقّع، والمحلل يراجع كل رقم."
+  },
+  "after": {
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+  },
+  "questions": [
+    {
+      "en": "Which taxpayer question is answered from scratch every day?",
+      "ar": "أي سؤال من الممولين يُجاب كل يوم من الصفر؟"
+    },
+    {
+      "en": "Which reply comes back because the taxpayer did not understand it the first time?",
+      "ar": "أي رد يعود لأن الممول لم يفهمه من المرة الأولى؟"
+    },
+    {
+      "en": "How many days do staff need to understand a new regulation and answer about it with one voice?",
+      "ar": "كم يومًا يحتاج الموظفون ليفهموا لائحة جديدة ويجيبوا عنها بصوت واحد؟"
+    },
+    {
+      "en": "Which memo to the minister's office is written under time pressure every month?",
+      "ar": "أي مذكرة تُكتب لمكتب الوزير تحت ضغط الوقت كل شهر؟"
+    },
+    {
+      "en": "What must never leave the building before a person has checked it?",
+      "ar": "ما الذي لا يجوز أن يخرج من المبنى قبل أن يراجعه إنسان؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A reply pattern for recurring taxpayer questions, tied to published guidance, still signed by its owner.",
+      "ar": "نمط رد للأسئلة المتكررة من الممولين، مربوط بالإرشادات المنشورة، ويبقى التوقيع لصاحبه."
+    },
+    {
+      "en": "One real regulation turned into a page for staff: what changed, who is affected, and the common questions.",
+      "ar": "لائحة حقيقية تحوّلت إلى صفحة للموظفين: ما الذي تغيّر، ومن يتأثر، وما الأسئلة الشائعة."
+    },
+    {
+      "en": "A written line between what the tool drafts and what the officer decides, so nothing comes near a tax decision.",
+      "ar": "حد مكتوب بين ما تُسوّده الأداة وما يقرره الموظف، حتى لا يقترب شيء من القرار الضريبي."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Does the tool issue a tax decision or an assessment?",
+        "ar": "هل تصدر الأداة قرارًا ضريبيًا أو ربطًا؟"
+      },
+      "a": {
+        "en": "No. The tool drafts a reply or a memo. The decision and the signature belong to the officer in charge.",
+        "ar": "لا. الأداة تُسوّد ردًا أو مذكرة. القرار والتوقيع لصاحب الاختصاص."
+      }
+    },
+    {
+      "q": {
+        "en": "Where does the tool help most?",
+        "ar": "أين تنفع الأداة أكثر؟"
+      },
+      "a": {
+        "en": "In a 14-week trial at Australia's Treasury between May and August 2024, with 218 staff, the clearest benefits were in basic administrative tasks, and the product was not suitable for more complex tasks. That is why we start with daily work, not complex analysis.",
+        "ar": "في تجربة استمرت 14 أسبوعًا في وزارة الخزانة الأسترالية بين مايو وأغسطس 2024، وشارك فيها 218 موظفًا، كانت أوضح الفوائد في المهام الإدارية الأساسية، ولم تكن الأداة مناسبة للمهام الأكثر تعقيدًا. لذلك نبدأ من الشغل اليومي، لا من التحليل المعقد."
+      }
+    }
+  ]
+}

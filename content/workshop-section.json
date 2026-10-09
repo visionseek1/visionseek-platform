@@ -1,19 +1,15 @@
 {
   "title": {
-    "en": "Workshops",
-    "ar": "الورش"
+    "en": "Masterclass",
+    "ar": "ماستركلاس"
   },
   "hero": {
     "en": "It is not enough to learn how to use it.",
     "ar": "لا يكفي أن تتعلم استخدامه."
   },
   "intro": {
-    "en": "Learn how it widens your ability to understand, to think, and to act.",
-    "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
-  },
-  "status": {
-    "en": "In design · No workshop has been held",
-    "ar": "قيد التصميم · لم تُعقد ورشة بعد"
+    "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
+    "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
   },
   "rolesHeading": {
     "en": "Start from the seat you hold",
@@ -27,8 +23,8 @@
         "ar": "قيادة عليا"
       },
       "note": {
-        "en": "Your path is the leader's own session, then the work of developing the institution. The team workshops are for the people who report to you.",
-        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ورش المؤسسات لفريقك، لا لك وحدك."
+        "en": "Your path is the leader's own session, then the work of developing the institution. The team masterclasses are for the people who report to you.",
+        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ماستركلاس المؤسسات لفريقك، لا لك وحدك."
       }
     },
     {
@@ -38,8 +34,8 @@
         "ar": "مديرون"
       },
       "note": {
-        "en": "Your path is the institution workshop for the kind of organization you run. You bring the team's real cases, not a sample from somewhere else.",
-        "ar": "مسارك ورشة مؤسستك. تحضر حالات فريقك الحقيقية، لا نموذجًا مستعارًا."
+        "en": "Your path is the institution masterclass for the kind of organization you run. You bring the team's real cases, not a sample from somewhere else.",
+        "ar": "مسارك ماستركلاس مؤسستك. تحضر حالات فريقك الحقيقية، لا نموذجًا مستعارًا."
       }
     },
     {
@@ -49,40 +45,78 @@
         "ar": "موظفون"
       },
       "note": {
-        "en": "Your path is the same institution workshop, from the desk where the work actually lands. The point is a faster, cleaner hand on today's tasks.",
-        "ar": "مسارك ورشة المؤسسة نفسها، من المكتب الذي يصل إليه الشغل. المقصود يد أسرع وأنظف على مهام اليوم."
+        "en": "Your path is the same institution masterclass, from the desk where the work actually lands. The point is a faster, cleaner hand on today's tasks.",
+        "ar": "مسارك ماستركلاس المؤسسة نفسه، من المكتب الذي يصل إليه الشغل. المقصود يد أسرع وأنظف على مهام اليوم."
       }
     }
   ],
   "doors": {
-    "leader": {
+    "individual": {
       "name": {
-        "en": "Management and leadership in the age of AI",
-        "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
+        "en": "For you",
+        "ar": "لك أنت"
       },
-      "line": {
-        "en": "A manager and leader who sees more, understands faster, and decides better.",
-        "ar": "مدير وقائد يرى أكثر، ويفهم أسرع، ويتخذ قرارات أفضل."
+      "quote": {
+        "en": "You're not going to lose your job to an AI, but you're going to lose your job to someone who uses AI.",
+        "ar": "لن تخسر عملك بسبب الذكاء الاصطناعي، بل لصالح من يستخدمه."
+      },
+      "quoteBy": {
+        "en": "Jensen Huang, co-founder and CEO of Nvidia · May 2025",
+        "ar": "جنسن هوانغ، أحد مؤسسي «إنفيديا» ورئيسها التنفيذي · مايو 2025"
+      },
+      "quoteSource": {
+        "title": "CNBC via NBC Los Angeles · Nvidia CEO at the Milken Institute Global Conference · 28 May 2025",
+        "url": "https://www.nbclosangeles.com/news/business/money-report/nvidia-ceo-you-wont-lose-your-job-to-ai-youll-lose-your-job-to-somebody-who-uses-ai/3710590"
+      },
+      "consequence": {
+        "en": "Whoever learns it today moves ahead. Whoever puts it off will find themselves behind people who were behind them yesterday.",
+        "ar": "من يتعلّمه اليوم يتقدّم، ومن يؤجّله سيجد نفسه غدًا خلف أناس كانوا خلفه بالأمس."
+      },
+      "for": {
+        "en": "For anyone who wants to understand AI, or to know how to use it in their own job.",
+        "ar": "لمن يريد أن يفهم الذكاء الاصطناعي، أو يعرف كيف يعمل به في عمله."
+      },
+      "body": {
+        "en": "Dr. Ahmed sits with you and understands your work before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
+        "ar": "يجلس معك د. أحمد، ويفهم عملك قبل أن يكلّمك عن أي أداة. ثم تفهم الذكاء الاصطناعي من داخل عملك أنت: أين يختصر عليك الوقت، وأين يفتح لك بابًا لم تكن تقدر عليه."
+      },
+      "meta": {
+        "en": "Private session · Built around your work, after we've studied it",
+        "ar": "جلسة خاصة · تُفصَّل على عملك بعد أن ندرسه"
       }
     },
     "institution": {
       "name": {
-        "en": "Working with AI",
-        "ar": "العمل مع الذكاء الاصطناعي"
+        "en": "For your institution",
+        "ar": "لمؤسستك"
       },
-      "line": {
-        "en": "A more capable person, not a person who works more.",
-        "ar": "إنسان أكثر قدرة، لا إنسان يعمل أكثر."
-      }
-    },
-    "development": {
-      "name": {
-        "en": "The institution and AI",
-        "ar": "المؤسسة والذكاء الاصطناعي"
+      "quote": {
+        "en": "Businesses will distinguish themselves by how well they use it.",
+        "ar": "سيكون الفرق بين شركة وأخرى في مدى إتقانها استخدام الذكاء الاصطناعي."
       },
-      "line": {
-        "en": "An institution that learns faster, moves faster, and can do more.",
-        "ar": "مؤسسة تتعلم أسرع، وتتحرك أسرع، وتستطيع أكثر."
+      "quoteBy": {
+        "en": "Bill Gates, co-founder of Microsoft · March 2023",
+        "ar": "بيل غيتس، أحد مؤسسي «مايكروسوفت» · مارس 2023"
+      },
+      "quoteSource": {
+        "title": "BigDATAwire · Bill Gates Says the Age of AI Has Begun · 22 March 2023",
+        "url": "https://bigdatawire.com/2023/03/22/bill-gates-says-the-age-of-ai-has-begun-bringing-opportunity-and-responsibility"
+      },
+      "consequence": {
+        "en": "The institution that starts today gets ahead. The one that waits will catch up years late.",
+        "ar": "المؤسسة التي تبدأ اليوم تسبق، والتي تنتظر ستلحق بغيرها متأخرة بسنوات."
+      },
+      "for": {
+        "en": "For an institution that wants to know what AI can do for it.",
+        "ar": "لمؤسسة تريد أن تعرف ما الذي ينفعها من الذكاء الاصطناعي."
+      },
+      "body": {
+        "en": "We study your institution from the inside, and what its counterparts around the world have achieved. Then we choose with you what to apply, so you start where they have already arrived.",
+        "ar": "ندرس مؤسستك من الداخل، وندرس ما وصلت إليه مثيلاتها في العالم، ثم نختار معكم ما تطبّقونه وينفعكم، لتبدأوا من حيث وصلوا هم."
+      },
+      "meta": {
+        "en": "Private masterclass · Built on your institution, after we've studied it",
+        "ar": "ماستركلاس خاص · يُبنى على مؤسستك بعد أن ندرسها"
       }
     }
   },
@@ -125,103 +159,279 @@
         "en": "Companies",
         "ar": "الشركات"
       }
+    },
+    {
+      "id": "customs",
+      "label": {
+        "en": "Customs and ports",
+        "ar": "الجمارك والموانئ"
+      }
+    },
+    {
+      "id": "finance",
+      "label": {
+        "en": "Finance and tax",
+        "ar": "المالية والضرائب"
+      }
+    },
+    {
+      "id": "justice",
+      "label": {
+        "en": "Justice and courts",
+        "ar": "العدل والمحاكم"
+      }
+    },
+    {
+      "id": "education",
+      "label": {
+        "en": "Education",
+        "ar": "التعليم"
+      }
+    },
+    {
+      "id": "energy",
+      "label": {
+        "en": "Energy and power",
+        "ar": "الطاقة والكهرباء"
+      }
+    },
+    {
+      "id": "municipality",
+      "label": {
+        "en": "Municipalities",
+        "ar": "البلديات"
+      }
+    },
+    {
+      "id": "civilservice",
+      "label": {
+        "en": "Labour and civil service",
+        "ar": "العمل والخدمة المدنية"
+      }
     }
   ],
   "allInstitutions": {
-    "en": "All five",
-    "ar": "الأنواع الخمسة"
+    "en": "All sectors",
+    "ar": "كل القطاعات"
   },
   "live": {
-    "kicker": "VISIONSEEK WORKSHOPS",
+    "kicker": "VISIONSEEK MASTERCLASS",
+    "instructor": {
+      "ar": "د. أحمد عبدالعليم",
+      "en": "Dr. Ahmed Abdelalim"
+    },
+    "teaches": {
+      "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
+      "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
+    },
+    "trailer": {
+      "video": "",
+      "label": {
+        "ar": "شاهد المقدمة",
+        "en": "Watch the introduction"
+      }
+    },
     "heroQuote": {
       "en": "AI will not only change how we work. It will change the limits of what we can do.",
       "ar": "الذكاء الاصطناعي لن يغيّر طريقة عملنا فقط. سيغيّر حدود ما نستطيع أن نفعله."
     },
-    "heroTitle": {
-      "en": "So it is not enough to learn how to use it.",
-      "ar": "لذلك، لا يكفي أن تتعلم استخدامه."
+    "opening": [
+      {
+        "en": "Every institution still does some of its work the way it did ten years ago, though that work can now be done faster, better and in less time. Many institutions around the world have already made the move, and published what they learned.",
+        "ar": "في كل مؤسسة عملٌ ما زال يُنجَز كما كان قبل عشر سنين، مع أنه صار ممكنًا اليوم أن يُنجَز أسرع وأفضل وبوقت أقل. ومؤسسات كثيرة في العالم سبقت إلى ذلك، ونشرت ما تعلّمته."
+      },
+      {
+        "en": "The masterclass shortens the road. It takes what the leading institutions have learned and applies it to your own work, so you start where they arrived, not where they began.",
+        "ar": "الماستركلاس يختصر عليك الطريق: يأخذ ما وصلت إليه أفضل مؤسسات العالم، ويطبّقه على عملك أنت، لتبدأ من حيث انتهوا، لا من حيث بدأوا."
+      },
+      {
+        "en": "Time waits for no one. What you learn today puts you ahead. What you put off, you will learn later, after others got there first.",
+        "ar": "والوقت لا ينتظر أحدًا. ما تتعلّمه اليوم تسبق به غيرك، وما تؤجّله ستتعلّمه غدًا وقد سبقك إليه غيرك."
+      },
+      {
+        "en": "You won't learn commands to type into a tool here; tools change every month. You learn to see your work anew, and that stays with you.",
+        "ar": "هنا لا تتعلّم أوامر تكتبها لأداة؛ فالأدوات تتغيّر كل شهر. تتعلّم كيف ترى عملك من جديد، وهذه تبقى معك."
+      },
+      {
+        "en": "The experience is out there for anyone who reads it. What nobody will do is sit with you, understand your work, and pick out what is useful to you. That is the masterclass.",
+        "ar": "التجارب منشورة لمن يريد أن يقرأها. لكن لا أحد سيجلس معك، ويفهم عملك، ثم يختار لك منها ما ينفعك أنت. هذا هو الماستركلاس."
+      }
+    ],
+    "independence": {
+      "title": {
+        "en": "We teach you. We don't tie you to us.",
+        "ar": "نعلّمك، ولا نربطك بنا"
+      },
+      "lead": {
+        "en": "Tools hand you a fish every day, and charge you for it every day. We teach you to fish.",
+        "ar": "الأدوات تعطيك كل يوم سمكة، وتأخذ ثمنها كل يوم. نحن نعلّمك الصيد."
+      },
+      "lines": [
+        {
+          "en": "Whoever understands for themselves owns their decisions. Whoever depends on others leaves those decisions in someone else’s hands.",
+          "ar": "فمن يفهم بنفسه يملك قراره، ومن يعتمد على غيره يبقى قراره في يد غيره."
+        },
+        {
+          "en": "We want every person and every Arab institution to own its capability, not rent it.",
+          "ar": "نريد لكل إنسان ولكل مؤسسة عربية أن تملك قدرتها، لا أن تستأجرها."
+        },
+        {
+          "en": "A capability you don't own today is one you'll be paying someone else for tomorrow.",
+          "ar": "والقدرة التي لا تملكها اليوم، ستدفع ثمنها غدًا لغيرك."
+        }
+      ]
     },
-    "heroLede": {
-      "en": "Learn how it widens your ability to understand, to think, and to act.",
-      "ar": "تعلّم كيف يوسّع قدرتك على الفهم، والتفكير، والعمل."
+    "dependence": {
+      "title": {
+        "en": "The price of depending on one tool",
+        "ar": "ثمن الاعتماد الكلي"
+      },
+      "cards": [
+        {
+          "date": {
+            "en": "19 July 2024",
+            "ar": "19 يوليو 2024"
+          },
+          "title": {
+            "en": "One update stopped the world",
+            "ar": "تحديث واحد أوقف العالم"
+          },
+          "body": {
+            "en": "A faulty update from a single security company, CrowdStrike, took down about 8.5 million Windows devices. Airlines halted flights around the world; banks and rail networks went down with them.",
+            "ar": "تحديث خاطئ من شركة أمن واحدة (CrowdStrike) أوقف قرابة 8.5 مليون جهاز ويندوز. توقفت رحلات طيران حول العالم، وتعطلت بنوك وشبكات قطارات."
+          },
+          "lesson": {
+            "en": "When everything rests on one tool, one mistake is enough to stop everything.",
+            "ar": "حين يقوم كل شيء على أداة واحدة، يكفي خطأ واحد ليتوقف كل شيء."
+          },
+          "source": {
+            "title": "TechCrunch · Microsoft says 8.5M Windows devices were affected by CrowdStrike outage · 20 July 2024",
+            "url": "https://techcrunch.com/2024/07/20/microsoft-says-8.5m-windows-devices-were-affected-by-crowdstrike-outage"
+          }
+        },
+        {
+          "date": {
+            "en": "7 October 2025",
+            "ar": "7 أكتوبر 2025"
+          },
+          "title": {
+            "en": "A government report citing sources that do not exist",
+            "ar": "تقرير حكومي بمراجع لا وجود لها"
+          },
+          "body": {
+            "en": "The Australian government paid Deloitte A$440,000 for a report that turned out to be full of fabricated references and an invented quote from a court judgment, after AI was used to prepare it. Deloitte paid part of the fee back.",
+            "ar": "دفعت الحكومة الأسترالية 440 ألف دولار أسترالي لـ«ديلويت» مقابل تقرير اتضح أنه مليء بمراجع مختلَقة واقتباس مخترع من حكم قضائي، بعد استخدام الذكاء الاصطناعي في إعداده. وأعادت «ديلويت» جزءًا من المبلغ."
+          },
+          "lesson": {
+            "en": "An institution that doesn't understand the work itself can't catch its tool's mistakes, or the mistakes of whoever uses the tool on its behalf.",
+            "ar": "المؤسسة التي لا تفهم بنفسها، لا تستطيع أن تكتشف خطأ أداتها، ولا خطأ من يستخدمها نيابة عنها."
+          },
+          "source": {
+            "title": "AP via BNN Bloomberg · Deloitte to partially refund Australian government for report with apparent AI-generated errors · 7 October 2025",
+            "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2025/10/07/deloitte-to-partially-refund-australian-government-for-report-with-apparent-ai-generated-errors/"
+          }
+        },
+        {
+          "date": {
+            "en": "14 February 2024",
+            "ar": "14 فبراير 2024"
+          },
+          "title": {
+            "en": "\"The chatbot did it\" did not work",
+            "ar": "«المسؤول هو الروبوت» لم تنفع"
+          },
+          "body": {
+            "en": "Air Canada's chatbot gave a customer wrong information. The airline argued the chatbot was a separate entity responsible for its own actions. The tribunal rejected that and held the airline responsible for everything on its website.",
+            "ar": "قال روبوت محادثة «طيران كندا» لعميل معلومة خاطئة. دفعت الشركة بأن الروبوت «كيان مستقل مسؤول عن أفعاله»، فرفضت المحكمة، وحمّلت الشركة مسؤولية كل ما يقوله موقعها."
+          },
+          "lesson": {
+            "en": "You can hand the work to a tool. You can't hand it the responsibility.",
+            "ar": "تستطيع أن تعطي العمل للأداة، لكنك لا تستطيع أن تعطيها المسؤولية."
+          },
+          "source": {
+            "title": "American Bar Association · BC Tribunal Confirms Companies Remain Liable for Information Provided by AI Chatbot · February 2024",
+            "url": "https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/"
+          }
+        }
+      ]
     },
-    "heroCustom": {
-      "ar": "كل ورشة تُصمَّم لك أنت: لعملك، ولمؤسستك، ولما تريد أن تصل إليه.",
-      "en": "Every workshop is designed for you: for your work, your institution, and where you want to get to."
-    },
-    "heroWith": {
-      "en": "With Dr. Ahmed Abdelalim",
-      "ar": "مع د. أحمد عبدالعليم"
-    },
-    "heroImage": "/workshops/ahmed-abdelalim.jpg",
+    "heroImage": "/masterclass/ahmed-abdelalim.jpg",
     "heroImageAlt": {
       "en": "Dr. Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
     },
     "heroImageLabel": "VISIONSEEK · MAKE IT POSSIBLE",
     "ctaPrimary": {
-      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
-      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
+      "ar": "اطلب ماستركلاس خاصًا مع د. أحمد عبدالعليم",
+      "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     },
     "doorsLabel": {
-      "en": "The three doors",
-      "ar": "الأبواب الثلاثة"
+      "en": "We start by understanding you, or your institution",
+      "ar": "نبدأ بفهمك أنت، أو بفهم مؤسستك"
+    },
+    "doorsLine": {
+      "en": "Either way, you leave seeing what you couldn't see in your work before, and you carry on by yourself.",
+      "ar": "وفي الحالتين، تخرج وأنت ترى في عملك ما لم تكن تراه، وتكمل بعدها بنفسك."
     },
     "doorCards": {
-      "leader": {
+      "individual": {
         "code": "01",
-        "image": "/workshops/ahmed-abdelalim.jpg"
+        "image": "/masterclass/ahmed-abdelalim.jpg"
       },
       "institution": {
         "code": "02",
-        "image": "/field-industry.jpg"
-      },
-      "development": {
-        "code": "03",
         "image": "/field-cities.jpg"
       }
     },
     "openDoor": {
-      "en": "Open the door",
+      "en": "Start here",
       "ar": "ادخل من هنا"
+    },
+    "cardTeacher": {
+      "en": "With Dr. Ahmed Abdelalim",
+      "ar": "مع د. أحمد عبدالعليم"
+    },
+    "institutionPick": {
+      "ar": "اختر قطاعك",
+      "en": "Choose your sector"
     },
     "howLabel": {
       "ar": "التخصيص هو ميزتنا",
       "en": "Made for you is the point"
     },
     "howTitle": {
-      "ar": "كيف تحصل على ورشتك",
-      "en": "How you get your workshop"
+      "en": "No two masterclasses are the same",
+      "ar": "لا يتكرر ماستركلاس مرتين"
     },
     "howSteps": [
       {
         "title": {
-          "ar": "اطلب ورشتك",
-          "en": "Request your workshop"
+          "en": "You tell us who you are",
+          "ar": "تخبرنا من أنت"
         },
         "line": {
-          "ar": "قل لنا من أنت، وماذا تعمل.",
-          "en": "Tell us who you are and what you do."
+          "en": "Tell us who you are, what you do, and where you want to get to.",
+          "ar": "قل لنا من أنت، وماذا تعمل، وإلى أين تريد أن تصل."
         }
       },
       {
         "title": {
-          "ar": "نفهم عملك",
-          "en": "We understand your work"
+          "en": "We study your work",
+          "ar": "ندرس عملك"
         },
         "line": {
-          "ar": "نجلس معك لنعرف تفاصيل عملك، ونضع لك حلولًا على أساسها.",
-          "en": "We sit with you to learn the details of your work, and build solutions on them."
+          "en": "Before any session, Dr. Ahmed studies your work, your institution, and how far its counterparts abroad have come.",
+          "ar": "قبل أي جلسة، يدرس د. أحمد عملك ومؤسستك، وما وصلت إليه مثيلاتها في العالم."
         }
       },
       {
         "title": {
-          "ar": "ورشة مصممة لك",
-          "en": "A workshop designed for you"
+          "en": "A session that's yours alone",
+          "ar": "جلسة لك وحدك"
         },
         "line": {
-          "ar": "ورشة خاصة مع مؤسس VisionSeek شخصيًا، د. أحمد عبدالعليم، على عملك الحقيقي وبالأدوات التي تناسبك.",
-          "en": "A private workshop with the founder of VisionSeek himself, Dr. Ahmed Abdelalim, on your real work and with the tools that fit you."
+          "en": "A private masterclass with VisionSeek's founder himself, on your own work, with the tools that suit you.",
+          "ar": "ماستركلاس خاص مع مؤسس VisionSeek شخصيًا، على عملك أنت، وبالأدوات التي تناسبك."
         }
       }
     ],
@@ -256,8 +466,8 @@
       }
     ],
     "closingCta": {
-      "ar": "اطلب ورشة خاصة مع د. أحمد عبدالعليم",
-      "en": "Request a private workshop with Dr. Ahmed Abdelalim"
+      "ar": "اطلب ماستركلاس خاصًا مع د. أحمد عبدالعليم",
+      "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     }
   }
 }

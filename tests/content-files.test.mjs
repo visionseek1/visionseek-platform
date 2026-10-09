@@ -52,7 +52,9 @@ test('six program concepts, VS-P01 to VS-P06, each complete', () => {
 
 test('guide pages keep their section and slug, with at least one block each', () => {
   const guides = readDir('guides');
-  assert.equal(guides.length, 17);
+  // 15: the two old masterclass guides («الماستركلاس الأسبوعي» and «سجلات الماستركلاس») were removed on 9 Oct 2026.
+  assert.equal(guides.length, 15);
+  assert.equal(guides.some(g => g.section === 'workshops'), false, 'no legacy masterclass guide pages');
   const keys = guides.map(g => `${g.section}/${g.slug}`);
   for (const expected of ['about/people', 'about/learning-from-darpa', 'programs/program-lifecycle', 'work-with-us/prepare-a-concept', 'news/media']) assert.ok(keys.includes(expected), expected);
   for (const guide of guides) {
@@ -100,7 +102,7 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
 
 test('navigation.json keeps the seven header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/news', '/opportunities', '/programs', '/projects', '/work-with-us', '/workshops']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);
