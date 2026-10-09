@@ -12,79 +12,79 @@
     "senior"
   ],
   "outcome": {
-    "en": "You draft, test, and prepare the decision yourself, on work that is actually yours.",
-    "ar": "تكتب وتحلّل وتحضّر قرارك بيدك، على مهامك أنت."
+    "en": "Find out what AI can do in your own work, and learn to do it yourself.",
+    "ar": "اعرف ما يستطيع الذكاء الاصطناعي أن يفعله في عملك أنت، وتعلّم أن تفعله بنفسك."
   },
   "summary": {
-    "en": "A private session for the person who signs. Not a tour of tools, and not a case borrowed from another institution.",
-    "ar": "جلسة للقائد نفسه، لا جولة في الأدوات، ولا حالة مستعارة من مؤسسة ثانية."
+    "en": "Courses teach a tool the way it works for everyone. Here, Dr. Ahmed Abdelalim sits down with you and learns your work first. Then you learn AI on your own work, and leave able to carry on by yourself.",
+    "ar": "الدورات تعلّمك الأداة كما تعمل عند الجميع. أما هنا فيجلس معك د. أحمد عبدالعليم، ويفهم عملك أولًا، ثم تتعلّم الذكاء الاصطناعي على عملك أنت، وتخرج وأنت قادر على أن تكمل بنفسك."
   },
   "audienceRole": {
-    "en": "The leader in person: a chief executive, a deputy, or a director-general.",
-    "ar": "القائد نفسه: رئيس مؤسسة، أو وكيل، أو مدير عام."
+    "en": "This session is for you if you want to understand AI, or to know how to work with it — whether you lead a team, practise a profession or run your own business.",
+    "ar": "هذه الجلسة لك إن كنت تريد أن تفهم الذكاء الاصطناعي، أو تعرف كيف تعمل به في عملك: مديرًا كنت، أو صاحب مهنة، أو صاحب عمل."
   },
   "audienceInstitution": {
-    "en": "Any institution. The hour is spent on your memos, your numbers, and the decision waiting for you.",
-    "ar": "أي مؤسسة. الساعة تمضي على مذكراتك وأرقامك والقرار الذي ينتظرك."
+    "en": "You need no technical background and no tool you already know. Just bring your work as it is: your days, your decisions, the tasks that eat your time.",
+    "ar": "لا تحتاج خلفية تقنية، ولا أن تعرف أي أداة من قبل. يكفي أن تأتي بعملك كما هو: يومك، وقراراتك، والمهام التي تأخذ وقتك."
   },
   "whyProblem": {
-    "en": "The tool has reached the building. The leader still asks someone else to try it. The signature stays upstairs, and the habit does not move.",
-    "ar": "الأداة وصلت المبنى، والقائد ما زال يطلب من غيره أن يجرّبها. التوقيع يبقى فوق، والعادة لا تتحرك."
+    "en": "Many people ask an assistant or a consultant to try the tool for them, then wait to hear what they found. The tool stays in someone else's hands, and their decisions hang on someone else's understanding.",
+    "ar": "كثيرون يطلبون من موظف أو مستشار أن يجرّب الأداة بدلًا منهم، ثم ينتظرون ما سيقوله. فتبقى الأداة في يد غيرهم، ويبقى قرارهم معلّقًا بفهم غيرهم."
   },
   "whyEvidence": {
-    "en": "BCG research published on 4 February 2026 found that executives who spend at least 10% of their time learning to use AI in their own work are 1.7 times likelier to lead organizations with more mature AI systems.",
-    "ar": "في بحث BCG المنشور في 4 فبراير 2026، المديرون الذين يقضون 10% على الأقل من وقتهم في تعلّم استعمال الذكاء الاصطناعي داخل شغلهم هم أنفسهم أقرب بـ1.7 مرة إلى قيادة مؤسسات أنضج في هذا المجال."
+    "en": "BCG research published in September 2026 found that executives who spend at least 10% of their time teaching themselves to use AI in their own work are 1.7 times likelier to lead organizations further along with it. Those who learn it themselves lead. Those who wait for others are led.",
+    "ar": "وفي بحث نشرته «BCG» في سبتمبر 2026: المديرون الذين يخصّصون 10% على الأقل من وقتهم ليتعلّموا بأنفسهم كيف يستخدمون الذكاء الاصطناعي في عملهم، أقرب بـ1.7 مرة من غيرهم إلى قيادة مؤسسات أنضج فيه. من يتعلّم بنفسه يقود، ومن ينتظر غيره يُقاد."
   },
   "source": {
-    "title": "BCG · The Three Dimensions of Leadership for the AI Era · 4 February 2026",
+    "title": "BCG · The Three Dimensions of Leadership for the AI Era · 29 September 2026",
     "url": "https://www.bcg.com/publications/2026/three-leadership-roles-ceos-ai"
   },
   "before": {
-    "en": "A short diagnosis: five questions about your real week, before anyone opens a tool.",
-    "ar": "تشخيص قصير: خمسة أسئلة عن أسبوعك الحقيقي، قبل أن تُفتح أداة."
+    "en": "Before the session we ask about your real week, not your technical skills. Questions like:",
+    "ar": "قبل الجلسة نسألك عن أسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
   },
   "during": {
-    "en": "We work on your material. A note you have to write, a figure you do not yet trust, or a decision you have to walk into a room with. No prepared example.",
-    "ar": "نشتغل على مادتك: مذكرة عليك كتابتها، أو رقم لم تطمئن إليه، أو قرار ستدخله إلى اجتماع. لا مثال جاهز."
+    "en": "You work with Dr. Ahmed on your own material, not a prepared example: a letter you need to write, a figure you need to understand, a decision you are taking into a meeting. You see for yourself where AI saves you time, where it opens up something you could not do before, and where it gets things wrong and should not be trusted.",
+    "ar": "تعمل مع د. أحمد على مادتك، لا على مثال جاهز: رسالة عليك أن تكتبها، أو رقم تريد أن تفهمه، أو قرار ستدخل به اجتماعًا. وترى بعينك أين يختصر عليك الذكاء الاصطناعي الوقت، وأين يفتح لك ما لم تكن تقدر عليه، وأين يخطئ فلا تثق به."
   },
   "after": {
-    "en": "Thirty days later, two measures only: time taken off the tasks we touched, and which tools you still actually open. No number is claimed before it is measured.",
-    "ar": "بعد ثلاثين يومًا مقياسَان فقط: الوقت الذي خرج من المهام التي لمسناها، والأدوات التي ما زلت تفتحها فعلًا. لا رقم قبل القياس."
+    "en": "You leave knowing how to carry on by yourself: which tool suits you, how to ask it, and when to check what it tells you. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج وأنت تعرف كيف تكمل بنفسك: أي أداة تناسبك، وكيف تسألها، ومتى تراجع ما تقوله. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which decision is waiting on you this week?",
-      "ar": "أي قرار ينتظرك هذا الأسبوع؟"
+      "en": "Which part of your week takes more time than it deserves?",
+      "ar": "ما العمل الذي يأخذ من أسبوعك أكثر مما يستحق؟"
     },
     {
-      "en": "Which note do you still write by hand, and why does it take that long?",
-      "ar": "أي مذكرة ما زلت تكتبها بيدك، ولماذا تأخذ هذا الوقت؟"
+      "en": "Which decision is waiting for you, and what would you like to understand better before you make it?",
+      "ar": "ما القرار الذي ينتظرك، وتريد أن تفهمه أعمق قبل أن تتخذه؟"
     },
     {
-      "en": "Where do you send the tool downstairs for someone else to try?",
-      "ar": "أين ترسل الأداة إلى غيرك ليجرّبها نيابة عنك؟"
+      "en": "What do you ask others to do for you that you wish you could do yourself?",
+      "ar": "ما الذي تطلب من غيرك أن يفعله لك، وتتمنى لو قدرت عليه بنفسك؟"
     },
     {
-      "en": "Which figure or fact do you want checked before you sign?",
-      "ar": "أي رقم أو واقعة تريد فحصها قبل أن توقع؟"
+      "en": "Where have you heard AI could help, without knowing where to start?",
+      "ar": "أين سمعت أن الذكاء الاصطناعي يفيد، ولم تعرف من أين تبدأ؟"
     },
     {
-      "en": "What will you never hand to the tool?",
-      "ar": "ما الذي لن تسلّمه للأداة أبدًا؟"
+      "en": "What would you never hand to a tool, however good it is?",
+      "ar": "ما الذي لن تسلّمه لأي أداة، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A way of using the tool for writing, testing, and preparing a decision, fitted to how you already work.",
-      "ar": "طريقة لاستعمال الأداة في الكتابة والفحص وتحضير القرار، على طريقتك لا على قالب عام."
+      "en": "A new way of seeing your work: what AI can change in it, and what you had not noticed before.",
+      "ar": "عين جديدة على عملك: ترى فيه ما يستطيع الذكاء الاصطناعي أن يغيّره، وما لم تكن تراه من قبل."
     },
     {
-      "en": "Three pieces of your own work, advanced in the session. Not a classroom exercise.",
-      "ar": "ثلاث مهام من شغلك تقدّمت داخل الجلسة. ليست تمرينًا دراسيًا."
+      "en": "Real pieces of your work moved forward in the session itself. Not exercises.",
+      "ar": "أعمال حقيقية من عملك تقدّمت داخل الجلسة نفسها، لا تمارين دراسية."
     },
     {
-      "en": "A line between what stays with you and what can later move to the team.",
-      "ar": "حد واضح بين ما يبقى عندك وما يمكن أن ينتقل إلى الفريق لاحقًا."
+      "en": "A clear line between what you hand to the tool and what stays your call.",
+      "ar": "حدّ واضح بين ما تسلّمه للأداة، وما يبقى قرارك أنت."
     }
   ],
   "faq": [
@@ -94,8 +94,18 @@
         "ar": "هل أحتاج خلفية تقنية؟"
       },
       "a": {
-        "en": "No. You need to be the person who owns the decision. The session does not turn you into an engineer.",
-        "ar": "لا. المطلوب أن تكون صاحب القرار. الجلسة لا تحوّلك إلى مهندس."
+        "en": "No. You need to know your work, and nobody knows it better than you. The session won't make you an engineer; it will change how you see your own work.",
+        "ar": "لا. تحتاج أن تعرف عملك، وأنت تعرفه أكثر من أي أحد. الجلسة لا تجعلك مهندسًا؛ تجعلك ترى عملك بعين جديدة."
+      }
+    },
+    {
+      "q": {
+        "en": "Why not learn it from an online course?",
+        "ar": "لماذا لا أتعلّمه من دورة على الإنترنت؟"
+      },
+      "a": {
+        "en": "A course explains the tool the way it works for everyone. Here you learn it on your own work, with someone who studied that work before the session began. No course can do that.",
+        "ar": "الدورة تشرح الأداة كما تعمل عند الجميع. هنا تتعلّمه على عملك أنت، مع من درس عملك قبل أن تبدأ الجلسة. وهذا ما لن تجده في أي دورة."
       }
     },
     {
@@ -104,8 +114,8 @@
         "ar": "هل تُحفظ ملفاتي على الموقع؟"
       },
       "a": {
-        "en": "No. The website does not take your documents. What is used in a session stays in that session, under an arrangement we agree before it starts.",
-        "ar": "لا. الموقع لا يستلم وثائقك. ما يُستخدم في الجلسة يبقى فيها، باتفاق يُحسم قبل أن تبدأ."
+        "en": "No. The website does not take your documents. What you share in the session stays in the session, under an arrangement we settle with you before it starts.",
+        "ar": "لا. الموقع لا يستلم وثائقك. وما تشاركه في الجلسة يبقى فيها، باتفاق نحسمه معك قبل أن نبدأ."
       }
     }
   ],
@@ -186,5 +196,43 @@
         "url": "https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf"
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "You hear about AI every day, and still don't know what it means for your work",
+      "ar": "تسمع عن الذكاء الاصطناعي كل يوم، ولا تعرف بعد ماذا يعني لعملك"
+    },
+    "whyNow": {
+      "en": "Nobody can learn it for you",
+      "ar": "لا أحد يستطيع أن يتعلّمه بدلًا منك"
+    },
+    "how": {
+      "en": "A session built around your own work",
+      "ar": "جلسة تُبنى على يومك أنت"
+    },
+    "before": {
+      "en": "We learn your work first",
+      "ar": "نفهم عملك أولًا"
+    },
+    "during": {
+      "en": "You learn on your own material",
+      "ar": "تتعلّم على مادتك أنت"
+    },
+    "after": {
+      "en": "You carry on yourself",
+      "ar": "تكمل بنفسك"
+    },
+    "leavesWith": {
+      "en": "What stays with you",
+      "ar": "ما يبقى معك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبها"
+    }
+  },
+  "cta": {
+    "en": "Ask for your session with Dr. Ahmed Abdelalim",
+    "ar": "اطلب جلستك مع د. أحمد عبدالعليم"
+  }
 }

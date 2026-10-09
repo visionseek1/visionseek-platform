@@ -15,6 +15,8 @@ export type WorkshopExample = {title: Bi; body: Bi};
 export type WorkshopFaq = {q: Bi; a: Bi};
 /** One documented shift in the sector: a figure, what it means, and the page it comes from. */
 export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; source: {title: string; url: string}};
+/** The sections of a masterclass page that carry a heading. */
+export type WorkshopHeadingKey = 'forWhom' | 'whyNow' | 'how' | 'before' | 'during' | 'after' | 'leavesWith' | 'faq';
 
 export type Workshop = {
   position: number;
@@ -43,6 +45,10 @@ export type Workshop = {
   examplesNote?: Bi;
   boundary: Bi;
   faq: WorkshopFaq[];
+  /** Headings written for this page, naming what the reader is living now. A missing one falls back to the shared default. */
+  headings?: Partial<Record<WorkshopHeadingKey, Bi>>;
+  /** The button at the foot of the page. */
+  cta?: Bi;
 };
 
 export type WorkshopRole = {id: RoleId; label: Bi; note: Bi};

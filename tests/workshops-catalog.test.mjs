@@ -127,3 +127,23 @@ test('every sector page that shows shifts names them in its own words and source
     }
   }
 });
+
+test('the «لك أنت» page speaks to the person: its own headings, independence, and a sourced reason to learn now', () => {
+  const page = workshops.find(item => item.slug === 'leader-seat');
+  assert.equal(page.kind, 'individual');
+  const generic = ['لمن', 'لماذا الآن', 'كيف تمشي', 'قبلها', 'جواها', 'بعدها', 'بماذا تخرج', 'أسئلة قصيرة'];
+  for (const key of ['forWhom', 'whyNow', 'how', 'before', 'during', 'after', 'leavesWith', 'faq']) {
+    const heading = page.headings?.[key];
+    assert.ok(heading?.ar && heading?.en, `heading ${key}`);
+    assert.equal(generic.includes(heading.ar), false, `heading ${key} is still the generic one`);
+  }
+  assert.ok(page.cta?.ar && page.cta?.en, 'its own button');
+  // Dr. Ahmed's most important point: we teach people to carry on by themselves.
+  assert.match(page.after.ar, /بنفسك/);
+  assert.match(page.after.ar, /لا تحتاجنا/);
+  // The evidence carries the date its source shows.
+  assert.match(page.source.title, /29 September 2026/);
+  assert.match(page.whyEvidence.ar, /سبتمبر 2026/);
+  const view = readFileSync(join(process.cwd(), 'components/institution/workshops-view.tsx'), 'utf8');
+  assert.match(view, /workshop\.headings\?\.\[key\]/, 'the page reads its own headings');
+});

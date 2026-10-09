@@ -1514,6 +1514,29 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
+      - label: عناوين أقسام الصفحة
+        name: headings
+        widget: object
+        required: false
+        collapsed: true
+        hint: "كل عنوان يتكتب للصفحة نفسها ويسمّي اللي القارئ عايشه دلوقتي. لو سبته فاضي يظهر العنوان العام (لمن، لماذا الآن…)."
+        fields:
+          - {label: "لمن", name: forWhom, widget: object, required: false, fields: &headingFields [{label: English, name: en, widget: string, required: false}, {label: العربية, name: ar, widget: string, required: false}]}
+          - {label: "لماذا الآن", name: whyNow, widget: object, required: false, fields: *headingFields}
+          - {label: "كيف تمشي", name: how, widget: object, required: false, fields: *headingFields}
+          - {label: "الخطوة الأولى (قبلها)", name: before, widget: object, required: false, fields: *headingFields}
+          - {label: "الخطوة الثانية (جواها)", name: during, widget: object, required: false, fields: *headingFields}
+          - {label: "الخطوة الثالثة (بعدها)", name: after, widget: object, required: false, fields: *headingFields}
+          - {label: "بماذا تخرج", name: leavesWith, widget: object, required: false, fields: *headingFields}
+          - {label: "الأسئلة", name: faq, widget: object, required: false, fields: *headingFields}
+      - label: زر آخر الصفحة
+        name: cta
+        widget: object
+        required: false
+        hint: "لو فاضي يظهر «اطلب جلسة تعارف»."
+        fields:
+          - {label: English, name: en, widget: string, required: false}
+          - {label: العربية, name: ar, widget: string, required: false}
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس
