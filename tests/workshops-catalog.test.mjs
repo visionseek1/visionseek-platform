@@ -76,7 +76,8 @@ test('the live section page is short: hero, two doors, founder, closing', () => 
   const live = section.live;
   assert.deepEqual(Object.keys(live.doorCards).sort(), ['individual', 'institution']);
   assert.ok(live.opening.length >= 3 && live.opening.every(line => line.ar && line.en), 'opening paragraphs');
-  for (const key of ['title', 'lead', 'line']) assert.ok(live.independence[key].ar && live.independence[key].en, `independence.${key}`);
+  for (const key of ['title', 'lead']) assert.ok(live.independence[key].ar && live.independence[key].en, `independence.${key}`);
+  assert.ok(live.independence.lines.length >= 2 && live.independence.lines.every(line => line.ar && line.en), 'independence lines');
   assert.equal(live.closingLines.length, 3);
   assert.match(live.founderStatement.ar, /لبلادنا العربية/);
   assert.equal(live.howSteps.length, 3);

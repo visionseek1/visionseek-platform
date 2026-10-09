@@ -300,4 +300,6 @@
 .vs-wl-own{display:flex;flex-direction:column;gap:.9rem;max-width:56rem;border-bottom:1px solid #1e231c}
 .vs-wl-own .vs-wl-code{margin:0;color:var(--lime);font-size:1rem;font-weight:700}
 .vs-wl-own h2{font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.45;font-weight:800}
-.vs-wl-own>p:last-child{margin:0;font-size:1.15rem;line-height:1.9;color:var(--wl-ink);max-width:44rem}
+.vs-wl-own>p:not(.vs-wl-code){margin:0;font-size:1.15rem;line-height:1.9;color:var(--wl-ink);max-width:44rem}
+.vs-wl-own>p:nth-last-child(2){font-size:1.3rem;font-weight:700;color:var(--white)}
+.vs-wl-own>p:last-child{color:var(--lime);font-weight:700}

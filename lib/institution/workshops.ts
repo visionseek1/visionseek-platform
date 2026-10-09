@@ -74,7 +74,7 @@ export type WorkshopLive = {
   /** The opening paragraphs under the quote, in order. */
   opening: Bi[];
   /** Dr. Ahmed's most important point (9 Oct 2026): we teach people; we don't make them depend on us or anyone else. */
-  independence: {title: Bi; lead: Bi; line: Bi};
+  independence: {title: Bi; lead: Bi; lines: Bi[]};
   heroImage: string;
   heroImageAlt: Bi;
   heroImageLabel: string;

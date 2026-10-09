@@ -268,16 +268,26 @@
     "independence": {
       "title": {
         "en": "We teach you. We don't tie you to us.",
-        "ar": "نعلّمك، لا نربطك بنا"
+        "ar": "نعلّمك، ولا نربطك بنا"
       },
       "lead": {
-        "en": "Most tools and methods are built so you need them every day. This masterclass is built so you stop needing it.",
-        "ar": "أغلب الأدوات والمناهج مصمَّمة لتحتاجها كل يوم. الماستركلاس مصمَّم لتستغني عنه."
+        "en": "Tools hand you a fish every day, and charge you for it every day. We teach you to fish.",
+        "ar": "الأدوات تعطيك كل يوم سمكة، وتأخذ ثمنها كل يوم. نحن نعلّمك الصيد."
       },
-      "line": {
-        "en": "You leave able to understand for yourself, choose your own tools, and carry on alone, without needing us or anyone else.",
-        "ar": "تخرج منه وأنت تفهم بنفسك، وتختار أدواتك بنفسك، وتكمل الطريق بنفسك، دون أن تحتاجنا أو تحتاج غيرنا."
-      }
+      "lines": [
+        {
+          "en": "Whoever understands for themselves owns their decisions. Whoever depends on others leaves those decisions in someone else’s hands.",
+          "ar": "فمن يفهم بنفسه يملك قراره، ومن يعتمد على غيره يبقى قراره في يد غيره."
+        },
+        {
+          "en": "We want every person and every Arab institution to own its capability, not rent it.",
+          "ar": "نريد لكل إنسان ولكل مؤسسة عربية أن تملك قدرتها، لا أن تستأجرها."
+        },
+        {
+          "en": "A capability you don't own today is one you'll be paying someone else for tomorrow.",
+          "ar": "والقدرة التي لا تملكها اليوم، ستدفع ثمنها غدًا لغيرك."
+        }
+      ]
     },
     "heroImage": "/masterclass/ahmed-abdelalim.jpg",
     "heroImageAlt": {

@@ -1764,9 +1764,10 @@ collections:
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
-                  - label: السطر تحتها
-                    name: line
-                    widget: object
+                  - label: السطور تحتها (المستفاد، ثم الإلهام، ثم التحفيز)
+                    name: lines
+                    widget: list
+                    summary: "{{fields.ar}}"
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
