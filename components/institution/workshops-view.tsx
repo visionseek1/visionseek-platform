@@ -107,7 +107,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
                     <p className="vs-wl-door-for">{text(locale, door.for)}</p>
                     <p className="vs-wl-door-text">{text(locale, door.body)}</p>
                     {kind === 'institution' && (
-                      <div className="vs-wl-door-leaves">
+                      <div className="vs-wl-door-leaves" id="institutions">
                         <b>{text(locale, live.institutionPick)}</b>
                         <ul className="vs-wl-door-chips">{institutionWorkshops.map(item => <li key={item.slug}><Link href={`${prefix}/masterclass/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link></li>)}</ul>
                       </div>
@@ -119,12 +119,6 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
               );
             })}
           </div>
-          <nav className="vs-wl-inst-links" id="institutions" aria-label={text(locale, section.doors.institution.name)}>
-            <span>{text(locale, section.doors.institution.name)}:</span>
-            {institutionWorkshops.map(item => (
-              <Link key={item.slug} href={`${prefix}/masterclass/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link>
-            ))}
-          </nav>
         </section>
 
         <section className="vs-wl-how" id="how">
