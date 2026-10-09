@@ -230,6 +230,7 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
                   <b>{text(locale, card.figure)}</b>
                   <strong>{text(locale, card.title)}</strong>
                   <p>{text(locale, card.body)}</p>
+                  {card.lesson?.ar && <p className="vs-ws-shift-lesson">{text(locale, card.lesson)}</p>}
                   <a href={card.source.url} target="_blank" rel="noreferrer">
                     {card.source.title}
                     <ArrowUpRight size={16} />
@@ -249,6 +250,7 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
                   <b>{text(locale, shift.figure)}</b>
                   <strong>{text(locale, shift.title)}</strong>
                   <p>{text(locale, shift.body)}</p>
+                  {shift.lesson?.ar && <p className="vs-ws-shift-lesson">{text(locale, shift.lesson)}</p>}
                   <a href={shift.source.url} target="_blank" rel="noreferrer">
                     {shift.source.title}
                     <ArrowUpRight size={16} />

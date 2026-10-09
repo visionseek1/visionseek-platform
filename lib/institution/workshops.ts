@@ -13,8 +13,8 @@ export type RoleId = 'senior' | 'manager' | 'staff';
 
 export type WorkshopExample = {title: Bi; body: Bi};
 export type WorkshopFaq = {q: Bi; a: Bi};
-/** One documented shift in the sector: a figure, what it means, and the page it comes from. */
-export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; source: {title: string; url: string}};
+/** One documented fact: a figure, what happened, what it means for the reader (lesson), and the page it comes from. */
+export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; lesson?: Bi; source: {title: string; url: string}};
 /** How fast things are moving, for the reader who decides: a real, sourced quote from a leader in the field, what happens to whoever waits, then documented figures. */
 export type WorkshopPace = {
   title: Bi;

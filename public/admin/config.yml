@@ -1374,12 +1374,12 @@ collections:
         fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
-      - label: «الأمر يتسارع» (تحت الافتتاح)
+      - label: «ما تخسره وأنت تنتظر» (تحت الافتتاح)
         name: pace
         widget: object
         required: false
         collapsed: true
-        hint: "مقولة حقيقية لأحد كبار المجال (اسمه وصفته وتاريخها ومصدر اتفتح)، ثم جملة تبيّن إن اللي يؤجّل هيتأخر، ثم أرقام موثّقة بمصادرها."
+        hint: "مقولة حقيقية لأحد كبار المجال (اسمه وصفته وتاريخها ومصدر اتفتح)، ثم جملة تبيّن إن اللي يؤجّل هيتأخر، ثم خسائر موثّقة بمصادرها، وتحت كل واحدة: ماذا تعني لك."
         fields:
           - {label: العنوان, name: title, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
           - {label: المقولة, name: quote, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
@@ -1394,6 +1394,7 @@ collections:
               - {label: الرقم, name: figure, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
               - {label: العنوان, name: title, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
               - {label: النص, name: body, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
+              - {label: "ماذا يعني لك (سطر الدرس)", name: lesson, widget: object, required: false, fields: [{label: English, name: en, widget: text, required: false}, {label: العربية, name: ar, widget: text, required: false}]}
               - {label: المصدر, name: source, widget: object, fields: [{label: العنوان والتاريخ, name: title, widget: string}, {label: الرابط, name: url, widget: string}]}
       - label: المنصب
         name: audienceRole
@@ -1458,6 +1459,13 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
+          - label: "ماذا يعني لك (سطر الدرس)"
+            name: lesson
+            widget: object
+            required: false
+            fields:
+              - {label: English, name: en, widget: text, required: false}
+              - {label: العربية, name: ar, widget: text, required: false}
           - label: المصدر
             name: source
             widget: object

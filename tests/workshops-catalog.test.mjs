@@ -132,7 +132,14 @@ test('the «لك أنت» page speaks to the leader: its own headings, how fast 
   const page = workshops.find(item => item.slug === 'leader-seat');
   assert.equal(page.kind, 'individual');
   // Dr. Ahmed (9 Oct 2026): address the owner or the leader first, not the employee, and show that it is moving fast.
-  assert.match(page.audienceRole.ar, /صاحب المؤسسة وقائدها/);
+  // Dr. Ahmed (9 Oct 2026): chief executives, owners of companies and institutions, and government leaders.
+  assert.match(page.audienceRole.ar, /الرئيس التنفيذي/);
+  assert.match(page.audienceRole.ar, /صاحب الشركة أو المؤسسة/);
+  assert.match(page.audienceRole.ar, /القائد الحكومي/);
+  // Every figure says what the reader loses or gains: a lesson line under each card.
+  for (const card of [...page.pace.cards, ...page.shifts]) {
+    assert.ok(card.lesson?.ar && card.lesson?.en, `${card.title.en}: what it means for the reader`);
+  }
   assert.match(section.doors.individual.for.ar, /صاحب المؤسسة وقائدها/);
   assert.ok(page.pace, 'the pace band');
   assert.ok(page.pace.quote.ar && page.pace.quoteBy.ar.match(/20\d\d/), 'a dated quote');

@@ -284,6 +284,7 @@
 .vs-ws-pace-quote figcaption{margin-top:.5rem;font-size:.85rem}
 .vs-ws-pace-quote figcaption a{display:inline-flex;align-items:center;gap:.25rem;color:var(--grey);text-decoration:none}
 .vs-ws-pace-quote figcaption a:hover{color:var(--lime)}
+.vs-ws-page .vs-ws-shift-grid p.vs-ws-shift-lesson{padding-top:.6rem;border-top:1px solid #2c3138;font-size:1.02rem;line-height:1.75;font-weight:700;color:var(--lime)}
 .vs-ws-page .vs-ws-pace-consequence{margin:1rem 0 0;max-width:46rem;font-size:1.15rem;line-height:1.8;font-weight:700;color:var(--lime)}
 
 /* Masterclass, two doors (9 Oct 2026): opening paragraphs, a sourced quote and its consequence on each door. */
