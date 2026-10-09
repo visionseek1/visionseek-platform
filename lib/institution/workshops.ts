@@ -15,6 +15,15 @@ export type WorkshopExample = {title: Bi; body: Bi};
 export type WorkshopFaq = {q: Bi; a: Bi};
 /** One documented shift in the sector: a figure, what it means, and the page it comes from. */
 export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; source: {title: string; url: string}};
+/** How fast things are moving, for the reader who decides: a real, sourced quote from a leader in the field, what happens to whoever waits, then documented figures. */
+export type WorkshopPace = {
+  title: Bi;
+  quote: Bi;
+  quoteBy: Bi;
+  quoteSource: {title: string; url: string};
+  consequence: Bi;
+  cards: WorkshopShift[];
+};
 /** The sections of a masterclass page that carry a heading. */
 export type WorkshopHeadingKey = 'forWhom' | 'whyNow' | 'how' | 'before' | 'during' | 'after' | 'leavesWith' | 'faq';
 
@@ -33,6 +42,8 @@ export type Workshop = {
   whyProblem: Bi;
   whyEvidence: Bi;
   source: {title: string; url: string};
+  /** Shown right under the opening when present: the quote, the consequence, and how fast it is moving. */
+  pace?: WorkshopPace;
   /** How understanding AI is changing this sector, from published sources. Optional; shown under the page's opening. */
   shiftsTitle?: Bi;
   shifts?: WorkshopShift[];

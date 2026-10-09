@@ -12,24 +12,84 @@
     "senior"
   ],
   "outcome": {
-    "en": "Find out what AI can do in your own work, and learn to do it yourself.",
-    "ar": "اعرف ما يستطيع الذكاء الاصطناعي أن يفعله في عملك أنت، وتعلّم أن تفعله بنفسك."
+    "en": "Lead your organization into AI before others get there first.",
+    "ar": "قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك."
   },
   "summary": {
-    "en": "Courses teach a tool the way it works for everyone. Here, Dr. Ahmed Abdelalim sits down with you and learns your work first. Then you learn AI on your own work, and leave able to carry on by yourself.",
-    "ar": "الدورات تعلّمك الأداة كما تعمل عند الجميع. أما هنا فيجلس معك د. أحمد عبدالعليم، ويفهم عملك أولًا، ثم تتعلّم الذكاء الاصطناعي على عملك أنت، وتخرج وأنت قادر على أن تكمل بنفسك."
+    "en": "AI is moving faster than anything organizations have seen, and yours will only get ahead if you understand it first. Dr. Ahmed Abdelalim sits down with you and studies your work and your organization before any tool comes up. Then you see for yourself what AI can change there, so you lead with the best the world has reached, not with what the organization is used to. And you leave knowing the way, and leading it yourself.",
+    "ar": "العالم يتحرك في الذكاء الاصطناعي بسرعة لم يعرفها من قبل، ولن تسبق مؤسستك فيه إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم، ويدرس عملك ومؤسستك قبل أي أداة، ثم ترى بعينك ما يستطيع الذكاء الاصطناعي أن يغيّره فيها، لتقودها بأعلى ما وصل إليه العالم، لا بما اعتادت عليه. وتخرج وأنت تعرف الطريق، وتقوده بنفسك."
+  },
+  "pace": {
+    "title": {
+      "en": "What used to change over years now changes in months",
+      "ar": "ما كان يتغيّر في سنوات، صار يتغيّر في أشهر"
+    },
+    "quote": {
+      "en": "…stagnation is slow-motion failure. If you're not climbing, you're sliding.",
+      "ar": "الجمود فشلٌ بطيء. إن لم تكن تصعد، فأنت تنزلق."
+    },
+    "quoteBy": {
+      "en": "Tobi Lütke, co-founder and CEO of Shopify, in a memo to his staff · April 2025",
+      "ar": "توبي لوتكه، أحد مؤسسي «شوبيفاي» ورئيسها التنفيذي، في رسالة إلى موظفيه · أبريل 2025"
+    },
+    "quoteSource": {
+      "title": "The Canadian Press via CP24 · AI now an 'expectation' at Shopify · 7 April 2025",
+      "url": "https://www.cp24.com/news/canada/2025/04/07/ai-now-an-expectation-at-shopify-will-factor-into-performance-reviews-hiring-ceo/"
+    },
+    "consequence": {
+      "en": "A leader who puts it off today will find the organization tomorrow behind others that used to trail it.",
+      "ar": "والقائد الذي يؤجّله اليوم، سيجد مؤسسته غدًا خلف مؤسسات كانت بالأمس خلفها."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "Every 7 months",
+          "ar": "كل 7 أشهر"
+        },
+        "title": {
+          "en": "What AI can do on its own doubles",
+          "ar": "ما يستطيع الذكاء الاصطناعي أن ينجزه وحده يتضاعف"
+        },
+        "body": {
+          "en": "Over six years, the length of the technical tasks AI can complete on its own doubled roughly every seven months, METR reports. If the trend holds, before this decade ends it will carry out on its own projects that take a person a month. A plan built on today's AI will be out of date before its year is over.",
+          "ar": "على مدى ست سنوات، ظلّ يتضاعف طول المهام التقنية التي يستطيع الذكاء الاصطناعي أن ينجزها وحده كل سبعة أشهر تقريبًا، بحسب «METR». وإن استمر هذا المسار، فقبل أن ينتهي هذا العقد سينجز وحده مشاريع تأخذ من الإنسان شهرًا. والخطة التي تُبنى على قدراته اليوم، ستصبح قديمة قبل أن تنتهي سنتها."
+        },
+        "source": {
+          "title": "METR · Measuring AI Ability to Complete Long Tasks · 19 March 2025",
+          "url": "https://metr.substack.com/p/2025-03-19-measuring-ai-ability-to-complete-long-tasks"
+        }
+      },
+      {
+        "figure": {
+          "en": "72% of CEOs",
+          "ar": "72% من الرؤساء التنفيذيين"
+        },
+        "title": {
+          "en": "Leaders have taken the decision into their own hands",
+          "ar": "القادة أخذوا القرار بأيديهم"
+        },
+        "body": {
+          "en": "In a BCG survey of 2,360 executives in 16 markets, 72% of chief executives said they are the main decision-makers on AI, and half said their jobs now depend on it. The trailblazers among them spend more than eight hours a week learning it themselves. The leaders who are ahead don't wait for a report on AI; they learn it.",
+          "ar": "في مسح لـ«BCG» شمل 2,360 مسؤولًا تنفيذيًا في 16 سوقًا، قال 72% من الرؤساء التنفيذيين إنهم أصحاب القرار الأول في الذكاء الاصطناعي، وقال نصفهم إن مناصبهم صارت معلّقة بنتائجه. والسبّاقون منهم يقضون أكثر من ثماني ساعات في الأسبوع يتعلّمونه بأنفسهم. فالقائد الذي يسبق اليوم لا ينتظر تقريرًا عن الذكاء الاصطناعي؛ يتعلّمه."
+        },
+        "source": {
+          "title": "BCG · AI Radar 2026: As AI Investments Surge, CEOs Take the Lead · 15 January 2026",
+          "url": "https://www.bcg.com/press/15january2026-as-ai-investments-surge-ceos-take-lead"
+        }
+      }
+    ]
   },
   "audienceRole": {
-    "en": "This session is for you if you want to understand AI, or to know how to work with it — whether you lead a team, practise a profession or run your own business.",
-    "ar": "هذه الجلسة لك إن كنت تريد أن تفهم الذكاء الاصطناعي، أو تعرف كيف تعمل به في عملك: مديرًا كنت، أو صاحب مهنة، أو صاحب عمل."
+    "en": "This session is for the person who owns or leads the organization: its owner, chair, chief executive, deputy minister or director-general. For whoever makes the call, and wants to understand first-hand where to take the organization.",
+    "ar": "هذه الجلسة لصاحب المؤسسة وقائدها: مالكها، أو رئيسها، أو رئيسها التنفيذي، أو وكيلها، أو مديرها العام. لمن يتخذ القرار، ويريد أن يفهم بنفسه إلى أين يأخذ مؤسسته."
   },
   "audienceInstitution": {
-    "en": "You need no technical background and no tool you already know. Just bring your work as it is: your days, your decisions, the tasks that eat your time.",
-    "ar": "لا تحتاج خلفية تقنية، ولا أن تعرف أي أداة من قبل. يكفي أن تأتي بعملك كما هو: يومك، وقراراتك، والمهام التي تأخذ وقتك."
+    "en": "You need no technical background. Bring the organization as it is: your decisions, your numbers, and the work still done the way it was ten years ago.",
+    "ar": "لا تحتاج خلفية تقنية. يكفي أن تأتي بمؤسستك كما هي: قراراتك، وأرقامك، والعمل الذي ما زال يُنجَز فيها كما كان قبل عشر سنين."
   },
   "whyProblem": {
-    "en": "Many people ask an assistant or a consultant to try the tool for them, then wait to hear what they found. The tool stays in someone else's hands, and their decisions hang on someone else's understanding.",
-    "ar": "كثيرون يطلبون من موظف أو مستشار أن يجرّب الأداة بدلًا منهم، ثم ينتظرون ما سيقوله. فتبقى الأداة في يد غيرهم، ويبقى قرارهم معلّقًا بفهم غيرهم."
+    "en": "Many leaders ask an assistant or a consultant to try the tool for them, then wait for the report. The tool stays in someone else's hands, and the organization's decisions hang on someone else's understanding.",
+    "ar": "كثير من القادة يكلّفون موظفًا أو مستشارًا أن يجرّب الأداة بدلًا منهم، ثم ينتظرون التقرير. فتبقى الأداة في يد غيرهم، ويبقى قرار المؤسسة معلّقًا بفهم غيرهم."
   },
   "whyEvidence": {
     "en": "BCG research published in September 2026 found that executives who spend at least 10% of their time teaching themselves to use AI in their own work are 1.7 times likelier to lead organizations further along with it. Those who learn it themselves lead. Those who wait for others are led.",
@@ -40,33 +100,33 @@
     "url": "https://www.bcg.com/publications/2026/three-leadership-roles-ceos-ai"
   },
   "before": {
-    "en": "Before the session we ask about your real week, not your technical skills. Questions like:",
-    "ar": "قبل الجلسة نسألك عن أسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
+    "en": "Before the session we ask about your organization and your real week, not your technical skills. Questions like:",
+    "ar": "قبل الجلسة نسألك عن مؤسستك وأسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
   },
   "during": {
-    "en": "You work with Dr. Ahmed on your own material, not a prepared example: a letter you need to write, a figure you need to understand, a decision you are taking into a meeting. You see for yourself where AI saves you time, where it opens up something you could not do before, and where it gets things wrong and should not be trusted.",
-    "ar": "تعمل مع د. أحمد على مادتك، لا على مثال جاهز: رسالة عليك أن تكتبها، أو رقم تريد أن تفهمه، أو قرار ستدخل به اجتماعًا. وترى بعينك أين يختصر عليك الذكاء الاصطناعي الوقت، وأين يفتح لك ما لم تكن تقدر عليه، وأين يخطئ فلا تثق به."
+    "en": "Dr. Ahmed works with you on your own material, not a prepared example: a memo you have to write, a figure you don't yet trust, a decision you are taking into a meeting. You see for yourself where AI saves time, where it opens up something your organization could not do before, and where it gets things wrong and cannot be trusted.",
+    "ar": "يعمل معك د. أحمد على مادتك أنت، لا على مثال جاهز: مذكرة عليك أن تكتبها، أو رقم لم تطمئن إليه، أو قرار ستدخل به اجتماعًا. وترى بعينك أين يختصر الذكاء الاصطناعي الوقت، وأين يفتح لمؤسستك ما لم تكن تقدر عليه، وأين يخطئ فلا يُؤتمن."
   },
   "after": {
-    "en": "You leave knowing how to carry on by yourself: which tool suits you, how to ask it, and when to check what it tells you. You won't need us afterwards, or anyone else.",
-    "ar": "تخرج وأنت تعرف كيف تكمل بنفسك: أي أداة تناسبك، وكيف تسألها، ومتى تراجع ما تقوله. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
+    "en": "You leave knowing the way and leading it yourself: what to ask of your team, which tools suit your organization, and when to trust what they say and when to check it. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج وأنت تعرف الطريق وتقوده بنفسك: ماذا تطلب من فريقك، وأي أداة تناسب مؤسستك، ومتى تثق بما تقوله ومتى تراجعه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which part of your week takes more time than it deserves?",
-      "ar": "ما العمل الذي يأخذ من أسبوعك أكثر مما يستحق؟"
+      "en": "What does your organization still do the way it did ten years ago?",
+      "ar": "ما العمل الذي ما زالت مؤسستك تنجزه كما كانت قبل عشر سنين؟"
     },
     {
-      "en": "Which decision is waiting for you, and what would you like to understand better before you make it?",
-      "ar": "ما القرار الذي ينتظرك، وتريد أن تفهمه أعمق قبل أن تتخذه؟"
+      "en": "Which decision is waiting for you this month that you would like to see more clearly first?",
+      "ar": "ما القرار الذي ينتظرك هذا الشهر، وتريد أن تراه أوضح قبل أن تتخذه؟"
     },
     {
-      "en": "What do you ask others to do for you that you wish you could do yourself?",
-      "ar": "ما الذي تطلب من غيرك أن يفعله لك، وتتمنى لو قدرت عليه بنفسك؟"
+      "en": "Where do you send someone else to try the tool for you?",
+      "ar": "أين تكلّف غيرك أن يجرّب الأداة بدلًا منك؟"
     },
     {
-      "en": "Where have you heard AI could help, without knowing where to start?",
-      "ar": "أين سمعت أن الذكاء الاصطناعي يفيد، ولم تعرف من أين تبدأ؟"
+      "en": "Which organization in the world do you watch, and wish you could start from where it is now?",
+      "ar": "أي مؤسسة في العالم تتابعها، وتتمنى أن تبدأ من حيث وصلت؟"
     },
     {
       "en": "What would you never hand to a tool, however good it is?",
@@ -75,8 +135,8 @@
   ],
   "leavesWith": [
     {
-      "en": "A new way of seeing your work: what AI can change in it, and what you had not noticed before.",
-      "ar": "عين جديدة على عملك: ترى فيه ما يستطيع الذكاء الاصطناعي أن يغيّره، وما لم تكن تراه من قبل."
+      "en": "A new way of seeing your organization: what AI can change in it, and what you had not noticed before.",
+      "ar": "عين جديدة على مؤسستك: ترى فيها ما يستطيع الذكاء الاصطناعي أن يغيّره، وما لم تكن تراه من قبل."
     },
     {
       "en": "Real pieces of your work moved forward in the session itself. Not exercises.",
@@ -85,17 +145,31 @@
     {
       "en": "A clear line between what you hand to the tool and what stays your call.",
       "ar": "حدّ واضح بين ما تسلّمه للأداة، وما يبقى قرارك أنت."
+    },
+    {
+      "en": "A first step for your organization: you know why you chose it, and how to lead your team there.",
+      "ar": "خطوة أولى لمؤسستك، تعرف لماذا اخترتها، وتعرف كيف تقود فريقك إليها."
     }
   ],
   "faq": [
+    {
+      "q": {
+        "en": "My time is tight. Why should I learn it myself instead of handing it to my team?",
+        "ar": "وقتي ضيق. لماذا أتعلّمه أنا، ولا أكلّف به فريقي؟"
+      },
+      "a": {
+        "en": "Because the decision is yours. Your team will learn the tools, but you decide where the organization goes with them. A leader who doesn't understand it first-hand leaves the decision with whoever does.",
+        "ar": "لأن القرار قرارك. فريقك سيتعلّم الأداة، لكنك أنت من يقرّر إلى أين تذهب المؤسسة بها. والقائد الذي لا يفهمه بنفسه، يبقى قراره في يد من فهمه."
+      }
+    },
     {
       "q": {
         "en": "Do I need a technical background?",
         "ar": "هل أحتاج خلفية تقنية؟"
       },
       "a": {
-        "en": "No. You need to know your work, and nobody knows it better than you. The session won't make you an engineer; it will change how you see your own work.",
-        "ar": "لا. تحتاج أن تعرف عملك، وأنت تعرفه أكثر من أي أحد. الجلسة لا تجعلك مهندسًا؛ تجعلك ترى عملك بعين جديدة."
+        "en": "No. You need to know your organization, and nobody knows it better than you. The session won't make you an engineer; it will change how you see your own organization.",
+        "ar": "لا. تحتاج أن تعرف مؤسستك، وأنت تعرفها أكثر من أي أحد. الجلسة لا تجعلك مهندسًا؛ تجعلك ترى مؤسستك بعين جديدة."
       }
     },
     {
@@ -104,8 +178,8 @@
         "ar": "لماذا لا أتعلّمه من دورة على الإنترنت؟"
       },
       "a": {
-        "en": "A course explains the tool the way it works for everyone. Here you learn it on your own work, with someone who studied that work before the session began. No course can do that.",
-        "ar": "الدورة تشرح الأداة كما تعمل عند الجميع. هنا تتعلّمه على عملك أنت، مع من درس عملك قبل أن تبدأ الجلسة. وهذا ما لن تجده في أي دورة."
+        "en": "A course explains the tool the way it works for everyone. Here you learn it on your own organization, with someone who studied it before the session began. No course can do that.",
+        "ar": "الدورة تشرح الأداة كما تعمل عند الجميع. هنا تتعلّمه على مؤسستك أنت، مع من درسها قبل أن تبدأ الجلسة. وهذا ما لن تجده في أي دورة."
       }
     },
     {
@@ -199,28 +273,28 @@
   ],
   "headings": {
     "forWhom": {
-      "en": "You hear about AI every day, and still don't know what it means for your work",
-      "ar": "تسمع عن الذكاء الاصطناعي كل يوم، ولا تعرف بعد ماذا يعني لعملك"
+      "en": "AI is pitched to you every day, and nobody tells you what it means for your organization",
+      "ar": "كل يوم يُعرض عليك الذكاء الاصطناعي، ولا أحد يقول لك ماذا يعني لمؤسستك"
     },
     "whyNow": {
       "en": "Nobody can learn it for you",
       "ar": "لا أحد يستطيع أن يتعلّمه بدلًا منك"
     },
     "how": {
-      "en": "A session built around your own work",
-      "ar": "جلسة تُبنى على يومك أنت"
+      "en": "A session built on your own organization",
+      "ar": "جلسة تُبنى على مؤسستك أنت"
     },
     "before": {
-      "en": "We learn your work first",
-      "ar": "نفهم عملك أولًا"
+      "en": "We study your organization first",
+      "ar": "نفهم مؤسستك أولًا"
     },
     "during": {
-      "en": "You learn on your own material",
-      "ar": "تتعلّم على مادتك أنت"
+      "en": "You learn on your own decisions",
+      "ar": "تتعلّم على قراراتك أنت"
     },
     "after": {
-      "en": "You carry on yourself",
-      "ar": "تكمل بنفسك"
+      "en": "You lead it yourself",
+      "ar": "تقود بنفسك"
     },
     "leavesWith": {
       "en": "What stays with you",

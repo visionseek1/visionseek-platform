@@ -214,6 +214,32 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
         <h1>{text(locale, workshop.outcome)}</h1>
         <p className="vs-ws-lede">{text(locale, workshop.summary)}</p>
 
+        {workshop.pace && (
+          <section id="pace" className="vs-ws-pace">
+            <h2>{text(locale, workshop.pace.title)}</h2>
+            <figure className="vs-ws-pace-quote">
+              <blockquote>{text(locale, workshop.pace.quote)}</blockquote>
+              <figcaption>
+                <a href={workshop.pace.quoteSource.url} target="_blank" rel="noreferrer">{text(locale, workshop.pace.quoteBy)}<ArrowUpRight size={14} aria-hidden /></a>
+              </figcaption>
+            </figure>
+            <p className="vs-ws-pace-consequence">{text(locale, workshop.pace.consequence)}</p>
+            <div className="vs-ws-shift-grid">
+              {workshop.pace.cards.map(card => (
+                <div key={card.title.en}>
+                  <b>{text(locale, card.figure)}</b>
+                  <strong>{text(locale, card.title)}</strong>
+                  <p>{text(locale, card.body)}</p>
+                  <a href={card.source.url} target="_blank" rel="noreferrer">
+                    {card.source.title}
+                    <ArrowUpRight size={16} />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {workshop.shifts && workshop.shifts.length > 0 && workshop.shiftsTitle && (
           <section id="shifts" className="vs-ws-shifts">
             <h2>{text(locale, workshop.shiftsTitle)}</h2>

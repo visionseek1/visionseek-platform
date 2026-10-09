@@ -128,9 +128,18 @@ test('every sector page that shows shifts names them in its own words and source
   }
 });
 
-test('the «لك أنت» page speaks to the person: its own headings, independence, and a sourced reason to learn now', () => {
+test('the «لك أنت» page speaks to the leader: its own headings, how fast it moves, independence, sourced reasons', () => {
   const page = workshops.find(item => item.slug === 'leader-seat');
   assert.equal(page.kind, 'individual');
+  // Dr. Ahmed (9 Oct 2026): address the owner or the leader first, not the employee, and show that it is moving fast.
+  assert.match(page.audienceRole.ar, /صاحب المؤسسة وقائدها/);
+  assert.match(section.doors.individual.for.ar, /صاحب المؤسسة وقائدها/);
+  assert.ok(page.pace, 'the pace band');
+  assert.ok(page.pace.quote.ar && page.pace.quoteBy.ar.match(/20\d\d/), 'a dated quote');
+  assert.match(page.pace.quoteSource.url, /^https:\/\//);
+  assert.ok(page.pace.consequence.ar, 'what happens to whoever waits');
+  assert.ok(page.pace.cards.length >= 2);
+  for (const card of page.pace.cards) assert.match(card.source.url, /^https:\/\//, card.title.en);
   const generic = ['لمن', 'لماذا الآن', 'كيف تمشي', 'قبلها', 'جواها', 'بعدها', 'بماذا تخرج', 'أسئلة قصيرة'];
   for (const key of ['forWhom', 'whyNow', 'how', 'before', 'during', 'after', 'leavesWith', 'faq']) {
     const heading = page.headings?.[key];
