@@ -42,6 +42,13 @@ test('fourteen designed masterclasses, none of them held', () => {
   }
 });
 
+test('the seven new sector pages stay off the site until they are rewritten', () => {
+  const drafts = workshops.filter(item => item.draft).map(item => item.slug).sort();
+  assert.deepEqual(drafts, ['customs-ports', 'education-schools', 'energy-utilities', 'finance-tax', 'justice-courts', 'labour-civil-service', 'municipalities']);
+  const loader = readFileSync(join(process.cwd(), 'lib/institution/workshops.ts'), 'utf8');
+  assert.match(loader, /\.filter\(item => !item\.draft\)/, 'the loader drops drafts');
+});
+
 test('police workshop stays on administration and citizen service', () => {
   const police = workshops.find(item => item.slug === 'police-citizen-service');
   assert.equal(police.institution, 'police');

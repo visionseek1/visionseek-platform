@@ -57,6 +57,7 @@
   },
   "position": 10,
   "slug": "justice-courts",
+  "draft": true,
   "kind": "institution",
   "institution": "justice",
   "roles": [

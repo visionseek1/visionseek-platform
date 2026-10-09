@@ -57,6 +57,7 @@
   },
   "position": 11,
   "slug": "education-schools",
+  "draft": true,
   "kind": "institution",
   "institution": "education",
   "roles": [

@@ -95,14 +95,7 @@ collections:
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
                   - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
                   - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
-                  - {label: "ماستركلاس ← ردّ المستورد يخرج أسرع وأوضح، والتعميم الجديد يفهم  /masterclass/customs-ports", value: "/masterclass/customs-ports"}
-                  - {label: "ماستركلاس ← التعميم يصل المدرسة واضحًا، ورسالة الأهل تُكتب في   /masterclass/education-schools", value: "/masterclass/education-schools"}
-                  - {label: "ماستركلاس ← تقرير الأداء الشهري يقول أين القرار، وإخطار الانقط  /masterclass/energy-utilities", value: "/masterclass/energy-utilities"}
-                  - {label: "ماستركلاس ← الممول يفهم الرد من أول مرة، ومذكرة الموازنة تصل إ  /masterclass/finance-tax", value: "/masterclass/finance-tax"}
                   - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
-                  - {label: "ماستركلاس ← الإخطار يخرج صحيحًا من أول مرة، والملف الإداري الط  /masterclass/justice-courts", value: "/masterclass/justice-courts"}
-                  - {label: "ماستركلاس ← الوصف الوظيفي يُكتب على المهارة لا على قائمة المها  /masterclass/labour-civil-service", value: "/masterclass/labour-civil-service"}
-                  - {label: "ماستركلاس ← شكوى الساكن تأخذ ردًا واضحًا، واشتراطات التصريح تُ  /masterclass/municipalities", value: "/masterclass/municipalities"}
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
@@ -1338,6 +1331,7 @@ collections:
         name: slug
         widget: string
         hint: "جزء الرابط بعد /masterclass/. لا تغيّره بعد النشر."
+      - {label: "مسودة (لا تظهر على الموقع)", name: draft, widget: boolean, required: false, default: false, hint: "الصفحة تبقى خارج الموقع لحد ما نصها يتكتب من جديد ويتعتمد."}
       - label: النوع
         name: kind
         widget: select

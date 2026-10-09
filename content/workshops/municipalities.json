@@ -57,6 +57,7 @@
   },
   "position": 13,
   "slug": "municipalities",
+  "draft": true,
   "kind": "institution",
   "institution": "municipality",
   "roles": [

@@ -57,6 +57,7 @@
   },
   "position": 12,
   "slug": "energy-utilities",
+  "draft": true,
   "kind": "institution",
   "institution": "energy",
   "roles": [

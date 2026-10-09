@@ -25,7 +25,9 @@ for f in sorted(glob.glob('content/guides/*.json')):
 for f in sorted(glob.glob('content/news/*.json')):
     d = load(f); add(f"/news/{d['slug']}", f"الأخبار ← {d['title']['ar']}")
 for f in sorted(glob.glob('content/workshops/*.json')):
-    d = load(f); add(f"/masterclass/{d['slug']}", f"ماستركلاس ← {d['outcome']['ar'][:50]}")
+    d = load(f)
+    if d.get('draft'): continue  # drafts are not on the site
+    add(f"/masterclass/{d['slug']}", f"ماستركلاس ← {d['outcome']['ar'][:50]}")
 cat = load('content/projects/catalog.json')
 for s in cat['sectors']: add(f"/projects/{s['slug']}", f"المشاريع ← {s['title']['ar']}")
 for f in sorted(glob.glob('content/projects/concepts/*.json')):

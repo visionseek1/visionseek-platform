@@ -19,6 +19,8 @@ export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; source: {title: st
 export type Workshop = {
   position: number;
   slug: string;
+  /** A draft page stays off the site (no route, no sitemap, no sector chip) until it is rewritten and approved. */
+  draft?: boolean;
   kind: WorkshopKind;
   institution: InstitutionKind | '';
   roles: RoleId[];
@@ -121,6 +123,7 @@ const loadWorkshops = (): Workshop[] =>
   readdirSync(dir)
     .filter(name => name.endsWith('.json'))
     .map(name => readJson<Workshop>(name))
+    .filter(item => !item.draft)
     .sort((a, b) => a.position - b.position || a.slug.localeCompare(b.slug));
 
 export const workshopSection: WorkshopSection = JSON.parse(readFileSync(sectionFile, 'utf8')) as WorkshopSection;

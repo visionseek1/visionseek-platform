@@ -57,6 +57,7 @@
   },
   "position": 14,
   "slug": "labour-civil-service",
+  "draft": true,
   "kind": "institution",
   "institution": "civilservice",
   "roles": [
