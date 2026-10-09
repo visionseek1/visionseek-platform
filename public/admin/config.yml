@@ -1785,6 +1785,52 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
+              - label: «ثمن الاعتماد الكلي» (أمثلة موثّقة)
+                name: dependence
+                widget: object
+                hint: "كل مثال حقيقي، ومصدره اتفتح فعلًا، وفي عنوان المصدر السنة."
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الأمثلة
+                    name: cards
+                    widget: list
+                    summary: "{{fields.title.ar}}"
+                    fields:
+                      - label: التاريخ
+                        name: date
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: العنوان
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: ما حدث
+                        name: body
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                      - label: الدرس
+                        name: lesson
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                      - label: المصدر
+                        name: source
+                        widget: object
+                        fields:
+                          - {label: العنوان, name: title, widget: string}
+                          - {label: الرابط, name: url, widget: string}
               - label: عنوان البابين
                 name: doorsLabel
                 widget: object

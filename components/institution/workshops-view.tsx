@@ -87,6 +87,21 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           {live.independence.lines.map(line => <p key={line.en}>{text(locale, line)}</p>)}
         </section>
 
+        <section className="vs-wl-price" id="price">
+          <h2>{text(locale, live.dependence.title)}</h2>
+          <div className="vs-wl-price-grid">
+            {live.dependence.cards.map(card => (
+              <article key={card.title.en}>
+                <span className="vs-wl-price-date">{text(locale, card.date)}</span>
+                <h3>{text(locale, card.title)}</h3>
+                <p>{text(locale, card.body)}</p>
+                <p className="vs-wl-price-lesson">{text(locale, card.lesson)}</p>
+                <a href={card.source.url} target="_blank" rel="noreferrer">{card.source.title}<ArrowUpRight size={14} aria-hidden /></a>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="vs-wl-doors" id="doors">
           <div className="vs-wl-head">
             <h2>{text(locale, live.doorsLabel)}</h2>

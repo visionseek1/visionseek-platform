@@ -289,6 +289,80 @@
         }
       ]
     },
+    "dependence": {
+      "title": {
+        "en": "The price of depending on one tool",
+        "ar": "ثمن الاعتماد الكلي"
+      },
+      "cards": [
+        {
+          "date": {
+            "en": "19 July 2024",
+            "ar": "19 يوليو 2024"
+          },
+          "title": {
+            "en": "One update stopped the world",
+            "ar": "تحديث واحد أوقف العالم"
+          },
+          "body": {
+            "en": "A faulty update from a single security company, CrowdStrike, took down about 8.5 million Windows devices. Airlines halted flights around the world; banks and rail networks went down with them.",
+            "ar": "تحديث خاطئ من شركة أمن واحدة (CrowdStrike) أوقف قرابة 8.5 مليون جهاز ويندوز. توقفت رحلات طيران حول العالم، وتعطلت بنوك وشبكات قطارات."
+          },
+          "lesson": {
+            "en": "When everything rests on one tool, one mistake is enough to stop everything.",
+            "ar": "حين يقوم كل شيء على أداة واحدة، يكفي خطأ واحد ليتوقف كل شيء."
+          },
+          "source": {
+            "title": "TechCrunch · Microsoft says 8.5M Windows devices were affected by CrowdStrike outage · 20 July 2024",
+            "url": "https://techcrunch.com/2024/07/20/microsoft-says-8.5m-windows-devices-were-affected-by-crowdstrike-outage"
+          }
+        },
+        {
+          "date": {
+            "en": "7 October 2025",
+            "ar": "7 أكتوبر 2025"
+          },
+          "title": {
+            "en": "A government report citing sources that do not exist",
+            "ar": "تقرير حكومي بمراجع لا وجود لها"
+          },
+          "body": {
+            "en": "The Australian government paid Deloitte A$440,000 for a report that turned out to be full of fabricated references and an invented quote from a court judgment, after AI was used to prepare it. Deloitte paid part of the fee back.",
+            "ar": "دفعت الحكومة الأسترالية 440 ألف دولار أسترالي لـ«ديلويت» مقابل تقرير اتضح أنه مليء بمراجع مختلَقة واقتباس مخترع من حكم قضائي، بعد استخدام الذكاء الاصطناعي في إعداده. وأعادت «ديلويت» جزءًا من المبلغ."
+          },
+          "lesson": {
+            "en": "An institution that doesn't understand the work itself can't catch its tool's mistakes, or the mistakes of whoever uses the tool on its behalf.",
+            "ar": "المؤسسة التي لا تفهم بنفسها، لا تستطيع أن تكتشف خطأ أداتها، ولا خطأ من يستخدمها نيابة عنها."
+          },
+          "source": {
+            "title": "AP via BNN Bloomberg · Deloitte to partially refund Australian government for report with apparent AI-generated errors · 7 October 2025",
+            "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2025/10/07/deloitte-to-partially-refund-australian-government-for-report-with-apparent-ai-generated-errors/"
+          }
+        },
+        {
+          "date": {
+            "en": "14 February 2024",
+            "ar": "14 فبراير 2024"
+          },
+          "title": {
+            "en": "\"The chatbot did it\" did not work",
+            "ar": "«المسؤول هو الروبوت» لم تنفع"
+          },
+          "body": {
+            "en": "Air Canada's chatbot gave a customer wrong information. The airline argued the chatbot was a separate entity responsible for its own actions. The tribunal rejected that and held the airline responsible for everything on its website.",
+            "ar": "قال روبوت محادثة «طيران كندا» لعميل معلومة خاطئة. دفعت الشركة بأن الروبوت «كيان مستقل مسؤول عن أفعاله»، فرفضت المحكمة، وحمّلت الشركة مسؤولية كل ما يقوله موقعها."
+          },
+          "lesson": {
+            "en": "You can hand the work to a tool. You can't hand it the responsibility.",
+            "ar": "تستطيع أن تعطي العمل للأداة، لكنك لا تستطيع أن تعطيها المسؤولية."
+          },
+          "source": {
+            "title": "American Bar Association · BC Tribunal Confirms Companies Remain Liable for Information Provided by AI Chatbot · February 2024",
+            "url": "https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/"
+          }
+        }
+      ]
+    },
     "heroImage": "/masterclass/ahmed-abdelalim.jpg",
     "heroImageAlt": {
       "en": "Dr. Ahmed Abdelalim",

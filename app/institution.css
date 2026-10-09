@@ -303,3 +303,15 @@
 .vs-wl-own>p:not(.vs-wl-code){margin:0;font-size:1.15rem;line-height:1.9;color:var(--wl-ink);max-width:44rem}
 .vs-wl-own>p:nth-last-child(2){font-size:1.3rem;font-weight:700;color:var(--white)}
 .vs-wl-own>p:last-child{color:var(--lime);font-weight:700}
+
+/* Masterclass: «ثمن الاعتماد الكلي» — documented cases, each with its lesson and source. */
+.vs-wl-price h2{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.3;margin-bottom:1.4rem}
+.vs-wl-price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.vs-wl-price-grid article{display:flex;flex-direction:column;gap:.6rem;padding:1.4rem;border-radius:18px;border:1px solid var(--wl-line);background:var(--wl-panel)}
+.vs-wl-price-date{font-size:.85rem;color:var(--lime)}
+.vs-wl-price-grid h3{font-size:1.25rem;line-height:1.5;font-weight:800;color:var(--white)}
+.vs-wl-price-grid p{margin:0;font-size:1rem;line-height:1.85;color:var(--wl-ink)}
+.vs-wl-price-grid .vs-wl-price-lesson{padding-top:.7rem;border-top:1px solid #3a4033;font-weight:700;color:var(--white)}
+.vs-wl-price-grid a{margin-top:auto;display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;line-height:1.5;color:var(--wl-soft);text-decoration:none}
+.vs-wl-price-grid a:hover{color:var(--lime)}
+@media(max-width:1100px){.vs-wl-price-grid{grid-template-columns:1fr}}
