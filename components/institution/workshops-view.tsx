@@ -174,6 +174,7 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
   const ar = locale === 'ar';
   const prefix = ar ? '/ar' : '';
   const kindName = workshopSection.doors[workshop.kind].name;
+  const sector = workshopSection.institutionTypes.find(type => type.id === workshop.institution);
   const stages = [
     {n: '01', title: ar ? 'قبلها' : 'Before', body: workshop.before},
     {n: '02', title: ar ? 'جواها' : 'Inside', body: workshop.during},
@@ -195,10 +196,31 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
           <span>/</span>
           <span>{text(locale, kindName)}</span>
         </nav>
-        <p className="vs-ws-kicker">{text(locale, kindName)}</p>
+        <p className="vs-ws-kicker">{text(locale, kindName)}{sector && <> · {text(locale, sector.label)}</>}</p>
+        <p className="vs-ws-teacher">{text(locale, workshopSection.live.cardTeacher)}</p>
         <p className="vs-ws-status">{text(locale, workshop.status)}</p>
         <h1>{text(locale, workshop.outcome)}</h1>
         <p className="vs-ws-lede">{text(locale, workshop.summary)}</p>
+
+        {workshop.shifts && workshop.shifts.length > 0 && workshop.shiftsTitle && (
+          <section id="shifts" className="vs-ws-shifts">
+            <h2>{text(locale, workshop.shiftsTitle)}</h2>
+            <p className="vs-ws-source-note">{ar ? 'أرقام كما نشرتها مصادرها، بتواريخها. ليست نتائج لـVisionSeek.' : 'Figures as their sources published them, with dates. They are not VisionSeek results.'}</p>
+            <div className="vs-ws-shift-grid">
+              {workshop.shifts.map(shift => (
+                <div key={shift.title.en}>
+                  <b>{text(locale, shift.figure)}</b>
+                  <strong>{text(locale, shift.title)}</strong>
+                  <p>{text(locale, shift.body)}</p>
+                  <a href={shift.source.url} target="_blank" rel="noreferrer">
+                    {shift.source.title}
+                    <ArrowUpRight size={16} />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section id="for-whom">
           <h2>{ar ? 'لمن' : 'Who it is for'}</h2>

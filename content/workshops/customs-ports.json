@@ -1,0 +1,234 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A reply to an importer's question",
+        "ar": "رد على سؤال مستورد"
+      },
+      "body": {
+        "en": "An importer or shipping agent asks which documents a procedure needs. Draft a reply grounded in published circulars; an officer checks it before it goes.",
+        "ar": "مستورد أو وكيل شحن يسأل عن المستندات المطلوبة لإجراء ما. صياغة رد يستند إلى التعاميم المنشورة، والموظف يراجعه قبل الإرسال."
+      }
+    },
+    {
+      "title": {
+        "en": "A new circular on one page",
+        "ar": "تعميم جديد في صفحة"
+      },
+      "body": {
+        "en": "Turn a new tariff or regulatory circular into a one-page internal brief for staff and a plain-language FAQ for traders.",
+        "ar": "تحويل تعميم تعريفة أو لائحة جديدة إلى ملخص داخلي من صفحة للموظفين، وأسئلة شائعة بلغة بسيطة للمتعاملين."
+      }
+    },
+    {
+      "title": {
+        "en": "The monthly management memo",
+        "ar": "مذكرة الإدارة الشهرية"
+      },
+      "body": {
+        "en": "From the statistics tables (vessel calls, turnaround times, declarations processed) to a memo that says what changed and what needs a decision.",
+        "ar": "من جداول الإحصاء (السفن، وزمن البقاء في الميناء، والإقرارات المنجزة) إلى مذكرة تقول ما تغيّر وما يحتاج قرارًا."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No masterclass has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الماستركلاس، من عمل المؤسسة نفسه. ليست نتائج. لم يُعقد ماستركلاس بعد."
+  },
+  "boundary": {
+    "en": "Administration and service to traders only. Inspection, targeting, risk analysis, and anything touching border security are out. No real consignment data is used under its owner's name.",
+    "ar": "الإدارة وخدمة المتعاملين فقط. التفتيش، والاستهداف، وتحليل المخاطر، وكل ما يمس أمن الحدود خارج الماستركلاس. ولا تُستعمل بيانات شحنة حقيقية باسم صاحبها."
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No masterclass has been held",
+    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
+  },
+  "position": 8,
+  "slug": "customs-ports",
+  "kind": "institution",
+  "institution": "customs",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "Replies to importers go out faster and clearer, a new circular is understood on first reading, and inspection stays out of the room.",
+    "ar": "ردّ المستورد يخرج أسرع وأوضح، والتعميم الجديد يفهمه الموظف من أول قراءة، والتفتيش يبقى خارج الغرفة."
+  },
+  "summary": {
+    "en": "For the desks that answer importers and shipping agents, and write circulars and reports. Not for inspection, and not for risk analysis.",
+    "ar": "لمكاتب تردّ على المستوردين ووكلاء الشحن، وتكتب التعاميم والتقارير. ليست للتفتيش، ولا لتحليل المخاطر."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in client service, circulars, and reporting at customs administrations and port authorities.",
+    "ar": "مديرو وموظفو خدمة المتعاملين، والتعاميم، والتقارير في الجمارك وهيئات الموانئ."
+  },
+  "audienceInstitution": {
+    "en": "A customs administration or port authority, limited to its administrative side and its service to traders. Inspection and risk analysis are outside this masterclass.",
+    "ar": "مصلحة جمارك أو هيئة موانئ، في جانبها الإداري وخدمة المتعاملين فقط. التفتيش وتحليل المخاطر خارج هذا الماستركلاس."
+  },
+  "whyProblem": {
+    "en": "The same importer question is answered from scratch every day. A new circular reaches staff as a long legal text, so the counter applies it late. The monthly report is pieced together by hand from scattered tables.",
+    "ar": "السؤال نفسه من المستوردين يُجاب كل يوم من الصفر. التعميم الجديد يصل الموظفين نصًا قانونيًا طويلًا، فيتأخر تطبيقه في الشباك. والتقرير الشهري يُجمع باليد من جداول متفرقة."
+  },
+  "whyEvidence": {
+    "en": "On 29 October 2024, officials of Brazil's customs administration wrote in the WCO's magazine that SISAM, a machine-learning system, has analysed every import declaration in Brazil for ten years, estimating the probability of about 30 types of error. Machines entered analysis a decade ago. The daily writing, from the importer's reply to the circular and the report, is what this masterclass works on.",
+    "ar": "في 29 أكتوبر 2024 كتب مسؤولون في الجمارك البرازيلية، في مجلة منظمة الجمارك العالمية، أن نظام SISAM القائم على تعلّم الآلة يحلّل كل إقرارات الاستيراد في البرازيل منذ عشر سنوات، ويقدّر احتمال نحو 30 نوعًا من الأخطاء. الآلة دخلت التحليل منذ عقد. أما الكتابة اليومية، من رد المستورد إلى التعميم والتقرير، فهي ما يشتغل عليه هذا الماستركلاس."
+  },
+  "source": {
+    "title": "WCO News 105 · How Brazil transformed Customs control through AI · 29 October 2024",
+    "url": "https://mag.wcoomd.org/magazine/wco-news-105-issue-3-2024/brazil-ai-and-other-technologies/"
+  },
+  "shiftsTitle": {
+    "en": "From hours of waiting to minutes of decision",
+    "ar": "من ساعات الانتظار إلى دقائق القرار"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "1 hour → under 1 minute",
+        "ar": "من ساعة إلى أقل من دقيقة"
+      },
+      "title": {
+        "en": "Korea Customs: every officer can question the data",
+        "ar": "الجمارك الكورية: كل موظف يسأل البيانات بنفسه"
+      },
+      "body": {
+        "en": "E-commerce imports into Korea grew 2.85-fold in five years, from 64 million to 181 million shipments, yet the time to analyse a high-risk shipment fell from about an hour to under a minute. The next step is generative AI that lets any customs officer put their own questions to the data.",
+        "ar": "تضاعفت شحنات التجارة الإلكترونية الواردة إلى كوريا 2.85 مرة في خمس سنوات، من 64 مليونًا إلى 181 مليون شحنة، ومع ذلك نزل وقت تحليل الشحنة عالية المخاطر من نحو ساعة إلى أقل من دقيقة. والخطوة التالية ذكاء اصطناعي توليدي يتيح لأي موظف جمارك أن يطرح أسئلته على البيانات بنفسه."
+      },
+      "source": {
+        "title": "Korea Customs Service · WCO News 108 · 26 October 2025",
+        "url": "https://mag.wcoomd.org/magazine/wco-news-108-issue-3-2025/korea-customs-services-e-commerce/"
+      }
+    },
+    {
+      "figure": {
+        "en": "Up to 3 days → minutes",
+        "ar": "من 3 أيام إلى دقائق"
+      },
+      "title": {
+        "en": "Singapore is redrawing port clearance",
+        "ar": "سنغافورة تعيد رسم إجراءات الميناء"
+      },
+      "body": {
+        "en": "In October 2024, Singapore's Maritime and Port Authority launched two AI applications for renewing the insurance certificates of Singapore-registered ships. It is building a port clearance system it says will cut application processing from up to three days to minutes, introduced progressively over the coming years.",
+        "ar": "في أكتوبر 2024 أطلقت هيئة الملاحة والموانئ في سنغافورة تطبيقين بالذكاء الاصطناعي لتجديد وثائق تأمين السفن المسجلة لديها. وتبني نظامًا لتخليص الموانئ تقول إنه سيُنزل زمن معالجة الطلب من ثلاثة أيام إلى دقائق، ويُطرح تدريجيًا في السنوات القادمة."
+      },
+      "source": {
+        "title": "Maritime and Port Authority of Singapore · Media release · 5 March 2025",
+        "url": "https://mpa.gov.sg/media-centre/details/driving-growth-and-innovation-to-strengthen-maritime-competitiveness-and-resilence"
+      }
+    },
+    {
+      "figure": {
+        "en": "12 of 116",
+        "ar": "12 من 116"
+      },
+      "title": {
+        "en": "The road is still open to whoever moves first",
+        "ar": "الطريق ما زال مفتوحًا لمن يتحرك أولًا"
+      },
+      "body": {
+        "en": "In the WCO's survey (116 submissions, 62% of the membership), only 12 members had adopted AI and machine learning. Yet these technologies topped the list of what is under development or consideration.",
+        "ar": "في مسح منظمة الجمارك العالمية (116 مشاركة تمثل 62% من الأعضاء) كان 12 عضوًا فقط قد تبنّوا الذكاء الاصطناعي وتعلّم الآلة. ومع ذلك جاءت هذه التقنيات في رأس ما يُطوَّر أو يُدرس الآن."
+      },
+      "source": {
+        "title": "WCO Smart Customs Project · Results of the Smart Customs Survey · July 2024",
+        "url": "https://scp.wcoomd.org/sites/default/files/2025-05/Public%20_Report_%20EN%20_31072024.pdf"
+      }
+    }
+  ],
+  "before": {
+    "en": "Five questions about the work that repeats at the client desk and in the circulars unit. Nothing about a specific consignment or about targeting criteria.",
+    "ar": "خمسة أسئلة عن الشغل الذي يتكرر على مكتب المتعاملين وفي قسم التعاميم. لا شيء عن شحنة بعينها أو عن معايير الاستهداف."
+  },
+  "during": {
+    "en": "The team works on its own material: a reply to an importer, a new circular turned into one page for staff, or a monthly report. An officer checks every figure and every reference before anything leaves.",
+    "ar": "الفريق يشتغل على مادته: رد على مستورد، أو تعميم جديد يتحول إلى صفحة للموظفين، أو تقرير شهري. الموظف يراجع كل رقم وكل مرجع قبل أن يخرج شيء."
+  },
+  "after": {
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use. We do not publish a result before that.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم. لا ننشر نتيجة قبل ذلك."
+  },
+  "questions": [
+    {
+      "en": "Which question from importers and shipping agents is answered from scratch every day?",
+      "ar": "أي سؤال من المستوردين ووكلاء الشحن يُجاب كل يوم من الصفر؟"
+    },
+    {
+      "en": "How many days pass between a circular's release and its correct use at the counter?",
+      "ar": "كم يومًا يمر بين صدور التعميم وتطبيقه الصحيح في الشباك؟"
+    },
+    {
+      "en": "Which report is assembled by hand from scattered tables every month?",
+      "ar": "أي تقرير يُجمع باليد من جداول متفرقة كل شهر؟"
+    },
+    {
+      "en": "Where is the same information copied from a document into a form again and again?",
+      "ar": "أين تُنقل البيانات نفسها من مستند إلى نموذج مرة بعد مرة؟"
+    },
+    {
+      "en": "What must an officer check before any reply goes out to a trader?",
+      "ar": "ما الذي يجب أن يراجعه موظف قبل خروج أي رد إلى متعامل؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A reply pattern for recurring importer questions, tied to published circulars, still signed by the officer in charge.",
+      "ar": "نمط رد للأسئلة المتكررة من المستوردين، مربوط بالتعاميم المنشورة، ويبقى التوقيع للموظف المختص."
+    },
+    {
+      "en": "One real circular turned into a one-page staff brief and a trader FAQ, in Arabic and English as separate texts.",
+      "ar": "تعميم حقيقي تحوّل إلى صفحة واحدة للموظفين وأسئلة شائعة للمتعاملين، بالعربية والإنجليزية كنصين مستقلين."
+    },
+    {
+      "en": "A written list of what stays with people alone, so the tool never drifts toward inspection or decisions.",
+      "ar": "قائمة مكتوبة بما يبقى للإنسان وحده، حتى لا تقترب الأداة من التفتيش أو القرار."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this masterclass been held?",
+        "ar": "هل عُقد هذا الماستركلاس؟"
+      },
+      "a": {
+        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
+        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Does this cover inspection or risk analysis?",
+        "ar": "هل يشمل الماستركلاس التفتيش أو تحليل المخاطر؟"
+      },
+      "a": {
+        "en": "No. No inspection, no targeting, no risk analysis. The door is the client desk, the circulars unit, and reporting.",
+        "ar": "لا. لا تفتيش، ولا استهداف، ولا تحليل مخاطر. الباب هو مكتب المتعاملين، وقسم التعاميم، والتقارير."
+      }
+    },
+    {
+      "q": {
+        "en": "Why customs and ports in particular?",
+        "ar": "لماذا الجمارك والموانئ تحديدًا؟"
+      },
+      "a": {
+        "en": "Because the corridor between Korea and the Arab world runs through here, and because VisionSeek's founder has worked in exports and international trade and knows the document and the shipment from the inside.",
+        "ar": "لأن الممر بين كوريا والعالم العربي يمر من هنا، ولأن مؤسس VisionSeek اشتغل في التصدير والتجارة الدولية، ويعرف المستند والشحنة من الداخل."
+      }
+    }
+  ]
+}

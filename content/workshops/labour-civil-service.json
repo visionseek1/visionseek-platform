@@ -1,0 +1,234 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "Rewriting a job description",
+        "ar": "إعادة كتابة وصف وظيفي"
+      },
+      "body": {
+        "en": "An old description written as a list of duties, such as Employment Services Officer, becomes a profile built on skills and outputs, marking where the tool helps and what needs human judgment.",
+        "ar": "وصف قديم مكتوب كقائمة واجبات، مثل «مسؤول خدمات التوظيف»، يصير ملفًا على المهارات والمخرجات، مع تحديد ما تساعد فيه الأداة وما يحتاج حكم إنسان."
+      }
+    },
+    {
+      "title": {
+        "en": "A training-needs memo",
+        "ar": "مذكرة احتياجات تدريبية"
+      },
+      "body": {
+        "en": "A skills-survey summary for one directorate becomes a one-page memo for the undersecretary: priorities, target groups, timeline, and how to measure impact.",
+        "ar": "ملخص مسح مهارات لإدارة ما يصير مذكرة من صفحة لمكتب الوكيل: الأولويات، والفئات المستهدفة، والجدول، وطريقة قياس الأثر."
+      }
+    },
+    {
+      "title": {
+        "en": "A reply to a job seeker",
+        "ar": "رد على باحث عن عمل"
+      },
+      "body": {
+        "en": "A clear, respectful reply to a citizen whose registration or job-matching application was declined: the reason, the next step, and the route of appeal, in Arabic and English as separate texts.",
+        "ar": "رد واضح ومحترم على مواطن رُفض تسجيله أو طلب توظيفه: السبب، والخطوة التالية، وطريق التظلم، بالعربية والإنجليزية كنصين مستقلين."
+      }
+    }
+  ],
+  "examplesNote": {
+    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No masterclass has been held.",
+    "ar": "هذه أمثلة لنوع الشغل داخل الماستركلاس، من عمل المؤسسة نفسه. ليست نتائج. لم يُعقد ماستركلاس بعد."
+  },
+  "boundary": {
+    "en": "No real employee or job-seeker data under their names, and no screening or rating of people by a tool. Hiring, promotion and ending service are human decisions.",
+    "ar": "لا بيانات موظفين أو باحثين عن عمل حقيقية بأسمائهم، ولا فرز أو تقييم لأشخاص بأداة. التعيين والترقية وإنهاء الخدمة قرارات إنسان."
+  },
+  "format": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "duration": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "size": {
+    "en": "[To be set]",
+    "ar": "[تُحدَّد]"
+  },
+  "status": {
+    "en": "In design · No masterclass has been held",
+    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
+  },
+  "position": 14,
+  "slug": "labour-civil-service",
+  "kind": "institution",
+  "institution": "civilservice",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "Job descriptions are written around skills, not task lists, the training plan reaches the undersecretary on one page, and replies to job seekers respect their time.",
+    "ar": "الوصف الوظيفي يُكتب على المهارة لا على قائمة المهام، وخطة التدريب تصل مكتب الوكيل في صفحة، والرد على الباحث عن عمل يحترم وقته."
+  },
+  "summary": {
+    "en": "For labour ministries, civil service bodies, and government HR. Decisions on hiring and ending service stay with a person.",
+    "ar": "لوزارات العمل، وجهات الخدمة المدنية، والموارد البشرية الحكومية. القرار في التعيين وإنهاء الخدمة يبقى لإنسان."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in workforce planning, training, human resources, and services for job seekers.",
+    "ar": "مديرو وموظفو تخطيط القوى العاملة، والتدريب، والموارد البشرية، وخدمة الباحثين عن عمل."
+  },
+  "audienceInstitution": {
+    "en": "A labour ministry, a civil service body, or a government HR department. No decision about a specific person comes from a tool.",
+    "ar": "وزارة عمل أو جهة خدمة مدنية أو إدارة موارد بشرية حكومية. لا قرار في شخص بعينه يصدر من أداة."
+  },
+  "whyProblem": {
+    "en": "Job descriptions were written years ago around task lists that no longer hold. Training plans are built on what was, not on what is changing. Replies to job seekers come late, or come out cold.",
+    "ar": "الوصف الوظيفي مكتوب منذ سنوات على قائمة مهام لم تعد كما كانت. خطة التدريب تُبنى على ما كان، لا على ما يتغيّر. والرد على الباحث عن عمل يتأخر، أو يخرج جافًا."
+  },
+  "whyEvidence": {
+    "en": "On 18 September 2025 the OECD published Governing with Artificial Intelligence, which explores 200 real-world examples of how governments use AI across 11 core functions, from delivering public services and administering justice to managing finances and reforming the civil service itself.",
+    "ar": "في 18 سبتمبر 2025 نشرت منظمة التعاون الاقتصادي والتنمية تقرير «الحكم بالذكاء الاصطناعي»، ويستعرض 200 مثال حقيقي لاستخدام الحكومات له في 11 وظيفة أساسية، من تقديم الخدمات العامة وإدارة العدالة، إلى إدارة المال العام وإصلاح الخدمة المدنية نفسها."
+  },
+  "source": {
+    "title": "OECD · Governing with Artificial Intelligence · 18 September 2025",
+    "url": "https://oecd.ai/en/ai-publications/governing-with-ai"
+  },
+  "shiftsTitle": {
+    "en": "Jobs are more likely to change than to vanish",
+    "ar": "الأرجح أن تتغيّر الوظيفة، لا أن تختفي"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "26 minutes a day",
+        "ar": "26 دقيقة يوميًا"
+      },
+      "title": {
+        "en": "UK: more than 20,000 civil servants tried it",
+        "ar": "بريطانيا: أكثر من 20 ألف موظف حكومي جرّبوا"
+      },
+      "body": {
+        "en": "In a three-month UK government trial with more than 20,000 civil servants, participants reported saving an average of 26 minutes a day with an AI assistant inside their office tools. 82% said they would not want to return to how they worked before.",
+        "ar": "في تجربة حكومية بريطانية امتدت ثلاثة أشهر وشارك فيها أكثر من 20 ألف موظف مدني، وفّر المشاركون في المتوسط 26 دقيقة يوميًا بمساعد ذكاء اصطناعي داخل أدوات المكتب، بحسب ما أفادوا. وقال 82% إنهم لا يريدون العودة إلى طريقة عملهم السابقة."
+      },
+      "source": {
+        "title": "GOV.UK · Cross-government findings report · 2 June 2025",
+        "url": "https://www.gov.uk/government/publications/microsoft-365-copilot-experiment-cross-government-findings-report/microsoft-365-copilot-experiment-cross-government-findings-report-html"
+      }
+    },
+    {
+      "figure": {
+        "en": "1 in 4",
+        "ar": "1 من 4"
+      },
+      "title": {
+        "en": "Transformation is likelier than replacement",
+        "ar": "التحوّل أرجح من الاستبدال"
+      },
+      "body": {
+        "en": "According to the ILO, one in four workers worldwide is in an occupation with some exposure to generative AI, with clerical work the most exposed. Because most occupations involve tasks that need human input, transformation of jobs is the most likely impact.",
+        "ar": "بحسب منظمة العمل الدولية، واحد من كل أربعة عاملين في العالم يعمل في مهنة يمسّها الذكاء الاصطناعي التوليدي، والأعمال المكتبية الأعلى تعرضًا. ولأن أغلب المهن فيها مهام تحتاج إنسانًا، فالأثر الأرجح أن تتحول الوظيفة، لا أن تُستبدل."
+      },
+      "source": {
+        "title": "ILO · Generative AI and Jobs: A Refined Global Index (Working Paper 140) · 20 May 2025",
+        "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+      }
+    },
+    {
+      "figure": {
+        "en": "59 of 100",
+        "ar": "59 من 100"
+      },
+      "title": {
+        "en": "Most of the workforce will need training",
+        "ar": "أغلب القوى العاملة تحتاج تدريبًا"
+      },
+      "body": {
+        "en": "The World Economic Forum says that if the world's workforce were 100 people, 59 would need training by 2030, and that around 39% of existing skill sets will be transformed or become outdated between 2025 and 2030.",
+        "ar": "يقول المنتدى الاقتصادي العالمي إن القوى العاملة في العالم لو كانت 100 شخص، لاحتاج 59 منهم إلى تدريب بحلول 2030، وإن نحو 39% من المهارات الحالية ستتحول أو تتقادم بين 2025 و2030."
+      },
+      "source": {
+        "title": "World Economic Forum · The Future of Jobs Report 2025 · 7 January 2025",
+        "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/"
+      }
+    }
+  ],
+  "before": {
+    "en": "Five questions about job descriptions, training, and replies to people. No individual employee file.",
+    "ar": "خمسة أسئلة عن الوصف الوظيفي، والتدريب، والرد على الناس. لا ملف موظف بعينه."
+  },
+  "during": {
+    "en": "The team works on its own material: an old job description rewritten around skills, a training-needs memo, or a reply to a job seeker. Decisions about people stay outside the room.",
+    "ar": "الفريق يشتغل على مادته: وصف وظيفي قديم يُعاد على المهارات، أو مذكرة احتياجات تدريبية، أو رد على باحث عن عمل. القرار في الأشخاص يبقى خارج الغرفة."
+  },
+  "after": {
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use. We do not publish a result before that.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم. لا ننشر نتيجة قبل ذلك."
+  },
+  "questions": [
+    {
+      "en": "Which job description has not changed in years, while the work around it has?",
+      "ar": "أي وصف وظيفي لم يتغير منذ سنوات، وتغيّر الشغل من حوله؟"
+    },
+    {
+      "en": "What is today's training plan built on: what was, or what is changing?",
+      "ar": "على ماذا تُبنى خطة التدريب اليوم: على ما كان أم على ما يتغيّر؟"
+    },
+    {
+      "en": "Which reply to job seekers is written from scratch every time?",
+      "ar": "أي رد على الباحثين عن عمل يُكتب من الصفر كل مرة؟"
+    },
+    {
+      "en": "Which workforce report is assembled by hand from several sources?",
+      "ar": "أي تقرير عن القوى العاملة يُجمع باليد من أكثر من مصدر؟"
+    },
+    {
+      "en": "Which decisions must stay with a person alone?",
+      "ar": "ما القرارات التي يجب أن تبقى لإنسان وحده؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "One real job description rewritten around skills and outputs, marking where the tool helps and what needs human judgment.",
+      "ar": "وصف وظيفي حقيقي أُعيد على المهارات والمخرجات، وفيه ما تساعد فيه الأداة وما يحتاج حكم إنسان."
+    },
+    {
+      "en": "A one-page training-needs memo for the undersecretary: priorities, target groups, timeline, and how to measure.",
+      "ar": "مذكرة احتياجات تدريبية من صفحة لمكتب الوكيل: الأولويات، والفئات، والجدول، وطريقة القياس."
+    },
+    {
+      "en": "A reply pattern for job seekers that explains the reason, the next step, and the route of appeal.",
+      "ar": "نمط رد على الباحثين عن عمل يشرح السبب، والخطوة التالية، وطريق التظلم."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Has this masterclass been held?",
+        "ar": "هل عُقد هذا الماستركلاس؟"
+      },
+      "a": {
+        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
+        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
+      }
+    },
+    {
+      "q": {
+        "en": "Does the tool screen applicants or rate employees?",
+        "ar": "هل تفرز الأداة المتقدمين أو تقيّم الموظفين؟"
+      },
+      "a": {
+        "en": "No. No screening or rating of people by a tool. The masterclass is about writing and planning; decisions about people belong to people.",
+        "ar": "لا. لا فرز ولا تقييم لأشخاص بأداة. الماستركلاس عن الكتابة والتخطيط، والقرار في الناس للناس."
+      }
+    },
+    {
+      "q": {
+        "en": "Does this mean fewer jobs?",
+        "ar": "هل يعني هذا تقليل الوظائف؟"
+      },
+      "a": {
+        "en": "The masterclass does not start from that question. The ILO says the most likely impact of generative AI is the transformation of jobs, not their replacement. What we work on is a more capable employee, not a missing one.",
+        "ar": "الماستركلاس لا يبدأ من هذا السؤال. ومنظمة العمل الدولية تقول إن الأثر الأرجح للذكاء الاصطناعي التوليدي تحوّل الوظائف لا استبدالها. ما نشتغل عليه موظف أقدر، لا موظف أقل."
+      }
+    }
+  ]
+}

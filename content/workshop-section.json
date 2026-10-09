@@ -125,11 +125,60 @@
         "en": "Companies",
         "ar": "الشركات"
       }
+    },
+    {
+      "id": "customs",
+      "label": {
+        "en": "Customs and ports",
+        "ar": "الجمارك والموانئ"
+      }
+    },
+    {
+      "id": "finance",
+      "label": {
+        "en": "Finance and tax",
+        "ar": "المالية والضرائب"
+      }
+    },
+    {
+      "id": "justice",
+      "label": {
+        "en": "Justice and courts",
+        "ar": "العدل والمحاكم"
+      }
+    },
+    {
+      "id": "education",
+      "label": {
+        "en": "Education",
+        "ar": "التعليم"
+      }
+    },
+    {
+      "id": "energy",
+      "label": {
+        "en": "Energy and power",
+        "ar": "الطاقة والكهرباء"
+      }
+    },
+    {
+      "id": "municipality",
+      "label": {
+        "en": "Municipalities",
+        "ar": "البلديات"
+      }
+    },
+    {
+      "id": "civilservice",
+      "label": {
+        "en": "Labour and civil service",
+        "ar": "العمل والخدمة المدنية"
+      }
     }
   ],
   "allInstitutions": {
-    "en": "All five",
-    "ar": "الأنواع الخمسة"
+    "en": "All sectors",
+    "ar": "كل القطاعات"
   },
   "live": {
     "kicker": "VISIONSEEK MASTERCLASS",
@@ -209,8 +258,8 @@
       "en": "Live session · On your own material · Length set with you"
     },
     "institutionPick": {
-      "ar": "اختر مؤسستك",
-      "en": "Choose your institution"
+      "ar": "اختر قطاعك",
+      "en": "Choose your sector"
     },
     "howLabel": {
       "ar": "التخصيص هو ميزتنا",

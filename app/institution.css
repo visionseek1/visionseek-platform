@@ -270,3 +270,11 @@
 .vs-wl-door::after{display:none}
 .vs-wl-door-body{margin-top:0;flex:1}
 .vs-wl-door-meta{margin-top:auto;padding-top:.4rem}
+/* Masterclass sector pages: documented shifts in the sector, each card with its figure and its source. */
+.vs-ws-teacher{margin:.4rem 0 0;color:var(--white);font-size:1rem}
+.vs-ws-shift-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:1.2rem}
+.vs-ws-shift-grid>div{display:flex;flex-direction:column;gap:.5rem;padding:1.3rem;background:#10151a;border:1px solid #2c3138;border-top:3px solid var(--lime)}
+.vs-ws-shift-grid b{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.25;color:var(--lime);font-weight:700}
+.vs-ws-shift-grid strong{font-size:1.15rem;line-height:1.5;font-weight:600}
+.vs-ws-page .vs-ws-shift-grid p{margin:0;font-size:.98rem;line-height:1.8;color:var(--grey)}
+.vs-ws-shift-grid a{margin-top:auto;font-size:.85rem;line-height:1.5}

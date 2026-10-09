@@ -5,11 +5,15 @@ import type {Entry, Locale} from './schema';
 export type {Locale};
 export type Bi = {en: string; ar: string};
 export type WorkshopKind = 'leader' | 'institution' | 'development';
-export type InstitutionKind = 'police' | 'university' | 'airport' | 'hospital' | 'company';
+export type InstitutionKind =
+  | 'police' | 'university' | 'airport' | 'hospital' | 'company'
+  | 'customs' | 'finance' | 'justice' | 'education' | 'energy' | 'municipality' | 'civilservice';
 export type RoleId = 'senior' | 'manager' | 'staff';
 
 export type WorkshopExample = {title: Bi; body: Bi};
 export type WorkshopFaq = {q: Bi; a: Bi};
+/** One documented shift in the sector: a figure, what it means, and the page it comes from. */
+export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; source: {title: string; url: string}};
 
 export type Workshop = {
   position: number;
@@ -24,6 +28,9 @@ export type Workshop = {
   whyProblem: Bi;
   whyEvidence: Bi;
   source: {title: string; url: string};
+  /** How understanding AI is changing this sector, from published sources. Optional; shown under the page's opening. */
+  shiftsTitle?: Bi;
+  shifts?: WorkshopShift[];
   before: Bi;
   during: Bi;
   after: Bi;
