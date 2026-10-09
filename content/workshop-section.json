@@ -265,6 +265,20 @@
         "ar": "التجارب منشورة لمن يريد أن يقرأها. لكن لا أحد سيجلس معك، ويفهم عملك، ثم يختار لك منها ما ينفعك أنت. هذا هو الماستركلاس."
       }
     ],
+    "independence": {
+      "title": {
+        "en": "We teach you. We don't tie you to us.",
+        "ar": "نعلّمك، لا نربطك بنا"
+      },
+      "lead": {
+        "en": "Most tools and methods are built so you need them every day. This masterclass is built so you stop needing it.",
+        "ar": "أغلب الأدوات والمناهج مصمَّمة لتحتاجها كل يوم. الماستركلاس مصمَّم لتستغني عنه."
+      },
+      "line": {
+        "en": "You leave able to understand for yourself, choose your own tools, and carry on alone, without needing us or anyone else.",
+        "ar": "تخرج منه وأنت تفهم بنفسك، وتختار أدواتك بنفسك، وتكمل الطريق بنفسك، دون أن تحتاجنا أو تحتاج غيرنا."
+      }
+    },
     "heroImage": "/masterclass/ahmed-abdelalim.jpg",
     "heroImageAlt": {
       "en": "Dr. Ahmed Abdelalim",

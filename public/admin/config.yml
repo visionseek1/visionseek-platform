@@ -1747,6 +1747,29 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
+              - label: «نعلّمك، لا نربطك بنا»
+                name: independence
+                widget: object
+                hint: "أهم نقطة: نعلّم الناس، ولا نجعلهم يعتمدون علينا ولا على غيرنا."
+                fields:
+                  - label: العنوان الصغير
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الجملة الكبيرة
+                    name: lead
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: السطر تحتها
+                    name: line
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
               - {label: صورة الغلاف, name: heroImage, widget: image}
               - label: وصف الصورة
                 name: heroImageAlt

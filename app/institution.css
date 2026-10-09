@@ -295,3 +295,9 @@
 .vs-wl-door-for{margin:.2rem 0 0;font-size:.9rem;color:var(--wl-soft)}
 .vs-wl-door-body .vs-wl-door-text{margin:0}
 @media(max-width:1100px){.vs-wl-door-grid.is-two{grid-template-columns:1fr}}
+
+/* Masterclass: «نعلّمك، لا نربطك بنا» — the point Dr. Ahmed asked to make clearest. */
+.vs-wl-own{display:flex;flex-direction:column;gap:.9rem;max-width:56rem;border-bottom:1px solid #1e231c}
+.vs-wl-own .vs-wl-code{margin:0;color:var(--lime);font-size:1rem;font-weight:700}
+.vs-wl-own h2{font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.45;font-weight:800}
+.vs-wl-own>p:last-child{margin:0;font-size:1.15rem;line-height:1.9;color:var(--wl-ink);max-width:44rem}
