@@ -31,29 +31,9 @@
       }
     }
   ],
-  "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No masterclass has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الماستركلاس، من عمل المؤسسة نفسه. ليست نتائج. لم يُعقد ماستركلاس بعد."
-  },
   "boundary": {
     "en": "Administration only. No drafting of judgments, no legal analysis of a case's merits, no real litigant data. Every date and name is matched against the case system before anything is sent.",
     "ar": "الإدارة فقط. لا صياغة لحكم، ولا تحليل قانوني لموضوع دعوى، ولا بيانات متقاضين حقيقية. وكل تاريخ واسم يُطابَق على نظام القضايا قبل الإرسال."
-  },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No masterclass has been held",
-    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "position": 10,
   "slug": "justice-courts",
@@ -161,8 +141,8 @@
     "ar": "الفريق يشتغل على مادته: إخطار جلسة، أو ملف إداري طويل يتحول إلى صفحة، أو إعلان للجمهور. كل تاريخ واسم يُطابَق على نظام القضايا قبل الإرسال."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use. We do not publish a result before that.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم. لا ننشر نتيجة قبل ذلك."
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
   },
   "questions": [
     {
@@ -201,16 +181,6 @@
     }
   ],
   "faq": [
-    {
-      "q": {
-        "en": "Has this masterclass been held?",
-        "ar": "هل عُقد هذا الماستركلاس؟"
-      },
-      "a": {
-        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
-        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
     {
       "q": {
         "en": "Does the tool write a judgment or analyse a case?",

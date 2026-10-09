@@ -84,8 +84,6 @@ collections:
                   - {label: "البرامج ← تشغيل مرن للموارد  /programs/resource-resilience", value: "/programs/resource-resilience"}
                   - {label: "البرامج ← من الدليل العلمي إلى القدرة  /programs/science-to-capability", value: "/programs/science-to-capability"}
                   - {label: "البرامج ← توريد عابر للحدود تقوده الأدلة  /programs/trusted-sourcing", value: "/programs/trusted-sourcing"}
-                  - {label: "masterclass ← كيف يعمل الماستركلاس الأسبوعي؟  /masterclass/how-workshops-work", value: "/masterclass/how-workshops-work"}
-                  - {label: "masterclass ← سجلات الماستركلاس ومخرجاته  /masterclass/rewinds", value: "/masterclass/rewinds"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}
@@ -1492,13 +1490,6 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
-      - label: تنبيه الأمثلة
-        name: examplesNote
-        widget: object
-        required: false
-        fields:
-          - {label: English, name: en, widget: text, required: false}
-          - {label: العربية, name: ar, widget: text, required: false}
       - label: الحد
         name: boundary
         widget: object
@@ -1507,25 +1498,6 @@ collections:
         fields:
           - {label: English, name: en, widget: text, required: false}
           - {label: العربية, name: ar, widget: text, required: false}
-      - label: الشكل
-        name: format
-        widget: object
-        hint: "اترك [تُحدَّد] و [To be set] إلى أن يقرر د. أحمد."
-        fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-      - label: المدة
-        name: duration
-        widget: object
-        fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-      - label: العدد
-        name: size
-        widget: object
-        fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
       - label: أسئلة شائعة
         name: faq
         widget: list
@@ -1542,13 +1514,6 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
-      - label: الحالة
-        name: status
-        widget: object
-        hint: "لا تغيّرها. الصيغة: قيد التصميم · لم يُعقد ماستركلاس بعد"
-        fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس
@@ -1578,12 +1543,6 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
-          - label: الحالة
-            name: status
-            widget: object
-            fields:
-              - {label: English, name: en, widget: string}
-              - {label: العربية, name: ar, widget: string}
           - label: عنوان المسار
             name: rolesHeading
             widget: object
@@ -1713,17 +1672,11 @@ collections:
               - label: فيديو المقدمة
                 name: trailer
                 widget: object
-                hint: "ارفع الفيديو (mp4) هنا فيظهر مكان الصورة في أعلى الصفحة. فارغ = غلاف «المقدمة قيد التصميم»."
+                hint: "ارفع الفيديو (mp4) هنا فيظهر مكان الصورة في أعلى الصفحة. فارغ = الصورة وحدها."
                 fields:
                   - {label: الفيديو, name: video, widget: file, required: false, default: ""}
                   - label: نص الزر
                     name: label
-                    widget: object
-                    fields:
-                      - {label: English, name: en, widget: string}
-                      - {label: العربية, name: ar, widget: string}
-                  - label: النص قبل رفع الفيديو
-                    name: pending
                     widget: object
                     fields:
                       - {label: English, name: en, widget: string}

@@ -220,38 +220,34 @@
         "ar": "ماستركلاس"
       },
       "eyebrow": {
-        "en": "THREE DOORS. A RESULT, NOT A COURSE NAME.",
-        "ar": "ثلاثة أبواب. نتيجة، لا اسم دورة."
+        "en": "VISIONSEEK MASTERCLASS",
+        "ar": "VISIONSEEK MASTERCLASS"
       },
       "intro": {
-        "en": "No masterclass has been held. The doors name who the session is for and what the person leaves able to do. Format, duration and group size are not set.",
-        "ar": "لم يُعقد ماستركلاس بعد. الأبواب تسمّي لمن الجلسة، وبماذا يخرج منها. الشكل والمدة والعدد لم تُحدَّد."
+        "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
+        "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
       },
       "image": "industry",
-      "notice": {
-        "en": "In design. No masterclass has been held.",
-        "ar": "قيد التصميم. لم يُعقد ماستركلاس بعد."
-      },
       "links": [
         {
           "href": "/masterclass/leader-seat",
           "label": {
-            "en": "Management and leadership in the age of AI",
-            "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
-          }
-        },
-        {
-          "href": "/masterclass#institutions",
-          "label": {
-            "en": "Working with AI",
-            "ar": "العمل مع الذكاء الاصطناعي"
+            "en": "For you",
+            "ar": "لك أنت"
           }
         },
         {
           "href": "/masterclass/develop-the-institution",
           "label": {
-            "en": "The institution and AI",
-            "ar": "المؤسسة والذكاء الاصطناعي"
+            "en": "For your institution",
+            "ar": "لمؤسستك"
+          }
+        },
+        {
+          "href": "/masterclass#institutions",
+          "label": {
+            "en": "Choose your sector",
+            "ar": "اختر قطاعك"
           }
         }
       ]

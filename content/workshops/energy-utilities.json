@@ -31,29 +31,9 @@
       }
     }
   ],
-  "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No masterclass has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الماستركلاس، من عمل المؤسسة نفسه. ليست نتائج. لم يُعقد ماستركلاس بعد."
-  },
   "boundary": {
     "en": "No access to control and operations systems, and no operational decision from a tool. Figures come from the team, and an engineer checks them before they leave.",
     "ar": "لا وصول إلى أنظمة التحكم والتشغيل، ولا قرار تشغيلي من أداة. الأرقام تأتي من الفريق، ويراجعها مهندس قبل أن تخرج."
-  },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No masterclass has been held",
-    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "position": 12,
   "slug": "energy-utilities",
@@ -161,8 +141,8 @@
     "ar": "الفريق يشتغل على مادته: سرد لتقرير الأداء الشهري، أو إخطار انقطاع مخطط، أو مذكرة أولويات صيانة. المهندس يراجع كل رقم."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use. We do not publish a result before that.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم. لا ننشر نتيجة قبل ذلك."
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
   },
   "questions": [
     {
@@ -201,16 +181,6 @@
     }
   ],
   "faq": [
-    {
-      "q": {
-        "en": "Has this masterclass been held?",
-        "ar": "هل عُقد هذا الماستركلاس؟"
-      },
-      "a": {
-        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
-        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
     {
       "q": {
         "en": "Does the masterclass come near running the grid?",

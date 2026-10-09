@@ -31,29 +31,9 @@
       }
     }
   ],
-  "examplesNote": {
-    "en": "These are examples of the work a session would use, drawn from the kind of work the institution already does. They are not results. No masterclass has been held.",
-    "ar": "هذه أمثلة لنوع الشغل داخل الماستركلاس، من عمل المؤسسة نفسه. ليست نتائج. لم يُعقد ماستركلاس بعد."
-  },
   "boundary": {
     "en": "Administration only. The masterclass does not diagnose, prescribe, interpret a result, or replace a clinician.",
     "ar": "الإدارة فقط. الماستركلاس لا يشخّص، ولا يصف، ولا يفسّر نتيجة، ولا يحل محل طبيب."
-  },
-  "format": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "duration": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "size": {
-    "en": "[To be set]",
-    "ar": "[تُحدَّد]"
-  },
-  "status": {
-    "en": "In design · No masterclass has been held",
-    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
   },
   "position": 5,
   "slug": "hospital-administration",
@@ -140,16 +120,6 @@
     }
   ],
   "faq": [
-    {
-      "q": {
-        "en": "Has this masterclass been held?",
-        "ar": "هل عُقد هذا الماستركلاس؟"
-      },
-      "a": {
-        "en": "No. It is in design. No masterclass has been held, and this page is not a client story.",
-        "ar": "لا. هذا الماستركلاس قيد التصميم. لم يُعقد بعد، وهذه الصفحة ليست حكاية عميل."
-      }
-    },
     {
       "q": {
         "en": "Will this touch patient care decisions?",

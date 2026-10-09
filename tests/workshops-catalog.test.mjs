@@ -8,10 +8,10 @@ const files = readdirSync(dir).filter(name => name.endsWith('.json'));
 const workshops = files.map(name => JSON.parse(readFileSync(join(dir, name), 'utf8')));
 const section = JSON.parse(readFileSync(join(process.cwd(), 'content/workshop-section.json'), 'utf8'));
 
-const unset = {en: '[To be set]', ar: '[تُحدَّد]'};
-const status = {en: 'In design · No masterclass has been held', ar: 'قيد التصميم · لم يُعقد ماستركلاس بعد'};
+// Dr. Ahmed (9 Oct 2026): nothing on the masterclass may suggest it is a trial, a display, or that none has been held.
+const notHeld = /لم يُعقد|لم تُعقد|لم ينعقد|قيد التصميم|تُحدَّد\]|ليست نتائج|ليس شراكة|حكاية عميل|has been held|In design|To be set|not results|being made|not a client story|not a partnership/;
 
-test('fourteen designed masterclasses, none of them held', () => {
+test('fourteen masterclass files, and no line says it is a trial or not yet held', () => {
   assert.equal(workshops.length, 14);
   assert.deepEqual(workshops.map(item => item.slug).sort(), [
     'airport-teams',
@@ -30,10 +30,7 @@ test('fourteen designed masterclasses, none of them held', () => {
     'university-teams',
   ]);
   for (const item of workshops) {
-    assert.deepEqual(item.status, status);
-    assert.deepEqual(item.format, unset);
-    assert.deepEqual(item.duration, unset);
-    assert.deepEqual(item.size, unset);
+    assert.equal(notHeld.test(JSON.stringify(item)), false, `${item.slug}: not-held or trial wording`);
     assert.equal(item.questions.length, 5);
     assert.equal(item.source.url.startsWith('https://'), true);
     const joined = JSON.stringify(item);
@@ -76,7 +73,10 @@ test('two doors: one person, or one institution with its sectors', () => {
   const types = section.institutionTypes.map(type => type.id);
   for (const item of workshops.filter(w => w.kind === 'institution' && w.institution)) assert.ok(types.includes(item.institution), `${item.slug}: unknown sector ${item.institution}`);
   for (const id of types) assert.equal(workshops.filter(w => w.institution === id).length, 1, `one masterclass per sector: ${id}`);
-  assert.deepEqual(section.status, status);
+  assert.equal(notHeld.test(JSON.stringify(section)), false, 'section: not-held or trial wording');
+  for (const view of ['components/institution/workshops-view.tsx', 'components/institution/pages.tsx', 'components/institution/home-sections.tsx']) {
+    assert.equal(notHeld.test(readFileSync(join(process.cwd(), view), 'utf8')), false, `${view}: not-held or trial wording`);
+  }
 });
 
 test('the live section page is short: hero, two doors, founder, closing', () => {
@@ -106,7 +106,7 @@ test('masterclass: the teacher leads, the introduction video has a slot, and the
   assert.equal(live.instructor.en, 'Dr. Ahmed Abdelalim');
   for (const key of ['teaches', 'cardTeacher', 'doorsLine', 'institutionPick']) assert.ok(live[key].ar && live[key].en, key);
   assert.equal(typeof live.trailer.video, 'string');
-  assert.ok(live.trailer.label.ar && live.trailer.pending.ar);
+  assert.ok(live.trailer.label.ar);
   assert.equal('heroWith' in live, false);
   assert.equal(section.title.ar, 'ماستركلاس');
   for (const item of [section, ...workshops]) assert.equal(/ورشة|ورش |الورش|[Ww]orkshop/.test(JSON.stringify(item)), false, item.slug ?? 'section');

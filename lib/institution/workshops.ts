@@ -40,13 +40,9 @@ export type Workshop = {
   questions: Bi[];
   leavesWith: Bi[];
   examples: WorkshopExample[];
-  examplesNote: Bi;
+  examplesNote?: Bi;
   boundary: Bi;
-  format: Bi;
-  duration: Bi;
-  size: Bi;
   faq: WorkshopFaq[];
-  status: Bi;
 };
 
 export type WorkshopRole = {id: RoleId; label: Bi; note: Bi};
@@ -70,8 +66,8 @@ export type WorkshopLive = {
   /** Masterclass: the teacher's name leads the page, then what he teaches. */
   instructor: Bi;
   teaches: Bi;
-  /** Introduction video. Empty `video` shows a designed placeholder with `pending`. */
-  trailer: {video: string; label: Bi; pending: Bi};
+  /** Introduction video. Empty `video` shows the photo. */
+  trailer: {video: string; label: Bi};
   heroQuote: Bi;
   /** The opening paragraphs under the quote, in order. */
   opening: Bi[];
@@ -104,7 +100,6 @@ export type WorkshopSection = {
   title: Bi;
   hero: Bi;
   intro: Bi;
-  status: Bi;
   rolesHeading: Bi;
   roles: WorkshopRole[];
   doors: Record<WorkshopKind, WorkshopDoor>;

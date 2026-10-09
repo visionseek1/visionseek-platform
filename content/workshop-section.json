@@ -11,10 +11,6 @@
     "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
     "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
   },
-  "status": {
-    "en": "In design · No masterclass has been held",
-    "ar": "قيد التصميم · لم يُعقد ماستركلاس بعد"
-  },
   "rolesHeading": {
     "en": "Start from the seat you hold",
     "ar": "ابدأ بالمنصب الذي تجلس عليه"
@@ -233,10 +229,6 @@
       "label": {
         "ar": "شاهد المقدمة",
         "en": "Watch the introduction"
-      },
-      "pending": {
-        "ar": "المقدمة قيد التصميم",
-        "en": "The introduction is being made"
       }
     },
     "heroQuote": {

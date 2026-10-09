@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight, Play} from 'lucide-react';
+import {ArrowRight, ArrowUpRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {
@@ -53,7 +53,6 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             </p>
             <h1 className="vs-wl-instructor">{text(locale, live.instructor)}</h1>
             <p className="vs-wl-teaches">{text(locale, live.teaches)}</p>
-            <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
             <div className="vs-wl-actions">
               <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`}>{text(locale, live.ctaPrimary)}<ArrowRight size={18} aria-hidden /></Link>
             </div>
@@ -62,13 +61,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             {live.trailer.video ? (
               <video className="vs-wl-trailer" src={live.trailer.video} poster={live.heroImage} controls playsInline preload="none" aria-label={text(locale, live.trailer.label)} />
             ) : (
-              <>
-                <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
-                <p className="vs-wl-trailer-soon">
-                  <span className="vs-wl-play" aria-hidden><Play size={20} /></span>
-                  <span><b>{text(locale, live.trailer.label)}</b><small>{text(locale, live.trailer.pending)}</small></span>
-                </p>
-              </>
+              <Image src={live.heroImage} alt={text(locale, live.heroImageAlt)} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
             )}
             <span>{live.heroImageLabel}</span>
           </div>
@@ -180,7 +173,6 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           <h2>
             {live.closingLines.map((line, index) => <span key={line.en} className={index === live.closingLines.length - 1 ? 'is-accent' : undefined}>{text(locale, line)}</span>)}
           </h2>
-          <p className="vs-wl-status"><span className="vs-wl-dot" />{text(locale, section.status)}</p>
           <Link className="vs-wl-btn is-lime" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`}>{text(locale, live.closingCta)}<ArrowRight size={18} aria-hidden /></Link>
         </section>
       </div>
@@ -199,11 +191,6 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
     {n: '02', title: ar ? 'جواها' : 'Inside', body: workshop.during},
     {n: '03', title: ar ? 'بعدها' : 'After', body: workshop.after},
   ];
-  const shape = [
-    {label: ar ? 'الشكل' : 'Format', value: workshop.format},
-    {label: ar ? 'المدة' : 'Duration', value: workshop.duration},
-    {label: ar ? 'العدد' : 'Group size', value: workshop.size},
-  ];
 
   return (
     <Frame locale={locale} path={`/masterclass/${slug}`}>
@@ -217,14 +204,12 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
         </nav>
         <p className="vs-ws-kicker">{text(locale, kindName)}{sector && <> · {text(locale, sector.label)}</>}</p>
         <p className="vs-ws-teacher">{text(locale, workshopSection.live.cardTeacher)}</p>
-        <p className="vs-ws-status">{text(locale, workshop.status)}</p>
         <h1>{text(locale, workshop.outcome)}</h1>
         <p className="vs-ws-lede">{text(locale, workshop.summary)}</p>
 
         {workshop.shifts && workshop.shifts.length > 0 && workshop.shiftsTitle && (
           <section id="shifts" className="vs-ws-shifts">
             <h2>{text(locale, workshop.shiftsTitle)}</h2>
-            <p className="vs-ws-source-note">{ar ? 'أرقام كما نشرتها مصادرها، بتواريخها. ليست نتائج لـVisionSeek.' : 'Figures as their sources published them, with dates. They are not VisionSeek results.'}</p>
             <div className="vs-ws-shift-grid">
               {workshop.shifts.map(shift => (
                 <div key={shift.title.en}>
@@ -252,7 +237,6 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
           <h2>{ar ? 'لماذا الآن' : 'Why now'}</h2>
           <p>{text(locale, workshop.whyProblem)}</p>
           <p>{text(locale, workshop.whyEvidence)}</p>
-          <p className="vs-ws-source-note">{ar ? 'مرجع خارجي. ليس شراكة ولا تكليفًا.' : 'An outside reference. Not a partnership and not an engagement.'}</p>
           <a href={workshop.source.url} target="_blank" rel="noreferrer">
             {workshop.source.title}
             <ArrowUpRight size={18} />
@@ -293,7 +277,6 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
         {workshop.examples.length > 0 && (
           <section id="examples">
             <h2>{ar ? 'أمثلة من شغل المؤسسة' : 'Examples from the institution’s work'}</h2>
-            <p>{text(locale, workshop.examplesNote)}</p>
             <div className="vs-ws-examples">
               {workshop.examples.map(example => (
                 <div key={example.title.en}>
@@ -304,19 +287,6 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
             </div>
           </section>
         )}
-
-        <section id="shape">
-          <h2>{ar ? 'الشكل والمدة والعدد' : 'Format, duration, and group size'}</h2>
-          <p>{ar ? 'لم يُحدَّد بعد. لا نضع رقمًا قبل أن يُقرَّر.' : 'Not set. No number is published before it is decided.'}</p>
-          <dl>
-            {shape.map(item => (
-              <div key={item.label}>
-                <dt>{item.label}</dt>
-                <dd>{text(locale, item.value)}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
 
         <section id="faq">
           <h2>{ar ? 'أسئلة قصيرة' : 'Short questions'}</h2>
