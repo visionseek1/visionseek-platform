@@ -5,7 +5,7 @@ description: Use for any change to visionseek.org (repo visionseek1/visionseek-p
 
 # دورة الشغل على موقع VisionSeek
 
-المستودع: `visionseek1/visionseek-platform` (Next.js على Vercel). اقرأ `CLAUDE.md` في المستودع قبل أي تعديل، والتزم بالأقفال السارية فيه.
+المستودع: `visionseek1/visionseek-platform` (Next.js على Vercel).
 
 ## الخطوات
 
@@ -13,7 +13,6 @@ description: Use for any change to visionseek.org (repo visionseek1/visionseek-p
    - افهم الطلب كله مرة واحدة، مش آخر جملة فيه بس.
    - لو فيه كلام هيتكتب على الموقع، اعرض النص المقترح على د. أحمد الأول، وما تبنيش قبل ما يوافق.
    - لو فيه قرار مفتوح، اسأل عنه ولا تختار نيابة عنه.
-   - راجع الأقفال السارية في `CLAUDE.md`.
 
 2. **فرع جديد**
    - ابدأ من `origin/main` المحدّث على فرع باسم واضح.
@@ -69,6 +68,5 @@ description: Use for any change to visionseek.org (repo visionseek1/visionseek-p
 
 - لا دمج من غير «ادمج».
 - لا أسرار ولا مفاتيح في المحادثة أو في المستودع.
-- لا محتوى دوائي جديد، ولا تفاصيل تسليحية.
-- لا محتوى من Notion إلا العنصر المعتمد بالاسم في التكليف.
+- لا تفاصيل تسليحية.
 - لا استراتيجية داخلية على الموقع.
