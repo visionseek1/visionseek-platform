@@ -1,43 +1,6 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A reply to an importer's question",
-        "ar": "رد على سؤال مستورد"
-      },
-      "body": {
-        "en": "An importer or shipping agent asks which documents a procedure needs. Draft a reply grounded in published circulars; an officer checks it before it goes.",
-        "ar": "مستورد أو وكيل شحن يسأل عن المستندات المطلوبة لإجراء ما. صياغة رد يستند إلى التعاميم المنشورة، والموظف يراجعه قبل الإرسال."
-      }
-    },
-    {
-      "title": {
-        "en": "A new circular on one page",
-        "ar": "تعميم جديد في صفحة"
-      },
-      "body": {
-        "en": "Turn a new tariff or regulatory circular into a one-page internal brief for staff and a plain-language FAQ for traders.",
-        "ar": "تحويل تعميم تعريفة أو لائحة جديدة إلى ملخص داخلي من صفحة للموظفين، وأسئلة شائعة بلغة بسيطة للمتعاملين."
-      }
-    },
-    {
-      "title": {
-        "en": "The monthly management memo",
-        "ar": "مذكرة الإدارة الشهرية"
-      },
-      "body": {
-        "en": "From the statistics tables (vessel calls, turnaround times, declarations processed) to a memo that says what changed and what needs a decision.",
-        "ar": "من جداول الإحصاء (السفن، وزمن البقاء في الميناء، والإقرارات المنجزة) إلى مذكرة تقول ما تغيّر وما يحتاج قرارًا."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "Administration and service to traders only. Inspection, targeting, risk analysis, and anything touching border security are out. No real consignment data is used under its owner's name.",
-    "ar": "الإدارة وخدمة المتعاملين فقط. التفتيش، والاستهداف، وتحليل المخاطر، وكل ما يمس أمن الحدود خارج الماستركلاس. ولا تُستعمل بيانات شحنة حقيقية باسم صاحبها."
-  },
   "position": 8,
   "slug": "customs-ports",
-  "draft": true,
   "kind": "institution",
   "institution": "customs",
   "roles": [
@@ -45,54 +8,116 @@
     "staff"
   ],
   "outcome": {
-    "en": "Replies to importers go out faster and clearer, a new circular is understood on first reading, and inspection stays out of the room.",
-    "ar": "ردّ المستورد يخرج أسرع وأوضح، والتعميم الجديد يفهمه الموظف من أول قراءة، والتفتيش يبقى خارج الغرفة."
+    "en": "Make your customs a gateway traders choose, not a corridor where they wait.",
+    "ar": "اجعل جماركك منفذًا يختاره التاجر، لا ممرًا ينتظر فيه."
   },
   "summary": {
-    "en": "For the desks that answer importers and shipping agents, and write circulars and reports. Not for inspection, and not for risk analysis.",
-    "ar": "لمكاتب تردّ على المستوردين ووكلاء الشحن، وتكتب التعاميم والتقارير. ليست للتفتيش، ولا لتحليل المخاطر."
+    "en": "What the world's leading customs administrations learned about AI is published for anyone who wants to read it. What fits your customs is in no report. Dr. Ahmed Abdelalim studies your administration's work, chooses with you what to start from among the world's experience, then teaches your team to carry it on.",
+    "ar": "ما تعلّمته أفضل جمارك العالم في الذكاء الاصطناعي منشور لمن يريد أن يقرأه. أما ما يناسب جماركك منه، فلن تجده في أي تقرير. يدرس د. أحمد عبدالعليم عمل جماركك، ويختار معك من تجارب العالم ما تبدأ منه، ثم يعلّم فريقك كيف يمضي فيه بنفسه."
   },
-  "audienceRole": {
-    "en": "Managers and staff in client service, circulars, and reporting at customs administrations and port authorities.",
-    "ar": "مديرو وموظفو خدمة المتعاملين، والتعاميم، والتقارير في الجمارك وهيئات الموانئ."
-  },
-  "audienceInstitution": {
-    "en": "A customs administration or port authority, limited to its administrative side and its service to traders. Inspection and risk analysis are outside this masterclass.",
-    "ar": "مصلحة جمارك أو هيئة موانئ، في جانبها الإداري وخدمة المتعاملين فقط. التفتيش وتحليل المخاطر خارج هذا الماستركلاس."
-  },
-  "whyProblem": {
-    "en": "The same importer question is answered from scratch every day. A new circular reaches staff as a long legal text, so the counter applies it late. The monthly report is pieced together by hand from scattered tables.",
-    "ar": "السؤال نفسه من المستوردين يُجاب كل يوم من الصفر. التعميم الجديد يصل الموظفين نصًا قانونيًا طويلًا، فيتأخر تطبيقه في الشباك. والتقرير الشهري يُجمع باليد من جداول متفرقة."
-  },
-  "whyEvidence": {
-    "en": "On 29 October 2024, officials of Brazil's customs administration wrote in the WCO's magazine that SISAM, a machine-learning system, has analysed every import declaration in Brazil for ten years, estimating the probability of about 30 types of error. Machines entered analysis a decade ago. The daily writing, from the importer's reply to the circular and the report, is what this masterclass works on.",
-    "ar": "في 29 أكتوبر 2024 كتب مسؤولون في الجمارك البرازيلية، في مجلة منظمة الجمارك العالمية، أن نظام SISAM القائم على تعلّم الآلة يحلّل كل إقرارات الاستيراد في البرازيل منذ عشر سنوات، ويقدّر احتمال نحو 30 نوعًا من الأخطاء. الآلة دخلت التحليل منذ عقد. أما الكتابة اليومية، من رد المستورد إلى التعميم والتقرير، فهي ما يشتغل عليه هذا الماستركلاس."
-  },
-  "source": {
-    "title": "WCO News 105 · How Brazil transformed Customs control through AI · 29 October 2024",
-    "url": "https://mag.wcoomd.org/magazine/wco-news-105-issue-3-2024/brazil-ai-and-other-technologies/"
+  "pace": {
+    "title": {
+      "en": "What trade loses while it waits at the border",
+      "ar": "ما تخسره التجارة وهي تنتظر عند المنفذ"
+    },
+    "consequence": {
+      "en": "Every day goods wait at your border, the trader and the economy pay for it together.",
+      "ar": "وكل يوم تنتظره البضاعة عند منفذك، يدفع ثمنه التاجر والاقتصاد معًا."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "More than 1% a day",
+          "ar": "أكثر من 1% في اليوم"
+        },
+        "title": {
+          "en": "Every day of delay cuts trade",
+          "ar": "كل يوم تأخير يقتطع من التجارة"
+        },
+        "body": {
+          "en": "A World Bank study found that each additional day a product is delayed before shipping reduces trade by more than 1%, as if the country had moved about 70 km farther from its trading partners.",
+          "ar": "وجدت دراسة للبنك الدولي أن كل يوم إضافي تتأخر فيه البضاعة قبل شحنها يخفّض التجارة بأكثر من 1%، وكأن البلد ابتعد عن شركائه التجاريين نحو 70 كيلومترًا."
+        },
+        "lesson": {
+          "en": "Delay at your border isn't a number in a report; it is trade your country loses.",
+          "ar": "التأخير في منفذك ليس رقمًا في تقرير؛ إنه تجارة تخسرها بلدك."
+        },
+        "source": {
+          "title": "World Bank · Djankov, Freund & Pham · Trading on Time · Review of Economics and Statistics · 2010",
+          "url": "https://openknowledge.worldbank.org/entities/publication/6be676c8-a4c7-5fc4-aa78-25403d30bf5c/full"
+        }
+      },
+      {
+        "figure": {
+          "en": "2.85×",
+          "ar": "2.85 ضعف"
+        },
+        "title": {
+          "en": "Shipments multiply; staff don't",
+          "ar": "الشحنات تتضاعف، والموظفون لا يتضاعفون"
+        },
+        "body": {
+          "en": "E-commerce imports into Korea grew 2.85-fold in five years, from 64 million to 181 million shipments.",
+          "ar": "تضاعفت شحنات التجارة الإلكترونية الواردة إلى كوريا 2.85 مرة في خمس سنوات، من 64 مليونًا إلى 181 مليون شحنة."
+        },
+        "lesson": {
+          "en": "The workload grows every year and headcount doesn't keep up. Only a different way of working closes that gap.",
+          "ar": "حجم العمل يكبر كل عام، وعدد الموظفين لا يكبر بالسرعة نفسها. والفرق لا تسدّه إلا طريقة عمل أخرى."
+        },
+        "source": {
+          "title": "Korea Customs Service · WCO News 108 · 26 October 2025",
+          "url": "https://mag.wcoomd.org/magazine/wco-news-108-issue-3-2025/korea-customs-services-e-commerce/"
+        }
+      }
+    ]
   },
   "shiftsTitle": {
-    "en": "From hours of waiting to minutes of decision",
-    "ar": "من ساعات الانتظار إلى دقائق القرار"
+    "en": "What customs gains when it redesigns its work",
+    "ar": "ما تكسبه الجمارك حين تعيد تصميم عملها"
   },
   "shifts": [
     {
       "figure": {
-        "en": "1 hour → under 1 minute",
-        "ar": "من ساعة إلى أقل من دقيقة"
+        "en": "12 days → 2 hours",
+        "ar": "من 12 يومًا إلى ساعتين"
       },
       "title": {
-        "en": "Korea Customs: every officer can question the data",
-        "ar": "الجمارك الكورية: كل موظف يسأل البيانات بنفسه"
+        "en": "Saudi Arabia: clearance in two hours",
+        "ar": "السعودية: الفسح في ساعتين"
       },
       "body": {
-        "en": "E-commerce imports into Korea grew 2.85-fold in five years, from 64 million to 181 million shipments, yet the time to analyse a high-risk shipment fell from about an hour to under a minute. The next step is generative AI that lets any customs officer put their own questions to the data.",
-        "ar": "تضاعفت شحنات التجارة الإلكترونية الواردة إلى كوريا 2.85 مرة في خمس سنوات، من 64 مليونًا إلى 181 مليون شحنة، ومع ذلك نزل وقت تحليل الشحنة عالية المخاطر من نحو ساعة إلى أقل من دقيقة. والخطوة التالية ذكاء اصطناعي توليدي يتيح لأي موظف جمارك أن يطرح أسئلته على البيانات بنفسه."
+        "en": "Saudi Arabia's Zakat, Tax and Customs Authority says customs clearance went from 12 days in 2017 to two hours, at all land, sea and air ports.",
+        "ar": "تقول هيئة الزكاة والضريبة والجمارك إن مدة الفسح الجمركي نزلت من 12 يومًا في 2017 إلى ساعتين، في جميع المنافذ البرية والبحرية والجوية."
+      },
+      "lesson": {
+        "en": "A regional experience: redesigning the work made the difference, not the tool alone.",
+        "ar": "تجربة من منطقتنا: الفرق صنعته إعادة تصميم العمل، لا الأداة وحدها."
       },
       "source": {
-        "title": "Korea Customs Service · WCO News 108 · 26 October 2025",
-        "url": "https://mag.wcoomd.org/magazine/wco-news-108-issue-3-2025/korea-customs-services-e-commerce/"
+        "title": "ZATCA · ZATCA implements 'Clearance within Two Hours' at Customs Ports · 22 January 2023",
+        "url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/Clearance-in-2h-Implementation.aspx"
+      }
+    },
+    {
+      "figure": {
+        "en": "A day → 2 seconds",
+        "ar": "من يوم إلى ثانيتين"
+      },
+      "title": {
+        "en": "Dubai Customs: goods classified in two seconds",
+        "ar": "جمارك دبي: التصنيف في ثانيتين"
+      },
+      "body": {
+        "en": "Dubai Customs' Al-Munasiq 2.0 classifies goods with AI and big data, cutting classification from a full day to two seconds. It is now used in 117 countries.",
+        "ar": "منصة «المنسّق 2.0» في جمارك دبي تصنّف السلع بالذكاء الاصطناعي والبيانات الضخمة، فاختصرت وقت التصنيف من يوم كامل إلى ثانيتين، وصارت تُستخدم في 117 دولة."
+      },
+      "lesson": {
+        "en": "A platform from an Arab customs administration, now used in 117 countries. Leading is possible from our region.",
+        "ar": "منصة من جمارك عربية تستعملها اليوم 117 دولة. السبق ممكن من منطقتنا."
+      },
+      "source": {
+        "title": "Sharjah24 · Hamdan bin Mohammed visits Dubai Customs · 15 December 2025",
+        "url": "https://sharjah24.ae/en/Articles/2025/12/15/a11"
       }
     },
     {
@@ -101,105 +126,154 @@
         "ar": "من 3 أيام إلى دقائق"
       },
       "title": {
-        "en": "Singapore is redrawing port clearance",
-        "ar": "سنغافورة تعيد رسم إجراءات الميناء"
+        "en": "Singapore: the port redraws its procedures",
+        "ar": "سنغافورة: الميناء يعيد رسم إجراءاته"
       },
       "body": {
-        "en": "In October 2024, Singapore's Maritime and Port Authority launched two AI applications for renewing the insurance certificates of Singapore-registered ships. It is building a port clearance system it says will cut application processing from up to three days to minutes, introduced progressively over the coming years.",
-        "ar": "في أكتوبر 2024 أطلقت هيئة الملاحة والموانئ في سنغافورة تطبيقين بالذكاء الاصطناعي لتجديد وثائق تأمين السفن المسجلة لديها. وتبني نظامًا لتخليص الموانئ تقول إنه سيُنزل زمن معالجة الطلب من ثلاثة أيام إلى دقائق، ويُطرح تدريجيًا في السنوات القادمة."
+        "en": "In October 2024, Singapore's Maritime and Port Authority launched two AI applications for renewing ships' insurance documents. It is building a port clearance system it says will cut processing from up to three days to minutes, introduced progressively over the coming years.",
+        "ar": "أطلقت هيئة الملاحة والموانئ في سنغافورة في أكتوبر 2024 تطبيقين بالذكاء الاصطناعي لتجديد وثائق تأمين السفن، وتبني نظامًا للتخليص في الميناء تقول إنه سيختصر معالجة الطلبات من ثلاثة أيام إلى دقائق، ويدخل الخدمة تدريجيًا خلال السنوات المقبلة."
+      },
+      "lesson": {
+        "en": "The leading ports don't wait for the full picture; they start with one step and build on it.",
+        "ar": "الموانئ الرائدة لا تنتظر اكتمال الصورة؛ تبدأ بخطوة، ثم تبني عليها."
       },
       "source": {
         "title": "Maritime and Port Authority of Singapore · Media release · 5 March 2025",
         "url": "https://mpa.gov.sg/media-centre/details/driving-growth-and-innovation-to-strengthen-maritime-competitiveness-and-resilence"
       }
-    },
-    {
-      "figure": {
-        "en": "12 of 116",
-        "ar": "12 من 116"
-      },
-      "title": {
-        "en": "The road is still open to whoever moves first",
-        "ar": "الطريق ما زال مفتوحًا لمن يتحرك أولًا"
-      },
-      "body": {
-        "en": "In the WCO's survey (116 submissions, 62% of the membership), only 12 members had adopted AI and machine learning. Yet these technologies topped the list of what is under development or consideration.",
-        "ar": "في مسح منظمة الجمارك العالمية (116 مشاركة تمثل 62% من الأعضاء) كان 12 عضوًا فقط قد تبنّوا الذكاء الاصطناعي وتعلّم الآلة. ومع ذلك جاءت هذه التقنيات في رأس ما يُطوَّر أو يُدرس الآن."
-      },
-      "source": {
-        "title": "WCO Smart Customs Project · Results of the Smart Customs Survey · July 2024",
-        "url": "https://scp.wcoomd.org/sites/default/files/2025-05/Public%20_Report_%20EN%20_31072024.pdf"
-      }
     }
   ],
+  "audienceRole": {
+    "en": "For the leadership of customs and port authorities and the heads of administration, client service and planning, with the members of their team they choose.",
+    "ar": "لقيادة الجمارك وهيئات الموانئ ومديري الإدارة وخدمة المتعاملين والتخطيط، ومعهم من يختارونه من فريقهم."
+  },
+  "audienceInstitution": {
+    "en": "Any customs administration or port authority. We start from what you have already built in digital clearance.",
+    "ar": "أي إدارة جمارك أو هيئة موانئ. نبدأ مما بنته جماركك بالفعل في التخليص الرقمي."
+  },
+  "whyProblem": {
+    "en": "The leading customs experiences are published for anyone who wants to read them. What nobody publishes is which of them fits your customs' law, systems and team. No tool vendor will tell you that.",
+    "ar": "تجارب الجمارك الرائدة منشورة لمن يريد أن يقرأها. ما لا يجده أحد منشورًا هو أيها يناسب قانون جماركك وأنظمتها وفريقها. ولن يقوله لك بائع أداة."
+  },
+  "whyEvidence": {
+    "en": "In the World Customs Organization's survey (July 2024) of 116 administrations, only 12 had AI and machine learning fully in use, and these technologies topped what the rest were building or considering. Whoever moves now starts from where others arrived, not from scratch.",
+    "ar": "في مسح منظمة الجمارك العالمية (يوليو 2024) الذي شمل 116 إدارة، 12 فقط شغّلت الذكاء الاصطناعي وتعلّم الآلة فعليًا، وجاءت هذه التقنيات في رأس ما تبنيه البقية أو تدرسه. ومن يتحرك الآن يبدأ من حيث وصل غيره، لا من الصفر."
+  },
+  "source": {
+    "title": "WCO Smart Customs Project · Results of the Smart Customs Survey · July 2024",
+    "url": "https://scp.wcoomd.org/sites/default/files/2025-05/Public%20_Report_%20EN%20_31072024.pdf"
+  },
   "before": {
-    "en": "Five questions about the work that repeats at the client desk and in the circulars unit. Nothing about a specific consignment or about targeting criteria.",
-    "ar": "خمسة أسئلة عن الشغل الذي يتكرر على مكتب المتعاملين وفي قسم التعاميم. لا شيء عن شحنة بعينها أو عن معايير الاستهداف."
+    "en": "Before the session we sit with your leadership to learn what your customs has built and where it wants to go, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف ما بنته جماركك، وإلى أين تريد أن تصل. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team works on its own material: a reply to an importer, a new circular turned into one page for staff, or a monthly report. An officer checks every figure and every reference before anything leaves.",
-    "ar": "الفريق يشتغل على مادته: رد على مستورد، أو تعميم جديد يتحول إلى صفحة للموظفين، أو تقرير شهري. الموظف يراجع كل رقم وكل مرجع قبل أن يخرج شيء."
+    "en": "Dr. Ahmed works with the customs leadership and team on their real work, sets out what customs administrations around the world have achieved, from Saudi Arabia and Dubai to Korea and Singapore, and you choose with him what to take, what to leave and where to start.",
+    "ar": "يجلس د. أحمد مع قيادة الجمارك وفريقها على عملهم الحقيقي، ويضع أمامكم ما وصلت إليه جمارك العالم، من السعودية ودبي إلى كوريا وسنغافورة، ثم تختارون معه ما تأخذونه وما تتركونه، ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+    "en": "Your customs administration leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج إدارة جماركك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which question from importers and shipping agents is answered from scratch every day?",
-      "ar": "أي سؤال من المستوردين ووكلاء الشحن يُجاب كل يوم من الصفر؟"
+      "en": "What have you already built that is not yet fully used?",
+      "ar": "ماذا بنيتم بالفعل، ولم يُستثمر كله بعد؟"
     },
     {
-      "en": "How many days pass between a circular's release and its correct use at the counter?",
-      "ar": "كم يومًا يمر بين صدور التعميم وتطبيقه الصحيح في الشباك؟"
+      "en": "Where does a trader wait longest between filing a declaration and getting the goods released?",
+      "ar": "أين ينتظر المتعامل أطول ما ينتظر بين تقديم البيان والإفراج عن بضاعته؟"
     },
     {
-      "en": "Which report is assembled by hand from scattered tables every month?",
-      "ar": "أي تقرير يُجمع باليد من جداول متفرقة كل شهر؟"
+      "en": "Who questions your data today, and who waits for someone else to do it?",
+      "ar": "من يسأل بياناتكم اليوم، ومن ينتظر غيره ليسألها له؟"
     },
     {
-      "en": "Where is the same information copied from a document into a form again and again?",
-      "ar": "أين تُنقل البيانات نفسها من مستند إلى نموذج مرة بعد مرة؟"
+      "en": "Which customs experience abroad are you watching, and what is holding you back from starting there?",
+      "ar": "أي تجربة جمارك في العالم تتابعونها، وما الذي يؤخر البدء منها؟"
     },
     {
-      "en": "What must an officer check before any reply goes out to a trader?",
-      "ar": "ما الذي يجب أن يراجعه موظف قبل خروج أي رد إلى متعامل؟"
+      "en": "What will never be handed to a tool in your customs, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في جماركم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A reply pattern for recurring importer questions, tied to published circulars, still signed by the officer in charge.",
-      "ar": "نمط رد للأسئلة المتكررة من المستوردين، مربوط بالتعاميم المنشورة، ويبقى التوقيع للموظف المختص."
+      "en": "A clear view of where your customs stands among the world's leaders: where you are ahead, and where the opening is.",
+      "ar": "صورة واضحة لمكان جماركك بين جمارك العالم الرائدة: أين سبقتم، وأين الفرصة."
     },
     {
-      "en": "One real circular turned into a one-page staff brief and a trader FAQ, in Arabic and English as separate texts.",
-      "ar": "تعميم حقيقي تحوّل إلى صفحة واحدة للموظفين وأسئلة شائعة للمتعاملين، بالعربية والإنجليزية كنصين مستقلين."
+      "en": "A first step chosen for your customs: which experience to start from, and why that one.",
+      "ar": "خطوة أولى مختارة على مقاس جماركك: من أي تجربة تبدأ، ولماذا هي بالذات."
     },
     {
-      "en": "A written list of what stays with people alone, so the tool never drifts toward inspection or decisions.",
-      "ar": "قائمة مكتوبة بما يبقى للإنسان وحده، حتى لا تقترب الأداة من التفتيش أو القرار."
+      "en": "A team that knows how to question the data itself, and when to review what the systems suggest.",
+      "ar": "فريق يعرف كيف يسأل البيانات بنفسه، ومتى يراجع ما تقترحه الأنظمة."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Administration, client service and planning. Inspection, targeting and risk analysis stay outside the masterclass.",
+    "ar": "الإدارة وخدمة المتعاملين والتخطيط. التفتيش والاستهداف وتحليل المخاطر خارج الماستركلاس."
+  },
   "faq": [
     {
       "q": {
-        "en": "Does this cover inspection or risk analysis?",
-        "ar": "هل يشمل الماستركلاس التفتيش أو تحليل المخاطر؟"
+        "en": "We are already well ahead digitally. What does this add?",
+        "ar": "جماركنا متقدمة رقميًا بالفعل. فماذا يضيف الماستركلاس؟"
       },
       "a": {
-        "en": "No. No inspection, no targeting, no risk analysis. The door is the client desk, the circulars unit, and reporting.",
-        "ar": "لا. لا تفتيش، ولا استهداف، ولا تحليل مخاطر. الباب هو مكتب المتعاملين، وقسم التعاميم، والتقارير."
+        "en": "Many customs administrations in the region have come a long way in digital clearance. What sets the leaders apart now is how the work is organised around the tools: who gets to question the data, who reviews what the systems suggest, and whom they build with. The masterclass starts there, on top of what you have built.",
+        "ar": "كثير من جمارك المنطقة قطع شوطًا كبيرًا في التخليص الرقمي. والفرق الذي تصنعه الإدارات الرائدة الآن في طريقة العمل حول الأدوات: من يحق له أن يسأل البيانات، ومن يراجع ما تقترحه الأنظمة، ومع من تبني. من هنا يبدأ الماستركلاس، فوق ما بنيتموه."
       }
     },
     {
       "q": {
-        "en": "Why customs and ports in particular?",
-        "ar": "لماذا الجمارك والموانئ تحديدًا؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "Because the corridor between Korea and the Arab world runs through here, and because VisionSeek's founder has worked in exports and international trade and knows the document and the shipment from the inside.",
-        "ar": "لأن الممر بين كوريا والعالم العربي يمر من هنا، ولأن مؤسس VisionSeek اشتغل في التصدير والتجارة الدولية، ويعرف المستند والشحنة من الداخل."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for consignment or trader data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات شحنة أو متعامل."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your customs clears every day, and traders still wait",
+      "ar": "جماركك تفسح كل يوم، والتاجر ما زال ينتظر"
+    },
+    "whyNow": {
+      "en": "The race has just begun, and whoever moves now leads",
+      "ar": "السباق في أوله، ومن يتحرك الآن يسبق"
+    },
+    "how": {
+      "en": "A masterclass built on your customs",
+      "ar": "ماستركلاس يُبنى على جماركك"
+    },
+    "before": {
+      "en": "We learn your customs' work first",
+      "ar": "نفهم عمل جماركك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the world's customs",
+      "ar": "نختار معكم من تجارب جمارك العالم"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your customs",
+      "ar": "ما يبقى في جماركك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your customs",
+    "ar": "تحدّث مع د. أحمد عن جماركك"
+  }
 }

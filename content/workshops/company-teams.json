@@ -1,40 +1,4 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A management note",
-        "ar": "مذكرة إدارة"
-      },
-      "body": {
-        "en": "The weekly picture a director needs: what moved, what stuck, and what needs a decision. Written from the team's own notes.",
-        "ar": "الصورة الأسبوعية التي يحتاجها المدير: ما تحرّك، وما وقف، وما يحتاج قرارًا. مكتوبة من ملاحظات الفريق."
-      }
-    },
-    {
-      "title": {
-        "en": "A meeting page",
-        "ar": "صفحة اجتماع"
-      },
-      "body": {
-        "en": "One page after the meeting, not a transcript. Decision, name, date.",
-        "ar": "صفحة بعد الاجتماع، لا تفريغًا كاملًا. قرار، واسم، وموعد."
-      }
-    },
-    {
-      "title": {
-        "en": "A letter the owner signs",
-        "ar": "خطاب يوقّعه صاحبه"
-      },
-      "body": {
-        "en": "A first draft of a letter to a customer or a partner. The person whose name is at the bottom still reads it.",
-        "ar": "مسودة أولى لخطاب إلى عميل أو شريك. صاحب الاسم في الأسفل ما زال يقرأه."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "",
-    "ar": ""
-  },
   "position": 6,
   "slug": "company-teams",
   "kind": "institution",
@@ -44,101 +8,272 @@
     "staff"
   ],
   "outcome": {
-    "en": "The team gets hours back on the writing it already does, and those hours are pointed at work that matters.",
-    "ar": "الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا، وتُوجَّه هذه الساعات إلى شغل له قيمة."
+    "en": "Make AI show up in your company's profits, not just its invoices.",
+    "ar": "اجعل الذكاء الاصطناعي يظهر في أرباح شركتك، لا في فواتيرها فقط."
   },
   "summary": {
-    "en": "For managers and staff inside a company. The cases are theirs: a management note, a meeting, a letter the owner still signs.",
-    "ar": "لمديرين وموظفين داخل شركة. الحالات لهم: مذكرة إدارة، أو اجتماع، أو خطاب ما زال صاحبه يوقعه."
+    "en": "Most companies use AI today, and few of them see it in their profits. The difference isn't the tool; it is leadership that knows where to put it. Dr. Ahmed Abdelalim studies your company, chooses with you what fits from the leading companies' experience, then teaches your team to carry it on.",
+    "ar": "أكثر الشركات تستعمل الذكاء الاصطناعي اليوم، وقليل منها يرى أثره في الأرباح. والفرق ليس في الأداة، بل في قيادة تعرف أين تضعها. يدرس د. أحمد عبدالعليم شركتك، ويختار معك من تجارب الشركات الرائدة ما يناسبها، ثم يعلّم فريقك كيف يمضي فيه بنفسه."
   },
+  "pace": {
+    "title": {
+      "en": "What a company pays when it experiments without knowing why",
+      "ar": "ما تدفعه الشركة حين تجرّب ولا تعرف لماذا"
+    },
+    "consequence": {
+      "en": "A company that experiments without direction pays for the trial and never collects the return.",
+      "ar": "والشركة التي تجرّب بلا وجهة، تدفع ثمن التجربة ولا تجني ثمرتها."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "42%",
+          "ar": "42%"
+        },
+        "title": {
+          "en": "Companies abandoning most of their initiatives",
+          "ar": "شركات تتخلى عن أغلب مبادراتها"
+        },
+        "body": {
+          "en": "In an S&P Global Market Intelligence survey of more than 1,000 respondents in North America and Europe, the share of companies abandoning most of their AI initiatives rose from 17% to 42% in one year, and the average organisation scrapped 46% of its proofs of concept before production.",
+          "ar": "في مسح لـ«S&P Global Market Intelligence» شمل أكثر من ألف مشارك في أمريكا الشمالية وأوروبا: ارتفعت نسبة الشركات التي تخلّت عن أغلب مبادراتها في الذكاء الاصطناعي من 17% إلى 42% في عام واحد، وتُلغى في المتوسط 46% من التجارب قبل أن تصل إلى التشغيل."
+        },
+        "lesson": {
+          "en": "Every trial that never reaches production is money that left your company and didn't come back.",
+          "ar": "كل تجربة لا تصل إلى التشغيل، مال خرج من شركتك ولم يعد."
+        },
+        "source": {
+          "title": "CIO Dive, reporting S&P Global Market Intelligence · AI project failure rates are on the rise · 14 March 2025",
+          "url": "https://www.ciodive.com/news/ai-project-fail-data-spglobal/742590/"
+        }
+      },
+      {
+        "figure": {
+          "en": "88% vs 39%",
+          "ar": "88% مقابل 39%"
+        },
+        "title": {
+          "en": "Used everywhere, felt in few profits",
+          "ar": "الاستخدام في كل مكان، والأثر عند القليل"
+        },
+        "body": {
+          "en": "In McKinsey's 2025 survey of 1,993 respondents in 105 countries, 88% use AI in at least one function, but only 39% report an impact on enterprise-level EBIT, and nearly two-thirds have not yet begun scaling it across the company.",
+          "ar": "في مسح «ماكنزي» لعام 2025 على 1,993 مشاركًا في 105 دول: 88% يستعملون الذكاء الاصطناعي في وظيفة واحدة على الأقل، و39% فقط يرون أثره في أرباح الشركة التشغيلية، وقرابة الثلثين لم يبدأوا توسيعه في الشركة كلها."
+        },
+        "lesson": {
+          "en": "Owning the tool doesn't move profits. Leadership that knows what to ask of it does.",
+          "ar": "امتلاك الأداة لا يحرّك الأرباح. ما يحرّكها قيادة تعرف ماذا تطلب منها."
+        },
+        "source": {
+          "title": "McKinsey · The state of AI in 2025: Agents, innovation, and transformation · 5 November 2025",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2025"
+        }
+      }
+    ]
+  },
+  "shiftsTitle": {
+    "en": "What a company gains when it knows where the tool belongs",
+    "ar": "ما تكسبه الشركة حين تعرف أين تضع الأداة"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "$500 million",
+        "ar": "500 مليون دولار"
+      },
+      "title": {
+        "en": "ADNOC: published value from AI",
+        "ar": "أدنوك: قيمة معلنة من الذكاء الاصطناعي"
+      },
+      "body": {
+        "en": "ADNOC reported $500 million (AED 1.84 billion) in value from deploying AI solutions in 2023 alone.",
+        "ar": "أعلنت «أدنوك» أنها حقّقت قيمة بلغت 500 مليون دولار (1.84 مليار درهم) من حلول الذكاء الاصطناعي في 2023 وحدها."
+      },
+      "lesson": {
+        "en": "A regional experience, measured in dollars, not in the word 'efficiency'.",
+        "ar": "تجربة من منطقتنا، برقم بالدولار، لا بكلمة «كفاءة»."
+      },
+      "source": {
+        "title": "ADNOC · $500 Million in Value Generated through Deployment of AI Solutions in 2023 · 5 March 2024",
+        "url": "https://adnoc.ae/en/news-and-media/press-releases/2023/$500-million-in-value-generated-by-adnoc-through-deployment-of-ai-solutions-in-2023"
+      }
+    },
+    {
+      "figure": {
+        "en": "15%",
+        "ar": "15%"
+      },
+      "title": {
+        "en": "The whole service team faster, newcomers most of all",
+        "ar": "فريق الخدمة كله أسرع، والجديد أكثر"
+      },
+      "body": {
+        "en": "A study in the Quarterly Journal of Economics of 5,172 customer-support agents found AI raised issues resolved per hour by 15% on average, with the largest gains for newer and less-skilled agents.",
+        "ar": "في دراسة نشرتها «المجلة الفصلية للاقتصاد» على 5,172 موظف خدمة عملاء: رفع الذكاء الاصطناعي عدد المشكلات المحلولة في الساعة 15% في المتوسط، وكان المكسب الأكبر عند الموظفين الأحدث والأقل مهارة."
+      },
+      "lesson": {
+        "en": "New staff become productive sooner, and your company gains the time that used to go into learning the job.",
+        "ar": "الموظف الجديد يصير منتجًا أسرع، وشركتك تكسب الوقت الذي كان يضيع في تعلّم العمل."
+      },
+      "source": {
+        "title": "Brynjolfsson, Li & Raymond · Generative AI at Work · Quarterly Journal of Economics · 2025",
+        "url": "https://digitaleconomy.stanford.edu/publication/generative-ai-at-work"
+      }
+    },
+    {
+      "figure": {
+        "en": "40% faster",
+        "ar": "أسرع 40%"
+      },
+      "title": {
+        "en": "Professional writing: faster and better",
+        "ar": "الكتابة المهنية: أسرع وأجود"
+      },
+      "body": {
+        "en": "In a randomised experiment published in Science with 453 college-educated professionals, the time to complete professional writing tasks fell by 40% and quality rose by 18%.",
+        "ar": "في تجربة عشوائية نشرتها مجلة «ساينس» على 453 مهنيًا من خريجي الجامعات: نزل الوقت اللازم لإنجاز مهام الكتابة المهنية 40%، وارتفعت الجودة 18%."
+      },
+      "lesson": {
+        "en": "This is the work that fills your company's day: letters, reports and memos.",
+        "ar": "وهذا هو العمل الذي يملأ يوم شركتك: رسائل وتقارير ومذكرات."
+      },
+      "source": {
+        "title": "Noy & Zhang · Experimental evidence on the productivity effects of generative AI · Science · July 2023",
+        "url": "https://scale.stanford.edu/publications/experimental-evidence-productivity-effects-generative-artificial-intelligence"
+      }
+    }
+  ],
   "audienceRole": {
-    "en": "Managers and the staff who draft, summarize, and prepare the work a manager will stand behind.",
-    "ar": "المديرون والموظفون الذين يسوّدون ويلخّصون ويجهّزون شغلًا سيقف المدير وراءه."
+    "en": "For the owner, the chief executive and the senior management team, with the members of their team they choose.",
+    "ar": "لصاحب الشركة ورئيسها التنفيذي وفريق الإدارة العليا، ومعهم من يختارونه من فريقهم."
   },
   "audienceInstitution": {
-    "en": "A company. Private or public. The masterclass uses the company's own files, not a case from a textbook.",
-    "ar": "شركة. خاصة أو عامة. الماستركلاس يستعمل ملفات الشركة، لا حالة من كتاب."
+    "en": "Any company, small or large. We start from the tools and experience your company already has.",
+    "ar": "أي شركة، صغيرة كانت أو كبيرة. نبدأ مما تملكه شركتك بالفعل من أدوات وخبرة."
   },
   "whyProblem": {
-    "en": "People are already using the tools. The company has not decided what the saved hour is for, so the hour disappears into more of the same.",
-    "ar": "الناس تستعمل الأدوات أصلًا. والشركة لم تحسم فيما تُصرَف الساعة الموفَّرة، فتختفي الساعة في المزيد من الشيء نفسه."
+    "en": "The same tools are available to your company and your competitors. The difference is knowing where they belong in your company, and that is something no vendor will tell you.",
+    "ar": "الأداة نفسها متاحة لشركتك ولمنافسيك. الفرق أن تعرف أنت أين تضعها في شركتك، وهذا ما لن يقوله لك بائعها."
   },
   "whyEvidence": {
-    "en": "In BCG's AI at Work, dated 3 June 2026, 74% of frontline employees said they use AI every day or several times a week, up 23 points from 2025. Among regular users, 42% report saving eight hours a week. BCG's point is the one that matters here: most organizations have not figured out how to turn that time into value.",
-    "ar": "في مقال BCG المعنون AI at Work، بتاريخ 3 يونيو 2026، قال 74% من موظفي الصف الأول إنهم يستعملون الذكاء الاصطناعي كل يوم أو عدة مرات في الأسبوع، بزيادة 23 نقطة عن 2025. ومن المنتظمين، 42% يقولون إنهم يوفّرون ثماني ساعات في الأسبوع. والنقطة التي تهم هنا هي التي قالها BCG: أكثر المؤسسات لم تعرف بعد كيف تحوّل هذا الوقت إلى قيمة."
+    "en": "In the Gulf, 93% of frontline workers use AI every week and 58% save eight hours or more, according to BCG, which warns that this fast start will only last with deliberate action from leadership.",
+    "ar": "وفي الخليج، يستعمل 93% من موظفي الخطوط الأمامية الذكاء الاصطناعي كل أسبوع، ويوفّر 58% منهم ثماني ساعات أو أكثر أسبوعيًا، بحسب «BCG»، التي تنبّه إلى أن هذه البداية السريعة لن تدوم إلا بقرار متعمّد من القيادة."
   },
   "source": {
-    "title": "BCG · AI at Work: Why Strategy Matters More Than Tools · 3 June 2026",
-    "url": "https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools"
+    "title": "Gulf Business · GCC ranks among global AI adoption leaders as 93% of frontline workers use it weekly · 3 September 2026",
+    "url": "https://gulfbusiness.com/en/2026/insights/gcc-ranks-among-global-ai-adoption-leaders-as-93-of-frontline-workers-use-it-weekly-bcg/"
   },
   "before": {
-    "en": "Five questions about the writing and preparation the team already repeats.",
-    "ar": "خمسة أسئلة عن الكتابة والتجهيز اللذين يكرّرهما الفريق أصلًا."
+    "en": "Before the session we sit with you and your team to learn where the company's time and money go today, starting with questions like:",
+    "ar": "قبل الجلسة نجلس معك ومع فريقك لنعرف أين يذهب وقت الشركة ومالها اليوم. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "We sit with the company's cases. A manager leaves with a draft they are willing to sign, not with a tour of features.",
-    "ar": "نجلس مع حالات الشركة. يخرج المدير بمسودة يقبل أن يوقعها، لا بجولة في الخصائص."
+    "en": "Dr. Ahmed works with you and your team on the company's real work, sets out what leading companies have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد معك ومع فريقك على عمل الشركة الحقيقي، ويضع أمامكم ما وصلت إليه الشركات الرائدة، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "Thirty days later we measure time returned, and which tools are still open on a normal Tuesday. The eight hours in the BCG survey are their finding, not ours. We do not borrow it as a promise.",
-    "ar": "بعد ثلاثين يومًا نقيس الوقت العائد، وأي أدوات ما زالت مفتوحة في ثلاثاء عادي. ساعات BCG الثماني نتيجتهم لا نتيجتنا. لا نستعيرها كوعد."
+    "en": "Your company leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج شركتك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which note does a manager rewrite every time before it can leave the team?",
-      "ar": "أي مذكرة يعيد المدير كتابتها كل مرة قبل أن تخرج من الفريق؟"
+      "en": "Which AI tools have you bought, and where has their effect shown up in the numbers?",
+      "ar": "ماذا اشتريتم من أدوات الذكاء الاصطناعي، وأين ظهر أثرها في الأرقام؟"
     },
     {
-      "en": "Which meeting produces talk and no page anyone can use the next day?",
-      "ar": "أي اجتماع ينتج كلامًا ولا ينتج صفحة يستعملها أحد في اليوم التالي؟"
+      "en": "Which work in the company repeats every day and takes your best people's time?",
+      "ar": "أي عمل في الشركة يتكرر كل يوم، ويأخذ وقت أفضل موظفيكم؟"
     },
     {
-      "en": "Which client or partner letter waits because the first draft is not safe to send?",
-      "ar": "أي خطاب لعميل أو شريك ينتظر لأن المسودة الأولى لا تُرسَل بأمان؟"
+      "en": "Where do customers lose patience before an answer reaches them?",
+      "ar": "أين يفقد العميل صبره قبل أن يصله الرد؟"
     },
     {
-      "en": "Where is the tool already open, with no agreement on what the saved hour is for?",
-      "ar": "أين الأداة مفتوحة أصلًا، من غير اتفاق على أين تذهب الساعة الموفَّرة؟"
+      "en": "Which company in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي شركة في العالم تتابعونها، وتتمنون أن تبدأوا من حيث وصلت؟"
     },
     {
-      "en": "What must still be signed by a named person?",
-      "ar": "ما الذي يجب أن يوقّعه شخص باسمه؟"
+      "en": "What will never be handed to a tool in your company, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في شركتكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A management note the manager can actually send.",
-      "ar": "مذكرة إدارة يستطيع المدير أن يرسلها فعلًا."
+      "en": "Where AI could show up in your company's numbers, and where to start.",
+      "ar": "أين يمكن أن يظهر الذكاء الاصطناعي في أرقام شركتك، ومن أين تبدأ."
     },
     {
-      "en": "A meeting page: the decision, the owner, and the open question.",
-      "ar": "صفحة اجتماع: القرار، وصاحبه، والسؤال المفتوح."
+      "en": "A first step chosen to fit your company, not a vendor's pitch.",
+      "ar": "خطوة أولى مختارة على مقاس شركتك، لا على عرض بائع."
     },
     {
-      "en": "An agreement on where a saved hour goes, instead of letting it vanish.",
-      "ar": "اتفاق على أين تذهب الساعة الموفَّرة، بدل أن تختفي."
+      "en": "A team that knows when to trust the tool and when to check it, and a rule for what stays a human decision.",
+      "ar": "فريق يعرف متى يثق بالأداة ومتى يراجعها، وقاعدة لما يبقى قرار إنسان."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "",
+    "ar": ""
+  },
   "faq": [
     {
       "q": {
-        "en": "Will you promise the eight hours BCG reported?",
-        "ar": "هل تعدون بساعات BCG الثماني؟"
+        "en": "We've already bought tools. What does the masterclass add?",
+        "ar": "اشترينا أدوات بالفعل. فماذا يضيف الماستركلاس؟"
       },
       "a": {
-        "en": "No. That figure is theirs, from their survey. We measure the tasks we actually touch, after 30 days.",
-        "ar": "لا. الرقم لهم، من مسحهم. نحن نقيس المهام التي نلمسها فعلًا، بعد 30 يومًا."
+        "en": "What no tool sells: where it belongs in your company, what to ask of it, and what never to hand to it. That is how what you bought turns into results in the numbers.",
+        "ar": "يضيف ما لا تبيعه الأداة: أين تضعها في شركتك، وماذا تطلب منها، وما الذي لا تسلّمه لها. وبهذا يتحول ما اشتريتموه إلى أثر في الأرقام."
       }
     },
     {
       "q": {
-        "en": "Is this a software license?",
-        "ar": "هل هذه رخصة برنامج؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "No. The session is about how the team works. The tool is whatever the company already has, or a choice made in the introductory conversation. Nothing is sold on this page.",
-        "ar": "لا. الجلسة عن طريقة شغل الفريق. الأداة هي ما عند الشركة أصلًا، أو اختيار يُحسم في جلسة التعارف. لا شيء يُباع في هذه الصفحة."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for customer data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات عملائكم."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "You've bought the tools, and the profits haven't moved yet",
+      "ar": "اشتريت الأدوات، والأرباح لم تتحرك بعد"
+    },
+    "whyNow": {
+      "en": "Your competitor has the same tool",
+      "ar": "منافسك يملك الأداة نفسها"
+    },
+    "how": {
+      "en": "A masterclass built on your company",
+      "ar": "ماستركلاس يُبنى على شركتك"
+    },
+    "before": {
+      "en": "We learn your company first",
+      "ar": "نفهم شركتك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading companies",
+      "ar": "نختار معكم من تجارب الشركات الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your company",
+      "ar": "ما يبقى في شركتك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your company",
+    "ar": "تحدّث مع د. أحمد عن شركتك"
+  }
 }

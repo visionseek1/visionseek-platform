@@ -91,11 +91,18 @@ collections:
                   - {label: "الأخبار ← ما الذي ينبغي أن يثبته التحدي؟  /news/learning-from-challenges", value: "/news/learning-from-challenges"}
                   - {label: "الأخبار ← مدير البرنامج بوصفه بانيًا للقدرة  /news/program-manager-model", value: "/news/program-manager-model"}
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
-                  - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
-                  - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
-                  - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
-                  - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
-                  - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
+                  - {label: "ماستركلاس ← اجعل مطارك يخبر المسافر قبل أن يسأل.  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
+                  - {label: "ماستركلاس ← اجعل الذكاء الاصطناعي يظهر في أرباح شركتك، لا في ف  /masterclass/company-teams", value: "/masterclass/company-teams"}
+                  - {label: "ماستركلاس ← اجعل جماركك منفذًا يختاره التاجر، لا ممرًا ينتظر ف  /masterclass/customs-ports", value: "/masterclass/customs-ports"}
+                  - {label: "ماستركلاس ← أعِد وقت معلميك إلى طلابهم.  /masterclass/education-schools", value: "/masterclass/education-schools"}
+                  - {label: "ماستركلاس ← اجعل مرفق الطاقة عندك أسرع في الخدمة، وأدق في القر  /masterclass/energy-utilities", value: "/masterclass/energy-utilities"}
+                  - {label: "ماستركلاس ← اجعل إدارتك الضريبية تخدم أكثر، بالفريق نفسه.  /masterclass/finance-tax", value: "/masterclass/finance-tax"}
+                  - {label: "ماستركلاس ← أعِد وقت أطبائك من الشاشة إلى المريض.  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
+                  - {label: "ماستركلاس ← اجعل العدالة أسرع في محاكمك، والحكم باقٍ للقاضي وح  /masterclass/justice-courts", value: "/masterclass/justice-courts"}
+                  - {label: "ماستركلاس ← جهّز موظفي الدولة لعمل يتغيّر أسرع من خطط تدريبهم.  /masterclass/labour-civil-service", value: "/masterclass/labour-civil-service"}
+                  - {label: "ماستركلاس ← اجعل بلديتك تُنجز للساكن في ساعات ما كان يأخذ أساب  /masterclass/municipalities", value: "/masterclass/municipalities"}
+                  - {label: "ماستركلاس ← أعِد ساعات شرطتك من الورق إلى الناس.  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
+                  - {label: "ماستركلاس ← اجعل جامعتك تسبق طلابها إلى الذكاء الاصطناعي، لا أ  /masterclass/university-teams", value: "/masterclass/university-teams"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /insights/physical-ai", value: "/insights/physical-ai"}
@@ -1374,7 +1381,7 @@ collections:
         fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
-      - label: «ما تخسره وأنت تنتظر» (تحت الافتتاح)
+      - label: «ما تخسره وهي تنتظر» (تحت الافتتاح)
         name: pace
         widget: object
         required: false
@@ -1382,9 +1389,9 @@ collections:
         hint: "مقولة حقيقية لأحد كبار المجال (اسمه وصفته وتاريخها ومصدر اتفتح)، ثم جملة تبيّن إن اللي يؤجّل هيتأخر، ثم خسائر موثّقة بمصادرها، وتحت كل واحدة: ماذا تعني لك."
         fields:
           - {label: العنوان, name: title, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
-          - {label: المقولة, name: quote, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
-          - {label: "صاحبها · صفته · تاريخها", name: quoteBy, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
-          - {label: مصدر المقولة, name: quoteSource, widget: object, fields: [{label: العنوان والتاريخ, name: title, widget: string}, {label: الرابط, name: url, widget: string}]}
+          - {label: المقولة (اختيارية), name: quote, widget: object, required: false, fields: [{label: English, name: en, widget: text, required: false}, {label: العربية, name: ar, widget: text, required: false}]}
+          - {label: "صاحبها · صفته · تاريخها", name: quoteBy, widget: object, required: false, fields: [{label: English, name: en, widget: string, required: false}, {label: العربية, name: ar, widget: string, required: false}]}
+          - {label: مصدر المقولة, name: quoteSource, widget: object, required: false, fields: [{label: العنوان والتاريخ, name: title, widget: string, required: false}, {label: الرابط, name: url, widget: string, required: false}]}
           - {label: جملة العاقبة, name: consequence, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
           - label: أرقام موثّقة
             name: cards

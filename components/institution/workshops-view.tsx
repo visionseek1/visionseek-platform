@@ -217,12 +217,14 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
         {workshop.pace && (
           <section id="pace" className="vs-ws-pace">
             <h2>{text(locale, workshop.pace.title)}</h2>
-            <figure className="vs-ws-pace-quote">
-              <blockquote>{text(locale, workshop.pace.quote)}</blockquote>
-              <figcaption>
-                <a href={workshop.pace.quoteSource.url} target="_blank" rel="noreferrer">{text(locale, workshop.pace.quoteBy)}<ArrowUpRight size={14} aria-hidden /></a>
-              </figcaption>
-            </figure>
+            {workshop.pace.quote?.ar && workshop.pace.quoteBy && workshop.pace.quoteSource && (
+              <figure className="vs-ws-pace-quote">
+                <blockquote>{text(locale, workshop.pace.quote)}</blockquote>
+                <figcaption>
+                  <a href={workshop.pace.quoteSource.url} target="_blank" rel="noreferrer">{text(locale, workshop.pace.quoteBy)}<ArrowUpRight size={14} aria-hidden /></a>
+                </figcaption>
+              </figure>
+            )}
             <p className="vs-ws-pace-consequence">{text(locale, workshop.pace.consequence)}</p>
             <div className="vs-ws-shift-grid">
               {workshop.pace.cards.map(card => (
