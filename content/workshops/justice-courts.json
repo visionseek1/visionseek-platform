@@ -1,43 +1,6 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A hearing or adjournment notice",
-        "ar": "إخطار جلسة أو تأجيل"
-      },
-      "body": {
-        "en": "A case number, a new date, a courtroom, the parties' names. Draft a standard notice in Arabic and English; staff match every date and name to the case system before sending.",
-        "ar": "رقم قضية، وتاريخ جديد، وقاعة، وأسماء أطراف. صياغة إخطار موحد بالعربية والإنجليزية، والموظف يطابق كل تاريخ واسم على نظام القضايا قبل الإرسال."
-      }
-    },
-    {
-      "title": {
-        "en": "One page from a long administrative file",
-        "ar": "صفحة من ملف إداري طويل"
-      },
-      "body": {
-        "en": "A procurement file for a court building or a staffing request becomes one page for the registry director: timeline, open actions, deadlines. Procedure only, never the merits of a case.",
-        "ar": "ملف مشتريات لمبنى محكمة أو طلب تعيين يصير صفحة لمدير القلم: الخط الزمني، والإجراءات المفتوحة، والمواعيد. إجراءات فقط، لا موضوع دعوى."
-      }
-    },
-    {
-      "title": {
-        "en": "A public notice",
-        "ar": "إعلان للجمهور"
-      },
-      "body": {
-        "en": "A new e-filing step, a fee change, or a holiday closure, in language a court user understands on first reading.",
-        "ar": "خطوة جديدة في القيد الإلكتروني، أو تغيير في رسم، أو إغلاق في عطلة، بلغة يفهمها المتقاضي من أول قراءة."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "Administration only. No drafting of judgments, no legal analysis of a case's merits, no real litigant data. Every date and name is matched against the case system before anything is sent.",
-    "ar": "الإدارة فقط. لا صياغة لحكم، ولا تحليل قانوني لموضوع دعوى، ولا بيانات متقاضين حقيقية. وكل تاريخ واسم يُطابَق على نظام القضايا قبل الإرسال."
-  },
   "position": 10,
   "slug": "justice-courts",
-  "draft": true,
   "kind": "institution",
   "institution": "justice",
   "roles": [
@@ -45,54 +8,94 @@
     "staff"
   ],
   "outcome": {
-    "en": "Notices go out right the first time, a long administrative file becomes one page, and the judgment stays with the judge alone.",
-    "ar": "الإخطار يخرج صحيحًا من أول مرة، والملف الإداري الطويل يصير صفحة، والحكم يبقى للقاضي وحده."
+    "en": "Make justice faster in your courts, with judgement staying with the judge alone.",
+    "ar": "اجعل العدالة أسرع في محاكمك، والحكم باقٍ للقاضي وحده."
   },
   "summary": {
-    "en": "For court registries, court administration, and the justice ministry's offices. No drafting of judgments, and no analysis of the merits of a case.",
-    "ar": "لأقلام الكتّاب، وإدارة المحاكم، ودواوين وزارة العدل. لا صياغة لحكم، ولا تحليل لموضوع دعوى."
+    "en": "Courts in our region and around the world now decide cases in weeks and review files in hours, while judgement stays with the judge. Dr. Ahmed Abdelalim studies your courts' administration, chooses with you what fits from the world's experience in administration and service to litigants, then teaches your team to carry it on.",
+    "ar": "محاكم في منطقتنا والعالم صارت تفصل في القضية في أسابيع، وتراجع الملف في ساعات، والحكم باقٍ للقاضي. يدرس د. أحمد عبدالعليم إدارة محاكمك، ويختار معك من تجارب العالم ما يناسبها في الإدارة وخدمة المتقاضين، ثم يعلّم فريقك كيف يمضي فيه بنفسه."
   },
-  "audienceRole": {
-    "en": "Managers and staff in registries, scheduling, service to court users, and administrative affairs.",
-    "ar": "مديرو وموظفو أقلام الكتّاب، والجدولة، وخدمة المتقاضين، والشؤون الإدارية."
-  },
-  "audienceInstitution": {
-    "en": "A justice ministry or court administration, on its administrative side only. The merits, the reasoning, and the judgment are outside this masterclass.",
-    "ar": "وزارة عدل أو إدارة محاكم، في جانبها الإداري فقط. موضوع الدعوى، والتسبيب، والحكم خارج هذا الماستركلاس."
-  },
-  "whyProblem": {
-    "en": "Each hearing notice is written by hand, and one wrong date postpones a session. A long administrative file reaches the director, who needs one page. Public notices are written in language only staff understand.",
-    "ar": "إخطار الجلسة يُكتب باليد لكل قضية، والخطأ في تاريخ واحد يؤجل جلسة. الملف الإداري الطويل يصل المدير وهو يحتاج صفحة. والإعلان للجمهور يُكتب بلغة لا يفهمها إلا الموظفون."
-  },
-  "whyEvidence": {
-    "en": "On 8 October 2025 the judiciary of England and Wales updated its guidance for judicial office holders: administrative tasks can be performed by AI, including composing, summarising and prioritising emails, transcribing and summarising meetings, and composing memoranda. The same guidance says judicial office holders are personally responsible for material produced in their name. That is the line this masterclass walks.",
-    "ar": "في 8 أكتوبر 2025 حدّثت السلطة القضائية في إنجلترا وويلز إرشادها لأصحاب المناصب القضائية: المهام الإدارية يمكن أن يؤديها الذكاء الاصطناعي، ومنها صياغة الرسائل وتلخيصها وترتيب أولوياتها، وتفريغ الاجتماعات وتلخيصها، وكتابة المذكرات. وفي الإرشاد نفسه: صاحب المنصب القضائي مسؤول شخصيًا عن كل ما يصدر باسمه. هذا هو الخط الذي يمشي عليه هذا الماستركلاس."
-  },
-  "source": {
-    "title": "Courts and Tribunals Judiciary · AI Guidance for Judicial Office Holders · 8 October 2025",
-    "url": "https://www.judiciary.uk/wp-content/uploads/2025/10/Artificial-Intelligence-AI-Guidance-for-Judicial-Office-Holders-1.pdf"
+  "pace": {
+    "title": {
+      "en": "What people lose when justice is slow",
+      "ar": "ما يخسره الناس حين تتأخر العدالة"
+    },
+    "consequence": {
+      "en": "When a case drags on, the litigant pays before the court does.",
+      "ar": "والقضية التي تتأخر، يدفع ثمنها المتقاضي قبل المحكمة."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "44% vs 9%",
+          "ar": "44% مقابل 9%"
+        },
+        "title": {
+          "en": "Judges got there before their institutions",
+          "ar": "القضاة سبقوا مؤسساتهم"
+        },
+        "body": {
+          "en": "In a UNESCO survey of 563 judicial operators in 96 countries, 44% had used AI tools in their work, while only 9% said their organisation had issued guidelines for using them, and the same share had received training.",
+          "ar": "في مسح لليونسكو شمل 563 من العاملين في القضاء في 96 دولة: 44% استعملوا أدوات الذكاء الاصطناعي في عملهم، و9% فقط قالوا إن مؤسستهم أصدرت إرشادات لاستعمالها، والنسبة نفسها قالت إنها تلقّت تدريبًا."
+        },
+        "lesson": {
+          "en": "What a judicial institution doesn't organise, each person organises in their own way.",
+          "ar": "ما لا تنظّمه المؤسسة القضائية، ينظّمه كل فرد على طريقته."
+        },
+        "source": {
+          "title": "UNESCO · Survey on the use of AI systems by judicial operators · 2024",
+          "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_041079ad-790e-4d8b-8c6d-865429e9de13"
+        }
+      }
+    ]
   },
   "shiftsTitle": {
-    "en": "Judges reached the tool before their institutions did",
-    "ar": "القضاة سبقوا مؤسساتهم إلى الأداة"
+    "en": "What courts gain when they shorten the road to judgement",
+    "ar": "ما تكسبه المحاكم حين تختصر الطريق إلى الحكم"
   },
   "shifts": [
     {
       "figure": {
-        "en": "44% vs 9%",
-        "ar": "44% مقابل 9%"
+        "en": "40 days",
+        "ar": "40 يومًا"
       },
       "title": {
-        "en": "Use came before the rules",
-        "ar": "الاستخدام سبق القواعد"
+        "en": "Abu Dhabi: cases in weeks, not years",
+        "ar": "أبوظبي: القضية في أسابيع لا سنوات"
       },
       "body": {
-        "en": "In a UNESCO survey of 563 judicial operators in 96 countries, 44% said they had used AI tools for their work, while only 9% said their organisation had issued guidelines for using AI chatbots, and the same share said it had provided AI-related training or information.",
-        "ar": "في مسح لليونسكو شمل 563 من العاملين في القضاء في 96 دولة، قال 44% إنهم استخدموا أدوات الذكاء الاصطناعي في عملهم، بينما قال 9% فقط إن مؤسساتهم أصدرت إرشادات لاستخدام روبوتات المحادثة، والنسبة نفسها قالت إنها وفّرت تدريبًا أو معلومات عنه."
+        "en": "In 2024, Abu Dhabi Judicial Department cut the time to resolve cases to 40 days at first instance and 34 days on appeal. Its strategy director says digital transformation, AI and machine learning played a crucial role.",
+        "ar": "اختصرت دائرة القضاء في أبوظبي في 2024 مدة الفصل في القضايا إلى 40 يومًا في محاكم أول درجة، و34 يومًا في الاستئناف. ويقول مدير الاستراتيجية في الدائرة إن التحول الرقمي والذكاء الاصطناعي وتعلّم الآلة كان لها دور حاسم."
+      },
+      "lesson": {
+        "en": "A regional experience: every day saved goes back to people waiting for their judgement.",
+        "ar": "تجربة من منطقتنا: كل يوم يُختصر، يعود إلى ناس ينتظرون أحكامهم."
       },
       "source": {
-        "title": "UNESCO · Survey on the use of AI systems by judicial operators · 2024",
-        "url": "https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_041079ad-790e-4d8b-8c6d-865429e9de13"
+        "title": "Khaleej Times · Abu Dhabi court cases now resolved in 40 days thanks to smart tech · 7 February 2025",
+        "url": "https://www.khaleejtimes.com/uae/legal/abu-dhabi-court-cases-now-resolved-in-40-days-instead-of-years-thanks-to-smart-tech?amp=1"
+      }
+    },
+    {
+      "figure": {
+        "en": "Days → hours",
+        "ar": "من أيام إلى ساعات"
+      },
+      "title": {
+        "en": "UAE Ministry of Justice: file review in hours",
+        "ar": "وزارة العدل الإماراتية: مراجعة الملف في ساعات"
+      },
+      "body": {
+        "en": "The UAE Ministry of Justice says five AI assistants have cut the review of case files from several days to a few hours, and that judicial discretion and the final decision remain entirely with the judge.",
+        "ar": "تقول وزارة العدل في الإمارات إن خمسة مساعدين بالذكاء الاصطناعي اختصروا مراجعة ملفات القضايا من عدة أيام إلى ساعات قليلة، وإن سلطة التقدير والقرار النهائي تبقى كاملة بيد القاضي."
+      },
+      "lesson": {
+        "en": "The tool shortens the road to judgement; judgement stays with the judge alone.",
+        "ar": "الأداة تختصر الطريق إلى الحكم، والحكم يبقى للقاضي وحده."
+      },
+      "source": {
+        "title": "Zawya · UAE Ministry of Justice leads shift towards agentic AI · 29 September 2026",
+        "url": "https://www.zawya.com/en/press-release/government-news/uae-ministry-of-justice-leads-shift-towards-agentic-ai-reducing-case-file-review-process-from-days-to-hours-1392576"
       }
     },
     {
@@ -101,105 +104,154 @@
         "ar": "3 لغات"
       },
       "title": {
-        "en": "Singapore: the file summarised, the document translated",
+        "en": "Singapore: files summarised, documents translated",
         "ar": "سنغافورة: الملف ملخّصًا، والوثيقة مترجمة"
       },
       "body": {
-        "en": "Singapore's judiciary developed a generative AI tool that summarises case documents for Small Claims Tribunal magistrates and for people representing themselves. In December 2024 it began on-demand translation of court documents into Chinese, Malay and Tamil.",
-        "ar": "طوّرت السلطة القضائية في سنغافورة أداة ذكاء اصطناعي توليدي تلخّص مستندات القضايا لقضاة محاكم المطالبات الصغيرة ولمن يمثّلون أنفسهم أمامها. وبدأت في ديسمبر 2024 ترجمة فورية لمستندات المحكمة إلى الصينية والملايوية والتاميلية."
+        "en": "Singapore's judiciary built an AI tool that summarises case documents for Small Claims Tribunal magistrates and for people representing themselves, and in December 2024 began on-demand translation of court documents into Chinese, Malay and Tamil.",
+        "ar": "طوّرت محاكم سنغافورة أداة ذكاء اصطناعي تلخّص ملفات القضايا لقضاة محكمة المطالبات الصغيرة وللأفراد الذين يمثّلون أنفسهم، وبدأت في ديسمبر 2024 ترجمة وثائق المحكمة عند الطلب إلى الصينية والملايوية والتاميلية."
+      },
+      "lesson": {
+        "en": "Litigants who understand their file in their own language reach justice sooner.",
+        "ar": "المتقاضي الذي يفهم ملفه بلغته، يصل إلى العدالة أسرع."
       },
       "source": {
         "title": "Singapore Judiciary · Media release · 10 September 2025",
         "url": "https://www.judiciary.gov.sg/news-and-resources/news/news-details/media-release--new-generative-ai-powered-case-summarisation-tool-to-help-small-claims-tribunals-users"
       }
-    },
-    {
-      "figure": {
-        "en": "18 languages",
-        "ar": "18 لغة"
-      },
-      "title": {
-        "en": "India: judgments reach people in their own language",
-        "ar": "الهند: الحكم يصل الناس بلغتهم"
-      },
-      "body": {
-        "en": "Language tools translate judgments of India's Supreme Court into 18 Indian languages, and speech recognition is enabling near real-time transcription of oral arguments. The government says the technology assists but never replaces judicial decision-making.",
-        "ar": "أدوات معالجة اللغة تترجم أحكام المحكمة العليا الهندية إلى 18 لغة هندية، والتعرّف على الكلام يفرّغ المرافعات الشفهية في وقت يكاد يكون فوريًا. والحكومة تقول إن التقنية تساعد ولا تحل أبدًا محل القرار القضائي."
-      },
-      "source": {
-        "title": "Press Information Bureau, Government of India · 11 February 2026",
-        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2226283&reg=3&lang=1"
-      }
     }
   ],
+  "audienceRole": {
+    "en": "For the leadership of justice ministries and judicial councils, court presidents and the heads of court administration, with the members of their team they choose.",
+    "ar": "لقيادات وزارات العدل والمجالس القضائية ورؤساء المحاكم ومديري إدارتها، ومعهم من يختارونه من فريقهم."
+  },
+  "audienceInstitution": {
+    "en": "Any justice ministry or judicial body. We start from what your courts have already built in digital litigation.",
+    "ar": "أي وزارة عدل أو جهة قضائية. نبدأ مما بنته محاكمك بالفعل في التقاضي الرقمي."
+  },
+  "whyProblem": {
+    "en": "What worked in Abu Dhabi or Singapore was built on their law, systems and the way their courts work. What fits your courts has to be chosen to their measure, not decided by a tool vendor.",
+    "ar": "ما نجح في أبوظبي أو سنغافورة بُني على قانونهم وأنظمتهم وطريقة عمل محاكمهم. ما يناسب محاكمك يُختار على مقاسها، ولا يقرره بائع أداة."
+  },
+  "whyEvidence": {
+    "en": "In India, Supreme Court judgments are translated into 18 languages and oral arguments are transcribed in near real time, and the government says the technology assists but never replaces judicial decision-making.",
+    "ar": "وفي الهند، تُترجم أحكام المحكمة العليا إلى 18 لغة، وتُفرَّغ المرافعات نصًا في وقت شبه فوري، وتقول الحكومة إن التقنية تساعد ولا تحل أبدًا محل القرار القضائي."
+  },
+  "source": {
+    "title": "Press Information Bureau, Government of India · How AI is Enhancing Access to Justice in India · 11 February 2026",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2226283&reg=3&lang=1"
+  },
   "before": {
-    "en": "Five questions about the administrative work of the registry and the ministry's offices. No specific case and no merits.",
-    "ar": "خمسة أسئلة عن الشغل الإداري في القلم والديوان. لا قضية بعينها، ولا موضوع دعوى."
+    "en": "Before the session we sit with your leadership to learn where cases slow down and where litigants wait, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف أين تطول القضية، وأين ينتظر المتقاضي. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team works on its own material: a hearing notice, a long administrative file turned into one page, or a public notice. Every date and name is matched against the case system before sending.",
-    "ar": "الفريق يشتغل على مادته: إخطار جلسة، أو ملف إداري طويل يتحول إلى صفحة، أو إعلان للجمهور. كل تاريخ واسم يُطابَق على نظام القضايا قبل الإرسال."
+    "en": "Dr. Ahmed works with the leadership and its team on court administration and service to litigants as they are today, sets out what leading courts have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع القيادة وفريقها على إدارة المحاكم وخدمة المتقاضين كما هي اليوم، ويضع أمامكم ما وصلت إليه المحاكم الرائدة، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+    "en": "Your judicial administration leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج إدارتك القضائية بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which notice is written by hand for every case though its form never changes?",
-      "ar": "أي إخطار يُكتب باليد لكل قضية رغم أن شكله لا يتغير؟"
+      "en": "How many days does a case take in your courts today, and where is most of that time lost?",
+      "ar": "كم يومًا تستغرق القضية في محاكمكم اليوم، وأين يضيع أكثرها؟"
     },
     {
-      "en": "Which administrative file reaches the director long, when one page would do?",
-      "ar": "أي ملف إداري يصل المدير طويلًا وهو يحتاج صفحة؟"
+      "en": "How many hearings are postponed because of an error in a notice or a date?",
+      "ar": "كم جلسة تتأجل بسبب خطأ في إعلان أو تاريخ؟"
     },
     {
-      "en": "Which question from court users is answered at the counter every day in the same words?",
-      "ar": "أي سؤال من المتقاضين يُجاب في الشباك كل يوم بالكلام نفسه؟"
+      "en": "How long does a long administrative file take to reach the decision-maker as a single page?",
+      "ar": "كم يستغرق الملف الإداري الطويل حتى يصل إلى صاحب القرار صفحةً واحدة؟"
     },
     {
-      "en": "Where do hours go into copying the same details between forms?",
-      "ar": "أين تضيع الساعات في نقل البيانات نفسها بين النماذج؟"
+      "en": "Which court in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي محكمة في العالم تتابعونها، وتتمنون أن تبدأوا من حيث وصلت؟"
     },
     {
-      "en": "What must never leave the court before a person has checked it?",
-      "ar": "ما الذي لا يخرج من المحكمة قبل أن يراجعه إنسان؟"
+      "en": "What will never be handed to a tool in your courts, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في محاكمكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A notice template filled from the case details, checked by registry staff before it goes out.",
-      "ar": "نموذج إخطار يُملأ من بيانات القضية، ويراجعه موظف القلم قبل أن يخرج."
+      "en": "A clear picture of where cases slow down in your courts, and where they can be shortened.",
+      "ar": "صورة واضحة لأين تطول القضية في محاكمك، وأين يمكن أن تُختصر."
     },
     {
-      "en": "One real administrative file turned into a single page: the timeline, the open actions, the deadlines.",
-      "ar": "ملف إداري حقيقي تحوّل إلى صفحة واحدة: الخط الزمني، والإجراءات المفتوحة، والمواعيد."
+      "en": "A first step in administration and service to litigants, chosen to fit your courts.",
+      "ar": "خطوة أولى في الإدارة وخدمة المتقاضين، مختارة على مقاس محاكمك."
     },
     {
-      "en": "A written line between administration and adjudication, so the tool never comes near a judgment.",
-      "ar": "حد مكتوب يفصل الإدارة عن القضاء، حتى لا تقترب الأداة من الحكم."
+      "en": "A clear rule: judgement belongs to the judge alone, and what goes to the tool is known.",
+      "ar": "قاعدة واضحة: الحكم للقاضي وحده، وما يُسلَّم للأداة معروف."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Court administration and service to litigants. Drafting judgments and analysing the merits of a case stay with the judge.",
+    "ar": "إدارة المحاكم وخدمة المتقاضين. صياغة الأحكام وتحليل موضوع الدعوى يبقيان للقاضي."
+  },
   "faq": [
     {
       "q": {
-        "en": "Does the tool write a judgment or analyse a case?",
-        "ar": "هل تكتب الأداة حكمًا أو تحلل قضية؟"
+        "en": "Does the tool come near the judgment?",
+        "ar": "هل تقترب الأداة من الحكم؟"
       },
       "a": {
-        "en": "No. No judgment, no reasoning, no analysis of a case's merits. The door is the registry, the ministry's offices, and communication with the public.",
-        "ar": "لا. لا حكم، ولا تسبيب، ولا تحليل لموضوع دعوى. الباب هو القلم والديوان والتواصل مع الجمهور."
+        "en": "No. Judgment and the assessment of a case belong to the judge alone. The masterclass works on court administration and service to litigants.",
+        "ar": "لا. الحكم وتقدير الدعوى للقاضي وحده. الماستركلاس يعمل على إدارة المحاكم وخدمة المتقاضين."
       }
     },
     {
       "q": {
-        "en": "Who is responsible for what goes out?",
-        "ar": "من يتحمّل مسؤولية ما يخرج؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "Whoever it goes out under. The tool drafts; a person checks and signs.",
-        "ar": "من يخرج باسمه. الأداة تُسوّد، والإنسان يراجع ويوقّع."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for any real litigant data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات أي متقاضٍ حقيقي."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Litigants wait while the file passes through many hands",
+      "ar": "المتقاضي ينتظر، والملف يمر بأيدٍ كثيرة"
+    },
+    "whyNow": {
+      "en": "Judgement belongs to the judge; the road to it can be shorter",
+      "ar": "الحكم للقاضي، والطريق إليه يمكن أن يُختصر"
+    },
+    "how": {
+      "en": "A masterclass built on your courts",
+      "ar": "ماستركلاس يُبنى على محاكمك"
+    },
+    "before": {
+      "en": "We learn your courts first",
+      "ar": "نفهم محاكمك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading courts",
+      "ar": "نختار معكم من تجارب المحاكم الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your courts",
+      "ar": "ما يبقى في محاكمك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your courts",
+    "ar": "تحدّث مع د. أحمد عن محاكمك"
+  }
 }

@@ -18,9 +18,10 @@ export type WorkshopShift = {figure: Bi; title: Bi; body: Bi; lesson?: Bi; sourc
 /** How fast things are moving, for the reader who decides: a real, sourced quote from a leader in the field, what happens to whoever waits, then documented figures. */
 export type WorkshopPace = {
   title: Bi;
-  quote: Bi;
-  quoteBy: Bi;
-  quoteSource: {title: string; url: string};
+  /** Optional: only a real quote, with its speaker, date and an opened source. */
+  quote?: Bi;
+  quoteBy?: Bi;
+  quoteSource?: {title: string; url: string};
   consequence: Bi;
   cards: WorkshopShift[];
 };

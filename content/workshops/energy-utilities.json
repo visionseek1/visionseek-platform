@@ -1,43 +1,6 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "The monthly performance narrative",
-        "ar": "سرد تقرير الأداء الشهري"
-      },
-      "body": {
-        "en": "From the month's indicator tables (outage frequency and duration, losses, collection, complaints) to a narrative that explains each change and ends with three decisions needed.",
-        "ar": "من جداول مؤشرات الشهر (تكرار الانقطاع ومدته، والفاقد، والتحصيل، والشكاوى) إلى سرد يشرح كل تغيّر وينتهي بثلاثة قرارات مطلوبة."
-      }
-    },
-    {
-      "title": {
-        "en": "A planned-outage notice",
-        "ar": "إخطار انقطاع مخطط"
-      },
-      "body": {
-        "en": "Areas, timing, safety guidance, and a contact channel, in Arabic and English as separate texts, then short versions for messages and social media.",
-        "ar": "المناطق، والتوقيت، وإرشادات السلامة، وقناة التواصل، بالعربية والإنجليزية كنصين مستقلين، ثم نسخ قصيرة للرسائل ووسائل التواصل."
-      }
-    },
-    {
-      "title": {
-        "en": "A maintenance priorities memo",
-        "ar": "مذكرة أولويات الصيانة"
-      },
-      "body": {
-        "en": "Inspection reports, asset age and fault logs for a group of substations become a memo for the planning committee: what to fix first, at what cost, and the risk of deferring.",
-        "ar": "تقارير الفحص وعمر الأصول وسجل الأعطال لمجموعة محطات تصير مذكرة للجنة التخطيط: ماذا نصلح أولًا، وبكم، وما خطر التأجيل."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "No access to control and operations systems, and no operational decision from a tool. Figures come from the team, and an engineer checks them before they leave.",
-    "ar": "لا وصول إلى أنظمة التحكم والتشغيل، ولا قرار تشغيلي من أداة. الأرقام تأتي من الفريق، ويراجعها مهندس قبل أن تخرج."
-  },
   "position": 12,
   "slug": "energy-utilities",
-  "draft": true,
   "kind": "institution",
   "institution": "energy",
   "roles": [
@@ -45,54 +8,72 @@
     "staff"
   ],
   "outcome": {
-    "en": "The monthly performance report says where the decision is, outage notices reach people before they ask, and running the grid stays with those who run it.",
-    "ar": "تقرير الأداء الشهري يقول أين القرار، وإخطار الانقطاع يصل الناس قبل أن يسألوا، وتشغيل الشبكة يبقى لأهله."
+    "en": "Make your energy utility faster in service and sharper in its decisions.",
+    "ar": "اجعل مرفق الطاقة عندك أسرع في الخدمة، وأدق في القرار."
   },
   "summary": {
-    "en": "For the management of energy ministries and power utilities: reports, planning, and communication with customers. Not for running the grid or its control systems.",
-    "ar": "لإدارات وزارة الطاقة وشركات الكهرباء: التقارير، والتخطيط، والتواصل مع المشتركين. ليست لتشغيل الشبكة ولا لأنظمة التحكم."
+    "en": "The leading energy utilities now shorten outages, settle a subscriber's request in minutes and forecast demand from data they couldn't see before. Dr. Ahmed Abdelalim studies your institution's work, chooses with you what fits from the world's experience in planning, performance and subscriber service, then teaches your team to carry it on. Running the grid stays with those who run it.",
+    "ar": "مرافق الطاقة الرائدة صارت تختصر الانقطاع، وتُنهي طلب المشترك في دقائق، وتتنبأ بالطلب على بيانات لم تكن تراها. يدرس د. أحمد عبدالعليم عمل مؤسستك، ويختار معك من تجارب العالم ما يناسبها في التخطيط والأداء وخدمة المشتركين، ثم يعلّم فريقك كيف يمضي فيه بنفسه. وتشغيل الشبكة يبقى لأهله."
   },
-  "audienceRole": {
-    "en": "Managers and staff in planning, performance, customer service, and the administrative side of maintenance.",
-    "ar": "مديرو وموظفو التخطيط، والأداء، وخدمة المشتركين، والصيانة في جانبها الإداري."
-  },
-  "audienceInstitution": {
-    "en": "An energy ministry, a power utility, or a regulator, in its written and planning work. Control of the grid and the plants is outside this masterclass.",
-    "ar": "وزارة طاقة أو شركة كهرباء أو جهة تنظيم، في شغلها المكتوب والتخطيطي. التحكم في الشبكة والمحطات خارج هذا الماستركلاس."
-  },
-  "whyProblem": {
-    "en": "The monthly performance report is tables without a story, so the official cannot see where the decision is. Planned-outage notices are written at the last minute. The maintenance memo is assembled from scattered inspection reports.",
-    "ar": "تقرير الأداء الشهري جداول بلا قصة، فلا يرى المسؤول أين القرار. إخطار الانقطاع المخطط يُكتب في آخر لحظة. ومذكرة الصيانة تُجمع من تقارير فحص متفرقة."
-  },
-  "whyEvidence": {
-    "en": "In its Energy and AI report, published in April 2025, the International Energy Agency says the prevalence of AI-related skills is much lower in the energy sector than in other sectors. That is exactly the gap this masterclass starts from.",
-    "ar": "في تقريرها «الطاقة والذكاء الاصطناعي» الصادر في أبريل 2025، تقول الوكالة الدولية للطاقة إن انتشار مهارات الذكاء الاصطناعي في قطاع الطاقة أقل بكثير منه في القطاعات الأخرى. وهذه بالضبط الفجوة التي يبدأ منها هذا الماستركلاس."
-  },
-  "source": {
-    "title": "International Energy Agency · Energy and AI: Executive summary · April 2025",
-    "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+  "pace": {
+    "title": {
+      "en": "What an energy institution loses when it lacks the skills",
+      "ar": "ما تخسره مؤسسة الطاقة حين تنقصها المهارة"
+    },
+    "consequence": {
+      "en": "An institution that doesn't build its people today will buy understanding from others tomorrow, at a higher price.",
+      "ar": "والمؤسسة التي لا تبني أهلها اليوم، ستشتري الفهم غدًا من غيرها بثمن أعلى."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "40% fewer",
+          "ar": "أقل 40%"
+        },
+        "title": {
+          "en": "The energy sector lags in skills",
+          "ar": "قطاع الطاقة متأخر في المهارة"
+        },
+        "body": {
+          "en": "The International Energy Agency says energy firms have concentrations of AI-skilled workers about 40% lower than technology, finance, education and media, and around 60% of companies report labour shortages that put timelines, reliability and cost control at risk.",
+          "ar": "تقول الوكالة الدولية للطاقة إن تركّز العاملين ذوي مهارات الذكاء الاصطناعي في شركات الطاقة أقل بنحو 40% منه في قطاعات التقنية والمال والتعليم والإعلام، وإن نحو 60% من الشركات أبلغت عن نقص في العمالة يهدد الجداول الزمنية والموثوقية وضبط التكاليف."
+        },
+        "lesson": {
+          "en": "The gap isn't in the tool; it is in the people who know how to use it.",
+          "ar": "الفجوة ليست في الأداة، بل في الناس الذين يعرفون كيف يستعملونها."
+        },
+        "source": {
+          "title": "International Energy Agency · World Energy Employment 2025 · 5 December 2025",
+          "url": "https://www.iea.org/reports/world-energy-employment-2025/executive-summary"
+        }
+      }
+    ]
   },
   "shiftsTitle": {
-    "en": "Capacity in the existing grid that nobody could see",
-    "ar": "طاقة في الشبكة القائمة لم يكن أحد يراها"
+    "en": "What a utility gains when it sees what's in its data",
+    "ar": "ما يكسبه مرفق الطاقة حين يرى ما في بياناته"
   },
   "shifts": [
     {
       "figure": {
-        "en": "175 GW",
-        "ar": "175 جيجاواط"
+        "en": "4 days → 8 minutes",
+        "ar": "من 4 أيام إلى 8 دقائق"
       },
       "title": {
-        "en": "Capacity without new lines",
-        "ar": "سعة بلا خطوط جديدة"
+        "en": "DEWA: deposit refunds in minutes",
+        "ar": "ديوا: استرداد مبلغ التأمين في دقائق"
       },
       "body": {
-        "en": "The IEA estimates that up to 175 GW of transmission capacity could be unlocked with remote sensors and AI-based management, without a single new line being built. When leadership understands this, the investment question itself changes.",
-        "ar": "تقدّر الوكالة الدولية للطاقة أن ما يصل إلى 175 جيجاواط من سعة نقل الكهرباء يمكن تحريرها بالحساسات والإدارة القائمة على الذكاء الاصطناعي، من غير بناء خط جديد واحد. حين تفهم القيادة هذا، يتغيّر سؤال الاستثمار نفسه."
+        "en": "Dubai Electricity and Water Authority says it has cut the time to refund a security deposit from four days to eight minutes, without any human intervention.",
+        "ar": "تقول هيئة كهرباء ومياه دبي إنها اختصرت وقت استرداد مبلغ التأمين من أربعة أيام إلى ثماني دقائق، دون أي تدخل بشري."
+      },
+      "lesson": {
+        "en": "A regional experience: subscribers get their money in minutes, and staff are free for what needs them.",
+        "ar": "تجربة من منطقتنا: المشترك يأخذ حقه في دقائق، والموظف يتفرغ لما يحتاجه."
       },
       "source": {
-        "title": "International Energy Agency · Energy and AI · April 2025",
-        "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+        "title": "DEWA · DEWA, the world's first AI-native utility · 12 June 2026",
+        "url": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2026/6/dewa-the-worlds-first-ai-native-utility"
       }
     },
     {
@@ -105,8 +86,12 @@
         "ar": "انقطاع أقصر"
       },
       "body": {
-        "en": "The agency says AI-based fault detection can rapidly and precisely pinpoint grid faults, reducing outage durations by 30–50%.",
-        "ar": "وتقول الوكالة إن كشف الأعطال بالذكاء الاصطناعي يحدد موضع العطل في الشبكة بسرعة ودقة، فيقصّر مدة الانقطاع بين 30% و50%."
+        "en": "The IEA says AI-based fault detection can rapidly and precisely pinpoint grid faults, reducing outage durations by 30–50%.",
+        "ar": "تقول الوكالة الدولية للطاقة إن كشف الأعطال بالذكاء الاصطناعي يحدد موضع العطل في الشبكة بسرعة ودقة، فيقصّر مدة الانقطاع 30–50%."
+      },
+      "lesson": {
+        "en": "Every minute of outage saved is trust returned to the subscriber.",
+        "ar": "كل دقيقة انقطاع تُختصر، ثقة تعود إلى المشترك."
       },
       "source": {
         "title": "International Energy Agency · Energy and AI · April 2025",
@@ -119,12 +104,16 @@
         "ar": "95 ألفًا بدل 159"
       },
       "title": {
-        "en": "Korea: the power company rebuilds its forecast",
+        "en": "Korea: the power company rebuilds its forecasting",
         "ar": "كوريا: شركة الكهرباء تعيد بناء التنبؤ"
       },
       "body": {
-        "en": "Korea's KEPCO rebuilt its demand-forecasting model with AI on about 95,000 data points from across the country, where the old model relied on only 159 datasets. It aims to cut annual electricity procurement costs by about 110 billion won ($73.4 million).",
-        "ar": "أعادت شركة الكهرباء الكورية KEPCO بناء نموذج التنبؤ بالطلب بالذكاء الاصطناعي على نحو 95 ألف نقطة بيانات من أنحاء البلاد، بعد أن كان النموذج القديم يعتمد على 159 مجموعة بيانات فقط. وتستهدف خفض تكاليف شراء الكهرباء السنوية بنحو 110 مليارات وون (73.4 مليون دولار)."
+        "en": "Korea's KEPCO rebuilt its demand forecasting with AI on about 95,000 data points from across the country, where the old model relied on only 159 datasets. It aims to cut annual electricity procurement costs by about 110 billion won ($73.4 million).",
+        "ar": "أعادت شركة الكهرباء الكورية بناء نموذج التنبؤ بالطلب بالذكاء الاصطناعي على نحو 95 ألف نقطة بيانات من أنحاء البلاد، بعد أن كان النموذج القديم يعتمد على 159 مجموعة بيانات فقط، وتستهدف خفض كلفة شراء الكهرباء السنوية بنحو 110 مليارات وون (73.4 مليون دولار)."
+      },
+      "lesson": {
+        "en": "The data is in your institution too. The difference is who knows how to question it.",
+        "ar": "البيانات موجودة عندك أيضًا. الفرق فيمن يعرف كيف يسألها."
       },
       "source": {
         "title": "The Korea Times · KEPCO deploys AI-powered grid system · 27 May 2026",
@@ -132,74 +121,137 @@
       }
     }
   ],
+  "audienceRole": {
+    "en": "For the leadership of energy ministries and electricity and water utilities and the heads of planning, performance and subscriber service, with the members of their team they choose.",
+    "ar": "لقيادات وزارات الطاقة وشركات الكهرباء والمياه ومديري التخطيط والأداء وخدمة المشتركين، ومعهم من يختارونه من فريقهم."
+  },
+  "audienceInstitution": {
+    "en": "Any energy ministry or electricity and water utility. We start from what your institution has already built.",
+    "ar": "أي وزارة طاقة أو مرفق كهرباء ومياه. نبدأ مما بنته مؤسستك بالفعل."
+  },
+  "whyProblem": {
+    "en": "What worked in Dubai or Korea was built on their grids, systems and teams. What fits your institution has to be chosen to its measure, not decided by a tool vendor.",
+    "ar": "ما نجح في دبي أو كوريا بُني على شبكاتهم وأنظمتهم وفرقهم. ما يناسب مؤسستك يُختار على مقاسها، ولا يقرره بائع أداة."
+  },
+  "whyEvidence": {
+    "en": "The International Energy Agency says the lack of digital skills is the single largest barrier to greater AI adoption in the energy sector.",
+    "ar": "وتقول الوكالة الدولية للطاقة إن نقص المهارات الرقمية هو أكبر عائق منفرد أمام تبنّي الذكاء الاصطناعي في قطاع الطاقة."
+  },
+  "source": {
+    "title": "International Energy Agency · Key Questions on Energy and AI · 2026",
+    "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
+  },
   "before": {
-    "en": "Five questions about the reports, notices and memos that repeat. Nothing about control systems.",
-    "ar": "خمسة أسئلة عن التقارير والإخطارات والمذكرات التي تتكرر. لا شيء عن أنظمة التحكم."
+    "en": "Before the session we sit with your leadership to learn how decisions are made today and where subscribers wait, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف كيف تُتخذ القرارات اليوم، وأين ينتظر المشترك. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team works on its own material: the narrative of the monthly performance report, a planned-outage notice, or a maintenance priorities memo. An engineer checks every figure.",
-    "ar": "الفريق يشتغل على مادته: سرد لتقرير الأداء الشهري، أو إخطار انقطاع مخطط، أو مذكرة أولويات صيانة. المهندس يراجع كل رقم."
+    "en": "Dr. Ahmed works with the leadership and its team on planning, performance and subscriber service as they are today, sets out what leading utilities have achieved, from Dubai to Korea, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع القيادة وفريقها على التخطيط والأداء وخدمة المشتركين كما هي اليوم، ويضع أمامكم ما وصلت إليه المرافق الرائدة، من دبي إلى كوريا، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+    "en": "Your institution leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج مؤسستك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which monthly report reads as tables, with no sign of where the decision is?",
-      "ar": "أي تقرير شهري يُقرأ جداول ولا يُفهم منه أين القرار؟"
+      "en": "Does your monthly performance report say where the decision lies, or does it stop at the tables?",
+      "ar": "هل يقول تقرير الأداء الشهري عندكم أين القرار، أم يكتفي بالجداول؟"
     },
     {
-      "en": "How long does a planned-outage notice take from writing to publication?",
-      "ar": "كم يستغرق إخطار الانقطاع المخطط من الكتابة إلى النشر؟"
+      "en": "How long does a subscriber wait to complete a request today?",
+      "ar": "كم ينتظر المشترك ليُنهي طلبه اليوم؟"
     },
     {
-      "en": "Which maintenance memo is assembled from scattered inspection reports?",
-      "ar": "أي مذكرة صيانة تُجمع من تقارير فحص متفرقة؟"
+      "en": "Which data do you collect every day that nobody questions?",
+      "ar": "أي بيانات تجمعونها كل يوم، ولا يسألها أحد؟"
     },
     {
-      "en": "Which customer question reaches the call centre every day in the same form?",
-      "ar": "أي سؤال من المشتركين يصل مركز الاتصال كل يوم بالصيغة نفسها؟"
+      "en": "Which utility in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي مرفق طاقة في العالم تتابعونه، وتتمنون أن تبدأوا من حيث وصل؟"
     },
     {
-      "en": "What must never go out before an engineer has checked it?",
-      "ar": "ما الذي لا يجوز أن يخرج قبل أن يراجعه مهندس؟"
+      "en": "What will never be handed to a tool in your utility, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في مؤسستكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A narrative pattern for the performance report that ends with the decisions needed, not with tables.",
-      "ar": "نمط سرد لتقرير الأداء ينتهي بالقرارات المطلوبة، لا بالجداول."
+      "en": "A clear view of where your institution stands among the leading utilities, and where the opening is.",
+      "ar": "صورة واضحة لمكان مؤسستك بين مرافق الطاقة الرائدة، وأين الفرصة."
     },
     {
-      "en": "One real outage notice in Arabic and English, with versions for text messages and the call centre.",
-      "ar": "إخطار انقطاع حقيقي بالعربية والإنجليزية، ونسخه للرسائل النصية ومركز الاتصال."
+      "en": "A first step in performance and subscriber service, chosen to fit your institution.",
+      "ar": "خطوة أولى في الأداء وخدمة المشتركين، مختارة على مقاس مؤسستك."
     },
     {
-      "en": "A written line between written work and operations, so the tool never comes near the grid.",
-      "ar": "حد مكتوب يفصل الشغل المكتوب عن التشغيل، حتى لا تقترب الأداة من الشبكة."
+      "en": "A plan to build the skills inside your team, instead of buying understanding from outside.",
+      "ar": "خطة لبناء المهارة داخل فريقك، بدل شراء الفهم من خارجه."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Planning, performance, subscriber service and administration. Control systems and grid operation stay outside the masterclass.",
+    "ar": "التخطيط والأداء وخدمة المشتركين والإدارة. أنظمة التحكم وتشغيل الشبكة خارج الماستركلاس."
+  },
   "faq": [
     {
       "q": {
-        "en": "Does the masterclass come near running the grid?",
-        "ar": "هل يقترب الماستركلاس من تشغيل الشبكة؟"
+        "en": "Does the masterclass touch control systems or grid operation?",
+        "ar": "هل يقترب الماستركلاس من أنظمة التحكم أو تشغيل الشبكة؟"
       },
       "a": {
-        "en": "No. No control systems, no operational decisions. The door is the report, the notice, and the memo.",
-        "ar": "لا. لا أنظمة تحكم، ولا قرار تشغيلي. الباب هو التقرير والإخطار والمذكرة."
+        "en": "No. It works on planning, performance, subscriber service and administration. Running the grid stays with the engineers who run it.",
+        "ar": "لا. يعمل على التخطيط والأداء وخدمة المشتركين والإدارة. وتشغيل الشبكة يبقى لمهندسيها."
       }
     },
     {
       "q": {
-        "en": "Why start with written work in a technical sector?",
-        "ar": "لماذا نبدأ بالشغل المكتوب في قطاع تقني؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "Because decisions in the ministry and the utility pass through paper before they reach the grid. Whoever understands the tool in writing knows its limits before going near operations.",
-        "ar": "لأن القرار في الوزارة والشركة يمر بالورق قبل أن يصل إلى الشبكة. ومن يفهم الأداة في الكتابة يعرف حدودها قبل أن يقترب من التشغيل."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for operational or subscriber data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات تشغيل أو بيانات مشتركين."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your data says more than anyone reads from it",
+      "ar": "بياناتك تقول أكثر مما يُقرأ منها"
+    },
+    "whyNow": {
+      "en": "Skills are the biggest barrier",
+      "ar": "المهارة هي العائق الأكبر"
+    },
+    "how": {
+      "en": "A masterclass built on your institution",
+      "ar": "ماستركلاس يُبنى على مؤسستك"
+    },
+    "before": {
+      "en": "We learn your institution first",
+      "ar": "نفهم مؤسستك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading utilities",
+      "ar": "نختار معكم من تجارب المرافق الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your institution",
+      "ar": "ما يبقى في مؤسستك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your institution",
+    "ar": "تحدّث مع د. أحمد عن مؤسستك"
+  }
 }
