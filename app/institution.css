@@ -278,6 +278,14 @@
 .vs-ws-shift-grid strong{font-size:1.15rem;line-height:1.5;font-weight:600}
 .vs-ws-page .vs-ws-shift-grid p{margin:0;font-size:.98rem;line-height:1.8;color:var(--grey)}
 .vs-ws-shift-grid a{margin-top:auto;font-size:.85rem;line-height:1.5}
+/* «لك أنت»: a leader's sourced quote, what happens to whoever waits, then how fast it is moving. */
+.vs-ws-pace-quote{margin:1rem 0 0;padding-inline-start:1.1rem;border-inline-start:4px solid var(--lime);max-width:46rem}
+.vs-ws-pace-quote blockquote{margin:0;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.6;font-weight:700;color:var(--white)}
+.vs-ws-pace-quote figcaption{margin-top:.5rem;font-size:.85rem}
+.vs-ws-pace-quote figcaption a{display:inline-flex;align-items:center;gap:.25rem;color:var(--grey);text-decoration:none}
+.vs-ws-pace-quote figcaption a:hover{color:var(--lime)}
+.vs-ws-page .vs-ws-shift-grid p.vs-ws-shift-lesson{padding-top:.6rem;border-top:1px solid #2c3138;font-size:1.02rem;line-height:1.75;font-weight:700;color:var(--lime)}
+.vs-ws-page .vs-ws-pace-consequence{margin:1rem 0 0;max-width:46rem;font-size:1.15rem;line-height:1.8;font-weight:700;color:var(--lime)}
 
 /* Masterclass, two doors (9 Oct 2026): opening paragraphs, a sourced quote and its consequence on each door. */
 .vs-wl-opening{display:flex;flex-direction:column;gap:1rem;max-width:46rem}

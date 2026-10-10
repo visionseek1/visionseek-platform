@@ -1374,6 +1374,28 @@ collections:
         fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
+      - label: «ما تخسره وأنت تنتظر» (تحت الافتتاح)
+        name: pace
+        widget: object
+        required: false
+        collapsed: true
+        hint: "مقولة حقيقية لأحد كبار المجال (اسمه وصفته وتاريخها ومصدر اتفتح)، ثم جملة تبيّن إن اللي يؤجّل هيتأخر، ثم خسائر موثّقة بمصادرها، وتحت كل واحدة: ماذا تعني لك."
+        fields:
+          - {label: العنوان, name: title, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
+          - {label: المقولة, name: quote, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
+          - {label: "صاحبها · صفته · تاريخها", name: quoteBy, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
+          - {label: مصدر المقولة, name: quoteSource, widget: object, fields: [{label: العنوان والتاريخ, name: title, widget: string}, {label: الرابط, name: url, widget: string}]}
+          - {label: جملة العاقبة, name: consequence, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
+          - label: أرقام موثّقة
+            name: cards
+            widget: list
+            summary: "{{fields.figure.ar}} — {{fields.title.ar}}"
+            fields:
+              - {label: الرقم, name: figure, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
+              - {label: العنوان, name: title, widget: object, fields: [{label: English, name: en, widget: string}, {label: العربية, name: ar, widget: string}]}
+              - {label: النص, name: body, widget: object, fields: [{label: English, name: en, widget: text}, {label: العربية, name: ar, widget: text}]}
+              - {label: "ماذا يعني لك (سطر الدرس)", name: lesson, widget: object, required: false, fields: [{label: English, name: en, widget: text, required: false}, {label: العربية, name: ar, widget: text, required: false}]}
+              - {label: المصدر, name: source, widget: object, fields: [{label: العنوان والتاريخ, name: title, widget: string}, {label: الرابط, name: url, widget: string}]}
       - label: المنصب
         name: audienceRole
         widget: object
@@ -1437,6 +1459,13 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
+          - label: "ماذا يعني لك (سطر الدرس)"
+            name: lesson
+            widget: object
+            required: false
+            fields:
+              - {label: English, name: en, widget: text, required: false}
+              - {label: العربية, name: ar, widget: text, required: false}
           - label: المصدر
             name: source
             widget: object
@@ -1514,6 +1543,29 @@ collections:
             fields:
               - {label: English, name: en, widget: text}
               - {label: العربية, name: ar, widget: text}
+      - label: عناوين أقسام الصفحة
+        name: headings
+        widget: object
+        required: false
+        collapsed: true
+        hint: "كل عنوان يتكتب للصفحة نفسها ويسمّي اللي القارئ عايشه دلوقتي. لو سبته فاضي يظهر العنوان العام (لمن، لماذا الآن…)."
+        fields:
+          - {label: "لمن", name: forWhom, widget: object, required: false, fields: &headingFields [{label: English, name: en, widget: string, required: false}, {label: العربية, name: ar, widget: string, required: false}]}
+          - {label: "لماذا الآن", name: whyNow, widget: object, required: false, fields: *headingFields}
+          - {label: "كيف تمشي", name: how, widget: object, required: false, fields: *headingFields}
+          - {label: "الخطوة الأولى (قبلها)", name: before, widget: object, required: false, fields: *headingFields}
+          - {label: "الخطوة الثانية (جواها)", name: during, widget: object, required: false, fields: *headingFields}
+          - {label: "الخطوة الثالثة (بعدها)", name: after, widget: object, required: false, fields: *headingFields}
+          - {label: "بماذا تخرج", name: leavesWith, widget: object, required: false, fields: *headingFields}
+          - {label: "الأسئلة", name: faq, widget: object, required: false, fields: *headingFields}
+      - label: زر آخر الصفحة
+        name: cta
+        widget: object
+        required: false
+        hint: "لو فاضي يظهر «اطلب جلسة تعارف»."
+        fields:
+          - {label: English, name: en, widget: string, required: false}
+          - {label: العربية, name: ar, widget: string, required: false}
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس

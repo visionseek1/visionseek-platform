@@ -127,3 +127,39 @@ test('every sector page that shows shifts names them in its own words and source
     }
   }
 });
+
+test('the «لك أنت» page speaks to the leader: its own headings, how fast it moves, independence, sourced reasons', () => {
+  const page = workshops.find(item => item.slug === 'leader-seat');
+  assert.equal(page.kind, 'individual');
+  // Dr. Ahmed (9 Oct 2026): address the owner or the leader first, not the employee, and show that it is moving fast.
+  // Dr. Ahmed (9 Oct 2026): chief executives, owners of companies and institutions, and government leaders.
+  assert.match(page.audienceRole.ar, /الرئيس التنفيذي/);
+  assert.match(page.audienceRole.ar, /صاحب الشركة أو المؤسسة/);
+  assert.match(page.audienceRole.ar, /القائد الحكومي/);
+  // Every figure says what the reader loses or gains: a lesson line under each card.
+  for (const card of [...page.pace.cards, ...page.shifts]) {
+    assert.ok(card.lesson?.ar && card.lesson?.en, `${card.title.en}: what it means for the reader`);
+  }
+  assert.match(section.doors.individual.for.ar, /صاحب المؤسسة وقائدها/);
+  assert.ok(page.pace, 'the pace band');
+  assert.ok(page.pace.quote.ar && page.pace.quoteBy.ar.match(/20\d\d/), 'a dated quote');
+  assert.match(page.pace.quoteSource.url, /^https:\/\//);
+  assert.ok(page.pace.consequence.ar, 'what happens to whoever waits');
+  assert.ok(page.pace.cards.length >= 2);
+  for (const card of page.pace.cards) assert.match(card.source.url, /^https:\/\//, card.title.en);
+  const generic = ['لمن', 'لماذا الآن', 'كيف تمشي', 'قبلها', 'جواها', 'بعدها', 'بماذا تخرج', 'أسئلة قصيرة'];
+  for (const key of ['forWhom', 'whyNow', 'how', 'before', 'during', 'after', 'leavesWith', 'faq']) {
+    const heading = page.headings?.[key];
+    assert.ok(heading?.ar && heading?.en, `heading ${key}`);
+    assert.equal(generic.includes(heading.ar), false, `heading ${key} is still the generic one`);
+  }
+  assert.ok(page.cta?.ar && page.cta?.en, 'its own button');
+  // Dr. Ahmed's most important point: we teach people to carry on by themselves.
+  assert.match(page.after.ar, /بنفسك/);
+  assert.match(page.after.ar, /لا تحتاجنا/);
+  // The evidence carries the date its source shows.
+  assert.match(page.source.title, /29 September 2026/);
+  assert.match(page.whyEvidence.ar, /سبتمبر 2026/);
+  const view = readFileSync(join(process.cwd(), 'components/institution/workshops-view.tsx'), 'utf8');
+  assert.match(view, /workshop\.headings\?\.\[key\]/, 'the page reads its own headings');
+});

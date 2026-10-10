@@ -12,90 +12,204 @@
     "senior"
   ],
   "outcome": {
-    "en": "You draft, test, and prepare the decision yourself, on work that is actually yours.",
-    "ar": "تكتب وتحلّل وتحضّر قرارك بيدك، على مهامك أنت."
+    "en": "Lead your organization into AI before others get there first.",
+    "ar": "قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك."
   },
   "summary": {
-    "en": "A private session for the person who signs. Not a tour of tools, and not a case borrowed from another institution.",
-    "ar": "جلسة للقائد نفسه، لا جولة في الأدوات، ولا حالة مستعارة من مؤسسة ثانية."
+    "en": "AI is moving faster than anything organizations have seen, and yours will only get ahead if you understand it first. Dr. Ahmed Abdelalim sits down with you and studies your work and your organization before any tool comes up. Then you see for yourself what AI can change there, so you lead with the best the world has reached, not with what the organization is used to. And you leave knowing the way, and leading it yourself.",
+    "ar": "العالم يتحرك في الذكاء الاصطناعي بسرعة لم يعرفها من قبل، ولن تسبق مؤسستك فيه إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم، ويدرس عملك ومؤسستك قبل أي أداة، ثم ترى بعينك ما يستطيع الذكاء الاصطناعي أن يغيّره فيها، لتقودها بأعلى ما وصل إليه العالم، لا بما اعتادت عليه. وتخرج وأنت تعرف الطريق، وتقوده بنفسك."
+  },
+  "pace": {
+    "title": {
+      "en": "What your organization loses while it waits",
+      "ar": "ما تخسره مؤسستك وهي تنتظر"
+    },
+    "quote": {
+      "en": "…stagnation is slow-motion failure. If you're not climbing, you're sliding.",
+      "ar": "الجمود فشلٌ بطيء. إن لم تكن تصعد، فأنت تنزلق."
+    },
+    "quoteBy": {
+      "en": "Tobi Lütke, co-founder and CEO of Shopify, in a memo to his staff · April 2025",
+      "ar": "توبي لوتكه، أحد مؤسسي «شوبيفاي» ورئيسها التنفيذي، في رسالة إلى موظفيه · أبريل 2025"
+    },
+    "quoteSource": {
+      "title": "The Canadian Press via CP24 · AI now an 'expectation' at Shopify · 7 April 2025",
+      "url": "https://www.cp24.com/news/canada/2025/04/07/ai-now-an-expectation-at-shopify-will-factor-into-performance-reviews-hiring-ceo/"
+    },
+    "consequence": {
+      "en": "A leader who puts it off today will find the organization tomorrow behind others that used to trail it.",
+      "ar": "والقائد الذي يؤجّله اليوم، سيجد مؤسسته غدًا خلف مؤسسات كانت بالأمس خلفها."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "95%",
+          "ar": "95%"
+        },
+        "title": {
+          "en": "You pay for the tool, and see no return",
+          "ar": "تدفع ثمن الأداة، ولا ترى عائدها"
+        },
+        "body": {
+          "en": "95% of companies' generative AI pilots left no measurable mark on profit and loss, according to an MIT report built on interviews with 150 leaders, a survey of 350 employees and 300 public deployments. The cause, the report says, is not the quality of the tools but a learning gap inside organizations.",
+          "ar": "95% من تجارب الذكاء الاصطناعي التوليدي في الشركات لم تترك أثرًا يُقاس في الأرباح، بحسب تقرير لمعهد «MIT» قام على مقابلات مع 150 قائدًا، ومسح 350 موظفًا، وتحليل 300 تطبيق. والسبب، كما يقول التقرير، ليس في جودة الأدوات، بل في فجوة التعلّم داخل المؤسسات."
+        },
+        "lesson": {
+          "en": "Money spent on a tool the decision-makers don't understand is money lost.",
+          "ar": "المال الذي يُصرف على أداة لا يفهمها أصحاب القرار، يضيع."
+        },
+        "source": {
+          "title": "Fortune · MIT report: 95% of generative AI pilots at companies are failing · 18 August 2025",
+          "url": "https://www.fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo"
+        }
+      },
+      {
+        "figure": {
+          "en": "78%",
+          "ar": "78%"
+        },
+        "title": {
+          "en": "Your staff already use it, with their own tools",
+          "ar": "موظفوك يستعملونه الآن… بأدواتهم هم"
+        },
+        "body": {
+          "en": "78% of employees who use AI bring their own tools to work rather than tools their organization chose, Microsoft and LinkedIn found.",
+          "ar": "78% من الموظفين الذين يستعملون الذكاء الاصطناعي يأتون إلى العمل بأدواتهم الخاصة، لا بأدوات اختارتها مؤسستهم، بحسب «مايكروسوفت» و«لينكدإن»."
+        },
+        "lesson": {
+          "en": "If you don't set the rules, every employee sets their own, and your organization's data may end up in tools you never chose.",
+          "ar": "إن لم تضع أنت القاعدة، وضعها كل موظف لنفسه، وقد تخرج بيانات مؤسستك إلى أدوات لم تخترها أنت."
+        },
+        "source": {
+          "title": "Microsoft and LinkedIn · 2024 Work Trend Index · 1 July 2024",
+          "url": "https://news.microsoft.com/en-xm/2024/07/01/microsofts-2024-work-trend-index-report-showcases-increased-appetite-for-ai-at-work-highlights-opportunity-for-leaders-to-transform-enthusiasm-into-productivity-gains/"
+        }
+      },
+      {
+        "figure": {
+          "en": "Less thinking",
+          "ar": "تفكير أقل"
+        },
+        "title": {
+          "en": "A team that trusts the tool more, and thinks less",
+          "ar": "فريق يثق بالأداة أكثر، ويفكّر أقل"
+        },
+        "body": {
+          "en": "A Microsoft and Carnegie Mellon study of 319 knowledge workers who use AI found that more confidence in it went with less critical-thinking effort.",
+          "ar": "دراسة لـ«مايكروسوفت» وجامعة «كارنيجي ميلون» على 319 موظفًا يستعملون الذكاء الاصطناعي: كلما زادت ثقتهم فيه، قلّ جهدهم في التفكير النقدي."
+        },
+        "lesson": {
+          "en": "Lean on it completely, and your organization loses the very judgement it needs to check it.",
+          "ar": "إن اعتمدت مؤسستك عليه كليًا، فقدت التفكير الذي تحتاجه لتراقبه."
+        },
+        "source": {
+          "title": "Lee et al. · The Impact of Generative AI on Critical Thinking · CHI 2025",
+          "url": "https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf"
+        }
+      }
+    ]
   },
   "audienceRole": {
-    "en": "The leader in person: a chief executive, a deputy, or a director-general.",
-    "ar": "القائد نفسه: رئيس مؤسسة، أو وكيل، أو مدير عام."
+    "en": "This session is for those who lead: chief executives, owners of companies and institutions, and government leaders, from ministers and deputy ministers to heads of authorities and directors-general. For whoever makes the call, and wants to understand first-hand where to take the organization.",
+    "ar": "هذه الجلسة لمن يقود: الرئيس التنفيذي، وصاحب الشركة أو المؤسسة، والقائد الحكومي من وزير أو وكيل أو رئيس هيئة أو مدير عام. لمن يتخذ القرار، ويريد أن يفهم بنفسه إلى أين يأخذ مؤسسته."
   },
   "audienceInstitution": {
-    "en": "Any institution. The hour is spent on your memos, your numbers, and the decision waiting for you.",
-    "ar": "أي مؤسسة. الساعة تمضي على مذكراتك وأرقامك والقرار الذي ينتظرك."
+    "en": "You need no technical background. Bring the organization as it is: your decisions, your numbers, and the work still done the way it was ten years ago.",
+    "ar": "لا تحتاج خلفية تقنية. يكفي أن تأتي بمؤسستك كما هي: قراراتك، وأرقامك، والعمل الذي ما زال يُنجَز فيها كما كان قبل عشر سنين."
   },
   "whyProblem": {
-    "en": "The tool has reached the building. The leader still asks someone else to try it. The signature stays upstairs, and the habit does not move.",
-    "ar": "الأداة وصلت المبنى، والقائد ما زال يطلب من غيره أن يجرّبها. التوقيع يبقى فوق، والعادة لا تتحرك."
+    "en": "Many leaders ask an assistant or a consultant to try the tool for them, then wait for the report. The tool stays in someone else's hands, and the organization's decisions hang on someone else's understanding.",
+    "ar": "كثير من القادة يكلّفون موظفًا أو مستشارًا أن يجرّب الأداة بدلًا منهم، ثم ينتظرون التقرير. فتبقى الأداة في يد غيرهم، ويبقى قرار المؤسسة معلّقًا بفهم غيرهم."
   },
   "whyEvidence": {
-    "en": "BCG research published on 4 February 2026 found that executives who spend at least 10% of their time learning to use AI in their own work are 1.7 times likelier to lead organizations with more mature AI systems.",
-    "ar": "في بحث BCG المنشور في 4 فبراير 2026، المديرون الذين يقضون 10% على الأقل من وقتهم في تعلّم استعمال الذكاء الاصطناعي داخل شغلهم هم أنفسهم أقرب بـ1.7 مرة إلى قيادة مؤسسات أنضج في هذا المجال."
+    "en": "BCG research published in September 2026 found that executives who spend at least 10% of their time teaching themselves to use AI in their own work are 1.7 times likelier to lead organizations further along with it. Those who learn it themselves lead. Those who wait for others are led.",
+    "ar": "وفي بحث نشرته «BCG» في سبتمبر 2026: المديرون الذين يخصّصون 10% على الأقل من وقتهم ليتعلّموا بأنفسهم كيف يستخدمون الذكاء الاصطناعي في عملهم، أقرب بـ1.7 مرة من غيرهم إلى قيادة مؤسسات أنضج فيه. من يتعلّم بنفسه يقود، ومن ينتظر غيره يُقاد."
   },
   "source": {
-    "title": "BCG · The Three Dimensions of Leadership for the AI Era · 4 February 2026",
+    "title": "BCG · The Three Dimensions of Leadership for the AI Era · 29 September 2026",
     "url": "https://www.bcg.com/publications/2026/three-leadership-roles-ceos-ai"
   },
   "before": {
-    "en": "A short diagnosis: five questions about your real week, before anyone opens a tool.",
-    "ar": "تشخيص قصير: خمسة أسئلة عن أسبوعك الحقيقي، قبل أن تُفتح أداة."
+    "en": "Before the session we ask about your organization and your real week, not your technical skills. Questions like:",
+    "ar": "قبل الجلسة نسألك عن مؤسستك وأسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
   },
   "during": {
-    "en": "We work on your material. A note you have to write, a figure you do not yet trust, or a decision you have to walk into a room with. No prepared example.",
-    "ar": "نشتغل على مادتك: مذكرة عليك كتابتها، أو رقم لم تطمئن إليه، أو قرار ستدخله إلى اجتماع. لا مثال جاهز."
+    "en": "Dr. Ahmed works with you on your own material, not a prepared example: a memo you have to write, a figure you don't yet trust, a decision you are taking into a meeting. You see for yourself where AI saves time, where it opens up something your organization could not do before, and where it gets things wrong and cannot be trusted.",
+    "ar": "يعمل معك د. أحمد على مادتك أنت، لا على مثال جاهز: مذكرة عليك أن تكتبها، أو رقم لم تطمئن إليه، أو قرار ستدخل به اجتماعًا. وترى بعينك أين يختصر الذكاء الاصطناعي الوقت، وأين يفتح لمؤسستك ما لم تكن تقدر عليه، وأين يخطئ فلا يُؤتمن."
   },
   "after": {
-    "en": "Thirty days later, two measures only: time taken off the tasks we touched, and which tools you still actually open. No number is claimed before it is measured.",
-    "ar": "بعد ثلاثين يومًا مقياسَان فقط: الوقت الذي خرج من المهام التي لمسناها، والأدوات التي ما زلت تفتحها فعلًا. لا رقم قبل القياس."
+    "en": "You leave knowing the way and leading it yourself: what to ask of your team, which tools suit your organization, and when to trust what they say and when to check it. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج وأنت تعرف الطريق وتقوده بنفسك: ماذا تطلب من فريقك، وأي أداة تناسب مؤسستك، ومتى تثق بما تقوله ومتى تراجعه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which decision is waiting on you this week?",
-      "ar": "أي قرار ينتظرك هذا الأسبوع؟"
+      "en": "What does your organization still do the way it did ten years ago?",
+      "ar": "ما العمل الذي ما زالت مؤسستك تنجزه كما كانت قبل عشر سنين؟"
     },
     {
-      "en": "Which note do you still write by hand, and why does it take that long?",
-      "ar": "أي مذكرة ما زلت تكتبها بيدك، ولماذا تأخذ هذا الوقت؟"
+      "en": "Which decision is waiting for you this month that you would like to see more clearly first?",
+      "ar": "ما القرار الذي ينتظرك هذا الشهر، وتريد أن تراه أوضح قبل أن تتخذه؟"
     },
     {
-      "en": "Where do you send the tool downstairs for someone else to try?",
-      "ar": "أين ترسل الأداة إلى غيرك ليجرّبها نيابة عنك؟"
+      "en": "Where do you send someone else to try the tool for you?",
+      "ar": "أين تكلّف غيرك أن يجرّب الأداة بدلًا منك؟"
     },
     {
-      "en": "Which figure or fact do you want checked before you sign?",
-      "ar": "أي رقم أو واقعة تريد فحصها قبل أن توقع؟"
+      "en": "Which organization in the world do you watch, and wish you could start from where it is now?",
+      "ar": "أي مؤسسة في العالم تتابعها، وتتمنى أن تبدأ من حيث وصلت؟"
     },
     {
-      "en": "What will you never hand to the tool?",
-      "ar": "ما الذي لن تسلّمه للأداة أبدًا؟"
+      "en": "What would you never hand to a tool, however good it is?",
+      "ar": "ما الذي لن تسلّمه لأي أداة، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A way of using the tool for writing, testing, and preparing a decision, fitted to how you already work.",
-      "ar": "طريقة لاستعمال الأداة في الكتابة والفحص وتحضير القرار، على طريقتك لا على قالب عام."
+      "en": "A new way of seeing your organization: what AI can change in it, and what you had not noticed before.",
+      "ar": "عين جديدة على مؤسستك: ترى فيها ما يستطيع الذكاء الاصطناعي أن يغيّره، وما لم تكن تراه من قبل."
     },
     {
-      "en": "Three pieces of your own work, advanced in the session. Not a classroom exercise.",
-      "ar": "ثلاث مهام من شغلك تقدّمت داخل الجلسة. ليست تمرينًا دراسيًا."
+      "en": "Real pieces of your work moved forward in the session itself. Not exercises.",
+      "ar": "أعمال حقيقية من عملك تقدّمت داخل الجلسة نفسها، لا تمارين دراسية."
     },
     {
-      "en": "A line between what stays with you and what can later move to the team.",
-      "ar": "حد واضح بين ما يبقى عندك وما يمكن أن ينتقل إلى الفريق لاحقًا."
+      "en": "A clear line between what you hand to the tool and what stays your call.",
+      "ar": "حدّ واضح بين ما تسلّمه للأداة، وما يبقى قرارك أنت."
+    },
+    {
+      "en": "A first step for your organization: you know why you chose it, and how to lead your team there.",
+      "ar": "خطوة أولى لمؤسستك، تعرف لماذا اخترتها، وتعرف كيف تقود فريقك إليها."
     }
   ],
   "faq": [
+    {
+      "q": {
+        "en": "My time is tight. Why should I learn it myself instead of handing it to my team?",
+        "ar": "وقتي ضيق. لماذا أتعلّمه أنا، ولا أكلّف به فريقي؟"
+      },
+      "a": {
+        "en": "Because the decision is yours. Your team will learn the tools, but you decide where the organization goes with them. A leader who doesn't understand it first-hand leaves the decision with whoever does.",
+        "ar": "لأن القرار قرارك. فريقك سيتعلّم الأداة، لكنك أنت من يقرّر إلى أين تذهب المؤسسة بها. والقائد الذي لا يفهمه بنفسه، يبقى قراره في يد من فهمه."
+      }
+    },
     {
       "q": {
         "en": "Do I need a technical background?",
         "ar": "هل أحتاج خلفية تقنية؟"
       },
       "a": {
-        "en": "No. You need to be the person who owns the decision. The session does not turn you into an engineer.",
-        "ar": "لا. المطلوب أن تكون صاحب القرار. الجلسة لا تحوّلك إلى مهندس."
+        "en": "No. You need to know your organization, and nobody knows it better than you. The session won't make you an engineer; it will change how you see your own organization.",
+        "ar": "لا. تحتاج أن تعرف مؤسستك، وأنت تعرفها أكثر من أي أحد. الجلسة لا تجعلك مهندسًا؛ تجعلك ترى مؤسستك بعين جديدة."
+      }
+    },
+    {
+      "q": {
+        "en": "Why not learn it from an online course?",
+        "ar": "لماذا لا أتعلّمه من دورة على الإنترنت؟"
+      },
+      "a": {
+        "en": "A course explains the tool the way it works for everyone. Here you learn it on your own organization, with someone who studied it before the session began. No course can do that.",
+        "ar": "الدورة تشرح الأداة كما تعمل عند الجميع. هنا تتعلّمه على مؤسستك أنت، مع من درسها قبل أن تبدأ الجلسة. وهذا ما لن تجده في أي دورة."
       }
     },
     {
@@ -104,87 +218,141 @@
         "ar": "هل تُحفظ ملفاتي على الموقع؟"
       },
       "a": {
-        "en": "No. The website does not take your documents. What is used in a session stays in that session, under an arrangement we agree before it starts.",
-        "ar": "لا. الموقع لا يستلم وثائقك. ما يُستخدم في الجلسة يبقى فيها، باتفاق يُحسم قبل أن تبدأ."
+        "en": "No. The website does not take your documents. What you share in the session stays in the session, under an arrangement we settle with you before it starts.",
+        "ar": "لا. الموقع لا يستلم وثائقك. وما تشاركه في الجلسة يبقى فيها، باتفاق نحسمه معك قبل أن نبدأ."
       }
     }
   ],
   "shiftsTitle": {
-    "en": "The faster leader of this era learns new skills",
-    "ar": "المدير الأسرع في هذا الزمن يتعلّم مهارات جديدة"
+    "en": "What your organization gains when it moves now",
+    "ar": "ما تكسبه مؤسستك حين تتحرك اليوم"
   },
   "shifts": [
+    {
+      "figure": {
+        "en": "1.7×",
+        "ar": "1.7 ضعف"
+      },
+      "title": {
+        "en": "The companies ahead earn more, and the gap is widening",
+        "ar": "من سبق يكسب أكثر، والفجوة تتسع"
+      },
+      "body": {
+        "en": "In a BCG study of more than 1,250 companies worldwide, only 5% capture AI's value at scale. Those companies posted 1.7 times the revenue growth and 3.6 times the three-year shareholder return of the laggards. 60% got no material value at all, despite what they spent.",
+        "ar": "في دراسة لـ«BCG» على أكثر من 1,250 شركة حول العالم، 5% فقط تجني قيمة الذكاء الاصطناعي على نطاق واسع. هذه الشركات حقّقت نموًا في الإيرادات أكبر بـ1.7 مرة، وعائدًا لمساهميها على ثلاث سنوات أكبر بـ3.6 مرة، من الشركات المتأخرة. أما 60% من الشركات، فلم تجنِ منه قيمة تُذكر رغم ما أنفقته."
+      },
+      "lesson": {
+        "en": "The question is not whether you spend on AI. It is which of the two groups your organization will be in.",
+        "ar": "السؤال ليس هل تنفق على الذكاء الاصطناعي، بل في أي الفريقين ستكون مؤسستك."
+      },
+      "source": {
+        "title": "BCG · The Widening AI Value Gap · September 2025",
+        "url": "https://media-publications.bcg.com/The-Widening-AI-Value-Gap-October-2025.pdf"
+      }
+    },
+    {
+      "figure": {
+        "en": "26 minutes a day",
+        "ar": "26 دقيقة يوميًا"
+      },
+      "title": {
+        "en": "Time a government gets back from paperwork",
+        "ar": "وقت يعود إلى الحكومة من الورق"
+      },
+      "body": {
+        "en": "In a UK government trial with more than 20,000 civil servants, participants said AI saved them an average of 26 minutes a day: nearly two weeks a year for each person.",
+        "ar": "في تجربة للحكومة البريطانية شملت أكثر من 20 ألف موظف حكومي، قال المشاركون إن الذكاء الاصطناعي وفّر عليهم 26 دقيقة في اليوم في المتوسط، أي قرابة أسبوعين في السنة لكل موظف."
+      },
+      "lesson": {
+        "en": "Multiply two weeks by the number of people you employ, and see how much time could go back to serving people.",
+        "ar": "اضرب أسبوعين في عدد موظفيك، وانظر كم من الوقت يمكن أن يعود إلى خدمة الناس."
+      },
+      "source": {
+        "title": "GOV.UK · Landmark government trial shows AI could save civil servants nearly 2 weeks a year · 2 June 2025",
+        "url": "https://www.gov.uk/government/news/landmark-government-trial-shows-ai-could-save-civil-servants-nearly-2-weeks-a-year"
+      }
+    },
+    {
+      "figure": {
+        "en": "A day → 2 seconds",
+        "ar": "من يوم إلى ثانيتين"
+      },
+      "title": {
+        "en": "Dubai Customs: a day's work now takes two seconds",
+        "ar": "جمارك دبي: ما كان يأخذ يومًا صار يأخذ ثانيتين"
+      },
+      "body": {
+        "en": "Dubai Customs' Al-Munasiq 2.0 classifies goods with AI and big data, cutting classification from a full day to two seconds. It is now used in 117 countries.",
+        "ar": "منصة «المنسّق 2.0» في جمارك دبي تصنّف السلع بالذكاء الاصطناعي والبيانات الضخمة، فاختصرت وقت التصنيف من يوم كامل إلى ثانيتين، وصارت تُستخدم في 117 دولة."
+      },
+      "lesson": {
+        "en": "An experience from our own region. Somewhere in your organization, work like this is waiting for someone to see it.",
+        "ar": "تجربة من منطقتنا. وفي مؤسستك عمل مثله ينتظر من يراه."
+      },
+      "source": {
+        "title": "Sharjah24 · Hamdan bin Mohammed visits Dubai Customs · 15 December 2025",
+        "url": "https://sharjah24.ae/en/Articles/2025/12/15/a11"
+      }
+    },
     {
       "figure": {
         "en": "About 25% faster",
         "ar": "أسرع بنحو 25%"
       },
       "title": {
-        "en": "A quarter faster, and wrong when the tool was out of its depth",
-        "ar": "أسرع بالربع… وأخطأ حين تجاوز حدود الأداة"
+        "en": "Your team, a quarter faster, if it knows when to trust the tool",
+        "ar": "فريقك أسرع بالربع… إن عرف متى يثق بالأداة"
       },
       "body": {
-        "en": "In a Harvard Business School experiment with 758 BCG consultants, those who used AI on tasks it suits completed 12.2% more tasks, about 25% faster, at about 32% higher quality. On a task beyond it, their correct answers fell from 84.5% to 70.6%. The skill is not using the tool; it is knowing when to trust it.",
-        "ar": "في تجربة لهارفارد للأعمال مع 758 مستشارًا من «BCG»: من استخدموا الذكاء الاصطناعي في مهام تناسبه أنجزوا 12.2% مهام أكثر، وأسرع بنحو 25%، وبجودة أعلى بنحو 32%. وفي مهمة خارج قدرته، نزلت إجاباتهم الصحيحة من 84.5% إلى 70.6%. المهارة ليست في استخدام الأداة، بل في معرفة متى تثق بها ومتى لا."
+        "en": "In a Harvard Business School experiment with 758 BCG consultants, those who used AI on tasks it suits completed 12.2% more tasks, about 25% faster, at about 32% higher quality. On a task beyond it, their correct answers fell from 84.5% to 70.6%.",
+        "ar": "في تجربة لهارفارد للأعمال مع 758 مستشارًا من «BCG»: من استخدموا الذكاء الاصطناعي في مهام تناسبه أنجزوا 12.2% مهام أكثر، وأسرع بنحو 25%، وبجودة أعلى بنحو 32%. وفي مهمة خارج قدرته، نزلت إجاباتهم الصحيحة من 84.5% إلى 70.6%."
+      },
+      "lesson": {
+        "en": "And the one who has to know where it belongs and where it doesn't is the leader, before the team.",
+        "ar": "ومن يجب أن يعرف أين يضعها وأين لا، هو القائد قبل الفريق."
       },
       "source": {
         "title": "HBS AI Institute · Navigating the Jagged Technological Frontier · September 2023",
         "url": "https://aiinstitute.hbs.edu/back-to-the-beginnings-of-ai-at-work/"
       }
-    },
-    {
-      "figure": {
-        "en": "66% of leaders",
-        "ar": "66% من القادة"
-      },
-      "title": {
-        "en": "Two in three leaders won’t hire without it",
-        "ar": "ثلثا القادة لا يوظفون من لا يعرفه"
-      },
-      "body": {
-        "en": "66% of business leaders said they would not hire someone without AI skills, and 71% would rather hire a less experienced candidate who has them. Experience alone is no longer enough.",
-        "ar": "66% من قادة الأعمال قالوا إنهم لن يوظفوا شخصًا بلا مهارات في الذكاء الاصطناعي، و71% يفضّلون مرشحًا أقل خبرة يملكها على مرشح أكثر خبرة لا يملكها. الخبرة وحدها لم تعد كافية."
-      },
-      "source": {
-        "title": "Microsoft and LinkedIn · 2024 Work Trend Index · 1 July 2024",
-        "url": "https://news.microsoft.com/en-xm/2024/07/01/microsofts-2024-work-trend-index-report-showcases-increased-appetite-for-ai-at-work-highlights-opportunity-for-leaders-to-transform-enthusiasm-into-productivity-gains/"
-      }
-    },
-    {
-      "figure": {
-        "en": "39% of skills",
-        "ar": "39% من المهارات"
-      },
-      "title": {
-        "en": "Today’s skills date before 2030",
-        "ar": "مهارات اليوم تتقادم قبل 2030"
-      },
-      "body": {
-        "en": "The World Economic Forum says around 39% of existing skill sets will be transformed or become outdated between 2025 and 2030, and 59 in every 100 workers will need training. Whoever does not learn now will be managing in five years with skills past their date.",
-        "ar": "يقول المنتدى الاقتصادي العالمي إن نحو 39% من المهارات الحالية ستتحول أو تتقادم بين 2025 و2030، وإن 59 من كل 100 عامل سيحتاجون إلى تدريب. من لا يتعلّم الآن، سيدير بعد خمس سنوات بمهارات انتهت صلاحيتها."
-      },
-      "source": {
-        "title": "World Economic Forum · The Future of Jobs Report 2025 · 7 January 2025",
-        "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/digest/"
-      }
-    },
-    {
-      "figure": {
-        "en": "319 knowledge workers",
-        "ar": "319 موظفًا"
-      },
-      "title": {
-        "en": "The more you trust the tool, the less you think",
-        "ar": "كلما زادت الثقة في الأداة، قلّ التفكير"
-      },
-      "body": {
-        "en": "A Microsoft and Carnegie Mellon study of 319 knowledge workers who use AI found that more confidence in it went with less critical-thinking effort. Total reliance weakens the very skill you need to check the tool.",
-        "ar": "دراسة لـ«مايكروسوفت» وجامعة «كارنيجي ميلون» على 319 موظفًا يستخدمون الذكاء الاصطناعي: الثقة الزائدة فيه ارتبطت بجهد أقل في التفكير النقدي. الاعتماد الكلي يُضعف المهارة نفسها التي تحتاجها لتراقب الأداة."
-      },
-      "source": {
-        "title": "Lee et al. · The Impact of Generative AI on Critical Thinking · CHI 2025",
-        "url": "https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf"
-      }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "AI is pitched to you every day, and nobody tells you what it means for your organization",
+      "ar": "كل يوم يُعرض عليك الذكاء الاصطناعي، ولا أحد يقول لك ماذا يعني لمؤسستك"
+    },
+    "whyNow": {
+      "en": "Nobody can learn it for you",
+      "ar": "لا أحد يستطيع أن يتعلّمه بدلًا منك"
+    },
+    "how": {
+      "en": "A session built on your own organization",
+      "ar": "جلسة تُبنى على مؤسستك أنت"
+    },
+    "before": {
+      "en": "We study your organization first",
+      "ar": "نفهم مؤسستك أولًا"
+    },
+    "during": {
+      "en": "You learn on your own decisions",
+      "ar": "تتعلّم على قراراتك أنت"
+    },
+    "after": {
+      "en": "You lead it yourself",
+      "ar": "تقود بنفسك"
+    },
+    "leavesWith": {
+      "en": "What stays with you",
+      "ar": "ما يبقى معك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبها"
+    }
+  },
+  "cta": {
+    "en": "Ask for your session with Dr. Ahmed Abdelalim",
+    "ar": "اطلب جلستك مع د. أحمد عبدالعليم"
+  }
 }
