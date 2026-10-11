@@ -15,6 +15,7 @@ export const SOURCES = {
   publish: { ds: "887bbcee-074d-4bcd-85e5-8b5c52c3a7d7", db: "13d5994fbae44c2893b30a2bd89506f2" },
   methods: { ds: "bc9bbdf6-5226-4a1b-9698-64dd3bfe7450", db: "6a2bcc17b8584b72bcd498c1cd9ec9c2" },
   requests: { ds: "54ff57e5-5d77-415d-98a6-b0c4810b80a4", db: "4ea8a74b705c4fc184235616a1498c4b" },
+  comments: { ds: "3b518164-13ac-414e-bec0-7d4aeddbe451", db: "44b26f5637c64c9f808931bebd6a27aa" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -26,6 +27,7 @@ export type LiveRoom = {
   methods: Row[];
   goals: Row[];
   requests: Row[];
+  comments: Row[];
   cycles: { title: string; url: string; edited: string }[];
 };
 
@@ -120,16 +122,30 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions, work, publish, methods, goals, requests, cyc] = await Promise.all([
+  const [decisions, work, publish, methods, goals, requests, comments, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
     safe(query(SOURCES.methods), []),
     safe(query(SOURCES.goals), []),
     safe(query(SOURCES.requests), []),
+    safe(query(SOURCES.comments), []),
     safe(cycles(), []),
   ]);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, cycles: cyc };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, cycles: cyc };
+  // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
+  try {
+    const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
+    for (const r of requests) {
+      if (r["الحالة"] !== "اتعمل") continue;
+      const t = `راجع: ${String(r["الطلب"] || "")}`;
+      if (!t.trim() || titles.has(t)) continue;
+      await createWorkCard({ title: t, type: "محرك", owner: "د. أحمد", due: "", desc: String(r["خلاصة النتيجة"] || ""), sec: "eng.radar-d", appetite: "ساعة", link: String(r["النتيجة"] || "") });
+      titles.add(t);
+    }
+  } catch {
+    /* القاعدة الآلية ما توقفش الصفحة */
+  }
   cache = { at: Date.now(), data };
   return data;
 }
@@ -157,4 +173,81 @@ export async function createEngineRequest(engine: string, note: string): Promise
   const json: any = await res.json();
   cache = null;
   return json.url as string;
+}
+
+/* ---------- المستوى 3.1: كروت وتعليقات (كتابة محصورة في «الشغل» و«تعليقات الغرفة»، بلا حذف) ---------- */
+
+const OWNERS = new Set(["د. أحمد", "Claude", "Grok"]);
+const TYPES = new Set(["مشروع", "تسويق", "عميل", "محرك", "موقع"]);
+const STAGES = new Set(["فكرة", "شغال", "مستني قرار", "مراجعة", "خلص", "واقف"]);
+const rt = (v: string) => ({ rich_text: v ? [{ text: { content: v.slice(0, 1900) } }] : [] });
+const isDate = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v);
+const isPageId = (v: string) => /^[0-9a-f]{32}$/.test(v.replace(/-/g, ""));
+
+export type NewCard = { title: string; type: string; owner: string; due: string; desc: string; sec: string; appetite: string; link?: string; blockedBy?: string; milestone?: boolean };
+
+export async function createWorkCard(c: NewCard): Promise<string> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const title = c.title.trim().slice(0, 200);
+  if (!title) throw new Error("empty title");
+  const properties: Record<string, unknown> = {
+    "الكارت": { title: [{ text: { content: title } }] },
+    "النوع": { select: { name: TYPES.has(c.type) ? c.type : "مشروع" } },
+    "المرحلة": { select: { name: "فكرة" } },
+    "المسؤول": { select: { name: OWNERS.has(c.owner) ? c.owner : "د. أحمد" } },
+    "الوصف": rt(c.desc || ""),
+    "القسم": rt(c.sec || ""),
+    "الشهية": rt(c.appetite || ""),
+    "مستني": rt(c.blockedBy || ""),
+    "معلم": { checkbox: !!c.milestone },
+  };
+  if (c.due && isDate(c.due)) properties["الموعد"] = { date: { start: c.due } };
+  if (c.link) properties["رابط Notion"] = { url: c.link };
+  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: SOURCES.work.ds }, properties });
+  if (res.status === 400 || res.status === 404) res = await call("/pages", { parent: { database_id: SOURCES.work.db }, properties }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} creating card`);
+  const json: any = await res.json();
+  cache = null;
+  return json.url as string;
+}
+
+export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string };
+
+export async function updateWorkCard(pageId: string, p: CardPatch): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  const properties: Record<string, unknown> = {};
+  if (p.stage && STAGES.has(p.stage)) properties["المرحلة"] = { select: { name: p.stage } };
+  if (p.owner && OWNERS.has(p.owner)) properties["المسؤول"] = { select: { name: p.owner } };
+  if (p.due !== undefined) properties["الموعد"] = p.due && isDate(p.due) ? { date: { start: p.due } } : { date: null };
+  if (p.steps !== undefined) properties["الخطوات"] = rt(p.steps);
+  if (p.blockedBy !== undefined) properties["مستني"] = rt(p.blockedBy);
+  if (p.next !== undefined) properties["الخطوة الجاية"] = rt(p.next);
+  if (p.milestone !== undefined) properties["معلم"] = { checkbox: !!p.milestone };
+  if (!Object.keys(properties).length) return;
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} updating card`);
+  cache = null;
+}
+
+export async function addComment(cardId: string, cardTitle: string, text: string): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const t = text.trim().slice(0, 1900);
+  if (!t) throw new Error("empty comment");
+  const properties = {
+    "التعليق": { title: [{ text: { content: t } }] },
+    "الكارت": rt(isPageId(cardId) ? cardId : ""),
+    "عنوان الكارت": rt(cardTitle.slice(0, 200)),
+    "مين": { select: { name: "د. أحمد" } },
+    "يوم": { date: { start: new Date().toISOString().slice(0, 10) } },
+  };
+  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: SOURCES.comments.ds }, properties });
+  if (res.status === 400 || res.status === 404) res = await call("/pages", { parent: { database_id: SOURCES.comments.db }, properties }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} adding comment`);
+  cache = null;
 }

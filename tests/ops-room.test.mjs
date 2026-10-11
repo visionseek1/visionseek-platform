@@ -52,11 +52,22 @@ test("the room reads Notion live from the server and writes only engine requests
   assert.doesNotMatch(notion, /ntn_[A-Za-z0-9]/);
   assert.match(notion, /\/data_sources\/\$\{src\.ds\}\/query/);
   assert.match(notion, /createEngineRequest/);
-  // الكتابة الوحيدة من الموقع: صفحة جديدة في «طلبات المحرك»؛ لا PATCH ولا حذف.
-  assert.doesNotMatch(notion, /method:\s*"(PATCH|DELETE)"/);
+  // الكتابة من الموقع محصورة: إضافة في «طلبات المحرك» و«الشغل» و«تعليقات الغرفة»، وتحديث خصائص كارت شغل. لا حذف أبدًا.
+  assert.doesNotMatch(notion, /method:\s*"DELETE"/);
+  assert.doesNotMatch(notion, /archived:\s*true|in_trash:\s*true/);
   assert.match(route, /window\.__ROOM__/);
   assert.match(route, /\\u003c/);
   assert.match(run, /cookieIsValid/);
   assert.match(html, /\/ops\/run/);
   assert.match(html, /window\.__ROOM__/);
+});
+
+test("the room has the chosen Asana features: mine, inbox, timeline, comments, steps, dependencies, milestones, overdue", async () => {
+  const [mod, card] = await Promise.all([read("app/ops/room-html.ts"), read("app/ops/card/route.ts")]);
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  for (const needle of ["بتاعي", "الوارد", "الخط الزمني", "/ops/card", "parseSteps", "blockedBy", "isLate", "معلم"]) {
+    assert.ok(html.includes(needle), `missing: ${needle}`);
+  }
+  assert.match(card, /cookieIsValid/);
+  assert.match(card, /action === "create"|action === "update"|action === "comment"/);
 });

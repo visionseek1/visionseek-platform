@@ -39,6 +39,15 @@ button{margin-top:12px;width:100%;font:inherit;font-weight:600;padding:10px;bord
 </html>`;
 }
 
+function readSeen(cookie: string | null): string {
+  if (!cookie) return "";
+  for (const part of cookie.split(";")) {
+    const [k, ...rest] = part.trim().split("=");
+    if (k === "vs_seen") return rest.join("=");
+  }
+  return "";
+}
+
 export async function GET(request: Request) {
   if (!roomConfigured()) {
     return new Response(
@@ -58,10 +67,21 @@ export async function GET(request: Request) {
       live = null;
     }
     const url = new URL(request.url);
-    const flash = url.searchParams.get("r") === "ok" ? "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة." : url.searchParams.get("r") === "err" ? "ما قدرناش نسجّل الطلب. جرّب تاني أو اكتبه في Notion." : "";
-    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash }).replace(/</g, "\\u003c")};</script>\n`;
+    const r = url.searchParams.get("r") || "";
+    const FLASH: Record<string, string> = {
+      ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.",
+      card: "الكارت اتضاف في Notion.",
+      saved: "اتحفظ في Notion.",
+      comment: "التعليق اتسجّل. Claude هيقراه ويرد في الغرفة.",
+      err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion.",
+    };
+    const flash = FLASH[r] || "";
+    // الوارد: اللي اتغيّر من آخر مرة فتحت (كوكي vs_seen = آخر زيارة).
+    const seen = readSeen(request.headers.get("cookie"));
+    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash, seen }).replace(/</g, "\\u003c")};</script>\n`;
     const html = roomHtml.replace("<script>\n// ---------- DATA", inject + "<script>\n// ---------- DATA");
-    return new Response(html, { headers });
+    const now = new Date().toISOString();
+    return new Response(html, { headers: { ...headers, "set-cookie": `vs_seen=${now}; Path=/ops; HttpOnly; Secure; SameSite=Strict; Max-Age=${60 * 60 * 24 * 90}` } });
   }
   const url = new URL(request.url);
   const wrong = url.searchParams.get("e") === "1";
