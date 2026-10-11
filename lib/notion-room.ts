@@ -16,6 +16,7 @@ export const SOURCES = {
   methods: { ds: "bc9bbdf6-5226-4a1b-9698-64dd3bfe7450", db: "6a2bcc17b8584b72bcd498c1cd9ec9c2" },
   requests: { ds: "54ff57e5-5d77-415d-98a6-b0c4810b80a4", db: "4ea8a74b705c4fc184235616a1498c4b" },
   comments: { ds: "3b518164-13ac-414e-bec0-7d4aeddbe451", db: "44b26f5637c64c9f808931bebd6a27aa" },
+  leads: { ds: "ea2da55a-85dd-475a-bae8-e265a2759d52", db: "49501c9f38994637a472732c92e5e1f2" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -28,6 +29,7 @@ export type LiveRoom = {
   goals: Row[];
   requests: Row[];
   comments: Row[];
+  leads: Row[];
   cycles: { title: string; url: string; edited: string }[];
 };
 
@@ -122,7 +124,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions, work, publish, methods, goals, requests, comments, cyc] = await Promise.all([
+  const [decisions, work, publish, methods, goals, requests, comments, leads, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -130,9 +132,10 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.goals), []),
     safe(query(SOURCES.requests), []),
     safe(query(SOURCES.comments), []),
+    safe(query(SOURCES.leads), []),
     safe(cycles(), []),
   ]);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, cycles: cyc };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, cycles: cyc };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -209,6 +212,27 @@ export async function createWorkCard(c: NewCard): Promise<string> {
   const json: any = await res.json();
   cache = null;
   return json.url as string;
+}
+
+/** مراحل لوحة العملاء — تحريك الكارت من الغرفة محصور فيها. */
+const LEAD_STAGES = new Set(["اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا", "اتقفل — مش دلوقتي"]);
+
+/** يحرّك كارت عميل لمرحلة تانية على اللوحة (قاعدة «عملاء — خط المتابعة»). لا حذف، ولا تعديل غير المرحلة والملاحظة والمتابعة. */
+export async function updateLeadStage(pageId: string, stage: string, note?: string, followup?: string): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  if (!LEAD_STAGES.has(stage)) throw new Error("bad stage");
+  const properties: Record<string, unknown> = { "المرحلة": { select: { name: stage } } };
+  if (note !== undefined && note !== "") properties["ملاحظة"] = rt(note);
+  if (followup !== undefined) properties["المتابعة الجاية"] = followup && isDate(followup) ? { date: { start: followup } } : { date: null };
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} moving lead`);
+  cache = null;
 }
 
 export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string; sec?: string };
