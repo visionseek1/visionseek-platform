@@ -247,6 +247,49 @@ export async function updateLeadStage(pageId: string, stage: string, note?: stri
   cache = null;
 }
 
+/* ---------- تقرير الصباح: ملخص يومي بالكود — صفر توكنز ---------- */
+
+const BRIEF_LOG_PAGE = "3f6e8808b7a681fdac40d5b62b18f59e";
+
+/** يبني تقرير الصباح من البيانات الحية. weekly=true (الخميس) يضيف أرقام اللوحة ودورات الأسبوع. */
+export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { title: string; body: string } {
+  const lines: string[] = [];
+  const day = (iso: unknown) => String(iso || "").slice(0, 10);
+  const follow = live.leads.filter((r) => {
+    const f = day(r["date:المتابعة الجاية:start"] || r["المتابعة الجاية"]);
+    return f && f <= today && r["المرحلة"] !== "كسبنا" && r["المرحلة"] !== "اتقفل — مش دلوقتي";
+  });
+  if (follow.length) lines.push(`⏰ متابعات النهارده: ${follow.map((r) => r["الجهة"]).join("، ")}`);
+  const openCycles = live.requests.filter((r) => r["الحالة"] === "اتعمل" && r["الإقفال"] === "مفتوحة");
+  if (openCycles.length) lines.push(`🔄 دورات مفتوحة بلا بناء: ${openCycles.length}`);
+  const waiting = live.requests.filter((r) => r["الحالة"] === "جديد" || r["الحالة"] === "شغال");
+  if (waiting.length) lines.push(`⚙️ في الماكينة: ${waiting.length} طلب`);
+  const decNeed = live.decisions.filter((r) => r["الحالة"] === "مستني د. أحمد");
+  if (decNeed.length) lines.push(`⚖️ قرارات مستنياك: ${decNeed.map((r) => String(r["القرار"] || "").split(":")[0]).slice(0, 3).join("، ")}${decNeed.length > 3 ? ` +${decNeed.length - 3}` : ""}`);
+  const pubDue = live.publish.filter((r) => r["الحالة"] === "معتمد" && day(r["date:موعد النشر:start"] || r["موعد النشر"]) && day(r["date:موعد النشر:start"] || r["موعد النشر"]) <= today);
+  if (pubDue.length) lines.push(`📣 معتمد ومستني نشرك: ${pubDue.map((r) => r["العنوان"]).join("، ")}`);
+  if (weekly) {
+    const stages = ["اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا"];
+    const counts = stages.map((s) => `${s} ${live.leads.filter((r) => r["المرحلة"] === s).length}`).join(" · ");
+    lines.push(`📊 اللوحة: ${counts}`);
+    const weekAgo = new Date(new Date(today + "T00:00:00Z").getTime() - 7 * 864e5).toISOString().slice(0, 10);
+    const cyc = live.requests.filter((r) => r["الحالة"] === "اتعمل" && day(r["date:اتعمل يوم:start"] || r["اتعمل يوم"]) >= weekAgo);
+    lines.push(`🛰️ دورات الأسبوع: ${cyc.length}${cyc.length ? " — " + cyc.map((r) => r["المحرك"]).join("، ") : ""}`);
+  }
+  if (!lines.length) lines.push("✓ مفيش حاجة مستنياك النهارده — المنصة مقفولة.");
+  return { title: weekly ? "نبض الأسبوع — الخميس" : "تقرير الصباح", body: lines.join("\n") };
+}
+
+/** يسجّل التقرير في صفحة «تقرير الصباح — سجل» (الأحدث فوق). */
+export async function logBrief(title: string, body: string, today: string): Promise<void> {
+  await fetch(`${API}/blocks/${BRIEF_LOG_PAGE}/children`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ children: [{ type: "paragraph", paragraph: { rich_text: [{ text: { content: `☀️ ${today} — ${title}\n${body}`.slice(0, 1900) } }] } }] }),
+    cache: "no-store",
+  });
+}
+
 export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string; sec?: string };
 
 export async function updateWorkCard(pageId: string, p: CardPatch): Promise<void> {
