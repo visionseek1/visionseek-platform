@@ -8,8 +8,8 @@ const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 test("the room is a private, non-indexed area behind a password from the environment", async () => {
   const [auth, route, login, config, proxy] = await Promise.all([
     read("lib/room-auth.ts"),
-    read("app/room/route.ts"),
-    read("app/room/login/route.ts"),
+    read("app/ops/route.ts"),
+    read("app/ops/login/route.ts"),
     read("next.config.ts"),
     read("proxy.ts"),
   ]);
@@ -20,16 +20,16 @@ test("the room is a private, non-indexed area behind a password from the environ
   assert.match(route, /noindex, nofollow/);
   assert.match(route, /roomConfigured\(\)/);
   assert.match(login, /passwordIsValid/);
-  assert.match(config, /source: "\/room", headers: room/);
-  assert.match(proxy, /admin\|room\|/);
+  assert.match(config, /source: "\/ops", headers: room/);
+  assert.match(proxy, /admin\|ops\|/);
 });
 
 test("the room page carries the four levels, the evidence measurement and no secrets", async () => {
-  const mod = await read("app/room/room-html.ts");
+  const mod = await read("app/ops/room-html.ts");
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
   assert.match(html, /<title>غرفة عمليات VisionSeek<\/title>/);
   assert.match(html, /name="robots" content="noindex, nofollow"/);
-  for (const needle of ["المستوى 1", "الأذرع الخمسة", "يرى", "يعرف", "يربط", "الكانبان", "التقويم", "الخرائط", "الدروس", "القرارات", "/room/logout"]) {
+  for (const needle of ["المستوى 1", "الأذرع الخمسة", "يرى", "يعرف", "يربط", "الكانبان", "التقويم", "الخرائط", "الدروس", "القرارات", "/ops/logout"]) {
     assert.ok(html.includes(needle), `missing: ${needle}`);
   }
   assert.doesNotMatch(html, /sk-|sb_publishable_|ROOM_PASSWORD/);

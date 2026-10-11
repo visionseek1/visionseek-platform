@@ -1,7 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 
 /**
- * غرفة العمليات (/room): دخول خاص بكلمة سر واحدة من متغير البيئة ROOM_PASSWORD.
+ * غرفة العمليات (/ops): دخول خاص بكلمة سر واحدة من متغير البيئة ROOM_PASSWORD.
  * لا كلمة سر في المستودع. لو المتغير مش موجود، الغرفة مقفولة بالكامل.
  * الكوكي بتحمل HMAC لكلمة السر، مش كلمة السر نفسها.
  */
@@ -41,11 +41,11 @@ export function sessionCookie(): string {
   const s = secret();
   if (s === null) throw new Error("ROOM_PASSWORD is not set");
   const maxAge = COOKIE_DAYS * 24 * 60 * 60;
-  return `${ROOM_COOKIE}=${roomToken(s)}; Path=/room; HttpOnly; Secure; SameSite=Strict; Max-Age=${maxAge}`;
+  return `${ROOM_COOKIE}=${roomToken(s)}; Path=/ops; HttpOnly; Secure; SameSite=Strict; Max-Age=${maxAge}`;
 }
 
 export function clearCookie(): string {
-  return `${ROOM_COOKIE}=; Path=/room; HttpOnly; Secure; SameSite=Strict; Max-Age=0`;
+  return `${ROOM_COOKIE}=; Path=/ops; HttpOnly; Secure; SameSite=Strict; Max-Age=0`;
 }
 
 export function readCookie(header: string | null): string | undefined {

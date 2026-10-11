@@ -60,7 +60,7 @@ const nextConfig: NextConfig = {
           "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https:; form-action 'self' https://github.com",
       },
     ];
-    // غرفة العمليات (/room): خاصة وبكلمة سر؛ تحمّل خط IBM Plex Sans Arabic من Google Fonts فقط.
+    // غرفة العمليات (/ops): خاصة وبكلمة سر؛ تحمّل خط IBM Plex Sans Arabic من Google Fonts فقط.
     const room = [
       ...shared,
       { key: "X-Frame-Options", value: "DENY" },
@@ -73,9 +73,9 @@ const nextConfig: NextConfig = {
       },
     ];
     return [
-      { source: "/:path((?!admin$|admin/|room$|room/|api/decap-oauth).*)", headers: site },
-      { source: "/room", headers: room },
-      { source: "/room/:path*", headers: room },
+      { source: "/:path((?!admin$|admin/|ops$|ops/|api/decap-oauth).*)", headers: site },
+      { source: "/ops", headers: room },
+      { source: "/ops/:path*", headers: room },
       { source: "/admin", headers: controlRoom },
       { source: "/admin/:path*", headers: controlRoom },
       { source: "/api/decap-oauth", headers: oauth },

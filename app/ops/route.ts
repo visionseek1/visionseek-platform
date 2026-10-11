@@ -2,7 +2,7 @@ import { cookieIsValid, readCookie, roomConfigured } from "@/lib/room-auth";
 import { roomHtml } from "./room-html";
 
 /**
- * /room — غرفة عمليات VisionSeek. منطقة خاصة: الطريق اللي بتمشي فيه الأقسام،
+ * /ops — غرفة عمليات VisionSeek. منطقة خاصة: الطريق اللي بتمشي فيه الأقسام،
  * مش صفحة عامة. دخول بكلمة سر (ROOM_PASSWORD في Vercel)، ولا تُفهرس.
  */
 const headers = {
@@ -58,7 +58,7 @@ export function GET(request: Request) {
       "غرفة العمليات · دخول",
       `<h1>غرفة عمليات VisionSeek</h1><p>منطقة خاصة. الطريق اللي بتمشي فيه الأقسام.</p>
 ${wrong ? '<p class="err">كلمة السر مش صح.</p>' : ""}
-<form method="post" action="/room/login"><label for="p">كلمة السر</label><input id="p" name="password" type="password" autocomplete="current-password" required autofocus><button type="submit">ادخل</button></form>`,
+<form method="post" action="/ops/login"><label for="p">كلمة السر</label><input id="p" name="password" type="password" autocomplete="current-password" required autofocus><button type="submit">ادخل</button></form>`,
     ),
     { status: wrong ? 401 : 200, headers },
   );

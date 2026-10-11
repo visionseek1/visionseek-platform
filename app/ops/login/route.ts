@@ -3,7 +3,7 @@ import { passwordIsValid, roomConfigured, sessionCookie } from "@/lib/room-auth"
 /** يستقبل كلمة السر من نموذج /room ويحط كوكي الجلسة. فشل = رجوع للنموذج بعلامة خطأ، بلا تفاصيل. */
 export async function POST(request: Request) {
   const origin = new URL(request.url).origin;
-  if (!roomConfigured()) return Response.redirect(`${origin}/room`, 303);
+  if (!roomConfigured()) return Response.redirect(`${origin}/ops`, 303);
 
   // تهدئة بسيطة ضد التخمين: كل محاولة تاخد وقت ثابت.
   await new Promise((r) => setTimeout(r, 400));
@@ -18,10 +18,10 @@ export async function POST(request: Request) {
   }
 
   if (!passwordIsValid(password)) {
-    return Response.redirect(`${origin}/room?e=1`, 303);
+    return Response.redirect(`${origin}/ops?e=1`, 303);
   }
   return new Response(null, {
     status: 303,
-    headers: { location: `${origin}/room`, "set-cookie": sessionCookie(), "cache-control": "no-store" },
+    headers: { location: `${origin}/ops`, "set-cookie": sessionCookie(), "cache-control": "no-store" },
   });
 }
