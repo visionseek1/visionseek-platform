@@ -150,7 +150,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   return data;
 }
 
-const ENGINES = new Set(["الدورة كاملة", "رادار الفرص", "رادار القدرات", "المعالج"]);
+const ENGINES = new Set(["الدورة كاملة", "رادار الفرص", "رادار القدرات", "المعالج", "رادار العملاء", "المُجهِّز"]);
 
 /** يسجّل طلب تشغيل دورة. يرجّع رابط السطر أو يرمي خطأ. */
 export async function createEngineRequest(engine: string, note: string): Promise<string> {
