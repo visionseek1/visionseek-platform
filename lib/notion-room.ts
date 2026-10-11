@@ -232,6 +232,18 @@ export async function updateLeadStage(pageId: string, stage: string, note?: stri
     cache: "no-store",
   });
   if (!res.ok) throw new Error(`notion ${res.status} moving lead`);
+  // سجل الحركة: سطر مؤرخ في جسم صفحة الجهة — التاريخ ما يتمسحش، يتضاف عليه
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    await fetch(`${API}/blocks/${pageId}/children`, {
+      method: "PATCH",
+      headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+      body: JSON.stringify({ children: [{ type: "paragraph", paragraph: { rich_text: [{ text: { content: `— ${today}: اتنقل لـ«${stage}» (من الغرفة)${note ? " · " + note.slice(0, 200) : ""}` } }] } }] }),
+      cache: "no-store",
+    });
+  } catch {
+    /* السجل تحسين، مش شرط نجاح النقلة */
+  }
   cache = null;
 }
 
