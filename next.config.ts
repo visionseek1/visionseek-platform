@@ -60,8 +60,22 @@ const nextConfig: NextConfig = {
           "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data: blob: https:; media-src 'self' blob: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https:; form-action 'self' https://github.com",
       },
     ];
+    // غرفة العمليات (/room): خاصة وبكلمة سر؛ تحمّل خط IBM Plex Sans Arabic من Google Fonts فقط.
+    const room = [
+      ...shared,
+      { key: "X-Frame-Options", value: "DENY" },
+      { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+      { key: "X-Robots-Tag", value: "noindex, nofollow" },
+      {
+        key: "Content-Security-Policy",
+        value:
+          "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data:; font-src 'self' data: https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; form-action 'self'",
+      },
+    ];
     return [
-      { source: "/:path((?!admin$|admin/|api/decap-oauth).*)", headers: site },
+      { source: "/:path((?!admin$|admin/|room$|room/|api/decap-oauth).*)", headers: site },
+      { source: "/room", headers: room },
+      { source: "/room/:path*", headers: room },
       { source: "/admin", headers: controlRoom },
       { source: "/admin/:path*", headers: controlRoom },
       { source: "/api/decap-oauth", headers: oauth },
