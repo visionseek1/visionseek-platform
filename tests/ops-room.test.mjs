@@ -81,7 +81,7 @@ test("the room installs on a phone: manifest, icons, service worker, mobile bars
   assert.ok(m.icons.length >= 2);
   assert.match(html, /rel="manifest" href="\/ops\/manifest\.webmanifest"/);
   assert.match(html, /apple-mobile-web-app-capable/);
-  assert.match(html, /serviceWorker\.register\("\/ops\/sw\.js"/);
+  assert.match(html, /serviceWorker\.register\("\/ops\/sw\.js\?v=\d+"/);
   for (const needle of ['id="tabbar"', 'id="topbar"', "ondragstart", "ondrop", "moveCard"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.doesNotMatch(sw, /caches\.open/); // لا تخزين لمحتوى الغرفة الخاصة
 });
