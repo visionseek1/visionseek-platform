@@ -7,6 +7,10 @@
     {
       "path": "/ops/push/send",
       "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/ops/brief",
+      "schedule": "0 23 * * *"
     }
   ]
 }

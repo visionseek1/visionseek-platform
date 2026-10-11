@@ -16,6 +16,7 @@ export const SOURCES = {
   methods: { ds: "bc9bbdf6-5226-4a1b-9698-64dd3bfe7450", db: "6a2bcc17b8584b72bcd498c1cd9ec9c2" },
   requests: { ds: "54ff57e5-5d77-415d-98a6-b0c4810b80a4", db: "4ea8a74b705c4fc184235616a1498c4b" },
   comments: { ds: "3b518164-13ac-414e-bec0-7d4aeddbe451", db: "44b26f5637c64c9f808931bebd6a27aa" },
+  leads: { ds: "ea2da55a-85dd-475a-bae8-e265a2759d52", db: "49501c9f38994637a472732c92e5e1f2" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -28,6 +29,7 @@ export type LiveRoom = {
   goals: Row[];
   requests: Row[];
   comments: Row[];
+  leads: Row[];
   cycles: { title: string; url: string; edited: string }[];
 };
 
@@ -122,7 +124,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions, work, publish, methods, goals, requests, comments, cyc] = await Promise.all([
+  const [decisions, work, publish, methods, goals, requests, comments, leads, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -130,9 +132,10 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.goals), []),
     safe(query(SOURCES.requests), []),
     safe(query(SOURCES.comments), []),
+    safe(query(SOURCES.leads), []),
     safe(cycles(), []),
   ]);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, cycles: cyc };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, cycles: cyc };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -150,7 +153,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   return data;
 }
 
-const ENGINES = new Set(["الدورة كاملة", "رادار الفرص", "رادار القدرات", "المعالج"]);
+const ENGINES = new Set(["الدورة كاملة", "رادار الفرص", "رادار القدرات", "المعالج", "رادار العملاء", "المُجهِّز"]);
 
 /** يسجّل طلب تشغيل دورة. يرجّع رابط السطر أو يرمي خطأ. */
 export async function createEngineRequest(engine: string, note: string): Promise<string> {
@@ -209,6 +212,82 @@ export async function createWorkCard(c: NewCard): Promise<string> {
   const json: any = await res.json();
   cache = null;
   return json.url as string;
+}
+
+/** مراحل لوحة العملاء — تحريك الكارت من الغرفة محصور فيها. */
+const LEAD_STAGES = new Set(["اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا", "اتقفل — مش دلوقتي"]);
+
+/** يحرّك كارت عميل لمرحلة تانية على اللوحة (قاعدة «عملاء — خط المتابعة»). لا حذف، ولا تعديل غير المرحلة والملاحظة والمتابعة. */
+export async function updateLeadStage(pageId: string, stage: string, note?: string, followup?: string): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  if (!LEAD_STAGES.has(stage)) throw new Error("bad stage");
+  const properties: Record<string, unknown> = { "المرحلة": { select: { name: stage } } };
+  if (note !== undefined && note !== "") properties["ملاحظة"] = rt(note);
+  if (followup !== undefined) properties["المتابعة الجاية"] = followup && isDate(followup) ? { date: { start: followup } } : { date: null };
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} moving lead`);
+  // سجل الحركة: سطر مؤرخ في جسم صفحة الجهة — التاريخ ما يتمسحش، يتضاف عليه
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    await fetch(`${API}/blocks/${pageId}/children`, {
+      method: "PATCH",
+      headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+      body: JSON.stringify({ children: [{ type: "paragraph", paragraph: { rich_text: [{ text: { content: `— ${today}: اتنقل لـ«${stage}» (من الغرفة)${note ? " · " + note.slice(0, 200) : ""}` } }] } }] }),
+      cache: "no-store",
+    });
+  } catch {
+    /* السجل تحسين، مش شرط نجاح النقلة */
+  }
+  cache = null;
+}
+
+/* ---------- تقرير الصباح: ملخص يومي بالكود — صفر توكنز ---------- */
+
+const BRIEF_LOG_PAGE = "3f6e8808b7a681fdac40d5b62b18f59e";
+
+/** يبني تقرير الصباح من البيانات الحية. weekly=true (الخميس) يضيف أرقام اللوحة ودورات الأسبوع. */
+export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { title: string; body: string } {
+  const lines: string[] = [];
+  const day = (iso: unknown) => String(iso || "").slice(0, 10);
+  const follow = live.leads.filter((r) => {
+    const f = day(r["date:المتابعة الجاية:start"] || r["المتابعة الجاية"]);
+    return f && f <= today && r["المرحلة"] !== "كسبنا" && r["المرحلة"] !== "اتقفل — مش دلوقتي";
+  });
+  if (follow.length) lines.push(`⏰ متابعات النهارده: ${follow.map((r) => r["الجهة"]).join("، ")}`);
+  const openCycles = live.requests.filter((r) => r["الحالة"] === "اتعمل" && r["الإقفال"] === "مفتوحة");
+  if (openCycles.length) lines.push(`🔄 دورات مفتوحة بلا بناء: ${openCycles.length}`);
+  const waiting = live.requests.filter((r) => r["الحالة"] === "جديد" || r["الحالة"] === "شغال");
+  if (waiting.length) lines.push(`⚙️ في الماكينة: ${waiting.length} طلب`);
+  const decNeed = live.decisions.filter((r) => r["الحالة"] === "مستني د. أحمد");
+  if (decNeed.length) lines.push(`⚖️ قرارات مستنياك: ${decNeed.map((r) => String(r["القرار"] || "").split(":")[0]).slice(0, 3).join("، ")}${decNeed.length > 3 ? ` +${decNeed.length - 3}` : ""}`);
+  const pubDue = live.publish.filter((r) => r["الحالة"] === "معتمد" && day(r["date:موعد النشر:start"] || r["موعد النشر"]) && day(r["date:موعد النشر:start"] || r["موعد النشر"]) <= today);
+  if (pubDue.length) lines.push(`📣 معتمد ومستني نشرك: ${pubDue.map((r) => r["العنوان"]).join("، ")}`);
+  if (weekly) {
+    const stages = ["اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا"];
+    const counts = stages.map((s) => `${s} ${live.leads.filter((r) => r["المرحلة"] === s).length}`).join(" · ");
+    lines.push(`📊 اللوحة: ${counts}`);
+    const weekAgo = new Date(new Date(today + "T00:00:00Z").getTime() - 7 * 864e5).toISOString().slice(0, 10);
+    const cyc = live.requests.filter((r) => r["الحالة"] === "اتعمل" && day(r["date:اتعمل يوم:start"] || r["اتعمل يوم"]) >= weekAgo);
+    lines.push(`🛰️ دورات الأسبوع: ${cyc.length}${cyc.length ? " — " + cyc.map((r) => r["المحرك"]).join("، ") : ""}`);
+  }
+  if (!lines.length) lines.push("✓ مفيش حاجة مستنياك النهارده — المنصة مقفولة.");
+  return { title: weekly ? "نبض الأسبوع — الخميس" : "تقرير الصباح", body: lines.join("\n") };
+}
+
+/** يسجّل التقرير في صفحة «تقرير الصباح — سجل» (الأحدث فوق). */
+export async function logBrief(title: string, body: string, today: string): Promise<void> {
+  await fetch(`${API}/blocks/${BRIEF_LOG_PAGE}/children`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ children: [{ type: "paragraph", paragraph: { rich_text: [{ text: { content: `☀️ ${today} — ${title}\n${body}`.slice(0, 1900) } }] } }] }),
+    cache: "no-store",
+  });
 }
 
 export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string; sec?: string };
