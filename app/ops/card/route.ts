@@ -47,6 +47,7 @@ export async function POST(request: Request) {
         steps: f.has("steps") ? g("steps") : undefined,
         blockedBy: f.has("blocked") ? g("blocked") : undefined,
         next: f.has("next") ? g("next") : undefined,
+        sec: g("sec") || undefined,
         milestone: f.has("milestone_set") ? g("milestone") === "1" : undefined,
       });
       return to("saved");

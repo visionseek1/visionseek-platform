@@ -211,7 +211,7 @@ export async function createWorkCard(c: NewCard): Promise<string> {
   return json.url as string;
 }
 
-export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string };
+export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string; sec?: string };
 
 export async function updateWorkCard(pageId: string, p: CardPatch): Promise<void> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
@@ -224,6 +224,7 @@ export async function updateWorkCard(pageId: string, p: CardPatch): Promise<void
   if (p.blockedBy !== undefined) properties["مستني"] = rt(p.blockedBy);
   if (p.next !== undefined) properties["الخطوة الجاية"] = rt(p.next);
   if (p.milestone !== undefined) properties["معلم"] = { checkbox: !!p.milestone };
+  if (p.sec && /^[a-z]+\.[a-z-]+$/.test(p.sec)) properties["القسم"] = rt(p.sec);
   if (!Object.keys(properties).length) return;
   const res = await fetch(`${API}/pages/${pageId}`, {
     method: "PATCH",

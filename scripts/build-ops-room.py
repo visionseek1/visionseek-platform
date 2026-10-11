@@ -12,6 +12,9 @@ head_part, markup = rest.split("</style>", 1)
 html = ('<!doctype html>\n<html lang="ar" dir="rtl">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
         '<meta name="robots" content="noindex, nofollow">\n<link rel="icon" href="/favicon.ico">\n'
+        '<link rel="manifest" href="/ops/manifest.webmanifest">\n<meta name="theme-color" content="#1b1a17">\n'
+        '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-status-bar-style" content="default">\n'
+        '<meta name="apple-mobile-web-app-title" content="الغرفة">\n<link rel="apple-touch-icon" href="/ops/icon-192.png">\n'
         + title + "\n" + head_part + "</style>\n</head>\n<body>" + markup + "\n</body>\n</html>\n")
 ts = ("/* الغرفة كصفحة واحدة مستقلة (نفس نسخة Claude المنشورة). تتولّد بـ scripts/build-ops-room.py ولا تُعدَّل يدويًا هنا. */\n"
       "export const roomHtml: string = " + json.dumps(html, ensure_ascii=False) + ";\n")
