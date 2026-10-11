@@ -85,3 +85,19 @@ test("the room installs on a phone: manifest, icons, service worker, mobile bars
   for (const needle of ['id="tabbar"', 'id="topbar"', "ondragstart", "ondrop", "moveCard"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.doesNotMatch(sw, /caches\.open/); // لا تخزين لمحتوى الغرفة الخاصة
 });
+
+test("notifications: push routes, feed, cron, service worker handlers, no keys in the repo", async () => {
+  const [mod, sw, vercel, send, keygen] = await Promise.all([read("app/ops/room-html.ts"), read("public/ops/sw.js"), read("vercel.json"), read("app/ops/push/send/route.ts"), read("app/ops/push/keygen/route.ts")]);
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  for (const needle of ["/ops/push/key", "/ops/push/subscribe", "/ops/push/send", "/ops/feed", "pushManager.subscribe", "Notification.requestPermission"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  assert.match(sw, /addEventListener\("push"/);
+  assert.match(sw, /notificationclick/);
+  assert.equal(JSON.parse(vercel).crons[0].path, "/ops/push/send");
+  assert.match(send, /CRON_SECRET/);
+  assert.match(send, /cookieIsValid/);
+  assert.doesNotMatch(keygen, /VAPID_PRIVATE_KEY\s*=\s*["']/);
+  for (const f of ["lib/webpush.ts", "lib/notion-room.ts", "app/ops/push/keygen/route.ts"]) {
+    const t = await read(f);
+    assert.doesNotMatch(t, /process\.env\.[A-Z_]+\s*=\s*["']/, `${f} assigns a secret`);
+  }
+});

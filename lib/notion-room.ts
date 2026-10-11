@@ -252,3 +252,90 @@ export async function addComment(cardId: string, cardTitle: string, text: string
   if (!res.ok) throw new Error(`notion ${res.status} adding comment`);
   cache = null;
 }
+
+/* ---------- الإشعارات: اشتراكات Web Push + سجل الإرسال (قاعدة «إشعارات الغرفة») ---------- */
+const NOTIFY = { ds: "dfce6732-767f-41bd-accf-527d7d155b15", db: "f16131ba895b469898c1fdd05ece380a" };
+
+export type StoredSub = { id: string; key: string; sub: { endpoint: string; keys: { p256dh: string; auth: string } }; device: string };
+
+export async function listSubscriptions(): Promise<StoredSub[]> {
+  const rows = await query(NOTIFY);
+  const out: StoredSub[] = [];
+  for (const r of rows) {
+    if (r["النوع"] !== "اشتراك" || r["الحالة"] !== "فعّال") continue;
+    try {
+      const sub = JSON.parse(String(r["البيانات"] || ""));
+      if (sub && sub.endpoint && sub.keys && sub.keys.p256dh && sub.keys.auth) out.push({ id: String(r.id || "").replace(/-/g, ""), key: String(r["العنصر"] || ""), sub, device: String(r["الجهاز"] || "") });
+    } catch {
+      /* سطر تالف يتجاهل */
+    }
+  }
+  return out;
+}
+
+export async function saveSubscription(key: string, sub: object, device: string): Promise<void> {
+  const existing = (await listSubscriptions()).find((s) => s.key === key);
+  if (existing) return;
+  const today = new Date().toISOString();
+  const properties = {
+    "العنصر": { title: [{ text: { content: key } }] },
+    "النوع": { select: { name: "اشتراك" } },
+    "الحالة": { select: { name: "فعّال" } },
+    "البيانات": rt(JSON.stringify(sub)),
+    "الجهاز": rt(device.slice(0, 200)),
+    "وقت": { date: { start: today } },
+  };
+  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: NOTIFY.ds }, properties });
+  if (res.status === 400 || res.status === 404) res = await call("/pages", { parent: { database_id: NOTIFY.db }, properties }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} saving subscription`);
+}
+
+export async function expireSubscription(pageId: string): Promise<void> {
+  if (!isPageId(pageId)) return;
+  await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties: { "الحالة": { select: { name: "منتهي" } } } }),
+    cache: "no-store",
+  });
+}
+
+export async function lastNotificationAt(): Promise<string> {
+  const rows = await query(NOTIFY);
+  let last = "";
+  for (const r of rows) {
+    if (r["النوع"] !== "إشعار") continue;
+    const t = String(r["وقت"] || "");
+    if (t > last) last = t;
+  }
+  return last;
+}
+
+export async function logNotification(title: string, body: string, devices: number): Promise<void> {
+  const properties = {
+    "العنصر": { title: [{ text: { content: title.slice(0, 200) } }] },
+    "النوع": { select: { name: "إشعار" } },
+    "البيانات": rt(body),
+    "وقت": { date: { start: new Date().toISOString() } },
+    "عدد الأجهزة": { number: devices },
+  };
+  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: NOTIFY.ds }, properties });
+  if (res.status === 400 || res.status === 404) res = await call("/pages", { parent: { database_id: NOTIFY.db }, properties }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} logging notification`);
+}
+
+/** يحسب اللي اتغيّر بعد وقت معيّن (نفس منطق «الوارد») — للإشعارات. */
+export function changesSince(live: LiveRoom, since: string): { title: string; body: string; count: number } | null {
+  const items: string[] = [];
+  const lbl = (k: string, t: unknown, s: unknown) => `${k}: ${String(t || "")}${s ? " · " + String(s) : ""}`;
+  for (const r of live.work) if (String(r.edited || "") > since) items.push(lbl("شغل", r["الكارت"], r["المرحلة"]));
+  for (const r of live.decisions) if (String(r.edited || "") > since) items.push(lbl("قرار", r["القرار"], r["الحالة"]));
+  for (const r of live.publish) if (String(r.edited || "") > since) items.push(lbl("نشر", r["العنوان"], r["الحالة"]));
+  for (const r of live.requests) if (String(r.edited || "") > since) items.push(lbl("طلب دورة", r["الطلب"], r["الحالة"]));
+  for (const r of live.comments) if (String(r.edited || "") > since && r["مين"] !== "د. أحمد") items.push(lbl("تعليق من " + String(r["مين"] || ""), r["عنوان الكارت"], r["التعليق"]));
+  if (!items.length) return null;
+  const late = live.work.filter((w) => String(w["الموعد"] || "") && String(w["الموعد"]) < new Date().toISOString().slice(0, 10) && !["خلص", "واقف"].includes(String(w["المرحلة"] || ""))).length;
+  const title = items.length === 1 ? items[0].slice(0, 80) : `${items.length} تغييرات في الغرفة${late ? ` · ${late} متأخر` : ""}`;
+  const body = items.slice(0, 4).join("\n") + (items.length > 4 ? `\n… و${items.length - 4} كمان` : "");
+  return { title, body, count: items.length };
+}
