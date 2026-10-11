@@ -276,6 +276,15 @@ export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { ti
     const cyc = live.requests.filter((r) => r["الحالة"] === "اتعمل" && day(r["date:اتعمل يوم:start"] || r["اتعمل يوم"]) >= weekAgo);
     lines.push(`🛰️ دورات الأسبوع: ${cyc.length}${cyc.length ? " — " + cyc.map((r) => r["المحرك"]).join("، ") : ""}`);
   }
+  // كاشف التعطل الصامت: طلب واقف على «شغال» أكتر من ساعتين = التشغيلة غالبًا فشلت
+  const twoHoursAgo = new Date(Date.now() - 2 * 3600 * 1000).toISOString();
+  const stuck = live.requests.filter((r) => r["الحالة"] === "شغال" && String(r.edited || "") < twoHoursAgo);
+  if (stuck.length) lines.push(`⚠️ تشغيلة معلقة (شغال من +ساعتين): ${stuck.map((r) => r["الطلب"]).join("، ")}`);
+  // بكرة عليك: اعرف الليلة إيه اللي مستنيك الصبح
+  const tom = new Date(new Date(today + "T00:00:00Z").getTime() + 864e5).toISOString().slice(0, 10);
+  const followTom = live.leads.filter((r) => day(r["date:المتابعة الجاية:start"] || r["المتابعة الجاية"]) === tom && r["المرحلة"] !== "كسبنا" && r["المرحلة"] !== "اتقفل — مش دلوقتي");
+  const pubTom = live.publish.filter((r) => r["الحالة"] === "معتمد" && day(r["date:موعد النشر:start"] || r["موعد النشر"]) === tom);
+  if (followTom.length || pubTom.length) lines.push(`🌙 بكرة عليك: ${[...followTom.map((r) => "متابعة " + r["الجهة"]), ...pubTom.map((r) => "نشر «" + r["العنوان"] + "»")].join("، ")}`);
   if (!lines.length) lines.push("✓ مفيش حاجة مستنياك النهارده — المنصة مقفولة.");
   return { title: weekly ? "نبض الأسبوع — الخميس" : "تقرير الصباح", body: lines.join("\n") };
 }
