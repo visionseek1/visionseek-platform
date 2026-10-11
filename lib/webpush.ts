@@ -86,7 +86,7 @@ export async function sendPush(sub: PushSubscription, payload: object, ttlSec = 
       ttl: String(ttlSec),
       urgency: "normal",
     },
-    body,
+    body: new Uint8Array(body.buffer, body.byteOffset, body.byteLength),
   });
   return res.status;
 }
