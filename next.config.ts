@@ -76,6 +76,9 @@ const nextConfig: NextConfig = {
       { source: "/:path((?!admin$|admin/|ops$|ops/|api/decap-oauth).*)", headers: site },
       { source: "/ops", headers: room },
       { source: "/ops/:path*", headers: room },
+      // عامل الخدمة بتاع الغرفة محتاج يتحكم في /ops نفسها (مش /ops/ بس):
+      // من غير الهيدر ده المتصفح بيرفض التسجيل بنطاق "/ops" والإشعارات ما تتفعّلش.
+      { source: "/ops/sw.js", headers: [{ key: "Service-Worker-Allowed", value: "/ops" }] },
       { source: "/admin", headers: controlRoom },
       { source: "/admin/:path*", headers: controlRoom },
       { source: "/api/decap-oauth", headers: oauth },
