@@ -1,4 +1,5 @@
 import { cookieIsValid, readCookie, roomConfigured } from "@/lib/room-auth";
+import { readLiveRoom } from "@/lib/notion-room";
 import { roomHtml } from "./room-html";
 
 /**
@@ -38,7 +39,7 @@ button{margin-top:12px;width:100%;font:inherit;font-weight:600;padding:10px;bord
 </html>`;
 }
 
-export function GET(request: Request) {
+export async function GET(request: Request) {
   if (!roomConfigured()) {
     return new Response(
       page(
@@ -49,7 +50,18 @@ export function GET(request: Request) {
     );
   }
   if (cookieIsValid(readCookie(request.headers.get("cookie")))) {
-    return new Response(roomHtml, { headers });
+    // المستوى 1: الغرفة تقرأ Notion حيًّا. لو مفيش توكن أو فشلت القراءة، الصفحة تعرض اللقطة.
+    let live = null;
+    try {
+      live = await readLiveRoom();
+    } catch {
+      live = null;
+    }
+    const url = new URL(request.url);
+    const flash = url.searchParams.get("r") === "ok" ? "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة." : url.searchParams.get("r") === "err" ? "ما قدرناش نسجّل الطلب. جرّب تاني أو اكتبه في Notion." : "";
+    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash }).replace(/</g, "\\u003c")};</script>\n`;
+    const html = roomHtml.replace("<script>\n// ---------- DATA", inject + "<script>\n// ---------- DATA");
+    return new Response(html, { headers });
   }
   const url = new URL(request.url);
   const wrong = url.searchParams.get("e") === "1";

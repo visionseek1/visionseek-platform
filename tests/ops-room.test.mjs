@@ -40,3 +40,23 @@ test("the session token is an HMAC of the password, never the password itself", 
   assert.equal(token.length, 64);
   assert.notEqual(token, "correct horse battery");
 });
+
+test("the room reads Notion live from the server and writes only engine requests", async () => {
+  const [notion, route, run, html] = await Promise.all([
+    read("lib/notion-room.ts"),
+    read("app/ops/route.ts"),
+    read("app/ops/run/route.ts"),
+    read("app/ops/room-html.ts"),
+  ]);
+  assert.match(notion, /process\.env\.NOTION_TOKEN/);
+  assert.doesNotMatch(notion, /ntn_[A-Za-z0-9]/);
+  assert.match(notion, /\/data_sources\/\$\{src\.ds\}\/query/);
+  assert.match(notion, /createEngineRequest/);
+  // الكتابة الوحيدة من الموقع: صفحة جديدة في «طلبات المحرك»؛ لا PATCH ولا حذف.
+  assert.doesNotMatch(notion, /method:\s*"(PATCH|DELETE)"/);
+  assert.match(route, /window\.__ROOM__/);
+  assert.match(route, /\\u003c/);
+  assert.match(run, /cookieIsValid/);
+  assert.match(html, /\/ops\/run/);
+  assert.match(html, /window\.__ROOM__/);
+});
