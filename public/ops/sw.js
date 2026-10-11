@@ -1,5 +1,5 @@
 /* غرفة العمليات — عامل خدمة بسيط: شبكة أولًا دايمًا (الصفحة خاصة ومتغيّرة)، ومفيش تخزين لمحتوى الغرفة.
-   وجوده يسمح بتثبيت الغرفة على الموبايل كتطبيق. */
+   وجوده يسمح بتثبيت الغرفة على الموبايل كتطبيق. v50 — تغيير المحتوى بيكسر كاش المتصفح القديم اللي من غير هيدر Service-Worker-Allowed. */
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", (e) => e.waitUntil(self.clients.claim()));
 self.addEventListener("fetch", (e) => {
