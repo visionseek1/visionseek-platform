@@ -86,9 +86,15 @@ export async function sendPush(sub: PushSubscription, payload: object, ttlSec = 
       ttl: String(ttlSec),
       urgency: "normal",
     },
-    body: new Uint8Array(body.buffer, body.byteOffset, body.byteLength),
+    body: toArrayBuffer(body),
   });
   return res.status;
+}
+
+function toArrayBuffer(b: Buffer): ArrayBuffer {
+  const ab = new ArrayBuffer(b.byteLength);
+  new Uint8Array(ab).set(b);
+  return ab;
 }
 
 export function pushConfigured(): boolean {
