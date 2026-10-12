@@ -1,0 +1,220 @@
+{
+  "position": 4,
+  "id": "VS-P10",
+  "slug": "delegated-decision-book",
+  "sector": "institutional-ai",
+  "track": "agent-governance",
+  "kind": "governance",
+  "status": "concept",
+  "title": {
+    "ar": "دفتر القرار المفوَّض",
+    "en": "The Delegated Decision Book"
+  },
+  "logo": "/projects/delegated-decision-book.svg",
+  "summary": {
+    "ar": "صفحة واحدة تحسم لكل قرار في وظيفة من وظائف شركتك: هل يأخذه الوكيل الذكي وحده، أم ينفّذه بعد موافقتك، أم يبقى في يد إنسان. مبنية على القاعدة نفسها التي وضعتها الإمارات لخدماتها الحكومية.",
+    "en": "One page that settles, for every decision in one job inside your company, whether the AI agent takes it alone, carries it out after your approval, or leaves it with a person. Built on the same rule the UAE set for its own government services."
+  },
+  "ambition": {
+    "ar": "ألّا يأخذ وكيلٌ قرارًا لم يُفوَّض فيه.",
+    "en": "No agent takes a decision it was never given."
+  },
+  "idea": {
+    "ar": "نأخذ وظيفة واحدة في الشركة، ونحصر كل قرار فيها، ونضعه في واحدة من ثلاث خانات: يُفوَّض كاملًا، أو يُنفَّذ بعد موافقة، أو يبقى عند إنسان. ولكل قرار نكتب من يوافق، وإلى من يُصعَّد، وكيف يعترض صاحب الشأن أو يصحّح.",
+    "en": "We take one job in the company, list every decision inside it, and place each one in one of three boxes: delegate fully, execute after approval, or keep with a person. For each decision we write down who approves, where it escalates, and how the person affected can object or correct it."
+  },
+  "beneficiary": {
+    "ar": "أصحاب الشركات وفرق الإدارة في الإمارات والخليج ومصر الذين بدأوا، أو سيبدأون، تشغيل وكلاء ذكاء اصطناعي في عملهم.",
+    "en": "Business owners and leadership teams in the UAE, the Gulf and Egypt who have started, or are about to start, running AI agents in their work."
+  },
+  "outcomes": [
+    {
+      "title": { "ar": "خريطة قرارات الوظيفة", "en": "A map of the job's decisions" },
+      "text": { "ar": "كل قرار في الوظيفة مكتوب، لا متروك للتقدير.", "en": "Every decision in the job written down, not left to guesswork." }
+    },
+    {
+      "title": { "ar": "ثلاث خانات لا أكثر", "en": "Three boxes, no more" },
+      "text": { "ar": "يُفوَّض، أو يُنفَّذ بعد موافقة، أو يبقى عند إنسان.", "en": "Delegate, execute after approval, or keep with a person." }
+    },
+    {
+      "title": { "ar": "نقاط توقّف معروفة", "en": "Known stopping points" },
+      "text": { "ar": "من يوافق، وإلى من يُصعَّد، وكيف يعترض العميل.", "en": "Who approves, where it escalates, and how the customer objects." }
+    }
+  ],
+  "whyNow": {
+    "paragraphs": [
+      {
+        "ar": "في 21 أغسطس 2026 أطلقت الإمارات دليلًا موحّدًا لتصميم الخدمات الحكومية التي يشغّلها الذكاء الاصطناعي الوكيلي. وفيه قواعد صريحة: لا إجراء قبل موافقة المتعامل، وانتقال سلس إلى موظف مختص عند الحاجة، وحقّ المتعامل في الاعتراض والتصحيح. وفي الأول من سبتمبر بدأت غرف دبي تدريب أكثر من 14,000 شركة من أعضاء مجموعات الأعمال ومجالسها على الوكلاء الأذكياء، ضمن برنامج هدفه أن تصبح دبي أولى مدن العالم في تبنّيهم تجاريًا بحلول 2028.",
+        "en": "On 21 August 2026 the UAE launched a unified guide for designing government services run by agentic AI. Its rules are explicit: no action before the customer approves, a smooth hand-over to a specialist employee when needed, and the customer's right to object or correct. On 1 September, Dubai Chambers began training more than 14,000 member companies of its business groups and councils on AI agents, under a programme that aims to make Dubai the world's leading city for commercial agentic AI adoption by 2028."
+      }
+    ],
+    "sources": [
+      { "title": "Khaleej Times — UAE launches unified guide for agentic AI government services (Aug 2026)", "url": "https://www.khaleejtimes.com/uae/uae-launches-unified-guide-agentic-ai-government-services" },
+      { "title": "The Next Web — Dubai is training 14,000 companies to run AI agents (Sep 2026)", "url": "https://thenextweb.com/news/dubai-chambers-agentic-ai-training-14000-companies" },
+      { "title": "UAE Cabinet — agentic AI across 50% of government (Apr 2026)", "url": "https://uaecabinet.ae/en/news/under-directives-of-uae-president-and-in-world-first-mohammed-bin-rashid-reveals-new-uae-government-framework-to-deploy-agentic-ai-across-50-of-government-sectors-operations-within-two-years" }
+    ],
+    "highlights": [
+      {
+        "value": { "ar": "21 أغسطس 2026", "en": "21 Aug 2026" },
+        "text": { "ar": "الإمارات تُطلق دليلًا موحّدًا: لا إجراء قبل موافقة المتعامل", "en": "The UAE's unified guide: no action before the customer approves" }
+      },
+      {
+        "value": { "ar": "+14,000", "en": "14,000+" },
+        "text": { "ar": "شركة تتدرّب على الوكلاء الأذكياء في غرف دبي · سبتمبر 2026", "en": "companies training on AI agents at Dubai Chambers · September 2026" }
+      },
+      {
+        "value": { "ar": "2028", "en": "2028" },
+        "text": { "ar": "هدف دبي: أولى مدن العالم في تبنّي الوكلاء تجاريًا", "en": "Dubai's target: the world's leading city for commercial agent adoption" }
+      }
+    ]
+  },
+  "profile": {
+    "audiences": ["company", "institution"],
+    "facts": [
+      {
+        "kind": "trend",
+        "title": { "ar": "الحكومة تسبق", "en": "Government goes first" },
+        "detail": {
+          "ar": "أعلنت الإمارات في أبريل 2026 نقل 50% من قطاعات حكومتها الاتحادية وخدماتها وعملياتها إلى الوكلاء الأذكياء خلال عامين.",
+          "en": "In April 2026 the UAE announced that 50% of its federal government's sectors, services and operations would move to agentic AI within two years."
+        },
+        "url": "https://uaecabinet.ae/en/news/under-directives-of-uae-president-and-in-world-first-mohammed-bin-rashid-reveals-new-uae-government-framework-to-deploy-agentic-ai-across-50-of-government-sectors-operations-within-two-years",
+        "value": "50%"
+      },
+      {
+        "kind": "exhibition",
+        "title": { "ar": "جيتكس جلوبال 2026", "en": "GITEX GLOBAL 2026" },
+        "detail": {
+          "ar": "7–11 ديسمبر 2026، مركز دبي للمعارض، إكسبو سيتي دبي.",
+          "en": "7–11 December 2026, Dubai Exhibition Centre, Expo City Dubai."
+        },
+        "url": "https://mediaoffice.ae/en/news/2025/october/08-10/gitex-global-to-begin-a-new-chapter-at-expo-city-dubai-in-2026",
+        "value": "7–11 DEC 2026"
+      }
+    ]
+  },
+  "file": {
+    "version": "0.1",
+    "updatedAt": "2026-10-12",
+    "stage": { "ar": "مفهوم", "en": "Concept" },
+    "stageNote": {
+      "ar": "تصوّر حدّدته VisionSeek من دليل الإمارات المنشور. لم يُطبَّق بعد لدى أي شركة.",
+      "en": "A concept VisionSeek defined from the UAE's published guide. Not yet applied at any company."
+    },
+    "challenge": {
+      "ar": "الوكيل الذكي لا يتوقف من تلقاء نفسه. إن لم تكتب له الشركة أين يقف، قرّر في كل شيء، والمسؤولية عليها.",
+      "en": "An AI agent does not stop on its own. If the company never writes down where it should stop, it decides everything — and the company answers for it."
+    },
+    "role": {
+      "ar": "نجلس مع صاحب القرار، ونحصر قرارات الوظيفة معه، ونصنّفها، ونكتب الدفتر. ويبقى القرار النهائي في كل خانة له وحده.",
+      "en": "We sit with the decision-maker, list the job's decisions together, classify them and write the book. The final call on every box stays with him alone."
+    },
+    "engagement": {
+      "ar": "يبدأ بجلسة القائد: 90 دقيقة نخرج منها بتصنيف قرارات وظيفة واحدة. ثم سبرنت الوظيفة: خمسة أيام نكتب فيها الدفتر كاملًا ونجهّزه للتشغيل.",
+      "en": "It starts with the Leader Session: 90 minutes that end with the decisions of one job classified. Then the Job Sprint: five days to write the full book and get it ready to run."
+    },
+    "workstreams": [
+      { "id": "map", "title": { "ar": "خريطة القرارات", "en": "Decision map" }, "body": { "ar": "كل قرار في الوظيفة، من أول طلب حتى آخر خطوة.", "en": "Every decision in the job, from the first request to the last step." } },
+      { "id": "classify", "title": { "ar": "التصنيف الثلاثي", "en": "Three-way classification" }, "body": { "ar": "يُفوَّض كاملًا، أو بعد موافقة، أو يبقى عند إنسان.", "en": "Delegate fully, after approval, or keep with a person." } },
+      { "id": "stops", "title": { "ar": "التوقّف والتصعيد", "en": "Stops and escalation" }, "body": { "ar": "من يوافق على كل قرار، وإلى من ينتقل حين يتعثّر الوكيل.", "en": "Who approves each decision, and who takes over when the agent gets stuck." } },
+      { "id": "objection", "title": { "ar": "الاعتراض والتصحيح", "en": "Objection and correction" }, "body": { "ar": "طريق واضح يعترض به العميل أو يصحّح، وسجلّ لما حدث.", "en": "A clear way for the customer to object or correct, and a record of what happened." } }
+    ],
+    "deliverables": [
+      { "title": { "ar": "دفتر الوظيفة", "en": "The job's book" }, "body": { "ar": "صفحة واحدة: كل قرار، وخانته، ومن يوافق عليه.", "en": "One page: every decision, its box, and who approves it." } },
+      { "title": { "ar": "خريطة التصعيد", "en": "The escalation map" }, "body": { "ar": "متى يتوقف الوكيل، وإلى من يذهب الملف كاملًا.", "en": "When the agent stops, and who receives the full file." } },
+      { "title": { "ar": "خطة التشغيل", "en": "The run plan" }, "body": { "ar": "ما يُفوَّض أولًا، وما ينتظر، وكيف يُقاس.", "en": "What gets delegated first, what waits, and how it is measured." } }
+    ],
+    "partnerNeeds": [
+      { "ar": "شركات تشغّل وكلاء ذكاء اصطناعي في خدمة العملاء أو المبيعات أو العمليات", "en": "Companies running AI agents in customer service, sales or operations" },
+      { "ar": "غرف تجارة ومجالس أعمال تدرّب أعضاءها على الوكلاء", "en": "Chambers and business councils training their members on agents" }
+    ],
+    "milestones": [
+      { "id": "definition", "title": { "ar": "تعريف الدفتر", "en": "Define the book" }, "description": { "ar": "الخانات الثلاث، ونقاط التوقّف، وحدود ما يغطّيه.", "en": "The three boxes, the stopping points, and the limits of what it covers." }, "state": "current" },
+      { "id": "first-session", "title": { "ar": "أول جلسة قائد", "en": "A first Leader Session" }, "description": { "ar": "تصنيف قرارات وظيفة واحدة مع صاحب قرار واحد.", "en": "One job's decisions classified with one decision-maker." }, "state": "planned" },
+      { "id": "first-sprint", "title": { "ar": "أول سبرنت وظيفة", "en": "A first Job Sprint" }, "description": { "ar": "دفتر كامل لوظيفة واحدة جاهز للتشغيل.", "en": "A full book for one job, ready to run." }, "state": "planned" }
+    ],
+    "updates": [
+      { "id": "concept-published", "date": "2026-10-12", "kind": "scope", "title": { "ar": "نشر التصوّر", "en": "Concept published" }, "body": { "ar": "عرّفنا دفتر القرار المفوَّض وخاناته الثلاث، وربطناه بدليل الإمارات.", "en": "We defined the Delegated Decision Book and its three boxes, and tied it to the UAE guide." }, "visibility": "public" }
+    ]
+  },
+  "pitch": {
+    "hook": {
+      "ar": "وكيلك الذكي قرّر اليوم نيابةً عنك. هل قلت له أين يقف؟",
+      "en": "Your AI agent made decisions for you today. Did you ever tell it where to stop?"
+    },
+    "promise": {
+      "ar": "الإمارات حسمتها لحكومتها: لا إجراء قبل موافقة صاحب الشأن، وموظف مختص حين يلزم، وحقّ الاعتراض والتصحيح. ودفتر القرار المفوَّض ينقل القاعدة نفسها إلى شركتك: كل قرار في الوظيفة يعرف خانته. يُفوَّض كاملًا، أو يُنفَّذ بعد موافقتك، أو يبقى في يد إنسان.",
+      "en": "The UAE settled it for its government: no action before the person concerned approves, a specialist employee when needed, and the right to object or correct. The Delegated Decision Book brings that same rule into your company: every decision in the job knows its box — delegated fully, carried out after your approval, or kept in human hands."
+    },
+    "risksTitle": {
+      "ar": "هذا ما يحدث حين لا يعرف الوكيل حدوده",
+      "en": "What happens when an agent doesn't know its limits"
+    },
+    "fears": [
+      {
+        "title": { "ar": "القاعدة كُتبت، والسوق سيُقاس عليها.", "en": "The rule is written, and the market will be measured by it." },
+        "body": {
+          "ar": "دليل الإمارات لم يترك الأمر للتقدير: موافقة قبل أي إجراء، وتصعيد إلى موظف مختص، وحقّ اعتراض. وما تطلبه الحكومة من خدماتها اليوم، يتوقعه المتعامل من كل شركة يتعامل معها غدًا.",
+          "en": "The UAE guide left nothing to judgement: approval before any action, escalation to a specialist employee, a right to object. What government asks of its own services today, customers will expect from every company they deal with tomorrow."
+        },
+        "sources": [
+          { "title": "Khaleej Times — UAE unified guide for agentic AI government services", "url": "https://www.khaleejtimes.com/uae/uae-launches-unified-guide-agentic-ai-government-services" }
+        ]
+      },
+      {
+        "title": { "ar": "منافسوك في الفصل نفسه.", "en": "Your competitors are in the same classroom." },
+        "body": {
+          "ar": "أكثر من 14,000 شركة في دبي بدأت التدرّب على الوكلاء الأذكياء منذ الأول من سبتمبر 2026. التدريب يعلّمهم تشغيل الوكيل، لكن أين يقف الوكيل في شركتك، فهذا قرارك أنت.",
+          "en": "More than 14,000 Dubai companies began training on AI agents on 1 September 2026. Training teaches them to run an agent. Where the agent stops inside your company is still your decision."
+        },
+        "figure": { "ar": "+14,000", "en": "14,000+" },
+        "sources": [
+          { "title": "The Next Web — Dubai is training 14,000 companies to run AI agents", "url": "https://thenextweb.com/news/dubai-chambers-agentic-ai-training-14000-companies" }
+        ]
+      },
+      {
+        "title": { "ar": "«مين اللي سمح له؟»", "en": "“Who allowed it to do that?”" },
+        "body": {
+          "ar": "السؤال الذي سيُطرح بعد أول خطأ. ومن غير ورقة مكتوبة تقول ما فُوِّض للوكيل وما لم يُفوَّض، لن يجد أحد الإجابة.",
+          "en": "The question that follows the first mistake. Without a written page saying what the agent was given and what it wasn't, nobody will have the answer."
+        }
+      }
+    ],
+    "scenario": {
+      "setup": {
+        "ar": "شركة تشغّل وكيلًا يرد على طلبات العملاء ويصرف المرتجعات. يصل طلب استرداد بمبلغ كبير، والعميل غاضب ويريد أن يكلّم أحدًا.",
+        "en": "A company runs an agent that answers customer requests and issues refunds. A large refund request arrives, and the customer is angry and wants to talk to someone."
+      },
+      "without": {
+        "ar": "الوكيل يصرف المبلغ وحده، أو يرفضه وحده، والعميل يدور في حلقة لا يصل فيها إلى إنسان.",
+        "en": "The agent pays it on its own, or refuses it on its own, and the customer goes round in a loop that never reaches a person."
+      },
+      "with": {
+        "ar": "الدفتر يقول: الاسترداد فوق الحد يُنفَّذ بعد موافقة المدير، والشكوى تنتقل إلى موظف ومعها الملف كاملًا، والعميل يعرف كيف يعترض.",
+        "en": "The book says: refunds above the limit go through after the manager approves, the complaint moves to an employee with the full file, and the customer knows how to object."
+      }
+    },
+    "gains": [
+      {
+        "audience": "company",
+        "text": {
+          "ar": "تشغّل الوكيل وأنت تعرف بالضبط ما يقرّره وحده وما يرجع فيه إليك.",
+          "en": "Run the agent knowing exactly what it decides alone and what comes back to you."
+        }
+      },
+      {
+        "audience": "institution",
+        "text": {
+          "ar": "تتفق الإدارة على صفحة واحدة قبل أي أداة، فلا يُترك القرار للمورّد ولا للوكيل.",
+          "en": "Leadership agrees on one page before any tool, so the decision is left neither to the vendor nor to the agent."
+        }
+      }
+    ],
+    "edges": [
+      { "ar": "يبدأ من وظيفة واحدة، لا من الشركة كلها", "en": "Starts with one job, not the whole company" },
+      { "ar": "مبني على قاعدة الإمارات نفسها", "en": "Built on the UAE's own rule" },
+      { "ar": "ثلاث خانات لكل قرار، لا أكثر", "en": "Three boxes per decision, no more" },
+      { "ar": "القرار الأخير في كل خانة لصاحب الشركة", "en": "The owner makes the final call on every box" }
+    ]
+  }
+}
