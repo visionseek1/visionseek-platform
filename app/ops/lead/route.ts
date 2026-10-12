@@ -1,5 +1,5 @@
 import { cookieIsValid, readCookie } from "@/lib/room-auth";
-import { notionConfigured, updateLeadStage } from "@/lib/notion-room";
+import { notionConfigured, updateLeadMap, updateLeadStage } from "@/lib/notion-room";
 
 /**
  * لوحة العملاء: تحريك كارت عميل لمرحلة تانية (سحب أو زرار من الغرفة).
@@ -20,6 +20,16 @@ export async function POST(request: Request) {
     const v = f.get(k);
     return typeof v === "string" ? v.trim() : "";
   };
+  // خانات خريطة العملاء والخدمات: النوع · المكان · الخدمة · النتيجة المقفولة والموعد · الإشارة (لكروت S5)
+  if (g("action") === "map") {
+    const opt = (k: string) => (f.has(k) ? g(k) : undefined);
+    try {
+      await updateLeadMap(g("id"), { type: opt("type"), place: opt("place"), service: opt("service"), outcome: opt("outcome"), followup: opt("followup"), signal: opt("signal"), signalUrl: opt("signalUrl") });
+      return Response.redirect(`${origin}/ops?r=saved#leads`, 303);
+    } catch {
+      return Response.redirect(`${origin}/ops?r=err#leads`, 303);
+    }
+  }
   try {
     await updateLeadStage(g("id"), g("stage"), f.has("note") ? g("note") : undefined, f.has("followup") ? g("followup") : undefined);
     return Response.redirect(`${origin}/ops?r=saved#leads`, 303);

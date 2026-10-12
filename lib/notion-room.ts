@@ -247,6 +247,47 @@ export async function updateLeadStage(pageId: string, stage: string, note?: stri
   cache = null;
 }
 
+/* ---------- خريطة العملاء والخدمات (12 أكتوبر 2026): النوع · المكان · الخدمة · النتيجة المقفولة ---------- */
+const CLIENT_TYPES = new Set(["C1 ناشئة", "C2 كبيرة وعائلية", "C3 جامعات", "C4 هيئات"]);
+const CLIENT_PLACES = new Set(["مصر", "السعودية", "الإمارات", "قطر", "باقي الخليج", "تانية"]);
+const CLIENT_SERVICES = new Set(["S1 جلسة القائد", "S2 ورشة القيادات", "S3 تشخيص القدرات", "S4 بناء القدرة", "S5 مصممة مسبقًا"]);
+const LOCKED_OUTCOMES = new Set(["اتبعت", "رد", "مكالمة", "جلسة", "دفع"]);
+
+export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string };
+
+/** يحدّث خانات الخريطة في كارت عميل. قيم محصورة في الخيارات المعتمدة؛ الفاضي يمسح الخانة. لا حذف للكارت ولا لمس لأي خانة تانية. */
+export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  const sel = (v: string | undefined, allowed: Set<string>) => {
+    if (v === undefined) return undefined;
+    if (v === "") return { select: null };
+    if (!allowed.has(v)) throw new Error("bad option");
+    return { select: { name: v } };
+  };
+  const properties: Record<string, unknown> = {};
+  const put = (k: string, v: unknown) => { if (v !== undefined) properties[k] = v; };
+  put("نوع العميل", sel(m.type, CLIENT_TYPES));
+  put("البلد", sel(m.place, CLIENT_PLACES));
+  put("الخدمة", sel(m.service, CLIENT_SERVICES));
+  put("النتيجة المقفولة", sel(m.outcome, LOCKED_OUTCOMES));
+  if (m.followup !== undefined) properties["المتابعة الجاية"] = m.followup && isDate(m.followup) ? { date: { start: m.followup } } : { date: null };
+  if (m.signal !== undefined) properties["الإشارة"] = rt(m.signal);
+  if (m.signalUrl !== undefined) {
+    if (m.signalUrl && !/^https:\/\/\S+$/.test(m.signalUrl)) throw new Error("bad url");
+    properties["مصدر الإشارة"] = { url: m.signalUrl || null };
+  }
+  if (!Object.keys(properties).length) return;
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} updating lead map`);
+  cache = null;
+}
+
 /* ---------- تقرير الصباح: ملخص يومي بالكود — صفر توكنز ---------- */
 
 const BRIEF_LOG_PAGE = "3f6e8808b7a681fdac40d5b62b18f59e";
