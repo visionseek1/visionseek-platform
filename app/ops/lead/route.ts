@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   // جهة جديدة على اللوحة بخانات الخريطة (من د. أحمد أو نقلًا عن nimo)
   if (g("action") === "create") {
     try {
-      await createLead({ name: g("name"), stage: g("stage"), type: g("type"), place: g("place"), service: g("service"), outcome: g("outcome"), followup: g("followup"), decider: g("decider"), note: g("note"), signal: g("signal"), signalUrl: g("signalUrl"), by: g("by") });
+      await createLead({ name: g("name"), stage: g("stage"), type: g("type"), place: g("place"), service: g("service"), outcome: g("outcome"), followup: g("followup"), decider: g("decider"), note: g("note"), signal: g("signal"), signalUrl: g("signalUrl"), by: g("by"), value: g("value") });
       return Response.redirect(`${origin}/ops?r=saved#leads`, 303);
     } catch {
       return Response.redirect(`${origin}/ops?r=err#leads`, 303);
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   if (g("action") === "map") {
     const opt = (k: string) => (f.has(k) ? g(k) : undefined);
     try {
-      await updateLeadMap(g("id"), { type: opt("type"), place: opt("place"), service: opt("service"), outcome: opt("outcome"), followup: opt("followup"), signal: opt("signal"), signalUrl: opt("signalUrl") });
+      await updateLeadMap(g("id"), { type: opt("type"), place: opt("place"), service: opt("service"), outcome: opt("outcome"), followup: opt("followup"), signal: opt("signal"), signalUrl: opt("signalUrl"), value: opt("value"), reason: opt("reason") });
       return Response.redirect(`${origin}/ops?r=saved#leads`, 303);
     } catch {
       return Response.redirect(`${origin}/ops?r=err#leads`, 303);

@@ -66,6 +66,8 @@ function plain(prop: any): string | string[] | null {
       return prop.date?.start ?? null;
     case "url":
       return prop.url ?? null;
+    case "number":
+      return typeof prop.number === "number" ? String(prop.number) : null;
     case "checkbox":
       return prop.checkbox ? "__YES__" : "__NO__";
     case "relation":
@@ -76,7 +78,7 @@ function plain(prop: any): string | string[] | null {
 }
 
 function toRow(page: any): Row {
-  const row: Row = { url: page.url ?? null, id: page.id ?? null, edited: page.last_edited_time ?? null };
+  const row: Row = { url: page.url ?? null, id: page.id ?? null, edited: page.last_edited_time ?? null, created: page.created_time ?? null };
   for (const [k, v] of Object.entries(page.properties || {})) row[k] = plain(v);
   return row;
 }
@@ -253,7 +255,9 @@ const CLIENT_PLACES = new Set(["مصر", "السعودية", "الإمارات",
 const CLIENT_SERVICES = new Set(["S1 جلسة القائد", "S2 ورشة القيادات", "S3 تشخيص القدرات", "S4 بناء القدرة", "S5 مصممة مسبقًا"]);
 const LOCKED_OUTCOMES = new Set(["اتبعت", "رد", "مكالمة", "جلسة", "دفع"]);
 
-export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string };
+export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string };
+const CLOSE_REASONS = new Set(["مش دلوقتي", "الميزانية", "مش صاحب القرار", "ما ردّش", "اختار حل تاني", "تانية"]);
+const num = (v: string | undefined) => { if (v === undefined) return undefined; if (v === "") return { number: null }; const n = Number(v.replace(/[,،\s]/g, "")); if (!Number.isFinite(n) || n < 0 || n > 1e9) throw new Error("bad number"); return { number: n }; };
 
 /** يحدّث خانات الخريطة في كارت عميل. قيم محصورة في الخيارات المعتمدة؛ الفاضي يمسح الخانة. لا حذف للكارت ولا لمس لأي خانة تانية. */
 export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
@@ -271,6 +275,8 @@ export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
   put("البلد", sel(m.place, CLIENT_PLACES));
   put("الخدمة", sel(m.service, CLIENT_SERVICES));
   put("النتيجة المقفولة", sel(m.outcome, LOCKED_OUTCOMES));
+  put("سبب الإقفال", sel(m.reason, CLOSE_REASONS));
+  put("القيمة (درهم)", num(m.value));
   if (m.followup !== undefined) properties["المتابعة الجاية"] = m.followup && isDate(m.followup) ? { date: { start: m.followup } } : { date: null };
   if (m.signal !== undefined) properties["الإشارة"] = rt(m.signal);
   if (m.signalUrl !== undefined) {
@@ -308,6 +314,7 @@ export async function createLead(l: NewLead): Promise<string> {
   opt("البلد", l.place, CLIENT_PLACES);
   opt("الخدمة", l.service, CLIENT_SERVICES);
   opt("النتيجة المقفولة", l.outcome, LOCKED_OUTCOMES);
+  if (l.value) { const v = num(l.value); if (v) properties["القيمة (درهم)"] = v; }
   if (l.followup && isDate(l.followup)) properties["المتابعة الجاية"] = { date: { start: l.followup } };
   if (l.decider) properties["صاحب القرار"] = rt(l.decider.slice(0, 200));
   if (l.note) properties["ملاحظة"] = rt(l.note);
