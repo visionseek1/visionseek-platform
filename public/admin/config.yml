@@ -252,6 +252,37 @@ collections:
           - label: العربية
             name: ar
             widget: text
+      - label: "شريط الإثبات: اتبنى بالفعل"
+        name: proof
+        widget: object
+        fields:
+        - label: العنوان
+          name: heading
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: البنود
+          name: items
+          widget: list
+          fields:
+          - label: الرقم
+            name: value
+            widget: string
+          - label: الوصف
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
       - label: بطاقة السؤال الذي نبدأ منه
         name: mission
         widget: object

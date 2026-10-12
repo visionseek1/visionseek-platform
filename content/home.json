@@ -4,25 +4,25 @@
       {
         "image": "/field-space.jpg",
         "label": {
-          "en": "VISIONSEEK",
-          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
+          "en": "VISIONSEEK — THE NEXT DECADE",
+          "ar": "VISIONSEEK — العقد القادم"
         },
         "title": {
-          "en": "Make It Possible.",
-          "ar": "Make It Possible."
+          "en": "Within ten years, we will be steering the helm of the world's technological development.",
+          "ar": "احنا شايفين إن خلال 10 سنين هنكون بنقود دفة التطور التكنولوجي في العالم"
         },
         "sub": {
-          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
-          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
+          "en": "Not a slogan. A working plan.",
+          "ar": "ودي مش جملة بتتقال… دي خطة شغّالة."
         },
         "text": {
           "en": "",
           "ar": ""
         },
-        "href": "/start",
+        "href": "/projects",
         "link": {
-          "en": "Build your solutions with us",
-          "ar": "ابنِ حلولك معنا"
+          "en": "See what is already built",
+          "ar": "شوف اللي اتبنى فعلًا"
         }
       },
       {
@@ -75,8 +75,8 @@
       }
     ],
     "firstSlideNote": {
-      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
-      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
+      "en": "We build in the open — every step, documented for everyone to see.",
+      "ar": "وبنبني قدّام الجميع — كل خطوة موثّقة، وكل نتيجة لها أثر تشوفه بنفسك."
     }
   },
   "mission": {
@@ -299,6 +299,42 @@
         "caption": {
           "en": "07—09 / PROOF · OPERATION · EVOLUTION",
           "ar": "07—09 / الإثبات · التشغيل · التطوير"
+        }
+      }
+    ]
+  },
+  "proof": {
+    "heading": {
+      "en": "Built. Not promised.",
+      "ar": "اتبنى بالفعل — مش وعود"
+    },
+    "items": [
+      {
+        "value": "6",
+        "label": {
+          "en": "Autonomous engines running the institution's research, every hour",
+          "ar": "محركات ذاتية تدير بحث المؤسسة — تلف كل ساعة بلا توقف"
+        }
+      },
+      {
+        "value": "6",
+        "label": {
+          "en": "Programs announced and open",
+          "ar": "برامج معلنة ومتاحة"
+        }
+      },
+      {
+        "value": "9",
+        "label": {
+          "en": "Research reports and readings published",
+          "ar": "تقارير وقراءات منشورة"
+        }
+      },
+      {
+        "value": "2",
+        "label": {
+          "en": "Full languages — two texts, one direction",
+          "ar": "لغتان كاملتان — نصّان مستقلان واتجاه واحد"
         }
       }
     ]
