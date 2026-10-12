@@ -2,30 +2,6 @@
   "hero": {
     "slides": [
       {
-        "image": "/field-cities.jpg",
-        "label": {
-          "en": "VISIONSEEK — THE NEXT DECADE",
-          "ar": "VISIONSEEK — العقد القادم"
-        },
-        "title": {
-          "en": "Within ten years, we will be steering the helm of the world's technological development.",
-          "ar": "احنا شايفين إن خلال 10 سنين هنكون بنقود دفة التطور التكنولوجي في العالم"
-        },
-        "sub": {
-          "en": "Not a slogan. A working plan.",
-          "ar": "ودي مش جملة بتتقال… دي خطة شغّالة."
-        },
-        "text": {
-          "en": "",
-          "ar": ""
-        },
-        "href": "/projects",
-        "link": {
-          "en": "See what is already built",
-          "ar": "شوف اللي اتبنى فعلًا"
-        }
-      },
-      {
         "image": "/field-space.jpg",
         "label": {
           "en": "VISIONSEEK",
@@ -99,8 +75,8 @@
       }
     ],
     "firstSlideNote": {
-      "en": "We build in the open — every step, documented.",
-      "ar": "وبنبني قدّام الجميع — كل خطوة موثّقة، وكل نتيجة لها أثر تشوفه بنفسك."
+      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
+      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
     }
   },
   "mission": {
@@ -362,5 +338,23 @@
         }
       }
     ]
+  },
+  "decade": {
+    "eyebrow": {
+      "en": "THE NEXT DECADE",
+      "ar": "العقد القادم"
+    },
+    "title": {
+      "en": "Within ten years, we will be steering the helm of the world's technological development.",
+      "ar": "احنا شايفين إن خلال 10 سنين هنكون بنقود دفة التطور التكنولوجي في العالم"
+    },
+    "sub": {
+      "en": "Not a slogan. A working plan — built in the open.",
+      "ar": "ودي مش جملة بتتقال… دي خطة شغّالة، بتتبني قدّام الجميع."
+    },
+    "link": {
+      "en": "See what is already built",
+      "ar": "شوف اللي اتبنى فعلًا"
+    }
   }
 }
