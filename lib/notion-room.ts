@@ -66,6 +66,8 @@ function plain(prop: any): string | string[] | null {
       return prop.date?.start ?? null;
     case "url":
       return prop.url ?? null;
+    case "number":
+      return typeof prop.number === "number" ? String(prop.number) : null;
     case "checkbox":
       return prop.checkbox ? "__YES__" : "__NO__";
     case "relation":
@@ -76,7 +78,7 @@ function plain(prop: any): string | string[] | null {
 }
 
 function toRow(page: any): Row {
-  const row: Row = { url: page.url ?? null, id: page.id ?? null, edited: page.last_edited_time ?? null };
+  const row: Row = { url: page.url ?? null, id: page.id ?? null, edited: page.last_edited_time ?? null, created: page.created_time ?? null };
   for (const [k, v] of Object.entries(page.properties || {})) row[k] = plain(v);
   return row;
 }
@@ -180,7 +182,7 @@ export async function createEngineRequest(engine: string, note: string): Promise
 
 /* ---------- المستوى 3.1: كروت وتعليقات (كتابة محصورة في «الشغل» و«تعليقات الغرفة»، بلا حذف) ---------- */
 
-const OWNERS = new Set(["د. أحمد", "Claude", "Grok"]);
+const OWNERS = new Set(["د. أحمد", "Claude", "Grok", "nimo"]);
 const TYPES = new Set(["مشروع", "تسويق", "عميل", "محرك", "موقع"]);
 const STAGES = new Set(["فكرة", "شغال", "مستني قرار", "مراجعة", "خلص", "واقف"]);
 const rt = (v: string) => ({ rich_text: v ? [{ text: { content: v.slice(0, 1900) } }] : [] });
@@ -245,6 +247,85 @@ export async function updateLeadStage(pageId: string, stage: string, note?: stri
     /* السجل تحسين، مش شرط نجاح النقلة */
   }
   cache = null;
+}
+
+/* ---------- خريطة العملاء والخدمات (12 أكتوبر 2026): النوع · المكان · الخدمة · النتيجة المقفولة ---------- */
+const CLIENT_TYPES = new Set(["C1 ناشئة", "C2 كبيرة وعائلية", "C3 جامعات", "C4 هيئات"]);
+const CLIENT_PLACES = new Set(["مصر", "السعودية", "الإمارات", "قطر", "باقي الخليج", "تانية"]);
+const CLIENT_SERVICES = new Set(["S1 جلسة القائد", "S2 ورشة القيادات", "S3 تشخيص القدرات", "S4 بناء القدرة", "S5 مصممة مسبقًا"]);
+const LOCKED_OUTCOMES = new Set(["اتبعت", "رد", "مكالمة", "جلسة", "دفع"]);
+
+export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string };
+const CLOSE_REASONS = new Set(["مش دلوقتي", "الميزانية", "مش صاحب القرار", "ما ردّش", "اختار حل تاني", "تانية"]);
+const num = (v: string | undefined) => { if (v === undefined) return undefined; if (v === "") return { number: null }; const n = Number(v.replace(/[,،\s]/g, "")); if (!Number.isFinite(n) || n < 0 || n > 1e9) throw new Error("bad number"); return { number: n }; };
+
+/** يحدّث خانات الخريطة في كارت عميل. قيم محصورة في الخيارات المعتمدة؛ الفاضي يمسح الخانة. لا حذف للكارت ولا لمس لأي خانة تانية. */
+export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  const sel = (v: string | undefined, allowed: Set<string>) => {
+    if (v === undefined) return undefined;
+    if (v === "") return { select: null };
+    if (!allowed.has(v)) throw new Error("bad option");
+    return { select: { name: v } };
+  };
+  const properties: Record<string, unknown> = {};
+  const put = (k: string, v: unknown) => { if (v !== undefined) properties[k] = v; };
+  put("نوع العميل", sel(m.type, CLIENT_TYPES));
+  put("البلد", sel(m.place, CLIENT_PLACES));
+  put("الخدمة", sel(m.service, CLIENT_SERVICES));
+  put("النتيجة المقفولة", sel(m.outcome, LOCKED_OUTCOMES));
+  put("سبب الإقفال", sel(m.reason, CLOSE_REASONS));
+  put("القيمة (درهم)", num(m.value));
+  if (m.followup !== undefined) properties["المتابعة الجاية"] = m.followup && isDate(m.followup) ? { date: { start: m.followup } } : { date: null };
+  if (m.signal !== undefined) properties["الإشارة"] = rt(m.signal);
+  if (m.signalUrl !== undefined) {
+    if (m.signalUrl && !/^https:\/\/\S+$/.test(m.signalUrl)) throw new Error("bad url");
+    properties["مصدر الإشارة"] = { url: m.signalUrl || null };
+  }
+  if (!Object.keys(properties).length) return;
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} updating lead map`);
+  cache = null;
+}
+
+const LEAD_RECORDERS = new Set(["د. أحمد", "Claude", "nimo"]);
+
+export type NewLead = LeadMap & { name: string; stage?: string; decider?: string; note?: string; by?: string };
+
+/** يضيف جهة جديدة على لوحة العملاء (قاعدة «عملاء — خط المتابعة») بخانات الخريطة. إضافة فقط. */
+export async function createLead(l: NewLead): Promise<string> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const name = (l.name || "").trim().slice(0, 200);
+  if (!name) throw new Error("empty name");
+  const stage = l.stage && LEAD_STAGES.has(l.stage) ? l.stage : "اتلقى";
+  const properties: Record<string, unknown> = {
+    "الجهة": { title: [{ text: { content: name } }] },
+    "المرحلة": { select: { name: stage } },
+    "سجّلها": { select: { name: l.by && LEAD_RECORDERS.has(l.by) ? l.by : "د. أحمد" } },
+  };
+  const opt = (k: string, v: string | undefined, allowed: Set<string>) => { if (v && allowed.has(v)) properties[k] = { select: { name: v } }; };
+  opt("نوع العميل", l.type, CLIENT_TYPES);
+  opt("البلد", l.place, CLIENT_PLACES);
+  opt("الخدمة", l.service, CLIENT_SERVICES);
+  opt("النتيجة المقفولة", l.outcome, LOCKED_OUTCOMES);
+  if (l.value) { const v = num(l.value); if (v) properties["القيمة (درهم)"] = v; }
+  if (l.followup && isDate(l.followup)) properties["المتابعة الجاية"] = { date: { start: l.followup } };
+  if (l.decider) properties["صاحب القرار"] = rt(l.decider.slice(0, 200));
+  if (l.note) properties["ملاحظة"] = rt(l.note);
+  if (l.signal) properties["الإشارة"] = rt(l.signal);
+  if (l.signalUrl && /^https:\/\/\S+$/.test(l.signalUrl)) properties["مصدر الإشارة"] = { url: l.signalUrl };
+  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: SOURCES.leads.ds }, properties });
+  if (res.status === 400 || res.status === 404) res = await call("/pages", { parent: { database_id: SOURCES.leads.db }, properties }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} creating lead`);
+  const json: any = await res.json();
+  cache = null;
+  return json.url as string;
 }
 
 /* ---------- تقرير الصباح: ملخص يومي بالكود — صفر توكنز ---------- */
