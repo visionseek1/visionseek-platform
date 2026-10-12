@@ -2,7 +2,7 @@
   "hero": {
     "slides": [
       {
-        "image": "/field-space.jpg",
+        "image": "/field-cities.jpg",
         "label": {
           "en": "VISIONSEEK — THE NEXT DECADE",
           "ar": "VISIONSEEK — العقد القادم"
@@ -23,6 +23,30 @@
         "link": {
           "en": "See what is already built",
           "ar": "شوف اللي اتبنى فعلًا"
+        }
+      },
+      {
+        "image": "/field-space.jpg",
+        "label": {
+          "en": "VISIONSEEK",
+          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
+        },
+        "title": {
+          "en": "Make It Possible.",
+          "ar": "Make It Possible."
+        },
+        "sub": {
+          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
+          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
+        },
+        "text": {
+          "en": "",
+          "ar": ""
+        },
+        "href": "/start",
+        "link": {
+          "en": "Build your solutions with us",
+          "ar": "ابنِ حلولك معنا"
         }
       },
       {
@@ -75,7 +99,7 @@
       }
     ],
     "firstSlideNote": {
-      "en": "We build in the open — every step, documented for everyone to see.",
+      "en": "We build in the open — every step, documented.",
       "ar": "وبنبني قدّام الجميع — كل خطوة موثّقة، وكل نتيجة لها أثر تشوفه بنفسك."
     }
   },
