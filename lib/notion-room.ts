@@ -427,3 +427,24 @@ export function changesSince(live: LiveRoom, since: string): { title: string; bo
   const body = items.slice(0, 4).join("\n") + (items.length > 4 ? `\n… و${items.length - 4} كمان` : "");
   return { title, body, count: items.length };
 }
+
+// ===== حسم القرارات من الغرفة (الإصدار 6): اعتمد / مش دلوقتي بضغطة =====
+const DECISION_VERDICTS = new Set(["اتحسم", "مؤجل"]);
+export async function updateDecision(pageId: string, verdict: string, note?: string): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  if (!DECISION_VERDICTS.has(verdict)) throw new Error("bad verdict");
+  const today = new Date().toISOString().slice(0, 10);
+  const properties: Record<string, unknown> = { "الحالة": { select: { name: verdict } } };
+  if (verdict === "اتحسم") properties["اتحسم يوم"] = { date: { start: today } };
+  const suffix = verdict === "اتحسم" ? `اتحسم من الغرفة ${today}` : `اتأجل من الغرفة ${today}`;
+  properties["القرار النهائي"] = rt(`${note ? note + " — " : ""}${suffix}`);
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} deciding`);
+  cache = null;
+}
