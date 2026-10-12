@@ -105,7 +105,7 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
 test("client map: every lead card carries type, place and service, a locked outcome with a date, and the room filters by them", async () => {
   const [mod, notion, lead] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  for (const needle of ["leadMatrix", "leadFilters", "leadMapForm", "newLeadForm", "سجّلها", "leadStats", "بقوا عملاء", "leadHealth", "dupCheck", "سبب الإقفال", "القيمة (درهم)", "C1 ناشئة", "S5 مصممة مسبقًا", "النتيجة المقفولة", "مصدر الإشارة"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  for (const needle of ["leadMatrix", "leadFilters", "leadMapForm", "newLeadForm", "سجّلها", "leadStats", "بقوا عملاء", "leadHealth", "dupCheck", "perfStrip", "عدادات الأداء", "سبب الإقفال", "القيمة (درهم)", "C1 ناشئة", "S5 مصممة مسبقًا", "النتيجة المقفولة", "مصدر الإشارة"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.match(notion, /export async function updateLeadMap/);
   assert.match(notion, /export async function createLead/);
   assert.match(notion, /"nimo"/);
