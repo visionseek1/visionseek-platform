@@ -255,7 +255,9 @@ const CLIENT_PLACES = new Set(["مصر", "السعودية", "الإمارات",
 const CLIENT_SERVICES = new Set(["S1 جلسة القائد", "S2 ورشة القيادات", "S3 تشخيص القدرات", "S4 بناء القدرة", "S5 مصممة مسبقًا"]);
 const LOCKED_OUTCOMES = new Set(["اتبعت", "رد", "مكالمة", "جلسة", "دفع"]);
 
-export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string };
+export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string; forecast?: string; track?: string };
+const LEAD_TRACKS = new Set(["عالي — نكلمهم دلوقتي", "متوسط — نسخّنهم الأول", "بدري — المراقبة"]);
+const score10 = (v: string | undefined) => { if (v === undefined) return undefined; if (v === "") return { number: null }; const n = Number(v); if (!Number.isInteger(n) || n < 0 || n > 10) throw new Error("bad forecast"); return { number: n }; };
 const CLOSE_REASONS = new Set(["مش دلوقتي", "الميزانية", "مش صاحب القرار", "ما ردّش", "اختار حل تاني", "تانية"]);
 const num = (v: string | undefined) => { if (v === undefined) return undefined; if (v === "") return { number: null }; const n = Number(v.replace(/[,،\s]/g, "")); if (!Number.isFinite(n) || n < 0 || n > 1e9) throw new Error("bad number"); return { number: n }; };
 
@@ -277,6 +279,8 @@ export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
   put("النتيجة المقفولة", sel(m.outcome, LOCKED_OUTCOMES));
   put("سبب الإقفال", sel(m.reason, CLOSE_REASONS));
   put("القيمة (درهم)", num(m.value));
+  put("التوقع", score10(m.forecast));
+  put("المسار", sel(m.track, LEAD_TRACKS));
   if (m.followup !== undefined) properties["المتابعة الجاية"] = m.followup && isDate(m.followup) ? { date: { start: m.followup } } : { date: null };
   if (m.signal !== undefined) properties["الإشارة"] = rt(m.signal);
   if (m.signalUrl !== undefined) {
@@ -315,6 +319,8 @@ export async function createLead(l: NewLead): Promise<string> {
   opt("الخدمة", l.service, CLIENT_SERVICES);
   opt("النتيجة المقفولة", l.outcome, LOCKED_OUTCOMES);
   if (l.value) { const v = num(l.value); if (v) properties["القيمة (درهم)"] = v; }
+  if (l.forecast) { const v = score10(l.forecast); if (v) properties["التوقع"] = v; }
+  if (l.track && LEAD_TRACKS.has(l.track)) properties["المسار"] = { select: { name: l.track } };
   if (l.followup && isDate(l.followup)) properties["المتابعة الجاية"] = { date: { start: l.followup } };
   if (l.decider) properties["صاحب القرار"] = rt(l.decider.slice(0, 200));
   if (l.note) properties["ملاحظة"] = rt(l.note);
@@ -326,6 +332,28 @@ export async function createLead(l: NewLead): Promise<string> {
   const json: any = await res.json();
   cache = null;
   return json.url as string;
+}
+
+/* ---------- المنهجيات: د. أحمد بس اللي يعتمد أو يوقّف (من الغرفة بكلمة السر). النص نفسه بيتعدّل في Notion. ---------- */
+const METHOD_STATUSES = new Set(["مسودة", "معتمدة", "متوقفة"]);
+export async function updateMethodStatus(pageId: string, status: string): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  if (!METHOD_STATUSES.has(status)) throw new Error("bad status");
+  const today = new Date().toISOString().slice(0, 10);
+  const properties: Record<string, unknown> = { "الحالة": { select: { name: status } }, "آخر تحديث": { date: { start: today } } };
+  if (status === "معتمدة") {
+    properties["اعتمدها"] = { select: { name: "د. أحمد" } };
+    properties["اتعتمدت يوم"] = { date: { start: today } };
+  }
+  const res = await fetch(`${API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+    body: JSON.stringify({ properties }),
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`notion ${res.status} updating method`);
+  cache = null;
 }
 
 /* ---------- تقرير الصباح: ملخص يومي بالكود — صفر توكنز ---------- */

@@ -112,3 +112,11 @@ test("client map: every lead card carries type, place and service, a locked outc
   assert.match(lead, /action"\) === "map"/);
   assert.match(lead, /cookieIsValid/);
 });
+
+test("methodologies: a room view, owner-only approval, agents read only approved ones", async () => {
+  const [mod, notion, route] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/method/route.ts")]);
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  for (const needle of ["renderMethods", "المنهجيات", "/ops/method", "المعتمدة", "التوقع", "المسار"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  assert.match(notion, /export async function updateMethodStatus/);
+  assert.match(route, /cookieIsValid/);
+});
