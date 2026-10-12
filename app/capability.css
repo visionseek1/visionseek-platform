@@ -35,7 +35,7 @@
 /* شريط الإثبات: «اتبنى بالفعل — مش وعود» تحت الواجهة مباشرة */
 .vs-proof{background:var(--black);color:#fff;padding:3.2rem clamp(1.5rem,5vw,6rem);border-top:1px solid var(--vs-line)}
 .vs-proof h2{font-size:1.05rem;letter-spacing:.08em;color:var(--grey);text-transform:uppercase;margin:0 0 2rem;font-weight:600}
-.vs-proof-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem}
+.vs-proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:2rem}
 .vs-proof-item{border-inline-start:2px solid var(--lime);padding-inline-start:1.1rem}
 .vs-proof-value{font-size:clamp(2.4rem,4vw,3.4rem);font-weight:700;line-height:1;display:block;font-variant-numeric:tabular-nums}
 .vs-proof-item p{color:#d5d7dd;font-size:.95rem;margin:.6rem 0 0;line-height:1.6}

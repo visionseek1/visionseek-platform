@@ -329,13 +329,6 @@
           "en": "Research reports and readings published",
           "ar": "تقارير وقراءات منشورة"
         }
-      },
-      {
-        "value": "2",
-        "label": {
-          "en": "Full languages — two texts, one direction",
-          "ar": "لغتان كاملتان — نصّان مستقلان واتجاه واحد"
-        }
       }
     ]
   },
@@ -349,8 +342,8 @@
       "ar": "احنا شايفين إن خلال 10 سنين هنكون بنقود دفة التطور التكنولوجي في العالم"
     },
     "sub": {
-      "en": "Not a slogan. A working plan — built in the open.",
-      "ar": "ودي مش جملة بتتقال… دي خطة شغّالة، بتتبني قدّام الجميع."
+      "en": "",
+      "ar": ""
     },
     "link": {
       "en": "See what is already built",

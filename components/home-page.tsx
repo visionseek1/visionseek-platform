@@ -23,7 +23,7 @@ export default function HomePage({locale}: {locale:Locale}) {
     <CapabilityHeader locale={locale} overlay/>
     <main id="main-content">
       <CapabilityHero locale={locale}/>
-      {!isBlockHidden("home.decade")&&<section className="vs-decade" id="decade"><p className="vs-eyebrow">{tx(decade.eyebrow)}</p><h2>{tx(decade.title)}</h2><p className="vs-decade-sub">{tx(decade.sub)}</p><Link className="vs-text-link" href={`${p}/projects`}>{tx(decade.link)}<ArrowRight size={20}/></Link></section>}
+      {!isBlockHidden("home.decade")&&<section className="vs-decade" id="decade"><p className="vs-eyebrow">{tx(decade.eyebrow)}</p><h2>{tx(decade.title)}</h2>{tx(decade.sub)?<p className="vs-decade-sub">{tx(decade.sub)}</p>:null}<Link className="vs-text-link" href={`${p}/projects`}>{tx(decade.link)}<ArrowRight size={20}/></Link></section>}
       {!isBlockHidden("home.proof")&&<section className="vs-proof" id="proof" aria-label={ar?"ما بُني بالفعل":"What is already built"}><h2>{tx(proof.heading)}</h2><div className="vs-proof-grid">{proof.items.map((it,i)=><div className="vs-proof-item" key={i}><span className="vs-proof-value" dir="ltr">{it.value}</span><p>{tx(it.label)}</p></div>)}</div></section>}
       {!isBlockHidden("home.explainer")&&<InstitutionExplainer locale={locale}/>}
       {!isBlockHidden("home.vision")&&<section className="vs-editorial" id="vision">
