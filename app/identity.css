@@ -94,3 +94,14 @@
  .vs-piece-card dl div{grid-template-columns:1fr}
  .vs-closing .vs-button{width:100%;justify-content:center}
 }
+
+/* الموبايل: اللوجو والزر والقائمة في سطر واحد، والغلاف ينزل تحت الشريط */
+@media (max-width:760px){
+ .vs-expanded-header .vs-nav-wrap{flex-wrap:nowrap;gap:.5rem}
+ .vs-expanded-header .vs-logo{flex:0 1 7.2rem;min-width:6rem}
+ .vs-expanded-header .vs-start-nav{margin-inline-start:auto;font-size:.68rem;padding:.6rem .55rem;white-space:normal;text-align:center;line-height:1.25;max-width:9.5rem}
+ .vs-expanded-header .vs-menu-button{padding:.55rem}
+ .vs-expanded-header .vs-menu-button span{display:none}
+ .vs-identity-hero .vs-hero-copy{padding:9.5rem 1.5rem 5rem}
+}
+@media (max-width:380px){.vs-expanded-header .vs-logo{flex-basis:6rem}.vs-expanded-header .vs-start-nav{max-width:8rem;font-size:.64rem}}
