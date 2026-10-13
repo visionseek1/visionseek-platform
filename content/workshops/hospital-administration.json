@@ -1,40 +1,4 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "An appointment message",
-        "ar": "رسالة موعد"
-      },
-      "body": {
-        "en": "Time, place, what to bring, and who to call if the day changes. No medical advice inside it.",
-        "ar": "الوقت والمكان وماذا يُحضر، ومن يُتصل به إن تغيّر اليوم. بلا نصيحة طبية داخلها."
-      }
-    },
-    {
-      "title": {
-        "en": "A department note",
-        "ar": "مذكرة قسم"
-      },
-      "body": {
-        "en": "What was agreed in the administrative meeting, in language the next shift can use.",
-        "ar": "ما اتُفق عليه في الاجتماع الإداري، بلغة تستطيع النوبة التالية استعمالها."
-      }
-    },
-    {
-      "title": {
-        "en": "A family question",
-        "ar": "سؤال أهل"
-      },
-      "body": {
-        "en": "A recurring non-clinical question — visiting hours, a document, a queue — answered once, clearly, and checked before it is sent.",
-        "ar": "سؤال غير سريري يتكرر: مواعيد الزيارة، أو مستند، أو دور الانتظار. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "Administration only. The masterclass does not diagnose, prescribe, interpret a result, or replace a clinician.",
-    "ar": "الإدارة فقط. الماستركلاس لا يشخّص، ولا يصف، ولا يفسّر نتيجة، ولا يحل محل طبيب."
-  },
   "position": 5,
   "slug": "hospital-administration",
   "kind": "institution",
@@ -44,101 +8,272 @@
     "staff"
   ],
   "outcome": {
-    "en": "Appointment messages, internal notes, and the paper behind a meeting move faster, while the clinical decision stays with the clinician.",
-    "ar": "رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع تتحرك أسرع، والقرار السريري يبقى عند الطبيب."
+    "en": "Give your doctors' time back from the screen to the patient.",
+    "ar": "أعِد وقت أطبائك من الشاشة إلى المريض."
   },
   "summary": {
-    "en": "For the administrative floor of a hospital. Not for diagnosis, prescription, or any decision that belongs to a clinician.",
-    "ar": "للطابق الإداري في المستشفى. ليست للتشخيص، ولا للوصفة، ولا لأي قرار يملكه الطبيب."
+    "en": "For every hour a clinic doctor spends with a patient, nearly two more go to records and desk work, and leading hospitals have started taking that time back. Dr. Ahmed Abdelalim studies your hospital's administration, chooses with you what fits from the world's experience in appointments, documentation and coordination, then teaches your team to carry it on. Clinical decisions stay with the doctor.",
+    "ar": "مقابل كل ساعة يقضيها طبيب العيادة مع المريض، تذهب ساعتان تقريبًا إلى السجلات والأعمال المكتبية، والمستشفيات الرائدة بدأت تستعيد هذا الوقت. يدرس د. أحمد عبدالعليم إدارة مستشفاك، ويختار معك من تجارب العالم ما يناسبها في المواعيد والتوثيق والتنسيق، ثم يعلّم فريقك كيف يمضي فيه بنفسه. والقرار السريري يبقى للطبيب."
   },
+  "pace": {
+    "title": {
+      "en": "What a hospital loses when its doctors' time goes to paperwork",
+      "ar": "ما يخسره المستشفى حين يذهب وقت أطبائه إلى الورق"
+    },
+    "consequence": {
+      "en": "The waiting patient doesn't see the screen; they see a doctor with no time for them.",
+      "ar": "والمريض الذي ينتظر لا يرى الشاشة؛ يرى طبيبًا لا يجد وقتًا له."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "2 hours for every 1",
+          "ar": "ساعتان مقابل كل ساعة"
+        },
+        "title": {
+          "en": "Doctors spend more time on screens than with patients",
+          "ar": "الطبيب مع الشاشة أكثر مما هو مع المريض"
+        },
+        "body": {
+          "en": "A study in the Annals of Internal Medicine that followed clinic doctors in four specialties found they spent only 27% of their time face to face with patients and 49.2% on electronic records and desk work: nearly two extra hours for every hour with a patient.",
+          "ar": "في دراسة نشرتها «حوليات الطب الباطني» تتبّعت أطباء العيادات في أربعة تخصصات: 27% فقط من وقتهم مع المرضى وجهًا لوجه، و49.2% على السجل الإلكتروني والأعمال المكتبية، أي نحو ساعتين إضافيتين مقابل كل ساعة مع المريض."
+        },
+        "lesson": {
+          "en": "The most expensive time in your hospital goes to paperwork.",
+          "ar": "أغلى وقت في مستشفاك يذهب إلى الورق."
+        },
+        "source": {
+          "title": "Sinsky et al. · Allocation of Physician Time in Ambulatory Practice · Annals of Internal Medicine · 6 September 2016",
+          "url": "https://psnet.ahrq.gov/issue/allocation-physician-time-ambulatory-practice-time-and-motion-study-four-specialties"
+        }
+      },
+      {
+        "figure": {
+          "en": "£1.2 billion",
+          "ar": "1.2 مليار جنيه إسترليني"
+        },
+        "title": {
+          "en": "Empty appointments the hospital pays for",
+          "ar": "مواعيد فارغة يدفع ثمنها المستشفى"
+        },
+        "body": {
+          "en": "In England, patients missed 8 million of 124.5 million outpatient appointments (6.4%); NHS England puts the cost at about £1.2 billion a year.",
+          "ar": "في إنجلترا، لم يحضر المرضى 8 ملايين موعد من أصل 124.5 مليون موعد في العيادات الخارجية (6.4%)، وتقدّر هيئة الخدمات الصحية كلفتها بنحو 1.2 مليار جنيه إسترليني في السنة."
+        },
+        "lesson": {
+          "en": "An empty slot is a doctor ready and another patient who was waiting.",
+          "ar": "الموعد الفارغ طبيب جاهز، ومريض آخر كان ينتظر."
+        },
+        "source": {
+          "title": "NHS England · NHS AI expansion to help tackle missed appointments · March 2024",
+          "url": "https://www.england.nhs.uk/2024/03/nhs-ai-expansion-to-help-tackle-missed-appointments-and-improve-waiting-times/"
+        }
+      }
+    ]
+  },
+  "shiftsTitle": {
+    "en": "What a hospital gains when it takes its time back",
+    "ar": "ما يكسبه المستشفى حين يستعيد وقته"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "20.8% → 10.3%",
+        "ar": "من 20.8% إلى 10.3%"
+      },
+      "title": {
+        "en": "UAE: missed appointments halved",
+        "ar": "الإمارات: المواعيد الفائتة نزلت إلى النصف"
+      },
+      "body": {
+        "en": "In Emirates Health Services' primary care centres, the share of appointments patients missed fell from 20.82% to 10.25% after AI and real-time analytics were introduced, according to a peer-reviewed study of 135,393 appointments.",
+        "ar": "في مراكز الرعاية الأولية التابعة لمؤسسة الإمارات للخدمات الصحية، نزلت نسبة المواعيد التي لا يحضرها المرضى من 20.82% إلى 10.25% بعد إدخال الذكاء الاصطناعي والتحليلات اللحظية، بحسب دراسة محكّمة على 135,393 موعدًا."
+      },
+      "lesson": {
+        "en": "A regional experience: one appointment in ten went back to a patient who was waiting.",
+        "ar": "تجربة من منطقتنا: موعد من كل عشرة عاد إلى مريض كان ينتظر."
+      },
+      "source": {
+        "title": "JMIR Formative Research · AI for managing no-show appointments in primary health care in the UAE · 6 January 2025",
+        "url": "https://formative.jmir.org/2025/1/e64936"
+      }
+    },
+    {
+      "figure": {
+        "en": "1,794 working days",
+        "ar": "1,794 يوم عمل"
+      },
+      "title": {
+        "en": "Kaiser Permanente: documentation time back to doctors",
+        "ar": "كايزر بيرماننتي: وقت التوثيق عاد إلى الأطباء"
+      },
+      "body": {
+        "en": "7,260 physicians at Kaiser Permanente in the US used an AI documentation tool across more than 2.5 million visits, saving an estimated 15,791 hours of documentation: the equivalent of 1,794 working days.",
+        "ar": "استعمل 7,260 طبيبًا في «كايزر بيرماننتي» الأمريكية أداة توثيق بالذكاء الاصطناعي في أكثر من 2.5 مليون زيارة، فوفّرت عليهم ما يُقدَّر بـ15,791 ساعة من التوثيق، أي ما يعادل 1,794 يوم عمل."
+      },
+      "lesson": {
+        "en": "Time back from writing to the patient, without touching the medical decision.",
+        "ar": "وقت يعود من الكتابة إلى المريض، دون أن يقترب أحد من القرار الطبي."
+      },
+      "source": {
+        "title": "AMA · AI scribes save 15,000 hours and restore the human side of medicine · 12 June 2025",
+        "url": "https://www.ama-assn.org/practice-management/digital-health/ai-scribes-save-15000-hours-and-restore-human-side-medicine"
+      }
+    },
+    {
+      "figure": {
+        "en": "30% fewer",
+        "ar": "أقل 30%"
+      },
+      "title": {
+        "en": "An NHS trust: more patients with the same doctors",
+        "ar": "مستشفى بريطاني: مرضى أكثر بالأطباء أنفسهم"
+      },
+      "body": {
+        "en": "In a six-month pilot at Mid and South Essex NHS Foundation Trust, AI that predicts missed appointments cut non-attendance by 30%, and 1,910 more patients were seen.",
+        "ar": "في تجربة لستة أشهر في مستشفيات «ميد أند ساوث إسكس» البريطانية، خفّض الذكاء الاصطناعي الذي يتنبأ بالمواعيد الفائتة نسبة عدم الحضور 30%، فاستُقبل 1,910 مرضى إضافيين."
+      },
+      "lesson": {
+        "en": "More patients, with the same doctors, on the same days.",
+        "ar": "مرضى أكثر، بالأطباء أنفسهم، وفي الأيام نفسها."
+      },
+      "source": {
+        "title": "NHS England · NHS AI expansion to help tackle missed appointments · March 2024",
+        "url": "https://www.england.nhs.uk/2024/03/nhs-ai-expansion-to-help-tackle-missed-appointments-and-improve-waiting-times/"
+      }
+    }
+  ],
   "audienceRole": {
-    "en": "Managers and staff in appointments, medical records administration, and department coordination.",
-    "ar": "مديرو وموظفو المواعيد، وإدارة السجلات، وتنسيق الأقسام."
+    "en": "For the leadership of a hospital or health authority and the heads of appointments, records and coordination, with the members of their team they choose.",
+    "ar": "لقيادة المستشفى أو الهيئة الصحية ومديري المواعيد والسجلات والتنسيق، ومعهم من يختارونه من فريقهم."
   },
   "audienceInstitution": {
-    "en": "A hospital. The material is administrative. If a sentence would change a patient's care, it does not leave the room without the clinician who owns it.",
-    "ar": "مستشفى. المادة إدارية. إن كانت الجملة ستغيّر رعاية مريض فهي لا تخرج إلا مع الطبيب الذي يملكها."
+    "en": "Any hospital or health authority, public or private. We start from what you have already built.",
+    "ar": "أي مستشفى أو هيئة صحية، حكومية كانت أو خاصة. نبدأ مما بنيتموه بالفعل."
   },
   "whyProblem": {
-    "en": "Patients wait on a sentence the administration already knows. Staff retype the same appointment, the same instruction, the same internal update.",
-    "ar": "المريض ينتظر جملة تعرفها الإدارة أصلًا. والموظف يعيد كتابة الموعد نفسه والتعليم نفسه والتحديث الداخلي نفسه."
+    "en": "What worked at Kaiser or the NHS was built on their systems, laws and way of working. What fits your hospital has to be chosen to its measure, not decided by a tool vendor.",
+    "ar": "ما نجح في «كايزر» أو هيئة الخدمات الصحية البريطانية بُني على أنظمتهم وقوانينهم وطريقة عمل فرقهم. ما يناسب مستشفاك يُختار على مقاسه، ولا يقرره بائع أداة."
   },
   "whyEvidence": {
-    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This masterclass follows that line on the administrative floor. It does not diagnose and it does not prescribe.",
-    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الماستركلاس يمشي على هذا الخط في الطابق الإداري. لا تشخّص ولا تصف دواء."
+    "en": "In a BCG survey of 11,749 workers in 14 markets, including the UAE and Saudi Arabia (June 2026), a clear strategy lifted measurable business impact by 25 percentage points; better tools alone moved it by about 5.",
+    "ar": "وفي دراسة لـ«BCG» على 11,749 موظفًا في 14 سوقًا، منها الإمارات والسعودية (يونيو 2026): الوضوح في الاستراتيجية رفع الأثر الملموس على العمل 25 نقطة مئوية، والأدوات الأفضل وحدها رفعته نحو 5 نقاط فقط."
   },
   "source": {
-    "title": "WHO · Ethics and governance of artificial intelligence for health · 28 June 2021",
-    "url": "https://www.who.int/publications/i/item/9789240029200"
+    "title": "BCG · AI Is Reshaping Jobs Faster Than Companies Are Reshaping Work · 3 June 2026",
+    "url": "https://www.bcg.com/press/3june2026-ai-reshaping-jobs-faster-than-companies-reshaping-work"
   },
   "before": {
-    "en": "Five questions about administrative work. No patient case is used as a clinical example.",
-    "ar": "خمسة أسئلة عن الشغل الإداري. لا تُستخدم حالة مريض كمثال سريري."
+    "en": "Before the session we sit with your leadership to learn where doctors' and staff time goes today, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف أين يذهب وقت الأطباء والموظفين اليوم. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team drafts from its own administrative work. A named person reviews anything a patient or a clinician will read.",
-    "ar": "الفريق يسوّد من شغله الإداري. شخص مسمّى يراجع كل ما سيقرأه مريض أو طبيب."
+    "en": "Dr. Ahmed works with the hospital's leadership and team on appointments, documentation and coordination as they are today, sets out what leading hospitals have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع قيادة المستشفى وفريقها على المواعيد والتوثيق والتنسيق كما هي اليوم، ويضع أمامكم ما وصلت إليه المستشفيات الرائدة، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we measure time returned on those administrative tasks, and which tools staff still open. Clinical outcomes are not what this masterclass claims, because it does not touch them.",
-    "ar": "بعد 30 يومًا نقيس الوقت العائد في المهام الإدارية، وأي أدوات ما زال الموظفون يفتحونها. النتائج السريرية ليست ما يدّعيه هذا الماستركلاس، لأنه لا يمسّها."
+    "en": "Your hospital leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج إدارة مستشفاك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which appointment message is retyped because the template never quite fits?",
-      "ar": "أي رسالة موعد تُعاد كتابتها لأن النموذج لا يطابق الحالة؟"
+      "en": "How many hours do your doctors spend on records for every hour with a patient?",
+      "ar": "كم ساعة يقضيها أطباؤك على السجلات مقابل كل ساعة مع المريض؟"
     },
     {
-      "en": "Which internal update is copied between wards by hand?",
-      "ar": "أي تحديث داخلي يُنسخ بين الأقسام يدويًا؟"
+      "en": "How many appointments are lost each week because the patient didn't come?",
+      "ar": "كم موعدًا يضيع في الأسبوع لأن المريض لم يحضر؟"
     },
     {
-      "en": "Which meeting note arrives too late to be useful?",
-      "ar": "أي محضر اجتماع يصل متأخرًا عن فائدته؟"
+      "en": "Which message do your staff write to patients from scratch every day?",
+      "ar": "ما الرسالة التي يكتبها موظفوك للمرضى كل يوم من جديد؟"
     },
     {
-      "en": "Where does a coordinator answer the same family question all day?",
-      "ar": "أين يجيب المنسق سؤال الأهل نفسه طوال اليوم؟"
+      "en": "Which hospital in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي مستشفى في العالم تتابعونه، وتتمنون أن تبدأوا من حيث وصل؟"
     },
     {
-      "en": "Which sentence must a clinician still own before it reaches a patient?",
-      "ar": "أي جملة يجب أن يملكها طبيب قبل أن تصل إلى مريض؟"
+      "en": "What will never be handed to a tool in your hospital, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في مستشفاكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A clearer appointment message, reviewed by the person who sends it today.",
-      "ar": "رسالة موعد أوضح، يراجعها من يرسلها اليوم."
+      "en": "Specific hours that could move from the screen back to the patient, and where to start.",
+      "ar": "ساعات محددة يمكن أن تعود من الشاشة إلى المريض، ومن أين تبدأ."
     },
     {
-      "en": "A one-page internal note from a real department meeting.",
-      "ar": "مذكرة داخلية من صفحة، خرجت من اجتماع قسم حقيقي."
+      "en": "A first step to cut missed appointments, chosen to fit your hospital.",
+      "ar": "خطوة أولى لتقليل المواعيد الفائتة، مختارة على مقاس مستشفاك."
     },
     {
-      "en": "A written boundary: the tool may draft administration, and it may not make a clinical call.",
-      "ar": "حد مكتوب: الأداة تسوّد الإدارة، ولا تتخذ قرارًا سريريًا."
+      "en": "A clear rule: what goes to a tool in administration, and what stays the doctor's decision.",
+      "ar": "قاعدة واضحة لما يُسلَّم للأداة في الإدارة، وما يبقى قرار الطبيب."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Administration only: appointments, documentation, coordination and communication with patients. Diagnosis, treatment and every clinical decision stay with the doctor.",
+    "ar": "الإدارة فقط: المواعيد، والتوثيق، والتنسيق، والتواصل مع المرضى. التشخيص والعلاج وكل قرار سريري يبقى للطبيب."
+  },
   "faq": [
     {
       "q": {
-        "en": "Will this touch patient care decisions?",
-        "ar": "هل يمس الماستركلاس قرارات الرعاية؟"
+        "en": "Does the masterclass touch medical decisions?",
+        "ar": "هل يتدخل الماستركلاس في القرار الطبي؟"
       },
       "a": {
-        "en": "No. If a sentence would change care, it belongs to the clinician. The session stays on administration.",
-        "ar": "لا. إن كانت الجملة ستغيّر الرعاية فهي للطبيب. الجلسة تبقى في الإدارة."
+        "en": "No. It works on administration only. Diagnosis, treatment and every clinical decision stay with the doctor alone.",
+        "ar": "لا. يعمل على الإدارة فقط. والتشخيص والعلاج وكل قرار سريري يبقى للطبيب وحده."
       }
     },
     {
       "q": {
-        "en": "Do you store patient files?",
-        "ar": "هل تحفظون ملفات مرضى؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "No. The website takes nothing. A session uses only what the hospital agrees to bring, and clinical records are not the material.",
-        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق المستشفى على إحضاره، والسجل السريري ليس المادة."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for any patient data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب أي بيانات عن المرضى."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your doctors are busy, and much of it is paperwork",
+      "ar": "أطباؤك مشغولون، وجزء كبير من انشغالهم ورق"
+    },
+    "whyNow": {
+      "en": "What worked in the world's hospitals doesn't transfer as it is",
+      "ar": "ما نجح في مستشفيات العالم لا يُنقل كما هو"
+    },
+    "how": {
+      "en": "A masterclass built on your hospital",
+      "ar": "ماستركلاس يُبنى على مستشفاك"
+    },
+    "before": {
+      "en": "We learn your hospital first",
+      "ar": "نفهم مستشفاك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading hospitals",
+      "ar": "نختار معكم من تجارب المستشفيات الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your hospital",
+      "ar": "ما يبقى في مستشفاك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your hospital",
+    "ar": "تحدّث مع د. أحمد عن مستشفاك"
+  }
 }

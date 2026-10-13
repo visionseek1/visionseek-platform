@@ -39,9 +39,9 @@ test('fourteen masterclass files, and no line says it is a trial or not yet held
   }
 });
 
-test('the seven new sector pages stay off the site until they are rewritten', () => {
+test('every masterclass page is rewritten and live; a future draft still stays off the site', () => {
   const drafts = workshops.filter(item => item.draft).map(item => item.slug).sort();
-  assert.deepEqual(drafts, ['customs-ports', 'education-schools', 'energy-utilities', 'finance-tax', 'justice-courts', 'labour-civil-service', 'municipalities']);
+  assert.deepEqual(drafts, []);
   const loader = readFileSync(join(process.cwd(), 'lib/institution/workshops.ts'), 'utf8');
   assert.match(loader, /\.filter\(item => !item\.draft\)/, 'the loader drops drafts');
 });
@@ -114,7 +114,10 @@ test('masterclass: the teacher leads, the introduction video has a slot, and the
 
 test('every sector page that shows shifts names them in its own words and sources each figure', () => {
   const sectors = ['customs-ports', 'finance-tax', 'justice-courts', 'education-schools', 'energy-utilities', 'municipalities', 'labour-civil-service'];
-  for (const slug of sectors) assert.ok(workshops.find(w => w.slug === slug)?.shifts?.length >= 3, `${slug} needs at least three documented shifts`);
+  for (const slug of sectors) {
+    const page = workshops.find(w => w.slug === slug);
+    assert.ok((page?.shifts?.length ?? 0) + (page?.pace?.cards?.length ?? 0) >= 3, `${slug} needs at least three documented figures, losses and gains together`);
+  }
   const titles = new Set();
   for (const item of workshops.filter(w => w.shifts)) {
     assert.ok(item.shiftsTitle?.ar && item.shiftsTitle?.en, `${item.slug}: shiftsTitle`);
@@ -162,4 +165,30 @@ test('the «لك أنت» page speaks to the leader: its own headings, how fast 
   assert.match(page.whyEvidence.ar, /سبتمبر 2026/);
   const view = readFileSync(join(process.cwd(), 'components/institution/workshops-view.tsx'), 'utf8');
   assert.match(view, /workshop\.headings\?\.\[key\]/, 'the page reads its own headings');
+});
+
+test('every institution page speaks to the leader: what it loses by waiting, what it gains by moving, and what each figure means', () => {
+  // Dr. Ahmed (9–10 Oct 2026): leaders first, gain and loss on every figure, independence, own headings.
+  const generic = ['لمن', 'لماذا الآن', 'كيف تمشي', 'قبلها', 'جواها', 'بعدها', 'بماذا تخرج', 'أسئلة قصيرة'];
+  const pageTitles = new Set();
+  for (const page of workshops.filter(w => w.kind === 'institution')) {
+    assert.ok(page.pace?.title?.ar && page.pace?.consequence?.ar, `${page.slug}: the loss band`);
+    assert.equal(pageTitles.has(page.pace.title.ar), false, `${page.slug}: loss heading repeats another page's`);
+    pageTitles.add(page.pace.title.ar);
+    assert.ok(page.pace.cards.length >= 1 && page.shifts.length >= 2, `${page.slug}: losses and gains`);
+    for (const c of [...page.pace.cards, ...page.shifts]) {
+      assert.ok(c.lesson?.ar && c.lesson?.en, `${page.slug}: ${c.title.en} needs its «ماذا يعني لك» line`);
+      assert.match(c.source.url, /^https:\/\//, `${page.slug}: ${c.title.en} source`);
+      assert.match(c.source.title, /\d{4}/, `${page.slug}: ${c.title.en} source year`);
+    }
+    if (page.pace.quote) assert.match(page.pace.quoteSource.title, /\d{4}/, `${page.slug}: quote source year`);
+    for (const key of ['forWhom', 'whyNow', 'how', 'before', 'during', 'after', 'leavesWith', 'faq']) {
+      assert.ok(page.headings?.[key]?.ar && page.headings?.[key]?.en, `${page.slug}: heading ${key}`);
+      assert.equal(generic.includes(page.headings[key].ar), false, `${page.slug}: heading ${key} is the generic one`);
+    }
+    assert.ok(page.cta?.ar && page.cta?.en, `${page.slug}: its own button`);
+    assert.match(page.audienceRole.ar, /لقيادة|لقيادات|لصاحب|لرئيس/, `${page.slug}: speaks to the leadership`);
+    assert.match(page.after.ar, /لا تحتاجنا/, `${page.slug}: we teach, we don't tie them to us`);
+    assert.equal(page.examples.length, 0, `${page.slug}: no staff-level examples`);
+  }
 });

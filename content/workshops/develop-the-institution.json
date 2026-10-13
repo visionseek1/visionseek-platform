@@ -1,9 +1,4 @@
 {
-  "examples": [],
-  "boundary": {
-    "en": "",
-    "ar": ""
-  },
   "position": 7,
   "slug": "develop-the-institution",
   "kind": "institution",
@@ -12,101 +7,298 @@
     "senior"
   ],
   "outcome": {
-    "en": "You see what the institution can already do with the people and money it has, and what it is not yet looking at.",
-    "ar": "ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم، وما لا تنظر إليه بعد."
+    "en": "Take your institution to where the world's best already are, without starting from scratch.",
+    "ar": "انقل مؤسستك إلى حيث وصلت أفضل مؤسسات العالم، ولا تبدأ من الصفر."
   },
   "summary": {
-    "en": "For the senior table. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building.",
-    "ar": "لمائدة القيادة العليا. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى."
+    "en": "What the leading institutions learned about AI is published, with the figures to prove it. What fits your institution is in no report. Dr. Ahmed Abdelalim studies your institution from the inside, chooses with you and your leadership what to take from the world's experience and where to begin, then teaches your team to carry it forward on its own.",
+    "ar": "ما تعلّمته المؤسسات الرائدة في الذكاء الاصطناعي منشور، وأرقامه معلنة. أما ما يناسب مؤسستك أنت منه، فلن تجده في أي تقرير. يدرس د. أحمد عبدالعليم مؤسستك من الداخل، ويختار معك ومع قيادتك ما تأخذونه من تجارب العالم ومن أين تبدأون، ثم يعلّم فريقك كيف يمضي فيه بنفسه."
   },
+  "pace": {
+    "title": {
+      "en": "What an institution pays when it buys the tool before it understands it",
+      "ar": "ما تدفعه المؤسسة حين تشتري الأداة قبل أن تفهمها"
+    },
+    "quote": {
+      "en": "Over the two years, ministers, directors-general and all federal entities will be evaluated on their ability to keep pace with this transformation.",
+      "ar": "وسيكون تقييم الوزراء ومدراء العموم وكافة الجهات الاتحادية خلال العامين مبني على قدرتهم على مواكبة هذا التحول"
+    },
+    "quoteBy": {
+      "en": "Sheikh Mohammed bin Rashid Al Maktoum, Vice President and Prime Minister of the UAE and Ruler of Dubai, announcing the government's move to AI within two years · April 2026",
+      "ar": "الشيخ محمد بن راشد آل مكتوم، نائب رئيس دولة الإمارات رئيس مجلس الوزراء حاكم دبي، معلنًا تحويل العمل الحكومي إلى الذكاء الاصطناعي خلال عامين · أبريل 2026"
+    },
+    "quoteSource": {
+      "title": "Emarat Al Youm · محمد بن راشد يعلن منظومة حكومية جديدة للتحول إلى الذكاء الاصطناعي ذاتي التنفيذ خلال عامين · 23 April 2026",
+      "url": "https://www.emaratalyoum.com/local-section/other/2026-04-23-1.2038827"
+    },
+    "consequence": {
+      "en": "Leaders who understand it today lead their institutions. Those who wait will be asked tomorrow what their institution missed.",
+      "ar": "القيادة التي تفهم اليوم تقود مؤسستها، والتي تنتظر ستُسأل غدًا عمّا فات مؤسستها."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "21%",
+          "ar": "21%"
+        },
+        "title": {
+          "en": "Government bodies moving without a plan",
+          "ar": "جهات حكومية تتحرك بلا خطة"
+        },
+        "body": {
+          "en": "The UK National Audit Office surveyed 87 government bodies: only 21% had an AI strategy, and 70% named the lack of people with AI skills as a barrier.",
+          "ar": "راجع مكتب التدقيق الوطني البريطاني 87 جهة حكومية: 21% فقط لديها استراتيجية للذكاء الاصطناعي، و70% قالت إن نقص من يملكون مهاراته هو العائق."
+        },
+        "lesson": {
+          "en": "A tool can be bought in a day; understanding cannot. Buy without a plan or people who understand it, and you buy a burden, not a capability.",
+          "ar": "الأداة تُشترى في يوم، والفهم لا يُشترى. ومن يشتري بلا خطة ولا أهل يفهمونها، يشتري عبئًا لا قدرة."
+        },
+        "source": {
+          "title": "UK National Audit Office · Use of artificial intelligence in government · 15 March 2024",
+          "url": "https://www.nao.org.uk/wp-content/uploads/2024/03/use-of-artificial-intelligence-in-government-summary.pdf"
+        }
+      },
+      {
+        "figure": {
+          "en": "57%",
+          "ar": "57%"
+        },
+        "title": {
+          "en": "Your people use it, and hide it",
+          "ar": "موظفوك يستعملونه… ويخفون ذلك"
+        },
+        "body": {
+          "en": "In a University of Melbourne and KPMG study of more than 48,000 people in 47 countries, only 40% said their workplace had a policy on generative AI; 57% hide their use of it, and 56% have made mistakes at work because of it.",
+          "ar": "في دراسة لجامعة ملبورن و«KPMG» شملت أكثر من 48 ألف شخص في 47 دولة: 40% فقط قالوا إن في عملهم سياسة لاستخدام الذكاء الاصطناعي التوليدي، و57% يخفون استخدامهم له، و56% وقعوا في أخطاء في عملهم بسببه."
+        },
+        "lesson": {
+          "en": "Leaders can't steer what they can't see, and a mistake made in the shadows surfaces in public one day.",
+          "ar": "ما لا تراه القيادة لا تستطيع أن تقوده، والخطأ الذي يقع في الظل يظهر يومًا في العلن."
+        },
+        "source": {
+          "title": "Melbourne Business School · Global study reveals trust of AI remains a critical challenge · 29 April 2025",
+          "url": "https://mbs.edu/news/Global-study-reveals-trust-of-AI-remains-a-critical-challenge"
+        }
+      }
+    ]
+  },
+  "shiftsTitle": {
+    "en": "What an institution gains when its leaders understand",
+    "ar": "ما تكسبه المؤسسة حين يفهم قادتها"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "Over 30% cheaper",
+        "ar": "أقل كلفة بأكثر من 30%"
+      },
+      "title": {
+        "en": "Abu Dhabi: better service at lower cost",
+        "ar": "أبوظبي: خدمة أفضل بكلفة أقل"
+      },
+      "body": {
+        "en": "From 2022 to 2025, the cost of delivering Abu Dhabi's government services fell by more than 30% while satisfaction rose from 78% to 92%, according to the chairman of the Department of Government Enablement. Its TAMM platform uses an AI agent to complete many requests end to end.",
+        "ar": "من 2022 إلى 2025، انخفضت كلفة تقديم الخدمات الحكومية في أبوظبي بأكثر من 30%، وارتفع رضا المتعاملين من 78% إلى 92%، بحسب رئيس دائرة التمكين الحكومي. ومنصة «تم» تستعمل وكيل ذكاء اصطناعي ينجز كثيرًا من الطلبات من أولها إلى آخرها."
+      },
+      "lesson": {
+        "en": "Better service used to mean higher cost. Not any more, for those who understand.",
+        "ar": "كانت الخدمة الأفضل تعني كلفة أعلى. لم تعد كذلك لمن فهم."
+      },
+      "source": {
+        "title": "Khaleej Times · Abu Dhabi government service costs fall by 30% as satisfaction hits 92% · 6 October 2026",
+        "url": "https://www.khaleejtimes.com/uae/abu-dhabi-govt-service-costs-fall-satisfaction-rises-3-years?amp=1"
+      }
+    },
+    {
+      "figure": {
+        "en": "4 hours → 1",
+        "ar": "من 4 ساعات إلى ساعة"
+      },
+      "title": {
+        "en": "Seoul: a report in an hour instead of four",
+        "ar": "سيول: التقرير في ساعة بدل أربع"
+      },
+      "body": {
+        "en": "At Seoul Metropolitan Government, 63% of head-office staff now use generative AI in their daily work. Writing a report fell from 3–4 hours to about one, and research from 1–3 hours to about half an hour.",
+        "ar": "في حكومة مدينة سيول، صار 63% من موظفي المقر يستعملون الذكاء الاصطناعي التوليدي في عملهم اليومي، فنزل وقت كتابة التقرير من 3–4 ساعات إلى نحو ساعة، والبحث عن المعلومة من 1–3 ساعات إلى نحو نصف ساعة."
+      },
+      "lesson": {
+        "en": "Hours that move from drafting to thinking and deciding, in every report your institution writes.",
+        "ar": "ساعات تعود من الصياغة إلى التفكير والقرار، في كل تقرير يُكتب في مؤسستك."
+      },
+      "source": {
+        "title": "Seoul Metropolitan Government · 직원 63% 생성형 AI 활용 · 21 January 2026",
+        "url": "https://news.seoul.go.kr/gov/archives/574496"
+      }
+    },
+    {
+      "figure": {
+        "en": "76,000 hours",
+        "ar": "76 ألف ساعة"
+      },
+      "title": {
+        "en": "Saudi Ministry of Energy: 76,000 working hours a year",
+        "ar": "وزارة الطاقة السعودية: 76 ألف ساعة عمل في السنة"
+      },
+      "body": {
+        "en": "Saudi Arabia's Ministry of Energy saves 76,000 working hours a year through AI applications and has raised performance efficiency by 30%, according to the Digital Government Authority's report.",
+        "ar": "وفّرت وزارة الطاقة السعودية 76 ألف ساعة عمل سنويًا عبر تطبيقات الذكاء الاصطناعي، ورفعت كفاءة الأداء 30%، بحسب تقرير هيئة الحكومة الرقمية."
+      },
+      "lesson": {
+        "en": "A regional experience, in a large ministry, with published figures. What one ministry did, your institution can do.",
+        "ar": "تجربة من منطقتنا، في وزارة كبيرة، بأرقام معلنة. وما فعلته وزارة، تستطيعه مؤسستك."
+      },
+      "source": {
+        "title": "Okaz · citing the Digital Government Authority report · 10 November 2025",
+        "url": "https://www.okaz.com.sa/ampArticle/2221448"
+      }
+    }
+  ],
   "audienceRole": {
-    "en": "Senior leadership: the people who can say yes to a change in how the institution works.",
-    "ar": "القيادة العليا: من يستطيع أن يقول نعم لتغيير طريقة عمل المؤسسة."
+    "en": "This masterclass is for the institution's leadership, ministers, heads of authorities, chief executives and owners, with the members of their team they choose to bring.",
+    "ar": "هذا الماستركلاس لقيادة المؤسسة: الوزير، ورئيس الهيئة، والرئيس التنفيذي، وصاحب الشركة، ومعهم من يختارونه من فريقهم."
   },
   "audienceInstitution": {
-    "en": "One institution, looked at as a whole. Not a single team, and not a tool demonstration.",
-    "ar": "مؤسسة واحدة، تُنظر إليها كاملة. ليست فريقًا واحدًا، وليست عرض أداة."
+    "en": "Any institution, public or private. We start from what yours has already built, not from scratch.",
+    "ar": "أي مؤسسة، حكومية كانت أو خاصة. نبدأ مما بنته مؤسستك بالفعل، لا من الصفر."
   },
   "whyProblem": {
-    "en": "Most of the effort is treated as a technology purchase. The institution then discovers that the people and the way of working were the larger part, and that it cannot see the next capability from inside the building alone.",
-    "ar": "أكثر الجهد يُعامل كشراء تقنية. ثم تكتشف المؤسسة أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
+    "en": "Tools can be bought and reports can be read. What nobody will do is sit with your leadership and say which of the world's experiences fits your institution's law, systems and way of working, and which doesn't. No tool vendor will tell you that.",
+    "ar": "الأداة تُشترى، والتقرير يُقرأ. لكن لا أحد سيجلس مع قيادتك ليقول لها أي تجارب العالم يناسب قانون مؤسستك وأنظمتها وطريقة عمل فريقها، وأيها لا يناسب. ولن يقوله بائع أداة."
   },
   "whyEvidence": {
-    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards.",
-    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين."
+    "en": "In a BCG survey of 11,749 workers in 14 markets, including the UAE, Saudi Arabia, Kuwait and Qatar (June 2026), a clear strategy lifted measurable business impact by 25 percentage points; better tools alone moved it by about 5. Understanding does five times what the tool does.",
+    "ar": "وفي دراسة لـ«BCG» على 11,749 موظفًا في 14 سوقًا، منها الإمارات والسعودية والكويت وقطر (يونيو 2026): الوضوح في الاستراتيجية رفع الأثر الملموس على العمل 25 نقطة مئوية، والأدوات الأفضل وحدها رفعته نحو 5 نقاط فقط. الفهم يصنع خمسة أضعاف ما تصنعه الأداة."
   },
   "source": {
-    "title": "BCG · AI Transformation Is a Workforce Transformation · 4 February 2026",
-    "url": "https://www.bcg.com/publications/2026/ai-transformation-is-a-workforce-transformation"
+    "title": "BCG · AI Is Reshaping Jobs Faster Than Companies Are Reshaping Work · 3 June 2026",
+    "url": "https://www.bcg.com/press/3june2026-ai-reshaping-jobs-faster-than-companies-reshaping-work"
   },
   "before": {
-    "en": "Five questions about what the institution can carry now, and what it keeps missing.",
-    "ar": "خمسة أسئلة عما تستطيع المؤسسة حمله الآن، وعما يفوتها."
+    "en": "Before the session we sit with your leadership to learn what the institution has built and where it wants to go, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف ما بنته المؤسسة، وإلى أين تريد أن تصل. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "We map the work that current people and current money can already change. Then we name what is not visible from inside: a capability, an opportunity, or a route to funding. No outside party is contacted in the session, and none is promised.",
-    "ar": "نرسم الشغل الذي يستطيع الناس الحاليون والمال الحالي تغييره. ثم نسمّي ما لا يُرى من الداخل: قدرة، أو فرصة، أو طريق تمويل. لا تُخاطَب جهة خارجية في الجلسة، ولا يُوعد بواحدة."
+    "en": "Dr. Ahmed works with your leadership and team on the institution's real work, sets out what comparable institutions around the world have achieved, and you choose with him what to take, what to leave, and where to start.",
+    "ar": "يجلس د. أحمد مع قيادتك وفريقها على عمل المؤسسة الحقيقي، ويضع أمامكم ما وصلت إليه مثيلاتها في العالم، ثم تختارون معه ما تأخذونه وما تتركونه، ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we look at what the institution actually started with its own resources, and which of the outside items it chose to pursue. Pursuit is not a deal. No partner is named because no partner exists.",
-    "ar": "بعد 30 يومًا ننظر فيما بدأته المؤسسة فعلًا بمواردها، وأي البنود الخارجية اختارت أن تسعى إليها. السعي ليس اتفاقًا. لا تُذكر جهة لأن لا جهة قائمة."
+    "en": "The institution leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج المؤسسة بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "What can your teams finish this month without a new budget?",
-      "ar": "ما الذي تستطيع فرقك إنهاءه هذا الشهر من غير ميزانية جديدة؟"
+      "en": "What does your institution still do the way it did ten years ago?",
+      "ar": "ما الذي ما زالت مؤسستك تنجزه كما كانت قبل عشر سنين؟"
     },
     {
-      "en": "Which repeated procedure still eats the leadership's week?",
-      "ar": "أي إجراء يتكرر وما زال يأكل أسبوع القيادة؟"
+      "en": "Which tools have you bought that are not yet fully used?",
+      "ar": "ماذا اشتريتم من أدوات، ولم يُستثمر كله بعد؟"
     },
     {
-      "en": "Which capability do you need and do not have inside the house?",
-      "ar": "أي قدرة تحتاجها وليست داخل البيت؟"
+      "en": "Which institution in the world do you watch, and wish you could start from where it is now?",
+      "ar": "أي مؤسسة في العالم تتابعونها، وتتمنون أن تبدأوا من حيث وصلت؟"
     },
     {
-      "en": "Which outside opportunity have you heard of and never examined?",
-      "ar": "أي فرصة خارجية سمعتها ولم تُفحص؟"
+      "en": "Who decides today what is handed to a tool and what stays a human decision?",
+      "ar": "من يقرر اليوم ما يُسلَّم للأداة، وما يبقى قرار إنسان؟"
     },
     {
-      "en": "What, if it is still unseen in ninety days, should be dropped?",
-      "ar": "ما الذي إن بقي غير مرئي بعد تسعين يومًا فالأولى تركه؟"
+      "en": "Where do the people you serve wait longer than they should?",
+      "ar": "أين ينتظر المتعامل معكم أطول مما يجب؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A map of what can be done with the people and money already in the building.",
-      "ar": "خريطة لما يُنجز بالناس والمال الموجودين في المبنى."
+      "en": "A clear picture of where your institution stands among the best in the world: where you are ahead, and where the opening is.",
+      "ar": "صورة واضحة لمكان مؤسستك بين أفضل مثيلاتها في العالم: أين سبقتم، وأين الفرصة."
     },
     {
-      "en": "A short list of what the leadership is not seeing: capability, opportunity, funding route.",
-      "ar": "قائمة قصيرة بما لا تراه القيادة: قدرة، وفرصة، وطريق تمويل."
+      "en": "A first step chosen to fit your institution, not a generic template.",
+      "ar": "خطوة أولى مختارة على مقاس مؤسستك، لا على قالب عام."
     },
     {
-      "en": "A first move that does not wait for an outside party, and a second move that does not pretend one is already there.",
-      "ar": "خطوة أولى لا تنتظر جهة خارجية، وخطوة ثانية لا تدّعي أن الجهة موجودة."
+      "en": "Leaders who know what to ask of the tools, and a team that knows when to trust them and when to check.",
+      "ar": "قيادة تعرف ما تطلبه من الأداة، وفريق يعرف متى يثق بها ومتى يراجعها."
+    },
+    {
+      "en": "A clear rule for what goes to the tool and what stays a human decision.",
+      "ar": "قاعدة واضحة لما يُسلَّم للأداة، وما يبقى قرار إنسان."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "",
+    "ar": ""
+  },
   "faq": [
     {
       "q": {
-        "en": "Do you bring funding or a partner to the first session?",
-        "ar": "هل تحضرون تمويلًا أو شريكًا إلى الجلسة الأولى؟"
+        "en": "We are already well ahead digitally. What does the masterclass add?",
+        "ar": "مؤسستنا متقدمة رقميًا بالفعل. فماذا يضيف الماستركلاس؟"
       },
       "a": {
-        "en": "No. The first work is what you can already do. Outside capability, opportunity, and funding are named as a search, not as a deal.",
-        "ar": "لا. الشغل الأول هو ما تستطيعون فعله أصلًا. القدرة والفرصة والتمويل من الخارج تُسمّى بوصفها بحثًا، لا اتفاقًا."
+        "en": "We start from what you have built, not from scratch. What sets the leading institutions apart today is not the tools they own but how work is organised around them: who questions the data, who reviews what systems suggest, and what is handed to them and what isn't.",
+        "ar": "نبدأ مما بنيتموه، لا من الصفر. والفرق الذي تصنعه المؤسسات الرائدة اليوم ليس في الأدوات التي تملكها، بل في طريقة العمل حولها: من يسأل البيانات، ومن يراجع ما تقترحه الأنظمة، وما الذي يُسلَّم لها وما الذي لا يُسلَّم."
       }
     },
     {
       "q": {
-        "en": "Is the 70% figure your result?",
-        "ar": "هل نسبة الـ70% نتيجتكم؟"
+        "en": "Why not just buy a ready-made tool?",
+        "ar": "لماذا لا نكتفي بشراء أداة جاهزة؟"
       },
       "a": {
-        "en": "No. It is BCG's, from the article linked on this page. We have held no masterclass, so we have no result of our own to show.",
-        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ماستركلاس، فلا نتيجة لنا نعرضها."
+        "en": "Because tools change every year and understanding stays. An institution that understands chooses its tools and replaces them when it wants; one that doesn't stays hostage to whoever sold them.",
+        "ar": "لأن الأداة تتغيّر كل عام، والفهم يبقى. المؤسسة التي تفهم تختار أداتها وتستبدلها متى شاءت، والتي لا تفهم تبقى رهينة لمن باعها."
+      }
+    },
+    {
+      "q": {
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
+      },
+      "a": {
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for real data about individuals.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات حقيقية عن أشخاص."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Offers reach your institution every day, and nobody asks what it needs",
+      "ar": "العروض تصل مؤسستك كل يوم، ولا أحد يسألها ماذا تحتاج"
+    },
+    "whyNow": {
+      "en": "The world's experience doesn't copy across as it is",
+      "ar": "تجارب العالم لا تُنسخ كما هي"
+    },
+    "how": {
+      "en": "A masterclass built on your institution alone",
+      "ar": "ماستركلاس يُبنى على مؤسستك وحدها"
+    },
+    "before": {
+      "en": "We study your institution first",
+      "ar": "ندرس مؤسستك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the world's experience",
+      "ar": "نختار معكم من تجارب العالم"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يكمل بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your institution",
+      "ar": "ما يبقى في مؤسستك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your institution",
+    "ar": "تحدّث مع د. أحمد عن مؤسستك"
+  }
 }
