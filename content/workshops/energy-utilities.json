@@ -1,0 +1,205 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "The monthly performance narrative",
+        "ar": "سرد تقرير الأداء الشهري"
+      },
+      "body": {
+        "en": "From the month's indicator tables (outage frequency and duration, losses, collection, complaints) to a narrative that explains each change and ends with three decisions needed.",
+        "ar": "من جداول مؤشرات الشهر (تكرار الانقطاع ومدته، والفاقد، والتحصيل، والشكاوى) إلى سرد يشرح كل تغيّر وينتهي بثلاثة قرارات مطلوبة."
+      }
+    },
+    {
+      "title": {
+        "en": "A planned-outage notice",
+        "ar": "إخطار انقطاع مخطط"
+      },
+      "body": {
+        "en": "Areas, timing, safety guidance, and a contact channel, in Arabic and English as separate texts, then short versions for messages and social media.",
+        "ar": "المناطق، والتوقيت، وإرشادات السلامة، وقناة التواصل، بالعربية والإنجليزية كنصين مستقلين، ثم نسخ قصيرة للرسائل ووسائل التواصل."
+      }
+    },
+    {
+      "title": {
+        "en": "A maintenance priorities memo",
+        "ar": "مذكرة أولويات الصيانة"
+      },
+      "body": {
+        "en": "Inspection reports, asset age and fault logs for a group of substations become a memo for the planning committee: what to fix first, at what cost, and the risk of deferring.",
+        "ar": "تقارير الفحص وعمر الأصول وسجل الأعطال لمجموعة محطات تصير مذكرة للجنة التخطيط: ماذا نصلح أولًا، وبكم، وما خطر التأجيل."
+      }
+    }
+  ],
+  "boundary": {
+    "en": "No access to control and operations systems, and no operational decision from a tool. Figures come from the team, and an engineer checks them before they leave.",
+    "ar": "لا وصول إلى أنظمة التحكم والتشغيل، ولا قرار تشغيلي من أداة. الأرقام تأتي من الفريق، ويراجعها مهندس قبل أن تخرج."
+  },
+  "position": 12,
+  "slug": "energy-utilities",
+  "draft": true,
+  "kind": "institution",
+  "institution": "energy",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "The monthly performance report says where the decision is, outage notices reach people before they ask, and running the grid stays with those who run it.",
+    "ar": "تقرير الأداء الشهري يقول أين القرار، وإخطار الانقطاع يصل الناس قبل أن يسألوا، وتشغيل الشبكة يبقى لأهله."
+  },
+  "summary": {
+    "en": "For the management of energy ministries and power utilities: reports, planning, and communication with customers. Not for running the grid or its control systems.",
+    "ar": "لإدارات وزارة الطاقة وشركات الكهرباء: التقارير، والتخطيط، والتواصل مع المشتركين. ليست لتشغيل الشبكة ولا لأنظمة التحكم."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in planning, performance, customer service, and the administrative side of maintenance.",
+    "ar": "مديرو وموظفو التخطيط، والأداء، وخدمة المشتركين، والصيانة في جانبها الإداري."
+  },
+  "audienceInstitution": {
+    "en": "An energy ministry, a power utility, or a regulator, in its written and planning work. Control of the grid and the plants is outside this masterclass.",
+    "ar": "وزارة طاقة أو شركة كهرباء أو جهة تنظيم، في شغلها المكتوب والتخطيطي. التحكم في الشبكة والمحطات خارج هذا الماستركلاس."
+  },
+  "whyProblem": {
+    "en": "The monthly performance report is tables without a story, so the official cannot see where the decision is. Planned-outage notices are written at the last minute. The maintenance memo is assembled from scattered inspection reports.",
+    "ar": "تقرير الأداء الشهري جداول بلا قصة، فلا يرى المسؤول أين القرار. إخطار الانقطاع المخطط يُكتب في آخر لحظة. ومذكرة الصيانة تُجمع من تقارير فحص متفرقة."
+  },
+  "whyEvidence": {
+    "en": "In its Energy and AI report, published in April 2025, the International Energy Agency says the prevalence of AI-related skills is much lower in the energy sector than in other sectors. That is exactly the gap this masterclass starts from.",
+    "ar": "في تقريرها «الطاقة والذكاء الاصطناعي» الصادر في أبريل 2025، تقول الوكالة الدولية للطاقة إن انتشار مهارات الذكاء الاصطناعي في قطاع الطاقة أقل بكثير منه في القطاعات الأخرى. وهذه بالضبط الفجوة التي يبدأ منها هذا الماستركلاس."
+  },
+  "source": {
+    "title": "International Energy Agency · Energy and AI: Executive summary · April 2025",
+    "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+  },
+  "shiftsTitle": {
+    "en": "Capacity in the existing grid that nobody could see",
+    "ar": "طاقة في الشبكة القائمة لم يكن أحد يراها"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "175 GW",
+        "ar": "175 جيجاواط"
+      },
+      "title": {
+        "en": "Capacity without new lines",
+        "ar": "سعة بلا خطوط جديدة"
+      },
+      "body": {
+        "en": "The IEA estimates that up to 175 GW of transmission capacity could be unlocked with remote sensors and AI-based management, without a single new line being built. When leadership understands this, the investment question itself changes.",
+        "ar": "تقدّر الوكالة الدولية للطاقة أن ما يصل إلى 175 جيجاواط من سعة نقل الكهرباء يمكن تحريرها بالحساسات والإدارة القائمة على الذكاء الاصطناعي، من غير بناء خط جديد واحد. حين تفهم القيادة هذا، يتغيّر سؤال الاستثمار نفسه."
+      },
+      "source": {
+        "title": "International Energy Agency · Energy and AI · April 2025",
+        "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+      }
+    },
+    {
+      "figure": {
+        "en": "30–50%",
+        "ar": "30–50%"
+      },
+      "title": {
+        "en": "Shorter outages",
+        "ar": "انقطاع أقصر"
+      },
+      "body": {
+        "en": "The agency says AI-based fault detection can rapidly and precisely pinpoint grid faults, reducing outage durations by 30–50%.",
+        "ar": "وتقول الوكالة إن كشف الأعطال بالذكاء الاصطناعي يحدد موضع العطل في الشبكة بسرعة ودقة، فيقصّر مدة الانقطاع بين 30% و50%."
+      },
+      "source": {
+        "title": "International Energy Agency · Energy and AI · April 2025",
+        "url": "https://www.iea.org/reports/energy-and-ai/executive-summary"
+      }
+    },
+    {
+      "figure": {
+        "en": "95,000 vs 159",
+        "ar": "95 ألفًا بدل 159"
+      },
+      "title": {
+        "en": "Korea: the power company rebuilds its forecast",
+        "ar": "كوريا: شركة الكهرباء تعيد بناء التنبؤ"
+      },
+      "body": {
+        "en": "Korea's KEPCO rebuilt its demand-forecasting model with AI on about 95,000 data points from across the country, where the old model relied on only 159 datasets. It aims to cut annual electricity procurement costs by about 110 billion won ($73.4 million).",
+        "ar": "أعادت شركة الكهرباء الكورية KEPCO بناء نموذج التنبؤ بالطلب بالذكاء الاصطناعي على نحو 95 ألف نقطة بيانات من أنحاء البلاد، بعد أن كان النموذج القديم يعتمد على 159 مجموعة بيانات فقط. وتستهدف خفض تكاليف شراء الكهرباء السنوية بنحو 110 مليارات وون (73.4 مليون دولار)."
+      },
+      "source": {
+        "title": "The Korea Times · KEPCO deploys AI-powered grid system · 27 May 2026",
+        "url": "https://www.koreatimes.co.kr/business/tech-science/20260527/kepco-deploys-ai-powered-grid-system-to-cut-annual-power-costs-by-73-mil"
+      }
+    }
+  ],
+  "before": {
+    "en": "Five questions about the reports, notices and memos that repeat. Nothing about control systems.",
+    "ar": "خمسة أسئلة عن التقارير والإخطارات والمذكرات التي تتكرر. لا شيء عن أنظمة التحكم."
+  },
+  "during": {
+    "en": "The team works on its own material: the narrative of the monthly performance report, a planned-outage notice, or a maintenance priorities memo. An engineer checks every figure.",
+    "ar": "الفريق يشتغل على مادته: سرد لتقرير الأداء الشهري، أو إخطار انقطاع مخطط، أو مذكرة أولويات صيانة. المهندس يراجع كل رقم."
+  },
+  "after": {
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+  },
+  "questions": [
+    {
+      "en": "Which monthly report reads as tables, with no sign of where the decision is?",
+      "ar": "أي تقرير شهري يُقرأ جداول ولا يُفهم منه أين القرار؟"
+    },
+    {
+      "en": "How long does a planned-outage notice take from writing to publication?",
+      "ar": "كم يستغرق إخطار الانقطاع المخطط من الكتابة إلى النشر؟"
+    },
+    {
+      "en": "Which maintenance memo is assembled from scattered inspection reports?",
+      "ar": "أي مذكرة صيانة تُجمع من تقارير فحص متفرقة؟"
+    },
+    {
+      "en": "Which customer question reaches the call centre every day in the same form?",
+      "ar": "أي سؤال من المشتركين يصل مركز الاتصال كل يوم بالصيغة نفسها؟"
+    },
+    {
+      "en": "What must never go out before an engineer has checked it?",
+      "ar": "ما الذي لا يجوز أن يخرج قبل أن يراجعه مهندس؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A narrative pattern for the performance report that ends with the decisions needed, not with tables.",
+      "ar": "نمط سرد لتقرير الأداء ينتهي بالقرارات المطلوبة، لا بالجداول."
+    },
+    {
+      "en": "One real outage notice in Arabic and English, with versions for text messages and the call centre.",
+      "ar": "إخطار انقطاع حقيقي بالعربية والإنجليزية، ونسخه للرسائل النصية ومركز الاتصال."
+    },
+    {
+      "en": "A written line between written work and operations, so the tool never comes near the grid.",
+      "ar": "حد مكتوب يفصل الشغل المكتوب عن التشغيل، حتى لا تقترب الأداة من الشبكة."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Does the masterclass come near running the grid?",
+        "ar": "هل يقترب الماستركلاس من تشغيل الشبكة؟"
+      },
+      "a": {
+        "en": "No. No control systems, no operational decisions. The door is the report, the notice, and the memo.",
+        "ar": "لا. لا أنظمة تحكم، ولا قرار تشغيلي. الباب هو التقرير والإخطار والمذكرة."
+      }
+    },
+    {
+      "q": {
+        "en": "Why start with written work in a technical sector?",
+        "ar": "لماذا نبدأ بالشغل المكتوب في قطاع تقني؟"
+      },
+      "a": {
+        "en": "Because decisions in the ministry and the utility pass through paper before they reach the grid. Whoever understands the tool in writing knows its limits before going near operations.",
+        "ar": "لأن القرار في الوزارة والشركة يمر بالورق قبل أن يصل إلى الشبكة. ومن يفهم الأداة في الكتابة يعرف حدودها قبل أن يقترب من التشغيل."
+      }
+    }
+  ]
+}

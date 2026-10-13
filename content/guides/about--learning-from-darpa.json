@@ -1,0 +1,71 @@
+{
+  "position": 16,
+  "section": "about",
+  "slug": "learning-from-darpa",
+  "title": {
+    "en": "Learning from DARPA",
+    "ar": "التعلم من DARPA"
+  },
+  "summary": {
+    "en": "Use established institutional knowledge to improve how we build capabilities.",
+    "ar": "توظيف معرفة مؤسسية متراكمة لتحسين طريقة بناء القدرات."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "What we learn",
+        "ar": "ما الذي نتعلمه؟"
+      },
+      "items": [
+        {
+          "en": "Frame ambitious work as a program with a clear question and evidence.",
+          "ar": "صياغة العمل الطموح كبرنامج له سؤال واضح وأدلة."
+        },
+        {
+          "en": "Give a program manager responsibility for the mission and its milestones.",
+          "ar": "إسناد مسؤولية المهمة ومراحلها إلى مدير برنامج."
+        },
+        {
+          "en": "Connect specialists, institutions and an eventual operating context.",
+          "ar": "ربط المتخصصين والمؤسسات وسياق التشغيل المستقبلي."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "What VisionSeek adds",
+        "ar": "ما الذي تضيفه VisionSeek؟"
+      },
+      "body": {
+        "en": "Our scope is institutional capability building. Highest Level One explicitly searches for the best people, knowledge, technologies and opportunities already available. The resulting form may be a system, platform, partnership, program or new venture.",
+        "ar": "نطاقنا هو بناء القدرات المؤسسية. يبحث Highest Level One صراحة عن أفضل الأشخاص والمعرفة والتقنيات والفرص المتاحة. وقد يكون الشكل الناتج منظومة أو منصة أو شراكة أو برنامجًا أو مشروعًا جديدًا."
+      }
+    },
+    {
+      "title": {
+        "en": "Proportionate adoption",
+        "ar": "تبنٍ يناسب المرحلة"
+      },
+      "body": {
+        "en": "A public framework can inform a small team, but a website does not create staff, funding or delivery history. Proposed programs become operational only through named people, approved resources and tested routines.",
+        "ar": "يمكن لإطار منشور أن يفيد فريقًا صغيرًا، لكن الموقع لا ينشئ موظفين أو تمويلًا أو سجل إنجاز. تتحول البرامج المقترحة إلى تشغيل بأشخاص محددين وموارد معتمدة وإجراءات مجرّبة."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/about/operating-model"
+    },
+    {
+      "href": "/about/program-questions"
+    },
+    {
+      "href": "/news/program-manager-model"
+    }
+  ],
+  "source": {
+    "title": "DARPA · Programs",
+    "url": "https://www.darpa.mil/research/programs"
+  }
+}

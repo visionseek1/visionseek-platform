@@ -1,0 +1,38 @@
+{
+  "position": 1,
+  "slug": "institutional-ai",
+  "code": "VS-P01",
+  "title": {
+    "en": "Institutional AI that can be trusted",
+    "ar": "ذكاء اصطناعي مؤسسي يمكن الاعتماد عليه"
+  },
+  "summary": {
+    "en": "Enable an institutional team to turn approved information into evidence-backed decisions and accountable actions.",
+    "ar": "تمكين فريق مؤسسي من تحويل معلومات معتمدة إلى قرارات مسندة وأفعال لها مسؤول واضح."
+  },
+  "image": "cities",
+  "beneficiary": {
+    "en": "Operations and decision teams in institutions.",
+    "ar": "فرق التشغيل واتخاذ القرار داخل المؤسسات."
+  },
+  "constraint": {
+    "en": "Knowledge is scattered; evidence and decision rights get lost between tools.",
+    "ar": "المعرفة متفرقة، وتضيع الأدلة وصلاحيات القرار بين الأدوات."
+  },
+  "hypothesis": {
+    "en": "A bounded AI workflow with explicit sources and human checkpoints can reduce decision preparation time without reducing evidence quality.",
+    "ar": "يمكن لمسار ذكاء اصطناعي محدود النطاق، بمصادر واضحة ونقاط اعتماد بشرية، تقليل زمن إعداد القرار دون خفض جودة الأدلة."
+  },
+  "test": {
+    "en": "Proposed test: compare 30 non-sensitive cases against the current process. Measure preparation time, unsupported claims, reviewer corrections and unauthorized actions. Targets are agreed before testing.",
+    "ar": "اختبار مقترح: مقارنة 30 حالة غير حساسة بالعملية الحالية، وقياس زمن الإعداد والادعاءات بلا سند وتصحيحات المراجع والأفعال غير المصرح بها. تُعتمد الأهداف قبل الاختبار."
+  },
+  "stop": {
+    "en": "Stop if the system cannot trace a material claim to evidence or performs an action outside its permission boundary.",
+    "ar": "إيقاف المسار إذا تعذر إسناد ادعاء مؤثر إلى دليل أو نُفذ فعل خارج حدود الصلاحيات."
+  },
+  "transfer": {
+    "en": "A named process owner accepts the workflow, permission matrix, evaluation set and manual fallback before live use.",
+    "ar": "يتسلم مسؤول العملية المسار ومصفوفة الصلاحيات ومجموعة التقييم والبديل اليدوي قبل الاستخدام الفعلي."
+  }
+}

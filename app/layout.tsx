@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
+import { Alexandria, IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
 import "./institution.css";
+import {site} from '@/lib/site';
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -19,6 +20,16 @@ const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   adjustFontFallback: true,
 });
 
+// Arabic display face for headings: drawn from Egypt's own street lettering,
+// so Arabic titles stop falling back to a system font under the Latin-only Oxanium.
+const alexandria = Alexandria({
+  subsets: ["arabic", "latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-arabic-display",
+  adjustFontFallback: true,
+});
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -30,15 +41,15 @@ const structuredData = {
       logo: "https://visionseek.org/visionseek-logo-color.png",
       description:
         "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
-      email: "abdelalim@visionseek.org",
-      telephone: "+82-10-4241-9606",
+      email: site.email,
+      telephone: site.phoneE164,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Incheon",
         addressCountry: "KR",
       },
       founder: { "@id": "https://visionseek.org/#ahmed-abdelalim" },
-      sameAs: ["https://www.linkedin.com/in/ahmed-abdelalim-462491160/"],
+      sameAs: [site.linkedinUrl],
     },
     {
       "@type": "Person",
@@ -47,7 +58,7 @@ const structuredData = {
       jobTitle: "Founder of VisionSeek",
       image: "https://visionseek.org/ahmed-abdelalim.jpg",
       worksFor: { "@id": "https://visionseek.org/#organization" },
-      sameAs: ["https://www.linkedin.com/in/ahmed-abdelalim-462491160/"],
+      sameAs: [site.linkedinUrl],
     },
     {
       "@type": "WebSite",
@@ -102,7 +113,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable}`}>
+    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable} ${alexandria.variable}`}>
       <body className="antialiased">
         <script
           type="application/ld+json"

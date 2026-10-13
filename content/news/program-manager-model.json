@@ -1,0 +1,66 @@
+{
+  "position": 5,
+  "section": "news",
+  "slug": "program-manager-model",
+  "title": {
+    "en": "The program manager as a builder of capability",
+    "ar": "مدير البرنامج بوصفه بانيًا للقدرة"
+  },
+  "summary": {
+    "en": "An institutional lesson from DARPA, adapted to VisionSeek’s proposed model.",
+    "ar": "درس مؤسسي من DARPA نكيّفه لنموذج VisionSeek المقترح."
+  },
+  "image": "industry",
+  "category": {
+    "en": "Institutional learning",
+    "ar": "تعلم مؤسسي"
+  },
+  "status": {
+    "en": "Source-based analysis",
+    "ar": "تحليل مسند"
+  },
+  "source": {
+    "title": "DARPA · Become a program manager",
+    "url": "https://www.darpa.mil/careers/program-manager"
+  },
+  "blocks": [
+    {
+      "title": {
+        "en": "What the reference shows",
+        "ar": "ما الذي يعرضه المرجع؟"
+      },
+      "body": {
+        "en": "DARPA describes program managers as people who develop research programs, coordinate research teams and manage technical milestones. Its public description emphasizes a time-limited appointment and engagement with intended users.",
+        "ar": "تصف DARPA مدير البرنامج بأنه يطور برامج البحث وينسق الفرق ويدير المراحل التقنية. ويؤكد وصفها المنشور مدة التعيين المحددة والتفاعل مع المستخدمين المستهدفين."
+      }
+    },
+    {
+      "title": {
+        "en": "Our proposed application",
+        "ar": "تطبيقنا المقترح"
+      },
+      "body": {
+        "en": "For VisionSeek, the role should own the capability question, evidence and next decision. The manager assembles expertise rather than claiming to contain it all, and identifies the future operator before treating a prototype as a success. This is our design choice, not a statement of DARPA policy.",
+        "ar": "في VisionSeek، نقترح أن يكون الدور مسؤولًا عن سؤال القدرة والأدلة والقرار التالي. يجمع المدير الخبرات بدل افتراض امتلاكها كلها، ويحدد المشغّل المستقبلي قبل اعتبار النموذج نجاحًا. هذا اختيار تصميمي لنا، وليس وصفًا لسياسة DARPA."
+      }
+    },
+    {
+      "title": {
+        "en": "What must be in place",
+        "ar": "ما الذي يجب تثبيته؟"
+      },
+      "body": {
+        "en": "A role description alone is insufficient. Each appointment needs an accepted mandate, scope, resources, review cadence, decision limits and a transition plan.",
+        "ar": "وصف الدور وحده لا يكفي. يحتاج كل تعيين إلى اختصاص مقبول ونطاق وموارد وإيقاع مراجعة وحدود قرار وخطة نقل للتشغيل."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/programs/program-lifecycle"
+    },
+    {
+      "href": "/about/operating-model"
+    }
+  ]
+}

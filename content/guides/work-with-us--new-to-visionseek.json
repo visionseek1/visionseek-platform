@@ -1,0 +1,61 @@
+{
+  "position": 1,
+  "section": "work-with-us",
+  "slug": "new-to-visionseek",
+  "title": {
+    "en": "New to VisionSeek",
+    "ar": "ابدأ مع VisionSeek"
+  },
+  "summary": {
+    "en": "Find where your need, knowledge or capability fits.",
+    "ar": "اعرف أين يناسب احتياجك أو معرفتك أو قدرتك."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "Start with your contribution",
+        "ar": "ابدأ بمساهمتك"
+      },
+      "items": [
+        {
+          "en": "An institution: describe an important capability you cannot achieve today.",
+          "ar": "مؤسسة: صف قدرة مهمة لا تستطيع تحقيقها اليوم."
+        },
+        {
+          "en": "An expert: show the knowledge or judgment you can bring to a mission.",
+          "ar": "خبير: اعرض المعرفة أو الحكم المتخصص الذي تقدمه للمهمة."
+        },
+        {
+          "en": "A research or technology team: show what exists, what is proven and what remains uncertain.",
+          "ar": "فريق بحث أو تقنية: وضّح ما هو موجود وما ثبت وما لم يُحسم."
+        },
+        {
+          "en": "A partner: identify an operating context, route to adoption or resource you can contribute.",
+          "ar": "شريك: حدد سياق تشغيل أو مسار تبنٍ أو موردًا يمكنك المساهمة به."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Then follow the evidence",
+        "ar": "ثم اتبع الأدلة"
+      },
+      "body": {
+        "en": "Read the method, explore a relevant program concept and prepare a short note. A scoping discussion should determine whether a meaningful next test exists. Commitments are agreed separately.",
+        "ar": "اقرأ المنهج، واستكشف تصور برنامج مناسبًا، وجهّز مذكرة قصيرة. تحدد مناقشة النطاق إن كان هناك اختبار تالٍ مفيد. تُتفق الالتزامات بصورة منفصلة."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/method"
+    },
+    {
+      "href": "/programs"
+    },
+    {
+      "href": "/work-with-us/prepare-a-concept"
+    }
+  ]
+}

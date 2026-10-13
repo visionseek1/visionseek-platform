@@ -1,0 +1,254 @@
+{
+  "position": 3,
+  "section": "news",
+  "slug": "egypt-health-in-numbers",
+  "title": {
+    "en": "Egypt’s health in numbers: where the need presses hardest",
+    "ar": "صحة مصر بالأرقام: أين تضغط الحاجة اليوم"
+  },
+  "summary": {
+    "en": "Eight million Egyptians live with diabetes without knowing it. The widest gaps are not in disease itself but in how late the system reaches it.",
+    "ar": "في مصر ثمانية ملايين إنسان يعيشون بالسكر ولا يعرفون. الفجوة الأوسع ليست في المرض نفسه، بل في تأخر وصول المنظومة إليه."
+  },
+  "image": "https://images.unsplash.com/photo-1583248793469-0b3360f27876?auto=format&fit=crop&w=1600&q=80",
+  "imageCredit": {
+    "name": "Omar Elsharawy",
+    "url": "https://unsplash.com/photos/aerial-view-of-city-buildings-during-daytime-_RlE7M_w8Ho"
+  },
+  "category": {
+    "en": "Health in numbers",
+    "ar": "الصحة بالأرقام"
+  },
+  "status": {
+    "en": "Source-based analysis",
+    "ar": "تحليل مسند"
+  },
+  "facts": [
+    {
+      "label": {
+        "en": "Adults with undiagnosed diabetes",
+        "ar": "بالغون بسكر غير مشخَّص"
+      },
+      "value": {
+        "en": "≈ 8.2 million (2024)",
+        "ar": "≈ 8.2 مليون (2024)"
+      }
+    },
+    {
+      "label": {
+        "en": "Hypertension under control",
+        "ar": "ضغط مضبوط"
+      },
+      "value": {
+        "en": "19% of patients (2019)",
+        "ar": "19% من المرضى (2019)"
+      }
+    },
+    {
+      "label": {
+        "en": "Average wait for an ICU bed",
+        "ar": "انتظار سرير الرعاية المركزة"
+      },
+      "value": {
+        "en": "13 hours (June 2025)",
+        "ar": "13 ساعة (يونيو 2025)"
+      }
+    },
+    {
+      "label": {
+        "en": "Liver cancer deaths",
+        "ar": "وفيات سرطان الكبد"
+      },
+      "value": {
+        "en": "21,018 (2024 estimate)",
+        "ar": "21,018 (تقدير 2024)"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "title": {
+        "en": "Why look at gaps, not diseases",
+        "ar": "لماذا نقرأ الفجوات لا الأمراض"
+      },
+      "body": {
+        "en": "Ranking diseases by how common they are tells you what Egypt suffers from. It does not tell you where effort changes outcomes. This article looks instead for the distance between the size of a problem and the system’s ability to reach it in time — because that distance, not the disease, is what technology, organisation and systems can actually move.",
+        "ar": "ترتيب الأمراض حسب انتشارها يخبرك بما تعانيه مصر، لكنه لا يخبرك أين يغيّر الجهد النتيجة. هذا المقال يبحث عن شيء آخر: المسافة بين حجم المشكلة وقدرة المنظومة على الوصول إليها في الوقت المناسب. فهذه المسافة، لا المرض نفسه، هي ما تستطيع التقنية والتنظيم والأنظمة أن تحرّكه."
+      }
+    },
+    {
+      "title": {
+        "en": "Gap one: detection — the disease is there, and no one sees it",
+        "ar": "الفجوة الأولى: الكشف — المرض موجود ولا أحد يراه"
+      },
+      "items": [
+        {
+          "en": "Diabetes: 13.2 million adults aged 20–79, an age-standardised prevalence of 22.4%, and 62% of them undiagnosed — about 8.2 million people. 72,000 deaths and USD 3.1 billion in related health spending (2024 estimates, IDF Diabetes Atlas).",
+          "ar": "السكري: 13.2 مليون بالغ بين 20 و79 سنة، بانتشار معيّر 22.4%، و62% منهم غير مشخَّصين — نحو 8.2 مليون إنسان. 72 ألف وفاة منسوبة إليه، و3.1 مليار دولار إنفاقًا صحيًا مرتبطًا به (تقديرات 2024، أطلس الاتحاد الدولي للسكري)."
+        },
+        {
+          "en": "Hypertension: 14.5 million adults aged 30–79. 53% diagnosed, 44% treated, and only 19% controlled (2019 data, WHO).",
+          "ar": "الضغط: 14.5 مليون بالغ بين 30 و79 سنة. شُخّص منهم 53%، وعولج 44%، وضُبط 19% فقط (بيانات 2019، منظمة الصحة العالمية)."
+        },
+        {
+          "en": "Breast cancer: 26,052 new cases and 9,717 deaths; 37.3% of all cancers in women (GLOBOCAN 2024).",
+          "ar": "سرطان الثدي: 26,052 حالة جديدة و9,717 وفاة، وهو 37.3% من سرطانات النساء (GLOBOCAN 2024)."
+        },
+        {
+          "en": "The quiet driver: adult obesity at 44.3% in 2022, up from 37.4% in 2012 — the highest among Arab states (WHO data via FAO).",
+          "ar": "المحرّك الصامت: السمنة عند 44.3% من البالغين في 2022 مقابل 37.4% في 2012، الأعلى عربيًا (بيانات منظمة الصحة عبر الفاو)."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Gap two: time — hours between the patient and the bed",
+        "ar": "الفجوة الثانية: الوقت — ساعات تفصل المريض عن السرير"
+      },
+      "items": [
+        {
+          "en": "Intensive care: the average wait for a bed fell from 26 to 13 hours, and for neonatal incubators from 20 to 7 hours (June 2024 to June 2025), across 561,720 ICU requests and 136,711 incubator requests. A real improvement — still measured in hours (Ministry of Health).",
+          "ar": "الرعاية المركزة: متوسط انتظار السرير انخفض من 26 إلى 13 ساعة، والحضانات من 20 إلى 7 ساعات (يونيو 2024 إلى يونيو 2025)، عبر 561,720 طلب رعاية مركزة و136,711 طلب حضانة. تحسّن حقيقي، لكنه ما زال يُقاس بالساعات (وزارة الصحة)."
+        },
+        {
+          "en": "Stroke: 150,000 to 210,000 new cases a year, accounting for 6.4% of deaths (Ministry of Health, May 2026).",
+          "ar": "الجلطات الدماغية: 150 إلى 210 آلاف إصابة سنويًا، وتمثّل 6.4% من الوفيات (وزارة الصحة، مايو 2026)."
+        },
+        {
+          "en": "Roads: 5,829 deaths and 84,553 injuries in 2025, with deaths up 10.8% (CAPMAS).",
+          "ar": "الطرق: 5,829 وفاة و84,553 مصابًا في 2025، بزيادة 10.8% في الوفيات (الجهاز المركزي للتعبئة والإحصاء)."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Gap three: the recurring cost — a bill paid every week",
+        "ar": "الفجوة الثالثة: الكلفة المتكررة — فاتورة تُدفع كل أسبوع"
+      },
+      "items": [
+        {
+          "en": "Dialysis: about 59,000 patients, 9.2 million sessions a year and roughly EGP 5.3 billion borne by the state (April 2024 figures). Much of it is the end of a road that began with diabetes or hypertension no one detected.",
+          "ar": "الغسيل الكلوي: نحو 59 ألف مريض، و9.2 مليون جلسة سنويًا، ونحو 5.3 مليار جنيه تتحملها الدولة (بيانات أبريل 2024). وكثير منه نهاية طريق بدأ بسكر أو ضغط لم يكتشفه أحد."
+        },
+        {
+          "en": "Liver cancer: 23,287 cases and 21,018 deaths — still the leading cancer killer, despite Egypt’s exceptional success against hepatitis C, because those already treated need lifelong follow-up (GLOBOCAN 2024; WHO EMRO on Egypt’s 2025–2030 sustainability plan).",
+          "ar": "سرطان الكبد: 23,287 حالة و21,018 وفاة — ما زال أول قاتل سرطاني رغم نجاح مصر الاستثنائي في فيروس C، لأن من عولجوا يحتاجون متابعة مدى الحياة (GLOBOCAN 2024؛ ومنظمة الصحة عن خطة الاستدامة 2025–2030)."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Gap four: the people who treat",
+        "ar": "الفجوة الرابعة: الناس الذين يعالِجون"
+      },
+      "items": [
+        {
+          "en": "164,016 doctors and dentists and 238,280 nursing staff in 2024; doctors in government hospitals fell 1.7% to 120,400 (CAPMAS).",
+          "ar": "164,016 طبيبًا وطبيب أسنان و238,280 فرد تمريض في 2024، وأطباء المستشفيات الحكومية تراجعوا 1.7% إلى 120,400 (الجهاز المركزي للتعبئة والإحصاء)."
+        },
+        {
+          "en": "About 6.7 doctors per 10,000 people (2020, WHO data via the World Bank).",
+          "ar": "نحو 6.7 طبيب لكل 10 آلاف نسمة (2020، بيانات منظمة الصحة عبر البنك الدولي)."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "What the state is already doing — and it is a lot",
+        "ar": "ما تفعله الدولة — وهو كثير"
+      },
+      "items": [
+        {
+          "en": "Universal Health Insurance covers six governorates; Minya began a pilot in June 2026 as the first of phase two, with a budget above EGP 115 billion for more than 12 million citizens.",
+          "ar": "التأمين الصحي الشامل يغطي ست محافظات، والمنيا بدأت تجريبيًا في يونيو 2026 كأول محافظات المرحلة الثانية، بميزانية تتجاوز 115 مليار جنيه لأكثر من 12 مليون مواطن."
+        },
+        {
+          "en": "More than six million unified electronic medical records already exist.",
+          "ar": "أكثر من ستة ملايين سجل طبي إلكتروني موحَّد قائمة بالفعل."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The reading",
+        "ar": "القراءة"
+      },
+      "body": {
+        "en": "Egypt’s health system does not lack will or initiatives. What it needs is to arrive earlier — before diabetes becomes dialysis, hypertension becomes a stroke, and a tumour is found too late — and to multiply the reach of every doctor who stayed rather than try to replace those who left. These are capability gaps, and capabilities can be built.",
+        "ar": "المنظومة الصحية المصرية لا تفتقر إلى الإرادة ولا إلى المبادرات. ما تحتاجه أن تصل أبكر: قبل أن يصير السكر غسيلًا، والضغط جلطة، والورم متأخرًا. وأن تضاعف أثر كل طبيب بقي، لا أن تحاول تعويض من رحل. هذه فجوات قدرة، والقدرات تُبنى."
+      }
+    },
+    {
+      "title": {
+        "en": "Limits of this article",
+        "ar": "حدود هذا المقال"
+      },
+      "body": {
+        "en": "This is a source-based compilation of public figures, each checked against its source on 8 October 2026. It has not undergone independent expert review, so it is published as an article rather than as a VisionSeek research report. Figures come from different years and methods and are not directly comparable with one another.",
+        "ar": "هذا تجميع مسند لأرقام عامة، كل رقم فيه طوبق مع مصدره في 8 أكتوبر 2026. لم يخضع لمراجعة خبير مستقل، ولذلك يُنشر مقالًا لا تقرير بحث من VisionSeek. والأرقام من سنوات ومناهج مختلفة، فلا تُقارن ببعضها مباشرة."
+      }
+    }
+  ],
+  "references": [
+    {
+      "title": "IDF Diabetes Atlas — Egypt",
+      "url": "https://diabetesatlas.org/data-by-location/country/egypt/"
+    },
+    {
+      "title": "WHO — Hypertension country profile, Egypt (2023)",
+      "url": "https://cdn.who.int/media/docs/default-source/country-profiles/hypertension/hypertension-2023/hypertension_egy_2023.pdf"
+    },
+    {
+      "title": "IARC GLOBOCAN 2024 — Egypt fact sheet",
+      "url": "https://gco.iarc.who.int/media/globocan/factsheets/populations/818-egypt-fact-sheet.pdf"
+    },
+    {
+      "title": "FAO SOFI RNE 2024 — Adult obesity (WHO data)",
+      "url": "https://openknowledge.fao.org/server/api/core/bitstreams/b64a7d04-6d70-488d-95e8-8a9beabb7483/content/sofi-statistics-rne-2024/adult-obesity.html"
+    },
+    {
+      "title": "Ministry of Health via Al-Bawaba — ICU and incubator waits",
+      "url": "https://www.albawabhnews.com/5253876"
+    },
+    {
+      "title": "Ministry of Health via El Watan — Stroke (May 2026)",
+      "url": "https://www.elwatannews.com/news/details/8280791"
+    },
+    {
+      "title": "CAPMAS via Ahram Online — Road traffic 2025",
+      "url": "https://english.ahram.org.eg/News/571613.aspx"
+    },
+    {
+      "title": "Youm7 — Dialysis digitisation (April 2024)",
+      "url": "https://www.youm7.com/6533365"
+    },
+    {
+      "title": "WHO EMRO — Hepatitis elimination sustainability plan",
+      "url": "https://www.emro.who.int/egy/egypt-news/towards-full-elimination-of-hepatitis-by-2030-egypt-launches-its-hepatitis-elimination-sustainability-plan.html"
+    },
+    {
+      "title": "CAPMAS — Annual health services bulletin 2024",
+      "url": "https://censusinfo.capmas.gov.eg/metadata-ar-v4.2/index.php/catalog/1944/download/7028"
+    },
+    {
+      "title": "CAPMAS via Amwal Al Ghad — Government hospital doctors",
+      "url": "https://amwalalghad.com/byql"
+    },
+    {
+      "title": "World Bank — Physicians per 1,000 people, Egypt",
+      "url": "https://api.worldbank.org/v2/country/EGY/indicator/SH.MED.PHYS.ZS?format=json"
+    },
+    {
+      "title": "Masrawy — Minya joins Universal Health Insurance (June 2026)",
+      "url": "https://www.masrawy.com/news/news_regions/details/2026/6/1/2996292/"
+    },
+    {
+      "title": "Cabinet via El Watan — Phase two budget",
+      "url": "https://www.elwatannews.com/news/details/8269015"
+    },
+    {
+      "title": "Al Mal — Unified electronic records",
+      "url": "https://almalnews.com/2086739/"
+    }
+  ]
+}

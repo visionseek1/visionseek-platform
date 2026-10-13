@@ -1,0 +1,205 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A reply to a resident's complaint",
+        "ar": "رد على شكوى ساكن"
+      },
+      "body": {
+        "en": "Missed waste collection or a damaged road. A reply that acknowledges the problem and states the next step, who is responsible, and the timeline, then is checked against service standards.",
+        "ar": "تأخر جمع النفايات أو طريق متضرر. رد يعترف بالمشكلة ويحدد الخطوة التالية والمسؤول والمدة، ثم يُراجع على معايير الخدمة."
+      }
+    },
+    {
+      "title": {
+        "en": "Permit requirements in plain language",
+        "ar": "اشتراطات تصريح بلغة بسيطة"
+      },
+      "body": {
+        "en": "The regulation text for a common permit (a shop sign, a renovation, an event) becomes a one-page checklist a non-specialist can follow.",
+        "ar": "نص اللائحة لتصريح شائع (لافتة محل، أو ترميم، أو فعالية) يصير قائمة من صفحة يتبعها غير المتخصص."
+      }
+    },
+    {
+      "title": {
+        "en": "A council meeting summary",
+        "ar": "ملخص اجتماع المجلس"
+      },
+      "body": {
+        "en": "From the minutes to an internal page: decisions, owners, deadlines, open items. Then a shorter version published for residents.",
+        "ar": "من المحضر إلى صفحة داخلية: القرارات، والمسؤول، والموعد، والمعلّق. ثم نسخة أقصر تُنشر للسكان."
+      }
+    }
+  ],
+  "boundary": {
+    "en": "No real residents' data under their names, and no decision on a permit or a violation from a tool. An officer checks every reply before it goes out.",
+    "ar": "لا بيانات سكان حقيقية بأسمائهم، ولا قرار في تصريح أو مخالفة من أداة. وكل رد يراجعه موظف قبل أن يخرج."
+  },
+  "position": 13,
+  "slug": "municipalities",
+  "draft": true,
+  "kind": "institution",
+  "institution": "municipality",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "A resident's complaint gets a clear reply, permit requirements fit on one page, and council minutes become decisions, owners and dates.",
+    "ar": "شكوى الساكن تأخذ ردًا واضحًا، واشتراطات التصريح تُقرأ في صفحة، ومحضر المجلس يصير قرارات ومسؤولين ومواعيد."
+  },
+  "summary": {
+    "en": "For resident services, permits and complaints, and the council secretariat. Municipal decisions stay with those who own them.",
+    "ar": "لمكاتب خدمة السكان، والتصاريح، والشكاوى، ولأمانة المجلس. القرار البلدي يبقى لصاحبه."
+  },
+  "audienceRole": {
+    "en": "Managers and staff in resident services, permits, complaints, and the council secretariat.",
+    "ar": "مديرو وموظفو خدمة السكان، والتصاريح، والشكاوى، وأمانة المجلس البلدي."
+  },
+  "audienceInstitution": {
+    "en": "A municipality or city government, in its service to residents and its written work. Granting or refusing a permit remains a decision for its owner.",
+    "ar": "بلدية أو أمانة مدينة، في خدمتها للسكان وشغلها المكتوب. منح التصريح أو رفضه قرار يبقى لصاحبه."
+  },
+  "whyProblem": {
+    "en": "The same complaint arrives in twenty versions, and each gets a reply written from scratch. Permit requirements are written in the language of the regulation, so applicants come back twice. Council minutes run long, and the decisions get lost in them.",
+    "ar": "الشكوى نفسها تصل بعشرين صيغة، ويُكتب لكل واحدة رد من الصفر. اشتراطات التصريح مكتوبة بلغة اللائحة، فيعود المراجع مرتين. ومحضر المجلس طويل، والقرارات تضيع فيه."
+  },
+  "whyEvidence": {
+    "en": "In the 2025 update of the Local Government Association's survey in England, 95% of responding councils were using or exploring AI. Lack of staff capabilities was the second-biggest barrier (56%), after lack of funding (62%).",
+    "ar": "في تحديث 2025 لمسح جمعية الحكومات المحلية في إنجلترا، قالت 95% من المجالس المشاركة إنها تستخدم الذكاء الاصطناعي أو تستكشفه. وجاء نقص قدرات الموظفين ثاني أكبر العوائق (56%)، بعد نقص التمويل (62%)."
+  },
+  "source": {
+    "title": "Local Government Association · State of the sector: AI, 2025 update · 2 June 2025",
+    "url": "https://www.local.gov.uk/node/8279073"
+  },
+  "shiftsTitle": {
+    "en": "Cities want it. Few have trained for it.",
+    "ar": "المدن تريد، وقلّة دُرّبت"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "80%",
+        "ar": "80%"
+      },
+      "title": {
+        "en": "Trying it is now the norm",
+        "ar": "التجربة صارت القاعدة"
+      },
+      "body": {
+        "en": "In a UN-Habitat global assessment of about 118 responses from 122 municipalities, around 80% were piloting or already using AI tools. For 45%, a knowledge gap about its potential was a concern.",
+        "ar": "في تقييم عالمي لموئل الأمم المتحدة شمل نحو 118 ردًا من 122 بلدية، كانت نحو 80% منها تجرّب أدوات الذكاء الاصطناعي أو تستخدمها فعلًا. وقال 45% إن فجوة المعرفة بإمكاناته مصدر قلق."
+      },
+      "source": {
+        "title": "UN-Habitat · Global Assessment of Responsible AI in Cities · 2024",
+        "url": "https://unhabitat.org/sites/default/files/2025/11/global_assessment_of_responsible_ai_in_cities_24112025.pdf"
+      }
+    },
+    {
+      "figure": {
+        "en": "96% vs 11%",
+        "ar": "96% مقابل 11%"
+      },
+      "title": {
+        "en": "Interest came before training",
+        "ar": "الرغبة سبقت التدريب"
+      },
+      "body": {
+        "en": "In the State of Cities survey on generative AI in local governments (October 2023), 96% of surveyed mayors expressed interest in using it, while only 11% of cities had provided training to staff. The biggest barriers: insufficient technical expertise (74%) and lack of awareness (72%).",
+        "ar": "في مسح «حالة المدن» عن الذكاء الاصطناعي التوليدي في الحكومات المحلية (أكتوبر 2023)، أبدى 96% من رؤساء البلديات المشاركين اهتمامًا باستخدامه، بينما وفّرت 11% فقط من المدن تدريبًا لموظفيها. وأكبر العوائق: نقص الخبرة التقنية (74%) وقلة الوعي (72%)."
+      },
+      "source": {
+        "title": "State of Cities · Generative AI in Local Governments · 18 October 2023",
+        "url": "https://cityaiconnect.jhu.edu/pdfs/Final-Gen-AI-In-Cities-Report_10.18.2023.pdf"
+      }
+    },
+    {
+      "figure": {
+        "en": "16.7%",
+        "ar": "16.7%"
+      },
+      "title": {
+        "en": "Seoul: a chatbot answers one in six consultations",
+        "ar": "سيول: سدس الاستشارات يجيب عنها روبوت"
+      },
+      "body": {
+        "en": "Seoul Talk, the chatbot the city launched on 1 February 2020, handles about 16.7% of all consultations at the city's 120 Dasan call centre, according to figures for the first half of 2024, and its channel has about 458,000 members.",
+        "ar": "روبوت المحادثة «سيول توك» الذي أطلقته مدينة سيول في 1 فبراير 2020 يعالج نحو 16.7% من كل استشارات مركز «120 داسان» للاتصال بالمدينة، بحسب أرقام النصف الأول من 2024، وعدد أعضاء قناته نحو 458 ألفًا."
+      },
+      "source": {
+        "title": "Seoul Metropolitan Government · Seoul news · 10 July 2024",
+        "url": "https://mediahub.seoul.go.kr/archives/2011661"
+      }
+    }
+  ],
+  "before": {
+    "en": "Five questions about the complaints, permits and minutes that repeat. No resident's name and no specific file.",
+    "ar": "خمسة أسئلة عن الشكاوى والتصاريح والمحاضر التي تتكرر. لا اسم ساكن ولا ملف بعينه."
+  },
+  "during": {
+    "en": "The team works on its own material: a reply to a complaint, permit requirements on one page, or council minutes turned into decisions. An officer checks and sends.",
+    "ar": "الفريق يشتغل على مادته: رد على شكوى، أو اشتراطات تصريح في صفحة، أو محضر مجلس يتحول إلى قرارات. الموظف يراجع ويرسل."
+  },
+  "after": {
+    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
+    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+  },
+  "questions": [
+    {
+      "en": "Which complaint repeats every week and gets a reply written from scratch?",
+      "ar": "أي شكوى تتكرر كل أسبوع ويُكتب لها رد من الصفر؟"
+    },
+    {
+      "en": "Which permit brings applicants back twice because the requirements were unclear?",
+      "ar": "أي تصريح يعود صاحبه مرتين لأن الاشتراطات لم تكن واضحة؟"
+    },
+    {
+      "en": "How many days pass between a council meeting and its decisions reaching those who carry them out?",
+      "ar": "كم يومًا يمر بين اجتماع المجلس ووصول قراراته إلى من ينفذها؟"
+    },
+    {
+      "en": "Where is the same information copied from form to form?",
+      "ar": "أين تُنقل البيانات نفسها من نموذج إلى نموذج؟"
+    },
+    {
+      "en": "What must never leave the municipality before a person has checked it?",
+      "ar": "ما الذي لا يخرج من البلدية قبل أن يراجعه إنسان؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A reply pattern for recurring complaints that says what was received, who is responsible, and when the next step comes.",
+      "ar": "نمط رد للشكاوى المتكررة يقول ماذا وصل، ومن المسؤول، ومتى الخطوة التالية."
+    },
+    {
+      "en": "One real permit's requirements on a single page: documents, fees, steps, and processing time.",
+      "ar": "اشتراطات تصريح حقيقي في صفحة واحدة: المستندات، والرسوم، والخطوات، والمدة."
+    },
+    {
+      "en": "Council minutes turned into a page of decisions, owners and dates, with a shorter version for residents.",
+      "ar": "محضر مجلس تحوّل إلى صفحة قرارات ومسؤولين ومواعيد، ونسخة أقصر للسكان."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Does the tool decide on a permit or a violation?",
+        "ar": "هل تقرر الأداة في تصريح أو مخالفة؟"
+      },
+      "a": {
+        "en": "No. The tool drafts replies, requirements and minutes. The decision belongs to the official in charge.",
+        "ar": "لا. الأداة تُسوّد الرد والاشتراطات والمحضر. القرار لصاحب الاختصاص."
+      }
+    },
+    {
+      "q": {
+        "en": "Does the masterclass need a new system?",
+        "ar": "هل يحتاج الماستركلاس نظامًا جديدًا؟"
+      },
+      "a": {
+        "en": "No. We work on what is already on the desk. Any new system is a separate decision that comes later, if at all.",
+        "ar": "لا. نشتغل على الشغل الموجود فعلًا على المكتب. أي نظام جديد قرار مستقل يأتي بعد ذلك، إن جاء."
+      }
+    }
+  ]
+}

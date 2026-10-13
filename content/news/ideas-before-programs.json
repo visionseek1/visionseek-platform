@@ -1,0 +1,69 @@
+{
+  "position": 7,
+  "section": "news",
+  "slug": "ideas-before-programs",
+  "title": {
+    "en": "Give ideas a place before they become programs",
+    "ar": "امنح الفكرة مكانًا قبل أن تصبح برنامجًا"
+  },
+  "summary": {
+    "en": "Why exploration, incubation and authorized execution should remain distinct.",
+    "ar": "لماذا نفصل بين الاستكشاف والإنضاج والتنفيذ المعتمد؟"
+  },
+  "image": "science",
+  "category": {
+    "en": "Institutional learning",
+    "ar": "تعلم مؤسسي"
+  },
+  "status": {
+    "en": "Source-based analysis",
+    "ar": "تحليل مسند"
+  },
+  "source": {
+    "title": "DARPA · Ideas Under Incubation",
+    "url": "https://www.darpa.mil/research/ideas"
+  },
+  "blocks": [
+    {
+      "title": {
+        "en": "The reference",
+        "ar": "المرجع"
+      },
+      "body": {
+        "en": "DARPA publishes ideas under incubation to gather context from specialists and prospective users before a formal program. Its page explicitly separates these discussions from formal solicitations.",
+        "ar": "تنشر DARPA أفكارًا تحت الإنضاج لجمع السياق من المتخصصين والمستخدمين المحتملين قبل البرنامج الرسمي. وتفصل الصفحة صراحة بين هذه المناقشات والدعوات الرسمية."
+      }
+    },
+    {
+      "title": {
+        "en": "The VisionSeek design",
+        "ar": "تصميم VisionSeek"
+      },
+      "body": {
+        "en": "Our program concepts are questions and proposed paths. They become operating programs only when a responsible owner, test, resources and intended beneficiary are confirmed. Showing the early work can invite useful expertise without inventing institutional maturity.",
+        "ar": "تصورات برامجنا أسئلة ومسارات مقترحة. تصبح برامج تشغيلية عند تثبيت مسؤول واختبار وموارد ومستفيد مستهدف. يتيح إظهار العمل المبكر استقبال خبرات مفيدة دون اختلاق نضج مؤسسي."
+      }
+    },
+    {
+      "title": {
+        "en": "An actionable contribution",
+        "ar": "مساهمة قابلة للاستخدام"
+      },
+      "body": {
+        "en": "Bring evidence that changes the question: a stronger baseline, a technical limit, an available capability or an operator willing to define a test.",
+        "ar": "قدّم دليلًا يغيّر السؤال: خط أساس أقوى، أو حدًا تقنيًا، أو قدرة متاحة، أو مشغّلًا مستعدًا لتحديد اختبار."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/programs/ideas"
+    },
+    {
+      "href": "/opportunities"
+    },
+    {
+      "href": "/work-with-us/prepare-a-concept"
+    }
+  ]
+}

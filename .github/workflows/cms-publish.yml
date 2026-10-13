@@ -1,0 +1,73 @@
+name: Publish from /admin
+
+# When Dr. Ahmed sets an edit in /admin to «جاهز للنشر» (label decap-cms/pending_publish), wait for the
+# required checks and publish it, the same way Decap's own «انشر الآن» would. Choosing that status in /admin
+# is the approval. Only content edits are published this way: a /admin branch that touches code is left alone.
+
+on:
+  pull_request:
+    types: [labeled, synchronize]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+  statuses: read
+
+concurrency:
+  group: cms-publish-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish when checks pass
+    if: >-
+      startsWith(github.event.pull_request.head.ref, 'cms/') &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      contains(github.event.pull_request.labels.*.name, 'decap-cms/pending_publish') &&
+      github.event.sender.login == github.repository_owner
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPOSITORY: ${{ github.repository }}
+      PULL_REQUEST: ${{ github.event.pull_request.number }}
+      HEAD_REF: ${{ github.event.pull_request.head.ref }}
+    steps:
+      - name: Content files only
+        run: |
+          outside="$(gh api --paginate "repos/$REPOSITORY/pulls/$PULL_REQUEST/files" --jq '.[].filename' | grep -Ev '^(content/|public/uploads/)' || true)"
+          if [ -n "$outside" ]; then
+            echo "This /admin edit touches files outside content/ and public/uploads/, so it is not published automatically:" >&2
+            echo "$outside" >&2
+            exit 1
+          fi
+
+      - name: Wait for the required checks
+        run: |
+          # Checks can take a few seconds to register after a new commit.
+          for attempt in $(seq 1 30); do
+            if gh pr checks "$PULL_REQUEST" --repo "$REPOSITORY" --required >/dev/null 2>&1; then exit 0; fi
+            pending="$(gh pr checks "$PULL_REQUEST" --repo "$REPOSITORY" --required --json bucket --jq '[.[] | select(.bucket == "pending")] | length' 2>/dev/null || echo 1)"
+            failed="$(gh pr checks "$PULL_REQUEST" --repo "$REPOSITORY" --required --json bucket --jq '[.[] | select(.bucket == "fail" or .bucket == "cancel")] | length' 2>/dev/null || echo 0)"
+            if [ "$failed" != "0" ] && [ "$pending" = "0" ]; then
+              echo "A required check failed, so nothing is published." >&2
+              gh pr comment "$PULL_REQUEST" --repo "$REPOSITORY" --body "لم يُنشر هذا التعديل: أحد الفحوصات المطلوبة فشل. التعديل محفوظ كما هو في /admin، ويحتاج مراجعة قبل نشره." || true
+              exit 1
+            fi
+            sleep 30
+          done
+          echo "The required checks did not finish in time." >&2
+          exit 1
+
+      - name: Publish
+        run: |
+          state="$(gh pr view "$PULL_REQUEST" --repo "$REPOSITORY" --json state,labels --jq '.state + " " + ([.labels[].name] | join(","))')"
+          case "$state" in
+            OPEN*decap-cms/pending_publish*) ;;
+            *) echo "The edit is no longer ready to publish ($state). Nothing to do."; exit 0 ;;
+          esac
+          gh api -X PUT "repos/$REPOSITORY/pulls/$PULL_REQUEST/merge" -f merge_method=merge >/dev/null
+          gh api -X DELETE "repos/$REPOSITORY/git/refs/heads/$HEAD_REF" >/dev/null || true
+          echo "Published."

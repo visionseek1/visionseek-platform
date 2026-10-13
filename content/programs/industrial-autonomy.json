@@ -1,0 +1,38 @@
+{
+  "position": 2,
+  "slug": "industrial-autonomy",
+  "code": "VS-P02",
+  "title": {
+    "en": "Autonomy for real industrial work",
+    "ar": "الاستقلالية في العمل الصناعي الحقيقي"
+  },
+  "summary": {
+    "en": "Make one repetitive inspection task reliably executable by a supervised robotic or computer-vision system.",
+    "ar": "جعل مهمة فحص متكررة قابلة للتنفيذ الموثوق بنظام روبوتي أو رؤية حاسوبية تحت الإشراف."
+  },
+  "image": "industry",
+  "beneficiary": {
+    "en": "Factories, inspection teams and industrial operators.",
+    "ar": "المصانع وفرق الفحص ومشغلو المنشآت الصناعية."
+  },
+  "constraint": {
+    "en": "Demonstrations often fail when lighting, objects, procedures or working conditions change.",
+    "ar": "قد تتعطل النماذج التجريبية مع تغير الإضاءة أو الأجسام أو الإجراءات أو ظروف العمل."
+  },
+  "hypothesis": {
+    "en": "A narrowly defined task, explicit operating envelope and operator intervention can turn available components into a useful inspection capability.",
+    "ar": "يمكن لمهمة محددة وحدود تشغيل واضحة وتدخل مشغّل أن تحول مكونات متاحة إلى قدرة فحص مفيدة."
+  },
+  "test": {
+    "en": "Proposed test: representative normal and difficult cases in a controlled environment. Measure missed defects, false alarms, cycle time and human interventions against the agreed baseline.",
+    "ar": "اختبار مقترح: حالات طبيعية وصعبة ممثلة للواقع في بيئة مضبوطة. نقيس العيوب الفائتة والإنذارات الخاطئة وزمن الدورة وتدخل الإنسان مقارنة بخط الأساس المعتمد."
+  },
+  "stop": {
+    "en": "Stop for unsafe behavior, unbounded failure modes or inability to meet the operator’s acceptance criteria.",
+    "ar": "إيقاف المسار عند سلوك غير آمن أو أعطال غير مفهومة أو العجز عن تحقيق معايير قبول المشغّل."
+  },
+  "transfer": {
+    "en": "The industrial operator approves the safety case, maintenance requirements, training and fallback process.",
+    "ar": "يعتمد المشغّل الصناعي ملف السلامة ومتطلبات الصيانة والتدريب وخطة الرجوع."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "position": 17,
+  "section": "news",
+  "slug": "media",
+  "title": {
+    "en": "Media & inquiries",
+    "ar": "الإعلام والاستفسارات"
+  },
+  "summary": {
+    "en": "Find the public identity, contact route and publication approach.",
+    "ar": "تعرّف على الهوية العامة والتواصل ومنهج النشر."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "About VisionSeek",
+        "ar": "عن VisionSeek"
+      },
+      "body": {
+        "en": "VisionSeek builds new capabilities for institutions and governments by connecting people, technology, knowledge, systems, partners and opportunities. Founder: Dr. Ahmed Abdelalim. Location: Incheon, South Korea.",
+        "ar": "تبني VisionSeek قدرات جديدة للمؤسسات والحكومات عبر ربط الأشخاص والتكنولوجيا والمعرفة والأنظمة والشركاء والفرص. المؤسس: د. أحمد عبدالعليم. الموقع: إنتشون، كوريا الجنوبية."
+      }
+    },
+    {
+      "title": {
+        "en": "Publication standards",
+        "ar": "معايير النشر"
+      },
+      "body": {
+        "en": "Editorial perspectives are distinguished from external source reports and completed results. A proposed program is labelled as proposed. Named partnerships and delivery claims require approval and supporting evidence.",
+        "ar": "تُفصل الرؤى التحريرية عن تقارير المصادر الخارجية والنتائج المنجزة. يُسمى البرنامج المقترح مقترحًا. تتطلب الشراكات المسماة وادعاءات الإنجاز اعتمادًا وأدلة داعمة."
+      }
+    },
+    {
+      "title": {
+        "en": "Contact",
+        "ar": "تواصل"
+      },
+      "body": {
+        "en": "For media, speaking or institutional inquiries: abdelalim@visionseek.org.",
+        "ar": "للاستفسارات الإعلامية أو طلب متحدث أو التواصل المؤسسي: abdelalim@visionseek.org."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/about"
+    },
+    {
+      "href": "/about/people"
+    },
+    {
+      "href": "/about/governance"
+    }
+  ]
+}

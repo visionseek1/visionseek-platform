@@ -1,0 +1,75 @@
+{
+  "position": 2,
+  "section": "work-with-us",
+  "slug": "how-to-respond",
+  "title": {
+    "en": "How to respond",
+    "ar": "كيف تشارك؟"
+  },
+  "summary": {
+    "en": "Prepare a contribution that can be assessed on its evidence.",
+    "ar": "جهّز مساهمة يمكن تقييمها بأدلتها."
+  },
+  "image": "cities",
+  "blocks": [
+    {
+      "title": {
+        "en": "The concept note",
+        "ar": "مذكرة التصور"
+      },
+      "items": [
+        {
+          "en": "Define the capability and the beneficiary in ordinary language.",
+          "ar": "حدد القدرة والمستفيد بلغة واضحة."
+        },
+        {
+          "en": "Describe the current limit and the evidence behind it.",
+          "ar": "صف الحد الحالي والدليل عليه."
+        },
+        {
+          "en": "Explain your approach, contribution and relevant experience.",
+          "ar": "اشرح المسار ومساهمتك وخبرتك المرتبطة."
+        },
+        {
+          "en": "Propose a first test, measures, resources and a time estimate.",
+          "ar": "اقترح اختبارًا أولًا ومقاييس وموارد وتقديرًا زمنيًا."
+        },
+        {
+          "en": "Identify risks, dependencies and what would make you stop.",
+          "ar": "حدد المخاطر والاعتماديات وما الذي يجعلك تتوقف."
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Submission route",
+        "ar": "طريقة الإرسال"
+      },
+      "body": {
+        "en": "The preparation tool creates a note you can download or open in your email app. You review and send it yourself. The website does not store or automatically submit it, and does not issue a receipt or selection promise.",
+        "ar": "تجهّز الأداة مذكرة يمكنك تنزيلها أو فتحها في بريدك. تراجعها وترسلها بنفسك. الموقع لا يخزنها أو يرسلها تلقائيًا، ولا يصدر إيصال استلام أو وعد اختيار."
+      }
+    },
+    {
+      "title": {
+        "en": "Information to include",
+        "ar": "المعلومات المناسبة"
+      },
+      "body": {
+        "en": "Use public or shareable evidence for the first conversation. Detailed confidential material can be handled later through an agreed process.",
+        "ar": "استخدم أدلة عامة أو مسموحًا بمشاركتها في النقاش الأول. يمكن التعامل مع التفاصيل السرية لاحقًا عبر إجراء متفق عليه."
+      }
+    }
+  ],
+  "related": [
+    {
+      "href": "/work-with-us/prepare-a-concept"
+    },
+    {
+      "href": "/work-with-us/review-and-selection"
+    },
+    {
+      "href": "/opportunities"
+    }
+  ]
+}

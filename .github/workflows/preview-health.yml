@@ -9,6 +9,7 @@ permissions:
   checks: read
   contents: read
   pull-requests: read
+  statuses: write
 
 jobs:
   verify-preview:
@@ -16,6 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
+      # /admin (Decap) reads this status to show «عرض المعاينة» on edits that are not published yet (config.yml: preview_context).
+      - name: Announce the preview to /admin
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          gh api "repos/$REPOSITORY/statuses/$SHA" -f state=pending -f context="VisionSeek preview" -f description="The preview is being built" >/dev/null || true
       - name: Wait for Vercel preview
         id: preview
         env:
@@ -42,6 +51,14 @@ jobs:
           done
           echo "A successful Vercel preview check was not found." >&2
           exit 1
+      - name: Hand the preview link to /admin
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIEW_URL: ${{ steps.preview.outputs.url }}
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          gh api "repos/$REPOSITORY/statuses/$SHA" -f state=success -f context="VisionSeek preview" -f target_url="$PREVIEW_URL" -f description="Open this change on its preview" >/dev/null || true
       - name: Verify core routes return 200
         env:
           PREVIEW_URL: ${{ steps.preview.outputs.url }}

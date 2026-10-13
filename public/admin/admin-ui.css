@@ -1,0 +1,17 @@
+/* VisionSeek touches on Decap's interface. Selectors use Decap's emotion labels (css-<hash>-<Label>),
+   which stay stable across builds of the same version. If an upgrade renames one, the rule simply stops applying. */
+
+#vs-help {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 300;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #030404;
+  color: #cfff00;
+  font: 600 14px/1 "Segoe UI", "IBM Plex Sans Arabic", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(3, 4, 4, .25);
+}
+#vs-help:hover, #vs-help:focus-visible { background: #cfff00; color: #030404; outline: none; }
