@@ -9,16 +9,17 @@ const VERSION = "2025-09-03";
 
 /** معرّفات مصادر البيانات (data sources) والقواعد تحت «غرفة العمليات — بيانات VisionSeek». */
 export const SOURCES = {
-  goals: { ds: "1c3b2da2-488c-4ade-b257-51301cee370e", db: "62b55a5d53924eb2a9040f9436b408f7" },
-  decisions: { ds: "4a2607a2-8adc-4e1d-adbe-8b39b5f03d78", db: "3fab0d99aac847979e7b75d465f72edc" },
-  work: { ds: "f9b149cf-8148-4951-9ce1-2219f05fe472", db: "d5b48733649c47f7a38374013bad10e4" },
-  publish: { ds: "887bbcee-074d-4bcd-85e5-8b5c52c3a7d7", db: "13d5994fbae44c2893b30a2bd89506f2" },
-  methods: { ds: "bc9bbdf6-5226-4a1b-9698-64dd3bfe7450", db: "6a2bcc17b8584b72bcd498c1cd9ec9c2" },
-  requests: { ds: "54ff57e5-5d77-415d-98a6-b0c4810b80a4", db: "4ea8a74b705c4fc184235616a1498c4b" },
-  comments: { ds: "3b518164-13ac-414e-bec0-7d4aeddbe451", db: "44b26f5637c64c9f808931bebd6a27aa" },
-  leads: { ds: "ea2da55a-85dd-475a-bae8-e265a2759d52", db: "49501c9f38994637a472732c92e5e1f2" },
+  // اتنقلت 13 أكتوبر 2026 لـWorkspace «9star’s Space» (نسخة من «كلود — الشغل الجديد»، والأصل متساب في الحساب القديم).
+  goals: { ds: "5c8372be-41c1-8237-8e2f-0762e5706517", db: "761372be41c182a7899e017f63a88bb7" },
+  decisions: { ds: "a3d372be-41c1-832c-9efc-875a397a2777", db: "8bb372be41c18201a2f281d27ca85e05" },
+  work: { ds: "92a372be-41c1-82aa-9270-87980bc5fcae", db: "190372be41c183b3b29b81213dae64fe" },
+  publish: { ds: "e5b372be-41c1-82b3-9be4-076a99f58ff2", db: "070372be41c183d5952381d3c37c6d1f" },
+  methods: { ds: "d16372be-41c1-8368-86a9-0742ea574882", db: "0c3372be41c18224bd0201c5cfb0246e" },
+  requests: { ds: "a4f372be-41c1-8397-a947-079603c94fc9", db: "164372be41c183269ffa813d72d06567" },
+  comments: { ds: "77c372be-41c1-82dd-aaf4-876b091f79cd", db: "2fa372be41c182eabf5201bca2bc89b0" },
+  leads: { ds: "3c2372be-41c1-826d-bcfc-0701247fee53", db: "193372be41c18375a5a78114d3d70c5d" },
   // الشجرة (13 أكتوبر 2026): القطاع ← القسم ← المسار ← العنصر ← المنهجية. كل مسار تحت قسم، وبيشاور على منهجيته.
-  tracks: { ds: "507136db-21df-4dfa-9de6-e4688782b9df", db: "bb622d5d146547e595f11c09cc3441bd" },
+  tracks: { ds: "803372be-41c1-8328-b878-07f0cc236e5a", db: "2b5372be41c1827a982f812ee578375d" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -409,7 +410,7 @@ export async function updateMethodStatus(pageId: string, status: string): Promis
 
 /* ---------- تقرير الصباح: ملخص يومي بالكود — صفر توكنز ---------- */
 
-const BRIEF_LOG_PAGE = "3f6e8808b7a681fdac40d5b62b18f59e";
+const BRIEF_LOG_PAGE = "8c6372be41c182638ff381efaeb7030b";
 
 /** يبني تقرير الصباح من البيانات الحية. weekly=true (الخميس) يضيف أرقام اللوحة ودورات الأسبوع. */
 export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { title: string; body: string } {
@@ -507,7 +508,7 @@ export async function addComment(cardId: string, cardTitle: string, text: string
 }
 
 /* ---------- الإشعارات: اشتراكات Web Push + سجل الإرسال (قاعدة «إشعارات الغرفة») ---------- */
-const NOTIFY = { ds: "dfce6732-767f-41bd-accf-527d7d155b15", db: "f16131ba895b469898c1fdd05ece380a" };
+const NOTIFY = { ds: "655372be-41c1-83d2-a8f5-07db380e829e", db: "632372be41c1821892e481ac9a59a352" };
 
 export type StoredSub = { id: string; key: string; sub: { endpoint: string; keys: { p256dh: string; auth: string } }; device: string };
 
