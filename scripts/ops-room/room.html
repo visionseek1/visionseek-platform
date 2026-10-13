@@ -542,7 +542,8 @@ function pageItem(id) {
   const tr = trackOf(i); const d = deptByName(i.dept || (tr ? tr.dept : "")); const s = sectorByName(i.sector);
   const ms = tr ? tr.methods.map(methodById).filter(Boolean) : [];
   const crumbs = [s ? `<a href="#sector/${s.id}">${t(s.name)}</a>` : '<span>من غير قطاع</span>', d ? `<a href="#dept/${d.id}">${t(d.name)}</a>` : "", tr ? `<a href="#track/${tr.id}">${t(tr.name)}</a>` : '<span class="warn">⚠️ من غير مسار</span>', ms[0] ? `<span>${t(ms[0].title)}</span>` : tr ? '<span class="warn">⚠️ من غير منهجية</span>' : ""].filter(Boolean).join(" ← ");
-  const cm = COMMENTS.filter((c) => pid(c["الكارت"]) === i.id).sort((a, b) => (String(a["يوم"]) < String(b["يوم"]) ? -1 : 1));
+  // بعد النقل لـWorkspace جديد المعرّفات اتغيرت، فالتعليق القديم بيتربط بعنوان الكارت كمان
+  const cm = COMMENTS.filter((c) => pid(c["الكارت"]) === i.id || String(c["عنوان الكارت"] || "") === i.title).sort((a, b) => (String(a["يوم"]) < String(b["يوم"]) ? -1 : 1));
   const back = `item/${i.id}`;
   return head(i.title, crumbs) + notLive() + `
 <div class="grid g2" style="align-items:start">
