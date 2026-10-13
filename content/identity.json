@@ -1,0 +1,272 @@
+{
+  "name": {
+    "en": "Institutional Capability Engineer",
+    "ar": "مهندس القدرات المؤسسية"
+  },
+  "nav": {
+    "cta": {"en": "Request an introductory session", "ar": "اطلب جلسة تعريفية"},
+    "method": {"en": "Method", "ar": "المنهج"},
+    "about": {"en": "About", "ar": "عن VisionSeek"},
+    "contact": {"en": "Contact", "ar": "تواصل"}
+  },
+  "hero": {
+    "image": "/field-chips.jpg",
+    "label": {"en": "VISIONSEEK · INSTITUTIONAL CAPABILITY ENGINEER", "ar": "VisionSeek · مهندس القدرات المؤسسية"},
+    "title": {
+      "en": "Your institution needs a capability it does not have yet. We design it, source it anywhere in the world, and make it yours.",
+      "ar": "نصمّم القدرة التي تحتاجها مؤسستك، ونجلبها من أي مكان في العالم، ونوطّنها عندك."
+    },
+    "text": {
+      "en": "We work in the space between the leader who runs the institution and the engineer who builds the technology. We are neither. We study the whole institution before anything else, then design the capability that moves it.",
+      "ar": "نقف في المساحة بين صاحب المؤسسة والمهندس التقني، ولسنا أيًّا منهما. ندرس المؤسسة كلها، ثم نصمّم القدرة التي تنقلها إلى موقع جديد."
+    },
+    "button": {"en": "Request an introductory session with Dr. Ahmed", "ar": "اطلب جلسة تعريفية مع د. أحمد"},
+    "secondary": {"en": "How we work", "ar": "كيف نعمل"}
+  },
+  "initiative": {
+    "eyebrow": {"en": "THE VISIONSEEK ARAB CAPABILITY INITIATIVE", "ar": "مبادرة VisionSeek لبناء القدرات العربية"},
+    "title": {
+      "en": "A free introductory session with Dr. Ahmed Abdelalim, for a limited number of leaders, until 31 December 2026.",
+      "ar": "جلسة تعريفية مجانية مع د. أحمد عبدالعليم، لعدد محدود من القادة، حتى 31 ديسمبر 2026."
+    },
+    "text": {
+      "en": "One hour. We understand your institution as it runs today, and show you what has become possible for it in the age of AI. No commitment: whatever comes after the session is your decision alone.",
+      "ar": "ساعة واحدة نفهم فيها مؤسستك كما هي، ونريك ما أصبح ممكنًا لها في عصر الذكاء الاصطناعي. لا التزام بعدها؛ ما يأتي بعد الجلسة قرارك وحدك."
+    },
+    "button": {"en": "Request the session", "ar": "اطلب الجلسة"},
+    "whoTitle": {"en": "WHO THE SESSION IS FOR", "ar": "الجلسة لمن؟"},
+    "who": [
+      {"en": "You lead an institution in Egypt or the Gulf.", "ar": "يقود مؤسسة في مصر أو الخليج."},
+      {"en": "You make its decisions, or sit close to the one who does.", "ar": "صاحب القرار فيها، أو قريب منه."},
+      {"en": "You want to develop your institution in the age of AI.", "ar": "يريد أن يطوّر مؤسسته في عصر الذكاء الاصطناعي."},
+      {"en": "You can give one hour, and speak plainly.", "ar": "مستعد أن يمنح ساعة، ويتكلم بصراحة."}
+    ],
+    "page": {
+      "title": {"en": "Request your introductory session.", "ar": "اطلب جلستك التعريفية."},
+      "intro": {
+        "en": "Tell us a little about your institution. We confirm a time with you directly.",
+        "ar": "احكِ لنا باختصار عن مؤسستك، ونتفق معك على الموعد مباشرة."
+      },
+      "next": [
+        {"en": "We confirm a time with you directly.", "ar": "نتفق معك على الموعد مباشرة."},
+        {"en": "One hour: your institution as it runs today, and what has become possible for it.", "ar": "ساعة واحدة: مؤسستك كما هي اليوم، وما أصبح ممكنًا لها."},
+        {"en": "Then you decide.", "ar": "ثم القرار لك."}
+      ],
+      "nextTitle": {"en": "What happens next", "ar": "ماذا يحدث بعد ذلك"}
+    }
+  },
+  "offers": {
+    "eyebrow": {"en": "WHAT WE OFFER", "ar": "ما نقدّمه"},
+    "title": {
+      "en": "Five doors. Behind them, one kind of work: a capability your institution owns.",
+      "ar": "خمسة أبواب، وراءها شغل واحد: قدرة تمتلكها مؤسستك."
+    },
+    "link": {"en": "All five", "ar": "الأبواب الخمسة"},
+    "items": [
+      {
+        "id": "institutions",
+        "name": {"en": "Institutional services", "ar": "خدمات المؤسسات"},
+        "text": {"en": "We study your institution, design the capability it needs, and localize it with you through the six pieces.", "ar": "ندرس مؤسستك، ونصمّم القدرة التي تحتاجها، ونوطّنها عندك بالقطع الست."},
+        "detail": {"en": "Every institution takes the pieces it needs, in the order that suits it. The duration follows the institution; the method is what stays fixed.", "ar": "كل مؤسسة تأخذ القطع التي تحتاجها بالترتيب الذي يناسبها. المدة تتبع المؤسسة، والثابت هو المنهج."},
+        "href": "/method",
+        "linkLabel": {"en": "The six pieces", "ar": "القطع الست"}
+      },
+      {
+        "id": "products",
+        "name": {"en": "Ready products", "ar": "المنتجات الجاهزة"},
+        "text": {"en": "Tools built once and used by many institutions, such as the Living Regulation.", "ar": "أدوات تُبنى مرة وتخدم أكثر من مؤسسة، مثل «اللائحة الحية»."},
+        "detail": {"en": "The Living Regulation lets an institution's AI agents act within the law it actually operates under: Gulf and Egyptian regulations become ready-to-run rules, each traced to its source article.", "ar": "«اللائحة الحية» تجعل وكلاء الذكاء الاصطناعي في المؤسسة يعملون داخل القانون الذي تخضع له فعلًا: لوائح الخليج ومصر تتحول إلى قواعد جاهزة للتشغيل، كل قاعدة مربوطة بمادتها."},
+        "href": "/projects",
+        "linkLabel": {"en": "See the products", "ar": "المنتجات"}
+      },
+      {
+        "id": "partnerships",
+        "name": {"en": "Partnerships and technology transfer", "ar": "الشراكات ونقل التكنولوجيا"},
+        "text": {"en": "With Korean and global companies in the foundational technologies of this age.", "ar": "مع شركات كورية وعالمية في التقنيات الأساسية لهذا العصر."},
+        "detail": {"en": "Based in South Korea, we reach companies and institutions that already run the capability, write the specification under fair terms, and bring the two sides to an agreement that leaves the capability where it is built.", "ar": "من مقرّنا في كوريا الجنوبية نصل إلى الشركات والمؤسسات التي تشغّل القدرة فعلًا، ونكتب المواصفات بشروط عادلة، ونوصل الطرفين إلى اتفاق يُبقي القدرة حيث تُبنى."},
+        "href": "/about",
+        "linkLabel": {"en": "Our vision", "ar": "رؤيتنا"}
+      },
+      {
+        "id": "leaders",
+        "name": {"en": "Knowledge and leader development", "ar": "المعرفة وبناء القادة"},
+        "text": {"en": "Workshops, sessions and content that let a leader see their own work anew. Leaders House is paused for now.", "ar": "ورش وجلسات ومحتوى يرى به القائد عمله من جديد. بيت القادة متوقف حاليًا."},
+        "detail": {"en": "The masterclass is built on your own work, after we have studied it: for you as a leader, or for your institution and its sector.", "ar": "الماستركلاس تُبنى على عملك أنت، بعد أن ندرسه: لك كقائد، أو لمؤسستك وقطاعها."},
+        "href": "/masterclass",
+        "linkLabel": {"en": "The masterclass", "ar": "الماستركلاس"}
+      },
+      {
+        "id": "presence",
+        "name": {"en": "Presence and outreach", "ar": "الظهور والتواصل"},
+        "text": {"en": "The site, the channels and the messages: the door through which everything above arrives.", "ar": "الموقع والمنصات والرسائل: الباب الذي يصل منه كل ما سبق."},
+        "detail": {"en": "What we publish here and on our channels is written to be checked: a source for every figure, and a plain statement of what we do not know yet.", "ar": "ما ننشره هنا وعلى منصاتنا مكتوب ليُراجع: مصدر لكل رقم، وقول صريح بما لا نعرفه بعد."},
+        "href": "/news",
+        "linkLabel": {"en": "News and reports", "ar": "الأخبار والتقارير"}
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": {"en": "THE METHOD", "ar": "المنهج"},
+    "title": {
+      "en": "Six pieces, arranged around your institution, not around a template.",
+      "ar": "ست قطع مرنة، نرتّبها على احتياج مؤسستك لا على قالب."
+    },
+    "text": {
+      "en": "The order is not fixed: you start with the piece you need today. Each piece has defined outputs, a named owner, and a review once it is done.",
+      "ar": "الترتيب ليس ثابتًا؛ تبدأ من القطعة التي تحتاجها اليوم. ولكل قطعة مخرجات محددة، ومسؤول باسمه، ومراجعة بعد أن تنتهي."
+    },
+    "link": {"en": "The full method", "ar": "المنهج كاملًا"},
+    "outputLabel": {"en": "Output", "ar": "المخرج"},
+    "ownerLabel": {"en": "Owner", "ar": "المسؤول"},
+    "reviewLabel": {"en": "Review", "ar": "المراجعة"},
+    "pieces": [
+      {
+        "id": "diagnosis",
+        "name": {"en": "Diagnosis", "ar": "التشخيص"},
+        "text": {"en": "We understand the leader, see the institution from inside, and compare it with the strongest of its peers.", "ar": "نفهم القائد، ونرى المؤسسة من الداخل، ونقارنها بأقوى نظرائها في مجالها."},
+        "output": {"en": "Ranked gaps and opportunities, and a proposed next step", "ar": "الفجوات والفرص مرتبة، واقتراح الخطوة التالية"},
+        "owner": {"en": "VisionSeek, with the leader", "ar": "VisionSeek مع القائد"},
+        "review": {"en": "The leader reviews the ranking and chooses where to start", "ar": "القائد يراجع الترتيب ويختار من أين نبدأ"}
+      },
+      {
+        "id": "capability-map",
+        "name": {"en": "Capability map", "ar": "خريطة القدرات"},
+        "text": {"en": "We define the capabilities required and decide for each: build, buy, transfer, or partner.", "ar": "نحدد القدرات المطلوبة، ونقرر لكل واحدة: نبنيها، أم نشتريها، أم ننقلها، أم نعقد فيها شراكة."},
+        "output": {"en": "A map ordered by dependency, approved by the leader", "ar": "خريطة مرتبة بالاعتماد المتبادل، يعتمدها القائد"},
+        "owner": {"en": "VisionSeek", "ar": "VisionSeek"},
+        "review": {"en": "The leader approves the map before anything is sourced", "ar": "القائد يعتمد الخريطة قبل أي توريد"}
+      },
+      {
+        "id": "sourcing",
+        "name": {"en": "Sourcing and partnership", "ar": "التوريد والشراكة"},
+        "text": {"en": "We write the specification under Shariah and fairness terms, search suppliers in Korea and worldwide, and negotiate fair terms.", "ar": "نكتب مواصفات القدرة بشروط الشريعة والعدل، ونبحث عن الموردين في كوريا والعالم، ونتفاوض بشروط عادلة."},
+        "output": {"en": "A closed agreement", "ar": "اتفاق مقفول"},
+        "owner": {"en": "VisionSeek, signed by the institution", "ar": "VisionSeek، وتوقّع المؤسسة"},
+        "review": {"en": "Terms checked against the specification before signing", "ar": "مراجعة الشروط على المواصفات قبل التوقيع"}
+      },
+      {
+        "id": "build-test",
+        "name": {"en": "Build and test", "ar": "البناء والتجربة"},
+        "text": {"en": "Success measures are set before we start. We pilot in a small scope with an owner inside the institution, on real data.", "ar": "نحدد مقاييس النجاح قبل البداية، ونجرّب في نطاق صغير له صاحب من داخل المؤسسة، على بيانات حقيقية."},
+        "output": {"en": "A measured decision: scale, adjust, or stop", "ar": "قرار مقاس: نوسّع، أم نعدّل، أم نتوقف"},
+        "owner": {"en": "The pilot's owner inside the institution, with VisionSeek", "ar": "صاحب التجربة داخل المؤسسة، مع VisionSeek"},
+        "review": {"en": "Results measured against the measures set at the start", "ar": "النتائج تُقاس على المقاييس المحددة في البداية"}
+      },
+      {
+        "id": "localization",
+        "name": {"en": "Transfer and localization", "ar": "النقل والتوطين"},
+        "text": {"en": "We agree at the start on what localized means: a local team, written knowledge, local operation, clear intellectual property. Then we transfer step by step.", "ar": "نتفق على معنى أن التوطين اكتمل: فريق محلي، ومعرفة مكتوبة، وتشغيل محلي، وملكية فكرية واضحة. ثم ننقل خطوة خطوة."},
+        "output": {"en": "A capability run inside the institution by its own people", "ar": "قدرة تعمل داخل المؤسسة بأيدي أهلها"},
+        "owner": {"en": "The institution's team, with VisionSeek", "ar": "فريق المؤسسة، مع VisionSeek"},
+        "review": {"en": "Each step measured against the agreed definition of localized", "ar": "كل خطوة تُقاس على تعريف التوطين المتفق عليه"}
+      },
+      {
+        "id": "handover",
+        "name": {"en": "Handover and enablement", "ar": "التسليم والتمكين"},
+        "text": {"en": "We name an owner and a team inside the institution, train them, write the operating guide, and step back while they run it.", "ar": "نحدد مسؤولًا وفريقًا داخل المؤسسة وندرّبهم، ونكتب دليل التشغيل، ونتركهم يشغّلون ونحن نتابع."},
+        "output": {"en": "Closure with the leader, and the next capability", "ar": "إقفال مع القائد، والقدرة التالية"},
+        "owner": {"en": "The named owner inside the institution", "ar": "المسؤول المسمّى داخل المؤسسة"},
+        "review": {"en": "Closure with the leader after the team has run it alone", "ar": "إقفال مع القائد بعد أن يشغّل الفريق وحده"}
+      }
+    ]
+  },
+  "vision": {
+    "eyebrow": {"en": "OUR VISION FOR 2036", "ar": "رؤيتنا لسنة 2036"},
+    "title": {
+      "en": "An Arab world that owns and localizes the foundational technologies of this age, with VisionSeek among the pillars that hold it up.",
+      "ar": "عالم عربي يمتلك التقنيات الأساسية لهذا العصر ويوطّنها، وVisionSeek من الأعمدة التي يقوم عليها ذلك."
+    },
+    "technologies": [
+      {"en": "Chips", "ar": "الرقائق"},
+      {"en": "Artificial intelligence", "ar": "الذكاء الاصطناعي"},
+      {"en": "Cloud and data", "ar": "السحابة والبيانات"},
+      {"en": "Telecommunications", "ar": "الاتصالات"},
+      {"en": "Robotics", "ar": "الروبوتات"},
+      {"en": "Clean energy", "ar": "الطاقة النظيفة"},
+      {"en": "Biotechnology", "ar": "التقنية الحيوية"}
+    ]
+  },
+  "values": {
+    "eyebrow": {"en": "OUR VALUES", "ar": "قيمنا"},
+    "items": [
+      {
+        "name": {"en": "Commitment to Shariah", "ar": "الالتزام بالشريعة"},
+        "text": {"en": "No commissions from suppliers, no interest-based instalments, and no work in what it forbids.", "ar": "لا عمولات من الموردين، ولا تقسيط بفوائد، ولا عمل في ما تحرّمه."}
+      },
+      {
+        "name": {"en": "Fairness", "ar": "العدل"},
+        "text": {"en": "We never build on the other side's weakness, and no party holds the other in its hand.", "ar": "لا نبني على ضعف الطرف الآخر، ولا يكون طرف متحكمًا في الآخر."}
+      },
+      {
+        "name": {"en": "A new reality in the Arab world", "ar": "صناعة واقع جديد في العالم العربي"},
+        "text": {"en": "Every capability we localize stays where it was built: a local team, written knowledge, clear ownership.", "ar": "كل قدرة نوطّنها تبقى هنا: فريق محلي، ومعرفة مكتوبة، وملكية واضحة."}
+      }
+    ]
+  },
+  "leader": {
+    "eyebrow": {"en": "WHO LEADS THE WORK WITH YOU", "ar": "من يقود العمل معك"},
+    "title": {"en": "Dr. Ahmed Abdelalim leads the work himself, October to December.", "ar": "د. أحمد عبدالعليم يقود العمل بنفسه من أكتوبر إلى ديسمبر."},
+    "text": {
+      "en": "A researcher with papers published in international journals, and a business owner and investor in South Korea who worked in Egypt and the Gulf before that. He does not help from the technical side of workflows; his thinking opens the door to new business models, capabilities and markets.",
+      "ar": "باحث له أبحاث منشورة في مجلات دولية، وصاحب أعمال ومستثمر في كوريا الجنوبية، عمل في مصر والخليج قبلها. لا يساعدك من الجانب التقني لسير العمل؛ يفتح لك الباب إلى نماذج أعمال وقدرات وأسواق جديدة."
+    },
+    "image": "/ahmed-abdelalim-2026.jpg",
+    "imageAlt": {"en": "Dr. Ahmed Abdelalim", "ar": "د. أحمد عبدالعليم"},
+    "link": {"en": "Meet the founder", "ar": "تعرّف على المؤسس"}
+  },
+  "closing": {
+    "title": {
+      "en": "Which capability, if your institution owned it today, would change where it stands tomorrow?",
+      "ar": "ما القدرة التي لو امتلكتها مؤسستك اليوم لتغيّر موقعها غدًا؟"
+    },
+    "button": {"en": "Request an introductory session", "ar": "اطلب جلسة تعريفية"}
+  },
+  "about": {
+    "label": {"en": "ABOUT VISIONSEEK", "ar": "عن VisionSeek"},
+    "title": {"en": "The institutional capability engineer.", "ar": "مهندس القدرات المؤسسية."},
+    "intro": {
+      "en": "VisionSeek stands in the space between the leader who owns the institution and the engineer who builds the technology, and is neither. It studies the whole institution, designs the capability it needs, sources it from anywhere in the world, and localizes it.",
+      "ar": "تقف VisionSeek في المساحة بين صاحب المؤسسة والمهندس التقني، وليست أيًّا منهما. تدرس المؤسسة كلها، وتصمّم القدرة التي تحتاجها، وتجلبها من أي مكان في العالم، وتوطّنها."
+    },
+    "placeEyebrow": {"en": "WHERE WE STAND", "ar": "أين نقف"},
+    "place": [
+      {"name": {"en": "The leader", "ar": "صاحب المؤسسة"}, "text": {"en": "Owns the decision and the ambition, and sees the institution whole.", "ar": "يملك القرار والطموح، ويرى المؤسسة كلها."}},
+      {"name": {"en": "VisionSeek", "ar": "VisionSeek"}, "text": {"en": "Reads the institution, designs the capability, finds who has it, and makes it the institution's own.", "ar": "تقرأ المؤسسة، وتصمّم القدرة، وتجد من يملكها، وتجعلها ملك المؤسسة."}},
+      {"name": {"en": "The engineer", "ar": "المهندس التقني"}, "text": {"en": "Builds and runs the technology once the capability is defined.", "ar": "يبني التقنية ويشغّلها بعد أن تتحدد القدرة."}}
+    ]
+  },
+  "services": {
+    "label": {"en": "WHAT WE OFFER", "ar": "ما نقدّمه"},
+    "title": {"en": "Five doors into one kind of work.", "ar": "خمسة أبواب إلى شغل واحد."},
+    "intro": {
+      "en": "Whichever door you come through, the work is the same: a capability your institution designs with us, receives, and keeps.",
+      "ar": "من أي باب دخلت، الشغل واحد: قدرة تصمّمها مؤسستك معنا، وتستلمها، وتبقى لها."
+    }
+  },
+  "methodPage": {
+    "label": {"en": "THE METHOD", "ar": "المنهج"},
+    "title": {"en": "Six pieces. Your order.", "ar": "ست قطع، والترتيب ترتيبك."},
+    "intro": {
+      "en": "Not every institution needs all six, and none needs them in the same order. We start from the piece you need today, set its outputs and its owner, and review it with you when it is done.",
+      "ar": "ليست كل مؤسسة تحتاج القطع الست، ولا تحتاجها مؤسستان بالترتيب نفسه. نبدأ من القطعة التي تحتاجها اليوم، ونحدد مخرجاتها ومسؤولها، ونراجعها معك حين تنتهي."
+    },
+    "flexTitle": {"en": "Three ways the pieces are arranged", "ar": "ثلاثة ترتيبات شائعة"},
+    "flex": [
+      {"name": {"en": "You know the gap", "ar": "تعرف الفجوة"}, "text": {"en": "Diagnosis is short. The work starts at the capability map.", "ar": "يكون التشخيص قصيرًا، ويبدأ الشغل من خريطة القدرات."}},
+      {"name": {"en": "You already chose the technology", "ar": "اخترت التقنية بالفعل"}, "text": {"en": "We start at sourcing, and go back to the map only where the choice depends on something else.", "ar": "نبدأ من التوريد، ونرجع إلى الخريطة حيث يعتمد الاختيار على شيء آخر."}},
+      {"name": {"en": "The capability already runs elsewhere in your group", "ar": "القدرة تعمل في مكان آخر داخل مجموعتك"}, "text": {"en": "We start at transfer and localization.", "ar": "نبدأ من النقل والتوطين."}}
+    ]
+  },
+  "offer": {
+    "label": {"en": "SERVICE OFFER", "ar": "عرض الخدمة"},
+    "title": {"en": "What working with VisionSeek looks like.", "ar": "كيف يبدو العمل مع VisionSeek."},
+    "intro": {"en": "Our capabilities, who leads the work with you, a note on this age, and what others have said.", "ar": "قدراتنا، ومن يقود العمل معك، وملاحظة عن هذا العصر، ومقولات حقيقية."},
+    "sections": [
+      {"id": "capabilities", "title": {"en": "Our capabilities", "ar": "قدراتنا"}, "body": {"en": "", "ar": ""}},
+      {"id": "who-leads", "title": {"en": "Who leads the work with you", "ar": "من يقود العمل معك"}, "body": {"en": "", "ar": ""}},
+      {"id": "this-age", "title": {"en": "A note on this age", "ar": "ملاحظة عن هذا العصر"}, "body": {"en": "", "ar": ""}},
+      {"id": "quotes", "title": {"en": "What others have said", "ar": "مقولات حقيقية"}, "body": {"en": "", "ar": ""}}
+    ],
+    "pricingNote": {"en": "Prices are stated in the written offer, not on this page.", "ar": "الأسعار تُذكر في العرض المكتوب، لا على هذه الصفحة."}
+  }
+}

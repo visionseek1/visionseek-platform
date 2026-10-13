@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SiteHeader from '@/components/site-header';
 import { references, toolkit } from '@/lib/reports/catalog';
+import { isArchived } from '@/lib/visibility';
 import styles from './reports.module.css';
 import ReportsLibrary from './library';
 import { brief } from '@/lib/reports/agent-governance';
@@ -23,7 +24,7 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
       <nav className={styles.nav} aria-label={t('تنقل قسم التقارير', 'Reports navigation')}>
         <Link href={root} aria-current={!methodology ? 'page' : undefined}>{t('التقارير', 'Reports')}</Link>
         <Link href={`${root}/methodology`} aria-current={methodology ? 'page' : undefined}>{t('المنهج والمعايير', 'Methods & standards')}</Link>
-        <Link href={ar ? '/ar/insights' : '/insights'}>{t('بيت القادة', 'Leaders House')}</Link>
+        {!isArchived('/insights') && <Link href={ar ? '/ar/insights' : '/insights'}>{t('بيت القادة', 'Leaders House')}</Link>}
       </nav>
       <header className={`${styles.hero} ${!methodology ? styles.indexHero : ''}`}>
         <div className={styles.masthead}><span>VISIONSEEK RESEARCH</span><span>{t('نربط المعرفة بما يمكن تحقيقه.', 'Connecting knowledge to what comes next.')}</span></div>
@@ -58,7 +59,7 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
         <section className={styles.principles}><h2>{t('أدوات مفتوحة، وتحليل يمكن فحصه', 'Open tools. Inspectable analysis.')}</h2><p>{t('نواة مرشحة للتقييم الفني. الاطلاع على توثيق الأداة لا يعني أنها متصلة أو مشغلة داخل المنصة.', 'A candidate stack for technical evaluation. Reviewing documentation does not mean a tool is integrated or running on this platform.')}</p><div className={styles.grid}>{toolkit.map(item=><article key={item.name}><span className={styles.label}>{t('مرشح للتقييم', 'CANDIDATE')}</span><h3><a href={item.url}>{item.name} ↗</a></h3><p>{item[locale]}</p></article>)}</div></section>
         <aside className={styles.note}><h2>{t('ما الذي يمنح التقرير صفة «مراجع»؟', 'What makes a report reviewed?')}</h2><p>{t('سجل مراجعة مستقل مرتبط بالنسخة، وإغلاق الملاحظات الجوهرية، واعتماد نشر بشري موثق. لا يكفي فحص آلي أو وجود استشهادات. عند تقييد البيانات نوضح مسار الوصول وإعادة الحساب بدل نشرها دون حق.', 'An independent, version-specific review record, resolution of material comments and documented human publication approval. Automated checks and citations alone are insufficient. Restricted data require a documented access and reproduction procedure.')}</p></aside>
       </>}
-      <footer className={styles.footer}><Link href={`${root}/studio`}>{t('إدارة التقارير', 'Reports studio')}</Link><span>VISIONSEEK · {t('هندسة الفرص', 'Engineering opportunities')}</span><Link href={methodology ? root : `${root}/methodology`}>{methodology ? t('مكتبة التقارير', 'Research library') : t('المنهج والمعايير', 'Methods & standards')}</Link></footer>
+      <footer className={styles.footer}><span>VISIONSEEK · {t('مهندس القدرات المؤسسية', 'Institutional capability engineer')}</span><Link href={methodology ? root : `${root}/methodology`}>{methodology ? t('مكتبة التقارير', 'Research library') : t('المنهج والمعايير', 'Methods & standards')}</Link></footer>
     </main>
   </div>;
 }

@@ -43,9 +43,13 @@ function cardData(project:Project,locale:Locale):ProjectCardData {
     audiences:project.profile?.audiences ?? [], audienceText:(project.profile?.audiences ?? []).map(a=>audienceLabels[a][locale]),
   };
 }
+const liveSectorCount=sectors.filter(sector=>projects.some(p=>p.sector===sector.slug)).length;
 function SectorGrid({locale}:{locale:Locale}) {
   const ar=locale==='ar';
-  return <div className={styles.sectorGrid}>{sectors.map((sector,i)=>{
+  // Since 13 October 2026 only sectors that hold a product are shown; the others keep their anchors and come back with their first entry.
+  const live=sectors.filter(sector=>projects.some(p=>p.sector===sector.slug));
+  const idle=sectors.filter(sector=>!live.includes(sector));
+  return <div className={styles.sectorGrid}>{idle.map(sector=>sector.anchors.map(anchor=><span className={styles.anchor} id={anchor} key={anchor}/>))}{live.map((sector,i)=>{
     const Icon=icons[sector.icon];const count=projects.filter(p=>p.sector===sector.slug).length;
     return <article className={styles.sectorCard} key={sector.slug} style={tone(sectorColors[sector.icon])}>
       {sector.anchors.map(anchor=><span className={styles.anchor} id={anchor} key={anchor}/>)}
@@ -77,7 +81,7 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
       <p className={styles.lede}>{ar?'أدوات وحلول نبنيها من قراءة ما تحتاجه المؤسسات الآن.':'Tools and solutions we build from what institutions need right now.'}</p>
       <dl className={styles.stats}>
         <div><dt>{ar?'مشاريع':'Projects'}</dt><dd dir="ltr">{String(projects.length).padStart(2,'0')}</dd></div>
-        <div><dt>{ar?'مجالات عمل':'Sectors'}</dt><dd dir="ltr">{String(sectors.length).padStart(2,'0')}</dd></div>
+        <div><dt>{ar?'مجالات عمل':'Sectors'}</dt><dd dir="ltr">{String(liveSectorCount).padStart(2,'0')}</dd></div>
         <div><dt>{ar?'لمن نصمّم':'Designed for'}</dt><dd className={styles.liveText}>{ar?'حكومات · مؤسسات · شركات':'Gov · Institutions · Companies'}</dd></div>
       </dl>
     </GridHero>
@@ -86,7 +90,7 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
       
     </div></section>
     <section id="fields" className={styles.section}><div className={styles.wrap}>
-      <div className={styles.heading}><h2>{ar?'المجالات':'Sectors'}</h2><span className={styles.count} dir="ltr">{String(sectors.length).padStart(2,'0')}</span></div>
+      <div className={styles.heading}><h2>{ar?'المجالات':'Sectors'}</h2><span className={styles.count} dir="ltr">{String(liveSectorCount).padStart(2,'0')}</span></div>
       <SectorGrid locale={locale}/>
     </div></section>
     <Contact locale={locale}/>

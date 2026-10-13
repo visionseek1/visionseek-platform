@@ -5,6 +5,30 @@
     },
     {
       "path": "/insights"
+    },
+    {
+      "path": "/programs"
+    },
+    {
+      "path": "/work-with-us"
+    },
+    {
+      "path": "/about/what-we-do"
+    },
+    {
+      "path": "/about/operating-model"
+    },
+    {
+      "path": "/about/program-questions"
+    },
+    {
+      "path": "/about/governance"
+    },
+    {
+      "path": "/about/learning-from-darpa"
+    },
+    {
+      "path": "/offer"
     }
   ],
   "hiddenBlocks": []

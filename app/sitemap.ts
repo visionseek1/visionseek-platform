@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:sectionPath(s.id),priority:0.8},{path:`/ar${sectionPath(s.id)}`,priority:0.8}]),
     ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
     ...workshops.flatMap(item=>[{path:`/masterclass/${item.slug}`,priority:0.75},{path:`/ar/masterclass/${item.slug}`,priority:0.75}]),
-    ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
+    ...["method", "about", "work-with-us", "start", "services", "initiative", "offer"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },

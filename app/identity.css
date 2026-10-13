@@ -1,0 +1,96 @@
+/* الهوية المعتمدة 13 أكتوبر 2026: «مهندس القدرات المؤسسية». الأقسام الجديدة على نفس ألوان الموقع وخطوطه. */
+.vs-identity-hero{height:auto;min-height:min(820px,92svh)}
+.vs-identity-hero>img{object-fit:cover;object-position:center 55%}
+.vs-identity-hero .vs-hero-copy{padding:10rem 6% 7rem;max-width:1180px}
+.vs-identity-hero h1{font-size:clamp(2.2rem,4.4vw,4.2rem);max-width:19em;text-wrap:balance;margin:1rem 0 1.4rem}
+.vs-site.locale-ar .vs-identity-hero h1{line-height:1.5}
+.vs-identity-hero .vs-hero-description{font-size:1.15rem;max-width:46rem;line-height:1.8}
+.vs-hero-actions{display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:center;justify-content:center;margin-top:2.3rem}
+.vs-hero-actions .vs-button{margin-top:0}
+.vs-hero-actions .vs-text-link{margin-top:0;color:var(--lime)}
+
+.vs-initiative{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:3rem;background:#111d15;border-top:1px solid #344137}
+.vs-initiative h2{font-size:clamp(1.7rem,2.8vw,2.7rem);line-height:1.4;margin:.9rem 0 1.2rem;max-width:30em}
+.vs-initiative-copy>p:not(.vs-eyebrow){font-size:1.15rem;line-height:1.85;color:#c5d0c2;max-width:40em}
+.vs-initiative-copy .vs-button{margin-top:2rem}
+.vs-initiative-who{align-self:start;border:1px solid #506047;padding:1.8rem 2rem}
+.vs-initiative-who ul{margin:1rem 0 0;padding-inline-start:1.2rem;display:grid;gap:.7rem;line-height:1.8;color:#e5f2d8;font-size:1.05rem}
+
+.vs-offers{background:var(--black)}
+.vs-offer-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--vs-line);border:1px solid var(--vs-line)}
+.vs-offer-grid.is-detailed{grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
+.vs-offer-card{background:var(--black);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:.8rem;min-height:14rem}
+.vs-offer-card h3{font-size:1.3rem;line-height:1.4;margin:0}
+.vs-offer-card p{margin:0;color:var(--grey);line-height:1.8;font-size:.98rem}
+.vs-offer-card .vs-offer-detail{color:#d5d7dd}
+.vs-offer-card .vs-text-link{margin-top:auto;padding-top:1rem}
+
+.vs-pieces{background:#0c120e;border-top:1px solid #344137}
+.vs-pieces .vs-section-heading>div:last-child>p{color:#c5d0c2;line-height:1.85;max-width:38em;margin:0}
+.vs-piece-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.vs-piece-card{border:1px solid #506047;padding:1.8rem;display:flex;flex-direction:column;gap:.7rem}
+.vs-piece-card h3{font-size:1.4rem;margin:0}
+.vs-piece-card>p{margin:0;color:#b8c6ae;line-height:1.85}
+.vs-piece-card dl{margin:auto 0 0;padding-top:.9rem;border-top:1px solid #34412f;display:grid;gap:.6rem}
+.vs-piece-card dl div{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.6rem;font-size:.95rem;line-height:1.7}
+.vs-piece-card dt{color:var(--lime);font-weight:700}
+.vs-piece-card dd{margin:0;color:#e5f2d8}
+
+.vs-vision-values{display:grid;grid-template-columns:1fr 1fr;gap:4rem;background:#f1f2eb;color:#111b16}
+.vs-vision-values .vs-eyebrow{color:#496c1f}
+.vs-vision-values h2{font-size:clamp(1.6rem,2.6vw,2.4rem);line-height:1.45;margin:.9rem 0 1.4rem}
+.vs-tech-list{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.vs-tech-list li{border:1px solid #8f9c86;border-radius:999px;padding:.5rem .95rem;font-weight:600;font-size:.95rem}
+.vs-values{display:grid;gap:1rem;margin-top:.9rem}
+.vs-values article{border-top:1px solid #bdc8b0;padding-top:.9rem}
+.vs-values h3{font-size:1.2rem;margin:0 0 .3rem}
+.vs-values p{margin:0;color:#3f4c3c;line-height:1.8}
+
+.vs-leader{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:3rem;align-items:center;background:var(--black)}
+.vs-leader h2{font-size:clamp(1.7rem,2.8vw,2.6rem);line-height:1.4;margin:.9rem 0 1.2rem}
+.vs-leader>div>p:not(.vs-eyebrow){color:#d5d7dd;line-height:1.85;font-size:1.08rem;max-width:40em}
+.vs-leader-image{position:relative;aspect-ratio:1/1;max-width:26rem;width:100%;justify-self:end;background:#17251a}
+.vs-leader-image img{object-fit:cover;object-position:center 20%}
+
+.vs-closing{background:#d5f65c;color:#111b16;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2rem}
+.vs-closing h2{font-size:clamp(1.7rem,2.8vw,2.6rem);line-height:1.4;margin:0;max-width:22em}
+.vs-closing .vs-button{background:#17221a;color:#f1f6e9;margin:0}
+.vs-closing .vs-button:hover{background:#2c4028}
+
+.vs-method-intro{padding-block:0 1rem}
+.vs-method-intro p{max-width:46em;font-size:1.15rem;line-height:1.85;color:#d5d7dd;margin:0}
+.vs-flex{background:var(--black)}
+.vs-flex h2{font-size:1.6rem;margin:0 0 1.6rem}
+.vs-flex-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.vs-flex-grid article{border-top:2px solid var(--lime);padding-top:1rem}
+.vs-flex-grid h3{font-size:1.15rem;margin:0 0 .4rem}
+.vs-flex-grid p{margin:0;color:var(--grey);line-height:1.8}
+
+.vs-place{background:#15171e}
+.vs-place-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.vs-place-grid article{border:1px solid var(--vs-line);padding:1.6rem}
+.vs-place-grid article.is-visionseek{border-color:var(--lime);background:rgba(207,255,0,.05)}
+.vs-place-grid h3{font-size:1.25rem;margin:0 0 .5rem}
+.vs-place-grid p{margin:0;color:var(--grey);line-height:1.8}
+
+.vs-next-steps{background:#151920}
+.vs-next-steps h2{font-size:1.6rem;margin:0 0 1.6rem}
+.vs-next-steps ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.vs-next-steps li{border-top:1px solid var(--vs-line);padding-top:1rem}
+.vs-next-steps li p{margin:.4rem 0 0;line-height:1.8}
+.vs-initiative-form{padding-top:3rem}
+.vs-offer-section h2{font-size:1.8rem;margin:0 0 1rem}
+.vs-offer-section p{max-width:46em;line-height:1.9;font-size:1.08rem;color:#d5d7dd}
+.vs-offer-note p{color:var(--grey);margin:0 0 1.4rem}
+.vs-offer-empty p{color:var(--grey);font-size:1.1rem}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@media (max-width:1050px){.vs-offer-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr))}.vs-piece-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+ .vs-identity-hero .vs-hero-copy{padding:8rem 1.5rem 5rem}
+ .vs-initiative,.vs-vision-values,.vs-leader{grid-template-columns:1fr;gap:2rem}
+ .vs-leader-image{justify-self:start}
+ .vs-piece-grid,.vs-flex-grid,.vs-place-grid,.vs-next-steps ol{grid-template-columns:1fr}
+ .vs-piece-card dl div{grid-template-columns:1fr}
+ .vs-closing .vs-button{width:100%;justify-content:center}
+}

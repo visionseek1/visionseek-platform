@@ -81,7 +81,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
+  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'identity', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {
@@ -100,9 +100,9 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
   for (const step of method.steps) for (const key of ['en', 'ar', 'questionEn', 'questionAr', 'textEn', 'textAr']) assert.equal(typeof step[key], 'string', `${step.id}.${key}`);
 });
 
-test('navigation.json keeps the seven header sections and site-relative paths', () => {
+test('navigation.json keeps the five header sections of the 13 October identity and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path), ['/services', '/method', '/offer', '/about', '/news']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);
@@ -195,7 +195,7 @@ test('page sections hidden from /admin exist, and /admin offers every hideable s
   const offered = [...readFileSync(join(root, 'public/admin/config.yml'), 'utf8').matchAll(/value: "([^"]+)"/g)].map(m => m[1]);
   for (const id of ids) assert.ok(offered.includes(id), `/admin does not offer ${id}; run scripts/archive-options.py`);
   for (const id of ids) {
-    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
+    const used = ['components/identity/home.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
     assert.ok(used, `${id} is listed but no section checks it`);
   }
 });
@@ -209,4 +209,19 @@ test('/admin loads the Arabic interface and its helpers before it starts', () =>
   assert.ok(configLines.includes('locale: ar'), 'config.yml sets locale: ar');
   assert.ok(configLines.includes('  preview_context: VisionSeek preview'), 'config.yml reads the preview status that preview-health.yml posts');
   assert.match(readFileSync(join(root, '.github/workflows/preview-health.yml'), 'utf8'), /context="VisionSeek preview"/);
+});
+
+test('identity.json carries the 13 October identity in both languages, with no HLO and no ceiling numbers', () => {
+  const identity = read('identity.json');
+  for (const key of ['name', 'hero', 'initiative', 'offers', 'method', 'vision', 'values', 'leader', 'closing', 'about', 'services', 'methodPage', 'offer']) assert.ok(identity[key], key);
+  assert.equal(identity.name.ar, 'مهندس القدرات المؤسسية');
+  assert.equal(identity.offers.items.length, 5);
+  assert.equal(identity.method.pieces.length, 6);
+  assert.equal(identity.vision.technologies.length, 7);
+  assert.equal(identity.values.items.length, 3);
+  assert.equal(identity.initiative.who.length, 4);
+  const flat = JSON.stringify(identity);
+  assert.ok(!/HLO|Highest Level One/.test(flat), 'HLO is gone');
+  assert.ok(!/\bfirst\b/i.test(flat) && !/\bأول\b/.test(flat), 'no «first» claims');
+  for (const piece of identity.method.pieces) for (const k of ['name', 'text', 'output', 'owner', 'review']) assert.ok(piece[k].en && piece[k].ar, `${piece.id}.${k}`);
 });
