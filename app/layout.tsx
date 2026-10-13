@@ -3,6 +3,7 @@ import { Alexandria, IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
 import "./institution.css";
+import "./identity.css";
 import {site} from '@/lib/site';
 
 const oxanium = Oxanium({
@@ -40,7 +41,7 @@ const structuredData = {
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-color.png",
       description:
-        "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
+        "VisionSeek is the institutional capability engineer. We design the capability an institution needs, source it anywhere in the world, and make it the institution's own.",
       email: site.email,
       telephone: site.phoneE164,
       address: {
@@ -73,9 +74,9 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
-  title: "VisionSeek | Make It Possible.",
+  title: "VisionSeek | Institutional Capability Engineer",
   description:
-    "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
+    "VisionSeek is the institutional capability engineer. We design the capability an institution needs, source it anywhere in the world, and make it the institution's own.",
   icons: {
     icon: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
     shortcut: "/visionseek-symbol-color.png",
@@ -91,11 +92,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "VisionSeek",
-    title: "VisionSeek | Make It Possible.",
+    title: "VisionSeek | Institutional Capability Engineer",
     description:
-      "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
+      "VisionSeek is the institutional capability engineer. We design the capability an institution needs, source it anywhere in the world, and make it the institution's own.",
     url: "/",
-    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
+    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Institutional Capability Engineer" }],
   },
   robots: {
     index: true,

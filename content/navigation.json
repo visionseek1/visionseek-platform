@@ -1,199 +1,88 @@
 {
   "sections": [
     {
-      "path": "/projects",
-      "en": "Projects",
-      "ar": "المشاريع",
+      "path": "/services",
+      "en": "What we offer",
+      "ar": "ما نقدّمه",
       "children": [
+        {
+          "href": "/services#institutions",
+          "en": "Institutional services",
+          "ar": "خدمات المؤسسات"
+        },
         {
           "href": "/projects",
-          "en": "All sectors",
-          "ar": "كل المجالات"
+          "en": "Ready products",
+          "ar": "المنتجات الجاهزة"
         },
         {
-          "href": "/projects/energy",
-          "en": "Energy & Climate",
-          "ar": "الطاقة والمناخ"
+          "href": "/services#partnerships",
+          "en": "Partnerships and technology transfer",
+          "ar": "الشراكات ونقل التكنولوجيا"
         },
-        {
-          "href": "/projects/semiconductors",
-          "en": "Chips & Semiconductors",
-          "ar": "الرقائق وأشباه الموصلات"
-        },
-        {
-          "href": "/projects/drones-aviation",
-          "en": "Drones & Aviation",
-          "ar": "الدرونز والطيران"
-        },
-        {
-          "href": "/projects/defense",
-          "en": "Defense & Security",
-          "ar": "الدفاع والأمن"
-        },
-        {
-          "href": "/projects/robotics",
-          "en": "Robotics & Industry",
-          "ar": "الروبوتات والصناعة"
-        },
-        {
-          "href": "/projects/health",
-          "en": "Medicine & Health",
-          "ar": "الطب والصحة"
-        },
-        {
-          "href": "/projects/agriculture",
-          "en": "Agriculture & Food Security",
-          "ar": "الزراعة والأمن الغذائي"
-        },
-        {
-          "href": "/projects/infrastructure",
-          "en": "Cities & Infrastructure",
-          "ar": "المدن والبنية التحتية"
-        }
-      ]
-    },
-    {
-      "path": "/opportunities",
-      "en": "R&D Opportunities",
-      "ar": "فرص البحث والتطوير",
-      "children": [
-        {
-          "href": "/opportunities",
-          "en": "Explore opportunities",
-          "ar": "استكشف الفرص"
-        },
-        {
-          "href": "/work-with-us/how-to-respond",
-          "en": "Response guide",
-          "ar": "دليل المشاركة"
-        },
-        {
-          "href": "/work-with-us/prepare-a-concept",
-          "en": "Prepare your note",
-          "ar": "جهّز مذكرتك"
-        }
-      ]
-    },
-    {
-      "path": "/masterclass",
-      "en": "Masterclass",
-      "ar": "ماستركلاس",
-      "children": [
         {
           "href": "/masterclass",
-          "en": "The three doors",
-          "ar": "الأبواب الثلاثة"
+          "en": "Knowledge and leader development",
+          "ar": "المعرفة وبناء القادة"
         },
         {
-          "href": "/masterclass/leader-seat",
-          "en": "Management and leadership in the age of AI",
-          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
-        },
-        {
-          "href": "/masterclass#institutions",
-          "en": "Working with AI",
-          "ar": "العمل مع الذكاء الاصطناعي"
-        },
-        {
-          "href": "/masterclass/develop-the-institution",
-          "en": "The institution and AI",
-          "ar": "المؤسسة والذكاء الاصطناعي"
+          "href": "/services#presence",
+          "en": "Presence and outreach",
+          "ar": "الظهور والتواصل"
         }
       ]
     },
     {
-      "path": "/programs",
-      "en": "Programs",
-      "ar": "البرامج",
+      "path": "/method",
+      "en": "Method",
+      "ar": "المنهج",
       "children": [
         {
-          "href": "/about/what-we-do#hlo",
-          "en": "HLO — Highest Level One",
-          "ar": "برنامج HLO"
+          "href": "/method#diagnosis",
+          "en": "Diagnosis",
+          "ar": "التشخيص"
         },
         {
-          "href": "/programs",
-          "en": "Program concepts",
-          "ar": "تصورات البرامج"
+          "href": "/method#capability-map",
+          "en": "Capability map",
+          "ar": "خريطة القدرات"
         },
         {
-          "href": "/programs/ideas",
-          "en": "Ideas under exploration",
-          "ar": "أفكار قيد الاستكشاف"
+          "href": "/method#sourcing",
+          "en": "Sourcing and partnership",
+          "ar": "التوريد والشراكة"
         },
         {
-          "href": "/programs/challenges",
-          "en": "Challenges",
-          "ar": "التحديات"
+          "href": "/method#build-test",
+          "en": "Build and test",
+          "ar": "البناء والتجربة"
         },
         {
-          "href": "/programs/spotlights",
-          "en": "Research spotlights",
-          "ar": "تحت المجهر"
+          "href": "/method#localization",
+          "en": "Transfer and localization",
+          "ar": "النقل والتوطين"
         },
         {
-          "href": "/programs/program-lifecycle",
-          "en": "How programs work",
-          "ar": "كيف تعمل البرامج؟"
+          "href": "/method#handover",
+          "en": "Handover and enablement",
+          "ar": "التسليم والتمكين"
         }
       ]
     },
     {
-      "path": "/news",
-      "en": "News",
-      "ar": "الأخبار",
+      "path": "/offer",
+      "en": "Service offer",
+      "ar": "عرض الخدمة",
       "children": [
         {
-          "href": "/news",
-          "en": "All news & notes",
-          "ar": "كل الأخبار والمقالات"
+          "href": "/offer",
+          "en": "Service offer",
+          "ar": "عرض الخدمة"
         },
         {
-          "href": "/insights",
-          "en": "Leaders House",
-          "ar": "بيت القادة"
-        },
-        {
-          "href": "/news/media",
-          "en": "Media & inquiries",
-          "ar": "الإعلام والاستفسارات"
-        }
-      ]
-    },
-    {
-      "path": "/work-with-us",
-      "en": "Work with Us",
-      "ar": "اعمل معنا",
-      "children": [
-        {
-          "href": "/start",
-          "en": "Build your solutions with us",
-          "ar": "ابنِ حلولك معنا"
-        },
-        {
-          "href": "/work-with-us/new-to-visionseek",
-          "en": "New to VisionSeek",
-          "ar": "ابدأ مع VisionSeek"
-        },
-        {
-          "href": "/work-with-us/how-to-respond",
-          "en": "How to respond",
-          "ar": "كيف تشارك؟"
-        },
-        {
-          "href": "/work-with-us/prepare-a-concept",
-          "en": "Prepare a concept",
-          "ar": "جهّز تصورًا"
-        },
-        {
-          "href": "/work-with-us/review-and-selection",
-          "en": "Review & selection",
-          "ar": "المراجعة والاختيار"
-        },
-        {
-          "href": "/work-with-us/transition",
-          "en": "Transition to use",
-          "ar": "النقل للتشغيل"
+          "href": "/initiative",
+          "en": "Request an introductory session",
+          "ar": "اطلب جلسة تعريفية"
         }
       ]
     },
@@ -203,44 +92,46 @@
       "ar": "عن VisionSeek",
       "children": [
         {
-          "href": "/about/what-we-do",
-          "en": "How VisionSeek works",
-          "ar": "كيف تعمل VisionSeek؟"
-        },
-        {
           "href": "/about",
-          "en": "Our vision",
-          "ar": "رؤيتنا"
+          "en": "The institutional capability engineer",
+          "ar": "مهندس القدرات المؤسسية"
         },
         {
-          "href": "/method",
-          "en": "Our method",
-          "ar": "منهجنا"
+          "href": "/about#vision",
+          "en": "Vision and values",
+          "ar": "الرؤية والقيم"
         },
         {
-          "href": "/about/operating-model",
-          "en": "Operating model",
-          "ar": "نموذج التشغيل"
-        },
-        {
-          "href": "/about/program-questions",
-          "en": "Program questions",
-          "ar": "أسئلة البرنامج"
+          "href": "/about#founder",
+          "en": "The founder",
+          "ar": "المؤسس"
         },
         {
           "href": "/about/people",
           "en": "People",
           "ar": "الأشخاص"
+        }
+      ]
+    },
+    {
+      "path": "/news",
+      "en": "News & reports",
+      "ar": "الأخبار والتقارير",
+      "children": [
+        {
+          "href": "/news",
+          "en": "All news & notes",
+          "ar": "كل الأخبار والمقالات"
         },
         {
-          "href": "/about/governance",
-          "en": "Governance",
-          "ar": "الحوكمة"
+          "href": "/reports",
+          "en": "Research & reports",
+          "ar": "الأبحاث والتقارير"
         },
         {
-          "href": "/about/learning-from-darpa",
-          "en": "Learning from DARPA",
-          "ar": "التعلم من DARPA"
+          "href": "/news/media",
+          "en": "Media & inquiries",
+          "ar": "الإعلام والاستفسارات"
         }
       ]
     }

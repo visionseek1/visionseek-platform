@@ -12,7 +12,13 @@ nav = load('content/navigation.json')
 for s in nav['sections'] + [nav['reports']]:
     add(s['path'], f"{s['ar']} (القسم كله)")
 add('/insights', 'بيت القادة (القسم كله)')
-add('/method', 'منهجنا')
+add('/programs', 'البرامج (القسم القديم كله)')
+add('/opportunities', 'الفرص (القسم القديم كله)')
+add('/work-with-us', 'اعمل معنا (القسم القديم كله)')
+add('/masterclass', 'الماستركلاس (القسم كله)')
+add('/projects', 'المنتجات الجاهزة / المشاريع (القسم كله)')
+add('/initiative', 'المبادرة والجلسة التعريفية')
+for old in ['/about/what-we-do','/about/operating-model','/about/program-questions','/about/governance','/about/learning-from-darpa']: add(old, 'عن VisionSeek ← صفحة قديمة ' + old)
 for s in nav['sections'] + [nav['reports']]:
     for c in s['children']:
         h = c['href'].split('#')[0]

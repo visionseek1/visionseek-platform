@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
-import InteriorPage from "@/components/capability/interior-page";
-export const metadata: Metadata = { title: "Our Method | VisionSeek", description: "Define the capability. Assemble the right people and the best available knowledge and technology. Prove, operate and evolve.", alternates: { canonical: "/method", languages: { en: "/method", ar: "/ar/method" } }, openGraph: { title: "Our Method | VisionSeek", url: "/method" } };
-export default function Page() { return <InteriorPage locale="en" kind="method"/>; }
+import type {Metadata} from 'next';
+import {MethodPage} from '@/components/identity/pages';
+export const metadata: Metadata = {"title": "The method | VisionSeek", "description": "Six flexible pieces arranged around your institution: diagnosis, capability map, sourcing and partnership, build and test, transfer and localization, handover and enablement.", "alternates": {"canonical": "/method", "languages": {"en": "/method", "ar": "/ar/method"}}, "openGraph": {"title": "The method | VisionSeek", "url": "/method"}};
+export default function Page() { return <MethodPage locale="en"/>; }
