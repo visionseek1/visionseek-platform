@@ -11,11 +11,11 @@ export async function POST(request: Request) {
   let f: FormData;
   try { f = await request.formData(); } catch { return Response.redirect(`${origin}/ops?r=err`, 303); }
   const g = (k: string) => { const v = f.get(k); return typeof v === "string" ? v.trim() : ""; };
-  const back = g("back").replace(/[^a-z0-9.\-]/gi, "").slice(0, 40);
+  const back = g("back").replace(/[^a-z0-9._\-/]/gi, "").slice(0, 80);
   const to = (r: string) => Response.redirect(`${origin}/ops?r=${r}${back ? "#" + back : ""}`, 303);
   if (!notionConfigured()) return to("err");
   try {
-    const verdict = g("verdict") === "ok" ? "اتحسم" : g("verdict") === "later" ? "مؤجل" : "";
+    const verdict = g("verdict") === "ok" ? "اتحسم" : g("verdict") === "later" ? "مؤجل" : g("verdict") === "no" ? "مرفوض" : "";
     if (!verdict) return to("err");
     await updateDecision(g("id"), verdict, g("note").slice(0, 300));
     return to("dec");

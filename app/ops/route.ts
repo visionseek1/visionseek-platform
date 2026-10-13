@@ -70,9 +70,11 @@ export async function GET(request: Request) {
     const r = url.searchParams.get("r") || "";
     const FLASH: Record<string, string> = {
       ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.",
-      card: "الكارت اتضاف في Notion.",
+      card: "العنصر اتضاف في Notion.",
       saved: "اتحفظ في Notion.",
       comment: "التعليق اتسجّل. Claude هيقراه ويرد في الغرفة.",
+      dec: "القرار اتسجّل في Notion.",
+      proposed: "الطلب راح «قرارات مستنياك».",
       err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion.",
     };
     const flash = FLASH[r] || "";

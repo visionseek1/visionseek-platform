@@ -24,15 +24,20 @@ test("the room is a private, non-indexed area behind a password from the environ
   assert.match(proxy, /admin\|ops\|/);
 });
 
-test("the room page carries the four levels, the evidence measurement and no secrets", async () => {
+test("the admin platform carries the approved structure, no secrets and no trace of the cancelled programme", async () => {
   const mod = await read("app/ops/room-html.ts");
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  assert.match(html, /<title>غرفة عمليات VisionSeek<\/title>/);
+  assert.match(html, /<title>منصة إدارة VisionSeek<\/title>/);
   assert.match(html, /name="robots" content="noindex, nofollow"/);
-  for (const needle of ["المستوى 1", "الأذرع الخمسة", "يرى", "يعرف", "يربط", "الكانبان", "التقويم", "الخرائط", "الدروس", "القرارات", "/ops/logout"]) {
+  for (const needle of ["مركز القيادة", "مهندس القدرات المؤسسية", "هل يبني قدرات؟", "أهداف الربع", "قرارات مستنياك", "مواعيد قريبة", "القطاعات", "الأقسام والمسارات", "الخدمات", "العملاء", "المرجع", "الأسعار (داخلي)", "القيم والقواعد", "سجل القرارات", "/ops/logout"]) {
     assert.ok(html.includes(needle), `missing: ${needle}`);
   }
+  for (const s of ["خدمات المؤسسات", "المنتجات الجاهزة", "الشراكات ونقل التكنولوجيا", "المعرفة وبناء القادة", "الظهور والتواصل"]) assert.ok(html.includes(s), `missing sector: ${s}`);
+  for (const d of ["القادة والعملاء", "هندسة القدرات", "الشراكات والتوطين", "البناء والمنتجات", "الرسالة والظهور", "التشغيل والمعرفة"]) assert.ok(html.includes(d), `missing department: ${d}`);
   assert.doesNotMatch(html, /sk-|sb_publishable_|ROOM_PASSWORD/);
+  assert.doesNotMatch(html, /HLO/);
+  // الأسعار داخلية: مفيش رقم سعر مكتوب في الصفحة نفسها، بتتقري من سجل القرارات بعد الدخول
+  assert.doesNotMatch(html, /7,500|1,000 درهم/);
 });
 
 test("the session token is an HMAC of the password, never the password itself", () => {
@@ -62,14 +67,23 @@ test("the room reads Notion live from the server and writes only engine requests
   assert.match(html, /window\.__ROOM__/);
 });
 
-test("the room has the chosen Asana features: mine, inbox, timeline, comments, steps, dependencies, milestones, overdue", async () => {
-  const [mod, card] = await Promise.all([read("app/ops/room-html.ts"), read("app/ops/card/route.ts")]);
+test("the tree: sector ← department ← track ← item ← methodology", async () => {
+  const [mod, card, notion] = await Promise.all([read("app/ops/room-html.ts"), read("app/ops/card/route.ts"), read("lib/notion-room.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  for (const needle of ["بتاعي", "الوارد", "الخط الزمني", "/ops/card", "parseSteps", "blockedBy", "isLate", "معلم"]) {
+  for (const needle of ["pageTrack", "pageNew", "methodBlock", "المثال الناجح", "القالب", "المقياس الأسبوعي", "/ops/card", "propose", "فكرة", "بيتفلتر", "شغال", "مستني أحمد", "خلص", "بعدين", "moveCard"]) {
     assert.ok(html.includes(needle), `missing: ${needle}`);
   }
+  // الأنواع الثمانية اتلغت من زر «إضافة»: العنصر بيتعرّف بمساره
+  assert.doesNotMatch(html, /name="type"/);
+  assert.match(card, /مفيش عنصر من غير مسار/);
   assert.match(card, /cookieIsValid/);
-  assert.match(card, /action === "create"|action === "update"|action === "comment"/);
+  assert.match(notion, /tracks: \{ ds: "507136db-21df-4dfa-9de6-e4688782b9df"/);
+  assert.match(notion, /function trackInfo/);
+  assert.match(notion, /export async function proposeMethodUpdate/);
+  // تحديث المنهجية من عنصر ناجح بيستنى موافقة د. أحمد
+  assert.match(notion, /"مستني د. أحمد"/);
+  // Nine Star منفصلة: أي حاجة تخص «هانا كار» ما تظهرش
+  assert.match(notion, /function notNineStar/);
 });
 
 test("the room installs on a phone: manifest, icons, service worker, mobile bars, drag and drop", async () => {
@@ -82,7 +96,7 @@ test("the room installs on a phone: manifest, icons, service worker, mobile bars
   assert.match(html, /rel="manifest" href="\/ops\/manifest\.webmanifest"/);
   assert.match(html, /apple-mobile-web-app-capable/);
   assert.match(html, /serviceWorker\.register\("\/ops\/sw\.js\?v=\d+"/);
-  for (const needle of ['id="tabbar"', 'id="topbar"', "ondragstart", "ondrop", "moveCard"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  for (const needle of ['id="tabbar"', 'id="topbar"', "ondragstart", "ondrop", "moveCard", "max-width:900px"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.doesNotMatch(sw, /caches\.open/); // لا تخزين لمحتوى الغرفة الخاصة
 });
 
@@ -102,21 +116,22 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
   }
 });
 
-test("client map: every lead card carries type, place and service, a locked outcome with a date, and the room filters by them", async () => {
+test("clients: stage, last contact, next follow-up, pieces order per client, and the initiative counter", async () => {
   const [mod, notion, lead] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  for (const needle of ["leadMatrix", "leadFilters", "leadMapForm", "newLeadForm", "سجّلها", "leadStats", "بقوا عملاء", "leadHealth", "dupCheck", "perfStrip", "عدادات الأداء", "leadTable", "toggleLR", "سبب الإقفال", "القيمة (درهم)", "C1 ناشئة", "S5 مصممة مسبقًا", "النتيجة المقفولة", "مصدر الإشارة"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  for (const needle of ["pageClients", "pageClient", "تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة", "آخر تواصل", "المتابعة الجاية", "ترتيب القطع", "المنح العشرة", "حسب العميل"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.match(notion, /export async function updateLeadMap/);
   assert.match(notion, /export async function createLead/);
-  assert.match(notion, /"nimo"/);
-  assert.match(lead, /action"\) === "map"/);
+  assert.match(notion, /"ترتيب القطع"/);
+  assert.match(notion, /"منحة المبادرة"/);
+  assert.match(lead, /pieces: opt\("pieces"\)/);
   assert.match(lead, /cookieIsValid/);
 });
 
 test("methodologies: a room view, owner-only approval, agents read only approved ones", async () => {
   const [mod, notion, route] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/method/route.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  for (const needle of ["renderMethods", "المنهجيات", "/ops/method", "المعتمدة", "التوقع", "المسار"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  for (const needle of ["renderMethods", "المنهجيات", "/ops/method", "المعتمدة", "مسارات من غير منهجية"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.match(notion, /export async function updateMethodStatus/);
   assert.match(route, /cookieIsValid/);
 });

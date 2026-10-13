@@ -17,6 +17,8 @@ export const SOURCES = {
   requests: { ds: "54ff57e5-5d77-415d-98a6-b0c4810b80a4", db: "4ea8a74b705c4fc184235616a1498c4b" },
   comments: { ds: "3b518164-13ac-414e-bec0-7d4aeddbe451", db: "44b26f5637c64c9f808931bebd6a27aa" },
   leads: { ds: "ea2da55a-85dd-475a-bae8-e265a2759d52", db: "49501c9f38994637a472732c92e5e1f2" },
+  // الشجرة (13 أكتوبر 2026): القطاع ← القسم ← المسار ← العنصر ← المنهجية. كل مسار تحت قسم، وبيشاور على منهجيته.
+  tracks: { ds: "507136db-21df-4dfa-9de6-e4688782b9df", db: "bb622d5d146547e595f11c09cc3441bd" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -30,6 +32,7 @@ export type LiveRoom = {
   requests: Row[];
   comments: Row[];
   leads: Row[];
+  tracks: Row[];
   cycles: { title: string; url: string; edited: string }[];
 };
 
@@ -113,6 +116,12 @@ async function cycles(): Promise<LiveRoom["cycles"]> {
 }
 
 let cache: { at: number; data: LiveRoom } | null = null;
+
+const NINE_STAR = /هانا ?كار|Hana ?Car/i;
+function notNineStar(r: Row): boolean {
+  for (const k of ["الكارت", "القرار", "الطلب", "عنوان الكارت", "التعليق"]) if (NINE_STAR.test(String(r[k] || ""))) return false;
+  return true;
+}
 const TTL = 60_000;
 
 /** يقرأ كل القواعد مرة واحدة ويحتفظ بها دقيقة. أي فشل في قاعدة = مصفوفة فاضية، لا تعطيل للصفحة. */
@@ -126,7 +135,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions, work, publish, methods, goals, requests, comments, leads, cyc] = await Promise.all([
+  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -135,9 +144,15 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.requests), []),
     safe(query(SOURCES.comments), []),
     safe(query(SOURCES.leads), []),
+    safe(query(SOURCES.tracks), []),
     safe(cycles(), []),
   ]);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, cycles: cyc };
+  // Nine Star مش جزء من VisionSeek: أي حاجة تخص «هانا كار» ما تظهرش في المنصة (قرار د. أحمد 13 أكتوبر).
+  const decisions = decisions0.filter(notNineStar);
+  const work = work0.filter(notNineStar);
+  const requests = requests0.filter(notNineStar);
+  const comments = comments0.filter(notNineStar);
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -145,7 +160,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       if (r["الحالة"] !== "اتعمل") continue;
       const t = `راجع: ${String(r["الطلب"] || "")}`;
       if (!t.trim() || titles.has(t)) continue;
-      await createWorkCard({ title: t, type: "محرك", owner: "د. أحمد", due: "", desc: String(r["خلاصة النتيجة"] || ""), sec: "eng.radar-d", appetite: "ساعة", link: String(r["النتيجة"] || "") });
+      await createWorkCard({ title: t, type: "محرك", owner: "د. أحمد", due: "", desc: String(r["خلاصة النتيجة"] || ""), sec: "eng.radar-d", appetite: "ساعة", link: String(r["النتيجة"] || ""), track: "الوكلاء" }, tracks);
       titles.add(t);
     }
   } catch {
@@ -184,20 +199,32 @@ export async function createEngineRequest(engine: string, note: string): Promise
 
 const OWNERS = new Set(["د. أحمد", "Claude", "Grok", "nimo"]);
 const TYPES = new Set(["مشروع", "تسويق", "عميل", "محرك", "موقع"]);
-const STAGES = new Set(["فكرة", "شغال", "مستني قرار", "مراجعة", "خلص", "واقف"]);
+// أعمدة اللوحة الجديدة: فكرة ← بيتفلتر ← شغال ← مستني أحمد ← خلص، و«بعدين» للمؤجل. القيم القديمة لسه مقبولة.
+const STAGES = new Set(["فكرة", "بيتفلتر", "شغال", "مستني أحمد", "خلص", "بعدين", "مستني قرار", "مراجعة", "واقف"]);
+const FILTER_ANSWERS = new Set(["نعم", "تأجيل"]);
+const SECTORS = new Set(["خدمات المؤسسات", "المنتجات الجاهزة", "الشراكات ونقل التكنولوجيا", "المعرفة وبناء القادة", "الظهور والتواصل"]);
+const DEPTS = new Set(["القادة والعملاء", "هندسة القدرات", "الشراكات والتوطين", "البناء والمنتجات", "الرسالة والظهور", "التشغيل والمعرفة"]);
+
+/** يلاقي المسار في قاعدة «المسارات» باسمه، ويرجّع القسم وأول قطاع بيخدمه — العنصر بيورثهم. */
+function trackInfo(tracks: Row[], name: string): { dept: string; sector: string } | null {
+  const t = tracks.find((r) => String(r["المسار"] || "") === name);
+  if (!t) return null;
+  const sectors = Array.isArray(t["القطاعات"]) ? (t["القطاعات"] as string[]) : [];
+  return { dept: String(t["القسم"] || ""), sector: sectors[0] || "" };
+}
 const rt = (v: string) => ({ rich_text: v ? [{ text: { content: v.slice(0, 1900) } }] : [] });
 const isDate = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v);
 const isPageId = (v: string) => /^[0-9a-f]{32}$/.test(v.replace(/-/g, ""));
 
-export type NewCard = { title: string; type: string; owner: string; due: string; desc: string; sec: string; appetite: string; link?: string; blockedBy?: string; milestone?: boolean };
+export type NewCard = { title: string; type: string; owner: string; due: string; desc: string; sec: string; appetite: string; link?: string; blockedBy?: string; milestone?: boolean; track?: string; goal?: string; filter?: string; next?: string };
 
-export async function createWorkCard(c: NewCard): Promise<string> {
+/** عنصر جديد بيتعمل من جوه مساره: القطاع والقسم بيتورثوا من قاعدة «المسارات»، ومفيش عنصر من غير مسار. */
+export async function createWorkCard(c: NewCard, knownTracks?: Row[]): Promise<string> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
   const title = c.title.trim().slice(0, 200);
   if (!title) throw new Error("empty title");
   const properties: Record<string, unknown> = {
     "الكارت": { title: [{ text: { content: title } }] },
-    "النوع": { select: { name: TYPES.has(c.type) ? c.type : "مشروع" } },
     "المرحلة": { select: { name: "فكرة" } },
     "المسؤول": { select: { name: OWNERS.has(c.owner) ? c.owner : "د. أحمد" } },
     "الوصف": rt(c.desc || ""),
@@ -206,6 +233,22 @@ export async function createWorkCard(c: NewCard): Promise<string> {
     "مستني": rt(c.blockedBy || ""),
     "معلم": { checkbox: !!c.milestone },
   };
+  // النوع اتلغى من زر «إضافة» (13 أكتوبر): العنصر بيتعرّف بمساره. بيتكتب بس لو جه من مكان قديم.
+  if (c.type && TYPES.has(c.type)) properties["النوع"] = { select: { name: c.type } };
+  if (c.track) {
+    const tracks = knownTracks ?? (await query(SOURCES.tracks));
+    const info = trackInfo(tracks, c.track);
+    if (!info) throw new Error("unknown track");
+    properties["المسار"] = { select: { name: c.track } };
+    if (DEPTS.has(info.dept)) properties["القسم المنفّذ"] = { select: { name: info.dept } };
+    if (SECTORS.has(info.sector)) properties["القطاع"] = { select: { name: info.sector } };
+  }
+  if (c.filter && FILTER_ANSWERS.has(c.filter)) {
+    properties["يبني قدرات؟"] = { select: { name: c.filter } };
+    if (c.filter === "تأجيل") properties["المرحلة"] = { select: { name: "بعدين" } };
+  }
+  if (c.goal && isPageId(c.goal)) properties["الهدف المرتبط"] = { relation: [{ id: c.goal }] };
+  if (c.next) properties["الخطوة الجاية"] = rt(c.next);
   if (c.due && isDate(c.due)) properties["الموعد"] = { date: { start: c.due } };
   if (c.link) properties["رابط Notion"] = { url: c.link };
   let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: SOURCES.work.ds }, properties });
@@ -217,7 +260,9 @@ export async function createWorkCard(c: NewCard): Promise<string> {
 }
 
 /** مراحل لوحة العملاء — تحريك الكارت من الغرفة محصور فيها. */
-const LEAD_STAGES = new Set(["اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا", "اتقفل — مش دلوقتي"]);
+const LEAD_STAGES = new Set(["تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة", "اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا", "اتقفل — مش دلوقتي"]);
+/** قطع الخدمة الست — ترتيبها عند كل عميل بيتسجّل في «ترتيب القطع». */
+export const PIECES = ["التشخيص", "خريطة القدرات", "التوريد والشراكة", "البناء والتجربة", "النقل والتوطين", "التسليم والتمكين"];
 
 /** يحرّك كارت عميل لمرحلة تانية على اللوحة (قاعدة «عملاء — خط المتابعة»). لا حذف، ولا تعديل غير المرحلة والملاحظة والمتابعة. */
 export async function updateLeadStage(pageId: string, stage: string, note?: string, followup?: string): Promise<void> {
@@ -255,7 +300,7 @@ const CLIENT_PLACES = new Set(["مصر", "السعودية", "الإمارات",
 const CLIENT_SERVICES = new Set(["S1 جلسة القائد", "S2 ورشة القيادات", "S3 تشخيص القدرات", "S4 بناء القدرة", "S5 مصممة مسبقًا"]);
 const LOCKED_OUTCOMES = new Set(["اتبعت", "رد", "مكالمة", "جلسة", "دفع"]);
 
-export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string; forecast?: string; track?: string };
+export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string; forecast?: string; track?: string; pieces?: string; grant?: string };
 const LEAD_TRACKS = new Set(["عالي — نكلمهم دلوقتي", "متوسط — نسخّنهم الأول", "بدري — المراقبة"]);
 const score10 = (v: string | undefined) => { if (v === undefined) return undefined; if (v === "") return { number: null }; const n = Number(v); if (!Number.isInteger(n) || n < 0 || n > 10) throw new Error("bad forecast"); return { number: n }; };
 const CLOSE_REASONS = new Set(["مش دلوقتي", "الميزانية", "مش صاحب القرار", "ما ردّش", "اختار حل تاني", "تانية"]);
@@ -283,6 +328,12 @@ export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
   put("المسار", sel(m.track, LEAD_TRACKS));
   if (m.followup !== undefined) properties["المتابعة الجاية"] = m.followup && isDate(m.followup) ? { date: { start: m.followup } } : { date: null };
   if (m.signal !== undefined) properties["الإشارة"] = rt(m.signal);
+  if (m.pieces !== undefined) {
+    const list = m.pieces.split("←").map((x) => x.trim()).filter(Boolean);
+    if (list.some((x) => !PIECES.includes(x)) || new Set(list).size !== list.length) throw new Error("bad pieces");
+    properties["ترتيب القطع"] = rt(list.join(" ← "));
+  }
+  if (m.grant !== undefined) properties["منحة المبادرة"] = { checkbox: m.grant === "1" };
   if (m.signalUrl !== undefined) {
     if (m.signalUrl && !/^https:\/\/\S+$/.test(m.signalUrl)) throw new Error("bad url");
     properties["مصدر الإشارة"] = { url: m.signalUrl || null };
@@ -378,7 +429,7 @@ export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { ti
   const pubDue = live.publish.filter((r) => r["الحالة"] === "معتمد" && day(r["date:موعد النشر:start"] || r["موعد النشر"]) && day(r["date:موعد النشر:start"] || r["موعد النشر"]) <= today);
   if (pubDue.length) lines.push(`📣 معتمد ومستني نشرك: ${pubDue.map((r) => r["العنوان"]).join("، ")}`);
   if (weekly) {
-    const stages = ["اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا"];
+    const stages = ["تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة"];
     const counts = stages.map((s) => `${s} ${live.leads.filter((r) => r["المرحلة"] === s).length}`).join(" · ");
     lines.push(`📊 اللوحة: ${counts}`);
     const weekAgo = new Date(new Date(today + "T00:00:00Z").getTime() - 7 * 864e5).toISOString().slice(0, 10);
@@ -408,7 +459,7 @@ export async function logBrief(title: string, body: string, today: string): Prom
   });
 }
 
-export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string; sec?: string };
+export type CardPatch = { stage?: string; owner?: string; due?: string; steps?: string; blockedBy?: string; milestone?: boolean; next?: string; sec?: string; goal?: string; filter?: string };
 
 export async function updateWorkCard(pageId: string, p: CardPatch): Promise<void> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
@@ -422,6 +473,11 @@ export async function updateWorkCard(pageId: string, p: CardPatch): Promise<void
   if (p.next !== undefined) properties["الخطوة الجاية"] = rt(p.next);
   if (p.milestone !== undefined) properties["معلم"] = { checkbox: !!p.milestone };
   if (p.sec && /^[a-z]+\.[a-z-]+$/.test(p.sec)) properties["القسم"] = rt(p.sec);
+  if (p.goal !== undefined) properties["الهدف المرتبط"] = { relation: p.goal && isPageId(p.goal) ? [{ id: p.goal }] : [] };
+  if (p.filter !== undefined && (p.filter === "" || FILTER_ANSWERS.has(p.filter))) {
+    properties["يبني قدرات؟"] = p.filter ? { select: { name: p.filter } } : { select: null };
+    if (p.filter === "تأجيل") properties["المرحلة"] = { select: { name: "بعدين" } };
+  }
   if (!Object.keys(properties).length) return;
   const res = await fetch(`${API}/pages/${pageId}`, {
     method: "PATCH",
@@ -538,15 +594,16 @@ export function changesSince(live: LiveRoom, since: string): { title: string; bo
 }
 
 // ===== حسم القرارات من الغرفة (الإصدار 6): اعتمد / مش دلوقتي بضغطة =====
-const DECISION_VERDICTS = new Set(["اتحسم", "مؤجل"]);
+const DECISION_VERDICTS = new Set(["اتحسم", "مؤجل", "مرفوض"]);
 export async function updateDecision(pageId: string, verdict: string, note?: string): Promise<void> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
   if (!isPageId(pageId)) throw new Error("bad page id");
   if (!DECISION_VERDICTS.has(verdict)) throw new Error("bad verdict");
   const today = new Date().toISOString().slice(0, 10);
-  const properties: Record<string, unknown> = { "الحالة": { select: { name: verdict } } };
-  if (verdict === "اتحسم") properties["اتحسم يوم"] = { date: { start: today } };
-  const suffix = verdict === "اتحسم" ? `اتحسم من الغرفة ${today}` : `اتأجل من الغرفة ${today}`;
+  // «مرفوض» بيتسجّل كقرار محسوم، والرفض مكتوب في «القرار النهائي».
+  const properties: Record<string, unknown> = { "الحالة": { select: { name: verdict === "مرفوض" ? "اتحسم" : verdict } } };
+  if (verdict !== "مؤجل") properties["اتحسم يوم"] = { date: { start: today } };
+  const suffix = verdict === "اتحسم" ? `اتوافق عليه من المنصة ${today}` : verdict === "مرفوض" ? `اترفض من المنصة ${today}` : `اتأجل من المنصة ${today}`;
   properties["القرار النهائي"] = rt(`${note ? note + " — " : ""}${suffix}`);
   const res = await fetch(`${API}/pages/${pageId}`, {
     method: "PATCH",
@@ -555,5 +612,50 @@ export async function updateDecision(pageId: string, verdict: string, note?: str
     cache: "no-store",
   });
   if (!res.ok) throw new Error(`notion ${res.status} deciding`);
+  // طلب تحديث منهجية من عنصر ناجح: بعد موافقة د. أحمد بس، العنصر بيتسجّل «مثال ناجح» على المنهجية.
+  if (verdict === "اتحسم") {
+    try {
+      const page: any = await (await call(`/pages/${pageId}`)).json();
+      const opts = plain(page?.properties?.["الخيارات"]);
+      const m = /method:([0-9a-f-]{32,36})\|item:([0-9a-f-]{32,36})/.exec(String(opts || ""));
+      if (m) {
+        const item: any = await (await call(`/pages/${m[2].replace(/-/g, "")}`)).json();
+        const title = String(plain(item?.properties?.["الكارت"]) || "");
+        await fetch(`${API}/pages/${m[1].replace(/-/g, "")}`, {
+          method: "PATCH",
+          headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
+          body: JSON.stringify({ properties: { "المثال الناجح": rt(`${title} — اتعتمد مثال ناجح ${today}`), "رابط المثال الناجح": { url: item?.url || null }, "آخر تحديث": { date: { start: today } } } }),
+          cache: "no-store",
+        });
+      }
+    } catch {
+      /* القرار نفسه اتسجّل؛ تحديث المنهجية يتعمل يدوي لو فشل */
+    }
+  }
+  cache = null;
+}
+
+/** عنصر خلص وطريقته نجحت ← طلب تحديث لمنهجية مساره، بيستنى موافقة د. أحمد في «قرارات مستنية أحمد». */
+export async function proposeMethodUpdate(itemId: string, methodId: string, note: string): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(itemId) || !isPageId(methodId)) throw new Error("bad page id");
+  const item: any = await (await call(`/pages/${itemId}`)).json();
+  const method: any = await (await call(`/pages/${methodId}`)).json();
+  const itemTitle = String(plain(item?.properties?.["الكارت"]) || "").slice(0, 120);
+  const methodTitle = String(plain(method?.properties?.["المنهجية"]) || "").slice(0, 120);
+  if (!itemTitle || !methodTitle) throw new Error("not found");
+  const today = new Date().toISOString().slice(0, 10);
+  const properties = {
+    "القرار": { title: [{ text: { content: `تحديث منهجية «${methodTitle}» من عنصر ناجح: «${itemTitle}»` } }] },
+    "الحالة": { select: { name: "مستني د. أحمد" } },
+    "القسم": { select: { name: "منهجيات" } },
+    "الخيارات": rt(`method:${methodId.replace(/-/g, "")}|item:${itemId.replace(/-/g, "")}`),
+    "السبب": rt(note.slice(0, 1500)),
+    "اتطلب يوم": { date: { start: today } },
+    "رابط التفاصيل": { url: item?.url || null },
+  };
+  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: SOURCES.decisions.ds }, properties });
+  if (res.status === 400 || res.status === 404) res = await call("/pages", { parent: { database_id: SOURCES.decisions.db }, properties }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} proposing method update`);
   cache = null;
 }

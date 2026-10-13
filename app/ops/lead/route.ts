@@ -20,28 +20,30 @@ export async function POST(request: Request) {
     const v = f.get(k);
     return typeof v === "string" ? v.trim() : "";
   };
+  // الرجوع لنفس الصفحة في المنصة (مثلًا #client/<id>)، وإلا لصفحة العملاء
+  const hash = "#" + (g("back").replace(/[^a-z0-9._\-/]/gi, "").slice(0, 80) || "leads");
   // جهة جديدة على اللوحة بخانات الخريطة (من د. أحمد أو نقلًا عن nimo)
   if (g("action") === "create") {
     try {
       await createLead({ name: g("name"), stage: g("stage"), type: g("type"), place: g("place"), service: g("service"), outcome: g("outcome"), followup: g("followup"), decider: g("decider"), note: g("note"), signal: g("signal"), signalUrl: g("signalUrl"), by: g("by"), value: g("value"), forecast: g("forecast"), track: g("track") });
-      return Response.redirect(`${origin}/ops?r=saved#leads`, 303);
+      return Response.redirect(`${origin}/ops?r=saved${hash}`, 303);
     } catch {
-      return Response.redirect(`${origin}/ops?r=err#leads`, 303);
+      return Response.redirect(`${origin}/ops?r=err${hash}`, 303);
     }
   }
   // خانات خريطة العملاء والخدمات: النوع · المكان · الخدمة · النتيجة المقفولة والموعد · الإشارة (لكروت S5)
   if (g("action") === "map") {
     const opt = (k: string) => (f.has(k) ? g(k) : undefined);
     try {
-      await updateLeadMap(g("id"), { type: opt("type"), place: opt("place"), service: opt("service"), outcome: opt("outcome"), followup: opt("followup"), signal: opt("signal"), signalUrl: opt("signalUrl"), value: opt("value"), reason: opt("reason"), forecast: opt("forecast"), track: opt("track") });
-      return Response.redirect(`${origin}/ops?r=saved#leads`, 303);
+      await updateLeadMap(g("id"), { type: opt("type"), place: opt("place"), service: opt("service"), outcome: opt("outcome"), followup: opt("followup"), signal: opt("signal"), signalUrl: opt("signalUrl"), value: opt("value"), reason: opt("reason"), forecast: opt("forecast"), track: opt("track"), pieces: opt("pieces"), grant: opt("grant") });
+      return Response.redirect(`${origin}/ops?r=saved${hash}`, 303);
     } catch {
-      return Response.redirect(`${origin}/ops?r=err#leads`, 303);
+      return Response.redirect(`${origin}/ops?r=err${hash}`, 303);
     }
   }
   try {
     await updateLeadStage(g("id"), g("stage"), f.has("note") ? g("note") : undefined, f.has("followup") ? g("followup") : undefined);
-    return Response.redirect(`${origin}/ops?r=saved#leads`, 303);
+    return Response.redirect(`${origin}/ops?r=saved${hash}`, 303);
   } catch {
     return Response.redirect(`${origin}/ops?r=err#leads`, 303);
   }
