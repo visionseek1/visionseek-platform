@@ -52,7 +52,7 @@ export async function GET(request: Request) {
   if (!roomConfigured()) {
     return new Response(
       page(
-        "غرفة العمليات · مقفولة",
+        "منصة الإدارة · مقفولة",
         `<h1>الغرفة مقفولة</h1><p>كلمة السر لسه ما اتحطّتش. تتضاف من إعدادات Vercel كمتغير بيئة باسم <code>ROOM_PASSWORD</code> (8 حروف على الأقل)، ومن غيرها الغرفة ما تفتحش لأي حد.</p>`,
       ),
       { status: 503, headers },
@@ -89,8 +89,8 @@ export async function GET(request: Request) {
   const wrong = url.searchParams.get("e") === "1";
   return new Response(
     page(
-      "غرفة العمليات · دخول",
-      `<h1>غرفة عمليات VisionSeek</h1><p>منطقة خاصة. الطريق اللي بتمشي فيه الأقسام.</p>
+      "منصة الإدارة · دخول",
+      `<h1>منصة إدارة VisionSeek</h1><p>منطقة خاصة بفريق VisionSeek.</p>
 ${wrong ? '<p class="err">كلمة السر مش صح.</p>' : ""}
 <form method="post" action="/ops/login"><label for="p">كلمة السر</label><input id="p" name="password" type="password" autocomplete="current-password" required autofocus><button type="submit">ادخل</button></form>`,
     ),
