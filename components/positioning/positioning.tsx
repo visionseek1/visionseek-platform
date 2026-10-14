@@ -59,9 +59,9 @@ export default function PositioningPage({locale}:{locale:Locale}) {
         <h1>{ar?'ابدأ من حيث وصل العالم.':'Build on the world’s progress.'}</h1>
         <p className={styles.heroLead}>{ar?'هناك تقنيات ومعرفة وفرص يمكن أن تغيّر ما تستطيع مؤسستك فعله. دور VisionSeek أن تكشف ما يناسبك منها، وتجمع عناصره، وتصنع معه مسارًا للتطبيق.':'Technology, knowledge and opportunities can change what your institution is able to do. VisionSeek discovers what fits your needs, connects the right elements and shapes a path to application.'}</p>
         <div className={styles.heroActions}><a className={styles.textLink} href="#position">{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={19}/></a></div>
-        <div className={styles.connection} aria-label={ar?'نربط ما لدى العالم باحتياج مؤسستك من خلال هندسة الفرص':'Engineering Opportunities connects global capabilities with your institution’s needs'}>
+        <div className={styles.connection} aria-label={ar?'نربط ما لدى العالم باحتياج مؤسستك، بعقلية مهندس القدرات المؤسسية':'As an institutional capability architect, VisionSeek connects global capabilities with your institution’s needs'}>
           <div><span className={styles.smallLabel}>{ar?'ما لدى العالم':'WHAT THE WORLD OFFERS'}</span><p>{ar?'معرفة · تقنيات · خبرات · أسواق':'Knowledge · Technology · Expertise · Markets'}</p></div>
-          <div className={styles.connector}><span>VisionSeek</span><strong>{ar?'هندسة الفرص':'Engineering Opportunities'}</strong></div>
+          <div className={styles.connector}><span>VisionSeek</span><strong>{ar?'مهندس القدرات المؤسسية':'Institutional Capability Architect'}</strong></div>
           <div><span className={styles.smallLabel}>{ar?'ما تحتاجه مؤسستك':'WHAT YOUR INSTITUTION NEEDS'}</span><p>{ar?'حل يناسب واقعها ويفتح لها خطوة جديدة.':'A solution that fits its reality and opens a new path.'}</p></div>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function PositioningPage({locale}:{locale:Locale}) {
           <article className={styles.visionseekModel}>
             <div className={styles.brandAsset}><Image src="/visionseek-logo-color.png" width={210} height={70} alt="VisionSeek" sizes="210px"/></div>
             <p className={styles.modelName} dir="ltr">VisionSeek</p>
-            <h3>{ar?'هندسة الفرص للمؤسسات العربية':'Engineering opportunities for Arab institutions'}</h3>
+            <h3>{ar?'مهندس القدرات المؤسسية للمؤسسات العربية':'The institutional capability architect for Arab institutions'}</h3>
             <p>{ar?'نربط طموح المؤسسة بما وصل إليه العالم. نكشف الفرصة، ثم نجمع المعرفة والتقنية والأشخاص والشركاء حول حل يناسبها.':'Connect institutional ambition with global progress. Discover the opportunity, then assemble knowledge, technology, people and partners around a fitting solution.'}</p>
             <a href="#our-role">{ar?'لماذا تختارنا؟':'Why choose us?'}<ArrowRight size={17}/></a>
           </article>
