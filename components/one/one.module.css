@@ -1,7 +1,7 @@
 /* One message, one path (15 Oct 2026): the simplified home, «ماذا نقدم» and the initiative. Dark VisionSeek ground, lime for the single CTA. */
 .hero { position: relative; min-height: min(86svh, 820px); display: flex; align-items: flex-end; padding: 9rem clamp(1.5rem, 6vw, 7rem) 5rem; overflow: hidden; background: #0a0b0d; }
-.hero img { object-fit: cover; opacity: .32; }
-.heroShade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,4,4,.15) 0%, rgba(3,4,4,.78) 70%, #030404 100%); }
+.hero img { object-fit: cover; opacity: .72; }
+.heroShade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,4,4,0) 0%, rgba(3,4,4,.35) 45%, rgba(3,4,4,.82) 100%); }
 .heroCopy { position: relative; max-width: 62rem; display: flex; flex-direction: column; gap: 1.6rem; }
 .heroCopy h1 { font-size: clamp(2.4rem, 5.6vw, 5.2rem); line-height: 1.25; margin: 0; text-wrap: balance; font-weight: 600; }
 .heroLine { color: var(--lime); font: 600 .78rem/1.6 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; direction: ltr; }

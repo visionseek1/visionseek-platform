@@ -13,7 +13,7 @@ test('one message: «مهندس القدرات المؤسسية», one CTA «ا�
   assert.equal(one.cta.label.ar, 'احجز جلستك المجانية');
   for (const p of publicFiles().filter(p => !p.includes('leaders') && !p.includes('reports'))) assert.doesNotMatch(read(p), /ابنِ حلولك معنا|Build your solutions with us/, p);
   assert.match(read('components/capability/navigation.tsx'), /<BookButton locale=\{locale\} className="vs-start-nav"\/>/);
-  assert.match(read('lib/seo.ts'), /VisionSeek \| نجعلها ممكنة/);
+  assert.match(read('lib/seo.ts'), /VisionSeek \| مهندس القدرات المؤسسية/);
   assert.match(read('lib/seo.ts'), /VisionSeek \| Institutional Capability Architect/);
 });
 

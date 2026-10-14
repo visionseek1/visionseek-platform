@@ -4,7 +4,10 @@
     "ar": "مهندس القدرات المؤسسية"
   },
   "cta": {
-    "label": { "en": "Book your free session", "ar": "احجز جلستك المجانية" },
+    "label": {
+      "en": "Book your free session",
+      "ar": "احجز جلستك المجانية"
+    },
     "line": {
       "en": "Start with a 30-minute session with Dr. Ahmed — free until December 2026.",
       "ar": "ابدأ بجلسة 30 دقيقة مع د. أحمد، مجانًا حتى ديسمبر 2026."
@@ -19,87 +22,231 @@
   },
   "home": {
     "hero": {
-      "title": { "en": "A new capability for your institution, built on the best the world has reached.", "ar": "قدرةٌ جديدة لمؤسستك، تُبنى بأفضل ما وصل إليه العالم." },
-      "line": { "en": "Institutional Capability Architect · From Korea to the Arab world", "ar": "Institutional Capability Architect · From Korea to the Arab world" },
+      "title": {
+        "en": "A new capability for your institution, built on the best the world has reached.",
+        "ar": "قدرةٌ جديدة لمؤسستك، تُبنى بأفضل ما وصل إليه العالم."
+      },
+      "line": {
+        "en": "Institutional Capability Architect · From Korea to the Arab world",
+        "ar": "مهندس القدرات المؤسسية · من كوريا إلى العالم العربي"
+      },
       "image": "/visionseek-hero.png",
-      "imageAlt": { "en": "VisionSeek", "ar": "VisionSeek" }
+      "imageAlt": {
+        "en": "VisionSeek",
+        "ar": "VisionSeek"
+      }
     },
     "problem": {
-      "eyebrow": { "en": "THE QUESTION", "ar": "السؤال" },
+      "eyebrow": {
+        "en": "THE QUESTION",
+        "ar": "السؤال"
+      },
       "text": {
         "en": "Institutions know they need a new capability. What they do not know is what to build, what to buy, what to transfer, whom to partner with, and in what order. We answer that question with them — then we build the answer.",
         "ar": "المؤسسات تعرف أنها تحتاج قدرة جديدة، لكنها لا تعرف ماذا تبني، وماذا تشتري، وماذا تنقل، ومن تشارك، وبأي ترتيب. نجيب عن هذا السؤال معها، ثم نبني الإجابة."
       }
     },
-    "sectorsHeading": { "en": "What we offer", "ar": "ماذا نقدم" },
-    "insightsHeading": { "en": "Latest from Insights", "ar": "آخر قراءات Insights" },
-    "insightsLink": { "en": "All of Insights", "ar": "كل Insights" },
-    "belief": { "en": "We believe the coming decade will be made by the institutions that start today.", "ar": "نؤمن أن العقد القادم تصنعه المؤسسات التي تبدأ اليوم." }
+    "sectorsHeading": {
+      "en": "What we offer",
+      "ar": "ماذا نقدم"
+    },
+    "insightsHeading": {
+      "en": "Latest from Insights",
+      "ar": "آخر قراءات Insights"
+    },
+    "insightsLink": {
+      "en": "All of Insights",
+      "ar": "كل Insights"
+    },
+    "belief": {
+      "en": "We believe the coming decade will be made by the institutions that start today.",
+      "ar": "نؤمن أن العقد القادم تصنعه المؤسسات التي تبدأ اليوم."
+    }
   },
   "sectors": [
     {
       "id": "services",
-      "title": { "en": "Institutional services", "ar": "خدمات المؤسسات" },
-      "text": { "en": "From diagnosis to a capability that runs inside your institution.", "ar": "من التشخيص إلى قدرة تعمل داخل مؤسستك." },
-      "detail": { "en": "Six pieces of work, taken in the order your institution needs: diagnosis, a capability map, sourcing and partnership, build and pilot, transfer and localisation, handover and enablement. The method is fixed; the pace is set by the institution.", "ar": "ست قطع عمل، تأخذها المؤسسة بالترتيب الذي يناسبها: التشخيص، وخريطة القدرات، والتوريد والشراكة، والبناء والتجربة، والنقل والتوطين، والتسليم والتمكين. المنهج ثابت، والإيقاع تحدده المؤسسة." }
+      "title": {
+        "en": "Institutional services",
+        "ar": "خدمات المؤسسات"
+      },
+      "text": {
+        "en": "From diagnosis to a capability that runs inside your institution.",
+        "ar": "من التشخيص إلى قدرة تعمل داخل مؤسستك."
+      },
+      "detail": {
+        "en": "Six pieces of work, taken in the order your institution needs: diagnosis, a capability map, sourcing and partnership, build and pilot, transfer and localisation, handover and enablement. The method is fixed; the pace is set by the institution.",
+        "ar": "ست قطع عمل، تأخذها المؤسسة بالترتيب الذي يناسبها: التشخيص، وخريطة القدرات، والتوريد والشراكة، والبناء والتجربة، والنقل والتوطين، والتسليم والتمكين. المنهج ثابت، والإيقاع تحدده المؤسسة."
+      }
     },
     {
       "id": "products",
-      "title": { "en": "Ready products", "ar": "المنتجات الجاهزة" },
-      "text": { "en": "Tools built once that serve more than one institution, such as the Living Charter.", "ar": "أدوات تُبنى مرة وتخدم أكثر من مؤسسة، مثل «اللائحة الحية»." },
-      "detail": { "en": "The first is the Living Charter: an institution's rules kept as a living system rather than a document on a shelf. More products follow as the work with institutions reveals them.", "ar": "أولها «اللائحة الحية»: لائحة المؤسسة كنظام حيّ يعمل، لا كملف على رفّ. وتتبعها منتجات أخرى يكشفها العمل مع المؤسسات." }
+      "title": {
+        "en": "Ready products",
+        "ar": "المنتجات الجاهزة"
+      },
+      "text": {
+        "en": "Tools built once that serve more than one institution, such as the Living Charter.",
+        "ar": "أدوات تُبنى مرة وتخدم أكثر من مؤسسة، مثل «اللائحة الحية»."
+      },
+      "detail": {
+        "en": "The first is the Living Charter: an institution's rules kept as a living system rather than a document on a shelf. More products follow as the work with institutions reveals them.",
+        "ar": "أولها «اللائحة الحية»: لائحة المؤسسة كنظام حيّ يعمل، لا كملف على رفّ. وتتبعها منتجات أخرى يكشفها العمل مع المؤسسات."
+      }
     },
     {
       "id": "partnerships",
-      "title": { "en": "Partnerships and technology transfer", "ar": "الشراكات ونقل التقنية" },
-      "text": { "en": "Partners from Korea and the world, and real localisation.", "ar": "شركاء من كوريا والعالم، وتوطين حقيقي." },
-      "detail": { "en": "We identify capabilities that Korean and global companies and labs already run, match them to what Gulf and Egyptian institutions need, and design the transfer so the capability stays: a local team, written knowledge, local operation, clear ownership.", "ar": "نرصد قدرات تشغّلها بالفعل شركات ومراكز كورية وعالمية، ونطابقها مع ما تحتاجه مؤسسات الخليج ومصر، ونصمم النقل بحيث تبقى القدرة هنا: فريق محلي، ومعرفة مكتوبة، وتشغيل محلي، وملكية واضحة." },
-      "fieldsHeading": { "en": "Fields we work across", "ar": "المجالات التي نعمل فيها" }
+      "title": {
+        "en": "Partnerships and technology transfer",
+        "ar": "الشراكات ونقل التقنية"
+      },
+      "text": {
+        "en": "Partners from Korea and the world, and real localisation.",
+        "ar": "شركاء من كوريا والعالم، وتوطين حقيقي."
+      },
+      "detail": {
+        "en": "We identify capabilities that Korean and global companies and labs already run, match them to what Gulf and Egyptian institutions need, and design the transfer so the capability stays: a local team, written knowledge, local operation, clear ownership.",
+        "ar": "نرصد قدرات تشغّلها بالفعل شركات ومراكز كورية وعالمية، ونطابقها مع ما تحتاجه مؤسسات الخليج ومصر، ونصمم النقل بحيث تبقى القدرة هنا: فريق محلي، ومعرفة مكتوبة، وتشغيل محلي، وملكية واضحة."
+      },
+      "fieldsHeading": {
+        "en": "Fields we work across",
+        "ar": "المجالات التي نعمل فيها"
+      }
     },
     {
       "id": "knowledge",
-      "title": { "en": "Knowledge and leaders", "ar": "المعرفة وبناء القادة" },
-      "text": { "en": "What we learn, written for the people who make the decisions.", "ar": "ما نتعلّمه نكتبه لمن بيده القرار." },
-      "detail": { "en": "VisionSeek Insights publishes notes, frameworks and reports from our learning engine. Masterclasses take leaders and their teams through management and leadership in the age of AI.", "ar": "VisionSeek Insights تنشر الملاحظات والأطر والتقارير من محرّك التعلم. والماستركلاس يأخذ القادة وفرقهم إلى الإدارة والقيادة في عصر الذكاء الاصطناعي." }
+      "title": {
+        "en": "Knowledge and leaders",
+        "ar": "المعرفة وبناء القادة"
+      },
+      "text": {
+        "en": "What we learn, written for the people who make the decisions.",
+        "ar": "ما نتعلّمه نكتبه لمن بيده القرار."
+      },
+      "detail": {
+        "en": "VisionSeek Insights publishes notes, frameworks and reports from our learning engine. Masterclasses take leaders and their teams through management and leadership in the age of AI.",
+        "ar": "VisionSeek Insights تنشر الملاحظات والأطر والتقارير من محرّك التعلم. والماستركلاس يأخذ القادة وفرقهم إلى الإدارة والقيادة في عصر الذكاء الاصطناعي."
+      }
     },
     {
       "id": "presence",
-      "title": { "en": "Presence", "ar": "الظهور" },
-      "text": { "en": "One message, everywhere.", "ar": "رسالة واحدة في كل مكان." },
-      "detail": { "en": "The site, the monthly letter and our channels carry one message: VisionSeek is the institutional capability architect for Arab institutions.", "ar": "الموقع، والنشرة الشهرية، وقنواتنا تحمل رسالة واحدة: VisionSeek هي مهندس القدرات المؤسسية للمؤسسات العربية." }
+      "title": {
+        "en": "Presence",
+        "ar": "الظهور"
+      },
+      "text": {
+        "en": "One message, everywhere.",
+        "ar": "رسالة واحدة في كل مكان."
+      },
+      "detail": {
+        "en": "The site, the monthly letter and our channels carry one message: VisionSeek is the institutional capability architect for Arab institutions.",
+        "ar": "الموقع، والنشرة الشهرية، وقنواتنا تحمل رسالة واحدة: VisionSeek هي مهندس القدرات المؤسسية للمؤسسات العربية."
+      }
     }
   ],
   "offer": {
-    "title": { "en": "What we offer", "ar": "ماذا نقدم" },
+    "title": {
+      "en": "What we offer",
+      "ar": "ماذا نقدم"
+    },
     "intro": {
       "en": "Five areas of work, all serving one role: the institutional capability architect. Start wherever your institution is.",
       "ar": "خمسة قطاعات عمل، تخدم كلها دورًا واحدًا: مهندس القدرات المؤسسية. ابدأ من حيث تقف مؤسستك."
     },
-    "moreHeading": { "en": "Also on the site", "ar": "أيضًا على الموقع" },
+    "moreHeading": {
+      "en": "Also on the site",
+      "ar": "أيضًا على الموقع"
+    },
     "more": [
-      { "href": "/masterclass", "title": { "en": "Masterclass", "ar": "ماستركلاس" }, "text": { "en": "Management and leadership in the age of AI.", "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي." } },
-      { "href": "/programs", "title": { "en": "Programs", "ar": "البرامج" }, "text": { "en": "Program concepts under exploration.", "ar": "تصورات برامج قيد الاستكشاف." } },
-      { "href": "/news", "title": { "en": "News", "ar": "الأخبار" }, "text": { "en": "News and notes from VisionSeek.", "ar": "أخبار ومقالات من VisionSeek." } }
+      {
+        "href": "/masterclass",
+        "title": {
+          "en": "Masterclass",
+          "ar": "ماستركلاس"
+        },
+        "text": {
+          "en": "Management and leadership in the age of AI.",
+          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي."
+        }
+      },
+      {
+        "href": "/programs",
+        "title": {
+          "en": "Programs",
+          "ar": "البرامج"
+        },
+        "text": {
+          "en": "Program concepts under exploration.",
+          "ar": "تصورات برامج قيد الاستكشاف."
+        }
+      },
+      {
+        "href": "/news",
+        "title": {
+          "en": "News",
+          "ar": "الأخبار"
+        },
+        "text": {
+          "en": "News and notes from VisionSeek.",
+          "ar": "أخبار ومقالات من VisionSeek."
+        }
+      }
     ]
   },
   "initiative": {
-    "eyebrow": { "en": "THE INITIATIVE", "ar": "المبادرة" },
-    "title": { "en": "The VisionSeek initiative for building Arab capabilities", "ar": "مبادرة VisionSeek لبناء القدرات العربية" },
-    "offer": { "en": "A free 30-minute session with Dr. Ahmed", "ar": "جلسة 30 دقيقة مجانًا مع د. أحمد" },
-    "period": { "en": "October to December 2026", "ar": "من أكتوبر إلى ديسمبر 2026" },
-    "limited": { "en": "A limited number of sessions", "ar": "عدد الجلسات محدود" },
+    "eyebrow": {
+      "en": "THE INITIATIVE",
+      "ar": "المبادرة"
+    },
+    "title": {
+      "en": "The VisionSeek initiative for building Arab capabilities",
+      "ar": "مبادرة VisionSeek لبناء القدرات العربية"
+    },
+    "offer": {
+      "en": "A free 30-minute session with Dr. Ahmed",
+      "ar": "جلسة 30 دقيقة مجانًا مع د. أحمد"
+    },
+    "period": {
+      "en": "October to December 2026",
+      "ar": "من أكتوبر إلى ديسمبر 2026"
+    },
+    "limited": {
+      "en": "A limited number of sessions",
+      "ar": "عدد الجلسات محدود"
+    },
     "intro": {
       "en": "One conversation about your institution: where it stands, what capability it needs next, and how to get there. No preparation needed beyond knowing the outcome you want.",
       "ar": "حديث واحد عن مؤسستك: أين تقف، وما القدرة التي تحتاجها بعد ذلك، وكيف تصل إليها. لا يحتاج الأمر إلى تحضير سوى أن تعرف النتيجة التي تريدها."
     },
-    "outcomesHeading": { "en": "What you leave the session with", "ar": "ما تخرج به من الجلسة" },
+    "outcomesHeading": {
+      "en": "What you leave the session with",
+      "ar": "ما تخرج به من الجلسة"
+    },
     "outcomes": [
-      { "en": "A clearer picture of the capability your institution needs.", "ar": "فهم أوضح للقدرة التي تحتاجها مؤسستك." },
-      { "en": "A first ordering: what to build, what to buy, what to transfer.", "ar": "أول ترتيب: ماذا تبني، وماذا تشتري، وماذا تنقل." },
-      { "en": "A clear next step — if there is one.", "ar": "خطوة جاية واضحة، إن كانت هناك خطوة." }
+      {
+        "en": "A clearer picture of the capability your institution needs.",
+        "ar": "فهم أوضح للقدرة التي تحتاجها مؤسستك."
+      },
+      {
+        "en": "A first ordering: what to build, what to buy, what to transfer.",
+        "ar": "أول ترتيب: ماذا تبني، وماذا تشتري، وماذا تنقل."
+      },
+      {
+        "en": "A clear next step — if there is one.",
+        "ar": "خطوة تالية واضحة، إن كانت هناك خطوة."
+      }
     ],
-    "forHeading": { "en": "Who it is for", "ar": "لمن هذه الجلسة" },
-    "for": { "en": "Leaders of institutions, companies and government bodies in the Gulf and Egypt who hold a decision about a new capability.", "ar": "قادة المؤسسات والشركات والجهات الحكومية في الخليج ومصر، ممن بيدهم قرار بشأن قدرة جديدة." },
-    "note": { "en": "The session is online, in Arabic or English, at a time that suits you. Confirmation arrives by email from hello@visionseek.org.", "ar": "الجلسة عبر الإنترنت، بالعربية أو الإنجليزية، في الوقت الذي يناسبك. يصلك التأكيد بالبريد من hello@visionseek.org." }
+    "forHeading": {
+      "en": "Who it is for",
+      "ar": "لمن هذه الجلسة"
+    },
+    "for": {
+      "en": "Leaders of institutions, companies and government bodies in the Gulf and Egypt who hold a decision about a new capability.",
+      "ar": "قادة المؤسسات والشركات والجهات الحكومية في الخليج ومصر، ممن بيدهم قرار بشأن قدرة جديدة."
+    },
+    "note": {
+      "en": "The session is online, in Arabic or English, at a time that suits you. Confirmation arrives by email from hello@visionseek.org.",
+      "ar": "الجلسة عبر الإنترنت، بالعربية أو الإنجليزية، في الوقت الذي يناسبك. يصلك التأكيد بالبريد من hello@visionseek.org."
+    }
   }
 }
