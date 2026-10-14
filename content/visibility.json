@@ -5,6 +5,9 @@
     },
     {
       "path": "/insights"
+    },
+    {
+      "path": "/reports"
     }
   ],
   "hiddenBlocks": []
