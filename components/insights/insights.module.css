@@ -18,8 +18,8 @@
 .page :is(h1, h2, h3, p, ul) { margin: 0; }
 .page a { color: var(--violet); }
 .page a:hover { color: var(--ink); }
-.page :is(h1, h2, h3) { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-weight: 600; letter-spacing: normal; }
-.en :is(h1, h2, h3) { font-family: var(--font-serif), Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+.page.page.page :is(h1, h2, h3) { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-weight: 600; letter-spacing: normal; }
+.page.page.en :is(h1, h2, h3) { font-family: var(--font-serif), Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
 
 .subnav { border-bottom: 1px solid var(--rule); padding-inline: clamp(16px, 5vw, 72px); }
 .subnavInner { max-width: 1240px; margin: 0 auto; display: flex; gap: 26px; flex-wrap: wrap; padding: 14px 0; font-size: 14px; }
@@ -32,19 +32,19 @@
 
 .intro { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: end; border-bottom: 1px solid var(--ink); padding-bottom: 56px; }
 .brandline { font-family: var(--font-serif), Georgia, serif; font-size: 18px; color: var(--violet); }
-.intro h1 { font-size: clamp(40px, 5vw, 64px); line-height: 1.2; text-wrap: balance; margin-top: 20px; }
+.page.page .intro h1 { font-size: clamp(40px, 5vw, 64px); line-height: 1.2; text-wrap: balance; margin-top: 20px; }
 .lede { font-size: 19px; line-height: 1.9; color: var(--body); max-width: 520px; }
 .en .lede { line-height: 1.65; }
 
 .rowHead { display: flex; align-items: baseline; gap: 16px; }
-.rowHead h2 { font-size: 15px; letter-spacing: 0.02em; }
+.page.page .rowHead h2 { font-size: 15px; letter-spacing: 0.02em; }
 .rowHead span { flex: 1; height: 1px; background: var(--rule); }
 .latest { display: flex; flex-direction: column; gap: 22px; }
 
 .feature { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px; text-decoration: none; color: var(--ink) !important; background: var(--card); border: 1px solid var(--rule); padding: clamp(24px, 4vw, 48px); transition: border-color .2s; }
 .feature:hover { border-color: var(--ink); }
-.feature h3 { font-size: clamp(26px, 2.6vw, 34px); line-height: 1.45; text-wrap: balance; margin-top: 18px; }
-.en .feature h3 { line-height: 1.25; }
+.page.page .feature h3 { font-size: clamp(26px, 2.6vw, 34px); line-height: 1.45; text-wrap: balance; margin-top: 18px; }
+.page.page.en .feature h3 { line-height: 1.25; }
 .featureSide { display: flex; flex-direction: column; gap: 16px; justify-content: space-between; }
 .featureSide p:first-child { font-size: 17px; line-height: 1.9; color: var(--body); }
 .small { font-size: 14px; color: var(--soft); }
@@ -58,24 +58,24 @@
 
 .band { display: flex; flex-wrap: wrap; gap: 40px; border-top: 1px solid var(--ink); padding-top: 28px; }
 .bandHead { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
-.bandHead h2 { font-size: 24px; }
+.page.page .bandHead h2 { font-size: 24px; }
 .bandHead p { font-size: 15px; line-height: 1.8; color: var(--mute); }
 .bandBody { flex: 2 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px; }
 
 .framework { background: var(--ink); color: var(--paper) !important; padding: 32px; display: flex; flex-direction: column; gap: 22px; min-height: 240px; text-decoration: none; }
-.framework h3 { font-size: 28px; color: var(--paper); }
+.page.page .framework h3 { font-size: 28px; color: var(--paper); }
 .framework .order { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--dash); }
 .framework .order i { width: 10px; height: 10px; background: var(--lime); }
 .framework p:last-child { font-size: 15px; line-height: 1.8; color: #d6d9d7; margin-top: auto; }
 
 .item { background: var(--card); border: 1px solid var(--rule); padding: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--ink) !important; text-decoration: none; }
-.item h3 { font-size: 20px; line-height: 1.5; }
+.page.page .item h3 { font-size: 20px; line-height: 1.5; }
 .item p { font-size: 15px; line-height: 1.8; color: var(--body); }
 .links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; font-weight: 600; }
 
 /* newsletter */
 .letter { background: var(--violet); color: var(--paper); padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 40px; align-items: center; scroll-margin-top: 120px; }
-.letter h2 { font-size: 30px; color: var(--paper); }
+.page.page .letter h2 { font-size: 30px; color: var(--paper); }
 .letter > div > p { font-size: 17px; line-height: 1.85; color: var(--violet-text); margin-top: 14px; }
 .form { display: flex; flex-direction: column; gap: 12px; }
 .form label { font-size: 13px; color: var(--violet-text); }
@@ -93,14 +93,14 @@
 .crumbs { font-size: 13px; color: var(--soft); display: flex; gap: 8px; flex-wrap: wrap; }
 .crumbs a { color: var(--soft); }
 .head { display: flex; flex-direction: column; gap: 18px; border-bottom: 1px solid var(--ink); padding-bottom: 32px; }
-.head h1 { font-size: clamp(32px, 4vw, 46px); line-height: 1.4; text-wrap: balance; }
-.en .head h1 { line-height: 1.2; }
+.page.page .head h1 { font-size: clamp(32px, 4vw, 46px); line-height: 1.4; text-wrap: balance; }
+.page.page.en .head h1 { line-height: 1.2; }
 .head > p { font-size: 19px; line-height: 1.9; color: var(--body); }
 .notice { background: var(--card); border: 1px solid var(--rule); padding: 22px 24px; display: flex; gap: 16px; align-items: flex-start; }
 .notice i { flex: none; width: 10px; height: 10px; background: var(--lime); outline: 1px solid var(--ink); margin-top: 9px; }
 .notice p { font-size: 16px; line-height: 1.85; }
 .block { display: flex; flex-direction: column; gap: 14px; }
-.block h2 { font-size: 22px; }
+.page.page .block h2 { font-size: 22px; }
 .block p { font-size: 18px; line-height: 2; }
 .en .block p { line-height: 1.7; }
 .block ul { padding-inline-start: 22px; display: flex; flex-direction: column; gap: 10px; font-size: 17px; line-height: 1.85; }
