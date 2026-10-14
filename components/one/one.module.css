@@ -7,7 +7,6 @@
 .heroCopy h1 { font-size: clamp(2.4rem, 5.6vw, 5.2rem); line-height: 1.25; margin: 0; text-wrap: balance; font-weight: 600; }
 .heroLine { color: var(--lime); font: 600 .78rem/1.6 Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; direction: ltr; }
 .heroActions { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin-top: .4rem; }
-.heroSub { color: rgba(245,245,242,.7); font-size: 1rem; }
 
 .section { padding: 5rem clamp(1.5rem, 6vw, 7rem); }
 .problem { background: #15171e; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 3rem 5rem; align-items: start; }

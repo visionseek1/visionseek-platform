@@ -62,7 +62,6 @@ export function OneHome({locale}: {locale: Locale}) {
       <div className={styles.heroCopy}>
         <p className={styles.heroLine} lang={ar ? 'ar' : 'en'} dir={ar ? 'rtl' : 'ltr'}>{tx(hero.line)}</p>
         <h1>{tx(hero.title)}</h1>
-        {ar ? null : <p className={styles.heroSub}>{hero.title.ar}</p>}
         <div className={styles.heroActions}><BookButton locale={locale}/><Link className="vs-text-link" href={`${p}/what-we-offer`}>{tx(oneMessage.offer.title)}<Arrow size={18}/></Link></div>
       </div>
     </section>
