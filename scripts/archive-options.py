@@ -11,7 +11,7 @@ def add(path, label):
 nav = load('content/navigation.json')
 for s in nav['sections'] + [nav['reports']]:
     add(s['path'], f"{s['ar']} (القسم كله)")
-add('/insights', 'بيت القادة (القسم كله)')
+add('/leaders-house', 'بيت القادة (القسم كله)')
 add('/method', 'منهجنا')
 for s in nav['sections'] + [nav['reports']]:
     for c in s['children']:
@@ -32,7 +32,7 @@ cat = load('content/projects/catalog.json')
 for s in cat['sectors']: add(f"/projects/{s['slug']}", f"المشاريع ← {s['title']['ar']}")
 for f in sorted(glob.glob('content/projects/concepts/*.json')):
     d = load(f); add(f"/projects/{d['sector']}/{d['track']}/{d['slug']}", f"المشاريع ← {d['id']} {d['title']['ar']}")
-add('/insights/physical-ai', 'بيت القادة ← إحاطة الذكاء الاصطناعي المادي')
+add('/leaders-house/physical-ai', 'بيت القادة ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/physical-ai', 'التقارير ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/agent-governance', 'التقارير ← حوكمة الوكلاء الأذكياء')
 

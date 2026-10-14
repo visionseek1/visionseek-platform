@@ -23,7 +23,7 @@ export default function ReportsCenter({ locale, methodology = false }: { locale:
       <nav className={styles.nav} aria-label={t('تنقل قسم التقارير', 'Reports navigation')}>
         <Link href={root} aria-current={!methodology ? 'page' : undefined}>{t('التقارير', 'Reports')}</Link>
         <Link href={`${root}/methodology`} aria-current={methodology ? 'page' : undefined}>{t('المنهج والمعايير', 'Methods & standards')}</Link>
-        <Link href={ar ? '/ar/insights' : '/insights'}>{t('بيت القادة', 'Leaders House')}</Link>
+        <Link href={ar ? '/ar/leaders-house' : '/leaders-house'}>{t('بيت القادة', 'Leaders House')}</Link>
       </nav>
       <header className={`${styles.hero} ${!methodology ? styles.indexHero : ''}`}>
         <div className={styles.masthead}><span>VISIONSEEK RESEARCH</span><span>{t('نربط المعرفة بما يمكن تحقيقه.', 'Connecting knowledge to what comes next.')}</span></div>

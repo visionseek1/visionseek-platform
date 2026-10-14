@@ -12,7 +12,7 @@ export async function characterMetadata(params:Promise<{slug:string}>,locale:Loc
  return {title:`${character.name[locale]} — ${character.sector[locale]} | VisionSeek`,description:character.bio[locale],alternates:{canonical:characterPath(slug,locale),languages:{ar:characterPath(slug,'ar'),en:characterPath(slug,'en')}}};
 }
 export async function CharacterRoute({params,locale}:{params:Promise<{slug:string}>;locale:Locale}){
- if(!showPublicCharacters)redirect(`${locale==='ar'?'/ar':''}/insights`);
+ if(!showPublicCharacters)redirect(`${locale==='ar'?'/ar':''}/leaders-house`);
  const {slug}=await params;if(!characterById(slug))notFound();
  return <LeadersFeed locale={locale} characterId={slug}/>;
 }

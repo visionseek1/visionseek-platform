@@ -512,6 +512,16 @@ ${edit ? `<section class="sec"><div class="t"><h2>تحديث الفروع</h2><s
 <p class="mute">اللي أحمد بيتعلمه: كل مدخل فكرة جديدة برقم وتاريخ، وتحته فروع: بحث · ماستركلاس/تعليم · منتج · نقل تقنية · خدمة مؤسسية · ظهور. كل فرع مربوط بقطاعه.</p>
 ${LENTRIES.map((e) => `<a class="card pad" href="#learn/${e.id}" style="display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink)"><div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap"><span class="tag num" style="font-weight:700">${t(e.num)}</span><b style="flex:1;min-width:200px">${t(e.idea)}</b><span class="small mute">${e.date ? fmt(e.date) : ""}</span></div><div style="display:flex;gap:6px;flex-wrap:wrap">${branchesOf(e).map((b) => `<span class="tag">${t(b.type)} · ${t(learnClock(b).stale ? "محتاج قرار" : b.status)}</span>`).join("")}</div></a>`).join("") || '<p class="empty">لسه مفيش مدخلات.</p>'}`;
 }
+// ---------- النشرة الشهرية لـ VisionSeek Insights: بند في قطاع الظهور والتواصل (15 أكتوبر 2026)
+const SUBS = (L && L.newsletter ? L.newsletter : []).map((r) => ({ email: String(r["البريد"] || ""), lang: String(r["اللغة"] || ""), page: String(r["الصفحة"] || ""), status: String(r["الحالة"] || "مشترك"), date: day(r["تاريخ الاشتراك"]) || day(r.created) })).filter((x) => x.email).sort((a, b) => (a.date < b.date ? 1 : -1));
+function newsletterBlock() {
+  const active = SUBS.filter((x) => x.status !== "ألغى");
+  const week = active.filter((x) => x.date >= WEEK_AGO).length;
+  return `<section class="sec"><div class="t"><h2>النشرة الشهرية للقادة</h2><span>الاشتراك من visionseek.org/insights · مفيش أي إرسال للمشتركين غير بموافقتك</span></div>
+<div class="card"><div style="display:flex;gap:28px;padding:14px 16px;flex-wrap:wrap"><div><span class="small mute">مشتركين</span><p class="num" style="font-size:22px;font-weight:700">${active.length}</p></div><div><span class="small mute">جداد آخر 7 أيام</span><p class="num" style="font-size:22px;font-weight:700">${week}</p></div></div>
+<details style="border-top:1px solid var(--line2)"><summary style="padding:12px 16px;cursor:pointer">القايمة (${active.length})</summary><div class="rows">${active.map((x) => `<div class="row"><span style="flex:1;min-width:0;direction:ltr;text-align:right;overflow-wrap:anywhere">${esc(x.email)}</span><span class="tag">${x.lang === "en" ? "English" : "عربي"}</span><span class="tag">${fmt(x.date)}</span></div>`).join("") || '<p class="empty">لسه مفيش مشتركين.</p>'}</div></details></div></section>`;
+}
+
 function learnInSector(s) {
   const bs = LBR.filter((b) => b.sector === s.name && !LEARN_CLOSED.includes(b.status));
   if (!bs.length) return "";
@@ -574,7 +584,7 @@ function pageSector(id) {
 <section class="card pad sec"><div class="t"><h2>المقياس الأسبوعي</h2><span>من المسارات اللي بتخدم القطاع</span></div><p style="font-size:22px;font-weight:700" class="num">${moved(all)}</p><p class="small mute">عنصر اتحرك آخر 7 أيام</p>${stageBar(all)}</section>
 </div>
 <section class="sec"><div class="t"><h2>المسارات اللي بتخدم القطاع</h2><span>من كل الأقسام</span></div>${ts.length ? `<div class="grid g3">${tcards}</div>` : '<div class="card pad warn">⚠️ لسه مفيش مسار بيخدم القطاع ده. المسارات تحت الأقسام ثابتة، فمحتاج قرارك: أنهي مسار يخدمه؟</div>'}</section>
-<section class="sec"><div class="t"><h2>لوحة الشغل</h2><span>فكرة ← بيتفلتر ← شغال ← مستني أحمد ← خلص</span></div>${filtersBar(all, ["dept", "track"])}${kanban(list)}</section>${learnInSector(s)}`;
+<section class="sec"><div class="t"><h2>لوحة الشغل</h2><span>فكرة ← بيتفلتر ← شغال ← مستني أحمد ← خلص</span></div>${filtersBar(all, ["dept", "track"])}${kanban(list)}</section>${learnInSector(s)}${s.name === "الظهور والتواصل" ? newsletterBlock() : ""}`;
 }
 function trackCard(x, showDept) {
   const its = trackItems(x);
@@ -634,7 +644,7 @@ function pageTrack(id) {
 <div class="sec">${methodBlock(x)}</div>
 <section class="card pad sec"><div class="t"><h2>المقياس الأسبوعي</h2></div><p>${t(x.measure || "⚠️ لسه مش محدد")}</p><p style="font-size:22px;font-weight:700" class="num">${moved(all)}</p><p class="small mute">عنصر اتحرك آخر 7 أيام</p>${stageBar(all)}</section>
 </div>
-${clients}
+${clients}${x.name === "الرسايل للقادة" ? newsletterBlock() : ""}
 <section class="sec"><div class="t"><h2>العناصر</h2><span>كل واحد بحالته</span></div>${filtersBar(all, [])}${kanban(applyFilter(all), { noTrack: true })}
 ${later.length ? `<details class="card"><summary style="padding:12px 16px;cursor:pointer">بعدين (${later.length})</summary><div class="rows">${later.map((i) => `<div class="row"><a href="#item/${i.id}" style="flex:1;color:var(--ink);text-decoration:none">${t(i.title)}</a></div>`).join("")}</div></details>` : ""}</section>`;
 }

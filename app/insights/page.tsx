@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
-import InsightsPage from "@/components/insights-page";
+import type {Metadata} from 'next';
+import {InsightsHub} from '@/components/insights/pages';
+import {insights} from '@/lib/insights';
 
 export const metadata: Metadata = {
-  title: "Leaders House | VisionSeek",
-  description: "A daily home for executives, institutional leaders and decision makers. Explore shifts, opportunities and capabilities through posts, short videos and stories.",
-  alternates: {
-    canonical: "/insights",
-    languages: { en: "/insights", ar: "/ar/insights" },
-  },
+  title: 'VisionSeek Insights',
+  description: insights.hub.intro.en,
+  alternates: {canonical: '/insights', languages: {en: '/insights', ar: '/ar/insights'}},
+  openGraph: {title: 'VisionSeek Insights', description: insights.hub.intro.en, url: '/insights'},
 };
-
-export default function Insights() {
-  return <InsightsPage locale="en" />;
-}
+export default function Page() { return <InsightsHub locale="en"/>; }

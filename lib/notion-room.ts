@@ -23,6 +23,8 @@ export const SOURCES = {
   // محرّك التعلم (15 أكتوبر 2026): «اللي أحمد بيتعلمه» — مدخلات L-xxx، وتحت كل مدخل فروع مربوطة بقطاعاتها.
   learn: { ds: "59de2970-31b2-4c62-8914-b3c8fecd3857", db: "9366ca1687004a0a8f24426bc1179f92" },
   learnBranches: { ds: "f9da4209-1ee3-474f-be98-2a7d0958034e", db: "a8dadabb9bd44f49a7784b550434513d" },
+  // النشرة الشهرية لـ VisionSeek Insights (15 أكتوبر 2026): بند في قطاع الظهور والتواصل. مفيش إرسال غير بموافقة د. أحمد.
+  newsletter: { ds: "8a242351-eda5-4798-b5ba-4d80afbcd564", db: "01b11b86292b44b0958c47f45128dd4d" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -39,6 +41,7 @@ export type LiveRoom = {
   tracks: Row[];
   learn: Row[];
   learnBranches: Row[];
+  newsletter: Row[];
   cycles: { title: string; url: string; edited: string }[];
 };
 
@@ -141,7 +144,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, learn, learnBranches, cyc] = await Promise.all([
+  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, learn, learnBranches, newsletter, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -153,6 +156,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.tracks), []),
     safe(query(SOURCES.learn), []),
     safe(query(SOURCES.learnBranches), []),
+    safe(query(SOURCES.newsletter), []),
     safe(cycles(), []),
   ]);
   // Nine Star مش جزء من VisionSeek: أي حاجة تخص «هانا كار» ما تظهرش في المنصة (قرار د. أحمد 13 أكتوبر).
@@ -160,7 +164,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   const work = work0.filter(notNineStar);
   const requests = requests0.filter(notNineStar);
   const comments = comments0.filter(notNineStar);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, learn, learnBranches, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, learn, learnBranches, newsletter, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -806,4 +810,38 @@ export async function updateLearnBranch(pageId: string, p: LearnPatch): Promise<
     }
   }
   cache = null;
+}
+
+/* ---------- النشرة الشهرية (VisionSeek Insights) ---------- */
+
+/** صيغة بريد معقولة، من غير مسافات، وبطول محدود. */
+export function validEmail(v: string): boolean {
+  return v.length >= 6 && v.length <= 254 && /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/.test(v);
+}
+
+/**
+ * يسجّل مشترك في «النشرة الشهرية — المشتركين». البريد المكرر ما يتسجّلش مرتين.
+ * الكتابة بس — مفيش أي إرسال للمشتركين من هنا (الإرسال بموافقة د. أحمد).
+ */
+export async function addNewsletterSubscriber(email: string, locale: "ar" | "en", page: string): Promise<"added" | "exists"> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const e = email.trim().toLowerCase();
+  if (!validEmail(e)) throw new Error("bad email");
+  const filter = { property: "البريد", title: { equals: e } };
+  let res = await call(`/data_sources/${SOURCES.newsletter.ds}/query`, { page_size: 1, filter });
+  if (res.status === 404 || res.status === 400) res = await call(`/databases/${SOURCES.newsletter.db}/query`, { page_size: 1, filter }, "2022-06-28");
+  if (res.ok) {
+    const json: any = await res.json();
+    if ((json.results || []).length) return "exists";
+  }
+  await createIn(SOURCES.newsletter, {
+    "البريد": { title: [{ text: { content: e } }] },
+    "اللغة": { select: { name: locale } },
+    "الصفحة": rt(page.replace(/[^a-z0-9/_\-#]/gi, "").slice(0, 120)),
+    "الحالة": { select: { name: "مشترك" } },
+    "تاريخ الاشتراك": { date: { start: todayStr() } },
+    "القطاع": { select: { name: "الظهور والتواصل" } },
+  });
+  cache = null;
+  return "added";
 }
