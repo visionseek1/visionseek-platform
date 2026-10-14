@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
       ]),
+      // One path to contact (15 Oct 2026): /contact → /start; the defence field is archived → the fields page.
+      ...['', '/ar'].flatMap(prefix => [
+        {source: `${prefix}/contact`, destination: `${prefix}/start`, permanent: true},
+        {source: `${prefix}/projects/defense`, destination: `${prefix}/projects`, permanent: false},
+        {source: `${prefix}/projects/defense/:path*`, destination: `${prefix}/projects`, permanent: false},
+      ]),
       // English lives at the root: /en/privacy → /privacy (the /en home page itself stays).
       {source: '/en/:path+', destination: '/:path+', permanent: true},
       {

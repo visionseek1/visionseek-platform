@@ -75,7 +75,7 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
 
         <footer className="report-footer">
           <Link href={`${base}/leaders-house`}>← {copy.back}</Link>
-          <a href="mailto:abdelalim@visionseek.org?subject=Government%20mission%20briefing">{copy.cta} ↗</a>
+          <a href="mailto:hello@visionseek.org?subject=Government%20mission%20briefing">{copy.cta} ↗</a>
         </footer>
       </article>
     </main>
