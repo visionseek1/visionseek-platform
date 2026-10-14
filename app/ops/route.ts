@@ -75,6 +75,7 @@ export async function GET(request: Request) {
       comment: "التعليق اتسجّل. Claude هيقراه ويرد في الغرفة.",
       dec: "القرار اتسجّل في Notion.",
       proposed: "الطلب راح «قرارات مستنياك».",
+      learn: "اتسجّل في محرّك التعلم.",
       err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion.",
     };
     const flash = FLASH[r] || "";
