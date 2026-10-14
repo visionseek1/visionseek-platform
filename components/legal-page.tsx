@@ -26,7 +26,7 @@ export default function LegalPage({ locale, kind }: { locale: "ar" | "en"; kind:
 
       <article className="legal-wrap">
         <p className="legal-kicker">VISIONSEEK / {kind === "privacy" ? (ar ? "الخصوصية" : "PRIVACY") : (ar ? "الشروط" : "TERMS")}</p>
-        <LegalBody ar={ar} doc={legal[kind]} />
+        <LegalBody ar={ar} doc={legal[kind]} email={kind === 'privacy' ? emails.insights : emails.general} />
         <p className="legal-meta">
           {ar ? `ساري من ${legal.effectiveDate.ar} · ${site.location.ar}` : `EFFECTIVE ${legal.effectiveDate.en.toUpperCase()} · ${site.location.en.toUpperCase()}`}
           {" · "}
@@ -61,7 +61,7 @@ function withTokens(text: string, email: string): ReactNode {
   });
 }
 
-function LegalBody({ ar, doc }: { ar: boolean; doc: LegalDoc }) {
+function LegalBody({ ar, doc, email }: { ar: boolean; doc: LegalDoc; email: string }) {
   const t = (value: Bi) => (ar ? value.ar : value.en);
   return (
     <>
@@ -70,7 +70,7 @@ function LegalBody({ ar, doc }: { ar: boolean; doc: LegalDoc }) {
       {doc.sections.map((section) => (
         <section key={section.heading.en}>
           <h2>{t(section.heading)}</h2>
-          {section.paragraphs.map((paragraph) => <p key={paragraph.en}>{withTokens(t(paragraph), kind === 'privacy' ? emails.insights : emails.general)}</p>)}
+          {section.paragraphs.map((paragraph) => <p key={paragraph.en}>{withTokens(t(paragraph), email)}</p>)}
           {section.bullets.length > 0 && <ul>{section.bullets.map((bullet) => <li key={bullet.en}>{t(bullet)}</li>)}</ul>}
         </section>
       ))}
