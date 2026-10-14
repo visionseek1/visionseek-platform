@@ -135,3 +135,23 @@ test("methodologies: a room view, owner-only approval, agents read only approved
   assert.match(notion, /export async function updateMethodStatus/);
   assert.match(route, /cookieIsValid/);
 });
+
+test("learning engine: entries L-xxx, six branch types tied to sectors, two-week red flag that waits on dependencies", async () => {
+  const [lib, route, mod] = await Promise.all([read("lib/notion-room.ts"), read("app/ops/learn/route.ts"), read("app/ops/room-html.ts")]);
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  assert.match(lib, /learn: \{ ds: "59de2970-31b2-4c62-8914-b3c8fecd3857"/);
+  assert.match(lib, /learnBranches: \{ ds: "f9da4209-1ee3-474f-be98-2a7d0958034e"/);
+  for (const [type, sector] of [["بحث", "المعرفة وبناء القادة"], ["ماستركلاس/تعليم", "المعرفة وبناء القادة"], ["منتج", "المنتجات الجاهزة"], ["نقل تقنية", "الشراكات ونقل التكنولوجيا"], ["خدمة مؤسسية", "خدمات المؤسسات"], ["ظهور", "الظهور والتواصل"]]) {
+    assert.ok(lib.includes(`"${type}": "${sector}"`), type);
+    assert.ok(html.includes(`["${type}", "${sector}"]`), type);
+  }
+  assert.match(lib, /LEARN_STALE_DAYS = 14/);
+  assert.match(html, /LEARN_STALE_DAYS = 14/);
+  assert.match(lib, /"اتفك التعليق"/);
+  assert.match(html, /محتاج قرار: قفل أو إلغاء/);
+  assert.match(html, /اللي أحمد بيتعلمه/);
+  assert.match(html, /"بحث أبعاد القرار"/);
+  assert.match(route, /verdict"\) === "close" \? "اتقفل"/);
+  assert.match(route, /"cancel" \? "اتلغى"/);
+  assert.doesNotMatch(route, /archived|in_trash|DELETE/);
+});
