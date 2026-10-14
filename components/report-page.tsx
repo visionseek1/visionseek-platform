@@ -15,7 +15,7 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
     inLanguage: ar ? "ar" : "en",
     author: { "@id": "https://visionseek.org/#organization" },
     publisher: { "@id": "https://visionseek.org/#organization" },
-    mainEntityOfPage: `https://visionseek.org${base}/insights/physical-ai`,
+    mainEntityOfPage: `https://visionseek.org${base}/leaders-house/physical-ai`,
   };
 
   return (
@@ -24,9 +24,9 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
       <SiteHeader
         locale={locale}
         solid
-        languageHref={ar ? "/insights/physical-ai" : "/ar/insights/physical-ai"}
+        languageHref={ar ? "/leaders-house/physical-ai" : "/ar/leaders-house/physical-ai"}
         items={[
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "الرؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/leaders-house" : "/leaders-house", label: ar ? "الرؤى" : "INSIGHTS" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
           { href: base || "/", label: ar ? "الرئيسية" : "HOME" },
         ]}
@@ -74,7 +74,7 @@ export default function ReportPage({ locale }: { locale: "ar" | "en" }) {
         </section>
 
         <footer className="report-footer">
-          <Link href={`${base}/insights`}>← {copy.back}</Link>
+          <Link href={`${base}/leaders-house`}>← {copy.back}</Link>
           <a href="mailto:abdelalim@visionseek.org?subject=Government%20mission%20briefing">{copy.cta} ↗</a>
         </footer>
       </article>

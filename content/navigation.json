@@ -107,11 +107,6 @@
       "ar": "البرامج",
       "children": [
         {
-          "href": "/about/what-we-do#hlo",
-          "en": "HLO — Highest Level One",
-          "ar": "برنامج HLO"
-        },
-        {
           "href": "/programs",
           "en": "Program concepts",
           "ar": "تصورات البرامج"
@@ -139,6 +134,33 @@
       ]
     },
     {
+      "path": "/insights",
+      "en": "Insights",
+      "ar": "Insights",
+      "children": [
+        {
+          "href": "/insights",
+          "en": "VisionSeek Insights",
+          "ar": "VisionSeek Insights"
+        },
+        {
+          "href": "/insights/notes/l-001",
+          "en": "Notes",
+          "ar": "ملاحظات"
+        },
+        {
+          "href": "/insights/frameworks/decision-dimensions",
+          "en": "Frameworks & tools",
+          "ar": "الأطر والأدوات"
+        },
+        {
+          "href": "/insights#newsletter",
+          "en": "Monthly newsletter",
+          "ar": "النشرة الشهرية"
+        }
+      ]
+    },
+    {
       "path": "/news",
       "en": "News",
       "ar": "الأخبار",
@@ -149,7 +171,7 @@
           "ar": "كل الأخبار والمقالات"
         },
         {
-          "href": "/insights",
+          "href": "/leaders-house",
           "en": "Leaders House",
           "ar": "بيت القادة"
         },

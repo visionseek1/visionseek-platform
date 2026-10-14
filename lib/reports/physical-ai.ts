@@ -1,7 +1,7 @@
 import data from '@/content/reports/physical-ai.json';
 
 /**
- * The Physical AI government brief, shown at /reports/physical-ai and /insights/physical-ai from the same text.
+ * The Physical AI government brief, shown at /reports/physical-ai and /leaders-house/physical-ai from the same text.
  * Edited from /admin («تقرير الذكاء الاصطناعي المادي»). Plain JSON import.
  */
 export type ReportSource = {name: string; title: string; url: string};

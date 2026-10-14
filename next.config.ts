@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
       ]),
+      // English lives at the root: /en/privacy → /privacy (the /en home page itself stays).
+      {source: '/en/:path+', destination: '/:path+', permanent: true},
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.visionseek.org" }],

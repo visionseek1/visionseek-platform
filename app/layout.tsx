@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alexandria, IBM_Plex_Sans_Arabic, Oxanium } from "next/font/google";
+import { Alexandria, IBM_Plex_Sans_Arabic, IBM_Plex_Serif, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
 import "./institution.css";
@@ -27,6 +27,16 @@ const alexandria = Alexandria({
   weight: ["500", "600", "700"],
   display: "swap",
   variable: "--font-arabic-display",
+  adjustFontFallback: true,
+});
+
+// Editorial serif for English headings in VisionSeek Insights only (calm, research-house register).
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: ["500"],
+  style: ["normal"],
+  display: "swap",
+  variable: "--font-serif",
   adjustFontFallback: true,
 });
 
@@ -113,7 +123,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable} ${alexandria.variable}`}>
+    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable} ${alexandria.variable} ${ibmPlexSerif.variable}`}>
       <body className="antialiased">
         <script
           type="application/ld+json"

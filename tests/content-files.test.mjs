@@ -93,16 +93,16 @@ test('every content collection in /admin points at a file or folder that exists'
 
 test('method.json keeps the nine steps, six communities and eight field cards with their ids', () => {
   const method = read('method.json');
-  assert.deepEqual(method.steps.map(s => s.id), ['define', 'limit', 'path', 'people', 'highest-level-one', 'architect', 'prove', 'operate', 'evolve']);
+  assert.deepEqual(method.steps.map(s => s.id), ['define', 'limit', 'path', 'people', 'best-available', 'architect', 'prove', 'operate', 'evolve']);
   assert.equal(method.communities.length, 6);
   assert.deepEqual(method.fields.map(f => f.id).sort(), ['agriculture', 'chips', 'cities', 'drones', 'energy', 'robots', 'science', 'space']);
   for (const field of method.fields) assert.ok(readFileSync(join(root, 'public', `field-${field.image}.jpg`)), field.id);
   for (const step of method.steps) for (const key of ['en', 'ar', 'questionEn', 'questionAr', 'textEn', 'textAr']) assert.equal(typeof step[key], 'string', `${step.id}.${key}`);
 });
 
-test('navigation.json keeps the seven header sections and site-relative paths', () => {
+test('navigation.json keeps the eight header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/insights', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);

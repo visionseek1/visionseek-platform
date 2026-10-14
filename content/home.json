@@ -67,10 +67,10 @@
           "en": "Connect the world’s knowledge, technologies and opportunities around a mission.",
           "ar": "نختار ما تحتاجه المهمة من معرفة وتقنيات وشركاء، ونضعه في خدمة القدرة التي نبنيها."
         },
-        "href": "/about/what-we-do#hlo",
+        "href": "/about/what-we-do",
         "link": {
-          "en": "Explore the HLO program",
-          "ar": "اكتشف برنامج HLO"
+          "en": "See how VisionSeek works",
+          "ar": "اكتشف كيف تعمل VisionSeek"
         }
       }
     ],
@@ -116,22 +116,6 @@
       "ar": "بيت القادة"
     },
     "rows": [
-      {
-        "href": "/about/what-we-do#hlo",
-        "image": "chips",
-        "category": {
-          "en": "PROGRAM · HLO",
-          "ar": "برنامج · HLO"
-        },
-        "title": {
-          "en": "Highest Level One",
-          "ar": "Highest Level One"
-        },
-        "text": {
-          "en": "Connect your institution with relevant global opportunities and capabilities, and test what is worth applying.",
-          "ar": "نربط مؤسستك بالفرص والقدرات المناسبة لها، ونختبر ما يستحق التطبيق."
-        }
-      },
       {
         "href": "/about#what-we-build",
         "image": "cities",
@@ -225,8 +209,8 @@
   },
   "method": {
     "eyebrow": {
-      "en": "ENGINEERING OPPORTUNITIES",
-      "ar": "هندسة الفرص"
+      "en": "INSTITUTIONAL CAPABILITY ARCHITECT",
+      "ar": "مهندس القدرات المؤسسية"
     },
     "title": {
       "en": "How we make it possible",
@@ -277,8 +261,8 @@
         },
         "image": "/field-chips.jpg",
         "caption": {
-          "en": "04—06 / PEOPLE · HLO · ARCHITECTURE",
-          "ar": "04—06 / الأشخاص · HLO · المنظومة"
+          "en": "04—06 / PEOPLE · CAPABILITIES · ARCHITECTURE",
+          "ar": "04—06 / الأشخاص · القدرات · المنظومة"
         }
       },
       {

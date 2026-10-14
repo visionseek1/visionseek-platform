@@ -38,7 +38,7 @@ export const characters:LeaderCharacter[] = [
 ];
 
 export function characterById(id:unknown){return characters.find(c=>c.id===id);}
-export function characterPath(id:string,locale:Locale){return `${locale==='ar'?'/ar':''}/insights/characters/${id}`;}
+export function characterPath(id:string,locale:Locale){return `${locale==='ar'?'/ar':''}/leaders-house/characters/${id}`;}
 export function normalizeCharacterFollows(raw:unknown):string[]{return Array.isArray(raw)?[...new Set(raw.filter((id):id is string=>typeof id==='string'&&!!characterById(id)))]:[];}
 export function postsForCharacter(posts:LeaderPost[],id:string){return characterById(id)?posts.filter(p=>p.character_id===id||p.sector_ids?.includes(id)):[];}
 export function characterAuthor(post:LeaderPost){return characterById(post.character_id);}
