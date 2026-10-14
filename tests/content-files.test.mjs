@@ -93,7 +93,7 @@ test('every content collection in /admin points at a file or folder that exists'
 
 test('method.json keeps the nine steps, six communities and eight field cards with their ids', () => {
   const method = read('method.json');
-  assert.deepEqual(method.steps.map(s => s.id), ['define', 'limit', 'path', 'people', 'highest-level-one', 'architect', 'prove', 'operate', 'evolve']);
+  assert.deepEqual(method.steps.map(s => s.id), ['define', 'limit', 'path', 'people', 'best-available', 'architect', 'prove', 'operate', 'evolve']);
   assert.equal(method.communities.length, 6);
   assert.deepEqual(method.fields.map(f => f.id).sort(), ['agriculture', 'chips', 'cities', 'drones', 'energy', 'robots', 'science', 'space']);
   for (const field of method.fields) assert.ok(readFileSync(join(root, 'public', `field-${field.image}.jpg`)), field.id);

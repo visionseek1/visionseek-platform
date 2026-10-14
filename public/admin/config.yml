@@ -63,7 +63,6 @@ collections:
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
                   - {label: "ماستركلاس ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
                   - {label: "ماستركلاس ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
-                  - {label: "البرامج ← برنامج HLO  /about/what-we-do", value: "/about/what-we-do"}
                   - {label: "البرامج ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
                   - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
                   - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
@@ -75,6 +74,7 @@ collections:
                   - {label: "اعمل معنا ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
                   - {label: "اعمل معنا ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
                   - {label: "اعمل معنا ← النقل للتشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
+                  - {label: "عن VisionSeek ← كيف تعمل VisionSeek؟  /about/what-we-do", value: "/about/what-we-do"}
                   - {label: "عن VisionSeek ← نموذج التشغيل  /about/operating-model", value: "/about/operating-model"}
                   - {label: "عن VisionSeek ← أسئلة البرنامج  /about/program-questions", value: "/about/program-questions"}
                   - {label: "عن VisionSeek ← الأشخاص  /about/people", value: "/about/people"}

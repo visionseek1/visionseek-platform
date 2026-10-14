@@ -44,3 +44,11 @@ test('newsletter: saved in the platform under الظهور والتواصل, nev
   assert.doesNotMatch(api + lib, /sendgrid|resend\.com|nodemailer|mailgun|smtp/i);
   assert.match(read('scripts/ops-room/room.html'), /مفيش أي إرسال للمشتركين غير بموافقتك/);
 });
+
+test('the cancelled programme does not appear anywhere on the public site', async () => {
+  const {readdirSync, statSync} = await import('node:fs');
+  const walk = d => readdirSync(new URL(`../${d}`, import.meta.url)).flatMap(f => { const p = `${d}/${f}`; return statSync(new URL(`../${p}`, import.meta.url)).isDirectory() ? walk(p) : [p]; });
+  const files = ['components', 'content', 'app', 'lib', 'public/admin'].flatMap(walk).filter(p => /\.(tsx?|json|ya?ml|css)$/.test(p) && !p.startsWith('app/ops/'));
+  for (const p of files) assert.doesNotMatch(read(p), /\bHLO\b|Highest Level One/, p);
+  assert.match(read('components/capability/navigation.tsx'), /مهندس القدرات المؤسسية/);
+});
