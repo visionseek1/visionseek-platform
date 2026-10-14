@@ -70,7 +70,7 @@ test('guide pages keep their section and slug, with at least one block each', ()
 test('home.json and about.json hold every bilingual block the pages render', () => {
   const home = read('home.json');
   assert.equal(home.hero.slides.length, 3);
-  assert.equal(home.hero.slides[0].title.en, 'Make It Possible.');
+  assert.equal(home.hero.slides[0].title.en, 'The Highest Level One.');
   assert.equal(home.method.parts.length, 3);
   assert.deepEqual(home.method.parts.map(p => p.id), ['define', 'people', 'prove']);
   for (const slide of home.hero.slides) assert.ok(slide.image.startsWith('/') && isText(slide.title) && isText(slide.link));

@@ -13,9 +13,9 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
   const ar=locale==='ar';const base=ar?'/ar':'';
   return <><section className={styles.homeBand} aria-labelledby="visionseek-explained">
     <div className={styles.homeIntro}>
-      <p className={styles.eyebrow} dir="ltr" lang="en">Cross-sector Opportunity, Capability &amp; Solutions Studio</p>
+      <p className={styles.eyebrow}>{ar?'استوديو لبناء القدرات ومعماريتها':'A MULTI-SECTOR CAPABILITY STUDIO'}</p>
       <h2 id="visionseek-explained">{ar?'مؤسستك قادرة على أكثر مما ترى اليوم.':'Your institution can do more than you see today.'}</h2>
-      <p>{ar?'في العالم اليوم تقنيات وحلول وقدرات قد تغيّر موقع مؤسستك بالكامل. نكشف لك ما لم تره بعد، ونصمّم الطريق لتصبح هذه الإمكانات قوة حقيقية داخل مؤسستك. ومع طفرة الذكاء الاصطناعي، تتّسع فرصتك لتقليص الفارق مع الشركات العالمية وامتلاك قدرات كانت حكرًا على الكبار.':'Technologies, solutions and capabilities around the world could transform your institution’s position. We reveal what you have yet to see and design a path to make those possibilities a real strength within your institution. Advances in AI are expanding your opportunity to close the gap with global companies and access capabilities once reserved for the largest players.'}</p>
+      <p>{ar?'في العالم اليوم تقنيات وحلول وقدرات قد تغيّر موقع مؤسستك بالكامل. نكشف لك ما لم تره بعد، ونصمّم الطريق لتصبح هذه الإمكانات قوة حقيقية داخل مؤسستك. ومع طفرة الذكاء الاصطناعي، تتّسع فرصتك لتقليص الفارق مع الشركات العالمية وامتلاك قدرات كانت حكرًا على الكبار. وللمؤسسات في مصر والخليج، Highest Level One هو الطريق: نبني القدرة داخل المؤسسة، بين فريق الهندسة ومن يتخذ القرار.':'Technologies, solutions and capabilities around the world could transform your institution’s position. We reveal what you have yet to see and design a path to make those possibilities a real strength within your institution. Advances in AI are expanding your opportunity to close the gap with global companies and access capabilities once reserved for the largest players. For institutions in Egypt and the Gulf, Highest Level One is that path: the capability is built in-house, between the engineering team and the people who decide.'}</p>
       <p><strong>{ar?'ما أصبح ممكنًا في العالم، يمكن أن يفتح فصلًا جديدًا لمؤسستك.':'What is now possible in the world could open a new chapter for your institution.'}</strong></p>
       <Link className={styles.textLink} href={`${base}${positioningPath}`}>{ar?'ما الذي يميّز VisionSeek؟':'Why VisionSeek?'}<ArrowRight size={21}/></Link>
     </div>
@@ -25,10 +25,6 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
       <p>{ar?'قد توجد التقنية التي تحتاجها داخل شركة أو مركز بحثي في مكان آخر. نحدد ما يناسب احتياج مؤسستك، ونصمم طريق نقل المعرفة وتكييف التقنية، ونجمع الشركاء والبنية التحتية والتنفيذ، ثم نختبرها في واقعك حتى تصبح قدرة تستطيع تشغيلها.':'The technology you need may already exist in a company or research lab elsewhere. We identify what fits your institution’s needs, design the knowledge transfer and technology adaptation, connect partners, infrastructure and implementation, then validate it in your setting as a capability you can operate.'}</p>
       <Link className={styles.textLink} href={`${base}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={20}/></Link>
     </div>
-  </section>
-  <section className={styles.koreaMena} aria-labelledby="korea-mena-title">
-    <h2 id="korea-mena-title" dir="ltr">Korea ↔ MENA</h2>
-    <p>{ar?'من مقرّنا في كوريا الجنوبية، نرصد قدرات نجحت الشركات والمؤسسات الكورية في تشغيلها بالفعل، في التصنيع المتقدم والروبوتات والطاقة والمياه والخدمات اللوجستية والذكاء الاصطناعي الصناعي. نحدد ما تحتاجه منها المؤسسات في الخليج ومصر، ومن يملك كل جزء، وما يحتاج إلى تكييف محلي، وأصغر تجربة عملية تكفي لإثبات النتيجة.':'Based in Korea, we track capabilities Korean industry and institutions have already made work — in advanced manufacturing, robotics, energy, water, logistics and industrial AI. We identify which of them Gulf and Egyptian institutions need, who owns each part, what must be adapted locally, and the smallest pilot that proves the result.'}</p>
   </section></>;
 }
 

@@ -2,27 +2,27 @@
   "hero": {
     "slides": [
       {
-        "image": "/field-space.jpg",
+        "image": "/field-chips.jpg",
         "label": {
-          "en": "VISIONSEEK",
-          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
+          "en": "HIGHEST LEVEL ONE",
+          "ar": "أعلى مستوى ممكن"
         },
         "title": {
-          "en": "Make It Possible.",
-          "ar": "Make It Possible."
+          "en": "The Highest Level One.",
+          "ar": "The Highest Level One."
         },
         "sub": {
-          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
-          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
+          "en": "Capabilities for institutions, especially AI, assembled between the engineering team and the people who decide.",
+          "ar": "قدرات للمؤسسات، والذكاء الاصطناعي في مقدمتها، تُجمَّع بين فريق الهندسة ومن يتخذ القرار."
         },
         "text": {
-          "en": "",
-          "ar": ""
+          "en": "VisionSeek builds that capability in-house, from what already works in the world.",
+          "ar": "تبني VisionSeek هذه القدرة داخل المؤسسة، مما يعمل أصلًا في العالم."
         },
-        "href": "/start",
+        "href": "/about/what-we-do#hlo",
         "link": {
-          "en": "Build your solutions with us",
-          "ar": "ابنِ حلولك معنا"
+          "en": "Explore the HLO program",
+          "ar": "اكتشف برنامج HLO"
         }
       },
       {
@@ -50,33 +50,33 @@
         }
       },
       {
-        "image": "/field-chips.jpg",
+        "image": "/field-space.jpg",
         "label": {
-          "en": "HIGHEST LEVEL ONE",
-          "ar": "HIGHEST LEVEL ONE"
+          "en": "EGYPT AND THE GULF",
+          "ar": "مصر والخليج"
         },
         "title": {
-          "en": "The best of what is possible.",
-          "ar": "نبني على أفضل ما توصّل إليه العالم."
+          "en": "A local working pattern.",
+          "ar": "نمط عمل يناسب الواقع المحلي."
         },
         "sub": {
-          "en": "The right people. The best available capabilities.",
-          "ar": "الخبرات المناسبة. والتقنيات الأكثر ملاءمة للمهمة."
+          "en": "A multi-sector capability studio for institutions.",
+          "ar": "استوديو قدرات متعدد القطاعات للمؤسسات."
         },
         "text": {
-          "en": "Connect the world’s knowledge, technologies and opportunities around a mission.",
-          "ar": "نختار ما تحتاجه المهمة من معرفة وتقنيات وشركاء، ونضعه في خدمة القدرة التي نبنيها."
+          "en": "Built for institutions in Egypt and the Gulf.",
+          "ar": "للمؤسسات في مصر والخليج."
         },
-        "href": "/about/what-we-do#hlo",
+        "href": "/start",
         "link": {
-          "en": "Explore the HLO program",
-          "ar": "اكتشف برنامج HLO"
+          "en": "Build your solutions with us",
+          "ar": "ابنِ حلولك معنا"
         }
       }
     ],
     "firstSlideNote": {
-      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
-      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
+      "en": "",
+      "ar": ""
     }
   },
   "mission": {
@@ -309,13 +309,6 @@
       "ar": "اتبنى بالفعل — مش وعود"
     },
     "items": [
-      {
-        "value": "6",
-        "label": {
-          "en": "Autonomous engines running the institution's research, every hour",
-          "ar": "محركات ذاتية تدير بحث المؤسسة — تلف كل ساعة بلا توقف"
-        }
-      },
       {
         "value": "6",
         "label": {
