@@ -116,16 +116,41 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
   }
 });
 
-test("clients: stage, last contact, next follow-up, pieces order per client, and the initiative counter", async () => {
-  const [mod, notion, lead] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts")]);
+test("clients (CRM phase 1): one pipeline in Ahmed's order, seven sources, contact log, 14-day flag, no sending", async () => {
+  const [mod, notion, lead, booking] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts"), read("app/api/booking/route.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  for (const needle of ["pageClients", "pageClient", "تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة", "آخر تواصل", "المتابعة الجاية", "ترتيب القطع", "المنح العشرة", "حسب العميل"]) assert.ok(html.includes(needle), `missing: ${needle}`);
-  assert.match(notion, /export async function updateLeadMap/);
-  assert.match(notion, /export async function createLead/);
-  assert.match(notion, /"ترتيب القطع"/);
-  assert.match(notion, /"منحة المبادرة"/);
+  // الخط: جلسة، بعدها تشخيص، بعدها عرض (قرار د. أحمد 15 أكتوبر) — في المكتبة وفي الواجهة
+  const pipeline = '["جديد", "جلسة تعريفية", "تشخيص", "عرض", "تعاقد", "تنفيذ"]';
+  assert.ok(notion.includes(`LEAD_PIPELINE = ${pipeline}`), "lib pipeline order");
+  assert.ok(html.includes(`LEAD_PIPELINE = ${pipeline}`), "room pipeline order");
+  assert.ok(notion.includes('LEAD_CLOSED = ["مغلق — فاز", "مغلق — خسر"]'));
+  // المصادر السبعة، و«تواصل مباشر» سابعهم
+  const sources = '["الموقع", "الحجز", "الرادار", "تعارف", "لينكدإن", "ماستركلاس", "تواصل مباشر"]';
+  assert.ok(notion.includes(`LEAD_SOURCES = ${sources}`));
+  assert.ok(html.includes(`LEAD_SOURCES = ${sources}`));
+  // المراحل القديمة بتتقرى على الخط الجديد من غير مسح
+  for (const [old, now] of [["تواصل", "جديد"], ["قطع لاحقة", "تنفيذ"], ["كسبنا", "مغلق — فاز"], ["اتقفل — مش دلوقتي", "مغلق — خسر"]]) {
+    assert.ok(notion.includes(`"${old}": "${now}"`), `lib legacy ${old}`);
+    assert.ok(html.includes(`"${old}": "${now}"`), `room legacy ${old}`);
+  }
+  // سجل التواصل: قاعدة مستقلة مربوطة بالعميل، وبتحدّث «آخر تواصل»؛ العلم الأحمر بعد 14 يوم
+  assert.match(notion, /contacts: \{ ds: "24254214-19b8-406c-8c33-b516160da228"/);
+  assert.match(notion, /export async function addContact/);
+  assert.match(notion, /"آخر تواصل"/);
+  assert.match(notion, /LEAD_STALE_DAYS = 14/);
+  assert.match(html, /LEAD_STALE_DAYS = 14/);
+  for (const needle of ["pageClients", "pageClient", "leadBoard", "dropLead", "سجل التواصل", "سجّل التواصل", "الخطوة الجاية", "ترتيب القطع", "المنح العشرة", "حوّله لعميل", "مفيش إرسال لأي عميل", "إغلاق الكارت", "من غير مصدر"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  // المسار: إنشاء، بيانات، تواصل، مرحلة — للمالك بس
+  assert.match(lead, /action === "contact"/);
+  assert.match(lead, /source: g\("source"\)/);
   assert.match(lead, /pieces: opt\("pieces"\)/);
   assert.match(lead, /cookieIsValid/);
+  // الحجز من الموقع: مصدر «الحجز» + مرحلة «جلسة تعريفية» + أول صف في سجل التواصل
+  assert.match(booking, /source: "الحجز"/);
+  assert.match(booking, /stage: "جلسة تعريفية"/);
+  assert.match(booking, /addContact\(/);
+  // مفيش إرسال لأي عميل من المنصة: ولا دالة إرسال بريد في مكتبة Notion أو مسار العملاء
+  for (const [name, text] of [["lib", notion], ["lead", lead], ["booking", booking]]) assert.doesNotMatch(text, /sendMail|nodemailer|resend\.|sendgrid|mailgun/i, `${name} must not send`);
 });
 
 test("methodologies: a room view, owner-only approval, agents read only approved ones", async () => {

@@ -110,6 +110,7 @@ label.f .inp,label.f .sel{width:100%;color:var(--ink)}
 .b-idea{background:#c9ccc4}.b-filter{background:#d9b54a}.b-doing{background:var(--wait-dot)}.b-wait{background:var(--stuck-dot)}.b-done{background:var(--ok-dot)}
 .dt{width:72px;flex:none;font-weight:600;font-size:13px}
 .kan{display:grid;grid-template-columns:repeat(5,minmax(200px,1fr));gap:10px;overflow-x:auto;padding-bottom:6px}
+.kan.k7{grid-template-columns:repeat(7,minmax(150px,1fr))}
 .col{background:color-mix(in srgb,var(--side) 70%,var(--ground));border:1px solid var(--line);border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:8px;min-height:120px}
 .col.over{outline:2px dashed var(--accent);outline-offset:-4px}
 .col>h3{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;padding:4px 4px 2px}
@@ -159,7 +160,7 @@ label.f .inp,label.f .sel{width:100%;color:var(--ink)}
   #tabbar a,#tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;color:var(--mute);text-decoration:none;background:none;border:0;min-height:48px;justify-content:center;cursor:pointer}
   #tabbar .on{color:var(--ink);font-weight:600}
   .g3,.g2{grid-template-columns:1fr}.g5{grid-template-columns:1fr 1fr}
-  .kan{grid-template-columns:repeat(5,minmax(240px,82vw));scroll-snap-type:x mandatory}.col{scroll-snap-align:start}
+  .kan{grid-template-columns:repeat(5,minmax(240px,82vw));scroll-snap-type:x mandatory}.kan.k7{grid-template-columns:repeat(7,minmax(240px,82vw))}.col{scroll-snap-align:start}
   .kv{grid-template-columns:1fr}.kv dt{margin-top:6px}
   #toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
 }
@@ -234,7 +235,16 @@ const DEPTS = [
 const OWNERS = ["د. أحمد", "Claude", "Grok", "nimo"];
 const COLS = [["idea", "فكرة"], ["filter", "بيتفلتر"], ["doing", "شغال"], ["wait", "مستني أحمد"], ["done", "خلص"]];
 const STAGE_NAME = { idea: "فكرة", filter: "بيتفلتر", doing: "شغال", wait: "مستني أحمد", done: "خلص", later: "بعدين" };
-const LEAD_STEPS = ["تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة"];
+// نظام العملاء — المرحلة 1 (15 أكتوبر 2026): خط واحد بترتيب د. أحمد (جلسة، بعدها تشخيص، بعدها عرض)، و«مغلق» في الآخر.
+const LEAD_PIPELINE = ["جديد", "جلسة تعريفية", "تشخيص", "عرض", "تعاقد", "تنفيذ"];
+const LEAD_CLOSED = ["مغلق — فاز", "مغلق — خسر"];
+const LEAD_STEPS = [...LEAD_PIPELINE, "مغلق"];
+const LEAD_LEGACY = { "تواصل": "جديد", "اتلقى": "جديد", "جاهز للتواصل": "جديد", "اتبعت له": "جديد", "رد": "جديد", "جلسة محجوزة": "جلسة تعريفية", "قطع لاحقة": "تنفيذ", "كسبنا": "مغلق — فاز", "اتقفل — مش دلوقتي": "مغلق — خسر" };
+const LEAD_SOURCES = ["الموقع", "الحجز", "الرادار", "تعارف", "لينكدإن", "ماستركلاس", "تواصل مباشر"];
+const LEAD_SECTORS = ["خدمات المؤسسات", "المنتجات الجاهزة", "الشراكات ونقل التكنولوجيا", "المعرفة وبناء القادة", "الظهور والتواصل"];
+const LEAD_STALE_DAYS = 14;
+const CONTACT_CHANNELS = ["إيميل", "مكالمة", "واتساب", "جلسة", "لقاء", "لينكدإن", "الموقع", "تانية"];
+const CONTACT_DIRECTIONS = ["وارد", "صادر", "ملاحظة"];
 const GRANTS = 10;
 const INITIATIVE_END = "2026-12-31";
 // قطع الخدمة الست: المنهج من رسالة 13 أكتوبر بكلام د. أحمد، والمدة «حسب العميل» (المنهج هو الثابت).
@@ -296,28 +306,37 @@ const trackOf = (it) => trackByName(it.track);
 const GOALS = (L ? L.goals : []).filter((r) => r["الربع"] === "Q4 2026").map((r) => ({ id: ID(r), title: String(r["الهدف"] || ""), order: Number(r["الترتيب"] || 99) })).sort((a, b) => a.order - b.order);
 function leadStage(s) {
   s = String(s || "");
-  if (["تواصل", "اتلقى", "جاهز للتواصل", "اتبعت له", "رد"].includes(s)) return "تواصل";
-  if (["جلسة تعريفية", "جلسة محجوزة"].includes(s)) return "جلسة تعريفية";
-  if (s === "كسبنا") return "قطع لاحقة";
-  if (s === "اتقفل — مش دلوقتي") return "مقفول";
-  return LEAD_STEPS.includes(s) ? s : "تواصل";
+  if (LEAD_PIPELINE.includes(s) || LEAD_CLOSED.includes(s)) return s;
+  return LEAD_LEGACY[s] || "جديد";
 }
+const leadClosed = (l) => LEAD_CLOSED.includes(l.stage);
 const LEADS = (L ? L.leads : []).map((r) => {
   const note = String(r["ملاحظة"] || "");
   const sent = /Sent\s+(\d{4}-\d{2}-\d{2})/.exec(note);
+  const stage = leadStage(r["المرحلة"]);
+  const last = day(r["آخر تواصل"]) || (sent ? sent[1] : day(r.edited));
   return {
-    id: ID(r), name: String(r["الجهة"] || ""), stage: leadStage(r["المرحلة"]), raw: String(r["المرحلة"] || ""), country: String(r["البلد"] || ""),
-    leader: String(r["صاحب القرار"] || ""), follow: day(r["المتابعة الجاية"]), note, last: sent ? sent[1] : day(r.edited),
+    id: ID(r), name: String(r["الجهة"] || ""), stage, raw: String(r["المرحلة"] || ""), country: String(r["البلد"] || ""),
+    leader: String(r["صاحب القرار"] || ""), follow: day(r["المتابعة الجاية"]), note, last,
+    source: String(r["مصدر العميل"] || ""), sector: String(r["القطاع"] || ""), email: String(r["الإيميل"] || ""), next: String(r["الخطوة الجاية"] || ""),
+    closeReason: String(r["سبب الإغلاق"] || ""), stale: !LEAD_CLOSED.includes(stage) && !!last && last <= addDays(TODAY, -LEAD_STALE_DAYS),
     pieces: String(r["ترتيب القطع"] || "").split("←").map((s) => s.trim()).filter(Boolean), grant: r["منحة المبادرة"] === "__YES__",
-    url: r.url, signal: String(r["الإشارة"] || ""),
+    url: r.url, signal: String(r["الإشارة"] || ""), signalUrl: r["مصدر الإشارة"] || "",
   };
 }).filter((x) => x.name);
+// سجل التواصل: صف لكل مكالمة أو إيميل أو جلسة، مربوط بالعميل.
+const CONTACTS = (L ? L.contacts : []).map((r) => ({
+  id: ID(r), lead: pid(arr(r["العميل"])[0]), summary: String(r["الملخص"] || ""), date: day(r["التاريخ"]) || day(r.created), channel: String(r["القناة"] || ""),
+  direction: String(r["الاتجاه"] || ""), by: String(r["كتبها"] || ""), details: String(r["التفاصيل"] || ""), url: r.url,
+})).filter((c) => c.summary).sort((a, b) => (a.date < b.date ? 1 : -1));
+const contactsOf = (l) => CONTACTS.filter((c) => c.lead === l.id);
 const DECISIONS = (L ? L.decisions : []).map((r) => ({
   id: ID(r), title: String(r["القرار"] || ""), status: String(r["الحالة"] || ""), dept: String(r["القسم"] || ""), asked: day(r["اتطلب يوم"]),
   done: day(r["اتحسم يوم"]), final: String(r["القرار النهائي"] || ""), reason: String(r["السبب"] || ""), options: String(r["الخيارات"] || ""), url: r.url, link: r["رابط التفاصيل"] || "",
 })).filter((d) => d.title);
 const COMMENTS = L ? L.comments : [];
-const sessions = () => LEADS.filter((l) => ["جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة"].includes(l.stage)).length;
+const sessions = () => LEADS.filter((l) => l.stage !== "جديد" && !leadClosed(l)).length;
+const staleLeads = () => LEADS.filter((l) => l.stale);
 const grantsUsed = () => LEADS.filter((l) => l.grant).length;
 const moved = (list) => list.filter((x) => x.edited && day(x.edited) >= WEEK_AGO).length;
 
@@ -558,14 +577,15 @@ function initiativeStrip() {
   const used = grantsUsed();
   return `<section class="card pad" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap" aria-label="مبادرة VisionSeek">
 <div style="display:flex;flex-direction:column;gap:2px;margin-inline-end:auto"><h2 style="font-size:15px">مبادرة VisionSeek لبناء القدرات العربية</h2><p class="small mute">الجلسة التعريفية مجانية لحد ${fmt(INITIATIVE_END)} ${INITIATIVE_END.slice(0, 4)}</p></div>
-<div><span class="small mute">في «تواصل»</span><p class="num" style="font-size:22px;font-weight:700">${LEADS.filter((l) => l.stage === "تواصل").length}</p></div>
-<div><span class="small mute">جلسات تعريفية</span><p class="num" style="font-size:22px;font-weight:700">${sessions()}</p></div>
+<div><span class="small mute">في «جديد»</span><p class="num" style="font-size:22px;font-weight:700">${LEADS.filter((l) => l.stage === "جديد").length}</p></div>
+<div><span class="small mute">في الخط</span><p class="num" style="font-size:22px;font-weight:700">${sessions()}</p></div>
+<div><span class="small mute">من غير تواصل ${LEAD_STALE_DAYS} يوم</span><p class="num ${staleLeads().length ? "warn" : ""}" style="font-size:22px;font-weight:700">${staleLeads().length ? `<a href="#clients/stale" style="color:inherit">${staleLeads().length}</a>` : "0"}</p></div>
 <div style="display:flex;flex-direction:column;gap:6px"><span class="small mute">المنح العشرة · <span class="num">${used}</span> من ${GRANTS}</span><div class="grants" aria-label="${used} من ${GRANTS} منح">${Array.from({ length: GRANTS }, (_, n) => `<span class="${n < used ? "on" : ""}"></span>`).join("")}</div></div>
 </section>`;
 }
 function upcoming() {
   const ev = [];
-  const open = LEADS.filter((l) => l.follow && l.stage !== "مقفول");
+  const open = LEADS.filter((l) => l.follow && !leadClosed(l));
   const byDay = {};
   open.forEach((l) => (byDay[l.follow] = byDay[l.follow] || []).push(l));
   Object.entries(byDay).forEach(([d, ls]) => ev.push({ d, html: ls.length === 1 ? `متابعة <a href="#client/${ls[0].id}">${t(ls[0].name)}</a>` : `متابعة ${ls.length} ${ls.length > 2 && ls.length < 11 ? "مؤسسات" : "مؤسسة"}<br><span class="small mute">${ls.slice(0, 4).map((l) => t(l.name)).join(" · ")}${ls.length > 4 ? ` · +${ls.length - 4}` : ""}</span>` }));
@@ -629,13 +649,13 @@ function pageTrack(id) {
   const d = deptByName(x.dept); const all = trackItems(x);
   const later = all.filter((i) => i.stage === "later");
   let clients = "";
-  const leadMap = { "التواصل": ["تواصل"], "الجلسات التعريفية": ["جلسة تعريفية"], "العروض": ["عرض"] };
+  const leadMap = { "التواصل": ["جديد"], "الجلسات التعريفية": ["جلسة تعريفية"], "العروض": ["تشخيص", "عرض"] };
   if (leadMap[x.name]) {
     const ls = LEADS.filter((l) => leadMap[x.name].includes(l.stage));
     clients = `<section class="sec"><div class="t"><h2>العملاء في المسار ده</h2><span class="num">${ls.length}</span></div><div class="card"><div class="rows">${ls.map((l) => `<div class="row"><a href="#client/${l.id}" style="flex:1;min-width:0;color:var(--ink);font-weight:600;text-decoration:none">${t(l.name)}</a><span class="tag">${t(l.country)}</span>${l.follow ? `<span class="tag">متابعة ${fmt(l.follow)}</span>` : ""}</div>`).join("") || '<p class="empty">مفيش.</p>'}</div></div></section>`;
   }
   if (x.name === "المتابعات") {
-    const ls = LEADS.filter((l) => l.follow && l.stage !== "مقفول").sort((a, b) => (a.follow < b.follow ? -1 : 1));
+    const ls = LEADS.filter((l) => l.follow && !leadClosed(l)).sort((a, b) => (a.follow < b.follow ? -1 : 1));
     clients = `<section class="sec"><div class="t"><h2>المتابعات الجاية</h2><span class="num">${ls.length}</span></div><div class="card"><div class="rows">${ls.map((l) => `<div class="row"><span class="dt ${l.follow < TODAY ? "warn" : ""}">${fmt(l.follow)}</span><a href="#client/${l.id}" style="flex:1;min-width:0;color:var(--ink);text-decoration:none">${t(l.name)}</a><span class="tag">${t(l.stage)}</span></div>`).join("") || '<p class="empty">مفيش.</p>'}</div></div></section>`;
   }
   return head(x.name, `<a href="#home">الرئيسية</a> › <a href="#dept/${d ? d.id : ""}">${t(x.dept)}</a> › المسار`, `<a class="btn pri" href="#new/${x.id}">${ICON.plus}عنصر جديد هنا</a>`) + notLive() + `
@@ -709,25 +729,77 @@ function pageServices() {
 <div class="grid g3">${PIECES.map((p, n) => `<article class="card pad sec"><div class="t"><span class="tag num">${n + 1}</span><h2>${t(p.name)}</h2></div><ol style="margin:0;padding-inline-start:20px;display:grid;gap:4px">${p.steps.map((s) => `<li>${t(s)}</li>`).join("")}</ol>${p.steps.length < 5 ? `<p class="small warn">⚠️ المنهج المعتمد فيه ${p.steps.length} خطوات بس — الباقي يتكتب منك.</p>` : ""}<dl class="kv" style="border-top:1px solid var(--line2);padding-top:10px"><dt>المخرجات</dt><dd>${t(p.out)}</dd><dt>المدة التقريبية</dt><dd>حسب العميل</dd></dl></article>`).join("")}</div>
 <section class="sec"><div class="t"><h2>ترتيب القطع عند كل عميل</h2></div><div class="card"><div class="rows">${withOrder.map((l) => `<div class="row"><a href="#client/${l.id}" style="flex:none;color:var(--ink);font-weight:600;text-decoration:none">${t(l.name)}</a><span style="flex:1;min-width:0">${l.pieces.map((x, n) => `<span class="tag">${n + 1}. ${t(x)}</span>`).join(" ")}</span></div>`).join("") || '<p class="empty">لسه مفيش عميل اتحدد له ترتيب. الترتيب بيتحدد من صفحة العميل.</p>'}</div></div></section>`;
 }
-let LF = { stage: "", country: "" };
-function pageClients() {
+let LF = { stage: "", country: "", source: "", sector: "", stale: false, view: "board" };
+const leadPill = (l) => `<span class="pill ${l.stage === "جديد" ? "p-filter" : l.stage === "مغلق — فاز" ? "p-ok" : l.stage === "مغلق — خسر" ? "p-later" : "p-doing"}">${t(l.stage)}</span>`;
+const staleTag = (l) => (l.stale ? `<span class="pill p-late">🚩 من غير تواصل ${LEAD_STALE_DAYS} يوم</span>` : "");
+function leadCard(l) {
+  return `<a class="it" href="#client/${l.id}" draggable="${leadClosed(l) ? "false" : "true"}" ondragstart="dragStartLead(event,'${l.id}')" data-id="${l.id}">
+<span class="tt">${t(l.name)}</span>
+<span class="mm">${l.source ? `<span class="tag">${t(l.source)}</span>` : '<span class="tag warn">⚠️ من غير مصدر</span>'}${l.country ? `<span class="tag">${t(l.country)}</span>` : ""}${leadClosed(l) ? leadPill(l) : ""}${staleTag(l)}${l.follow && !leadClosed(l) ? lateTag(l.follow, false) : ""}</span>
+${l.next && !leadClosed(l) ? `<span class="small mute">${t(l.next).slice(0, 90)}</span>` : ""}
+</a>`;
+}
+function leadBoard(list) {
+  const cols = LEAD_STEPS.map((k) => [k, k === "مغلق" ? list.filter(leadClosed) : list.filter((l) => l.stage === k)]);
+  return `<div class="kan k7">${cols.map(([k, ls]) => `<section class="col" data-col="${k}" ${k === "مغلق" ? "" : `ondragover="dragOver(event)" ondragleave="this.classList.remove('over')" ondrop="dropLead(event,'${k}')"`} aria-label="${k}"><h3>${t(k)}<span class="c num">${ls.length}</span></h3>${ls.map(leadCard).join("") || '<p class="empty" style="padding:6px 4px">—</p>'}</section>`).join("")}</div>`;
+}
+function leadTable(list) {
+  return `<div class="card tbl"><table><thead><tr><th>المؤسسة</th><th>المصدر</th><th>القطاع</th><th>الدولة</th><th>المرحلة</th><th>آخر تواصل</th><th>الخطوة الجاية</th><th>موعدها</th></tr></thead><tbody>${list.map((l) => `<tr><td><a href="#client/${l.id}">${t(l.name)}</a>${l.stale ? '<br><span class="small warn">🚩 من غير تواصل</span>' : ""}</td><td>${t(l.source || "—")}</td><td>${t(l.sector || "—")}</td><td>${t(l.country || "—")}</td><td>${leadPill(l)}</td><td class="num">${fmt(l.last) || "—"}</td><td class="small">${t(l.next || "—")}</td><td class="num ${l.follow && l.follow < TODAY && !leadClosed(l) ? "warn" : ""}">${fmt(l.follow) || "—"}</td></tr>`).join("") || '<tr><td colspan="8" class="empty">مفيش.</td></tr>'}</tbody></table></div>`;
+}
+function radarBlock() {
+  const cyc = (L ? L.cycles : []).filter((c) => /رادار العملاء/.test(c.title)).slice(0, 5);
+  if (!cyc.length) return "";
+  return `<details class="card"><summary style="padding:12px 16px;cursor:pointer;font-weight:600">من الرادار <span class="small mute">— آخر دورات «رادار العملاء». التحويل لعميل بإيدك: اضغط «حوّله لعميل» واكتب اسم الجهة.</span></summary><div class="rows" style="border-top:1px solid var(--line2)">${cyc.map((c) => `<div class="row"><a href="${esc(c.url)}" target="_blank" rel="noreferrer" style="flex:1;min-width:0;color:var(--ink);font-weight:600;text-decoration:none">${t(c.title)}</a><span class="tag num">${fmt(day(c.edited))}</span><button class="btn sm" type="button" onclick="newFromRadar('${esc(c.url)}')">حوّله لعميل</button></div>`).join("")}</div></details>`;
+}
+function newFromRadar(url) {
+  const d = document.getElementById("newlead"); if (!d) return;
+  d.open = true; const f = d.querySelector("form");
+  f.elements.source.value = "الرادار"; f.elements.signalUrl.value = url; f.elements.name.focus();
+}
+function newLeadForm(back) {
+  const sel = (name, opts, label, req) => `<label class="f">${label}${req ? " (مطلوب)" : ""}<select class="sel" name="${name}" ${req ? "required" : ""}><option value="">—</option>${opts.map((o) => `<option>${o}</option>`).join("")}</select></label>`;
+  return `<details id="newlead" class="card"><summary style="padding:12px 16px;cursor:pointer;font-weight:600">جهة جديدة</summary><form method="post" action="/ops/lead" class="pad sec" style="border-top:1px solid var(--line2)"><input type="hidden" name="action" value="create"><input type="hidden" name="stage" value="جديد"><input type="hidden" name="back" value="${back}"><input type="hidden" name="signalUrl" value=""><div class="grid g2"><label class="f">المؤسسة (مطلوب)<input class="inp" name="name" required maxlength="200"></label>${sel("source", LEAD_SOURCES, "المصدر", true)}${sel("sector", LEAD_SECTORS, "القطاع")}${sel("place", ["مصر", "السعودية", "الإمارات", "قطر", "باقي الخليج", "تانية"], "الدولة")}<label class="f">القائد — الاسم والمنصب العلني بس<input class="inp" name="decider" maxlength="200"></label><label class="f">إيميل الجهة (اختياري)<input class="inp" type="email" name="email" maxlength="254" dir="ltr"></label><label class="f">الخطوة الجاية<input class="inp" name="next" maxlength="500"></label><label class="f">موعدها<input class="inp" type="date" name="followup"></label></div><label class="f">ملاحظة (اختياري)<textarea class="inp" name="note" maxlength="1900"></textarea></label><div><button class="btn pri" type="submit">ضيف على اللوحة</button></div></form></details>`;
+}
+function pageClients(sub) {
+  if (sub === "stale") LF.stale = true;
   const countries = [...new Set(LEADS.map((l) => l.country).filter(Boolean))];
-  const list = LEADS.filter((l) => (!LF.stage || l.stage === LF.stage) && (!LF.country || l.country === LF.country)).sort((a, b) => ((a.follow || "9") < (b.follow || "9") ? -1 : 1));
-  return head("العملاء", `<a href="#home">الرئيسية</a>`, `<button class="btn pri" type="button" onclick="document.getElementById('newlead').open=true">${ICON.plus}جهة جديدة</button>`) + notLive() + initiativeStrip() + `
-<div class="filters"><label>المرحلة<select class="sel" onchange="LF.stage=this.value;render()"><option value="">الكل</option>${[...LEAD_STEPS, "مقفول"].map((s) => `<option ${LF.stage === s ? "selected" : ""}>${s}</option>`).join("")}</select></label><label>الدولة<select class="sel" onchange="LF.country=this.value;render()"><option value="">الكل</option>${countries.map((c) => `<option ${LF.country === c ? "selected" : ""}>${t(c)}</option>`).join("")}</select></label><span class="small mute num">${list.length} جهة</span></div>
-<div class="card tbl"><table><thead><tr><th>المؤسسة</th><th>القائد</th><th>الدولة</th><th>المرحلة</th><th>آخر تواصل</th><th>المتابعة الجاية</th></tr></thead><tbody>${list.map((l) => `<tr><td><a href="#client/${l.id}">${t(l.name)}</a></td><td>${t(l.leader || "—")}</td><td>${t(l.country || "—")}</td><td><span class="pill ${l.stage === "تواصل" ? "p-filter" : l.stage === "مقفول" ? "p-later" : "p-doing"}">${t(l.stage)}</span></td><td class="num">${fmt(l.last)}</td><td class="num ${l.follow && l.follow < TODAY ? "warn" : ""}">${fmt(l.follow) || "—"}</td></tr>`).join("") || '<tr><td colspan="6" class="empty">مفيش.</td></tr>'}</tbody></table></div>
-<details id="newlead" class="card"><summary style="padding:12px 16px;cursor:pointer;font-weight:600">جهة جديدة</summary><form method="post" action="/ops/lead" class="pad sec" style="border-top:1px solid var(--line2)"><input type="hidden" name="action" value="create"><input type="hidden" name="stage" value="تواصل"><input type="hidden" name="back" value="clients"><div class="grid g2"><label class="f">المؤسسة (مطلوب)<input class="inp" name="name" required maxlength="200"></label><label class="f">القائد — الاسم والمنصب العلني بس<input class="inp" name="decider" maxlength="200"></label><label class="f">الدولة<select class="sel" name="place"><option value="">—</option>${["مصر", "السعودية", "الإمارات", "قطر", "باقي الخليج", "تانية"].map((c) => `<option>${c}</option>`).join("")}</select></label><label class="f">المتابعة الجاية<input class="inp" type="date" name="followup"></label></div><div><button class="btn pri" type="submit">ضيف في Notion</button></div></form></details>`;
+  const list = LEADS.filter((l) => (!LF.stage || (LF.stage === "مغلق" ? leadClosed(l) : l.stage === LF.stage)) && (!LF.country || l.country === LF.country) && (!LF.source || l.source === LF.source) && (!LF.sector || l.sector === LF.sector) && (!LF.stale || l.stale)).sort((a, b) => ((a.follow || "9") < (b.follow || "9") ? -1 : 1));
+  const sel = (key, label, opts) => `<label>${label}<select class="sel" onchange="LF.${key}=this.value;render()"><option value="">الكل</option>${opts.map((o) => `<option ${LF[key] === o ? "selected" : ""}>${t(o)}</option>`).join("")}</select></label>`;
+  return head("العملاء", `<a href="#home">الرئيسية</a>`, `<button class="btn pri" type="button" onclick="document.getElementById('newlead').open=true;document.getElementById('newlead').scrollIntoView()">${ICON.plus}جهة جديدة</button>`) + notLive() + initiativeStrip() + `
+<div class="filters">${sel("stage", "المرحلة", LEAD_STEPS)}${sel("source", "المصدر", LEAD_SOURCES)}${sel("sector", "القطاع", LEAD_SECTORS)}${sel("country", "الدولة", countries)}<label><input type="checkbox" ${LF.stale ? "checked" : ""} onchange="LF.stale=this.checked;render()"> من غير تواصل ${LEAD_STALE_DAYS} يوم</label><span class="small mute num">${list.length} جهة</span><span style="margin-inline-start:auto;display:flex;gap:4px"><button class="btn sm ${LF.view === "board" ? "yes" : ""}" type="button" onclick="LF.view='board';render()">لوحة</button><button class="btn sm ${LF.view === "list" ? "yes" : ""}" type="button" onclick="LF.view='list';render()">قايمة</button></span></div>
+<p class="small mute">الخط: ${LEAD_PIPELINE.join(" ← ")} ← مغلق (فاز أو خسر). اسحب الكارت لمرحلة تانية، والإغلاق من صفحة العميل بسبب.</p>
+${LF.view === "list" ? leadTable(list) : leadBoard(list)}
+${radarBlock()}
+${newLeadForm("clients")}`;
 }
 function pageClient(id) {
   const l = LEADS.find((x) => x.id === id); if (!l) return pageClients();
   const back = `client/${l.id}`;
-  const steps = LEAD_STEPS.map((s) => `<form method="post" action="/ops/lead"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="stage" value="${s}"><input type="hidden" name="back" value="${back}"><button class="stp ${l.stage === s ? "on" : ""}" type="submit" ${l.stage === s ? 'aria-current="step"' : ""}>${s}</button></form>`).join('<span class="mute">←</span>');
+  const closed = leadClosed(l);
+  const steps = LEAD_PIPELINE.map((s) => `<form method="post" action="/ops/lead"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="stage" value="${s}"><input type="hidden" name="back" value="${back}"><button class="stp ${l.stage === s ? "on" : ""}" type="submit" ${l.stage === s ? 'aria-current="step"' : ""}>${s}</button></form>`).join('<span class="mute">←</span>');
   const sel = (n) => `<label class="f">القطعة ${n + 1}<select class="sel" data-piece>${["", ...PIECES.map((p) => p.name)].map((p) => `<option value="${p}" ${l.pieces[n] === p ? "selected" : ""}>${p || "—"}</option>`).join("")}</select></label>`;
+  const opt = (name, opts, cur, label) => `<label class="f">${label}<select class="sel" name="${name}"><option value="">—</option>${opts.map((o) => `<option ${cur === o ? "selected" : ""}>${o}</option>`).join("")}</select></label>`;
+  const cs = contactsOf(l);
+  const closeForm = closed
+    ? `<div class="card pad sec"><p>${leadPill(l)} ${l.closeReason ? `<span class="small mute">— ${t(l.closeReason)}</span>` : ""}</p><form method="post" action="/ops/lead" style="display:flex;gap:8px"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="stage" value="جديد"><input type="hidden" name="back" value="${back}"><button class="btn sm" type="submit">رجّعه للخط</button></form></div>`
+    : `<details class="card"><summary style="padding:12px 16px;cursor:pointer;font-weight:600">إغلاق الكارت</summary><form method="post" action="/ops/lead" class="pad sec" style="border-top:1px solid var(--line2)"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><label class="f">السبب (مطلوب)<input class="inp" name="reason" required maxlength="500"></label><div style="display:flex;gap:8px"><button class="btn yes" type="submit" name="stage" value="مغلق — فاز">مغلق — فاز</button><button class="btn" type="submit" name="stage" value="مغلق — خسر">مغلق — خسر</button></div></form></details>`;
   return head(l.name, `<a href="#clients">العملاء</a>`) + notLive() + `
-<section class="card pad sec"><div class="t"><h2>المرحلة</h2><span>اضغط على المرحلة الجديدة</span></div><div class="steps" style="align-items:center">${steps}</div>${l.stage === "مقفول" ? '<p class="small mute">الجهة دي مقفولة «مش دلوقتي».</p>' : ""}</section>
+<section class="card pad sec"><div class="t"><h2>المرحلة</h2><span>اضغط على المرحلة الجديدة · ${staleTag(l) || `آخر تواصل ${fmt(l.last) || "—"}`}</span></div><div class="steps" style="align-items:center">${steps}</div>${closed ? `<p class="small mute">الكارت مغلق — ${t(l.stage)}.</p>` : ""}</section>
 <div class="grid g2" style="align-items:start">
-<section class="card pad sec"><dl class="kv"><dt>القائد</dt><dd>${t(l.leader || "—")}</dd><dt>الدولة</dt><dd>${t(l.country || "—")}</dd><dt>آخر تواصل</dt><dd class="num">${fmt(l.last) || "—"}</dd><dt>المتابعة الجاية</dt><dd><form method="post" action="/ops/lead" style="display:flex;gap:6px;flex-wrap:wrap"><input type="hidden" name="action" value="map"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><input class="inp" type="date" name="followup" value="${esc(l.follow)}" aria-label="المتابعة الجاية"><button class="btn sm" type="submit">احفظ</button></form></dd>${l.signal ? `<dt>الإشارة</dt><dd>${t(l.signal)}</dd>` : ""}</dl>${l.note ? `<details><summary class="small" style="cursor:pointer">سجل التواصل</summary><p class="small" style="white-space:pre-wrap;margin-top:6px">${t(l.note)}</p></details>` : ""}<a class="small" href="${esc(l.url)}" target="_blank" rel="noreferrer">افتحها في Notion</a></section>
 <section class="sec">
+<form class="card pad sec" method="post" action="/ops/lead"><input type="hidden" name="action" value="map"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><div class="t"><h2>بيانات العميل</h2></div>
+<div class="grid g2">${opt("source", LEAD_SOURCES, l.source, "المصدر")}${opt("sector", LEAD_SECTORS, l.sector, "القطاع")}${opt("place", ["مصر", "السعودية", "الإمارات", "قطر", "باقي الخليج", "تانية"], l.country, "الدولة")}<label class="f">إيميل الجهة<input class="inp" type="email" name="email" value="${esc(l.email)}" maxlength="254" dir="ltr"></label></div>
+<dl class="kv"><dt>القائد</dt><dd>${t(l.leader || "—")}</dd>${l.signal ? `<dt>الإشارة</dt><dd>${t(l.signal)}${l.signalUrl ? ` · <a class="small" href="${esc(l.signalUrl)}" target="_blank" rel="noreferrer">المصدر</a>` : ""}</dd>` : ""}<dt>المرحلة</dt><dd>${t(l.raw !== l.stage ? `${l.stage} (كانت «${l.raw}»)` : l.stage)}</dd></dl>
+<div><button class="btn sm" type="submit">احفظ البيانات</button></div></form>
+<form class="card pad sec" method="post" action="/ops/lead"><input type="hidden" name="action" value="map"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><div class="t"><h2>الخطوة الجاية</h2><span>اللي هيحصل بعد كده، وامتى</span></div><div class="grid g2"><label class="f">الخطوة<input class="inp" name="next" value="${esc(l.next)}" maxlength="500"></label><label class="f">موعدها<input class="inp" type="date" name="followup" value="${esc(l.follow)}"></label></div><div><button class="btn sm" type="submit">احفظ</button></div></form>
+${closeForm}
+${l.note ? `<details class="card"><summary class="small" style="padding:12px 16px;cursor:pointer">ملاحظة الكارت القديمة</summary><p class="small" style="white-space:pre-wrap;padding:0 16px 12px">${t(l.note)}</p></details>` : ""}
+<a class="small" href="${esc(l.url)}" target="_blank" rel="noreferrer">افتحها في Notion</a>
+</section>
+<section class="sec">
+<section class="card sec" style="gap:0"><div class="t" style="padding:14px 16px 0"><h2>سجل التواصل</h2><span class="num">${cs.length}</span></div>
+<form method="post" action="/ops/lead" class="pad sec" style="border-bottom:1px solid var(--line2)"><input type="hidden" name="action" value="contact"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><div class="grid g3">${opt("channel", CONTACT_CHANNELS, "إيميل", "القناة")}${opt("direction", CONTACT_DIRECTIONS, "صادر", "الاتجاه")}<label class="f">التاريخ<input class="inp" type="date" name="date" value="${TODAY}"></label></div><label class="f">الملخص (مطلوب)<input class="inp" name="summary" required maxlength="300" placeholder="مثال: اتصلنا وطلبوا عرض مبدئي"></label><label class="f">التفاصيل (اختياري)<textarea class="inp" name="details" maxlength="1900"></textarea></label><div class="grid g2"><label class="f">الخطوة الجاية بعد التواصل ده (اختياري)<input class="inp" name="next" maxlength="500"></label><label class="f">موعدها<input class="inp" type="date" name="followup"></label></div><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn pri" type="submit">سجّل التواصل</button><span class="small mute">التسجيل بس — مفيش إرسال لأي عميل من المنصة.</span></div></form>
+<div class="rows">${cs.map((c) => `<div class="row" style="align-items:flex-start;flex-wrap:wrap"><span class="dt num">${fmt(c.date)}</span><div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:4px"><span style="font-weight:600">${t(c.summary)}</span>${c.details ? `<p class="small mute" style="white-space:pre-wrap">${t(c.details)}</p>` : ""}<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">${t(c.channel)}</span><span class="tag">${t(c.direction)}</span>${c.by ? `<span class="tag">${t(c.by)}</span>` : ""}</div></div></div>`).join("") || '<p class="empty">لسه مفيش تواصل مسجّل. أول ما تسجّل، «آخر تواصل» بيتحدث لوحده.</p>'}</div></section>
 <form class="card pad sec" method="post" action="/ops/lead" onsubmit="this.pieces.value=[...this.querySelectorAll('[data-piece]')].map(s=>s.value).filter(Boolean).join(' ← ')"><input type="hidden" name="action" value="map"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><input type="hidden" name="pieces" value=""><div class="t"><h2>ترتيب القطع للعميل ده</h2><span>الترتيب بيختلف من عميل للتاني</span></div><div class="grid g3">${PIECES.map((_, n) => sel(n)).join("")}</div><div><button class="btn" type="submit">احفظ الترتيب</button></div></form>
 <form class="card pad" method="post" action="/ops/lead" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><input type="hidden" name="action" value="map"><input type="hidden" name="id" value="${l.id}"><input type="hidden" name="back" value="${back}"><input type="hidden" name="grant" value="${l.grant ? "0" : "1"}"><span style="flex:1">منحة من المنح العشرة: <b>${l.grant ? "واخدها" : "لأ"}</b> <span class="small mute num">(${grantsUsed()} من ${GRANTS} متاخدة)</span></span><button class="btn sm" type="submit">${l.grant ? "شيل المنحة" : "اديها منحة"}</button></form>
 </section>
@@ -765,6 +837,15 @@ let DRAG = "";
 function dragStart(e, id) { DRAG = id; try { e.dataTransfer.setData("text/plain", id); } catch (x) {} }
 function dragOver(e) { e.preventDefault(); e.currentTarget.classList.add("over"); }
 function dropOn(e, col) { e.preventDefault(); e.currentTarget.classList.remove("over"); const id = DRAG || e.dataTransfer.getData("text/plain"); moveCard(id, col); }
+function dragStartLead(e, id) { DRAG = "lead:" + id; try { e.dataTransfer.setData("text/plain", "lead:" + id); } catch (x) {} }
+function dropLead(e, stage) {
+  e.preventDefault(); e.currentTarget.classList.remove("over");
+  const raw = DRAG || e.dataTransfer.getData("text/plain"); if (!raw.startsWith("lead:")) return;
+  const l = LEADS.find((x) => x.id === raw.slice(5)); if (!l || l.stage === stage || !ON_SITE || !LEAD_PIPELINE.includes(stage)) return;
+  const f = document.createElement("form"); f.method = "post"; f.action = "/ops/lead";
+  f.innerHTML = `<input name="id" value="${l.id}"><input name="stage" value="${stage}"><input name="back" value="${curBack()}">`;
+  f.hidden = true; document.body.appendChild(f); f.submit();
+}
 function moveCard(id, col) {
   const it = ITEMS.find((x) => x.id === id); if (!it || it.stage === col || !ON_SITE) return;
   const f = document.createElement("form"); f.method = "post"; f.action = "/ops/card";
@@ -820,14 +901,14 @@ function render() {
   let h = location.hash.slice(1) || "home";
   if (ALIAS[h]) { location.replace("#" + ALIAS[h]); return; }
   const [p, a] = [h.split("/")[0], h.split("/").slice(1).join("/")];
-  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients() : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "learn" ? pageLearn(a) : pageHome();
+  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "learn" ? pageLearn(a) : pageHome();
   $("#main").innerHTML = html;
   renderSide();
   menu(false);
 }
 let lastPage = "";
-window.addEventListener("hashchange", () => { const p = location.hash.split("/").slice(0, 2).join("/"); if (p !== lastPage) { FILTER = { dept: "", owner: "", track: "" }; lastPage = p; } render(); window.scrollTo(0, 0); });
-const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", learn: "اتسجّل في محرّك التعلم.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
+window.addEventListener("hashchange", () => { const p = location.hash.split("/").slice(0, 2).join("/"); if (p !== lastPage) { FILTER = { dept: "", owner: "", track: "" }; LF.stale = false; lastPage = p; } render(); window.scrollTo(0, 0); });
+const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", learn: "اتسجّل في محرّك التعلم.", contact: "التواصل اتسجّل على العميل.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
 render();
 if (RM.flash || /[?&]r=/.test(location.search)) {
   const r = new URLSearchParams(location.search).get("r") || "";

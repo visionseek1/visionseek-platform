@@ -76,6 +76,7 @@ export async function GET(request: Request) {
       dec: "القرار اتسجّل في Notion.",
       proposed: "الطلب راح «قرارات مستنياك».",
       learn: "اتسجّل في محرّك التعلم.",
+      contact: "التواصل اتسجّل على العميل.",
       err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion.",
     };
     const flash = FLASH[r] || "";
