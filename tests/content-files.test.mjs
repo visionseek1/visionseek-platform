@@ -100,9 +100,9 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
   for (const step of method.steps) for (const key of ['en', 'ar', 'questionEn', 'questionAr', 'textEn', 'textAr']) assert.equal(typeof step[key], 'string', `${step.id}.${key}`);
 });
 
-test('navigation.json keeps the eight header sections and site-relative paths', () => {
+test('navigation.json keeps the five header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/insights', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/initiative', '/insights', '/start', '/what-we-offer']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);
@@ -195,7 +195,7 @@ test('page sections hidden from /admin exist, and /admin offers every hideable s
   const offered = [...readFileSync(join(root, 'public/admin/config.yml'), 'utf8').matchAll(/value: "([^"]+)"/g)].map(m => m[1]);
   for (const id of ids) assert.ok(offered.includes(id), `/admin does not offer ${id}; run scripts/archive-options.py`);
   for (const id of ids) {
-    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
+    const used = ['components/one/pages.tsx', 'components/institution/home-sections.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
     assert.ok(used, `${id} is listed but no section checks it`);
   }
 });

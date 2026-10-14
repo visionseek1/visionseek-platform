@@ -16,3 +16,6 @@ export const institutionNav: NavSection[] = data.sections.filter(section => !isA
 const reportsNav: NavSection = visible(data.reports);
 const showReports = !isArchived(data.reports.path);
 export const institutionHeaderNav: NavSection[] = institutionNav.flatMap(item => item.path === '/news' && showReports ? [reportsNav, item] : [item]);
+
+/** Footer-only groups (15 Oct 2026): «اعمل معنا», the masterclass, programs, news and fields left the five-item menu but stay reachable from the footer. */
+export const footerNav: NavSection[] = [...institutionNav, ...((data as {footer?: NavSection[]}).footer ?? []).filter(section => !isArchived(section.path)).map(visible)];

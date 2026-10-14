@@ -1,13 +1,24 @@
 {
   "blocks": [
-    {"id": "home.explainer", "page": "/", "label": "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»"},
-    {"id": "home.vision", "page": "/", "label": "الرئيسية ← الرسالة وما نقرأه"},
-    {"id": "home.programs", "page": "/", "label": "الرئيسية ← البرامج"},
-    {"id": "home.updates", "page": "/", "label": "الرئيسية ← ماستركلاس والأخبار"},
-    {"id": "home.method", "page": "/", "label": "الرئيسية ← المنهج"},
-    {"id": "home.communities", "page": "/", "label": "الرئيسية ← المجتمعات"},
-    {"id": "home.fields", "page": "/", "label": "الرئيسية ← المجالات"},
-    {"id": "home.work", "page": "/", "label": "الرئيسية ← اعمل معنا"},
-    {"id": "home.contact", "page": "/", "label": "الرئيسية ← التواصل"}
+    {
+      "id": "home.problem",
+      "page": "/",
+      "label": "الرئيسية ← السؤال (المشكلة في جملتين)"
+    },
+    {
+      "id": "home.sectors",
+      "page": "/",
+      "label": "الرئيسية ← القطاعات الخمسة"
+    },
+    {
+      "id": "home.insights",
+      "page": "/",
+      "label": "الرئيسية ← آخر قراءات Insights"
+    },
+    {
+      "id": "home.close",
+      "page": "/",
+      "label": "الرئيسية ← جملة العقد وزرار الحجز"
+    }
   ]
 }

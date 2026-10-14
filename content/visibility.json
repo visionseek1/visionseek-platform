@@ -8,6 +8,9 @@
     },
     {
       "path": "/reports"
+    },
+    {
+      "path": "/projects/defense"
     }
   ],
   "hiddenBlocks": []

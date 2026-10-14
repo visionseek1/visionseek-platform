@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type {ReactNode} from "react";
 import SiteHeader from "@/components/site-header";
-import {site} from '@/lib/site';
+import {site, emails} from '@/lib/site';
 import legal from '@/content/legal.json';
 
 type LegalKind = "privacy" | "terms";
@@ -50,12 +50,12 @@ type Bi = {en: string; ar: string};
 type LegalSection = {heading: Bi; paragraphs: Bi[]; bullets: Bi[]};
 type LegalDoc = {title: Bi; lead: Bi; sections: LegalSection[]};
 
-/* Edited from /admin («الخصوصية والشروط»). A paragraph may carry two tokens only: {{email}} renders the site email as a mailto link, and {{ltr:…}} keeps a Latin fragment left-to-right inside Arabic text. */
-function withTokens(text: string): ReactNode {
+/* Edited from /admin («الخصوصية والشروط»). A paragraph may carry two tokens only: {{email}} renders the section's address (insights@ on the privacy page, hello@ on the terms) as a mailto link, and {{ltr:…}} keeps a Latin fragment left-to-right inside Arabic text. */
+function withTokens(text: string, email: string): ReactNode {
   const parts = text.split(/(\{\{email\}\}|\{\{ltr:[^}]*\}\})/);
   if (parts.length === 1) return text;
   return parts.map((part, index) => {
-    if (part === "{{email}}") return <a key={index} href={`mailto:${site.email}`}>{site.email}</a>;
+    if (part === "{{email}}") return <a key={index} href={`mailto:${email}`}>{email}</a>;
     if (part.startsWith("{{ltr:")) return <span key={index} dir="ltr">{part.slice(6, -2)}</span>;
     return part;
   });
@@ -70,7 +70,7 @@ function LegalBody({ ar, doc }: { ar: boolean; doc: LegalDoc }) {
       {doc.sections.map((section) => (
         <section key={section.heading.en}>
           <h2>{t(section.heading)}</h2>
-          {section.paragraphs.map((paragraph) => <p key={paragraph.en}>{withTokens(t(paragraph))}</p>)}
+          {section.paragraphs.map((paragraph) => <p key={paragraph.en}>{withTokens(t(paragraph), kind === 'privacy' ? emails.insights : emails.general)}</p>)}
           {section.bullets.length > 0 && <ul>{section.bullets.map((bullet) => <li key={bullet.en}>{t(bullet)}</li>)}</ul>}
         </section>
       ))}

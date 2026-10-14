@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {institutionNav} from '@/lib/institution/navigation';
+import {footerNav as institutionNav} from '@/lib/institution/navigation';
 import type {Locale} from './content';
 import {site} from '@/lib/site';
 export default function CapabilityFooter({locale}:{locale:Locale}){const ar=locale==='ar';const p=ar?'/ar':'';

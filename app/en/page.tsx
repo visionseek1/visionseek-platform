@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
-import HomePage from "@/components/home-page";
+import type {Metadata} from 'next';
+import {OneHome} from '@/components/one/pages';
+import {OG_IMAGES, TITLE_EN} from '@/lib/seo';
+import {oneMessage} from '@/lib/one-message';
 
 export const metadata: Metadata = {
-  title: "VisionSeek | Future Technology, Science & Venture Building",
-  description: "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
-  alternates: {
-    canonical: "/",
-    languages: { en: "/", ar: "/ar" },
-  },
+  title: {absolute: TITLE_EN},
+  description: oneMessage.home.problem.text.en,
+  alternates: {canonical: '/', languages: {en: '/', ar: '/ar'}},
+  openGraph: {title: TITLE_EN, description: oneMessage.home.problem.text.en, url: '/', images: OG_IMAGES},
 };
-
-export default function EnglishHome() {
-  return <HomePage locale="en" />;
-}
+export default function EnglishHome() { return <OneHome locale="en"/>; }

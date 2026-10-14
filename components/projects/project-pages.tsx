@@ -1,5 +1,6 @@
 import type {CSSProperties, ReactNode} from 'react';
 import Link from 'next/link';
+import {BookButton} from '@/components/one/book-button';
 import Image from 'next/image';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2, BrainCircuit} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
@@ -61,7 +62,7 @@ function Contact({locale}:{locale:Locale}) {
   const ar=locale==='ar';
   return <section className={styles.contact}><div className={styles.wrap}>
     <h2>{ar?'ما الذي تريد تغييره في مؤسستك؟':'What do you want to change in your institution?'}</h2>
-    <Link className={styles.primary} href={`${prefix(locale)}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={18} aria-hidden="true"/></Link>
+    <BookButton locale={locale} className={styles.primary}/>
   </div></section>;
 }
 function GridHero({children,glow}:{children:ReactNode;glow?:string}) {

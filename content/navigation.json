@@ -1,76 +1,213 @@
 {
   "sections": [
     {
-      "path": "/projects",
-      "en": "Projects",
-      "ar": "المشاريع",
+      "path": "/about",
+      "en": "About",
+      "ar": "من نحن",
       "children": [
         {
-          "href": "/projects",
-          "en": "All sectors",
-          "ar": "كل المجالات"
+          "href": "/about/what-we-do",
+          "en": "How VisionSeek works",
+          "ar": "كيف تعمل VisionSeek؟"
         },
         {
-          "href": "/projects/energy",
-          "en": "Energy & Climate",
-          "ar": "الطاقة والمناخ"
+          "href": "/about",
+          "en": "Our vision",
+          "ar": "رؤيتنا"
         },
         {
-          "href": "/projects/semiconductors",
-          "en": "Chips & Semiconductors",
-          "ar": "الرقائق وأشباه الموصلات"
+          "href": "/method",
+          "en": "Our method",
+          "ar": "منهجنا"
         },
         {
-          "href": "/projects/drones-aviation",
-          "en": "Drones & Aviation",
-          "ar": "الدرونز والطيران"
+          "href": "/about/operating-model",
+          "en": "Operating model",
+          "ar": "نموذج التشغيل"
         },
         {
-          "href": "/projects/defense",
-          "en": "Defense & Security",
-          "ar": "الدفاع والأمن"
+          "href": "/about/program-questions",
+          "en": "Program questions",
+          "ar": "أسئلة البرنامج"
         },
         {
-          "href": "/projects/robotics",
-          "en": "Robotics & Industry",
-          "ar": "الروبوتات والصناعة"
+          "href": "/about/people",
+          "en": "People",
+          "ar": "الأشخاص"
         },
         {
-          "href": "/projects/health",
-          "en": "Medicine & Health",
-          "ar": "الطب والصحة"
+          "href": "/about/governance",
+          "en": "Governance",
+          "ar": "الحوكمة"
         },
         {
-          "href": "/projects/agriculture",
-          "en": "Agriculture & Food Security",
-          "ar": "الزراعة والأمن الغذائي"
-        },
-        {
-          "href": "/projects/infrastructure",
-          "en": "Cities & Infrastructure",
-          "ar": "المدن والبنية التحتية"
+          "href": "/about/learning-from-darpa",
+          "en": "Learning from DARPA",
+          "ar": "التعلم من DARPA"
         }
       ]
     },
     {
-      "path": "/opportunities",
-      "en": "R&D Opportunities",
-      "ar": "فرص البحث والتطوير",
+      "path": "/what-we-offer",
+      "en": "What we offer",
+      "ar": "ماذا نقدم",
       "children": [
         {
-          "href": "/opportunities",
-          "en": "Explore opportunities",
-          "ar": "استكشف الفرص"
+          "href": "/what-we-offer#services",
+          "en": "Institutional services",
+          "ar": "خدمات المؤسسات"
+        },
+        {
+          "href": "/what-we-offer#products",
+          "en": "Ready products",
+          "ar": "المنتجات الجاهزة"
+        },
+        {
+          "href": "/what-we-offer#partnerships",
+          "en": "Partnerships and technology transfer",
+          "ar": "الشراكات ونقل التقنية"
+        },
+        {
+          "href": "/what-we-offer#knowledge",
+          "en": "Knowledge and leaders",
+          "ar": "المعرفة وبناء القادة"
+        },
+        {
+          "href": "/what-we-offer#presence",
+          "en": "Presence",
+          "ar": "الظهور"
+        },
+        {
+          "href": "/masterclass",
+          "en": "Masterclass",
+          "ar": "ماستركلاس"
+        },
+        {
+          "href": "/programs",
+          "en": "Programs",
+          "ar": "البرامج"
+        },
+        {
+          "href": "/news",
+          "en": "News",
+          "ar": "الأخبار"
+        },
+        {
+          "href": "/projects",
+          "en": "Fields",
+          "ar": "المجالات"
+        }
+      ]
+    },
+    {
+      "path": "/insights",
+      "en": "Insights",
+      "ar": "Insights",
+      "children": [
+        {
+          "href": "/insights",
+          "en": "VisionSeek Insights",
+          "ar": "VisionSeek Insights"
+        },
+        {
+          "href": "/insights/notes/l-001",
+          "en": "Notes",
+          "ar": "ملاحظات"
+        },
+        {
+          "href": "/insights/frameworks/decision-dimensions",
+          "en": "Frameworks & tools",
+          "ar": "الأطر والأدوات"
+        },
+        {
+          "href": "/insights#newsletter",
+          "en": "Monthly newsletter",
+          "ar": "النشرة الشهرية"
+        }
+      ]
+    },
+    {
+      "path": "/initiative",
+      "en": "The initiative",
+      "ar": "المبادرة",
+      "children": [
+        {
+          "href": "/initiative",
+          "en": "A free 30-minute session",
+          "ar": "جلسة 30 دقيقة مجانًا"
+        },
+        {
+          "href": "/initiative#book",
+          "en": "Book your free session",
+          "ar": "احجز جلستك المجانية"
+        }
+      ]
+    },
+    {
+      "path": "/start",
+      "en": "Contact",
+      "ar": "تواصل",
+      "children": [
+        {
+          "href": "/start",
+          "en": "Write to us",
+          "ar": "راسلنا"
+        },
+        {
+          "href": "/initiative#book",
+          "en": "Book your free session",
+          "ar": "احجز جلستك المجانية"
+        }
+      ]
+    }
+  ],
+  "reports": {
+    "path": "/reports",
+    "en": "Reports",
+    "ar": "التقارير",
+    "children": [
+      {
+        "href": "/reports",
+        "en": "Research & reports",
+        "ar": "الأبحاث والتقارير"
+      },
+      {
+        "href": "/reports/methodology",
+        "en": "Methods & standards",
+        "ar": "المنهج والمعايير"
+      }
+    ]
+  },
+  "footer": [
+    {
+      "path": "/work-with-us",
+      "en": "Work with us",
+      "ar": "اعمل معنا",
+      "children": [
+        {
+          "href": "/work-with-us/new-to-visionseek",
+          "en": "New to VisionSeek",
+          "ar": "ابدأ مع VisionSeek"
         },
         {
           "href": "/work-with-us/how-to-respond",
-          "en": "Response guide",
-          "ar": "دليل المشاركة"
+          "en": "How to respond",
+          "ar": "كيف تشارك؟"
         },
         {
           "href": "/work-with-us/prepare-a-concept",
-          "en": "Prepare your note",
-          "ar": "جهّز مذكرتك"
+          "en": "Prepare a concept",
+          "ar": "جهّز تصورًا"
+        },
+        {
+          "href": "/work-with-us/review-and-selection",
+          "en": "Review & selection",
+          "ar": "المراجعة والاختيار"
+        },
+        {
+          "href": "/work-with-us/transition",
+          "en": "Transition to use",
+          "ar": "النقل للتشغيل"
         }
       ]
     },
@@ -134,33 +271,6 @@
       ]
     },
     {
-      "path": "/insights",
-      "en": "Insights",
-      "ar": "Insights",
-      "children": [
-        {
-          "href": "/insights",
-          "en": "VisionSeek Insights",
-          "ar": "VisionSeek Insights"
-        },
-        {
-          "href": "/insights/notes/l-001",
-          "en": "Notes",
-          "ar": "ملاحظات"
-        },
-        {
-          "href": "/insights/frameworks/decision-dimensions",
-          "en": "Frameworks & tools",
-          "ar": "الأطر والأدوات"
-        },
-        {
-          "href": "/insights#newsletter",
-          "en": "Monthly newsletter",
-          "ar": "النشرة الشهرية"
-        }
-      ]
-    },
-    {
       "path": "/news",
       "en": "News",
       "ar": "الأخبار",
@@ -183,105 +293,51 @@
       ]
     },
     {
-      "path": "/work-with-us",
-      "en": "Work with Us",
-      "ar": "اعمل معنا",
+      "path": "/projects",
+      "en": "Fields",
+      "ar": "المجالات",
       "children": [
         {
-          "href": "/start",
-          "en": "Build your solutions with us",
-          "ar": "ابنِ حلولك معنا"
+          "href": "/projects",
+          "en": "All sectors",
+          "ar": "كل المجالات"
         },
         {
-          "href": "/work-with-us/new-to-visionseek",
-          "en": "New to VisionSeek",
-          "ar": "ابدأ مع VisionSeek"
+          "href": "/projects/energy",
+          "en": "Energy & Climate",
+          "ar": "الطاقة والمناخ"
         },
         {
-          "href": "/work-with-us/how-to-respond",
-          "en": "How to respond",
-          "ar": "كيف تشارك؟"
+          "href": "/projects/semiconductors",
+          "en": "Chips & Semiconductors",
+          "ar": "الرقائق وأشباه الموصلات"
         },
         {
-          "href": "/work-with-us/prepare-a-concept",
-          "en": "Prepare a concept",
-          "ar": "جهّز تصورًا"
+          "href": "/projects/drones-aviation",
+          "en": "Drones & Aviation",
+          "ar": "الدرونز والطيران"
         },
         {
-          "href": "/work-with-us/review-and-selection",
-          "en": "Review & selection",
-          "ar": "المراجعة والاختيار"
+          "href": "/projects/robotics",
+          "en": "Robotics & Industry",
+          "ar": "الروبوتات والصناعة"
         },
         {
-          "href": "/work-with-us/transition",
-          "en": "Transition to use",
-          "ar": "النقل للتشغيل"
-        }
-      ]
-    },
-    {
-      "path": "/about",
-      "en": "About",
-      "ar": "عن VisionSeek",
-      "children": [
-        {
-          "href": "/about/what-we-do",
-          "en": "How VisionSeek works",
-          "ar": "كيف تعمل VisionSeek؟"
+          "href": "/projects/health",
+          "en": "Medicine & Health",
+          "ar": "الطب والصحة"
         },
         {
-          "href": "/about",
-          "en": "Our vision",
-          "ar": "رؤيتنا"
+          "href": "/projects/agriculture",
+          "en": "Agriculture & Food Security",
+          "ar": "الزراعة والأمن الغذائي"
         },
         {
-          "href": "/method",
-          "en": "Our method",
-          "ar": "منهجنا"
-        },
-        {
-          "href": "/about/operating-model",
-          "en": "Operating model",
-          "ar": "نموذج التشغيل"
-        },
-        {
-          "href": "/about/program-questions",
-          "en": "Program questions",
-          "ar": "أسئلة البرنامج"
-        },
-        {
-          "href": "/about/people",
-          "en": "People",
-          "ar": "الأشخاص"
-        },
-        {
-          "href": "/about/governance",
-          "en": "Governance",
-          "ar": "الحوكمة"
-        },
-        {
-          "href": "/about/learning-from-darpa",
-          "en": "Learning from DARPA",
-          "ar": "التعلم من DARPA"
+          "href": "/projects/infrastructure",
+          "en": "Cities & Infrastructure",
+          "ar": "المدن والبنية التحتية"
         }
       ]
     }
-  ],
-  "reports": {
-    "path": "/reports",
-    "en": "Reports",
-    "ar": "التقارير",
-    "children": [
-      {
-        "href": "/reports",
-        "en": "Research & reports",
-        "ar": "الأبحاث والتقارير"
-      },
-      {
-        "href": "/reports/methodology",
-        "en": "Methods & standards",
-        "ar": "المنهج والمعايير"
-      }
-    ]
-  }
+  ]
 }
