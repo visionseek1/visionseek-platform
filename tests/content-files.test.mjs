@@ -100,9 +100,9 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
   for (const step of method.steps) for (const key of ['en', 'ar', 'questionEn', 'questionAr', 'textEn', 'textAr']) assert.equal(typeof step[key], 'string', `${step.id}.${key}`);
 });
 
-test('navigation.json keeps the eight header sections and site-relative paths', () => {
+test('navigation.json keeps the nine header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/insights', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/insights', '/korean-solutions', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);

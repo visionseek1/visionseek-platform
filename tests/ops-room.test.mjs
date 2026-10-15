@@ -163,7 +163,7 @@ test("review login: a second password that reads only, accepted in preview only;
   assert.match(auth, /return isPreview\(\) && s && s\.length >= 8 \? s : null/);
   assert.match(auth, /export function cookieIsOwner/);
   assert.doesNotMatch(auth, /ROOM_REVIEW_PASSWORD\s*=\s*["']/);
-  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/research/route.ts", "app/ops/comps/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
+  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/research/route.ts", "app/ops/comps/route.ts", "app/ops/solutions/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
     const t = await read(f);
     assert.match(t, /cookieIsOwner/, `${f} must require the owner to write`);
   }

@@ -218,6 +218,7 @@ const ICON = {
   menu: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
   chev: '<svg class="ico chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>',
   trophy: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M9 20h6"/></svg>',
+  globe: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>',
   plus: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
 };
 
@@ -432,6 +433,7 @@ function renderSide() {
 <a class="nl ${on("home")}" href="#home">${ICON.home}الرئيسية</a>
 <a class="nl ${on("research")}" href="#research">${ICON.book}الأبحاث والنشر<span class="c num">${PUBS.length}</span></a>
 <a class="nl ${on("comps")}" href="#comps">${ICON.trophy}المسابقات${redComps().length ? `<span class="c num" style="color:var(--late)">${redComps().length}</span>` : `<span class="c num">${COMPS.length}</span>`}</a>
+<a class="nl ${on("solutions")}" href="#solutions">${ICON.globe}حلول من كوريا<span class="c num">${SOLS.filter((x) => x.visible).length}</span></a>
 <span class="grp">القطاعات</span>${sec}<a class="nl sub ${on("later")}" href="#later" style="color:var(--mute)">بعدين<span class="c num">${later}</span></a>
 <span class="grp">الأقسام والمسارات</span>${deps}
 <span class="grp">المكتبة</span>
@@ -520,6 +522,67 @@ function pageComps(a) {
 <p class="small mute">مفتوحة ← مسجّلين ← بنجهّز ← قدّمنا ← انتهت. المسابقة بتنوّر أحمر لو موعدها فات أو باقي عليه أسبوع أو أقل، ولسه ما قدّمناش.</p>
 <section class="card"><div class="rows">${live.map(compRow).join("") || '<p class="empty">لسه مفيش مسابقات.</p>'}</div></section>
 ${done.length ? `<details class="card"><summary style="padding:12px 16px;cursor:pointer">انتهت (${done.length})</summary><div class="rows">${done.map(compRow).join("")}</div></details>` : ""}`;
+}
+// ---------- حلول من كوريا (16 أكتوبر 2026): المنصة على visionseek.org/korean-solutions بتقرا من هنا كل 10 دقايق.
+// إضافة وتعديل وإخفاء بس، مفيش حذف. الحل اللي مش «ظاهر» بيختفي من الموقع ويفضل في Notion.
+const SOL_TYPES = ["منتج", "حل", "تكنولوجيا"];
+const SOL_SECTORS = ["الصحة", "الرعاية الاجتماعية", "الأمن والمدن", "الزراعة والغذاء", "الطاقة", "التصنيع"];
+const SOL_REGIONS = ["نعم", "تجربة", "لسه"];
+const SOL_REGION_LABEL = { "نعم": "وصل المنطقة", "تجربة": "تجربة في المنطقة", "لسه": "لسه ما وصلش" };
+const SOL_REGION_PILL = { "نعم": "p-ok", "تجربة": "p-filter", "لسه": "p-later" };
+const SOL_ROUTES = ["شراء", "توزيع", "ترخيص", "مشروع مشترك"];
+const SOLS = (L && L.solutions ? L.solutions : []).map((r) => ({ id: ID(r), title: String(r["الاسم"] || ""), en: String(r["Name"] || ""), slug: String(r["slug"] || ""), type: String(r["النوع"] || ""), sector: String(r["المجال"] || ""), maker: String(r["الشركة"] || ""), region: String(r["وصل المنطقة"] || "لسه"), whereAr: String(r["أين"] || ""), whereEn: String(r["Where"] || ""), routes: arr(r["طرق النقل"]), visible: r["ظاهر"] === "__YES__", order: r["الترتيب"] == null ? "" : String(r["الترتيب"]), proof: String(r["الدليل"] || ""), url: r.url }))
+  .filter((x) => x.title).sort((a, b) => (Number(a.order) || 99) - (Number(b.order) || 99));
+/** دليل من غير رابط = ⚠️ (كل رقم لازم يكون ليه مصدر). */
+const solNoSource = (x) => x.proof.split("\n").filter((l) => l.trim()).some((l) => !/\|\s*https?:\/\//.test(l));
+function solRow(x) {
+  const warn = [!x.slug ? "⚠️ من غير slug — مش هيظهر" : "", !x.proof.trim() ? "⚠️ من غير دليل" : solNoSource(x) ? "⚠️ دليل من غير رابط" : ""].filter(Boolean);
+  return `<div class="row" style="flex-wrap:wrap;align-items:flex-start${x.visible ? "" : ";opacity:.72"}">
+<div style="flex:1;min-width:240px;display:flex;flex-direction:column;gap:6px">
+<b style="font-size:14px">${x.visible && x.slug ? `<a href="https://visionseek.org/ar/korean-solutions/${esc(x.slug)}" target="_blank" rel="noreferrer" style="color:var(--ink)">${t(x.title)}</a>` : t(x.title)} <span class="small mute" dir="ltr">${t(x.en)}</span></b>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">${t(x.sector)}</span><span class="pill ${SOL_REGION_PILL[x.region] || "p-later"}">${t(SOL_REGION_LABEL[x.region] || x.region)}</span>${x.visible ? '<span class="pill p-ok">ظاهر على الموقع</span>' : '<span class="pill p-later">مخفي</span>'}${warn.map((w) => `<span class="tag">${w}</span>`).join("")}</div>
+<span class="small mute" dir="auto">${t(x.maker)}${x.routes.length ? " · " + x.routes.map(t).join("، ") : ""}</span>
+${x.url ? `<a class="small" href="${esc(x.url)}" target="_blank" rel="noreferrer">افتح في Notion (للنص والدليل)</a>` : ""}</div>
+<div style="display:flex;flex-direction:column;gap:8px;min-width:260px;flex:1">
+<form method="post" action="/ops/solutions" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:6px;align-items:end"><input type="hidden" name="action" value="update"><input type="hidden" name="id" value="${x.id}"><input type="hidden" name="back" value="solutions">
+<label class="f">وصل المنطقة؟<select class="sel" name="region">${SOL_REGIONS.map((r) => `<option value="${r}"${r === x.region ? " selected" : ""}>${SOL_REGION_LABEL[r]}</option>`).join("")}</select></label>
+<label class="f">الترتيب<input class="inp num" name="order" inputmode="numeric" value="${esc(x.order)}"></label>
+<label class="f" style="grid-column:1/-1">فين في المنطقة (عربي)<input class="inp" name="whereAr" maxlength="500" value="${t(x.whereAr)}"></label>
+<label class="f" style="grid-column:1/-1">Where (English)<input class="inp" name="whereEn" maxlength="500" dir="ltr" value="${t(x.whereEn)}"></label>
+<div><button class="btn sm" type="submit">احفظ</button></div></form>
+<form method="post" action="/ops/solutions"><input type="hidden" name="action" value="visible"><input type="hidden" name="id" value="${x.id}"><input type="hidden" name="back" value="solutions"><input type="hidden" name="visible" value="${x.visible ? "no" : "yes"}">
+<button class="btn sm" type="submit">${x.visible ? "اخفيه من الموقع" : "اظهره على الموقع"}</button></form></div></div>`;
+}
+function pageSolutions(a) {
+  if (a === "new") return head("حل جديد", `<a href="#home">الرئيسية</a> › <a href="#solutions">حلول من كوريا</a>`) + notLive() + `
+<p class="small mute">كل رقم في الدليل لازم يكون ليه رابط مصدره. سطر لكل دليل بالشكل ده: <b>النص | الرابط</b>. الحل الجديد بيبدأ مخفي لحد ما تراجعه وتظهره.</p>
+<form class="card pad" method="post" action="/ops/solutions" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:980px;align-items:end"><input type="hidden" name="action" value="create"><input type="hidden" name="back" value="solutions">
+<label class="f">الاسم (عربي)<input class="inp" name="titleAr" required maxlength="200"></label>
+<label class="f">Name (English)<input class="inp" name="titleEn" maxlength="200" dir="ltr"></label>
+<label class="f">slug (رابط الصفحة، إنجليزي صغير وشرطات)<input class="inp" name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80" dir="ltr" placeholder="ai-mammography-reader"></label>
+<label class="f">النوع<select class="sel" name="kind">${SOL_TYPES.map((x) => `<option>${x}</option>`).join("")}</select></label>
+<label class="f">المجال<select class="sel" name="sector">${SOL_SECTORS.map((x) => `<option>${x}</option>`).join("")}</select></label>
+<label class="f">الشركة / المنتج<input class="inp" name="maker" maxlength="200" dir="auto"></label>
+<label class="f">وصل المنطقة؟<select class="sel" name="region">${SOL_REGIONS.map((r) => `<option value="${r}">${SOL_REGION_LABEL[r]}</option>`).join("")}</select></label>
+<label class="f">فين في المنطقة (عربي)<input class="inp" name="whereAr" maxlength="500"></label>
+<label class="f">Where (English)<input class="inp" name="whereEn" maxlength="500" dir="ltr"></label>
+<label class="f" style="grid-column:1/-1">المشكلة (عربي)<textarea class="inp" name="problemAr" rows="2"></textarea></label>
+<label class="f" style="grid-column:1/-1">Problem (English)<textarea class="inp" name="problemEn" rows="2" dir="ltr"></textarea></label>
+<label class="f" style="grid-column:1/-1">الحل (عربي)<textarea class="inp" name="solutionAr" rows="2"></textarea></label>
+<label class="f" style="grid-column:1/-1">Solution (English)<textarea class="inp" name="solutionEn" rows="2" dir="ltr"></textarea></label>
+<label class="f" style="grid-column:1/-1">الدليل (عربي) — سطر لكل دليل: النص | الرابط<textarea class="inp" name="proofAr" rows="3"></textarea></label>
+<label class="f" style="grid-column:1/-1">Proof (English) — one per line: text | url<textarea class="inp" name="proofEn" rows="3" dir="ltr"></textarea></label>
+<label class="f" style="grid-column:1/-1">أين الفرصة (عربي)<textarea class="inp" name="opportunityAr" rows="2"></textarea></label>
+<label class="f" style="grid-column:1/-1">Opportunity (English)<textarea class="inp" name="opportunityEn" rows="2" dir="ltr"></textarea></label>
+<fieldset class="f" style="grid-column:1/-1;border:0;padding:0;display:flex;gap:14px;flex-wrap:wrap"><legend class="small mute" style="margin-bottom:6px">طرق النقل</legend>${SOL_ROUTES.map((r) => `<label style="display:flex;gap:6px;align-items:center"><input type="checkbox" name="routes" value="${r}">${r}</label>`).join("")}</fieldset>
+<label class="f">الترتيب<input class="inp num" name="order" inputmode="numeric"></label>
+<div><button class="btn pri" type="submit">ضيف (مخفي)</button></div></form>`;
+  const shown = SOLS.filter((x) => x.visible).length;
+  const groups = SOL_TYPES.map((ty) => { const list = SOLS.filter((x) => x.type === ty); return `<section class="sec"><div class="t"><h2>${ty === "منتج" ? "منتجات" : ty === "حل" ? "حلول" : "تكنولوجيا"}</h2><span class="num">${list.length}</span></div><section class="card"><div class="rows">${list.map(solRow).join("") || '<p class="empty">لسه مفيش.</p>'}</div></section></section>`; }).join("");
+  return head("حلول من كوريا", `<a href="#home">الرئيسية</a>`, `<a class="btn pri" href="#solutions/new">${ICON.plus}حل جديد</a>`) + notLive() + `
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill p-ok num">${shown} ظاهر على الموقع</span><span class="pill p-later num">${SOLS.length - shown} مخفي</span><a class="small" href="https://visionseek.org/ar/korean-solutions" target="_blank" rel="noreferrer">افتح الصفحة على الموقع ↗</a></div>
+<p class="small mute">اللي بتغيّره هنا بيظهر على الموقع خلال 10 دقايق. النص الكامل والدليل بيتعدّلوا في Notion. مفيش حذف من هنا — «اخفيه» بيشيله من الموقع بس.</p>
+${groups}`;
 }
 // ---------- النشرة الشهرية لـ VisionSeek Insights: بند في قطاع الظهور والتواصل (15 أكتوبر 2026)
 const SUBS = (L && L.newsletter ? L.newsletter : []).map((r) => ({ email: String(r["البريد"] || ""), lang: String(r["اللغة"] || ""), page: String(r["الصفحة"] || ""), status: String(r["الحالة"] || "مشترك"), date: day(r["تاريخ الاشتراك"]) || day(r.created) })).filter((x) => x.email).sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -882,14 +945,14 @@ function render() {
   let h = location.hash.slice(1) || "home";
   if (ALIAS[h]) { location.replace("#" + ALIAS[h]); return; }
   const [p, a] = [h.split("/")[0], h.split("/").slice(1).join("/")];
-  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "research" ? pageResearch(a) : p === "comps" ? pageComps(a) : pageHome();
+  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "research" ? pageResearch(a) : p === "comps" ? pageComps(a) : p === "solutions" ? pageSolutions(a) : pageHome();
   $("#main").innerHTML = html;
   renderSide();
   menu(false);
 }
 let lastPage = "";
 window.addEventListener("hashchange", () => { const p = location.hash.split("/").slice(0, 2).join("/"); if (p !== lastPage) { FILTER = { dept: "", owner: "", track: "" }; LF.stale = false; lastPage = p; } render(); window.scrollTo(0, 0); });
-const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", pub: "اتسجّل في الأبحاث والنشر.", comp: "اتسجّل في المسابقات.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
+const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", pub: "اتسجّل في الأبحاث والنشر.", comp: "اتسجّل في المسابقات.", sol: "الحل اتضاف في Notion وهو مخفي. اظهره لما تراجعه.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
 render();
 if (RM.flash || /[?&]r=/.test(location.search)) {
   const r = new URLSearchParams(location.search).get("r") || "";

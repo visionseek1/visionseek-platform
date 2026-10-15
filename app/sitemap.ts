@@ -7,6 +7,10 @@ import {showPublicCharacters} from '@/lib/leaders/presentation';
 import {projectRoutes} from '@/lib/projects';
 import {isArchived} from '@/lib/visibility';
 import {insights} from '@/lib/insights';
+import ksData from '@/content/korean-solutions.json';
+
+// Korean Solutions pages known at build time (the JSON copy of the Notion database).
+const koreanSolutions = ksData.solutions;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -24,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },
     { path: "/ar/projects", priority: 0.8 },
+    {path: '/korean-solutions', priority: 0.85}, {path: '/ar/korean-solutions', priority: 0.85},
+    ...koreanSolutions.flatMap(k => [{path: `/korean-solutions/${k.slug}`, priority: 0.7}, {path: `/ar/korean-solutions/${k.slug}`, priority: 0.7}]),
     { path: "/insights", priority: 0.85 },
     { path: "/ar/insights", priority: 0.85 },
     ...insights.notes.flatMap(n => [{path: `/insights/notes/${n.slug}`, priority: 0.7}, {path: `/ar/insights/notes/${n.slug}`, priority: 0.7}]),

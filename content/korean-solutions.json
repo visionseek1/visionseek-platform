@@ -1,0 +1,436 @@
+{
+  "_note": "نسخة احتياطية من قاعدة «حلول من كوريا» في Notion (16 أكتوبر 2026). الموقع بيقرا Notion حيًّا، ولو Notion مش متاح بيعرض النسخة دي. كل رقم ليه مصدر في الدليل.",
+  "solutions": [
+    {
+      "slug": "ai-mammography-reader",
+      "type": "منتج",
+      "sector": "الصحة",
+      "order": 1,
+      "title": {
+        "ar": "قارئ الماموجرام الذكي",
+        "en": "AI mammography reader"
+      },
+      "maker": "Lunit INSIGHT MMG · Lunit, Seoul",
+      "problem": {
+        "ar": "الكشف المبكر عن سرطان الثدي يحتاج عينَي طبيبَين على كل صورة، والمنطقة لا تملك أطباء أشعة ثدي بهذا العدد.",
+        "en": "Breast screening assumes two radiologists read every image, and the region does not have that many breast radiologists."
+      },
+      "solution": {
+        "ar": "قارئ ذكي يقف بجانب الطبيب، يلوّن المواضع المشتبهة ويعطي كلًّا منها درجة احتمال، فيلتقط ما قد يفوت العين المتعبة، ويقلّل استدعاء النساء بلا داعٍ.",
+        "en": "An AI second reader that marks suspicious areas with a probability score, catching what a tired eye can miss while calling fewer women back for nothing."
+      },
+      "proof": [
+        {
+          "ar": "اعتماد FDA بتصريح K211678 (2021)، ومعتمد في كوريا منذ 2019",
+          "en": "FDA clearance K211678 (2021); approved in Korea since 2019",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K211678"
+        },
+        {
+          "ar": "سنة تشغيل فعلي في مستشفى سويدي: الاكتشاف ارتفع 15%، والاستدعاء انخفض من 2.8% إلى 2.5%",
+          "en": "One year in routine use at a Swedish hospital: detection up 15%, recalls down from 2.8% to 2.5%",
+          "url": "https://technode.global/?p=90431"
+        },
+        {
+          "ar": "يعمل في برنامج الفحص الوطني في قطر (عقد 5 سنوات من 2024)",
+          "en": "Used in Qatar's national screening programme (five-year contract from 2024)",
+          "url": "https://en.startuprecipe.co.kr/archives/pr-newswire/lunits-ai-solution-enhances-qatars-national-breast-cancer-screening-program"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "قطر · مصر (مؤسسة بهية) · السعودية",
+        "en": "Qatar · Egypt (Baheya Foundation) · Saudi Arabia"
+      },
+      "opportunity": {
+        "ar": "برامج الفحص في المنطقة تتوسع أسرع من عدد أطباء الأشعة. الفرصة في مراكز الفحص التي لم يصلها القارئ الذكي بعد.",
+        "en": "Screening programmes in the region are growing faster than the number of radiologists. The opening is in screening centres the AI reader has not reached yet."
+      },
+      "routes": [
+        "شراء",
+        "توزيع"
+      ]
+    },
+    {
+      "slug": "smart-heart-patch",
+      "type": "منتج",
+      "sector": "الصحة",
+      "order": 2,
+      "title": {
+        "ar": "لاصقة القلب الذكية",
+        "en": "Smart heart-monitoring patch"
+      },
+      "maker": "mobiCARE · Seers Technology",
+      "problem": {
+        "ar": "اضطرابات نبض القلب تظهر وتختفي، وجهاز الهولتر الكبير يسجّل يومًا واحدًا فقط.",
+        "en": "Heart-rhythm disorders come and go, and a bulky Holter monitor records for a single day."
+      },
+      "solution": {
+        "ar": "لاصقة صغيرة على الصدر تسجّل أيامًا والمريض في بيته، ثم يقرأ الذكاء الاصطناعي التسجيل ويستخرج ما فاته فحص اليوم الواحد.",
+        "en": "A small chest patch records for days while the patient lives at home, then AI reads the recording and finds what a one-day test would miss."
+      },
+      "proof": [
+        {
+          "ar": "اعتماد FDA بتصريح K253384 (يونيو 2026)",
+          "en": "FDA clearance K253384 (June 2026)",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K253384"
+        },
+        {
+          "ar": "نحو 1,100 مؤسسة طبية كورية، وأكثر من 770 ألف فحص",
+          "en": "About 1,100 Korean medical institutions and more than 770,000 tests",
+          "url": "https://en.edaily.co.kr/news/eda202609075139"
+        },
+        {
+          "ar": "عقد توزيع لثلاث سنوات مع One Health التابعة لـ PureHealth الإماراتية",
+          "en": "Three-year distribution contract with One Health, part of the UAE's PureHealth",
+          "url": "https://www.biospectator.com/news/view/28630"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "الإمارات",
+        "en": "UAE"
+      },
+      "opportunity": {
+        "ar": "دخل الإمارات، والسعودية وعُمان معلنتان خطوة تالية. الفرصة في أسواق لم يُعلن عنها بعد.",
+        "en": "It has entered the UAE, with Saudi Arabia and Oman announced as next. The opening is in markets not yet announced."
+      },
+      "routes": [
+        "شراء",
+        "توزيع"
+      ]
+    },
+    {
+      "slug": "gait-training-robot",
+      "type": "منتج",
+      "sector": "الصحة",
+      "order": 3,
+      "title": {
+        "ar": "روبوت تدريب المشي",
+        "en": "Gait-training robot"
+      },
+      "maker": "Morning Walk S200 · Curexo",
+      "problem": {
+        "ar": "مريض الجلطة يحتاج آلاف الخطوات المتكررة ليستعيد مشيه، والمعالج لا يستطيع أن يحمل ساقيه كل تلك الخطوات.",
+        "en": "A stroke patient needs thousands of repeated steps to relearn walking, more than any therapist can physically guide."
+      },
+      "solution": {
+        "ar": "المريض يجلس على الروبوت، ودوّاستان آليتان تحرّكان ساقيه في نمط مشي طبيعي، بلا حزام تعليق، والجلسة تبدأ في حوالي ثلاث دقائق.",
+        "en": "The patient sits on the robot while two powered footplates move the legs in a natural gait, with no overhead harness; a session starts in about three minutes."
+      },
+      "proof": [
+        {
+          "ar": "مسجّل لدى FDA في فئة معفاة من التصريح المسبق، ومعتمد في كوريا وأوروبا (CE)",
+          "en": "FDA-registered in an exempt class; approved in Korea and Europe (CE)",
+          "url": "https://accessgudid.nlm.nih.gov/devices/08800043810022"
+        },
+        {
+          "ar": "تجربة عشوائية في 3 مراكز كورية: تحسّن أكبر في قوة الطرف المصاب والتوازن",
+          "en": "Randomised trial in three Korean centres: greater gains in limb strength and balance",
+          "url": "https://oak.ulsan.ac.kr/handle/2021.oak/6582"
+        }
+      ],
+      "region": "لسه",
+      "where": {
+        "ar": "",
+        "en": ""
+      },
+      "opportunity": {
+        "ar": "لم يصل إلى مصر أو الخليج بعد، ومراكز التأهيل في المنطقة تتوسع.",
+        "en": "Not yet in Egypt or the Gulf, while rehabilitation centres in the region are expanding."
+      },
+      "routes": [
+        "شراء",
+        "توزيع"
+      ]
+    },
+    {
+      "slug": "dental-implants",
+      "type": "منتج",
+      "sector": "الصحة",
+      "order": 4,
+      "title": {
+        "ar": "زراعة الأسنان الكورية",
+        "en": "Korean dental implants"
+      },
+      "maker": "Osstem Implant",
+      "problem": {
+        "ar": "زراعة الأسنان علاج يكثر عليه الطلب في المنطقة، ويحتاج نظامًا موثوقًا يتعلّمه الطبيب ويثق فيه المريض.",
+        "en": "Implants are in high demand across the region, and clinics need a reliable system their dentists can master and their patients can trust."
+      },
+      "solution": {
+        "ar": "أنظمة زراعة كورية كاملة، تعمل مع منصات طب الأسنان الرقمي، ومعها تدريب مستمر لفريق العيادة.",
+        "en": "Complete Korean implant systems that work with digital dentistry platforms, with continuous training for the clinical team."
+      },
+      "proof": [
+        {
+          "ar": "شراكة مع Healthpoint التابعة لـ M42 في أبوظبي (أغسطس 2025): كل أنظمة Osstem وتدريب الأطباء",
+          "en": "Partnership with M42's Healthpoint in Abu Dhabi (August 2025): the full Osstem range plus clinical training",
+          "url": "https://m42.ae/media-resources/news/m42-s-healthpoint-partners-with-osstem-implant-to-offer-advanced-korean-dental-technologies/"
+        },
+        {
+          "ar": "مبادلة استثمرت في الشركة",
+          "en": "Mubadala has invested in the company",
+          "url": "https://gulfnews.com/business/markets/mubadala-invests-in-korean-dental-implant-manufacturer-osstem-implant-1.1696404222878"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "الإمارات (أبوظبي)",
+        "en": "UAE (Abu Dhabi)"
+      },
+      "opportunity": {
+        "ar": "الشركة الكبيرة لها شريك في الإمارات. الفرصة في ماركات كورية أقل شهرة، وفي أسواق أقل تغطية مثل مصر والكويت والبحرين.",
+        "en": "The market leader already has a partner in the UAE. The opening lies in lesser-known Korean brands, and in less-covered markets such as Egypt, Kuwait and Bahrain."
+      },
+      "routes": [
+        "شراء",
+        "توزيع"
+      ]
+    },
+    {
+      "slug": "aesthetic-devices",
+      "type": "منتج",
+      "sector": "الصحة",
+      "order": 5,
+      "title": {
+        "ar": "أجهزة التجميل الكورية",
+        "en": "Korean aesthetic devices"
+      },
+      "maker": "HIFU · RF · Laser — Classys, Jeisys",
+      "problem": {
+        "ar": "عيادات التجميل في المنطقة تبحث عن أجهزة غير جراحية مجرّبة، بتكلفة تشغيل معقولة.",
+        "en": "Aesthetic clinics in the region want proven non-surgical devices with sensible running costs."
+      },
+      "solution": {
+        "ar": "أجهزة كورية بالموجات فوق الصوتية المركّزة (HIFU) والترددات الراديوية (RF) والليزر، لشدّ البشرة وتجديدها دون جراحة.",
+        "en": "Korean HIFU, radio-frequency and laser devices for non-surgical skin tightening and renewal."
+      },
+      "proof": [
+        {
+          "ar": "Classys: أكثر من 21 ألف جهاز Ultraformer حول العالم، في أكثر من 80 دولة",
+          "en": "Classys: more than 21,000 Ultraformer units worldwide, in 80+ countries",
+          "url": "https://en.prnasia.com/releases/global/classys-emerges-as-a-global-leader-in-medical-aesthetics-beyond-k-beauty-highlighting-45-growth-50-margins-and-recurring-revenue-model-530870.shtml"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "موزّعون في الخليج (من متابعة فريقنا للسوق)",
+        "en": "Distributors in the Gulf (from our own market tracking)"
+      },
+      "opportunity": {
+        "ar": "الشركات الكبيرة لها موزّعون في الخليج. الفرصة في ماركات الصف الثاني، وفي مصر والكويت والبحرين.",
+        "en": "The big names already have Gulf distributors. The opening is in second-tier brands, and in Egypt, Kuwait and Bahrain."
+      },
+      "routes": [
+        "توزيع",
+        "شراء"
+      ]
+    },
+    {
+      "slug": "point-of-care-diagnostics",
+      "type": "منتج",
+      "sector": "الصحة",
+      "order": 6,
+      "title": {
+        "ar": "التحاليل السريعة في مكان الكشف",
+        "en": "Point-of-care diagnostics"
+      },
+      "maker": "AFIAS · ichroma — Boditech Med",
+      "problem": {
+        "ar": "نتيجة التحليل التي تتأخر أيامًا تؤخّر القرار الطبي، خاصة في الرعاية الأولية والمدن البعيدة عن المعامل الكبيرة.",
+        "en": "Lab results that take days delay clinical decisions, especially in primary care and in towns far from large laboratories."
+      },
+      "solution": {
+        "ar": "أجهزة تحاليل صغيرة تعطي النتيجة في دقائق داخل العيادة نفسها، لعشرات التحاليل.",
+        "en": "Compact analysers that return results in minutes inside the clinic itself, across dozens of tests."
+      },
+      "proof": [
+        {
+          "ar": "نحو 25% من إيرادات الشركة من الشرق الأوسط، و26 كاشفًا معتمدًا من هيئة الغذاء والدواء السعودية",
+          "en": "About 25% of company revenue comes from the Middle East; 26 test kits approved by the Saudi FDA",
+          "url": "https://blog.ai.dmomo.co.kr/news/11153"
+        },
+        {
+          "ar": "7,017 جهازًا رُكّبت حول العالم في النصف الأول من 2026",
+          "en": "7,017 analysers installed worldwide in the first half of 2026",
+          "url": "https://www.hankyung.com/article/202607305564P"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "السعودية والشرق الأوسط",
+        "en": "Saudi Arabia and the wider Middle East"
+      },
+      "opportunity": {
+        "ar": "الشركة تتوسع في السعودية. الفرصة في أسواق أقل تغطية، وفي ماركات كورية أخرى في الفئة نفسها.",
+        "en": "The company is expanding in Saudi Arabia. The opening is in less-covered markets and in other Korean brands in the same category."
+      },
+      "routes": [
+        "توزيع",
+        "شراء"
+      ]
+    },
+    {
+      "slug": "elderly-care-call",
+      "type": "حل",
+      "sector": "الرعاية الاجتماعية",
+      "order": 7,
+      "title": {
+        "ar": "مكالمة الرعاية الذكية للمسنّين",
+        "en": "AI care calls for older people"
+      },
+      "maker": "CLOVA CareCall · Naver Cloud",
+      "problem": {
+        "ar": "المسنّ الذي يعيش وحده قد تمرّ عليه أيام لا يسأل عنه فيها أحد، وأول علامة خطر قد تفوت.",
+        "en": "An older person living alone can go days without anyone checking in, and the first warning sign can be missed."
+      },
+      "solution": {
+        "ar": "مكالمة أسبوعية من صوت ذكي يسأل المسنّ عن صحته وأكله ونومه، ويتذكّر ما قاله في المرة السابقة، ويبلّغ الأخصائي الاجتماعي عند أول علامة خطر. الهاتف العادي يكفي.",
+        "en": "A weekly AI voice call that asks how they are eating, sleeping and feeling, remembers the last conversation, and alerts a social worker at the first sign of trouble. An ordinary phone is enough."
+      },
+      "proof": [
+        {
+          "ar": "نحو 50 ألف مسنّ في نحو 150 جهة كورية، وتتعاقد عليه البلديات",
+          "en": "About 50,000 older people across some 150 Korean organisations, contracted by local governments",
+          "url": "https://navercorp.com/media/pressReleasesDetail?seq=34429"
+        }
+      ],
+      "region": "لسه",
+      "where": {
+        "ar": "",
+        "en": ""
+      },
+      "opportunity": {
+        "ar": "لم يصل المنطقة بعد. شرط نقله نموذج صوتي يفهم اللهجات العربية، وهذه قدرة يمكن بناؤها.",
+        "en": "Not yet in the region. Bringing it here needs a voice model that understands Arabic dialects, a capability that can be built."
+      },
+      "routes": [
+        "ترخيص",
+        "مشروع مشترك"
+      ]
+    },
+    {
+      "slug": "cardiac-arrest-early-warning",
+      "type": "حل",
+      "sector": "الصحة",
+      "order": 8,
+      "title": {
+        "ar": "الإنذار المبكر بتوقف القلب",
+        "en": "Early warning for cardiac arrest"
+      },
+      "maker": "Med-DeepCARS · VUNO",
+      "problem": {
+        "ar": "أغلب حالات توقف القلب في الأقسام العادية تسبقها علامات بساعات، لكن الممرضة المسؤولة عن عشرات المرضى لا تلحظها.",
+        "en": "Most cardiac arrests on general wards are preceded by warning signs hours earlier, which a nurse covering dozens of patients cannot catch."
+      },
+      "solution": {
+        "ar": "نظام يقرأ أربع علامات حيوية من الملف الإلكتروني وينذر الفريق قبل أن يسوء الحال، ويعمل فوق نظام المستشفى القائم.",
+        "en": "A system that reads four vital signs from the electronic record and alerts the team before the patient deteriorates, on top of the hospital's existing system."
+      },
+      "proof": [
+        {
+          "ar": "معتمد في كوريا وأوروبا (CE MDR) وبريطانيا (UKCA)",
+          "en": "Approved in Korea, Europe (CE MDR) and the UK (UKCA)",
+          "url": "https://www.biospectrumasia.com/news/27/26018/south-korea-based-vunos-ai-powered-cardiac-arrest-risk-management-system-earns-ce-mdr-and-ukca-certifications.html"
+        },
+        {
+          "ar": "دراسة متعددة المراكز في Critical Care (2023): دقة تنبؤ 0.869 مقابل 0.767 للمقياس المعتاد",
+          "en": "Multicentre study in Critical Care (2023): predictive accuracy 0.869 versus 0.767 for the usual score",
+          "url": "https://link.springer.com/article/10.1186/s13054-023-04609-0"
+        }
+      ],
+      "region": "تجربة",
+      "where": {
+        "ar": "السعودية (البيئة التجريبية للرعاية الصحية)",
+        "en": "Saudi Arabia (healthcare sandbox)"
+      },
+      "opportunity": {
+        "ar": "العناية المركزة في المنطقة تحت ضغط. الفرصة في المستشفيات الرقمية والافتراضية الجديدة.",
+        "en": "Intensive care in the region is under strain. The opening is in the new digital and virtual hospitals."
+      },
+      "routes": [
+        "شراء",
+        "مشروع مشترك"
+      ]
+    },
+    {
+      "slug": "ai-security-cameras",
+      "type": "حل",
+      "sector": "الأمن والمدن",
+      "order": 9,
+      "title": {
+        "ar": "كاميرات المراقبة بالذكاء الاصطناعي",
+        "en": "AI video security"
+      },
+      "maker": "Hanwha Vision",
+      "problem": {
+        "ar": "المدن والمطارات والمنشآت الكبيرة فيها آلاف الكاميرات، ولا يستطيع أحد أن يشاهدها كلها في الوقت نفسه.",
+        "en": "Cities, airports and large facilities run thousands of cameras, and no one can watch them all at once."
+      },
+      "solution": {
+        "ar": "كاميرات تفهم ما تراه: تكشف الحركة غير المعتادة والأشخاص والأشياء، وتنبّه الفريق إلى ما يستحق الانتباه.",
+        "en": "Cameras that understand what they see: they detect unusual movement, people and objects, and alert the team to what matters."
+      },
+      "proof": [
+        {
+          "ar": "مبيعات الشركة في الشرق الأوسط زادت 22% في 2025، وكاميرات الذكاء الاصطناعي بلغت 49% من مبيعاتها في الربع الأخير",
+          "en": "Middle East sales grew 22% in 2025; AI cameras reached 49% of network-camera sales in Q4",
+          "url": "https://view.asiae.co.kr/en/article/2026020511130077633"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "الشرق الأوسط",
+        "en": "Middle East"
+      },
+      "opportunity": {
+        "ar": "الشركة لها حضور في المنطقة. الفرصة في المشاريع الحكومية الجديدة، وفي ماركات كورية أصغر في الفئة نفسها.",
+        "en": "The company is already present. The opening is in new government projects and in smaller Korean brands in the same category."
+      },
+      "routes": [
+        "شراء",
+        "توزيع"
+      ]
+    },
+    {
+      "slug": "container-smart-farms",
+      "type": "تكنولوجيا",
+      "sector": "الزراعة والغذاء",
+      "order": 10,
+      "title": {
+        "ar": "المزارع الذكية في كونتينرات",
+        "en": "Container smart farms"
+      },
+      "maker": "N.Thing",
+      "problem": {
+        "ar": "الحرارة وشح المياه يجعلان الزراعة المفتوحة صعبة في أغلب المنطقة، والخضار الطازجة تُستورد من بعيد.",
+        "en": "Heat and water scarcity make open-field farming hard across most of the region, and fresh vegetables travel from far away."
+      },
+      "solution": {
+        "ar": "مزارع رأسية داخل كونتينرات، تتحكم في الضوء والحرارة والمياه، وتزرع الخضار في أي مناخ وقرب من يأكلها.",
+        "en": "Vertical farms inside shipping containers that control light, heat and water, growing vegetables in any climate, close to the people who eat them."
+      },
+      "proof": [
+        {
+          "ar": "صفقة بـ 3 ملايين دولار في الإمارات (2021)، واستهلاك مياه أقل حتى 98% من المزرعة المعتادة",
+          "en": "A US$3 million deal in the UAE (2021); up to 98% less water than a typical farm",
+          "url": "https://v.daum.net/v/20210517174056361"
+        }
+      ],
+      "region": "نعم",
+      "where": {
+        "ar": "الإمارات",
+        "en": "UAE"
+      },
+      "opportunity": {
+        "ar": "الفرصة الأكبر ليست شراء الكونتينر فقط، بل نقل التقنية وتصنيعها في المنطقة.",
+        "en": "The bigger opening is not just buying containers, but transferring the technology and building them in the region."
+      },
+      "routes": [
+        "شراء",
+        "ترخيص",
+        "مشروع مشترك"
+      ]
+    }
+  ]
+}
