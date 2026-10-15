@@ -23,7 +23,8 @@ test('commissioning and partnership enquiries retain the correct project identit
  }
 });
 test('each advertised project has a bilingual dossier and no unsupported completed milestones',()=>{
- for(const project of projects){
+ // A ready product page (box: VisionSeek Box) has no dossier by design: why, what's inside, and a founding cohort.
+ for(const project of projects.filter(p=>!p.box)){
   const file=projectFiles[project.id];assert.ok(file,project.id);
   assert.ok(file.workstreams.length&&file.deliverables.length&&file.partnerNeeds.length);
   for(const value of [file.stage,file.stageNote,file.challenge,file.role,file.engagement])assert.ok(value.ar&&value.en);

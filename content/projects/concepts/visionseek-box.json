@@ -1,0 +1,96 @@
+{
+  "position": 4,
+  "id": "VS-P11",
+  "slug": "visionseek-box",
+  "sector": "institutional-ai",
+  "track": "sovereign-ai",
+  "kind": "governance",
+  "status": "concept",
+  "title": {
+    "ar": "VisionSeek Box",
+    "en": "VisionSeek Box"
+  },
+  "logo": "/projects/visionseek-box.svg",
+  "ambition": {
+    "ar": "ذكاءُ مؤسستك، مِلكُها.",
+    "en": "Your institution's own intelligence."
+  },
+  "summary": {
+    "ar": "الذكاء الاصطناعي الذي يعمل داخل مؤسستك، على بياناتها، وبلغتها. لا يخرج منها، ولا ينام. سيادتك على بياناتك كاملة، وأمانها في يدك.",
+    "en": "AI that works inside your institution, on its data, in its language. It never leaves, and it never sleeps. Your data stays under your sovereignty, and its security stays in your hands."
+  },
+  "idea": {
+    "ar": "كل مؤسسة تريد الذكاء الاصطناعي، لكن أغلبها لا يستطيع أن يسلّم بياناته لأحد خارجها. VisionSeek Box يأتي بالذكاء الاصطناعي إليها.",
+    "en": "Every institution wants AI. Most cannot hand their data to someone outside. VisionSeek Box brings the AI to them."
+  },
+  "beneficiary": {
+    "ar": "كل مؤسسة لا تستطيع أن تسلّم بياناتها لأحد خارجها.",
+    "en": "Every institution that cannot hand its data to someone outside."
+  },
+  "outcomes": [],
+  "box": {
+    "whyTitle": {
+      "ar": "لماذا؟",
+      "en": "Why"
+    },
+    "insideTitle": {
+      "ar": "ماذا في داخله؟",
+      "en": "What's inside"
+    },
+    "inside": [
+      {
+        "title": {
+          "ar": "جهاز خاص",
+          "en": "A private device"
+        },
+        "text": {
+          "ar": "يُركَّب داخل المؤسسة، فتبقى بياناتها في داخلها.",
+          "en": "Installed on site, so the data stays in."
+        }
+      },
+      {
+        "title": {
+          "ar": "وكلاء مصمَّمون لك",
+          "en": "Agents designed for you"
+        },
+        "text": {
+          "ar": "يتعلّمون عمل مؤسستك، ويؤدّونه كل يوم.",
+          "en": "They learn your institution's work, and do it every day."
+        }
+      },
+      {
+        "title": {
+          "ar": "قدرة تنمو",
+          "en": "A capability that grows"
+        },
+        "text": {
+          "ar": "تركيب وتدريب لفريقك، حتى يصبح الذكاء الاصطناعي جزءًا من عملكم اليومي.",
+          "en": "Setup and training for your team, until AI is part of how you work every day."
+        }
+      }
+    ],
+    "cohortTitle": {
+      "ar": "دفعة المؤسِّسين",
+      "en": "Founding cohort"
+    },
+    "cohort": {
+      "ar": "عدد محدود من المؤسسات سيبني معنا النسخة الأولى.",
+      "en": "A limited number of institutions will build the first version with us."
+    },
+    "cta": {
+      "ar": "سجّل اهتمامك",
+      "en": "Register your interest"
+    },
+    "email": "projects@visionseek.org",
+    "subject": {
+      "ar": "VisionSeek Box — اهتمام",
+      "en": "VisionSeek Box — interest"
+    }
+  },
+  "profile": {
+    "audiences": [
+      "institution"
+    ],
+    "facts": []
+  }
+}

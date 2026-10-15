@@ -58,7 +58,11 @@ export type Project = {
   /** The project's identity card: who it is designed for, and dated public facts (major exhibitions, the global trend). */
   profile?:{audiences:ProjectAudience[];facts:ProjectFact[]};
   file?:ProjectFile;
+  /** A ready product page (VisionSeek Box, 15 Oct 2026): why, what's inside, and a founding cohort that writes to us. No status line. */
+  box?:ProjectBox;
 };
+export type ProjectBox={whyTitle:Text;insideTitle:Text;inside:{title:Text;text:Text}[];cohortTitle:Text;cohort:Text;cta:Text;email:string;subject:Text};
+export const boxMailto=(box:ProjectBox,locale:Locale)=>`mailto:${box.email}?subject=${encodeURIComponent(box.subject[locale])}`;
 type Catalog = {conceptNotice:Text; status:Record<ProjectStatus,Text>; sectors:Sector[]; tracks:Track[]};
 
 const contentRoot = join(process.cwd(), 'content', 'projects');
