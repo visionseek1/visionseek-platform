@@ -27,7 +27,7 @@ test('first launch: note L-001 (research in progress), the Decision Dimensions M
   assert.equal(d.notes[0].status.ar, 'قيد البحث');
   assert.equal(d.frameworks[0].title.ar, 'خريطة أبعاد القرار');
   assert.equal(d.frameworks[0].status.ar, 'قيد البناء.');
-  assert.deepEqual([d.reports.length, d.articles.length], [0, 0]);
+  assert.equal(d.articles.length, 0);
   const pages = read('components/insights/pages.tsx');
   assert.match(pages, /if \(!items\.length\) return null/);
   assert.doesNotMatch(pages + JSON.stringify(d), /لا يوجد بعد/);
@@ -65,16 +65,23 @@ test('/en/<page> redirects to the English page at the root', () => {
   assert.match(read('next.config.ts'), /source: '\/en\/:path\+', destination: '\/:path\+'/);
 });
 
-test('research paper «احذر نصائح الذكاء الاصطناعي» (Advice from Half the Picture): card, report page in both languages, Arabic PDF and the DOI', () => {
+test('Insights: reports and research papers live apart; the frameworks are archived, not deleted', () => {
   const d = json('content/insights.json');
-  assert.equal(d.sections.research.title.ar, 'أوراقنا العلمية');
-  const r = d.research.find(x => x.page === '/insights/research/half-the-picture');
-  assert.ok(r);
-  assert.equal(r.preprint, 'https://doi.org/10.5281/zenodo.23399249');
-  assert.match(r.title.ar, /^احذر نصائح الذكاء الاصطناعي/);
-  assert.match(r.title.en, /^Advice from Half the Picture/);
-  assert.ok(existsSync('public' + r.pdf), r.pdf);
-  for (const f of ['app/insights/research/half-the-picture/page.tsx', 'app/ar/insights/research/half-the-picture/page.tsx']) assert.ok(existsSync(f), f);
+  assert.equal(d.sections.reports.title.ar, 'التقارير');
+  assert.equal(d.sections.research.title.ar, 'الأوراق العلمية');
+  const report = d.reports.find(x => x.page === '/insights/reports/half-the-picture');
+  assert.ok(report);
+  assert.match(report.title.ar, /^احذر نصائح الذكاء الاصطناعي/);
+  assert.ok(existsSync('public' + report.pdf), report.pdf);
+  assert.equal(report.related.href, '/insights/research');
+  const paper = d.research[0];
+  assert.match(paper.title.en, /^Advice from Half the Picture/);
+  assert.equal(paper.preprint, 'https://doi.org/10.5281/zenodo.23399249');
+  assert.equal(paper.related.href, '/insights/reports/half-the-picture');
+  for (const f of ['insights/reports/page.tsx', 'insights/research/page.tsx', 'insights/reports/half-the-picture/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  assert.ok(json('content/visibility.json').archived.some(a => a.path === '/insights/frameworks/decision-dimensions'));
+  assert.equal(d.frameworks[0].slug, 'decision-dimensions');
+  assert.match(read('next.config.ts'), /insights\/research\/half-the-picture`, destination: `\$\{prefix\}\/insights\/reports\/half-the-picture/);
   const lib = read('lib/research/half-the-picture.ts');
   assert.match(lib, /zenodo\.23399249/);
   assert.match(lib, /القرار الإنساني يبقى قرارك/);

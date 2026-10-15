@@ -17,6 +17,9 @@
     },
     {
       "path": "/news"
+    },
+    {
+      "path": "/insights/frameworks/decision-dimensions"
     }
   ],
   "hiddenBlocks": []

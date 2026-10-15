@@ -67,6 +67,8 @@ collections:
                   - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
                   - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
                   - {label: "البرامج ← كيف تعمل البرامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
+                  - {label: "Insights ← التقارير  /insights/reports", value: "/insights/reports"}
+                  - {label: "Insights ← الأوراق العلمية  /insights/research", value: "/insights/research"}
                   - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
                   - {label: "Insights ← الأطر والأدوات  /insights/frameworks/decision-dimensions", value: "/insights/frameworks/decision-dimensions"}
                   - {label: "الأخبار ← الإعلام والاستفسارات  /news/media", value: "/news/media"}
@@ -2154,7 +2156,7 @@ collections:
         name: sections
         widget: object
         fields:
-        - label: "التقارير الرئيسية"
+        - label: "التقارير"
           name: reports
           widget: object
           fields:
@@ -2218,7 +2220,7 @@ collections:
             fields:
             - {label: English, name: en, widget: text}
             - {label: العربية, name: ar, widget: text}
-        - label: "أوراقنا العلمية"
+        - label: "الأوراق العلمية"
           name: research
           widget: object
           fields:
@@ -2348,7 +2350,7 @@ collections:
           fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
-      - label: "التقارير الرئيسية (فاضي = مخفي)"
+      - label: "التقارير (فاضي = مخفي)"
         name: reports
         widget: list
         required: false
@@ -2357,6 +2359,13 @@ collections:
         - label: "العنوان"
           name: title
           widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "النوع والتاريخ (سطر صغير فوق العنوان)"
+          name: kind
+          widget: object
+          required: false
           fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
@@ -2370,6 +2379,21 @@ collections:
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
+        - {label: "صفحة التقرير على الموقع (مثلًا /insights/reports/half-the-picture)", name: page, widget: string, required: false}
+        - {label: "لغة ملف PDF", name: pdfLang, widget: select, options: [ar, en], required: false}
+        - label: "رابط مرتبط (تقرير ↔ ورقة)"
+          name: related
+          widget: object
+          required: false
+          fields:
+          - {label: "المسار (يبدأ بـ /)", name: href, widget: string}
+          - label: "اسم الزرار"
+            name: label
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+        - {label: "التاريخ", name: date, widget: string, required: false}
       - label: "مقالات للقادة (فاضي = مخفي)"
         name: articles
         widget: list
@@ -2392,7 +2416,7 @@ collections:
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
-      - label: "أوراقنا العلمية (فاضي = مخفي)"
+      - label: "الأوراق العلمية (فاضي = مخفي)"
         name: research
         widget: list
         required: false
@@ -2417,12 +2441,25 @@ collections:
           fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
-        - {label: "صفحة التقرير على الموقع (مثلًا /insights/research/half-the-picture)", name: page, widget: string, required: false}
+        - {label: "صفحة على الموقع (اختياري)", name: page, widget: string, required: false}
         - {label: "الرابط", name: url, widget: string, required: false}
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
         - {label: "لغة ملف PDF", name: pdfLang, widget: select, options: [ar, en], required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (DOI أو arXiv أو SSRN أو Zenodo)", name: preprint, widget: string, required: false}
+        - {label: "DOI", name: doi, widget: string, required: false}
+        - label: "رابط مرتبط (تقرير ↔ ورقة)"
+          name: related
+          widget: object
+          required: false
+          fields:
+          - {label: "المسار (يبدأ بـ /)", name: href, widget: string}
+          - label: "اسم الزرار"
+            name: label
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
         - {label: "التاريخ", name: date, widget: string, required: false}
       - label: النشرة الشهرية
         name: newsletter

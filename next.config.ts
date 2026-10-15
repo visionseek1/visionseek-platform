@@ -15,7 +15,10 @@ const nextConfig: NextConfig = {
         // «الورش» became «ماستركلاس» (9 Oct 2026): old links keep working.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
+        // «احذر نصائح الذكاء الاصطناعي» moved from the papers to the reports (16 Oct 2026).
+        {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/insights/reports/half-the-picture`, permanent: true},
       ]),
+      {source: '/insights/research/half-the-picture-ar.pdf', destination: '/insights/reports/half-the-picture-ar.pdf', permanent: true},
       // English lives at the root: /en/privacy → /privacy (the /en home page itself stays).
       {source: '/en/:path+', destination: '/:path+', permanent: true},
       {

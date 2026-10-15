@@ -119,3 +119,8 @@
   .subnavInner { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 18px; }
   .subnav .end { margin-inline-start: 0; }
 }
+
+/* «التقارير» and «الأوراق العلمية» on their own pages */
+.listBody { display: block; }
+.listGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; }
+.listGrid .item { padding: clamp(24px, 3vw, 36px); }
