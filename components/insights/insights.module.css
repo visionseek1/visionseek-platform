@@ -71,6 +71,7 @@
 .item { background: var(--card); border: 1px solid var(--rule); padding: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--ink) !important; text-decoration: none; }
 .page.page .item h3 { font-size: 20px; line-height: 1.5; }
 .item p { font-size: 15px; line-height: 1.8; color: var(--body); }
+.kindLine { font-size: 13px; font-weight: 600; color: var(--violet); }
 .links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; font-weight: 600; }
 
 /* newsletter */

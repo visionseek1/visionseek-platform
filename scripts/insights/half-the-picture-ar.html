@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>النصيحة من نصف الصورة — مختبر VisionSeek</title>
+<style>
+@font-face{font-family:Plex;src:url(FONTS/ibmplexsansarabic/IBMPlexSansArabic-Regular.ttf);font-weight:400}
+@font-face{font-family:Plex;src:url(FONTS/ibmplexsansarabic/IBMPlexSansArabic-Medium.ttf);font-weight:500}
+@font-face{font-family:Plex;src:url(FONTS/ibmplexsansarabic/IBMPlexSansArabic-SemiBold.ttf);font-weight:600}
+@font-face{font-family:Plex;src:url(FONTS/ibmplexsansarabic/IBMPlexSansArabic-Bold.ttf);font-weight:700}
+@font-face{font-family:Alex;src:url("FONTS/alexandria/Alexandria[wght].ttf");font-weight:100 900}
+@font-face{font-family:Grot;src:url("FONTS/spacegrotesk/SpaceGrotesk[wght].ttf");font-weight:300 700}
+@page{size:A4;margin:0}
+:root{--ink:#0b0d0c;--body:#2b2f2d;--mute:#5b605d;--rule:#d9dad4;--paper:#ffffff;--tint:#f3f3ef;--violet:#292a40;--lime:#cfff00;--limeD:#9fc400}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff}
+body{font-family:Plex,sans-serif;color:var(--body);font-size:10.6pt;line-height:1.85;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+p,h1,h2,h3,ul,ol{margin:0}
+.en,.num{font-family:Grot,sans-serif}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;padding:22mm 20mm 24mm}
+.page:last-child{page-break-after:auto}
+.run{position:absolute;top:10mm;inset-inline:20mm;display:flex;justify-content:space-between;font-size:7.6pt;color:var(--mute);letter-spacing:.02em;border-bottom:.6pt solid var(--rule);padding-bottom:2.2mm}
+.foot{position:absolute;bottom:10mm;inset-inline:20mm;display:flex;justify-content:space-between;font-size:7.6pt;color:var(--mute)}
+.foot b{font-family:Grot;font-weight:600;color:var(--ink)}
+.kicker{font-family:Grot;font-size:8pt;letter-spacing:.2em;color:var(--violet);font-weight:600;display:flex;align-items:center;gap:3mm}
+.kicker i{display:inline-block;width:7mm;height:2.2pt;background:var(--lime);outline:.5pt solid var(--ink)}
+h2{font-family:Alex,Plex,sans-serif;font-weight:600;font-size:21pt;line-height:1.45;color:var(--ink);margin-top:3mm;text-wrap:balance}
+h3{font-family:Alex,Plex,sans-serif;font-weight:600;font-size:12pt;line-height:1.5;color:var(--ink)}
+.lead{font-size:12pt;line-height:1.9;color:var(--ink)}
+.stack{display:flex;flex-direction:column;gap:4.2mm}
+.rule{height:.8pt;background:var(--ink);margin:6mm 0}
+
+/* cover */
+.cover{background:var(--ink);color:#f5f5f2;padding:0}
+.cover .grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:12mm 12mm}
+.cover .band{position:absolute;top:0;bottom:0;inset-inline-start:0;width:9mm;background:var(--lime)}
+.cover .in{position:absolute;inset:22mm 26mm 22mm 20mm;display:flex;flex-direction:column}
+.cover .logo{height:9mm;align-self:flex-start}
+.cover .lab{margin-top:30mm;font-family:Grot;font-size:9pt;letter-spacing:.24em;color:var(--lime);font-weight:600}
+.cover h1{font-family:Alex,Plex,sans-serif;font-weight:700;font-size:40pt;line-height:1.3;margin-top:7mm;color:#fff}
+.cover .q{font-family:Alex,Plex,sans-serif;font-weight:400;font-size:19pt;line-height:1.6;margin-top:6mm;color:#d6d9d7;max-width:150mm}
+.cover .meta{margin-top:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm;border-top:.8pt solid #ffffff40;padding-top:6mm;font-size:9pt;color:#c9ccca}
+.cover .meta b{display:block;color:#fff;font-weight:600;font-size:10pt}
+.cover .meta .en{direction:ltr;text-align:right}
+.cover .tag{display:inline-block;margin-top:9mm;font-size:9.5pt;border:.8pt solid var(--lime);color:var(--lime);padding:1.2mm 4mm}
+
+/* exec summary */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1.4pt solid var(--ink);border-bottom:.6pt solid var(--rule)}
+.stat{padding:5mm 4mm 5mm;border-inline-start:.6pt solid var(--rule)}
+.stat:first-child{border-inline-start:0;padding-inline-start:0}
+.stat .big{font-family:Grot;font-weight:700;font-size:27pt;line-height:1.1;color:var(--ink);direction:ltr;text-align:right}
+.stat .big small{font-size:14pt}
+.stat p{font-size:8.8pt;line-height:1.7;margin-top:2.5mm;color:var(--body)}
+.takeaways{display:flex;flex-direction:column;gap:0;margin-top:2mm}
+.takeaways li{list-style:none;display:grid;grid-template-columns:9mm 1fr;gap:3mm;padding:3.4mm 0;border-bottom:.6pt solid var(--rule)}
+.takeaways li .n{font-family:Grot;font-weight:700;font-size:11pt;color:var(--violet)}
+.takeaways li b{color:var(--ink)}
+.callout{background:var(--violet);color:#eef0f6;padding:6mm 7mm;display:grid;grid-template-columns:auto 1fr;gap:6mm;align-items:center}
+.callout .k{font-family:Grot;font-size:8pt;letter-spacing:.18em;color:var(--lime);font-weight:600;writing-mode:horizontal-tb}
+.callout p{font-size:11pt;line-height:1.8}
+.callout b{color:#fff}
+
+/* problem */
+.chat{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:2mm}
+.bubble{background:var(--tint);border:.6pt solid var(--rule);padding:6mm}
+.bubble .who{font-size:8pt;color:var(--mute);letter-spacing:.04em}
+.bubble .line{margin-top:3mm;font-family:Alex,Plex;font-weight:500;font-size:14pt;line-height:1.6;color:var(--ink)}
+.bubble.dark{background:var(--ink);border-color:var(--ink);color:#e9ebe8}
+.bubble.dark .who{color:var(--lime)}
+.bubble.dark ul{margin-top:3mm;padding:0;display:flex;flex-direction:column;gap:2mm}
+.bubble.dark li{list-style:none;font-size:9.4pt;line-height:1.65;display:grid;grid-template-columns:4mm 1fr;gap:2mm}
+.bubble.dark li::before{content:"";width:2.4mm;height:2.4mm;margin-top:1.6mm;border:.8pt solid var(--lime)}
+blockquote{margin:0;border-inline-start:3pt solid var(--lime);background:var(--tint);padding:6mm 7mm;font-family:Alex,Plex;font-weight:400;font-size:12.4pt;line-height:1.85;color:var(--ink)}
+.note{font-size:8.4pt;color:var(--mute);line-height:1.7}
+
+/* exhibits */
+.ex{border-top:1.4pt solid var(--ink);padding-top:3.2mm}
+.ex .cap{display:flex;gap:3mm;align-items:baseline}
+.ex .cap .no{font-family:Grot;font-size:8pt;letter-spacing:.14em;font-weight:700;color:var(--violet)}
+.ex .cap h3{font-size:11pt}
+.ex .src{margin-top:2.5mm;font-size:7.6pt;color:var(--mute);line-height:1.6}
+.dims{display:grid;grid-template-columns:repeat(10,1fr);gap:1.6mm;margin-top:4mm}
+.dims div{height:21mm;border:.8pt solid var(--ink);display:flex;align-items:flex-end;justify-content:center;padding:1.5mm;font-size:7pt;text-align:center;line-height:1.3;color:var(--mute)}
+.dims div.on{background:var(--lime);color:var(--ink);font-weight:600}
+.dims div.off{background:repeating-linear-gradient(135deg,#fff 0 2mm,#eef0ea 2mm 4mm)}
+.legend{display:flex;gap:6mm;margin-top:2.5mm;font-size:7.8pt;color:var(--mute)}
+.legend span{display:inline-flex;gap:1.6mm;align-items:center}
+.legend i{width:3mm;height:3mm;border:.6pt solid var(--ink);display:inline-block}
+.ladder{display:flex;flex-direction:column;margin-top:3mm}
+.ladder .row{display:grid;grid-template-columns:8mm 46mm 1fr;gap:3mm;align-items:center;padding:2.2mm 0;border-bottom:.6pt solid var(--rule);font-size:9pt;line-height:1.6}
+.ladder .row .n{font-family:Grot;font-weight:700;color:var(--violet)}
+.ladder .row b{color:var(--ink)}
+.ladder .row.ref{background:var(--tint)}
+.chips{display:flex;flex-wrap:wrap;gap:2mm}
+.chip{border:.6pt solid var(--ink);padding:.6mm 3mm;font-size:8.4pt}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+.card{border-top:.8pt solid var(--ink);padding-top:3mm}
+.card .big{font-family:Grot;font-weight:700;font-size:22pt;color:var(--ink);line-height:1.15}
+.card p{font-size:9pt;line-height:1.7;margin-top:1.6mm}
+
+/* bar chart */
+.chart{margin-top:4mm}
+.crow{display:grid;grid-template-columns:52mm 1fr;gap:4mm;align-items:center;min-height:11mm;border-bottom:.6pt solid var(--rule)}
+.crow .lbl{font-size:8.8pt;line-height:1.5;color:var(--ink)}
+.crow .lbl small{display:block;color:var(--mute);font-size:7.6pt}
+.track{position:relative;height:11mm}
+.track .bar{position:absolute;top:3mm;height:5mm;background:var(--ink)}
+.track .bar.lime{background:var(--lime);outline:.6pt solid var(--ink)}
+.track .bar.violet{background:var(--violet)}
+.track .val{position:absolute;top:3.2mm;font-family:Grot;font-weight:600;font-size:8.6pt;color:var(--ink);white-space:nowrap;direction:ltr}
+.track .txt{position:absolute;top:2.6mm;font-size:8.4pt;color:var(--violet);font-weight:600;white-space:nowrap}
+.axis{display:grid;grid-template-columns:52mm 1fr;gap:4mm}
+.axis .sc{position:relative;height:5mm;font-family:Grot;font-size:7.4pt;color:var(--mute);direction:ltr}
+.axis .sc span{position:absolute;transform:translateX(-50%)}
+.gridl{position:absolute;top:0;bottom:0;width:0;border-inline-start:.5pt dashed #c7c9c3}
+.chartwrap{position:relative}
+
+/* findings */
+.finding{display:grid;grid-template-columns:13mm 1fr;gap:4mm;padding:4mm 0;border-bottom:.6pt solid var(--rule)}
+.finding .n{font-family:Grot;font-weight:700;font-size:20pt;line-height:1;color:var(--ink)}
+.finding h3{margin-bottom:1.4mm}
+.finding p{font-size:9.8pt;line-height:1.85}
+.dots{display:flex;flex-wrap:wrap;gap:1.6mm;direction:rtl}
+.dots i{width:5.2mm;height:5.2mm;border-radius:50%;border:.8pt solid var(--ink);display:inline-block}
+.dots i.on{background:var(--lime)}
+.dots.sm{gap:1mm}.dots.sm i{width:3.6mm;height:3.6mm}
+.cover .strip{display:grid;grid-template-columns:repeat(10,1fr);gap:2.4mm;margin-top:16mm}
+.cover .strip i{height:30mm;border:.8pt solid #ffffff55}
+.cover .strip i.on{background:var(--lime);border-color:var(--lime)}
+.cover .strip-cap{display:flex;justify-content:space-between;margin-top:3mm;font-size:8.6pt;color:#9da19e}
+.dotrow{display:grid;grid-template-columns:22mm 1fr 26mm;gap:3mm;align-items:center;padding:2.4mm 0;border-bottom:.6pt solid var(--rule);font-size:9pt}
+.dotrow b{color:var(--ink)}
+.dotrow .r{font-family:Grot;font-weight:600;color:var(--ink);direction:ltr;text-align:left}
+
+/* protocol */
+.steps{display:flex;flex-direction:column;gap:5mm;margin-top:2mm}
+.step{display:grid;grid-template-columns:24mm 1fr;gap:6mm;border:.8pt solid var(--ink)}
+.step .s{background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:4mm}
+.step .s span{font-family:Grot;font-size:7.4pt;letter-spacing:.16em;color:var(--lime);font-weight:600}
+.step .s b{font-family:Grot;font-size:30pt;line-height:1}
+.step .c{padding:4.5mm 0 4.5mm 6mm}
+.step .c p{font-size:10pt;line-height:1.85;margin-top:1.6mm}
+.prompt{margin-top:3mm;background:var(--tint);border-inline-start:2.4pt solid var(--violet);padding:3mm 4mm;font-size:9.8pt;color:var(--ink);font-family:Alex,Plex;line-height:1.8}
+.warn{display:grid;grid-template-columns:auto 1fr;gap:4mm;padding:5mm 6mm;background:var(--lime);color:var(--ink);font-size:10pt;line-height:1.8}
+.warn b{font-family:Grot;font-size:8pt;letter-spacing:.16em}
+
+/* limits */
+.lim{display:grid;grid-template-columns:1fr 1fr;gap:3.5mm 7mm}
+.lim div{border-top:.8pt solid var(--ink);padding-top:2.4mm;font-size:9.2pt;line-height:1.75}
+.lim b{display:block;color:var(--ink);font-size:9.6pt}
+.next li{list-style:none;display:grid;grid-template-columns:8mm 1fr;gap:3mm;padding:2.6mm 0;border-bottom:.6pt solid var(--rule);font-size:9.4pt;line-height:1.75}
+.next{padding:0}
+.next .n{font-family:Grot;font-weight:700;color:var(--violet)}
+.next b{color:var(--ink)}
+.closing{background:var(--ink);color:#f0f1ee;padding:8mm 8mm}
+.closing .k{font-family:Grot;font-size:8pt;letter-spacing:.2em;color:var(--lime);font-weight:600}
+.closing p{font-family:Alex,Plex;font-size:13.6pt;line-height:1.85;margin-top:3mm}
+.closing p b{color:var(--lime);font-weight:600}
+.cite{font-size:8pt;line-height:1.7;color:var(--mute);border-top:.6pt solid var(--rule);padding-top:3mm}
+.cite .en{direction:ltr;text-align:left;display:block;font-size:7.8pt;margin-top:1mm}
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="page cover">
+  <div class="grid"></div><div class="band"></div>
+  <div class="in">
+    <img class="logo" src="LOGO" alt="VisionSeek">
+    <p class="lab">VISIONSEEK LAB · EXPLORATORY STUDY</p>
+    <h1>النصيحة من نصف الصورة</h1>
+    <p class="q">هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟</p>
+    <span class="tag" style="align-self:flex-start">مختبر VisionSeek · تقرير مبسّط لدراسة استكشافية</span>
+    <div class="strip"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="strip-cap"><span>معلومة واحدة يكتبها الناس</span><span>وتسع لا يعرفها إلا صاحب القرار</span></div>
+    <div class="meta">
+      <div>إعداد<b>د. أحمد، مؤسس VisionSeek</b></div>
+      <div>التاريخ<b>أكتوبر 2026</b></div>
+      <div>الورقة العلمية (نسخة أولية)<b class="en">doi.org/10.5281/zenodo.23399249</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. EXECUTIVE SUMMARY -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:6mm">
+    <p class="kicker"><i></i>الخلاصة في دقيقة</p>
+    <h2>من سطر واحد، يعطي الذكاء الاصطناعي توصية. وفي نحو خُمس الحالات، تنقلب حين يعرف الصورة كاملة.</h2>
+    <div class="stats">
+      <div class="stat"><p class="big num">21–25<small>%</small></p><p>من توصيات النماذج الكبيرة المبنية على معلومة واحدة، انقلبت بعد معرفة الصورة الكاملة.</p></div>
+      <div class="stat"><p class="big num">94<small>%</small></p><p>من إجابات أحد النماذج الصغيرة أعطت توجيهًا دون أي إشارة إلى نقص المعلومات.</p></div>
+      <div class="stat"><p class="big num">8–14<small>%</small></p><p>نسبة الانقلاب حين أُعطي النموذج إجابات المستخدم عن أسئلته قبل أن ينصح: قرابة النصف.</p></div>
+      <div class="stat"><p class="big num">3 / 24</p><p>حالة فقط غيّر فيها Grok توصيته في المراجعة المتبادلة، مع أنه قال في كل مرة إنه يقبل النقد.</p></div>
+    </div>
+    <ul class="takeaways" style="padding:0">
+      <li><span class="n num">01</span><p><b>النصيحة تنقلب في نحو خُمس الحالات.</b> وحين زادت المعلومات إلى ثلاث، انخفضت هذه النسبة إلى النصف تقريبًا.</p></li>
+      <li><span class="n num">02</span><p><b>التحفّظ في الصياغة لا يعني أن النموذج لا يوجّه.</b> النماذج الكبيرة تربط نصيحتها بشروط، لكنها نادرًا ما تسأل المستخدم سؤالًا واحدًا.</p></li>
+      <li><span class="n num">03</span><p><b>أن يكشف النموذج ما ينقصه لا يكفي وحده.</b> «أفضل تخمين» قبل سماع الجواب ظل مبنيًا على المعلومة الواحدة.</p></li>
+      <li><span class="n num">04</span><p><b>الفائدة تأتي حين يجيب المستخدم.</b> انخفضت نسبة الانقلاب إلى قرابة النصف، وكان الانخفاض واضحًا إحصائيًا في نموذجين من ثلاثة.</p></li>
+      <li><span class="n num">05</span><p><b>النماذج المتقدمة في التطبيقات ليست محصّنة،</b> والنموذج الآخر يقترح ما قد يكون ناقصًا، لكنه لا يعرف حقيقة حياتك.</p></li>
+    </ul>
+    <div class="callout"><span class="k">PROTOCOL</span><p><b>ثلاث خطوات تطبّقها بنفسك:</b> أخبر النموذج بالأبعاد الحاسمة من البداية. اطلب منه أن يسألك قبل أن ينصحك. أجب قبل أن تأخذ بالنصيحة.</p></div>
+  </div>
+  <div class="foot"><span>دراسة استكشافية — انظر «حدود هذه الدراسة»</span><b>02</b></div>
+</section>
+
+<!-- 3. PROBLEM + QUESTION -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:5mm">
+    <p class="kicker"><i></i>01 · المشكلة</p>
+    <h2>سطر واحد وقرار كامل</h2>
+    <div class="chat">
+      <div class="bubble"><p class="who">ما يراه النموذج</p><p class="line">«زوجي أنفق مدخراتنا دون أن يستشيرني. هل أطلب الطلاق؟»</p><p class="note" style="margin-top:4mm">تخيّل امرأة تكتب لنموذج ذكاء اصطناعي سطرًا واحدًا، ثم تنتظر النصيحة.</p></div>
+      <div class="bubble dark"><p class="who">ما لا يعرفه النموذج</p><ul>
+        <li>أن المال ذهب إلى عملية جراحية طارئة لأخي الزوج، ولولاها لمات.</li>
+        <li>أن الزوج لم يُخفِ عنها مالًا قط في اثني عشر عامًا.</li>
+        <li>أن لديهما ثلاثة أطفال.</li>
+        <li>أن دينهما وعائلتيهما ينفّران من الطلاق.</li>
+        <li>أن الزوج عرض أن يسدّد المبلغ من عمل إضافي.</li>
+        <li>أن الطلاق سيتركها بلا دخل.</li>
+      </ul></div>
+    </div>
+    <p>هذه التفاصيل تغيّر القرار كله، ولا يملكها إلا صاحبة القرار. ومع ذلك، يعطي النموذج في الغالب توصية. قد تكون التوصية حذرة ومليئة بعبارات مثل «يعتمد الأمر على…»، لكنها تنتهي باتجاه واضح. والناس يأخذون بهذا الاتجاه.</p>
+    <p>هذا ليس افتراضًا نظريًا. تشير تقارير صحفية منشورة إلى حالات انتهت فيها علاقات زوجية بعد أن قدّم أحد الطرفين روايته وحده لنموذج ذكاء اصطناعي، فجاءته نصيحة بالانفصال أو بالتصعيد القانوني. وفي إحدى هذه الحالات قال المحامي الحقيقي إن الأمر لا يستدعي شيئًا من ذلك. هذه الحالات قصص منتقاة وليست دليلًا علميًا، لكنها تكشف آلية متكررة: <b style="color:var(--ink)">النموذج يجيب على قدر ما وصله فقط.</b></p>
+    <div class="rule" style="margin:2mm 0"></div>
+    <p class="kicker"><i></i>02 · سؤال البحث</p>
+    <p>انطلقت الدراسة من سؤال صاغه د. أحمد:</p>
+    <blockquote>«عندما يستشير المستخدم نموذج ذكاء اصطناعي في قرار إنساني مركّب (علاقة، إدارة، أو ما يشبههما)، إلى أي مدى يوجّه النموذج القرار اعتمادًا على المعطيات القليلة المقدَّمة له، متجاهلًا أبعادًا حاسمة لا يملكها إلا المستخدم، مثل السياق، وتاريخ العلاقة، والأشخاص المتأثرين، والدين والقيم، والعواقب المترتبة؟ وهل يمكن لبروتوكول يجعل النموذج يكشف هذه الأبعاد الناقصة قبل التوجيه أن يقلّل هذا القصور؟»</blockquote>
+    <p>الدراسة إذن لا تقارن بين أنواع القرارات. هي تقيس الفجوة بين ما يُقال للنموذج وما يتوقف عليه القرار فعلًا.</p>
+  </div>
+  <div class="foot"><span>المشكلة وسؤال البحث</span><b>03</b></div>
+</section>
+
+<!-- 4. METHOD -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:5mm">
+    <p class="kicker"><i></i>03 · ماذا فعلنا؟</p>
+    <h2>24 موقفًا، وعشر معلومات لكل موقف، وخمس طرق للسؤال</h2>
+    <div class="cols3">
+      <div class="card"><p class="big num">8</p><p>مواقف في العلاقات الزوجية والأسرية.</p></div>
+      <div class="card"><p class="big num">8</p><p>مواقف في الإدارة والعمل.</p></div>
+      <div class="card"><p class="big num">8</p><p>مواقف في قرارات إنسانية أخرى مثل الصداقة والجيرة ورعاية الوالدين.</p></div>
+    </div>
+    <div class="ex">
+      <div class="cap"><span class="no">الشكل 1</span><h3>لكل موقف خياران، وعشر معلومات: واحدة يكتبها الناس، وتسع لا يعرفها إلا صاحب القرار</h3></div>
+      <div class="dims">
+        <div class="on">ما يكتبه الناس عادة</div>
+        <div class="off"></div><div class="off"></div><div class="off"></div><div class="off"></div><div class="off"></div><div class="off"></div><div class="off"></div><div class="off"></div><div class="off"></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--lime)"></i>المعلومة الأولى</span><span><i style="background:repeating-linear-gradient(135deg,#fff 0 1mm,#e3e5df 1mm 2mm)"></i>التسع الباقية: السياق، وتاريخ العلاقة، ومن سيتأثر، والدين والقيم، والعواقب</span></div>
+    </div>
+    <div class="ex">
+      <div class="cap"><span class="no">الشكل 2</span><h3>سألنا النماذج بخمس طرق مختلفة</h3></div>
+      <div class="ladder">
+        <div class="row"><span class="n num">1</span><b>معلومة واحدة فقط</b><span>كما يفعل أغلب الناس.</span></div>
+        <div class="row"><span class="n num">2</span><b>ثلاث معلومات</b><span></span></div>
+        <div class="row ref"><span class="n num">3</span><b>الصورة الكاملة (المعلومات العشر)</b><span>جعلنا توصية النموذج هنا مرجعًا للمقارنة.</span></div>
+        <div class="row"><span class="n num">4</span><b>معلومة واحدة + كشف ما ينقص</b><span>مع طلب أن يكشف النموذج ما ينقصه ويسأل عنه، ثم يعطي أفضل تخمين مشروط.</span></div>
+        <div class="row"><span class="n num">5</span><b>معلومة واحدة + كشف + إجابات</b><span>الطلب نفسه، ثم تُعطى للنموذج إجابات المستخدم عن أسئلته، وبعدها ينصح.</span></div>
+      </div>
+    </div>
+    <div class="cols2">
+      <div><h3>جرّبنا نماذج متعددة</h3><p style="margin-top:1.6mm;font-size:9.6pt">شملت التجربة نموذجين كبيرين من Claude ونموذجًا من Gemini ونموذجين صغيرين مفتوحين يعملان على الجهاز. وجرّبنا يدويًا نموذجين متقدمين في تطبيقاتهما الاستهلاكية، هما Claude وGrok. ثم أجرينا تجربة «مراجعة متبادلة»: يجيب نموذج، وينتقده نموذج آخر، ثم يراجع الأول إجابته.</p></div>
+      <div style="background:var(--tint);padding:5mm"><h3>المقياس الأساسي بسيط</h3><p style="margin-top:1.6mm;font-size:9.6pt">هل تغيّرت توصية النموذج حين عرف الصورة الكاملة؟ إن تغيّرت، فالنصيحة التي أعطاها من معلومة واحدة كانت ستأخذ صاحبها في الاتجاه الخطأ، بمعيار النموذج نفسه.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>المنهج</span><b>04</b></div>
+</section>
+
+<!-- 5. FINDINGS 1–3 -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:4mm">
+    <p class="kicker"><i></i>04 · ماذا وجدنا؟</p>
+    <h2>كشف النقص وحده لا يغيّر النتيجة. الذي يغيّرها أن يجيب المستخدم.</h2>
+    <div class="ex">
+      <div class="cap"><span class="no">الشكل 3</span><h3>نسبة انقلاب التوصية مقارنة بتوصية النموذج بعد معرفة الصورة الكاملة</h3></div>
+      <div class="chartwrap chart">
+        <div class="crow"><div class="lbl">معلومة واحدة<small>النماذج الكبيرة</small></div><div class="track"><div class="bar" style="right:0;width:calc(25%/30*100)"></div><span class="val" style="right:calc(25%/30*100 + 2mm)">21–25%</span><div class="bar lime" style="right:calc(21%/30*100);width:calc(4%/30*100);top:3mm"></div></div></div>
+        <div class="crow"><div class="lbl">ثلاث معلومات</div><div class="track"><span class="txt" style="right:0">انخفضت إلى النصف تقريبًا</span></div></div>
+        <div class="crow"><div class="lbl">معلومة واحدة + كشف ما ينقص</div><div class="track"><div class="bar" style="right:0;width:calc(23%/30*100)"></div><span class="val" style="right:calc(23%/30*100 + 2mm)">20–23%</span><div class="bar lime" style="right:calc(20%/30*100);width:calc(3%/30*100)"></div></div></div>
+        <div class="crow"><div class="lbl">معلومة واحدة + كشف + إجابات المستخدم</div><div class="track"><div class="bar violet" style="right:0;width:calc(14%/30*100)"></div><span class="val" style="right:calc(14%/30*100 + 2mm)">8–14%</span><div class="bar lime" style="right:calc(8%/30*100);width:calc(6%/30*100)"></div></div></div>
+        <div class="axis"><span></span><div class="sc"><span style="left:100%">0%</span><span style="left:66.667%">10%</span><span style="left:33.333%">20%</span><span style="left:0%">30%</span></div></div>
+      </div>
+      <p class="src">الأعمدة حتى الحد الأعلى للنطاق، والجزء المضيء هو النطاق الذي وردت فيه النتيجة. الأرقام تقريبية كما وردت في الدراسة.</p>
+    </div>
+    <div class="finding"><span class="n num">1</span><div><h3>النصيحة تنقلب في نحو خُمس الحالات.</h3><p>حين أُعطيت النماذج الكبيرة معلومة واحدة، جاءت توصيتها مخالفة لتوصيتها بعد معرفة الصورة الكاملة في نحو 21% إلى 25% من الإجابات. وحين زادت المعلومات إلى ثلاث، انخفضت هذه النسبة إلى النصف تقريبًا.</p></div></div>
+    <div class="finding"><span class="n num">2</span><div><h3>النماذج الصغيرة توجّه بحسم، والكبيرة تتحفّظ ثم توجّه.</h3><p>النماذج الصغيرة أعطت توجيهًا دون أي إشارة إلى نقص المعلومات في أغلب إجاباتها، وبلغ ذلك في أحدها 94%. أما نماذج Claude فقلّما فعلت ذلك (نحو 10% إلى 14%)، وكانت تربط نصيحتها بشروط. لكنها نادرًا ما سألت المستخدم سؤالًا واحدًا، ومع ذلك انقلبت توصيتها بالقدر نفسه تقريبًا. <b style="color:var(--ink)">التحفّظ في الصياغة لا يعني أن النموذج لا يوجّه.</b></p></div></div>
+    <div class="finding" style="border-bottom:0"><span class="n num">3</span><div><h3>أن يكشف النموذج ما ينقصه لا يكفي وحده.</h3><p>حين طلبنا من النماذج أن تسمّي الأبعاد الناقصة وتسأل عنها، فعلت ذلك في كل الإجابات تقريبًا. لكن «أفضل تخمين» الذي قدّمته قبل أن تسمع الجواب ظل مبنيًا على المعلومة الواحدة، فبقيت نسبة الانقلاب كما هي (نحو 20% إلى 23%).</p></div></div>
+  </div>
+  <div class="foot"><span>النتائج 1–3</span><b>05</b></div>
+</section>
+
+<!-- 6. FINDINGS 4–6 -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:4mm">
+    <div class="finding" style="padding-top:0"><span class="n num">4</span><div><h3>الفائدة تأتي حين يجيب المستخدم.</h3><p>حين أُعطي النموذج إجابات المستخدم عن أسئلته قبل أن ينصح، انخفضت نسبة الانقلاب إلى نحو 8% إلى 14%، أي إلى قرابة النصف. كان هذا الانخفاض واضحًا إحصائيًا في نموذجين من ثلاثة. لكنه تركّز في عدد من المواقف دون غيرها، ولذلك نحتاج مواقف أكثر قبل أن نعمّمه.</p></div></div>
+    <div class="ex">
+      <div class="cap"><span class="no">الشكل 4</span><h3>التوجيه دون أي إشارة إلى نقص المعلومات</h3></div>
+      <div class="chartwrap chart">
+        <div class="crow"><div class="lbl">أحد النموذجين الصغيرين<small>أعلى نسبة سُجّلت</small></div><div class="track"><div class="bar" style="right:0;width:94%"></div><span class="val" style="right:calc(94% - 12mm);color:#fff">94%</span></div></div>
+        <div class="crow"><div class="lbl">نماذج Claude</div><div class="track"><div class="bar violet" style="right:0;width:14%"></div><div class="bar lime" style="right:10%;width:4%"></div><span class="val" style="right:calc(14% + 2mm)">10–14%</span></div></div>
+        <div class="axis"><span></span><div class="sc"><span style="left:100%">0%</span><span style="left:50%">50%</span><span style="left:0%">100%</span></div></div>
+      </div>
+    </div>
+    <div class="finding"><span class="n num">5</span><div><h3>النماذج المتقدمة في التطبيقات ليست محصّنة.</h3><p>في التجربة اليدوية على ثمانية مواقف، انقلبت توصية Claude في موقف واحد، وتوصية Grok في موقفين. ولم يقلّل طلب الكشف عن الأبعاد الناقصة هذا الانقلاب في أي منهما. ولاحظنا أن Grok أعطى إجابتين متعاكستين للسؤال نفسه حرفيًا في جلستين مختلفتين.</p></div></div>
+    <div class="ex">
+      <div class="cap"><span class="no">الشكل 5</span><h3>المواقف التي انقلبت فيها التوصية، في التطبيقات وفي المراجعة المتبادلة</h3></div>
+      <div class="dotrow"><b>Claude</b><div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="r">1 / 8</span></div>
+      <div class="dotrow"><b>Grok</b><div class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="r">2 / 8</span></div>
+      <div class="dotrow" style="border-bottom:0"><b>Grok بعد النقد</b><div class="dots sm"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="r">3 / 24</span></div>
+      <p class="src">الدائرة المضيئة: موقف انقلبت فيه التوصية (التجربة اليدوية)، أو غيّر فيه Grok توصيته بعد النقد (المراجعة المتبادلة). قال Grok في الحالات الأربع والعشرين كلها إنه يقبل النقد.</p>
+    </div>
+    <div class="finding" style="border-bottom:0"><span class="n num">6</span><div><h3>النموذج الآخر يقترح، لكنه لا يعرف.</h3><p>في المراجعة المتبادلة على 24 حالة، قال Grok في كل مرة إنه يقبل النقد. لكنه غيّر توصيته في ثلاث حالات فقط، وهي بالضبط الحالات الثلاث التي خالفه فيها الناقد. كان النقد مفيدًا لأنه نبّه إلى أبعاد ثقافية ودينية لم تُذكر: السكن في شقة ببيت عائلة الخطيب كما هو شائع في مصر، والقرض البنكي بفائدة وما يثيره من اعتبارات دينية، واحتمال الاحتيال في عروض العمل بالخليج. ووصف الناقد إحدى الإجابات بأنها من أكثر الإجابات توجيهًا، وهي نصيحة بطلب الطلاق بناءً على جملة واحدة تقول فيها الزوجة إن زوجها يريد الزواج بأخرى. الخلاصة أن نموذجًا آخر يستطيع أن يذكّرك بما قد يكون ناقصًا، لكنه لا يعرف حقيقة حياتك. <b style="color:var(--ink)">وحدك تعرفها.</b></p></div></div>
+  </div>
+  <div class="foot"><span>النتائج 4–6</span><b>06</b></div>
+</section>
+
+<!-- 7. PROTOCOL -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:5mm">
+    <p class="kicker"><i></i>05 · البروتوكول العملي</p>
+    <h2>ثلاث خطوات تطبّقها بنفسك</h2>
+    <p class="lead">لا تحتاج إلى أدوات خاصة. حين تستشير أي نموذج ذكاء اصطناعي في قرار يخص علاقة أو أسرة أو فريق عمل، اتبع هذه الخطوات:</p>
+    <div class="steps">
+      <div class="step"><div class="s"><span>STEP</span><b>1</b></div><div class="c"><h3>أخبر النموذج بالأبعاد الحاسمة من البداية.</h3><p>لا تكتفِ بسطر واحد. اذكر السياق، وتاريخ العلاقة، ومن سيتأثر بالقرار، وما يمليه عليك دينك وقيمك، والعواقب التي تخشاها، وهل يمكن التراجع عن القرار. اذكر أيضًا رأي الطرف الآخر، ولو بإنصاف مختصر.</p>
+        <div class="chips" style="margin-top:3mm"><span class="chip">السياق</span><span class="chip">تاريخ العلاقة</span><span class="chip">من سيتأثر</span><span class="chip">الدين والقيم</span><span class="chip">العواقب</span><span class="chip">هل يمكن التراجع؟</span><span class="chip">رأي الطرف الآخر</span></div></div></div>
+      <div class="step"><div class="s"><span>STEP</span><b>2</b></div><div class="c"><h3>اطلب منه أن يسألك قبل أن ينصحك.</h3><p>اكتب له مثلًا:</p><p class="prompt">«قبل أن تنصحني، اذكر لي المعلومات الناقصة التي لا يعرفها إلا أنا، واسألني ثلاثة أسئلة، ولا تعطني أي توصية قبل أن أجيب».</p></div></div>
+      <div class="step"><div class="s"><span>STEP</span><b>3</b></div><div class="c"><h3>أجب قبل أن تأخذ بالنصيحة.</h3><p>أجب عن أسئلته بصدق، وقل «لا أعرف» حين لا تعرف. ثم اطلب النصيحة. وتذكّر أن النصيحة الأولى، قبل إجاباتك، ليست نصيحة عنك أنت، بل عن شخص افتراضي قال جملتك نفسها.</p></div></div>
+    </div>
+    <div class="warn"><b>تنبيه</b><p>إذا لاحظت أن رأي النموذج يتغيّر كلما أضفت معلومة، فهذا لا يعني أنه متقلّب بلا سبب. هو يذكّرك بأن القرار يعتمد على ما تعرفه أنت أكثر مما يعتمد على ما يعرفه هو.</p></div>
+  </div>
+  <div class="foot"><span>البروتوكول</span><b>07</b></div>
+</section>
+
+<!-- 8. LIMITS, NEXT, CONCLUSION -->
+<section class="page">
+  <div class="run"><span>مختبر VisionSeek · النصيحة من نصف الصورة</span><span class="en">VISIONSEEK LAB · OCT 2026</span></div>
+  <div class="stack" style="gap:4.4mm">
+    <p class="kicker"><i></i>06 · حدود هذه الدراسة</p>
+    <p>نريد أن نكون واضحين في حدود ما توصّلنا إليه:</p>
+    <div class="lim">
+      <div><b>هي دراسة استكشافية وليست دراسة حاسمة.</b>عدد المواقف محدود (24 موقفًا رئيسيًا و16 موقفًا إضافيًا)، وكلها من إعداد فريق البحث.</div>
+      <div><b>لم يشارك بشر حقيقيون.</b>إجابات «المستخدم» عن أسئلة النموذج كتبها نموذج آخر مقيّد بمعلومات الموقف. والناس في الواقع يجيبون بطرق مختلفة.</div>
+      <div><b>التصنيف آلي.</b>نموذج ذكاء اصطناعي هو من صنّف الإجابات (هل سألت؟ هل اشترطت؟)، ولم يراجعها مقيّمون بشريون بعد.</div>
+      <div><b>التجارب اليدوية محدودة.</b>أُجريت مرة واحدة لكل سؤال وفي جلسة واحدة لكل نموذج، فقد تتأثر الإجابات بما سبقها.</div>
+      <div style="grid-column:1/-1"><b>نحن نقيس تغيّر النصيحة، لا ضررها.</b>وتشير استطلاعات منشورة إلى أن كثيرًا من الناس يرون فائدة في نصائح الذكاء الاصطناعي. ويبيّن تحليل تجميعي معروف (Vaccaro وزملاؤه) أن الجمع بين الإنسان والذكاء الاصطناعي لا يحقق دائمًا نتائج أفضل، وأن النتائج تختلف من نوع مهمة إلى آخر.</div>
+    </div>
+    <p class="kicker" style="margin-top:2mm"><i></i>07 · الخطوات القادمة</p>
+    <ol class="next">
+      <li><span class="n num">1</span><p><b>إشراك أشخاص حقيقيين</b> يجيبون عن أسئلة النموذج بكلماتهم، لنعرف هل يصمد أثر الخطوة الثالثة في الواقع.</p></li>
+      <li><span class="n num">2</span><p><b>مقيّمون بشريون</b> يراجعون تصنيف الإجابات، ويقيّمون جودة النصيحة نفسها لا اتجاهها فقط.</p></li>
+      <li><span class="n num">3</span><p><b>مواقف أكثر وأكثر تنوعًا،</b> ومنها مواقف مكتوبة بالعربية ومن واقع مجتمعاتنا، لأن أبعادًا مثل الدين والعائلة الممتدة والعرف تظهر هنا بقوة.</p></li>
+      <li><span class="n num">4</span><p><b>نشر الورقة العلمية</b> بالإنجليزية بعد المراجعة، مع إتاحة المواقف والأدوات لمن يريد تكرار التجربة.</p></li>
+    </ol>
+    <div class="closing"><p class="k">الخلاصة</p><p>الذكاء الاصطناعي لا يرى من حياتك إلا ما تكتبه له. فإذا كتبت سطرًا واحدًا، فهو ينصح شخصًا لا يعرفه. والحل ليس أن يقول النموذج «ينقصني كذا» فقط، بل أن تجيبه أنت قبل أن يوجّهك. <b>القرار الإنساني يبقى قرارك، لأنك وحدك تملك أبعاده الحاسمة.</b></p></div>
+    <div class="cite">للاستشهاد بالورقة العلمية:<span class="en">Abdelalim, A. (2026). Advice from Half the Picture: How Language Models Steer Complex Human Decisions from Partial Information, and a Dimension-Disclosure Protocol. VisionSeek. Preprint, Zenodo. https://doi.org/10.5281/zenodo.23399249</span></div>
+  </div>
+  <div class="foot"><span>visionseek.org/ar/insights</span><b>08</b></div>
+</section>
+
+</body>
+</html>

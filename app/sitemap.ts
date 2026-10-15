@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/insights", priority: 0.85 },
     ...insights.notes.flatMap(n => [{path: `/insights/notes/${n.slug}`, priority: 0.7}, {path: `/ar/insights/notes/${n.slug}`, priority: 0.7}]),
     ...insights.frameworks.flatMap(f => [{path: `/insights/frameworks/${f.slug}`, priority: 0.7}, {path: `/ar/insights/frameworks/${f.slug}`, priority: 0.7}]),
+    ...insights.research.filter(r => r.page).flatMap(r => [{path: r.page as string, priority: 0.75}, {path: `/ar${r.page}`, priority: 0.75}]),
     { path: "/leaders-house", priority: 0.85 },
     { path: "/ar/leaders-house", priority: 0.85 },
     { path: "/privacy", priority: 0.3 },

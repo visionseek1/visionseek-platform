@@ -27,7 +27,7 @@ test('first launch: note L-001 (research in progress), the Decision Dimensions M
   assert.equal(d.notes[0].status.ar, 'قيد البحث');
   assert.equal(d.frameworks[0].title.ar, 'خريطة أبعاد القرار');
   assert.equal(d.frameworks[0].status.ar, 'قيد البناء.');
-  assert.deepEqual([d.reports.length, d.articles.length, d.research.length], [0, 0, 0]);
+  assert.deepEqual([d.reports.length, d.articles.length], [0, 0]);
   const pages = read('components/insights/pages.tsx');
   assert.match(pages, /if \(!items\.length\) return null/);
   assert.doesNotMatch(pages + JSON.stringify(d), /لا يوجد بعد/);
@@ -63,4 +63,19 @@ test('«هندسة الفرص» / Engineering Opportunities no longer appears on
 
 test('/en/<page> redirects to the English page at the root', () => {
   assert.match(read('next.config.ts'), /source: '\/en\/:path\+', destination: '\/:path\+'/);
+});
+
+test('research paper «النصيحة من نصف الصورة»: card, report page in both languages, Arabic PDF and the DOI', () => {
+  const d = json('content/insights.json');
+  assert.equal(d.sections.research.title.ar, 'أوراقنا العلمية');
+  const r = d.research.find(x => x.page === '/insights/research/half-the-picture');
+  assert.ok(r);
+  assert.equal(r.preprint, 'https://doi.org/10.5281/zenodo.23399249');
+  assert.match(r.title.ar, /^النصيحة من نصف الصورة/);
+  assert.match(r.title.en, /^Advice from Half the Picture/);
+  assert.ok(existsSync('public' + r.pdf), r.pdf);
+  for (const f of ['app/insights/research/half-the-picture/page.tsx', 'app/ar/insights/research/half-the-picture/page.tsx']) assert.ok(existsSync(f), f);
+  const lib = read('lib/research/half-the-picture.ts');
+  assert.match(lib, /zenodo\.23399249/);
+  assert.match(lib, /القرار الإنساني يبقى قرارك/);
 });

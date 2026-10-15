@@ -1,33 +1,72 @@
 {
   "hub": {
-    "title": { "en": "Insight before decision", "ar": "الفكرة قبل القرار" },
+    "title": {
+      "en": "Insight before decision",
+      "ar": "الفكرة قبل القرار"
+    },
     "intro": {
       "en": "What we learn while building capabilities with Arab institutions: reports, frameworks and notes written for the people who make the decisions, each ending in a recommendation you can act on.",
       "ar": "هنا ننشر ما نتعلّمه ونحن نبني القدرات مع المؤسسات العربية: تقارير وأطر وملاحظات، مكتوبة لمن بيده القرار، وتنتهي كلها بتوصية يمكن العمل بها."
     },
-    "latest": { "en": "Latest from the learning engine", "ar": "الأحدث من محرّك التعلم" },
-    "readNote": { "en": "Read the note", "ar": "اقرأ الملاحظة" }
+    "latest": {
+      "en": "Latest from the learning engine",
+      "ar": "الأحدث من محرّك التعلم"
+    },
+    "readNote": {
+      "en": "Read the note",
+      "ar": "اقرأ الملاحظة"
+    }
   },
   "sections": {
     "reports": {
-      "title": { "en": "Flagship reports", "ar": "التقارير الرئيسية" },
-      "intro": { "en": "One or two a year on the big questions, each with recommendations for leaders and a PDF to download.", "ar": "تقرير أو تقريران في السنة عن الأسئلة الكبرى، وفي كل تقرير توصيات للقادة، ونسخة PDF للتحميل." }
+      "title": {
+        "en": "Flagship reports",
+        "ar": "التقارير الرئيسية"
+      },
+      "intro": {
+        "en": "One or two a year on the big questions, each with recommendations for leaders and a PDF to download.",
+        "ar": "تقرير أو تقريران في السنة عن الأسئلة الكبرى، وفي كل تقرير توصيات للقادة، ونسخة PDF للتحميل."
+      }
     },
     "articles": {
-      "title": { "en": "Articles for leaders", "ar": "مقالات للقادة" },
-      "intro": { "en": "Short: one idea, and one recommendation you can apply tomorrow.", "ar": "قصيرة: فكرة واحدة، وتوصية واحدة يمكن تطبيقها غدًا." }
+      "title": {
+        "en": "Articles for leaders",
+        "ar": "مقالات للقادة"
+      },
+      "intro": {
+        "en": "Short: one idea, and one recommendation you can apply tomorrow.",
+        "ar": "قصيرة: فكرة واحدة، وتوصية واحدة يمكن تطبيقها غدًا."
+      }
     },
     "notes": {
-      "title": { "en": "Notes", "ar": "ملاحظات" },
-      "intro": { "en": "One page for each new idea from our learning engine.", "ar": "صفحة واحدة لكل فكرة جديدة من محرّك التعلم." }
+      "title": {
+        "en": "Notes",
+        "ar": "ملاحظات"
+      },
+      "intro": {
+        "en": "One page for each new idea from our learning engine.",
+        "ar": "صفحة واحدة لكل فكرة جديدة من محرّك التعلم."
+      }
     },
     "frameworks": {
-      "title": { "en": "Frameworks & tools", "ar": "الأطر والأدوات" },
-      "intro": { "en": "Ways of thinking, under the VisionSeek name, for a leader to use with their team.", "ar": "طرق تفكير باسم VisionSeek، يستخدمها القائد مع فريقه." }
+      "title": {
+        "en": "Frameworks & tools",
+        "ar": "الأطر والأدوات"
+      },
+      "intro": {
+        "en": "Ways of thinking, under the VisionSeek name, for a leader to use with their team.",
+        "ar": "طرق تفكير باسم VisionSeek، يستخدمها القائد مع فريقه."
+      }
     },
     "research": {
-      "title": { "en": "Peer-reviewed research", "ar": "الأبحاث المحكّمة" },
-      "intro": { "en": "Research published in academic journals. We show the abstract and the journal link, and the preprint on arXiv or SSRN where the journal allows it.", "ar": "أبحاث منشورة في مجلات علمية. نعرض الملخص ورابط المجلة، ورابط النسخة الأولية على arXiv أو SSRN إن سمحت المجلة." }
+      "title": {
+        "en": "Our research papers",
+        "ar": "أوراقنا العلمية"
+      },
+      "intro": {
+        "en": "Papers produced at VisionSeek: published preprints and peer-reviewed journal articles, each with its abstract and permanent link.",
+        "ar": "أوراق علمية أنتجناها في VisionSeek: النسخ الأولية المنشورة، والأبحاث المحكّمة في المجلات العلمية. لكل ورقة ملخّصها ورابطها الدائم."
+      }
     }
   },
   "notes": [
@@ -35,53 +74,160 @@
       "slug": "l-001",
       "number": "L-001",
       "date": "2026-10-15",
-      "dateLabel": { "en": "October 2026", "ar": "أكتوبر ٢٠٢٦" },
-      "status": { "en": "Research in progress", "ar": "قيد البحث" },
-      "title": { "en": "Why does AI stumble when a decision calls for creativity or emotion?", "ar": "لماذا يتعثّر الذكاء الاصطناعي حين يكون القرار إبداعيًا أو عاطفيًا؟" },
-      "subtitle": { "en": "AI's shortfall in creative and emotional decisions, and its link to missing dimensions of context.", "ar": "قصور الذكاء الاصطناعي في القرارات الإبداعية والعاطفية، وصلته بنقص أبعاد السياق." },
-      "teaser": { "en": "Our hypothesis: the shortfall is not in the intelligence itself but in the context that reaches it — dimensions a person carries in their head and never writes down, so the model decides without them.", "ar": "فرضيتنا أن القصور ليس في الذكاء نفسه، بل في السياق الذي يصله: أبعادٌ يحملها الإنسان في رأسه ولا يكتبها، فيقرّر النموذج من دونها." },
-      "teaserNote": { "en": "Research is under way. Findings and recommendations will be published here when it is complete.", "ar": "البحث جارٍ. النتائج والتوصيات تُنشر هنا حين تكتمل." },
-      "notice": { "en": "This is an early note from our learning engine. The research is still under way; when it is complete we will publish what we found here, with practical recommendations for leaders.", "ar": "هذه ملاحظة أولية من محرّك التعلم. البحث ما زال جاريًا، وحين يكتمل ننشر هنا ما وجدناه، ومعه توصيات عملية للقادة." },
+      "dateLabel": {
+        "en": "October 2026",
+        "ar": "أكتوبر ٢٠٢٦"
+      },
+      "status": {
+        "en": "Research in progress",
+        "ar": "قيد البحث"
+      },
+      "title": {
+        "en": "Why does AI stumble when a decision calls for creativity or emotion?",
+        "ar": "لماذا يتعثّر الذكاء الاصطناعي حين يكون القرار إبداعيًا أو عاطفيًا؟"
+      },
+      "subtitle": {
+        "en": "AI's shortfall in creative and emotional decisions, and its link to missing dimensions of context.",
+        "ar": "قصور الذكاء الاصطناعي في القرارات الإبداعية والعاطفية، وصلته بنقص أبعاد السياق."
+      },
+      "teaser": {
+        "en": "Our hypothesis: the shortfall is not in the intelligence itself but in the context that reaches it — dimensions a person carries in their head and never writes down, so the model decides without them.",
+        "ar": "فرضيتنا أن القصور ليس في الذكاء نفسه، بل في السياق الذي يصله: أبعادٌ يحملها الإنسان في رأسه ولا يكتبها، فيقرّر النموذج من دونها."
+      },
+      "teaserNote": {
+        "en": "Research is under way. Findings and recommendations will be published here when it is complete.",
+        "ar": "البحث جارٍ. النتائج والتوصيات تُنشر هنا حين تكتمل."
+      },
+      "notice": {
+        "en": "This is an early note from our learning engine. The research is still under way; when it is complete we will publish what we found here, with practical recommendations for leaders.",
+        "ar": "هذه ملاحظة أولية من محرّك التعلم. البحث ما زال جاريًا، وحين يكتمل ننشر هنا ما وجدناه، ومعه توصيات عملية للقادة."
+      },
       "blocks": [
         {
-          "heading": { "en": "The question", "ar": "السؤال" },
-          "text": { "en": "When AI is asked for a decision that needs creative or emotional judgment, where does it go wrong? And why does its answer look sound on the surface, yet sit far from what someone who knows the situation from the inside would decide?", "ar": "حين يُطلب من الذكاء الاصطناعي قرارٌ يحتاج إلى حسٍّ إبداعي أو عاطفي، أين يخطئ؟ ولماذا يبدو جوابه سليمًا في ظاهره، بعيدًا عمّا كان سيقرّره إنسانٌ يعرف الموقف من داخله؟" }
+          "heading": {
+            "en": "The question",
+            "ar": "السؤال"
+          },
+          "text": {
+            "en": "When AI is asked for a decision that needs creative or emotional judgment, where does it go wrong? And why does its answer look sound on the surface, yet sit far from what someone who knows the situation from the inside would decide?",
+            "ar": "حين يُطلب من الذكاء الاصطناعي قرارٌ يحتاج إلى حسٍّ إبداعي أو عاطفي، أين يخطئ؟ ولماذا يبدو جوابه سليمًا في ظاهره، بعيدًا عمّا كان سيقرّره إنسانٌ يعرف الموقف من داخله؟"
+          }
         },
         {
-          "heading": { "en": "Our hypothesis", "ar": "فرضيتنا" },
-          "text": { "en": "That the problem is not the model's ability but the context it receives. People carry dimensions in their heads that they never write down — it does not occur to them that these need writing down — and the model decides without them.", "ar": "أن المشكلة ليست في قدرة النموذج، بل فيما يصله من سياق. فالإنسان يحمل في رأسه أبعادًا لا يكتبها، ولا يخطر له أنها تحتاج إلى كتابة، والنموذج يقرّر من دونها." }
+          "heading": {
+            "en": "Our hypothesis",
+            "ar": "فرضيتنا"
+          },
+          "text": {
+            "en": "That the problem is not the model's ability but the context it receives. People carry dimensions in their heads that they never write down — it does not occur to them that these need writing down — and the model decides without them.",
+            "ar": "أن المشكلة ليست في قدرة النموذج، بل فيما يصله من سياق. فالإنسان يحمل في رأسه أبعادًا لا يكتبها، ولا يخطر له أنها تحتاج إلى كتابة، والنموذج يقرّر من دونها."
+          }
         }
       ],
-      "comingHeading": { "en": "What comes next", "ar": "ما الذي سيأتي" },
+      "comingHeading": {
+        "en": "What comes next",
+        "ar": "ما الذي سيأتي"
+      },
       "coming": [
-        { "en": "The research findings, with their sources.", "ar": "نتائج البحث، بمصادرها." },
-        { "en": "Recommendations for leaders who rely on AI for decisions of this kind.", "ar": "توصيات للقادة الذين يعتمدون على الذكاء الاصطناعي في قرارات من هذا النوع." }
+        {
+          "en": "The research findings, with their sources.",
+          "ar": "نتائج البحث، بمصادرها."
+        },
+        {
+          "en": "Recommendations for leaders who rely on AI for decisions of this kind.",
+          "ar": "توصيات للقادة الذين يعتمدون على الذكاء الاصطناعي في قرارات من هذا النوع."
+        }
       ],
-      "follow": { "en": "Get the findings as soon as they are published, in the monthly letter for leaders.", "ar": "تصلك النتائج أول ما تُنشر، في النشرة الشهرية للقادة." }
+      "follow": {
+        "en": "Get the findings as soon as they are published, in the monthly letter for leaders.",
+        "ar": "تصلك النتائج أول ما تُنشر، في النشرة الشهرية للقادة."
+      }
     }
   ],
   "frameworks": [
     {
       "slug": "decision-dimensions",
-      "order": { "en": "First framework", "ar": "الإطار الأول" },
-      "title": { "en": "The Decision Dimensions Map", "ar": "خريطة أبعاد القرار" },
-      "status": { "en": "In development.", "ar": "قيد البناء." },
-      "text": { "en": "We are building this framework now, and will publish it here when it is complete.", "ar": "نعمل على هذا الإطار الآن، وننشره هنا حين يكتمل." }
+      "order": {
+        "en": "First framework",
+        "ar": "الإطار الأول"
+      },
+      "title": {
+        "en": "The Decision Dimensions Map",
+        "ar": "خريطة أبعاد القرار"
+      },
+      "status": {
+        "en": "In development.",
+        "ar": "قيد البناء."
+      },
+      "text": {
+        "en": "We are building this framework now, and will publish it here when it is complete.",
+        "ar": "نعمل على هذا الإطار الآن، وننشره هنا حين يكتمل."
+      }
     }
   ],
   "reports": [],
   "articles": [],
-  "research": [],
+  "research": [
+    {
+      "title": {
+        "ar": "النصيحة من نصف الصورة: هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟",
+        "en": "Advice from Half the Picture: How Language Models Steer Complex Human Decisions from Partial Information, and a Dimension-Disclosure Protocol"
+      },
+      "kind": {
+        "ar": "نسخة أولية · Zenodo · أكتوبر 2026",
+        "en": "Preprint · Zenodo · October 2026"
+      },
+      "summary": {
+        "ar": "حين يستشير الإنسان نموذج ذكاء اصطناعي في قرار إنساني بسطر واحد، تنقلب النصيحة في نحو خُمس الحالات إذا عرف النموذج الصورة كاملة. ومعها بروتوكول من ثلاث خطوات تطبّقه بنفسك.",
+        "en": "Ask a language model about a human decision in one line, and in about one case in five its advice reverses once it sees the whole picture. With a three-step protocol anyone can apply."
+      },
+      "page": "/insights/research/half-the-picture",
+      "pdf": "/insights/research/half-the-picture-ar.pdf",
+      "pdfLang": "ar",
+      "preprint": "https://doi.org/10.5281/zenodo.23399249",
+      "date": "2026-10-16"
+    }
+  ],
   "newsletter": {
-    "title": { "en": "The monthly letter for leaders", "ar": "النشرة الشهرية للقادة" },
-    "text": { "en": "One letter a month: the most important things we learned, and what we recommend.", "ar": "رسالة واحدة في الشهر: أهم ما تعلّمناه، وما نوصي به." },
-    "label": { "en": "Your email", "ar": "بريدك الإلكتروني" },
-    "button": { "en": "Subscribe", "ar": "اشترك" },
-    "privacy": { "en": "We never share your email, and you can unsubscribe at any time.", "ar": "لا نشارك بريدك مع أحد، وتستطيع إلغاء الاشتراك في أي وقت." },
-    "success": { "en": "You are on the list. Welcome.", "ar": "سجّلنا بريدك. أهلًا بك بين قرّاء النشرة." },
-    "exists": { "en": "This email is already on the list.", "ar": "هذا البريد مسجّل عندنا بالفعل." },
-    "invalid": { "en": "Please check the email address.", "ar": "راجع عنوان البريد من فضلك." },
-    "error": { "en": "We could not save it right now. Please try again shortly.", "ar": "تعذّر التسجيل الآن. جرّب مرة أخرى بعد قليل." },
-    "cta": { "en": "Subscribe to the newsletter", "ar": "اشترك في النشرة" }
+    "title": {
+      "en": "The monthly letter for leaders",
+      "ar": "النشرة الشهرية للقادة"
+    },
+    "text": {
+      "en": "One letter a month: the most important things we learned, and what we recommend.",
+      "ar": "رسالة واحدة في الشهر: أهم ما تعلّمناه، وما نوصي به."
+    },
+    "label": {
+      "en": "Your email",
+      "ar": "بريدك الإلكتروني"
+    },
+    "button": {
+      "en": "Subscribe",
+      "ar": "اشترك"
+    },
+    "privacy": {
+      "en": "We never share your email, and you can unsubscribe at any time.",
+      "ar": "لا نشارك بريدك مع أحد، وتستطيع إلغاء الاشتراك في أي وقت."
+    },
+    "success": {
+      "en": "You are on the list. Welcome.",
+      "ar": "سجّلنا بريدك. أهلًا بك بين قرّاء النشرة."
+    },
+    "exists": {
+      "en": "This email is already on the list.",
+      "ar": "هذا البريد مسجّل عندنا بالفعل."
+    },
+    "invalid": {
+      "en": "Please check the email address.",
+      "ar": "راجع عنوان البريد من فضلك."
+    },
+    "error": {
+      "en": "We could not save it right now. Please try again shortly.",
+      "ar": "تعذّر التسجيل الآن. جرّب مرة أخرى بعد قليل."
+    },
+    "cta": {
+      "en": "Subscribe to the newsletter",
+      "ar": "اشترك في النشرة"
+    }
   }
 }
