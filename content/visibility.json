@@ -8,6 +8,12 @@
     },
     {
       "path": "/reports"
+    },
+    {
+      "path": "/programs"
+    },
+    {
+      "path": "/work-with-us"
     }
   ],
   "hiddenBlocks": []
