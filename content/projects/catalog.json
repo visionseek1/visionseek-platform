@@ -294,6 +294,19 @@
         "ar": "وكلاء ينفّذون داخل المؤسسة، وقواعد تحسم كل خطوة قبل أن تقع.",
         "en": "Agents that act inside the institution, and rules that settle every step before it happens."
       }
+    },
+    {
+      "slug": "sovereign-ai",
+      "sector": "institutional-ai",
+      "label": "SOVEREIGN",
+      "title": {
+        "ar": "الذكاء الاصطناعي داخل المؤسسة",
+        "en": "AI inside the institution"
+      },
+      "intro": {
+        "ar": "ذكاء اصطناعي يعمل داخل المؤسسة، على بياناتها، وبلغتها، ولا يخرج منها.",
+        "en": "AI that runs inside the institution, on its data, in its language, and never leaves it."
+      }
     }
   ]
 }

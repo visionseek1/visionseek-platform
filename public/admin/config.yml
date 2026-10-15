@@ -101,6 +101,7 @@ collections:
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
+                  - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /leaders-house/physical-ai", value: "/leaders-house/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}

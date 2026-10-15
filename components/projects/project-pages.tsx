@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2, BrainCircuit} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, type Sector, type SectorIcon, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
+import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, boxMailto, type Sector, type SectorIcon, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 import {ProjectFilter, type ProjectCardData} from './project-filter';
 
@@ -150,8 +150,8 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
   const ar=locale==='ar';const sector=sectorBySlug(project.sector)!;const track=trackOf(project)!;
   const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
   const file=projectFileById(project.id);const color=sectorColors[sector.icon];
-  const pitch=project.pitch;
-  const tabs:[string,string][]=[
+  const pitch=project.pitch;const box=project.box;
+  const tabs:[string,string][]=box?[['why',box.whyTitle[locale]],['inside',box.insideTitle[locale]],['cohort',box.cohortTitle[locale]]]:[
     ...(pitch?[['risks',ar?'الخطر':'The risk'],['gains',ar?'الفائدة':'What you gain']] as [string,string][]:[]),
     ...(project.whyNow?[['why-now',ar?'لماذا الآن':'Why now'] as [string,string]]:[]),
     ...(pitch?[]:[['overview',ar?'المشروع':'Project'] as [string,string]]),
@@ -172,7 +172,7 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
             <p className={styles.ambition}>{project.ambition[locale]}</p>
             <p className={styles.lede}>{project.summary[locale]}</p>
           </>}
-          <div className={styles.actions}><Link className={styles.primary} href={projectInquiry(project,locale)}>{ar?'ناقش تكليف المشروع':'Discuss a project mandate'}<ArrowUpRight size={18} aria-hidden="true"/></Link></div>
+          <div className={styles.actions}>{box?<a className={styles.primary} href={boxMailto(box,locale)}>{box.cta[locale]}<ArrowUpRight size={18} aria-hidden="true"/></a>:<Link className={styles.primary} href={projectInquiry(project,locale)}>{ar?'ناقش تكليف المشروع':'Discuss a project mandate'}<ArrowUpRight size={18} aria-hidden="true"/></Link>}</div>
         </div>
         <ProfileCard project={project} locale={locale}/>
       </div>
@@ -211,7 +211,20 @@ export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) 
       <Eyebrow>{ar?'ما الذي يميّزه':'WHAT SETS IT APART'}</Eyebrow>
       <ul className={styles.edges}>{pitch.edges.map(edge=><li key={edge.en}>{edge[locale]}</li>)}</ul>
     </div></section>}
-    {!pitch&&<section id="overview" className={`${styles.section} ${styles.band}`}><div className={`${styles.wrap} ${styles.split}`}>
+    {box&&<>
+      <section id="why" className={`${styles.section} ${styles.band}`}><div className={styles.wrap}>
+        <h2 className={styles.h2}>{box.whyTitle[locale]}</h2><p className={styles.big}>{project.idea[locale]}</p>
+      </div></section>
+      <section id="inside" className={styles.section}><div className={styles.wrap}>
+        <h2 className={styles.h2}>{box.insideTitle[locale]}</h2>
+        <div className={styles.workGrid}>{box.inside.map((item,i)=><article key={item.title.en}><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span><h3>{item.title[locale]}</h3><p>{item.text[locale]}</p></article>)}</div>
+      </div></section>
+      <section id="cohort" className={`${styles.section} ${styles.band}`}><div className={styles.wrap}>
+        <h2 className={styles.h2}>{box.cohortTitle[locale]}</h2><p className={styles.prose}>{box.cohort[locale]}</p>
+        <div className={styles.actions}><a className={styles.primary} href={boxMailto(box,locale)}>{box.cta[locale]}<ArrowUpRight size={18} aria-hidden="true"/></a><span className={styles.mono} dir="ltr">{box.email}</span></div>
+      </div></section>
+    </>}
+    {!pitch&&!box&&<section id="overview" className={`${styles.section} ${styles.band}`}><div className={`${styles.wrap} ${styles.split}`}>
       <div><Eyebrow>{ar?'التحدي':'THE CHALLENGE'}</Eyebrow><p className={styles.big}>{file?.challenge[locale]||project.idea[locale]}</p></div>
       <div className={styles.panel}><Eyebrow>{ar?'دور VisionSeek':'VISIONSEEK’S ROLE'}</Eyebrow><p>{file?.role[locale]||project.idea[locale]}</p><Eyebrow>{ar?'لمن':'WHO IT IS FOR'}</Eyebrow><p>{project.beneficiary[locale]}</p></div>
     </div></section>}

@@ -131,7 +131,12 @@ test('project concepts resolve to a real sector and track, with public dossiers 
   assert.ok(isText(catalog.conceptNotice));
   for (const key of ['concept', 'active', 'completed']) assert.ok(isText(catalog.status[key]), key);
   for (const track of catalog.tracks) assert.ok(catalog.sectors.some(s => s.slug === track.sector), track.slug);
-  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P09']);
+  assert.deepEqual(concepts.map(c => c.id).sort(), ['VS-P09', 'VS-P11']);
+  // VisionSeek Box (15 Oct 2026): interest goes to projects@ by email, no form and no status line on the page
+  const box = concepts.find(c => c.id === 'VS-P11');
+  assert.equal(box.box.email, 'projects@visionseek.org');
+  assert.ok(box.summary.ar.includes('سيادتك') && box.summary.ar.includes('أمانها'));
+  assert.equal(box.box.inside.length, 3);
   for (const project of concepts) {
     assert.ok(catalog.tracks.some(t => t.slug === project.track && t.sector === project.sector), project.id);
     assert.ok(['concept', 'active', 'completed'].includes(project.status), project.id);
