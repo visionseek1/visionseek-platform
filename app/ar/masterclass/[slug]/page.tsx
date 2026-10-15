@@ -1,10 +1,9 @@
 import type {Metadata} from 'next';
-import {OG_IMAGES} from '@/lib/seo';
 import {notFound} from 'next/navigation';
 import {DetailPage} from '@/components/institution/pages';
 import {WorkshopPage} from '@/components/institution/workshops-view';
 import {entries, getEntry} from '@/lib/institution';
-import {getWorkshop, workshops, workshopTitle} from '@/lib/institution/workshops';
+import {getWorkshop, workshops} from '@/lib/institution/workshops';
 
 export const dynamicParams = false;
 
@@ -23,10 +22,10 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const workshop = getWorkshop(slug);
   if (workshop) {
     return {
-      title: `${workshopTitle(workshop, 'ar')} | VisionSeek`,
+      title: `${workshop.outcome.ar} | VisionSeek`,
       description: workshop.summary.ar,
       alternates: {canonical: `/ar/masterclass/${slug}`, languages: {en: `/masterclass/${slug}`, ar: `/ar/masterclass/${slug}`}},
-      openGraph: {images:OG_IMAGES,title: `${workshopTitle(workshop, 'ar')} | VisionSeek`, description: workshop.summary.ar, url: `/ar/masterclass/${slug}`},
+      openGraph: {title: `${workshop.outcome.ar} | VisionSeek`, description: workshop.summary.ar, url: `/ar/masterclass/${slug}`},
     };
   }
   const entry = getEntry('workshops', slug);
@@ -35,7 +34,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     title: `${entry.title.ar} | VisionSeek`,
     description: entry.summary.ar,
     alternates: {canonical: `/ar/masterclass/${slug}`, languages: {en: `/masterclass/${slug}`, ar: `/ar/masterclass/${slug}`}},
-    openGraph: {images:OG_IMAGES,title: `${entry.title.ar} | VisionSeek`, description: entry.summary.ar, url: `/ar/masterclass/${slug}`},
+    openGraph: {title: `${entry.title.ar} | VisionSeek`, description: entry.summary.ar, url: `/ar/masterclass/${slug}`},
   };
 }
 

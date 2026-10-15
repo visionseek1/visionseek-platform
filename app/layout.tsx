@@ -4,8 +4,6 @@ import "./globals.css";
 import "./capability.css";
 import "./institution.css";
 import {site} from '@/lib/site';
-import {TITLE_EN} from '@/lib/seo';
-import {oneMessage} from '@/lib/one-message';
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -51,7 +49,8 @@ const structuredData = {
       name: "VisionSeek",
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-color.png",
-      description: "VisionSeek is the institutional capability architect for Arab institutions, based in Korea. " + oneMessage.home.problem.text.en,
+      description:
+        "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
       email: site.email,
       telephone: site.phoneE164,
       address: {
@@ -84,8 +83,9 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
-  title: TITLE_EN,
-  description: oneMessage.home.problem.text.en,
+  title: "VisionSeek | Make It Possible.",
+  description:
+    "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
   icons: {
     icon: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
     shortcut: "/visionseek-symbol-color.png",
@@ -101,10 +101,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "VisionSeek",
-    title: TITLE_EN,
-    description: oneMessage.home.problem.text.en,
+    title: "VisionSeek | Make It Possible.",
+    description:
+      "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
     url: "/",
-    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek" }],
+    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
   },
   robots: {
     index: true,

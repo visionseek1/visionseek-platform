@@ -361,7 +361,7 @@ export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
   cache = null;
 }
 
-const LEAD_RECORDERS = new Set(["د. أحمد", "Claude", "nimo", "الموقع"]);
+const LEAD_RECORDERS = new Set(["د. أحمد", "Claude", "nimo"]);
 
 export type NewLead = LeadMap & { name: string; stage?: string; decider?: string; note?: string; by?: string };
 

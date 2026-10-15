@@ -35,9 +35,6 @@ export type Workshop = {
   kind: WorkshopKind;
   institution: InstitutionKind | '';
   roles: RoleId[];
-  /** Short page title (15 Oct 2026); the outcome stays the headline. */
-
-  title?: Bi;
   outcome: Bi;
   summary: Bi;
   audienceRole: Bi;
@@ -142,9 +139,6 @@ const loadWorkshops = (): Workshop[] =>
     .sort((a, b) => a.position - b.position || a.slug.localeCompare(b.slug));
 
 export const workshopSection: WorkshopSection = JSON.parse(readFileSync(sectionFile, 'utf8')) as WorkshopSection;
-/** The <title> of a masterclass page: the short title when set, otherwise the outcome line. */
-export const workshopTitle = (w: {title?: Bi; outcome: Bi}, locale: 'ar' | 'en'): string => (w.title?.[locale] || w.outcome[locale]);
-
 export const workshops: Workshop[] = loadWorkshops();
 export const getWorkshop = (slug: string) => workshops.find(item => item.slug === slug);
 

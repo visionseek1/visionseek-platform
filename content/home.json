@@ -19,10 +19,10 @@
           "en": "",
           "ar": ""
         },
-        "href": "/initiative",
+        "href": "/start",
         "link": {
-          "en": "Book your free session",
-          "ar": "احجز جلستك المجانية"
+          "en": "Build your solutions with us",
+          "ar": "ابنِ حلولك معنا"
         }
       },
       {
@@ -180,8 +180,8 @@
       "ar": "قد تواجه مؤسستك تحديًا، أو ترى فرصة تحتاج إلى حل جديد. نجمع معك الخبرات والتقنيات المناسبة لبناء حل يخدم أهدافك ويعمل في واقعك."
     },
     "button": {
-      "en": "Book your free session",
-      "ar": "احجز جلستك المجانية"
+      "en": "Build your solutions with us",
+      "ar": "ابنِ حلولك معنا"
     },
     "image": "/field-energy.jpg",
     "imageAlt": {
@@ -199,8 +199,8 @@
       "ar": "ما الحل الذي سيمنح مؤسستك السبق؟"
     },
     "button": {
-      "en": "Book your free session",
-      "ar": "احجز جلستك المجانية"
+      "en": "Build your solutions with us",
+      "ar": "ابنِ حلولك معنا"
     },
     "founderLink": {
       "en": "Meet the founder and explore the vision",
@@ -286,5 +286,52 @@
         }
       }
     ]
+  },
+  "proof": {
+    "heading": {
+      "en": "Built. Not promised.",
+      "ar": "اتبنى بالفعل — مش وعود"
+    },
+    "items": [
+      {
+        "value": "6",
+        "label": {
+          "en": "Autonomous engines running the institution's research, every hour",
+          "ar": "محركات ذاتية تدير بحث المؤسسة — تلف كل ساعة بلا توقف"
+        }
+      },
+      {
+        "value": "6",
+        "label": {
+          "en": "Programs announced and open",
+          "ar": "برامج معلنة ومتاحة"
+        }
+      },
+      {
+        "value": "9",
+        "label": {
+          "en": "Research reports and readings published",
+          "ar": "تقارير وقراءات منشورة"
+        }
+      }
+    ]
+  },
+  "decade": {
+    "eyebrow": {
+      "en": "THE NEXT DECADE",
+      "ar": "العقد القادم"
+    },
+    "title": {
+      "en": "Within ten years, we will be steering the helm of the world's technological development.",
+      "ar": "احنا شايفين إن خلال 10 سنين هنكون بنقود دفة التطور التكنولوجي في العالم"
+    },
+    "sub": {
+      "en": "",
+      "ar": ""
+    },
+    "link": {
+      "en": "See what is already built",
+      "ar": "شوف اللي اتبنى فعلًا"
+    }
   }
 }

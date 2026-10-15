@@ -63,8 +63,8 @@
         },
         "paragraphs": [
           {
-            "en": "If you subscribe to the monthly newsletter on VisionSeek Insights, we keep your email address, the page language and the date you subscribed in an internal record on Notion, seen only by the VisionSeek team. We use your email only to send the newsletter; we never share or sell it. You can unsubscribe and have your email deleted at any time by writing to insights@visionseek.org.",
-            "ar": "إذا اشتركت في النشرة الشهرية من صفحة VisionSeek Insights، نحفظ بريدك الإلكتروني ولغة الصفحة وتاريخ اشتراكك في سجلّ داخلي على خدمة Notion، لا يطّلع عليه إلا فريق VisionSeek. نستخدم بريدك لإرسال النشرة وحدها، ولا نشاركه مع أحد ولا نبيعه. وتستطيع إلغاء اشتراكك وحذف بريدك في أي وقت بمراسلتنا على {{ltr:insights@visionseek.org}}."
+            "en": "If you subscribe to the monthly newsletter on VisionSeek Insights, we keep your email address, the page language and the date you subscribed in an internal record on Notion, seen only by the VisionSeek team. We use your email only to send the newsletter; we never share or sell it. You can unsubscribe and have your email deleted at any time by writing to abdelalim@visionseek.org.",
+            "ar": "إذا اشتركت في النشرة الشهرية من صفحة VisionSeek Insights، نحفظ بريدك الإلكتروني ولغة الصفحة وتاريخ اشتراكك في سجلّ داخلي على خدمة Notion، لا يطّلع عليه إلا فريق VisionSeek. نستخدم بريدك لإرسال النشرة وحدها، ولا نشاركه مع أحد ولا نبيعه. وتستطيع إلغاء اشتراكك وحذف بريدك في أي وقت بمراسلتنا على {{ltr:abdelalim@visionseek.org}}."
           }
         ],
         "bullets": []
@@ -114,8 +114,8 @@
         },
         "paragraphs": [
           {
-            "en": "The fields page describes areas of exploration, not delivered projects, unless a written agreement says otherwise. Insights is a sensor: readings and briefings to help you see, not legal, investment, or policy advice, and not a decision made for you.",
-            "ar": "صفحة المجالات تصف مساحات استكشاف، لا مشروعات مُسلَّمة، إلا إذا قال اتفاق مكتوب غير ذلك. صفحة Insights مستشعر: قراءات وإحاطات للمساعدة على الرؤية، لا نصيحة قانونية أو استثمارية أو قرارًا حكوميًا بالنيابة عنك."
+            "en": "The fields page describes areas of exploration, not delivered projects, unless a written agreement says otherwise. Insights is a sensor: signals and briefings to help you see, not legal, investment, or policy advice, and not a decision made for you.",
+            "ar": "صفحة المجالات تصف مساحات استكشاف، لا مشروعات مُسلَّمة، إلا إذا قال اتفاق مكتوب غير ذلك. صفحة الرؤى مستشعر: إشارات وإحاطات للمساعدة على الرؤية، لا نصيحة قانونية أو استثمارية أو قرارًا حكوميًا بالنيابة عنك."
           }
         ],
         "bullets": []
