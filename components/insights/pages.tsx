@@ -19,10 +19,10 @@ export function SubNav({locale, current}: {locale: Locale; current: 'all' | 'not
   return <nav className={styles.subnav} aria-label={ar ? 'أقسام Insights' : 'Insights sections'}><div className={styles.subnavInner}>
     <Link href={`${p}/insights`} aria-current={current === 'all' ? 'page' : undefined}>{ar ? 'الكل' : 'All'}</Link>
     {insights.reports.length > 0 && <Link href={`${p}/insights/reports`} aria-current={current === 'reports' ? 'page' : undefined}>{t(s.reports.title)}</Link>}
+    {insights.research.length > 0 && <Link href={`${p}/insights/research`} aria-current={current === 'research' ? 'page' : undefined}>{t(s.research.title)}</Link>}
     {insights.articles.length > 0 && <a href={`${p}/insights#articles`}>{t(s.articles.title)}</a>}
     {first && <Link href={`${p}/insights/notes/${first.slug}`} aria-current={current === 'notes' ? 'page' : undefined}>{t(s.notes.title)}</Link>}
     {fw && <Link href={`${p}/insights/frameworks/${fw.slug}`} aria-current={current === 'frameworks' ? 'page' : undefined}>{t(s.frameworks.title)}</Link>}
-    {insights.research.length > 0 && <Link href={`${p}/insights/research`} aria-current={current === 'research' ? 'page' : undefined}>{t(s.research.title)}</Link>}
     <a className={styles.end} href={`${p}/insights#newsletter`}>{t(insights.newsletter.title)}</a>
   </div></nav>;
 }
