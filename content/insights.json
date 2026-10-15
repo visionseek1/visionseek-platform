@@ -203,19 +203,8 @@
         "ar": "نسخة أولية · Zenodo · أكتوبر 2026 · أحمد عبد العليم، VisionSeek",
         "en": "Preprint · Zenodo · October 2026 · Ahmed Abdelalim, VisionSeek"
       },
-      "summary": {
-        "ar": "تقيس الورقة إلى أي مدى توجّه النماذج اللغوية قرارات إنسانية مركّبة حين لا تعرف إلا معلومة واحدة: تنقلب التوصية في نحو خُمس الحالات حين يعرف النموذج الصورة كاملة. وتختبر بروتوكولًا يكشف فيه النموذج الأبعاد الناقصة قبل أن ينصح.",
-        "en": "The paper measures how far language models steer complex human decisions from a single fact: recommendations reverse in about one case in five once the model sees the full picture. It tests a protocol in which the model discloses the missing dimensions before advising."
-      },
       "preprint": "https://doi.org/10.5281/zenodo.23399249",
       "doi": "10.5281/zenodo.23399249",
-      "related": {
-        "href": "/insights/reports/half-the-picture",
-        "label": {
-          "ar": "اقرأ التقرير المبسّط",
-          "en": "Read the plain-language report"
-        }
-      },
       "date": "2026-10-16"
     }
   ],

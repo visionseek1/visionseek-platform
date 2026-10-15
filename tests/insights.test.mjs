@@ -77,7 +77,8 @@ test('Insights: reports and research papers live apart; the frameworks are archi
   const paper = d.research[0];
   assert.match(paper.title.en, /^Advice from Half the Picture/);
   assert.equal(paper.preprint, 'https://doi.org/10.5281/zenodo.23399249');
-  assert.equal(paper.related.href, '/insights/reports/half-the-picture');
+  assert.equal(paper.related, undefined);
+  assert.ok(json('content/visibility.json').archived.some(a => a.path === '/insights/notes/l-001'));
   for (const f of ['insights/reports/page.tsx', 'insights/research/page.tsx', 'insights/reports/half-the-picture/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
   assert.ok(json('content/visibility.json').archived.some(a => a.path === '/insights/frameworks/decision-dimensions'));
   assert.equal(d.frameworks[0].slug, 'decision-dimensions');
