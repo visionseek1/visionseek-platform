@@ -1,5 +1,5 @@
 /**
- * «النصيحة من نصف الصورة» — التقرير المبسّط لورقة مختبر VisionSeek (نسخة أولية على Zenodo).
+ * «احذر نصائح الذكاء الاصطناعي» — التقرير المبسّط لورقة مختبر VisionSeek (نسخة أولية على Zenodo).
  * النص العربي هو نص د. أحمد كما كتبه في التقرير. الإنجليزي نص مستقل لنفس الفكرة.
  * الأرقام كما وردت في الدراسة فقط — مفيش رقم من عندنا.
  */
@@ -13,10 +13,10 @@ export const paper = {
   date: '2026-10-16',
   dateLabel: {ar: 'أكتوبر 2026', en: 'October 2026'},
   label: {ar: 'مختبر VisionSeek · تقرير مبسّط لدراسة استكشافية', en: 'VisionSeek Lab · A plain-language report on an exploratory study'},
-  title: {ar: 'النصيحة من نصف الصورة', en: 'Advice from Half the Picture'},
+  title: {ar: 'احذر نصائح الذكاء الاصطناعي', en: 'Advice from Half the Picture'},
   question: {ar: 'هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟', en: 'How language models steer complex human decisions from partial information, and a dimension-disclosure protocol'},
   fullTitle: {
-    ar: 'النصيحة من نصف الصورة: هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟',
+    ar: 'احذر نصائح الذكاء الاصطناعي: هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟',
     en: 'Advice from Half the Picture: How Language Models Steer Complex Human Decisions from Partial Information, and a Dimension-Disclosure Protocol',
   },
   author: {ar: 'د. أحمد، مؤسس VisionSeek', en: 'Ahmed Abdelalim, VisionSeek'},

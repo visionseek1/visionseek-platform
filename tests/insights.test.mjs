@@ -65,13 +65,13 @@ test('/en/<page> redirects to the English page at the root', () => {
   assert.match(read('next.config.ts'), /source: '\/en\/:path\+', destination: '\/:path\+'/);
 });
 
-test('research paper «النصيحة من نصف الصورة»: card, report page in both languages, Arabic PDF and the DOI', () => {
+test('research paper «احذر نصائح الذكاء الاصطناعي» (Advice from Half the Picture): card, report page in both languages, Arabic PDF and the DOI', () => {
   const d = json('content/insights.json');
   assert.equal(d.sections.research.title.ar, 'أوراقنا العلمية');
   const r = d.research.find(x => x.page === '/insights/research/half-the-picture');
   assert.ok(r);
   assert.equal(r.preprint, 'https://doi.org/10.5281/zenodo.23399249');
-  assert.match(r.title.ar, /^النصيحة من نصف الصورة/);
+  assert.match(r.title.ar, /^احذر نصائح الذكاء الاصطناعي/);
   assert.match(r.title.en, /^Advice from Half the Picture/);
   assert.ok(existsSync('public' + r.pdf), r.pdf);
   for (const f of ['app/insights/research/half-the-picture/page.tsx', 'app/ar/insights/research/half-the-picture/page.tsx']) assert.ok(existsSync(f), f);
