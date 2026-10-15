@@ -86,5 +86,11 @@
       "ar": "VisionSeek Box — اهتمام",
       "en": "VisionSeek Box — interest"
     }
+  },
+  "profile": {
+    "audiences": [
+      "institution"
+    ],
+    "facts": []
   }
 }
