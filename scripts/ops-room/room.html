@@ -126,7 +126,6 @@ label.f .inp,label.f .sel{width:100%;color:var(--ink)}
 .filters label{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mute)}
 .method{display:flex;flex-direction:column;gap:10px}
 .method ol{margin:0;padding-inline-start:20px;display:grid;gap:4px}
-.learn{border-color:var(--line)}.lb.stale{background:var(--late-bg)}
 .kv{display:grid;grid-template-columns:120px 1fr;gap:6px 14px;font-size:13.5px}
 .kv dt{color:var(--mute)}.kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .tbl{overflow-x:auto}
@@ -218,6 +217,7 @@ const ICON = {
   branch: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 7v10M6 12h10"/></svg>',
   menu: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
   chev: '<svg class="ico chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>',
+  trophy: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M9 20h6"/></svg>',
   plus: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
 };
 
@@ -430,7 +430,8 @@ function renderSide() {
   }).join("");
   $("#side").innerHTML = `<div class="brand"><span class="logo">VS</span><b style="font-size:15px">منصة الإدارة</b></div>
 <a class="nl ${on("home")}" href="#home">${ICON.home}الرئيسية</a>
-<a class="nl ${on("learn")}" href="#learn">${ICON.book}محرّك التعلم${staleBranches().length ? `<span class="c num" style="color:var(--late)">${staleBranches().length}</span>` : `<span class="c num">${LENTRIES.length}</span>`}</a>
+<a class="nl ${on("research")}" href="#research">${ICON.book}الأبحاث والنشر<span class="c num">${PUBS.length}</span></a>
+<a class="nl ${on("comps")}" href="#comps">${ICON.trophy}المسابقات${redComps().length ? `<span class="c num" style="color:var(--late)">${redComps().length}</span>` : `<span class="c num">${COMPS.length}</span>`}</a>
 <span class="grp">القطاعات</span>${sec}<a class="nl sub ${on("later")}" href="#later" style="color:var(--mute)">بعدين<span class="c num">${later}</span></a>
 <span class="grp">الأقسام والمسارات</span>${deps}
 <span class="grp">المكتبة</span>
@@ -447,95 +448,78 @@ function renderSide() {
 }
 function menu(open) { document.body.classList.toggle("menu", !!open); }
 
-// ---------- محرّك التعلم: «اللي أحمد بيتعلمه» (15 أكتوبر 2026)
-// كل مدخل فكرة جديدة برقم L-xxx، وتحته فروع مربوطة بقطاعاتها. «بحث» أول فرع لما المدخل محتاج بحث، ومش إجباري.
-const LEARN_TYPES = [["بحث", "المعرفة وبناء القادة"], ["ماستركلاس/تعليم", "المعرفة وبناء القادة"], ["منتج", "المنتجات الجاهزة"], ["نقل تقنية", "الشراكات ونقل التكنولوجيا"], ["خدمة مؤسسية", "خدمات المؤسسات"], ["ظهور", "الظهور والتواصل"]];
-const LEARN_ST = ["جاري", "معلّق", "خلص", "اتقفل", "اتلغى"];
-const LEARN_CLOSED = ["خلص", "اتقفل", "اتلغى"];
-const LEARN_STALE_DAYS = 14;
-const LBR = (L && L.learnBranches ? L.learnBranches : []).map((r) => ({
-  id: ID(r), title: String(r["الفرع"] || ""), entry: pid(arr(r["المدخل"])[0] || ""), type: String(r["النوع"] || ""), sector: String(r["القطاع"] || ""),
-  owner: String(r["الصاحب"] || ""), due: day(r["الموعد"]), next: String(r["الخطوة الجاية"] || ""), status: String(r["الحالة"] || "جاري"),
-  dep: String(r["معلّق على"] || "").trim(), last: day(r["آخر حركة"]) || day(r.created), freed: day(r["اتفك التعليق"]), reason: String(r["سبب القرار"] || ""), url: r.url,
-})).filter((b) => b.type);
-const LENTRIES = (L && L.learn ? L.learn : []).map((r) => ({ id: ID(r), idea: String(r["الفكرة"] || ""), num: String(r["الرقم"] || ""), date: day(r["التاريخ"]) || day(r.created), notes: String(r["ملاحظات"] || ""), url: r.url }))
-  .filter((e) => e.idea).sort((a, b) => (a.num < b.num ? 1 : -1));
-const typeOrder = (t) => LEARN_TYPES.findIndex((x) => x[0] === t);
-const branchesOf = (e) => LBR.filter((b) => b.entry === e.id).sort((a, b) => typeOrder(a.type) - typeOrder(b.type));
-const daysBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 864e5);
-/** الفرع «المعلّق على» فرع تاني: الساعة واقفة لحد ما الفرع ده يخلص، وبعدها العدّ يبدأ من وقت ما خلص. */
-function learnClock(b) {
-  if (LEARN_CLOSED.includes(b.status)) return { stale: false, waiting: false, since: "" };
-  let since = b.last;
-  if (b.dep) {
-    const sib = LBR.find((x) => x !== b && x.entry === b.entry && x.type === b.dep);
-    if (sib && sib.status !== "خلص") return { stale: false, waiting: true, since: "" };
-    if (sib) { const freed = b.freed || sib.last; if (freed && (!since || freed > since)) since = freed; }
-  }
-  return { stale: !!since && daysBetween(since, TODAY) >= LEARN_STALE_DAYS, waiting: false, since };
+// ---------- الأبحاث والنشر (16 أكتوبر 2026): صف لكل ورقة أو تقرير أو مقال في كل جهة نشر
+const PUB_TYPES = ["ورقة علمية", "تقرير", "مقال"];
+const PUB_ST = ["فكرة", "كتابة", "مراجعة", "منشور"];
+const PUB_PILL = { "فكرة": "p-idea", "كتابة": "p-filter", "مراجعة": "p-doing", "منشور": "p-done" };
+const PUBS = (L && L.research ? L.research : []).map((r) => ({ id: ID(r), title: String(r["العنوان"] || ""), type: String(r["النوع"] || ""), status: String(r["الحالة"] || "فكرة"), venue: String(r["الجهة"] || ""), link: String(r["الرابط"] || ""), date: day(r["التاريخ"]), url: r.url }))
+  .filter((x) => x.title).sort((a, b) => ((b.date || "") > (a.date || "") ? 1 : -1));
+function pubCard(x) {
+  return `<article class="card pad" style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pill ${PUB_PILL[x.status] || "p-idea"}">${t(x.status)}</span>${x.type ? `<span class="tag">${t(x.type)}</span>` : ""}${x.venue ? `<span class="tag">${t(x.venue)}</span>` : ""}${x.date ? `<span class="tag">${fmt(x.date)}</span>` : ""}</div>
+<p dir="auto" style="font-weight:600;font-size:14px;line-height:1.6">${x.link ? `<a href="${esc(x.link)}" target="_blank" rel="noreferrer" style="color:var(--ink)">${t(x.title)}</a>` : t(x.title)}</p>
+<details><summary class="small" style="cursor:pointer">عدّل</summary><form method="post" action="/ops/research" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:8px;align-items:end"><input type="hidden" name="action" value="update"><input type="hidden" name="id" value="${x.id}"><input type="hidden" name="back" value="research">
+<label class="f">الحالة<select class="sel" name="status">${PUB_ST.map((st) => `<option${st === x.status ? " selected" : ""}>${st}</option>`).join("")}</select></label>
+<label class="f">التاريخ<input class="inp" type="date" name="date" value="${esc(x.date)}"></label>
+<label class="f" style="grid-column:1/-1">الرابط<input class="inp" name="link" value="${esc(x.link)}" dir="ltr" maxlength="500"></label>
+<div><button class="btn pri sm" type="submit">احفظ</button></div></form></details></article>`;
 }
-const staleBranches = () => LBR.filter((b) => learnClock(b).stale);
-const learnPill = (b) => {
-  const c = learnClock(b);
-  if (c.stale) return '<span class="pill p-late">محتاج قرار: قفل أو إلغاء</span>';
-  const cls = { "جاري": "p-doing", "معلّق": "p-filter", "خلص": "p-done", "اتقفل": "p-later", "اتلغى": "p-later" }[b.status] || "p-idea";
-  return `<span class="pill ${cls}">${t(b.status)}${c.waiting && b.dep ? ` على «${t(b.dep)}»` : ""}</span>`;
-};
-function learnDecide(b) {
-  const f = (v, label, cls) => `<form method="post" action="/ops/learn" style="display:flex;gap:6px"><input type="hidden" name="action" value="decide"><input type="hidden" name="id" value="${b.id}"><input type="hidden" name="verdict" value="${v}"><input type="hidden" name="back" value="${curBack()}"><button class="btn ${cls}" type="submit">${label}</button></form>`;
-  return `<div style="display:flex;gap:8px">${f("cancel", "إلغاء", "")}${f("close", "قفل", "yes")}</div>`;
+function pageResearch(a) {
+  if (a === "new") return head("إضافة للأبحاث والنشر", `<a href="#home">الرئيسية</a> › <a href="#research">الأبحاث والنشر</a>`) + notLive() + `
+<form class="card pad" method="post" action="/ops/research" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;max-width:820px;align-items:end"><input type="hidden" name="action" value="create"><input type="hidden" name="back" value="research">
+<label class="f" style="grid-column:1/-1">العنوان<input class="inp" name="title" required maxlength="300" dir="auto"></label>
+<label class="f">النوع<select class="sel" name="kind">${PUB_TYPES.map((x) => `<option>${x}</option>`).join("")}</select></label>
+<label class="f">الحالة<select class="sel" name="status">${PUB_ST.map((x) => `<option>${x}</option>`).join("")}</select></label>
+<label class="f">الجهة (مجلة، موقع، Zenodo…)<input class="inp" name="venue" maxlength="200" dir="auto"></label>
+<label class="f">التاريخ<input class="inp" type="date" name="date"></label>
+<label class="f" style="grid-column:1/-1">الرابط (لو اتنشر)<input class="inp" name="link" maxlength="500" dir="ltr"></label>
+<div><button class="btn pri" type="submit">ضيف</button></div></form>`;
+  const cols = PUB_ST.map((st) => { const xs = PUBS.filter((x) => x.status === st); return `<section style="display:flex;flex-direction:column;gap:8px;min-width:0"><div style="display:flex;justify-content:space-between;align-items:center"><span class="pill ${PUB_PILL[st]}">${st}</span><span class="small mute num">${xs.length}</span></div>${xs.map(pubCard).join("") || '<p class="empty">—</p>'}</section>`; }).join("");
+  return head("الأبحاث والنشر", `<a href="#home">الرئيسية</a>`, `<a class="btn pri" href="#research/new">${ICON.plus}إضافة</a>`) + notLive() + `
+<p class="mute">صف لكل ورقة أو تقرير أو مقال، في كل جهة نشر: فكرة ← كتابة ← مراجعة ← منشور.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;align-items:start">${cols}</div>`;
 }
-function branchRow(b, opts = {}) {
-  const c = learnClock(b);
-  const sec = sectorByName(b.sector);
-  return `<div class="row lb${c.stale ? " stale" : ""}" style="flex-wrap:wrap;align-items:flex-start">
-<div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:5px">
-<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><b style="font-size:14px">${opts.withEntry ? `${t(opts.withEntry)} · ` : ""}${t(b.type)}</b>${learnPill(b)}</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap">${sec ? `<a class="tag" href="#sector/${sec.id}">${t(b.sector)}</a>` : `<span class="tag">${t(b.sector)}</span>`}${b.owner ? `<span class="tag">الصاحب: ${t(b.owner)}</span>` : '<span class="tag warn">⚠️ من غير صاحب</span>'}${b.due ? lateTag(b.due, LEARN_CLOSED.includes(b.status)) : '<span class="tag">من غير موعد</span>'}${c.since && !LEARN_CLOSED.includes(b.status) ? `<span class="tag">آخر حركة ${fmt(c.since)}</span>` : ""}</div>
-${b.next ? `<p class="small"><span class="mute">الخطوة الجاية:</span> ${t(b.next)}</p>` : ""}${b.reason ? `<p class="small mute">سبب القرار: ${t(b.reason)}</p>` : ""}
-</div>${c.stale ? learnDecide(b) : ""}</div>`;
+
+// ---------- المسابقات (16 أكتوبر 2026): الاسم، الرابط، الحالة، الموعد (آخر يوم للتقديم)
+const COMP_ST = ["مفتوحة", "مسجّلين", "بنجهّز", "قدّمنا", "انتهت"];
+const COMP_PILL = { "مفتوحة": "p-idea", "مسجّلين": "p-filter", "بنجهّز": "p-doing", "قدّمنا": "p-done", "انتهت": "p-later" };
+const COMP_WARN_DAYS = 7;
+const COMPS = (L && L.competitions ? L.competitions : []).map((r) => ({ id: ID(r), name: String(r["الاسم"] || ""), link: String(r["الرابط"] || ""), status: String(r["الحالة"] || "مفتوحة"), due: day(r["الموعد"]), url: r.url }))
+  .filter((x) => x.name).sort((a, b) => ((a.due || "9999") < (b.due || "9999") ? -1 : 1));
+/** المسابقة تنوّر أحمر لو موعدها فات أو باقي عليه أسبوع أو أقل، ولسه ما قدّمناش. */
+const compOpen = (x) => ["مفتوحة", "مسجّلين", "بنجهّز"].includes(x.status);
+const compLeft = (x) => (x.due ? Math.round((Date.parse(x.due) - Date.parse(TODAY)) / 864e5) : null);
+const compRed = (x) => compOpen(x) && compLeft(x) !== null && compLeft(x) <= COMP_WARN_DAYS;
+const redComps = () => COMPS.filter(compRed);
+function compRow(x) {
+  const left = compLeft(x);
+  const when = x.due ? (left < 0 ? `<span class="pill p-late">فات · ${fmt(x.due)}</span>` : left === 0 ? '<span class="pill p-late">النهارده</span>' : `<span class="${compRed(x) ? "pill p-late" : "tag"} num">${fmt(x.due)} · باقي ${left} يوم</span>`) : '<span class="tag">من غير موعد</span>';
+  return `<div class="row" style="flex-wrap:wrap;align-items:flex-start${compRed(x) ? ";background:var(--late-bg)" : ""}">
+<div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:6px">
+<b dir="auto" style="font-size:14px">${x.link ? `<a href="${esc(x.link)}" target="_blank" rel="noreferrer" style="color:var(--ink)">${t(x.name)}</a>` : t(x.name)}</b>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pill ${COMP_PILL[x.status] || "p-idea"}">${t(x.status)}</span>${when}${x.link ? "" : '<span class="tag">⚠️ من غير رابط</span>'}</div></div>
+<form method="post" action="/ops/comps" style="display:flex;gap:6px;flex-wrap:wrap;align-items:end"><input type="hidden" name="action" value="update"><input type="hidden" name="id" value="${x.id}"><input type="hidden" name="back" value="comps">
+<select class="sel" name="status" aria-label="الحالة">${COMP_ST.map((st) => `<option${st === x.status ? " selected" : ""}>${st}</option>`).join("")}</select>
+<input class="inp" type="date" name="due" value="${esc(x.due)}" aria-label="الموعد" style="width:auto">
+<button class="btn sm" type="submit">احفظ</button></form></div>`;
 }
-function learnSection() {
-  const entries = LENTRIES.slice(0, 4);
-  const body = entries.map((e) => `<div style="border-top:1px solid var(--line2)"><a href="#learn/${e.id}" style="display:flex;gap:10px;align-items:baseline;padding:12px 16px;color:var(--ink);text-decoration:none;flex-wrap:wrap"><span class="tag num" style="font-weight:700">${t(e.num)}</span><b style="flex:1;min-width:200px;font-size:15px">${t(e.idea)}</b><span class="small mute">${e.date ? fmt(e.date) : ""}</span></a><div class="rows">${branchesOf(e).map((b) => branchRow(b)).join("") || '<p class="empty">لسه مفيش فروع. <a href="#learn/' + e.id + '">ضيف فرع</a></p>'}</div></div>`).join("");
-  const red = staleBranches().length;
-  return `<section class="card learn" aria-label="اللي أحمد بيتعلمه"><div style="display:flex;align-items:center;gap:10px;padding:14px 16px;flex-wrap:wrap"><div style="display:flex;flex-direction:column;gap:2px;margin-inline-end:auto"><h2 style="font-size:16px">اللي أحمد بيتعلمه</h2><span class="small mute">محرّك التعلم · كل فكرة جديدة وفروعها في القطاعات</span></div>${red ? `<span class="pill p-late num">${red} محتاج قرار</span>` : ""}<a class="btn" href="#learn">كل المدخلات</a><a class="btn pri" href="#learn/new">${ICON.plus}مدخل جديد</a></div>${body || '<p class="empty" style="border-top:1px solid var(--line2)">لسه مفيش مدخلات.</p>'}</section>`;
-}
-function pageLearn(a) {
-  if (a === "new") return head("مدخل جديد", `<a href="#home">الرئيسية</a> › <a href="#learn">محرّك التعلم</a>`) + notLive() + `
-<form class="card pad" method="post" action="/ops/learn" style="display:flex;flex-direction:column;gap:12px;max-width:720px"><input type="hidden" name="action" value="entry"><input type="hidden" name="back" value="learn">
-<p class="small mute">الرقم بيتحط لوحده بعد آخر رقم، والتاريخ النهارده. الفروع بتتضاف من صفحة المدخل.</p>
-<label class="f">الفكرة أو المعرفة الجديدة<input class="inp" name="idea" required maxlength="300"></label>
-<label class="f">ملاحظات (اختياري)<textarea class="inp" name="notes" maxlength="1800"></textarea></label>
-<div><button class="btn pri" type="submit">سجّل المدخل</button></div></form>`;
-  const e = a && LENTRIES.find((x) => x.id === a);
-  if (e) {
-    const bs = branchesOf(e);
-    const have = bs.map((b) => b.type);
-    const types = LEARN_TYPES.filter((x) => !have.includes(x[0]));
-    const edit = bs.filter((b) => !LEARN_CLOSED.includes(b.status)).map((b) => `<details class="card"><summary style="padding:12px 16px;cursor:pointer">عدّل «${t(b.type)}»</summary><form method="post" action="/ops/learn" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;padding:0 16px 16px;align-items:end"><input type="hidden" name="action" value="update"><input type="hidden" name="id" value="${b.id}"><input type="hidden" name="back" value="learn/${e.id}">
-<label class="f">الحالة<select class="sel" name="status">${LEARN_ST.map((s) => `<option${s === b.status ? " selected" : ""}>${s}</option>`).join("")}</select></label>
-<label class="f">الصاحب<input class="inp" name="owner" value="${esc(b.owner)}" maxlength="200"></label>
-<label class="f">الموعد<input class="inp" type="date" name="due" value="${esc(b.due)}"></label>
-<label class="f" style="grid-column:1/-1">الخطوة الجاية<input class="inp" name="next" value="${esc(b.next)}" maxlength="600"></label>
-<div><button class="btn pri" type="submit">احفظ</button></div></form></details>`).join("");
-    const add = types.length ? `<form class="card pad" method="post" action="/ops/learn" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;align-items:end"><input type="hidden" name="action" value="branch"><input type="hidden" name="entry" value="${e.id}"><input type="hidden" name="num" value="${esc(e.num)}"><input type="hidden" name="back" value="learn/${e.id}">
-<h3 style="grid-column:1/-1;font-size:14px">فرع جديد</h3>
-<label class="f">النوع (والقطاع بيتحدد منه)<select class="sel" name="kind">${types.map(([n, s]) => `<option value="${n}">${n} ← ${s}</option>`).join("")}</select></label>
-<label class="f">الصاحب<input class="inp" name="owner" maxlength="200"></label>
-<label class="f">الموعد<input class="inp" type="date" name="due"></label>
-<label class="f">معلّق على<select class="sel" name="depends"><option value="">مش معلّق</option>${have.map((h) => `<option>${t(h)}</option>`).join("")}</select></label>
-<label class="f" style="grid-column:1/-1">الخطوة الجاية<input class="inp" name="next" maxlength="600"></label>
-<div><button class="btn pri" type="submit">ضيف الفرع</button></div></form>` : "";
-    return head(`${e.num} · ${e.idea}`, `<a href="#home">الرئيسية</a> › <a href="#learn">محرّك التعلم</a>`, `<a class="btn" href="${esc(e.url || "#")}" target="_blank" rel="noreferrer">افتح في Notion</a>`) + notLive() + `
-<div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">${e.date ? fmt(e.date) : ""}</span>${e.notes ? `<span class="small">${t(e.notes)}</span>` : ""}</div>
-<section class="card"><div style="padding:14px 16px"><h2 style="font-size:15px">الفروع</h2></div><div class="rows" style="border-top:1px solid var(--line2)">${bs.map((b) => branchRow(b)).join("") || '<p class="empty">لسه مفيش فروع.</p>'}</div></section>
-<p class="small mute">أي فرع ملوش حركة أسبوعين بيتعلّم أحمر «محتاج قرار: قفل أو إلغاء». الفرع المعلّق على فرع تاني ما يتحسبش عليه الوقت غير من وقت ما الفرع ده يخلص.</p>
-${edit ? `<section class="sec"><div class="t"><h2>تحديث الفروع</h2><span>أي حفظ = حركة</span></div>${edit}</section>` : ""}${add}`;
-  }
-  return head("محرّك التعلم", `<a href="#home">الرئيسية</a>`, `<a class="btn pri" href="#learn/new">${ICON.plus}مدخل جديد</a>`) + notLive() + `
-<p class="mute">اللي أحمد بيتعلمه: كل مدخل فكرة جديدة برقم وتاريخ، وتحته فروع: بحث · ماستركلاس/تعليم · منتج · نقل تقنية · خدمة مؤسسية · ظهور. كل فرع مربوط بقطاعه.</p>
-${LENTRIES.map((e) => `<a class="card pad" href="#learn/${e.id}" style="display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink)"><div style="display:flex;gap:10px;align-items:baseline;flex-wrap:wrap"><span class="tag num" style="font-weight:700">${t(e.num)}</span><b style="flex:1;min-width:200px">${t(e.idea)}</b><span class="small mute">${e.date ? fmt(e.date) : ""}</span></div><div style="display:flex;gap:6px;flex-wrap:wrap">${branchesOf(e).map((b) => `<span class="tag">${t(b.type)} · ${t(learnClock(b).stale ? "محتاج قرار" : b.status)}</span>`).join("")}</div></a>`).join("") || '<p class="empty">لسه مفيش مدخلات.</p>'}`;
+function pageComps(a) {
+  if (a === "new") return head("مسابقة جديدة", `<a href="#home">الرئيسية</a> › <a href="#comps">المسابقات</a>`) + notLive() + `
+<form class="card pad" method="post" action="/ops/comps" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;max-width:820px;align-items:end"><input type="hidden" name="action" value="create"><input type="hidden" name="back" value="comps">
+<label class="f" style="grid-column:1/-1">الاسم<input class="inp" name="name" required maxlength="300" dir="auto"></label>
+<label class="f" style="grid-column:1/-1">الرابط<input class="inp" name="link" maxlength="500" dir="ltr"></label>
+<label class="f">الحالة<select class="sel" name="status">${COMP_ST.map((x) => `<option>${x}</option>`).join("")}</select></label>
+<label class="f">الموعد (آخر يوم للتقديم)<input class="inp" type="date" name="due"></label>
+<div><button class="btn pri" type="submit">ضيف</button></div></form>`;
+  const counts = COMP_ST.map((st) => `<span class="pill ${COMP_PILL[st]}">${st} <b class="num">${COMPS.filter((x) => x.status === st).length}</b></span>`).join("");
+  const live = COMPS.filter((x) => x.status !== "انتهت");
+  const done = COMPS.filter((x) => x.status === "انتهت");
+  const red = redComps().length;
+  return head("المسابقات", `<a href="#home">الرئيسية</a>`, `<a class="btn pri" href="#comps/new">${ICON.plus}مسابقة جديدة</a>`) + notLive() + `
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${counts}${red ? `<span class="pill p-late num">${red} موعدها قرّب ولسه ما قدّمناش</span>` : ""}</div>
+<p class="small mute">مفتوحة ← مسجّلين ← بنجهّز ← قدّمنا ← انتهت. المسابقة بتنوّر أحمر لو موعدها فات أو باقي عليه أسبوع أو أقل، ولسه ما قدّمناش.</p>
+<section class="card"><div class="rows">${live.map(compRow).join("") || '<p class="empty">لسه مفيش مسابقات.</p>'}</div></section>
+${done.length ? `<details class="card"><summary style="padding:12px 16px;cursor:pointer">انتهت (${done.length})</summary><div class="rows">${done.map(compRow).join("")}</div></details>` : ""}`;
 }
 // ---------- النشرة الشهرية لـ VisionSeek Insights: بند في قطاع الظهور والتواصل (15 أكتوبر 2026)
 const SUBS = (L && L.newsletter ? L.newsletter : []).map((r) => ({ email: String(r["البريد"] || ""), lang: String(r["اللغة"] || ""), page: String(r["الصفحة"] || ""), status: String(r["الحالة"] || "مشترك"), date: day(r["تاريخ الاشتراك"]) || day(r.created) })).filter((x) => x.email).sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -547,19 +531,11 @@ function newsletterBlock() {
 <details style="border-top:1px solid var(--line2)"><summary style="padding:12px 16px;cursor:pointer">القايمة (${active.length})</summary><div class="rows">${active.map((x) => `<div class="row"><span style="flex:1;min-width:0;direction:ltr;text-align:right;overflow-wrap:anywhere">${esc(x.email)}</span><span class="tag">${x.lang === "en" ? "English" : "عربي"}</span><span class="tag">${fmt(x.date)}</span></div>`).join("") || '<p class="empty">لسه مفيش مشتركين.</p>'}</div></details></div></section>`;
 }
 
-function learnInSector(s) {
-  const bs = LBR.filter((b) => b.sector === s.name && !LEARN_CLOSED.includes(b.status));
-  if (!bs.length) return "";
-  const num = (b) => { const e = LENTRIES.find((x) => x.id === b.entry); return e ? e.num : ""; };
-  return `<section class="sec"><div class="t"><h2>من محرّك التعلم</h2><span>فروع مربوطة بالقطاع ده</span></div><div class="card"><div class="rows">${bs.map((b) => branchRow(b, { withEntry: num(b) })).join("")}</div></div></section>`;
-}
-
 // ---------- الصفحات
 function pageHome() {
   const goals = GOALS.map((g, n) => { const s = goalStatus(g); return `<article class="card pad" style="display:flex;flex-direction:column;gap:10px${s.ok ? "" : ";border-color:var(--stuck-bg)"}"><div style="display:flex;justify-content:space-between;gap:8px"><span class="tag num">${n + 1}</span>${goalPill(s.ok)}</div><p style="font-weight:600;font-size:15px">${t(g.title)}</p><p class="small ${s.ok ? "mute" : "warn"}">${s.items.length ? `${s.items.length} عنصر مربوط · ${s.active.length} شغال` : "مفيش ولا عنصر مربوط"}</p></article>`; }).join("") || '<p class="empty">الأهداف مش متسجلة في Notion.</p>';
   const decs = [
     ...waitingDecisions().map((d) => `<div class="row" style="flex-wrap:wrap"><div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:5px"><a href="${esc(d.url)}" target="_blank" rel="noreferrer" style="color:var(--ink);font-weight:600;text-decoration:none">${t(d.title)}</a><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">قرار</span>${d.dept ? `<span class="tag">${t(d.dept)}</span>` : ""}${d.asked ? `<span class="tag">اتطلب ${fmt(d.asked)}</span>` : ""}</div>${d.reason ? `<p class="small mute">${t(d.reason).slice(0, 220)}</p>` : ""}</div><div style="display:flex;gap:8px">${decForm(d.id, "no", "رفض")}${decForm(d.id, "ok", "موافقة", "yes")}</div></div>`),
-    ...staleBranches().map((b) => { const e = LENTRIES.find((x) => x.id === b.entry); return `<div class="row" style="flex-wrap:wrap"><div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:5px"><a href="#learn/${b.entry}" style="color:var(--ink);font-weight:600;text-decoration:none">${e ? t(e.num) + " · " : ""}${t(b.type)}: محتاج قرار</a><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">محرّك التعلم</span><span class="tag">${t(b.sector)}</span><span class="pill p-late">ملوش حركة أسبوعين</span></div></div>${learnDecide(b)}</div>`; }),
     ...waitingWork().map((i) => `<div class="row" style="flex-wrap:wrap"><div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:5px"><a href="#item/${i.id}" style="color:var(--ink);font-weight:600;text-decoration:none">${t(i.title)}</a><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag">عنصر</span>${i.track ? `<span class="tag">${t(i.track)}</span>` : ""}${i.owner ? `<span class="tag">${t(i.owner)}</span>` : ""}${lateTag(i.due, false)}</div></div><div style="display:flex;gap:8px">${stageForm(i.id, "بعدين", "رفض", "", "home")}${stageForm(i.id, "شغال", "موافقة", "yes", "home")}</div></div>`),
   ];
   const up = upcoming();
@@ -575,7 +551,6 @@ function pageHome() {
 <section class="card" aria-label="قرارات مستنية أحمد"><div style="display:flex;align-items:center;gap:10px;padding:14px 16px"><h2 style="font-size:15px">قرارات مستنياك</h2><span class="pill p-wait num">${decs.length}</span></div><div class="rows" style="border-top:1px solid var(--line2)">${decs.join("") || '<p class="empty">مفيش حاجة مستنياك.</p>'}</div></section>
 <section class="card" aria-label="مواعيد قريبة"><div style="padding:14px 16px"><h2 style="font-size:15px">مواعيد قريبة</h2></div><div class="rows" style="border-top:1px solid var(--line2)">${up || '<p class="empty">مفيش مواعيد قريبة.</p>'}</div></section>
 </div>
-${learnSection()}
 <section class="sec" aria-label="القطاعات"><div class="t"><h2>القطاعات هذا الأسبوع</h2><span>الشريط = العناصر في كل عمود</span></div><div class="grid g5">${secs}</div></section>
 ${initiativeStrip()}`;
 }
@@ -610,7 +585,7 @@ function pageSector(id) {
 <section class="card pad sec"><div class="t"><h2>المقياس الأسبوعي</h2><span>من المسارات اللي بتخدم القطاع</span></div><p style="font-size:22px;font-weight:700" class="num">${moved(all)}</p><p class="small mute">عنصر اتحرك آخر 7 أيام</p>${stageBar(all)}</section>
 </div>
 <section class="sec"><div class="t"><h2>المسارات اللي بتخدم القطاع</h2><span>من كل الأقسام</span></div>${ts.length ? `<div class="grid g3">${tcards}</div>` : '<div class="card pad warn">⚠️ لسه مفيش مسار بيخدم القطاع ده. المسارات تحت الأقسام ثابتة، فمحتاج قرارك: أنهي مسار يخدمه؟</div>'}</section>
-<section class="sec"><div class="t"><h2>لوحة الشغل</h2><span>فكرة ← بيتفلتر ← شغال ← مستني أحمد ← خلص</span></div>${filtersBar(all, ["dept", "track"])}${kanban(list)}</section>${learnInSector(s)}${s.name === "الظهور والتواصل" ? newsletterBlock() : ""}`;
+<section class="sec"><div class="t"><h2>لوحة الشغل</h2><span>فكرة ← بيتفلتر ← شغال ← مستني أحمد ← خلص</span></div>${filtersBar(all, ["dept", "track"])}${kanban(list)}</section>${s.name === "الظهور والتواصل" ? newsletterBlock() : ""}`;
 }
 function trackCard(x, showDept) {
   const its = trackItems(x);
@@ -907,14 +882,14 @@ function render() {
   let h = location.hash.slice(1) || "home";
   if (ALIAS[h]) { location.replace("#" + ALIAS[h]); return; }
   const [p, a] = [h.split("/")[0], h.split("/").slice(1).join("/")];
-  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "learn" ? pageLearn(a) : pageHome();
+  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "research" ? pageResearch(a) : p === "comps" ? pageComps(a) : pageHome();
   $("#main").innerHTML = html;
   renderSide();
   menu(false);
 }
 let lastPage = "";
 window.addEventListener("hashchange", () => { const p = location.hash.split("/").slice(0, 2).join("/"); if (p !== lastPage) { FILTER = { dept: "", owner: "", track: "" }; LF.stale = false; lastPage = p; } render(); window.scrollTo(0, 0); });
-const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", learn: "اتسجّل في محرّك التعلم.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
+const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", pub: "اتسجّل في الأبحاث والنشر.", comp: "اتسجّل في المسابقات.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
 render();
 if (RM.flash || /[?&]r=/.test(location.search)) {
   const r = new URLSearchParams(location.search).get("r") || "";

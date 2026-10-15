@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { createHmac } from "node:crypto";
 import test from "node:test";
 
@@ -162,7 +163,7 @@ test("review login: a second password that reads only, accepted in preview only;
   assert.match(auth, /return isPreview\(\) && s && s\.length >= 8 \? s : null/);
   assert.match(auth, /export function cookieIsOwner/);
   assert.doesNotMatch(auth, /ROOM_REVIEW_PASSWORD\s*=\s*["']/);
-  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/learn/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
+  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/research/route.ts", "app/ops/comps/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
     const t = await read(f);
     assert.match(t, /cookieIsOwner/, `${f} must require the owner to write`);
   }
@@ -179,22 +180,22 @@ test("methodologies: a room view, owner-only approval, agents read only approved
   assert.match(route, /cookieIsOwner|cookieIsValid/);
 });
 
-test("learning engine: entries L-xxx, six branch types tied to sectors, two-week red flag that waits on dependencies", async () => {
-  const [lib, route, mod] = await Promise.all([read("lib/notion-room.ts"), read("app/ops/learn/route.ts"), read("app/ops/room-html.ts")]);
+test("research & publishing and competitions replace the learning engine; Notion learn data is left untouched", async () => {
+  const [lib, research, comps, mod] = await Promise.all([read("lib/notion-room.ts"), read("app/ops/research/route.ts"), read("app/ops/comps/route.ts"), read("app/ops/room-html.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  assert.match(lib, /learn: \{ ds: "59de2970-31b2-4c62-8914-b3c8fecd3857"/);
-  assert.match(lib, /learnBranches: \{ ds: "f9da4209-1ee3-474f-be98-2a7d0958034e"/);
-  for (const [type, sector] of [["بحث", "المعرفة وبناء القادة"], ["ماستركلاس/تعليم", "المعرفة وبناء القادة"], ["منتج", "المنتجات الجاهزة"], ["نقل تقنية", "الشراكات ونقل التكنولوجيا"], ["خدمة مؤسسية", "خدمات المؤسسات"], ["ظهور", "الظهور والتواصل"]]) {
-    assert.ok(lib.includes(`"${type}": "${sector}"`), type);
-    assert.ok(html.includes(`["${type}", "${sector}"]`), type);
+  assert.doesNotMatch(html, /محرّك التعلم|اللي أحمد بيتعلمه|\/ops\/learn/);
+  assert.ok(!existsSync(new URL("../app/ops/learn/route.ts", import.meta.url)));
+  assert.match(lib, /learn: \{ ds: "59de2970-31b2-4c62-8914-b3c8fecd3857"/); // the Notion data stays where it is
+  assert.doesNotMatch(lib, /query\(SOURCES\.learn/);
+  assert.match(lib, /research: \{ ds: "161b632e-cee3-4f48-a902-58cabe7f87f6"/);
+  assert.match(lib, /competitions: \{ ds: "dfb7c211-c54d-4d4c-9365-dcb6293d2541"/);
+  assert.match(lib, /COMP_STATUSES = \["مفتوحة", "مسجّلين", "بنجهّز", "قدّمنا", "انتهت"\]/);
+  assert.match(lib, /PUB_STATUSES = \["فكرة", "كتابة", "مراجعة", "منشور"\]/);
+  for (const needle of ["الأبحاث والنشر", "المسابقات", "#research", "#comps", "/ops/research", "/ops/comps", "COMP_WARN_DAYS = 7"]) assert.ok(html.includes(needle), needle);
+  assert.ok(html.includes('const COMP_ST = ["مفتوحة", "مسجّلين", "بنجهّز", "قدّمنا", "انتهت"]'));
+  for (const route of [research, comps]) {
+    assert.match(route, /cookieIsOwner/);
+    assert.match(route, /isPreview\(\)/);
+    assert.doesNotMatch(route, /archived|in_trash|DELETE/);
   }
-  assert.match(lib, /LEARN_STALE_DAYS = 14/);
-  assert.match(html, /LEARN_STALE_DAYS = 14/);
-  assert.match(lib, /"اتفك التعليق"/);
-  assert.match(html, /محتاج قرار: قفل أو إلغاء/);
-  assert.match(html, /اللي أحمد بيتعلمه/);
-  assert.match(html, /"بحث أبعاد القرار"/);
-  assert.match(route, /verdict"\) === "close" \? "اتقفل"/);
-  assert.match(route, /"cancel" \? "اتلغى"/);
-  assert.doesNotMatch(route, /archived|in_trash|DELETE/);
 });
