@@ -144,6 +144,8 @@ label.f .inp,label.f .sel{width:100%;color:var(--ink)}
 .grants span.on{background:var(--accent);border-color:var(--accent)}
 #toast{position:fixed;bottom:20px;inset-inline-start:50%;transform:translateX(50%);background:var(--ink);color:var(--ground);padding:10px 16px;border-radius:9px;font-size:13.5px;z-index:50;max-width:min(92vw,520px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
 #toast.err{background:var(--late);color:#fff}
+.review form button[type=submit],.review .btn.pri{pointer-events:none;opacity:.45}
+#revbar{display:none;background:var(--late-bg);color:var(--ink);font-size:13px;padding:8px 16px;text-align:center}.review #revbar{display:block}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 #scrim{display:none}
 @media (max-width:1100px){.g5{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr 1fr}.hero>div:first-child{grid-column:1/-1}.hero>div:nth-child(2){border-inline-start:0;padding-inline-start:0}}
@@ -173,6 +175,7 @@ label.f .inp,label.f .sel{width:100%;color:var(--ink)}
 <nav id="side" aria-label="التنقل"></nav>
 <div style="flex:1;min-width:0;display:flex;flex-direction:column">
 <header id="topbar"><button type="button" aria-label="القايمة" onclick="menu(true)"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><h1 id="ttl">مركز القيادة</h1><a href="#new" aria-label="إضافة عنصر"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a></header>
+<div id="revbar">وضع المراجعة — قراءة بس. مفيش حفظ على Notion من هنا.</div>
 <main id="main"></main>
 </div>
 </div>
@@ -180,8 +183,11 @@ label.f .inp,label.f .sel{width:100%;color:var(--ink)}
 <div id="toast" role="status" hidden></div>
 <script>
 // ---------- DATA
-const RM = window.__ROOM__ || { live: null, flash: "", seen: "" };
+const RM = window.__ROOM__ || { live: null, flash: "", seen: "", role: "" };
 const L = RM.live;
+// دور المراجعة: قراءة بس — الأزرار اللي بتكتب مخفية، والسيرفر بيرفض الكتابة كمان.
+const REVIEW = RM.role === "review";
+if (REVIEW) document.documentElement.classList.add("review");
 const LIVE = !!L;
 const ON_SITE = location.pathname.indexOf("/ops") === 0;
 
@@ -362,7 +368,7 @@ const goalPill = (ok) => (ok ? '<span class="pill p-ok"><i></i>ماشي</span>' 
 const lateTag = (d, done) => (d && !done ? (d < TODAY ? `<span class="pill p-late">فات · ${fmt(d)}</span>` : d === TODAY ? '<span class="pill p-wait">الموعد النهارده</span>' : `<span class="tag">${fmt(d)}</span>`) : "");
 function itemCard(i, opts = {}) {
   const tr = trackOf(i);
-  return `<a class="it" href="#item/${i.id}" draggable="true" ondragstart="dragStart(event,'${i.id}')" data-id="${i.id}">
+  return `<a class="it" href="#item/${i.id}" draggable="${REVIEW ? "false" : "true"}" ondragstart="dragStart(event,'${i.id}')" data-id="${i.id}">
 <span class="tt">${t(i.title)}</span>
 <span class="mm">${opts.noTrack || !i.track ? "" : `<span class="tag">${t(i.track)}</span>`}${i.owner ? `<span class="tag">${t(i.owner)}</span>` : ""}${lateTag(i.due, i.stage === "done")}${!i.filter && i.stage !== "done" ? '<span class="tag" title="لسه ما اتسألش «هل يبني قدرات؟»">محتاج فلتر</span>' : ""}${!tr ? '<span class="pill p-late">⚠️ من غير مسار</span>' : ""}</span>
 </a>`;
@@ -733,7 +739,7 @@ let LF = { stage: "", country: "", source: "", sector: "", stale: false, view: "
 const leadPill = (l) => `<span class="pill ${l.stage === "جديد" ? "p-filter" : l.stage === "مغلق — فاز" ? "p-ok" : l.stage === "مغلق — خسر" ? "p-later" : "p-doing"}">${t(l.stage)}</span>`;
 const staleTag = (l) => (l.stale ? `<span class="pill p-late">🚩 من غير تواصل ${LEAD_STALE_DAYS} يوم</span>` : "");
 function leadCard(l) {
-  return `<a class="it" href="#client/${l.id}" draggable="${leadClosed(l) ? "false" : "true"}" ondragstart="dragStartLead(event,'${l.id}')" data-id="${l.id}">
+  return `<a class="it" href="#client/${l.id}" draggable="${leadClosed(l) || REVIEW ? "false" : "true"}" ondragstart="dragStartLead(event,'${l.id}')" data-id="${l.id}">
 <span class="tt">${t(l.name)}</span>
 <span class="mm">${l.source ? `<span class="tag">${t(l.source)}</span>` : '<span class="tag warn">⚠️ من غير مصدر</span>'}${l.country ? `<span class="tag">${t(l.country)}</span>` : ""}${leadClosed(l) ? leadPill(l) : ""}${staleTag(l)}${l.follow && !leadClosed(l) ? lateTag(l.follow, false) : ""}</span>
 ${l.next && !leadClosed(l) ? `<span class="small mute">${t(l.next).slice(0, 90)}</span>` : ""}
@@ -908,7 +914,7 @@ function render() {
 }
 let lastPage = "";
 window.addEventListener("hashchange", () => { const p = location.hash.split("/").slice(0, 2).join("/"); if (p !== lastPage) { FILTER = { dept: "", owner: "", track: "" }; LF.stale = false; lastPage = p; } render(); window.scrollTo(0, 0); });
-const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", learn: "اتسجّل في محرّك التعلم.", contact: "التواصل اتسجّل على العميل.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
+const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", learn: "اتسجّل في محرّك التعلم.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
 render();
 if (RM.flash || /[?&]r=/.test(location.search)) {
   const r = new URLSearchParams(location.search).get("r") || "";

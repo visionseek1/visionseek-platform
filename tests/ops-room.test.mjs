@@ -62,7 +62,7 @@ test("the room reads Notion live from the server and writes only engine requests
   assert.doesNotMatch(notion, /archived:\s*true|in_trash:\s*true/);
   assert.match(route, /window\.__ROOM__/);
   assert.match(route, /\\u003c/);
-  assert.match(run, /cookieIsValid/);
+  assert.match(run, /cookieIsOwner|cookieIsValid/);
   assert.match(html, /\/ops\/run/);
   assert.match(html, /window\.__ROOM__/);
 });
@@ -76,7 +76,7 @@ test("the tree: sector ← department ← track ← item ← methodology", async
   // الأنواع الثمانية اتلغت من زر «إضافة»: العنصر بيتعرّف بمساره
   assert.doesNotMatch(html, /name="type"/);
   assert.match(card, /مفيش عنصر من غير مسار/);
-  assert.match(card, /cookieIsValid/);
+  assert.match(card, /cookieIsOwner|cookieIsValid/);
   assert.match(notion, /tracks: \{ ds: "803372be-41c1-8328-b878-07f0cc236e5a"/);
   assert.match(notion, /function trackInfo/);
   assert.match(notion, /export async function proposeMethodUpdate/);
@@ -108,7 +108,7 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
   assert.match(sw, /notificationclick/);
   assert.equal(JSON.parse(vercel).crons[0].path, "/ops/push/send");
   assert.match(send, /CRON_SECRET/);
-  assert.match(send, /cookieIsValid/);
+  assert.match(send, /cookieIsOwner|cookieIsValid/);
   assert.doesNotMatch(keygen, /VAPID_PRIVATE_KEY\s*=\s*["']/);
   for (const f of ["lib/webpush.ts", "lib/notion-room.ts", "app/ops/push/keygen/route.ts"]) {
     const t = await read(f);
@@ -117,7 +117,7 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
 });
 
 test("clients (CRM phase 1): one pipeline in Ahmed's order, seven sources, contact log, 14-day flag, no sending", async () => {
-  const [mod, notion, lead, booking] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts"), read("app/api/booking/route.ts")]);
+  const [mod, notion, lead] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
   // الخط: جلسة، بعدها تشخيص، بعدها عرض (قرار د. أحمد 15 أكتوبر) — في المكتبة وفي الواجهة
   const pipeline = '["جديد", "جلسة تعريفية", "تشخيص", "عرض", "تعاقد", "تنفيذ"]';
@@ -144,13 +144,31 @@ test("clients (CRM phase 1): one pipeline in Ahmed's order, seven sources, conta
   assert.match(lead, /action === "contact"/);
   assert.match(lead, /source: g\("source"\)/);
   assert.match(lead, /pieces: opt\("pieces"\)/);
-  assert.match(lead, /cookieIsValid/);
-  // الحجز من الموقع: مصدر «الحجز» + مرحلة «جلسة تعريفية» + أول صف في سجل التواصل
-  assert.match(booking, /source: "الحجز"/);
-  assert.match(booking, /stage: "جلسة تعريفية"/);
-  assert.match(booking, /addContact\(/);
+  assert.match(lead, /cookieIsOwner|cookieIsValid/);
+  // مراجعة nimo (15 أكتوبر): المعاينة ما تكتبش على Notion، والمصدر مطلوب في السيرفر، والمراجع يقرا بس
+  assert.match(lead, /if \(isPreview\(\)\) return Response\.redirect\(`\$\{origin\}\/ops\?r=preview/);
+  assert.match(lead, /if \(!g\("source"\)\) return Response\.redirect\(`\$\{origin\}\/ops\?r=nosource/);
+  assert.match(notion, /if \(!source\) throw new Error\("source required"\)/);
+  assert.doesNotMatch(notion, /: "تواصل مباشر";/);
+  assert.match(lead, /cookieIsOwner\(cookie\)/);
   // مفيش إرسال لأي عميل من المنصة: ولا دالة إرسال بريد في مكتبة Notion أو مسار العملاء
-  for (const [name, text] of [["lib", notion], ["lead", lead], ["booking", booking]]) assert.doesNotMatch(text, /sendMail|nodemailer|resend\.|sendgrid|mailgun/i, `${name} must not send`);
+  for (const [name, text] of [["lib", notion], ["lead", lead]]) assert.doesNotMatch(text, /sendMail|nodemailer|resend\.|sendgrid|mailgun/i, `${name} must not send`);
+});
+
+test("review login: a second password that reads only, accepted in preview only; every write route is owner-only", async () => {
+  const auth = await read("lib/room-auth.ts");
+  assert.match(auth, /process\.env\.VERCEL_ENV !== "production"/);
+  assert.match(auth, /ROOM_REVIEW_PASSWORD/);
+  assert.match(auth, /return isPreview\(\) && s && s\.length >= 8 \? s : null/);
+  assert.match(auth, /export function cookieIsOwner/);
+  assert.doesNotMatch(auth, /ROOM_REVIEW_PASSWORD\s*=\s*["']/);
+  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/learn/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
+    const t = await read(f);
+    assert.match(t, /cookieIsOwner/, `${f} must require the owner to write`);
+  }
+  const mod = await read("app/ops/room-html.ts");
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  assert.match(html, /وضع المراجعة — قراءة بس/);
 });
 
 test("methodologies: a room view, owner-only approval, agents read only approved ones", async () => {
@@ -158,7 +176,7 @@ test("methodologies: a room view, owner-only approval, agents read only approved
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
   for (const needle of ["renderMethods", "المنهجيات", "/ops/method", "المعتمدة", "مسارات من غير منهجية"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.match(notion, /export async function updateMethodStatus/);
-  assert.match(route, /cookieIsValid/);
+  assert.match(route, /cookieIsOwner|cookieIsValid/);
 });
 
 test("learning engine: entries L-xxx, six branch types tied to sectors, two-week red flag that waits on dependencies", async () => {

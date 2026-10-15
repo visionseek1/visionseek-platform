@@ -405,14 +405,17 @@ const LEAD_RECORDERS = new Set(["د. أحمد", "Claude", "nimo"]);
 
 export type NewLead = LeadMap & { name: string; stage?: string; decider?: string; note?: string; by?: string };
 
-/** يضيف جهة جديدة على لوحة العملاء (قاعدة «عملاء — خط المتابعة») بخانات الخريطة. إضافة فقط. المصدر مطلوب؛ اللي جاي من الموقع مصدره «الموقع». */
+/** يضيف جهة جديدة على لوحة العملاء (قاعدة «عملاء — خط المتابعة») بخانات الخريطة. إضافة فقط. المصدر مطلوب ولا يُفترض؛ اللي جاي من الموقع نفسه مصدره «الموقع». */
 export async function createLead(l: NewLead): Promise<string> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
   const name = (l.name || "").trim().slice(0, 200);
   if (!name) throw new Error("empty name");
   const stage = l.stage && LEAD_STAGES.has(l.stage) ? l.stage : "جديد";
   const by = l.by && LEAD_RECORDERS.has(l.by) ? l.by : "د. أحمد";
-  const source = l.source && LEAD_SOURCE_SET.has(l.source) ? l.source : by === "الموقع" ? "الموقع" : "تواصل مباشر";
+  // المصدر مطلوب (مراجعة nimo 15 أكتوبر): مفيش مصدر افتراضي. اللي جاي من الموقع نفسه بس ياخد «الموقع».
+  if (l.source && !LEAD_SOURCE_SET.has(l.source)) throw new Error("bad source");
+  const source = l.source || (by === "الموقع" ? "الموقع" : "");
+  if (!source) throw new Error("source required");
   const properties: Record<string, unknown> = {
     "الجهة": { title: [{ text: { content: name } }] },
     "المرحلة": { select: { name: stage } },

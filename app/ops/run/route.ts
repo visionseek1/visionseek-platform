@@ -1,4 +1,4 @@
-import { cookieIsValid, readCookie } from "@/lib/room-auth";
+import { cookieIsOwner, readCookie } from "@/lib/room-auth";
 import { createEngineRequest, notionConfigured } from "@/lib/notion-room";
 
 /**
@@ -7,7 +7,7 @@ import { createEngineRequest, notionConfigured } from "@/lib/notion-room";
  */
 export async function POST(request: Request) {
   const origin = new URL(request.url).origin;
-  if (!cookieIsValid(readCookie(request.headers.get("cookie")))) {
+  if (!cookieIsOwner(readCookie(request.headers.get("cookie")))) {
     return Response.redirect(`${origin}/ops`, 303);
   }
   if (!notionConfigured()) return Response.redirect(`${origin}/ops?r=err#eng`, 303);

@@ -1,14 +1,15 @@
-import { cookieIsValid, readCookie } from "@/lib/room-auth";
+import { cookieIsOwner, cookieIsValid, isPreview, readCookie } from "@/lib/room-auth";
 import { addContact, createLead, notionConfigured, updateLeadMap, updateLeadStage } from "@/lib/notion-room";
 
 /**
  * نظام العملاء (المرحلة 1): تحريك كارت عميل على الخط، وبياناته، وتسجيل تواصل عليه.
- * الكتابة في قاعدتين بس: «عملاء — خط المتابعة» و«سجل التواصل». للمالك فقط. مفيش إرسال لأي عميل من هنا.
+ * الكتابة في قاعدتين بس: «عملاء — خط المتابعة» و«سجل التواصل». للمالك فقط (المراجع بيقرا بس). مفيش إرسال لأي عميل من هنا.
+ * في المعاينة (VERCEL_ENV مش production) مفيش أي كتابة على Notion — الطلب بيرجع «معاينة — مفيش حفظ».
  */
 export async function POST(request: Request) {
   const origin = new URL(request.url).origin;
-  if (!cookieIsValid(readCookie(request.headers.get("cookie")))) return Response.redirect(`${origin}/ops`, 303);
-  if (!notionConfigured()) return Response.redirect(`${origin}/ops?r=err#clients`, 303);
+  const cookie = readCookie(request.headers.get("cookie"));
+  if (!cookieIsValid(cookie)) return Response.redirect(`${origin}/ops`, 303);
 
   let f: FormData;
   try {
@@ -23,9 +24,13 @@ export async function POST(request: Request) {
   const opt = (k: string) => (f.has(k) ? g(k) : undefined);
   // الرجوع لنفس الصفحة في المنصة (مثلًا #client/<id>)، وإلا لصفحة العملاء
   const hash = "#" + (g("back").replace(/[^a-z0-9._\-/]/gi, "").slice(0, 80) || "clients");
+  if (isPreview()) return Response.redirect(`${origin}/ops?r=preview${hash}`, 303);
+  if (!cookieIsOwner(cookie)) return Response.redirect(`${origin}/ops?r=readonly${hash}`, 303);
+  if (!notionConfigured()) return Response.redirect(`${origin}/ops?r=err${hash}`, 303);
   const action = g("action");
-  // جهة جديدة على اللوحة (من د. أحمد، أو نقلًا عن nimo، أو من نتيجة رادار)
+  // جهة جديدة على اللوحة (من د. أحمد، أو نقلًا عن nimo، أو من نتيجة رادار). المصدر مطلوب — السيرفر بيرفض من غيره.
   if (action === "create") {
+    if (!g("source")) return Response.redirect(`${origin}/ops?r=nosource${hash}`, 303);
     try {
       await createLead({ name: g("name"), stage: g("stage"), type: g("type"), place: g("place"), service: g("service"), outcome: g("outcome"), followup: g("followup"), decider: g("decider"), note: g("note"), signal: g("signal"), signalUrl: g("signalUrl"), by: g("by"), value: g("value"), forecast: g("forecast"), track: g("track"), source: g("source"), sector: g("sector"), next: g("next"), email: g("email") });
       return Response.redirect(`${origin}/ops?r=saved${hash}`, 303);
