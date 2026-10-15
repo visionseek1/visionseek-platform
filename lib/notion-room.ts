@@ -20,9 +20,13 @@ export const SOURCES = {
   leads: { ds: "3c2372be-41c1-826d-bcfc-0701247fee53", db: "193372be41c18375a5a78114d3d70c5d" },
   // الشجرة (13 أكتوبر 2026): القطاع ← القسم ← المسار ← العنصر ← المنهجية. كل مسار تحت قسم، وبيشاور على منهجيته.
   tracks: { ds: "803372be-41c1-8328-b878-07f0cc236e5a", db: "2b5372be41c1827a982f812ee578375d" },
-  // محرّك التعلم (15 أكتوبر 2026): «اللي أحمد بيتعلمه» — مدخلات L-xxx، وتحت كل مدخل فروع مربوطة بقطاعاتها.
+  // محرّك التعلم (15 أكتوبر 2026): اتشال من المنصة 16 أكتوبر (قرار د. أحمد). المدخلات والفروع فاضلة في Notion زي ما هي، والمنصة مبقتش تقراها.
   learn: { ds: "59de2970-31b2-4c62-8914-b3c8fecd3857", db: "9366ca1687004a0a8f24426bc1179f92" },
   learnBranches: { ds: "f9da4209-1ee3-474f-be98-2a7d0958034e", db: "a8dadabb9bd44f49a7784b550434513d" },
+  // الأبحاث والنشر (16 أكتوبر 2026): صف لكل ورقة أو تقرير أو مقال في كل جهة نشر.
+  research: { ds: "161b632e-cee3-4f48-a902-58cabe7f87f6", db: "c084a15a23694c6aa759b8c9ed560397" },
+  // المسابقات (16 أكتوبر 2026): الاسم، الرابط، الحالة، الموعد (آخر يوم للتقديم).
+  competitions: { ds: "dfb7c211-c54d-4d4c-9365-dcb6293d2541", db: "21c7b10bbd714d06a4fd90f964ee885f" },
   // النشرة الشهرية لـ VisionSeek Insights (15 أكتوبر 2026): بند في قطاع الظهور والتواصل. مفيش إرسال غير بموافقة د. أحمد.
   newsletter: { ds: "8a242351-eda5-4798-b5ba-4d80afbcd564", db: "01b11b86292b44b0958c47f45128dd4d" },
   // نظام العملاء — المرحلة 1 (15 أكتوبر 2026): سجل التواصل، صف لكل مكالمة أو إيميل أو جلسة، مربوط بالعميل. كتابة بس، مفيش إرسال.
@@ -41,8 +45,8 @@ export type LiveRoom = {
   comments: Row[];
   leads: Row[];
   tracks: Row[];
-  learn: Row[];
-  learnBranches: Row[];
+  research: Row[];
+  competitions: Row[];
   newsletter: Row[];
   contacts: Row[];
   cycles: { title: string; url: string; edited: string }[];
@@ -147,7 +151,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, learn, learnBranches, newsletter, contacts, cyc] = await Promise.all([
+  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, research, competitions, newsletter, contacts, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -157,8 +161,8 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.comments), []),
     safe(query(SOURCES.leads), []),
     safe(query(SOURCES.tracks), []),
-    safe(query(SOURCES.learn), []),
-    safe(query(SOURCES.learnBranches), []),
+    safe(query(SOURCES.research), []),
+    safe(query(SOURCES.competitions), []),
     safe(query(SOURCES.newsletter), []),
     safe(query(SOURCES.contacts), []),
     safe(cycles(), []),
@@ -168,7 +172,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   const work = work0.filter(notNineStar);
   const requests = requests0.filter(notNineStar);
   const comments = comments0.filter(notNineStar);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, learn, learnBranches, newsletter, contacts, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, research, competitions, newsletter, contacts, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -758,46 +762,6 @@ export async function proposeMethodUpdate(itemId: string, methodId: string, note
   cache = null;
 }
 
-/* ---------- محرّك التعلم: «اللي أحمد بيتعلمه» (15 أكتوبر 2026) ---------- */
-
-/** أنواع الفروع، وكل نوع مربوط بقطاعه. «بحث» أول فرع لما المدخل محتاج بحث، ومش إجباري. */
-export const LEARN_BRANCHES: Record<string, string> = {
-  "بحث": "المعرفة وبناء القادة",
-  "ماستركلاس/تعليم": "المعرفة وبناء القادة",
-  "منتج": "المنتجات الجاهزة",
-  "نقل تقنية": "الشراكات ونقل التكنولوجيا",
-  "خدمة مؤسسية": "خدمات المؤسسات",
-  "ظهور": "الظهور والتواصل",
-};
-export const LEARN_STATUSES = ["جاري", "معلّق", "خلص", "اتقفل", "اتلغى"];
-const LEARN_CLOSED = new Set(["خلص", "اتقفل", "اتلغى"]);
-const DAY = 86_400_000;
-export const LEARN_STALE_DAYS = 14;
-
-/**
- * أي فرع ملوش حركة أسبوعين = «محتاج قرار: قفل أو إلغاء».
- * الفرع «المعلّق على» فرع تاني ما يتحسبش عليه وقت غير من وقت ما الفرع ده يخلص (قرار د. أحمد 15 أكتوبر).
- */
-export function learnBranchStale(b: Row, all: Row[], today: string): boolean {
-  if (LEARN_CLOSED.has(String(b["الحالة"] || ""))) return false;
-  const day = (v: unknown) => (v ? Date.parse(String(v).slice(0, 10)) : NaN);
-  let start = day(b["آخر حركة"]);
-  if (isNaN(start)) start = day(b["created"]);
-  const dep = String(b["معلّق على"] || "").trim();
-  if (dep) {
-    const entry = Array.isArray(b["المدخل"]) ? (b["المدخل"] as string[])[0] : "";
-    const sib = all.find((x) => x !== b && String(x["النوع"] || "") === dep && Array.isArray(x["المدخل"]) && (x["المدخل"] as string[])[0] === entry);
-    if (sib && String(sib["الحالة"] || "") !== "خلص") return false; // لسه مستني — الساعة واقفة
-    if (sib) {
-      let freed = day(b["اتفك التعليق"]);
-      if (isNaN(freed)) freed = day(sib["آخر حركة"]);
-      if (!isNaN(freed) && (isNaN(start) || freed > start)) start = freed;
-    }
-  }
-  if (isNaN(start)) return false;
-  return Date.parse(today) - start >= LEARN_STALE_DAYS * DAY;
-}
-
 async function patchPage(pageId: string, properties: Record<string, unknown>): Promise<void> {
   const res = await fetch(`${API}/pages/${pageId}`, {
     method: "PATCH",
@@ -817,84 +781,64 @@ async function createIn(src: { ds: string; db: string }, properties: Record<stri
 
 const todayStr = () => new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10); // توقيت كوريا
 
-/** مدخل جديد برقم بعد آخر رقم (L-001، L-002…). يرجّع معرّف الصفحة. */
-export async function createLearnEntry(idea: string, notes: string): Promise<string> {
-  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
-  const title = idea.trim().slice(0, 300);
-  if (!title) throw new Error("empty idea");
-  const rows = await query(SOURCES.learn);
-  const max = rows.reduce((m, r) => Math.max(m, Number((String(r["الرقم"] || "").match(/L-(\d+)/) || [])[1] || 0)), 0);
-  const num = "L-" + String(max + 1).padStart(3, "0");
-  const json = await createIn(SOURCES.learn, {
-    "الفكرة": { title: [{ text: { content: title } }] },
-    "الرقم": rt(num),
-    "التاريخ": { date: { start: todayStr() } },
-    "ملاحظات": rt(notes || ""),
-  });
-  cache = null;
-  return String(json.id || "");
-}
+/* ---------- الأبحاث والنشر، والمسابقات (16 أكتوبر 2026) — كتابة بس، مفيش حذف ---------- */
+export const PUB_TYPES = ["ورقة علمية", "تقرير", "مقال"];
+export const PUB_STATUSES = ["فكرة", "كتابة", "مراجعة", "منشور"];
+export const COMP_STATUSES = ["مفتوحة", "مسجّلين", "بنجهّز", "قدّمنا", "انتهت"];
+const isUrl = (v: string) => /^https?:\/\/\S+$/i.test(v);
+const urlProp = (v: string) => ({ url: v && isUrl(v) ? v.slice(0, 500) : null });
+const dateProp = (v: string) => ({ date: v && isDate(v) ? { start: v } : null });
 
-export type NewLearnBranch = { entry: string; entryNum: string; type: string; owner: string; due: string; next: string; dependsOn: string };
-
-/** فرع تحت مدخل: القطاع بيتحدد من النوع. لو معلّق على فرع تاني بيبدأ «معلّق». */
-export async function createLearnBranch(b: NewLearnBranch): Promise<void> {
+export type NewPub = { title: string; type: string; status: string; venue: string; link: string; date: string };
+export async function createPub(p: NewPub): Promise<void> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
-  if (!isPageId(b.entry)) throw new Error("bad entry");
-  const sector = LEARN_BRANCHES[b.type];
-  if (!sector) throw new Error("bad type");
-  const dep = b.dependsOn && LEARN_BRANCHES[b.dependsOn] && b.dependsOn !== b.type ? b.dependsOn : "";
-  const num = /^L-\d{3,}$/.test(b.entryNum) ? b.entryNum + " · " : "";
+  const title = p.title.trim().slice(0, 300);
+  if (!title) throw new Error("empty title");
+  if (!PUB_TYPES.includes(p.type) || !PUB_STATUSES.includes(p.status)) throw new Error("bad option");
   const properties: Record<string, unknown> = {
-    "الفرع": { title: [{ text: { content: num + b.type } }] },
-    "المدخل": { relation: [{ id: b.entry }] },
-    "النوع": { select: { name: b.type } },
-    "القطاع": { select: { name: sector } },
-    "الصاحب": rt(b.owner.slice(0, 200)),
-    "الخطوة الجاية": rt(b.next),
-    "الحالة": { select: { name: dep ? "معلّق" : "جاري" } },
-    "معلّق على": rt(dep),
-    "آخر حركة": { date: { start: todayStr() } },
+    "العنوان": { title: [{ text: { content: title } }] },
+    "النوع": { select: { name: p.type } },
+    "الحالة": { select: { name: p.status } },
+    "الجهة": rt(p.venue.slice(0, 200)),
   };
-  if (b.due && isDate(b.due)) properties["الموعد"] = { date: { start: b.due } };
-  await createIn(SOURCES.learnBranches, properties);
+  if (p.link) properties["الرابط"] = urlProp(p.link);
+  if (p.date) properties["التاريخ"] = dateProp(p.date);
+  await createIn(SOURCES.research, properties);
   cache = null;
 }
-
-export type LearnPatch = { status?: string; owner?: string; due?: string; next?: string; reason?: string };
-
-/**
- * أي تعديل على الفرع = حركة (بيتسجّل «آخر حركة» النهارده).
- * لما فرع يخلص: الفروع اللي معلّقة عليه في نفس المدخل بيتسجّل لها «اتفك التعليق» — ومن هنا يبدأ عدّ الأسبوعين.
- */
-export async function updateLearnBranch(pageId: string, p: LearnPatch): Promise<void> {
+export async function updatePub(pageId: string, p: { status?: string; link?: string; date?: string }): Promise<void> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
   if (!isPageId(pageId)) throw new Error("bad page id");
-  const today = todayStr();
-  const properties: Record<string, unknown> = { "آخر حركة": { date: { start: today } } };
-  if (p.status && LEARN_STATUSES.includes(p.status)) properties["الحالة"] = { select: { name: p.status } };
-  if (p.owner !== undefined) properties["الصاحب"] = rt(p.owner.slice(0, 200));
-  if (p.due !== undefined) properties["الموعد"] = p.due && isDate(p.due) ? { date: { start: p.due } } : { date: null };
-  if (p.next !== undefined) properties["الخطوة الجاية"] = rt(p.next);
-  if (p.reason !== undefined) properties["سبب القرار"] = rt(p.reason.slice(0, 500));
+  const properties: Record<string, unknown> = {};
+  if (p.status && PUB_STATUSES.includes(p.status)) properties["الحالة"] = { select: { name: p.status } };
+  if (p.link !== undefined) properties["الرابط"] = urlProp(p.link);
+  if (p.date !== undefined) properties["التاريخ"] = dateProp(p.date);
+  if (!Object.keys(properties).length) return;
   await patchPage(pageId, properties);
-  if (p.status === "خلص") {
-    try {
-      const all = await query(SOURCES.learnBranches);
-      const me = all.find((r) => String(r.id || "").replace(/-/g, "") === pageId.replace(/-/g, ""));
-      const entry = me && Array.isArray(me["المدخل"]) ? (me["المدخل"] as string[])[0] : "";
-      const type = String(me?.["النوع"] || "");
-      for (const r of all) {
-        if (r === me || !entry || !type) continue;
-        if (String(r["معلّق على"] || "") !== type) continue;
-        if (!Array.isArray(r["المدخل"]) || (r["المدخل"] as string[])[0] !== entry) continue;
-        if (LEARN_CLOSED.has(String(r["الحالة"] || ""))) continue;
-        await patchPage(String(r.id), { "اتفك التعليق": { date: { start: today } } });
-      }
-    } catch {
-      /* فك التعليق ما يوقفش الحفظ — الصفحة بتحسبه كمان من «آخر حركة» للفرع اللي خلص */
-    }
-  }
+  cache = null;
+}
+
+export type NewComp = { name: string; link: string; status: string; due: string };
+export async function createComp(c: NewComp): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const name = c.name.trim().slice(0, 300);
+  if (!name) throw new Error("empty name");
+  if (!COMP_STATUSES.includes(c.status)) throw new Error("bad status");
+  const properties: Record<string, unknown> = { "الاسم": { title: [{ text: { content: name } }] }, "الحالة": { select: { name: c.status } } };
+  if (c.link) properties["الرابط"] = urlProp(c.link);
+  if (c.due) properties["الموعد"] = dateProp(c.due);
+  await createIn(SOURCES.competitions, properties);
+  cache = null;
+}
+export async function updateComp(pageId: string, c: { status?: string; due?: string; link?: string }): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  const properties: Record<string, unknown> = {};
+  if (c.status && COMP_STATUSES.includes(c.status)) properties["الحالة"] = { select: { name: c.status } };
+  if (c.due !== undefined) properties["الموعد"] = dateProp(c.due);
+  if (c.link !== undefined) properties["الرابط"] = urlProp(c.link);
+  if (!Object.keys(properties).length) return;
+  await patchPage(pageId, properties);
   cache = null;
 }
 
