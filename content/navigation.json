@@ -144,6 +144,16 @@
           "ar": "VisionSeek Insights"
         },
         {
+          "href": "/insights/reports",
+          "en": "Reports",
+          "ar": "التقارير"
+        },
+        {
+          "href": "/insights/research",
+          "en": "Research papers",
+          "ar": "الأوراق العلمية"
+        },
+        {
           "href": "/insights/notes/l-001",
           "en": "Notes",
           "ar": "ملاحظات"

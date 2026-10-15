@@ -9,7 +9,7 @@ export const paper = {
   slug: 'half-the-picture',
   doi: '10.5281/zenodo.23399249',
   doiUrl: 'https://doi.org/10.5281/zenodo.23399249',
-  pdfAr: '/insights/research/half-the-picture-ar.pdf',
+  pdfAr: '/insights/reports/half-the-picture-ar.pdf',
   date: '2026-10-16',
   dateLabel: {ar: 'أكتوبر 2026', en: 'October 2026'},
   label: {ar: 'مختبر VisionSeek · تقرير مبسّط لدراسة استكشافية', en: 'VisionSeek Lab · A plain-language report on an exploratory study'},

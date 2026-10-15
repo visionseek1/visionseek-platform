@@ -20,12 +20,12 @@
   "sections": {
     "reports": {
       "title": {
-        "en": "Flagship reports",
-        "ar": "التقارير الرئيسية"
+        "en": "Reports",
+        "ar": "التقارير"
       },
       "intro": {
-        "en": "One or two a year on the big questions, each with recommendations for leaders and a PDF to download.",
-        "ar": "تقرير أو تقريران في السنة عن الأسئلة الكبرى، وفي كل تقرير توصيات للقادة، ونسخة PDF للتحميل."
+        "en": "Plain-language reports on what we study and learn, written for the people who make the decisions, each with a PDF to download.",
+        "ar": "تقارير مبسّطة لما ندرسه ونتعلّمه، مكتوبة لمن بيده القرار، وفي كل تقرير نسخة PDF للتحميل."
       }
     },
     "articles": {
@@ -60,12 +60,12 @@
     },
     "research": {
       "title": {
-        "en": "Our research papers",
-        "ar": "أوراقنا العلمية"
+        "en": "Research papers",
+        "ar": "الأوراق العلمية"
       },
       "intro": {
-        "en": "Papers produced at VisionSeek: published preprints and peer-reviewed journal articles, each with its abstract and permanent link.",
-        "ar": "أوراق علمية أنتجناها في VisionSeek: النسخ الأولية المنشورة، والأبحاث المحكّمة في المجلات العلمية. لكل ورقة ملخّصها ورابطها الدائم."
+        "en": "Papers produced at VisionSeek, under their original titles with permanent links: published preprints and peer-reviewed articles.",
+        "ar": "أوراق علمية أنتجناها في VisionSeek، بعنوانها الأصلي ورابطها الدائم: النسخ الأولية المنشورة، والأبحاث المحكّمة."
       }
     }
   },
@@ -165,26 +165,46 @@
       }
     }
   ],
-  "reports": [],
-  "articles": [],
-  "research": [
+  "reports": [
     {
       "title": {
         "ar": "احذر نصائح الذكاء الاصطناعي: هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟",
-        "en": "Advice from Half the Picture: How Language Models Steer Complex Human Decisions from Partial Information, and a Dimension-Disclosure Protocol"
+        "en": "Advice from Half the Picture: does AI steer your human decisions while knowing very little?"
       },
       "kind": {
-        "ar": "نسخة أولية · Zenodo · أكتوبر 2026",
-        "en": "Preprint · Zenodo · October 2026"
+        "ar": "تقرير مبسّط · مختبر VisionSeek · أكتوبر 2026",
+        "en": "Plain-language report · VisionSeek Lab · October 2026"
       },
       "summary": {
         "ar": "حين يستشير الإنسان نموذج ذكاء اصطناعي في قرار إنساني بسطر واحد، تنقلب النصيحة في نحو خُمس الحالات إذا عرف النموذج الصورة كاملة. ومعها بروتوكول من ثلاث خطوات تطبّقه بنفسك.",
         "en": "Ask a language model about a human decision in one line, and in about one case in five its advice reverses once it sees the whole picture. With a three-step protocol anyone can apply."
       },
-      "page": "/insights/research/half-the-picture",
-      "pdf": "/insights/research/half-the-picture-ar.pdf",
+      "page": "/insights/reports/half-the-picture",
+      "pdf": "/insights/reports/half-the-picture-ar.pdf",
       "pdfLang": "ar",
+      "related": {
+        "href": "/insights/research",
+        "label": {
+          "ar": "الورقة العلمية",
+          "en": "The research paper"
+        }
+      },
+      "date": "2026-10-16"
+    }
+  ],
+  "articles": [],
+  "research": [
+    {
+      "title": {
+        "ar": "Advice from Half the Picture: How Language Models Steer Complex Human Decisions from Partial Information, and a Dimension-Disclosure Protocol",
+        "en": "Advice from Half the Picture: How Language Models Steer Complex Human Decisions from Partial Information, and a Dimension-Disclosure Protocol"
+      },
+      "kind": {
+        "ar": "نسخة أولية · Zenodo · أكتوبر 2026 · أحمد عبد العليم، VisionSeek",
+        "en": "Preprint · Zenodo · October 2026 · Ahmed Abdelalim, VisionSeek"
+      },
       "preprint": "https://doi.org/10.5281/zenodo.23399249",
+      "doi": "10.5281/zenodo.23399249",
       "date": "2026-10-16"
     }
   ],
