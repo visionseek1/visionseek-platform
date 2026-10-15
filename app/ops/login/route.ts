@@ -1,4 +1,4 @@
-import { passwordIsValid, roomConfigured, sessionCookie } from "@/lib/room-auth";
+import { passwordIsValid, reviewCookie, reviewPasswordIsValid, roomConfigured, sessionCookie } from "@/lib/room-auth";
 
 /** يستقبل كلمة السر من نموذج /room ويحط كوكي الجلسة. فشل = رجوع للنموذج بعلامة خطأ، بلا تفاصيل. */
 export async function POST(request: Request) {
@@ -17,7 +17,11 @@ export async function POST(request: Request) {
     password = "";
   }
 
+  // كلمة سر المراجعة (قراءة بس) بتتقبل في المعاينة فقط؛ في الإنتاج مفيش غير كلمة السر الأساسية.
   if (!passwordIsValid(password)) {
+    if (reviewPasswordIsValid(password)) {
+      return new Response(null, { status: 303, headers: { location: `${origin}/ops`, "set-cookie": reviewCookie(), "cache-control": "no-store" } });
+    }
     return Response.redirect(`${origin}/ops?e=1`, 303);
   }
   return new Response(null, {

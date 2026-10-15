@@ -1,4 +1,4 @@
-import { cookieIsValid, readCookie } from "@/lib/room-auth";
+import { cookieIsOwner, readCookie } from "@/lib/room-auth";
 import { createLearnBranch, createLearnEntry, notionConfigured, updateLearnBranch } from "@/lib/notion-room";
 
 /**
@@ -7,7 +7,7 @@ import { createLearnBranch, createLearnEntry, notionConfigured, updateLearnBranc
  */
 export async function POST(request: Request) {
   const origin = new URL(request.url).origin;
-  if (!cookieIsValid(readCookie(request.headers.get("cookie")))) return Response.redirect(`${origin}/ops`, 303);
+  if (!cookieIsOwner(readCookie(request.headers.get("cookie")))) return Response.redirect(`${origin}/ops`, 303);
   let f: FormData;
   try { f = await request.formData(); } catch { return Response.redirect(`${origin}/ops?r=err`, 303); }
   const g = (k: string) => { const v = f.get(k); return typeof v === "string" ? v.trim() : ""; };

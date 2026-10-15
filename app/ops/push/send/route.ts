@@ -1,4 +1,4 @@
-import { cookieIsValid, readCookie } from "@/lib/room-auth";
+import { cookieIsOwner, readCookie } from "@/lib/room-auth";
 import { changesSince, lastNotificationAt, listSubscriptions, logNotification, notionConfigured, readLiveRoom, expireSubscription } from "@/lib/notion-room";
 import { pushConfigured, sendPush } from "@/lib/webpush";
 
@@ -9,7 +9,7 @@ import { pushConfigured, sendPush } from "@/lib/webpush";
 export async function POST(request: Request) {
   const cron = process.env.CRON_SECRET;
   const byCron = !!cron && request.headers.get("authorization") === `Bearer ${cron}`;
-  const byOwner = cookieIsValid(readCookie(request.headers.get("cookie")));
+  const byOwner = cookieIsOwner(readCookie(request.headers.get("cookie")));
   if (!byCron && !byOwner) return Response.json({ ok: false }, { status: 401 });
   if (!pushConfigured() || !notionConfigured()) return Response.json({ ok: false, reason: "not configured" }, { status: 503 });
 

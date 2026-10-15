@@ -1,10 +1,10 @@
-import { cookieIsValid, readCookie } from "@/lib/room-auth";
+import { cookieIsOwner, readCookie } from "@/lib/room-auth";
 import { notionConfigured, saveSubscription, expireSubscription, listSubscriptions } from "@/lib/notion-room";
 import { endpointId } from "@/lib/webpush";
 
 /** يسجّل اشتراك جهاز في الإشعارات (للمالك). JSON: {subscription, device} أو {unsubscribe: endpoint}. */
 export async function POST(request: Request) {
-  if (!cookieIsValid(readCookie(request.headers.get("cookie")))) return Response.json({ ok: false }, { status: 401 });
+  if (!cookieIsOwner(readCookie(request.headers.get("cookie")))) return Response.json({ ok: false }, { status: 401 });
   if (!notionConfigured()) return Response.json({ ok: false, reason: "notion" }, { status: 503 });
   let body: { subscription?: { endpoint?: string; keys?: { p256dh?: string; auth?: string } }; device?: string; unsubscribe?: string } = {};
   try {

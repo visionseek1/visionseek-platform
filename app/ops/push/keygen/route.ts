@@ -1,5 +1,5 @@
 import { generateKeyPairSync, randomBytes } from "node:crypto";
-import { cookieIsValid, readCookie } from "@/lib/room-auth";
+import { cookieIsOwner, readCookie } from "@/lib/room-auth";
 import { pushConfigured } from "@/lib/webpush";
 
 /**
@@ -7,7 +7,7 @@ import { pushConfigured } from "@/lib/webpush";
  * ما بيتخزنش في أي مكان على السيرفر. بيقفل تلقائيًا لما المفاتيح تتحط.
  */
 export function GET(request: Request) {
-  if (!cookieIsValid(readCookie(request.headers.get("cookie")))) return new Response("", { status: 401 });
+  if (!cookieIsOwner(readCookie(request.headers.get("cookie")))) return new Response("", { status: 401 });
   const headers = { "content-type": "text/html; charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex, nofollow" };
   if (pushConfigured()) return new Response(`<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><body style="font-family:system-ui;padding:24px"><h2>مفاتيح الإشعارات موجودة بالفعل</h2><p>ارجع للغرفة وفعّل الإشعارات من القايمة.</p><a href="/ops">رجوع</a></body></html>`, { headers });
   const { privateKey } = generateKeyPairSync("ec", { namedCurve: "prime256v1" });

@@ -32,9 +32,51 @@ export function passwordIsValid(candidate: string): boolean {
   return s !== null && safeEqual(roomToken(candidate), roomToken(s));
 }
 
-export function cookieIsValid(value: string | undefined): boolean {
+/** بيئة المعاينة (Vercel preview أو تشغيل محلي): مفيش كتابة على Notion من مسارات العملاء، وبيُقبل فيها دخول المراجعة. */
+export function isPreview(): boolean {
+  return process.env.VERCEL_ENV !== "production";
+}
+
+/**
+ * دخول قراءة بس للمراجعة (مراجعة nimo 15 أكتوبر): كلمة سر تانية ROOM_REVIEW_PASSWORD، بتشتغل في المعاينة بس، مش في الإنتاج.
+ * الكوكي بتحمل HMAC مختلف عن كوكي المالك، فالسيرفر يعرف الدور من غير ما يحتاج خانة زيادة.
+ */
+function reviewSecret(): string | null {
+  const s = process.env.ROOM_REVIEW_PASSWORD;
+  return isPreview() && s && s.length >= 8 ? s : null;
+}
+export function reviewToken(password: string): string {
+  return createHmac("sha256", password).update("visionseek-room-review-v1").digest("hex");
+}
+export function reviewPasswordIsValid(candidate: string): boolean {
+  const s = reviewSecret();
+  return s !== null && safeEqual(reviewToken(candidate), reviewToken(s));
+}
+export function reviewCookie(): string {
+  const s = reviewSecret();
+  if (s === null) throw new Error("ROOM_REVIEW_PASSWORD is not set");
+  return `${ROOM_COOKIE}=${reviewToken(s)}; Path=/ops; HttpOnly; Secure; SameSite=Strict; Max-Age=${24 * 60 * 60}`;
+}
+
+export type RoomRole = "owner" | "review";
+/** دور صاحب الكوكي: مالك (كلمة السر الأساسية)، أو مراجع (قراءة بس)، أو لا شيء. */
+export function cookieRole(value: string | undefined): RoomRole | null {
+  if (typeof value !== "string") return null;
   const s = secret();
-  return s !== null && typeof value === "string" && safeEqual(value, roomToken(s));
+  if (s !== null && safeEqual(value, roomToken(s))) return "owner";
+  const r = reviewSecret();
+  if (r !== null && safeEqual(value, reviewToken(r))) return "review";
+  return null;
+}
+
+/** يقرأ الغرفة: المالك أو المراجع. */
+export function cookieIsValid(value: string | undefined): boolean {
+  return cookieRole(value) !== null;
+}
+
+/** يكتب في الغرفة: المالك بس. المراجع بيشوف ولا يحفظ. */
+export function cookieIsOwner(value: string | undefined): boolean {
+  return cookieRole(value) === "owner";
 }
 
 export function sessionCookie(): string {

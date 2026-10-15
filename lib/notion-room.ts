@@ -25,6 +25,8 @@ export const SOURCES = {
   learnBranches: { ds: "f9da4209-1ee3-474f-be98-2a7d0958034e", db: "a8dadabb9bd44f49a7784b550434513d" },
   // النشرة الشهرية لـ VisionSeek Insights (15 أكتوبر 2026): بند في قطاع الظهور والتواصل. مفيش إرسال غير بموافقة د. أحمد.
   newsletter: { ds: "8a242351-eda5-4798-b5ba-4d80afbcd564", db: "01b11b86292b44b0958c47f45128dd4d" },
+  // نظام العملاء — المرحلة 1 (15 أكتوبر 2026): سجل التواصل، صف لكل مكالمة أو إيميل أو جلسة، مربوط بالعميل. كتابة بس، مفيش إرسال.
+  contacts: { ds: "24254214-19b8-406c-8c33-b516160da228", db: "a45aff37317442f880cf45cbd7a6ff66" },
 } as const;
 
 type Row = Record<string, string | string[] | null>;
@@ -42,6 +44,7 @@ export type LiveRoom = {
   learn: Row[];
   learnBranches: Row[];
   newsletter: Row[];
+  contacts: Row[];
   cycles: { title: string; url: string; edited: string }[];
 };
 
@@ -144,7 +147,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, learn, learnBranches, newsletter, cyc] = await Promise.all([
+  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, learn, learnBranches, newsletter, contacts, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -157,6 +160,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.learn), []),
     safe(query(SOURCES.learnBranches), []),
     safe(query(SOURCES.newsletter), []),
+    safe(query(SOURCES.contacts), []),
     safe(cycles(), []),
   ]);
   // Nine Star مش جزء من VisionSeek: أي حاجة تخص «هانا كار» ما تظهرش في المنصة (قرار د. أحمد 13 أكتوبر).
@@ -164,7 +168,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   const work = work0.filter(notNineStar);
   const requests = requests0.filter(notNineStar);
   const comments = comments0.filter(notNineStar);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, learn, learnBranches, newsletter, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, learn, learnBranches, newsletter, contacts, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -271,19 +275,44 @@ export async function createWorkCard(c: NewCard, knownTracks?: Row[]): Promise<s
   return json.url as string;
 }
 
-/** مراحل لوحة العملاء — تحريك الكارت من الغرفة محصور فيها. */
-const LEAD_STAGES = new Set(["تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة", "اتلقى", "جاهز للتواصل", "اتبعت له", "رد", "جلسة محجوزة", "كسبنا", "اتقفل — مش دلوقتي"]);
+/* ---------- نظام العملاء — المرحلة 1 (15 أكتوبر 2026): خط واحد بترتيب د. أحمد: جلسة، بعدها تشخيص، بعدها عرض ---------- */
+/** خط المتابعة بالترتيب. «مغلق» في الآخر بنتيجتين. */
+export const LEAD_PIPELINE = ["جديد", "جلسة تعريفية", "تشخيص", "عرض", "تعاقد", "تنفيذ"];
+export const LEAD_CLOSED = ["مغلق — فاز", "مغلق — خسر"];
+/** المراحل القديمة بتتقرى على الخط الجديد، من غير ما نمسح أي قيمة من Notion. */
+const LEAD_LEGACY: Record<string, string> = { "تواصل": "جديد", "اتلقى": "جديد", "جاهز للتواصل": "جديد", "اتبعت له": "جديد", "رد": "جديد", "جلسة محجوزة": "جلسة تعريفية", "قطع لاحقة": "تنفيذ", "كسبنا": "مغلق — فاز", "اتقفل — مش دلوقتي": "مغلق — خسر" };
+export function leadStageOf(raw: unknown): string {
+  const s = String(raw || "");
+  if (LEAD_PIPELINE.includes(s) || LEAD_CLOSED.includes(s)) return s;
+  return LEAD_LEGACY[s] || "جديد";
+}
+export const leadOpen = (r: Row): boolean => !LEAD_CLOSED.includes(leadStageOf(r["المرحلة"]));
+/** آخر تواصل مسجّل، وإلا آخر تعديل على الكارت. 14 يوم من غيرهم = علم أحمر. */
+export function leadStale(r: Row, today: string): boolean {
+  const last = String(r["آخر تواصل"] || r["date:آخر تواصل:start"] || r["edited"] || r["created"] || "").slice(0, 10);
+  if (!last) return false;
+  return Date.parse(today) - Date.parse(last) >= LEAD_STALE_DAYS * 86_400_000;
+}
+/** مراحل لوحة العملاء — تحريك الكارت من الغرفة محصور فيها (الجديدة + القديمة عشان أي كارت قديم يتحرك). */
+const LEAD_STAGES = new Set([...LEAD_PIPELINE, ...LEAD_CLOSED, ...Object.keys(LEAD_LEGACY)]);
+/** مصادر العميل السبعة. «تواصل مباشر» للعملاء اللي اتسجّلوا من إيميل مباشر (قرار د. أحمد 15 أكتوبر). */
+export const LEAD_SOURCES = ["الموقع", "الحجز", "الرادار", "تعارف", "لينكدإن", "ماستركلاس", "تواصل مباشر"];
+/** القطاع اللي العميل جاي منه — نفس أسماء قطاعات المنصة. */
+export const LEAD_SECTORS = ["خدمات المؤسسات", "المنتجات الجاهزة", "الشراكات ونقل التكنولوجيا", "المعرفة وبناء القادة", "الظهور والتواصل"];
+/** عميل مفتوح من غير أي تواصل 14 يوم = علم أحمر على اللوحة. */
+export const LEAD_STALE_DAYS = 14;
 /** قطع الخدمة الست — ترتيبها عند كل عميل بيتسجّل في «ترتيب القطع». */
 export const PIECES = ["التشخيص", "خريطة القدرات", "التوريد والشراكة", "البناء والتجربة", "النقل والتوطين", "التسليم والتمكين"];
 
-/** يحرّك كارت عميل لمرحلة تانية على اللوحة (قاعدة «عملاء — خط المتابعة»). لا حذف، ولا تعديل غير المرحلة والملاحظة والمتابعة. */
-export async function updateLeadStage(pageId: string, stage: string, note?: string, followup?: string): Promise<void> {
+/** يحرّك كارت عميل لمرحلة تانية على اللوحة (قاعدة «عملاء — خط المتابعة»). لا حذف، ولا تعديل غير المرحلة والملاحظة والمتابعة وسبب الإغلاق. */
+export async function updateLeadStage(pageId: string, stage: string, note?: string, followup?: string, reason?: string): Promise<void> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
   if (!isPageId(pageId)) throw new Error("bad page id");
   if (!LEAD_STAGES.has(stage)) throw new Error("bad stage");
   const properties: Record<string, unknown> = { "المرحلة": { select: { name: stage } } };
   if (note !== undefined && note !== "") properties["ملاحظة"] = rt(note);
   if (followup !== undefined) properties["المتابعة الجاية"] = followup && isDate(followup) ? { date: { start: followup } } : { date: null };
+  if (LEAD_CLOSED.includes(stage)) properties["سبب الإغلاق"] = rt((reason || "").slice(0, 500));
   const res = await fetch(`${API}/pages/${pageId}`, {
     method: "PATCH",
     headers: { authorization: `Bearer ${process.env.NOTION_TOKEN}`, "notion-version": VERSION, "content-type": "application/json" },
@@ -312,7 +341,9 @@ const CLIENT_PLACES = new Set(["مصر", "السعودية", "الإمارات",
 const CLIENT_SERVICES = new Set(["S1 جلسة القائد", "S2 ورشة القيادات", "S3 تشخيص القدرات", "S4 بناء القدرة", "S5 مصممة مسبقًا"]);
 const LOCKED_OUTCOMES = new Set(["اتبعت", "رد", "مكالمة", "جلسة", "دفع"]);
 
-export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string; forecast?: string; track?: string; pieces?: string; grant?: string };
+export type LeadMap = { type?: string; place?: string; service?: string; outcome?: string; followup?: string; signal?: string; signalUrl?: string; value?: string; reason?: string; forecast?: string; track?: string; pieces?: string; grant?: string; source?: string; sector?: string; next?: string; email?: string; lastContact?: string };
+const LEAD_SOURCE_SET = new Set(LEAD_SOURCES);
+const LEAD_SECTOR_SET = new Set(LEAD_SECTORS);
 const LEAD_TRACKS = new Set(["عالي — نكلمهم دلوقتي", "متوسط — نسخّنهم الأول", "بدري — المراقبة"]);
 const score10 = (v: string | undefined) => { if (v === undefined) return undefined; if (v === "") return { number: null }; const n = Number(v); if (!Number.isInteger(n) || n < 0 || n > 10) throw new Error("bad forecast"); return { number: n }; };
 const CLOSE_REASONS = new Set(["مش دلوقتي", "الميزانية", "مش صاحب القرار", "ما ردّش", "اختار حل تاني", "تانية"]);
@@ -338,7 +369,16 @@ export async function updateLeadMap(pageId: string, m: LeadMap): Promise<void> {
   put("القيمة (درهم)", num(m.value));
   put("التوقع", score10(m.forecast));
   put("المسار", sel(m.track, LEAD_TRACKS));
+  put("مصدر العميل", sel(m.source, LEAD_SOURCE_SET));
+  put("القطاع", sel(m.sector, LEAD_SECTOR_SET));
   if (m.followup !== undefined) properties["المتابعة الجاية"] = m.followup && isDate(m.followup) ? { date: { start: m.followup } } : { date: null };
+  if (m.lastContact !== undefined) properties["آخر تواصل"] = m.lastContact && isDate(m.lastContact) ? { date: { start: m.lastContact } } : { date: null };
+  if (m.next !== undefined) properties["الخطوة الجاية"] = rt(m.next.slice(0, 500));
+  if (m.email !== undefined) {
+    const e = m.email.trim().toLowerCase();
+    if (e && !validEmail(e)) throw new Error("bad email");
+    properties["الإيميل"] = { email: e || null };
+  }
   if (m.signal !== undefined) properties["الإشارة"] = rt(m.signal);
   if (m.pieces !== undefined) {
     const list = m.pieces.split("←").map((x) => x.trim()).filter(Boolean);
@@ -365,22 +405,32 @@ const LEAD_RECORDERS = new Set(["د. أحمد", "Claude", "nimo"]);
 
 export type NewLead = LeadMap & { name: string; stage?: string; decider?: string; note?: string; by?: string };
 
-/** يضيف جهة جديدة على لوحة العملاء (قاعدة «عملاء — خط المتابعة») بخانات الخريطة. إضافة فقط. */
+/** يضيف جهة جديدة على لوحة العملاء (قاعدة «عملاء — خط المتابعة») بخانات الخريطة. إضافة فقط. المصدر مطلوب ولا يُفترض؛ اللي جاي من الموقع نفسه مصدره «الموقع». */
 export async function createLead(l: NewLead): Promise<string> {
   if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
   const name = (l.name || "").trim().slice(0, 200);
   if (!name) throw new Error("empty name");
-  const stage = l.stage && LEAD_STAGES.has(l.stage) ? l.stage : "اتلقى";
+  const stage = l.stage && LEAD_STAGES.has(l.stage) ? l.stage : "جديد";
+  const by = l.by && LEAD_RECORDERS.has(l.by) ? l.by : "د. أحمد";
+  // المصدر مطلوب (مراجعة nimo 15 أكتوبر): مفيش مصدر افتراضي. اللي جاي من الموقع نفسه بس ياخد «الموقع».
+  if (l.source && !LEAD_SOURCE_SET.has(l.source)) throw new Error("bad source");
+  const source = l.source || (by === "الموقع" ? "الموقع" : "");
+  if (!source) throw new Error("source required");
   const properties: Record<string, unknown> = {
     "الجهة": { title: [{ text: { content: name } }] },
     "المرحلة": { select: { name: stage } },
-    "سجّلها": { select: { name: l.by && LEAD_RECORDERS.has(l.by) ? l.by : "د. أحمد" } },
+    "سجّلها": { select: { name: by } },
+    "مصدر العميل": { select: { name: source } },
   };
   const opt = (k: string, v: string | undefined, allowed: Set<string>) => { if (v && allowed.has(v)) properties[k] = { select: { name: v } }; };
   opt("نوع العميل", l.type, CLIENT_TYPES);
   opt("البلد", l.place, CLIENT_PLACES);
   opt("الخدمة", l.service, CLIENT_SERVICES);
   opt("النتيجة المقفولة", l.outcome, LOCKED_OUTCOMES);
+  opt("القطاع", l.sector, LEAD_SECTOR_SET);
+  if (l.next) properties["الخطوة الجاية"] = rt(l.next.slice(0, 500));
+  if (l.email) { const e = l.email.trim().toLowerCase(); if (validEmail(e)) properties["الإيميل"] = { email: e }; }
+  if (l.lastContact && isDate(l.lastContact)) properties["آخر تواصل"] = { date: { start: l.lastContact } };
   if (l.value) { const v = num(l.value); if (v) properties["القيمة (درهم)"] = v; }
   if (l.forecast) { const v = score10(l.forecast); if (v) properties["التوقع"] = v; }
   if (l.track && LEAD_TRACKS.has(l.track)) properties["المسار"] = { select: { name: l.track } };
@@ -395,6 +445,41 @@ export async function createLead(l: NewLead): Promise<string> {
   const json: any = await res.json();
   cache = null;
   return json.url as string;
+}
+
+/* ---------- سجل التواصل: صف لكل مكالمة أو إيميل أو جلسة. كتابة بس — مفيش إرسال لأي عميل من المنصة (قاعدة د. أحمد). ---------- */
+export const CONTACT_CHANNELS = ["إيميل", "مكالمة", "واتساب", "جلسة", "لقاء", "لينكدإن", "الموقع", "تانية"];
+export const CONTACT_DIRECTIONS = ["وارد", "صادر", "ملاحظة"];
+export type NewContact = { lead: string; channel: string; direction: string; summary: string; details?: string; by?: string; date?: string; next?: string; followup?: string };
+
+/** يسجّل تواصل على عميل، ويحدّث «آخر تواصل» على كارت العميل (والخطوة الجاية وموعدها لو اتبعتوا). يرجّع معرّف الصف. */
+export async function addContact(c: NewContact): Promise<string> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(c.lead)) throw new Error("bad lead");
+  const summary = (c.summary || "").trim().slice(0, 300);
+  if (!summary) throw new Error("empty summary");
+  if (!CONTACT_CHANNELS.includes(c.channel)) throw new Error("bad channel");
+  if (!CONTACT_DIRECTIONS.includes(c.direction)) throw new Error("bad direction");
+  const date = c.date && isDate(c.date) ? c.date : todayStr();
+  const json = await createIn(SOURCES.contacts, {
+    "الملخص": { title: [{ text: { content: summary } }] },
+    "العميل": { relation: [{ id: c.lead }] },
+    "التاريخ": { date: { start: date } },
+    "القناة": { select: { name: c.channel } },
+    "الاتجاه": { select: { name: c.direction } },
+    "كتبها": { select: { name: c.by && LEAD_RECORDERS.has(c.by) ? c.by : "د. أحمد" } },
+    "التفاصيل": rt((c.details || "").slice(0, 1900)),
+  });
+  const patch: Record<string, unknown> = { "آخر تواصل": { date: { start: date } } };
+  if (c.next !== undefined && c.next !== "") patch["الخطوة الجاية"] = rt(c.next.slice(0, 500));
+  if (c.followup && isDate(c.followup)) patch["المتابعة الجاية"] = { date: { start: c.followup } };
+  try {
+    await patchPage(c.lead, patch);
+  } catch {
+    /* الصف اتسجّل؛ تحديث الكارت تحسين */
+  }
+  cache = null;
+  return String(json.id || "");
 }
 
 /* ---------- المنهجيات: د. أحمد بس اللي يعتمد أو يوقّف (من الغرفة بكلمة السر). النص نفسه بيتعدّل في Notion. ---------- */
@@ -429,9 +514,11 @@ export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { ti
   const day = (iso: unknown) => String(iso || "").slice(0, 10);
   const follow = live.leads.filter((r) => {
     const f = day(r["date:المتابعة الجاية:start"] || r["المتابعة الجاية"]);
-    return f && f <= today && r["المرحلة"] !== "كسبنا" && r["المرحلة"] !== "اتقفل — مش دلوقتي";
+    return f && f <= today && leadOpen(r);
   });
   if (follow.length) lines.push(`⏰ متابعات النهارده: ${follow.map((r) => r["الجهة"]).join("، ")}`);
+  const stale = live.leads.filter((r) => leadOpen(r) && leadStale(r, today));
+  if (stale.length) lines.push(`🚩 من غير تواصل ${LEAD_STALE_DAYS} يوم: ${stale.slice(0, 5).map((r) => r["الجهة"]).join("، ")}${stale.length > 5 ? ` +${stale.length - 5}` : ""}`);
   const openCycles = live.requests.filter((r) => r["الحالة"] === "اتعمل" && r["الإقفال"] === "مفتوحة");
   if (openCycles.length) lines.push(`🔄 دورات مفتوحة بلا بناء: ${openCycles.length}`);
   const waiting = live.requests.filter((r) => r["الحالة"] === "جديد" || r["الحالة"] === "شغال");
@@ -441,8 +528,7 @@ export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { ti
   const pubDue = live.publish.filter((r) => r["الحالة"] === "معتمد" && day(r["date:موعد النشر:start"] || r["موعد النشر"]) && day(r["date:موعد النشر:start"] || r["موعد النشر"]) <= today);
   if (pubDue.length) lines.push(`📣 معتمد ومستني نشرك: ${pubDue.map((r) => r["العنوان"]).join("، ")}`);
   if (weekly) {
-    const stages = ["تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة"];
-    const counts = stages.map((s) => `${s} ${live.leads.filter((r) => r["المرحلة"] === s).length}`).join(" · ");
+    const counts = LEAD_PIPELINE.map((s) => `${s} ${live.leads.filter((r) => leadStageOf(r["المرحلة"]) === s).length}`).join(" · ");
     lines.push(`📊 اللوحة: ${counts}`);
     const weekAgo = new Date(new Date(today + "T00:00:00Z").getTime() - 7 * 864e5).toISOString().slice(0, 10);
     const cyc = live.requests.filter((r) => r["الحالة"] === "اتعمل" && day(r["date:اتعمل يوم:start"] || r["اتعمل يوم"]) >= weekAgo);
@@ -454,7 +540,7 @@ export function buildBrief(live: LiveRoom, weekly: boolean, today: string): { ti
   if (stuck.length) lines.push(`⚠️ تشغيلة معلقة (شغال من +ساعتين): ${stuck.map((r) => r["الطلب"]).join("، ")}`);
   // بكرة عليك: اعرف الليلة إيه اللي مستنيك الصبح
   const tom = new Date(new Date(today + "T00:00:00Z").getTime() + 864e5).toISOString().slice(0, 10);
-  const followTom = live.leads.filter((r) => day(r["date:المتابعة الجاية:start"] || r["المتابعة الجاية"]) === tom && r["المرحلة"] !== "كسبنا" && r["المرحلة"] !== "اتقفل — مش دلوقتي");
+  const followTom = live.leads.filter((r) => day(r["date:المتابعة الجاية:start"] || r["المتابعة الجاية"]) === tom && leadOpen(r));
   const pubTom = live.publish.filter((r) => r["الحالة"] === "معتمد" && day(r["date:موعد النشر:start"] || r["موعد النشر"]) === tom);
   if (followTom.length || pubTom.length) lines.push(`🌙 بكرة عليك: ${[...followTom.map((r) => "متابعة " + r["الجهة"]), ...pubTom.map((r) => "نشر «" + r["العنوان"] + "»")].join("، ")}`);
   if (!lines.length) lines.push("✓ مفيش حاجة مستنياك النهارده — المنصة مقفولة.");

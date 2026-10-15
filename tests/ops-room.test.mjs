@@ -62,7 +62,7 @@ test("the room reads Notion live from the server and writes only engine requests
   assert.doesNotMatch(notion, /archived:\s*true|in_trash:\s*true/);
   assert.match(route, /window\.__ROOM__/);
   assert.match(route, /\\u003c/);
-  assert.match(run, /cookieIsValid/);
+  assert.match(run, /cookieIsOwner|cookieIsValid/);
   assert.match(html, /\/ops\/run/);
   assert.match(html, /window\.__ROOM__/);
 });
@@ -76,7 +76,7 @@ test("the tree: sector ← department ← track ← item ← methodology", async
   // الأنواع الثمانية اتلغت من زر «إضافة»: العنصر بيتعرّف بمساره
   assert.doesNotMatch(html, /name="type"/);
   assert.match(card, /مفيش عنصر من غير مسار/);
-  assert.match(card, /cookieIsValid/);
+  assert.match(card, /cookieIsOwner|cookieIsValid/);
   assert.match(notion, /tracks: \{ ds: "803372be-41c1-8328-b878-07f0cc236e5a"/);
   assert.match(notion, /function trackInfo/);
   assert.match(notion, /export async function proposeMethodUpdate/);
@@ -108,7 +108,7 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
   assert.match(sw, /notificationclick/);
   assert.equal(JSON.parse(vercel).crons[0].path, "/ops/push/send");
   assert.match(send, /CRON_SECRET/);
-  assert.match(send, /cookieIsValid/);
+  assert.match(send, /cookieIsOwner|cookieIsValid/);
   assert.doesNotMatch(keygen, /VAPID_PRIVATE_KEY\s*=\s*["']/);
   for (const f of ["lib/webpush.ts", "lib/notion-room.ts", "app/ops/push/keygen/route.ts"]) {
     const t = await read(f);
@@ -116,16 +116,59 @@ test("notifications: push routes, feed, cron, service worker handlers, no keys i
   }
 });
 
-test("clients: stage, last contact, next follow-up, pieces order per client, and the initiative counter", async () => {
+test("clients (CRM phase 1): one pipeline in Ahmed's order, seven sources, contact log, 14-day flag, no sending", async () => {
   const [mod, notion, lead] = await Promise.all([read("app/ops/room-html.ts"), read("lib/notion-room.ts"), read("app/ops/lead/route.ts")]);
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
-  for (const needle of ["pageClients", "pageClient", "تواصل", "جلسة تعريفية", "عرض", "تشخيص", "قطع لاحقة", "آخر تواصل", "المتابعة الجاية", "ترتيب القطع", "المنح العشرة", "حسب العميل"]) assert.ok(html.includes(needle), `missing: ${needle}`);
-  assert.match(notion, /export async function updateLeadMap/);
-  assert.match(notion, /export async function createLead/);
-  assert.match(notion, /"ترتيب القطع"/);
-  assert.match(notion, /"منحة المبادرة"/);
+  // الخط: جلسة، بعدها تشخيص، بعدها عرض (قرار د. أحمد 15 أكتوبر) — في المكتبة وفي الواجهة
+  const pipeline = '["جديد", "جلسة تعريفية", "تشخيص", "عرض", "تعاقد", "تنفيذ"]';
+  assert.ok(notion.includes(`LEAD_PIPELINE = ${pipeline}`), "lib pipeline order");
+  assert.ok(html.includes(`LEAD_PIPELINE = ${pipeline}`), "room pipeline order");
+  assert.ok(notion.includes('LEAD_CLOSED = ["مغلق — فاز", "مغلق — خسر"]'));
+  // المصادر السبعة، و«تواصل مباشر» سابعهم
+  const sources = '["الموقع", "الحجز", "الرادار", "تعارف", "لينكدإن", "ماستركلاس", "تواصل مباشر"]';
+  assert.ok(notion.includes(`LEAD_SOURCES = ${sources}`));
+  assert.ok(html.includes(`LEAD_SOURCES = ${sources}`));
+  // المراحل القديمة بتتقرى على الخط الجديد من غير مسح
+  for (const [old, now] of [["تواصل", "جديد"], ["قطع لاحقة", "تنفيذ"], ["كسبنا", "مغلق — فاز"], ["اتقفل — مش دلوقتي", "مغلق — خسر"]]) {
+    assert.ok(notion.includes(`"${old}": "${now}"`), `lib legacy ${old}`);
+    assert.ok(html.includes(`"${old}": "${now}"`), `room legacy ${old}`);
+  }
+  // سجل التواصل: قاعدة مستقلة مربوطة بالعميل، وبتحدّث «آخر تواصل»؛ العلم الأحمر بعد 14 يوم
+  assert.match(notion, /contacts: \{ ds: "24254214-19b8-406c-8c33-b516160da228"/);
+  assert.match(notion, /export async function addContact/);
+  assert.match(notion, /"آخر تواصل"/);
+  assert.match(notion, /LEAD_STALE_DAYS = 14/);
+  assert.match(html, /LEAD_STALE_DAYS = 14/);
+  for (const needle of ["pageClients", "pageClient", "leadBoard", "dropLead", "سجل التواصل", "سجّل التواصل", "الخطوة الجاية", "ترتيب القطع", "المنح العشرة", "حوّله لعميل", "مفيش إرسال لأي عميل", "إغلاق الكارت", "من غير مصدر"]) assert.ok(html.includes(needle), `missing: ${needle}`);
+  // المسار: إنشاء، بيانات، تواصل، مرحلة — للمالك بس
+  assert.match(lead, /action === "contact"/);
+  assert.match(lead, /source: g\("source"\)/);
   assert.match(lead, /pieces: opt\("pieces"\)/);
-  assert.match(lead, /cookieIsValid/);
+  assert.match(lead, /cookieIsOwner|cookieIsValid/);
+  // مراجعة nimo (15 أكتوبر): المعاينة ما تكتبش على Notion، والمصدر مطلوب في السيرفر، والمراجع يقرا بس
+  assert.match(lead, /if \(isPreview\(\)\) return Response\.redirect\(`\$\{origin\}\/ops\?r=preview/);
+  assert.match(lead, /if \(!g\("source"\)\) return Response\.redirect\(`\$\{origin\}\/ops\?r=nosource/);
+  assert.match(notion, /if \(!source\) throw new Error\("source required"\)/);
+  assert.doesNotMatch(notion, /: "تواصل مباشر";/);
+  assert.match(lead, /cookieIsOwner\(cookie\)/);
+  // مفيش إرسال لأي عميل من المنصة: ولا دالة إرسال بريد في مكتبة Notion أو مسار العملاء
+  for (const [name, text] of [["lib", notion], ["lead", lead]]) assert.doesNotMatch(text, /sendMail|nodemailer|resend\.|sendgrid|mailgun/i, `${name} must not send`);
+});
+
+test("review login: a second password that reads only, accepted in preview only; every write route is owner-only", async () => {
+  const auth = await read("lib/room-auth.ts");
+  assert.match(auth, /process\.env\.VERCEL_ENV !== "production"/);
+  assert.match(auth, /ROOM_REVIEW_PASSWORD/);
+  assert.match(auth, /return isPreview\(\) && s && s\.length >= 8 \? s : null/);
+  assert.match(auth, /export function cookieIsOwner/);
+  assert.doesNotMatch(auth, /ROOM_REVIEW_PASSWORD\s*=\s*["']/);
+  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/learn/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
+    const t = await read(f);
+    assert.match(t, /cookieIsOwner/, `${f} must require the owner to write`);
+  }
+  const mod = await read("app/ops/room-html.ts");
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  assert.match(html, /وضع المراجعة — قراءة بس/);
 });
 
 test("methodologies: a room view, owner-only approval, agents read only approved ones", async () => {
@@ -133,7 +176,7 @@ test("methodologies: a room view, owner-only approval, agents read only approved
   const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
   for (const needle of ["renderMethods", "المنهجيات", "/ops/method", "المعتمدة", "مسارات من غير منهجية"]) assert.ok(html.includes(needle), `missing: ${needle}`);
   assert.match(notion, /export async function updateMethodStatus/);
-  assert.match(route, /cookieIsValid/);
+  assert.match(route, /cookieIsOwner|cookieIsValid/);
 });
 
 test("learning engine: entries L-xxx, six branch types tied to sectors, two-week red flag that waits on dependencies", async () => {

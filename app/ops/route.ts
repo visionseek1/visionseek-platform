@@ -1,4 +1,4 @@
-import { cookieIsValid, readCookie, roomConfigured } from "@/lib/room-auth";
+import { cookieRole, readCookie, roomConfigured } from "@/lib/room-auth";
 import { readLiveRoom } from "@/lib/notion-room";
 import { roomHtml } from "./room-html";
 
@@ -58,7 +58,8 @@ export async function GET(request: Request) {
       { status: 503, headers },
     );
   }
-  if (cookieIsValid(readCookie(request.headers.get("cookie")))) {
+  const role = cookieRole(readCookie(request.headers.get("cookie")));
+  if (role) {
     // المستوى 1: الغرفة تقرأ Notion حيًّا. لو مفيش توكن أو فشلت القراءة، الصفحة تعرض اللقطة.
     let live = null;
     try {
@@ -76,12 +77,16 @@ export async function GET(request: Request) {
       dec: "القرار اتسجّل في Notion.",
       proposed: "الطلب راح «قرارات مستنياك».",
       learn: "اتسجّل في محرّك التعلم.",
+      contact: "التواصل اتسجّل على العميل.",
+      preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.",
+      readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.",
+      nosource: "المصدر مطلوب — اختار مصدر العميل الأول.",
       err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion.",
     };
     const flash = FLASH[r] || "";
     // الوارد: اللي اتغيّر من آخر مرة فتحت (كوكي vs_seen = آخر زيارة).
     const seen = readSeen(request.headers.get("cookie"));
-    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash, seen }).replace(/</g, "\\u003c")};</script>\n`;
+    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash, seen, role }).replace(/</g, "\\u003c")};</script>\n`;
     const html = roomHtml.replace("<script>\n// ---------- DATA", inject + "<script>\n// ---------- DATA");
     const now = new Date().toISOString();
     return new Response(html, { headers: { ...headers, "set-cookie": `vs_seen=${now}; Path=/ops; HttpOnly; Secure; SameSite=Strict; Max-Age=${60 * 60 * 24 * 90}` } });
