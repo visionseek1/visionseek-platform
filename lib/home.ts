@@ -5,8 +5,11 @@ export type Bi = {en: string; ar: string};
 export type HomeSlide = {image: string; label: Bi; title: Bi; sub: Bi; text: Bi; href: string; link: Bi};
 export type HomeReadingRow = {href: string; image: string; category: Bi; title: Bi; text: Bi};
 export type HomeMethodPart = {id: string; label: Bi; title: Bi; text: Bi; image: string; caption: Bi};
+export type HomeProofItem = {value: string; label: Bi};
 export type Home = {
   hero: {slides: HomeSlide[]; firstSlideNote: Bi};
+  decade: {eyebrow: Bi; title: Bi; sub: Bi; link: Bi};
+  proof: {heading: Bi; items: HomeProofItem[]};
   mission: {heading: Bi; image: string; imageAlt: Bi; eyebrow: Bi; title: Bi; text: Bi; link: Bi};
   reading: {heading: Bi; headingLink: Bi; rows: HomeReadingRow[]};
   communities: {eyebrow: Bi; title: Bi; text: Bi};

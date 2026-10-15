@@ -40,47 +40,46 @@ collections:
                 widget: select
                 options:
                 # archive-options:start
-                  - {label: "من نحن (القسم كله)  /about", value: "/about"}
-                  - {label: "ماذا نقدم (القسم كله)  /what-we-offer", value: "/what-we-offer"}
-                  - {label: "Insights (القسم كله)  /insights", value: "/insights"}
-                  - {label: "المبادرة (القسم كله)  /initiative", value: "/initiative"}
-                  - {label: "تواصل (القسم كله)  /start", value: "/start"}
-                  - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
+                  - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
+                  - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
+                  - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
-                  - {label: "المجالات (القسم كله)  /projects", value: "/projects"}
+                  - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
+                  - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
-                  - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "بيت القادة (القسم كله)  /leaders-house", value: "/leaders-house"}
                   - {label: "منهجنا  /method", value: "/method"}
-                  - {label: "من نحن ← كيف تعمل VisionSeek؟  /about/what-we-do", value: "/about/what-we-do"}
-                  - {label: "من نحن ← نموذج التشغيل  /about/operating-model", value: "/about/operating-model"}
-                  - {label: "من نحن ← أسئلة البرنامج  /about/program-questions", value: "/about/program-questions"}
-                  - {label: "من نحن ← الأشخاص  /about/people", value: "/about/people"}
-                  - {label: "من نحن ← الحوكمة  /about/governance", value: "/about/governance"}
-                  - {label: "من نحن ← التعلم من DARPA  /about/learning-from-darpa", value: "/about/learning-from-darpa"}
-                  - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
-                  - {label: "Insights ← الأطر والأدوات  /insights/frameworks/decision-dimensions", value: "/insights/frameworks/decision-dimensions"}
-                  - {label: "اعمل معنا ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
-                  - {label: "اعمل معنا ← كيف تشارك؟  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
-                  - {label: "اعمل معنا ← جهّز تصورًا  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
-                  - {label: "اعمل معنا ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
-                  - {label: "اعمل معنا ← النقل للتشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
+                  - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
+                  - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
+                  - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
+                  - {label: "المشاريع ← الدفاع والأمن  /projects/defense", value: "/projects/defense"}
+                  - {label: "المشاريع ← الروبوتات والصناعة  /projects/robotics", value: "/projects/robotics"}
+                  - {label: "المشاريع ← الطب والصحة  /projects/health", value: "/projects/health"}
+                  - {label: "المشاريع ← الزراعة والأمن الغذائي  /projects/agriculture", value: "/projects/agriculture"}
+                  - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
+                  - {label: "فرص البحث والتطوير ← دليل المشاركة  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
+                  - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
                   - {label: "ماستركلاس ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
                   - {label: "ماستركلاس ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
                   - {label: "البرامج ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
                   - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
                   - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
                   - {label: "البرامج ← كيف تعمل البرامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
+                  - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
+                  - {label: "Insights ← الأطر والأدوات  /insights/frameworks/decision-dimensions", value: "/insights/frameworks/decision-dimensions"}
                   - {label: "الأخبار ← الإعلام والاستفسارات  /news/media", value: "/news/media"}
-                  - {label: "المجالات ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
-                  - {label: "المجالات ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
-                  - {label: "المجالات ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
-                  - {label: "المجالات ← الروبوتات والصناعة  /projects/robotics", value: "/projects/robotics"}
-                  - {label: "المجالات ← الطب والصحة  /projects/health", value: "/projects/health"}
-                  - {label: "المجالات ← الزراعة والأمن الغذائي  /projects/agriculture", value: "/projects/agriculture"}
-                  - {label: "المجالات ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
+                  - {label: "اعمل معنا ← ابنِ حلولك معنا  /start", value: "/start"}
+                  - {label: "اعمل معنا ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
+                  - {label: "اعمل معنا ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
+                  - {label: "اعمل معنا ← النقل للتشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
+                  - {label: "عن VisionSeek ← كيف تعمل VisionSeek؟  /about/what-we-do", value: "/about/what-we-do"}
+                  - {label: "عن VisionSeek ← نموذج التشغيل  /about/operating-model", value: "/about/operating-model"}
+                  - {label: "عن VisionSeek ← أسئلة البرنامج  /about/program-questions", value: "/about/program-questions"}
+                  - {label: "عن VisionSeek ← الأشخاص  /about/people", value: "/about/people"}
+                  - {label: "عن VisionSeek ← الحوكمة  /about/governance", value: "/about/governance"}
+                  - {label: "عن VisionSeek ← التعلم من DARPA  /about/learning-from-darpa", value: "/about/learning-from-darpa"}
                   - {label: "التقارير ← المنهج والمعايير  /reports/methodology", value: "/reports/methodology"}
                   - {label: "البرامج ← مسارات قدرات الحوسبة والصناعة  /programs/compute-capability", value: "/programs/compute-capability"}
                   - {label: "البرامج ← الاستقلالية في العمل الصناعي الحقيقي  /programs/industrial-autonomy", value: "/programs/industrial-autonomy"}
@@ -100,7 +99,6 @@ collections:
                   - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
-                  - {label: "المشاريع ← الدفاع والأمن  /projects/defense", value: "/projects/defense"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /leaders-house/physical-ai", value: "/leaders-house/physical-ai"}
@@ -117,10 +115,15 @@ collections:
             hint: "اختر القسم ليختفي من صفحته، واحذفه من هنا ليعود. الغلاف أعلى الرئيسية لا يُخفى."
             options:
                 # block-options:start
-              - {label: "الرئيسية ← السؤال (المشكلة في جملتين)", value: "home.problem"}
-              - {label: "الرئيسية ← القطاعات الخمسة", value: "home.sectors"}
-              - {label: "الرئيسية ← آخر قراءات Insights", value: "home.insights"}
-              - {label: "الرئيسية ← جملة العقد وزرار الحجز", value: "home.close"}
+              - {label: "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»", value: "home.explainer"}
+              - {label: "الرئيسية ← الرسالة وما نقرأه", value: "home.vision"}
+              - {label: "الرئيسية ← البرامج", value: "home.programs"}
+              - {label: "الرئيسية ← ماستركلاس والأخبار", value: "home.updates"}
+              - {label: "الرئيسية ← المنهج", value: "home.method"}
+              - {label: "الرئيسية ← المجتمعات", value: "home.communities"}
+              - {label: "الرئيسية ← المجالات", value: "home.fields"}
+              - {label: "الرئيسية ← اعمل معنا", value: "home.work"}
+              - {label: "الرئيسية ← التواصل", value: "home.contact"}
                 # block-options:end
   - name: navigation
     label: "الشريط العلوي والتذييل (الترتيب والروابط)"
@@ -147,23 +150,6 @@ collections:
                   - {label: المسار (يبدأ بـ /), name: href, widget: string}
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-          - label: "مجموعات التذييل فقط (اعمل معنا، الماستركلاس، البرامج، الأخبار، المجالات)"
-            name: footer
-            widget: list
-            required: false
-            summary: "{{fields.ar}} — {{fields.path}}"
-            fields:
-              - {label: مسار المجموعة, name: path, widget: string}
-              - {label: الاسم English, name: en, widget: string}
-              - {label: الاسم بالعربية, name: ar, widget: string}
-              - label: الروابط
-                name: children
-                widget: list
-                summary: "{{fields.ar}} — {{fields.href}}"
-                fields:
-                  - {label: المسار (يبدأ بـ /), name: href, widget: string}
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
           - label: التقارير (في القائمة العلوية فقط)
             name: reports
             widget: object
@@ -182,7 +168,7 @@ collections:
 
   - name: home
     label: الصفحة الرئيسية
-    description: "نصوص الأقسام القديمة اللي لسه بتستخدمها صفحات داخلية (المنهج والأقسام). الرئيسية الجديدة بتتعدّل من «رسالة الموقع والمبادرة»."
+    description: شرائح الغلاف، وبطاقة السؤال، وقسم «من داخل VisionSeek»، وعناوين الأقسام، وقسم المنهج، وقسم العمل معنا، والتواصل.
     preview_path: "ar"
     editor: {preview: false}
     files:
@@ -269,6 +255,81 @@ collections:
           - label: العربية
             name: ar
             widget: text
+      - label: "شريط رؤية العقد"
+        name: decade
+        widget: object
+        fields:
+        - label: السطر الصغير فوق الجملة
+          name: eyebrow
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: جملة الرؤية
+          name: title
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: text
+          - label: العربية
+            name: ar
+            widget: text
+        - label: السطر التالي
+          name: sub
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: نص الرابط
+          name: link
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+      - label: "شريط الإثبات: اتبنى بالفعل"
+        name: proof
+        widget: object
+        fields:
+        - label: العنوان
+          name: heading
+          widget: object
+          fields:
+          - label: English
+            name: en
+            widget: string
+          - label: العربية
+            name: ar
+            widget: string
+        - label: البنود
+          name: items
+          widget: list
+          fields:
+          - label: الرقم
+            name: value
+            widget: string
+          - label: الوصف
+            name: label
+            widget: object
+            fields:
+            - label: English
+              name: en
+              widget: string
+            - label: العربية
+              name: ar
+              widget: string
       - label: بطاقة السؤال الذي نبدأ منه
         name: mission
         widget: object
@@ -1379,14 +1440,7 @@ collections:
           - {label: قيادة عليا, value: senior}
           - {label: مديرون, value: manager}
           - {label: موظفون, value: staff}
-      - label: "عنوان قصير (لتبويب المتصفح ومحركات البحث)"
-        name: title
-        widget: object
-        required: false
-        fields:
-          - {label: English, name: en, widget: string, required: false}
-          - {label: العربية, name: ar, widget: string, required: false}
-      - label: النتيجة (العنوان الكبير في الصفحة)
+      - label: النتيجة (عنوان الصفحة)
         name: outcome
         widget: object
         fields:
@@ -2056,256 +2110,6 @@ collections:
               - {label: ملاحظة المصادر, name: sourceNote, widget: text}
               - {label: زر الدعوة, name: cta, widget: string}
               - {label: رابط الرجوع, name: back, widget: string}
-
-  - name: one_message
-    label: "رسالة الموقع والمبادرة (الرئيسية، ماذا نقدم، المبادرة)"
-    description: "رسالة واحدة ومسار واحد: «مهندس القدرات المؤسسية»، وزرار واحد «احجز جلستك المجانية». رابط الحجز من Cal.com يتحط هنا، ولحد ما يتحط الزرار بيودّي على صفحة المبادرة. مفيش أسعار في الموقع."
-    preview_path: "ar"
-    editor: {preview: false}
-    files:
-    - label: رسالة الموقع والمبادرة
-      name: one_message
-      file: content/one-message.json
-      fields:
-      - label: "الهوية"
-        name: identity
-        widget: object
-        fields:
-        - {label: English, name: en, widget: string}
-        - {label: العربية, name: ar, widget: string}
-      - label: الزرار الواحد
-        name: cta
-        widget: object
-        fields:
-        - label: "نص الزرار"
-          name: label
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "السطر اللي قبل الزرار في آخر كل صفحة"
-          name: line
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-      - label: الحجز
-        name: booking
-        widget: object
-        fields:
-        - {label: "رابط Cal.com (يبدأ بـ https://cal.com/)", name: url, widget: string, required: false}
-        - label: "نص لحد ما الرابط يتفعّل"
-          name: pending
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
-      - label: الرئيسية
-        name: home
-        widget: object
-        fields:
-        - label: الهيرو
-          name: hero
-          widget: object
-          fields:
-          - label: "العنوان"
-            name: title
-            widget: object
-            fields:
-            - {label: English, name: en, widget: text}
-            - {label: العربية, name: ar, widget: text}
-          - label: "السطر الصغير"
-            name: line
-            widget: object
-            fields:
-            - {label: English, name: en, widget: string}
-            - {label: العربية, name: ar, widget: string}
-          - {label: الصورة, name: image, widget: image}
-          - label: "وصف الصورة"
-            name: imageAlt
-            widget: object
-            fields:
-            - {label: English, name: en, widget: string}
-            - {label: العربية, name: ar, widget: string}
-        - label: المشكلة
-          name: problem
-          widget: object
-          fields:
-          - label: "السطر العلوي"
-            name: eyebrow
-            widget: object
-            fields:
-            - {label: English, name: en, widget: string}
-            - {label: العربية, name: ar, widget: string}
-          - label: "النص (جملتان)"
-            name: text
-            widget: object
-            fields:
-            - {label: English, name: en, widget: text}
-            - {label: العربية, name: ar, widget: text}
-        - label: "عنوان القطاعات"
-          name: sectorsHeading
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "عنوان قراءات Insights"
-          name: insightsHeading
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "رابط Insights"
-          name: insightsLink
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "جملة العقد القادم"
-          name: belief
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
-      - label: القطاعات الخمسة
-        name: sectors
-        widget: list
-        summary: "{{fields.title.ar}}"
-        fields:
-        - {label: المعرّف, name: id, widget: string}
-        - label: "الاسم"
-          name: title
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "سطر البطاقة في الرئيسية"
-          name: text
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "التفصيل في «ماذا نقدم»"
-          name: detail
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
-        - label: "عنوان المجالات (للشراكات فقط)"
-          name: fieldsHeading
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-      - label: صفحة «ماذا نقدم»
-        name: offer
-        widget: object
-        fields:
-        - label: "العنوان"
-          name: title
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "المقدمة"
-          name: intro
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
-        - label: "عنوان «أيضًا على الموقع»"
-          name: moreHeading
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: روابط «أيضًا على الموقع»
-          name: more
-          widget: list
-          fields:
-          - {label: المسار, name: href, widget: string}
-          - label: "الاسم"
-            name: title
-            widget: object
-            fields:
-            - {label: English, name: en, widget: string}
-            - {label: العربية, name: ar, widget: string}
-          - label: "السطر"
-            name: text
-            widget: object
-            fields:
-            - {label: English, name: en, widget: string}
-            - {label: العربية, name: ar, widget: string}
-      - label: صفحة المبادرة
-        name: initiative
-        widget: object
-        fields:
-        - label: "السطر العلوي"
-          name: eyebrow
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "العنوان"
-          name: title
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "العرض"
-          name: offer
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "الفترة"
-          name: period
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "سطر العدد المحدود"
-          name: limited
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "المقدمة"
-          name: intro
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
-        - label: "عنوان «ما تخرج به»"
-          name: outcomesHeading
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: ما تخرج به من الجلسة
-          name: outcomes
-          widget: list
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "عنوان «لمن»"
-          name: forHeading
-          widget: object
-          fields:
-          - {label: English, name: en, widget: string}
-          - {label: العربية, name: ar, widget: string}
-        - label: "لمن هذه الجلسة"
-          name: for
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
-        - label: "ملاحظة آخر الصفحة"
-          name: note
-          widget: object
-          fields:
-          - {label: English, name: en, widget: text}
-          - {label: العربية, name: ar, widget: text}
 
   - name: insights
     label: VisionSeek Insights

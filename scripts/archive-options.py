@@ -9,12 +9,11 @@ def add(path, label):
     if path not in [o[0] for o in opts]: opts.append((path, label))
 
 nav = load('content/navigation.json')
-for s in nav['sections'] + nav.get('footer', []) + [nav['reports']]:
+for s in nav['sections'] + [nav['reports']]:
     add(s['path'], f"{s['ar']} (القسم كله)")
-add('/opportunities', 'فرص البحث والتطوير (القسم كله)')
 add('/leaders-house', 'بيت القادة (القسم كله)')
 add('/method', 'منهجنا')
-for s in nav['sections'] + nav.get('footer', []) + [nav['reports']]:
+for s in nav['sections'] + [nav['reports']]:
     for c in s['children']:
         h = c['href'].split('#')[0]
         if h and h != s['path']: add(h, f"{s['ar']} ← {c['ar']}")

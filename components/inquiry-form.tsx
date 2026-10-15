@@ -19,7 +19,7 @@ export default function InquiryForm() {
     if (!name || !message) return;
     const subject = encodeURIComponent("VisionSeek — استفسار من " + name);
     const body = encodeURIComponent(`الاسم: ${name}\nالبريد الإلكتروني: ${email}\n\n${message}`);
-    window.location.assign(`mailto:hello@visionseek.org?subject=${subject}&body=${body}`);
+    window.location.assign(`mailto:abdelalim@visionseek.org?subject=${subject}&body=${body}`);
     setPrepared(true);
   }
 
@@ -30,7 +30,7 @@ export default function InquiryForm() {
         <p lang="en" className="english">START AN INQUIRY</p>
         <p>رسالة قصيرة قد تكون بداية شيء مهم.</p>
       </div>
-      <form className="inquiry-form" action="mailto:hello@visionseek.org" method="post" encType="text/plain" onSubmit={prepareEmail} onChange={() => setPrepared(false)} aria-describedby="inquiry-note">
+      <form className="inquiry-form" action="mailto:abdelalim@visionseek.org" method="post" encType="text/plain" onSubmit={prepareEmail} onChange={() => setPrepared(false)} aria-describedby="inquiry-note">
         <div className="inquiry-inputs">
           <label htmlFor="inquiry-name">الاسم <span lang="en">NAME</span>
             <Input id="inquiry-name" name="name" required pattern=".*\S.*" maxLength={80} autoComplete="name" dir="auto" />
@@ -42,10 +42,10 @@ export default function InquiryForm() {
         <label htmlFor="inquiry-message">استفسارك <span lang="en">MESSAGE</span>
           <Textarea id="inquiry-message" name="message" required maxLength={800} rows={5} dir="auto" onInput={(event) => event.currentTarget.setCustomValidity(event.currentTarget.value.trim() ? "" : "يرجى كتابة استفسارك.")} />
         </label>
-        <p id="inquiry-note" className="inquiry-note">يفتح الزر رسالة جاهزة إلى hello@visionseek.org في تطبيق بريدك؛ أكمل الإرسال من هناك. لا يتم إرسال الرسالة تلقائيًا من الموقع.</p>
+        <p id="inquiry-note" className="inquiry-note">يفتح الزر رسالة جاهزة إلى abdelalim@visionseek.org في تطبيق بريدك؛ أكمل الإرسال من هناك. لا يتم إرسال الرسالة تلقائيًا من الموقع.</p>
         <Button className="inquiry-submit" type="submit">متابعة عبر البريد <span aria-hidden="true">↗</span></Button>
-        {prepared && <p role="status" className="inquiry-status">تم تجهيز الرسالة، وليس إرسالها. إذا لم يفتح تطبيق البريد، راسلنا على <a href="mailto:hello@visionseek.org">hello@visionseek.org</a>.</p>}
-        <noscript><p>يمكنك مراسلتنا مباشرة على <a href="mailto:hello@visionseek.org">hello@visionseek.org</a>.</p></noscript>
+        {prepared && <p role="status" className="inquiry-status">تم تجهيز الرسالة، وليس إرسالها. إذا لم يفتح تطبيق البريد، راسلنا على <a href="mailto:abdelalim@visionseek.org">abdelalim@visionseek.org</a>.</p>}
+        <noscript><p>يمكنك مراسلتنا مباشرة على <a href="mailto:abdelalim@visionseek.org">abdelalim@visionseek.org</a>.</p></noscript>
       </form>
     </div>
   );

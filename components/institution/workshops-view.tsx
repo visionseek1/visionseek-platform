@@ -3,7 +3,6 @@ import Image from 'next/image';
 import {ArrowRight, ArrowUpRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {emails} from '@/lib/site';
 import {
   getWorkshop,
   workshopSection,
@@ -18,7 +17,7 @@ function Frame({locale, path, children}: {locale: Locale; path: string; children
     <div className={`vs-site locale-${locale}`} lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <CapabilityHeader locale={locale} path={path} />
       <main id="main-content">{children}</main>
-      <CapabilityFooter locale={locale} email={emails.masterclass} />
+      <CapabilityFooter locale={locale} />
     </div>
   );
 }

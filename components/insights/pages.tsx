@@ -3,7 +3,6 @@ import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {insights, latestNotes, type Bi, type InsightFramework, type InsightLink, type InsightNote} from '@/lib/insights';
 import Newsletter from './newsletter';
-import {emails} from '@/lib/site';
 import styles from './insights.module.css';
 
 type Locale = 'ar' | 'en';
@@ -69,7 +68,6 @@ export function InsightsHub({locale}: {locale: Locale}) {
       </section>}
       <LinkBand id="research" items={insights.research} ar={ar} title={sections.research.title} intro={sections.research.intro}/>
       <Newsletter locale={locale} copy={insights.newsletter} page="/insights"/>
-      <p className={styles.small}>{ar ? 'للمراسلة بخصوص Insights والنشرة: ' : 'Write to us about Insights and the newsletter: '}<a href={`mailto:${emails.insights}`} dir="ltr">{emails.insights}</a></p>
     </div></div>
   </Shell>;
 }

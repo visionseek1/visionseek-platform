@@ -1,5 +1,5 @@
 {
-  "email": "hello@visionseek.org",
+  "email": "abdelalim@visionseek.org",
   "whatsapp": "821042419606",
   "phoneDisplay": "+82 10 4241 9606",
   "phoneE164": "+82-10-4241-9606",
@@ -24,14 +24,5 @@
   "footerBlurb": {
     "en": "We discover what becomes possible when ideas, technologies, people, markets and institutions connect. Then we find the right form to make it real.",
     "ar": "نكتشف ما يصبح ممكنًا عندما تتصل الأفكار والتقنيات والأشخاص والأسواق والمؤسسات، ثم نحدد الشكل الصحيح لجعله واقعًا."
-  },
-  "emails": {
-    "general": "hello@visionseek.org",
-    "insights": "insights@visionseek.org",
-    "masterclass": "masterclass@visionseek.org",
-    "partners": "partners@visionseek.org",
-    "media": "media@visionseek.org",
-    "careers": "careers@visionseek.org",
-    "founder": "abdelalim@visionseek.org"
   }
 }

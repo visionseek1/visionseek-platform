@@ -14,10 +14,10 @@ test('VisionSeek Insights takes /insights; Leaders House moves to /leaders-house
   assert.match(read('components/capability/navigation.tsx'), /isArchived\('\/leaders-house'\)/);
 });
 
-test('Insights sits in the five-item menu between «ماذا نقدم» and «المبادرة»', () => {
+test('Insights sits in the main menu between Programs and News', () => {
   const nav = json('content/navigation.json').sections.map(s => s.path);
-  assert.equal(nav[nav.indexOf('/insights') - 1], '/what-we-offer');
-  assert.equal(nav[nav.indexOf('/insights') + 1], '/initiative');
+  assert.equal(nav[nav.indexOf('/insights') - 1], '/programs');
+  assert.equal(nav[nav.indexOf('/insights') + 1], '/news');
   for (const s of json('content/navigation.json').sections) for (const c of s.children) if (c.ar === 'بيت القادة') assert.equal(c.href, '/leaders-house');
 });
 

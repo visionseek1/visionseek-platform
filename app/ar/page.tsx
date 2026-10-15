@@ -1,12 +1,15 @@
-import type {Metadata} from 'next';
-import {OneHome} from '@/components/one/pages';
-import {OG_IMAGES, TITLE_AR} from '@/lib/seo';
-import {oneMessage} from '@/lib/one-message';
+import type { Metadata } from "next";
+import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title: {absolute: TITLE_AR},
-  description: oneMessage.home.problem.text.ar,
-  alternates: {canonical: '/ar', languages: {en: '/', ar: '/ar'}},
-  openGraph: {title: TITLE_AR, description: oneMessage.home.problem.text.ar, url: '/ar', images: OG_IMAGES},
+  title: "VisionSeek | Make It Possible.",
+  description: "VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات. نكتشف الفرص عند التقاء القطاعات، ونجمع التقنيات والمعرفة والشركاء لتحويلها إلى مشروعات وقدرات وحلول قابلة للتنفيذ.",
+  alternates: {
+    canonical: "/ar",
+    languages: { en: "/", ar: "/ar" },
+  },
 };
-export default function ArabicHome() { return <OneHome locale="ar"/>; }
+
+export default function ArabicHome() {
+  return <HomePage locale="ar" />;
+}

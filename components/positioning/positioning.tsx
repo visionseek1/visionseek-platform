@@ -4,7 +4,6 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import type { Locale } from '@/components/capability/content';
 import { CapabilityHeader } from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {BookButton} from '@/components/one/book-button';
 import styles from './positioning.module.css';
 
 export const positioningPath='/about/what-we-do';
@@ -23,7 +22,7 @@ export function InstitutionExplainer({locale}:{locale:Locale}) {
       <p className={styles.eyebrow}>CRITICAL CAPABILITY TRANSFER</p>
       <h3>{ar?'ننقل القدرات المتقدمة من العالم إلى مؤسستك.':'We move critical capabilities to where they need to exist.'}</h3>
       <p>{ar?'قد توجد التقنية التي تحتاجها داخل شركة أو مركز بحثي في مكان آخر. نحدد ما يناسب احتياج مؤسستك، ونصمم طريق نقل المعرفة وتكييف التقنية، ونجمع الشركاء والبنية التحتية والتنفيذ، ثم نختبرها في واقعك حتى تصبح قدرة تستطيع تشغيلها.':'The technology you need may already exist in a company or research lab elsewhere. We identify what fits your institution’s needs, design the knowledge transfer and technology adaptation, connect partners, infrastructure and implementation, then validate it in your setting as a capability you can operate.'}</p>
-      <BookButton locale={locale} className={styles.textLink}/>
+      <Link className={styles.textLink} href={`${base}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={20}/></Link>
     </div>
   </section>
   <section className={styles.koreaMena} aria-labelledby="korea-mena-title">
@@ -106,7 +105,7 @@ export default function PositioningPage({locale}:{locale:Locale}) {
 
       <section className={styles.contact}>
         <p className={styles.eyebrow}>{ar?'ابدأ من مؤسستك':'START WITH YOUR INSTITUTION'}</p><h2>{ar?'ما الفرصة التي يمكن أن تغيّر موقع مؤسستك؟':'What opportunity could change your institution’s position?'}</h2><p>{ar?'شاركنا النتيجة التي تريد الوصول إليها أو القرار الذي يشغلك.':'Tell us the outcome you want or the decision on your mind.'}</p>
-        <BookButton locale={locale} className={styles.primary}/><Link className={styles.textLink} href={`${base}/projects`}>{ar?'استكشف مشاريع VisionSeek':'Explore VisionSeek projects'}<ArrowRight size={19}/></Link>
+        <Link className={styles.primary} href={`${base}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={20}/></Link><Link className={styles.textLink} href={`${base}/projects`}>{ar?'استكشف مشاريع VisionSeek':'Explore VisionSeek projects'}<ArrowRight size={19}/></Link>
       </section>
     </main><CapabilityFooter locale={locale}/>
   </div>;
