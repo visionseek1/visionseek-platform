@@ -1,0 +1,20 @@
+import type {Metadata} from 'next';
+import {notFound} from 'next/navigation';
+import {KoreanSolutionDetail} from '@/components/korean-solutions/pages';
+import {getSolution, getSolutions} from '@/lib/korean-solutions';
+
+type Props = {params: Promise<{slug: string}>};
+export const revalidate = 600;
+export const dynamicParams = true;
+export async function generateStaticParams() { return (await getSolutions()).map(s => ({slug: s.slug})); }
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+  const s = await getSolution((await params).slug); if (!s) return {};
+  const path = `/korean-solutions/${s.slug}`;
+  return {title: `${s.title.en || s.title.ar} | Korean Solutions`, description: s.problem.en || s.problem.ar, alternates: {canonical: path, languages: {en: path, ar: `/ar${path}`}}};
+}
+export default async function Page({params}: Props) {
+  const all = await getSolutions();
+  const s = all.find(x => x.slug === (await params).slug); if (!s) notFound();
+  const related = all.filter(x => x.slug !== s.slug && x.sector === s.sector).slice(0, 3);
+  return <KoreanSolutionDetail locale="en" s={s} related={related}/>;
+}

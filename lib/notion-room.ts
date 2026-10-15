@@ -27,6 +27,8 @@ export const SOURCES = {
   research: { ds: "161b632e-cee3-4f48-a902-58cabe7f87f6", db: "c084a15a23694c6aa759b8c9ed560397" },
   // المسابقات (16 أكتوبر 2026): الاسم، الرابط، الحالة، الموعد (آخر يوم للتقديم).
   competitions: { ds: "dfb7c211-c54d-4d4c-9365-dcb6293d2541", db: "21c7b10bbd714d06a4fd90f964ee885f" },
+  // حلول من كوريا (16 أكتوبر 2026): صف لكل منتج أو حل أو تكنولوجيا. الموقع بيعرض الصفوف اللي «ظاهر» عليها علامة بس.
+  koreanSolutions: { ds: "d81a751a-06b2-4ab1-933e-a6aa0deab79d", db: "14a9fa5e616343649ec107b70b384a4f" },
   // النشرة الشهرية لـ VisionSeek Insights (15 أكتوبر 2026): بند في قطاع الظهور والتواصل. مفيش إرسال غير بموافقة د. أحمد.
   newsletter: { ds: "8a242351-eda5-4798-b5ba-4d80afbcd564", db: "01b11b86292b44b0958c47f45128dd4d" },
   // نظام العملاء — المرحلة 1 (15 أكتوبر 2026): سجل التواصل، صف لكل مكالمة أو إيميل أو جلسة، مربوط بالعميل. كتابة بس، مفيش إرسال.
@@ -47,6 +49,7 @@ export type LiveRoom = {
   tracks: Row[];
   research: Row[];
   competitions: Row[];
+  solutions: Row[];
   newsletter: Row[];
   contacts: Row[];
   cycles: { title: string; url: string; edited: string }[];
@@ -96,7 +99,7 @@ function plain(prop: any): string | string[] | null {
   }
 }
 
-function toRow(page: any): Row {
+export function toRow(page: any): Row {
   const row: Row = { url: page.url ?? null, id: page.id ?? null, edited: page.last_edited_time ?? null, created: page.created_time ?? null };
   for (const [k, v] of Object.entries(page.properties || {})) row[k] = plain(v);
   return row;
@@ -151,7 +154,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
       return fallback;
     }
   };
-  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, research, competitions, newsletter, contacts, cyc] = await Promise.all([
+  const [decisions0, work0, publish, methods, goals, requests0, comments0, leads, tracks, research, competitions, solutions, newsletter, contacts, cyc] = await Promise.all([
     safe(query(SOURCES.decisions), []),
     safe(query(SOURCES.work), []),
     safe(query(SOURCES.publish), []),
@@ -163,6 +166,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
     safe(query(SOURCES.tracks), []),
     safe(query(SOURCES.research), []),
     safe(query(SOURCES.competitions), []),
+    safe(query(SOURCES.koreanSolutions), []),
     safe(query(SOURCES.newsletter), []),
     safe(query(SOURCES.contacts), []),
     safe(cycles(), []),
@@ -172,7 +176,7 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   const work = work0.filter(notNineStar);
   const requests = requests0.filter(notNineStar);
   const comments = comments0.filter(notNineStar);
-  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, research, competitions, newsletter, contacts, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
+  const data: LiveRoom = { at: new Date().toISOString(), decisions, work, publish, methods, goals, requests, comments, leads, tracks, research, competitions, solutions, newsletter, contacts, cycles: cyc.filter((c) => !NINE_STAR.test(c.title)) };
   // قاعدة آلية (1 من 3): طلب دورة «اتعمل» ← كارت «راجع الدورة» على د. أحمد، مرة واحدة لكل طلب.
   try {
     const titles = new Set(work.map((w) => String(w["الكارت"] || "")));
@@ -837,6 +841,57 @@ export async function updateComp(pageId: string, c: { status?: string; due?: str
   if (c.status && COMP_STATUSES.includes(c.status)) properties["الحالة"] = { select: { name: c.status } };
   if (c.due !== undefined) properties["الموعد"] = dateProp(c.due);
   if (c.link !== undefined) properties["الرابط"] = urlProp(c.link);
+  if (!Object.keys(properties).length) return;
+  await patchPage(pageId, properties);
+  cache = null;
+}
+
+/* ---------- حلول من كوريا (16 أكتوبر 2026) — إضافة وتعديل وإخفاء. مفيش حذف. ---------- */
+export const KS_TYPES = ["منتج", "حل", "تكنولوجيا"];
+export const KS_SECTORS = ["الصحة", "الرعاية الاجتماعية", "الأمن والمدن", "الزراعة والغذاء", "الطاقة", "التصنيع"];
+export const KS_REGIONS = ["نعم", "تجربة", "لسه"];
+export const KS_ROUTES = ["شراء", "توزيع", "ترخيص", "مشروع مشترك"];
+const slugOk = (v: string) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v) && v.length <= 80;
+const longText = (v: string) => rt(v.slice(0, 1900));
+
+export type NewSolution = { titleAr: string; titleEn: string; slug: string; type: string; sector: string; maker: string; region: string; whereAr: string; whereEn: string; problemAr: string; problemEn: string; solutionAr: string; solutionEn: string; proofAr: string; proofEn: string; opportunityAr: string; opportunityEn: string; routes: string[]; order: string; visible: boolean };
+export async function createSolution(x: NewSolution): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const title = x.titleAr.trim().slice(0, 200);
+  if (!title || !slugOk(x.slug)) throw new Error("bad title or slug");
+  if (!KS_TYPES.includes(x.type) || !KS_SECTORS.includes(x.sector) || !KS_REGIONS.includes(x.region)) throw new Error("bad option");
+  const properties: Record<string, unknown> = {
+    "الاسم": { title: [{ text: { content: title } }] },
+    "Name": rt(x.titleEn.slice(0, 200)),
+    "slug": rt(x.slug),
+    "النوع": { select: { name: x.type } },
+    "المجال": { select: { name: x.sector } },
+    "الشركة": rt(x.maker.slice(0, 200)),
+    "وصل المنطقة": { select: { name: x.region } },
+    "أين": rt(x.whereAr.slice(0, 500)),
+    "Where": rt(x.whereEn.slice(0, 500)),
+    "المشكلة": longText(x.problemAr), "Problem": longText(x.problemEn),
+    "الحل": longText(x.solutionAr), "Solution": longText(x.solutionEn),
+    "الدليل": longText(x.proofAr), "Proof": longText(x.proofEn),
+    "الفرصة": longText(x.opportunityAr), "Opportunity": longText(x.opportunityEn),
+    "طرق النقل": { multi_select: x.routes.filter((r) => KS_ROUTES.includes(r)).map((name) => ({ name })) },
+    "ظاهر": { checkbox: x.visible },
+  };
+  const n = Number(x.order);
+  if (x.order && Number.isFinite(n)) properties["الترتيب"] = { number: n };
+  await createIn(SOURCES.koreanSolutions, properties);
+  cache = null;
+}
+export type SolutionPatch = { visible?: boolean; region?: string; whereAr?: string; whereEn?: string; order?: string };
+export async function updateSolution(pageId: string, p: SolutionPatch): Promise<void> {
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  if (!isPageId(pageId)) throw new Error("bad page id");
+  const properties: Record<string, unknown> = {};
+  if (p.visible !== undefined) properties["ظاهر"] = { checkbox: p.visible };
+  if (p.region && KS_REGIONS.includes(p.region)) properties["وصل المنطقة"] = { select: { name: p.region } };
+  if (p.whereAr !== undefined) properties["أين"] = rt(p.whereAr.slice(0, 500));
+  if (p.whereEn !== undefined) properties["Where"] = rt(p.whereEn.slice(0, 500));
+  if (p.order !== undefined) { const n = Number(p.order); properties["الترتيب"] = { number: p.order && Number.isFinite(n) ? n : null }; }
   if (!Object.keys(properties).length) return;
   await patchPage(pageId, properties);
   cache = null;

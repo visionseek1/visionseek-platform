@@ -1,6 +1,23 @@
 {
   "sections": [
     {
+      "path": "/korean-solutions",
+      "en": "Korean Solutions",
+      "ar": "حلول من كوريا",
+      "children": [
+        {
+          "href": "/korean-solutions",
+          "en": "Find a solution",
+          "ar": "المستكشف"
+        },
+        {
+          "href": "/korean-solutions#needs",
+          "en": "Tell us your need",
+          "ar": "اكتب احتياجك"
+        }
+      ]
+    },
+    {
       "path": "/projects",
       "en": "Projects",
       "ar": "المشاريع",
