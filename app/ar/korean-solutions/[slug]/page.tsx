@@ -13,8 +13,9 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   return {title: `${s.title.ar} | حلول من كوريا`, description: s.problem.ar, alternates: {canonical: `/ar${path}`, languages: {ar: `/ar${path}`, en: path}}};
 }
 export default async function Page({params}: Props) {
+  const {slug} = await params;
   const all = await getSolutions();
-  const s = all.find(x => x.slug === (await params).slug); if (!s) notFound();
+  const s = all.find(x => x.slug === slug); if (!s) notFound();
   const related = all.filter(x => x.slug !== s.slug && x.sector === s.sector).slice(0, 3);
   return <KoreanSolutionDetail locale="ar" s={s} related={related}/>;
 }
