@@ -2218,7 +2218,7 @@ collections:
             fields:
             - {label: English, name: en, widget: text}
             - {label: العربية, name: ar, widget: text}
-        - label: "الأبحاث المحكّمة"
+        - label: "أوراقنا العلمية"
           name: research
           widget: object
           fields:
@@ -2392,7 +2392,7 @@ collections:
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
-      - label: "الأبحاث المحكّمة (فاضي = مخفي)"
+      - label: "أوراقنا العلمية (فاضي = مخفي)"
         name: research
         widget: list
         required: false
@@ -2404,16 +2404,26 @@ collections:
           fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
+        - label: "النوع والتاريخ (سطر صغير فوق العنوان)"
+          name: kind
+          widget: object
+          required: false
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
         - label: "الملخص"
           name: summary
           widget: object
           fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
+        - {label: "صفحة التقرير على الموقع (مثلًا /insights/research/half-the-picture)", name: page, widget: string, required: false}
         - {label: "الرابط", name: url, widget: string, required: false}
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
+        - {label: "لغة ملف PDF", name: pdfLang, widget: select, options: [ar, en], required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
-        - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
+        - {label: "النسخة الأولية (DOI أو arXiv أو SSRN أو Zenodo)", name: preprint, widget: string, required: false}
+        - {label: "التاريخ", name: date, widget: string, required: false}
       - label: النشرة الشهرية
         name: newsletter
         widget: object

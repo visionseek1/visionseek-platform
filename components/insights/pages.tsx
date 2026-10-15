@@ -9,7 +9,7 @@ type Locale = 'ar' | 'en';
 const tx = (ar: boolean) => (v: Bi) => (ar ? v.ar : v.en);
 
 /** Sub-navigation: only sections that have content appear (empty ones stay hidden until they are filled). */
-function SubNav({locale, current}: {locale: Locale; current: 'all' | 'notes' | 'frameworks'}) {
+export function SubNav({locale, current}: {locale: Locale; current: 'all' | 'notes' | 'frameworks' | 'research'}) {
   const ar = locale === 'ar'; const t = tx(ar); const p = ar ? '/ar' : '';
   const s = insights.sections;
   const first = latestNotes()[0]; const fw = insights.frameworks[0];
@@ -19,7 +19,7 @@ function SubNav({locale, current}: {locale: Locale; current: 'all' | 'notes' | '
     {insights.articles.length > 0 && <a href={`${p}/insights#articles`}>{t(s.articles.title)}</a>}
     {first && <Link href={`${p}/insights/notes/${first.slug}`} aria-current={current === 'notes' ? 'page' : undefined}>{t(s.notes.title)}</Link>}
     {fw && <Link href={`${p}/insights/frameworks/${fw.slug}`} aria-current={current === 'frameworks' ? 'page' : undefined}>{t(s.frameworks.title)}</Link>}
-    {insights.research.length > 0 && <a href={`${p}/insights#research`}>{t(s.research.title)}</a>}
+    {insights.research.length > 0 && <a href={`${p}/insights#research`} aria-current={current === 'research' ? 'page' : undefined}>{t(s.research.title)}</a>}
     <a className={styles.end} href={`${p}/insights#newsletter`}>{t(insights.newsletter.title)}</a>
   </div></nav>;
 }
@@ -29,7 +29,7 @@ function Meta({note, ar}: {note: InsightNote; ar: boolean}) {
   return <div className={styles.meta}><span className={styles.kind}>{ar ? 'ملاحظة' : 'Note'}</span><span className={styles.dot} aria-hidden="true">·</span><span className={styles.num}>{note.number}</span><span className={styles.dot} aria-hidden="true">·</span><span>{t(note.dateLabel)}</span><span className={styles.status}>{t(note.status)}</span></div>;
 }
 
-function Shell({locale, path, children}: {locale: Locale; path: string; children: React.ReactNode}) {
+export function Shell({locale, path, children}: {locale: Locale; path: string; children: React.ReactNode}) {
   const ar = locale === 'ar';
   return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar ? 'rtl' : 'ltr'}><CapabilityHeader locale={locale} path={path}/><main id="main-content" className={`${styles.page} ${ar ? '' : styles.en}`}>{children}</main><CapabilityFooter locale={locale}/></div>;
 }
@@ -37,7 +37,7 @@ function Shell({locale, path, children}: {locale: Locale; path: string; children
 function LinkBand({id, items, ar, title, intro}: {id: string; items: InsightLink[]; ar: boolean; title: Bi; intro: Bi}) {
   const t = tx(ar);
   if (!items.length) return null; // empty sections stay hidden until they have content
-  return <section id={id} className={styles.band} aria-label={t(title)}><div className={styles.bandHead}><h2>{t(title)}</h2><p>{t(intro)}</p></div><div className={styles.bandBody}>{items.map(i => <article key={i.title.en} className={styles.item}><h3>{t(i.title)}</h3>{(i.summary.ar || i.summary.en) && <p>{t(i.summary)}</p>}<div className={styles.links}>{i.url && <a href={i.url} target="_blank" rel="noreferrer">{i.journal || (ar ? 'اقرأ' : 'Read')}</a>}{i.pdf && <a href={i.pdf}>{ar ? 'تحميل PDF' : 'Download PDF'}</a>}{i.preprint && <a href={i.preprint} target="_blank" rel="noreferrer">{ar ? 'النسخة الأولية' : 'Preprint'}</a>}</div></article>)}</div></section>;
+  return <section id={id} className={styles.band} aria-label={t(title)}><div className={styles.bandHead}><h2>{t(title)}</h2><p>{t(intro)}</p></div><div className={styles.bandBody}>{items.map(i => <article key={i.title.en} className={styles.item}>{i.kind && <p className={styles.kindLine}>{t(i.kind)}</p>}<h3>{t(i.title)}</h3>{(i.summary.ar || i.summary.en) && <p>{t(i.summary)}</p>}<div className={styles.links}>{i.page && <Link href={`${ar ? '/ar' : ''}${i.page}`}>{ar ? 'اقرأ التقرير' : 'Read the report'}</Link>}{i.url && <a href={i.url} target="_blank" rel="noreferrer">{i.journal || (ar ? 'اقرأ' : 'Read')}</a>}{i.pdf && <a href={i.pdf}>{ar ? 'تحميل PDF' : (i.pdfLang === 'ar' ? 'Arabic report (PDF)' : 'Download PDF')}</a>}{i.preprint && <a href={i.preprint} target="_blank" rel="noreferrer">{ar ? 'النسخة الأولية' : 'Preprint'}</a>}</div></article>)}</div></section>;
 }
 
 export function InsightsHub({locale}: {locale: Locale}) {
