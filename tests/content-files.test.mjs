@@ -137,6 +137,7 @@ test('project concepts resolve to a real sector and track, with public dossiers 
   assert.equal(box.box.email, 'projects@visionseek.org');
   assert.ok(box.summary.ar.includes('سيادتك') && box.summary.ar.includes('أمانها'));
   assert.equal(box.box.inside.length, 3);
+  assert.match(readFileSync(join(root, 'public/projects/visionseek-box.svg'), 'utf8'), /#cfff00/); // logo direction 03 (chosen 15 Oct)
   for (const project of concepts) {
     assert.ok(catalog.tracks.some(t => t.slug === project.track && t.sector === project.sector), project.id);
     assert.ok(['concept', 'active', 'completed'].includes(project.status), project.id);
