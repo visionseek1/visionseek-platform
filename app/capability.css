@@ -47,3 +47,21 @@
 .vs-decade-sub{color:#b9bcc7;font-size:1rem;margin:0 auto 1.4rem;max-width:40rem}
 .vs-decade .vs-text-link{justify-content:center}
 @media(max-width:760px){.vs-decade{padding:2.4rem 1.5rem 2rem}.vs-decade h2{font-size:1.25rem}}
+
+.vs-hero-copy h1.vs-hero-title{font-size:clamp(2.15rem,4.1vw,4.3rem);max-width:18em}
+.vs-hero-actions{display:flex;flex-wrap:wrap;gap:.8rem 1rem;justify-content:center;margin-top:1.8rem}
+.vs-button-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.vs-button-ghost:hover{border-color:var(--lime);color:var(--lime);background:transparent}
+.vs-architecture{display:grid;grid-template-columns:minmax(16rem,.72fr) 1.3fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;padding:5.5rem clamp(1.5rem,5vw,6rem);background:#0b0d0e}
+.vs-architecture-image img{width:100%;height:auto;object-fit:cover}
+.vs-architecture h2{font-size:clamp(2rem,3vw,3rem);margin:.7rem 0 1.2rem}
+.vs-architecture p:not(.vs-eyebrow){color:var(--grey);font-size:1.05rem;line-height:1.75}
+.vs-brief{background:#14191b}
+.vs-brief h2{font-size:clamp(2rem,3.2vw,3.2rem);margin:.7rem 0 1.6rem;max-width:16em}
+.vs-brief-form{display:grid;gap:1rem;max-width:36rem}
+.vs-brief-form label{display:grid;gap:.45rem;font-size:.95rem}
+.vs-brief-form :is(input,select){background:#0b0d0e;color:#fff;border:1px solid var(--vs-line);padding:.9rem 1rem;font:inherit}
+.vs-brief-trap{position:absolute;left:-9999px;height:0;width:0;opacity:0}
+.vs-brief-note{color:var(--grey);font-size:.9rem}
+@media(max-width:760px){.vs-architecture{grid-template-columns:1fr}}
+.vs-site .vs-button.vs-button-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}.vs-site .vs-button.vs-button-ghost:hover{border-color:var(--lime);color:var(--lime);background:transparent}
