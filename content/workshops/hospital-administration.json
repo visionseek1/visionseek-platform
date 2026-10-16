@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The hospital loses the day to paperwork, and to a system that stops.",
-    "ar": "يوم المستشفى يضيع في الورق، وفي نظام يتوقف."
+    "en": "The person who leads the hospital and understands the work protects the day. The one who leaves the system to someone else wakes up to a corridor that has stopped.",
+    "ar": "من يقود المستشفى ويفهم العمل يحمي اليوم. ومن يترك النظام لغيره يستيقظ على ممر توقف."
   },
   "summary": {
-    "en": "Published figures. We change them when the source changes. They are not our result.",
-    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
+    "en": "In Saudi Arabia, physicians have already started, and the obstacle was the institution. In Egypt, the family-medicine file has already moved. The figure is the source's. We change it when the source changes.",
+    "ar": "في السعودية بدأ الأطباء، والعائق كان المؤسسة. وفي مصر تحرّك ملف طب الأسرة. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "audienceRole": {
     "en": "Managers and staff in appointments, medical records administration, and department coordination.",
@@ -90,8 +90,8 @@
   ],
   "faq": [],
   "shiftsTitle": {
-    "en": "Three published hospital problems",
-    "ar": "ثلاث مشكلات منشورة في المستشفى"
+    "en": "What is at stake for a hospital",
+    "ar": "ما هو على المحك في المستشفى"
   },
   "shifts": [
     {
@@ -100,12 +100,12 @@
         "ar": "759"
       },
       "title": {
-        "en": "Hospitals dark from one update",
-        "ar": "مستشفيات انطفأت من تحديث واحد"
+        "en": "One morning, the hospital went dark",
+        "ar": "صباح واحد، والمستشفى أظلمت"
       },
       "body": {
-        "en": "JAMA Network Open: of 2,232 US hospitals, 759 showed network disruption after the 19 July 2024 CrowdStrike update. The next day, unplanned emergency visits were 23%, operating rooms 43%, and outpatient visits 46%.",
-        "ar": "JAMA Network Open: من 2232 مستشفى أمريكيًا، ظهر انقطاع الشبكة في 759 بعد تحديث CrowdStrike في 19 يوليو 2024. في اليوم التالي كانت الزيارات الطارئة غير المخططة 23%، وغرف العمليات 43%، والعيادات الخارجية 46%."
+        "en": "JAMA Network Open: one faulty update on 19 July 2024 disrupted the network at 759 US hospitals. Records, scans, and the emergency were among what stopped. A hospital in Cairo or Riyadh lives on the same kind of day.",
+        "ar": "JAMA Network Open: تحديث واحد معطوب في 19 يوليو 2024 قطع الشبكة في 759 مستشفى أمريكيًا. الملف، والأشعة، والطوارئ كانت بين ما توقف. مستشفى في القاهرة أو الرياض تعيش على يوم من هذا النوع."
       },
       "source": {
         "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
@@ -114,38 +114,38 @@
     },
     {
       "figure": {
-        "en": "0.57",
-        "ar": "0.57"
+        "en": "66.9%",
+        "ar": "66.9%"
       },
       "title": {
-        "en": "Minutes that did not come back",
-        "ar": "دقائق لم تَعُد"
+        "en": "The physicians started. The institution did not",
+        "ar": "الأطباء بدأوا. المؤسسة لم تبدأ"
       },
       "body": {
-        "en": "JAMIA Open, 2025: an ambient documentation tool saved 0.57 minutes per visit, and the difference was not statistically significant.",
-        "ar": "JAMIA Open، 2025: أداة توثيق محيطة وفّرت 0.57 دقيقة في اللقاء، والفرق غير دال إحصائيًا."
+        "en": "A study of 521 health practitioners in Saudi Arabia, published 27 August 2026: 66.9% of the physicians had already used medical AI. Intention was high, and the authors' conclusion is that the obstacle is the institution, not the people's will.",
+        "ar": "دراسة على 521 ممارسًا صحيًا في السعودية، نُشرت في 27 أغسطس 2026: 66.9% من الأطباء سبق أن استخدموا الذكاء الاصطناعي الطبي. الرغبة عالية، وخلاصة الباحثين أن العائق هو المؤسسة، لا إرادة الناس."
       },
       "source": {
-        "title": "JAMIA Open · Ambient scribe time · 2025",
-        "url": "https://academic.oup.com/jamiaopen/article/8/6/ooaf159/8371863"
+        "title": "Frontiers in Health Services · AI among Saudi healthcare professionals · 27 August 2026",
+        "url": "https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2026.1895739/full"
       }
     },
     {
       "figure": {
-        "en": "1",
-        "ar": "1"
+        "en": "255",
+        "ar": "255"
       },
       "title": {
-        "en": "The first technology hazard",
-        "ar": "أول خطر تقني"
+        "en": "Egypt has already moved the file",
+        "ar": "مصر حرّكت الملف"
       },
       "body": {
-        "en": "ECRI ranked risks from AI-enabled health technology as the number one health technology hazard for 2025. The risk is trusting the answer without a check.",
-        "ar": "ECRI جعل مخاطر التقنية الصحية المعتمدة على الذكاء الاصطناعي الخطر الأول في قائمة 2025. الخطر هو الثقة في الجواب من غير مراجعة."
+        "en": "Egypt's Healthcare Authority, 2 February 2025: 255 family-medicine centers and units were fully automated, and outpatient clinics were at 98%. The hospital whose leader understands this leads the one that is coming, not the one that was.",
+        "ar": "هيئة الرعاية الصحية في مصر، 2 فبراير 2025: 255 مركزًا ووحدة طب أسرة صارت مؤتمتة بالكامل، والعيادات الخارجية بلغت 98%. المستشفى التي يفهم قائدها هذا تقود التي تأتي، لا التي فاتت."
       },
       "source": {
-        "title": "ECRI · Top 10 Health Technology Hazards · 2025",
-        "url": "https://home.ecri.org/blogs/ecri-news/artificial-intelligence-tops-2025-health-technology-hazards-list"
+        "title": "Egypt Healthcare Authority · UHI digitalization · 2 February 2025",
+        "url": "https://eha.gov.eg/en/news/digitalization-achievements/"
       }
     }
   ]

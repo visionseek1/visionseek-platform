@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The product comes back from the market with a quality defect.",
-    "ar": "المنتج يرجع من السوق بعيب جودة."
+    "en": "A product comes back with the company's name on it. Whoever reads the defect early keeps the name.",
+    "ar": "منتج يرجع وعليه اسم الشركة. من يقرأ العيب مبكرًا يحفظ الاسم."
   },
   "summary": {
-    "en": "Published figures. We change them when the source changes. They are not our result.",
-    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
+    "en": "A company that ships from Egypt or the Gulf lives on the registration file, the shipment, and the notice that brings a box back. These figures are the FDA's, for fiscal year 2024. We change them when the report changes.",
+    "ar": "شركة تشحن من مصر أو الخليج تعيش على ملف التسجيل، والشحنة، والإخطار الذي يُرجع العلبة. هذه أرقام إدارة الغذاء والدواء الأمريكية للسنة المالية 2024. نبدّلها إذا تغيّر التقرير."
   },
   "audienceRole": {
     "en": "Managers and staff who prepare files, internal notes, and replies that a qualified person will sign.",
@@ -90,8 +90,8 @@
   ],
   "faq": [],
   "shiftsTitle": {
-    "en": "Three published problems for a drug company",
-    "ar": "ثلاث مشكلات منشورة لشركة الدواء"
+    "en": "What comes back to a drug company",
+    "ar": "ما يرجع على شركة الدواء"
   },
   "shifts": [
     {
@@ -100,12 +100,12 @@
         "ar": "421"
       },
       "title": {
-        "en": "Products recalled",
-        "ar": "منتجات سُحبت"
+        "en": "Products that came back",
+        "ar": "منتجات رجعت"
       },
       "body": {
-        "en": "FDA, fiscal year 2024: 421 human drug products were recalled, the lowest count in five years. The most common defect group was contamination.",
-        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: سُحب 421 منتج دواء بشري، وهو أقل عدد في خمس سنوات. أكثر مجموعات العيوب شيوعًا كانت التلوث."
+        "en": "FDA, fiscal year 2024: 421 human drug products were recalled. The most common defect was contamination. A name on a box in Cairo, Jeddah, or Dubai is the same kind of notice.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: سُحب 421 منتج دواء بشري. أكثر العيوب كان التلوث. اسم على علبة في القاهرة أو جدة أو دبي إخطار من هذا النوع."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
@@ -118,12 +118,12 @@
         "ar": "260"
       },
       "title": {
-        "en": "Recall events",
-        "ar": "حوادث سحب"
+        "en": "The notices increased",
+        "ar": "الإخطارات زادت"
       },
       "body": {
-        "en": "The same FDA report: 165 manufacturing sites generated 260 recall events, 15% more than fiscal year 2023.",
-        "ar": "التقرير نفسه: 165 موقع تصنيع أنتجت 260 حادثة سحب، بزيادة 15% عن السنة المالية 2023."
+        "en": "165 sites generated 260 recall events, 15% more than the year before. The market is not getting quieter.",
+        "ar": "165 موقعًا أنتجت 260 حادثة سحب، بزيادة 15% عن السنة التي قبلها. السوق لا يهدأ."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
@@ -136,12 +136,12 @@
         "ar": "24%"
       },
       "title": {
-        "en": "Recalls tied to manufacturing rules",
-        "ar": "سحب مرتبط بقواعد التصنيع"
+        "en": "The defect changed its name, not its cost",
+        "ar": "العيب غيّر اسمه، لا ثمنه"
       },
       "body": {
-        "en": "For fiscal years 2020 to 2023, about half of recalls were related to CGMP deficiencies. In fiscal year 2024 that group was 24% of recalls.",
-        "ar": "من 2020 إلى 2023 كان نحو نصف السحب مرتبطًا بقصور قواعد التصنيع الجيد. في 2024 صارت هذه المجموعة 24% من السحب."
+        "en": "Recalls tied to manufacturing-rule failures fell to 24%, after being about half in the years before. The box still comes back. Someone has to read why, before the customer does.",
+        "ar": "السحب المرتبط بقصور قواعد التصنيع نزل إلى 24%، بعد أن كان نحو النصف في السنوات السابقة. العلبة ترجع رغم ذلك. أحدهم يقرأ السبب قبل الزبون."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",

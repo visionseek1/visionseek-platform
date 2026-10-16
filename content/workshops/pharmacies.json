@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "A medication error costs money, and it reaches the person.",
-    "ar": "خطأ الدواء يكلف، ويصل إلى الشخص."
+    "en": "The error is in the bag, and the person is standing at the counter.",
+    "ar": "الخطأ في الكيس، والشخص واقف على الكاونتر."
   },
   "summary": {
-    "en": "Published figures. We change them when the source changes. They are not our result.",
-    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
+    "en": "A pharmacy in Egypt or the Gulf is this counter: the prescription, the box, and the one sentence you will not hand to a tool. The figures are published. We change them when the source changes.",
+    "ar": "صيدلية في مصر أو الخليج هي هذا الكاونتر: الروشتة، والعلبة، والجملة التي لن تُسلَّم لأداة. الأرقام منشورة. نبدّلها إذا تغيّر المصدر."
   },
   "audienceRole": {
     "en": "Managers and staff who write the stock note, the handover, and the repeated document reply.",
@@ -90,40 +90,22 @@
   ],
   "faq": [],
   "shiftsTitle": {
-    "en": "Three published pharmacy problems",
-    "ar": "ثلاث مشكلات منشورة في الصيدلية"
+    "en": "What is at stake at the counter",
+    "ar": "ما هو على المحك على الكاونتر"
   },
   "shifts": [
     {
       "figure": {
-        "en": "$42bn",
-        "ar": "42 مليار"
-      },
-      "title": {
-        "en": "A year of medication errors",
-        "ar": "سنة من أخطاء الدواء"
-      },
-      "body": {
-        "en": "WHO, Medication Without Harm, launched 29 March 2017: the cost associated with medication errors has been estimated at 42 billion US dollars a year.",
-        "ar": "منظمة الصحة العالمية، تحدي دواء بلا ضرر، أُطلق في 29 مارس 2017: قُدّرت التكلفة المرتبطة بأخطاء الدواء بنحو 42 مليار دولار في السنة."
-      },
-      "source": {
-        "title": "WHO · Medication Without Harm · 29 March 2017",
-        "url": "https://www.who.int/initiatives/medication-without-harm"
-      }
-    },
-    {
-      "figure": {
-        "en": "1 in 20",
+        "en": "1 من 20",
         "ar": "1 من 20"
       },
       "title": {
-        "en": "Patients with preventable harm",
-        "ar": "مرضى يصيبهم ضرر يمكن منعه"
+        "en": "A person who can be spared",
+        "ar": "شخص يمكن أن يُجنَّب"
       },
       "body": {
-        "en": "A WHO systematic review published in 2023, from 100 studies and 487,162 patients: preventable medication-related harm affects about one in 20 patients.",
-        "ar": "مراجعة منهجية لمنظمة الصحة العالمية نُشرت في 2023، من 100 دراسة و487162 مريضًا: الضرر الدوائي الذي يمكن منعه يصيب نحو مريض من كل عشرين."
+        "en": "A WHO review published in 2023, from 100 studies and 487,162 patients: preventable medication harm reaches about one person in twenty. At a counter in Cairo, Jeddah, or Dubai, that person has a name.",
+        "ar": "مراجعة لمنظمة الصحة العالمية نُشرت في 2023، من 100 دراسة و487162 مريضًا: الضرر الدوائي الذي يمكن منعه يصل إلى شخص من كل عشرين. على كاونتر في القاهرة أو جدة أو دبي، لهذا الشخص اسم."
       },
       "source": {
         "title": "WHO · Preventable medication-related harm · 2023",
@@ -132,20 +114,38 @@
     },
     {
       "figure": {
-        "en": ">1/4",
-        "ar": "أكثر من الربع"
+        "en": "الربع",
+        "ar": "الربع"
       },
       "title": {
-        "en": "Of those cases, severe",
-        "ar": "من هذه الحالات، شديدة"
+        "en": "And it is not a small error",
+        "ar": "وهو ليس خطأ صغيرًا"
       },
       "body": {
-        "en": "The same review: more than a quarter of those cases were severe or potentially life-threatening. Prescribing and monitoring were the stages where preventable harm was most frequent.",
-        "ar": "المراجعة نفسها: أكثر من ربع هذه الحالات كان شديدًا أو مهددًا للحياة. أكثر الضرر القابل للمنع وقع في الوصف والمتابعة."
+        "en": "The same review: more than a quarter of those cases were severe or potentially life-threatening. The harm sits in prescribing and in follow-up, before the bag is closed.",
+        "ar": "المراجعة نفسها: أكثر من ربع هذه الحالات كان شديدًا أو مهددًا للحياة. الضرر يقع في الوصف وفي المتابعة، قبل أن يُغلق الكيس."
       },
       "source": {
         "title": "WHO · Preventable medication-related harm · 2023",
         "url": "https://hdl.handle.net/10665/376203"
+      }
+    },
+    {
+      "figure": {
+        "en": "8117",
+        "ar": "8117"
+      },
+      "title": {
+        "en": "The region has already started asking",
+        "ar": "المنطقة بدأت تسأل"
+      },
+      "body": {
+        "en": "A review of pharmacy practice in the Middle East, published 9 October 2026, gathered 15 studies and 8,117 people. The question is no longer whether the counter will meet the tool. It is who at the counter understands it.",
+        "ar": "مراجعة لممارسة الصيدلة في الشرق الأوسط، نُشرت في 9 أكتوبر 2026، جمعت 15 دراسة و8117 شخصًا. السؤال لم يعُد هل سيلاقي الكاونتر الأداة. السؤال من على الكاونتر يفهمها."
+      },
+      "source": {
+        "title": "Frontiers in Digital Health · AI in pharmacy practice in the Middle East · 9 October 2026",
+        "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1951084/full"
       }
     }
   ]

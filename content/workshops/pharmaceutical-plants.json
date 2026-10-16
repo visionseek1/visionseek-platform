@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The site receives a quality letter, and the batch waits.",
-    "ar": "الموقع يصله خطاب جودة، والتشغيلة تنتظر."
+    "en": "A letter arrives, the line stops, and the shipment waits for a signature.",
+    "ar": "خطاب يصل، والخط يتوقف، والشحنة تنتظر توقيعًا."
   },
   "summary": {
-    "en": "Published figures. We change them when the source changes. They are not our result.",
-    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
+    "en": "A plant in Sixth of October, Sudair, or Jebel Ali knows this day: the qualified person, the batch, and an inspector who did not come to chat. The figures are the FDA's for fiscal year 2024. We change them when the report changes.",
+    "ar": "مصنع في السادس من أكتوبر، أو سدير، أو جبل علي يعرف هذا اليوم: الشخص المؤهل، والتشغيلة، ومفتش لم يأتِ للحديث. الأرقام لإدارة الغذاء والدواء في السنة المالية 2024. نبدّلها إذا تغيّر التقرير."
   },
   "audienceRole": {
     "en": "Managers and staff who write the shift note, the handover, and the deviation that a qualified person will sign.",
@@ -90,8 +90,8 @@
   ],
   "faq": [],
   "shiftsTitle": {
-    "en": "Three published problems on the plant floor",
-    "ar": "ثلاث مشكلات منشورة في المصنع"
+    "en": "What reaches a plant",
+    "ar": "ما يصل إلى المصنع"
   },
   "shifts": [
     {
@@ -100,12 +100,12 @@
         "ar": "105"
       },
       "title": {
-        "en": "Quality warning letters",
-        "ar": "خطابات تحذير للجودة"
+        "en": "Letters in one year",
+        "ar": "خطابات في سنة"
       },
       "body": {
-        "en": "FDA, fiscal year 2024: 105 warning letters to human drug manufacturing sites for drug quality, the highest number in five years.",
-        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: 105 خطابات تحذير لمواقع تصنيع الدواء البشري بسبب الجودة، وهو أعلى عدد في خمس سنوات."
+        "en": "FDA, fiscal year 2024: 105 quality warning letters to human-drug manufacturing sites, the highest number in five years. A letter is not a slide. It is a line that stops.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: 105 خطابات تحذير للجودة لمواقع تصنيع الدواء البشري، وهو أعلى عدد في خمس سنوات. الخطاب ليس شريحة. هو خط يتوقف."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
@@ -118,12 +118,12 @@
         "ar": "64"
       },
       "title": {
-        "en": "Letters sent abroad",
-        "ar": "خطابات إلى مواقع خارج أمريكا"
+        "en": "More of the letters went abroad",
+        "ar": "مزيد من الخطابات خرج إلى الخارج"
       },
       "body": {
-        "en": "Foreign warning letters rose from 35 to 64. Domestic letters fell from 59 to 41. Inspection-based letters were up 21% from fiscal year 2023.",
-        "ar": "خطابات المواقع الأجنبية ارتفعت من 35 إلى 64. والخطابات الداخلية نزلت من 59 إلى 41. والخطابات المبنية على تفتيش زادت 21% عن 2023."
+        "en": "Letters to sites outside the United States rose from 35 to 64. Domestic letters fell from 59 to 41. A plant that exports is in that mail.",
+        "ar": "خطابات المواقع خارج الولايات المتحدة ارتفعت من 35 إلى 64. والداخلية نزلت من 59 إلى 41. مصنع يصدّر موجود في هذا البريد."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
@@ -136,12 +136,12 @@
         "ar": "21%"
       },
       "title": {
-        "en": "More letters after inspections",
-        "ar": "خطابات أكثر بعد التفتيش"
+        "en": "The inspection got heavier",
+        "ar": "التفتيش صار أثقل"
       },
       "body": {
-        "en": "FDA, fiscal year 2024: inspection-based quality warning letters rose 21% from fiscal year 2023, because more inspections were done.",
-        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: خطابات التحذير المبنية على التفتيش زادت 21% عن 2023، لأن التفتيش نفسه زاد."
+        "en": "Inspection-based letters rose 21% because the inspections themselves increased. The visit is not getting lighter.",
+        "ar": "الخطابات المبنية على التفتيش زادت 21% لأن التفتيش نفسه زاد. الزيارة لا تخف."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",

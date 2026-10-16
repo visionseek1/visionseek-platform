@@ -12,17 +12,17 @@
     "senior"
   ],
   "outcome": {
-    "en": "Whoever does not understand the tool leaves the decision to someone else.",
-    "ar": "من لا يفهم الأداة يترك القرار لغيره."
+    "en": "The decision is yours. If you do not understand it, someone else will, and they will take it.",
+    "ar": "القرار لك. إن لم تفهمه أنت، فهمه غيرك وأخذه."
   },
   "summary": {
-    "en": "Published figures. We change them when the source changes. They are not our result.",
-    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
+    "en": "In the Gulf and in Egypt the tool has reached the clinic and the file. A leader who sits and learns, leads. One who waits is led. The figure is the source's, and we change it when the source changes.",
+    "ar": "في الخليج وفي مصر وصلت الأداة إلى العيادة والملف. قائد يجلس ويتعلّم، يقود. والذي ينتظر يُقاد. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "pace": {
     "title": {
-      "en": "Two published problems",
-      "ar": "مشكلتان منشورتان"
+      "en": "What you gain, and what you can lose",
+      "ar": "ما تربحه، وما يمكن أن تخسره"
     },
     "quote": {
       "en": "Even a single made-up term could trigger a detailed, decisive response based entirely on fiction.",
@@ -37,52 +37,52 @@
       "url": "https://www.mountsinai.org/about/newsroom/2025/ai-chatbots-can-run-with-medical-misinformation-study-finds-highlighting-the-need-for-stronger-safeguards"
     },
     "consequence": {
-      "en": "The figure is the source's, and we change it when the source changes.",
-      "ar": "الرقم من مصدره، ونبدّله إذا تغيّر المصدر."
+      "en": "Learn it and you lead the institution. Leave it, and the day can stop without you understanding why.",
+      "ar": "تعلّمه فتقود المؤسسة. اتركه، فيمكن أن يتوقف اليوم وأنت لا تفهم لماذا."
     },
     "cards": [
+      {
+        "figure": {
+          "en": "66.9%",
+          "ar": "66.9%"
+        },
+        "title": {
+          "en": "The people around you have started",
+          "ar": "من حولك بدأ"
+        },
+        "body": {
+          "en": "Saudi Arabia, 27 August 2026, 521 practitioners: 66.9% of physicians had already used medical AI. The obstacle the researchers name is the institution, not the desire.",
+          "ar": "السعودية، 27 أغسطس 2026، 521 ممارسًا: 66.9% من الأطباء سبق أن استخدموا الذكاء الاصطناعي الطبي. العائق الذي يسميه الباحثون هو المؤسسة، لا الرغبة."
+        },
+        "lesson": {
+          "en": "If you understand it, you can lead them. If you do not, they move and you hear about it.",
+          "ar": "إن فهمته قُدتهم. وإن لم تفهمه تحركوا وسمعت عنهم."
+        },
+        "source": {
+          "title": "Frontiers in Health Services · AI among Saudi healthcare professionals · 27 August 2026",
+          "url": "https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2026.1895739/full"
+        }
+      },
       {
         "figure": {
           "en": "759",
           "ar": "759"
         },
         "title": {
-          "en": "Hospitals dark from one update",
-          "ar": "مستشفيات انطفأت من تحديث واحد"
+          "en": "A day that stops",
+          "ar": "يوم يتوقف"
         },
         "body": {
-          "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted the network at 759 of 2,232 US hospitals.",
-          "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع الشبكة في 759 مستشفى من 2232 مستشفى أمريكيًا."
+          "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted 759 hospitals. The leader who understands the system is the one who can stand in that corridor.",
+          "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع 759 مستشفى. القائد الذي يفهم النظام هو من يستطيع أن يقف في ذلك الممر."
         },
         "lesson": {
-          "en": "One day of dependence is a published fact, not our result.",
-          "ar": "يوم واحد من الاعتماد واقعة منشورة، لا نتيجتنا."
+          "en": "The harm is not a slide. It is a morning.",
+          "ar": "الضرر ليس شريحة. هو صباح."
         },
         "source": {
           "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
           "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
-        }
-      },
-      {
-        "figure": {
-          "en": "0.57",
-          "ar": "0.57"
-        },
-        "title": {
-          "en": "Minutes that did not come back",
-          "ar": "دقائق لم تَعُد"
-        },
-        "body": {
-          "en": "JAMIA Open, 2025: 0.57 minutes saved per visit, and the difference was not statistically significant.",
-          "ar": "JAMIA Open، 2025: 0.57 دقيقة أقل في اللقاء، والفرق غير دال إحصائيًا."
-        },
-        "lesson": {
-          "en": "Buying the tool did not return the day.",
-          "ar": "شراء الأداة لم يُرجع اليوم."
-        },
-        "source": {
-          "title": "JAMIA Open · Ambient scribe time · 2025",
-          "url": "https://academic.oup.com/jamiaopen/article/8/6/ooaf159/8371863"
         }
       }
     ]

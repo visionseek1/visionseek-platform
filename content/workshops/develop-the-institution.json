@@ -12,12 +12,12 @@
     "senior"
   ],
   "outcome": {
-    "en": "The tool is bought. The institution does not change.",
-    "ar": "الأداة تُشترى. المؤسسة لا تتغيّر."
+    "en": "An institution whose leader understands it gets ahead. One that buys the tool and stands still arrives late.",
+    "ar": "مؤسسة يفهمها قائدها تسبق. والتي تشتري الأداة وتقف، تلحق."
   },
   "summary": {
-    "en": "Published figures. We change them when the source changes. They are not our result.",
-    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
+    "en": "People in the Gulf already want this. Egypt has already moved the file. Buying alone changed nothing. The figure is the source's, and we change it when the source changes.",
+    "ar": "الناس في الخليج يريدون هذا. ومصر حرّكت الملف. والشراء وحده لم يغيّر شيئًا. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "audienceRole": {
     "en": "Senior leadership of a medical institution: the people who can say yes to a change in how it works.",
@@ -89,62 +89,62 @@
   ],
   "faq": [],
   "shiftsTitle": {
-    "en": "Three published problems for the institution",
-    "ar": "ثلاث مشكلات منشورة للمؤسسة"
+    "en": "What is at stake for the institution",
+    "ar": "ما هو على المحك في المؤسسة"
   },
   "shifts": [
+    {
+      "figure": {
+        "en": "71.6%",
+        "ar": "71.6%"
+      },
+      "title": {
+        "en": "They want it. The institution is what stops them",
+        "ar": "يريدونه. المؤسسة هي التي توقفهم"
+      },
+      "body": {
+        "en": "The same Saudi study, 27 August 2026: 71.6% intend to use AI, and 51.2% have used it. The authors say the obstacle is organizational, not the willingness of the people.",
+        "ar": "الدراسة السعودية نفسها، 27 أغسطس 2026: 71.6% ينوون استخدام الذكاء الاصطناعي، و51.2% استخدموه. الباحثون يقولون إن العائق مؤسسي، لا رغبة الناس."
+      },
+      "source": {
+        "title": "Frontiers in Health Services · AI among Saudi healthcare professionals · 27 August 2026",
+        "url": "https://www.frontiersin.org/journals/health-services/articles/10.3389/frhs.2026.1895739/full"
+      }
+    },
+    {
+      "figure": {
+        "en": "255",
+        "ar": "255"
+      },
+      "title": {
+        "en": "The file in Egypt did not wait",
+        "ar": "الملف في مصر لم ينتظر"
+      },
+      "body": {
+        "en": "On 2 February 2025 the Healthcare Authority said 255 family-medicine units were fully automated. An institution that still treats this as a purchase will read about a system that has already moved.",
+        "ar": "في 2 فبراير 2025 قالت هيئة الرعاية الصحية إن 255 وحدة طب أسرة صارت مؤتمتة بالكامل. مؤسسة ما زالت تعامل هذا كشراء ستقرأ عن نظام تحرّك."
+      },
+      "source": {
+        "title": "Egypt Healthcare Authority · UHI digitalization · 2 February 2025",
+        "url": "https://eha.gov.eg/en/news/digitalization-achievements/"
+      }
+    },
     {
       "figure": {
         "en": "لا فرق",
         "ar": "لا فرق"
       },
       "title": {
-        "en": "The clinic that bought the tool",
-        "ar": "العيادة التي اشترت الأداة"
+        "en": "The clinic that only bought it",
+        "ar": "العيادة التي اكتفت بالشراء"
       },
       "body": {
-        "en": "NEJM AI, 22 November 2024: in the primary analysis, clinicians given an ambient documentation tool were not more efficient than those without it.",
-        "ar": "NEJM AI، 22 نوفمبر 2024: في التحليل الأساسي، لم يكن الأطباء الذين أُعطوا أداة توثيق محيطة أكفأ ممن لم يأخذوها."
+        "en": "NEJM AI, 22 November 2024: clinicians who were given the documentation tool were not more efficient. The purchase was not the change. The change is a leader who understands the work.",
+        "ar": "NEJM AI، 22 نوفمبر 2024: الأطباء الذين أُعطوا أداة التوثيق لم يكونوا أكفأ. الشراء لم يكن التغيير. التغيير قائد يفهم العمل."
       },
       "source": {
         "title": "NEJM AI · Clinical documentation efficiency · 22 November 2024",
         "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400659"
-      }
-    },
-    {
-      "figure": {
-        "en": "1",
-        "ar": "1"
-      },
-      "title": {
-        "en": "The first hazard of the year",
-        "ar": "أول خطر في السنة"
-      },
-      "body": {
-        "en": "ECRI, 2025: AI-enabled health technology was the first item on the health technology hazards list, because an unchecked answer can harm.",
-        "ar": "ECRI، 2025: التقنية الصحية المعتمدة على الذكاء الاصطناعي كانت البند الأول في قائمة المخاطر، لأن الجواب غير المراجع قد يضر."
-      },
-      "source": {
-        "title": "ECRI · Top 10 Health Technology Hazards · 2025",
-        "url": "https://home.ecri.org/blogs/ecri-news/artificial-intelligence-tops-2025-health-technology-hazards-list"
-      }
-    },
-    {
-      "figure": {
-        "en": "759",
-        "ar": "759"
-      },
-      "title": {
-        "en": "One update, one day",
-        "ar": "تحديث واحد، يوم واحد"
-      },
-      "body": {
-        "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted the network at 759 US hospitals.",
-        "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع الشبكة في 759 مستشفى أمريكيًا."
-      },
-      "source": {
-        "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
-        "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
       }
     }
   ]
