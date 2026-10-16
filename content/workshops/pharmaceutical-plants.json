@@ -1,39 +1,8 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A shift note",
-        "ar": "ملاحظة وردية"
-      },
-      "body": {
-        "en": "What happened, what is still open, and who takes it next. No release decision inside it.",
-        "ar": "ما الذي حدث، وما الذي ما زال مفتوحًا، ومن يأخذه بعد ذلك. بلا قرار إفراج داخلها."
-      }
-    },
-    {
-      "title": {
-        "en": "A handover",
-        "ar": "تسليم"
-      },
-      "body": {
-        "en": "What the next shift needs, in language it can use.",
-        "ar": "ما تحتاجه الوردية التالية، بلغة تستطيع استعمالها."
-      }
-    },
-    {
-      "title": {
-        "en": "A deviation note",
-        "ar": "ملاحظة انحراف"
-      },
-      "body": {
-        "en": "What was seen, written once, and checked before it is filed.",
-        "ar": "ما الذي شوهد، يُكتب مرة، ويُراجع قبل الحفظ."
-      }
-    }
-  ],
+  "examples": [],
   "boundary": {
-    "en": "Paperwork only. The masterclass does not release a batch, change a method, or replace the qualified person.",
-    "ar": "الأوراق فقط. الماستركلاس لا يفرج عن تشغيلة، ولا يغيّر طريقة، ولا يحل محل الشخص المؤهل."
+    "en": "No batch release.",
+    "ar": "لا إفراج عن تشغيلة."
   },
   "position": 16,
   "slug": "pharmaceutical-plants",
@@ -44,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The shift note, the deviation write-up, and the handover move faster, while release of a batch stays with the person who owns it.",
-    "ar": "ملاحظة الوردية وكتابة الانحراف والتسليم تتحرك أسرع، وإفراج التشغيلة يبقى عند من يملكه."
+    "en": "The site receives a quality letter, and the batch waits.",
+    "ar": "الموقع يصله خطاب جودة، والتشغيلة تنتظر."
   },
   "summary": {
-    "en": "For a factory in the medical sector. Not for releasing a batch, changing a method, or any decision that belongs to the qualified person.",
-    "ar": "لمصنع في القطاع الطبي. ليس لإفراج تشغيلة، ولا لتغيير طريقة، ولا لأي قرار يملكه الشخص المؤهل."
+    "en": "Published figures. We change them when the source changes. They are not our result.",
+    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
   },
   "audienceRole": {
     "en": "Managers and staff who write the shift note, the handover, and the deviation that a qualified person will sign.",
@@ -119,25 +88,64 @@
       "ar": "حد مكتوب: الأداة تسوّد الملاحظة، ولا تفرج عن التشغيلة."
     }
   ],
-  "faq": [
+  "faq": [],
+  "shiftsTitle": {
+    "en": "Three published problems on the plant floor",
+    "ar": "ثلاث مشكلات منشورة في المصنع"
+  },
+  "shifts": [
     {
-      "q": {
-        "en": "Does this release a batch?",
-        "ar": "هل يفرج الماستركلاس عن تشغيلة؟"
+      "figure": {
+        "en": "105",
+        "ar": "105"
       },
-      "a": {
-        "en": "No. If a sentence would release a batch, it belongs to the qualified person. The session stays on the paperwork.",
-        "ar": "لا. إن كانت الجملة ستفرج عن تشغيلة فهي للشخص المؤهل. الجلسة تبقى في الأوراق."
+      "title": {
+        "en": "Quality warning letters",
+        "ar": "خطابات تحذير للجودة"
+      },
+      "body": {
+        "en": "FDA, fiscal year 2024: 105 warning letters to human drug manufacturing sites for drug quality, the highest number in five years.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: 105 خطابات تحذير لمواقع تصنيع الدواء البشري بسبب الجودة، وهو أعلى عدد في خمس سنوات."
+      },
+      "source": {
+        "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
+        "url": "https://www.fda.gov/media/193320/download"
       }
     },
     {
-      "q": {
-        "en": "Do you keep the plant's records?",
-        "ar": "هل تحفظون سجلات المصنع؟"
+      "figure": {
+        "en": "64",
+        "ar": "64"
       },
-      "a": {
-        "en": "No. The website takes nothing. A session uses only what the plant agrees to bring.",
-        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما يوافق المصنع على إحضاره."
+      "title": {
+        "en": "Letters sent abroad",
+        "ar": "خطابات إلى مواقع خارج أمريكا"
+      },
+      "body": {
+        "en": "Foreign warning letters rose from 35 to 64. Domestic letters fell from 59 to 41. Inspection-based letters were up 21% from fiscal year 2023.",
+        "ar": "خطابات المواقع الأجنبية ارتفعت من 35 إلى 64. والخطابات الداخلية نزلت من 59 إلى 41. والخطابات المبنية على تفتيش زادت 21% عن 2023."
+      },
+      "source": {
+        "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
+        "url": "https://www.fda.gov/media/193320/download"
+      }
+    },
+    {
+      "figure": {
+        "en": "21%",
+        "ar": "21%"
+      },
+      "title": {
+        "en": "More letters after inspections",
+        "ar": "خطابات أكثر بعد التفتيش"
+      },
+      "body": {
+        "en": "FDA, fiscal year 2024: inspection-based quality warning letters rose 21% from fiscal year 2023, because more inspections were done.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: خطابات التحذير المبنية على التفتيش زادت 21% عن 2023، لأن التفتيش نفسه زاد."
+      },
+      "source": {
+        "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
+        "url": "https://www.fda.gov/media/193320/download"
       }
     }
   ]

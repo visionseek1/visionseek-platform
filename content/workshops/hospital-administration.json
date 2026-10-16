@@ -1,39 +1,8 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "An appointment message",
-        "ar": "رسالة موعد"
-      },
-      "body": {
-        "en": "Time, place, what to bring, and who to call if the day changes. No medical advice inside it.",
-        "ar": "الوقت والمكان وماذا يُحضر، ومن يُتصل به إن تغيّر اليوم. بلا نصيحة طبية داخلها."
-      }
-    },
-    {
-      "title": {
-        "en": "A department note",
-        "ar": "مذكرة قسم"
-      },
-      "body": {
-        "en": "What was agreed in the administrative meeting, in language the next shift can use.",
-        "ar": "ما اتُفق عليه في الاجتماع الإداري، بلغة تستطيع النوبة التالية استعمالها."
-      }
-    },
-    {
-      "title": {
-        "en": "A family question",
-        "ar": "سؤال أهل"
-      },
-      "body": {
-        "en": "A recurring non-clinical question — visiting hours, a document, a queue — answered once, clearly, and checked before it is sent.",
-        "ar": "سؤال غير سريري يتكرر: مواعيد الزيارة، أو مستند، أو دور الانتظار. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
-      }
-    }
-  ],
+  "examples": [],
   "boundary": {
-    "en": "Administration only. The masterclass does not diagnose, prescribe, interpret a result, or replace a clinician.",
-    "ar": "الإدارة فقط. الماستركلاس لا يشخّص، ولا يصف، ولا يفسّر نتيجة، ولا يحل محل طبيب."
+    "en": "No diagnosis, and no care decision.",
+    "ar": "لا تشخيص، ولا قرار رعاية."
   },
   "position": 5,
   "slug": "hospital-administration",
@@ -44,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "Appointment messages, internal notes, and the paper behind a meeting move faster, while the clinical decision stays with the clinician.",
-    "ar": "رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع تتحرك أسرع، والقرار السريري يبقى عند الطبيب."
+    "en": "The hospital loses the day to paperwork, and to a system that stops.",
+    "ar": "يوم المستشفى يضيع في الورق، وفي نظام يتوقف."
   },
   "summary": {
-    "en": "For the administrative floor of a hospital. Not for diagnosis, prescription, or any decision that belongs to a clinician.",
-    "ar": "للطابق الإداري في المستشفى. ليست للتشخيص، ولا للوصفة، ولا لأي قرار يملكه الطبيب."
+    "en": "Published figures. We change them when the source changes. They are not our result.",
+    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
   },
   "audienceRole": {
     "en": "Managers and staff in appointments, medical records administration, and department coordination.",
@@ -119,25 +88,64 @@
       "ar": "حد مكتوب: الأداة تسوّد الإدارة، ولا تتخذ قرارًا سريريًا."
     }
   ],
-  "faq": [
+  "faq": [],
+  "shiftsTitle": {
+    "en": "Three published hospital problems",
+    "ar": "ثلاث مشكلات منشورة في المستشفى"
+  },
+  "shifts": [
     {
-      "q": {
-        "en": "Will this touch patient care decisions?",
-        "ar": "هل يمس الماستركلاس قرارات الرعاية؟"
+      "figure": {
+        "en": "759",
+        "ar": "759"
       },
-      "a": {
-        "en": "No. If a sentence would change care, it belongs to the clinician. The session stays on administration.",
-        "ar": "لا. إن كانت الجملة ستغيّر الرعاية فهي للطبيب. الجلسة تبقى في الإدارة."
+      "title": {
+        "en": "Hospitals dark from one update",
+        "ar": "مستشفيات انطفأت من تحديث واحد"
+      },
+      "body": {
+        "en": "JAMA Network Open: of 2,232 US hospitals, 759 showed network disruption after the 19 July 2024 CrowdStrike update. The next day, unplanned emergency visits were 23%, operating rooms 43%, and outpatient visits 46%.",
+        "ar": "JAMA Network Open: من 2232 مستشفى أمريكيًا، ظهر انقطاع الشبكة في 759 بعد تحديث CrowdStrike في 19 يوليو 2024. في اليوم التالي كانت الزيارات الطارئة غير المخططة 23%، وغرف العمليات 43%، والعيادات الخارجية 46%."
+      },
+      "source": {
+        "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
+        "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
       }
     },
     {
-      "q": {
-        "en": "Do you store patient files?",
-        "ar": "هل تحفظون ملفات مرضى؟"
+      "figure": {
+        "en": "0.57",
+        "ar": "0.57"
       },
-      "a": {
-        "en": "No. The website takes nothing. A session uses only what the hospital agrees to bring, and clinical records are not the material.",
-        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق المستشفى على إحضاره، والسجل السريري ليس المادة."
+      "title": {
+        "en": "Minutes that did not come back",
+        "ar": "دقائق لم تَعُد"
+      },
+      "body": {
+        "en": "JAMIA Open, 2025: an ambient documentation tool saved 0.57 minutes per visit, and the difference was not statistically significant.",
+        "ar": "JAMIA Open، 2025: أداة توثيق محيطة وفّرت 0.57 دقيقة في اللقاء، والفرق غير دال إحصائيًا."
+      },
+      "source": {
+        "title": "JAMIA Open · Ambient scribe time · 2025",
+        "url": "https://academic.oup.com/jamiaopen/article/8/6/ooaf159/8371863"
+      }
+    },
+    {
+      "figure": {
+        "en": "1",
+        "ar": "1"
+      },
+      "title": {
+        "en": "The first technology hazard",
+        "ar": "أول خطر تقني"
+      },
+      "body": {
+        "en": "ECRI ranked risks from AI-enabled health technology as the number one health technology hazard for 2025. The risk is trusting the answer without a check.",
+        "ar": "ECRI جعل مخاطر التقنية الصحية المعتمدة على الذكاء الاصطناعي الخطر الأول في قائمة 2025. الخطر هو الثقة في الجواب من غير مراجعة."
+      },
+      "source": {
+        "title": "ECRI · Top 10 Health Technology Hazards · 2025",
+        "url": "https://home.ecri.org/blogs/ecri-news/artificial-intelligence-tops-2025-health-technology-hazards-list"
       }
     }
   ]

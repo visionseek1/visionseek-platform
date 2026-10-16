@@ -1,8 +1,8 @@
 {
   "examples": [],
   "boundary": {
-    "en": "",
-    "ar": ""
+    "en": "No diagnosis, no batch release, and no advice about a medicine.",
+    "ar": "لا تشخيص، ولا إفراج عن تشغيلة، ولا نصح عن دواء."
   },
   "position": 7,
   "slug": "develop-the-institution",
@@ -12,12 +12,12 @@
     "senior"
   ],
   "outcome": {
-    "en": "You see what the medical institution can already do with the people and money it has, and what it is not yet looking at.",
-    "ar": "ترى ما تستطيع المؤسسة الطبية فعله بمن فيها وبمالها اليوم، وما لا تنظر إليه بعد."
+    "en": "The tool is bought. The institution does not change.",
+    "ar": "الأداة تُشترى. المؤسسة لا تتغيّر."
   },
   "summary": {
-    "en": "For the senior table of a medical institution: a hospital, a pharmaceutical company, a factory, or a pharmacy. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building.",
-    "ar": "لمائدة القيادة في مؤسسة طبية: مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى."
+    "en": "Published figures. We change them when the source changes. They are not our result.",
+    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
   },
   "audienceRole": {
     "en": "Senior leadership of a medical institution: the people who can say yes to a change in how it works.",
@@ -87,5 +87,65 @@
       "ar": "خطوة أولى لا تنتظر جهة خارجية، وخطوة ثانية لا تدّعي أن الجهة موجودة."
     }
   ],
-  "faq": []
+  "faq": [],
+  "shiftsTitle": {
+    "en": "Three published problems for the institution",
+    "ar": "ثلاث مشكلات منشورة للمؤسسة"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "لا فرق",
+        "ar": "لا فرق"
+      },
+      "title": {
+        "en": "The clinic that bought the tool",
+        "ar": "العيادة التي اشترت الأداة"
+      },
+      "body": {
+        "en": "NEJM AI, 22 November 2024: in the primary analysis, clinicians given an ambient documentation tool were not more efficient than those without it.",
+        "ar": "NEJM AI، 22 نوفمبر 2024: في التحليل الأساسي، لم يكن الأطباء الذين أُعطوا أداة توثيق محيطة أكفأ ممن لم يأخذوها."
+      },
+      "source": {
+        "title": "NEJM AI · Clinical documentation efficiency · 22 November 2024",
+        "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400659"
+      }
+    },
+    {
+      "figure": {
+        "en": "1",
+        "ar": "1"
+      },
+      "title": {
+        "en": "The first hazard of the year",
+        "ar": "أول خطر في السنة"
+      },
+      "body": {
+        "en": "ECRI, 2025: AI-enabled health technology was the first item on the health technology hazards list, because an unchecked answer can harm.",
+        "ar": "ECRI، 2025: التقنية الصحية المعتمدة على الذكاء الاصطناعي كانت البند الأول في قائمة المخاطر، لأن الجواب غير المراجع قد يضر."
+      },
+      "source": {
+        "title": "ECRI · Top 10 Health Technology Hazards · 2025",
+        "url": "https://home.ecri.org/blogs/ecri-news/artificial-intelligence-tops-2025-health-technology-hazards-list"
+      }
+    },
+    {
+      "figure": {
+        "en": "759",
+        "ar": "759"
+      },
+      "title": {
+        "en": "One update, one day",
+        "ar": "تحديث واحد، يوم واحد"
+      },
+      "body": {
+        "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted the network at 759 US hospitals.",
+        "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع الشبكة في 759 مستشفى أمريكيًا."
+      },
+      "source": {
+        "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
+        "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
+      }
+    }
+  ]
 }

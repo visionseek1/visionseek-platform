@@ -1,39 +1,8 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A file note",
-        "ar": "ملاحظة ملف"
-      },
-      "body": {
-        "en": "What changed, what is still open, and who signs. No claim about the medicine inside it.",
-        "ar": "ما الذي تغيّر، وما الذي ما زال مفتوحًا، ومن يوقّع. بلا ادعاء عن الدواء داخلها."
-      }
-    },
-    {
-      "title": {
-        "en": "An internal note",
-        "ar": "مذكرة داخلية"
-      },
-      "body": {
-        "en": "What the meeting agreed, in language the next team can use.",
-        "ar": "ما اتُفق عليه في الاجتماع، بلغة يستطيع الفريق التالي استعمالها."
-      }
-    },
-    {
-      "title": {
-        "en": "A regulator's question",
-        "ar": "سؤال جهة رقابية"
-      },
-      "body": {
-        "en": "A recurring question about a document, answered once, clearly, and checked before it is sent.",
-        "ar": "سؤال يتكرر عن مستند. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
-      }
-    }
-  ],
+  "examples": [],
   "boundary": {
-    "en": "Paperwork only. The masterclass does not approve a medicine, write a product claim, or replace the qualified person.",
-    "ar": "الأوراق فقط. الماستركلاس لا يعتمد دواء، ولا يكتب ادعاء منتج، ولا يحل محل الشخص المؤهل."
+    "en": "No drug approval.",
+    "ar": "لا اعتماد دواء."
   },
   "position": 15,
   "slug": "pharmaceutical-companies",
@@ -44,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The file, the internal note, and the reply to a regulator move faster, while the scientific decision stays with the person who owns it.",
-    "ar": "الملف والمذكرة الداخلية والرد على الجهة الرقابية تتحرك أسرع، والقرار العلمي يبقى عند من يملكه."
+    "en": "The product comes back from the market with a quality defect.",
+    "ar": "المنتج يرجع من السوق بعيب جودة."
   },
   "summary": {
-    "en": "For a pharmaceutical company. Not for approving a medicine, writing a claim, or any decision that belongs to the qualified person.",
-    "ar": "لشركة دواء. ليست لاعتماد دواء، ولا لكتابة ادعاء، ولا لأي قرار يملكه الشخص المؤهل."
+    "en": "Published figures. We change them when the source changes. They are not our result.",
+    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
   },
   "audienceRole": {
     "en": "Managers and staff who prepare files, internal notes, and replies that a qualified person will sign.",
@@ -119,25 +88,64 @@
       "ar": "حد مكتوب: الأداة تسوّد الأوراق، ولا تعتمد الدواء."
     }
   ],
-  "faq": [
+  "faq": [],
+  "shiftsTitle": {
+    "en": "Three published problems for a drug company",
+    "ar": "ثلاث مشكلات منشورة لشركة الدواء"
+  },
+  "shifts": [
     {
-      "q": {
-        "en": "Does this approve a medicine?",
-        "ar": "هل يعتمد الماستركلاس دواء؟"
+      "figure": {
+        "en": "421",
+        "ar": "421"
       },
-      "a": {
-        "en": "No. If a sentence would change the product, it belongs to the qualified person. The session stays on the paperwork.",
-        "ar": "لا. إن كانت الجملة ستغيّر المنتج فهي للشخص المؤهل. الجلسة تبقى في الأوراق."
+      "title": {
+        "en": "Products recalled",
+        "ar": "منتجات سُحبت"
+      },
+      "body": {
+        "en": "FDA, fiscal year 2024: 421 human drug products were recalled, the lowest count in five years. The most common defect group was contamination.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: سُحب 421 منتج دواء بشري، وهو أقل عدد في خمس سنوات. أكثر مجموعات العيوب شيوعًا كانت التلوث."
+      },
+      "source": {
+        "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
+        "url": "https://www.fda.gov/media/193320/download"
       }
     },
     {
-      "q": {
-        "en": "Do you keep the company's files?",
-        "ar": "هل تحفظون ملفات الشركة؟"
+      "figure": {
+        "en": "260",
+        "ar": "260"
       },
-      "a": {
-        "en": "No. The website takes nothing. A session uses only what the company agrees to bring.",
-        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق الشركة على إحضاره."
+      "title": {
+        "en": "Recall events",
+        "ar": "حوادث سحب"
+      },
+      "body": {
+        "en": "The same FDA report: 165 manufacturing sites generated 260 recall events, 15% more than fiscal year 2023.",
+        "ar": "التقرير نفسه: 165 موقع تصنيع أنتجت 260 حادثة سحب، بزيادة 15% عن السنة المالية 2023."
+      },
+      "source": {
+        "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
+        "url": "https://www.fda.gov/media/193320/download"
+      }
+    },
+    {
+      "figure": {
+        "en": "24%",
+        "ar": "24%"
+      },
+      "title": {
+        "en": "Recalls tied to manufacturing rules",
+        "ar": "سحب مرتبط بقواعد التصنيع"
+      },
+      "body": {
+        "en": "For fiscal years 2020 to 2023, about half of recalls were related to CGMP deficiencies. In fiscal year 2024 that group was 24% of recalls.",
+        "ar": "من 2020 إلى 2023 كان نحو نصف السحب مرتبطًا بقصور قواعد التصنيع الجيد. في 2024 صارت هذه المجموعة 24% من السحب."
+      },
+      "source": {
+        "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
+        "url": "https://www.fda.gov/media/193320/download"
       }
     }
   ]

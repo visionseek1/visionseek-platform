@@ -1,39 +1,8 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A stock note",
-        "ar": "ملاحظة مخزون"
-      },
-      "body": {
-        "en": "What is short, what arrived, and who to tell. No advice about a medicine inside it.",
-        "ar": "ما الذي نقص، وما الذي وصل، ومن يُخبَر. بلا نصيحة عن دواء داخلها."
-      }
-    },
-    {
-      "title": {
-        "en": "A handover",
-        "ar": "تسليم"
-      },
-      "body": {
-        "en": "What the next shift needs, in language it can use.",
-        "ar": "ما تحتاجه الوردية التالية، بلغة تستطيع استعمالها."
-      }
-    },
-    {
-      "title": {
-        "en": "A document question",
-        "ar": "سؤال مستند"
-      },
-      "body": {
-        "en": "A recurring question about a paper, answered once, clearly, and checked before it is sent.",
-        "ar": "سؤال يتكرر عن ورقة. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
-      }
-    }
-  ],
+  "examples": [],
   "boundary": {
-    "en": "Administration only. The masterclass does not advise on a medicine, interpret a prescription, or replace a pharmacist.",
-    "ar": "الإدارة فقط. الماستركلاس لا ينصح عن دواء، ولا يفسّر وصفة، ولا يحل محل صيدلي."
+    "en": "No advice to a person about a medicine.",
+    "ar": "لا نصح لشخص عن دواء."
   },
   "position": 17,
   "slug": "pharmacies",
@@ -44,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The stock note, the shift handover, and the answer to a repeated document question move faster, while any sentence about a medicine stays with the pharmacist.",
-    "ar": "ملاحظة المخزون وتسليم الوردية والرد على سؤال مستند يتكرر تتحرك أسرع، وأي جملة عن دواء تبقى عند الصيدلي."
+    "en": "A medication error costs money, and it reaches the person.",
+    "ar": "خطأ الدواء يكلف، ويصل إلى الشخص."
   },
   "summary": {
-    "en": "For a pharmacy. Not for advising a person on a medicine, and not for any sentence a pharmacist must own.",
-    "ar": "لصيدلية. ليست لنصيحة شخص عن دواء، ولا لأي جملة يجب أن يملكها صيدلي."
+    "en": "Published figures. We change them when the source changes. They are not our result.",
+    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
   },
   "audienceRole": {
     "en": "Managers and staff who write the stock note, the handover, and the repeated document reply.",
@@ -119,25 +88,64 @@
       "ar": "حد مكتوب: الأداة تسوّد الإدارة، ولا تنصح عن دواء."
     }
   ],
-  "faq": [
+  "faq": [],
+  "shiftsTitle": {
+    "en": "Three published pharmacy problems",
+    "ar": "ثلاث مشكلات منشورة في الصيدلية"
+  },
+  "shifts": [
     {
-      "q": {
-        "en": "Does this advise a person on a medicine?",
-        "ar": "هل ينصح الماستركلاس شخصًا عن دواء؟"
+      "figure": {
+        "en": "$42bn",
+        "ar": "42 مليار"
       },
-      "a": {
-        "en": "No. If a sentence would change what a person takes, it belongs to the pharmacist. The session stays on administration.",
-        "ar": "لا. إن كانت الجملة ستغيّر ما يأخذه شخص فهي للصيدلي. الجلسة تبقى في الإدارة."
+      "title": {
+        "en": "A year of medication errors",
+        "ar": "سنة من أخطاء الدواء"
+      },
+      "body": {
+        "en": "WHO, Medication Without Harm, launched 29 March 2017: the cost associated with medication errors has been estimated at 42 billion US dollars a year.",
+        "ar": "منظمة الصحة العالمية، تحدي دواء بلا ضرر، أُطلق في 29 مارس 2017: قُدّرت التكلفة المرتبطة بأخطاء الدواء بنحو 42 مليار دولار في السنة."
+      },
+      "source": {
+        "title": "WHO · Medication Without Harm · 29 March 2017",
+        "url": "https://www.who.int/initiatives/medication-without-harm"
       }
     },
     {
-      "q": {
-        "en": "Do you keep pharmacy records?",
-        "ar": "هل تحفظون سجلات الصيدلية؟"
+      "figure": {
+        "en": "1 in 20",
+        "ar": "1 من 20"
       },
-      "a": {
-        "en": "No. The website takes nothing. A session uses only what the pharmacy agrees to bring, and a prescription is not the material.",
-        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق الصيدلية على إحضاره، والوصفة ليست المادة."
+      "title": {
+        "en": "Patients with preventable harm",
+        "ar": "مرضى يصيبهم ضرر يمكن منعه"
+      },
+      "body": {
+        "en": "A WHO systematic review published in 2023, from 100 studies and 487,162 patients: preventable medication-related harm affects about one in 20 patients.",
+        "ar": "مراجعة منهجية لمنظمة الصحة العالمية نُشرت في 2023، من 100 دراسة و487162 مريضًا: الضرر الدوائي الذي يمكن منعه يصيب نحو مريض من كل عشرين."
+      },
+      "source": {
+        "title": "WHO · Preventable medication-related harm · 2023",
+        "url": "https://hdl.handle.net/10665/376203"
+      }
+    },
+    {
+      "figure": {
+        "en": ">1/4",
+        "ar": "أكثر من الربع"
+      },
+      "title": {
+        "en": "Of those cases, severe",
+        "ar": "من هذه الحالات، شديدة"
+      },
+      "body": {
+        "en": "The same review: more than a quarter of those cases were severe or potentially life-threatening. Prescribing and monitoring were the stages where preventable harm was most frequent.",
+        "ar": "المراجعة نفسها: أكثر من ربع هذه الحالات كان شديدًا أو مهددًا للحياة. أكثر الضرر القابل للمنع وقع في الوصف والمتابعة."
+      },
+      "source": {
+        "title": "WHO · Preventable medication-related harm · 2023",
+        "url": "https://hdl.handle.net/10665/376203"
       }
     }
   ]

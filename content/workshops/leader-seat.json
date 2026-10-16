@@ -12,17 +12,17 @@
     "senior"
   ],
   "outcome": {
-    "en": "Lead your medical institution into AI before others in the sector get there first.",
-    "ar": "قُد مؤسستك الطبية إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك في القطاع."
+    "en": "Whoever does not understand the tool leaves the decision to someone else.",
+    "ar": "من لا يفهم الأداة يترك القرار لغيره."
   },
   "summary": {
-    "en": "The medical sector is moving in AI faster than its institutions have known, and yours only gets ahead if you understand it first. Dr. Ahmed Abdelalim sits with you and studies the work before any tool. Then you see what AI can change, and you leave knowing the way, and leading it yourself.",
-    "ar": "القطاع الطبي يتحرك في الذكاء الاصطناعي بسرعة لم تعرفها مؤسساته، ولن تسبق مؤسستك إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم ويدرس العمل قبل أي أداة. ثم ترى ما يستطيع أن يغيّره، وتخرج وأنت تعرف الطريق وتقوده بنفسك."
+    "en": "Published figures. We change them when the source changes. They are not our result.",
+    "ar": "أرقام منشورة. نبدّلها إذا تغيّر المصدر. ليست نتيجتنا."
   },
   "pace": {
     "title": {
-      "en": "What your medical institution loses while it waits",
-      "ar": "ما تخسره مؤسستك الطبية وهي تنتظر"
+      "en": "Two published problems",
+      "ar": "مشكلتان منشورتان"
     },
     "quote": {
       "en": "Even a single made-up term could trigger a detailed, decisive response based entirely on fiction.",
@@ -37,8 +37,8 @@
       "url": "https://www.mountsinai.org/about/newsroom/2025/ai-chatbots-can-run-with-medical-misinformation-study-finds-highlighting-the-need-for-stronger-safeguards"
     },
     "consequence": {
-      "en": "A medical leader who puts this off will find the institution behind another hospital, plant, or pharmacy that learned where the tool lies.",
-      "ar": "قائد طبي يؤجّل هذا سيجد المؤسسة خلف مستشفى أو مصنع أو صيدلية تعلّمت أين تكذب الأداة."
+      "en": "The figure is the source's, and we change it when the source changes.",
+      "ar": "الرقم من مصدره، ونبدّله إذا تغيّر المصدر."
     },
     "cards": [
       {
@@ -47,86 +47,42 @@
           "ar": "759"
         },
         "title": {
-          "en": "Hospitals whose systems went dark from one update",
-          "ar": "مستشفيات انطفأت أنظمتها من تحديث واحد"
+          "en": "Hospitals dark from one update",
+          "ar": "مستشفيات انطفأت من تحديث واحد"
         },
         "body": {
-          "en": "JAMA Network Open measured the 19 July 2024 CrowdStrike update across 2,232 US hospitals. Network disruption showed at 759. Patient-facing services were among what went down.",
-          "ar": "قاست JAMA Network Open تحديث CrowdStrike في 19 يوليو 2024 على 2232 مستشفى أمريكيًا. ظهر انقطاع الشبكة في 759. وكانت خدمات مواجهة للمريض بين ما توقف."
+          "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted the network at 759 of 2,232 US hospitals.",
+          "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع الشبكة في 759 مستشفى من 2232 مستشفى أمريكيًا."
         },
         "lesson": {
-          "en": "A medical institution that rests on one tool can lose the working day around the patient, not only an office system.",
-          "ar": "مؤسسة طبية ترتكز على أداة واحدة قد تخسر يوم العمل حول المريض، لا نظام المكتب فقط."
+          "en": "One day of dependence is a published fact, not our result.",
+          "ar": "يوم واحد من الاعتماد واقعة منشورة، لا نتيجتنا."
         },
         "source": {
-          "title": "JAMA Network Open · Patient Care Technology Disruptions Associated With the CrowdStrike Outage · 19 July 2025",
-          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836824"
+          "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
         }
       },
       {
         "figure": {
-          "en": "1.6 million",
-          "ar": "1.6 مليون"
+          "en": "0.57",
+          "ar": "0.57"
         },
         "title": {
-          "en": "A health report the buyer could not check",
-          "ar": "تقرير صحي لم يستطع المشتري أن يراجعه"
+          "en": "Minutes that did not come back",
+          "ar": "دقائق لم تَعُد"
         },
         "body": {
-          "en": "A provincial health department paid nearly 1.6 million Canadian dollars for a workforce report that cited papers which do not exist. Deloitte said AI supported a small number of citations, not the writing of the report.",
-          "ar": "دفعت إدارة صحة إقليمية ما يقارب 1.6 مليون دولار كندي مقابل تقرير قوى عاملة استشهد بأبحاث لا وجود لها. قالت ديلويت إن الذكاء الاصطناعي دعم عددًا قليلًا من المراجع، لا كتابة التقرير."
+          "en": "JAMIA Open, 2025: 0.57 minutes saved per visit, and the difference was not statistically significant.",
+          "ar": "JAMIA Open، 2025: 0.57 دقيقة أقل في اللقاء، والفرق غير دال إحصائيًا."
         },
         "lesson": {
-          "en": "If the people who lead the health institution cannot read the work, they cannot catch the tool.",
-          "ar": "إن كان من يقود المؤسسة الصحية لا يقرأ العمل، فلن يمسك الأداة."
+          "en": "Buying the tool did not return the day.",
+          "ar": "شراء الأداة لم يُرجع اليوم."
         },
         "source": {
-          "title": "Fortune · Deloitte health-workforce report for Newfoundland and Labrador contained fabricated citations · 25 November 2025",
-          "url": "https://fortune.com/2025/11/25/deloitte-caught-fabricated-ai-generated-research-million-dollar-report-canada-government/"
-        }
-      },
-      {
-        "figure": {
-          "en": "7 patients",
-          "ar": "7 مرضى"
-        },
-        "title": {
-          "en": "A tool nobody chose sat in the doctors' meeting",
-          "ar": "أداة لم يخترها أحد جلست في اجتماع الأطباء"
-        },
-        "body": {
-          "en": "Otter.ai joined a hospital hepatology round and sent the transcript on. Seven patients' names, diagnoses, and treatment left the room, including to former staff. The hospital, not the tool, owned the breach.",
-          "ar": "دخلت Otter.ai اجتماع أطباء الكبد في مستشفى وأرسلت النص. خرجت أسماء سبعة مرضى وتشخيصاتهم وعلاجهم، ووصلت إلى موظفين سابقين. المستشفى، لا الأداة، هو من ملك الخرق."
-        },
-        "lesson": {
-          "en": "If you do not choose the tool, someone on the team will, and the patient record can leave with it.",
-          "ar": "إن لم تختر الأداة أنت، سيختارها أحد في الفريق، وقد يخرج معها سجل المريض."
-        },
-        "source": {
-          "title": "The Globe and Mail · AI bot recorded a doctors' meeting and sent patient information · 20 November 2025",
-          "url": "https://www.theglobeandmail.com/canada/article-ai-bot-doctors-meeting-patient-info-hospital-privacy-watchdog/"
-        }
-      },
-      {
-        "figure": {
-          "en": "No group gain",
-          "ar": "بلا عائد جماعي"
-        },
-        "title": {
-          "en": "The clinic bought the scribe, and the group did not speed up",
-          "ar": "العيادة اشترت الكاتب، والمجموعة لم تسرع"
-        },
-        "body": {
-          "en": "NEJM AI followed 112 primary care clinicians using an ambient documentation tool and 103 who did not. In the primary analysis the group using it was not measurably more efficient.",
-          "ar": "تابعت NEJM AI 112 طبيب رعاية أولية يستخدمون أداة توثيق محيطة، و103 لا يستخدمونها. في التحليل الأساسي لم تكن المجموعة التي تستخدمها أكفأ بشكل يُقاس."
-        },
-        "lesson": {
-          "en": "A medical institution can pay for the tool and still see nothing, if the people who decide have not learned where it belongs.",
-          "ar": "تستطيع المؤسسة الطبية أن تدفع ثمن الأداة ولا ترى شيئًا، إن لم يتعلم من يقرر أين موضعها."
-        },
-        "source": {
-          "title": "NEJM AI · Does AI-Powered Clinical Documentation Enhance Clinician Efficiency? · 22 November 2024",
-          "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400659"
+          "title": "JAMIA Open · Ambient scribe time · 2025",
+          "url": "https://academic.oup.com/jamiaopen/article/8/6/ooaf159/8371863"
         }
       }
     ]
