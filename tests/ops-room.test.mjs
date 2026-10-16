@@ -125,10 +125,14 @@ test("clients (CRM phase 1): one pipeline in Ahmed's order, seven sources, conta
   assert.ok(notion.includes(`LEAD_PIPELINE = ${pipeline}`), "lib pipeline order");
   assert.ok(html.includes(`LEAD_PIPELINE = ${pipeline}`), "room pipeline order");
   assert.ok(notion.includes('LEAD_CLOSED = ["مغلق — فاز", "مغلق — خسر"]'));
-  // المصادر السبعة، و«تواصل مباشر» سابعهم
-  const sources = '["الموقع", "الحجز", "الرادار", "تعارف", "لينكدإن", "ماستركلاس", "تواصل مباشر"]';
-  assert.ok(notion.includes(`LEAD_SOURCES = ${sources}`));
-  assert.ok(html.includes(`LEAD_SOURCES = ${sources}`));
+  // المصادر الجديدة، والقيم القديمة فاضلة (منها «تواصل مباشر» و«الرادار»)
+  const sources = await import("../lib/lead-intake.ts");
+  const listed = html.match(/const LEAD_SOURCES = (\[[\s\S]*?\]);/);
+  assert.ok(listed, "room source list");
+  assert.deepEqual(JSON.parse(listed[1]), sources.LEAD_SOURCES);
+  assert.deepEqual(sources.LEAD_SOURCES, [...sources.LEAD_SOURCES_NEW, ...sources.LEAD_SOURCES_LEGACY]);
+  assert.ok(html.includes("الجهة (مطلوب)"));
+  assert.ok(html.includes('sel("source", LEAD_SOURCES, "المصدر", true)'));
   // المراحل القديمة بتتقرى على الخط الجديد من غير مسح
   for (const [old, now] of [["تواصل", "جديد"], ["قطع لاحقة", "تنفيذ"], ["كسبنا", "مغلق — فاز"], ["اتقفل — مش دلوقتي", "مغلق — خسر"]]) {
     assert.ok(notion.includes(`"${old}": "${now}"`), `lib legacy ${old}`);
