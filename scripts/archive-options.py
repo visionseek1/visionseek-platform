@@ -34,6 +34,8 @@ for f in sorted(glob.glob('content/projects/concepts/*.json')):
     d = load(f); add(f"/projects/{d['sector']}/{d['track']}/{d['slug']}", f"المشاريع ← {d['id']} {d['title']['ar']}")
 med = load('content/medical.json')
 add('/fields', 'المجالات')
+add('/education', 'التعليم والماستركلاس')
+add('/system', 'النظام داخل المؤسسة')
 for s in med['sectors']:
     add(f"/sectors/{s['slug']}", f"لمين بنشتغل ← {s['title']['ar']}")
 add('/leaders-house/physical-ai', 'بيت القادة ← إحاطة الذكاء الاصطناعي المادي')

@@ -6,17 +6,31 @@ import {isArchived} from '@/lib/visibility';
 export type {Bi};
 export type MedicalField = {id: string; focus: boolean; title: Bi; line?: Bi};
 export type MedicalSector = {slug: string; title: Bi; problem: Bi; fieldIds: string[]};
-export type MedicalStep = {id: string; title: Bi; text: Bi};
+export type MedicalStep = {id: string; href: string; title: Bi; text: Bi};
+export type MedicalPart = {title: Bi; text: Bi};
+export type MedicalTrackStep = {id: string; title: Bi; text: Bi};
 export type Medical = {
   home: {eyebrow: Bi; title: Bi; intro: Bi; fieldsLink: Bi};
   fieldsPage: {eyebrow: Bi; title: Bi; intro: Bi; now: Bi; later: Bi; soon: Bi; starLabel: Bi; sectorsHeading: Bi};
   sectors: MedicalSector[];
   fields: MedicalField[];
   fieldsNote: Bi;
+  identity: {eyebrow: Bi; title: Bi; problem: Bi; insights: Bi};
+  education: {
+    eyebrow: Bi; title: Bi; intro: Bi;
+    general: MedicalPart; specific: MedicalPart;
+    formatsTitle: Bi; formats: MedicalPart[];
+    starting: Bi; communityTitle: Bi; community: Bi;
+  };
+  system: {
+    eyebrow: Bi; title: Bi; intro: Bi;
+    generalTitle: Bi; generalIntro: Bi; general: MedicalTrackStep[];
+    customTitle: Bi; custom: Bi; bridge: Bi;
+  };
   work: {eyebrow: Bi; title: Bi; intro: Bi; steps: MedicalStep[]};
-  insightsBlock: {title: Bi; intro: Bi; empty: Bi; all: Bi};
+  insightsBlock: {title: Bi; intro: Bi; empty: Bi; future: Bi; all: Bi};
   session: {title: Bi; text: Bi; button: Bi};
-  cross: {fields: Bi; others: Bi; who: Bi};
+  cross: {fields: Bi; others: Bi; who: Bi; education: Bi; system: Bi};
 };
 
 export const medical: Medical = data;

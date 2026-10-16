@@ -91,6 +91,34 @@
   padding: 0;
 }
 
+.step a {
+  display: block;
+  color: inherit;
+}
+
+.step[aria-current="step"] {
+  border-top: 3px solid var(--lime);
+  background: #17191f;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.identity p {
+  max-width: 46rem;
+  font-size: 1.2rem;
+  color: var(--grey);
+  margin-top: 1.1rem;
+}
+
+.identity h2 {
+  max-width: 18em;
+}
+
 .stepNum {
   display: block;
   margin-bottom: 0.8rem;
@@ -164,6 +192,10 @@
   color: var(--lime);
 }
 
+:global(.vs-site[dir="rtl"]) .links svg {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 980px) {
   .later,
   .links {
@@ -176,7 +208,8 @@
   .spotlight,
   .steps,
   .later,
-  .links {
+  .links,
+  .pair {
     grid-template-columns: 1fr;
   }
 }

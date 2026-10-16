@@ -49,6 +49,31 @@ function FieldCard({field, ar}: {field: MedicalField; ar: boolean}) {
   );
 }
 
+export function Journey({locale, here}: {locale: Locale; here?: "education" | "system"}) {
+  const ar = locale === "ar";
+  const t = tx(ar);
+  const p = ar ? "/ar" : "";
+  const current = here === "system" ? ["study", "operation"] : here ? [here] : [];
+  return (
+    <section className="vs-section" aria-labelledby="journey-title">
+      <p className="vs-eyebrow">{t(medical.work.eyebrow)}</p>
+      <h2 id="journey-title">{t(medical.work.title)}</h2>
+      <p className={styles.lead}>{t(medical.work.intro)}</p>
+      <ol className={styles.steps}>
+        {medical.work.steps.map((step, index) => (
+          <li className={styles.step} key={step.id} aria-current={current.includes(step.id) ? "step" : undefined}>
+            <Link href={`${p}${step.href}`}>
+              <span className={styles.stepNum}>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{t(step.title)}</h3>
+              <p>{t(step.text)}</p>
+            </Link>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 function Session({locale}: {locale: Locale}) {
   const ar = locale === "ar";
   const t = tx(ar);
@@ -102,25 +127,13 @@ export function SectorView({locale, sector}: {locale: Locale; sector: MedicalSec
         </Link>
       </section>
 
-      <section className="vs-section" aria-labelledby="sector-work">
-        <p className="vs-eyebrow">{t(medical.work.eyebrow)}</p>
-        <h2 id="sector-work">{t(medical.work.title)}</h2>
-        <p className={styles.lead}>{t(medical.work.intro)}</p>
-        <ol className={styles.steps}>
-          {medical.work.steps.map((step, index) => (
-            <li className={styles.step} key={step.id}>
-              <span className={styles.stepNum}>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{t(step.title)}</h3>
-              <p>{t(step.text)}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <Journey locale={locale} />
 
       <section className={`vs-section ${styles.band}`} aria-labelledby="sector-insights">
         <p className="vs-eyebrow">Insights</p>
         <h2 id="sector-insights">{t(medical.insightsBlock.title)}</h2>
         <p className={styles.lead}>{t(medical.insightsBlock.intro)}</p>
+        <p className={styles.note}>{t(medical.insightsBlock.future)}</p>
         {insights.length === 0 ? (
           <p className={styles.empty}>{t(medical.insightsBlock.empty)}</p>
         ) : (
@@ -157,6 +170,11 @@ export function SectorView({locale, sector}: {locale: Locale; sector: MedicalSec
       <Session locale={locale} />
 
       <section className={`vs-section ${styles.more}`} aria-label={t(medical.cross.others)}>
+        <div className={styles.links}>
+          <Link href={`${p}/education`}>{t(medical.cross.education)}</Link>
+          <Link href={`${p}/system`}>{t(medical.cross.system)}</Link>
+          <Link href={`${p}/fields`}>{t(medical.cross.fields)}</Link>
+        </div>
         <h2>{t(medical.cross.others)}</h2>
         <div className={styles.links}>
           {others.map(item => (
@@ -203,9 +221,14 @@ export function FieldsView({locale}: {locale: Locale}) {
         </div>
       </section>
 
+      <Journey locale={locale} />
       <Session locale={locale} />
 
       <section className={`vs-section ${styles.more}`} aria-label={t(page.sectorsHeading)}>
+        <div className={styles.links}>
+          <Link href={`${p}/education`}>{t(medical.cross.education)}</Link>
+          <Link href={`${p}/system`}>{t(medical.cross.system)}</Link>
+        </div>
         <h2>{t(page.sectorsHeading)}</h2>
         <div className={styles.links}>
           {medical.sectors.map(sector => (
@@ -213,6 +236,123 @@ export function FieldsView({locale}: {locale: Locale}) {
               {t(sector.title)}
             </Link>
           ))}
+        </div>
+      </section>
+    </Shell>
+  );
+}
+
+export function EducationView({locale}: {locale: Locale}) {
+  const ar = locale === "ar";
+  const t = tx(ar);
+  const p = ar ? "/ar" : "";
+  const page = medical.education;
+  return (
+    <Shell locale={locale} path="/education">
+      <section className="vs-interior-hero">
+        <nav className="vs-breadcrumb" aria-label={ar ? "مسار الصفحة" : "Breadcrumb"}>
+          <Link href={p || "/"}>{ar ? "الرئيسية" : "Home"}</Link>
+          <span>/</span>
+          <span>{t(page.title)}</span>
+        </nav>
+        <p className="vs-eyebrow">{t(page.eyebrow)}</p>
+        <h1>{t(page.title)}</h1>
+        <p className="vs-interior-intro">{t(page.intro)}</p>
+      </section>
+      <section className="vs-section" aria-labelledby="education-parts">
+        <h2 id="education-parts">{ar ? "من الصورة العامة إلى ورقة المؤسسة" : "From the wide picture to one page"}</h2>
+        <div className={styles.pair}>
+          <article className={styles.focus}>
+            <h3>{t(page.general.title)}</h3>
+            <p>{t(page.general.text)}</p>
+          </article>
+          <article className={styles.focus}>
+            <h3>{t(page.specific.title)}</h3>
+            <p>{t(page.specific.text)}</p>
+          </article>
+        </div>
+      </section>
+      <section className={`vs-section ${styles.band}`} aria-labelledby="education-formats">
+        <h2 id="education-formats">{t(page.formatsTitle)}</h2>
+        <p className={styles.lead}>{t(page.starting)}</p>
+        <ol className={styles.steps}>
+          {page.formats.map((format, index) => (
+            <li className={styles.step} key={format.title.en}>
+              <span className={styles.stepNum}>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{t(format.title)}</h3>
+              <p>{t(format.text)}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section className="vs-section" aria-labelledby="education-community">
+        <h2 id="education-community">{t(page.communityTitle)}</h2>
+        <p className={styles.lead}>{t(page.community)}</p>
+      </section>
+      <Journey locale={locale} here="education" />
+      <Session locale={locale} />
+      <section className={`vs-section ${styles.more}`}>
+        <div className={styles.links}>
+          <Link href={`${p}/system`}>{t(medical.cross.system)}</Link>
+          <Link href={`${p}/fields`}>{t(medical.cross.fields)}</Link>
+          <Link href={`${p}/#who-we-work-with`}>{t(medical.cross.who)}</Link>
+        </div>
+      </section>
+    </Shell>
+  );
+}
+
+export function SystemView({locale}: {locale: Locale}) {
+  const ar = locale === "ar";
+  const t = tx(ar);
+  const p = ar ? "/ar" : "";
+  const page = medical.system;
+  return (
+    <Shell locale={locale} path="/system">
+      <section className="vs-interior-hero">
+        <nav className="vs-breadcrumb" aria-label={ar ? "مسار الصفحة" : "Breadcrumb"}>
+          <Link href={p || "/"}>{ar ? "الرئيسية" : "Home"}</Link>
+          <span>/</span>
+          <span>{t(page.title)}</span>
+        </nav>
+        <p className="vs-eyebrow">{t(page.eyebrow)}</p>
+        <h1>{t(page.title)}</h1>
+        <p className="vs-interior-intro">{t(page.intro)}</p>
+      </section>
+      <section className="vs-section" aria-labelledby="system-general">
+        <p className="vs-eyebrow">{t(page.generalTitle)}</p>
+        <h2 id="system-general">{t(page.generalTitle)}</h2>
+        <p className={styles.lead}>{t(page.generalIntro)}</p>
+        <ol className={styles.steps}>
+          {page.general.map((step, index) => (
+            <li className={styles.step} id={step.id} key={step.id}>
+              <span className={styles.stepNum}>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{t(step.title)}</h3>
+              <p>{t(step.text)}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section className={`vs-section ${styles.band}`} aria-labelledby="system-custom">
+        <h2 id="system-custom">{t(page.customTitle)}</h2>
+        <p className={styles.lead}>{t(page.custom)}</p>
+        <p className={styles.note}>{t(page.bridge)}</p>
+      </section>
+      <section className="vs-section" aria-labelledby="system-insights">
+        <h2 id="system-insights">{t(medical.insightsBlock.title)}</h2>
+        <p className={styles.lead}>{t(medical.insightsBlock.future)}</p>
+        <Link className={`vs-text-link ${styles.follow}`} href={`${p}/insights`}>
+          {t(medical.insightsBlock.all)}
+          <ArrowRight size={20} />
+        </Link>
+      </section>
+      <Journey locale={locale} here="system" />
+      <Session locale={locale} />
+      <section className={`vs-section ${styles.more}`}>
+        <div className={styles.links}>
+          <Link href={`${p}/education`}>{t(medical.cross.education)}</Link>
+          <Link href={`${p}/fields`}>{t(medical.cross.fields)}</Link>
+          <Link href={`${p}/#who-we-work-with`}>{t(medical.cross.who)}</Link>
         </div>
       </section>
     </Shell>

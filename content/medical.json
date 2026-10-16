@@ -85,42 +85,112 @@
     "en": "The star marks what we work on now. The rest is on the map, and is not our work yet.",
     "ar": "النجمة على اللي بنشتغل عليه دلوقتي. الباقي ظاهر، ولسه مش شغلنا."
   },
-  "work": {
-    "eyebrow": {"en": "HOW WE WORK", "ar": "إزاي بنشتغل"},
-    "title": {"en": "Masterclass, then Study, then Operation.", "ar": "ماستركلاس، ثم دراسة، ثم تشغيل."},
-    "intro": {"en": "In that order. A step is not skipped.", "ar": "بالترتيب ده. مش بنعدّي خطوة."},
-    "steps": [
+  "identity": {
+    "eyebrow": {"en": "THE MEDICAL FIELD", "ar": "المجال الطبي"},
+    "title": {"en": "VisionSeek specializes in the medical field.", "ar": "VisionSeek متخصصة في المجال الطبي."},
+    "problem": {"en": "A medical institution wants an important new capability, and does not yet know what to build, what to buy, what to transfer, whom to partner with, or in what order.", "ar": "المؤسسة الطبية عايزة قدرة جديدة ومهمة. ولسه مش عارفة تبني إيه، وتشتري إيه، وتنقل إيه، وتشارك مين، وبأي ترتيب."},
+    "insights": {"en": "The capabilities that come next will be named in Insights. None are published from this path yet.", "ar": "القدرات اللي جاية هتتسمى في Insights. لسه مفيش قدرة منشورة من هنا."}
+  },
+  "education": {
+    "eyebrow": {"en": "FOR LEADERS ACROSS HEALTHCARE", "ar": "لقيادات القطاع الطبي كله"},
+    "title": {"en": "Education and the masterclass", "ar": "التعليم والماستركلاس"},
+    "intro": {"en": "For the leader of any medical institution. First the wide picture. Then the question inside their own institution.", "ar": "لقائد أي مؤسسة طبية. الأول الصورة الواسعة. وبعدين مسألة مؤسسته هو."},
+    "general": {
+      "title": {"en": "The wide picture", "ar": "الصورة العامة"},
+      "text": {"en": "Understand the big picture of AI, and the tools that now exist: what they can do, and what they still cannot.", "ar": "نفهم صورة الذكاء الاصطناعي الكبيرة، والأدوات اللي بقت موجودة. إيه اللي تعمله، وإيه اللي لسه ما تعملهوش."}
+    },
+    "specific": {
+      "title": {"en": "The institution's own question", "ar": "مسألة المؤسسة"},
+      "text": {"en": "Each institution works on its own problems, and leaves with one page: the first capability to start with.", "ar": "كل مؤسسة تشتغل على مسائلها هي. وتخرج بورقة واحدة: أول قدرة تبدأ بيها."}
+    },
+    "formatsTitle": {"en": "Three ways to sit", "ar": "ثلاث طرق للحضور"},
+    "formats": [
       {
-        "id": "masterclass",
-        "title": {"en": "Masterclass", "ar": "ماستركلاس"},
-        "text": {"en": "We sit with the leader on their own question, inside their institution, before any talk of a tool.", "ar": "نقعد مع القائد على سؤاله هو، جوه مؤسسته، قبل أي كلام عن أداة."}
+        "title": {"en": "Short open sessions, online", "ar": "جلسات قصيرة مفتوحة، أونلاين"},
+        "text": {"en": "Open to leaders. Short. This is where we start.", "ar": "مفتوحة للقيادات. قصيرة. ومن هنا بنبدأ."}
       },
       {
+        "title": {"en": "A masterclass for one institution", "ar": "ماستركلاس لمؤسسة واحدة"},
+        "text": {"en": "On that institution's own material, not on a shared example.", "ar": "على مادة المؤسسة نفسها، مش على مثال جاهز."}
+      },
+      {
+        "title": {"en": "An in-person masterclass for a group", "ar": "ماستركلاس حضوري لمجموعة"},
+        "text": {"en": "Leaders in one room. Each one still on their own institution.", "ar": "قيادات في قاعة واحدة. وكل واحد لسه على مؤسسته."}
+      }
+    ],
+    "starting": {"en": "We start online.", "ar": "بنبدأ أونلاين."},
+    "communityTitle": {"en": "A community of leaders", "ar": "مجتمع للقيادات"},
+    "community": {"en": "After the education, the leaders stay in one community and come back to each other.", "ar": "بعد التعليم، القيادات تفضل في مجتمع واحد، وترجع لبعض."}
+  },
+  "system": {
+    "eyebrow": {"en": "INSIDE THE INSTITUTION", "ar": "جوه المؤسسة"},
+    "title": {"en": "The system inside the institution", "ar": "النظام داخل المؤسسة"},
+    "intro": {"en": "A team and a method, placed inside the institution. Not a presentation delivered from the outside.", "ar": "فريق ومنهج، جوه المؤسسة. مش عرض يتقدّم من بره."},
+    "generalTitle": {"en": "The general track", "ar": "المسار العام"},
+    "generalIntro": {"en": "The same order in every institution. This track comes first.", "ar": "نفس الترتيب في كل مؤسسة. والمسار ده هو الأول."},
+    "general": [
+      {
         "id": "study",
-        "title": {"en": "Study", "ar": "دراسة"},
-        "text": {"en": "We study what is actually in the way: the constraint, the evidence, and what is still unknown.", "ar": "ندرس اللي واقف فعلًا: القيد، والدليل، واللي لسه مش معروف."}
+        "title": {"en": "Study the institution first", "ar": "ندرس المؤسسة الأول"},
+        "text": {"en": "Before anything is put in place, learn how the institution actually works, and where the first capability should sit.", "ar": "قبل ما نركّب أي حاجة، نعرف المؤسسة بتشتغل إزاي، وأول قدرة تقعد فين."}
       },
       {
         "id": "operation",
+        "title": {"en": "Install the capability and run it", "ar": "نركّب القدرة ونشغّلها"},
+        "text": {"en": "What was chosen enters the daily work, with the people who already do that work.", "ar": "اللي اتختار يدخل في الشغل اليومي، مع الناس اللي بتعمله أصلًا."}
+      },
+      {
+        "id": "measure",
+        "title": {"en": "Measure the result", "ar": "نقيس النتيجة"},
+        "text": {"en": "Agree what will be measured before the work starts. A result that is not measured is not yet a result.", "ar": "نتفق على اللي هيتقاس قبل ما الشغل يبدأ. والنتيجة اللي ما تتقاسش، لسه مش نتيجة."}
+      }
+    ],
+    "customTitle": {"en": "Custom capabilities", "ar": "قدرات على مقاس المؤسسة"},
+    "custom": {"en": "Once the general track is moving, a capability can be shaped for this institution alone.", "ar": "لما المسار العام يمشي، نقدر نفصل قدرة للمؤسسة دي وحدها."},
+    "bridge": {"en": "The general track leads to the custom one. We do not start with a custom build.", "ar": "المسار العام هو اللي يوصّل للخاص. مش بنبدأ بتفصيل من أول يوم."}
+  },
+  "work": {
+    "eyebrow": {"en": "THE JOURNEY", "ar": "الطريق"},
+    "title": {"en": "Education, then Study, then Operation.", "ar": "تعليم، ثم دراسة، ثم تشغيل."},
+    "intro": {"en": "In that order. The general track is what leads to a capability shaped for one institution.", "ar": "بالترتيب ده. والمسار العام هو اللي يوصّل لقدرة على مقاس المؤسسة."},
+    "steps": [
+      {
+        "id": "education",
+        "href": "/education",
+        "title": {"en": "Education", "ar": "تعليم"},
+        "text": {"en": "The wide picture of AI and its tools, then the institution's own problems, on one page.", "ar": "صورة الذكاء الاصطناعي وأدواته، وبعدين مسائل المؤسسة، في ورقة واحدة."}
+      },
+      {
+        "id": "study",
+        "href": "/system#study",
+        "title": {"en": "Study", "ar": "دراسة"},
+        "text": {"en": "Study the institution first, before anything is put in place.", "ar": "ندرس المؤسسة الأول، قبل ما نركّب أي حاجة."}
+      },
+      {
+        "id": "operation",
+        "href": "/system#operation",
         "title": {"en": "Operation", "ar": "تشغيل"},
-        "text": {"en": "What is shown to work enters the institution's daily work, not a presentation left behind.", "ar": "اللي يثبت إنه يشتغل، يدخل في شغل المؤسسة كل يوم. مش عرض يتساب."}
+        "text": {"en": "Put the capability into the daily work, run it, and measure the result.", "ar": "ندخل القدرة في الشغل اليومي، نشغّلها، ونقيس النتيجة."}
       }
     ]
   },
   "insightsBlock": {
-    "title": {"en": "Latest Insights", "ar": "أحدث القراءات"},
-    "intro": {"en": "What is published in Insights and tagged for this sector.", "ar": "اللي اتنشر في Insights ومتعلم عليه القطاع ده."},
+    "title": {"en": "Insights, where the next capabilities come from", "ar": "Insights، من هنا القدرات اللي جاية"},
+    "intro": {"en": "Insights is the future source of capabilities. When a piece is published for this sector, it appears here.", "ar": "Insights هو مصدر القدرات اللي جاية. لما تنزل قراءة للقطاع ده، تظهر هنا."},
     "empty": {"en": "Nothing here yet.", "ar": "لا يوجد بعد."},
+    "future": {"en": "What is learned while a capability runs comes back into Insights. From there, the next capabilities are named. None are published from this path yet.", "ar": "اللي بنتعلمه والقدرة شغّالة، يرجع في Insights. ومن هناك تتسمى القدرات اللي بعد كده. لسه مفيش قدرة منشورة من المسار ده."},
     "all": {"en": "All Insights", "ar": "كل القراءات"}
   },
   "session": {
     "title": {"en": "A free 30-minute session with Ahmed Abdelalim", "ar": "جلسة مجانية، ٣٠ دقيقة، مع د. أحمد"},
-    "text": {"en": "We start from the question in front of you. A ready-made solution is not required.", "ar": "نبدأ من السؤال اللي قدامك. مش محتاج تصور جاهز."},
+    "text": {"en": "October to December 2026. The number of sessions is limited. We start from the question in front of you.", "ar": "من أكتوبر إلى ديسمبر ٢٠٢٦. العدد محدود. نبدأ من السؤال اللي قدامك."},
     "button": {"en": "Book the session with Ahmed Abdelalim", "ar": "احجز الجلسة مع د. أحمد"}
   },
   "cross": {
     "fields": {"en": "All fields", "ar": "كل المجالات"},
     "others": {"en": "Other institutions", "ar": "جهات تانية"},
-    "who": {"en": "Who we work with", "ar": "لمين بنشتغل"}
+    "who": {"en": "Who we work with", "ar": "لمين بنشتغل"},
+    "education": {"en": "Education", "ar": "التعليم"},
+    "system": {"en": "The system inside the institution", "ar": "النظام داخل المؤسسة"}
   }
 }
