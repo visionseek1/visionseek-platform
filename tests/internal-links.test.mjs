@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {existsSync} from 'node:fs';
 import {readFile, readdir} from 'node:fs/promises';
 import path from 'node:path';
 import test from 'node:test';
@@ -52,7 +53,12 @@ function textOf(html) {
  * A link is broken when its target is missing, or when it still resolves only because
  * the archive redirects that path to the home page.
  */
-export function brokenInternalLinks(html, archivedPaths, pages = [...html.keys()]) {
+function isPublicFile(pathname) {
+  if (!pathname.startsWith('/') || pathname.includes('..') || pathname.endsWith('/')) return false;
+  return existsSync(path.join(process.cwd(), 'public', pathname));
+}
+
+export function brokenInternalLinks(html, archivedPaths, pages = [...html.keys()], fileExists = isPublicFile) {
   const failures = [];
   const skip = route => route.startsWith('/admin') || route.startsWith('/ops') || route.startsWith('/room') || route.startsWith('/api');
   for (const route of pages) {
@@ -74,10 +80,11 @@ export function brokenInternalLinks(html, archivedPaths, pages = [...html.keys()
         failures.push(`${route}: «${label}» → ${raw} (archived; opens the home page)`);
         continue;
       }
-      if (!html.has(target)) {
+      if (!html.has(target) && !fileExists(target)) {
         failures.push(`${route}: «${label}» → ${raw} (no page)`);
         continue;
       }
+      if (!html.has(target)) continue;
       if (url.hash) {
         const id = decodeURIComponent(url.hash.slice(1));
         if (id && !html.get(target).includes(`id="${id}"`)) failures.push(`${route}: «${label}» → ${raw} (missing #${id})`);
