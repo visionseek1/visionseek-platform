@@ -397,11 +397,11 @@
     "doorCards": {
       "individual": {
         "code": "01",
-        "image": "/masterclass/doctor.jpg"
+        "image": "/masterclass/door-doctor.jpg"
       },
       "institution": {
         "code": "02",
-        "image": "/masterclass/hospital.jpg"
+        "image": "/masterclass/door-hospital.jpg"
       }
     },
     "openDoor": {
