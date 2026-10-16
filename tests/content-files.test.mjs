@@ -41,13 +41,13 @@ test('the six section headers keep their ids and links', () => {
   }
 });
 
-test('six program concepts, VS-P01 to VS-P06, each complete', () => {
+test('Aegis is the only program, VS-P01, and it is pilot-ready', () => {
   const programs = readDir('programs');
-  assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02', 'VS-P03', 'VS-P04', 'VS-P05', 'VS-P06']);
-  for (const program of programs) {
-    for (const key of ['title', 'summary', 'beneficiary', 'constraint', 'hypothesis', 'test', 'stop', 'transfer']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
-    assert.equal(typeof program.position, 'number');
-  }
+  assert.deepEqual(programs.map(p => p.code), ['VS-P01']);
+  assert.equal(programs[0].slug, 'aegis');
+  assert.equal(programs[0].name.en, 'Aegis');
+  assert.equal(programs[0].steps.length, 3);
+  assert.ok(isText(programs[0].title) && isText(programs[0].summary) && isText(programs[0].challenge) && isText(programs[0].approach));
 });
 
 test('guide pages keep their section and slug, with at least one block each', () => {

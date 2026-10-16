@@ -1,24 +1,49 @@
 import {t, type Entry, type Text} from './schema';
 import {readContentDir} from './content-files';
 
-type Concept={slug:string;code:string;title:Text;summary:Text;image:string;beneficiary:Text;constraint:Text;hypothesis:Text;test:Text;stop:Text;transfer:Text};
-/** The six program concepts. Edited from /admin («البرامج»); the shared block template below stays in code. */
-export const concepts:Concept[]=readContentDir<Concept&{position:number}>('programs');
-export const programEntries:Entry[]=concepts.map(c=>({section:'programs',slug:c.slug,code:c.code,title:c.title,summary:c.summary,category:t('Program concepts','تصورات برامج'),status:t('Proposed · not launched','مقترح · لم يُطلق'),image:c.image,action:'concept',facts:[{label:t('Program owner','مسؤول البرنامج'),value:t('Program manager — appointment pending','مدير برنامج — لم يُعيّن')},{label:t('Funding','التمويل'),value:t('Not committed','غير معتمد')},{label:t('Schedule','الجدول الزمني'),value:t('Set after scope and baseline approval','يُحدد بعد اعتماد النطاق وخط الأساس')}],blocks:[
- {title:t('The capability and its beneficiary','القدرة والمستفيد'),body:c.beneficiary},
- {title:t('The current limit','الحد الحالي'),body:c.constraint},
- {title:t('The hypothesis to test','الفرضية المطلوب اختبارها'),body:c.hypothesis},
- {title:t('Stage gates','مراحل وقرارات البرنامج'),items:[t('Frame: confirm the user, baseline, access and intended capability.','تحديد: تثبيت المستفيد وخط الأساس وصلاحيات الوصول والقدرة المطلوبة.'),t('Prove: run the smallest meaningful test with pre-agreed measures.','إثبات: تنفيذ أصغر اختبار مفيد بمقاييس معتمدة مسبقًا.'),t('Pilot: test in the intended operating context with an accountable owner.','تجريب: اختبار في سياق التشغيل المستهدف مع مسؤول واضح.'),t('Transition: accept evidence, operating responsibilities and rollback arrangements.','نقل للتشغيل: قبول الأدلة ومسؤوليات التشغيل وترتيبات الرجوع.')]},
- {title:t('Proposed evaluation','التقييم المقترح'),body:c.test},
- {title:t('Stop or change direction','متى نوقف المسار أو نغيره؟'),body:c.stop},
- {title:t('Who will operate the capability?','مَن سيشغّل القدرة؟'),body:c.transfer},
- {title:t('The team to assemble','الفريق المطلوب تجميعه'),items:[t('A program manager accountable for the capability and its evidence.','مدير برنامج مسؤول عن القدرة وأدلتها.'),t('A domain specialist, technical builder and independent reviewer.','متخصص بالمجال ومنفذ تقني ومراجع مستقل.'),t('A beneficiary representative who can define and accept real operating value.','ممثل للمستفيد يستطيع تحديد وقبول القيمة التشغيلية الفعلية.')]}
-],related:[`/opportunities/${c.slug}`, '/programs/program-lifecycle','/work-with-us/prepare-a-concept']}));
+type Step = {title: Text; body: Text};
+type Concept = {
+  slug: string;
+  code: string;
+  title: Text;
+  summary: Text;
+  image: string;
+  name?: Text;
+  classification?: Text;
+  status?: Text;
+  challenge?: Text;
+  approach?: Text;
+  steps?: Step[];
+};
+/** Programs. Edited from /admin («البرامج»). Aegis is the first field program. */
+export const concepts: Concept[] = readContentDir<Concept & {position: number}>('programs');
 
-export const opportunityEntries:Entry[]=concepts.map(c=>({section:'opportunities',slug:c.slug,code:c.code.replace('P','O'),title:c.title,summary:t('Explore contributing expertise, a test environment or a technical approach to this proposed capability.', 'استكشف المساهمة بخبرة أو بيئة اختبار أو مسار تقني لبناء هذه القدرة المقترحة.'),category:t('Exploratory collaboration','تعاون استكشافي'),status:t('Expression of interest','إبداء اهتمام'),image:c.image,action:'concept',facts:[{label:t('Linked program','البرنامج المرتبط'),value:c.title},{label:t('Deadline','الموعد النهائي'),value:t('No call or deadline announced','لا توجد دعوة رسمية أو مهلة معلنة')},{label:t('Award / budget','التعاقد / الميزانية'),value:t('Not offered or committed','غير مطروح أو معتمد')}],blocks:[
- {title:t('The question','السؤال'),body:c.summary},
- {title:t('Who could contribute?','مَن يمكنه المساهمة؟'),items:[t('A specialist with evidence of relevant work.','متخصص لديه دليل على عمل ذي صلة.'),t('An institution willing to discuss a bounded test environment.','مؤسسة ترغب في مناقشة بيئة اختبار محددة.'),t('A team able to build and explain a testable approach.','فريق يستطيع بناء وشرح مسار قابل للاختبار.')]},
- {title:t('What to prepare','ما المطلوب تحضيره؟'),items:[t('A plain-language description of your proposed contribution.','وصف واضح للمساهمة المقترحة.'),t('Evidence of relevant experience and the uncertainties you would resolve.','دليل الخبرة المرتبطة وأوجه عدم اليقين التي ستعمل على حسمها.'),t('A first experiment, required access, resources and expected output.','تجربة أولى وصلاحيات وموارد مطلوبة ومخرج متوقع.')]},
- {title:t('How interest is considered','كيف يُنظر في إبداء الاهتمام؟'),body:t('The proposed sequence is fit review, evidence review, a scoping conversation and a separately approved test. Sending a note does not create a contract, award or promise of selection.','المسار المقترح هو مراجعة الملاءمة ثم الأدلة، ومناقشة تحديد النطاق، واختبار يُعتمد بصورة منفصلة. إرسال مذكرة لا ينشئ تعاقدًا أو تمويلًا أو وعدًا بالاختيار.')},
- {title:t('The first proof','الإثبات الأول'),body:c.test}
-],related:[`/programs/${c.slug}`,'/work-with-us/how-to-respond','/work-with-us/prepare-a-concept']}));
+export const programEntries: Entry[] = concepts.map(c => ({
+  section: 'programs',
+  slug: c.slug,
+  code: c.code,
+  title: c.title,
+  summary: c.summary,
+  category: c.classification ?? t('Program', 'برنامج'),
+  status: c.status ?? t('Pilot-Ready', 'جاهز للتجربة'),
+  image: c.image,
+  action: 'concept',
+  cta: {
+    title: t('Request an Aegis Immersion Brief', 'اطلب موجز استكشاف نظام إيجيس'),
+    label: t('Request an Aegis Immersion Brief', 'اطلب موجز استكشاف نظام إيجيس'),
+    href: '/#capability-brief',
+  },
+  facts: [
+    {label: t('Official name', 'الاسم الرسمي'), value: c.name ?? c.title},
+    {label: t('Classification', 'التصنيف'), value: c.classification ?? t('Institutional AI', 'ذكاء اصطناعي مؤسسي')},
+    {label: t('Status', 'الحالة'), value: c.status ?? t('Pilot-Ready', 'جاهز للتجربة')},
+  ],
+  blocks: [
+    {title: t('The operational reality', 'التحدي المؤسسي'), body: c.challenge},
+    {title: t('The grounded approach', 'منهجيتنا الميدانية لتشغيل Aegis'), body: c.approach},
+    ...(c.steps ?? []).map(step => ({title: step.title, body: step.body})),
+  ],
+  related: ['/programs'],
+}));
+
+export const opportunityEntries: Entry[] = [];
