@@ -68,8 +68,8 @@ export function brokenInternalLinks(html, archivedPaths, pages = [...html.keys()
       const hrefMatch = match[1].match(/\bhref="([^"]*)"/);
       if (!hrefMatch) continue;
       const raw = hrefMatch[1].replaceAll('&amp;', '&');
-      if (!raw || raw.startsWith('mailto:') || raw.startsWith('tel:') || raw.startsWith('javascript:')) continue;
-      if (/^[a-z]+:/i.test(raw) && !raw.startsWith('/')) continue;
+      if (!raw || /^(?:mailto|tel|javascript|data|vbscript):/i.test(raw)) continue;
+      if (/^[a-z][a-z0-9+.-]*:/i.test(raw)) continue;
       let url;
       try { url = new URL(raw, `https://visionseek.org${route === '/' ? '' : route}`); }
       catch { failures.push(`${route}: unreadable href ${raw}`); continue; }
@@ -96,7 +96,7 @@ export function brokenInternalLinks(html, archivedPaths, pages = [...html.keys()
 
 test('the link check fails on an archived target, a missing page, and a missing anchor', () => {
   const html = new Map([
-    ['/', '<a href="/programs/ideas">كل البرامج</a><a href="/about">About</a><a href="/missing">Nope</a><a href="/about#founder">Founder</a><a href="/about#gone">Gone</a>'],
+    ['/', '<a href="/programs/ideas">كل البرامج</a><a href="/about">About</a><a href="/missing">Nope</a><a href="/about#founder">Founder</a><a href="/about#gone">Gone</a><a href="javascript:alert(1)">js</a><a href="data:text/html,x">data</a><a href="vbscript:msgbox">vb</a><a href="mailto:a@b.c">mail</a>'],
     ['/about', '<section id="founder"></section>'],
     ['/programs/ideas', '<p>still built, but archived</p>'],
   ]);
@@ -106,6 +106,7 @@ test('the link check fails on an archived target, a missing page, and a missing 
   assert.ok(failures.some(item => item.includes('#gone')), failures.join('\n'));
   assert.equal(failures.filter(item => item.includes('href="/about"') || item.includes('→ /about (')).length, 0, failures.join('\n'));
   assert.equal(failures.filter(item => item.includes('#founder')).length, 0, failures.join('\n'));
+  assert.equal(failures.filter(item => /javascript:|data:|vbscript:|mailto:/.test(item)).length, 0, failures.join('\n'));
 });
 
 test('public pages do not link to archived or missing routes', async () => {
