@@ -25,20 +25,20 @@
       "ar": "ما تخسره مؤسستك الطبية وهي تنتظر"
     },
     "quote": {
-      "en": "…stagnation is slow-motion failure. If you're not climbing, you're sliding.",
-      "ar": "الجمود فشلٌ بطيء. إن لم تكن تصعد، فأنت تنزلق."
+      "en": "Even a single made-up term could trigger a detailed, decisive response based entirely on fiction.",
+      "ar": "حتى مصطلح مختلق واحد قد يطلق جوابًا مفصلًا وحاسمًا، مبنيًا كله على وهم."
     },
     "quoteBy": {
-      "en": "Tobi Lütke, co-founder and CEO of Shopify, in a memo to his staff · April 2025",
-      "ar": "توبي لوتكه، أحد مؤسسي «شوبيفاي» ورئيسها التنفيذي، في رسالة إلى موظفيه · أبريل 2025"
+      "en": "Eyal Klang, MD, Mount Sinai · 6 August 2025",
+      "ar": "إيال كلانغ، ماونت سايناي · 6 أغسطس 2025"
     },
     "quoteSource": {
-      "title": "The Canadian Press via CP24 · AI now an 'expectation' at Shopify · 7 April 2025",
-      "url": "https://www.cp24.com/news/canada/2025/04/07/ai-now-an-expectation-at-shopify-will-factor-into-performance-reviews-hiring-ceo/"
+      "title": "Mount Sinai · AI chatbots can run with medical misinformation · 6 August 2025",
+      "url": "https://www.mountsinai.org/about/newsroom/2025/ai-chatbots-can-run-with-medical-misinformation-study-finds-highlighting-the-need-for-stronger-safeguards"
     },
     "consequence": {
-      "en": "A leader who puts it off today will find the organization tomorrow behind others that used to trail it.",
-      "ar": "والقائد الذي يؤجّله اليوم، سيجد مؤسسته غدًا خلف مؤسسات كانت بالأمس خلفها."
+      "en": "A medical leader who puts this off will find the institution behind another hospital, plant, or pharmacy that learned where the tool lies.",
+      "ar": "قائد طبي يؤجّل هذا سيجد المؤسسة خلف مستشفى أو مصنع أو صيدلية تعلّمت أين تكذب الأداة."
     },
     "cards": [
       {
@@ -140,24 +140,24 @@
     "ar": "لا تحتاج خلفية تقنية. يكفي أن تأتي بمؤسستك الطبية كما هي: قراراتك، وأرقامك، والعمل الذي ما زال يُنجَز فيها كما كان قبل عشر سنين."
   },
   "whyProblem": {
-    "en": "Many leaders ask an assistant or a consultant to try the tool for them, then wait for the report. The tool stays in someone else's hands, and the organization's decisions hang on someone else's understanding.",
-    "ar": "كثير من القادة يكلّفون موظفًا أو مستشارًا أن يجرّب الأداة بدلًا منهم، ثم ينتظرون التقرير. فتبقى الأداة في يد غيرهم، ويبقى قرار المؤسسة معلّقًا بفهم غيرهم."
+    "en": "Medical leaders hand the tool to an assistant or a vendor, then wait for the report. The tool stays in someone else's hands, and the decision about the patient, the file, or the batch hangs on someone else's understanding.",
+    "ar": "قادة طبيون يسلّمون الأداة لمساعد أو لمورّد، ثم ينتظرون التقرير. تبقى الأداة في يد غيرهم، ويبقى القرار عن المريض أو الملف أو التشغيلة معلّقًا بفهم غيرهم."
   },
   "whyEvidence": {
-    "en": "BCG research published in September 2026 found that executives who spend at least 10% of their time teaching themselves to use AI in their own work are 1.7 times likelier to lead organizations further along with it. Those who learn it themselves lead. Those who wait for others are led.",
-    "ar": "وفي بحث نشرته «BCG» في سبتمبر 2026: المديرون الذين يخصّصون 10% على الأقل من وقتهم ليتعلّموا بأنفسهم كيف يستخدمون الذكاء الاصطناعي في عملهم، أقرب بـ1.7 مرة من غيرهم إلى قيادة مؤسسات أنضج فيه. من يتعلّم بنفسه يقود، ومن ينتظر غيره يُقاد."
+    "en": "NEJM AI, on 22 November 2024, followed a clinic that had bought an ambient documentation tool. In the primary analysis the group using it was not more efficient than the group that was not. Buying the tool did not teach the people who lead. Whoever learns the work leads the institution. Whoever waits to be shown is led.",
+    "ar": "في نوفمبر 2024 تابعت NEJM AI عيادة اشترت أداة توثيق محيطة. في التحليل الأساسي لم تكن المجموعة التي تستخدمها أكفأ من التي لا تستخدمها. شراء الأداة لم يعلّم من يقود. من يتعلّم العمل يقود المؤسسة، ومن ينتظر أن يُرى له يُقاد."
   },
   "source": {
-    "title": "BCG · The Three Dimensions of Leadership for the AI Era · 29 September 2026",
-    "url": "https://www.bcg.com/publications/2026/three-leadership-roles-ceos-ai"
+    "title": "NEJM AI · Does AI-Powered Clinical Documentation Enhance Clinician Efficiency? · 22 November 2024",
+    "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400659"
   },
   "before": {
-    "en": "Before the session we ask about your organization and your real week, not your technical skills. Questions like:",
-    "ar": "قبل الجلسة نسألك عن مؤسستك وأسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
+    "en": "Before the session we ask about your medical institution and your real week, not about your technical skill. Questions like:",
+    "ar": "قبل الجلسة نسألك عن مؤسستك الطبية وأسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
   },
   "during": {
-    "en": "Dr. Ahmed works with you on your own material, not a prepared example: a memo you have to write, a figure you don't yet trust, a decision you are taking into a meeting. You see for yourself where AI saves time, where it opens up something your organization could not do before, and where it gets things wrong and cannot be trusted.",
-    "ar": "يعمل معك د. أحمد على مادتك أنت، لا على مثال جاهز: مذكرة عليك أن تكتبها، أو رقم لم تطمئن إليه، أو قرار ستدخل به اجتماعًا. وترى بعينك أين يختصر الذكاء الاصطناعي الوقت، وأين يفتح لمؤسستك ما لم تكن تقدر عليه، وأين يخطئ فلا يُؤتمن."
+    "en": "Dr. Ahmed works on your material, not on a prepared example from another sector: an administrative note you have to send, a figure you do not yet trust, a decision you are taking into a meeting. You see where AI shortens the day, where it opens work the institution could not do, and where it is wrong and must not be trusted. The clinical call, the batch release, and advice about a medicine stay with the person who owns them.",
+    "ar": "يعمل معك د. أحمد على مادتك أنت، لا على مثال جاهز من قطاع آخر: ملاحظة إدارية عليك أن ترسلها، أو رقم لم تطمئن إليه، أو قرار ستدخل به اجتماعًا. ترى أين يختصر الذكاء الاصطناعي اليوم، وأين يفتح للمؤسسة ما لم تكن تقدر عليه، وأين يخطئ فلا يُؤتمن. القرار السريري، وإفراج التشغيلة، والنصح عن دواء، تبقى عند من يملكها."
   },
   "after": {
     "en": "You leave knowing the way and leading it yourself: what to ask of your team, which tools suit your organization, and when to trust what they say and when to check it. You won't need us afterwards, or anyone else.",
@@ -165,24 +165,24 @@
   },
   "questions": [
     {
-      "en": "What does your organization still do the way it did ten years ago?",
-      "ar": "ما العمل الذي ما زالت مؤسستك تنجزه كما كانت قبل عشر سنين؟"
+      "en": "What work does your hospital, company, factory, or pharmacy still do the way it did ten years ago?",
+      "ar": "أي عمل في مستشفاك أو شركتك أو مصنعك أو صيدليتك ما زال يُنجز كما كان قبل عشر سنين؟"
     },
     {
-      "en": "Which decision is waiting for you this month that you would like to see more clearly first?",
+      "en": "Which decision is waiting for you this month, and you want to see it more clearly first?",
       "ar": "ما القرار الذي ينتظرك هذا الشهر، وتريد أن تراه أوضح قبل أن تتخذه؟"
     },
     {
-      "en": "Where do you send someone else to try the tool for you?",
-      "ar": "أين تكلّف غيرك أن يجرّب الأداة بدلًا منك؟"
+      "en": "Where do you send someone else to try the tool on a medical file instead of you?",
+      "ar": "أين تكلّف غيرك أن يجرّب الأداة على ملف طبي بدلًا منك؟"
     },
     {
-      "en": "Which organization in the world do you watch, and wish you could start from where it is now?",
-      "ar": "أي مؤسسة في العالم تتابعها، وتتمنى أن تبدأ من حيث وصلت؟"
+      "en": "Which medical institution do you watch, and wish you could start from where it is now?",
+      "ar": "أي مؤسسة طبية تتابعها، وتتمنى أن تبدأ من حيث وصلت؟"
     },
     {
-      "en": "What would you never hand to a tool, however good it is?",
-      "ar": "ما الذي لن تسلّمه لأي أداة، مهما كانت؟"
+      "en": "Which sentence about a patient, a medicine, or a batch will you never hand to a tool?",
+      "ar": "أي جملة عن مريض أو دواء أو تشغيلة لن تسلّمها لأداة؟"
     }
   ],
   "leavesWith": [
@@ -297,36 +297,36 @@
   ],
   "headings": {
     "forWhom": {
-      "en": "AI is pitched to you every day, and nobody tells you what it means for your organization",
-      "ar": "كل يوم يُعرض عليك الذكاء الاصطناعي، ولا أحد يقول لك ماذا يعني لمؤسستك"
+      "en": "This is for the person who leads a hospital, a drug company, a factory, or a pharmacy",
+      "ar": "هذه لمن يقود مستشفى أو شركة دواء أو مصنعًا أو صيدلية"
     },
     "whyNow": {
-      "en": "Nobody can learn it for you",
-      "ar": "لا أحد يستطيع أن يتعلّمه بدلًا منك"
+      "en": "Nobody in the institution can learn it instead of you",
+      "ar": "لا أحد في المؤسسة يستطيع أن يتعلّمه بدلًا منك"
     },
     "how": {
-      "en": "A session built on your own organization",
-      "ar": "جلسة تُبنى على مؤسستك أنت"
+      "en": "A session built on your medical institution",
+      "ar": "جلسة تُبنى على مؤسستك الطبية"
     },
     "before": {
-      "en": "We study your organization first",
-      "ar": "نفهم مؤسستك أولًا"
+      "en": "We study the institution before any tool",
+      "ar": "ندرس المؤسسة قبل أي أداة"
     },
     "during": {
-      "en": "You learn on your own decisions",
-      "ar": "تتعلّم على قراراتك أنت"
+      "en": "You learn on your own medical decisions",
+      "ar": "تتعلّم على قراراتك الطبية أنت"
     },
     "after": {
-      "en": "You lead it yourself",
-      "ar": "تقود بنفسك"
+      "en": "You lead the institution yourself",
+      "ar": "تقود المؤسسة بنفسك"
     },
     "leavesWith": {
-      "en": "What stays with you",
-      "ar": "ما يبقى معك بعد الجلسة"
+      "en": "What stays with the medical leader",
+      "ar": "ما يبقى مع القائد الطبي"
     },
     "faq": {
-      "en": "Before you ask",
-      "ar": "قبل أن تطلبها"
+      "en": "Before you ask for the session",
+      "ar": "قبل أن تطلب الجلسة"
     }
   },
   "cta": {

@@ -24,7 +24,7 @@
       },
       "note": {
         "en": "Your path is the leader's own session, then the work of developing the institution. The team masterclasses are for the people who report to you.",
-        "ar": "مسارك قعدة القائد، ثم تطوير المؤسسة. ماستركلاس المؤسسات لفريقك، لا لك وحدك."
+        "ar": "مسارك جلسة القائد، ثم تطوير المؤسسة الطبية. ماستركلاس المؤسسات لفريقك، لا لك وحدك."
       }
     },
     {
@@ -69,16 +69,16 @@
         "url": "https://www.nbclosangeles.com/news/business/money-report/nvidia-ceo-you-wont-lose-your-job-to-ai-youll-lose-your-job-to-somebody-who-uses-ai/3710590"
       },
       "consequence": {
-        "en": "Whoever learns it today moves ahead. Whoever puts it off will find themselves behind people who were behind them yesterday.",
-        "ar": "من يتعلّمه اليوم يتقدّم، ومن يؤجّله سيجد نفسه غدًا خلف أناس كانوا خلفه بالأمس."
+        "en": "The medical leader who learns it now moves the institution. The one who waits will follow a hospital, a plant, or a pharmacy that used to be behind.",
+        "ar": "القائد الطبي الذي يتعلّمه الآن يحرّك المؤسسة. والذي ينتظر سيتبع مستشفى أو مصنعًا أو صيدلية كانت خلفه."
       },
       "for": {
-        "en": "For the person who owns or leads a medical institution — a hospital, a pharmaceutical company, a factory, or a pharmacy: to understand AI first-hand, and know how to lead with it.",
-        "ar": "لصاحب المؤسسة وقائدها في القطاع الطبي: مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. ليفهم الذكاء الاصطناعي بنفسه، ويعرف كيف يقود مؤسسته فيه."
+        "en": "For the person who owns or leads a medical institution: the chief executive, and the owner of the company or institution, in a hospital, a pharmaceutical company, a factory, or a pharmacy.",
+        "ar": "لصاحب المؤسسة وقائدها في القطاع الطبي: الرئيس التنفيذي، وصاحب الشركة أو المؤسسة، في مستشفى أو شركة دواء أو مصنع أو صيدلية."
       },
       "body": {
-        "en": "Dr. Ahmed sits with you and understands your work inside your medical institution before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
-        "ar": "يجلس معك د. أحمد، ويفهم عملك داخل مؤسستك الطبية قبل أن يكلّمك عن أي أداة. ثم تفهم الذكاء الاصطناعي من داخل عملك أنت: أين يختصر عليك الوقت، وأين يفتح لك بابًا لم تكن تقدر عليه."
+        "en": "Dr. Ahmed sits with you before any tool. The material is your hospital, your company, your plant, or your pharmacy: the note, the file, the shift, the decision that is yours. Then you see where AI saves the day, and where it must not speak.",
+        "ar": "يجلس معك د. أحمد قبل أي أداة. المادة هي مستشفاك أو شركتك أو مصنعك أو صيدليتك: الملاحظة، والملف، والوردية، والقرار الذي هو لك. ثم ترى أين يختصر الذكاء الاصطناعي اليوم، وأين لا يجوز أن يتكلم."
       },
       "meta": {
         "en": "Private session · Built around your work, after we've studied it",
@@ -107,16 +107,16 @@
         "ar": "المؤسسة الطبية التي تبدأ اليوم تسبق، والتي تنتظر ستلحق بغيرها متأخرة بسنوات."
       },
       "for": {
-        "en": "For a medical institution that wants to know what AI can do for it.",
-        "ar": "لمؤسسة طبية تريد أن تعرف ما الذي ينفعها من الذكاء الاصطناعي."
+        "en": "For one medical institution that wants to know what it can already do with the people and the money it has.",
+        "ar": "لمؤسسة طبية واحدة تريد أن تعرف ما تستطيع فعله بمن فيها وبمالها الآن."
       },
       "body": {
-        "en": "We study your medical institution from the inside, and what comparable medical institutions around the world have achieved. Then we choose with you what to apply, so you start where they have already arrived.",
-        "ar": "ندرس مؤسستك الطبية من الداخل، وندرس ما وصلت إليه المؤسسات الطبية المماثلة في العالم، ثم نختار معكم ما تطبّقونه وينفعكم، لتبدأوا من حيث وصلوا هم."
+        "en": "We study that hospital, company, factory, or pharmacy from the inside, and what comparable medical institutions have published. Then we choose with you what to apply. The clinical decision, the batch release, and the advice about a medicine stay with the person who owns them.",
+        "ar": "ندرس تلك المستشفى أو الشركة أو المصنع أو الصيدلية من الداخل، وما نشرته المؤسسات الطبية المماثلة. ثم نختار معكم ما يُطبَّق. القرار السريري، وإفراج التشغيلة، والنصح عن دواء، تبقى عند من يملكها."
       },
       "meta": {
-        "en": "Private masterclass · Built on your institution, after we've studied it",
-        "ar": "ماستركلاس خاص · يُبنى على مؤسستك بعد أن ندرسها"
+        "en": "A private masterclass, built on that medical institution after we have studied it",
+        "ar": "ماستركلاس خاص، يُبنى على تلك المؤسسة الطبية بعد أن ندرسها"
       }
     }
   },
@@ -253,29 +253,29 @@
       }
     },
     "heroQuote": {
-      "en": "AI will not only change how we work. It will change the limits of what we can do.",
-      "ar": "الذكاء الاصطناعي لن يغيّر طريقة عملنا فقط. سيغيّر حدود ما نستطيع أن نفعله."
+      "en": "In a hospital, a pharmaceutical company, a factory, or a pharmacy, AI does not change the work by itself. It changes what that institution can carry, if the people who lead it understand the work.",
+      "ar": "في المستشفى، وشركة الدواء، والمصنع، والصيدلية، الذكاء الاصطناعي لا يغيّر الشغل وحده. يغيّر ما تستطيع المؤسسة أن تحمله، إذا فهم من يقودها العمل."
     },
     "opening": [
       {
-        "en": "Every medical institution still does some of its work the way it did ten years ago, though that work can now be done faster, better and in less time. Many medical institutions around the world have already made the move, and published what they learned.",
-        "ar": "في كل مؤسسة طبية عملٌ ما زال يُنجَز كما كان قبل عشر سنين، مع أنه صار ممكنًا اليوم أن يُنجَز أسرع وأفضل وبوقت أقل. ومؤسسات طبية كثيرة في العالم سبقت إلى ذلك، ونشرت ما تعلّمته."
+        "en": "A medical institution still runs part of its day the way it did ten years ago: the note, the handover, the file, the reply. Elsewhere, hospitals and companies in this sector have already moved that work, and published what they learned.",
+        "ar": "مؤسسة طبية ما زالت تدير جزءًا من يومها كما كان قبل عشر سنين: الملاحظة، والتسليم، والملف، والرد. وفي أماكن أخرى، مستشفيات وشركات في هذا القطاع نقلت هذا الشغل، ونشرت ما تعلّمته."
       },
       {
-        "en": "The masterclass shortens the road. It takes what the leading medical institutions have learned and applies it to your own work, so you start where they arrived, not where they began.",
-        "ar": "الماستركلاس يختصر عليك الطريق: يأخذ ما وصلت إليه أفضل المؤسسات الطبية في العالم، ويطبّقه على عملك أنت، لتبدأ من حيث انتهوا، لا من حيث بدأوا."
+        "en": "This masterclass is for that institution. It takes what leading medical institutions have already learned and sets it on your own work, so a hospital, a drug company, a factory, or a pharmacy starts where they arrived.",
+        "ar": "هذا الماستركلاس لتلك المؤسسة. يأخذ ما تعلّمته المؤسسات الطبية التي سبقت، ويضعه على عملك أنت، فتبدأ المستشفى أو شركة الدواء أو المصنع أو الصيدلية من حيث وصلوا."
       },
       {
-        "en": "Time waits for no one. What you learn today puts you ahead. What you put off, you will learn later, after others got there first.",
-        "ar": "والوقت لا ينتظر أحدًا. ما تتعلّمه اليوم تسبق به غيرك، وما تؤجّله ستتعلّمه غدًا وقد سبقك إليه غيرك."
+        "en": "The tool will not wait. What a medical leader learns now is what the institution can use. What is put off is learned later, after another hospital or another plant has already moved.",
+        "ar": "الأداة لن تنتظر. ما يتعلّمه قائد طبي الآن هو ما تستطيع المؤسسة أن تستعمله. وما يُؤجَّل يُتعلَّم لاحقًا، بعد أن تكون مستشفى أخرى أو مصنع آخر قد تحرك."
       },
       {
-        "en": "You won't learn commands to type into a tool here; tools change every month. You learn to see your work anew, and that stays with you.",
-        "ar": "هنا لا تتعلّم أوامر تكتبها لأداة؛ فالأدوات تتغيّر كل شهر. تتعلّم كيف ترى عملك من جديد، وهذه تبقى معك."
+        "en": "You will not learn commands to type into a tool. Tools in a clinic, a plant, and a pharmacy change every month. You learn to see the medical work again, and that stays.",
+        "ar": "لن تتعلّم أوامر تكتبها في أداة. الأدوات في العيادة والمصنع والصيدلية تتغيّر كل شهر. تتعلّم أن ترى العمل الطبي من جديد، وهذا يبقى."
       },
       {
-        "en": "The experience is out there for anyone who reads it. What nobody will do is sit with you, understand your work, and pick out what is useful to you. That is the masterclass.",
-        "ar": "التجارب منشورة لمن يريد أن يقرأها. لكن لا أحد سيجلس معك، ويفهم عملك، ثم يختار لك منها ما ينفعك أنت. هذا هو الماستركلاس."
+        "en": "The cases are published. What nobody else will do is sit with the person who leads the institution, understand that hospital or company or plant or pharmacy, and choose what is useful there. That is the masterclass.",
+        "ar": "الوقائع منشورة. ما لن يفعله غيرنا هو أن يجلس مع من يقود المؤسسة، ويفهم تلك المستشفى أو الشركة أو المصنع أو الصيدلية، ثم يختار ما ينفعها. هذا هو الماستركلاس."
       }
     ],
     "independence": {
@@ -289,16 +289,16 @@
       },
       "lines": [
         {
-          "en": "Whoever understands for themselves owns their decisions. Whoever depends on others leaves those decisions in someone else’s hands.",
-          "ar": "فمن يفهم بنفسه يملك قراره، ومن يعتمد على غيره يبقى قراره في يد غيره."
+          "en": "Whoever understands the medical work owns the decision. Whoever hands it to a tool, or to someone else, leaves the patient, the file, or the batch in another hand.",
+          "ar": "من يفهم العمل الطبي يملك القرار. ومن يسلّمه لأداة، أو لغيره، يترك المريض أو الملف أو التشغيلة في يد أخرى."
         },
         {
-          "en": "We want every leader and every Arab medical institution to own its capability, not rent it.",
-          "ar": "نريد لكل قائد ولكل مؤسسة طبية عربية أن تملك قدرتها، لا أن تستأجرها."
+          "en": "We want every leader, and every Arab hospital, drug company, factory, and pharmacy, to own its capability, not rent it.",
+          "ar": "نريد لكل قائد، ولكل مستشفى وشركة دواء ومصنع وصيدلية عربية، أن يملك قدرته، لا أن يستأجرها."
         },
         {
-          "en": "A capability you don't own today is one you'll be paying someone else for tomorrow.",
-          "ar": "والقدرة التي لا تملكها اليوم، ستدفع ثمنها غدًا لغيرك."
+          "en": "A capability a medical institution does not own today is one it will pay someone else for tomorrow, and it will still be responsible for the patient.",
+          "ar": "القدرة التي لا تملكها المؤسسة الطبية اليوم ستدفع ثمنها غدًا لغيرها، وستبقى هي المسؤولة عن المريض."
         }
       ]
     },
@@ -387,12 +387,12 @@
       "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     },
     "doorsLabel": {
-      "en": "We start by understanding you, or your institution",
-      "ar": "نبدأ بفهمك أنت، أو بفهم مؤسستك"
+      "en": "We start with the medical leader, or with the medical institution",
+      "ar": "نبدأ بالقائد الطبي، أو بالمؤسسة الطبية"
     },
     "doorsLine": {
-      "en": "Either way, you leave seeing what you couldn't see in your medical work before, and you carry on by yourself.",
-      "ar": "وفي الحالتين، تخرج وأنت ترى في عملك الطبي ما لم تكن تراه، وتكمل بعدها بنفسك."
+      "en": "A hospital, a pharmaceutical company, a factory, or a pharmacy. Either way you leave seeing the work, and you carry it yourself.",
+      "ar": "مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. في الحالين تخرج وأنت ترى العمل، وتكمله بنفسك."
     },
     "doorCards": {
       "individual": {
@@ -413,46 +413,46 @@
       "ar": "مع د. أحمد عبدالعليم"
     },
     "institutionPick": {
-      "ar": "اختر قطاعك",
-      "en": "Choose your sector"
+      "en": "Four medical institutions. Choose yours.",
+      "ar": "أربع مؤسسات طبية. اختر مؤسستك."
     },
     "howLabel": {
-      "ar": "التخصيص هو ميزتنا",
-      "en": "Made for you is the point"
+      "en": "The method does not change",
+      "ar": "المنهج لا يتغيّر"
     },
     "howTitle": {
-      "en": "No two masterclasses are the same",
-      "ar": "لا يتكرر ماستركلاس مرتين"
+      "en": "The same three steps, on your medical institution",
+      "ar": "الخطوات الثلاث نفسها، على مؤسستك الطبية"
     },
     "howSteps": [
       {
         "title": {
-          "en": "You tell us who you are",
-          "ar": "تخبرنا من أنت"
+          "en": "You tell us which institution",
+          "ar": "تقول أي مؤسسة"
         },
         "line": {
-          "en": "Tell us who you are, what you do, and where you want to get to.",
-          "ar": "قل لنا من أنت، وماذا تعمل، وإلى أين تريد أن تصل."
+          "en": "A hospital, a pharmaceutical company, a factory, or a pharmacy. Who you are, what the work is, and where you want it to go.",
+          "ar": "مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. من أنت، وما الشغل، وإلى أين تريده أن يصل."
         }
       },
       {
         "title": {
-          "en": "We study your work",
-          "ar": "ندرس عملك"
+          "en": "We study that work",
+          "ar": "ندرس ذلك الشغل"
         },
         "line": {
-          "en": "Before any session, Dr. Ahmed studies your work, your medical institution, and how far comparable medical institutions abroad have come.",
-          "ar": "قبل أي جلسة، يدرس د. أحمد عملك ومؤسستك الطبية، وما وصلت إليه المؤسسات الطبية المماثلة في العالم."
+          "en": "Before the session, Dr. Ahmed studies your work and what comparable medical institutions have already published. Not a sample from another sector.",
+          "ar": "قبل الجلسة، يدرس د. أحمد عملك، وما نشرته المؤسسات الطبية المماثلة. لا نموذجًا من قطاع آخر."
         }
       },
       {
         "title": {
-          "en": "A session that's yours alone",
-          "ar": "جلسة لك وحدك"
+          "en": "A session on your own work",
+          "ar": "جلسة على شغلك أنت"
         },
         "line": {
-          "en": "A private masterclass with VisionSeek's founder himself, on your own work, with the tools that suit you.",
-          "ar": "ماستركلاس خاص مع مؤسس VisionSeek شخصيًا، على عملك أنت، وبالأدوات التي تناسبك."
+          "en": "A private masterclass with VisionSeek's founder, on your files and your decisions, with the tools that fit that institution.",
+          "ar": "ماستركلاس خاص مع مؤسس VisionSeek، على ملفاتك وقراراتك، بالأدوات التي تناسب تلك المؤسسة."
         }
       }
     ],
@@ -465,8 +465,8 @@
       "en": "Founder of VisionSeek · South Korea"
     },
     "founderStatement": {
-      "en": "I see AI as an opportunity for our Arab countries. Not to win a technology race, but to own the sensitive technologies that are now easier to own than ever before: in hospitals, pharmaceutical companies, factories, and pharmacies.",
-      "ar": "أرى الذكاء الاصطناعي فرصة لبلادنا العربية. ليس لنتفوّق في سباق التكنولوجيا، بل لنمتلك التقنيات الحساسة التي صار امتلاكها اليوم أسهل من أي وقت مضى: في المستشفيات، وشركات الدواء، والمصانع، والصيدليات."
+      "en": "I see AI as an opportunity for our Arab countries. Not to win a technology race, but so our hospitals, pharmaceutical companies, factories, and pharmacies can own the capability that is now easier to own than ever before.",
+      "ar": "أرى الذكاء الاصطناعي فرصة لبلادنا العربية. ليس لنتفوّق في سباق التكنولوجيا، بل لتملك مستشفياتنا وشركات الدواء والمصانع والصيدليات القدرة التي صار امتلاكها اليوم أسهل من أي وقت مضى."
     },
     "founderLink": {
       "en": "Meet the founder",
@@ -474,16 +474,16 @@
     },
     "closingLines": [
       {
-        "en": "Perhaps the greatest value of AI",
-        "ar": "ربما تكون أكبر قيمة للذكاء الاصطناعي"
+        "en": "In a medical institution, the value of AI",
+        "ar": "في المؤسسة الطبية، قيمة الذكاء الاصطناعي"
       },
       {
-        "en": "is not in what it does instead of you…",
-        "ar": "ليست فيما يفعله بدلًا منك…"
+        "en": "is not in what it does instead of the clinician, the pharmacist, or the qualified person…",
+        "ar": "ليست فيما يفعله بدلًا من الطبيب أو الصيدلي أو الشخص المؤهل…"
       },
       {
-        "en": "but in what it makes you able to do.",
-        "ar": "بل فيما يجعلك قادرًا على فعله أنت."
+        "en": "but in what it makes that institution able to carry.",
+        "ar": "بل فيما يجعل تلك المؤسسة قادرة على حمله."
       }
     ],
     "closingCta": {

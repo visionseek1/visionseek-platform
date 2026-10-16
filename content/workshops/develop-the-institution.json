@@ -24,28 +24,28 @@
     "ar": "القيادة العليا في مؤسسة طبية: من يستطيع أن يقول نعم لتغيير طريقة عملها."
   },
   "audienceInstitution": {
-    "en": "One medical institution, looked at as a whole. Not a single team, and not a tool demonstration.",
-    "ar": "مؤسسة طبية واحدة، تُنظر إليها كاملة. ليست فريقًا واحدًا، وليست عرض أداة."
+    "en": "One medical institution, looked at as a whole: a hospital, a pharmaceutical company, a factory, or a pharmacy. Not a single team, and not a demonstration of a tool.",
+    "ar": "مؤسسة طبية واحدة، تُنظر إليها كاملة: مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. ليست فريقًا واحدًا، وليست عرض أداة."
   },
   "whyProblem": {
-    "en": "Most of the effort in a medical institution is treated as a technology purchase. It then discovers that the people and the way of working were the larger part, and that it cannot see the next capability from inside the building alone.",
-    "ar": "أكثر الجهد في المؤسسة الطبية يُعامل كشراء تقنية. ثم تكتشف أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
+    "en": "A medical institution treats the step as buying a system. Then it finds that the people and the way the hospital, the plant, or the pharmacy works were the larger part, and that the next capability is not visible from inside the building alone.",
+    "ar": "المؤسسة الطبية تعامل الخطوة كشراء نظام. ثم تجد أن الناس وطريقة عمل المستشفى أو المصنع أو الصيدلية كانوا الجزء الأكبر، وأن القدرة التالية لا تُرى من داخل المبنى وحده."
   },
   "whyEvidence": {
-    "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards.",
-    "ar": "كتب BCG في 4 فبراير 2026، من عمله مع مئات الشركات، أن نحو 10% من قيمة الذكاء الاصطناعي تأتي من الخوارزميات، ونحو 20% من التقنية اللازمة لتشغيلها، والـ70% الباقية من إعادة النظر في الناس وطريقة الشغل. وفي النص نفسه، نحو 5% من المؤسسات تحقّق مكاسب مالية معتبرة، والشركات التي يسميها BCG «مبنية للمستقبل» تخطط لتأهيل أكثر من 50% من موظفيها، مقابل 20% عند المتأخرين."
+    "en": "NEJM AI, on 22 November 2024, followed primary care clinicians who had been given an ambient documentation tool. The group was not measurably more efficient. The purchase was not the change. WHO guidance of 28 June 2021 puts the responsibility on the person, not on the tool. This masterclass starts from that: what the medical institution can carry now, with the people it has.",
+    "ar": "في 22 نوفمبر 2024 تابعت NEJM AI أطباء رعاية أولية أُعطوا أداة توثيق محيطة. لم تكن المجموعة أكفأ بشكل يُقاس. الشراء لم يكن التغيير. وإرشاد منظمة الصحة العالمية في 28 يونيو 2021 يضع المسؤولية على الإنسان، لا على الأداة. الماستركلاس يبدأ من هنا: ما تستطيع المؤسسة الطبية حمله الآن، بمن فيها."
   },
   "source": {
-    "title": "BCG · AI Transformation Is a Workforce Transformation · 4 February 2026",
-    "url": "https://www.bcg.com/publications/2026/ai-transformation-is-a-workforce-transformation"
+    "title": "NEJM AI · Does AI-Powered Clinical Documentation Enhance Clinician Efficiency? · 22 November 2024",
+    "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400659"
   },
   "before": {
-    "en": "Five questions about what the institution can carry now, and what it keeps missing.",
-    "ar": "خمسة أسئلة عما تستطيع المؤسسة حمله الآن، وعما يفوتها."
+    "en": "Five questions about what this medical institution can carry now, and what it keeps missing.",
+    "ar": "خمسة أسئلة عما تستطيع هذه المؤسسة الطبية حمله الآن، وعما يفوتها."
   },
   "during": {
-    "en": "We map the work that current people and current money can already change. Then we name what is not visible from inside: a capability, an opportunity, or a route to funding. No outside party is contacted in the session, and none is promised.",
-    "ar": "نرسم الشغل الذي يستطيع الناس الحاليون والمال الحالي تغييره. ثم نسمّي ما لا يُرى من الداخل: قدرة، أو فرصة، أو طريق تمويل. لا تُخاطَب جهة خارجية في الجلسة، ولا يُوعد بواحدة."
+    "en": "We map the work that current people and current money can already change in that medical institution. Then we name what is not visible from inside: a capability, an opportunity, or a route to funding. No outside party is contacted in the session, and none is promised. Nothing here diagnoses, releases a batch, or advises on a medicine.",
+    "ar": "نرسم الشغل الذي يستطيع الناس الحاليون والمال الحالي تغييره في تلك المؤسسة الطبية. ثم نسمّي ما لا يُرى من الداخل: قدرة، أو فرصة، أو طريق تمويل. لا تُخاطَب جهة خارجية في الجلسة، ولا يُوعد بواحدة. لا شيء هنا يشخّص، أو يفرج عن تشغيلة، أو ينصح عن دواء."
   },
   "after": {
     "en": "After 30 days we look at what the institution actually started with its own resources, and which of the outside items it chose to pursue. Pursuit is not a deal. No partner is named because no partner exists.",
@@ -57,16 +57,16 @@
       "ar": "ما الذي تستطيع فرقك إنهاءه هذا الشهر من غير ميزانية جديدة؟"
     },
     {
-      "en": "Which repeated procedure still eats the leadership's week?",
-      "ar": "أي إجراء يتكرر وما زال يأكل أسبوع القيادة؟"
+      "en": "Which repeated medical procedure still takes the leadership's week: a note, a handover, a file, a reply?",
+      "ar": "أي إجراء طبي يتكرر وما زال يأكل أسبوع القيادة: ملاحظة، أو تسليم، أو ملف، أو رد؟"
     },
     {
-      "en": "Which capability do you need and do not have inside the house?",
-      "ar": "أي قدرة تحتاجها وليست داخل البيت؟"
+      "en": "Which capability does the hospital, the company, the factory, or the pharmacy need and not have inside the house?",
+      "ar": "أي قدرة تحتاجها المستشفى أو الشركة أو المصنع أو الصيدلية، وليست داخل البيت؟"
     },
     {
-      "en": "Which outside opportunity have you heard of and never examined?",
-      "ar": "أي فرصة خارجية سمعتها ولم تُفحص؟"
+      "en": "Which medical institution elsewhere have you heard of, and never examined?",
+      "ar": "أي مؤسسة طبية في مكان آخر سمعتها ولم تُفحص؟"
     },
     {
       "en": "What, if it is still unseen in ninety days, should be dropped?",

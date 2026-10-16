@@ -68,6 +68,17 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           </div>
         </section>
 
+        <section className="vs-wl-why" id="sectors">
+          <h2>{text(locale, live.institutionPick)}</h2>
+          <ul className="vs-wl-door-chips">
+            {institutionWorkshops.map(item => (
+              <li key={item.slug}>
+                <Link href={`${prefix}/masterclass/${item.slug}`}>{section.institutionTypes.find(type => type.id === item.institution)?.label[locale]}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="vs-wl-why">
           <blockquote className="vs-wl-quote">{text(locale, live.heroQuote)}</blockquote>
           <div className="vs-wl-opening">

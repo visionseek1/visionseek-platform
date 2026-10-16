@@ -173,8 +173,8 @@ test('the «لك أنت» page speaks to the leader: its own headings, how fast 
   assert.match(page.after.ar, /بنفسك/);
   assert.match(page.after.ar, /لا تحتاجنا/);
   // The evidence carries the date its source shows.
-  assert.match(page.source.title, /29 September 2026/);
-  assert.match(page.whyEvidence.ar, /سبتمبر 2026/);
+  assert.match(page.source.title, /22 November 2024/);
+  assert.match(page.whyEvidence.ar, /نوفمبر 2024/);
   const view = readFileSync(join(process.cwd(), 'components/institution/workshops-view.tsx'), 'utf8');
   assert.match(view, /workshop\.headings\?\.\[key\]/, 'the page reads its own headings');
 });
