@@ -53,11 +53,13 @@ test('the cancelled programme does not appear anywhere on the public site', asyn
   assert.match(read('components/capability/navigation.tsx'), /مهندس القدرات المؤسسية/);
 });
 
-test('«هندسة الفرص» / Engineering Opportunities no longer appears on the public site', async () => {
+test('«هندسة الفرص» is the homepage title, and it does not return on the rest of the public site', async () => {
   const {readdirSync, statSync} = await import('node:fs');
   const walk = d => readdirSync(new URL(`../${d}`, import.meta.url)).flatMap(f => { const p = `${d}/${f}`; return statSync(new URL(`../${p}`, import.meta.url)).isDirectory() ? walk(p) : [p]; });
-  const files = ['components', 'content', 'app', 'lib', 'public/admin'].flatMap(walk).filter(p => /\.(tsx?|json|ya?ml|css)$/.test(p) && !p.startsWith('app/ops/'));
+  const files = ['components', 'content', 'app', 'lib', 'public/admin'].flatMap(walk).filter(p => /\.(tsx?|json|ya?ml|css)$/.test(p) && !p.startsWith('app/ops/') && p !== 'content/home.json');
   for (const p of files) assert.doesNotMatch(read(p), /هندسة الفرص|engineering opportunities/i, p);
+  assert.match(read('content/home.json'), /هندسة الفرص/);
+  assert.match(read('content/home.json'), /Engineering Opportunities/);
   assert.match(read('components/capability/footer.tsx'), /'منهجنا'/);
 });
 
