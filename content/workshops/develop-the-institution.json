@@ -12,24 +12,24 @@
     "senior"
   ],
   "outcome": {
-    "en": "You see what the institution can already do with the people and money it has, and what it is not yet looking at.",
-    "ar": "ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم، وما لا تنظر إليه بعد."
+    "en": "You see what the medical institution can already do with the people and money it has, and what it is not yet looking at.",
+    "ar": "ترى ما تستطيع المؤسسة الطبية فعله بمن فيها وبمالها اليوم، وما لا تنظر إليه بعد."
   },
   "summary": {
-    "en": "For the senior table. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building.",
-    "ar": "لمائدة القيادة العليا. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى."
+    "en": "For the senior table of a medical institution: a hospital, a pharmaceutical company, a factory, or a pharmacy. We start with what can be carried now, then name the capability, the opportunity, and the funding that are still outside the building.",
+    "ar": "لمائدة القيادة في مؤسسة طبية: مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. نبدأ بما يُحمل الآن، ثم نسمّي القدرة والفرصة والتمويل التي ما زالت خارج المبنى."
   },
   "audienceRole": {
-    "en": "Senior leadership: the people who can say yes to a change in how the institution works.",
-    "ar": "القيادة العليا: من يستطيع أن يقول نعم لتغيير طريقة عمل المؤسسة."
+    "en": "Senior leadership of a medical institution: the people who can say yes to a change in how it works.",
+    "ar": "القيادة العليا في مؤسسة طبية: من يستطيع أن يقول نعم لتغيير طريقة عملها."
   },
   "audienceInstitution": {
-    "en": "One institution, looked at as a whole. Not a single team, and not a tool demonstration.",
-    "ar": "مؤسسة واحدة، تُنظر إليها كاملة. ليست فريقًا واحدًا، وليست عرض أداة."
+    "en": "One medical institution, looked at as a whole. Not a single team, and not a tool demonstration.",
+    "ar": "مؤسسة طبية واحدة، تُنظر إليها كاملة. ليست فريقًا واحدًا، وليست عرض أداة."
   },
   "whyProblem": {
-    "en": "Most of the effort is treated as a technology purchase. The institution then discovers that the people and the way of working were the larger part, and that it cannot see the next capability from inside the building alone.",
-    "ar": "أكثر الجهد يُعامل كشراء تقنية. ثم تكتشف المؤسسة أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
+    "en": "Most of the effort in a medical institution is treated as a technology purchase. It then discovers that the people and the way of working were the larger part, and that it cannot see the next capability from inside the building alone.",
+    "ar": "أكثر الجهد في المؤسسة الطبية يُعامل كشراء تقنية. ثم تكتشف أن الناس وطريقة الشغل كانا الجزء الأكبر، وأنها لا ترى القدرة التالية من داخل المبنى وحدها."
   },
   "whyEvidence": {
     "en": "BCG, on 4 February 2026, wrote from its case work that about 10% of AI value comes from the algorithms, about 20% from the technology needed to implement them, and the remaining 70% from rethinking people and how work is done. In the same piece, about 5% of organizations were taking substantial financial gains, and the companies BCG calls future-built plan to upskill more than 50% of employees, against 20% among laggards.",

@@ -150,7 +150,7 @@ test('the «لك أنت» page speaks to the leader: its own headings, how fast 
   // Dr. Ahmed (9 Oct 2026): chief executives, owners of companies and institutions, and government leaders.
   assert.match(page.audienceRole.ar, /الرئيس التنفيذي/);
   assert.match(page.audienceRole.ar, /صاحب الشركة أو المؤسسة/);
-  assert.match(page.audienceRole.ar, /القائد الحكومي/);
+  assert.match(page.audienceRole.ar, /القطاع الطبي/);
   // Every figure says what the reader loses or gains: a lesson line under each card.
   for (const card of [...page.pace.cards, ...page.shifts]) {
     assert.ok(card.lesson?.ar && card.lesson?.en, `${card.title.en}: what it means for the reader`);

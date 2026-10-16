@@ -77,8 +77,8 @@
         "ar": "لصاحب المؤسسة وقائدها في القطاع الطبي: مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. ليفهم الذكاء الاصطناعي بنفسه، ويعرف كيف يقود مؤسسته فيه."
       },
       "body": {
-        "en": "Dr. Ahmed sits with you and understands your work before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
-        "ar": "يجلس معك د. أحمد، ويفهم عملك قبل أن يكلّمك عن أي أداة. ثم تفهم الذكاء الاصطناعي من داخل عملك أنت: أين يختصر عليك الوقت، وأين يفتح لك بابًا لم تكن تقدر عليه."
+        "en": "Dr. Ahmed sits with you and understands your work inside your medical institution before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
+        "ar": "يجلس معك د. أحمد، ويفهم عملك داخل مؤسستك الطبية قبل أن يكلّمك عن أي أداة. ثم تفهم الذكاء الاصطناعي من داخل عملك أنت: أين يختصر عليك الوقت، وأين يفتح لك بابًا لم تكن تقدر عليه."
       },
       "meta": {
         "en": "Private session · Built around your work, after we've studied it",
@@ -103,16 +103,16 @@
         "url": "https://bigdatawire.com/2023/03/22/bill-gates-says-the-age-of-ai-has-begun-bringing-opportunity-and-responsibility"
       },
       "consequence": {
-        "en": "The institution that starts today gets ahead. The one that waits will catch up years late.",
-        "ar": "المؤسسة التي تبدأ اليوم تسبق، والتي تنتظر ستلحق بغيرها متأخرة بسنوات."
+        "en": "The medical institution that starts today gets ahead. The one that waits will catch up years late.",
+        "ar": "المؤسسة الطبية التي تبدأ اليوم تسبق، والتي تنتظر ستلحق بغيرها متأخرة بسنوات."
       },
       "for": {
         "en": "For a medical institution that wants to know what AI can do for it.",
         "ar": "لمؤسسة طبية تريد أن تعرف ما الذي ينفعها من الذكاء الاصطناعي."
       },
       "body": {
-        "en": "We study your institution from the inside, and what its counterparts around the world have achieved. Then we choose with you what to apply, so you start where they have already arrived.",
-        "ar": "ندرس مؤسستك من الداخل، وندرس ما وصلت إليه مثيلاتها في العالم، ثم نختار معكم ما تطبّقونه وينفعكم، لتبدأوا من حيث وصلوا هم."
+        "en": "We study your medical institution from the inside, and what comparable medical institutions around the world have achieved. Then we choose with you what to apply, so you start where they have already arrived.",
+        "ar": "ندرس مؤسستك الطبية من الداخل، وندرس ما وصلت إليه المؤسسات الطبية المماثلة في العالم، ثم نختار معكم ما تطبّقونه وينفعكم، لتبدأوا من حيث وصلوا هم."
       },
       "meta": {
         "en": "Private masterclass · Built on your institution, after we've studied it",
@@ -258,12 +258,12 @@
     },
     "opening": [
       {
-        "en": "Every institution still does some of its work the way it did ten years ago, though that work can now be done faster, better and in less time. Many institutions around the world have already made the move, and published what they learned.",
-        "ar": "في كل مؤسسة عملٌ ما زال يُنجَز كما كان قبل عشر سنين، مع أنه صار ممكنًا اليوم أن يُنجَز أسرع وأفضل وبوقت أقل. ومؤسسات كثيرة في العالم سبقت إلى ذلك، ونشرت ما تعلّمته."
+        "en": "Every medical institution still does some of its work the way it did ten years ago, though that work can now be done faster, better and in less time. Many medical institutions around the world have already made the move, and published what they learned.",
+        "ar": "في كل مؤسسة طبية عملٌ ما زال يُنجَز كما كان قبل عشر سنين، مع أنه صار ممكنًا اليوم أن يُنجَز أسرع وأفضل وبوقت أقل. ومؤسسات طبية كثيرة في العالم سبقت إلى ذلك، ونشرت ما تعلّمته."
       },
       {
-        "en": "The masterclass shortens the road. It takes what the leading institutions have learned and applies it to your own work, so you start where they arrived, not where they began.",
-        "ar": "الماستركلاس يختصر عليك الطريق: يأخذ ما وصلت إليه أفضل مؤسسات العالم، ويطبّقه على عملك أنت، لتبدأ من حيث انتهوا، لا من حيث بدأوا."
+        "en": "The masterclass shortens the road. It takes what the leading medical institutions have learned and applies it to your own work, so you start where they arrived, not where they began.",
+        "ar": "الماستركلاس يختصر عليك الطريق: يأخذ ما وصلت إليه أفضل المؤسسات الطبية في العالم، ويطبّقه على عملك أنت، لتبدأ من حيث انتهوا، لا من حيث بدأوا."
       },
       {
         "en": "Time waits for no one. What you learn today puts you ahead. What you put off, you will learn later, after others got there first.",
@@ -293,8 +293,8 @@
           "ar": "فمن يفهم بنفسه يملك قراره، ومن يعتمد على غيره يبقى قراره في يد غيره."
         },
         {
-          "en": "We want every person and every Arab institution to own its capability, not rent it.",
-          "ar": "نريد لكل إنسان ولكل مؤسسة عربية أن تملك قدرتها، لا أن تستأجرها."
+          "en": "We want every leader and every Arab medical institution to own its capability, not rent it.",
+          "ar": "نريد لكل قائد ولكل مؤسسة طبية عربية أن تملك قدرتها، لا أن تستأجرها."
         },
         {
           "en": "A capability you don't own today is one you'll be paying someone else for tomorrow.",
@@ -391,8 +391,8 @@
       "ar": "نبدأ بفهمك أنت، أو بفهم مؤسستك"
     },
     "doorsLine": {
-      "en": "Either way, you leave seeing what you couldn't see in your work before, and you carry on by yourself.",
-      "ar": "وفي الحالتين، تخرج وأنت ترى في عملك ما لم تكن تراه، وتكمل بعدها بنفسك."
+      "en": "Either way, you leave seeing what you couldn't see in your medical work before, and you carry on by yourself.",
+      "ar": "وفي الحالتين، تخرج وأنت ترى في عملك الطبي ما لم تكن تراه، وتكمل بعدها بنفسك."
     },
     "doorCards": {
       "individual": {
@@ -441,8 +441,8 @@
           "ar": "ندرس عملك"
         },
         "line": {
-          "en": "Before any session, Dr. Ahmed studies your work, your institution, and how far its counterparts abroad have come.",
-          "ar": "قبل أي جلسة، يدرس د. أحمد عملك ومؤسستك، وما وصلت إليه مثيلاتها في العالم."
+          "en": "Before any session, Dr. Ahmed studies your work, your medical institution, and how far comparable medical institutions abroad have come.",
+          "ar": "قبل أي جلسة، يدرس د. أحمد عملك ومؤسستك الطبية، وما وصلت إليه المؤسسات الطبية المماثلة في العالم."
         }
       },
       {

@@ -12,12 +12,12 @@
     "senior"
   ],
   "outcome": {
-    "en": "Lead your organization into AI before others get there first.",
-    "ar": "قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك."
+    "en": "Lead your medical institution into AI before others in the sector get there first.",
+    "ar": "قُد مؤسستك الطبية إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك في القطاع."
   },
   "summary": {
-    "en": "AI is moving faster than anything organizations have seen, and yours will only get ahead if you understand it first. Dr. Ahmed Abdelalim sits down with you and studies your work and your organization before any tool comes up. Then you see for yourself what AI can change there, so you lead with the best the world has reached, not with what the organization is used to. And you leave knowing the way, and leading it yourself.",
-    "ar": "العالم يتحرك في الذكاء الاصطناعي بسرعة لم يعرفها من قبل، ولن تسبق مؤسستك فيه إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم، ويدرس عملك ومؤسستك قبل أي أداة، ثم ترى بعينك ما يستطيع الذكاء الاصطناعي أن يغيّره فيها، لتقودها بأعلى ما وصل إليه العالم، لا بما اعتادت عليه. وتخرج وأنت تعرف الطريق، وتقوده بنفسك."
+    "en": "Medicine is moving in AI faster than its institutions have known, and yours will only get ahead if you understand it first. Dr. Ahmed Abdelalim sits with you and studies your work and your hospital, company, factory, or pharmacy before any tool. Then you see for yourself what AI can change there, so you lead with the best medical institutions have reached, not with what yours is used to. And you leave knowing the way, and leading it yourself.",
+    "ar": "القطاع الطبي يتحرك في الذكاء الاصطناعي بسرعة لم تعرفها مؤسساته من قبل، ولن تسبق مؤسستك فيه إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم، ويدرس عملك ومؤسستك، مستشفى أو شركة دواء أو مصنعًا أو صيدلية، قبل أي أداة. ثم ترى بعينك ما يستطيع الذكاء الاصطناعي أن يغيّره فيها، لتقودها بأعلى ما وصلت إليه المؤسسات الطبية، لا بما اعتادت عليه. وتخرج وأنت تعرف الطريق، وتقوده بنفسك."
   },
   "pace": {
     "title": {
@@ -110,12 +110,12 @@
     ]
   },
   "audienceRole": {
-    "en": "This session is for those who lead: chief executives, owners of companies and institutions, and government leaders, from ministers and deputy ministers to heads of authorities and directors-general. For whoever makes the call, and wants to understand first-hand where to take the organization.",
-    "ar": "هذه الجلسة لمن يقود: الرئيس التنفيذي، وصاحب الشركة أو المؤسسة، والقائد الحكومي من وزير أو وكيل أو رئيس هيئة أو مدير عام. لمن يتخذ القرار، ويريد أن يفهم بنفسه إلى أين يأخذ مؤسسته."
+    "en": "This session is for whoever leads in the medical sector: the chief executive, and the owner of the company or institution, in a hospital, a pharmaceutical company, a factory, or a pharmacy. For whoever makes the call, and wants to understand first-hand where to take the institution.",
+    "ar": "هذه الجلسة لمن يقود في القطاع الطبي: الرئيس التنفيذي، وصاحب الشركة أو المؤسسة، في مستشفى أو شركة دواء أو مصنع أو صيدلية. لمن يتخذ القرار، ويريد أن يفهم بنفسه إلى أين يأخذ مؤسسته."
   },
   "audienceInstitution": {
-    "en": "You need no technical background. Bring the organization as it is: your decisions, your numbers, and the work still done the way it was ten years ago.",
-    "ar": "لا تحتاج خلفية تقنية. يكفي أن تأتي بمؤسستك كما هي: قراراتك، وأرقامك، والعمل الذي ما زال يُنجَز فيها كما كان قبل عشر سنين."
+    "en": "You need no technical background. Bring the medical institution as it is: your decisions, your numbers, and the work still done the way it was ten years ago.",
+    "ar": "لا تحتاج خلفية تقنية. يكفي أن تأتي بمؤسستك الطبية كما هي: قراراتك، وأرقامك، والعمل الذي ما زال يُنجَز فيها كما كان قبل عشر سنين."
   },
   "whyProblem": {
     "en": "Many leaders ask an assistant or a consultant to try the tool for them, then wait for the report. The tool stays in someone else's hands, and the organization's decisions hang on someone else's understanding.",
