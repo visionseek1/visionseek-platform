@@ -99,7 +99,7 @@ export function Session({locale}: {locale: Locale}) {
   const t = tx(ar);
   const p = ar ? "/ar" : "";
   return (
-    <section className={styles.session} aria-labelledby="home-session">
+    <section className={styles.session} id="contact" aria-labelledby="home-session">
       <h2 id="home-session">{t(copy.session.title)}</h2>
       <p>{t(copy.session.line)}</p>
       <Link className={styles.button} href={`${p}/start`}>
