@@ -32,6 +32,10 @@ cat = load('content/projects/catalog.json')
 for s in cat['sectors']: add(f"/projects/{s['slug']}", f"المشاريع ← {s['title']['ar']}")
 for f in sorted(glob.glob('content/projects/concepts/*.json')):
     d = load(f); add(f"/projects/{d['sector']}/{d['track']}/{d['slug']}", f"المشاريع ← {d['id']} {d['title']['ar']}")
+med = load('content/medical.json')
+add('/fields', 'المجالات')
+for s in med['sectors']:
+    add(f"/sectors/{s['slug']}", f"لمين بنشتغل ← {s['title']['ar']}")
 add('/leaders-house/physical-ai', 'بيت القادة ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/physical-ai', 'التقارير ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/agent-governance', 'التقارير ← حوكمة الوكلاء الأذكياء')

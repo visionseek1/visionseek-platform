@@ -7,6 +7,7 @@ import {showPublicCharacters} from '@/lib/leaders/presentation';
 import {projectRoutes} from '@/lib/projects';
 import {isArchived} from '@/lib/visibility';
 import {insights} from '@/lib/insights';
+import {medical} from '@/lib/medical';
 import ksData from '@/content/korean-solutions.json';
 
 // Korean Solutions pages known at build time (the JSON copy of the Notion database).
@@ -39,6 +40,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...[...insights.reports, ...insights.research].filter(r => r.page).flatMap(r => [{path: r.page as string, priority: 0.75}, {path: `/ar${r.page}`, priority: 0.75}]),
     { path: "/leaders-house", priority: 0.85 },
     { path: "/ar/leaders-house", priority: 0.85 },
+    { path: "/fields", priority: 0.8 },
+    { path: "/ar/fields", priority: 0.8 },
+    ...medical.sectors.flatMap(sector => [{path: `/sectors/${sector.slug}`, priority: 0.75}, {path: `/ar/sectors/${sector.slug}`, priority: 0.75}]),
     { path: "/privacy", priority: 0.3 },
     { path: "/ar/privacy", priority: 0.3 },
     { path: "/terms", priority: 0.3 },

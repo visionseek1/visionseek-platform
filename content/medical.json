@@ -1,0 +1,126 @@
+{
+  "home": {
+    "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
+    "title": {"en": "Who we work with", "ar": "لمين بنشتغل"},
+    "intro": {"en": "Six parts of healthcare. We start from the question in front of the person who leads it.", "ar": "ست جهات في القطاع الصحي. نبدأ من السؤال اللي واقف قدام قائدها."},
+    "fieldsLink": {"en": "Fields", "ar": "المجالات"}
+  },
+  "fieldsPage": {
+    "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
+    "title": {"en": "Fields", "ar": "المجالات"},
+    "intro": {"en": "Three fields we work in now, each marked with a star. The rest of the map is shown, and marked coming soon.", "ar": "ثلاثة بنشتغل عليهم دلوقتي، وعليهم نجمة. الباقي على الخريطة، ومكتوب عليه قريبًا."},
+    "now": {"en": "Where we work now", "ar": "اللي بنشتغل عليه دلوقتي"},
+    "later": {"en": "On the map, not yet", "ar": "على الخريطة، ولسه مش دلوقتي"},
+    "soon": {"en": "Coming soon", "ar": "قريبًا"},
+    "starLabel": {"en": "Current focus", "ar": "التركيز الحالي"},
+    "sectorsHeading": {"en": "Who we work with", "ar": "لمين بنشتغل"}
+  },
+  "sectors": [
+    {
+      "slug": "hospitals",
+      "title": {"en": "Hospitals and care providers", "ar": "المستشفيات ومقدّمو الرعاية"},
+      "problem": {"en": "Every day a decision is required on the bed, the diagnosis and the medicine, and the picture inside the hospital is still in pieces.", "ar": "كل يوم مطلوب قرار على السرير والتشخيص والدواء، والصورة داخل المستشفى لسه متقطعة."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "therapy", "remote", "operations", "revenue", "experience"]
+    },
+    {
+      "slug": "pharma",
+      "title": {"en": "Pharmaceutical companies and plants", "ar": "شركات الأدوية والمصانع"},
+      "problem": {"en": "A medicine has a road, from research to the plant to the patient, and the leader still cannot see that road as one picture.", "ar": "الدواء له طريق، من البحث إلى المصنع إلى المريض، والقائد لسه مش شايف الطريق ده صورة واحدة."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "genomics"]
+    },
+    {
+      "slug": "pharmacies",
+      "title": {"en": "Pharmacies and distribution", "ar": "الصيدليات والتوزيع"},
+      "problem": {"en": "The medicine that is needed is not always where it is needed. Stock sits on its own, and demand sits on its own.", "ar": "الدواء المطلوب مش دايمًا في المكان المطلوب. المخزون لوحده، والطلب لوحده."},
+      "fieldIds": ["radiology", "diagnosis", "drugs"]
+    },
+    {
+      "slug": "insurance",
+      "title": {"en": "Insurance", "ar": "التأمين"},
+      "problem": {"en": "The insurance leader has to pay for care that deserves it, and what actually changed for the patient is still not visible.", "ar": "قائد التأمين مطلوب منه يدفع لرعاية تستاهل، ومش باين له إيه اللي اتغير عند المريض."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "revenue", "experience"]
+    },
+    {
+      "slug": "government",
+      "title": {"en": "Government and regulators", "ar": "الحكومة والجهات التنظيمية"},
+      "problem": {"en": "The leader of a ministry or a regulator writes the rule and has to watch the system, and the picture arrives late and in pieces.", "ar": "قائد الوزارة أو الجهة التنظيمية يكتب القاعدة ويراقب المنظومة، والصورة توصله متأخرة ومتفرقة."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "public-health", "genomics"]
+    },
+    {
+      "slug": "research",
+      "title": {"en": "Research and universities", "ar": "البحث والجامعات"},
+      "problem": {"en": "The knowledge is there, the institution needs a capability it can run every day, and the road from the paper to that daily work is still not drawn.", "ar": "المعرفة موجودة، والمؤسسة محتاجة قدرة تمشي بيها كل يوم، والطريق من الورقة للتشغيل لسه مش مترسوم."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "genomics"]
+    }
+  ],
+  "fields": [
+    {
+      "id": "radiology",
+      "focus": true,
+      "title": {"en": "Radiology", "ar": "الأشعة والتصوير الطبي"},
+      "line": {"en": "An image that says what is inside the body, before the decision is made.", "ar": "صورة تقول ما في الجسم، قبل ما يتاخد القرار."}
+    },
+    {
+      "id": "diagnosis",
+      "focus": true,
+      "title": {"en": "Medical diagnosis", "ar": "التشخيص الإكلينيكي"},
+      "line": {"en": "Knowing the patient's condition early, before it widens.", "ar": "تعرف حالة المريض بدري، قبل ما تتسع."}
+    },
+    {
+      "id": "drugs",
+      "focus": true,
+      "title": {"en": "Drugs", "ar": "الدواء"},
+      "line": {"en": "The medicine itself, from the plant until it reaches the person who needs it.", "ar": "الدوا نفسه، من المصنع لحد ما يوصل للي محتاجه."}
+    },
+    {"id": "labs", "focus": false, "title": {"en": "Labs and pathology", "ar": "المعامل والباثولوجي"}},
+    {"id": "therapy", "focus": false, "title": {"en": "Therapy and procedures", "ar": "العلاج والعمليات"}},
+    {"id": "remote", "focus": false, "title": {"en": "Remote monitoring", "ar": "المتابعة عن بُعد"}},
+    {"id": "operations", "focus": false, "title": {"en": "Hospital operations", "ar": "تشغيل المستشفى"}},
+    {"id": "revenue", "focus": false, "title": {"en": "Revenue and insurance", "ar": "الإيراد والتأمين"}},
+    {"id": "public-health", "focus": false, "title": {"en": "Public health", "ar": "الصحة العامة"}},
+    {"id": "genomics", "focus": false, "title": {"en": "Genomics", "ar": "الجينوم"}},
+    {"id": "experience", "focus": false, "title": {"en": "Patient experience", "ar": "تجربة المريض"}}
+  ],
+  "fieldsNote": {
+    "en": "The star marks what we work on now. The rest is on the map, and is not our work yet.",
+    "ar": "النجمة على اللي بنشتغل عليه دلوقتي. الباقي ظاهر، ولسه مش شغلنا."
+  },
+  "work": {
+    "eyebrow": {"en": "HOW WE WORK", "ar": "إزاي بنشتغل"},
+    "title": {"en": "Masterclass, then Study, then Operation.", "ar": "ماستركلاس، ثم دراسة، ثم تشغيل."},
+    "intro": {"en": "In that order. A step is not skipped.", "ar": "بالترتيب ده. مش بنعدّي خطوة."},
+    "steps": [
+      {
+        "id": "masterclass",
+        "title": {"en": "Masterclass", "ar": "ماستركلاس"},
+        "text": {"en": "We sit with the leader on their own question, inside their institution, before any talk of a tool.", "ar": "نقعد مع القائد على سؤاله هو، جوه مؤسسته، قبل أي كلام عن أداة."}
+      },
+      {
+        "id": "study",
+        "title": {"en": "Study", "ar": "دراسة"},
+        "text": {"en": "We study what is actually in the way: the constraint, the evidence, and what is still unknown.", "ar": "ندرس اللي واقف فعلًا: القيد، والدليل، واللي لسه مش معروف."}
+      },
+      {
+        "id": "operation",
+        "title": {"en": "Operation", "ar": "تشغيل"},
+        "text": {"en": "What is shown to work enters the institution's daily work, not a presentation left behind.", "ar": "اللي يثبت إنه يشتغل، يدخل في شغل المؤسسة كل يوم. مش عرض يتساب."}
+      }
+    ]
+  },
+  "insightsBlock": {
+    "title": {"en": "Latest Insights", "ar": "أحدث القراءات"},
+    "intro": {"en": "What is published in Insights and tagged for this sector.", "ar": "اللي اتنشر في Insights ومتعلم عليه القطاع ده."},
+    "empty": {"en": "Nothing here yet.", "ar": "لا يوجد بعد."},
+    "all": {"en": "All Insights", "ar": "كل القراءات"}
+  },
+  "session": {
+    "title": {"en": "A free 30-minute session with Ahmed Abdelalim", "ar": "جلسة مجانية، ٣٠ دقيقة، مع د. أحمد"},
+    "text": {"en": "We start from the question in front of you. A ready-made solution is not required.", "ar": "نبدأ من السؤال اللي قدامك. مش محتاج تصور جاهز."},
+    "button": {"en": "Book the session with Ahmed Abdelalim", "ar": "احجز الجلسة مع د. أحمد"}
+  },
+  "cross": {
+    "fields": {"en": "All fields", "ar": "كل المجالات"},
+    "others": {"en": "Other institutions", "ar": "جهات تانية"},
+    "who": {"en": "Who we work with", "ar": "لمين بنشتغل"}
+  }
+}
