@@ -16,8 +16,8 @@
     "ar": "قُد مؤسستك الطبية إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك في القطاع."
   },
   "summary": {
-    "en": "Medicine is moving in AI faster than its institutions have known, and yours will only get ahead if you understand it first. Dr. Ahmed Abdelalim sits with you and studies your work and your hospital, company, factory, or pharmacy before any tool. Then you see for yourself what AI can change there, so you lead with the best medical institutions have reached, not with what yours is used to. And you leave knowing the way, and leading it yourself.",
-    "ar": "القطاع الطبي يتحرك في الذكاء الاصطناعي بسرعة لم تعرفها مؤسساته من قبل، ولن تسبق مؤسستك فيه إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم، ويدرس عملك ومؤسستك، مستشفى أو شركة دواء أو مصنعًا أو صيدلية، قبل أي أداة. ثم ترى بعينك ما يستطيع الذكاء الاصطناعي أن يغيّره فيها، لتقودها بأعلى ما وصلت إليه المؤسسات الطبية، لا بما اعتادت عليه. وتخرج وأنت تعرف الطريق، وتقوده بنفسك."
+    "en": "The medical sector is moving in AI faster than its institutions have known, and yours only gets ahead if you understand it first. Dr. Ahmed Abdelalim sits with you and studies the work before any tool. Then you see what AI can change, and you leave knowing the way, and leading it yourself.",
+    "ar": "القطاع الطبي يتحرك في الذكاء الاصطناعي بسرعة لم تعرفها مؤسساته، ولن تسبق مؤسستك إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم ويدرس العمل قبل أي أداة. ثم ترى ما يستطيع أن يغيّره، وتخرج وأنت تعرف الطريق وتقوده بنفسك."
   },
   "pace": {
     "title": {
@@ -165,8 +165,8 @@
   },
   "questions": [
     {
-      "en": "What work does your hospital, company, factory, or pharmacy still do the way it did ten years ago?",
-      "ar": "أي عمل في مستشفاك أو شركتك أو مصنعك أو صيدليتك ما زال يُنجز كما كان قبل عشر سنين؟"
+      "en": "What work is still done the way it was ten years ago?",
+      "ar": "أي عمل ما زال يُنجز كما كان قبل عشر سنين؟"
     },
     {
       "en": "Which decision is waiting for you this month, and you want to see it more clearly first?",
