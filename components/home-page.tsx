@@ -5,6 +5,7 @@ import { ArrowRight, Building2, Landmark, Microscope, Users, Factory, Network } 
 import { CapabilityHeader } from "@/components/capability/navigation";
 import CapabilityFooter from "@/components/capability/footer";
 import CapabilityHero from "@/components/capability/hero";
+import CapabilityBriefForm from "@/components/capability/brief-form";
 import { InstitutionExplainer } from "@/components/positioning/positioning";
 import MethodSpotlight from "@/components/capability/method-spotlight";
 import { communities, fields, type Locale } from "@/components/capability/content";
@@ -17,12 +18,22 @@ const icons = [Building2, Landmark, Microscope, Users, Factory, Network];
 export default function HomePage({locale}: {locale:Locale}) {
   const ar=locale==="ar";const p=ar?"/ar":"";
   const tx=(v:{en:string;ar:string})=>ar?v.ar:v.en;
-  const {mission,reading:readingCopy,communities:communitiesCopy,fields:fieldsCopy,work,contact,proof,decade}=home;
+  const {mission,reading:readingCopy,communities:communitiesCopy,fields:fieldsCopy,work,contact,proof,decade,architecture}=home;
   const reading=readingCopy.rows.map(r=>({href:r.href,image:r.image,category:tx(r.category),title:tx(r.title),text:tx(r.text)}));
   return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar?"rtl":"ltr"}>
     <CapabilityHeader locale={locale} overlay/>
     <main id="main-content">
       <CapabilityHero locale={locale}/>
+      <section className="vs-architecture" id="architecture">
+        <div className="vs-architecture-image"><Image src={architecture.image} alt={tx(architecture.imageAlt)} width={900} height={1100} /></div>
+        <div>
+          <p className="vs-eyebrow">{tx(architecture.eyebrow)}</p>
+          <h2>{tx(architecture.title)}</h2>
+          <p>{tx(architecture.text)}</p>
+        </div>
+      </section>
+      {!isBlockHidden("home.method")&&<MethodSpotlight locale={locale}/>}
+      <CapabilityBriefForm locale={locale}/>
       {!isBlockHidden("home.decade")&&<section className="vs-decade" id="decade"><p className="vs-eyebrow">{tx(decade.eyebrow)}</p><h2>{tx(decade.title)}</h2>{tx(decade.sub)?<p className="vs-decade-sub">{tx(decade.sub)}</p>:null}<Link className="vs-text-link" href={`${p}/projects`}>{tx(decade.link)}<ArrowRight size={20}/></Link></section>}
       {!isBlockHidden("home.proof")&&<section className="vs-proof" id="proof" aria-label={ar?"ما بُني بالفعل":"What is already built"}><h2>{tx(proof.heading)}</h2><div className="vs-proof-grid">{proof.items.map((it,i)=><div className="vs-proof-item" key={i}><span className="vs-proof-value" dir="ltr">{it.value}</span><p>{tx(it.label)}</p></div>)}</div></section>}
       {!isBlockHidden("home.explainer")&&<InstitutionExplainer locale={locale}/>}
@@ -31,7 +42,6 @@ export default function HomePage({locale}: {locale:Locale}) {
         <div className="vs-reading"><div className="vs-mini-heading"><h2>{tx(readingCopy.heading)}</h2>{!isArchived('/leaders-house')&&<Link href={`${p}/leaders-house`}>{tx(readingCopy.headingLink)}<ArrowRight size={18}/></Link>}</div>{reading.map(r=><Link className="vs-reading-row" href={`${p}${r.href}`} key={r.href}><div className="vs-reading-image"><Image src={`/field-${r.image}.jpg`} alt="" fill sizes="(max-width:760px) 30vw, 16vw"/></div><div><p className="vs-eyebrow">{r.category}</p><h3>{r.title}</h3><p>{r.text}</p><span className="vs-inline-arrow" aria-hidden="true">↗</span></div></Link>)}</div>
       </section>}
       <InstitutionHome locale={locale}/>
-      {!isBlockHidden("home.method")&&<MethodSpotlight locale={locale}/>}
       {!isBlockHidden("home.communities")&&<section className="vs-section vs-communities" id="communities"><div className="vs-section-heading"><div><p className="vs-eyebrow">{tx(communitiesCopy.eyebrow)}</p><h2>{tx(communitiesCopy.title)}</h2></div><p>{tx(communitiesCopy.text)}</p></div><div className="vs-community-grid">{communities.map((c,i)=>{const Icon=icons[i];return <Link href={`${p}/work-with-us#${c.id}`} key={c.id} className="vs-community-card"><Icon size={40} strokeWidth={1.25}/><h3>{ar?c.ar:c.en}</h3><p>{ar?c.textAr:c.textEn}</p><ArrowRight className="vs-card-arrow" size={22}/></Link>;})}</div></section>}
       {!isBlockHidden("home.fields")&&<section className="vs-section vs-fields" id="fields"><div className="vs-section-heading"><div><p className="vs-eyebrow">{tx(fieldsCopy.eyebrow)}</p><h2>{tx(fieldsCopy.title)}</h2></div><div><p>{tx(fieldsCopy.text)}</p><Link className="vs-text-link" href={`${p}/projects`}>{tx(fieldsCopy.link)}<ArrowRight size={20}/></Link></div></div><div className="vs-fields-grid">{fields.map(({id,en,ar:arabic,image:img},i)=><Link href={`${p}/projects#${id}`} key={id} className="vs-field-card"><Image src={`/field-${img}.jpg`} alt="" fill sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 25vw"/><div><span>0{i+1}</span><h3>{ar?arabic:en}</h3><ArrowRight size={21}/></div></Link>)}</div></section>}
       {!isBlockHidden("home.work")&&<section className="vs-work-feature"><div className="vs-work-copy"><p className="vs-eyebrow">{tx(work.eyebrow)}</p><h2>{tx(work.title)}</h2><p>{tx(work.text)}</p><Link className="vs-button" href={`${p}/start`}>{tx(work.button)}<ArrowRight size={20}/></Link></div><div className="vs-work-image"><Image src={work.image} alt={tx(work.imageAlt)} fill sizes="(max-width:760px) 100vw, 50vw"/></div></section>}

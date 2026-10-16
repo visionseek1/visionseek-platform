@@ -4,25 +4,25 @@
       {
         "image": "/field-space.jpg",
         "label": {
-          "en": "VISIONSEEK",
-          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
+          "en": "CRITICAL CAPABILITY TRANSFER · KOREA TO MENA",
+          "ar": "نقل القدرات الحرجة · من كوريا إلى المنطقة العربية"
         },
         "title": {
-          "en": "Make It Possible.",
-          "ar": "Make It Possible."
+          "en": "Engineering Opportunities & Critical Capability Transfer",
+          "ar": "هندسة الفرص ونقل القدرات الحرجة"
         },
         "sub": {
-          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
-          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
+          "en": "From South Korea to the Arab world: we discover what becomes possible when advanced technology, industrial know-how, and institutions connect.",
+          "ar": "من كوريا الجنوبية إلى العالم العربي: نكتشف ما يصبح ممكنًا حين تتصل التقنية المتقدمة، والخبرة الصناعية، والمؤسسات."
         },
         "text": {
           "en": "",
           "ar": ""
         },
-        "href": "/start",
+        "href": "#capability-brief",
         "link": {
-          "en": "Build your solutions with us",
-          "ar": "ابنِ حلولك معنا"
+          "en": "Request a Capability Brief",
+          "ar": "اطلب موجز القدرة"
         }
       },
       {
@@ -75,8 +75,15 @@
       }
     ],
     "firstSlideNote": {
-      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
-      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
+      "en": "",
+      "ar": ""
+    },
+    "secondary": {
+      "href": "#method",
+      "label": {
+        "en": "Explore Our Method",
+        "ar": "تعرّف على المنهج"
+      }
     }
   },
   "mission": {
@@ -209,12 +216,12 @@
   },
   "method": {
     "eyebrow": {
-      "en": "INSTITUTIONAL CAPABILITY ARCHITECT",
-      "ar": "مهندس القدرات المؤسسية"
+      "en": "THE CAPABILITY METHOD",
+      "ar": "منهج القدرة"
     },
     "title": {
-      "en": "How we make it possible",
-      "ar": "كيف نجعلها ممكنة"
+      "en": "How We Make It Possible — The Capability Method",
+      "ar": "كيف نجعلها ممكنة — منهج القدرة"
     },
     "link": {
       "en": "Our full method",
@@ -228,16 +235,16 @@
       {
         "id": "define",
         "label": {
-          "en": "Define the capability",
-          "ar": "حدد القدرة"
+          "en": "01 · Define the Capability & Limit",
+          "ar": "01 · حدّد القدرة والحد"
         },
         "title": {
-          "en": "Start with what should become possible.",
-          "ar": "نبدأ بما يجب أن يصبح ممكنًا."
+          "en": "Define the Capability & Limit",
+          "ar": "حدّد القدرة والحد"
         },
         "text": {
-          "en": "Who should become capable of doing what? Define the capability, understand why it does not exist today, and find the path that can change that limit.",
-          "ar": "مَن يجب أن يصبح قادرًا على فعل ماذا؟ نحدد القدرة، ونفهم ما يمنع وجودها اليوم، ونبحث عن المسار الذي يغير حدود الممكن."
+          "en": "Turn a broad institutional ambition into a precise capability question. Understand why the capability does not exist today and find the path to change that limit.",
+          "ar": "حوّل طموح المؤسسة الواسع إلى سؤال قدرة دقيق. افهم لماذا لا توجد هذه القدرة اليوم، وابحث عن المسار الذي يغيّر هذا الحد."
         },
         "image": "/field-cities.jpg",
         "caption": {
@@ -248,16 +255,16 @@
       {
         "id": "people",
         "label": {
-          "en": "Assemble the right elements",
-          "ar": "اجمع العناصر الصحيحة"
+          "en": "02 · Assemble the Right Elements",
+          "ar": "02 · اجمع العناصر الصحيحة"
         },
         "title": {
-          "en": "The right people. The best of what exists.",
-          "ar": "أفضل الأشخاص. وأفضل ما هو متاح."
+          "en": "Assemble the Right Elements",
+          "ar": "اجمع العناصر الصحيحة"
         },
         "text": {
-          "en": "Assemble the team the mission needs. Find the best knowledge, technology and opportunities available globally. Then design how those elements work as one capability.",
-          "ar": "نجمع الفريق الذي تحتاجه المهمة، ونبحث عن أفضل المعرفة والتقنيات والفرص المتاحة عالميًا. ثم نصمم كيف تعمل هذه العناصر كقدرة واحدة."
+          "en": "Connect vetted Korean technology owners, subject-matter experts, industrial capacity, and local implementation frameworks into a cohesive mission.",
+          "ar": "صل أصحاب التقنية الكورية الذين تم فحصهم، وخبراء المجال، والطاقة الصناعية، وأطر التنفيذ المحلية، في مهمة واحدة متماسكة."
         },
         "image": "/field-chips.jpg",
         "caption": {
@@ -268,16 +275,16 @@
       {
         "id": "prove",
         "label": {
-          "en": "Prove, operate and evolve",
-          "ar": "اختبر وشغّل وطوّر"
+          "en": "03 · Prove, Operate & Evolve",
+          "ar": "03 · أثبت، شغّل، وطوّر"
         },
         "title": {
-          "en": "An idea is not a capability until it works.",
-          "ar": "الفكرة ليست قدرة حتى تعمل."
+          "en": "Prove, Operate & Evolve",
+          "ar": "أثبت، وشغّل، وطوّر"
         },
         "text": {
-          "en": "Turn assumptions into measurable tests. Put the capability into real operations with clear responsibilities and governance. Keep learning as the boundaries of possibility change.",
-          "ar": "نحوّل الافتراضات إلى اختبارات مقاسة. نضع القدرة في العمليات الحقيقية بمسؤوليات وحوكمة واضحة، ثم نتعلم ونطوّر باستمرار."
+          "en": "Deploy the smallest, fastest evidence-led pilot that proves the result in your setting, ensuring your institution can operate and evolve it independently.",
+          "ar": "انشر أصغر وأسرع تجربة يقودها الدليل وتثبت النتيجة في بيئتك، بحيث تستطيع مؤسستك أن تشغّلها وتطوّرها باستقلال."
         },
         "image": "/field-industry.jpg",
         "caption": {
@@ -333,5 +340,76 @@
       "en": "See what is already built",
       "ar": "شوف اللي اتبنى فعلًا"
     }
+  },
+  "architecture": {
+    "eyebrow": {
+      "en": "THE ARCHITECTURE BEHIND VISIONSEEK",
+      "ar": "المعمارية خلف VisionSeek"
+    },
+    "title": {
+      "en": "The Architecture Behind VisionSeek",
+      "ar": "المعمارية خلف VisionSeek"
+    },
+    "image": "/ahmed-abdelalim.jpg",
+    "imageAlt": {
+      "en": "Ahmed Abdelalim, founder of VisionSeek",
+      "ar": "أحمد عبدالعليم، مؤسس VisionSeek"
+    },
+    "text": {
+      "en": "Founded by Ahmed Abdelalim — Founder & Chief Capability Architect. VisionSeek was built upon a rigorous methodology bridging computational scientific research and proven cross-border operational execution in South Korea. Operating at the intersection of deep technology and institutional strategy, we reject theoretical advisory in favor of engineering real, verifiable capabilities that move institutions ahead.",
+      "ar": "أسّسها أحمد عبدالعليم، المؤسس ومهندس القدرات. بُنيت VisionSeek على منهجية تربط البحث العلمي الحاسوبي بتنفيذ عابر للحدود ثبت في كوريا الجنوبية. نعمل حيث تلتقي التقنية العميقة بالاستراتيجية المؤسسية، ونرفض الاستشارة النظرية لصالح هندسة قدرات حقيقية، يمكن التحقق منها، وتنقل المؤسسة إلى الأمام."
+    }
+  },
+  "brief": {
+    "eyebrow": {
+      "en": "CAPABILITY BRIEF",
+      "ar": "موجز القدرة"
+    },
+    "title": {
+      "en": "Start a Capability Conversation",
+      "ar": "ابدأ حديث القدرة"
+    },
+    "note": {
+      "en": "The request reaches the team. There is no automatic reply.",
+      "ar": "يصل الطلب إلى الفريق. لا يوجد رد آلي."
+    },
+    "org": {
+      "en": "Organization / Institution Name",
+      "ar": "اسم المؤسسة"
+    },
+    "capability": {
+      "en": "Critical Capability of Interest",
+      "ar": "القدرة المستهدفة"
+    },
+    "email": {
+      "en": "Professional Email",
+      "ar": "البريد المهني"
+    },
+    "submit": {
+      "en": "Request Capability Brief",
+      "ar": "اطلب موجز القدرة"
+    },
+    "options": [
+      {
+        "value": "Biohealth & Medical AI",
+        "en": "Biohealth & Medical AI",
+        "ar": "الصحة الحيوية والذكاء الاصطناعي الطبي"
+      },
+      {
+        "value": "Institutional AI",
+        "en": "Institutional AI",
+        "ar": "الذكاء الاصطناعي المؤسسي"
+      },
+      {
+        "value": "Industrial Autonomy",
+        "en": "Industrial Autonomy",
+        "ar": "الاستقلال الصناعي"
+      },
+      {
+        "value": "Cross-Border Sourcing",
+        "en": "Cross-Border Sourcing",
+        "ar": "التوريد العابر للحدود"
+      }
+    ]
   }
 }
