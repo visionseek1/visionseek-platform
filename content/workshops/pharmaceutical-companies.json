@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "A product comes back with the company's name on it. Whoever reads the defect early keeps the name.",
-    "ar": "منتج يرجع وعليه اسم الشركة. من يقرأ العيب مبكرًا يحفظ الاسم."
+    "en": "AI can read a defect before the box comes back. A company that does not understand it reads the notice with everyone else.",
+    "ar": "الذكاء الاصطناعي يقرأ العيب قبل أن ترجع العلبة. شركة لا تفهمه تقرأ الإخطار مع الناس."
   },
   "summary": {
-    "en": "A company that ships from Egypt or the Gulf lives on the registration file, the shipment, and the notice that brings a box back. These figures are the FDA's, for fiscal year 2024. We change them when the report changes.",
-    "ar": "شركة تشحن من مصر أو الخليج تعيش على ملف التسجيل، والشحنة، والإخطار الذي يُرجع العلبة. هذه أرقام إدارة الغذاء والدواء الأمريكية للسنة المالية 2024. نبدّلها إذا تغيّر التقرير."
+    "en": "A company shipping from Egypt or the Gulf lives on the file, the shipment, and the notice. These are FDA figures for fiscal year 2024: what comes back when nobody reads it early. We change them when the report changes.",
+    "ar": "شركة تشحن من مصر أو الخليج تعيش على الملف والشحنة والإخطار. هذه أرقام إدارة الغذاء والدواء لسنة 2024: ما يرجع حين لا يقرأه أحد مبكرًا. نبدّلها إذا تغيّر التقرير."
   },
   "audienceRole": {
     "en": "Managers and staff who prepare files, internal notes, and replies that a qualified person will sign.",
@@ -104,8 +104,8 @@
         "ar": "منتجات رجعت"
       },
       "body": {
-        "en": "FDA, fiscal year 2024: 421 human drug products were recalled. The most common defect was contamination. A name on a box in Cairo, Jeddah, or Dubai is the same kind of notice.",
-        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: سُحب 421 منتج دواء بشري. أكثر العيوب كان التلوث. اسم على علبة في القاهرة أو جدة أو دبي إخطار من هذا النوع."
+        "en": "FDA, fiscal year 2024: 421 human drug products were recalled. Contamination was the most common defect. AI is how a company can see that pattern before the box with its name is already in Cairo, Jeddah, or Dubai.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: سُحب 421 منتج دواء بشري. التلوث كان أكثر العيوب. الذكاء الاصطناعي هو كيف ترى الشركة هذا النمط قبل أن تكون العلبة التي عليها اسمها في القاهرة أو جدة أو دبي."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",

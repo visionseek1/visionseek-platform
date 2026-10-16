@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The error is in the bag, and the person is standing at the counter.",
-    "ar": "الخطأ في الكيس، والشخص واقف على الكاونتر."
+    "en": "AI can catch the error before the bag closes. A pharmacy that hands it the sentence about the medicine has left the counter.",
+    "ar": "الذكاء الاصطناعي يمكن أن يمسك الخطأ قبل أن يُغلق الكيس. صيدلية تسلّمه الجملة عن الدواء تكون قد تركت الكاونتر."
   },
   "summary": {
-    "en": "A pharmacy in Egypt or the Gulf is this counter: the prescription, the box, and the one sentence you will not hand to a tool. The figures are published. We change them when the source changes.",
-    "ar": "صيدلية في مصر أو الخليج هي هذا الكاونتر: الروشتة، والعلبة، والجملة التي لن تُسلَّم لأداة. الأرقام منشورة. نبدّلها إذا تغيّر المصدر."
+    "en": "At a counter in Egypt or the Gulf the prescription, the box, and the person are already there. AI helps the person who understands it. It must not be the one who advises. The figure is the source's, and we change it when the source changes.",
+    "ar": "على كاونتر في مصر أو الخليج، الروشتة والعلبة والشخص موجودون. الذكاء الاصطناعي ينفع من يفهمه. ولا يجوز أن يكون هو من ينصح. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "audienceRole": {
     "en": "Managers and staff who write the stock note, the handover, and the repeated document reply.",
@@ -136,12 +136,12 @@
         "ar": "8117"
       },
       "title": {
-        "en": "The region has already started asking",
-        "ar": "المنطقة بدأت تسأل"
+        "en": "The region is already asking about AI at the counter",
+        "ar": "المنطقة تسأل عن الذكاء الاصطناعي على الكاونتر"
       },
       "body": {
-        "en": "A review of pharmacy practice in the Middle East, published 9 October 2026, gathered 15 studies and 8,117 people. The question is no longer whether the counter will meet the tool. It is who at the counter understands it.",
-        "ar": "مراجعة لممارسة الصيدلة في الشرق الأوسط، نُشرت في 9 أكتوبر 2026، جمعت 15 دراسة و8117 شخصًا. السؤال لم يعُد هل سيلاقي الكاونتر الأداة. السؤال من على الكاونتر يفهمها."
+        "en": "A review of pharmacy practice in the Middle East, 9 October 2026, gathered 15 studies and 8,117 people. The question is no longer whether AI will reach the counter. It is who at the counter understands it, and who will not let it speak for the medicine.",
+        "ar": "مراجعة لممارسة الصيدلة في الشرق الأوسط، 9 أكتوبر 2026، جمعت 15 دراسة و8117 شخصًا. السؤال لم يعُد هل يصل الذكاء الاصطناعي إلى الكاونتر. السؤال من على الكاونتر يفهمه، ومن لن يدعه يتكلم عن الدواء."
       },
       "source": {
         "title": "Frontiers in Digital Health · AI in pharmacy practice in the Middle East · 9 October 2026",

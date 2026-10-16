@@ -12,17 +12,17 @@
     "senior"
   ],
   "outcome": {
-    "en": "The decision is yours. If you do not understand it, someone else will, and they will take it.",
-    "ar": "القرار لك. إن لم تفهمه أنت، فهمه غيرك وأخذه."
+    "en": "The AI decision is yours. If you do not understand it, someone else will, and they will take it.",
+    "ar": "قرار الذكاء الاصطناعي لك. إن لم تفهمه أنت، فهمه غيرك وأخذه."
   },
   "summary": {
-    "en": "In the Gulf and in Egypt the tool has reached the clinic and the file. A leader who sits and learns, leads. One who waits is led. The figure is the source's, and we change it when the source changes.",
-    "ar": "في الخليج وفي مصر وصلت الأداة إلى العيادة والملف. قائد يجلس ويتعلّم، يقود. والذي ينتظر يُقاد. الرقم من مصدره، ونبدّله إذا تغيّر."
+    "en": "In the Gulf and in Egypt the AI tool is already in the clinic and on the file. A leader who learns it leads. One who waits is led by whoever understood it. The figure is the source's, and we change it when the source changes.",
+    "ar": "في الخليج وفي مصر، أداة الذكاء الاصطناعي وصلت العيادة والملف. قائد يتعلّمها يقود. والذي ينتظر يقوده من فهمها. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "pace": {
     "title": {
-      "en": "What you gain, and what you can lose",
-      "ar": "ما تربحه، وما يمكن أن تخسره"
+      "en": "The AI is already here. The question is who leads it",
+      "ar": "الذكاء الاصطناعي هنا. السؤال من يقوده"
     },
     "quote": {
       "en": "Even a single made-up term could trigger a detailed, decisive response based entirely on fiction.",
@@ -47,16 +47,16 @@
           "ar": "66.9%"
         },
         "title": {
-          "en": "The people around you have started",
-          "ar": "من حولك بدأ"
+          "en": "The people around you are already using the AI",
+          "ar": "من حولك يستخدم الذكاء الاصطناعي"
         },
         "body": {
           "en": "Saudi Arabia, 27 August 2026, 521 practitioners: 66.9% of physicians had already used medical AI. The obstacle the researchers name is the institution, not the desire.",
           "ar": "السعودية، 27 أغسطس 2026، 521 ممارسًا: 66.9% من الأطباء سبق أن استخدموا الذكاء الاصطناعي الطبي. العائق الذي يسميه الباحثون هو المؤسسة، لا الرغبة."
         },
         "lesson": {
-          "en": "If you understand it, you can lead them. If you do not, they move and you hear about it.",
-          "ar": "إن فهمته قُدتهم. وإن لم تفهمه تحركوا وسمعت عنهم."
+          "en": "If you understand the AI, you lead them. If you do not, they move and you hear about it.",
+          "ar": "إن فهمت الذكاء الاصطناعي قُدتهم. وإن لم تفهمه تحركوا وسمعت عنهم."
         },
         "source": {
           "title": "Frontiers in Health Services · AI among Saudi healthcare professionals · 27 August 2026",
@@ -69,12 +69,12 @@
           "ar": "759"
         },
         "title": {
-          "en": "A day that stops",
-          "ar": "يوم يتوقف"
+          "en": "A system you do not understand can stop the day",
+          "ar": "نظام لا تفهمه يمكن أن يوقف اليوم"
         },
         "body": {
-          "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted 759 hospitals. The leader who understands the system is the one who can stand in that corridor.",
-          "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع 759 مستشفى. القائد الذي يفهم النظام هو من يستطيع أن يقف في ذلك الممر."
+          "en": "JAMA Network Open, 19 July 2025: one faulty update disrupted 759 hospitals. The leader who understands the AI, and the system under it, is the one who can stand in that corridor.",
+          "ar": "JAMA Network Open، 19 يوليو 2025: تحديث واحد معطوب قطع 759 مستشفى. القائد الذي يفهم الذكاء الاصطناعي، والنظام تحته، هو من يستطيع أن يقف في ذلك الممر."
         },
         "lesson": {
           "en": "The harm is not a slide. It is a morning.",

@@ -12,12 +12,12 @@
     "senior"
   ],
   "outcome": {
-    "en": "An institution whose leader understands it gets ahead. One that buys the tool and stands still arrives late.",
-    "ar": "مؤسسة يفهمها قائدها تسبق. والتي تشتري الأداة وتقف، تلحق."
+    "en": "An institution whose leader understands the AI gets ahead. One that buys the tool and does not understand it arrives late.",
+    "ar": "مؤسسة يفهم قائدها الذكاء الاصطناعي تسبق. والتي تشتري الأداة ولا تفهمها، تلحق."
   },
   "summary": {
-    "en": "People in the Gulf already want this. Egypt has already moved the file. Buying alone changed nothing. The figure is the source's, and we change it when the source changes.",
-    "ar": "الناس في الخليج يريدون هذا. ومصر حرّكت الملف. والشراء وحده لم يغيّر شيئًا. الرقم من مصدره، ونبدّله إذا تغيّر."
+    "en": "In Saudi Arabia people want the AI, and the institution is what stops them. In Egypt the file is already digital. Buying the tool, by itself, did not make a clinic faster. The figure is the source's, and we change it when the source changes.",
+    "ar": "في السعودية الناس تريد الذكاء الاصطناعي، والمؤسسة هي التي توقفهم. وفي مصر الملف صار رقميًا. وشراء الأداة وحده لم يجعل عيادة أسرع. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "audienceRole": {
     "en": "Senior leadership of a medical institution: the people who can say yes to a change in how it works.",
@@ -99,8 +99,8 @@
         "ar": "71.6%"
       },
       "title": {
-        "en": "They want it. The institution is what stops them",
-        "ar": "يريدونه. المؤسسة هي التي توقفهم"
+        "en": "They want the AI. The institution holds them back",
+        "ar": "يريدون الذكاء الاصطناعي. المؤسسة تعيقهم"
       },
       "body": {
         "en": "The same Saudi study, 27 August 2026: 71.6% intend to use AI, and 51.2% have used it. The authors say the obstacle is organizational, not the willingness of the people.",
@@ -117,12 +117,12 @@
         "ar": "255"
       },
       "title": {
-        "en": "The file in Egypt did not wait",
-        "ar": "الملف في مصر لم ينتظر"
+        "en": "The file is digital. The AI decision is still open",
+        "ar": "الملف رقمي. قرار الذكاء الاصطناعي ما زال مفتوحًا"
       },
       "body": {
-        "en": "On 2 February 2025 the Healthcare Authority said 255 family-medicine units were fully automated. An institution that still treats this as a purchase will read about a system that has already moved.",
-        "ar": "في 2 فبراير 2025 قالت هيئة الرعاية الصحية إن 255 وحدة طب أسرة صارت مؤتمتة بالكامل. مؤسسة ما زالت تعامل هذا كشراء ستقرأ عن نظام تحرّك."
+        "en": "On 2 February 2025 Egypt's Healthcare Authority said 255 family-medicine units were fully automated. The screen is on. The institution that treats AI as a purchase will read about a system that has already moved.",
+        "ar": "في 2 فبراير 2025 قالت هيئة الرعاية الصحية في مصر إن 255 وحدة طب أسرة صارت مؤتمتة. الشاشة تعمل. المؤسسة التي تعامل الذكاء الاصطناعي كشراء ستقرأ عن نظام تحرّك."
       },
       "source": {
         "title": "Egypt Healthcare Authority · UHI digitalization · 2 February 2025",
@@ -135,8 +135,8 @@
         "ar": "لا فرق"
       },
       "title": {
-        "en": "The clinic that only bought it",
-        "ar": "العيادة التي اكتفت بالشراء"
+        "en": "They bought the AI. The clinic did not get faster",
+        "ar": "اشتروا الذكاء الاصطناعي. العيادة لم تسرع"
       },
       "body": {
         "en": "NEJM AI, 22 November 2024: clinicians who were given the documentation tool were not more efficient. The purchase was not the change. The change is a leader who understands the work.",

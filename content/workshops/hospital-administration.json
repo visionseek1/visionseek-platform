@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "The person who leads the hospital and understands the work protects the day. The one who leaves the system to someone else wakes up to a corridor that has stopped.",
-    "ar": "من يقود المستشفى ويفهم العمل يحمي اليوم. ومن يترك النظام لغيره يستيقظ على ممر توقف."
+    "en": "Whoever leads the hospital and understands the AI protects the day. Whoever hands the tool to someone else wakes up to a decision that is not theirs.",
+    "ar": "من يقود المستشفى ويفهم الذكاء الاصطناعي يحمي اليوم. ومن يسلّم الأداة لغيره يستيقظ على قرار ليس قراره."
   },
   "summary": {
-    "en": "In Saudi Arabia, physicians have already started, and the obstacle was the institution. In Egypt, the family-medicine file has already moved. The figure is the source's. We change it when the source changes.",
-    "ar": "في السعودية بدأ الأطباء، والعائق كان المؤسسة. وفي مصر تحرّك ملف طب الأسرة. الرقم من مصدره، ونبدّله إذا تغيّر."
+    "en": "In Saudi Arabia, 66.9% of physicians in a 2026 study had already used medical AI, and the obstacle was the institution. In Egypt the file is already digital. The next question is who understands the AI on top of it. The figure is the source's, and we change it when the source changes.",
+    "ar": "في السعودية، 66.9% من الأطباء في دراسة 2026 سبق أن استخدموا الذكاء الاصطناعي الطبي، والعائق كان المؤسسة. وفي مصر الملف صار رقميًا. السؤال الآن: من يفهم الذكاء الاصطناعي فوق هذا الملف. الرقم من مصدره، ونبدّله إذا تغيّر."
   },
   "audienceRole": {
     "en": "Managers and staff in appointments, medical records administration, and department coordination.",
@@ -96,30 +96,12 @@
   "shifts": [
     {
       "figure": {
-        "en": "759",
-        "ar": "759"
-      },
-      "title": {
-        "en": "One morning, the hospital went dark",
-        "ar": "صباح واحد، والمستشفى أظلمت"
-      },
-      "body": {
-        "en": "JAMA Network Open: one faulty update on 19 July 2024 disrupted the network at 759 US hospitals. Records, scans, and the emergency were among what stopped. A hospital in Cairo or Riyadh lives on the same kind of day.",
-        "ar": "JAMA Network Open: تحديث واحد معطوب في 19 يوليو 2024 قطع الشبكة في 759 مستشفى أمريكيًا. الملف، والأشعة، والطوارئ كانت بين ما توقف. مستشفى في القاهرة أو الرياض تعيش على يوم من هذا النوع."
-      },
-      "source": {
-        "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
-        "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
-      }
-    },
-    {
-      "figure": {
         "en": "66.9%",
         "ar": "66.9%"
       },
       "title": {
-        "en": "The physicians started. The institution did not",
-        "ar": "الأطباء بدأوا. المؤسسة لم تبدأ"
+        "en": "Physicians already use the AI. The hospital does not lead it",
+        "ar": "الأطباء يستخدمون الذكاء الاصطناعي. المستشفى لا تقوده"
       },
       "body": {
         "en": "A study of 521 health practitioners in Saudi Arabia, published 27 August 2026: 66.9% of the physicians had already used medical AI. Intention was high, and the authors' conclusion is that the obstacle is the institution, not the people's will.",
@@ -132,16 +114,34 @@
     },
     {
       "figure": {
+        "en": "759",
+        "ar": "759"
+      },
+      "title": {
+        "en": "One morning the system stopped, and nobody had understood it",
+        "ar": "صباح توقف فيه النظام، ولم يكن أحد قد فهمه"
+      },
+      "body": {
+        "en": "JAMA Network Open: one faulty update on 19 July 2024 disrupted 759 US hospitals. Records, scans, and the emergency stopped. That was not an AI tool. It is the same morning: a hospital run by a system its leader does not understand. AI makes that morning closer, not farther.",
+        "ar": "JAMA Network Open: تحديث واحد في 19 يوليو 2024 قطع 759 مستشفى أمريكيًا. توقف الملف والأشعة والطوارئ. لم تكن تلك أداة ذكاء اصطناعي. هو الصباح نفسه: مستشفى يديرها نظام لا يفهمه قائدها. الذكاء الاصطناعي يقرّب هذا الصباح، لا يبعّده."
+      },
+      "source": {
+        "title": "JAMA Network Open · CrowdStrike outage · 19 July 2025",
+        "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836538"
+      }
+    },
+    {
+      "figure": {
         "en": "255",
         "ar": "255"
       },
       "title": {
-        "en": "Egypt has already moved the file",
-        "ar": "مصر حرّكت الملف"
+        "en": "Egypt digitized the file. AI is the next decision",
+        "ar": "مصر رقمنت الملف. الذكاء الاصطناعي هو القرار التالي"
       },
       "body": {
-        "en": "Egypt's Healthcare Authority, 2 February 2025: 255 family-medicine centers and units were fully automated, and outpatient clinics were at 98%. The hospital whose leader understands this leads the one that is coming, not the one that was.",
-        "ar": "هيئة الرعاية الصحية في مصر، 2 فبراير 2025: 255 مركزًا ووحدة طب أسرة صارت مؤتمتة بالكامل، والعيادات الخارجية بلغت 98%. المستشفى التي يفهم قائدها هذا تقود التي تأتي، لا التي فاتت."
+        "en": "Egypt's Healthcare Authority, 2 February 2025: 255 family-medicine units were fully automated, and outpatient clinics were at 98%. The screen is already there. What is not there is a leader who understands the AI that will sit on that file.",
+        "ar": "هيئة الرعاية الصحية في مصر، 2 فبراير 2025: 255 وحدة طب أسرة صارت مؤتمتة، والعيادات الخارجية بلغت 98%. الشاشة موجودة. ما ليس موجودًا هو قائد يفهم الذكاء الاصطناعي الذي سيجلس على هذا الملف."
       },
       "source": {
         "title": "Egypt Healthcare Authority · UHI digitalization · 2 February 2025",

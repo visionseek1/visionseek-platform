@@ -13,12 +13,12 @@
     "staff"
   ],
   "outcome": {
-    "en": "A letter arrives, the line stops, and the shipment waits for a signature.",
-    "ar": "خطاب يصل، والخط يتوقف، والشحنة تنتظر توقيعًا."
+    "en": "AI can show the deviation before the letter. A plant that does not understand it receives the letter and then asks what happened.",
+    "ar": "الذكاء الاصطناعي يُظهر الانحراف قبل الخطاب. مصنع لا يفهمه يصله الخطاب ثم يسأل ماذا حدث."
   },
   "summary": {
-    "en": "A plant in Sixth of October, Sudair, or Jebel Ali knows this day: the qualified person, the batch, and an inspector who did not come to chat. The figures are the FDA's for fiscal year 2024. We change them when the report changes.",
-    "ar": "مصنع في السادس من أكتوبر، أو سدير، أو جبل علي يعرف هذا اليوم: الشخص المؤهل، والتشغيلة، ومفتش لم يأتِ للحديث. الأرقام لإدارة الغذاء والدواء في السنة المالية 2024. نبدّلها إذا تغيّر التقرير."
+    "en": "A plant in Sixth of October, Sudair, or Jebel Ali knows the qualified person, the batch, and the inspector. These FDA figures are the cost of seeing the problem late. We change them when the report changes.",
+    "ar": "مصنع في السادس من أكتوبر، أو سدير، أو جبل علي يعرف الشخص المؤهل والتشغيلة والمفتش. أرقام الإدارة هذه ثمن رؤية المشكلة متأخرًا. نبدّلها إذا تغيّر التقرير."
   },
   "audienceRole": {
     "en": "Managers and staff who write the shift note, the handover, and the deviation that a qualified person will sign.",
@@ -104,8 +104,8 @@
         "ar": "خطابات في سنة"
       },
       "body": {
-        "en": "FDA, fiscal year 2024: 105 quality warning letters to human-drug manufacturing sites, the highest number in five years. A letter is not a slide. It is a line that stops.",
-        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: 105 خطابات تحذير للجودة لمواقع تصنيع الدواء البشري، وهو أعلى عدد في خمس سنوات. الخطاب ليس شريحة. هو خط يتوقف."
+        "en": "FDA, fiscal year 2024: 105 quality warning letters, the highest in five years. A letter stops the line. AI, understood by the people who run the plant, is how the deviation is seen before that letter.",
+        "ar": "إدارة الغذاء والدواء، السنة المالية 2024: 105 خطابات تحذير للجودة، أعلى عدد في خمس سنوات. الخطاب يوقف الخط. الذكاء الاصطناعي، إذا فهمه من يدير المصنع، هو كيف يُرى الانحراف قبل هذا الخطاب."
       },
       "source": {
         "title": "FDA · Report on the State of Pharmaceutical Quality · FY2024",
