@@ -1,5 +1,6 @@
 import { cookieRole, readCookie, roomConfigured } from "@/lib/room-auth";
 import { readLiveRoom } from "@/lib/notion-room";
+import { medicalSector } from "@/data/ops/medical";
 import { roomHtml } from "./room-html";
 
 /**
@@ -88,7 +89,7 @@ export async function GET(request: Request) {
     const flash = FLASH[r] || "";
     // الوارد: اللي اتغيّر من آخر مرة فتحت (كوكي vs_seen = آخر زيارة).
     const seen = readSeen(request.headers.get("cookie"));
-    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash, seen, role }).replace(/</g, "\\u003c")};</script>\n`;
+    const inject = `<script>window.__ROOM__=${JSON.stringify({ live, flash, seen, role, medical: medicalSector }).replace(/</g, "\\u003c")};</script>\n`;
     const html = roomHtml.replace("<script>\n// ---------- DATA", inject + "<script>\n// ---------- DATA");
     const now = new Date().toISOString();
     return new Response(html, { headers: { ...headers, "set-cookie": `vs_seen=${now}; Path=/ops; HttpOnly; Secure; SameSite=Strict; Max-Age=${60 * 60 * 24 * 90}` } });
