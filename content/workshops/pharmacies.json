@@ -1,0 +1,144 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A stock note",
+        "ar": "ملاحظة مخزون"
+      },
+      "body": {
+        "en": "What is short, what arrived, and who to tell. No advice about a medicine inside it.",
+        "ar": "ما الذي نقص، وما الذي وصل، ومن يُخبَر. بلا نصيحة عن دواء داخلها."
+      }
+    },
+    {
+      "title": {
+        "en": "A handover",
+        "ar": "تسليم"
+      },
+      "body": {
+        "en": "What the next shift needs, in language it can use.",
+        "ar": "ما تحتاجه الوردية التالية، بلغة تستطيع استعمالها."
+      }
+    },
+    {
+      "title": {
+        "en": "A document question",
+        "ar": "سؤال مستند"
+      },
+      "body": {
+        "en": "A recurring question about a paper, answered once, clearly, and checked before it is sent.",
+        "ar": "سؤال يتكرر عن ورقة. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
+      }
+    }
+  ],
+  "boundary": {
+    "en": "Administration only. The masterclass does not advise on a medicine, interpret a prescription, or replace a pharmacist.",
+    "ar": "الإدارة فقط. الماستركلاس لا ينصح عن دواء، ولا يفسّر وصفة، ولا يحل محل صيدلي."
+  },
+  "position": 17,
+  "slug": "pharmacies",
+  "kind": "institution",
+  "institution": "pharmacy",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "The stock note, the shift handover, and the answer to a repeated document question move faster, while any sentence about a medicine stays with the pharmacist.",
+    "ar": "ملاحظة المخزون وتسليم الوردية والرد على سؤال مستند يتكرر تتحرك أسرع، وأي جملة عن دواء تبقى عند الصيدلي."
+  },
+  "summary": {
+    "en": "For a pharmacy. Not for advising a person on a medicine, and not for any sentence a pharmacist must own.",
+    "ar": "لصيدلية. ليست لنصيحة شخص عن دواء، ولا لأي جملة يجب أن يملكها صيدلي."
+  },
+  "audienceRole": {
+    "en": "Managers and staff who write the stock note, the handover, and the repeated document reply.",
+    "ar": "المديرون والموظفون الذين يكتبون ملاحظة المخزون والتسليم والرد المتكرر عن مستند."
+  },
+  "audienceInstitution": {
+    "en": "A pharmacy. The material is administrative. If a sentence would change what a person takes, it does not leave without the pharmacist who owns it.",
+    "ar": "صيدلية. المادة إدارية. إن كانت الجملة ستغيّر ما يأخذه شخص فهي لا تخرج إلا مع الصيدلي الذي يملكها."
+  },
+  "whyProblem": {
+    "en": "The counter repeats a document answer it already knows. The stock note is rewritten, and the handover arrives after the next shift has started.",
+    "ar": "الصيدلية تعيد جواب مستند تعرفه أصلًا. ملاحظة المخزون تُكتب من جديد، والتسليم يصل بعد أن بدأت الوردية التالية."
+  },
+  "whyEvidence": {
+    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This masterclass follows that line. It does not advise a person on a medicine.",
+    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الماستركلاس يمشي على هذا الخط. لا ينصح شخصًا عن دواء."
+  },
+  "source": {
+    "title": "WHO · Ethics and governance of artificial intelligence for health · 28 June 2021",
+    "url": "https://www.who.int/publications/i/item/9789240029200"
+  },
+  "before": {
+    "en": "Five questions about the pharmacy's own administrative work. No prescription is used as a clinical example.",
+    "ar": "خمسة أسئلة عن الشغل الإداري في الصيدلية. لا تُستخدم وصفة كمثال سريري."
+  },
+  "during": {
+    "en": "The team drafts from its own administrative work. A named pharmacist reviews anything a person would read about a medicine.",
+    "ar": "الفريق يسوّد من شغله الإداري. صيدلي مسمّى يراجع كل ما سيقرأه شخص عن دواء."
+  },
+  "after": {
+    "en": "After 30 days we look at which administrative notes actually moved. Advice about a medicine is not what this masterclass claims, because it does not give it.",
+    "ar": "بعد 30 يومًا ننظر أي ملاحظات إدارية تحركت فعلًا. النصح عن دواء ليس ما يدّعيه هذا الماستركلاس، لأنه لا يقدمه."
+  },
+  "questions": [
+    {
+      "en": "Which stock note is rewritten because the last one never quite fitted?",
+      "ar": "أي ملاحظة مخزون تُعاد كتابتها لأن السابقة لم تطابق الحالة؟"
+    },
+    {
+      "en": "Which handover is copied by hand between shifts?",
+      "ar": "أي تسليم يُنسخ يدويًا بين الورديات؟"
+    },
+    {
+      "en": "Which document question is answered again and again at the counter?",
+      "ar": "أي سؤال عن مستند يُجاب مرة بعد مرة عند الصرف؟"
+    },
+    {
+      "en": "Where does the same internal update get copied by hand?",
+      "ar": "أين يُنسخ التحديث الداخلي نفسه يدويًا؟"
+    },
+    {
+      "en": "Which sentence must a pharmacist still own before a person reads it?",
+      "ar": "أي جملة يجب أن يملكها صيدلي قبل أن يقرأها شخص؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A stock note the next shift can use.",
+      "ar": "ملاحظة مخزون تستطيع الوردية التالية استعمالها."
+    },
+    {
+      "en": "One clear reply to a document question, checked before it is sent.",
+      "ar": "رد واحد واضح على سؤال مستند، يُراجع قبل الإرسال."
+    },
+    {
+      "en": "A written boundary: the tool may draft the administration, and it may not advise on a medicine.",
+      "ar": "حد مكتوب: الأداة تسوّد الإدارة، ولا تنصح عن دواء."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Does this advise a person on a medicine?",
+        "ar": "هل ينصح الماستركلاس شخصًا عن دواء؟"
+      },
+      "a": {
+        "en": "No. If a sentence would change what a person takes, it belongs to the pharmacist. The session stays on administration.",
+        "ar": "لا. إن كانت الجملة ستغيّر ما يأخذه شخص فهي للصيدلي. الجلسة تبقى في الإدارة."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you keep pharmacy records?",
+        "ar": "هل تحفظون سجلات الصيدلية؟"
+      },
+      "a": {
+        "en": "No. The website takes nothing. A session uses only what the pharmacy agrees to bring, and a prescription is not the material.",
+        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق الصيدلية على إحضاره، والوصفة ليست المادة."
+      }
+    }
+  ]
+}

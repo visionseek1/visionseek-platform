@@ -1,0 +1,144 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A file note",
+        "ar": "ملاحظة ملف"
+      },
+      "body": {
+        "en": "What changed, what is still open, and who signs. No claim about the medicine inside it.",
+        "ar": "ما الذي تغيّر، وما الذي ما زال مفتوحًا، ومن يوقّع. بلا ادعاء عن الدواء داخلها."
+      }
+    },
+    {
+      "title": {
+        "en": "An internal note",
+        "ar": "مذكرة داخلية"
+      },
+      "body": {
+        "en": "What the meeting agreed, in language the next team can use.",
+        "ar": "ما اتُفق عليه في الاجتماع، بلغة يستطيع الفريق التالي استعمالها."
+      }
+    },
+    {
+      "title": {
+        "en": "A regulator's question",
+        "ar": "سؤال جهة رقابية"
+      },
+      "body": {
+        "en": "A recurring question about a document, answered once, clearly, and checked before it is sent.",
+        "ar": "سؤال يتكرر عن مستند. يُجاب مرة، بوضوح، ويُراجع قبل الإرسال."
+      }
+    }
+  ],
+  "boundary": {
+    "en": "Paperwork only. The masterclass does not approve a medicine, write a product claim, or replace the qualified person.",
+    "ar": "الأوراق فقط. الماستركلاس لا يعتمد دواء، ولا يكتب ادعاء منتج، ولا يحل محل الشخص المؤهل."
+  },
+  "position": 15,
+  "slug": "pharmaceutical-companies",
+  "kind": "institution",
+  "institution": "pharma",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "The file, the internal note, and the reply to a regulator move faster, while the scientific decision stays with the person who owns it.",
+    "ar": "الملف والمذكرة الداخلية والرد على الجهة الرقابية تتحرك أسرع، والقرار العلمي يبقى عند من يملكه."
+  },
+  "summary": {
+    "en": "For a pharmaceutical company. Not for approving a medicine, writing a claim, or any decision that belongs to the qualified person.",
+    "ar": "لشركة دواء. ليست لاعتماد دواء، ولا لكتابة ادعاء، ولا لأي قرار يملكه الشخص المؤهل."
+  },
+  "audienceRole": {
+    "en": "Managers and staff who prepare files, internal notes, and replies that a qualified person will sign.",
+    "ar": "المديرون والموظفون الذين يجهّزون الملفات والمذكرات والردود التي سيوقّعها شخص مؤهل."
+  },
+  "audienceInstitution": {
+    "en": "A pharmaceutical company. The material is the company's own paperwork. A sentence that would change a product does not leave without the person who owns that decision.",
+    "ar": "شركة دواء. المادة أوراق الشركة نفسها. الجملة التي تغيّر منتجًا لا تخرج إلا مع من يملك ذلك القرار."
+  },
+  "whyProblem": {
+    "en": "The same file note is rewritten, the same internal update is copied, and a reply waits on a sentence the team already knows.",
+    "ar": "الملاحظة نفسها تُعاد كتابتها، والتحديث الداخلي نفسه يُنسخ، والرد ينتظر جملة يعرفها الفريق أصلًا."
+  },
+  "whyEvidence": {
+    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This masterclass follows that line. It does not approve a medicine and it does not write a claim.",
+    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الماستركلاس يمشي على هذا الخط. لا يعتمد دواء ولا يكتب ادعاء."
+  },
+  "source": {
+    "title": "WHO · Ethics and governance of artificial intelligence for health · 28 June 2021",
+    "url": "https://www.who.int/publications/i/item/9789240029200"
+  },
+  "before": {
+    "en": "Five questions about the company's own paperwork. No product is used as a scientific example.",
+    "ar": "خمسة أسئلة عن أوراق الشركة. لا يُستخدم منتج كمثال علمي."
+  },
+  "during": {
+    "en": "The team drafts from its own files. A named person reviews anything that would leave the building.",
+    "ar": "الفريق يسوّد من ملفاته. شخص مسمّى يراجع كل ما سيخرج من المبنى."
+  },
+  "after": {
+    "en": "After 30 days we look at which paperwork actually moved, and which sentence still waits for the person who owns it. Product decisions are not what this masterclass claims, because it does not make them.",
+    "ar": "بعد 30 يومًا ننظر أي أوراق تحركت فعلًا، وأي جملة ما زالت تنتظر من يملكها. قرارات المنتج ليست ما يدّعيه هذا الماستركلاس، لأنه لا يتخذها."
+  },
+  "questions": [
+    {
+      "en": "Which file note is rewritten because the last version never quite fitted?",
+      "ar": "أي ملاحظة ملف تُعاد كتابتها لأن النسخة السابقة لم تطابق الحالة؟"
+    },
+    {
+      "en": "Which internal update is copied between teams by hand?",
+      "ar": "أي تحديث داخلي يُنسخ بين الفرق يدويًا؟"
+    },
+    {
+      "en": "Which reply to a regulator sits waiting for a sentence the team already knows?",
+      "ar": "أي رد على جهة رقابية ينتظر جملة يعرفها الفريق أصلًا؟"
+    },
+    {
+      "en": "Where does the same question return every week?",
+      "ar": "أين يعود السؤال نفسه كل أسبوع؟"
+    },
+    {
+      "en": "Which sentence must the qualified person still own before it leaves?",
+      "ar": "أي جملة يجب أن يملكها الشخص المؤهل قبل أن تخرج؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A file note the person who owns it has already reviewed.",
+      "ar": "ملاحظة ملف راجعها من يملكها."
+    },
+    {
+      "en": "A one-page internal note from a real meeting.",
+      "ar": "مذكرة داخلية من صفحة، خرجت من اجتماع حقيقي."
+    },
+    {
+      "en": "A written boundary: the tool may draft the paperwork, and it may not approve the medicine.",
+      "ar": "حد مكتوب: الأداة تسوّد الأوراق، ولا تعتمد الدواء."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Does this approve a medicine?",
+        "ar": "هل يعتمد الماستركلاس دواء؟"
+      },
+      "a": {
+        "en": "No. If a sentence would change the product, it belongs to the qualified person. The session stays on the paperwork.",
+        "ar": "لا. إن كانت الجملة ستغيّر المنتج فهي للشخص المؤهل. الجلسة تبقى في الأوراق."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you keep the company's files?",
+        "ar": "هل تحفظون ملفات الشركة؟"
+      },
+      "a": {
+        "en": "No. The website takes nothing. A session uses only what the company agrees to bring.",
+        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما توافق الشركة على إحضاره."
+      }
+    }
+  ]
+}

@@ -8,7 +8,8 @@ export type Bi = {en: string; ar: string};
 export type WorkshopKind = 'individual' | 'institution';
 export type InstitutionKind =
   | 'police' | 'university' | 'airport' | 'hospital' | 'company'
-  | 'customs' | 'finance' | 'justice' | 'education' | 'energy' | 'municipality' | 'civilservice';
+  | 'customs' | 'finance' | 'justice' | 'education' | 'energy' | 'municipality' | 'civilservice'
+  | 'pharma' | 'factory' | 'pharmacy';
 export type RoleId = 'senior' | 'manager' | 'staff';
 
 export type WorkshopExample = {title: Bi; body: Bi};

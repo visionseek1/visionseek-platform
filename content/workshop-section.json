@@ -8,8 +8,8 @@
     "ar": "لا يكفي أن تتعلم استخدامه."
   },
   "intro": {
-    "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
-    "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
+    "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea. This masterclass is for the medical sector.",
+    "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية. الماستركلاس للقطاع الطبي."
   },
   "rolesHeading": {
     "en": "Start from the seat you hold",
@@ -73,8 +73,8 @@
         "ar": "من يتعلّمه اليوم يتقدّم، ومن يؤجّله سيجد نفسه غدًا خلف أناس كانوا خلفه بالأمس."
       },
       "for": {
-        "en": "For the person who owns or leads an organization: to understand AI first-hand, and know how to lead with it.",
-        "ar": "لصاحب المؤسسة وقائدها: ليفهم الذكاء الاصطناعي بنفسه، ويعرف كيف يقود مؤسسته فيه."
+        "en": "For the person who owns or leads a medical institution — a hospital, a pharmaceutical company, a factory, or a pharmacy: to understand AI first-hand, and know how to lead with it.",
+        "ar": "لصاحب المؤسسة وقائدها في القطاع الطبي: مستشفى، أو شركة دواء، أو مصنع، أو صيدلية. ليفهم الذكاء الاصطناعي بنفسه، ويعرف كيف يقود مؤسسته فيه."
       },
       "body": {
         "en": "Dr. Ahmed sits with you and understands your work before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
@@ -107,8 +107,8 @@
         "ar": "المؤسسة التي تبدأ اليوم تسبق، والتي تنتظر ستلحق بغيرها متأخرة بسنوات."
       },
       "for": {
-        "en": "For an institution that wants to know what AI can do for it.",
-        "ar": "لمؤسسة تريد أن تعرف ما الذي ينفعها من الذكاء الاصطناعي."
+        "en": "For a medical institution that wants to know what AI can do for it.",
+        "ar": "لمؤسسة طبية تريد أن تعرف ما الذي ينفعها من الذكاء الاصطناعي."
       },
       "body": {
         "en": "We study your institution from the inside, and what its counterparts around the world have achieved. Then we choose with you what to apply, so you start where they have already arrived.",
@@ -208,6 +208,27 @@
         "en": "Labour and civil service",
         "ar": "العمل والخدمة المدنية"
       }
+    },
+    {
+      "id": "pharma",
+      "label": {
+        "en": "Pharmaceutical companies",
+        "ar": "شركات الدواء"
+      }
+    },
+    {
+      "id": "factory",
+      "label": {
+        "en": "Factories",
+        "ar": "المصانع"
+      }
+    },
+    {
+      "id": "pharmacy",
+      "label": {
+        "en": "Pharmacies",
+        "ar": "الصيدليات"
+      }
     }
   ],
   "allInstitutions": {
@@ -221,8 +242,8 @@
       "en": "Dr. Ahmed Abdelalim"
     },
     "teaches": {
-      "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
-      "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
+      "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea. This masterclass is for the medical sector.",
+      "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية. الماستركلاس للقطاع الطبي."
     },
     "trailer": {
       "video": "",
@@ -444,8 +465,8 @@
       "en": "Founder of VisionSeek · South Korea"
     },
     "founderStatement": {
-      "ar": "أرى الذكاء الاصطناعي فرصة لبلادنا العربية. ليس لنتفوّق في سباق التكنولوجيا، بل لنمتلك التقنيات الحساسة التي صار امتلاكها اليوم أسهل من أي وقت مضى: الصناعات الدفاعية، والرقائق، والطاقة، وغيرها.",
-      "en": "I see AI as an opportunity for our Arab countries. Not to win a technology race, but to own the sensitive technologies that are now easier to own than ever before: defence industries, chips, energy, and more."
+      "en": "I see AI as an opportunity for our Arab countries. Not to win a technology race, but to own the sensitive technologies that are now easier to own than ever before: in hospitals, pharmaceutical companies, factories, and pharmacies.",
+      "ar": "أرى الذكاء الاصطناعي فرصة لبلادنا العربية. ليس لنتفوّق في سباق التكنولوجيا، بل لنمتلك التقنيات الحساسة التي صار امتلاكها اليوم أسهل من أي وقت مضى: في المستشفيات، وشركات الدواء، والمصانع، والصيدليات."
     },
     "founderLink": {
       "en": "Meet the founder",

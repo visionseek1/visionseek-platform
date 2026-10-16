@@ -11,8 +11,8 @@ const section = JSON.parse(readFileSync(join(process.cwd(), 'content/workshop-se
 // Dr. Ahmed (9 Oct 2026): nothing on the masterclass may suggest it is a trial, a display, or that none has been held.
 const notHeld = /لم يُعقد|لم تُعقد|لم ينعقد|قيد التصميم|تُحدَّد\]|ليست نتائج|ليس شراكة|حكاية عميل|has been held|In design|To be set|not results|being made|not a client story|not a partnership/;
 
-test('fourteen masterclass files, and no line says it is a trial or not yet held', () => {
-  assert.equal(workshops.length, 14);
+test('seventeen masterclass files, and no line says it is a trial or not yet held', () => {
+  assert.equal(workshops.length, 17);
   assert.deepEqual(workshops.map(item => item.slug).sort(), [
     'airport-teams',
     'company-teams',
@@ -26,6 +26,9 @@ test('fourteen masterclass files, and no line says it is a trial or not yet held
     'labour-civil-service',
     'leader-seat',
     'municipalities',
+    'pharmaceutical-companies',
+    'pharmaceutical-plants',
+    'pharmacies',
     'police-citizen-service',
     'university-teams',
   ]);
@@ -39,9 +42,21 @@ test('fourteen masterclass files, and no line says it is a trial or not yet held
   }
 });
 
-test('the seven new sector pages stay off the site until they are rewritten', () => {
+test('non-medical sector pages stay off the public chooser', () => {
   const drafts = workshops.filter(item => item.draft).map(item => item.slug).sort();
-  assert.deepEqual(drafts, ['customs-ports', 'education-schools', 'energy-utilities', 'finance-tax', 'justice-courts', 'labour-civil-service', 'municipalities']);
+  assert.deepEqual(drafts, [
+    'airport-teams',
+    'company-teams',
+    'customs-ports',
+    'education-schools',
+    'energy-utilities',
+    'finance-tax',
+    'justice-courts',
+    'labour-civil-service',
+    'municipalities',
+    'police-citizen-service',
+    'university-teams',
+  ]);
   const loader = readFileSync(join(process.cwd(), 'lib/institution/workshops.ts'), 'utf8');
   assert.match(loader, /\.filter\(item => !item\.draft\)/, 'the loader drops drafts');
 });
@@ -69,7 +84,7 @@ test('two doors: one person, or one institution with its sectors', () => {
   for (const item of workshops) assert.ok(['individual', 'institution'].includes(item.kind), `${item.slug}: unknown door ${item.kind}`);
   assert.equal(workshops.filter(w => w.kind === 'individual').length, 1, 'one page behind the individual door');
   assert.equal(workshops.filter(w => w.kind === 'institution' && !w.institution).length, 1, 'one general page behind the institution door');
-  assert.equal(section.institutionTypes.length, 12);
+  assert.equal(section.institutionTypes.length, 15);
   const types = section.institutionTypes.map(type => type.id);
   for (const item of workshops.filter(w => w.kind === 'institution' && w.institution)) assert.ok(types.includes(item.institution), `${item.slug}: unknown sector ${item.institution}`);
   for (const id of types) assert.equal(workshops.filter(w => w.institution === id).length, 1, `one masterclass per sector: ${id}`);

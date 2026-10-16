@@ -1,0 +1,144 @@
+{
+  "examples": [
+    {
+      "title": {
+        "en": "A shift note",
+        "ar": "ملاحظة وردية"
+      },
+      "body": {
+        "en": "What happened, what is still open, and who takes it next. No release decision inside it.",
+        "ar": "ما الذي حدث، وما الذي ما زال مفتوحًا، ومن يأخذه بعد ذلك. بلا قرار إفراج داخلها."
+      }
+    },
+    {
+      "title": {
+        "en": "A handover",
+        "ar": "تسليم"
+      },
+      "body": {
+        "en": "What the next shift needs, in language it can use.",
+        "ar": "ما تحتاجه الوردية التالية، بلغة تستطيع استعمالها."
+      }
+    },
+    {
+      "title": {
+        "en": "A deviation note",
+        "ar": "ملاحظة انحراف"
+      },
+      "body": {
+        "en": "What was seen, written once, and checked before it is filed.",
+        "ar": "ما الذي شوهد، يُكتب مرة، ويُراجع قبل الحفظ."
+      }
+    }
+  ],
+  "boundary": {
+    "en": "Paperwork only. The masterclass does not release a batch, change a method, or replace the qualified person.",
+    "ar": "الأوراق فقط. الماستركلاس لا يفرج عن تشغيلة، ولا يغيّر طريقة، ولا يحل محل الشخص المؤهل."
+  },
+  "position": 16,
+  "slug": "pharmaceutical-plants",
+  "kind": "institution",
+  "institution": "factory",
+  "roles": [
+    "manager",
+    "staff"
+  ],
+  "outcome": {
+    "en": "The shift note, the deviation write-up, and the handover move faster, while release of a batch stays with the person who owns it.",
+    "ar": "ملاحظة الوردية وكتابة الانحراف والتسليم تتحرك أسرع، وإفراج التشغيلة يبقى عند من يملكه."
+  },
+  "summary": {
+    "en": "For a factory in the medical sector. Not for releasing a batch, changing a method, or any decision that belongs to the qualified person.",
+    "ar": "لمصنع في القطاع الطبي. ليس لإفراج تشغيلة، ولا لتغيير طريقة، ولا لأي قرار يملكه الشخص المؤهل."
+  },
+  "audienceRole": {
+    "en": "Managers and staff who write the shift note, the handover, and the deviation that a qualified person will sign.",
+    "ar": "المديرون والموظفون الذين يكتبون ملاحظة الوردية والتسليم والانحراف الذي سيوقّعه شخص مؤهل."
+  },
+  "audienceInstitution": {
+    "en": "A factory. The material is the plant's own paperwork. A sentence that would release a batch does not leave without the person who owns that decision.",
+    "ar": "مصنع. المادة أوراق المصنع نفسه. الجملة التي تفرج عن تشغيلة لا تخرج إلا مع من يملك ذلك القرار."
+  },
+  "whyProblem": {
+    "en": "The shift repeats a note the last shift already wrote. A deviation sits in a sentence, and the handover arrives after the next shift has started.",
+    "ar": "الوردية تعيد ملاحظة كتبتها الوردية السابقة. والانحراف يقف عند جملة، والتسليم يصل بعد أن بدأت الوردية التالية."
+  },
+  "whyEvidence": {
+    "en": "WHO guidance on the ethics and governance of artificial intelligence for health, published on 28 June 2021, puts human autonomy and accountability at the center: a tool does not replace the person responsible. This masterclass follows that line on the factory floor's paperwork. It does not release a batch.",
+    "ar": "إرشاد منظمة الصحة العالمية لأخلاقيات وحوكمة الذكاء الاصطناعي من أجل الصحة، المنشور في 28 يونيو 2021، يجعل استقلالية الإنسان والمساءلة في الوسط: الأداة لا تحل محل المسؤول. الماستركلاس يمشي على هذا الخط في أوراق المصنع. لا يفرج عن تشغيلة."
+  },
+  "source": {
+    "title": "WHO · Ethics and governance of artificial intelligence for health · 28 June 2021",
+    "url": "https://www.who.int/publications/i/item/9789240029200"
+  },
+  "before": {
+    "en": "Five questions about the plant's own paperwork. No batch is used as a scientific example.",
+    "ar": "خمسة أسئلة عن أوراق المصنع. لا تُستخدم تشغيلة كمثال علمي."
+  },
+  "during": {
+    "en": "The team drafts from its own shift. A named person reviews anything that would leave the floor.",
+    "ar": "الفريق يسوّد من ورديته. شخص مسمّى يراجع كل ما سيخرج من المصنع."
+  },
+  "after": {
+    "en": "After 30 days we look at which notes actually moved, and which sentence still waits for the person who can release the batch. Release is not what this masterclass claims, because it does not do it.",
+    "ar": "بعد 30 يومًا ننظر أي ملاحظات تحركت فعلًا، وأي جملة ما زالت تنتظر من يستطيع الإفراج عن التشغيلة. الإفراج ليس ما يدّعيه هذا الماستركلاس، لأنه لا يفعله."
+  },
+  "questions": [
+    {
+      "en": "Which shift note is rewritten because the last one never quite fitted?",
+      "ar": "أي ملاحظة وردية تُعاد كتابتها لأن السابقة لم تطابق الحالة؟"
+    },
+    {
+      "en": "Which handover is copied by hand between shifts?",
+      "ar": "أي تسليم يُنسخ يدويًا بين الورديات؟"
+    },
+    {
+      "en": "Which deviation write-up arrives too late to be useful?",
+      "ar": "أي كتابة انحراف تصل متأخرة عن فائدتها؟"
+    },
+    {
+      "en": "Where does the same question return every shift?",
+      "ar": "أين يعود السؤال نفسه كل وردية؟"
+    },
+    {
+      "en": "Which sentence must the qualified person still own before a batch moves?",
+      "ar": "أي جملة يجب أن يملكها الشخص المؤهل قبل أن تتحرك التشغيلة؟"
+    }
+  ],
+  "leavesWith": [
+    {
+      "en": "A shift note the next shift can use, reviewed by the person who wrote it.",
+      "ar": "ملاحظة وردية تستطيع الوردية التالية استعمالها، راجعها من كتبها."
+    },
+    {
+      "en": "A one-page deviation note from a real event.",
+      "ar": "ملاحظة انحراف من صفحة، خرجت من واقعة حقيقية."
+    },
+    {
+      "en": "A written boundary: the tool may draft the note, and it may not release the batch.",
+      "ar": "حد مكتوب: الأداة تسوّد الملاحظة، ولا تفرج عن التشغيلة."
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Does this release a batch?",
+        "ar": "هل يفرج الماستركلاس عن تشغيلة؟"
+      },
+      "a": {
+        "en": "No. If a sentence would release a batch, it belongs to the qualified person. The session stays on the paperwork.",
+        "ar": "لا. إن كانت الجملة ستفرج عن تشغيلة فهي للشخص المؤهل. الجلسة تبقى في الأوراق."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you keep the plant's records?",
+        "ar": "هل تحفظون سجلات المصنع؟"
+      },
+      "a": {
+        "en": "No. The website takes nothing. A session uses only what the plant agrees to bring.",
+        "ar": "لا. الموقع لا يأخذ شيئًا. الجلسة تستعمل ما يوافق المصنع على إحضاره."
+      }
+    }
+  ]
+}
