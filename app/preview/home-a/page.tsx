@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <HomeDirection locale="en" tone="a" />;
+  return <HomeDirection locale="en" path="/preview/home-a" />;
 }

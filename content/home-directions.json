@@ -41,9 +41,5 @@
     "credit": {"en": "Photograph", "ar": "صورة"},
     "source": "Unsplash",
     "href": "https://unsplash.com/photos/1582719471384-894fbb16e074"
-  },
-  "directions": {
-    "a": {"en": "Direction A", "ar": "اتجاه أ"},
-    "b": {"en": "Direction B", "ar": "اتجاه ب"}
   }
 }

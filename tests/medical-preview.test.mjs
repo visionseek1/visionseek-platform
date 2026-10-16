@@ -55,10 +55,11 @@ test('new routes are in the sitemap, and the top nav is not the way in', () => {
   const paths = nav.sections.map(section => section.path);
   assert.ok(!paths.includes('/fields'));
   assert.ok(!paths.includes('/sectors'));
-  assert.match(read('components/home-page.tsx'), /home\.sectors/);
-  assert.match(read('components/home-page.tsx'), /home\.identity/);
+  assert.match(read('components/preview/home-direction.tsx'), /home\.sectors/);
+  assert.match(read('components/preview/home-direction.tsx'), /home\.identity/);
   assert.ok(!json('content/navigation.json').sections.some(section => ['/education', '/system', '/fields'].includes(section.path)));
-  assert.match(read('components/home-page.tsx'), /WhoWeWorkWith/);
+  assert.match(read('components/preview/home-direction.tsx'), /medical\.sectors/);
+  assert.doesNotMatch(read('content/navigation.json'), /\/preview\/home-b/);
   assert.match(read('lib/page-blocks.json'), /home\.sectors/);
 });
 

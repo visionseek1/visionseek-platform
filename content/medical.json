@@ -8,7 +8,7 @@
   "fieldsPage": {
     "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
     "title": {"en": "Fields", "ar": "المجالات"},
-    "intro": {"en": "Three fields we work in now, each marked with a star. The rest of the map is shown, and marked coming soon.", "ar": "ثلاثة بنشتغل عليهم دلوقتي، وعليهم نجمة. الباقي على الخريطة، ومكتوب عليه قريبًا."},
+    "intro": {"en": "Three fields are marked Now. The rest of the map is shown, and marked Soon.", "ar": "ثلاثة عليهم علامة الآن. الباقي على الخريطة، ومكتوب عليه قريبًا."},
     "now": {"en": "Where we work now", "ar": "اللي بنشتغل عليه دلوقتي"},
     "later": {"en": "On the map, not yet", "ar": "على الخريطة، ولسه مش دلوقتي"},
     "soon": {"en": "Coming soon", "ar": "قريبًا"},
@@ -82,8 +82,8 @@
     {"id": "experience", "focus": false, "title": {"en": "Patient experience", "ar": "تجربة المريض"}}
   ],
   "fieldsNote": {
-    "en": "The star marks what we work on now. The rest is on the map, and is not our work yet.",
-    "ar": "النجمة على اللي بنشتغل عليه دلوقتي. الباقي ظاهر، ولسه مش شغلنا."
+    "en": "The Now badge marks the three fields we work in. The rest of the map is marked Soon.",
+    "ar": "علامة الآن على الثلاثة اللي بنشتغل عليهم. الباقي ظاهر، وعليه قريبًا."
   },
   "identity": {
     "eyebrow": {"en": "THE MEDICAL FIELD", "ar": "المجال الطبي"},
