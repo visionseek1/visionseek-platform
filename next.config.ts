@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
         {source: `${prefix}/education`, destination: `${prefix}/masterclass`, permanent: true},
+        // صفحات الجهات اتنقلت أقسامًا على /projects (أكتوبر ٢٠٢٦).
+        {source: `${prefix}/sectors/hospitals`, destination: `${prefix}/projects#hospitals`, permanent: true},
+        {source: `${prefix}/sectors/pharma`, destination: `${prefix}/projects#pharma`, permanent: true},
+        {source: `${prefix}/sectors/pharmacies`, destination: `${prefix}/projects#pharmacies`, permanent: true},
+        {source: `${prefix}/sectors/government`, destination: `${prefix}/projects#government`, permanent: true},
+        {source: `${prefix}/sectors/research`, destination: `${prefix}/projects#research`, permanent: true},
         // «احذر نصائح الذكاء الاصطناعي» moved from the papers to the reports (16 Oct 2026).
         {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/insights/reports/half-the-picture`, permanent: true},
       ]),

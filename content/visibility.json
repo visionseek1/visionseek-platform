@@ -37,6 +37,7 @@
     "home.fields",
     "home.work",
     "home.hero.hlo",
-    "masterclass.catalog"
+    "masterclass.catalog",
+    "projects.legacy"
   ]
 }

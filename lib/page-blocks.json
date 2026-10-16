@@ -14,6 +14,7 @@
     {"id": "home.contact", "page": "/", "label": "الرئيسية ← التواصل"},
     {"id": "home.sectors", "page": "/", "label": "الرئيسية ← لمين بنشتغل"},
     {"id": "home.identity", "page": "/", "label": "الرئيسية ← المجال الطبي"},
-    {"id": "masterclass.catalog", "page": "/masterclass", "label": "ماستركلاس ← الفهرس القديم"}
+    {"id": "masterclass.catalog", "page": "/masterclass", "label": "ماستركلاس ← الفهرس القديم"},
+    {"id": "projects.legacy", "page": "/projects", "label": "المشاريع ← الفهرس القديم"}
   ]
 }

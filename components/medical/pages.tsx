@@ -93,7 +93,7 @@ export function SectorView({locale, sector}: {locale: Locale; sector: MedicalSec
   const insights = insightsForSector(sector.slug);
   const others = medical.sectors.filter(item => item.slug !== sector.slug);
   return (
-    <Shell locale={locale} path={`/sectors/${sector.slug}`}>
+    <Shell locale={locale} path="/projects">
       <section className="vs-interior-hero">
         <nav className="vs-breadcrumb" aria-label={ar ? "مسار الصفحة" : "Breadcrumb"}>
           <Link href={p || "/"}>{ar ? "الرئيسية" : "Home"}</Link>
@@ -173,7 +173,7 @@ export function SectorView({locale, sector}: {locale: Locale; sector: MedicalSec
         <h2>{t(medical.cross.others)}</h2>
         <div className={styles.links}>
           {others.map(item => (
-            <Link href={`${p}/sectors/${item.slug}`} key={item.slug}>
+            <Link href={`${p}/projects#${item.slug}`} key={item.slug}>
               {t(item.title)}
             </Link>
           ))}
@@ -227,7 +227,7 @@ export function FieldsView({locale}: {locale: Locale}) {
         <h2>{t(page.sectorsHeading)}</h2>
         <div className={styles.links}>
           {medical.sectors.map(sector => (
-            <Link href={`${p}/sectors/${sector.slug}`} key={sector.slug}>
+            <Link href={`${p}/projects#${sector.slug}`} key={sector.slug}>
               {t(sector.title)}
             </Link>
           ))}

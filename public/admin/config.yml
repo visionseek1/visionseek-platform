@@ -107,11 +107,6 @@ collections:
                   - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
                   - {label: "المجالات  /fields", value: "/fields"}
                   - {label: "النظام داخل المؤسسة  /system", value: "/system"}
-                  - {label: "لمين بنشتغل ← المستشفيات ومقدّمو الرعاية  /sectors/hospitals", value: "/sectors/hospitals"}
-                  - {label: "لمين بنشتغل ← شركات الأدوية والمصانع  /sectors/pharma", value: "/sectors/pharma"}
-                  - {label: "لمين بنشتغل ← الصيدليات والتوزيع  /sectors/pharmacies", value: "/sectors/pharmacies"}
-                  - {label: "لمين بنشتغل ← الحكومة والجهات الرقابية  /sectors/government", value: "/sectors/government"}
-                  - {label: "لمين بنشتغل ← البحث والجامعات  /sectors/research", value: "/sectors/research"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /leaders-house/physical-ai", value: "/leaders-house/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}
@@ -141,6 +136,7 @@ collections:
               - {label: "الرئيسية ← لمين بنشتغل", value: "home.sectors"}
               - {label: "الرئيسية ← المجال الطبي", value: "home.identity"}
               - {label: "ماستركلاس ← الفهرس القديم", value: "masterclass.catalog"}
+              - {label: "المشاريع ← الفهرس القديم", value: "projects.legacy"}
                 # block-options:end
   - name: navigation
     label: "الشريط العلوي والتذييل (الترتيب والروابط)"

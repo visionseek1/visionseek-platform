@@ -13,7 +13,7 @@ const icons = {
 
 const tx = (ar: boolean) => (value: Bi) => (ar ? value.ar : value.en);
 
-/** Home section. Reaches every sector page and the fields page. The top nav is unchanged. */
+/** Home section. Each card opens its sector on the projects page. The top nav is unchanged. */
 export default function WhoWeWorkWith({locale}: {locale: Locale}) {
   const ar = locale === "ar";
   const t = tx(ar);
@@ -38,7 +38,7 @@ export default function WhoWeWorkWith({locale}: {locale: Locale}) {
         {medical.sectors.map(sector => {
           const Icon = icons[sector.slug as keyof typeof icons] ?? Building2;
           return (
-            <Link className="vs-community-card" href={`${p}/sectors/${sector.slug}`} key={sector.slug}>
+            <Link className="vs-community-card" href={`${p}/projects#${sector.slug}`} key={sector.slug}>
               <Icon size={40} strokeWidth={1.25} />
               <h3>{t(sector.title)}</h3>
               <p>{t(sector.problem)}</p>
