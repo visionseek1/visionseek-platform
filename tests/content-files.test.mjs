@@ -72,7 +72,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
   assert.equal(home.hero.slides.length, 3);
   assert.equal(home.hero.slides[0].title.en, 'Engineering Opportunities & Critical Capability Transfer');
   assert.equal(home.hero.secondary.label.en, 'Explore Our Method');
-  assert.equal(home.method.title.en, 'How We Make It Possible — The Capability Method');
+  assert.equal(home.method.title.en, 'How We Make It Possible — The Field Capability Method');
   assert.equal(home.method.parts.length, 3);
   assert.deepEqual(home.method.parts.map(p => p.id), ['define', 'people', 'prove']);
   for (const slide of home.hero.slides) assert.ok(slide.image.startsWith('/') && isText(slide.title) && isText(slide.link));
