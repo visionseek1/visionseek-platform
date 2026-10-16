@@ -21,8 +21,8 @@
   },
   "pace": {
     "title": {
-      "en": "What your organization loses while it waits",
-      "ar": "ما تخسره مؤسستك وهي تنتظر"
+      "en": "What your medical institution loses while it waits",
+      "ar": "ما تخسره مؤسستك الطبية وهي تنتظر"
     },
     "quote": {
       "en": "…stagnation is slow-motion failure. If you're not climbing, you're sliding.",
@@ -43,68 +43,90 @@
     "cards": [
       {
         "figure": {
-          "en": "95%",
-          "ar": "95%"
+          "en": "759",
+          "ar": "759"
         },
         "title": {
-          "en": "You pay for the tool, and see no return",
-          "ar": "تدفع ثمن الأداة، ولا ترى عائدها"
+          "en": "Hospitals whose systems went dark from one update",
+          "ar": "مستشفيات انطفأت أنظمتها من تحديث واحد"
         },
         "body": {
-          "en": "95% of companies' generative AI pilots left no measurable mark on profit and loss, according to an MIT report built on interviews with 150 leaders, a survey of 350 employees and 300 public deployments. The cause, the report says, is not the quality of the tools but a learning gap inside organizations.",
-          "ar": "95% من تجارب الذكاء الاصطناعي التوليدي في الشركات لم تترك أثرًا يُقاس في الأرباح، بحسب تقرير لمعهد «MIT» قام على مقابلات مع 150 قائدًا، ومسح 350 موظفًا، وتحليل 300 تطبيق. والسبب، كما يقول التقرير، ليس في جودة الأدوات، بل في فجوة التعلّم داخل المؤسسات."
+          "en": "JAMA Network Open measured the 19 July 2024 CrowdStrike update across 2,232 US hospitals. Network disruption showed at 759. Patient-facing services were among what went down.",
+          "ar": "قاست JAMA Network Open تحديث CrowdStrike في 19 يوليو 2024 على 2232 مستشفى أمريكيًا. ظهر انقطاع الشبكة في 759. وكانت خدمات مواجهة للمريض بين ما توقف."
         },
         "lesson": {
-          "en": "Money spent on a tool the decision-makers don't understand is money lost.",
-          "ar": "المال الذي يُصرف على أداة لا يفهمها أصحاب القرار، يضيع."
+          "en": "A medical institution that rests on one tool can lose the working day around the patient, not only an office system.",
+          "ar": "مؤسسة طبية ترتكز على أداة واحدة قد تخسر يوم العمل حول المريض، لا نظام المكتب فقط."
         },
         "source": {
-          "title": "Fortune · MIT report: 95% of generative AI pilots at companies are failing · 18 August 2025",
-          "url": "https://www.fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo"
+          "title": "JAMA Network Open · Patient Care Technology Disruptions Associated With the CrowdStrike Outage · 19 July 2025",
+          "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2836824"
         }
       },
       {
         "figure": {
-          "en": "78%",
-          "ar": "78%"
+          "en": "1.6 million",
+          "ar": "1.6 مليون"
         },
         "title": {
-          "en": "Your staff already use it, with their own tools",
-          "ar": "موظفوك يستعملونه الآن… بأدواتهم هم"
+          "en": "A health report the buyer could not check",
+          "ar": "تقرير صحي لم يستطع المشتري أن يراجعه"
         },
         "body": {
-          "en": "78% of employees who use AI bring their own tools to work rather than tools their organization chose, Microsoft and LinkedIn found.",
-          "ar": "78% من الموظفين الذين يستعملون الذكاء الاصطناعي يأتون إلى العمل بأدواتهم الخاصة، لا بأدوات اختارتها مؤسستهم، بحسب «مايكروسوفت» و«لينكدإن»."
+          "en": "A provincial health department paid nearly 1.6 million Canadian dollars for a workforce report that cited papers which do not exist. Deloitte said AI supported a small number of citations, not the writing of the report.",
+          "ar": "دفعت إدارة صحة إقليمية ما يقارب 1.6 مليون دولار كندي مقابل تقرير قوى عاملة استشهد بأبحاث لا وجود لها. قالت ديلويت إن الذكاء الاصطناعي دعم عددًا قليلًا من المراجع، لا كتابة التقرير."
         },
         "lesson": {
-          "en": "If you don't set the rules, every employee sets their own, and your organization's data may end up in tools you never chose.",
-          "ar": "إن لم تضع أنت القاعدة، وضعها كل موظف لنفسه، وقد تخرج بيانات مؤسستك إلى أدوات لم تخترها أنت."
+          "en": "If the people who lead the health institution cannot read the work, they cannot catch the tool.",
+          "ar": "إن كان من يقود المؤسسة الصحية لا يقرأ العمل، فلن يمسك الأداة."
         },
         "source": {
-          "title": "Microsoft and LinkedIn · 2024 Work Trend Index · 1 July 2024",
-          "url": "https://news.microsoft.com/en-xm/2024/07/01/microsofts-2024-work-trend-index-report-showcases-increased-appetite-for-ai-at-work-highlights-opportunity-for-leaders-to-transform-enthusiasm-into-productivity-gains/"
+          "title": "Fortune · Deloitte health-workforce report for Newfoundland and Labrador contained fabricated citations · 25 November 2025",
+          "url": "https://fortune.com/2025/11/25/deloitte-caught-fabricated-ai-generated-research-million-dollar-report-canada-government/"
         }
       },
       {
         "figure": {
-          "en": "Less thinking",
-          "ar": "تفكير أقل"
+          "en": "7 patients",
+          "ar": "7 مرضى"
         },
         "title": {
-          "en": "A team that trusts the tool more, and thinks less",
-          "ar": "فريق يثق بالأداة أكثر، ويفكّر أقل"
+          "en": "A tool nobody chose sat in the doctors' meeting",
+          "ar": "أداة لم يخترها أحد جلست في اجتماع الأطباء"
         },
         "body": {
-          "en": "A Microsoft and Carnegie Mellon study of 319 knowledge workers who use AI found that more confidence in it went with less critical-thinking effort.",
-          "ar": "دراسة لـ«مايكروسوفت» وجامعة «كارنيجي ميلون» على 319 موظفًا يستعملون الذكاء الاصطناعي: كلما زادت ثقتهم فيه، قلّ جهدهم في التفكير النقدي."
+          "en": "Otter.ai joined a hospital hepatology round and sent the transcript on. Seven patients' names, diagnoses, and treatment left the room, including to former staff. The hospital, not the tool, owned the breach.",
+          "ar": "دخلت Otter.ai اجتماع أطباء الكبد في مستشفى وأرسلت النص. خرجت أسماء سبعة مرضى وتشخيصاتهم وعلاجهم، ووصلت إلى موظفين سابقين. المستشفى، لا الأداة، هو من ملك الخرق."
         },
         "lesson": {
-          "en": "Lean on it completely, and your organization loses the very judgement it needs to check it.",
-          "ar": "إن اعتمدت مؤسستك عليه كليًا، فقدت التفكير الذي تحتاجه لتراقبه."
+          "en": "If you do not choose the tool, someone on the team will, and the patient record can leave with it.",
+          "ar": "إن لم تختر الأداة أنت، سيختارها أحد في الفريق، وقد يخرج معها سجل المريض."
         },
         "source": {
-          "title": "Lee et al. · The Impact of Generative AI on Critical Thinking · CHI 2025",
-          "url": "https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf"
+          "title": "The Globe and Mail · AI bot recorded a doctors' meeting and sent patient information · 20 November 2025",
+          "url": "https://www.theglobeandmail.com/canada/article-ai-bot-doctors-meeting-patient-info-hospital-privacy-watchdog/"
+        }
+      },
+      {
+        "figure": {
+          "en": "No group gain",
+          "ar": "بلا عائد جماعي"
+        },
+        "title": {
+          "en": "The clinic bought the scribe, and the group did not speed up",
+          "ar": "العيادة اشترت الكاتب، والمجموعة لم تسرع"
+        },
+        "body": {
+          "en": "NEJM AI followed 112 primary care clinicians using an ambient documentation tool and 103 who did not. In the primary analysis the group using it was not measurably more efficient.",
+          "ar": "تابعت NEJM AI 112 طبيب رعاية أولية يستخدمون أداة توثيق محيطة، و103 لا يستخدمونها. في التحليل الأساسي لم تكن المجموعة التي تستخدمها أكفأ بشكل يُقاس."
+        },
+        "lesson": {
+          "en": "A medical institution can pay for the tool and still see nothing, if the people who decide have not learned where it belongs.",
+          "ar": "تستطيع المؤسسة الطبية أن تدفع ثمن الأداة ولا ترى شيئًا، إن لم يتعلم من يقرر أين موضعها."
+        },
+        "source": {
+          "title": "NEJM AI · Does AI-Powered Clinical Documentation Enhance Clinician Efficiency? · 22 November 2024",
+          "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2400659"
         }
       }
     ]
@@ -224,96 +246,52 @@
     }
   ],
   "shiftsTitle": {
-    "en": "What your organization gains when it moves now",
-    "ar": "ما تكسبه مؤسستك حين تتحرك اليوم"
+    "en": "What a medical institution gets back when it knows the tool",
+    "ar": "ما تسترده المؤسسة الطبية حين تعرف الأداة"
   },
   "shifts": [
     {
       "figure": {
-        "en": "1.7×",
-        "ar": "1.7 ضعف"
+        "en": "0.57 min",
+        "ar": "0.57 دقيقة"
       },
       "title": {
-        "en": "The companies ahead earn more, and the gap is widening",
-        "ar": "من سبق يكسب أكثر، والفجوة تتسع"
+        "en": "A note that got shorter, for some physicians",
+        "ar": "ملاحظة صارت أقصر، عند بعض الأطباء"
       },
       "body": {
-        "en": "In a BCG study of more than 1,250 companies worldwide, only 5% capture AI's value at scale. Those companies posted 1.7 times the revenue growth and 3.6 times the three-year shareholder return of the laggards. 60% got no material value at all, despite what they spent.",
-        "ar": "في دراسة لـ«BCG» على أكثر من 1,250 شركة حول العالم، 5% فقط تجني قيمة الذكاء الاصطناعي على نطاق واسع. هذه الشركات حقّقت نموًا في الإيرادات أكبر بـ1.7 مرة، وعائدًا لمساهميها على ثلاث سنوات أكبر بـ3.6 مرة، من الشركات المتأخرة. أما 60% من الشركات، فلم تجنِ منه قيمة تُذكر رغم ما أنفقته."
+        "en": "At one academic medical center, 45 physicians in eight clinics used an ambient scribe. Median time per note fell by 0.57 minutes, and median daily documentation time by 6.89 minutes. The difference between physicians was large.",
+        "ar": "في مركز طبي أكاديمي، استخدم 45 طبيبًا في ثماني عيادات كاتبًا محيطًا. انخفض الوسيط لكل ملاحظة 0.57 دقيقة، ووسيط التوثيق اليومي 6.89 دقيقة. والفرق بين الأطباء كان واسعًا."
       },
       "lesson": {
-        "en": "The question is not whether you spend on AI. It is which of the two groups your organization will be in.",
-        "ar": "السؤال ليس هل تنفق على الذكاء الاصطناعي، بل في أي الفريقين ستكون مؤسستك."
+        "en": "The time comes back where the tool fits that physician's work. It is not a result you can assume for the whole hospital.",
+        "ar": "الوقت يعود حيث تناسب الأداة عمل ذلك الطبيب. ليست نتيجة تفترضها للمستشفى كله."
       },
       "source": {
-        "title": "BCG · The Widening AI Value Gap · September 2025",
-        "url": "https://media-publications.bcg.com/The-Widening-AI-Value-Gap-October-2025.pdf"
+        "title": "JAMIA · Ambient artificial intelligence scribes: utilization and impact on documentation time · 17 December 2024",
+        "url": "https://academic.oup.com/jamia/article/32/2/381/7926614"
       }
     },
     {
       "figure": {
-        "en": "26 minutes a day",
-        "ar": "26 دقيقة يوميًا"
+        "en": "Nearly half",
+        "ar": "النصف تقريبًا"
       },
       "title": {
-        "en": "Time a government gets back from paperwork",
-        "ar": "وقت يعود إلى الحكومة من الورق"
+        "en": "One warning cut the medical error the chatbot repeated",
+        "ar": "تحذير واحد خفّض الخطأ الطبي الذي كرره الروبوت"
       },
       "body": {
-        "en": "In a UK government trial with more than 20,000 civil servants, participants said AI saved them an average of 26 minutes a day: nearly two weeks a year for each person.",
-        "ar": "في تجربة للحكومة البريطانية شملت أكثر من 20 ألف موظف حكومي، قال المشاركون إن الذكاء الاصطناعي وفّر عليهم 26 دقيقة في اليوم في المتوسط، أي قرابة أسبوعين في السنة لكل موظف."
+        "en": "Mount Sinai researchers reported that chatbots repeated and expanded false medical details. One line in the prompt, warning that the information might be wrong, cut those errors nearly in half, by the researchers' account.",
+        "ar": "أبلغ باحثو ماونت سايناي أن الروبوتات كررت تفاصيل طبية كاذبة ووسّعتها. سطر واحد في الأمر، ينبّه أن المعلومة قد تكون خطأ، خفّض تلك الأخطاء إلى النصف تقريبًا، بحسب الباحثين."
       },
       "lesson": {
-        "en": "Multiply two weeks by the number of people you employ, and see how much time could go back to serving people.",
-        "ar": "اضرب أسبوعين في عدد موظفيك، وانظر كم من الوقت يمكن أن يعود إلى خدمة الناس."
+        "en": "The check belongs to the institution. The tool will not put it there.",
+        "ar": "المراجعة ملك المؤسسة. الأداة لن تضعها من نفسها."
       },
       "source": {
-        "title": "GOV.UK · Landmark government trial shows AI could save civil servants nearly 2 weeks a year · 2 June 2025",
-        "url": "https://www.gov.uk/government/news/landmark-government-trial-shows-ai-could-save-civil-servants-nearly-2-weeks-a-year"
-      }
-    },
-    {
-      "figure": {
-        "en": "A day → 2 seconds",
-        "ar": "من يوم إلى ثانيتين"
-      },
-      "title": {
-        "en": "Dubai Customs: a day's work now takes two seconds",
-        "ar": "جمارك دبي: ما كان يأخذ يومًا صار يأخذ ثانيتين"
-      },
-      "body": {
-        "en": "Dubai Customs' Al-Munasiq 2.0 classifies goods with AI and big data, cutting classification from a full day to two seconds. It is now used in 117 countries.",
-        "ar": "منصة «المنسّق 2.0» في جمارك دبي تصنّف السلع بالذكاء الاصطناعي والبيانات الضخمة، فاختصرت وقت التصنيف من يوم كامل إلى ثانيتين، وصارت تُستخدم في 117 دولة."
-      },
-      "lesson": {
-        "en": "An experience from our own region. Somewhere in your organization, work like this is waiting for someone to see it.",
-        "ar": "تجربة من منطقتنا. وفي مؤسستك عمل مثله ينتظر من يراه."
-      },
-      "source": {
-        "title": "Sharjah24 · Hamdan bin Mohammed visits Dubai Customs · 15 December 2025",
-        "url": "https://sharjah24.ae/en/Articles/2025/12/15/a11"
-      }
-    },
-    {
-      "figure": {
-        "en": "About 25% faster",
-        "ar": "أسرع بنحو 25%"
-      },
-      "title": {
-        "en": "Your team, a quarter faster, if it knows when to trust the tool",
-        "ar": "فريقك أسرع بالربع… إن عرف متى يثق بالأداة"
-      },
-      "body": {
-        "en": "In a Harvard Business School experiment with 758 BCG consultants, those who used AI on tasks it suits completed 12.2% more tasks, about 25% faster, at about 32% higher quality. On a task beyond it, their correct answers fell from 84.5% to 70.6%.",
-        "ar": "في تجربة لهارفارد للأعمال مع 758 مستشارًا من «BCG»: من استخدموا الذكاء الاصطناعي في مهام تناسبه أنجزوا 12.2% مهام أكثر، وأسرع بنحو 25%، وبجودة أعلى بنحو 32%. وفي مهمة خارج قدرته، نزلت إجاباتهم الصحيحة من 84.5% إلى 70.6%."
-      },
-      "lesson": {
-        "en": "And the one who has to know where it belongs and where it doesn't is the leader, before the team.",
-        "ar": "ومن يجب أن يعرف أين يضعها وأين لا، هو القائد قبل الفريق."
-      },
-      "source": {
-        "title": "HBS AI Institute · Navigating the Jagged Technological Frontier · September 2023",
-        "url": "https://aiinstitute.hbs.edu/back-to-the-beginnings-of-ai-at-work/"
+        "title": "Mount Sinai · AI chatbots can run with medical misinformation · 6 August 2025",
+        "url": "https://www.mountsinai.org/about/newsroom/2025/ai-chatbots-can-run-with-medical-misinformation-study-finds-highlighting-the-need-for-stronger-safeguards"
       }
     }
   ],
