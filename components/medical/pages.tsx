@@ -285,7 +285,7 @@ export function MasterclassView({locale}: {locale: Locale}) {
                 <strong>{t(page.general.title)}</strong>
                 <p>{t(page.general.text)}</p>
               </li>
-              <li>
+              <li id="institutions">
                 <span className="vs-wl-step-n">02</span>
                 <strong>{t(page.specific.title)}</strong>
                 <p>{t(page.specific.text)}</p>
