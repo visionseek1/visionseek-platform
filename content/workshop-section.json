@@ -397,11 +397,11 @@
     "doorCards": {
       "individual": {
         "code": "01",
-        "image": "/masterclass/ahmed-abdelalim.jpg"
+        "image": "/masterclass/doctor.jpg"
       },
       "institution": {
         "code": "02",
-        "image": "/field-cities.jpg"
+        "image": "/masterclass/hospital.jpg"
       }
     },
     "openDoor": {
