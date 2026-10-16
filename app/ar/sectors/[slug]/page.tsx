@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {notFound} from "next/navigation";
-import {SectorPage} from "@/components/preview/interior";
+import {SectorView} from "@/components/medical/pages";
 import {medical, sectorBySlug} from "@/lib/medical";
 
 export const dynamicParams = false;
@@ -29,5 +29,5 @@ export default async function Page({params}: Props) {
   const {slug} = await params;
   const sector = sectorBySlug(slug);
   if (!sector) notFound();
-  return <SectorPage locale="ar" sector={sector} />;
+  return <SectorView locale="ar" sector={sector} />;
 }

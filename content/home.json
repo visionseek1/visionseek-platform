@@ -5,15 +5,15 @@
         "image": "/field-space.jpg",
         "label": {
           "en": "VISIONSEEK",
-          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
+          "ar": "المجال الطبي"
         },
         "title": {
           "en": "Make It Possible.",
           "ar": "Make It Possible."
         },
         "sub": {
-          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
-          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
+          "en": "VisionSeek specializes in the medical field.",
+          "ar": "VisionSeek متخصصة في المجال الطبي."
         },
         "text": {
           "en": "",
@@ -21,32 +21,32 @@
         },
         "href": "/start",
         "link": {
-          "en": "Build your solutions with us",
-          "ar": "ابنِ حلولك معنا"
+          "en": "A session with Ahmed Abdelalim",
+          "ar": "جلسة مع د. أحمد"
         }
       },
       {
         "image": "/field-industry.jpg",
         "label": {
-          "en": "THE VISIONSEEK QUESTION",
-          "ar": "سؤال VisionSeek"
+          "en": "THE PATH",
+          "ar": "الطريق"
         },
         "title": {
-          "en": "What solution could move your institution ahead?",
-          "ar": "ما الذي أصبح ممكنًا اليوم، وقد يسبقك به غيرك غدًا؟"
+          "en": "Education, then Study, then Operation.",
+          "ar": "تعليم، ثم دراسة، ثم تشغيل."
         },
         "sub": {
-          "en": "Start with the capability that should exist.",
-          "ar": "اكتشف القدرة التي قد تغيّر موقعك غدًا."
+          "en": "In that order. The general track leads to one institution.",
+          "ar": "بالترتيب ده. والعام يوصّل لقدرة على مقاس المؤسسة."
         },
         "text": {
-          "en": "Understand the limit. Find the path. Put it to the test.",
-          "ar": "افهم الحد الحقيقي. اكتشف المسار. واختبره في الواقع."
+          "en": "First the wide picture. Then one page for the institution's own question.",
+          "ar": "الأول الصورة الواسعة. وبعدين ورقة واحدة لمسألة المؤسسة."
         },
-        "href": "/method",
+        "href": "/education",
         "link": {
-          "en": "Explore our method",
-          "ar": "اكتشف منهجنا"
+          "en": "Education",
+          "ar": "التعليم"
         }
       },
       {
@@ -71,12 +71,13 @@
         "link": {
           "en": "See how VisionSeek works",
           "ar": "اكتشف كيف تعمل VisionSeek"
-        }
+        },
+        "block": "home.hero.hlo"
       }
     ],
     "firstSlideNote": {
-      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
-      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
+      "en": "Build, buy, transfer, or partner. In what order.",
+      "ar": "تبني، تشتري، تنقل، ولا تشارك. وبأي ترتيب."
     }
   },
   "mission": {

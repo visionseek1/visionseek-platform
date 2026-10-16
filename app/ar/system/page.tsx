@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {SystemPage} from "@/components/preview/interior";
+import {SystemView} from "@/components/medical/pages";
 import {medical} from "@/lib/medical";
 
 const title = `${medical.system.title.ar} | VisionSeek`;
@@ -13,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <SystemPage locale="ar" />;
+  return <SystemView locale="ar" />;
 }

@@ -2,7 +2,7 @@
   "home": {
     "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
     "title": {"en": "Who we work with", "ar": "لمين بنشتغل"},
-    "intro": {"en": "Six parts of healthcare. We start from the question in front of the person who leads it.", "ar": "ست جهات في القطاع الصحي. نبدأ من السؤال اللي واقف قدام قائدها."},
+    "intro": {"en": "Six parts of healthcare. Three fields now: radiology, diagnosis and drugs. The rest of the map is marked soon.", "ar": "ست جهات في القطاع الصحي. ثلاثة مجالات دلوقتي: الأشعة، والتشخيص، والدواء. الباقي على الخريطة، وعليه قريبًا."},
     "fieldsLink": {"en": "Fields", "ar": "المجالات"}
   },
   "fieldsPage": {

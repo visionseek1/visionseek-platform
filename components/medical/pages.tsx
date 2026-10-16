@@ -35,13 +35,7 @@ function FieldCard({field, ar}: {field: MedicalField; ar: boolean}) {
   return (
     <article className={field.focus ? styles.focus : styles.muted}>
       <div className={styles.fieldTop}>
-        {field.focus ? (
-          <span className={styles.star} aria-label={t(starLabel)}>
-            ⭐
-          </span>
-        ) : (
-          <span className={styles.soon}>{t(soon)}</span>
-        )}
+        <span className={field.focus ? styles.now : styles.soon}>{field.focus ? t(starLabel) : t(soon)}</span>
       </div>
       <h3>{t(field.title)}</h3>
       {field.focus && field.line ? <p>{t(field.line)}</p> : null}
@@ -74,7 +68,7 @@ export function Journey({locale, here}: {locale: Locale; here?: "education" | "s
   );
 }
 
-function Session({locale}: {locale: Locale}) {
+export function Session({locale}: {locale: Locale}) {
   const ar = locale === "ar";
   const t = tx(ar);
   const p = ar ? "/ar" : "";

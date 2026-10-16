@@ -130,6 +130,9 @@ collections:
                 # block-options:start
               - {label: "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»", value: "home.explainer"}
               - {label: "الرئيسية ← الرسالة وما نقرأه", value: "home.vision"}
+              - {label: "الرئيسية ← العقد", value: "home.decade"}
+              - {label: "الرئيسية ← ما بُني بالفعل", value: "home.proof"}
+              - {label: "الرئيسية ← شريحة الغلاف الثالثة", value: "home.hero.hlo"}
               - {label: "الرئيسية ← البرامج", value: "home.programs"}
               - {label: "الرئيسية ← ماستركلاس والأخبار", value: "home.updates"}
               - {label: "الرئيسية ← المنهج", value: "home.method"}

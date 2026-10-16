@@ -2,7 +2,7 @@ import Link from "next/link";
 import {ArrowRight} from "lucide-react";
 import type {Locale} from "@/components/capability/content";
 import {medical, type Bi} from "@/lib/medical";
-import {Journey} from "./pages";
+import {Journey, Session} from "./pages";
 import styles from "./medical.module.css";
 
 const tx = (ar: boolean) => (value: Bi) => (ar ? value.ar : value.en);
@@ -28,6 +28,7 @@ export default function MedicalIdentity({locale}: {locale: Locale}) {
         </div>
       </section>
       <Journey locale={locale} />
+      <Session locale={locale} />
     </>
   );
 }

@@ -2,6 +2,9 @@
   "blocks": [
     {"id": "home.explainer", "page": "/", "label": "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»"},
     {"id": "home.vision", "page": "/", "label": "الرئيسية ← الرسالة وما نقرأه"},
+    {"id": "home.decade", "page": "/", "label": "الرئيسية ← العقد"},
+    {"id": "home.proof", "page": "/", "label": "الرئيسية ← ما بُني بالفعل"},
+    {"id": "home.hero.hlo", "page": "/", "label": "الرئيسية ← شريحة الغلاف الثالثة"},
     {"id": "home.programs", "page": "/", "label": "الرئيسية ← البرامج"},
     {"id": "home.updates", "page": "/", "label": "الرئيسية ← ماستركلاس والأخبار"},
     {"id": "home.method", "page": "/", "label": "الرئيسية ← المنهج"},

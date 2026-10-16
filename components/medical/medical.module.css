@@ -49,11 +49,7 @@
   margin-bottom: 0.9rem;
 }
 
-.star {
-  font-size: 1.15rem;
-  line-height: 1;
-}
-
+.now,
 .soon {
   display: inline-flex;
   align-items: center;
@@ -62,6 +58,11 @@
   font-size: 0.75rem;
   line-height: 1.4;
   padding: 0.12rem 0.55rem;
+}
+
+.now {
+  color: var(--lime);
+  border-color: var(--lime);
 }
 
 .focus h3,

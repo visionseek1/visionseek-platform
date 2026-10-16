@@ -1,17 +1,15 @@
-import type {Metadata} from "next";
-import copy from "@/content/home-directions.json";
-import HomeDirection from "@/components/preview/home-direction";
-
-const title = "VisionSeek | المجال الطبي";
-const description = copy.hero.sentence.ar;
+import type { Metadata } from "next";
+import HomePage from "@/components/home-page";
 
 export const metadata: Metadata = {
-  title,
-  description,
-  alternates: {canonical: "/ar", languages: {en: "/", ar: "/ar"}},
-  openGraph: {title, description, url: "/ar"},
+  title: "VisionSeek | Make It Possible.",
+  description: "VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات. نكتشف الفرص عند التقاء القطاعات، ونجمع التقنيات والمعرفة والشركاء لتحويلها إلى مشروعات وقدرات وحلول قابلة للتنفيذ.",
+  alternates: {
+    canonical: "/ar",
+    languages: { en: "/", ar: "/ar" },
+  },
 };
 
 export default function ArabicHome() {
-  return <HomeDirection locale="ar" />;
+  return <HomePage locale="ar" />;
 }

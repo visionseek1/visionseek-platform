@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {FieldsPage} from "@/components/preview/interior";
+import {FieldsView} from "@/components/medical/pages";
 import {medical} from "@/lib/medical";
 
 const title = `${medical.fieldsPage.title.ar} | VisionSeek`;
@@ -13,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <FieldsPage locale="ar" />;
+  return <FieldsView locale="ar" />;
 }

@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {EducationPage} from "@/components/preview/interior";
+import {EducationView} from "@/components/medical/pages";
 import {medical} from "@/lib/medical";
 
 const title = `${medical.education.title.ar} | VisionSeek`;
@@ -13,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <EducationPage locale="ar" />;
+  return <EducationView locale="ar" />;
 }

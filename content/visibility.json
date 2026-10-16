@@ -25,5 +25,17 @@
       "path": "/insights/notes/l-001"
     }
   ],
-  "hiddenBlocks": []
+  "hiddenBlocks": [
+    "home.decade",
+    "home.proof",
+    "home.explainer",
+    "home.vision",
+    "home.programs",
+    "home.updates",
+    "home.method",
+    "home.communities",
+    "home.fields",
+    "home.work",
+    "home.hero.hlo"
+  ]
 }
