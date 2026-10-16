@@ -47,25 +47,33 @@ test("the session token is an HMAC of the password, never the password itself", 
   assert.notEqual(token, "correct horse battery");
 });
 
-test("the room reads Notion live from the server and writes only engine requests", async () => {
-  const [notion, route, run, html] = await Promise.all([
+test("the room reads Notion live and cannot create engine requests", async () => {
+  const [notion, route, html, source] = await Promise.all([
     read("lib/notion-room.ts"),
     read("app/ops/route.ts"),
-    read("app/ops/run/route.ts"),
     read("app/ops/room-html.ts"),
+    read("scripts/ops-room/room.html"),
   ]);
   assert.match(notion, /process\.env\.NOTION_TOKEN/);
   assert.doesNotMatch(notion, /ntn_[A-Za-z0-9]/);
   assert.match(notion, /\/data_sources\/\$\{src\.ds\}\/query/);
-  assert.match(notion, /createEngineRequest/);
-  // الكتابة من الموقع محصورة: إضافة في «طلبات المحرك» و«الشغل» و«تعليقات الغرفة»، وتحديث خصائص كارت شغل. لا حذف أبدًا.
+  assert.match(notion, /query\(SOURCES\.requests\)/);
+  assert.equal((notion.match(/SOURCES\.requests/g) || []).length, 1);
+  assert.doesNotMatch(notion, /createEngineRequest/);
+  // قراءة طلبات المحرك فاضلة. إنشاء صف جديد منها اتلغى مع زر «شغّل دورة». لا حذف أبدًا.
   assert.doesNotMatch(notion, /method:\s*"DELETE"/);
   assert.doesNotMatch(notion, /archived:\s*true|in_trash:\s*true/);
+  assert.ok(!existsSync(new URL("../app/ops/run/route.ts", import.meta.url)));
   assert.match(route, /window\.__ROOM__/);
   assert.match(route, /\\u003c/);
-  assert.match(run, /cookieIsOwner|cookieIsValid/);
-  assert.match(html, /\/ops\/run/);
+  assert.doesNotMatch(route, /طلب الدورة اتسجّل|خلال ساعة/);
+  for (const text of [html, source]) {
+    assert.doesNotMatch(text, /شغّل دورة/);
+    assert.doesNotMatch(text, /\/ops\/run/);
+    assert.doesNotMatch(text, /طلب الدورة اتسجّل|خلال ساعة/);
+  }
   assert.match(html, /window\.__ROOM__/);
+  assert.match(html, /function enginesBlock/);
 });
 
 test("the tree: sector ← department ← track ← item ← methodology", async () => {
@@ -163,7 +171,7 @@ test("review login: a second password that reads only, accepted in preview only;
   assert.match(auth, /return isPreview\(\) && s && s\.length >= 8 \? s : null/);
   assert.match(auth, /export function cookieIsOwner/);
   assert.doesNotMatch(auth, /ROOM_REVIEW_PASSWORD\s*=\s*["']/);
-  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/research/route.ts", "app/ops/comps/route.ts", "app/ops/solutions/route.ts", "app/ops/method/route.ts", "app/ops/run/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
+  for (const f of ["app/ops/card/route.ts", "app/ops/decision/route.ts", "app/ops/research/route.ts", "app/ops/comps/route.ts", "app/ops/solutions/route.ts", "app/ops/method/route.ts", "app/ops/push/send/route.ts", "app/ops/push/subscribe/route.ts", "app/ops/push/keygen/route.ts", "app/ops/brief/route.ts", "app/ops/lead/route.ts"]) {
     const t = await read(f);
     assert.match(t, /cookieIsOwner/, `${f} must require the owner to write`);
   }
