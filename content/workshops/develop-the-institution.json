@@ -87,26 +87,5 @@
       "ar": "خطوة أولى لا تنتظر جهة خارجية، وخطوة ثانية لا تدّعي أن الجهة موجودة."
     }
   ],
-  "faq": [
-    {
-      "q": {
-        "en": "Do you bring funding or a partner to the first session?",
-        "ar": "هل تحضرون تمويلًا أو شريكًا إلى الجلسة الأولى؟"
-      },
-      "a": {
-        "en": "No. The first work is what you can already do. Outside capability, opportunity, and funding are named as a search, not as a deal.",
-        "ar": "لا. الشغل الأول هو ما تستطيعون فعله أصلًا. القدرة والفرصة والتمويل من الخارج تُسمّى بوصفها بحثًا، لا اتفاقًا."
-      }
-    },
-    {
-      "q": {
-        "en": "Is the 70% figure your result?",
-        "ar": "هل نسبة الـ70% نتيجتكم؟"
-      },
-      "a": {
-        "en": "No. It is BCG's, from the article linked on this page. We have held no masterclass, so we have no result of our own to show.",
-        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ماستركلاس، فلا نتيجة لنا نعرضها."
-      }
-    }
-  ]
+  "faq": []
 }

@@ -257,15 +257,17 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
           </section>
         )}
 
-        <section id="faq">
-          <h2>{heading('faq', 'Short questions', 'أسئلة قصيرة')}</h2>
-          {workshop.faq.map(item => (
-            <details key={item.q.en}>
-              <summary>{text(locale, item.q)}</summary>
-              <p>{text(locale, item.a)}</p>
-            </details>
-          ))}
-        </section>
+        {workshop.faq.length > 0 && (
+          <section id="faq">
+            <h2>{heading('faq', 'Short questions', 'أسئلة قصيرة')}</h2>
+            {workshop.faq.map(item => (
+              <details key={item.q.en}>
+                <summary>{text(locale, item.q)}</summary>
+                <p>{text(locale, item.a)}</p>
+              </details>
+            ))}
+          </section>
+        )}
 
         <p className="vs-ws-cta">
           <Link className="vs-button" href={`${prefix}/start?${new URLSearchParams({from: 'workshops', workshop: workshop.slug, idea: `${text(locale, kindName)} — ${text(locale, workshop.outcome)}`.slice(0, 180)})}`}>
