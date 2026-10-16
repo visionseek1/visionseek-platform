@@ -73,8 +73,8 @@
         "ar": "من يتعلّمه الآن يحرّك المؤسسة. ومن ينتظر يتبع."
       },
       "for": {
-        "en": "For the person who owns or leads the institution in the medical sector.",
-        "ar": "لصاحب المؤسسة وقائدها في القطاع الطبي."
+        "en": "For the person who owns or leads the institution.",
+        "ar": "لصاحب المؤسسة وقائدها."
       },
       "body": {
         "en": "Dr. Ahmed sits with you before any tool. You see where time comes back, and where the tool must not speak.",
@@ -107,8 +107,8 @@
         "ar": "من يبدأ اليوم يسبق. ومن ينتظر يلحق متأخرًا."
       },
       "for": {
-        "en": "For one medical institution that wants to know what helps it now.",
-        "ar": "لمؤسسة طبية تريد أن تعرف ما ينفعها الآن."
+        "en": "For the institution.",
+        "ar": "للمؤسسة."
       },
       "body": {
         "en": "We study the institution and what comparable ones have published, then choose with you what to apply. The decision stays with the person who owns it.",
@@ -242,8 +242,8 @@
       "en": "Dr. Ahmed Abdelalim"
     },
     "teaches": {
-      "en": "A masterclass for the medical sector. You see what AI can change in the work.",
-      "ar": "ماستركلاس للقطاع الطبي. ترى ما يغيّره الذكاء الاصطناعي في العمل."
+      "en": "We study the work, then a private session, and you carry on yourself.",
+      "ar": "ندرس العمل، ثم جلسة خاصة، وتكمل بنفسك."
     },
     "trailer": {
       "video": "",
@@ -375,8 +375,8 @@
       "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     },
     "doorsLabel": {
-      "en": "You, or your institution",
-      "ar": "لك، أو لمؤسستك"
+      "en": "You, or the institution",
+      "ar": "لك، أو للمؤسسة"
     },
     "doorsLine": {
       "en": "Either way you leave seeing the work, and you carry it yourself.",
@@ -409,18 +409,18 @@
       "ar": "المنهج لا يتغيّر"
     },
     "howTitle": {
-      "en": "Three steps. On this institution.",
-      "ar": "ثلاث خطوات. على هذه المؤسسة."
+      "en": "Three steps",
+      "ar": "ثلاث خطوات"
     },
     "howSteps": [
       {
         "title": {
-          "en": "You say who you are",
-          "ar": "تقول من أنت"
+          "en": "Who you are",
+          "ar": "من أنت"
         },
         "line": {
-          "en": "Who you are, what the work is, and where it should go.",
-          "ar": "من أنت، وما العمل، وإلى أين."
+          "en": "Who you are, and what the work is.",
+          "ar": "من أنت، وما العمل."
         }
       },
       {
@@ -429,18 +429,18 @@
           "ar": "ندرس العمل"
         },
         "line": {
-          "en": "Before the session, Dr. Ahmed studies the work and what comparable institutions have published.",
-          "ar": "قبل الجلسة يدرس د. أحمد العمل، وما نشرته المؤسسات المماثلة."
+          "en": "Before the session.",
+          "ar": "قبل الجلسة."
         }
       },
       {
         "title": {
-          "en": "A session for you",
-          "ar": "جلسة لك"
+          "en": "A private session",
+          "ar": "جلسة خاصة"
         },
         "line": {
-          "en": "A private masterclass with the founder of VisionSeek, on the work itself.",
-          "ar": "ماستركلاس خاص مع مؤسس VisionSeek، على العمل نفسه."
+          "en": "With the founder, on the work itself.",
+          "ar": "مع المؤسس، على العمل نفسه."
         }
       }
     ],
@@ -479,8 +479,8 @@
       "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
     },
     "intro": {
-      "en": "A masterclass for the medical sector. You see what AI can change in the work.",
-      "ar": "ماستركلاس للقطاع الطبي. ترى ما يغيّره الذكاء الاصطناعي في العمل."
+      "en": "We study the work, then a private session, and you carry on yourself.",
+      "ar": "ندرس العمل، ثم جلسة خاصة، وتكمل بنفسك."
     }
   }
 }
