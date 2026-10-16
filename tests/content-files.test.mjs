@@ -201,7 +201,7 @@ test('page sections hidden from /admin exist, and /admin offers every hideable s
   const offered = [...readFileSync(join(root, 'public/admin/config.yml'), 'utf8').matchAll(/value: "([^"]+)"/g)].map(m => m[1]);
   for (const id of ids) assert.ok(offered.includes(id), `/admin does not offer ${id}; run scripts/archive-options.py`);
   for (const id of ids) {
-    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx', 'components/capability/hero.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
+    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx', 'components/capability/hero.tsx', 'components/institution/workshops-view.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
     assert.ok(used, `${id} is listed but no section checks it`);
   }
 });

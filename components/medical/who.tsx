@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {ArrowRight, Building2, Factory, Landmark, Microscope, Network, Shield} from "lucide-react";
+import {ArrowRight, Building2, Factory, Landmark, Microscope, Network} from "lucide-react";
 import type {Locale} from "@/components/capability/content";
 import {medical, type Bi} from "@/lib/medical";
 
@@ -7,7 +7,6 @@ const icons = {
   hospitals: Building2,
   pharma: Factory,
   pharmacies: Network,
-  insurance: Shield,
   government: Landmark,
   research: Microscope,
 } as const;

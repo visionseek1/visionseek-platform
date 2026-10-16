@@ -42,8 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/leaders-house", priority: 0.85 },
     { path: "/fields", priority: 0.8 },
     { path: "/ar/fields", priority: 0.8 },
-    { path: "/education", priority: 0.85 },
-    { path: "/ar/education", priority: 0.85 },
     { path: "/system", priority: 0.85 },
     { path: "/ar/system", priority: 0.85 },
     ...medical.sectors.flatMap(sector => [{path: `/sectors/${sector.slug}`, priority: 0.75}, {path: `/ar/sectors/${sector.slug}`, priority: 0.75}]),

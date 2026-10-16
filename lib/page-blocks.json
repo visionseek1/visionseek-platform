@@ -13,6 +13,7 @@
     {"id": "home.work", "page": "/", "label": "الرئيسية ← اعمل معنا"},
     {"id": "home.contact", "page": "/", "label": "الرئيسية ← التواصل"},
     {"id": "home.sectors", "page": "/", "label": "الرئيسية ← لمين بنشتغل"},
-    {"id": "home.identity", "page": "/", "label": "الرئيسية ← المجال الطبي"}
+    {"id": "home.identity", "page": "/", "label": "الرئيسية ← المجال الطبي"},
+    {"id": "masterclass.catalog", "page": "/masterclass", "label": "ماستركلاس ← الفهرس القديم"}
   ]
 }

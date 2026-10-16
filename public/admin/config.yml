@@ -106,13 +106,11 @@ collections:
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
                   - {label: "المجالات  /fields", value: "/fields"}
-                  - {label: "التعليم والماستركلاس  /education", value: "/education"}
                   - {label: "النظام داخل المؤسسة  /system", value: "/system"}
                   - {label: "لمين بنشتغل ← المستشفيات ومقدّمو الرعاية  /sectors/hospitals", value: "/sectors/hospitals"}
                   - {label: "لمين بنشتغل ← شركات الأدوية والمصانع  /sectors/pharma", value: "/sectors/pharma"}
                   - {label: "لمين بنشتغل ← الصيدليات والتوزيع  /sectors/pharmacies", value: "/sectors/pharmacies"}
-                  - {label: "لمين بنشتغل ← التأمين  /sectors/insurance", value: "/sectors/insurance"}
-                  - {label: "لمين بنشتغل ← الحكومة والجهات التنظيمية  /sectors/government", value: "/sectors/government"}
+                  - {label: "لمين بنشتغل ← الحكومة والجهات الرقابية  /sectors/government", value: "/sectors/government"}
                   - {label: "لمين بنشتغل ← البحث والجامعات  /sectors/research", value: "/sectors/research"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /leaders-house/physical-ai", value: "/leaders-house/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
@@ -142,6 +140,7 @@ collections:
               - {label: "الرئيسية ← التواصل", value: "home.contact"}
               - {label: "الرئيسية ← لمين بنشتغل", value: "home.sectors"}
               - {label: "الرئيسية ← المجال الطبي", value: "home.identity"}
+              - {label: "ماستركلاس ← الفهرس القديم", value: "masterclass.catalog"}
                 # block-options:end
   - name: navigation
     label: "الشريط العلوي والتذييل (الترتيب والروابط)"
@@ -3330,7 +3329,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: "اسم النجمة"
+              - label: "وسم المثال"
                 name: starLabel
                 widget: object
                 fields:
@@ -3509,7 +3508,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: "التعليم"
+              - label: "الماستركلاس"
                 name: education
                 widget: object
                 fields:
@@ -3603,6 +3602,12 @@ collections:
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
+              - label: "الأمثلة مش سقف"
+                name: examples
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
               - label: "عنوان الصيغ"
                 name: formatsTitle
                 widget: object

@@ -16,10 +16,12 @@ const pages = [
   'app/ar/system/page.tsx',
 ];
 
-test('healthcare preview: six sectors, three focus fields, eight coming later, both languages', () => {
+test('healthcare preview: five sectors, three example fields, eight coming later, both languages', () => {
   const data = json('content/medical.json');
-  assert.deepEqual(data.sectors.map(sector => sector.slug), ['hospitals', 'pharma', 'pharmacies', 'insurance', 'government', 'research']);
-  assert.equal(data.sectors.length, 6);
+  assert.deepEqual(data.sectors.map(sector => sector.slug), ['hospitals', 'pharma', 'pharmacies', 'government', 'research']);
+  assert.equal(data.sectors.length, 5);
+  assert.equal(data.sectors.some(sector => sector.slug === 'insurance'), false);
+  assert.equal(data.sectors.find(sector => sector.slug === 'government').title.ar, 'الحكومة والجهات الرقابية');
   const focus = data.fields.filter(field => field.focus);
   const later = data.fields.filter(field => !field.focus);
   assert.deepEqual(focus.map(field => field.id), ['radiology', 'diagnosis', 'drugs']);
@@ -27,7 +29,10 @@ test('healthcare preview: six sectors, three focus fields, eight coming later, b
   assert.equal(data.fieldsPage.soon.en, 'Coming soon');
   assert.equal(data.fieldsPage.soon.ar, 'قريبًا');
   assert.equal(data.work.steps.map(step => step.id).join(','), 'education,study,operation');
-  assert.deepEqual(data.work.steps.map(step => step.href), ['/education', '/system#study', '/system#operation']);
+  assert.deepEqual(data.work.steps.map(step => step.href), ['/masterclass', '/system#study', '/system#operation']);
+  assert.match(data.education.examples.ar, /مش سقف/);
+  assert.match(data.fieldsNote.ar, /أمثلة/);
+  assert.doesNotMatch(data.home.intro.ar, /ست جهات/);
   assert.equal(data.identity.title.en, 'VisionSeek specializes in the medical field.');
   assert.match(data.identity.problem.en, /build, what to buy, what to transfer/);
   assert.equal(data.education.formats.length, 3);
@@ -48,8 +53,12 @@ test('healthcare preview: six sectors, three focus fields, eight coming later, b
 test('new routes are in the sitemap, and the top nav is not the way in', () => {
   const sitemap = read('app/sitemap.ts');
   assert.match(sitemap, /\/fields/);
-  assert.match(sitemap, /\/education/);
+  assert.doesNotMatch(sitemap, /\/education/);
   assert.match(sitemap, /\/system/);
+  assert.match(read('app/education/page.tsx'), /permanentRedirect\("\/masterclass"\)/);
+  assert.match(read('app/ar/education/page.tsx'), /permanentRedirect\("\/ar\/masterclass"\)/);
+  assert.match(read('components/institution/workshops-view.tsx'), /masterclass\.catalog/);
+  assert.match(read('components/medical/pages.tsx'), /MasterclassView/);
   assert.match(sitemap, /medical\.sectors/);
   const nav = json('content/navigation.json');
   const paths = nav.sections.map(section => section.path);

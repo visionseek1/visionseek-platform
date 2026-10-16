@@ -18,7 +18,7 @@ export type Medical = {
   identity: {eyebrow: Bi; title: Bi; problem: Bi; insights: Bi};
   education: {
     eyebrow: Bi; title: Bi; intro: Bi;
-    general: MedicalPart; specific: MedicalPart;
+    general: MedicalPart; specific: MedicalPart; examples: Bi;
     formatsTitle: Bi; formats: MedicalPart[];
     starting: Bi; communityTitle: Bi; community: Bi;
   };

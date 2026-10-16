@@ -21,7 +21,7 @@ export default function MedicalIdentity({locale}: {locale: Locale}) {
         <p>{t(identity.problem)}</p>
         <p>{t(identity.insights)}</p>
         <div className={styles.links}>
-          <Link href={`${p}/education`}>{t(cross.education)} <ArrowRight size={18} /></Link>
+          <Link href={`${p}/masterclass`}>{t(cross.education)} <ArrowRight size={18} /></Link>
           <Link href={`${p}/system`}>{t(cross.system)} <ArrowRight size={18} /></Link>
           <Link href={`${p}/fields`}>{t(cross.fields)} <ArrowRight size={18} /></Link>
           <Link href={`${p}/#who-we-work-with`}>{t(cross.who)} <ArrowRight size={18} /></Link>

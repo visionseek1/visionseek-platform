@@ -1,4 +1,5 @@
 import type {ReactNode} from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {ArrowRight} from "lucide-react";
 import {CapabilityHeader} from "@/components/capability/navigation";
@@ -165,7 +166,7 @@ export function SectorView({locale, sector}: {locale: Locale; sector: MedicalSec
 
       <section className={`vs-section ${styles.more}`} aria-label={t(medical.cross.others)}>
         <div className={styles.links}>
-          <Link href={`${p}/education`}>{t(medical.cross.education)}</Link>
+          <Link href={`${p}/masterclass`}>{t(medical.cross.education)}</Link>
           <Link href={`${p}/system`}>{t(medical.cross.system)}</Link>
           <Link href={`${p}/fields`}>{t(medical.cross.fields)}</Link>
         </div>
@@ -220,7 +221,7 @@ export function FieldsView({locale}: {locale: Locale}) {
 
       <section className={`vs-section ${styles.more}`} aria-label={t(page.sectorsHeading)}>
         <div className={styles.links}>
-          <Link href={`${p}/education`}>{t(medical.cross.education)}</Link>
+          <Link href={`${p}/masterclass`}>{t(medical.cross.education)}</Link>
           <Link href={`${p}/system`}>{t(medical.cross.system)}</Link>
         </div>
         <h2>{t(page.sectorsHeading)}</h2>
@@ -233,6 +234,88 @@ export function FieldsView({locale}: {locale: Locale}) {
         </div>
       </section>
     </Shell>
+  );
+}
+
+export function MasterclassView({locale}: {locale: Locale}) {
+  const ar = locale === "ar";
+  const t = tx(ar);
+  const p = ar ? "/ar" : "";
+  const page = medical.education;
+  return (
+    <div className={`vs-site locale-${locale}`} lang={locale} dir={ar ? "rtl" : "ltr"}>
+      <CapabilityHeader locale={locale} path="/masterclass" />
+      <main id="main-content">
+        <div className="vs-wl">
+          <section className="vs-wl-hero">
+            <div className="vs-wl-hero-text">
+              <nav className="vs-breadcrumb" aria-label={ar ? "مسار الصفحة" : "Breadcrumb"}>
+                <Link href={p || "/"}>{ar ? "الرئيسية" : "Home"}</Link>
+                <span>/</span>
+                <span>{t(page.title)}</span>
+              </nav>
+              <p className="vs-wl-lockup" dir="ltr">
+                <Image src="/visionseek-symbol-color.png" alt="" width={36} height={36} />
+                <span><small>VISIONSEEK</small><b>MASTERCLASS</b></span>
+              </p>
+              <h1 className="vs-wl-instructor">{t(page.title)}</h1>
+              <p className="vs-wl-teaches">{t(page.intro)}</p>
+              <div className="vs-wl-actions">
+                <Link className="vs-wl-btn is-lime" href={`${p}/start`}>
+                  {t(medical.session.button)}
+                  <ArrowRight size={18} aria-hidden />
+                </Link>
+              </div>
+            </div>
+            <div className="vs-wl-hero-image">
+              <Image src="/masterclass/ahmed-abdelalim.jpg" alt={ar ? "د. أحمد" : "Ahmed Abdelalim"} width={1254} height={1254} priority sizes="(max-width: 860px) 100vw, 50vw" />
+              <span>VISIONSEEK · MAKE IT POSSIBLE</span>
+            </div>
+          </section>
+          <section className="vs-wl-how" id="parts">
+            <div className="vs-wl-head">
+              <div>
+                <p className="vs-wl-code">{t(page.eyebrow)}</p>
+                <h2>{ar ? "من الصورة العامة إلى خريطة المؤسسة" : "From the wide picture to the institution's map"}</h2>
+              </div>
+            </div>
+            <ol className="vs-wl-how-steps">
+              <li>
+                <span className="vs-wl-step-n">01</span>
+                <strong>{t(page.general.title)}</strong>
+                <p>{t(page.general.text)}</p>
+              </li>
+              <li>
+                <span className="vs-wl-step-n">02</span>
+                <strong>{t(page.specific.title)}</strong>
+                <p>{t(page.specific.text)}</p>
+              </li>
+            </ol>
+            <p>{t(page.examples)}</p>
+          </section>
+          <section className="vs-wl-own" id="insights">
+            <p className="vs-wl-code">Insights</p>
+            <h2>{t(medical.insightsBlock.title)}</h2>
+            <p>{t(medical.insightsBlock.future)}</p>
+            <Link className="vs-text-link" href={`${p}/insights`}>
+              {t(medical.insightsBlock.all)}
+              <ArrowRight size={18} aria-hidden />
+            </Link>
+          </section>
+          <Journey locale={locale} here="education" />
+          <section className="vs-wl-closing" id="start">
+            <h2>
+              <span>{t(medical.session.title)}</span>
+            </h2>
+            <Link className="vs-wl-btn is-lime" href={`${p}/start`}>
+              {t(medical.session.button)}
+              <ArrowRight size={18} aria-hidden />
+            </Link>
+          </section>
+        </div>
+      </main>
+      <CapabilityFooter locale={locale} />
+    </div>
   );
 }
 
@@ -344,7 +427,7 @@ export function SystemView({locale}: {locale: Locale}) {
       <Session locale={locale} />
       <section className={`vs-section ${styles.more}`}>
         <div className={styles.links}>
-          <Link href={`${p}/education`}>{t(medical.cross.education)}</Link>
+          <Link href={`${p}/masterclass`}>{t(medical.cross.education)}</Link>
           <Link href={`${p}/fields`}>{t(medical.cross.fields)}</Link>
           <Link href={`${p}/#who-we-work-with`}>{t(medical.cross.who)}</Link>
         </div>

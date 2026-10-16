@@ -2,17 +2,17 @@
   "home": {
     "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
     "title": {"en": "Who we work with", "ar": "لمين بنشتغل"},
-    "intro": {"en": "Six parts of healthcare. Three fields now: radiology, diagnosis and drugs. The rest of the map is marked soon.", "ar": "ست جهات في القطاع الصحي. ثلاثة مجالات دلوقتي: الأشعة، والتشخيص، والدواء. الباقي على الخريطة، وعليه قريبًا."},
+    "intro": {"en": "Five parts of healthcare. Radiology, diagnosis and drugs are examples we start with, not the limit of the work. The rest of the map is marked soon.", "ar": "خمس جهات في القطاع الصحي. الأشعة والتشخيص والدواء أمثلة بنبدأ بيها، مش سقف الشغل. الباقي على الخريطة، وعليه قريبًا."},
     "fieldsLink": {"en": "Fields", "ar": "المجالات"}
   },
   "fieldsPage": {
     "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
     "title": {"en": "Fields", "ar": "المجالات"},
-    "intro": {"en": "Three fields are marked Now. The rest of the map is shown, and marked Soon.", "ar": "ثلاثة عليهم علامة الآن. الباقي على الخريطة، ومكتوب عليه قريبًا."},
-    "now": {"en": "Where we work now", "ar": "اللي بنشتغل عليه دلوقتي"},
+    "intro": {"en": "Three examples we start with: radiology, diagnosis and drugs. They are not the limit of the fields. The rest of the map is marked soon.", "ar": "ثلاثة أمثلة بنبدأ بيها: الأشعة، والتشخيص، والدواء. مش سقف المجالات. الباقي على الخريطة، ومكتوب عليه قريبًا."},
+    "now": {"en": "Examples we start with", "ar": "أمثلة بنبدأ بيها"},
     "later": {"en": "On the map, not yet", "ar": "على الخريطة، ولسه مش دلوقتي"},
     "soon": {"en": "Coming soon", "ar": "قريبًا"},
-    "starLabel": {"en": "Current focus", "ar": "التركيز الحالي"},
+    "starLabel": {"en": "An example we start with", "ar": "مثال بنبدأ بيه"},
     "sectorsHeading": {"en": "Who we work with", "ar": "لمين بنشتغل"}
   },
   "sectors": [
@@ -35,15 +35,9 @@
       "fieldIds": ["radiology", "diagnosis", "drugs"]
     },
     {
-      "slug": "insurance",
-      "title": {"en": "Insurance", "ar": "التأمين"},
-      "problem": {"en": "The insurance leader has to pay for care that deserves it, and what actually changed for the patient is still not visible.", "ar": "قائد التأمين مطلوب منه يدفع لرعاية تستاهل، ومش باين له إيه اللي اتغير عند المريض."},
-      "fieldIds": ["radiology", "diagnosis", "drugs", "revenue", "experience"]
-    },
-    {
       "slug": "government",
-      "title": {"en": "Government and regulators", "ar": "الحكومة والجهات التنظيمية"},
-      "problem": {"en": "The leader of a ministry or a regulator writes the rule and has to watch the system, and the picture arrives late and in pieces.", "ar": "قائد الوزارة أو الجهة التنظيمية يكتب القاعدة ويراقب المنظومة، والصورة توصله متأخرة ومتفرقة."},
+      "title": {"en": "Government and oversight bodies", "ar": "الحكومة والجهات الرقابية"},
+      "problem": {"en": "The leader of a ministry or an oversight body writes the rule and has to watch the system, and the picture arrives late and in pieces.", "ar": "قائد الوزارة أو الجهة الرقابية يكتب القاعدة ويراقب المنظومة، والصورة توصله متأخرة ومتفرقة."},
       "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "public-health", "genomics"]
     },
     {
@@ -82,8 +76,8 @@
     {"id": "experience", "focus": false, "title": {"en": "Patient experience", "ar": "تجربة المريض"}}
   ],
   "fieldsNote": {
-    "en": "The Now badge marks the three fields we work in. The rest of the map is marked Soon.",
-    "ar": "علامة الآن على الثلاثة اللي بنشتغل عليهم. الباقي ظاهر، وعليه قريبًا."
+    "en": "These three are examples of where we start. They are not the limit. The rest of the map is marked soon.",
+    "ar": "الثلاثة أمثلة على اللي بنبدأ بيه، مش حد الشغل. الباقي ظاهر، وعليه قريبًا."
   },
   "identity": {
     "eyebrow": {"en": "THE MEDICAL FIELD", "ar": "المجال الطبي"},
@@ -92,16 +86,20 @@
     "insights": {"en": "The capabilities that come next will be named in Insights. None are published from this path yet.", "ar": "القدرات اللي جاية هتتسمى في Insights. لسه مفيش قدرة منشورة من هنا."}
   },
   "education": {
-    "eyebrow": {"en": "FOR LEADERS ACROSS HEALTHCARE", "ar": "لقيادات القطاع الطبي كله"},
-    "title": {"en": "Education and the masterclass", "ar": "التعليم والماستركلاس"},
-    "intro": {"en": "For the leader of any medical institution. First the wide picture. Then the question inside their own institution.", "ar": "لقائد أي مؤسسة طبية. الأول الصورة الواسعة. وبعدين مسألة مؤسسته هو."},
+    "eyebrow": {"en": "FOR LEADERS ACROSS THE MEDICAL SECTOR", "ar": "لقيادات القطاع الطبي كله"},
+    "title": {"en": "Masterclass", "ar": "الماستركلاس"},
+    "intro": {"en": "Online. For the leader of any institution in the medical sector.", "ar": "أونلاين. لقائد أي مؤسسة في القطاع الطبي."},
     "general": {
       "title": {"en": "The wide picture", "ar": "الصورة العامة"},
-      "text": {"en": "Understand the big picture of AI, and the tools that now exist: what they can do, and what they still cannot.", "ar": "نفهم صورة الذكاء الاصطناعي الكبيرة، والأدوات اللي بقت موجودة. إيه اللي تعمله، وإيه اللي لسه ما تعملهوش."}
+      "text": {"en": "The big picture of AI, and the tools that now exist: what they can do, and what they still cannot.", "ar": "صورة الذكاء الاصطناعي الكبيرة، والأدوات اللي بقت موجودة. إيه اللي تعمله، وإيه اللي لسه ما تعملهوش."}
     },
     "specific": {
-      "title": {"en": "The institution's own question", "ar": "مسألة المؤسسة"},
-      "text": {"en": "Each institution works on its own problems, and leaves with one page: the first capability to start with.", "ar": "كل مؤسسة تشتغل على مسائلها هي. وتخرج بورقة واحدة: أول قدرة تبدأ بيها."}
+      "title": {"en": "The institution's own problems", "ar": "مسائل المؤسسة"},
+      "text": {"en": "Each institution works on its own problems, and leaves with a map of the first capability to start with.", "ar": "كل مؤسسة تشتغل على مسائلها هي، وتخرج بخريطة لأول قدرة تبدأ بيها."}
+    },
+    "examples": {
+      "en": "Radiology, diagnosis and drugs are examples of where we start. They are not the limit.",
+      "ar": "الأشعة، والتشخيص، والدواء أمثلة على اللي بنبدأ بيه. مش سقف الشغل."
     },
     "formatsTitle": {"en": "Three ways to sit", "ar": "ثلاث طرق للحضور"},
     "formats": [
@@ -156,9 +154,9 @@
     "steps": [
       {
         "id": "education",
-        "href": "/education",
+        "href": "/masterclass",
         "title": {"en": "Education", "ar": "تعليم"},
-        "text": {"en": "The wide picture of AI and its tools, then the institution's own problems, on one page.", "ar": "صورة الذكاء الاصطناعي وأدواته، وبعدين مسائل المؤسسة، في ورقة واحدة."}
+        "text": {"en": "Online, for leaders across the medical sector: the wide picture of AI and its tools, then each institution's own problems, and a map of the first capability.", "ar": "أونلاين، لقيادات القطاع الطبي كله: صورة الذكاء الاصطناعي وأدواته، وبعدين مسائل المؤسسة، وخريطة لأول قدرة."}
       },
       {
         "id": "study",
@@ -190,7 +188,7 @@
     "fields": {"en": "All fields", "ar": "كل المجالات"},
     "others": {"en": "Other institutions", "ar": "جهات تانية"},
     "who": {"en": "Who we work with", "ar": "لمين بنشتغل"},
-    "education": {"en": "Education", "ar": "التعليم"},
+    "education": {"en": "Masterclass", "ar": "الماستركلاس"},
     "system": {"en": "The system inside the institution", "ar": "النظام داخل المؤسسة"}
   }
 }
