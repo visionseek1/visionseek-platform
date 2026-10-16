@@ -1,7 +1,7 @@
 /**
- * غرفة العمليات تقرأ Notion حيًّا (المستوى 1) وتكتب طلبات المحرك (المستوى 2).
+ * غرفة العمليات تقرأ Notion حيًّا.
  * التوكن من متغير البيئة NOTION_TOKEN (سرّ في Vercel). بدون توكن: الغرفة تعرض اللقطة.
- * الكتابة الوحيدة المسموحة من الموقع: سطر في قاعدة «طلبات المحرك». لا تعديل على أي قاعدة تانية.
+ * الموقع ما بينشئش صفوف في «طلبات المحرك» (زر «شغّل دورة» اتلغى). لا حذف من أي قاعدة.
  */
 
 const API = "https://api.notion.com/v1";
@@ -192,31 +192,6 @@ export async function readLiveRoom(): Promise<LiveRoom | null> {
   }
   cache = { at: Date.now(), data };
   return data;
-}
-
-const ENGINES = new Set(["الدورة كاملة", "رادار الفرص", "رادار القدرات", "المعالج", "رادار العملاء", "المُجهِّز"]);
-
-/** يسجّل طلب تشغيل دورة. يرجّع رابط السطر أو يرمي خطأ. */
-export async function createEngineRequest(engine: string, note: string): Promise<string> {
-  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
-  const eng = ENGINES.has(engine) ? engine : "الدورة كاملة";
-  const today = new Date().toISOString().slice(0, 10);
-  const properties = {
-    "الطلب": { title: [{ text: { content: `${eng} — طلب من الغرفة ${today}` } }] },
-    "المحرك": { select: { name: eng } },
-    "الحالة": { select: { name: "جديد" } },
-    "اتطلب يوم": { date: { start: today } },
-    "مين طلب": { rich_text: [{ text: { content: "د. أحمد (من /ops)" } }] },
-    "ملاحظة الطلب": { rich_text: [{ text: { content: note.slice(0, 1800) } }] },
-  };
-  let res = await call("/pages", { parent: { type: "data_source_id", data_source_id: SOURCES.requests.ds }, properties });
-  if (res.status === 400 || res.status === 404) {
-    res = await call("/pages", { parent: { database_id: SOURCES.requests.db }, properties }, "2022-06-28");
-  }
-  if (!res.ok) throw new Error(`notion ${res.status} creating request`);
-  const json: any = await res.json();
-  cache = null;
-  return json.url as string;
 }
 
 /* ---------- المستوى 3.1: كروت وتعليقات (كتابة محصورة في «الشغل» و«تعليقات الغرفة»، بلا حذف) ---------- */
