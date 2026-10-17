@@ -36,7 +36,8 @@ export default function CapabilityBriefForm({locale}: {locale: Locale}) {
   }
 
   return (
-    <section className="vs-section vs-brief" id="capability-brief">
+    <section className="vs-section vs-brief" id="contact">
+      <span id="capability-brief" />
       <p className="vs-eyebrow">{tx(copy.eyebrow)}</p>
       <h2>{tx(copy.title)}</h2>
       <form className="vs-brief-form" onSubmit={onSubmit}>

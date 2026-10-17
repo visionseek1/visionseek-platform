@@ -16,3 +16,11 @@ export const institutionNav: NavSection[] = data.sections.filter(section => !isA
 const reportsNav: NavSection = visible(data.reports);
 const showReports = !isArchived(data.reports.path);
 export const institutionHeaderNav: NavSection[] = institutionNav.flatMap(item => item.path === '/news' && showReports ? [reportsNav, item] : [item]);
+
+/** The public bar: method, programs, domains, contact. The rest stays in the files, off this bar. */
+export const publicNav: NavLink[] = [
+  {href: '/method', en: 'Method', ar: 'المنهجية التشغيلية'},
+  {href: '/programs', en: 'Programs', ar: 'البرامج'},
+  {href: '/projects#fields', en: 'Domains', ar: 'المجالات'},
+  {href: '/#contact', en: 'Contact', ar: 'تواصل معنا'},
+];
