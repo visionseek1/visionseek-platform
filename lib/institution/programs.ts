@@ -11,9 +11,12 @@ type Concept = {
   name?: Text;
   classification?: Text;
   status?: Text;
+  challengeTitle?: Text;
   challenge?: Text;
+  approachTitle?: Text;
   approach?: Text;
   steps?: Step[];
+  cta?: Text;
 };
 /** Programs. Edited from /admin («البرامج»). Aegis is the first field program. */
 export const concepts: Concept[] = readContentDir<Concept & {position: number}>('programs');
@@ -29,8 +32,8 @@ export const programEntries: Entry[] = concepts.map(c => ({
   image: c.image,
   action: 'concept',
   cta: {
-    title: t('Request an Aegis Immersion Brief', 'اطلب موجز استكشاف نظام إيجيس'),
-    label: t('Request an Aegis Immersion Brief', 'اطلب موجز استكشاف نظام إيجيس'),
+    title: c.cta ?? t('Request a capability brief', 'اطلب موجز القدرة'),
+    label: c.cta ?? t('Request a capability brief', 'اطلب موجز القدرة'),
     href: '/#capability-brief',
   },
   facts: [
@@ -39,8 +42,8 @@ export const programEntries: Entry[] = concepts.map(c => ({
     {label: t('Status', 'الحالة'), value: c.status ?? t('Pilot-Ready', 'جاهز للتجربة')},
   ],
   blocks: [
-    {title: t('The operational reality', 'التحدي المؤسسي'), body: c.challenge},
-    {title: t('The grounded approach', 'منهجيتنا الميدانية لتشغيل Aegis'), body: c.approach},
+    {title: c.challengeTitle ?? t('The operational reality', 'التحدي المؤسسي'), body: c.challenge},
+    {title: c.approachTitle ?? t('The field method', 'المنهج الميداني'), body: c.approach},
     ...(c.steps ?? []).map(step => ({title: step.title, body: step.body})),
   ],
   related: ['/programs'],

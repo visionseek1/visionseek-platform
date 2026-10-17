@@ -41,13 +41,15 @@ test('the six section headers keep their ids and links', () => {
   }
 });
 
-test('Aegis is the only program, VS-P01, and it is pilot-ready', () => {
+test('Aegis and Apex are the programs, VS-P01 and VS-P02', () => {
   const programs = readDir('programs');
-  assert.deepEqual(programs.map(p => p.code), ['VS-P01']);
-  assert.equal(programs[0].slug, 'aegis');
-  assert.equal(programs[0].name.en, 'Aegis');
-  assert.equal(programs[0].steps.length, 3);
-  assert.ok(isText(programs[0].title) && isText(programs[0].summary) && isText(programs[0].challenge) && isText(programs[0].approach));
+  assert.deepEqual(programs.map(p => p.code), ['VS-P01', 'VS-P02']);
+  assert.deepEqual(programs.map(p => p.slug), ['aegis', 'apex']);
+  assert.equal(programs[1].name.en, 'Apex');
+  for (const program of programs) {
+    assert.equal(program.steps.length, 3);
+    assert.ok(isText(program.title) && isText(program.summary) && isText(program.challenge) && isText(program.approach) && isText(program.cta));
+  }
 });
 
 test('guide pages keep their section and slug, with at least one block each', () => {
