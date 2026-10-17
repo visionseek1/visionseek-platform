@@ -27,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },
     { path: "/domains", priority: 0.85 },
+    { path: "/biohealth", priority: 0.9 },
+    { path: "/ar/biohealth", priority: 0.9 },
     { path: "/ar/domains", priority: 0.85 },
     {path: '/korean-solutions', priority: 0.85}, {path: '/ar/korean-solutions', priority: 0.85},
     ...koreanSolutions.flatMap(k => [{path: `/korean-solutions/${k.slug}`, priority: 0.7}, {path: `/ar/korean-solutions/${k.slug}`, priority: 0.7}]),
