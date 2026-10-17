@@ -65,3 +65,28 @@
 .vs-brief-note{color:var(--grey);font-size:.9rem}
 @media(max-width:760px){.vs-architecture{grid-template-columns:1fr}}
 .vs-site .vs-button.vs-button-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}.vs-site .vs-button.vs-button-ghost:hover{border-color:var(--lime);color:var(--lime);background:transparent}
+
+.vs-desktop-nav{gap:2.75rem;padding-inline:2.4rem}
+
+/* One bar, the same measure as the page. The old capsule and the second strip are retired. */
+.vs-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.vs-header,.vs-header-overlay{position:sticky;top:0;background:rgba(7,9,8,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--vs-line)}
+.vs-utility{display:none}
+.vs-nav-wrap{height:4.75rem;padding:0 clamp(1.5rem,5vw,6rem);gap:2.5rem;background:transparent}
+.vs-logo{flex:0 0 11.25rem}
+.vs-desktop-nav{margin-inline-start:auto;gap:0;padding:0;background:none;border:0;backdrop-filter:none;font-size:.92rem}
+.vs-desktop-nav a{color:#e6e7e4;font-weight:550;padding:.55rem 1.05rem}
+.vs-site.locale-ar .vs-desktop-nav a{padding-inline:.85rem}
+.vs-desktop-nav a:hover,.vs-desktop-nav a[aria-current=page]{color:var(--lime)}
+.vs-desktop-nav a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--lime)}
+.vs-desktop-nav a.vs-nav-cta{margin-inline-start:.35rem;border:1px solid var(--lime);color:var(--lime);padding:.5rem .95rem}
+.vs-desktop-nav a.vs-nav-cta:hover{background:var(--lime);color:var(--black)}
+.vs-language{border:0;color:var(--grey);font-size:.78rem;letter-spacing:.08em;padding-inline:1rem}
+.vs-menu-sheet nav a{font-size:1.15rem;padding:1rem 0}
+.vs-menu-sheet nav a[aria-current=page]{color:var(--lime)}
+.vs-site [id]{scroll-margin-top:5.75rem}
+.vs-hero-copy{padding:4.5rem clamp(1.5rem,5vw,6rem) 5.5rem}
+.vs-footer-map nav{flex-direction:row;flex-wrap:wrap;gap:1.1rem 2rem;align-items:center}
+.vs-footer-map{padding-top:1.6rem;margin-top:1.6rem;border-top:1px solid var(--vs-line)}
+@media(max-width:1150px){.vs-desktop-nav{gap:0;padding:0;font-size:.82rem}.vs-desktop-nav a{padding-inline:.6rem}}
+@media(max-width:760px){.vs-nav-wrap{height:auto;min-height:4.25rem;padding-block:.85rem}.vs-hero-copy{padding:3.2rem 1.5rem 4.2rem}.vs-footer-map nav{gap:.8rem 1.2rem}}
