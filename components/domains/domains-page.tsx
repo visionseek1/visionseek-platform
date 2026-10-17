@@ -33,6 +33,7 @@ const domains = [
       en: "Join advanced pharmaceutical science and computational drug modelling with intelligent diagnostics from South Korea, and build research, treatment, and industrial capability for health and pharmaceutical institutions.",
       ar: "دمج البحث العلمي المتقدم في العلوم الصيدلانية والنمذجة الحاسوبية للأدوية مع تقنيات التشخيص الطبي الذكي في كوريا الجنوبية، لبناء قدرات بحثية وعلاجية وصناعية متقدمة للمؤسسات الصحية والدوائية.",
     },
+    arm: {href: "/biohealth", en: "Open the operating arm: VisionSeek BioHealth", ar: "استعرض الذراع التشغيلي: VisionSeek BioHealth"},
   },
   {
     tag: "04 / CRITICAL INFRASTRUCTURE, ENERGY & SEMICONDUCTORS",
@@ -64,6 +65,7 @@ export default function DomainsPage({locale}: {locale: Locale}) {
           <h2>{ar ? domain.ar : domain.en}</h2>
           <p>{ar ? domain.text.ar : domain.text.en}</p>
           {domain.program && <Link className={styles.badge} href={`${p}${domain.program.href}`}>{ar ? domain.program.ar : domain.program.en}<ArrowRight size={16}/></Link>}
+          {"arm" in domain && domain.arm && <Link className={styles.badge} href={`${p}${domain.arm.href}`}>{ar ? domain.arm.ar : domain.arm.en}<ArrowRight size={16}/></Link>}
         </article>)}
       </section>
       <section className={styles.cta}>
