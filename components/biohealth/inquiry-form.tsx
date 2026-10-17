@@ -11,9 +11,9 @@ const kinds = [
 ];
 
 const tracks = [
-  {id: "bioprocess", en: "Bioprocess engineering and CDMO localization", ar: "هندسة وتوطين عمليات التصنيع الحيوي والـ CDMO"},
-  {id: "diagnostics", en: "Sovereign diagnostic AI inside the facility", ar: "نشر الذكاء الاصطناعي التشخيصي السيادي داخل المنشأة"},
-  {id: "insilico", en: "In silico molecular drug research", ar: "حوسبة وتطوير أبحاث الأدوية الجزيئية"},
+  {id: "bioprocess", en: "Bioprocess engineering and CDMO localization", ar: "هندسة وتوطين عمليات التصنيع الحيوي والـ CDMO (Bioprocess)"},
+  {id: "diagnostics", en: "Sovereign diagnostic AI inside the facility", ar: "نشر الذكاء الاصطناعي التشخيصي السيادي داخل المنشأة (Diagnostics)"},
+  {id: "insilico", en: "In silico molecular drug research", ar: "حوسبة وتطوير أبحاث الأدوية الجزيئية (In Silico R&D)"},
 ];
 
 export default function BiohealthInquiry({locale}: {locale: Locale}) {
