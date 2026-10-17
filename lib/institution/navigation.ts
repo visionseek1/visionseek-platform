@@ -21,6 +21,6 @@ export const institutionHeaderNav: NavSection[] = institutionNav.flatMap(item =>
 export const publicNav: NavLink[] = [
   {href: '/method', en: 'Method', ar: 'المنهجية التشغيلية'},
   {href: '/programs', en: 'Programs', ar: 'البرامج'},
-  {href: '/projects#fields', en: 'Domains', ar: 'المجالات'},
+  {href: '/domains', en: 'Domains', ar: 'المجالات'},
   {href: '/#contact', en: 'Contact', ar: 'تواصل معنا'},
 ];

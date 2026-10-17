@@ -65,3 +65,5 @@
 .vs-brief-note{color:var(--grey);font-size:.9rem}
 @media(max-width:760px){.vs-architecture{grid-template-columns:1fr}}
 .vs-site .vs-button.vs-button-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}.vs-site .vs-button.vs-button-ghost:hover{border-color:var(--lime);color:var(--lime);background:transparent}
+
+.vs-desktop-nav{gap:2.75rem;padding-inline:2.4rem}
