@@ -44,7 +44,8 @@ export default function BiohealthPage({locale}: {locale: Locale}) {
   const units = [
     {
       code: "UNIT-01 // OPERATIONAL BIOPROCESS",
-      name: "VisionSeek Bioprocess Engineering",
+      name: "VisionSeek Helix",
+      line: "Bioprocess Engineering & cGMP Transfer",
       href: "/programs/apex",
       program: ar ? <>مدعومة ببروتوكول <En>VS-P02: Apex</En> (<En>Embedded Capability</En>)</> : "Driven by VS-P02: Apex (Embedded Capability)",
       body: ar
@@ -57,7 +58,8 @@ export default function BiohealthPage({locale}: {locale: Locale}) {
     },
     {
       code: "UNIT-02 // CLINICAL AI & GENOMICS",
-      name: "VisionSeek Sovereign Diagnostics",
+      name: "VisionSeek Sentinel",
+      line: "Sovereign Clinical Diagnostics & AI",
       href: "/programs/aegis",
       program: ar ? <>مدعومة بمعمارية <En>VS-P01: Aegis</En> (<En>Sovereign Infrastructure</En>)</> : "Driven by VS-P01: Aegis (Sovereign Infrastructure)",
       body: ar
@@ -118,6 +120,7 @@ export default function BiohealthPage({locale}: {locale: Locale}) {
           {units.map(unit => <article key={unit.code}>
             <p className={styles.kicker} dir="ltr"><En>{unit.code}</En></p>
             <h2><En>{unit.name}</En></h2>
+            <p className={styles.line}><En>{unit.line}</En></p>
             <Link href={`${p}${unit.href}`}>{unit.program}<ArrowRight size={16}/></Link>
             <p>{unit.body}</p>
             <p><strong>{ar ? "الجهات المستهدفة: " : "For: "}</strong>{unit.who}</p>

@@ -8,7 +8,9 @@
 .rule{border-top:1px solid rgba(255,255,255,.1)}
 .gaps{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem}
 .gaps article{padding-top:1.4rem}
-.gaps h2,.units h2{font-size:1.45rem;line-height:1.4;margin:.7rem 0 .9rem}
+.gaps h2{font-size:1.45rem;line-height:1.4;margin:.7rem 0 .9rem}
+.units h2{font-size:1.45rem;line-height:1.4;margin:.7rem 0 .35rem}
+.line{color:var(--grey);font-size:.95rem;margin:0 0 .9rem}
 .gaps p,.units p,.bridge p{color:var(--grey);line-height:1.85}
 .unitsHead{margin-bottom:2rem}
 .units>div{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
