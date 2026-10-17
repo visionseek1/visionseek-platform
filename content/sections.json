@@ -126,43 +126,15 @@
       },
       "image": "space",
       "notice": {
-        "en": "The six program concepts are proposed for exploration. They are not launched or funded programs.",
-        "ar": "تصورات البرامج الستة مقترحة للاستكشاف، وليست برامج أُطلقت أو اعتُمد تمويلها."
+        "en": "Aegis and Apex are open for joint institutional development.",
+        "ar": "Aegis و Apex مفتوحان للتطوير المشترك المؤسسي."
       },
       "links": [
         {
           "href": "/programs",
           "label": {
-            "en": "All programs",
-            "ar": "كل البرامج"
-          }
-        },
-        {
-          "href": "/programs/ideas",
-          "label": {
-            "en": "Ideas under exploration",
-            "ar": "أفكار قيد الاستكشاف"
-          }
-        },
-        {
-          "href": "/programs/challenges",
-          "label": {
-            "en": "Challenges",
-            "ar": "التحديات"
-          }
-        },
-        {
-          "href": "/programs/spotlights",
-          "label": {
-            "en": "Research spotlights",
-            "ar": "تحت المجهر"
-          }
-        },
-        {
-          "href": "/programs/program-lifecycle",
-          "label": {
-            "en": "How programs work",
-            "ar": "كيف تعمل البرامج؟"
+            "en": "Aegis",
+            "ar": "Aegis"
           }
         }
       ]

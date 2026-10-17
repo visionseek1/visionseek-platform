@@ -323,3 +323,5 @@
 .vs-wl-price-grid a{margin-top:auto;display:inline-flex;align-items:center;gap:.3rem;font-size:.8rem;line-height:1.5;color:var(--wl-soft);text-decoration:none}
 .vs-wl-price-grid a:hover{color:var(--lime)}
 @media(max-width:1100px){.vs-wl-price-grid{grid-template-columns:1fr}}
+
+.vs-institution-layout.is-single{grid-template-columns:minmax(0,1fr)}
