@@ -133,36 +133,8 @@
         {
           "href": "/programs",
           "label": {
-            "en": "All programs",
-            "ar": "كل البرامج"
-          }
-        },
-        {
-          "href": "/programs/ideas",
-          "label": {
-            "en": "Ideas under exploration",
-            "ar": "أفكار قيد الاستكشاف"
-          }
-        },
-        {
-          "href": "/programs/challenges",
-          "label": {
-            "en": "Challenges",
-            "ar": "التحديات"
-          }
-        },
-        {
-          "href": "/programs/spotlights",
-          "label": {
-            "en": "Research spotlights",
-            "ar": "تحت المجهر"
-          }
-        },
-        {
-          "href": "/programs/program-lifecycle",
-          "label": {
-            "en": "How programs work",
-            "ar": "كيف تعمل البرامج؟"
+            "en": "Aegis",
+            "ar": "Aegis"
           }
         }
       ]
