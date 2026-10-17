@@ -101,7 +101,7 @@ export default function BiohealthPage({locale}: {locale: Locale}) {
         </div>
       </section>
       <section className={`${styles.section} ${styles.rule}`} aria-label={ar ? "فجوة الواقع الميداني" : "The strategic reality gap"}>
-        <p className={styles.kicker}>{ar ? <>فجوة الواقع الميداني <En>// THE STRATEGIC REALITY GAP</En></> : "THE STRATEGIC REALITY GAP"}</p>
+        <p className={styles.kicker}>{ar ? <>{"فجوة الواقع الميداني "}<En>{"// THE STRATEGIC REALITY GAP"}</En></> : "THE STRATEGIC REALITY GAP"}</p>
         <div className={styles.gaps}>
           {gaps.map(gap => <article className={styles.rule} key={gap.tag}>
             <p className={styles.kicker} dir="ltr"><En>{gap.tag}</En></p>
@@ -112,7 +112,7 @@ export default function BiohealthPage({locale}: {locale: Locale}) {
       </section>
       <section className={styles.section} id="units">
         <div className={styles.unitsHead}>
-          <p className={styles.kicker}>{ar ? <>الوحدات التشغيلية الميدانية <En>// DEPLOYABLE OPERATING UNITS</En></> : "DEPLOYABLE OPERATING UNITS"}</p>
+          <p className={styles.kicker}>{ar ? <>{"الوحدات التشغيلية الميدانية "}<En>{"// DEPLOYABLE OPERATING UNITS"}</En></> : "DEPLOYABLE OPERATING UNITS"}</p>
         </div>
         <div className={styles.units}><div>
           {units.map(unit => <article key={unit.code}>
