@@ -1,0 +1,38 @@
+{
+  "position": 5,
+  "slug": "science-to-capability",
+  "code": "VS-P05",
+  "title": {
+    "en": "From scientific evidence to capability",
+    "ar": "من الدليل العلمي إلى القدرة"
+  },
+  "summary": {
+    "en": "Help an applied-research team identify whether a promising finding can support a reproducible, useful capability.",
+    "ar": "مساعدة فريق بحث تطبيقي على تحديد ما إذا كان اكتشاف واعد يدعم قدرة نافعة قابلة لإعادة الإثبات."
+  },
+  "image": "science",
+  "beneficiary": {
+    "en": "Research institutions and translation teams.",
+    "ar": "المؤسسات البحثية وفرق تحويل البحث إلى تطبيق."
+  },
+  "constraint": {
+    "en": "A published finding does not by itself establish reproducibility, implementation feasibility or real-world value.",
+    "ar": "النتيجة المنشورة لا تثبت وحدها قابلية التكرار أو التنفيذ أو القيمة في الواقع."
+  },
+  "hypothesis": {
+    "en": "An evidence map and an independent replication plan can identify the most consequential uncertainties before scaling.",
+    "ar": "يمكن لخريطة أدلة وخطة إعادة إثبات مستقلة تحديد أهم أوجه عدم اليقين قبل التوسع."
+  },
+  "test": {
+    "en": "Proposed test: select a non-clinical research case, document the evidence hierarchy and define an independent reproducibility experiment with a qualified specialist.",
+    "ar": "اختبار مقترح: اختيار حالة بحثية غير سريرية، وتوثيق مراتب الأدلة، وتصميم تجربة لإعادة الإثبات بالتعاون مع متخصص مؤهل."
+  },
+  "stop": {
+    "en": "Pause for irreproducible findings, unavailable critical data or unresolved ethical and access requirements.",
+    "ar": "تعليق المسار عند تعذر إعادة الإثبات أو غياب بيانات حاسمة أو عدم حسم المتطلبات الأخلاقية وصلاحيات الوصول."
+  },
+  "transfer": {
+    "en": "An accountable research lead accepts the protocol, evidence record and limits of use.",
+    "ar": "يعتمد قائد بحث مسؤول البروتوكول وسجل الأدلة وحدود الاستخدام."
+  }
+}

@@ -36,19 +36,17 @@ test('the six section headers keep their ids and links', () => {
   assert.deepEqual(sections.map(s => s.id).sort(), ['about', 'news', 'opportunities', 'programs', 'work-with-us', 'workshops']);
   for (const section of sections) {
     for (const key of ['title', 'eyebrow', 'intro']) assert.ok(isText(section[key]), `${section.id}.${key}`);
-    assert.ok(section.id === 'programs' ? section.links.length >= 1 : section.links.length >= 3, section.id);
+    assert.ok(section.links.length >= 3, section.id);
     for (const link of section.links) assert.ok(link.href.startsWith('/') && isText(link.label), section.id);
   }
 });
 
-test('Aegis and Apex are the programs, VS-P01 and VS-P02', () => {
+test('six program concepts, VS-P01 to VS-P06, each complete', () => {
   const programs = readDir('programs');
-  assert.deepEqual(programs.map(p => p.code), ['VS-P01', 'VS-P02']);
-  assert.deepEqual(programs.map(p => p.slug), ['aegis', 'apex']);
-  assert.equal(programs[1].name.en, 'Apex');
+  assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02', 'VS-P03', 'VS-P04', 'VS-P05', 'VS-P06']);
   for (const program of programs) {
-    assert.equal(program.steps.length, 3);
-    assert.ok(isText(program.title) && isText(program.summary) && isText(program.challenge) && isText(program.approach) && isText(program.cta));
+    for (const key of ['title', 'summary', 'beneficiary', 'constraint', 'hypothesis', 'test', 'stop', 'transfer']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
+    assert.equal(typeof program.position, 'number');
   }
 });
 
@@ -72,9 +70,7 @@ test('guide pages keep their section and slug, with at least one block each', ()
 test('home.json and about.json hold every bilingual block the pages render', () => {
   const home = read('home.json');
   assert.equal(home.hero.slides.length, 3);
-  assert.equal(home.hero.slides[0].title.en, 'Engineering Opportunities & Critical Capability Transfer');
-  assert.equal(home.hero.secondary.label.en, 'Explore Our Method');
-  assert.equal(home.method.title.en, 'How We Make It Possible — The Field Capability Method');
+  assert.equal(home.hero.slides[0].title.en, 'Make It Possible.');
   assert.equal(home.method.parts.length, 3);
   assert.deepEqual(home.method.parts.map(p => p.id), ['define', 'people', 'prove']);
   for (const slide of home.hero.slides) assert.ok(slide.image.startsWith('/') && isText(slide.title) && isText(slide.link));

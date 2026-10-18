@@ -7,9 +7,7 @@ export type HomeReadingRow = {href: string; image: string; category: Bi; title: 
 export type HomeMethodPart = {id: string; label: Bi; title: Bi; text: Bi; image: string; caption: Bi};
 export type HomeProofItem = {value: string; label: Bi};
 export type Home = {
-  hero: {slides: HomeSlide[]; firstSlideNote: Bi; secondary: {href: string; label: Bi}};
-  architecture: {eyebrow: Bi; title: Bi; image: string; imageAlt: Bi; text: Bi};
-  brief: {eyebrow: Bi; title: Bi; note: Bi; org: Bi; capability: Bi; email: Bi; submit: Bi; options: {value: string; en: string; ar: string}[]};
+  hero: {slides: HomeSlide[]; firstSlideNote: Bi};
   decade: {eyebrow: Bi; title: Bi; sub: Bi; link: Bi};
   proof: {heading: Bi; items: HomeProofItem[]};
   mission: {heading: Bi; image: string; imageAlt: Bi; eyebrow: Bi; title: Bi; text: Bi; link: Bi};

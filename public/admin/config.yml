@@ -119,8 +119,15 @@ collections:
             hint: "اختر القسم ليختفي من صفحته، واحذفه من هنا ليعود. الغلاف أعلى الرئيسية لا يُخفى."
             options:
                 # block-options:start
-              - {label: "الرئيسية ← المنهج", value: "home.method"}
+              - {label: "الرئيسية ← «مؤسستك قادرة على أكثر مما ترى اليوم»", value: "home.explainer"}
+              - {label: "الرئيسية ← الرسالة وما نقرأه", value: "home.vision"}
               - {label: "الرئيسية ← البرامج", value: "home.programs"}
+              - {label: "الرئيسية ← ماستركلاس والأخبار", value: "home.updates"}
+              - {label: "الرئيسية ← المنهج", value: "home.method"}
+              - {label: "الرئيسية ← المجتمعات", value: "home.communities"}
+              - {label: "الرئيسية ← المجالات", value: "home.fields"}
+              - {label: "الرئيسية ← اعمل معنا", value: "home.work"}
+              - {label: "الرئيسية ← التواصل", value: "home.contact"}
                 # block-options:end
   - name: navigation
     label: "الشريط العلوي والتذييل (الترتيب والروابط)"

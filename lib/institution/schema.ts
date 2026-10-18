@@ -11,7 +11,6 @@ export type Entry = {
   references?:{title:string;url:string}[];
   imageCredit?:{name:string;url:string};
   action?:'concept'|'interest'|'workshop';
-  cta?:{title:Text;label:Text;href:string};
 };
 export type Section = {id:SectionId;title:Text;eyebrow:Text;intro:Text;image:string;notice?:Text;links:{href:string;label:Text}[]};
 
