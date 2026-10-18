@@ -4,25 +4,25 @@
       {
         "image": "/field-space.jpg",
         "label": {
-          "en": "CRITICAL CAPABILITY TRANSFER · KOREA TO MENA",
-          "ar": "CRITICAL CAPABILITY TRANSFER · KOREA TO MENA"
+          "en": "VISIONSEEK",
+          "ar": "Cross-sector Opportunity, Capability & Solutions Studio"
         },
         "title": {
-          "en": "Engineering Opportunities & Critical Capability Transfer",
-          "ar": "هندسة الفرص ونقل القدرات الحرجة"
+          "en": "Make It Possible.",
+          "ar": "Make It Possible."
         },
         "sub": {
-          "en": "From South Korea to the Arab world: we discover what becomes possible when advanced technology, industrial know-how, and institutions connect.",
-          "ar": "من كوريا الجنوبية إلى العالم العربي: نكتشف ما يصبح ممكناً حين تتصل التقنية المتقدمة، والخبرة الصناعية، والمؤسسات."
+          "en": "Cross-sector Opportunity, Capability & Solutions Studio",
+          "ar": "استوديو الفرص والقدرات والحلول العابرة للقطاعات."
         },
         "text": {
           "en": "",
           "ar": ""
         },
-        "href": "#capability-brief",
+        "href": "/start",
         "link": {
-          "en": "Request a Capability Brief",
-          "ar": "اطلب موجز القدرة"
+          "en": "Build your solutions with us",
+          "ar": "ابنِ حلولك معنا"
         }
       },
       {
@@ -75,15 +75,8 @@
       }
     ],
     "firstSlideNote": {
-      "en": "",
-      "ar": ""
-    },
-    "secondary": {
-      "href": "#method",
-      "label": {
-        "en": "Explore Our Method",
-        "ar": "تعرف على المنهج"
-      }
+      "en": "From Korea to the Arab world: we bring capabilities that already work to the institutions that need them.",
+      "ar": "من كوريا إلى العالم العربي: ننقل قدرات أثبتت نجاحها إلى المؤسسات التي تحتاجها."
     }
   },
   "mission": {
@@ -216,12 +209,12 @@
   },
   "method": {
     "eyebrow": {
-      "en": "THE FIELD CAPABILITY METHOD",
-      "ar": "منهج القدرة الميداني"
+      "en": "INSTITUTIONAL CAPABILITY ARCHITECT",
+      "ar": "مهندس القدرات المؤسسية"
     },
     "title": {
-      "en": "How We Make It Possible — The Field Capability Method",
-      "ar": "كيف نجعلها ممكنة — منهج القدرة الميداني"
+      "en": "How we make it possible",
+      "ar": "كيف نجعلها ممكنة"
     },
     "link": {
       "en": "Our full method",
@@ -235,61 +228,61 @@
       {
         "id": "define",
         "label": {
-          "en": "01 · Grounding & Immersion",
-          "ar": "01 · ادرس الواقع"
+          "en": "Define the capability",
+          "ar": "حدد القدرة"
         },
         "title": {
-          "en": "01. Study the ground, not only the reports",
-          "ar": "01. ادرس الواقع، لا تكتفِ بالتقارير"
+          "en": "Start with what should become possible.",
+          "ar": "نبدأ بما يجب أن يصبح ممكنًا."
         },
         "text": {
-          "en": "We do not rely on theories far from the work. We go in beside your teams, inside the institution, and study the operating challenges, the data gaps, and the complexity of the internal environment, so we understand what is actually happening on the ground.",
-          "ar": "لا نعتمد على النظريات البعيدة عن الواقع؛ بل ننزل جنباً إلى جنب مع فرقك داخل المؤسسة لندرس بدقة التحديات التشغيلية، فجوات البيانات، وتعقيدات البيئة الداخلية لنفهم ما يحدث فعلياً على الأرض."
+          "en": "Who should become capable of doing what? Define the capability, understand why it does not exist today, and find the path that can change that limit.",
+          "ar": "مَن يجب أن يصبح قادرًا على فعل ماذا؟ نحدد القدرة، ونفهم ما يمنع وجودها اليوم، ونبحث عن المسار الذي يغير حدود الممكن."
         },
         "image": "/field-cities.jpg",
         "caption": {
-          "en": "01 / GROUNDING & IMMERSION",
-          "ar": "01 / دراسة الواقع"
+          "en": "01—03 / CAPABILITY · LIMIT · PATH",
+          "ar": "01—03 / القدرة · الحد · المسار"
         }
       },
       {
         "id": "people",
         "label": {
-          "en": "02 · Capability Matching",
-          "ar": "02 · هندس المعمارية"
+          "en": "Assemble the right elements",
+          "ar": "اجمع العناصر الصحيحة"
         },
         "title": {
-          "en": "02. Engineer the architecture that fits",
-          "ar": "02. هندس المعمارية المناسبة"
+          "en": "The right people. The best of what exists.",
+          "ar": "أفضل الأشخاص. وأفضل ما هو متاح."
         },
         "text": {
-          "en": "We match the operating reality found in the field with the latest work of laboratories and innovation centers worldwide, especially in South Korea, and design a technical and operating architecture made for your own sovereign need.",
-          "ar": "نطابق واقعك التشغيلي المكتشف ميدانياً مع أحدث ما أنتجته المختبرات ومراكز الابتكار العالمية (خصوصاً في كوريا الجنوبية)، لنصمم لك بنية تقنية وتشغيلية مخصصة بالكامل لاحتياجاتك السيادية."
+          "en": "Assemble the team the mission needs. Find the best knowledge, technology and opportunities available globally. Then design how those elements work as one capability.",
+          "ar": "نجمع الفريق الذي تحتاجه المهمة، ونبحث عن أفضل المعرفة والتقنيات والفرص المتاحة عالميًا. ثم نصمم كيف تعمل هذه العناصر كقدرة واحدة."
         },
         "image": "/field-chips.jpg",
         "caption": {
-          "en": "02 / CAPABILITY MATCHING & ARCHITECTURE",
-          "ar": "02 / المطابقة والمعمارية"
+          "en": "04—06 / PEOPLE · CAPABILITIES · ARCHITECTURE",
+          "ar": "04—06 / الأشخاص · القدرات · المنظومة"
         }
       },
       {
         "id": "prove",
         "label": {
-          "en": "03 · Deploy, Operate & Evolve",
-          "ar": "03 · أثبت وشغّل"
+          "en": "Prove, operate and evolve",
+          "ar": "اختبر وشغّل وطوّر"
         },
         "title": {
-          "en": "03. Prove it, run it, and keep developing it",
-          "ar": "03. أثبت، شغّل، وطور باستمرار"
+          "en": "An idea is not a capability until it works.",
+          "ar": "الفكرة ليست قدرة حتى تعمل."
         },
         "text": {
-          "en": "We build the system, run it, and test it through controlled field pilots. We keep watching performance and developing it beside your team, so the value lasts and the effect is real.",
-          "ar": "نبني النظام، نشغله ونختبره عبر تجارب ميدانية محكومة، ونستمر في مراقبة الأداء وتطويره جنباً إلى جنب مع فريقك لضمان استدامة القيمة وتحقيق الأثر الحقيقي."
+          "en": "Turn assumptions into measurable tests. Put the capability into real operations with clear responsibilities and governance. Keep learning as the boundaries of possibility change.",
+          "ar": "نحوّل الافتراضات إلى اختبارات مقاسة. نضع القدرة في العمليات الحقيقية بمسؤوليات وحوكمة واضحة، ثم نتعلم ونطوّر باستمرار."
         },
         "image": "/field-industry.jpg",
         "caption": {
-          "en": "03 / DEPLOY, OPERATE & EVOLVE",
-          "ar": "03 / التشغيل والتطوير"
+          "en": "07—09 / PROOF · OPERATION · EVOLUTION",
+          "ar": "07—09 / الإثبات · التشغيل · التطوير"
         }
       }
     ]
@@ -340,76 +333,5 @@
       "en": "See what is already built",
       "ar": "شوف اللي اتبنى فعلًا"
     }
-  },
-  "architecture": {
-    "eyebrow": {
-      "en": "THE STRATEGIC ARCHITECTURE BEHIND VISIONSEEK",
-      "ar": "البنية الاستراتيجية خلف VisionSeek"
-    },
-    "title": {
-      "en": "The Strategic Architecture Behind VisionSeek",
-      "ar": "البنية الاستراتيجية خلف VisionSeek"
-    },
-    "image": "/ahmed-abdelalim.jpg",
-    "imageAlt": {
-      "en": "Ahmed Abdelalim, founder of VisionSeek",
-      "ar": "أحمد عبدالعليم، مؤسس VisionSeek"
-    },
-    "text": {
-      "en": "VisionSeek was founded by Ahmed Abdelalim — Founder & Chief Capability Architect. The platform was built on a rigorous methodology that joins advanced scientific research (in pharmaceutical sciences and computational drug design) with commercial, cross-border operations in South Korea. We work at the intersection of deep technology and institutional strategy, and we reject theoretical advisory in favor of engineering real, field-proven, evidence-backed capabilities that move institutions ahead.",
-      "ar": "تأسست VisionSeek بقيادة أحمد عبدالعليم — المؤسس وكبير مهندسي القدرات. قامت المنصة على منهجية صارمة تدمج بين البحث العلمي المتقدم (في مجالات العلوم الصيدلانية والتصميم الدوائي المحسوب) والتشغيل التجاري والعابر للحدود في كوريا الجنوبية. نحن نعمل في تقاطع التكنولوجيا العميقة والاستراتيجية المؤسسية، رافضين الاستشارات النظرية لصالح هندسة قدرات حقيقية، ميدانية، ومثبتة بالأدلة تدفع المؤسسات للأمام."
-    }
-  },
-  "brief": {
-    "eyebrow": {
-      "en": "CAPABILITY BRIEF",
-      "ar": "موجز القدرة"
-    },
-    "title": {
-      "en": "Start an Institutional Capability Conversation",
-      "ar": "ابدأ حوار القدرات المؤسسية"
-    },
-    "note": {
-      "en": "The request reaches the team. There is no automatic reply.",
-      "ar": "يصل الطلب إلى الفريق. لا يوجد رد آلي."
-    },
-    "org": {
-      "en": "Organization / Institution Name",
-      "ar": "اسم المؤسسة أو الجهة"
-    },
-    "capability": {
-      "en": "Critical Capability of Interest",
-      "ar": "القدرة الحرجة المستهدفة"
-    },
-    "email": {
-      "en": "Professional Email",
-      "ar": "البريد المهني"
-    },
-    "submit": {
-      "en": "Request Capability Brief",
-      "ar": "اطلب موجز القدرة"
-    },
-    "options": [
-      {
-        "value": "Biohealth & Medical AI",
-        "en": "Biohealth & Medical AI",
-        "ar": "الصحة الحيوية والذكاء الاصطناعي الطبي"
-      },
-      {
-        "value": "Institutional AI",
-        "en": "Institutional AI",
-        "ar": "الذكاء الاصطناعي المؤسسي"
-      },
-      {
-        "value": "Industrial Autonomy",
-        "en": "Industrial Autonomy",
-        "ar": "الاستقلال الصناعي"
-      },
-      {
-        "value": "Cross-Border Sourcing",
-        "en": "Cross-Border Sourcing",
-        "ar": "التوريد العابر للحدود"
-      }
-    ]
   }
 }

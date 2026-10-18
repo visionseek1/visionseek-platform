@@ -45,7 +45,13 @@
   ],
   "related": [
     {
-      "href": "/programs/aegis"
+      "href": "/programs/institutional-ai"
+    },
+    {
+      "href": "/programs/trusted-sourcing"
+    },
+    {
+      "href": "/programs/compute-capability"
     }
   ]
 }
