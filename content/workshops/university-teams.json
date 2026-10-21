@@ -1,40 +1,4 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A student-service letter",
-        "ar": "خطاب شؤون طلاب"
-      },
-      "body": {
-        "en": "Answer a recurring request — a transcript question, a deadline, a missing document — in language the student can act on.",
-        "ar": "الرد على طلب يتكرر: سؤال عن بيان، أو موعد، أو مستند ناقص، بلغة يستطيع الطالب أن يتصرف بها."
-      }
-    },
-    {
-      "title": {
-        "en": "A committee brief",
-        "ar": "مذكرة لجنة"
-      },
-      "body": {
-        "en": "Pull the question, the options, and the open points into two pages, from papers the department already has.",
-        "ar": "جمع السؤال والخيارات والنقاط المفتوحة في صفحتين، من أوراق يملكها القسم أصلًا."
-      }
-    },
-    {
-      "title": {
-        "en": "A course note",
-        "ar": "ملاحظة منهج"
-      },
-      "body": {
-        "en": "A lecturer's rough points become a clean note for students. The lecturer decides what is taught. The tool only clears the writing.",
-        "ar": "نقاط أستاذ متفرقة تصبح ملاحظة مرتبة للطلاب. الأستاذ يقرر ماذا يُدرَّس. الأداة ترتب الكتابة فقط."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "",
-    "ar": ""
-  },
   "position": 3,
   "slug": "university-teams",
   "kind": "institution",
@@ -44,101 +8,272 @@
     "staff"
   ],
   "outcome": {
-    "en": "The team finishes the paper, the student letter, and the committee brief without handing judgment to the tool.",
-    "ar": "الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من غير أن يسلّم الحكم للأداة."
+    "en": "Get your university ahead of its students on AI, instead of running after them.",
+    "ar": "اجعل جامعتك تسبق طلابها إلى الذكاء الاصطناعي، لا أن تلحق بهم."
   },
   "summary": {
-    "en": "For faculty support, student services, and the people who prepare the meeting. Academic judgment stays with the academic.",
-    "ar": "لمساندة هيئة التدريس، وخدمات الطلاب، ومن يجهّز الاجتماع. الحكم العلمي يبقى لصاحبه."
+    "en": "Your students use AI every day, and most of them didn't learn it from you. The leading universities have started using it to serve their students and run their administration. Dr. Ahmed Abdelalim studies your university, chooses with you what fits from universities around the world in leadership, administration and student services, then teaches your team to carry it on. Academic judgement stays with academics.",
+    "ar": "طلاب جامعتك يستعملون الذكاء الاصطناعي كل يوم، وأغلبهم لم يتعلّموه منها. والجامعات الرائدة بدأت تستعمله في خدمة طلابها وإدارتها. يدرس د. أحمد عبدالعليم جامعتك، ويختار معك من تجارب الجامعات في العالم ما يناسبها في القيادة والإدارة وخدمات الطلاب، ثم يعلّم فريقك كيف يمضي فيه بنفسه. والحكم العلمي يبقى لأهله."
   },
+  "pace": {
+    "title": {
+      "en": "What a university loses when its students get there first",
+      "ar": "ما تخسره الجامعة حين يسبقها طلابها"
+    },
+    "consequence": {
+      "en": "A university that doesn't lead its students here will find them learning it elsewhere.",
+      "ar": "والجامعة التي لا تقود طلابها في هذا، ستجدهم يتعلّمونه من غيرها."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "92% vs 36%",
+          "ar": "92% مقابل 36%"
+        },
+        "title": {
+          "en": "Students got there before their universities",
+          "ar": "الطلاب سبقوا جامعاتهم"
+        },
+        "body": {
+          "en": "In a UK Higher Education Policy Institute survey (February 2025), 92% of students used AI tools, up from 66% a year earlier, while only 36% had received AI-skills training from their institution.",
+          "ar": "في مسح لمعهد سياسات التعليم العالي البريطاني (فبراير 2025): 92% من الطلاب يستعملون أدوات الذكاء الاصطناعي، بعد أن كانوا 66% قبل عام، و36% فقط تلقّوا تدريبًا على مهاراته من جامعتهم."
+        },
+        "lesson": {
+          "en": "Your students are learning alone and making mistakes alone. A university that doesn't teach them leaves the defining skill of their time to chance.",
+          "ar": "طلابك يتعلّمون وحدهم، ويخطئون وحدهم. والجامعة التي لا تعلّمهم تترك أهم مهارة في زمنهم للصدفة."
+        },
+        "source": {
+          "title": "HEPI · Student Generative AI Survey 2025 · 26 February 2025",
+          "url": "https://www.hepi.ac.uk/2025/02/26/student-generative-ai-survey-2025/"
+        }
+      },
+      {
+        "figure": {
+          "en": "39%",
+          "ar": "39%"
+        },
+        "title": {
+          "en": "Use without rules or budget",
+          "ar": "استخدام بلا قواعد ولا ميزانية"
+        },
+        "body": {
+          "en": "In EDUCAUSE's 2025 AI Landscape Study of about 800 higher-education respondents, only 39% said their institution had AI acceptable-use policies, and only 2% were funding AI from new sources.",
+          "ar": "في دراسة «EDUCAUSE» لعام 2025 التي شملت نحو 800 مشارك من مؤسسات التعليم العالي: 39% فقط قالوا إن لدى مؤسستهم سياسات لاستخدام الذكاء الاصطناعي، و2% فقط خصّصت له تمويلًا جديدًا."
+        },
+        "lesson": {
+          "en": "What a university doesn't plan for happens anyway, only without leadership.",
+          "ar": "ما لا تخطط له الجامعة يحدث فيها على كل حال، لكن بلا قيادة."
+        },
+        "source": {
+          "title": "GovTech, reporting the 2025 EDUCAUSE AI Landscape Study · 25 February 2025",
+          "url": "https://www.govtech.com/education/higher-ed/survey-higher-ed-ai-adoption-faces-financial-policy-hurdles"
+        }
+      }
+    ]
+  },
+  "shiftsTitle": {
+    "en": "What a university gains when it leads",
+    "ar": "ما تكسبه الجامعة حين تقود هي"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "+3.3 points",
+        "ar": "+3.3 نقطة"
+      },
+      "title": {
+        "en": "Georgia State: admitted students who didn't slip away",
+        "ar": "جورجيا ستيت: طلاب مقبولون لم يضيعوا"
+      },
+      "body": {
+        "en": "Many US universities lose 10–20% of admitted students before the first day. When Georgia State University used an AI assistant to answer their questions and remind them of each step, the students it reached were 3.3 percentage points more likely to start on time, in a randomised trial.",
+        "ar": "تفقد جامعات أمريكية كثيرة بين 10 و20% من طلابها المقبولين قبل أول يوم دراسة. وحين استعملت جامعة جورجيا ستيت مساعدًا ذكيًا يجيب أسئلتهم ويذكّرهم بكل خطوة، صار الطلاب الذين وصلهم أكثر التحاقًا في الموعد بـ3.3 نقطة مئوية، في تجربة عشوائية محكّمة."
+      },
+      "lesson": {
+        "en": "Every admitted student who never arrives is a seat and revenue the university has lost.",
+        "ar": "كل طالب مقبول لا يصل، مقعد ودخل خسرتهما الجامعة."
+      },
+      "source": {
+        "title": "Brookings · Freezing 'summer melt' in its tracks: Increasing college enrollment with AI · 11 September 2018",
+        "url": "https://www.brookings.edu/articles/freezing-summer-melt-in-its-tracks-increasing-college-enrollment-with-ai/"
+      }
+    },
+    {
+      "figure": {
+        "en": "60%",
+        "ar": "60%"
+      },
+      "title": {
+        "en": "Khalifa University: professors' time back",
+        "ar": "جامعة خليفة: وقت الأستاذ يعود إليه"
+      },
+      "body": {
+        "en": "Khalifa University's president in Abu Dhabi says an AI platform has cut professors' time on administration, class preparation, exam setting and grading by 60%.",
+        "ar": "يقول رئيس جامعة خليفة في أبوظبي إن منصة ذكاء اصطناعي خفّضت وقت الأساتذة في الإدارة وتحضير المحاضرات وإعداد الاختبارات والتصحيح بنسبة 60%."
+      },
+      "lesson": {
+        "en": "A regional experience: time back from paperwork to research and students.",
+        "ar": "تجربة من منطقتنا: وقت يعود من الورق إلى البحث والطالب."
+      },
+      "source": {
+        "title": "Gulf News · AI platform reduces professor admin time by 60% at Khalifa University · 7 October 2026",
+        "url": "https://gulfnews.com/uae/abu-dhabi/ai-platform-reduces-professor-admin-time-by-60-at-khalifa-university-1.500701738"
+      }
+    },
+    {
+      "figure": {
+        "en": "14.5 working days a month",
+        "ar": "14.5 يوم عمل شهريًا"
+      },
+      "title": {
+        "en": "NTU Singapore: student services move faster",
+        "ar": "جامعة نانيانغ: خدمات الطلاب أسرع"
+      },
+      "body": {
+        "en": "NTU Singapore's chief information officer says its AI assistant for student services saves around 14.5 working days every month.",
+        "ar": "يقول مدير المعلوماتية في جامعة نانيانغ التكنولوجية بسنغافورة إن مساعد الذكاء الاصطناعي لخدمات الطلاب يوفّر نحو 14.5 يوم عمل كل شهر."
+      },
+      "lesson": {
+        "en": "Staff days that go back to the student who needs a person.",
+        "ar": "أيام موظفين تعود إلى الطالب الذي يحتاج إنسانًا."
+      },
+      "source": {
+        "title": "Frontier Enterprise · NTU Singapore, CloudMile slash admin work with generative AI · 30 July 2025",
+        "url": "https://www.frontier-enterprise.com/ntu-singapore-cloudmile-slash-admin-work-with-generative-ai/"
+      }
+    }
+  ],
   "audienceRole": {
-    "en": "Managers and staff: department coordinators, student-service officers, and the people who draft for a committee.",
-    "ar": "مديرون وموظفون: منسقو الأقسام، وموظفو شؤون الطلاب، ومن يسوّد للجنة."
+    "en": "For the university president, vice-presidents and the heads of administration and student services, with the members of their team they choose.",
+    "ar": "لرئيس الجامعة ونوابه وقيادات الإدارة وخدمات الطلاب، ومعهم من يختارونه من فريقهم."
   },
   "audienceInstitution": {
-    "en": "A university. The cases come from its own term: a syllabus note, a student letter, a committee paper.",
-    "ar": "جامعة. الحالات من فصلها هي: ملاحظة منهج، أو خطاب طالب، أو ورقة لجنة."
+    "en": "Any university or college, public or private. We start from what your university has already built.",
+    "ar": "أي جامعة أو كلية، حكومية كانت أو خاصة. نبدأ مما بنته جامعتك بالفعل."
   },
   "whyProblem": {
-    "en": "The same explanation is written ten times for ten students. The committee paper is assembled the night before. The academic still has to decide, and the drafting eats the week.",
-    "ar": "الشرح نفسه يُكتب عشر مرات لعشرة طلاب. ورقة اللجنة تُجمع في الليلة السابقة. صاحب العلم ما زال يقرر، والمسودة تأكل الأسبوع."
+    "en": "What worked at Georgia State or in Singapore was built on their systems, students and way of working. What fits your university has to be chosen to its measure, not decided by a tool vendor.",
+    "ar": "ما نجح في جورجيا أو سنغافورة بُني على أنظمتهم وطلابهم وطريقة عمل فرقهم. ما يناسب جامعتك يُختار على مقاسها، ولا يقرره بائع أداة."
   },
   "whyEvidence": {
-    "en": "On 8 August 2024 UNESCO published an AI competency framework for teachers: 15 competencies across five dimensions, including AI for professional learning. It is a public reference for what teaching staff need to master. It is not a program we run in UNESCO's name.",
-    "ar": "في 8 أغسطس 2024 نشرت اليونسكو إطار كفايات للمعلمين في الذكاء الاصطناعي: 15 كفاية في خمسة أبعاد، منها الذكاء الاصطناعي للتعلّم المهني. مرجع عام لما يحتاج عضو هيئة التدريس أن يتقنه. وليس برنامجًا نديره باسم اليونسكو."
+    "en": "In a BCG survey of 11,749 workers in 14 markets, including the UAE and Saudi Arabia (June 2026), a clear strategy lifted measurable business impact by 25 percentage points; better tools alone moved it by about 5.",
+    "ar": "وفي دراسة لـ«BCG» على 11,749 موظفًا في 14 سوقًا، منها الإمارات والسعودية (يونيو 2026): الوضوح في الاستراتيجية رفع الأثر الملموس على العمل 25 نقطة مئوية، والأدوات الأفضل وحدها رفعته نحو 5 نقاط فقط."
   },
   "source": {
-    "title": "UNESCO · AI competency framework for teachers · 8 August 2024",
-    "url": "https://www.unesco.org/en/articles/ai-competency-framework-teachers"
+    "title": "BCG · AI Is Reshaping Jobs Faster Than Companies Are Reshaping Work · 3 June 2026",
+    "url": "https://www.bcg.com/press/3june2026-ai-reshaping-jobs-faster-than-companies-reshaping-work"
   },
   "before": {
-    "en": "Five questions about the work already on the team's desk this term.",
-    "ar": "خمسة أسئلة عن الشغل الموجود فعلًا على مكتب الفريق هذا الفصل."
+    "en": "Before the session we sit with the university's leadership to learn where administrative and academic time goes, and how students reach services today, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادة الجامعة لنعرف أين يذهب وقت الإدارة والأساتذة، وكيف يصل الطالب إلى الخدمة اليوم. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "We open the university's own cases. A person who owns the academic or administrative decision reviews every page before it moves.",
-    "ar": "نفتح حالات الجامعة نفسها. من يملك القرار العلمي أو الإداري يراجع كل صفحة قبل أن تتحرك."
+    "en": "Dr. Ahmed works with the university's leadership and team on administration and student services as they are today, sets out what leading universities have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع قيادة الجامعة وفريقها على الإدارة وخدمات الطلاب كما هي اليوم، ويضع أمامكم ما وصلت إليه الجامعات الرائدة، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "Thirty days later we measure time returned on those tasks, and which tools are still open on a normal week. Nothing is reported as a result before then.",
-    "ar": "بعد ثلاثين يومًا نقيس الوقت العائد في هذه المهام، وأي أدوات ما زالت مفتوحة في أسبوع عادي. لا شيء يُروى كنتيجة قبل ذلك."
+    "en": "Your university leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج جامعتك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which student letter is rewritten because the first version is too cold or too vague?",
-      "ar": "أي خطاب لطالب يُعاد لأن النسخة الأولى باردة أو غامضة؟"
+      "en": "How many of your students use AI, and how many learned it from you?",
+      "ar": "كم من طلابكم يستعمل الذكاء الاصطناعي، وكم منهم تعلّمه منكم؟"
     },
     {
-      "en": "Which committee paper is built from old files the night before the meeting?",
-      "ar": "أي ورقة لجنة تُبنى من ملفات قديمة في الليلة السابقة للاجتماع؟"
+      "en": "How many admitted students never reach the first day?",
+      "ar": "كم طالبًا مقبولًا لا يصل إلى أول يوم دراسة؟"
     },
     {
-      "en": "Which explanation do teachers repeat, and could a first draft carry the repetition?",
-      "ar": "أي شرح يعيده الأساتذة، وهل تستطيع مسودة أولى أن تحمل التكرار؟"
+      "en": "Which question do students ask every term that is answered from scratch each time?",
+      "ar": "ما السؤال الذي يتكرر من الطلاب كل فصل، ويُجاب في كل مرة من جديد؟"
     },
     {
-      "en": "Where does a coordinator lose a day moving text between forms?",
-      "ar": "أين يضيع على المنسق يوم في نقل النص بين النماذج؟"
+      "en": "Which university in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي جامعة في العالم تتابعونها، وتتمنون أن تبدأوا من حيث وصلت؟"
     },
     {
-      "en": "Which judgment must never leave the academic who owns it?",
-      "ar": "أي حكم لا يجوز أن يغادر صاحبه من هيئة التدريس؟"
+      "en": "What will never be handed to a tool in your university, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في جامعتكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A first-draft habit for student letters, with the sender still responsible for the sentence that goes out.",
-      "ar": "عادة مسودة أولى لخطابات الطلاب، والمرسل يبقى مسؤولًا عن الجملة التي تخرج."
+      "en": "A clear picture of where your university stands against its own students on AI: where they are ahead, and where you can lead.",
+      "ar": "صورة واضحة لمكان جامعتك من طلابها في الذكاء الاصطناعي: أين سبقوها، وأين تستطيع أن تقودهم."
     },
     {
-      "en": "One committee brief prepared from the department's real papers.",
-      "ar": "مذكرة لجنة واحدة جُهزت من أوراق القسم الحقيقية."
+      "en": "A first step in student services and administration, chosen to fit your university.",
+      "ar": "خطوة أولى في خدمات الطلاب والإدارة، مختارة على مقاس جامعتك."
     },
     {
-      "en": "A written line between drafting help and academic judgment.",
-      "ar": "حد مكتوب بين مساعدة المسودة والحكم العلمي."
+      "en": "A clear rule for what goes to a tool and what stays academic judgement.",
+      "ar": "قاعدة واضحة لما يُسلَّم للأداة، وما يبقى حكمًا علميًا لأهله."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Leadership, administration and student services. Academic judgement and assessment stay with academics.",
+    "ar": "القيادة والإدارة وخدمات الطلاب. الحكم العلمي والتقييم الأكاديمي يبقيان لأهلهما."
+  },
   "faq": [
     {
       "q": {
-        "en": "Does the tool grade or decide academic matters?",
-        "ar": "هل تصحّح الأداة أو تحسم أمرًا علميًا؟"
+        "en": "Does the masterclass touch academic judgement or assessment?",
+        "ar": "هل يتدخل الماستركلاس في الحكم العلمي أو التقييم؟"
       },
       "a": {
-        "en": "No. It drafts. Grades, admissions, and academic judgment stay with the people who hold them today.",
-        "ar": "لا. هي تسوّد. الدرجات والقبول والحكم العلمي تبقى عند أصحابها اليوم."
+        "en": "No. It works on leadership, administration and student services. Academic judgement stays with those who own it.",
+        "ar": "لا. يعمل على القيادة والإدارة وخدمات الطلاب. والحكم العلمي يبقى لأهله."
       }
     },
     {
       "q": {
-        "en": "Is this a UNESCO program?",
-        "ar": "هل هذا برنامج لليونسكو؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "No. UNESCO's framework is a public source for the problem. We are not delivering it, and we are not affiliated with UNESCO.",
-        "ar": "لا. إطار اليونسكو مصدر عام للمسألة. نحن لا نقدمه، ولسنا جهة تابعة لليونسكو."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for real student data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات حقيقية عن الطلاب."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your students got there first, and the university is still waiting",
+      "ar": "طلابك سبقوا إليه، والجامعة ما زالت تنتظر"
+    },
+    "whyNow": {
+      "en": "What worked in the world's universities doesn't transfer as it is",
+      "ar": "ما نجح في جامعات العالم لا يُنقل كما هو"
+    },
+    "how": {
+      "en": "A masterclass built on your university",
+      "ar": "ماستركلاس يُبنى على جامعتك"
+    },
+    "before": {
+      "en": "We learn your university first",
+      "ar": "نفهم جامعتك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading universities",
+      "ar": "نختار معكم من تجارب الجامعات الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your university",
+      "ar": "ما يبقى في جامعتك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your university",
+    "ar": "تحدّث مع د. أحمد عن جامعتك"
+  }
 }

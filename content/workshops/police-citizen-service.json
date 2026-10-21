@@ -1,40 +1,4 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A citizen's written request",
-        "ar": "طلب مواطن مكتوب"
-      },
-      "body": {
-        "en": "Turn a long complaint into a clear reply: what was received, what the office can do, and what happens next. The staff member edits and sends it.",
-        "ar": "تحويل شكوى طويلة إلى رد واضح: ماذا وصل، وماذا يستطيع المكتب، وما الخطوة التالية. الموظف يعدّل ويرسل."
-      }
-    },
-    {
-      "title": {
-        "en": "An internal administrative record",
-        "ar": "محضر إداري داخلي"
-      },
-      "body": {
-        "en": "Turn scattered meeting notes into a one-page record of what was agreed in the office. Not an operational report.",
-        "ar": "تحويل ملاحظات اجتماع متفرقة إلى محضر من صفحة بما اتُفق عليه في الديوان. ليس تقرير عمليات."
-      }
-    },
-    {
-      "title": {
-        "en": "A service notice",
-        "ar": "إعلان خدمة"
-      },
-      "body": {
-        "en": "Rewrite a procedure the public needs to follow, in language a visitor can use without a second visit.",
-        "ar": "إعادة كتابة إجراء يحتاجه الجمهور، بلغة يستطيع معها المراجع أن يتمه من غير زيارة ثانية."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "Administration and citizen service only. Investigation, surveillance, monitoring, and every security function are out. If a task is operational, it does not enter the room.",
-    "ar": "الإدارة وخدمة المواطن فقط. التحقيق والمراقبة والمتابعة وكل وظيفة أمنية خارج الماستركلاس. إن كانت المهمة عملياتية فهي لا تدخل الغرفة."
-  },
   "position": 2,
   "slug": "police-citizen-service",
   "kind": "institution",
@@ -44,101 +8,250 @@
     "staff"
   ],
   "outcome": {
-    "en": "Citizen replies move faster, and internal administration gets clearer, without the session ever touching security work.",
-    "ar": "ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوضح، والجلسة لا تقترب من أي عمل أمني."
+    "en": "Bring your force's hours back from paperwork to the public.",
+    "ar": "أعِد ساعات شرطتك من الورق إلى الناس."
   },
   "summary": {
-    "en": "For the desks that answer people and run the office. Not for operations, and not for watching anyone.",
-    "ar": "لمكاتب ترد على الناس وتدير الديوان. ليست للعمليات، وليست لمراقبة أحد."
+    "en": "In every police station, hours go to recording, memos and answering the same question again: hours that could go back to serving the public. Dr. Ahmed Abdelalim studies your administration and citizen service, chooses with you what fits from police forces around the world, then teaches your team to carry it on. Security work stays entirely outside the masterclass.",
+    "ar": "في كل مركز شرطة ساعات تذهب إلى التسجيل والمذكرات والرد على السؤال نفسه، وهي ساعات يمكن أن تعود إلى خدمة الناس. يدرس د. أحمد عبدالعليم إدارتك وخدمة المواطن فيها، ويختار معك من تجارب الشرطة في العالم ما يناسبها، ثم يعلّم فريقك كيف يمضي فيه بنفسه. والعمل الأمني كله خارج الماستركلاس."
   },
+  "pace": {
+    "title": {
+      "en": "What a police force loses when its time drowns in paperwork",
+      "ar": "ما تخسره الشرطة حين يغرق وقتها في الورق"
+    },
+    "consequence": {
+      "en": "Every hour an officer spends on paperwork is an hour away from the public.",
+      "ar": "وكل ساعة يقضيها الضابط على الورق، ساعة غاب فيها عن الناس."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "38 million hours",
+          "ar": "38 مليون ساعة"
+        },
+        "title": {
+          "en": "Police hours lost to process",
+          "ar": "ساعات شرطة تضيع في الإجراءات"
+        },
+        "body": {
+          "en": "A policing productivity review commissioned by the UK Home Office estimated that better processes could free about 38 million hours of police time over five years, and found that call takers spend an average of 14 minutes recording each incident.",
+          "ar": "قدّرت مراجعة إنتاجية الشرطة التي كلّفت بها وزارة الداخلية البريطانية أن تحسين الإجراءات يمكن أن يحرّر نحو 38 مليون ساعة من وقت الشرطة خلال خمس سنوات، ووجدت أن موظف البلاغات يقضي في المتوسط 14 دقيقة في تسجيل البلاغ الواحد."
+        },
+        "lesson": {
+          "en": "That is time your force already has, and spends on process instead of people.",
+          "ar": "هذا وقت يملكه جهازك الآن، وينفقه على الإجراء بدل الناس."
+        },
+        "source": {
+          "title": "UK Home Office (commissioned) · Policing Productivity Review · October 2023",
+          "url": "https://assets.publishing.service.gov.uk/media/655784fa544aea000dfb2f9a/Policing_Productivity_Review.pdf"
+        }
+      },
+      {
+        "figure": {
+          "en": "3,000 officers",
+          "ar": "3,000 ضابط"
+        },
+        "title": {
+          "en": "Paperwork swallows a whole force",
+          "ar": "الورق يأكل قوة كاملة"
+        },
+        "body": {
+          "en": "In its white paper on police reform, the UK government says freeing officers from paperwork could give up to 6 million hours a year back to the frontline: the equivalent of 3,000 officers.",
+          "ar": "في الكتاب الأبيض لإصلاح الشرطة، تقول الحكومة البريطانية إن تحرير الضباط من الورق يعيد إلى الميدان ما يصل إلى 6 ملايين ساعة في السنة، أي ما يعادل 3,000 ضابط."
+        },
+        "lesson": {
+          "en": "Imagine adding thousands of officers to your force without hiring one.",
+          "ar": "تخيّل أن تضيف إلى قوتك آلاف الضباط، دون أن تعيّن أحدًا."
+        },
+        "source": {
+          "title": "GOV.UK · White paper sets out reforms to policing · 26 January 2026",
+          "url": "https://www.gov.uk/government/news/white-paper-sets-out-reforms-to-policing"
+        }
+      }
+    ]
+  },
+  "shiftsTitle": {
+    "en": "What a force gains when it rethinks its work",
+    "ar": "ما تكسبه الشرطة حين تعيد ترتيب عملها"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "7 steps → 4",
+        "ar": "من 7 خطوات إلى 4"
+      },
+      "title": {
+        "en": "Dubai Police: a shorter path for the public",
+        "ar": "شرطة دبي: معاملة أقصر للمتعامل"
+      },
+      "body": {
+        "en": "Dubai Police has brought AI into 29 administrative operations, cutting the steps to obtain a 'minor accident' report from seven to four. Its virtual officer, Amna, held 20,000 conversations with the public in 2023, in Arabic and English.",
+        "ar": "أدخلت شرطة دبي الذكاء الاصطناعي في 29 عملية إدارية، فنزلت خطوات الحصول على تقرير «حادث بسيط» من سبع إلى أربع. وأجرت الضابطة الافتراضية «آمنة» 20 ألف محادثة مع الجمهور في 2023، بالعربية والإنجليزية."
+      },
+      "lesson": {
+        "en": "A regional experience: every step removed gives time back to the public and the officer alike.",
+        "ar": "تجربة من منطقتنا: كل خطوة تُختصر، وقت يعود إلى المتعامل وإلى الضابط معًا."
+      },
+      "source": {
+        "title": "Dubai Media Office · Dubai Police employs artificial intelligence · 13 June 2024",
+        "url": "https://mediaoffice.ae/en/news/2024/june/13-06/dubai-police-employs-artificial"
+      }
+    },
+    {
+      "figure": {
+        "en": "45%",
+        "ar": "45%"
+      },
+      "title": {
+        "en": "UK: almost half of non-emergency contacts handled without staff",
+        "ar": "بريطانيا: قرابة نصف البلاغات غير الطارئة دون موظف"
+      },
+      "body": {
+        "en": "Bobbi, the AI assistant used by Thames Valley and Hampshire police, handles about 200 non-emergency conversations a day, resolves nearly 45% without staff, and freed more than 3,200 contact-centre hours in its first six months.",
+        "ar": "مساعد الذكاء الاصطناعي «بوبي» لدى شرطتي وادي التايمز وهامبشاير يتلقى نحو 200 محادثة غير طارئة يوميًا، ويُنهي قرابة 45% منها دون تدخل موظف، وحرّر أكثر من 3,200 ساعة لمراكز الاتصال في ستة أشهر."
+      },
+      "lesson": {
+        "en": "Staff freed from the repeated question can give their time to the people who really need a person.",
+        "ar": "الموظف الذي لا ينشغل بالسؤال المكرر، يتفرغ لمن يحتاج إنسانًا فعلًا."
+      },
+      "source": {
+        "title": "Greatest Hits Radio · Bobbi AI transforms policing access six months after launch · 1 July 2026",
+        "url": "https://www.hellorayo.co.uk/greatest-hits/oxfordshire/news/bobbi-ai-policing-access-thames-valley-hampshire"
+      }
+    }
+  ],
   "audienceRole": {
-    "en": "Managers and staff in administration and citizen service.",
-    "ar": "مديرو وموظفو الإدارة وخدمة المواطن."
+    "en": "For police leadership and the heads of administration and citizen service, with the members of their team they choose.",
+    "ar": "لقيادة الشرطة ومديري الإدارة وخدمة المواطن، ومعهم من يختارونه من فريقهم."
   },
   "audienceInstitution": {
-    "en": "A police institution, limited to the administrative side and the citizen's request. Security work is outside this masterclass.",
-    "ar": "مؤسسة شرطية، في جانبها الإداري وطلب المواطن فقط. العمل الأمني خارج هذا الماستركلاس."
+    "en": "Any police force or interior ministry. We start from what you have already built in digital service, not from scratch.",
+    "ar": "أي جهاز شرطة أو وزارة داخلية. نبدأ مما بنيتموه بالفعل في الخدمة الرقمية، لا من الصفر."
   },
   "whyProblem": {
-    "en": "The same citizen question is rewritten several times. The internal note is assembled by hand from scattered comments. The delay is in the writing, not in a missing system.",
-    "ar": "سؤال المواطن نفسه يُعاد صياغته أكثر من مرة. المذكرة الداخلية تُجمع يدويًا من تعليقات متفرقة. التأخير في الكتابة، لا في نظام ناقص."
+    "en": "What worked in Dubai or the UK was built on their law, systems and way of working. What fits your force has to be chosen to its measure, not decided by a tool vendor.",
+    "ar": "ما نجح في دبي أو بريطانيا بُني على قانونهم وأنظمتهم وطريقة عمل فرقهم. ما يناسب شرطتك يُختار على مقاسها، ولا يقرره بائع أداة."
   },
   "whyEvidence": {
-    "en": "The OECD's Governing with Artificial Intelligence report, published on 18 September 2025, describes government use of AI to tailor internal processes and public services, and to improve the job quality and learning of public servants. That is the only lane this masterclass uses.",
-    "ar": "تقرير OECD المعنون Governing with Artificial Intelligence، المنشور في 18 سبتمبر 2025، يصف استعمال الحكومات للذكاء الاصطناعي في تكييف الإجراءات الداخلية والخدمات العامة، وفي تحسين جودة عمل الموظف العام وتعلّمه. هذا هو المسار الوحيد لهذا الماستركلاس."
+    "en": "Even in the UK, the National Audit Office found that only 21% of 87 government bodies had an AI strategy, and 70% lacked people with the skills. The tools are open to everyone; understanding is what makes the difference.",
+    "ar": "وحتى في بريطانيا، وجد مكتب التدقيق الوطني أن 21% فقط من 87 جهة حكومية لديها استراتيجية للذكاء الاصطناعي، وأن 70% تعاني نقص من يملكون مهاراته. الأداة متاحة للجميع، والفهم هو الفارق."
   },
   "source": {
-    "title": "OECD · Governing with Artificial Intelligence · 18 September 2025",
-    "url": "https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en.html"
+    "title": "UK National Audit Office · Use of artificial intelligence in government · 15 March 2024",
+    "url": "https://www.nao.org.uk/wp-content/uploads/2024/03/use-of-artificial-intelligence-in-government-summary.pdf"
   },
   "before": {
-    "en": "Five questions about the office and the citizen desk. Nothing about an operation, a case, or a person under watch.",
-    "ar": "خمسة أسئلة عن الديوان ومكتب المواطن. لا شيء عن عملية، أو قضية، أو شخص تحت نظر."
+    "en": "Before the session we sit with your leadership to learn how administration and citizen service work today, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف كيف تعمل الإدارة وخدمة المواطن اليوم. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team works on its own administrative cases: a reply, a short record, a service notice. A person still reads and sends whatever leaves the building.",
-    "ar": "الفريق يشتغل على حالاته الإدارية: رد، أو محضر قصير، أو إعلان خدمة. الإنسان يقرأ ويرسل كل ما يخرج من المبنى."
+    "en": "Dr. Ahmed works with your leadership and team on administration and citizen service as they are today, sets out what police forces around the world have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع قيادتك وفريقها على العمل الإداري وخدمة المواطن كما هما اليوم، ويضع أمامكم ما وصلت إليه أجهزة الشرطة في العالم، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those administrative tasks, and which tools are still in daily use.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام الإدارية، والأدوات التي ما زالت تُستعمل كل يوم."
+    "en": "Your leadership leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج قيادتك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which citizen reply is rewritten because the first draft is never clear enough?",
-      "ar": "أي رد على مواطن يُعاد لأن المسودة الأولى لا تخرج واضحة؟"
+      "en": "How many hours a week do your officers spend on paperwork?",
+      "ar": "كم ساعة يقضيها ضباطك على الورق في الأسبوع؟"
     },
     {
-      "en": "Which administrative report is stitched together from scattered notes?",
-      "ar": "أي تقرير إداري يُجمع من ملاحظات متفرقة؟"
+      "en": "Which question do citizens ask every day that is answered from scratch each time?",
+      "ar": "ما السؤال الذي يتكرر من المواطنين كل يوم، ويُجاب في كل مرة من جديد؟"
     },
     {
-      "en": "Which question from visitors is answered from scratch every time?",
-      "ar": "أي سؤال من المراجعين يُجاب في كل مرة من الصفر؟"
+      "en": "Where does the public wait longer than it should, and why?",
+      "ar": "أين ينتظر المتعامل أطول مما يجب، ولماذا؟"
     },
     {
-      "en": "Where do hours go into copying the same words from one form to another?",
-      "ar": "أين تضيع الساعات في نقل الكلام نفسه من نموذج إلى نموذج؟"
+      "en": "Which police force in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي جهاز شرطة في العالم تتابعونه، وتتمنون أن تبدأوا من حيث وصل؟"
     },
     {
-      "en": "What must a person still check before any reply goes out?",
-      "ar": "ما الذي يجب أن يراجعه إنسان قبل خروج أي رد؟"
+      "en": "What will never be handed to a tool in your force, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في جهازكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A reply pattern for recurring citizen requests, still signed by the officer who owns it.",
-      "ar": "نمط رد للطلبات المتكررة من المواطنين، ويبقى التوقيع لصاحب الاختصاص."
+      "en": "Specific hours that could move from paperwork back to the public, and where to start.",
+      "ar": "ساعات محددة يمكن أن تعود من الورق إلى الناس، ومن أين تبدأ."
     },
     {
-      "en": "One administrative note produced from the team's own material.",
-      "ar": "مذكرة إدارية واحدة خرجت من مادة الفريق نفسه."
+      "en": "Clearer, faster citizen service, chosen from police forces around the world to fit yours.",
+      "ar": "خدمة مواطن أوضح وأسرع، مختارة من تجارب الشرطة في العالم على مقاس جهازك."
     },
     {
-      "en": "A short list of tasks that stay human, written down so the tool does not wander.",
-      "ar": "قائمة قصيرة بالمهام التي تبقى للإنسان، مكتوبة حتى لا تشرد الأداة."
+      "en": "A clear rule for what goes to a tool and what stays an officer's decision.",
+      "ar": "قاعدة واضحة لما يُسلَّم للأداة، وما يبقى قرار ضابط."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Administration and citizen service only. Investigation, surveillance and all security work stay outside the masterclass.",
+    "ar": "الإدارة وخدمة المواطن فقط. التحقيق والمراقبة وكل عمل أمني خارج الماستركلاس."
+  },
   "faq": [
     {
       "q": {
-        "en": "Does this cover security work?",
-        "ar": "هل يشمل الماستركلاس العمل الأمني؟"
+        "en": "Does the masterclass touch security work or operations?",
+        "ar": "هل يقترب الماستركلاس من العمل الأمني أو العمليات؟"
       },
       "a": {
-        "en": "No. Not investigation, not surveillance, not monitoring. The door is the citizen desk and the administrative office.",
-        "ar": "لا. لا تحقيق، ولا مراقبة، ولا متابعة. الباب هو مكتب المواطن والديوان الإداري."
+        "en": "No. It works on administration and citizen service only: memos, reports, answering the public, organising work. Anything to do with security or investigation stays outside.",
+        "ar": "لا. يعمل على الإدارة وخدمة المواطن فقط: المذكرات، والتقارير، والرد على الناس، وتنظيم العمل. وكل ما يمس الأمن والتحقيق خارجه."
       }
     },
     {
       "q": {
-        "en": "Who sends the reply?",
-        "ar": "من يرسل الرد؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "The person who already owns it. The tool drafts. It does not speak for the institution.",
-        "ar": "صاحبه الأصلي. الأداة تُسوّد. وهي لا تتكلم باسم المؤسسة."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for any data about people or cases.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب أي بيانات عن أشخاص أو قضايا."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your force has the hours; paperwork takes them",
+      "ar": "جهازك يملك الساعات، والورق يأخذها"
+    },
+    "whyNow": {
+      "en": "What worked for Dubai Police doesn't transfer as it is",
+      "ar": "ما نجح في شرطة دبي لا يُنقل كما هو"
+    },
+    "how": {
+      "en": "A masterclass built on your force",
+      "ar": "ماستركلاس يُبنى على جهازك أنت"
+    },
+    "before": {
+      "en": "We learn your administration first",
+      "ar": "نفهم إدارتك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from forces around the world",
+      "ar": "نختار معكم من تجارب الشرطة في العالم"
+    },
+    "after": {
+      "en": "Your leadership carries it on",
+      "ar": "قيادتك تمضي بنفسها"
+    },
+    "leavesWith": {
+      "en": "What stays with your force",
+      "ar": "ما يبقى في جهازك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your force",
+    "ar": "تحدّث مع د. أحمد عن جهازك"
+  }
 }

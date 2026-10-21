@@ -1,40 +1,4 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A delay notice",
-        "ar": "إعلان تأخير"
-      },
-      "body": {
-        "en": "One paragraph a passenger can act on: the new time, where to wait, and who to ask. The duty manager approves it.",
-        "ar": "فقرة يستطيع المسافر أن يتصرف بها: الموعد الجديد، وأين ينتظر، ومن يسأل. مدير النوبة يعتمدها."
-      }
-    },
-    {
-      "title": {
-        "en": "A shift note",
-        "ar": "مذكرة نوبة"
-      },
-      "body": {
-        "en": "What the last shift already told passengers, so the next shift does not invent a second story.",
-        "ar": "ما قالته النوبة السابقة للمسافرين، حتى لا تخترع النوبة التالية حكاية ثانية."
-      }
-    },
-    {
-      "title": {
-        "en": "A service reply",
-        "ar": "رد خدمة"
-      },
-      "body": {
-        "en": "An answer to a recurring passenger question about baggage, a connection, or a meeting point. Not a security instruction.",
-        "ar": "جواب عن سؤال مسافر يتكرر: أمتعة، أو ترانزيت، أو نقطة التقاء. ليس تعليمًا أمنيًا."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "Passenger information and internal coordination only. Security screening, identity systems, and biometrics are out of this masterclass.",
-    "ar": "إعلام المسافر والتنسيق الداخلي فقط. التفتيش الأمني وأنظمة الهوية والبصمات خارج هذا الماستركلاس."
-  },
   "position": 4,
   "slug": "airport-teams",
   "kind": "institution",
@@ -44,101 +8,272 @@
     "staff"
   ],
   "outcome": {
-    "en": "Passenger information and the internal note that coordinates it are written once, clearly, by the team that owns them.",
-    "ar": "معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُكتب مرة واحدة وبوضوح، على يد الفريق الذي يملكها."
+    "en": "Make your airport tell passengers before they have to ask.",
+    "ar": "اجعل مطارك يخبر المسافر قبل أن يسأل."
   },
   "summary": {
-    "en": "For the people who tell passengers what is happening, and who write the note that keeps the terminal aligned. Not for security screening.",
-    "ar": "لمن يخبر المسافر بما يجري، ويكتب المذكرة التي تُبقي المبنى على خط واحد. ليست لتفتيش أمني."
+    "en": "When a flight is disrupted, many passengers still find out from the airport board rather than a message sent ahead. The leading airports have closed that gap. Dr. Ahmed Abdelalim studies your airport, chooses with you what fits from airports around the world in passenger information and operations coordination, then teaches your team to carry it on.",
+    "ar": "حين تضطرب الرحلة، يعرف كثير من المسافرين من لوحة المطار، لا من رسالة وصلتهم قبلها. والمطارات الرائدة سدّت هذه الفجوة. يدرس د. أحمد عبدالعليم مطارك، ويختار معك من تجارب المطارات في العالم ما يناسبه في إعلام المسافر وتنسيق التشغيل، ثم يعلّم فريقك كيف يمضي فيه بنفسه."
   },
+  "pace": {
+    "title": {
+      "en": "What your airport loses when news reaches passengers late",
+      "ar": "ما يخسره مطارك حين يتأخر الخبر عن المسافر"
+    },
+    "consequence": {
+      "en": "Passengers don't remember why the flight was late; they remember how they were treated while they waited.",
+      "ar": "والمسافر لا يتذكر سبب التأخير، يتذكر كيف عُومل وهو ينتظر."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "34%",
+          "ar": "34%"
+        },
+        "title": {
+          "en": "Only a third satisfied with updates",
+          "ar": "ثلث المسافرين فقط راضون عن التحديثات"
+        },
+        "body": {
+          "en": "In UK Civil Aviation Authority research on disrupted flights, only 34% of passengers were satisfied with how often they were updated and 57% wanted more information; 41% learned of the disruption from airport speakers or boards, although 92% had checked their flight status before arriving.",
+          "ar": "في بحث لهيئة الطيران المدني البريطانية عن الرحلات المضطربة: 34% فقط من المسافرين رضوا عن تواتر التحديثات، و57% أرادوا معلومات أكثر، و41% عرفوا بالاضطراب من سماعات المطار ولوحاته، مع أن 92% تحققوا من حالة رحلتهم قبل الوصول."
+        },
+        "lesson": {
+          "en": "Passengers are already ahead of their airport, and an airport that lags behind them loses their trust.",
+          "ar": "المسافر سبق مطاره إلى المعلومة، والمطار الذي يتأخر عنه يخسر ثقته."
+        },
+        "source": {
+          "title": "UK Civil Aviation Authority · Only one in ten passengers feel fully informed of their rights when a flight is disrupted · 25 July 2025",
+          "url": "https://www.caa.co.uk/newsroom/news/new-research-reveals-only-one-in-ten-passengers-feel-fully-informed-of-their-rights-when-flight-is-disrupted/"
+        }
+      },
+      {
+        "figure": {
+          "en": "+1.5% revenue",
+          "ar": "+1.5% في الإيرادات"
+        },
+        "title": {
+          "en": "Passenger satisfaction is revenue",
+          "ar": "رضا المسافر دخلٌ للمطار"
+        },
+        "body": {
+          "en": "Airports Council International found, from a survey of 550,000 passengers, that every 1% increase in passenger satisfaction goes with a 1.5% increase in an airport's non-aeronautical revenue.",
+          "ar": "وجد مجلس المطارات الدولي، من مسح شمل 550 ألف مسافر، أن كل زيادة بنسبة 1% في رضا المسافرين تقابلها زيادة بنسبة 1.5% في الإيرادات غير الجوية للمطار."
+        },
+        "lesson": {
+          "en": "Information that reaches passengers on time isn't an extra; it is part of your airport's income.",
+          "ar": "المعلومة التي تصل المسافر في وقتها ليست خدمة إضافية؛ إنها جزء من دخل مطارك."
+        },
+        "source": {
+          "title": "Aviation Week, reporting an ACI World white paper · 26 April 2016",
+          "url": "https://aviationweek.com/air-transport/airports-networks/aci-discusses-influence-customer-service-revenue"
+        }
+      }
+    ]
+  },
+  "shiftsTitle": {
+    "en": "What an airport gains when it knows before it is asked",
+    "ar": "ما يكسبه المطار حين يعرف قبل أن يُسأل"
+  },
+  "shifts": [
+    {
+      "figure": {
+        "en": "80% → 95%",
+        "ar": "من 80% إلى 95%"
+      },
+      "title": {
+        "en": "Dubai International: more flights on time",
+        "ar": "مطار دبي: رحلات أكثر في موعدها"
+      },
+      "body": {
+        "en": "Dubai International says on-time performance reached 95% after it adopted AI systems, compared with about 80% before, and that turnaround fell by five minutes on average per flight: 45,000 hours a year.",
+        "ar": "يقول مطار دبي الدولي إن نسبة الرحلات في موعدها بلغت 95% بعد اعتماد أنظمة الذكاء الاصطناعي، مقارنة بنحو 80% قبلها، وإن وقت تجهيز الطائرة بين رحلتين نقص خمس دقائق في المتوسط، أي 45 ألف ساعة في السنة."
+      },
+      "lesson": {
+        "en": "A regional experience: more capacity from the same infrastructure, without pouring new concrete.",
+        "ar": "تجربة من منطقتنا: سعة أكبر من البنية نفسها، دون صبّ متر خرسانة جديد."
+      },
+      "source": {
+        "title": "The National · Dubai International Airport hails AI efficiency boost · 17 October 2025",
+        "url": "https://www.thenationalnews.com/business/2025/10/17/dubai-airports-ai-use-boosts-flight-punctuality-and-speeds-up-turnarounds/"
+      }
+    },
+    {
+      "figure": {
+        "en": "8.6% → 96.5%",
+        "ar": "من 8.6% إلى 96.5%"
+      },
+      "title": {
+        "en": "Dubai Airports: passenger contact from weakest to best",
+        "ar": "مطارات دبي: التواصل مع المسافر من الأضعف إلى الأفضل"
+      },
+      "body": {
+        "en": "After Dubai Airports rebuilt its passenger contact centre as one technology-enabled service, in Arabic and English around the clock, its mystery-shopper rating rose from 8.6% to 96.5%.",
+        "ar": "بعد أن أعادت مطارات دبي بناء مركز التواصل مع المسافرين خدمةً واحدة تدعمها التقنية، بالعربية والإنجليزية وعلى مدار الساعة، ارتفع تقييمه في برنامج «المتسوق السري» من 8.6% إلى 96.5%."
+      },
+      "lesson": {
+        "en": "No single tool made the difference; redesigning how the airport reaches its passengers did.",
+        "ar": "الفرق لم تصنعه أداة واحدة، بل إعادة تصميم الطريقة التي يصل بها المطار إلى المسافر."
+      },
+      "source": {
+        "title": "Dubai Airports · Contact centre wins two prestigious accolades · 13 April 2023",
+        "url": "https://media.dubaiairports.ae/dubai-airports-contact-centre-wins-two-prestigious-accolades-for-excellent-customer-service/"
+      }
+    },
+    {
+      "figure": {
+        "en": "30–40% faster",
+        "ar": "أسرع 30–40%"
+      },
+      "title": {
+        "en": "Heathrow: faster answers for passengers",
+        "ar": "هيثرو: الرد على المسافر أسرع"
+      },
+      "body": {
+        "en": "Heathrow's director of marketing and digital says AI in passenger service made responses about 30–40% faster, and that 95% of cases no longer need a member of staff.",
+        "ar": "يقول مدير التسويق والرقمنة في مطار هيثرو إن الذكاء الاصطناعي في خدمة المسافرين جعل الرد أسرع بنحو 30–40%، وإن 95% من الحالات لم تعد تحتاج تدخل موظف."
+      },
+      "lesson": {
+        "en": "Your staff are freed for the passenger who needs a person, not the question that keeps coming back.",
+        "ar": "موظفوك يتفرغون للمسافر الذي يحتاج إنسانًا، لا للسؤال الذي يتكرر."
+      },
+      "source": {
+        "title": "diginomica · Agentforce flight status update from Heathrow Airport · 11 June 2025",
+        "url": "https://diginomica.com/node/28926"
+      }
+    }
+  ],
   "audienceRole": {
-    "en": "Managers and staff in passenger information, irregular operations communication, and terminal coordination.",
-    "ar": "مديرو وموظفو إعلام المسافرين، والتواصل عند اضطراب التشغيل، وتنسيق المبنى."
+    "en": "For airport leadership and the heads of passenger experience, operations coordination and administration, with the members of their team they choose.",
+    "ar": "لقيادة المطار ومديري تجربة المسافر وتنسيق التشغيل والإدارة، ومعهم من يختارونه من فريقهم."
   },
   "audienceInstitution": {
-    "en": "An airport. The cases are public information and internal coordination. Identity systems and security screening stay out.",
-    "ar": "مطار. الحالات معلومة للجمهور وتنسيق داخلي. أنظمة الهوية والتفتيش الأمني خارجها."
+    "en": "Any airport or civil aviation authority. We start from what your airport has already built.",
+    "ar": "أي مطار أو هيئة طيران مدني. نبدأ مما بناه مطارك بالفعل."
   },
   "whyProblem": {
-    "en": "When a flight moves, the explanation is rewritten in several rooms, and the passenger hears a different sentence at each desk.",
-    "ar": "حين تتحرك رحلة، يُعاد شرحها في أكثر من غرفة، ويسمع المسافر جملة مختلفة عند كل مكتب."
+    "en": "What worked at Dubai or Heathrow was built on their systems, partners and way of working. What fits your airport has to be chosen to its measure, not decided by a tool vendor.",
+    "ar": "ما نجح في دبي أو هيثرو بُني على أنظمتهم وشركائهم وطريقة عمل فرقهم. ما يناسب مطارك يُختار على مقاسه، ولا يقرره بائع أداة."
   },
   "whyEvidence": {
-    "en": "IATA's Global Passenger Survey, released on 5 November 2025, found that 78% of passengers want a smartphone that can book, pay, and navigate airport processes. The public already expects the airport's words to travel with them. This masterclass is about those words and the note behind them. It is not a biometrics program and not a security program.",
-    "ar": "في استبيان المسافرين العالمي لاتحاد النقل الجوي (IATA)، الصادر في 5 نوفمبر 2025، يريد 78% من المسافرين هاتفًا ينجز به الحجز والدفع والتنقل داخل إجراءات المطار. الجمهور ينتظر أن تمشي كلمة المطار معه. هذا الماستركلاس عن تلك الكلمة وعن المذكرة التي وراءها. وليست برنامج بصمات ولا برنامج أمن."
+    "en": "In a BCG survey of 11,749 workers in 14 markets, including the UAE and Saudi Arabia (June 2026), a clear strategy lifted measurable business impact by 25 percentage points; better tools alone moved it by about 5.",
+    "ar": "وفي دراسة لـ«BCG» على 11,749 موظفًا في 14 سوقًا، منها الإمارات والسعودية (يونيو 2026): الوضوح في الاستراتيجية رفع الأثر الملموس على العمل 25 نقطة مئوية، والأدوات الأفضل وحدها رفعته نحو 5 نقاط فقط."
   },
   "source": {
-    "title": "IATA · Global Passenger Survey 2025 · 5 November 2025",
-    "url": "https://www.iata.org/en/pressroom/2025-releases/2025-11-05-02/"
+    "title": "BCG · AI Is Reshaping Jobs Faster Than Companies Are Reshaping Work · 3 June 2026",
+    "url": "https://www.bcg.com/press/3june2026-ai-reshaping-jobs-faster-than-companies-reshaping-work"
   },
   "before": {
-    "en": "Five questions about the messages the terminal already struggles to keep consistent.",
-    "ar": "خمسة أسئلة عن الرسائل التي يصعب على المبنى أن يوحّدها اليوم."
+    "en": "Before the session we sit with the airport's leadership to learn how news reaches passengers today and how teams coordinate inside the building, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادة المطار لنعرف كيف يصل الخبر إلى المسافر اليوم، وكيف تتنسق الجهات داخل المبنى. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team rewrites its own notices and coordination notes. A duty manager still approves what the passenger will read.",
-    "ar": "الفريق يعيد كتابة إعلاناته ومذكرات التنسيق. مدير النوبة يبقى من يعتمد ما سيقرأه المسافر."
+    "en": "Dr. Ahmed works with the airport's leadership and team on passenger information and operations coordination as they are today, sets out what the leading airports have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع قيادة المطار وفريقها على إعلام المسافر وتنسيق التشغيل كما هما اليوم، ويضع أمامكم ما وصلت إليه المطارات الرائدة، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days: how long a notice now takes, and whether the same tool is still used on a disrupted day.",
-    "ar": "بعد 30 يومًا: كم يأخذ الإعلان الآن، وهل الأداة نفسها ما زالت تُستخدم في يوم مضطرب."
+    "en": "Your airport leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج إدارة مطارك بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which passenger notice is rewritten differently in two halls?",
-      "ar": "أي إعلان للمسافر يُعاد بصيغتين في صالتين؟"
+      "en": "When a flight is delayed, how many minutes pass before passengers know?",
+      "ar": "حين تتأخر رحلة، كم دقيقة تمر قبل أن يعرف المسافر؟"
     },
     {
-      "en": "Which delay explanation takes too long to leave the operations room?",
-      "ar": "أي شرح لتأخير يتأخر خروجه من غرفة التشغيل؟"
+      "en": "How many teams in the airport explain the same delay, and in how many versions?",
+      "ar": "كم جهة في المطار تشرح التأخير نفسه، وبكم صيغة؟"
     },
     {
-      "en": "Which internal note fails to tell the next shift what was already said?",
-      "ar": "أي مذكرة داخلية لا تقول للنوبة التالية ماذا قيل أصلًا؟"
+      "en": "Which question do passengers ask every day?",
+      "ar": "ما السؤال الذي يتكرر من المسافرين كل يوم؟"
     },
     {
-      "en": "Where do staff answer the same question at the desk, by phone, and in writing?",
-      "ar": "أين يجيب الموظفون السؤال نفسه عند المكتب وفي الهاتف وكتابةً؟"
+      "en": "Which airport in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي مطار في العالم تتابعونه، وتتمنون أن تبدأوا من حيث وصل؟"
     },
     {
-      "en": "What must a duty manager still approve before it is shown to passengers?",
-      "ar": "ما الذي يجب أن يعتمده مدير النوبة قبل أن يراه المسافر؟"
+      "en": "What will never be handed to a tool in your airport, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في مطاركم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A pattern for a disruption notice: what changed, what the passenger does, and what is still unknown.",
-      "ar": "نمط لإعلان اضطراب: ما الذي تغيّر، وماذا يفعل المسافر، وما الذي لم يُعرف بعد."
+      "en": "A first step for news to reach passengers before they ask, and where to start.",
+      "ar": "خطوة أولى ليصل الخبر إلى المسافر قبل أن يسأل، ومن أين تبدأ."
     },
     {
-      "en": "One coordination note the next shift can read in a minute.",
-      "ar": "مذكرة تنسيق تقرأها النوبة التالية في دقيقة."
+      "en": "A way for the airport to speak with one voice, instead of a different sentence at every desk.",
+      "ar": "طريقة يتكلم بها المطار بصوت واحد، بدل جملة مختلفة عند كل مكتب."
     },
     {
-      "en": "A rule for what is never drafted by the tool: security instructions and identity decisions.",
-      "ar": "قاعدة لما لا تسوّده الأداة أبدًا: تعليمات الأمن وقرارات الهوية."
+      "en": "A clear rule for what goes to a tool and what stays a human decision.",
+      "ar": "قاعدة واضحة لما يُسلَّم للأداة، وما يبقى قرار إنسان."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Passenger information and experience, operations coordination and administration. Security screening and identity and biometric systems stay outside the masterclass.",
+    "ar": "إعلام المسافر وتجربته، وتنسيق التشغيل، والإدارة. التفتيش الأمني وأنظمة الهوية والبصمات خارج الماستركلاس."
+  },
   "faq": [
     {
       "q": {
-        "en": "Is this about airport security or biometrics?",
-        "ar": "هل هذا الماستركلاس عن أمن المطار أو البصمات؟"
+        "en": "Does the masterclass touch security screening or identity systems?",
+        "ar": "هل يقترب الماستركلاس من التفتيش الأمني أو أنظمة الهوية؟"
       },
       "a": {
-        "en": "No. The session does not design screening, identity, or biometrics. It works on what passengers are told, and on the note behind that message.",
-        "ar": "لا. الجلسة لا تصمم تفتيشًا ولا هوية ولا بصمات. هي تشتغل على ما يُقال للمسافر، وعلى المذكرة وراء تلك الرسالة."
+        "en": "No. It works on passenger information, operations coordination and administration only.",
+        "ar": "لا. يعمل على إعلام المسافر وتنسيق التشغيل والإدارة فقط."
       }
     },
     {
       "q": {
-        "en": "Who approves what the passenger reads?",
-        "ar": "من يعتمد ما يقرأه المسافر؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "The duty manager who approves it today. The tool does not publish.",
-        "ar": "مدير النوبة الذي يعتمده اليوم. الأداة لا تنشر."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for passenger data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب أي بيانات عن المسافرين."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your airport has the information; too little of it reaches passengers",
+      "ar": "مطارك يملك المعلومة، ولا يصل المسافر منها إلا القليل"
+    },
+    "whyNow": {
+      "en": "What worked at Dubai and Heathrow doesn't transfer as it is",
+      "ar": "ما نجح في دبي وهيثرو لا يُنقل كما هو"
+    },
+    "how": {
+      "en": "A masterclass built on your airport",
+      "ar": "ماستركلاس يُبنى على مطارك"
+    },
+    "before": {
+      "en": "We learn your airport first",
+      "ar": "نفهم مطارك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading airports",
+      "ar": "نختار معكم من تجارب المطارات الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your airport",
+      "ar": "ما يبقى في مطارك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your airport",
+    "ar": "تحدّث مع د. أحمد عن مطارك"
+  }
 }

@@ -1,43 +1,6 @@
 {
-  "examples": [
-    {
-      "title": {
-        "en": "A circular to principals",
-        "ar": "تعميم إلى مديري المدارس"
-      },
-      "body": {
-        "en": "A new exam calendar or an attendance rule. The tool proposes the structure and a plain-language summary; staff check every date and reference.",
-        "ar": "تقويم امتحانات جديد أو قاعدة حضور. الأداة تقترح البنية وملخصًا بلغة بسيطة، والموظف يراجع كل تاريخ ومرجع."
-      }
-    },
-    {
-      "title": {
-        "en": "A letter to parents",
-        "ar": "رسالة للأهل"
-      },
-      "body": {
-        "en": "A change in school policy, with a short FAQ. The school leader approves the facts and the tone before it goes.",
-        "ar": "تغيير في سياسة المدرسة مع أسئلة شائعة قصيرة. القائد يعتمد المعلومة والنبرة قبل الإرسال."
-      }
-    },
-    {
-      "title": {
-        "en": "A unit plan",
-        "ar": "خطة وحدة دراسية"
-      },
-      "body": {
-        "en": "A sequence of lessons and activities tied to curriculum standards. The teacher decides the pedagogy and checks every fact.",
-        "ar": "تسلسل دروس وأنشطة مرتبط بمعايير المنهج. المعلم يقرر طريقة التدريس ويتحقق من صحة كل معلومة."
-      }
-    }
-  ],
-  "boundary": {
-    "en": "No real student data under their names, and no grades decided by a tool. Whatever goes out remains the responsibility of the teacher or leader who wrote it.",
-    "ar": "لا بيانات طلاب حقيقية بأسمائهم، ولا درجات تُقرَّر بأداة. وما يخرج يبقى مسؤولية المعلم أو القائد الذي كتبه."
-  },
   "position": 11,
   "slug": "education-schools",
-  "draft": true,
   "kind": "institution",
   "institution": "education",
   "roles": [
@@ -45,54 +8,94 @@
     "staff"
   ],
   "outcome": {
-    "en": "Circulars reach schools clear, a letter to parents takes minutes, and the teacher's time goes back to students.",
-    "ar": "التعميم يصل المدرسة واضحًا، ورسالة الأهل تُكتب في دقائق، ووقت المعلم يعود إلى طلابه."
+    "en": "Give your teachers' time back to their students.",
+    "ar": "أعِد وقت معلميك إلى طلابهم."
   },
   "summary": {
-    "en": "For the ministry, education directorates, school leadership, and the teacher's preparation. The teaching judgment stays with the teacher.",
-    "ar": "للوزارة، وإدارات التعليم، وإدارة المدرسة، ولتحضير المعلم. الحكم التربوي يبقى للمعلم."
+    "en": "Teachers today are worn down more by paperwork than by the classroom, and teachers in the UAE and Singapore have already taken up the tools. Dr. Ahmed Abdelalim studies your ministry's or schools' work, chooses with you what fits from the world's experience in administration, preparation and communication with parents, then teaches your team to carry it on. Educational judgement stays with the teacher.",
+    "ar": "المعلم اليوم يرهقه الورق أكثر مما يرهقه الفصل، ومعلمون في الإمارات وسنغافورة سبقوا إلى الأداة. يدرس د. أحمد عبدالعليم عمل وزارتك أو مدارسك، ويختار معك من تجارب العالم ما يناسبها في الإدارة والتحضير والتواصل مع الأهل، ثم يعلّم فريقك كيف يمضي فيه بنفسه. والحكم التربوي يبقى للمعلم."
   },
-  "audienceRole": {
-    "en": "Managers and staff in the ministry and education directorates, school leaders, and teachers in their preparation.",
-    "ar": "مديرو وموظفو الوزارة وإدارات التعليم، وقيادات المدارس، والمعلمون في تحضيرهم."
-  },
-  "audienceInstitution": {
-    "en": "A ministry of education, an education directorate, or a school. Written work and preparation only; assessing students and the teaching judgment stay with the teacher.",
-    "ar": "وزارة تعليم أو إدارة تعليمية أو مدرسة. الشغل المكتوب والتحضير فقط؛ تقييم الطالب والحكم التربوي يبقيان للمعلم."
-  },
-  "whyProblem": {
-    "en": "Teachers write more than they teach: a letter to parents, a report, a form. Circulars reach schools in language that needs explaining, so applying them lags. Every hour taken by paperwork is taken from the classroom.",
-    "ar": "المعلم يكتب أكثر مما يدرّس: رسالة للأهل، وتقرير، ونموذج. والتعميم يصل المدرسة بلغة تحتاج من يشرحها، فيتأخر تطبيقه. وما يُقتطع من الأوراق يُقتطع من الفصل."
-  },
-  "whyEvidence": {
-    "en": "England's Department for Education published its position on generative AI in education on 26 October 2023 and updated it on 12 August 2025: to reduce teacher workload, particularly for lesson planning, resource creation, and administrative tasks. The same text says teachers, leaders and staff must use their professional judgement when using these tools.",
-    "ar": "نشرت وزارة التعليم في إنجلترا موقفها من الذكاء الاصطناعي التوليدي في التعليم في 26 أكتوبر 2023، وحدّثته في 12 أغسطس 2025: أن يخفف عبء المعلم، خاصة في تحضير الدروس، وإعداد المواد، والمهام الإدارية. وفي النص نفسه: على المعلمين والقادة والموظفين أن يستعملوا حكمهم المهني حين يستخدمون هذه الأدوات."
-  },
-  "source": {
-    "title": "UK Department for Education · Generative AI in education · updated 12 August 2025",
-    "url": "https://www.gov.uk/government/publications/generative-artificial-intelligence-in-education/generative-artificial-intelligence-ai-in-education"
+  "pace": {
+    "title": {
+      "en": "What students lose when their teacher drowns in paperwork",
+      "ar": "ما يخسره الطالب حين يغرق معلمه في الورق"
+    },
+    "consequence": {
+      "en": "Every hour paperwork takes from a teacher is paid by a student who was waiting.",
+      "ar": "وكل ساعة يأخذها الورق من المعلم، يدفعها طالب كان ينتظره."
+    },
+    "cards": [
+      {
+        "figure": {
+          "en": "52%",
+          "ar": "52%"
+        },
+        "title": {
+          "en": "Paperwork weighs on teachers more than the classroom",
+          "ar": "الورق أثقل على المعلم من الفصل"
+        },
+        "body": {
+          "en": "In TALIS 2024, 52% of teachers said too much administrative work was a significant source of stress, more than maintaining classroom discipline (45%) or having too many lessons to teach (31%).",
+          "ar": "في مسح «تاليس» لعام 2024، قال 52% من المعلمين إن كثرة العمل الإداري مصدر ضغط كبير عليهم، أكثر من ضبط الفصل (45%) ومن كثرة الحصص (31%)."
+        },
+        "lesson": {
+          "en": "The heaviest part of a teacher's day isn't the students; it is the paperwork.",
+          "ar": "أثقل ما في يوم المعلم ليس الطالب، بل الورق."
+        },
+        "source": {
+          "title": "Education International · Using artificial intelligence: Takeaways from TALIS 2024 · 5 December 2025",
+          "url": "https://www.ei-ie.org/en/item/31815:using-artificial-intelligence-takeaways-from-talis-2024"
+        }
+      },
+      {
+        "figure": {
+          "en": "Under 10%",
+          "ar": "أقل من 10%"
+        },
+        "title": {
+          "en": "Teachers moved before their institutions",
+          "ar": "المعلمون سبقوا مؤسساتهم"
+        },
+        "body": {
+          "en": "In a UNESCO survey of more than 450 schools and universities, fewer than 10% had developed institutional policies or formal guidance on generative AI.",
+          "ar": "في مسح لليونسكو شمل أكثر من 450 مدرسة وجامعة، أقل من 10% وضعت سياسات أو إرشادات رسمية لاستعمال الذكاء الاصطناعي التوليدي."
+        },
+        "lesson": {
+          "en": "A teacher using the tool without guidance learns alone and makes mistakes alone.",
+          "ar": "والمعلم الذي يستعمل الأداة بلا توجيه، يتعلّم وحده ويخطئ وحده."
+        },
+        "source": {
+          "title": "UNESCO · Survey on generative AI guidance in schools and universities · 1 June 2023",
+          "url": "https://gcedclearinghouse.org/en/node/130058"
+        }
+      }
+    ]
   },
   "shiftsTitle": {
-    "en": "The teacher's hour goes back to the students",
+    "en": "The teacher's hour goes back to students",
     "ar": "ساعة المعلم تعود إلى طلابه"
   },
   "shifts": [
     {
       "figure": {
-        "en": "Under 10%",
-        "ar": "أقل من 10%"
+        "en": "31%",
+        "ar": "31%"
       },
       "title": {
-        "en": "Institutions are behind their teachers",
-        "ar": "المؤسسات تأخرت عن المعلم"
+        "en": "Less preparation time, same quality",
+        "ar": "وقت أقل في التحضير، بالجودة نفسها"
       },
       "body": {
-        "en": "In a UNESCO survey of more than 450 schools and universities, fewer than 10% had developed institutional policies or formal guidance on the use of generative AI.",
-        "ar": "في مسح لليونسكو شمل أكثر من 450 مدرسة وجامعة، كانت أقل من 10% منها قد وضعت سياسات مؤسسية أو إرشادات رسمية لاستخدام الذكاء الاصطناعي التوليدي."
+        "en": "In an Education Endowment Foundation trial with 259 teachers in 68 schools in England, teachers who used ChatGPT with a guide cut lesson-preparation time by 31%, about 25 minutes a week, and quality did not appear to be affected according to an expert panel.",
+        "ar": "في تجربة لمؤسسة «Education Endowment Foundation» البريطانية على 259 معلمًا في 68 مدرسة، خفّض المعلمون الذين استعملوا «ChatGPT» مع دليل إرشادي وقت تحضير الدروس 31%، أي نحو 25 دقيقة أسبوعيًا، ولم تتأثر الجودة بحسب لجنة خبراء."
+      },
+      "lesson": {
+        "en": "The guide that came with the tool made the difference. The tool alone teaches no one.",
+        "ar": "والفرق صنعه الدليل الذي رافق الأداة. الأداة وحدها لا تعلّم أحدًا."
       },
       "source": {
-        "title": "UNESCO · Survey on generative AI guidance in schools and universities · 1 June 2023",
-        "url": "https://gcedclearinghouse.org/en/node/130058"
+        "title": "Education Endowment Foundation · ChatGPT in lesson preparation trial · 12 December 2024",
+        "url": "https://educationendowmentfoundation.org.uk/projects-and-evaluation/projects/choices-in-edtech-using-generative-ai-chatgpt-for-ks3-science-lesson-preparation-2024-teacher-choices-trial"
       }
     },
     {
@@ -105,119 +108,150 @@
         "ar": "الإمارات وسنغافورة في المقدمة"
       },
       "body": {
-        "en": "In the OECD's TALIS 2024, around one in three teachers had used AI in their work, and around 75% in the UAE and Singapore. One of the main uses: generating lesson plans or activities (64%).",
-        "ar": "في مسح TALIS 2024 لمنظمة التعاون الاقتصادي والتنمية، استخدم نحو معلم من كل ثلاثة الذكاء الاصطناعي في عمله، وفي الإمارات وسنغافورة نحو 75% من المعلمين. ومن أكثر استخداماته توليد خطط الدروس والأنشطة (64%)."
+        "en": "In the OECD's TALIS 2024, around one in three teachers had used AI in their work, and around 75% in the UAE and Singapore. One of the main uses: preparing lesson plans and activities (64%).",
+        "ar": "في مسح «تاليس» لعام 2024 لمنظمة التعاون الاقتصادي والتنمية، استعمل نحو ثلث المعلمين الذكاء الاصطناعي في عملهم، وبلغت النسبة نحو 75% في الإمارات وسنغافورة. ومن أبرز استعمالاتهم: إعداد خطط الدروس والأنشطة (64%)."
+      },
+      "lesson": {
+        "en": "Some in our region are already ahead. The question is where your schools stand.",
+        "ar": "في منطقتنا من سبق بالفعل. والسؤال: أين تقف مدارسك؟"
       },
       "source": {
         "title": "OECD · Results from TALIS 2024: The State of Teaching · 6 October 2025",
         "url": "https://www.oecd.org/en/publications/results-from-talis-2024_90df6235-en"
       }
-    },
-    {
-      "figure": {
-        "en": "52%",
-        "ar": "52%"
-      },
-      "title": {
-        "en": "Paperwork weighs more than the classroom",
-        "ar": "الأوراق أثقل من الفصل"
-      },
-      "body": {
-        "en": "In TALIS 2024, 52% of teachers said too much administrative work was a significant source of stress, more than maintaining classroom discipline (45%) or having too many lessons to teach (31%).",
-        "ar": "في TALIS 2024 قال 52% من المعلمين إن كثرة العمل الإداري مصدر ضغط كبير، أكثر من ضبط الفصل (45%) وكثرة الحصص (31%)."
-      },
-      "source": {
-        "title": "Education International · Takeaways from TALIS 2024 · 5 December 2025",
-        "url": "https://www.ei-ie.org/en/item/31815:using-artificial-intelligence-takeaways-from-talis-2024"
-      }
-    },
-    {
-      "figure": {
-        "en": "31%",
-        "ar": "31%"
-      },
-      "title": {
-        "en": "Less preparation time, same quality",
-        "ar": "وقت أقل في التحضير، بالجودة نفسها"
-      },
-      "body": {
-        "en": "In an Education Endowment Foundation trial with 259 teachers in 68 schools in England, teachers who used ChatGPT with a guide cut lesson-preparation time by 31%, about 25 minutes a week, and quality did not appear to be affected according to an expert panel.",
-        "ar": "في تجربة لمؤسسة Education Endowment Foundation شملت 259 معلمًا في 68 مدرسة في إنجلترا، خفّض المعلمون الذين استعملوا ChatGPT مع دليل وقتَ تحضير الدروس بنسبة 31%، أي نحو 25 دقيقة في الأسبوع، ولم تتأثر الجودة بحسب لجنة خبراء راجعت المواد."
-      },
-      "source": {
-        "title": "Education Endowment Foundation · ChatGPT in lesson preparation trial · 12 December 2024",
-        "url": "https://educationendowmentfoundation.org.uk/projects-and-evaluation/projects/choices-in-edtech-using-generative-ai-chatgpt-for-ks3-science-lesson-preparation-2024-teacher-choices-trial"
-      }
     }
   ],
+  "audienceRole": {
+    "en": "For the leadership of education ministries and authorities and school leaders, with the members of their team they choose.",
+    "ar": "لقيادات وزارات التعليم وإداراته وقيادات المدارس، ومعهم من يختارونه من فريقهم."
+  },
+  "audienceInstitution": {
+    "en": "Any education ministry, authority or school group. We start from what you have already built.",
+    "ar": "أي وزارة تعليم أو إدارة تعليمية أو مجموعة مدارس. نبدأ مما بنيتموه بالفعل."
+  },
+  "whyProblem": {
+    "en": "What worked in Singapore or England was built on their curricula, systems and teachers. What fits your schools has to be chosen to their measure, not decided by a tool vendor.",
+    "ar": "ما نجح في سنغافورة أو بريطانيا بُني على مناهجهم وأنظمتهم ومعلميهم. ما يناسب مدارسك يُختار على مقاسها، ولا يقرره بائع أداة."
+  },
+  "whyEvidence": {
+    "en": "Even in the UK, the National Audit Office found that only 21% of 87 government bodies had an AI strategy, and 70% lacked people with the skills. The tools are open to everyone; understanding is what makes the difference.",
+    "ar": "وحتى في بريطانيا، وجد مكتب التدقيق الوطني أن 21% فقط من 87 جهة حكومية لديها استراتيجية للذكاء الاصطناعي، وأن 70% تعاني نقص من يملكون مهاراته. الأداة متاحة للجميع، والفهم هو الفارق."
+  },
+  "source": {
+    "title": "UK National Audit Office · Use of artificial intelligence in government · 15 March 2024",
+    "url": "https://www.nao.org.uk/wp-content/uploads/2024/03/use-of-artificial-intelligence-in-government-summary.pdf"
+  },
   "before": {
-    "en": "Five questions about the writing that takes teachers' and leaders' time. No student's name and no grade.",
-    "ar": "خمسة أسئلة عن الكتابة التي تأخذ وقت المعلم والإدارة. لا اسم طالب ولا درجة."
+    "en": "Before the session we sit with your leadership to learn where teachers' and administrators' time goes today, starting with questions like:",
+    "ar": "قبل الجلسة نجلس مع قيادتك لنعرف أين يذهب وقت المعلمين والإداريين اليوم. ونبدأ بأسئلة مثل:"
   },
   "during": {
-    "en": "The team works on its own material: a circular to schools, a letter to parents, or a unit plan. The teacher decides the pedagogy and checks every fact.",
-    "ar": "الفريق يشتغل على مادته: تعميم للمدارس، أو رسالة للأهل، أو خطة وحدة دراسية. المعلم يقرر طريقة التدريس ويراجع كل معلومة."
+    "en": "Dr. Ahmed works with the leadership and its team on administration, preparation and communication with parents as they are today, sets out what leading education systems have achieved, and you choose with him what to take and where to start.",
+    "ar": "يجلس د. أحمد مع القيادة وفريقها على العمل الإداري والتحضير والتواصل مع الأهل كما هي اليوم، ويضع أمامكم ما وصلت إليه الأنظمة التعليمية الرائدة، ثم تختارون معه ما تأخذونه ومن أين تبدأون."
   },
   "after": {
-    "en": "After 30 days we look at two things: time taken off those tasks, and which tools are still in daily use.",
-    "ar": "بعد 30 يومًا ننظر في شيئين: الوقت الذي خرج من هذه المهام، والأدوات التي ما زالت تُستعمل كل يوم."
+    "en": "Your education leadership leaves with a first step it knows the reasons for, and a team that knows how to carry it forward. You won't need us afterwards, or anyone else.",
+    "ar": "تخرج قيادتك التعليمية بخطوة أولى تعرف لماذا اختارتها، وبفريق يعرف كيف يمضي فيها بنفسه. ولا تحتاجنا بعدها، ولا تحتاج أحدًا غيرنا."
   },
   "questions": [
     {
-      "en": "Which letter to parents is written from scratch every term?",
-      "ar": "أي رسالة للأهل تُكتب من الصفر كل فصل دراسي؟"
+      "en": "How many hours a week do your teachers spend on paperwork?",
+      "ar": "كم ساعة يقضيها معلموكم على الورق في الأسبوع؟"
     },
     {
-      "en": "Which ministry circular needs someone to explain it before a school can apply it?",
-      "ar": "أي تعميم من الوزارة يحتاج من يشرحه قبل أن يُطبَّق في المدرسة؟"
+      "en": "How long does a new circular take to reach the classroom as intended?",
+      "ar": "كم يستغرق التعميم الجديد حتى يُطبَّق في الفصل كما أُريد له؟"
     },
     {
-      "en": "How many hours a week does a teacher spend on paperwork instead of students?",
-      "ar": "كم ساعة في الأسبوع يقضيها المعلم في الأوراق بدل الطلاب؟"
+      "en": "How many of your teachers use AI today, and who guided them?",
+      "ar": "كم من معلميكم يستعمل الذكاء الاصطناعي اليوم، ومن وجّههم؟"
     },
     {
-      "en": "Which report is requested from schools and assembled by hand from several sources?",
-      "ar": "أي تقرير يُطلب من المدرسة ويُجمع باليد من أكثر من مصدر؟"
+      "en": "Which education system in the world do you watch, and wish you could start from where it is?",
+      "ar": "أي نظام تعليمي في العالم تتابعونه، وتتمنون أن تبدأوا من حيث وصل؟"
     },
     {
-      "en": "What must remain the teacher's judgment alone?",
-      "ar": "ما الذي يجب أن يبقى لحكم المعلم وحده؟"
+      "en": "What will never be handed to a tool in your schools, however good it is?",
+      "ar": "ما الذي لن يُسلَّم لأي أداة في مدارسكم، مهما كانت؟"
     }
   ],
   "leavesWith": [
     {
-      "en": "A pattern for circulars and letters that come out clear the first time, checked by their owner.",
-      "ar": "نمط لتعاميم ورسائل تخرج واضحة من أول مرة، ويراجعها صاحبها."
+      "en": "Specific hours that could move from paperwork back to students, and where to start.",
+      "ar": "ساعات محددة يمكن أن تعود من الورق إلى الطالب، ومن أين تبدأ."
     },
     {
-      "en": "One real unit plan prepared by the teacher inside the session, in their own way.",
-      "ar": "خطة وحدة دراسية حقيقية حضّرها المعلم داخل الجلسة، بطريقته هو."
+      "en": "Clear guidance for your teachers on using the tool, instead of each one learning alone.",
+      "ar": "إرشاد واضح لمعلميك في استعمال الأداة، بدل أن يتعلّم كل واحد وحده."
     },
     {
-      "en": "A written line between where the tool helps and what stays with the teacher's judgment.",
-      "ar": "حد مكتوب بين ما تساعد فيه الأداة وما يبقى لحكم المعلم."
+      "en": "A clear rule: educational judgement belongs to the teacher, and what goes to the tool is known.",
+      "ar": "قاعدة واضحة: الحكم التربوي للمعلم، وما يُسلَّم للأداة معروف."
     }
   ],
+  "examples": [],
+  "boundary": {
+    "en": "Administration, preparation and communication with parents. Educational judgement and assessment stay with the teacher.",
+    "ar": "الإدارة والتحضير والتواصل مع الأهل. الحكم التربوي والتقييم يبقيان للمعلم."
+  },
   "faq": [
     {
       "q": {
-        "en": "Does the tool assess students or set grades?",
-        "ar": "هل تقيّم الأداة الطلاب أو تضع الدرجات؟"
+        "en": "Will a tool decide grades or educational judgements?",
+        "ar": "هل تقرر الأداة درجات أو أحكامًا تربوية؟"
       },
       "a": {
-        "en": "No. Assessment, grades and the teaching judgment belong to the teacher. The tool helps with writing and preparation.",
-        "ar": "لا. التقييم والدرجة والحكم التربوي للمعلم. الأداة تساعد في الكتابة والتحضير."
+        "en": "No. Educational judgement and assessment belong to the teacher alone. The masterclass works on administration, preparation and communication.",
+        "ar": "لا. الحكم التربوي والتقييم للمعلم وحده. الماستركلاس يعمل على الإدارة والتحضير والتواصل."
       }
     },
     {
       "q": {
-        "en": "How is this different from the universities masterclass?",
-        "ar": "ما الفرق بينه وبين ماستركلاس الجامعات؟"
+        "en": "Do we need to open our systems or data?",
+        "ar": "هل نحتاج أن نفتح أنظمتنا أو بياناتنا؟"
       },
       "a": {
-        "en": "This one is for the ministry, education directorates and schools. The universities masterclass is for university teams: faculty support, student services, and committees.",
-        "ar": "هذا للوزارة وإدارات التعليم والمدارس. ماستركلاس الجامعات لفرق الجامعة: مساندة هيئة التدريس، وخدمات الطلاب، واللجان."
+        "en": "No. We work on how your people think and decide, and on whatever part of your work you choose to share. We don't ask for real student data.",
+        "ar": "لا. نعمل على طريقة التفكير والقرار، وعلى ما تختارون مشاركته من عملكم. ولا نطلب بيانات حقيقية عن الطلاب."
       }
     }
-  ]
+  ],
+  "headings": {
+    "forWhom": {
+      "en": "Your teachers write more than they teach",
+      "ar": "معلموك يكتبون أكثر مما يدرّسون"
+    },
+    "whyNow": {
+      "en": "Experience doesn't transfer to your schools as it is",
+      "ar": "التجربة لا تُنقل إلى مدارسك كما هي"
+    },
+    "how": {
+      "en": "A masterclass built on your schools",
+      "ar": "ماستركلاس يُبنى على مدارسك"
+    },
+    "before": {
+      "en": "We learn your schools first",
+      "ar": "نفهم مدارسك أولًا"
+    },
+    "during": {
+      "en": "We choose with you from the leading education systems",
+      "ar": "نختار معكم من تجارب التعليم الرائدة"
+    },
+    "after": {
+      "en": "Your team carries it on",
+      "ar": "فريقك يمضي بنفسه"
+    },
+    "leavesWith": {
+      "en": "What stays in your schools",
+      "ar": "ما يبقى في مدارسك بعد الجلسة"
+    },
+    "faq": {
+      "en": "Before you ask",
+      "ar": "قبل أن تطلبه"
+    }
+  },
+  "cta": {
+    "en": "Talk to Dr. Ahmed about your education institution",
+    "ar": "تحدّث مع د. أحمد عن مؤسستك التعليمية"
+  }
 }
