@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "workshops",
+  "nameAr": "الورش",
+  "nameEn": "Workshops",
+  "description": "الورش ومحتواها في المصدر المشترك للموقع.",
+  "icon": "graduation",
+  "sortOrder": 80,
+  "publicRoutes": [
+    "/ar/workshops"
+  ],
+  "adminEntryPoint": null,
+  "owner": "مساحة الورش",
+  "codeRef": "main @ ed7cb36",
+  "docsUrl": null,
+  "readiness": "development",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": false,
+      "disabledReason": "المحرر التشغيلي لم يُسلّم بعد."
+    }
+  ],
+  "permissions": [
+    "read"
+  ],
+  "agentTools": [],
+  "editorAvailable": false,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [],
+  "workflowEnabled": false
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "opportunities",
+  "nameAr": "فرص البحث والتطوير",
+  "nameEn": "R&D opportunities",
+  "description": "عرض الفرص ومسارات المشاركة الحالية.",
+  "icon": "graduation",
+  "sortOrder": 70,
+  "publicRoutes": [
+    "/ar/opportunities"
+  ],
+  "adminEntryPoint": null,
+  "owner": "مساحة الفرص",
+  "codeRef": "main @ ed7cb36",
+  "docsUrl": null,
+  "readiness": "development",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": false,
+      "disabledReason": "المحرر التشغيلي لم يُسلّم بعد."
+    }
+  ],
+  "permissions": [
+    "read"
+  ],
+  "agentTools": [],
+  "editorAvailable": false,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [],
+  "workflowEnabled": false
+}

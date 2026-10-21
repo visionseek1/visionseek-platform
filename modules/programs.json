@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "moduleId": "programs",
+  "nameAr": "البرامج",
+  "nameEn": "Programs",
+  "description": "تصميم البرامج ومتابعة تطوير الخدمة.",
+  "icon": "compass",
+  "sortOrder": 30,
+  "publicRoutes": [
+    "/ar/programs"
+  ],
+  "adminEntryPoint": null,
+  "owner": "مساحة البرامج وHLO",
+  "codeRef": "feat/ihsan-program-system @ dcaa5eb1b8a186a8b2c6280e21b6039300b2a4f6",
+  "docsUrl": null,
+  "readiness": "development",
+  "capabilities": [
+    {
+      "action": "read",
+      "enabled": false,
+      "disabledReason": "المحرر لم يندمج في هذا الإصدار بعد."
+    }
+  ],
+  "permissions": [
+    "read",
+    "createDraft",
+    "editDraft",
+    "review",
+    "publish",
+    "archive"
+  ],
+  "agentTools": [],
+  "editorAvailable": false,
+  "healthEvidence": {
+    "check": "فتح المحرر وحفظ مخرج بحساب مصرح",
+    "checkedAt": null,
+    "result": "unknown",
+    "evidence": null
+  },
+  "migrations": [],
+  "dependencies": [],
+  "rollbackNotes": "إلغاء التسجيل لا يحذف المحتوى. الاستعادة مسؤولية الوحدة.",
+  "acceptanceEvidence": [],
+  "workflowEnabled": true
+}
