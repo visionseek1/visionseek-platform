@@ -10,7 +10,7 @@ import {NO_PARTNERSHIP, REGION_COPY, ROUTES, ROUTE_COPY, SECTOR_EN, TYPE_COPY, t
 
 type Locale = 'ar' | 'en';
 
-function Shell({locale, path, here, children}: {locale: Locale; path: string; here?: string; children: React.ReactNode}) {
+export function Shell({locale, path, here, children}: {locale: Locale; path: string; here?: string; children: React.ReactNode}) {
   const ar = locale === 'ar'; const p = ar ? '/ar' : '';
   return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar ? 'rtl' : 'ltr'}>
     <CapabilityHeader locale={locale} path={path}/>
@@ -19,6 +19,7 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
         <span className={styles.barName}><Link href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
         <span className={styles.barNav}>
           <a href={`${p}/korean-solutions#sections`}>{ar ? 'الأقسام' : 'Sections'}</a>
+          <Link href={`${p}/korean-solutions/cars`}>{ar ? 'السيارات' : 'Cars'}</Link>
           <a href={`${p}/korean-solutions#needs`}>{ar ? 'احتياجات المنطقة' : 'Regional needs'}</a>
           <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف ننقل الحل' : 'How we transfer'}</a>
         </span>

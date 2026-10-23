@@ -55,6 +55,14 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
       </div></div>
     </section>
 
+    <div className={styles.gutter}><div className={`${styles.inner} ${styles.carsDoor}`}>
+      <Link href={`${p}/korean-solutions/cars`}>
+        <span className={`${styles.carsDoorEn} ${styles.latin}`} lang="en">CARS</span>
+        <span className={styles.carsDoorWord}>{ar ? 'السيارات' : 'Cars'}</span>
+      </Link>
+      <p>{ar ? 'هجين. كهرباء. بيت جينيسيس. جديدة فقط.' : 'Hybrid. Electric. The Genesis house. New only.'}</p>
+    </div></div>
+
     <DemandSections locale={locale} solutions={solutions}/>
 
     <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">

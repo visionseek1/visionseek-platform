@@ -4,18 +4,18 @@ import styles from './ks.module.css';
 
 type Locale = 'ar' | 'en';
 type Kind = 'need' | 'solution';
-const SECTORS: [string, string][] = [['الصحة', 'Health'], ['التصنيع', 'Manufacturing'], ['الكهرباء والإلكترونيات', 'Electrical and electronics'], ['الطاقة', 'Energy and water'], ['الزراعة والغذاء', 'Agriculture'], ['الأمن والمدن', 'Security and cities'], ['الرعاية الاجتماعية', 'Social care'], ['مجال آخر', 'Another field']];
+const SECTORS: [string, string][] = [['الصحة', 'Health'], ['التصنيع', 'Manufacturing'], ['الكهرباء والإلكترونيات', 'Electrical and electronics'], ['الطاقة', 'Energy and water'], ['الزراعة والغذاء', 'Agriculture'], ['الأمن والمدن', 'Security and cities'], ['الرعاية الاجتماعية', 'Social care'], ['السيارات', 'Cars'], ['مجال آخر', 'Another field']];
 
 /**
  * «احتياجك» (a regional need) and «اطلب هذا الحل» (ask for one solution).
  * The request is recorded as a new lead in the operations platform. Nothing is sent back automatically:
  * the VisionSeek team replies by hand.
  */
-export default function RequestForm({locale, kind, solution}: {locale: Locale; kind: Kind; solution?: {slug: string; title: string}}) {
+export default function RequestForm({locale, kind, solution, initialSector, initialNeed}: {locale: Locale; kind: Kind; solution?: {slug: string; title: string}; initialSector?: string; initialNeed?: string}) {
   const ar = locale === 'ar';
   const [state, setState] = useState<'idle' | 'busy' | 'done' | 'missing' | 'email' | 'error'>('idle');
-  const [sector, setSector] = useState('الصحة');
-  const [need, setNeed] = useState('');
+  const [sector, setSector] = useState(initialSector || 'الصحة');
+  const [need, setNeed] = useState(initialNeed || '');
   useEffect(() => {
     const onNeed = (event: Event) => {
       const detail = (event as CustomEvent<{sector?: string; need?: string}>).detail || {};

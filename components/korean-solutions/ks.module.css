@@ -231,3 +231,57 @@
   .demandHead { grid-template-columns: 1fr; }
   .demandPhoto { min-height: 200px; }
 }
+
+/* Cars: a word-door out of the catalog, then a quiet house. Not a seventh photo tile. */
+.carsDoor { display: flex; align-items: baseline; justify-content: space-between; gap: 18px 32px; flex-wrap: wrap; padding-block: 28px 26px; border-bottom: 1px solid var(--ink); }
+.carsDoor a { display: flex; align-items: baseline; gap: 14px; text-decoration: none; color: var(--ink); }
+.carsDoorWord { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-size: clamp(32px, 4vw, 44px); font-weight: 700; line-height: 1; }
+.carsDoorEn { font-size: 12px; letter-spacing: 0.18em; color: var(--mute); }
+.carsDoor p { margin: 0; font-size: 15px; color: var(--mute); }
+
+.carsStage { background: #ececec; }
+.carsFlag { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 36px 48px; align-items: end; padding-block: clamp(48px, 7vw, 84px) 36px; }
+.carsCopy { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; padding-bottom: 12px; }
+.carsEyebrow { font-size: 12px; letter-spacing: 0.2em; color: var(--mute); font-weight: 600; }
+.page.page .carsName { font-size: clamp(72px, 11vw, 128px); line-height: 0.86; letter-spacing: -0.04em; font-weight: 500; }
+.carsMark { font-size: 14px; letter-spacing: 0.08em; }
+.carsLine { font-size: clamp(18px, 2vw, 22px); line-height: 1.7; max-width: 18em; }
+.carsFigure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.carsPhoto { position: relative; min-height: 420px; background: #e4e4e4; }
+.carsPhoto img { object-fit: cover; object-position: center; }
+.carsCaption { font-size: 13px; line-height: 1.6; color: var(--mute); }
+.carsCaption a { color: inherit; }
+
+.carsBody { display: flex; flex-direction: column; gap: 48px; padding-block: 56px 72px; }
+.carsList h2, .carsTech h2, .carsAsk h2 { font-size: clamp(28px, 3vw, 36px); }
+.carsIntro { margin-top: 8px; font-size: 16px; line-height: 1.7; color: var(--mute); max-width: 36em; }
+.carsList ul { list-style: none; margin: 22px 0 0; padding: 0; }
+.carsList li { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; gap: 12px 24px; align-items: baseline; padding-block: 18px; border-top: 1px solid var(--rule); }
+.carsList li:last-child { border-bottom: 1px solid var(--rule); }
+.carsCar { font-size: 18px; }
+.carsRowLine { color: var(--body); }
+.carsTag { font-size: 13px; letter-spacing: 0.06em; color: var(--mute); }
+
+.carsTechGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 22px; }
+.carsTechGrid h3 { font-size: 18px; margin-bottom: 8px; }
+.carsTechGrid p { font-size: 15px; line-height: 1.75; color: var(--body); }
+
+.carsFact { display: flex; align-items: flex-end; gap: 28px; flex-wrap: wrap; padding-top: 8px; border-top: 1px solid var(--ink); }
+.carsNumber { font-size: clamp(72px, 10vw, 112px); line-height: 0.85; font-weight: 500; }
+.carsFactUnit { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.carsFact p { font-size: 16px; line-height: 1.7; max-width: 28em; }
+.carsFact a { font-size: 13px; color: var(--mute); }
+.carsOnly { font-size: 17px; line-height: 1.7; }
+
+.carsAsk { display: flex; flex-direction: column; gap: 18px; max-width: 760px; }
+.carsAsk .fine { color: var(--mute); }
+.carsAsk .bad { color: #8a1f16; }
+.carsAsk .done { color: var(--ink); background: var(--tint); }
+.carsAsk .form :is(input, select, textarea) { border: 1px solid var(--rule); }
+
+@media (max-width: 800px) {
+  .carsFlag, .carsTechGrid, .carsList li { grid-template-columns: 1fr; }
+  .carsPhoto { min-height: 240px; }
+  .carsList li { gap: 4px; }
+}
+
