@@ -44,8 +44,7 @@ collections:
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
-                  - {label: "حوكمة الذكاء الاصطناعي (القسم كله)  /governance", value: "/governance"}
-                  - {label: "حوكمة الذكاء الاصطناعي ← فخ الإجابة الواحدة  /governance/single-track-trap", value: "/governance/single-track-trap"}
+                  - {label: "ماستركلاس ← فخ الإجابة الواحدة  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
@@ -3242,8 +3241,8 @@ collections:
 
   - name: governance
     label: "حوكمة الذكاء الاصطناعي"
-    description: "قسم الحوكمة والورشة الأولى. يظهر على /governance و /governance/single-track-trap، وبالعربية تحت /ar. لا تضف رقمًا بلا مصدر."
-    preview_path: "ar/governance/single-track-trap"
+    description: "كورس فخ الإجابة الواحدة داخل الماستركلاس. يظهر على /masterclass/single-track-trap، وبالعربية تحت /ar. الصفحة المختصرة تعرض النبذة والمحاور والمحاضر وزر اشترك. لا تضف رقمًا بلا مصدر، ولا سعرًا."
+    preview_path: "ar/masterclass/single-track-trap"
     editor: {preview: false}
     files:
       - label: "النص"
@@ -3301,6 +3300,44 @@ collections:
               - label: "العنوان الفرعي"
                 name: subtitle
                 widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النبذة"
+                name: blurb
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان المحاور"
+                name: topicsLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المحاور"
+                name: topics
+                widget: list
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المحاضر"
+                name: instructorLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المحاضر المختصر"
+                name: instructorShort
+                widget: object
+                hint: "العربي: د. أحمد. الإنجليزي: Ahmed Abdelalim من غير لقب."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زر الاشتراك"
+                name: subscribe
+                widget: object
+                hint: "نص الزر فقط. الرابط ثابت في الكود (ENROLL_HREF) إلى أن يُربط GoHighLevel."
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}

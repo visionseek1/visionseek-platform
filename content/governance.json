@@ -19,6 +19,32 @@
       "en": "The Single-Track Trap: How to Protect Enterprise Investments from Hidden AI Flaws",
       "ar": "فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
     },
+    "blurb": {
+      "en": "When we ask an AI system, the answer is often built on a single method, without the other methods that could solve the problem. In a company, that answer can carry large costs in a direction that may be wrong. You leave able to widen the options, and the decision stays yours.",
+      "ar": "حين نسأل الذكاء الاصطناعي، كثيرًا ما تأتي إجابته مبنيةً على منهج واحد، دون أن يعرض بقية المناهج. وفي الشركات قد تُبنى على هذه الإجابة تكاليف ضخمة في اتجاه ربما يكون خاطئًا. تخرج قادرًا على أن توسّع الخيارات، ويبقى القرار قرارك."
+    },
+    "topicsLabel": {"en": "What you will cover", "ar": "المحاور"},
+    "topics": [
+      {
+        "en": "The shock: why the answer looks right when it is incomplete.",
+        "ar": "الصدمة: لماذا تبدو الإجابة صحيحة وهي ناقصة؟"
+      },
+      {
+        "en": "Where it comes from: sycophancy, automation bias, and overconfident fabrication.",
+        "ar": "الفهم: المجاملة، وانحياز الأتمتة، والثقة الزائدة."
+      },
+      {
+        "en": "The tool: apply «بدائل» to a real question.",
+        "ar": "الأداة: منهج «بدائل» على سؤال حقيقي."
+      },
+      {
+        "en": "Ownership: a written rule, and your name on the decision.",
+        "ar": "الملكية: قاعدة مكتوبة، والقرار باسمك."
+      }
+    ],
+    "instructorLabel": {"en": "Instructor", "ar": "المحاضر"},
+    "instructorShort": {"en": "Ahmed Abdelalim", "ar": "د. أحمد"},
+    "subscribe": {"en": "Subscribe", "ar": "اشترك"},
     "instructor": {"en": "Ahmed Abdelalim", "ar": "د. أحمد عبدالعليم"},
     "withLine": {
       "en": "With Ahmed Abdelalim",

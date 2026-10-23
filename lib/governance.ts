@@ -10,5 +10,12 @@ export const tx = (locale: Locale, value: Bi) => value[locale];
 
 export const localePath = (locale: Locale, path: string) => (locale === 'ar' ? `/ar${path}` : path);
 
-export const sectionPath = '/governance';
-export const workshopPath = `${sectionPath}/${workshop.slug}`;
+/** Public course URL, inside Masterclass. */
+export const coursePath = `/masterclass/${workshop.slug}`;
+
+/**
+ * The one enrollment link. Swap this single constant when GoHighLevel is connected.
+ * Arabic pages prefix it with /ar. No price and no payment on the course page.
+ */
+export const ENROLL_HREF = '/start';
+export const enrollHref = (locale: Locale) => localePath(locale, ENROLL_HREF);

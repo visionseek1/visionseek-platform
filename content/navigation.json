@@ -119,23 +119,6 @@
       ]
     },
     {
-      "path": "/governance",
-      "en": "AI Governance",
-      "ar": "حوكمة الذكاء الاصطناعي",
-      "children": [
-        {
-          "href": "/governance",
-          "en": "The section",
-          "ar": "القسم"
-        },
-        {
-          "href": "/governance/single-track-trap",
-          "en": "The Single-Track Trap",
-          "ar": "فخ الإجابة الواحدة"
-        }
-      ]
-    },
-    {
       "path": "/programs",
       "en": "Programs",
       "ar": "البرامج",

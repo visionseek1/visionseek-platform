@@ -28,6 +28,7 @@ for f in sorted(glob.glob('content/workshops/*.json')):
     d = load(f)
     if d.get('draft'): continue  # drafts are not on the site
     add(f"/masterclass/{d['slug']}", f"ماستركلاس ← {d['outcome']['ar'][:50]}")
+add('/masterclass/single-track-trap', 'ماستركلاس ← فخ الإجابة الواحدة')
 cat = load('content/projects/catalog.json')
 for s in cat['sectors']: add(f"/projects/{s['slug']}", f"المشاريع ← {s['title']['ar']}")
 for f in sorted(glob.glob('content/projects/concepts/*.json')):

@@ -11,6 +11,7 @@ import {
   type WorkshopHeadingKey,
   type WorkshopKind,
 } from '@/lib/institution/workshops';
+import {coursePath, workshop as governanceCourse} from '@/lib/governance';
 
 function Frame({locale, path, children}: {locale: Locale; path: string; children: React.ReactNode}) {
   return (
@@ -134,6 +135,17 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
               );
             })}
           </div>
+        </section>
+
+        <section className="vs-wl-course" aria-labelledby="vs-wl-course-title">
+          <Link className="vs-wl-course-card" href={`${prefix}${coursePath}`}>
+            <Image src={governanceCourse.cover} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} />
+            <div>
+              <span className="vs-wl-code">{text(locale, governanceCourse.title)}</span>
+              <h2 id="vs-wl-course-title">{text(locale, governanceCourse.subtitle)}</h2>
+              <p>{text(locale, governanceCourse.instructorShort)}</p>
+            </div>
+          </Link>
         </section>
 
         <section className="vs-wl-how" id="how">
