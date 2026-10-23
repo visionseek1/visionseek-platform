@@ -1,4 +1,5 @@
 'use client';
+import {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ks.module.css';
@@ -11,15 +12,6 @@ const ask = (sector: string, need: string) => {
   window.dispatchEvent(new CustomEvent('ks-need', {detail: {sector, need}}));
   document.getElementById('needs')?.scrollIntoView({behavior: 'smooth', block: 'start'});
 };
-
-const sectionImage = (sector: string) => (
-  sector === 'الصحة' ? '/field-science.jpg'
-  : sector === 'الرعاية الاجتماعية' ? '/field-cities.jpg'
-  : sector === 'الأمن والمدن' ? '/field-drones.jpg'
-  : sector === 'الزراعة والغذاء' ? '/field-food.jpg'
-  : sector === 'الطاقة' ? '/field-energy.jpg'
-  : '/field-industry.jpg'
-);
 
 const SECTIONS: {
   id: string;
@@ -124,7 +116,6 @@ function ProductCard({s, locale}: {s: Solution; locale: Locale}) {
   const p = ar ? '/ar' : '';
   return <article className={styles.offer}>
     <Link href={`${p}/korean-solutions/${s.slug}`}>
-      <div className={styles.offerPhoto}><Image src={sectionImage(s.sector)} alt="" fill sizes="(max-width:760px) 100vw, 33vw"/></div>
       <div className={styles.offerBody}>
         <h3>{t(s.title) || s.title.ar}</h3>
         <p>{t(s.problem)}</p>
@@ -150,25 +141,27 @@ function ServiceCard({card, locale, sector}: {card: Card; locale: Locale; sector
 export default function DemandSections({locale, solutions}: {locale: Locale; solutions: Solution[]}) {
   const ar = locale === 'ar';
   const t = (v: Bi) => (ar ? v.ar : v.en);
+  const [active, setActive] = useState(SECTIONS[0].id);
+  const section = SECTIONS.find(s => s.id === active) || SECTIONS[0];
+  const listed = section.match ? solutions.filter(section.match) : [];
   return <div id="sections" className={styles.sections}>
-    {SECTIONS.map(section => {
-      const listed = section.match ? solutions.filter(section.match) : [];
-      return <section key={section.id} className={styles.demand} aria-labelledby={`demand-${section.id}`}>
-        <div className={styles.demandHead}>
-          <div className={styles.demandPhoto}><Image src={section.image} alt="" fill sizes="(max-width:860px) 100vw, 460px"/></div>
-          <div className={styles.demandText}>
-            <p className={styles.kicker}>{ar ? 'قسم' : 'Section'}</p>
-            <h2 id={`demand-${section.id}`}>{t(section.title)}</h2>
-            <p>{t(section.line)}</p>
-            {section.source && <a className={styles.source} href={section.source.href} target="_blank" rel="noreferrer">{t(section.source.label)}</a>}
-            <button type="button" className={styles.primary} onClick={() => ask(section.sector, t(section.title))}>{ar ? 'محتاج من هذا القسم؟ تواصل معنا' : 'Need something in this section? Contact us'}</button>
-          </div>
-        </div>
-        {(listed.length > 0 || section.services.length > 0) && <div className={styles.offerGrid}>
-          {listed.map(s => <ProductCard key={s.slug} s={s} locale={locale}/>)}
-          {section.services.map(card => <ServiceCard key={card.title.en} card={card} locale={locale} sector={section.sector}/>)}
-        </div>}
-      </section>;
-    })}
+    <div className={styles.tileRow} role="tablist" aria-label={ar ? 'أقسام الطلب' : 'Demand sections'}>
+      {SECTIONS.map(s => <button key={s.id} type="button" role="tab" aria-selected={s.id === active} className={styles.tile} onClick={() => setActive(s.id)}>
+        <span className={styles.tilePhoto}><Image src={s.image} alt="" fill sizes="120px"/></span>
+        <span className={styles.tileName}>{t(s.title)}</span>
+      </button>)}
+    </div>
+    <section className={styles.panel} aria-labelledby="demand-title">
+      <div className={styles.panelHead}>
+        <h2 id="demand-title">{t(section.title)}</h2>
+        <p>{t(section.line)}</p>
+        {section.source && <a className={styles.source} href={section.source.href} target="_blank" rel="noreferrer">{t(section.source.label)}</a>}
+      </div>
+      <div className={styles.offerGrid}>
+        {listed.map(s => <ProductCard key={s.slug} s={s} locale={locale}/>)}
+        {section.services.map(card => <ServiceCard key={card.title.en} card={card} locale={locale} sector={section.sector}/>)}
+      </div>
+      <button type="button" className={styles.panelAsk} onClick={() => ask(section.sector, t(section.title))}>{ar ? 'محتاج من هذا القسم؟ تواصل معنا' : 'Need something in this section? Contact us'}</button>
+    </section>
   </div>;
 }

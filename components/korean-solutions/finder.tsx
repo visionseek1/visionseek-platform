@@ -41,8 +41,8 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
         <h1 id="ks-title">{ar ? 'حلول من كوريا' : 'Korean Solutions'}</h1>
         <p className={styles.heroLede}>{ar
-          ? 'ما تطلبه المنطقة من كوريا، في أقسام. كل قسم فيه منتجات أو خدمات بصور. اللي محتاج حاجة يتواصل معنا، ونبحث له عنها في كوريا.'
-          : 'What the region asks Korea for, in sections. Each section has products or services, with pictures. If you need something, contact us and we look for it in Korea.'}</p>
+          ? 'اختر القسم. شوف المنتج أو الخدمة. لو محتاجها، اطلبها.'
+          : 'Choose a section. See the product or service. If you need it, ask for it.'}</p>
         <label className={styles.search}>
           <span>{ar ? 'ابحث عن حل' : 'Search for a solution'}</span>
           <span className={styles.searchBox}>
@@ -50,27 +50,10 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
             <input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder={ar ? 'مثال: سرطان الثدي، رعاية المسنّين، الزراعة…' : 'e.g. breast screening, elderly care, farming…'} aria-controls="ks-results"/>
           </span>
         </label>
-        <div className={styles.stats}>
-          <div><b className={styles.num}>{solutions.length}</b><span>{ar ? 'حل في المنصة' : 'on the platform'}</span></div>
-          <div><b className={styles.num}>{sectors.length}</b><span>{ar ? 'مجالات' : 'fields'}</span></div>
-          <div><b className={`${styles.num} ${styles.hot}`}>{solutions.filter(s => s.region === 'نعم').length}</b><span>{ar ? 'وصلت المنطقة العربية' : 'already in the Arab region'}</span></div>
-        </div>
       </div></div>
     </section>
 
     <DemandSections locale={locale} solutions={solutions}/>
-
-    <div className={styles.gutter}><section className={`${styles.inner} ${styles.doors}`} aria-label={ar ? 'الأبواب الثلاثة' : 'Three doors'}>
-      {TYPES.map(k => {
-        const c = TYPE_COPY[k]; const on = f.type === k;
-        return <button key={k} type="button" className={styles.door} aria-pressed={on} onClick={() => { setF(prev => ({...prev, type: on ? 'all' : k})); document.getElementById('finder')?.scrollIntoView({behavior: 'smooth', block: 'start'}); }}>
-          <span className={`${styles.doorEn} ${styles.latin}`} lang="en">{c.many.en.toUpperCase()}</span>
-          <span className={styles.doorName}>{t(c.many)}</span>
-          <span className={styles.doorLine}>{t(c.line)}</span>
-          <span className={styles.doorCount}><span className={styles.num}>{solutions.filter(s => s.type === k).length}</span> {ar ? 'في المنصة' : 'on the platform'} {arrow}</span>
-        </button>;
-      })}
-    </section></div>
 
     <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">
       <div className={styles.finderHead}>
