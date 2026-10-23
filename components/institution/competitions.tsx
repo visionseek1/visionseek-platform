@@ -94,8 +94,7 @@ function CompetitionCard({card, ar, tx, filled = false}: {card: Card; ar: boolea
         </div>
       </div>
       <figure className="vs-comp-photo">
-        <Image src="/competitions/team.jpg" alt={ar ? 'صورة توضيحية لفريق يعمل معًا' : 'Illustrative photo of a team working together'} fill sizes="(max-width: 760px) 100vw, 42vw"/>
-        <figcaption>{ar ? 'صورة توضيحية، تتبدّل بصورة حقيقية لما تتوفر.' : 'Illustrative image. Replaced when a real team photo is available.'}</figcaption>
+        <Image src="/competitions/team.jpg" alt={ar ? 'فريق يعمل معًا' : 'A team working together'} fill sizes="(max-width: 760px) 100vw, 42vw"/>
       </figure>
     </article>
   );
