@@ -370,3 +370,5 @@
   .vs-wl-catalog-instructor>div{grid-template-columns:1fr}
   .vs-wl-catalog .vs-wl-course-card{grid-template-columns:1fr}
 }
+
+.vs-institution-layout.is-single{grid-template-columns:minmax(0,1fr)}
