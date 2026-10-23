@@ -16,7 +16,7 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
       <nav className={`${styles.bar} ${styles.gutter}`} aria-label={ar ? 'أقسام حلول من كوريا' : 'Korean Solutions sections'}><div className={`${styles.inner} ${styles.barInner}`}>
         <span className={styles.barName}><Link href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
         <span className={styles.barNav}>
-          <a href={`${p}/korean-solutions#finder`}>{ar ? 'المستكشف' : 'Finder'}</a>
+          <a href={`${p}/korean-solutions#sections`}>{ar ? 'الأقسام' : 'Sections'}</a>
           <a href={`${p}/korean-solutions#needs`}>{ar ? 'احتياجات المنطقة' : 'Regional needs'}</a>
           <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف ننقل الحل' : 'How we transfer'}</a>
         </span>

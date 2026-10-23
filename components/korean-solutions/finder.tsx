@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import {useMemo, useState} from 'react';
+import DemandSections from './sections';
 import styles from './ks.module.css';
 import {NO_PARTNERSHIP, REGION_COPY, ROUTE_COPY, SECTOR_EN, TYPE_COPY, TYPES, type Bi, type Region, type Solution, type SolutionType} from '@/lib/korean-solutions-copy';
 
@@ -40,8 +41,8 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
         <h1 id="ks-title">{ar ? 'حلول من كوريا' : 'Korean Solutions'}</h1>
         <p className={styles.heroLede}>{ar
-          ? 'بنت كوريا في عقود ما تحتاجه منطقتنا اليوم. نختار منها ما أثبت نفسه هناك، ونحمله إلى المؤسسة العربية التي تحتاجه: منتجات جاهزة، وحلول تعمل داخل المؤسسة، وتكنولوجيا تُنقل وتُصنع عندنا.'
-          : 'Over a few decades Korea built much of what our region needs today. We pick what has proven itself there and carry it to the Arab organisation that needs it: ready products, solutions that work inside the organisation, and technology that is transferred and made here.'}</p>
+          ? 'ما تطلبه المنطقة من كوريا، في أقسام. كل قسم فيه منتجات أو خدمات بصور. اللي محتاج حاجة يتواصل معنا، ونبحث له عنها في كوريا.'
+          : 'What the region asks Korea for, in sections. Each section has products or services, with pictures. If you need something, contact us and we look for it in Korea.'}</p>
         <label className={styles.search}>
           <span>{ar ? 'ابحث عن حل' : 'Search for a solution'}</span>
           <span className={styles.searchBox}>
@@ -56,6 +57,8 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         </div>
       </div></div>
     </section>
+
+    <DemandSections locale={locale} solutions={solutions}/>
 
     <div className={styles.gutter}><section className={`${styles.inner} ${styles.doors}`} aria-label={ar ? 'الأبواب الثلاثة' : 'Three doors'}>
       {TYPES.map(k => {
