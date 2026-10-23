@@ -86,7 +86,9 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.doesNotMatch(course, /workshop\.topics|topicsLabel|course-topics|المحاور/);
   assert.match(course, /workshop\.instructorShort/);
   const card = read('components/institution/workshops-view.tsx');
-  assert.doesNotMatch(card, /governanceCourse\.price|workshop\.price|governanceCourse\.subtitle/);
+  assert.match(card, /governanceCourse\.price/);
+  assert.match(card, /governanceCourse\.soon/);
+  assert.doesNotMatch(card, /governanceCourse\.subtitle/);
   const lib = read('lib/governance.ts');
   assert.match(lib, /export const ENROLL_HREF = 'https:\/\/link\.fastpaydirect\.com\/payment-link\/6adb486bcaf20c1f8ff2b74a'/);
   assert.match(lib, /export const enrollHref = \(locale: Locale\) => \(locale === 'ar' \? ENROLL_HREF : ENROLL_HREF\)/);

@@ -1804,6 +1804,32 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
+              - label: لمن الماستركلاس
+                name: catalogFor
+                widget: object
+                hint: "سطر واحد ملخّص من سطري «لك أنت» و«لمؤسستك». لا تضف جمهورًا جديدًا."
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان عن المحاضر
+                name: aboutInstructor
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان ليه VisionSeek
+                name: whyLabel
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: زر الماستر كلاس الخاص
+                name: privateCta
+                widget: object
+                hint: "نص الزر فقط. الوجهة تبقى صفحة ابدأ الحالية."
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
               - label: فيديو المقدمة
                 name: trailer
                 widget: object
