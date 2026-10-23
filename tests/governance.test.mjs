@@ -30,7 +30,17 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   for (const figure of ['5,000', '812.02', '97,587', '440']) assert.ok(flat.includes(figure), figure);
   assert.equal(data.workshop.evidence.length, 5);
   for (const item of data.workshop.evidence) assert.match(item.source.url, /^https:\/\//);
-  assert.equal(data.section.empty.ar, 'الورش التالية: لا يوجد بعد.');
+  assert.equal(data.section.empty.ar, 'ماستر كلاس تالية: لا يوجد بعد.');
+  assert.equal(data.workshop.blurb.ar.split('\n\n').length, 2);
+  assert.equal(data.workshop.blurb.en.split('\n\n').length, 2);
+  assert.equal(data.workshop.blurb.ar.split('\n\n')[0], 'حين تعتمد الشركات الكبرى على النماذج اللغوية الكبرى لاستشراف قراراتها الاستراتيجية، غالباً ما تفترض أن الإجابة الواثقة والمنمقة التي تتلقاها تمثل الحقيقة المطلقة. غير أن المأزق الحقيقي يكمن في "انحياز الإجابة الواحدة"؛ إذ تميل أدوات الذكاء الاصطناعي بطبيعتها الإحصائية إلى ترشيح مدرسة إدارية واحدة وتجاهل البدائل المنهجية المتاحة. هذا الخفاء المعرفي يضع القادة أمام خطر خفي: استثمار ملايين الدولارات في مسار تشغيلي قد لا يتناسب مع طبيعة أصول مؤسستهم.');
+  const prose = [];
+  const collect = value => {
+    if (typeof value === 'string') prose.push(value);
+    else if (value && typeof value === 'object') for (const child of Object.values(value)) collect(child);
+  };
+  collect(data);
+  assert.doesNotMatch(prose.join('\n'), /ورشة|ورش|Workshop|workshop/);
 });
 
 test('the course sits under masterclass, the old section is gone, and enrollment is one href', () => {

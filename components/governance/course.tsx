@@ -51,7 +51,9 @@ export function MasterclassPage({locale}: {locale: Locale}) {
 
         <section className={styles.block} aria-labelledby="course-blurb">
           <h2 id="course-blurb" className={styles.visuallyHidden}>{t(locale, workshop.title)}</h2>
-          <p className={styles.lede}>{t(locale, workshop.blurb)}</p>
+          {t(locale, workshop.blurb).split('\n\n').map(paragraph => (
+            <p className={styles.lede} key={paragraph}>{paragraph}</p>
+          ))}
         </section>
 
         <section className={styles.block} aria-labelledby="course-instructor">

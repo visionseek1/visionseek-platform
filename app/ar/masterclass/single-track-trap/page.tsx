@@ -6,7 +6,7 @@ const title = `${workshop.subtitle.ar} | VisionSeek`;
 
 export const metadata: Metadata = {
   title,
-  description: workshop.blurb.ar,
+  description: workshop.blurb.ar.replace(/\s*\n+\s*/g, ' '),
   alternates: {
     canonical: localePath('ar', coursePath),
     languages: {ar: localePath('ar', coursePath), en: coursePath},

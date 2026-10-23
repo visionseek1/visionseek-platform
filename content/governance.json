@@ -2,17 +2,17 @@
   "section": {
     "title": {"en": "AI Governance", "ar": "حوكمة الذكاء الاصطناعي"},
     "intro": {
-      "en": "The Governance section at VisionSeek. Its first workshop asks how to protect a decision that has a cost from an answer built on a single method.",
-      "ar": "قسم الحوكمة في VisionSeek. الورشة الأولى فيه تسأل: كيف تحمي قرارًا له كلفة من إجابة مبنية على منهج واحد."
+      "en": "The Governance section at VisionSeek. Its first masterclass asks how to protect a decision that has a cost from an answer built on a single method.",
+      "ar": "قسم الحوكمة في VisionSeek. ماستر كلاس الأول فيه يسأل: كيف تحمي قرارًا له كلفة من إجابة مبنية على منهج واحد."
     },
-    "empty": {"en": "Further workshops: none yet.", "ar": "الورش التالية: لا يوجد بعد."}
+    "empty": {"en": "Further masterclasses: none yet.", "ar": "ماستر كلاس تالية: لا يوجد بعد."}
   },
   "workshop": {
     "slug": "single-track-trap",
-    "position": {"en": "Workshop 01", "ar": "الورشة الأولى"},
+    "position": {"en": "Masterclass 01", "ar": "ماستر كلاس الأول"},
     "kicker": {
-      "en": "The first workshop in the Governance section",
-      "ar": "الورشة الأولى في قسم الحوكمة"
+      "en": "The first masterclass in the Governance section",
+      "ar": "ماستر كلاس الأول في قسم الحوكمة"
     },
     "title": {"en": "AI Governance", "ar": "حوكمة الذكاء الاصطناعي"},
     "subtitle": {
@@ -20,8 +20,8 @@
       "ar": "فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
     },
     "blurb": {
-      "en": "When we ask an AI system, the answer is often built on a single method, without the other methods that could solve the problem. In a company, that answer can carry large costs in a direction that may be wrong. You leave able to widen the options, and the decision stays yours.",
-      "ar": "حين نسأل الذكاء الاصطناعي، كثيرًا ما تأتي إجابته مبنيةً على منهج واحد، دون أن يعرض بقية المناهج. وفي الشركات قد تُبنى على هذه الإجابة تكاليف ضخمة في اتجاه ربما يكون خاطئًا. تخرج قادرًا على أن توسّع الخيارات، ويبقى القرار قرارك."
+      "en": "When large companies rely on large language models to anticipate their strategic decisions, they often assume that the confident, finely worded answer they receive represents absolute truth. Yet the real predicament lies in \"single-answer bias\"; AI tools, by their statistical nature, tend to nominate a single management school and ignore the methodological alternatives available. This epistemic hiddenness places leaders before a hidden risk: the investment of millions of dollars in an operational path that may not suit the nature of their institution's assets.\n\nThe Masterclass «AI Governance: The Single-Answer Trap» comes to offer a scientific and practical methodology that enables executives to govern AI tools, test their hypotheses, and adjust the compass of the strategic decision away from biases and canned judgments. This program was designed specifically for leaders and decision-makers in the Gulf and Egypt markets who wish to build solid, aware institutional systems.",
+      "ar": "حين تعتمد الشركات الكبرى على النماذج اللغوية الكبرى لاستشراف قراراتها الاستراتيجية، غالباً ما تفترض أن الإجابة الواثقة والمنمقة التي تتلقاها تمثل الحقيقة المطلقة. غير أن المأزق الحقيقي يكمن في \"انحياز الإجابة الواحدة\"؛ إذ تميل أدوات الذكاء الاصطناعي بطبيعتها الإحصائية إلى ترشيح مدرسة إدارية واحدة وتجاهل البدائل المنهجية المتاحة. هذا الخفاء المعرفي يضع القادة أمام خطر خفي: استثمار ملايين الدولارات في مسار تشغيلي قد لا يتناسب مع طبيعة أصول مؤسستهم.\n\nيأتي ماستر كلاس «حوكمة الذكاء الاصطناعي: فخ الإجابة الواحدة» ليقدم منهجية علمية وعملية تمكن المديرين التنفيذيين من حوكمة أدوات الذكاء الاصطناعي، واختبار فرضياتها، وضبط بوصلة القرار الاستراتيجي بعيداً عن الانحيازات والأحكام المعلبة. صُمم هذا البرنامج خصيصاً للقادة وصناع القرار في أسواق الخليج ومصر الراغبين في بناء منظومات مؤسسية صلبة وواعية."
     },
     "topicsLabel": {"en": "What you will cover", "ar": "المحاور"},
     "topics": [
@@ -72,7 +72,7 @@
       "ar": "القضايا ذات التكلفة الموثّقة تتعلق بالاختلاق وغياب المراجعة البشرية، لا بغياب البدائل نفسه."
     },
     "honestyLabel": {"en": "A note on the evidence", "ar": "ملاحظة على الأدلة"},
-    "audienceLabel": {"en": "Who it is for", "ar": "لمن هذه الورشة"},
+    "audienceLabel": {"en": "Who it is for", "ar": "لمن ماستر كلاس هذا"},
     "audience": {
       "en": "For individuals: leaders and decision-makers who come themselves, from any field, and who use AI on decisions that have a cost.",
       "ar": "للأفراد: القادة وصنّاع القرار الذين يحضرون بأنفسهم، من أي مجال، ممن يستخدمون الذكاء الاصطناعي في قرارات لها كلفة."
@@ -87,8 +87,8 @@
     "methodName": {"en": "بدائل", "ar": "بدائل"},
     "methodLabel": {"en": "The method", "ar": "المنهج"},
     "methodIntro": {
-      "en": "Five steps that turn a single answer into a governed decision. In this workshop the method is called «بدائل».",
-      "ar": "خمس خطوات تحوّل الإجابة الواحدة إلى قرار محكوم. اسم المنهج في هذه الورشة: «بدائل»."
+      "en": "Five steps that turn a single answer into a governed decision. In this masterclass the method is called «بدائل».",
+      "ar": "خمس خطوات تحوّل الإجابة الواحدة إلى قرار محكوم. اسم المنهج في ماستر كلاس هذا: «بدائل»."
     },
     "steps": [
       {
@@ -139,7 +139,7 @@
       {"en": "Challenge and opposition", "ar": "تحدٍّ ومعارضة"},
       {"en": "A documented human decision", "ar": "قرار بشري موثّق"}
     ],
-    "journeyLabel": {"en": "The workshop in four stations", "ar": "الورشة في أربع محطات"},
+    "journeyLabel": {"en": "The masterclass in four stations", "ar": "ماستر كلاس في أربع محطات"},
     "stations": [
       {
         "title": {"en": "The shock", "ar": "الصدمة"},
@@ -281,8 +281,8 @@
       "reveal": {"en": "Reveal the alternatives", "ar": "اكشف البدائل"},
       "another": {"en": "Write another decision", "ar": "اكتب قرارًا آخر"},
       "tableCaption": {
-        "en": "Five methods for the decision you wrote. These are the workshop’s methods, applied to your words. They are not an automated reading of your institution.",
-        "ar": "خمسة مناهج للقرار الذي كتبته. هذه مناهج الورشة نفسها، مطبّقة على كلامك. ليست قراءة آلية لمؤسستك."
+        "en": "Five methods for the decision you wrote. These are the masterclass’s methods, applied to your words. They are not an automated reading of your institution.",
+        "ar": "خمسة مناهج للقرار الذي كتبته. هذه مناهج ماستر كلاس نفسه، مطبّقة على كلامك. ليست قراءة آلية لمؤسستك."
       },
       "columns": {
         "method": {"en": "Method", "ar": "المنهج"},
@@ -332,8 +332,8 @@
             "ar": "إن كُتبت المعايير بعد الإجابة، مالت نحوها."
           },
           "fits": {
-            "en": "A decision that has a cost, which is who this workshop is for.",
-            "ar": "قرار له كلفة، وهو جمهور هذه الورشة."
+            "en": "A decision that has a cost, which is who this masterclass is for.",
+            "ar": "قرار له كلفة، وهو جمهور ماستر كلاس هذا."
           }
         },
         {
@@ -384,10 +384,10 @@
     "cover": "/governance/cover.jpg",
     "logo": "/governance/logo.png",
     "coverAlt": {
-      "en": "Workshop cover: AI Governance. The Single-Track Trap: How to Protect Enterprise Investments from Hidden AI Flaws.",
-      "ar": "غلاف الورشة: حوكمة الذكاء الاصطناعي. فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
+      "en": "Masterclass cover: AI Governance. The Single-Track Trap: How to Protect Enterprise Investments from Hidden AI Flaws.",
+      "ar": "غلاف ماستر كلاس: حوكمة الذكاء الاصطناعي. فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
     },
-    "enter": {"en": "Enter the workshop", "ar": "ادخل الورشة"},
+    "enter": {"en": "Enter the masterclass", "ar": "ادخل ماستر كلاس"},
     "onThisPage": {"en": "On this page", "ar": "في هذه الصفحة"},
     "home": {"en": "Home", "ar": "الرئيسية"},
     "outcomeLabel": {"en": "What you leave with", "ar": "ما يخرج به المشارك"},

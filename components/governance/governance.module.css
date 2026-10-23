@@ -182,6 +182,7 @@
 .page.en .sectionLabel { letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.72rem; }
 .page.page .block h2 { font-size: clamp(1.7rem, 3vw, 2.35rem); margin-bottom: 1rem; max-width: 22ch; }
 .lede { font-size: 1.12rem; max-width: 42rem; color: var(--body); }
+.lede + .lede { margin-top: 1.15rem; }
 .page .instructorName { font-size: clamp(1.35rem, 2vw, 1.8rem); font-weight: 650; }
 .enroll { align-self: flex-start; margin-top: 0.35rem; }
 .block .enroll { margin-top: 1.15rem; }
