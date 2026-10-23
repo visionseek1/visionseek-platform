@@ -11,6 +11,8 @@ import {
   type WorkshopHeadingKey,
   type WorkshopKind,
 } from '@/lib/institution/workshops';
+import {MasterclassView} from '@/components/medical/pages';
+import {isBlockHidden} from '@/lib/visibility';
 
 function Frame({locale, path, children}: {locale: Locale; path: string; children: React.ReactNode}) {
   return (
@@ -25,6 +27,11 @@ function Frame({locale, path, children}: {locale: Locale; path: string; children
 const text = (locale: Locale, value: {en: string; ar: string}) => value[locale];
 
 export function WorkshopsIndex({locale}: {locale: Locale}) {
+  if (isBlockHidden('masterclass.catalog')) return <MasterclassView locale={locale} />;
+  return <LegacyWorkshopsIndex locale={locale} />;
+}
+
+function LegacyWorkshopsIndex({locale}: {locale: Locale}) {
   const ar = locale === 'ar';
   const prefix = ar ? '/ar' : '';
   const section = workshopSection;

@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "sentence": {
+      "en": "Build, buy, transfer, or partner. In what order.",
+      "ar": "تبني، تشتري، تنقل، ولا تشارك. وبأي ترتيب."
+    },
+    "line": {
+      "en": "VisionSeek specializes in the medical field.",
+      "ar": "VisionSeek متخصصة في المجال الطبي."
+    },
+    "button": {
+      "en": "A session with Ahmed Abdelalim",
+      "ar": "جلسة مع د. أحمد"
+    }
+  },
+  "sectors": {
+    "title": {"en": "Who we work with", "ar": "لمين بنشتغل"},
+    "line": {"en": "Five parts of healthcare. One question in front of each leader.", "ar": "خمس جهات. والسؤال قدام قائد كل واحدة."}
+  },
+  "fields": {
+    "title": {"en": "Fields", "ar": "المجالات"},
+    "line": {"en": "Three fields now. The rest of the map is marked soon.", "ar": "ثلاثة دلوقتي. الباقي على الخريطة، وعليه قريبًا."},
+    "now": {"en": "Now", "ar": "الآن"},
+    "soon": {"en": "Soon", "ar": "قريبًا"}
+  },
+  "journey": {
+    "title": {"en": "Education, then Study, then Operation.", "ar": "تعليم، ثم دراسة، ثم تشغيل."},
+    "line": {"en": "In that order. The general track leads to one institution.", "ar": "بالترتيب ده. والعام يوصّل لقدرة على مقاس المؤسسة."}
+  },
+  "insights": {
+    "title": {"en": "The next capabilities are named here.", "ar": "القدرات اللي جاية تتسمى هنا."},
+    "line": {"en": "Nothing is published from this path yet.", "ar": "لسه مفيش قدرة منشورة من هنا."},
+    "link": {"en": "Insights", "ar": "Insights"}
+  },
+  "session": {
+    "title": {"en": "A free session. Thirty minutes.", "ar": "جلسة مجانية. ٣٠ دقيقة."},
+    "line": {"en": "October to December 2026. The number of sessions is limited.", "ar": "من أكتوبر إلى ديسمبر ٢٠٢٦. العدد محدود."}
+  },
+  "photo": {
+    "alt": {"en": "An empty laboratory. Benches and cabinets, no one in the frame.", "ar": "معمل فاضي. أرفف وخزائن، من غير أشخاص."},
+    "credit": {"en": "Photograph", "ar": "صورة"},
+    "source": "Unsplash",
+    "href": "https://unsplash.com/photos/1582719471384-894fbb16e074"
+  }
+}

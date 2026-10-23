@@ -81,7 +81,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
+  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports', 'medical']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {
@@ -201,7 +201,7 @@ test('page sections hidden from /admin exist, and /admin offers every hideable s
   const offered = [...readFileSync(join(root, 'public/admin/config.yml'), 'utf8').matchAll(/value: "([^"]+)"/g)].map(m => m[1]);
   for (const id of ids) assert.ok(offered.includes(id), `/admin does not offer ${id}; run scripts/archive-options.py`);
   for (const id of ids) {
-    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
+    const used = ['components/home-page.tsx', 'components/institution/home-sections.tsx', 'components/capability/hero.tsx', 'components/institution/workshops-view.tsx', 'components/projects/project-pages.tsx'].some(file => readFileSync(join(root, file), 'utf8').includes(`'${id}'`) || readFileSync(join(root, file), 'utf8').includes(`"${id}"`));
     assert.ok(used, `${id} is listed but no section checks it`);
   }
 });

@@ -1,0 +1,194 @@
+{
+  "home": {
+    "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
+    "title": {"en": "Who we work with", "ar": "لمين بنشتغل"},
+    "intro": {"en": "Five parts of healthcare. Radiology, diagnosis and drugs are examples we start with, not the limit of the work. The rest of the map is marked soon.", "ar": "خمس جهات في القطاع الصحي. الأشعة والتشخيص والدواء أمثلة بنبدأ بيها، مش سقف الشغل. الباقي على الخريطة، وعليه قريبًا."},
+    "fieldsLink": {"en": "Fields", "ar": "المجالات"}
+  },
+  "fieldsPage": {
+    "eyebrow": {"en": "HEALTHCARE", "ar": "القطاع الصحي"},
+    "title": {"en": "Fields", "ar": "المجالات"},
+    "intro": {"en": "Three examples we start with: radiology, diagnosis and drugs. They are not the limit of the fields. The rest of the map is marked soon.", "ar": "ثلاثة أمثلة بنبدأ بيها: الأشعة، والتشخيص، والدواء. مش سقف المجالات. الباقي على الخريطة، ومكتوب عليه قريبًا."},
+    "now": {"en": "Examples we start with", "ar": "أمثلة بنبدأ بيها"},
+    "later": {"en": "On the map, not yet", "ar": "على الخريطة، ولسه مش دلوقتي"},
+    "soon": {"en": "Coming soon", "ar": "قريبًا"},
+    "starLabel": {"en": "An example we start with", "ar": "مثال بنبدأ بيه"},
+    "sectorsHeading": {"en": "Who we work with", "ar": "لمين بنشتغل"}
+  },
+  "sectors": [
+    {
+      "slug": "hospitals",
+      "title": {"en": "Hospitals and care providers", "ar": "المستشفيات ومقدّمو الرعاية"},
+      "problem": {"en": "Every day a decision is required on the bed, the diagnosis and the medicine, and the picture inside the hospital is still in pieces.", "ar": "كل يوم مطلوب قرار على السرير والتشخيص والدواء، والصورة داخل المستشفى لسه متقطعة."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "therapy", "remote", "operations", "revenue", "experience"]
+    },
+    {
+      "slug": "pharma",
+      "title": {"en": "Pharmaceutical companies and plants", "ar": "شركات الأدوية والمصانع"},
+      "problem": {"en": "A medicine has a road, from research to the plant to the patient, and the leader still cannot see that road as one picture.", "ar": "الدواء له طريق، من البحث إلى المصنع إلى المريض، والقائد لسه مش شايف الطريق ده صورة واحدة."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "genomics"]
+    },
+    {
+      "slug": "pharmacies",
+      "title": {"en": "Pharmacies and distribution", "ar": "الصيدليات والتوزيع"},
+      "problem": {"en": "The medicine that is needed is not always where it is needed. Stock sits on its own, and demand sits on its own.", "ar": "الدواء المطلوب مش دايمًا في المكان المطلوب. المخزون لوحده، والطلب لوحده."},
+      "fieldIds": ["radiology", "diagnosis", "drugs"]
+    },
+    {
+      "slug": "government",
+      "title": {"en": "Government and oversight bodies", "ar": "الحكومة والجهات الرقابية"},
+      "problem": {"en": "The leader of a ministry or an oversight body writes the rule and has to watch the system, and the picture arrives late and in pieces.", "ar": "قائد الوزارة أو الجهة الرقابية يكتب القاعدة ويراقب المنظومة، والصورة توصله متأخرة ومتفرقة."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "public-health", "genomics"]
+    },
+    {
+      "slug": "research",
+      "title": {"en": "Research and universities", "ar": "البحث والجامعات"},
+      "problem": {"en": "The knowledge is there, the institution needs a capability it can run every day, and the road from the paper to that daily work is still not drawn.", "ar": "المعرفة موجودة، والمؤسسة محتاجة قدرة تمشي بيها كل يوم، والطريق من الورقة للتشغيل لسه مش مترسوم."},
+      "fieldIds": ["radiology", "diagnosis", "drugs", "labs", "genomics"]
+    }
+  ],
+  "fields": [
+    {
+      "id": "radiology",
+      "focus": true,
+      "title": {"en": "Radiology", "ar": "الأشعة والتصوير الطبي"},
+      "line": {"en": "An image that says what is inside the body, before the decision is made.", "ar": "صورة تقول ما في الجسم، قبل ما يتاخد القرار."}
+    },
+    {
+      "id": "diagnosis",
+      "focus": true,
+      "title": {"en": "Medical diagnosis", "ar": "التشخيص الإكلينيكي"},
+      "line": {"en": "Knowing the patient's condition early, before it widens.", "ar": "تعرف حالة المريض بدري، قبل ما تتسع."}
+    },
+    {
+      "id": "drugs",
+      "focus": true,
+      "title": {"en": "Drugs", "ar": "الدواء"},
+      "line": {"en": "The medicine itself, from the plant until it reaches the person who needs it.", "ar": "الدوا نفسه، من المصنع لحد ما يوصل للي محتاجه."}
+    },
+    {"id": "labs", "focus": false, "title": {"en": "Labs and pathology", "ar": "المعامل والباثولوجي"}},
+    {"id": "therapy", "focus": false, "title": {"en": "Therapy and procedures", "ar": "العلاج والعمليات"}},
+    {"id": "remote", "focus": false, "title": {"en": "Remote monitoring", "ar": "المتابعة عن بُعد"}},
+    {"id": "operations", "focus": false, "title": {"en": "Hospital operations", "ar": "تشغيل المستشفى"}},
+    {"id": "revenue", "focus": false, "title": {"en": "Revenue and insurance", "ar": "الإيراد والتأمين"}},
+    {"id": "public-health", "focus": false, "title": {"en": "Public health", "ar": "الصحة العامة"}},
+    {"id": "genomics", "focus": false, "title": {"en": "Genomics", "ar": "الجينوم"}},
+    {"id": "experience", "focus": false, "title": {"en": "Patient experience", "ar": "تجربة المريض"}}
+  ],
+  "fieldsNote": {
+    "en": "These three are examples of where we start. They are not the limit. The rest of the map is marked soon.",
+    "ar": "الثلاثة أمثلة على اللي بنبدأ بيه، مش حد الشغل. الباقي ظاهر، وعليه قريبًا."
+  },
+  "identity": {
+    "eyebrow": {"en": "THE MEDICAL FIELD", "ar": "المجال الطبي"},
+    "title": {"en": "VisionSeek specializes in the medical field.", "ar": "VisionSeek متخصصة في المجال الطبي."},
+    "problem": {"en": "A medical institution wants an important new capability, and does not yet know what to build, what to buy, what to transfer, whom to partner with, or in what order.", "ar": "المؤسسة الطبية عايزة قدرة جديدة ومهمة. ولسه مش عارفة تبني إيه، وتشتري إيه، وتنقل إيه، وتشارك مين، وبأي ترتيب."},
+    "insights": {"en": "The capabilities that come next will be named in Insights. None are published from this path yet.", "ar": "القدرات اللي جاية هتتسمى في Insights. لسه مفيش قدرة منشورة من هنا."}
+  },
+  "education": {
+    "eyebrow": {"en": "FOR LEADERS ACROSS THE MEDICAL SECTOR", "ar": "لقيادات القطاع الطبي كله"},
+    "title": {"en": "Masterclass", "ar": "الماستركلاس"},
+    "intro": {"en": "Online. For the leader of any institution in the medical sector.", "ar": "أونلاين. لقائد أي مؤسسة في القطاع الطبي."},
+    "general": {
+      "title": {"en": "The wide picture", "ar": "الصورة العامة"},
+      "text": {"en": "The big picture of AI, and the tools that now exist: what they can do, and what they still cannot.", "ar": "صورة الذكاء الاصطناعي الكبيرة، والأدوات اللي بقت موجودة. إيه اللي تعمله، وإيه اللي لسه ما تعملهوش."}
+    },
+    "specific": {
+      "title": {"en": "The institution's own problems", "ar": "مسائل المؤسسة"},
+      "text": {"en": "Each institution works on its own problems, and leaves with a map of the first capability to start with.", "ar": "كل مؤسسة تشتغل على مسائلها هي، وتخرج بخريطة لأول قدرة تبدأ بيها."}
+    },
+    "examples": {
+      "en": "Radiology, diagnosis and drugs are examples of where we start. They are not the limit.",
+      "ar": "الأشعة، والتشخيص، والدواء أمثلة على اللي بنبدأ بيه. مش سقف الشغل."
+    },
+    "formatsTitle": {"en": "Three ways to sit", "ar": "ثلاث طرق للحضور"},
+    "formats": [
+      {
+        "title": {"en": "Short open sessions, online", "ar": "جلسات قصيرة مفتوحة، أونلاين"},
+        "text": {"en": "Open to leaders. Short. This is where we start.", "ar": "مفتوحة للقيادات. قصيرة. ومن هنا بنبدأ."}
+      },
+      {
+        "title": {"en": "A masterclass for one institution", "ar": "ماستركلاس لمؤسسة واحدة"},
+        "text": {"en": "On that institution's own material, not on a shared example.", "ar": "على مادة المؤسسة نفسها، مش على مثال جاهز."}
+      },
+      {
+        "title": {"en": "An in-person masterclass for a group", "ar": "ماستركلاس حضوري لمجموعة"},
+        "text": {"en": "Leaders in one room. Each one still on their own institution.", "ar": "قيادات في قاعة واحدة. وكل واحد لسه على مؤسسته."}
+      }
+    ],
+    "starting": {"en": "We start online.", "ar": "بنبدأ أونلاين."},
+    "communityTitle": {"en": "A community of leaders", "ar": "مجتمع للقيادات"},
+    "community": {"en": "After the education, the leaders stay in one community and come back to each other.", "ar": "بعد التعليم، القيادات تفضل في مجتمع واحد، وترجع لبعض."}
+  },
+  "system": {
+    "eyebrow": {"en": "INSIDE THE INSTITUTION", "ar": "جوه المؤسسة"},
+    "title": {"en": "The system inside the institution", "ar": "النظام داخل المؤسسة"},
+    "intro": {"en": "A team and a method, placed inside the institution. Not a presentation delivered from the outside.", "ar": "فريق ومنهج، جوه المؤسسة. مش عرض يتقدّم من بره."},
+    "generalTitle": {"en": "The general track", "ar": "المسار العام"},
+    "generalIntro": {"en": "The same order in every institution. This track comes first.", "ar": "نفس الترتيب في كل مؤسسة. والمسار ده هو الأول."},
+    "general": [
+      {
+        "id": "study",
+        "title": {"en": "Study the institution first", "ar": "ندرس المؤسسة الأول"},
+        "text": {"en": "Before anything is put in place, learn how the institution actually works, and where the first capability should sit.", "ar": "قبل ما نركّب أي حاجة، نعرف المؤسسة بتشتغل إزاي، وأول قدرة تقعد فين."}
+      },
+      {
+        "id": "operation",
+        "title": {"en": "Install the capability and run it", "ar": "نركّب القدرة ونشغّلها"},
+        "text": {"en": "What was chosen enters the daily work, with the people who already do that work.", "ar": "اللي اتختار يدخل في الشغل اليومي، مع الناس اللي بتعمله أصلًا."}
+      },
+      {
+        "id": "measure",
+        "title": {"en": "Measure the result", "ar": "نقيس النتيجة"},
+        "text": {"en": "Agree what will be measured before the work starts. A result that is not measured is not yet a result.", "ar": "نتفق على اللي هيتقاس قبل ما الشغل يبدأ. والنتيجة اللي ما تتقاسش، لسه مش نتيجة."}
+      }
+    ],
+    "customTitle": {"en": "Custom capabilities", "ar": "قدرات على مقاس المؤسسة"},
+    "custom": {"en": "Once the general track is moving, a capability can be shaped for this institution alone.", "ar": "لما المسار العام يمشي، نقدر نفصل قدرة للمؤسسة دي وحدها."},
+    "bridge": {"en": "The general track leads to the custom one. We do not start with a custom build.", "ar": "المسار العام هو اللي يوصّل للخاص. مش بنبدأ بتفصيل من أول يوم."}
+  },
+  "work": {
+    "eyebrow": {"en": "THE JOURNEY", "ar": "الطريق"},
+    "title": {"en": "Education, then Study, then Operation.", "ar": "تعليم، ثم دراسة، ثم تشغيل."},
+    "intro": {"en": "In that order. The general track is what leads to a capability shaped for one institution.", "ar": "بالترتيب ده. والمسار العام هو اللي يوصّل لقدرة على مقاس المؤسسة."},
+    "steps": [
+      {
+        "id": "education",
+        "href": "/masterclass",
+        "title": {"en": "Education", "ar": "تعليم"},
+        "text": {"en": "Online, for leaders across the medical sector: the wide picture of AI and its tools, then each institution's own problems, and a map of the first capability.", "ar": "أونلاين، لقيادات القطاع الطبي كله: صورة الذكاء الاصطناعي وأدواته، وبعدين مسائل المؤسسة، وخريطة لأول قدرة."}
+      },
+      {
+        "id": "study",
+        "href": "/system#study",
+        "title": {"en": "Study", "ar": "دراسة"},
+        "text": {"en": "Study the institution first, before anything is put in place.", "ar": "ندرس المؤسسة الأول، قبل ما نركّب أي حاجة."}
+      },
+      {
+        "id": "operation",
+        "href": "/system#operation",
+        "title": {"en": "Operation", "ar": "تشغيل"},
+        "text": {"en": "Put the capability into the daily work, run it, and measure the result.", "ar": "ندخل القدرة في الشغل اليومي، نشغّلها، ونقيس النتيجة."}
+      }
+    ]
+  },
+  "insightsBlock": {
+    "title": {"en": "Insights, where the next capabilities come from", "ar": "Insights، من هنا القدرات اللي جاية"},
+    "intro": {"en": "Insights is the future source of capabilities. When a piece is published for this sector, it appears here.", "ar": "Insights هو مصدر القدرات اللي جاية. لما تنزل قراءة للقطاع ده، تظهر هنا."},
+    "empty": {"en": "Nothing here yet.", "ar": "لا يوجد بعد."},
+    "future": {"en": "What is learned while a capability runs comes back into Insights. From there, the next capabilities are named. None are published from this path yet.", "ar": "اللي بنتعلمه والقدرة شغّالة، يرجع في Insights. ومن هناك تتسمى القدرات اللي بعد كده. لسه مفيش قدرة منشورة من المسار ده."},
+    "all": {"en": "All Insights", "ar": "كل القراءات"}
+  },
+  "session": {
+    "title": {"en": "A free 30-minute session with Ahmed Abdelalim", "ar": "جلسة مجانية، ٣٠ دقيقة، مع د. أحمد"},
+    "text": {"en": "October to December 2026. The number of sessions is limited. We start from the question in front of you.", "ar": "من أكتوبر إلى ديسمبر ٢٠٢٦. العدد محدود. نبدأ من السؤال اللي قدامك."},
+    "button": {"en": "Book the session with Ahmed Abdelalim", "ar": "احجز الجلسة مع د. أحمد"}
+  },
+  "cross": {
+    "fields": {"en": "All fields", "ar": "كل المجالات"},
+    "others": {"en": "Other institutions", "ar": "جهات تانية"},
+    "who": {"en": "Who we work with", "ar": "لمين بنشتغل"},
+    "education": {"en": "Masterclass", "ar": "الماستركلاس"},
+    "system": {"en": "The system inside the institution", "ar": "النظام داخل المؤسسة"}
+  }
+}

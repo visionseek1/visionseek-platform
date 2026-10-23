@@ -5,6 +5,8 @@ import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse,
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, boxMailto, type Sector, type SectorIcon, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
+import {focusFields, medical} from '@/lib/medical';
+import {isBlockHidden} from '@/lib/visibility';
 import styles from './projects.module.css';
 import {ProjectFilter, type ProjectCardData} from './project-filter';
 
@@ -68,7 +70,7 @@ function GridHero({children,glow}:{children:ReactNode;glow?:string}) {
   return <section className={styles.hero} style={glow?tone(glow):undefined}><div className={styles.heroGrid} aria-hidden="true"/><div className={styles.wrap}>{children}</div></section>;
 }
 
-export function ProjectsIndex({locale}:{locale:Locale}) {
+function LegacyProjectsIndex({locale}:{locale:Locale}) {
   const ar=locale==='ar';
   return <Frame locale={locale} path="/projects">
     <GridHero>
@@ -91,6 +93,103 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
     </div></section>
     <Contact locale={locale}/>
   </Frame>;
+}
+
+/**
+ * A public project is listed under a medical sector only when its own text is that sector.
+ * Proviso AI is legal governance for AI agents. VisionSeek Box is an on-prem device for any institution.
+ * Neither is a hospital, a plant, a pharmacy, a health regulator, or a university, so the map stays empty
+ * and both remain under «مشاريع أخرى». Archived LNG files are not in `projects`.
+ */
+const sectorOfProject = new Map<string, string>();
+const projectsInSector = (slug:string) => projects.filter(project => sectorOfProject.get(project.slug) === slug);
+const otherProjects = () => projects.filter(project => !sectorOfProject.has(project.slug));
+
+function exampleLine(locale:Locale) {
+  const titles = focusFields().map(field => field.title[locale]);
+  if (locale === 'ar') {
+    const list = titles.length > 1 ? `${titles.slice(0, -1).join('، ')}، و${titles[titles.length - 1]}` : titles.join('');
+    return `أمثلة بنبدأ بيها، مش سقف: ${list}.`;
+  }
+  const list = titles.length > 1 ? `${titles.slice(0, -1).join(', ')}, and ${titles[titles.length - 1]}` : titles.join('');
+  return `Examples we start with, not a limit: ${list}.`;
+}
+
+function MedicalProjectsIndex({locale}:{locale:Locale}) {
+  const ar = locale === 'ar';
+  const p = prefix(locale);
+  const others = otherProjects();
+  const underCount = medical.sectors.reduce((sum, sector) => sum + projectsInSector(sector.slug).length, 0);
+  return <Frame locale={locale} path="/projects">
+    <GridHero>
+      <p className={styles.live}><span aria-hidden="true"/>VISIONSEEK / PROJECTS</p>
+      <h1>{ar ? <>خمس جهات في <em>القطاع الصحي.</em></> : <>Five parts of <em>healthcare.</em></>}</h1>
+      <p className={styles.lede}>{ar ? 'كل جهة بسطر مشكلتها، وأمثلة بنبدأ بيها، والمشاريع المنشورة تحتها.' : 'Each part has its problem, the examples we start with, and the projects published under it.'}</p>
+      <dl className={styles.stats}>
+        <div><dt>{ar ? 'جهات' : 'Parts'}</dt><dd dir="ltr">{String(medical.sectors.length).padStart(2, '0')}</dd></div>
+        <div><dt>{ar ? 'تحت الجهات' : 'Under them'}</dt><dd dir="ltr">{String(underCount).padStart(2, '0')}</dd></div>
+        <div><dt>{ar ? 'مشاريع أخرى' : 'Other projects'}</dt><dd dir="ltr">{String(others.length).padStart(2, '0')}</dd></div>
+      </dl>
+    </GridHero>
+    <div id="fields">
+      {medical.sectors.map((sector, index) => {
+        const listed = projectsInSector(sector.slug);
+        return <section className={styles.section} id={sector.slug} key={sector.slug} style={{scrollMarginTop: 88}}>
+          <div className={styles.wrap}>
+            <div className={styles.heading}>
+              <h2>{sector.title[locale]}</h2>
+              <span className={styles.count} dir="ltr">{String(index + 1).padStart(2, '0')}</span>
+            </div>
+            <p className={styles.lede}>{sector.problem[locale]}</p>
+            <p className={styles.notice}>{exampleLine(locale)}</p>
+            {listed.length
+              ? <div className={styles.cardsBelow}><ProjectFilter locale={locale} cards={listed.map(project => cardData(project, locale))} audiences={[]}/></div>
+              : <div className={styles.emptyState}><p>{ar ? 'لسه مفيش مشروع منشور هنا.' : 'No published project here yet.'}</p></div>}
+          </div>
+        </section>;
+      })}
+    </div>
+    <section className={`${styles.section} ${styles.band}`} id="other-projects">
+      <div className={styles.wrap}>
+        <div className={styles.heading}>
+          <h2>{ar ? 'مشاريع أخرى' : 'Other projects'}</h2>
+          <span className={styles.count} dir="ltr">{String(others.length).padStart(2, '0')}</span>
+        </div>
+        <p className={styles.lede}>{ar ? 'مشاريع منشورة قبل المسار الطبي. صفحاتها زي ما هي، ومن غير إعادة كتابة.' : 'Projects published before the medical path. Their pages stay as they are.'}</p>
+        <div className={styles.cardsBelow}><ProjectFilter locale={locale} cards={others.map(project => cardData(project, locale))} audiences={[]}/></div>
+      </div>
+    </section>
+    <section className={styles.section} aria-labelledby="journey-title">
+      <div className={styles.wrap}>
+        <p className={styles.eyebrow}>{medical.work.eyebrow[locale]}</p>
+        <h2 className={styles.h2} id="journey-title">{medical.work.title[locale]}</h2>
+        <p className={styles.lede}>{medical.work.intro[locale]}</p>
+        <div className={styles.workGrid}>
+          {medical.work.steps.map((step, index) => <article key={step.id}>
+            <Link href={`${p}${step.href}`} style={{display: 'block', color: 'inherit'}}>
+              <span className={styles.mono} dir="ltr">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{step.title[locale]}</h3>
+              <p>{step.text[locale]}</p>
+            </Link>
+          </article>)}
+        </div>
+      </div>
+    </section>
+    <section className={styles.contact}>
+      <div className={styles.wrap}>
+        <div>
+          <h2>{medical.session.title[locale]}</h2>
+          <p className={styles.lede}>{medical.session.text[locale]}</p>
+        </div>
+        <Link className={styles.primary} href={`${p}/start`}>{medical.session.button[locale]}<ArrowRight size={18} aria-hidden="true"/></Link>
+      </div>
+    </section>
+  </Frame>;
+}
+
+export function ProjectsIndex({locale}:{locale:Locale}) {
+  if (!isBlockHidden('projects.legacy')) return <LegacyProjectsIndex locale={locale}/>;
+  return <MedicalProjectsIndex locale={locale}/>;
 }
 
 export function SectorPage({sector,locale}:{sector:Sector;locale:Locale}) {
