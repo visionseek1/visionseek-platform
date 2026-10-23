@@ -57,11 +57,11 @@ test('Korean Solutions: in the menu, the sitemap and the archive list; the ops s
   for (const needle of ['حلول من كوريا', '#solutions', '/ops/solutions', 'اخفيه من الموقع']) assert.ok(html.includes(needle), needle);
 });
 
-test('Korean cars: a house inside Korean Solutions, new cars only, no dealer', () => {
+test('Korean cars: a house inside Korean Solutions, no dealer', () => {
   for (const f of ['app/korean-solutions/cars/page.tsx', 'app/ar/korean-solutions/cars/page.tsx', 'components/korean-solutions/cars.tsx', 'public/ks/gv90.jpg']) assert.ok(existsSync(new URL(`../${f}`, import.meta.url)), f);
   const cars = read('components/korean-solutions/cars.tsx');
   assert.match(cars, /GV90/);
-  assert.match(cars, /جديدة فقط/);
+  assert.doesNotMatch(cars, /جديدة فقط/);
   assert.match(cars, /14\.8/);
   assert.doesNotMatch(cars, /هانا|Hana Car|Nine Star|مستعمل للبيع|MSRP/i);
   assert.match(read('components/korean-solutions/finder.tsx'), /korean-solutions\/cars/);

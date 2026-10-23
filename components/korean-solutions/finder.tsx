@@ -63,7 +63,7 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         <span className={styles.carsRowCopy}>
           <span className={`${styles.carsRowEn} ${styles.latin}`} lang="en">GENESIS</span>
           <span className={styles.carsRowWord}>{ar ? 'السيارات' : 'Cars'}</span>
-          <span className={styles.carsRowLine}>{ar ? 'هجين وكهرباء. جديدة فقط.' : 'Hybrid and electric. New only.'}</span>
+          <span className={styles.carsRowLine}>{ar ? 'هجين وكهرباء.' : 'Hybrid and electric.'}</span>
         </span>
       </Link>
       <div className={styles.finderHead}>

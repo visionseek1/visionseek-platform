@@ -7,13 +7,15 @@ import {NO_PARTNERSHIP, type Bi} from '@/lib/korean-solutions-copy';
 type Locale = 'ar' | 'en';
 type Mark = 'hybrid' | 'electric';
 
-const CARS: {name: string; mark: Mark; line: Bi}[] = [
-  {name: 'Genesis Electrified G80', mark: 'electric', line: {ar: 'سيدان للطريق الطويل.', en: 'A sedan for the long road.'}},
-  {name: 'Genesis Electrified GV70', mark: 'electric', line: {ar: 'للمدينة.', en: 'For the city.'}},
-  {name: 'Hyundai Ioniq 5', mark: 'electric', line: {ar: 'مجرّبة على الطريق من سنوات.', en: 'On the road for years.'}},
-  {name: 'Kia EV9', mark: 'electric', line: {ar: 'ثلاثة صفوف. للأسطول أو للعائلة.', en: 'Three rows. For a fleet or a family.'}},
-  {name: 'Hyundai Santa Fe Hybrid', mark: 'hybrid', line: {ar: 'عائلة ومسافة.', en: 'A family, and distance.'}},
-  {name: 'Kia Sorento Hybrid', mark: 'hybrid', line: {ar: 'نفس المسافة، من كيا.', en: 'The same distance, from Kia.'}},
+type Role = 'wide' | 'pair' | 'band';
+
+const CARS: {name: string; mark: Mark; role: Role; line: Bi}[] = [
+  {name: 'Genesis Electrified G80', mark: 'electric', role: 'wide', line: {ar: 'سيدان للطريق الطويل.', en: 'A sedan for the long road.'}},
+  {name: 'Genesis Electrified GV70', mark: 'electric', role: 'pair', line: {ar: 'للمدينة.', en: 'For the city.'}},
+  {name: 'Hyundai Ioniq 5', mark: 'electric', role: 'pair', line: {ar: 'مجرّبة على الطريق من سنوات.', en: 'On the road for years.'}},
+  {name: 'Kia EV9', mark: 'electric', role: 'band', line: {ar: 'ثلاثة صفوف. للأسطول أو للعائلة.', en: 'Three rows. For a fleet or a family.'}},
+  {name: 'Hyundai Santa Fe Hybrid', mark: 'hybrid', role: 'pair', line: {ar: 'عائلة ومسافة.', en: 'A family, and distance.'}},
+  {name: 'Kia Sorento Hybrid', mark: 'hybrid', role: 'pair', line: {ar: 'نفس المسافة، من كيا.', en: 'The same distance, from Kia.'}},
 ];
 
 const TECH: {title: Bi; text: Bi}[] = [
@@ -42,8 +44,8 @@ export default function KoreanCars({locale}: {locale: Locale}) {
         <p className={`${styles.carsHeroEn} ${styles.latin}`} lang="en" dir="ltr">GENESIS · GV90</p>
         <h1 id="cars-title">{ar ? 'السيارات' : 'Cars'}</h1>
         <p>{ar
-          ? 'الأعلى في بيت جينيسيس. كهرباء، جديدة، ومن غير سعر.'
-          : 'The top of the Genesis house. Electric, new, and with no price.'}</p>
+          ? 'الأعلى في بيت جينيسيس. كهرباء، ومن غير سعر.'
+          : 'The top of the Genesis house. Electric, and with no price.'}</p>
       </div>
     </section>
 
@@ -54,15 +56,26 @@ export default function KoreanCars({locale}: {locale: Locale}) {
 
       <section className={styles.carsList} aria-labelledby="cars-list">
         <h2 id="cars-list">{ar ? 'الطرازات' : 'The models'}</h2>
-        {groups.map(mark => <div key={mark} className={styles.carsGroup}>
-          <h3>{t(MARK[mark])}</h3>
-          <ul>
-            {CARS.filter(car => car.mark === mark).map(car => <li key={car.name}>
-              <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{car.name}</span>
-              <span>{t(car.line)}</span>
-            </li>)}
-          </ul>
-        </div>)}
+        {groups.map(mark => {
+          const items = CARS.filter(car => car.mark === mark);
+          const wide = items.filter(car => car.role === 'wide');
+          const pair = items.filter(car => car.role === 'pair');
+          const band = items.filter(car => car.role === 'band');
+          const Name = ({car}: {car: typeof CARS[number]}) => <>
+            <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{car.name}</span>
+            <p>{t(car.line)}</p>
+          </>;
+          return <div key={mark} className={styles.carsGroup}>
+            <h3>{t(MARK[mark])}</h3>
+            <div className={styles.carsMix}>
+              {wide.map(car => <article key={car.name} className={styles.carsWide}><Name car={car}/></article>)}
+              {pair.length > 0 && <div className={mark === 'hybrid' ? styles.carsPairSoft : styles.carsPair}>
+                {pair.map(car => <article key={car.name}><Name car={car}/></article>)}
+              </div>}
+              {band.map(car => <article key={car.name} className={styles.carsBand}><Name car={car}/></article>)}
+            </div>
+          </div>;
+        })}
       </section>
 
       <section className={styles.carsTech} aria-labelledby="cars-tech">
@@ -77,8 +90,8 @@ export default function KoreanCars({locale}: {locale: Locale}) {
         <span className={styles.num}>14.8</span> {ar ? 'مليار دولار، صادرات كوريا من الهجين في 2025، بزيادة 30٪.' : 'billion dollars. Korean hybrid exports in 2025, up 30 percent.'} <a href={SOURCE}>{ar ? 'المصدر' : 'Source'}</a>
       </p>
       <p className={styles.carsOnly}>{ar
-        ? 'جديدة فقط. لا مستعمل. VisionSeek لا تخزّن سيارات. تفتح الطلب.'
-        : 'New only. Not used. VisionSeek does not stock cars. It opens the request.'}</p>
+        ? 'VisionSeek لا تخزّن سيارات. تفتح الطلب.'
+        : 'VisionSeek does not stock cars. It opens the request.'}</p>
       <p className={styles.note}>{t(NO_PARTNERSHIP)}</p>
 
       <section id="request" className={styles.carsAsk} aria-labelledby="cars-ask">
