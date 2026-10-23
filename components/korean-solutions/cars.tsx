@@ -5,98 +5,89 @@ import styles from './ks.module.css';
 import {NO_PARTNERSHIP, type Bi} from '@/lib/korean-solutions-copy';
 
 type Locale = 'ar' | 'en';
-type Mark = 'hybrid' | 'electric';
 
-type Role = 'wide' | 'pair' | 'band';
+type Shot = {
+  name: string;
+  src: string;
+  mark: Bi;
+  line: Bi;
+  span: 'lead' | 'half' | 'wide';
+};
 
-const CARS: {name: string; mark: Mark; role: Role; line: Bi}[] = [
-  {name: 'Genesis Electrified G80', mark: 'electric', role: 'wide', line: {ar: 'سيدان للطريق الطويل.', en: 'A sedan for the long road.'}},
-  {name: 'Genesis Electrified GV70', mark: 'electric', role: 'pair', line: {ar: 'للمدينة.', en: 'For the city.'}},
-  {name: 'Hyundai Ioniq 5', mark: 'electric', role: 'pair', line: {ar: 'مجرّبة على الطريق من سنوات.', en: 'On the road for years.'}},
-  {name: 'Kia EV9', mark: 'electric', role: 'band', line: {ar: 'ثلاثة صفوف. للأسطول أو للعائلة.', en: 'Three rows. For a fleet or a family.'}},
-  {name: 'Hyundai Santa Fe Hybrid', mark: 'hybrid', role: 'pair', line: {ar: 'عائلة ومسافة.', en: 'A family, and distance.'}},
-  {name: 'Kia Sorento Hybrid', mark: 'hybrid', role: 'pair', line: {ar: 'نفس المسافة، من كيا.', en: 'The same distance, from Kia.'}},
+const SHOTS: Shot[] = [
+  {name: 'Genesis Electrified G80', src: '/ks/g80.jpg', span: 'lead', mark: {ar: 'كهرباء', en: 'Electric'}, line: {ar: 'سيدان للطريق الطويل.', en: 'A sedan for the long road.'}},
+  {name: 'Hyundai Ioniq 5', src: '/ks/ioniq.jpg', span: 'half', mark: {ar: 'كهرباء', en: 'Electric'}, line: {ar: 'على الطريق من سنوات.', en: 'On the road for years.'}},
+  {name: 'Genesis Electrified GV70', src: '/ks/gv70.jpg', span: 'half', mark: {ar: 'كهرباء', en: 'Electric'}, line: {ar: 'للمدينة.', en: 'For the city.'}},
+  {name: 'Kia EV9', src: '/ks/ev9.jpg', span: 'wide', mark: {ar: 'كهرباء', en: 'Electric'}, line: {ar: 'ثلاثة صفوف. للأسطول أو للعائلة.', en: 'Three rows. For a fleet or a family.'}},
+  {name: 'Hyundai Santa Fe Hybrid', src: '/ks/santa.jpg', span: 'wide', mark: {ar: 'هجين', en: 'Hybrid'}, line: {ar: 'عائلة ومسافة. وسورينتو من كيا، لنفس المسافة.', en: 'A family, and distance. And the Sorento from Kia, for the same road.'}},
 ];
 
 const TECH: {title: Bi; text: Bi}[] = [
-  {title: {ar: 'البطارية', en: 'The battery'}, text: {ar: 'معمار 800 فولت، ومنها GV90 وأيونيك 5 وGV60. الشحن السريع من السيارة، لا من صندوق يُشترى بعدها.', en: 'An 800-volt architecture, including the GV90, the Ioniq 5 and the GV60. Fast charging is part of the car, not a box bought later.'}},
-  {title: {ar: 'مساعدة القيادة', en: 'Driver assistance'}, text: {ar: 'مساعدة على الطريق السريع، من هيونداي وكيا وجينيسيس. مساعدة، لا سيارة تقود نفسها.', en: 'Highway assistance from Hyundai, Kia and Genesis. Assistance, not a car that drives itself.'}},
-  {title: {ar: 'المقصورة', en: 'The cabin'}, text: {ar: 'شاشة ومقعد وصوت كغرفة هادية، لا كقائمة كماليات.', en: 'Screen, seat and sound as a quiet room, not an options list.'}},
+  {title: {ar: 'البطارية', en: 'The battery'}, text: {ar: 'شحن سريع من السيارة نفسها. معمار 800 فولت، ومنها GV90 وأيونيك 5.', en: 'Fast charging from the car itself. An 800-volt architecture, including the GV90 and the Ioniq 5.'}},
+  {title: {ar: 'الطريق', en: 'The road'}, text: {ar: 'مساعدة على الطريق السريع. مساعدة، لا سيارة تقود نفسها.', en: 'Help on the highway. Help, not a car that drives itself.'}},
+  {title: {ar: 'جوه', en: 'Inside'}, text: {ar: 'شاشة، ومقعد، وصوت. أوضة هادية، مش قائمة كماليات.', en: 'A screen, a seat, a sound. A quiet room, not an options list.'}},
 ];
 
-const MARK: Record<Mark, Bi> = {
-  hybrid: {ar: 'هجين', en: 'Hybrid'},
-  electric: {ar: 'كهرباء', en: 'Electric'},
-};
-
 const SOURCE = 'https://www.koreatimes.co.kr/economy/20260115/koreas-auto-exports-hit-record-72-bil-in-2025';
-const PHOTO = 'https://commons.wikimedia.org/wiki/File:Genesis_GV90_JG1_Baena_Green_(5).jpg';
-const LICENSE = 'https://creativecommons.org/licenses/by-sa/4.0';
+
+function ShotCard({shot, t}: {shot: Shot; t: (v: Bi) => string}) {
+  return <article className={`${styles.carsShot} ${shot.span === 'lead' ? styles.carsShotLead : ''} ${shot.span === 'wide' ? styles.carsShotWide : ''}`}>
+    <Image src={shot.src} alt={shot.name} fill sizes={shot.span === 'half' ? '(max-width:800px) 100vw, 50vw' : '100vw'}/>
+    <div className={styles.carsShotCopy}>
+      <span className={styles.carsShotMark}>{t(shot.mark)}</span>
+      <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{shot.name}</span>
+      <p>{t(shot.line)}</p>
+    </div>
+  </article>;
+}
 
 export default function KoreanCars({locale}: {locale: Locale}) {
   const ar = locale === 'ar';
   const t = (v: Bi) => (ar ? v.ar : v.en);
-  const groups: Mark[] = ['electric', 'hybrid'];
+  const [lead, ioniq, gv70, ev9, santa] = SHOTS;
   return <Shell locale={locale} path="/korean-solutions/cars" here={ar ? 'السيارات' : 'Cars'}>
     <section className={styles.carsHero} aria-labelledby="cars-title">
-      <div className={styles.carsHeroPhoto}><Image src="/ks/gv90.jpg" alt="" fill sizes="100vw" priority/></div>
+      <div className={styles.carsHeroPhoto}><Image src="/ks/gv90.jpg" alt="Genesis GV90" fill sizes="100vw" priority/></div>
       <div className={`${styles.gutter} ${styles.carsHeroCopy}`}>
         <p className={`${styles.carsHeroEn} ${styles.latin}`} lang="en" dir="ltr">GENESIS · GV90</p>
         <h1 id="cars-title">{ar ? 'السيارات' : 'Cars'}</h1>
         <p>{ar
-          ? 'الأعلى في بيت جينيسيس. كهرباء، ومن غير سعر.'
-          : 'The top of the Genesis house. Electric, and with no price.'}</p>
+          ? 'فوق البيت سيارة واحدة. وتحتها طريق: كهرباء، وهجين.'
+          : 'One car at the top of the house. Under it, a road: electric, and hybrid.'}</p>
       </div>
+    </section>
+
+    <section className={styles.carsGallery} aria-label={ar ? 'الطرازات' : 'The models'}>
+      <ShotCard shot={lead} t={t}/>
+      <div className={styles.carsShotRow}>
+        <ShotCard shot={ioniq} t={t}/>
+        <ShotCard shot={gv70} t={t}/>
+      </div>
+      <ShotCard shot={ev9} t={t}/>
+      <ShotCard shot={santa} t={t}/>
     </section>
 
     <div className={styles.gutter}><div className={`${styles.inner} ${styles.carsBody}`}>
       <p className={styles.carsCaption}>{ar
-        ? <>الصورة لجينيسيس GV90. <a href={PHOTO}>Damian B Oh</a>، <a href={LICENSE}>CC BY-SA 4.0</a>.</>
-        : <>The photograph is the Genesis GV90. <a href={PHOTO}>Damian B Oh</a>, <a href={LICENSE}>CC BY-SA 4.0</a>.</>}</p>
-
-      <section className={styles.carsList} aria-labelledby="cars-list">
-        <h2 id="cars-list">{ar ? 'الطرازات' : 'The models'}</h2>
-        {groups.map(mark => {
-          const items = CARS.filter(car => car.mark === mark);
-          const wide = items.filter(car => car.role === 'wide');
-          const pair = items.filter(car => car.role === 'pair');
-          const band = items.filter(car => car.role === 'band');
-          const Name = ({car}: {car: typeof CARS[number]}) => <>
-            <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{car.name}</span>
-            <p>{t(car.line)}</p>
-          </>;
-          return <div key={mark} className={styles.carsGroup}>
-            <h3>{t(MARK[mark])}</h3>
-            <div className={styles.carsMix}>
-              {wide.map(car => <article key={car.name} className={styles.carsWide}><Name car={car}/></article>)}
-              {pair.length > 0 && <div className={mark === 'hybrid' ? styles.carsPairSoft : styles.carsPair}>
-                {pair.map(car => <article key={car.name}><Name car={car}/></article>)}
-              </div>}
-              {band.map(car => <article key={car.name} className={styles.carsBand}><Name car={car}/></article>)}
-            </div>
-          </div>;
-        })}
-      </section>
+        ? 'الصور: GV90 لداميان ب. أوه، وG80 وGV70 وEV9 لألكسندر ميغل، وأيونيك 5 لـ TTTNIS، وسانتا في لـ RL GNZLZ. الرخص CC BY-SA 4.0، وأيونيك 5 ملكية عامة.'
+        : 'Photographs: the GV90 by Damian B Oh, the G80, GV70 and EV9 by Alexander Migl, the Ioniq 5 by TTTNIS, the Santa Fe by RL GNZLZ. CC BY-SA 4.0, and the Ioniq 5 is public domain.'}</p>
 
       <section className={styles.carsTech} aria-labelledby="cars-tech">
-        <h2 id="cars-tech">{ar ? 'التقنية' : 'Technology'}</h2>
-        <p className={styles.carsIntro}>{ar ? 'مش طراز رابع. موجودة جوه السيارة.' : 'Not a fourth model. It sits inside the car.'}</p>
-        <dl>
-          {TECH.map(item => <div key={item.title.en}><dt>{t(item.title)}</dt><dd>{t(item.text)}</dd></div>)}
-        </dl>
+        <h2 id="cars-tech">{ar ? 'جوه السيارة' : 'Inside the car'}</h2>
+        <div className={styles.carsPulse}>
+          {TECH.map(item => <article key={item.title.en}><h3>{t(item.title)}</h3><p>{t(item.text)}</p></article>)}
+        </div>
       </section>
 
       <p className={styles.carsFact}>
         <span className={styles.num}>14.8</span> {ar ? 'مليار دولار، صادرات كوريا من الهجين في 2025، بزيادة 30٪.' : 'billion dollars. Korean hybrid exports in 2025, up 30 percent.'} <a href={SOURCE}>{ar ? 'المصدر' : 'Source'}</a>
       </p>
-      <p className={styles.carsOnly}>{ar
-        ? 'VisionSeek لا تخزّن سيارات. تفتح الطلب.'
-        : 'VisionSeek does not stock cars. It opens the request.'}</p>
+      <p className={styles.carsOnly}>{ar ? 'من غير سعر في الصفحة. VisionSeek تفتح الطلب.' : 'No price on the page. VisionSeek opens the request.'}</p>
       <p className={styles.note}>{t(NO_PARTNERSHIP)}</p>
 
       <section id="request" className={styles.carsAsk} aria-labelledby="cars-ask">
         <h2 id="cars-ask">{ar ? 'اطلب سيارة' : 'Ask for a car'}</h2>
-        <RequestForm locale={locale} kind="need" initialSector="السيارات" initialNeed={ar ? 'محتاج سيارة كورية جديدة.' : 'I need a new Korean car.'}/>
+        <RequestForm locale={locale} kind="need" initialSector="السيارات" initialNeed={ar ? 'محتاج سيارة كورية.' : 'I need a Korean car.'}/>
       </section>
     </div></div>
   </Shell>;

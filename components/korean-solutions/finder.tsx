@@ -59,7 +59,7 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
 
     <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">
       <Link href={`${p}/korean-solutions/cars`} className={styles.carsRow}>
-        <span className={styles.carsRowPhoto}><Image src="/ks/gv90.jpg" alt="" fill sizes="160px"/></span>
+        <span className={styles.carsRowPhoto}><Image src="/ks/g80.jpg" alt="" fill sizes="160px"/></span>
         <span className={styles.carsRowCopy}>
           <span className={`${styles.carsRowEn} ${styles.latin}`} lang="en">GENESIS</span>
           <span className={styles.carsRowWord}>{ar ? 'السيارات' : 'Cars'}</span>
