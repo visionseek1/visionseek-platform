@@ -41,6 +41,7 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   };
   collect(data);
   assert.doesNotMatch(prose.join('\n'), /ورشة|ورش|Workshop|workshop/);
+  assert.doesNotMatch(prose.join('\n'), /single-answer/i);
 });
 
 test('the course sits under masterclass, the old section is gone, and enrollment is one href', () => {
