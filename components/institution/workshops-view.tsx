@@ -49,7 +49,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
         <section className="vs-wl-catalog-grid" id="institutions" aria-label={text(locale, section.title)}>
           <article className="vs-wl-offer vs-wl-course-card">
             <Link href={courseHref}>
-              <Image src={governanceCourse.cover[locale]} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} priority />
+              <Image src={governanceCourse.cover} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} priority />
             </Link>
             <div>
               <h2 id="vs-wl-course-title"><Link href={courseHref}>{text(locale, governanceCourse.title)}</Link></h2>

@@ -393,14 +393,11 @@
       "en": "The Deloitte link on this page is The Guardian’s report. It should be replaced with an AP link when one is available. The Senate record was not checked.",
       "ar": "رابط Deloitte في هذه الصفحة من The Guardian، ويُستبدل برابط AP عند توفّره. سجل مجلس الشيوخ لم يُراجَع."
     },
-    "cover": {
-      "en": "/governance/cover-en.png",
-      "ar": "/governance/cover-ar.png"
-    },
+    "cover": "/governance/cover.jpg",
     "logo": "/governance/logo.png",
     "coverAlt": {
-      "en": "Masterclass cover: AI Governance for Organizational Leaders and Executives. Masterclass. Ahmed Abdelalim.",
-      "ar": "غلاف ماستر كلاس: حوكمة الذكاء الاصطناعي لمديري المؤسسات والمديرين التنفيذيين. ماستر كلاس. د. أحمد عبدالعليم."
+      "en": "Masterclass cover: AI Governance. The Single-Track Trap: How to Protect Enterprise Investments from Hidden AI Flaws.",
+      "ar": "غلاف ماستر كلاس: حوكمة الذكاء الاصطناعي. فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
     },
     "enter": {"en": "Enter the masterclass", "ar": "ادخل ماستر كلاس"},
     "onThisPage": {"en": "On this page", "ar": "في هذه الصفحة"},

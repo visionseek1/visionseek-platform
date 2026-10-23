@@ -3819,10 +3819,7 @@ collections:
                   - {label: "العربية", name: ar, widget: text}
               - label: "صورة الغلاف"
                 name: cover
-                widget: object
-                fields:
-                  - {label: "English", name: en, widget: string}
-                  - {label: "العربية", name: ar, widget: string}
+                widget: string
               - label: "الشعار"
                 name: logo
                 widget: string

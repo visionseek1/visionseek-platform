@@ -53,7 +53,7 @@ export function MasterclassPage({locale}: {locale: Locale}) {
             <h1>{t(locale, workshop.title)}</h1>
             <figure className={styles.poster}>
               <Image
-                src={workshop.cover[locale]}
+                src={workshop.cover}
                 alt={t(locale, workshop.coverAlt)}
                 width={1280}
                 height={720}
