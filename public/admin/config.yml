@@ -84,8 +84,8 @@ collections:
                   - {label: "عن VisionSeek ← الحوكمة  /about/governance", value: "/about/governance"}
                   - {label: "عن VisionSeek ← التعلم من DARPA  /about/learning-from-darpa", value: "/about/learning-from-darpa"}
                   - {label: "التقارير ← المنهج والمعايير  /reports/methodology", value: "/reports/methodology"}
-                  - {label: "البرامج ← VisionSeek Helix  /programs/helix", value: "/programs/helix"}
-                  - {label: "البرامج ← VisionSeek Sentinel  /programs/sentinel", value: "/programs/sentinel"}
+                  - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
+                  - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}

@@ -36,18 +36,18 @@ test('the six section headers keep their ids and links', () => {
   assert.deepEqual(sections.map(s => s.id).sort(), ['about', 'news', 'opportunities', 'programs', 'work-with-us', 'workshops']);
   for (const section of sections) {
     for (const key of ['title', 'eyebrow', 'intro']) assert.ok(isText(section[key]), `${section.id}.${key}`);
-    assert.ok(section.links.length >= 3, section.id);
+    assert.ok(section.id === 'programs' ? section.links.length === 0 : section.links.length >= 3, section.id);
     for (const link of section.links) assert.ok(link.href.startsWith('/') && isText(link.label), section.id);
   }
 });
 
-test('two field programs, Helix and Sentinel, each complete', () => {
+test('two programs, Aegis and Apex, each complete', () => {
   const programs = readDir('programs');
   assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02']);
-  assert.deepEqual(programs.map(p => p.slug).sort(), ['helix', 'sentinel']);
+  assert.deepEqual(programs.map(p => p.slug).sort(), ['aegis', 'apex']);
   for (const program of programs) {
-    for (const key of ['title', 'summary', 'beneficiary', 'constraint', 'hypothesis', 'test', 'stop', 'transfer']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
-    assert.equal(typeof program.position, 'number');
+    for (const key of ['title', 'summary', 'challenge', 'approach', 'status', 'cta']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
+    assert.ok(Array.isArray(program.steps) && program.steps.length >= 1, program.slug);
   }
 });
 
