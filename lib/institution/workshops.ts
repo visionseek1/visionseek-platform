@@ -83,6 +83,11 @@ export type WorkshopLive = {
   /** Masterclass: the teacher's name leads the page, then what he teaches. */
   instructor: Bi;
   teaches: Bi;
+  /** One line, condensed from the two existing “for” lines. */
+  catalogFor: Bi;
+  aboutInstructor: Bi;
+  whyLabel: Bi;
+  privateCta: Bi;
   /** Introduction video. Empty `video` shows the photo. */
   trailer: {video: string; label: Bi};
   heroQuote: Bi;

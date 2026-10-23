@@ -44,6 +44,7 @@ collections:
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
+                  - {label: "ماستركلاس ← فخ الإجابة الواحدة  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
@@ -1799,6 +1800,32 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
+              - label: لمن الماستركلاس
+                name: catalogFor
+                widget: object
+                hint: "سطر واحد ملخّص من سطري «لك أنت» و«لمؤسستك». لا تضف جمهورًا جديدًا."
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان عن المحاضر
+                name: aboutInstructor
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: عنوان ليه VisionSeek
+                name: whyLabel
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: زر الماستر كلاس الخاص
+                name: privateCta
+                widget: object
+                hint: "نص الزر فقط. الوجهة تبقى صفحة ابدأ الحالية."
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
               - label: فيديو المقدمة
                 name: trailer
                 widget: object
@@ -3233,3 +3260,601 @@ collections:
                       - {label: English, name: en, widget: string}
                       - {label: العربية, name: ar, widget: string}
 
+
+  - name: governance
+    label: "حوكمة الذكاء الاصطناعي"
+    description: "كورس الماستركلاس على /masterclass/single-track-trap، وبالعربية تحت /ar. الصفحة المختصرة تعرض العنوان والنبذة والمحاضر وزر اشترك والسعر جنبه. لا تضف رقمًا بلا مصدر خارج حقل السعر."
+    preview_path: "ar/masterclass/single-track-trap"
+    editor: {preview: false}
+    files:
+      - label: "النص"
+        name: governance
+        file: content/governance.json
+        fields:
+          - label: "القسم"
+            name: section
+            widget: object
+            fields:
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المقدمة"
+                name: intro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "حين لا توجد ورش تالية"
+                name: empty
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+          - label: "الورشة"
+            name: workshop
+            widget: object
+            fields:
+              - label: "المعرّف"
+                name: slug
+                widget: string
+                hint: "لا تغيّر المعرّف: مسار الصفحة مبني عليه."
+              - label: "ترتيب الورشة"
+                name: position
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السطر فوق العنوان"
+                name: kicker
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان الفرعي"
+                name: subtitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النبذة"
+                name: blurb
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان المحاور"
+                name: topicsLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المحاور"
+                name: topics
+                widget: list
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المحاضر"
+                name: instructorLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المحاضر المختصر"
+                name: instructorShort
+                widget: object
+                hint: "العربي: د. أحمد. الإنجليزي: Ahmed Abdelalim من غير لقب."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زر الاشتراك"
+                name: subscribe
+                widget: object
+                hint: "نص الزر فقط. الرابط ثابت في الكود (ENROLL_HREF)."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السعر بجانب الزر"
+                name: price
+                widget: object
+                hint: "يظهر في صفحة هذا الكورس فقط: البطاقة الجانبية، والتفاصيل، وقسم اشترك الآن."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان عن الماستر كلاس"
+                name: aboutLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان لمن هذا الماستر كلاس"
+                name: forLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان ماذا ستخرج به"
+                name: gainLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "قريبًا"
+                name: soon
+                widget: object
+                hint: "للمدة والشكل وماذا ستخرج به. لا تكتب مدة أو موعدًا أو شكلًا."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان التفاصيل"
+                name: detailsLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المدة"
+                name: durationLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الشكل"
+                name: formatLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان اشترك الآن"
+                name: enrollLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "اسم المقدّم"
+                name: instructor
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر المقدم"
+                name: withLine
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الاقتباس"
+                name: quote
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "نسبة الاقتباس"
+                name: quoteBy
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الفكرة"
+                name: idea
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "الوعد"
+                name: promise
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان الوعد"
+                name: promiseLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "ملاحظة الأدلة"
+                name: honesty
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان الملاحظة"
+                name: honestyLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الجمهور"
+                name: audienceLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الجمهور"
+                name: audience
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان الأمثلة"
+                name: examplesLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الأمثلة"
+                name: examples
+                widget: list
+                fields:
+                  - label: "en"
+                    name: en
+                    widget: string
+                  - label: "ar"
+                    name: ar
+                    widget: string
+              - label: "اسم المنهج"
+                name: methodName
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المنهج"
+                name: methodLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تقديم المنهج"
+                name: methodIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "الخطوات"
+                name: steps
+                widget: list
+                fields:
+                  - label: "الحرف"
+                    name: mark
+                    widget: string
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "النص"
+                    name: body
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+              - label: "المسار"
+                name: path
+                widget: list
+                fields:
+                  - label: "en"
+                    name: en
+                    widget: string
+                  - label: "ar"
+                    name: ar
+                    widget: string
+              - label: "عنوان المحطات"
+                name: journeyLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المحطات"
+                name: stations
+                widget: list
+                fields:
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "السؤال"
+                    name: question
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "ما يخرج به المشارك"
+                    name: outcome
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المشكلة"
+                name: problemLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الأدلة"
+                name: evidence
+                widget: list
+                fields:
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "النص"
+                    name: body
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "المصدر"
+                    name: source
+                    widget: object
+                    fields:
+                      - label: "العنوان"
+                        name: title
+                        widget: string
+                      - label: "الرابط"
+                        name: url
+                        widget: string
+              - label: "التمرين"
+                name: exercise
+                widget: object
+                fields:
+                  - label: "التسمية"
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - {label: "المدة بالدقائق", name: minutes, widget: number}
+                  - label: "سطر المدة"
+                    name: minutesLabel
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "الخطوات"
+                    name: steps
+                    widget: list
+                    fields:
+                      - label: "العنوان"
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                      - label: "النص"
+                        name: body
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+              - label: "المحاكاة"
+                name: simulation
+                widget: object
+                fields:
+                  - label: "التسمية"
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "المقدمة"
+                    name: intro
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "تسمية الحقل"
+                    name: fieldLabel
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "نص داخل الحقل"
+                    name: placeholder
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "رسالة الحقل الفارغ"
+                    name: empty
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "زر الإجابة الواحدة"
+                    name: submit
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "عنوان الإجابة الواحدة"
+                    name: singleHeading
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "قالب الإجابة الواحدة"
+                    name: singleTemplate
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "تنبيه المحاكاة"
+                    name: disclaimer
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "زر اكشف البدائل"
+                    name: reveal
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "زر قرار آخر"
+                    name: another
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "وصف الجدول"
+                    name: tableCaption
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "أعمدة الجدول"
+                    name: columns
+                    widget: object
+                    fields:
+                      - label: "عمود المنهج"
+                        name: method
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                      - label: "التكلفة"
+                        name: cost
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                      - label: "المخاطرة"
+                        name: risk
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                      - label: "متى يناسب"
+                        name: fits
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                  - label: "المناهج"
+                    name: approaches
+                    widget: list
+                    fields:
+                      - label: "العنوان"
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                      - label: "التكلفة"
+                        name: cost
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+                      - label: "المخاطرة"
+                        name: risk
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: text}
+                          - {label: "العربية", name: ar, widget: text}
+                      - label: "متى يناسب"
+                        name: fits
+                        widget: object
+                        fields:
+                          - {label: "English", name: en, widget: string}
+                          - {label: "العربية", name: ar, widget: string}
+              - label: "الدعوة"
+                name: cta
+                widget: object
+                fields:
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "النص"
+                    name: body
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+                  - label: "نص الزر"
+                    name: button
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المصادر"
+                name: sourcesLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "ملاحظة المصادر"
+                name: sourcesNote
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "صورة الغلاف"
+                name: cover
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الشعار"
+                name: logo
+                widget: string
+              - label: "وصف الغلاف"
+                name: coverAlt
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "نص الدخول"
+                name: enter
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "في هذه الصفحة"
+                name: onThisPage
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الرئيسية"
+                name: home
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية ما يخرج به"
+                name: outcomeLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية السؤال"
+                name: questionLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}

@@ -224,6 +224,13 @@
       "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
       "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
     },
+    "catalogFor": {
+      "en": "For the person who owns or leads an organization, and for an institution that wants to know what AI can do for it.",
+      "ar": "لصاحب المؤسسة وقائدها، وللمؤسسة التي تريد أن تعرف ما ينفعها من الذكاء الاصطناعي."
+    },
+    "aboutInstructor": {"en": "About the instructor", "ar": "عن المحاضر"},
+    "whyLabel": {"en": "Why VisionSeek", "ar": "ليه VisionSeek"},
+    "privateCta": {"en": "A private masterclass for your institution", "ar": "ماستر كلاس خاص لمؤسستك"},
     "trailer": {
       "video": "",
       "label": {

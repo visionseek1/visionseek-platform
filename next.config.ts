@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/insights/reports/half-the-picture`, permanent: true},
       ]),
       {source: '/insights/research/half-the-picture-ar.pdf', destination: '/insights/reports/half-the-picture-ar.pdf', permanent: true},
+      // The governance section was folded into Masterclass (23 Oct 2026).
+      {source: '/governance/single-track-trap', destination: '/masterclass/single-track-trap', permanent: true},
+      {source: '/ar/governance/single-track-trap', destination: '/ar/masterclass/single-track-trap', permanent: true},
+      {source: '/governance', destination: '/masterclass', permanent: true},
+      {source: '/ar/governance', destination: '/ar/masterclass', permanent: true},
       // English lives at the root: /en/privacy → /privacy (the /en home page itself stays).
       {source: '/en/:path+', destination: '/:path+', permanent: true},
       {

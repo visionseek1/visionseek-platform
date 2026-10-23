@@ -1,0 +1,24 @@
+import type {Metadata} from 'next';
+import {MasterclassPage} from '@/components/governance/course';
+import {coursePath, localePath, workshop} from '@/lib/governance';
+
+const title = `${workshop.title.ar} | VisionSeek`;
+
+export const metadata: Metadata = {
+  title,
+  description: workshop.blurb.ar.replace(/\s*\n+\s*/g, ' '),
+  alternates: {
+    canonical: localePath('ar', coursePath),
+    languages: {ar: localePath('ar', coursePath), en: coursePath},
+  },
+  openGraph: {
+    title,
+    description: workshop.blurb.ar.replace(/\s*\n+\s*/g, ' '),
+    url: localePath('ar', coursePath),
+    images: [{url: workshop.cover.ar, width: 1600, height: 900, alt: workshop.coverAlt.ar}],
+  },
+};
+
+export default function Page() {
+  return <MasterclassPage locale="ar" />;
+}
