@@ -130,11 +130,13 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.match(redirects, /source: '\/ar\/governance', destination: '\/ar\/masterclass'/);
   assert.match(read('components/institution/workshops-view.tsx'), /vs-wl-course-card/);
   assert.match(read('components/institution/workshops-view.tsx'), /coursePath/);
-  assert.equal(data.workshop.cover.en, '/governance/cover-v2-en.png');
-  assert.equal(data.workshop.cover.ar, '/governance/cover-v2-ar.png');
+  assert.equal(data.workshop.cover.en, '/governance/cover-v3-en.png');
+  assert.equal(data.workshop.cover.ar, '/governance/cover-v3-ar.png');
   const sha = name => createHash('sha256').update(readFileSync(new URL(`../${name}`, import.meta.url))).digest('hex');
-  assert.equal(sha('public/governance/cover-v2-ar.png'), '1330c73df04454d2d6a51b841312d9bfc958e0923a3a2848d969a7a795aba147');
-  assert.equal(sha('public/governance/cover-v2-en.png'), '6fc71810cc7cbb68180880f18becbbe00eb5ca8f5f7f87fadde5a21a46e74890');
+  assert.equal(sha('public/governance/cover-v3-ar.png'), '2e5c82bf82590d5cc824b77946a386372274f90ce82a24f9f0d9480a8fac3461');
+  assert.equal(sha('public/governance/cover-v3-en.png'), 'd0d49f7fab4f05e3c3d3e9f0a21c04870c9f241d3e5f14ce6f87ef3cb6309a73');
+  assert.equal(existsSync(new URL('../public/governance/cover-v2-en.png', import.meta.url)), false);
+  assert.equal(existsSync(new URL('../public/governance/cover-v2-ar.png', import.meta.url)), false);
   assert.equal(existsSync(new URL('../public/governance/cover-en.png', import.meta.url)), false);
   assert.equal(existsSync(new URL('../public/governance/cover-ar.png', import.meta.url)), false);
   assert.equal(existsSync(new URL('../public/governance/cover.jpg', import.meta.url)), false);
