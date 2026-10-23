@@ -1,0 +1,370 @@
+{
+  "section": {
+    "title": {"en": "AI Governance", "ar": "حوكمة الذكاء الاصطناعي"},
+    "intro": {
+      "en": "The Governance section at VisionSeek. Its first workshop asks how to protect a decision that has a cost from an answer built on a single method.",
+      "ar": "قسم الحوكمة في VisionSeek. الورشة الأولى فيه تسأل: كيف تحمي قرارًا له كلفة من إجابة مبنية على منهج واحد."
+    },
+    "empty": {"en": "Further workshops: none yet.", "ar": "الورش التالية: لا يوجد بعد."}
+  },
+  "workshop": {
+    "slug": "single-track-trap",
+    "position": {"en": "Workshop 01", "ar": "الورشة الأولى"},
+    "kicker": {
+      "en": "The first workshop in the Governance section",
+      "ar": "الورشة الأولى في قسم الحوكمة"
+    },
+    "title": {"en": "AI Governance", "ar": "حوكمة الذكاء الاصطناعي"},
+    "subtitle": {
+      "en": "The Single-Track Trap: How to Protect Enterprise Investments from Hidden AI Flaws",
+      "ar": "فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
+    },
+    "instructor": {"en": "Ahmed Abdelalim", "ar": "د. أحمد عبدالعليم"},
+    "withLine": {
+      "en": "With Ahmed Abdelalim",
+      "ar": "مع د. أحمد عبدالعليم"
+    },
+    "quote": {
+      "en": "When we ask an AI system, the answer is often built on a single method, without the other methods that could solve the problem. In a company, that answer can carry large costs in a direction that may be wrong.",
+      "ar": "حين نسأل الذكاء الاصطناعي، كثيرًا ما تأتي إجابته مبنيةً على منهج واحد، دون أن يعرض بقية المناهج الممكنة للحل. وفي الشركات قد تُبنى على هذه الإجابة تكاليف ضخمة في اتجاهٍ ربما يكون خاطئًا."
+    },
+    "quoteBy": {
+      "en": "An observation by Ahmed Abdelalim",
+      "ar": "ملاحظة د. أحمد عبدالعليم"
+    },
+    "idea": {
+      "en": "AI does not always get it wrong. It offers one path with complete confidence. A sound leader does not stop at “What is the answer?” The question is: what are the other paths, and why did we choose this one?",
+      "ar": "الذكاء الاصطناعي لا يخطئ دائمًا، لكنه يقدّم طريقًا واحدًا بثقةٍ كاملة. والقائد الحكيم لا يسأل: ما الإجابة؟ بل يسأل: ما الطرق الأخرى، ولماذا اخترنا هذا الطريق؟"
+    },
+    "promise": {
+      "en": "You leave able to make AI widen your options instead of narrowing them, and the decision stays yours.",
+      "ar": "أن تخرج قادرًا على أن تجعل الذكاء الاصطناعي يوسّع خياراتك بدل أن يضيّقها، وأن يبقى القرار قرارك أنت."
+    },
+    "promiseLabel": {"en": "The promise", "ar": "الوعد"},
+    "honesty": {
+      "en": "The cases with a documented cost concern fabrication and the absence of human review. They do not, by themselves, document the absence of alternatives.",
+      "ar": "القضايا ذات التكلفة الموثّقة تتعلق بالاختلاق وغياب المراجعة البشرية، لا بغياب البدائل نفسه."
+    },
+    "honestyLabel": {"en": "A note on the evidence", "ar": "ملاحظة على الأدلة"},
+    "audienceLabel": {"en": "Who it is for", "ar": "لمن هذه الورشة"},
+    "audience": {
+      "en": "For individuals: leaders and decision-makers who come themselves, from any field, and who use AI on decisions that have a cost.",
+      "ar": "للأفراد: القادة وصنّاع القرار الذين يحضرون بأنفسهم، من أي مجال، ممن يستخدمون الذكاء الاصطناعي في قرارات لها كلفة."
+    },
+    "examplesLabel": {"en": "Examples, not a closed list", "ar": "أمثلة لا حصر"},
+    "examples": [
+      {"en": "A company director studying an expansion", "ar": "مدير شركة يدرس توسعًا"},
+      {"en": "A hospital director assessing a new tool", "ar": "مدير مستشفى يقيّم أداة جديدة"},
+      {"en": "A founder choosing a business model", "ar": "رائد أعمال يختار نموذج عمل"},
+      {"en": "A government official writing a policy", "ar": "مسؤول حكومي يكتب سياسة"}
+    ],
+    "methodName": {"en": "بدائل", "ar": "بدائل"},
+    "methodLabel": {"en": "The method", "ar": "المنهج"},
+    "methodIntro": {
+      "en": "Five steps that turn a single answer into a governed decision. In this workshop the method is called «بدائل».",
+      "ar": "خمس خطوات تحوّل الإجابة الواحدة إلى قرار محكوم. اسم المنهج في هذه الورشة: «بدائل»."
+    },
+    "steps": [
+      {
+        "mark": "ب",
+        "title": {"en": "Name the methods", "ar": "بيّن المناهج"},
+        "body": {
+          "en": "Ask explicitly for at least three different methods, not one answer.",
+          "ar": "اطلب صراحةً ثلاثة مناهج مختلفة على الأقل للحل، لا إجابة واحدة."
+        }
+      },
+      {
+        "mark": "د",
+        "title": {"en": "Write the criteria first", "ar": "دوّن المعايير"},
+        "body": {
+          "en": "Set the criteria before you see the answers: cost, risk, time, and whether you can step back.",
+          "ar": "حدّد معايير المقارنة قبل رؤية الإجابات: التكلفة، المخاطرة، الزمن، قابلية التراجع."
+        }
+      },
+      {
+        "mark": "ا",
+        "title": {"en": "Test by opposition", "ar": "اختبر بالمعارضة"},
+        "body": {
+          "en": "Ask the model to criticize its own choice, or ask another model to take the critic’s role (red team).",
+          "ar": "اطلب من النموذج نقد اختياره، أو من نموذج آخر أن يؤدي دور الخصم (Red team)."
+        }
+      },
+      {
+        "mark": "ئ",
+        "title": {"en": "Separate generation from the decision", "ar": "افصل التوليد عن القرار"},
+        "body": {
+          "en": "AI generates the options. The person who is responsible decides, and their name is on the decision.",
+          "ar": "الذكاء الاصطناعي يولّد الخيارات، والإنسان المسؤول يقرّر ويحمل اسمه على القرار."
+        }
+      },
+      {
+        "mark": "ل",
+        "title": {"en": "Summarize and record", "ar": "لخّص ووثّق"},
+        "body": {
+          "en": "Record the alternatives that were rejected, and why, so the decision can be reviewed later.",
+          "ar": "سجّل البدائل التي رُفضت ولماذا، ليمكن مراجعة القرار لاحقًا."
+        }
+      }
+    ],
+    "path": [
+      {"en": "A question", "ar": "سؤال"},
+      {"en": "Several methods", "ar": "مناهج متعددة"},
+      {"en": "Comparison against criteria", "ar": "مقارنة بمعايير"},
+      {"en": "Challenge and opposition", "ar": "تحدٍّ ومعارضة"},
+      {"en": "A documented human decision", "ar": "قرار بشري موثّق"}
+    ],
+    "journeyLabel": {"en": "The workshop in four stations", "ar": "الورشة في أربع محطات"},
+    "stations": [
+      {
+        "title": {"en": "The shock", "ar": "الصدمة"},
+        "question": {"en": "Why does the answer look right when it is incomplete?", "ar": "لماذا تبدو الإجابة صحيحة وهي ناقصة؟"},
+        "outcome": {"en": "You see a single-method answer, and what it left out.", "ar": "يرى بعينه إجابة بمنهج واحد وما فاتها."}
+      },
+      {
+        "title": {"en": "Understanding", "ar": "الفهم"},
+        "question": {"en": "Where does the bias come from?", "ar": "من أين يأتي الانحياز؟"},
+        "outcome": {"en": "You can name sycophancy, automation bias, and overconfident fabrication.", "ar": "يعرف المجاملة وانحياز الأتمتة والثقة الزائدة."}
+      },
+      {
+        "title": {"en": "The tool", "ar": "الأداة"},
+        "question": {"en": "How do I govern my own use?", "ar": "كيف أحكم استخدامي؟"},
+        "outcome": {"en": "You apply «بدائل» to a real question.", "ar": "يطبّق منهج «بدائل» على سؤال حقيقي."}
+      },
+      {
+        "title": {"en": "Ownership", "ar": "الملكية"},
+        "question": {"en": "Who owns the decision?", "ar": "من يملك القرار؟"},
+        "outcome": {"en": "A written personal rule for using AI in your decisions.", "ar": "قاعدة شخصية مكتوبة لاستخدام الذكاء الاصطناعي في قراراته."}
+      }
+    ],
+    "problemLabel": {"en": "The problem, and the evidence", "ar": "المشكلة والأدلة"},
+    "evidence": [
+      {
+        "title": {"en": "Sycophancy", "ar": "المجاملة"},
+        "body": {
+          "en": "Models tend to agree with the person asking, rather than correct them. Sharma et al., 2023.",
+          "ar": "النماذج تميل إلى موافقة رأي السائل بدل تصحيحه. Sharma وآخرون، 2023."
+        },
+        "source": {
+          "title": "Towards Understanding Sycophancy in Language Models (arXiv, 2023)",
+          "url": "https://arxiv.org/abs/2310.13548"
+        }
+      },
+      {
+        "title": {"en": "Automation bias", "ar": "انحياز الأتمتة"},
+        "body": {
+          "en": "People tend to accept an automated system’s suggestion even when it is wrong. Goddard et al., 2012, JAMIA.",
+          "ar": "البشر يميلون إلى قبول اقتراح النظام الآلي حتى حين يكون خاطئًا. Goddard وآخرون، 2012، JAMIA."
+        },
+        "source": {
+          "title": "Automation bias: a systematic review (JAMIA, 2012)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21685142/"
+        }
+      },
+      {
+        "title": {"en": "Overconfident fabrication", "ar": "الثقة الزائدة والاختلاق"},
+        "body": {
+          "en": "Mata v. Avianca, New York, June 2023: citations to cases that do not exist, and a US$5,000 fine ordered by the court.",
+          "ar": "Mata v. Avianca، نيويورك، يونيو 2023: استشهاد بقضايا غير موجودة، وغرامة 5,000 دولار بأمر المحكمة."
+        },
+        "source": {
+          "title": "Mata v. Avianca: sanctions over fake citations (Reuters, 22 June 2023)",
+          "url": "https://www.reuters.com/legal/new-york-lawyers-sanctioned-using-fake-chatgpt-cases-legal-brief-2023-06-22/"
+        }
+      },
+      {
+        "title": {"en": "The institution still carries the responsibility", "ar": "المسؤولية تبقى على المؤسسة"},
+        "body": {
+          "en": "Moffatt v. Air Canada, February 2024: the tribunal ordered the company to pay CAD 812.02 because of false information from its chatbot.",
+          "ar": "Moffatt v. Air Canada، فبراير 2024: ألزم قرار المحكمة الشركة بدفع 812.02 دولار كندي بسبب معلومة خاطئة من روبوت المحادثة."
+        },
+        "source": {
+          "title": "Moffatt v. Air Canada, 2024 BCCRT 149 (CanLII, 14 February 2024)",
+          "url": "https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html"
+        }
+      },
+      {
+        "title": {"en": "A direct cost on a consulting report", "ar": "تكلفة مباشرة على تقرير استشاري"},
+        "body": {
+          "en": "Deloitte Australia, 2025: refunded A$97,587 of a report worth A$440,000. The figure is from press reports (AP and AFR, via The Guardian). The Senate record was not checked for this page.",
+          "ar": "Deloitte أستراليا، 2025: ردّت 97,587 دولارًا أستراليًا من تقرير قيمته 440 ألف دولار أسترالي. الرقم من مصدر صحفي (AP وAFR، عبر The Guardian). سجل مجلس الشيوخ لم يُراجَع في هذه الصفحة."
+        },
+        "source": {
+          "title": "Deloitte to pay money back after using AI in a A$440,000 report (The Guardian, citing AP / AFR, 2025)",
+          "url": "https://www.theguardian.com/australia-news/2025/oct/06/deloitte-to-pay-money-back-to-albanese-government-after-using-ai-in-440000-report"
+        }
+      }
+    ],
+    "exercise": {
+      "label": {"en": "An applied exercise", "ar": "تمرين تطبيقي"},
+      "minutes": 15,
+      "minutesLabel": {"en": "15 minutes", "ar": "15 دقيقة"},
+      "steps": [
+        {
+          "title": {"en": "Ask as you usually do", "ar": "اسأل كعادتك"},
+          "body": {
+            "en": "Write a real question from your work, and take the model’s answer as it comes.",
+            "ar": "يكتب المشارك سؤالًا حقيقيًا من عمله، ويأخذ إجابة النموذج كما هي."
+          }
+        },
+        {
+          "title": {"en": "Ask for the alternatives", "ar": "اطلب البدائل"},
+          "body": {
+            "en": "Ask again: “Show three different methods, and compare them on cost, risk, and time.”",
+            "ar": "يعيد السؤال: «اعرض ثلاثة مناهج مختلفة، وقارن بينها بالتكلفة والمخاطرة والزمن»."
+          }
+        },
+        {
+          "title": {"en": "Ask for opposition", "ar": "اطلب المعارضة"},
+          "body": {
+            "en": "Ask: “What is the strongest argument against the first recommendation?”",
+            "ar": "«ما أقوى حجة ضد التوصية الأولى؟»"
+          }
+        },
+        {
+          "title": {"en": "Compare, then write", "ar": "قارن واكتب"},
+          "body": {
+            "en": "In two lines: what changed in your decision, and what cost you nearly took on.",
+            "ar": "يكتب في سطرين: ماذا تغيّر في قراره، وما التكلفة التي كاد يتحمّلها."
+          }
+        }
+      ]
+    },
+    "simulation": {
+      "label": {"en": "A classroom simulation", "ar": "محاكاة في القاعة"},
+      "title": {"en": "One answer, then the other methods", "ar": "إجابة واحدة، ثم بقية المناهج"},
+      "intro": {
+        "en": "Write a decision you are facing at work. You will see the shape of a single-method answer, then five methods for that same decision. Nothing is sent, and nothing is stored.",
+        "ar": "اكتب قرارًا تواجهه الآن في عملك. سترى شكل الإجابة المبنية على منهج واحد، ثم خمسة مناهج للقرار نفسه. لا يُرسَل شيء، ولا يُحفَظ شيء."
+      },
+      "fieldLabel": {"en": "A decision you are facing", "ar": "قرار تواجهه"},
+      "placeholder": {
+        "en": "For example: expanding into another city, adopting a tool in a hospital, or choosing a business model.",
+        "ar": "مثال: التوسع إلى مدينة جديدة، أو اعتماد أداة في المستشفى، أو اختيار نموذج العمل."
+      },
+      "empty": {"en": "Write the decision first.", "ar": "اكتب القرار أولًا."},
+      "submit": {"en": "Show the single-method answer", "ar": "اعرض الإجابة الواحدة"},
+      "singleHeading": {"en": "The single-method answer", "ar": "الإجابة بمنهج واحد"},
+      "singleTemplate": {
+        "en": "{decision} — Proceed on the first method the answer offers, and start. No other method needs to be shown.",
+        "ar": "{decision} — المسار المناسب هو المضي في المنهج الأول الذي تقدّمه الإجابة، والبدء في التنفيذ. لا حاجة إلى عرض منهج آخر."
+      },
+      "disclaimer": {
+        "en": "This is the shape of the answer as it usually arrives: one method, with complete confidence. It is not connected to a model. What you type stays in this page and is not stored.",
+        "ar": "هذا شكل الإجابة كما تأتي عادةً: منهج واحد، بثقة كاملة. ليست متصلة بنموذج. ما تكتبه يبقى في هذه الصفحة ولا يُحفَظ."
+      },
+      "reveal": {"en": "Reveal the alternatives", "ar": "اكشف البدائل"},
+      "another": {"en": "Write another decision", "ar": "اكتب قرارًا آخر"},
+      "tableCaption": {
+        "en": "Five methods for the decision you wrote. These are the workshop’s methods, applied to your words. They are not an automated reading of your institution.",
+        "ar": "خمسة مناهج للقرار الذي كتبته. هذه مناهج الورشة نفسها، مطبّقة على كلامك. ليست قراءة آلية لمؤسستك."
+      },
+      "columns": {
+        "method": {"en": "Method", "ar": "المنهج"},
+        "cost": {"en": "Cost", "ar": "التكلفة"},
+        "risk": {"en": "Risk", "ar": "المخاطرة"},
+        "fits": {"en": "When it fits", "ar": "متى يناسب"}
+      },
+      "approaches": [
+        {
+          "title": {"en": "The single method", "ar": "المنهج الواحد"},
+          "cost": {
+            "en": "The whole cost of the decision sits on a path that was not compared with any other.",
+            "ar": "كلفة القرار كلها على مسار لم يُقارَن بغيره."
+          },
+          "risk": {
+            "en": "The answer tends to agree with what you expect, and people tend to accept the system’s suggestion even when it is incomplete.",
+            "ar": "الإجابة تميل إلى موافقة ما تتوقعه، والناس يميلون إلى قبول اقتراح النظام ولو كان ناقصًا."
+          },
+          "fits": {
+            "en": "When you can step back, and the cost of being wrong is small.",
+            "ar": "حين يكون القرار قابلًا للتراجع، وكلفة الخطأ صغيرة."
+          }
+        },
+        {
+          "title": {"en": "A limited trial you can leave", "ar": "تجربة محدودة يمكن تركها"},
+          "cost": {
+            "en": "A smaller first outlay, and more time before any wider commitment.",
+            "ar": "كلفة أولى أصغر، وزمن أطول قبل أي توسع."
+          },
+          "risk": {
+            "en": "The trial becomes the adopted path before the comparison criteria are written.",
+            "ar": "أن تتحول التجربة إلى المسار المعتمد قبل كتابة معايير المقارنة."
+          },
+          "fits": {
+            "en": "When you can stop before carrying the full cost.",
+            "ar": "حين تستطيع الوقوف قبل تحمّل الكلفة كاملة."
+          }
+        },
+        {
+          "title": {"en": "Criteria written before the answers", "ar": "معايير تُكتب قبل الإجابات"},
+          "cost": {
+            "en": "Time to name cost, risk, time, and whether you can step back — before any answer is in front of you.",
+            "ar": "وقت لتحديد التكلفة والمخاطرة والزمن وقابلية التراجع، قبل أن ترى أي إجابة."
+          },
+          "risk": {
+            "en": "Criteria written after the answer tend to lean toward it.",
+            "ar": "إن كُتبت المعايير بعد الإجابة، مالت نحوها."
+          },
+          "fits": {
+            "en": "A decision that has a cost, which is who this workshop is for.",
+            "ar": "قرار له كلفة، وهو جمهور هذه الورشة."
+          }
+        },
+        {
+          "title": {"en": "Opposition before you adopt it", "ar": "معارضة قبل الاعتماد"},
+          "cost": {
+            "en": "Another pass: ask for a critique of the choice, or ask another model to take the critic’s role.",
+            "ar": "جولة إضافية: اطلب نقد الاختيار، أو نموذجًا آخر في دور الخصم."
+          },
+          "risk": {
+            "en": "Opposition in form only, which still agrees in substance.",
+            "ar": "معارضة شكلية تبقى موافقة في جوهرها."
+          },
+          "fits": {
+            "en": "Before a responsible person puts their name on the decision.",
+            "ar": "قبل أن يضع إنسان مسؤول اسمه على القرار."
+          }
+        },
+        {
+          "title": {"en": "Generation apart from the decision", "ar": "التوليد بمعزل عن القرار"},
+          "cost": {
+            "en": "A written record of the alternatives that were rejected, and why.",
+            "ar": "سجل مكتوب بالبدائل التي رُفضت، وسبب رفضها."
+          },
+          "risk": {
+            "en": "If no one’s name is on the decision, the institution still carries it.",
+            "ar": "إن غاب اسم صاحب القرار، بقيت المسؤولية على المؤسسة."
+          },
+          "fits": {
+            "en": "Any decision the institution will later be asked to account for.",
+            "ar": "أي قرار ستُسأل عنه المؤسسة لاحقًا."
+          }
+        }
+      ]
+    },
+    "cta": {
+      "title": {"en": "A first session", "ar": "الخطوة الأولى"},
+      "body": {
+        "en": "A free 30-minute session with Ahmed Abdelalim. In it, the «بدائل» method is applied to a real decision of yours.",
+        "ar": "جلسة مجانية مدتها 30 دقيقة مع د. أحمد. نطبّق فيها منهج «بدائل» على قرار حقيقي لديك."
+      },
+      "button": {"en": "Start the free session", "ar": "ابدأ الجلسة المجانية"}
+    },
+    "sourcesLabel": {"en": "Sources", "ar": "المصادر"},
+    "sourcesNote": {
+      "en": "The Deloitte link on this page is The Guardian’s report. It should be replaced with an AP link when one is available. The Senate record was not checked.",
+      "ar": "رابط Deloitte في هذه الصفحة من The Guardian، ويُستبدل برابط AP عند توفّره. سجل مجلس الشيوخ لم يُراجَع."
+    },
+    "cover": "/governance/cover.jpg",
+    "logo": "/governance/logo.png",
+    "coverAlt": {
+      "en": "Workshop cover: AI Governance. The Single-Track Trap: How to Protect Enterprise Investments from Hidden AI Flaws.",
+      "ar": "غلاف الورشة: حوكمة الذكاء الاصطناعي. فخ الإجابة الواحدة: كيف تحمي استثمارات شركتك من أخطاء الذكاء الاصطناعي الخفية؟"
+    },
+    "enter": {"en": "Enter the workshop", "ar": "ادخل الورشة"},
+    "onThisPage": {"en": "On this page", "ar": "في هذه الصفحة"},
+    "home": {"en": "Home", "ar": "الرئيسية"},
+    "outcomeLabel": {"en": "What you leave with", "ar": "ما يخرج به المشارك"},
+    "questionLabel": {"en": "Question", "ar": "السؤال"}
+  }
+}
