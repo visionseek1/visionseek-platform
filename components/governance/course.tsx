@@ -54,15 +54,6 @@ export function MasterclassPage({locale}: {locale: Locale}) {
           <p className={styles.lede}>{t(locale, workshop.blurb)}</p>
         </section>
 
-        <section className={styles.block} aria-labelledby="course-topics">
-          <h2 id="course-topics">{t(locale, workshop.topicsLabel)}</h2>
-          <ul className={styles.topics}>
-            {workshop.topics.map(topic => (
-              <li key={topic.en}>{t(locale, topic)}</li>
-            ))}
-          </ul>
-        </section>
-
         <section className={styles.block} aria-labelledby="course-instructor">
           <p className={styles.sectionLabel} id="course-instructor">{t(locale, workshop.instructorLabel)}</p>
           <p className={styles.instructorName}>{t(locale, workshop.instructorShort)}</p>

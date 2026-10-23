@@ -42,7 +42,7 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.doesNotMatch(course, /Simulation|اكشف البدائل|workshop\.evidence|workshop\.stations/);
   assert.match(course, /enrollHref/);
   assert.match(course, /workshop\.blurb/);
-  assert.match(course, /workshop\.topics/);
+  assert.doesNotMatch(course, /workshop\.topics|topicsLabel|course-topics|المحاور/);
   assert.match(course, /workshop\.instructorShort/);
   const lib = read('lib/governance.ts');
   assert.match(lib, /export const ENROLL_HREF = '\/start'/);
