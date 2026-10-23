@@ -124,29 +124,14 @@
       "ar": "البرامج",
       "children": [
         {
-          "href": "/programs",
-          "en": "Program concepts",
-          "ar": "تصورات البرامج"
+          "href": "/programs/aegis",
+          "en": "Aegis",
+          "ar": "Aegis"
         },
         {
-          "href": "/programs/ideas",
-          "en": "Ideas under exploration",
-          "ar": "أفكار قيد الاستكشاف"
-        },
-        {
-          "href": "/programs/challenges",
-          "en": "Challenges",
-          "ar": "التحديات"
-        },
-        {
-          "href": "/programs/spotlights",
-          "en": "Research spotlights",
-          "ar": "تحت المجهر"
-        },
-        {
-          "href": "/programs/program-lifecycle",
-          "en": "How programs work",
-          "ar": "كيف تعمل البرامج؟"
+          "href": "/programs/apex",
+          "en": "Apex",
+          "ar": "Apex"
         }
       ]
     },
