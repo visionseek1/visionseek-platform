@@ -41,6 +41,7 @@ collections:
                 options:
                 # archive-options:start
                   - {label: "حلول من كوريا (القسم كله)  /korean-solutions", value: "/korean-solutions"}
+                  - {label: "حلول من كوريا ← السيارات  /korean-solutions/cars", value: "/korean-solutions/cars"}
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
