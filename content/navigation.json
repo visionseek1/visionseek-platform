@@ -1,19 +1,34 @@
 {
   "sections": [
     {
-      "path": "/korean-solutions",
-      "en": "Korean Solutions",
-      "ar": "حلول من كوريا",
+      "path": "/programs",
+      "en": "Programs",
+      "ar": "البرامج",
       "children": [
         {
-          "href": "/korean-solutions",
-          "en": "Find a solution",
-          "ar": "المستكشف"
+          "href": "/programs",
+          "en": "Program concepts",
+          "ar": "تصورات البرامج"
         },
         {
-          "href": "/korean-solutions#needs",
-          "en": "Tell us your need",
-          "ar": "اكتب احتياجك"
+          "href": "/programs/ideas",
+          "en": "Ideas under exploration",
+          "ar": "أفكار قيد الاستكشاف"
+        },
+        {
+          "href": "/programs/challenges",
+          "en": "Challenges",
+          "ar": "التحديات"
+        },
+        {
+          "href": "/programs/spotlights",
+          "en": "Research spotlights",
+          "ar": "تحت المجهر"
+        },
+        {
+          "href": "/programs/program-lifecycle",
+          "en": "How programs work",
+          "ar": "كيف تعمل البرامج؟"
         }
       ]
     },
@@ -70,87 +85,6 @@
       ]
     },
     {
-      "path": "/opportunities",
-      "en": "R&D Opportunities",
-      "ar": "فرص البحث والتطوير",
-      "children": [
-        {
-          "href": "/opportunities",
-          "en": "Explore opportunities",
-          "ar": "استكشف الفرص"
-        },
-        {
-          "href": "/work-with-us/how-to-respond",
-          "en": "Response guide",
-          "ar": "دليل المشاركة"
-        },
-        {
-          "href": "/work-with-us/prepare-a-concept",
-          "en": "Prepare your note",
-          "ar": "جهّز مذكرتك"
-        }
-      ]
-    },
-    {
-      "path": "/masterclass",
-      "en": "Masterclass",
-      "ar": "ماستركلاس",
-      "children": [
-        {
-          "href": "/masterclass",
-          "en": "The three doors",
-          "ar": "الأبواب الثلاثة"
-        },
-        {
-          "href": "/masterclass/leader-seat",
-          "en": "Management and leadership in the age of AI",
-          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
-        },
-        {
-          "href": "/masterclass#institutions",
-          "en": "Working with AI",
-          "ar": "العمل مع الذكاء الاصطناعي"
-        },
-        {
-          "href": "/masterclass/develop-the-institution",
-          "en": "The institution and AI",
-          "ar": "المؤسسة والذكاء الاصطناعي"
-        }
-      ]
-    },
-    {
-      "path": "/programs",
-      "en": "Programs",
-      "ar": "البرامج",
-      "children": [
-        {
-          "href": "/programs",
-          "en": "Program concepts",
-          "ar": "تصورات البرامج"
-        },
-        {
-          "href": "/programs/ideas",
-          "en": "Ideas under exploration",
-          "ar": "أفكار قيد الاستكشاف"
-        },
-        {
-          "href": "/programs/challenges",
-          "en": "Challenges",
-          "ar": "التحديات"
-        },
-        {
-          "href": "/programs/spotlights",
-          "en": "Research spotlights",
-          "ar": "تحت المجهر"
-        },
-        {
-          "href": "/programs/program-lifecycle",
-          "en": "How programs work",
-          "ar": "كيف تعمل البرامج؟"
-        }
-      ]
-    },
-    {
       "path": "/insights",
       "en": "Insights",
       "ar": "Insights",
@@ -188,24 +122,46 @@
       ]
     },
     {
-      "path": "/news",
-      "en": "News",
-      "ar": "الأخبار",
+      "path": "/masterclass",
+      "en": "Masterclass",
+      "ar": "ماستركلاس",
       "children": [
         {
-          "href": "/news",
-          "en": "All news & notes",
-          "ar": "كل الأخبار والمقالات"
+          "href": "/masterclass",
+          "en": "The three doors",
+          "ar": "الأبواب الثلاثة"
         },
         {
-          "href": "/leaders-house",
-          "en": "Leaders House",
-          "ar": "بيت القادة"
+          "href": "/masterclass/leader-seat",
+          "en": "Management and leadership in the age of AI",
+          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
         },
         {
-          "href": "/news/media",
-          "en": "Media & inquiries",
-          "ar": "الإعلام والاستفسارات"
+          "href": "/masterclass#institutions",
+          "en": "Working with AI",
+          "ar": "العمل مع الذكاء الاصطناعي"
+        },
+        {
+          "href": "/masterclass/develop-the-institution",
+          "en": "The institution and AI",
+          "ar": "المؤسسة والذكاء الاصطناعي"
+        }
+      ]
+    },
+    {
+      "path": "/korean-solutions",
+      "en": "Korean Solutions",
+      "ar": "حلول من كوريا",
+      "children": [
+        {
+          "href": "/korean-solutions",
+          "en": "Find a solution",
+          "ar": "المستكشف"
+        },
+        {
+          "href": "/korean-solutions#needs",
+          "en": "Tell us your need",
+          "ar": "اكتب احتياجك"
         }
       ]
     },
@@ -243,6 +199,28 @@
           "href": "/work-with-us/transition",
           "en": "Transition to use",
           "ar": "النقل للتشغيل"
+        }
+      ]
+    },
+    {
+      "path": "/news",
+      "en": "News",
+      "ar": "الأخبار",
+      "children": [
+        {
+          "href": "/news",
+          "en": "All news & notes",
+          "ar": "كل الأخبار والمقالات"
+        },
+        {
+          "href": "/leaders-house",
+          "en": "Leaders House",
+          "ar": "بيت القادة"
+        },
+        {
+          "href": "/news/media",
+          "en": "Media & inquiries",
+          "ar": "الإعلام والاستفسارات"
         }
       ]
     },
@@ -290,6 +268,28 @@
           "href": "/about/learning-from-darpa",
           "en": "Learning from DARPA",
           "ar": "التعلم من DARPA"
+        }
+      ]
+    },
+    {
+      "path": "/opportunities",
+      "en": "R&D Opportunities",
+      "ar": "فرص البحث والتطوير",
+      "children": [
+        {
+          "href": "/opportunities",
+          "en": "Explore opportunities",
+          "ar": "استكشف الفرص"
+        },
+        {
+          "href": "/work-with-us/how-to-respond",
+          "en": "Response guide",
+          "ar": "دليل المشاركة"
+        },
+        {
+          "href": "/work-with-us/prepare-a-concept",
+          "en": "Prepare your note",
+          "ar": "جهّز مذكرتك"
         }
       ]
     }
