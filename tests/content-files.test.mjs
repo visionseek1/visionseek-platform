@@ -41,9 +41,10 @@ test('the six section headers keep their ids and links', () => {
   }
 });
 
-test('six program concepts, VS-P01 to VS-P06, each complete', () => {
+test('two field programs, Helix and Sentinel, each complete', () => {
   const programs = readDir('programs');
-  assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02', 'VS-P03', 'VS-P04', 'VS-P05', 'VS-P06']);
+  assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02']);
+  assert.deepEqual(programs.map(p => p.slug).sort(), ['helix', 'sentinel']);
   for (const program of programs) {
     for (const key of ['title', 'summary', 'beneficiary', 'constraint', 'hypothesis', 'test', 'stop', 'transfer']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
     assert.equal(typeof program.position, 'number');

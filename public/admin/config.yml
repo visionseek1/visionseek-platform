@@ -84,12 +84,8 @@ collections:
                   - {label: "عن VisionSeek ← الحوكمة  /about/governance", value: "/about/governance"}
                   - {label: "عن VisionSeek ← التعلم من DARPA  /about/learning-from-darpa", value: "/about/learning-from-darpa"}
                   - {label: "التقارير ← المنهج والمعايير  /reports/methodology", value: "/reports/methodology"}
-                  - {label: "البرامج ← مسارات قدرات الحوسبة والصناعة  /programs/compute-capability", value: "/programs/compute-capability"}
-                  - {label: "البرامج ← الاستقلالية في العمل الصناعي الحقيقي  /programs/industrial-autonomy", value: "/programs/industrial-autonomy"}
-                  - {label: "البرامج ← ذكاء اصطناعي مؤسسي يمكن الاعتماد عليه  /programs/institutional-ai", value: "/programs/institutional-ai"}
-                  - {label: "البرامج ← تشغيل مرن للموارد  /programs/resource-resilience", value: "/programs/resource-resilience"}
-                  - {label: "البرامج ← من الدليل العلمي إلى القدرة  /programs/science-to-capability", value: "/programs/science-to-capability"}
-                  - {label: "البرامج ← توريد عابر للحدود تقوده الأدلة  /programs/trusted-sourcing", value: "/programs/trusted-sourcing"}
+                  - {label: "البرامج ← VisionSeek Helix  /programs/helix", value: "/programs/helix"}
+                  - {label: "البرامج ← VisionSeek Sentinel  /programs/sentinel", value: "/programs/sentinel"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}

@@ -2,9 +2,9 @@ import {t, type Entry, type Text} from './schema';
 import {readContentDir} from './content-files';
 
 type Concept={slug:string;code:string;title:Text;summary:Text;image:string;beneficiary:Text;constraint:Text;hypothesis:Text;test:Text;stop:Text;transfer:Text};
-/** The six program concepts. Edited from /admin («البرامج»); the shared block template below stays in code. */
+/** The two field programs. Edited from /admin («البرامج»); the shared block template below stays in code. */
 export const concepts:Concept[]=readContentDir<Concept&{position:number}>('programs');
-export const programEntries:Entry[]=concepts.map(c=>({section:'programs',slug:c.slug,code:c.code,title:c.title,summary:c.summary,category:t('Program concepts','تصورات برامج'),status:t('Proposed · not launched','مقترح · لم يُطلق'),image:c.image,action:'concept',facts:[{label:t('Program owner','مسؤول البرنامج'),value:t('Program manager — appointment pending','مدير برنامج — لم يُعيّن')},{label:t('Funding','التمويل'),value:t('Not committed','غير معتمد')},{label:t('Schedule','الجدول الزمني'),value:t('Set after scope and baseline approval','يُحدد بعد اعتماد النطاق وخط الأساس')}],blocks:[
+export const programEntries:Entry[]=concepts.map(c=>({section:'programs',slug:c.slug,code:c.code,title:c.title,summary:c.summary,category:t('Program concepts','تصورات برامج'),status:t('Pilot-ready','جاهز للتجريب'),image:c.image,action:'concept',facts:[{label:t('Program owner','مسؤول البرنامج'),value:t('Program manager — appointment pending','مدير برنامج — لم يُعيّن')},{label:t('Funding','التمويل'),value:t('Not committed','غير معتمد')},{label:t('Schedule','الجدول الزمني'),value:t('Set after scope and baseline approval','يُحدد بعد اعتماد النطاق وخط الأساس')}],blocks:[
  {title:t('The capability and its beneficiary','القدرة والمستفيد'),body:c.beneficiary},
  {title:t('The current limit','الحد الحالي'),body:c.constraint},
  {title:t('The hypothesis to test','الفرضية المطلوب اختبارها'),body:c.hypothesis},
