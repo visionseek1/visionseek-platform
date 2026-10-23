@@ -87,6 +87,8 @@
 .empty { grid-column: 1 / -1; padding: 32px; background: var(--card); border: 1px dashed var(--dash); text-align: center; color: var(--mute); line-height: 1.8; }
 
 .card { background: var(--card); border: 1px solid var(--rule); padding: 22px; display: flex; flex-direction: column; gap: 12px; position: relative; }
+.cardPhoto { position: relative; height: 176px; margin: -22px -22px 4px; overflow: hidden; background: var(--ink); }
+.cardPhoto img, .dPhoto img { object-fit: cover; }
 .card:hover { border-color: var(--ink); }
 .tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .tag { font-size: 12px; padding: 3px 10px; background: var(--tint); color: var(--mute); }
@@ -142,7 +144,8 @@
 
 /* Detail page */
 .dHero { background: var(--ink); color: var(--paper); }
-.dHeroInner { display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: flex-end; padding-block: 56px 64px; }
+.dHeroInner { display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: stretch; padding-block: 56px 64px; }
+.dPhoto { position: relative; flex: 1 1 300px; min-height: 260px; }
 .dHeroMain { flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
 .dTags { display: flex; gap: 8px; flex-wrap: wrap; }
 .dTags span { font-size: 13px; padding: 4px 12px; border: 1px solid #ffffff55; }
@@ -150,7 +153,7 @@
 .dTags .dIn { background: var(--lime); color: var(--ink); font-weight: 600; border-color: var(--lime); }
 .page.page .dHero h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.2; text-wrap: balance; }
 .dMaker { font-size: 18px; color: var(--soft); }
-.dActions { flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px; }
+.dActions { flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px; align-self: flex-end; }
 .page .dActions a { display: inline-flex; justify-content: center; align-items: center; text-decoration: none; }
 .page .dActions .primary { min-height: 54px; background: var(--lime); color: var(--ink); font-weight: 700; font-size: 17px; }
 .page .dActions .secondary { min-height: 48px; border: 1px solid #ffffff66; color: var(--paper); font-size: 15px; }

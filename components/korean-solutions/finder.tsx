@@ -1,7 +1,9 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import {useMemo, useState} from 'react';
 import DemandSections from './sections';
+import {productImage} from './photos';
 import styles from './ks.module.css';
 import {NO_PARTNERSHIP, REGION_COPY, ROUTE_COPY, SECTOR_EN, TYPE_COPY, TYPES, type Bi, type Region, type Solution, type SolutionType} from '@/lib/korean-solutions-copy';
 
@@ -95,6 +97,7 @@ export function SolutionCard({s, locale}: {s: Solution; locale: Locale}) {
   const where = t(s.where);
   const proof = s.proof[0];
   return <article className={styles.card}>
+    <div className={styles.cardPhoto}><Image src={productImage(s.slug)} alt="" fill sizes="(max-width:760px) 100vw, 33vw"/></div>
     <div className={styles.tags}><span className={`${styles.type} ${styles['t-' + c.key]}`}>{t(c.one)}</span>{s.sector && <span className={styles.tag}>{ar ? s.sector : SECTOR_EN[s.sector] || s.sector}</span>}</div>
     <h3><Link href={`${p}/korean-solutions/${s.slug}`}>{t(s.title) || s.title.ar}</Link></h3>
     {s.maker && <p className={styles.maker} dir="auto">{s.maker}</p>}

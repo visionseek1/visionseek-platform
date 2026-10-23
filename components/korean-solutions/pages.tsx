@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import Finder, {SolutionCard} from './finder';
+import {productImage} from './photos';
 import RequestForm from './request-form';
 import styles from './ks.module.css';
 import {NO_PARTNERSHIP, REGION_COPY, ROUTES, ROUTE_COPY, SECTOR_EN, TYPE_COPY, type Bi, type Solution} from '@/lib/korean-solutions-copy';
@@ -71,6 +73,7 @@ export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: S
         <h1 id="sol-title">{t(s.title)}</h1>
         {s.maker && <p className={`${styles.dMaker} ${styles.latin}`} dir="auto">{s.maker}</p>}
       </div>
+      <div className={styles.dPhoto}><Image src={productImage(s.slug)} alt="" fill sizes="(max-width:900px) 100vw, 420px"/></div>
       <div className={styles.dActions}>
         <a className={styles.primary} href="#request">{ar ? 'اطلب هذا الحل' : 'Ask for this solution'}</a>
         <Link className={styles.secondary} href={`${p}/korean-solutions#finder`}>{ar ? 'رجوع للمستكشف' : 'Back to the finder'}</Link>

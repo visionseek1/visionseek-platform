@@ -3,24 +3,11 @@ import {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ks.module.css';
+import {productImage} from './photos';
 import type {Bi, Solution} from '@/lib/korean-solutions-copy';
 
 type Locale = 'ar' | 'en';
 type Card = {title: Bi; text: Bi; image: string; need: Bi};
-
-/** Illustrative field photos only. Not a picture of the Korean product. Each item has its own photo. */
-const PRODUCT_IMAGE: Record<string, string> = {
-  'ai-mammography-reader': '/ks/mammo.jpg',
-  'smart-heart-patch': '/ks/heart.jpg',
-  'gait-training-robot': '/ks/gait.jpg',
-  'dental-implants': '/ks/dental.jpg',
-  'aesthetic-devices': '/ks/laser.jpg',
-  'point-of-care-diagnostics': '/ks/analyzer.jpg',
-  'elderly-care-call': '/ks/elder.jpg',
-  'cardiac-arrest-early-warning': '/ks/monitor.jpg',
-  'ai-security-cameras': '/ks/cctv.jpg',
-  'container-smart-farms': '/ks/farm.jpg',
-};
 
 const ask = (sector: string, need: string) => {
   window.dispatchEvent(new CustomEvent('ks-need', {detail: {sector, need}}));
@@ -135,7 +122,7 @@ function ProductCard({s, locale}: {s: Solution; locale: Locale}) {
   const ar = locale === 'ar';
   const t = (v: Bi) => (ar ? v.ar : v.en);
   const p = ar ? '/ar' : '';
-  const image = PRODUCT_IMAGE[s.slug] || '/ks/health.jpg';
+  const image = productImage(s.slug);
   return <article className={styles.offer}>
     <Link href={`${p}/korean-solutions/${s.slug}`}>
       <div className={styles.offerPhoto}><Image src={image} alt="" fill sizes="(max-width:760px) 100vw, 33vw"/></div>
