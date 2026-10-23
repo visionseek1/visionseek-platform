@@ -24,6 +24,13 @@
           }
         },
         {
+          "href": "/work-with-us#competitions",
+          "label": {
+            "en": "Competitions",
+            "ar": "المسابقات"
+          }
+        },
+        {
           "href": "/work-with-us/new-to-visionseek",
           "label": {
             "en": "New to VisionSeek",
