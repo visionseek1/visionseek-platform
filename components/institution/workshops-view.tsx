@@ -43,28 +43,19 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             <span>{text(locale, section.title)}</span>
           </nav>
           <h1>{text(locale, section.title)}</h1>
-          <p>{text(locale, live.catalogFor)}</p>
+          <p>{text(locale, live.teaches)}</p>
         </header>
 
-        <section className="vs-wl-catalog-grid" aria-label={text(locale, section.title)}>
+        <section className="vs-wl-catalog-grid" id="institutions" aria-label={text(locale, section.title)}>
           <article className="vs-wl-offer vs-wl-course-card">
             <Link href={courseHref}>
-              <Image src={governanceCourse.cover} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} priority />
+              <Image src={governanceCourse.cover[locale]} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} priority />
             </Link>
             <div>
               <h2 id="vs-wl-course-title"><Link href={courseHref}>{text(locale, governanceCourse.title)}</Link></h2>
               <p><span>{text(locale, governanceCourse.durationLabel)}</span> {text(locale, governanceCourse.soon)}</p>
               <p className="vs-wl-offer-price">{text(locale, governanceCourse.price)}</p>
               <Link className="vs-wl-btn is-lime" href={courseHref}>{text(locale, governanceCourse.subscribe)}<ArrowRight size={18} aria-hidden /></Link>
-            </div>
-          </article>
-
-          <article className="vs-wl-offer" id="institutions">
-            <Image src={live.heroImage} alt={text(locale, governanceCourse.instructorShort)} width={1254} height={1254} />
-            <div>
-              <h2>{text(locale, section.title)}</h2>
-              <p>{text(locale, live.teaches)}</p>
-              <Link className="vs-wl-btn is-lime" href={privateHref}>{text(locale, governanceCourse.subscribe)}<ArrowRight size={18} aria-hidden /></Link>
             </div>
           </article>
         </section>

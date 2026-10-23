@@ -129,4 +129,13 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.match(redirects, /source: '\/ar\/governance', destination: '\/ar\/masterclass'/);
   assert.match(read('components/institution/workshops-view.tsx'), /vs-wl-course-card/);
   assert.match(read('components/institution/workshops-view.tsx'), /coursePath/);
+  assert.equal(data.workshop.cover.en, '/governance/cover-en.png');
+  assert.equal(data.workshop.cover.ar, '/governance/cover-ar.png');
+  assert.equal(existsSync(new URL('../public/governance/cover-en.png', import.meta.url)), true);
+  assert.equal(existsSync(new URL('../public/governance/cover-ar.png', import.meta.url)), true);
+  assert.match(course, /workshop\.cover\[locale\]/);
+  assert.match(card, /governanceCourse\.cover\[locale\]/);
+  assert.match(card, /live\.teaches/);
+  assert.doesNotMatch(data.workshop.coverAlt.en, /Single-Track|\bDr\b|PhD/i);
+  assert.doesNotMatch(data.workshop.coverAlt.ar, /فخ الإجابة|دكتوراه/);
 });
