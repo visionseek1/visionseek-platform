@@ -1,0 +1,23 @@
+{
+  "cards": [
+    {
+      "id": "open-decision-guard",
+      "status": "open",
+      "deadline": "2026-10-26",
+      "project": "Open Decision Guard",
+      "description": {
+        "en": "A layer that stops AI from closing a decision too early for the manager, and hands the decision back to the human.",
+        "ar": "طبقة بتوقّف الذكاء الاصطناعي لما يحسم القرار بدري بدل المدير، وبترجّع القرار للإنسان."
+      },
+      "competition": "Meta Global AI Developer Hackathon",
+      "role": {
+        "en": "AI agent developer · LLM APIs",
+        "ar": "مطوّر وكلاء AI · LLM APIs"
+      },
+      "leader": {
+        "en": "Led by Ahmed Abdelalim",
+        "ar": "يقوده د. أحمد عبدالعليم"
+      }
+    }
+  ]
+}

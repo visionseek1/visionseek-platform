@@ -24,38 +24,10 @@
           }
         },
         {
-          "href": "/work-with-us/new-to-visionseek",
+          "href": "/work-with-us#competitions",
           "label": {
-            "en": "New to VisionSeek",
-            "ar": "ابدأ مع VisionSeek"
-          }
-        },
-        {
-          "href": "/work-with-us/how-to-respond",
-          "label": {
-            "en": "How to respond",
-            "ar": "كيف تشارك؟"
-          }
-        },
-        {
-          "href": "/work-with-us/prepare-a-concept",
-          "label": {
-            "en": "Prepare a concept",
-            "ar": "جهّز تصورًا"
-          }
-        },
-        {
-          "href": "/work-with-us/review-and-selection",
-          "label": {
-            "en": "Review & selection",
-            "ar": "المراجعة والاختيار"
-          }
-        },
-        {
-          "href": "/work-with-us/transition",
-          "label": {
-            "en": "Transition to use",
-            "ar": "النقل للتشغيل"
+            "en": "Competitions",
+            "ar": "المسابقات"
           }
         }
       ]
