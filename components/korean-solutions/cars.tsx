@@ -32,7 +32,7 @@ const SOURCE = 'https://www.koreatimes.co.kr/economy/20260115/koreas-auto-export
 
 function ShotCard({shot, t}: {shot: Shot; t: (v: Bi) => string}) {
   return <article className={`${styles.carsShot} ${shot.span === 'lead' ? styles.carsShotLead : ''} ${shot.span === 'wide' ? styles.carsShotWide : ''}`}>
-    <Image src={shot.src} alt={shot.name} fill sizes={shot.span === 'half' ? '(max-width:800px) 100vw, 50vw' : '100vw'}/>
+    <div className={styles.carsShotPhoto}><Image src={shot.src} alt={shot.name} fill sizes={shot.span === 'half' ? '(max-width:800px) 100vw, 40vw' : '(max-width:800px) 100vw, 720px'}/></div>
     <div className={styles.carsShotCopy}>
       <span className={styles.carsShotMark}>{t(shot.mark)}</span>
       <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{shot.name}</span>
@@ -47,27 +47,31 @@ export default function KoreanCars({locale}: {locale: Locale}) {
   const [lead, ioniq, gv70, ev9, santa] = SHOTS;
   return <Shell locale={locale} path="/korean-solutions/cars" here={ar ? 'السيارات' : 'Cars'}>
     <section className={styles.carsHero} aria-labelledby="cars-title">
-      <div className={styles.carsHeroPhoto}><Image src="/ks/gv90.jpg" alt="Genesis GV90" fill sizes="100vw" priority/></div>
-      <div className={`${styles.gutter} ${styles.carsHeroCopy}`}>
-        <p className={`${styles.carsHeroEn} ${styles.latin}`} lang="en" dir="ltr">GENESIS · GV90</p>
-        <h1 id="cars-title">{ar ? 'السيارات' : 'Cars'}</h1>
-        <p>{ar
-          ? 'فوق البيت سيارة واحدة. وتحتها طريق: كهرباء، وهجين.'
-          : 'One car at the top of the house. Under it, a road: electric, and hybrid.'}</p>
-      </div>
+      <div className={styles.gutter}><div className={`${styles.inner} ${styles.carsHeroGrid}`}>
+        <div className={styles.carsHeroCopy}>
+          <p className={`${styles.carsHeroEn} ${styles.latin}`} lang="en" dir="ltr">GENESIS · GV90</p>
+          <h1 id="cars-title">{ar ? 'السيارات' : 'Cars'}</h1>
+          <p>{ar
+            ? 'فوق البيت سيارة واحدة. وتحتها طريق: كهرباء، وهجين.'
+            : 'One car at the top of the house. Under it, a road: electric, and hybrid.'}</p>
+        </div>
+        <div className={styles.carsHeroPhoto}><Image src="/ks/gv90.jpg" alt="Genesis GV90" fill sizes="(max-width:800px) 100vw, 560px" priority/></div>
+      </div></div>
     </section>
 
     <section className={styles.carsGallery} aria-label={ar ? 'الطرازات' : 'The models'}>
-      <ShotCard shot={lead} t={t}/>
-      <div className={styles.carsShotRow}>
-        <ShotCard shot={ioniq} t={t}/>
-        <ShotCard shot={gv70} t={t}/>
-      </div>
-      <ShotCard shot={ev9} t={t}/>
-      <ShotCard shot={santa} t={t}/>
+      <div className={styles.gutter}><div className={styles.inner}>
+        <ShotCard shot={lead} t={t}/>
+        <div className={styles.carsShotRow}>
+          <ShotCard shot={ioniq} t={t}/>
+          <ShotCard shot={gv70} t={t}/>
+        </div>
+        <ShotCard shot={ev9} t={t}/>
+        <ShotCard shot={santa} t={t}/>
+      </div></div>
     </section>
 
-    <div className={styles.gutter}><div className={`${styles.inner} ${styles.carsBody}`}>
+    <div className={`${styles.gutter} ${styles.carsSheet}`}><div className={`${styles.inner} ${styles.carsBody}`}>
       <p className={styles.carsCaption}>{ar
         ? 'الصور: GV90 لداميان ب. أوه، وG80 وGV70 وEV9 لألكسندر ميغل، وأيونيك 5 لـ TTTNIS، وسانتا في لـ RL GNZLZ. الرخص CC BY-SA 4.0، وأيونيك 5 ملكية عامة.'
         : 'Photographs: the GV90 by Damian B Oh, the G80, GV70 and EV9 by Alexander Migl, the Ioniq 5 by TTTNIS, the Santa Fe by RL GNZLZ. CC BY-SA 4.0, and the Ioniq 5 is public domain.'}</p>

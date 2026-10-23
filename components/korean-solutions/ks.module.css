@@ -244,37 +244,39 @@
 .carsRow:hover .carsRowEn, .carsRow:hover .carsRowLine { color: #d6d9d7; }
 @media (max-width: 560px) { .carsRowPhoto { flex-basis: 112px; } .carsRowWord { font-size: 22px; } }
 
-.carsHero { position: relative; display: flex; align-items: flex-end; min-height: clamp(520px, 72vw, 760px); background: #111; color: #fff; }
-.carsHeroPhoto { position: absolute; inset: 0; }
+.carsHero { background: #fff; color: var(--ink); }
+.carsHeroGrid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 28px 36px; align-items: center; padding-block: 36px 12px; }
+.carsHeroPhoto { position: relative; height: 220px; background: #f7f7f5; }
 .carsHeroPhoto img { object-fit: cover; object-position: center 42%; }
-.carsHeroCopy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 10px; width: 100%; padding-block: 120px 40px; background: linear-gradient(180deg, transparent 20%, #0b0d0cd0 100%); }
-.carsHeroEn { font-size: 13px; letter-spacing: 0.18em; color: var(--lime); font-weight: 600; }
-.page.page .carsHero h1 { color: #fff; font-size: clamp(52px, 8vw, 92px); line-height: 0.95; }
-.carsHeroCopy p:last-child { font-size: clamp(18px, 2vw, 22px); line-height: 1.65; color: #f4f6f3; max-width: 16em; }
+.carsHeroCopy { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.carsHeroEn { font-size: 12px; letter-spacing: 0.16em; color: var(--mute); font-weight: 600; }
+.page.page .carsHero h1 { color: var(--ink); font-size: clamp(40px, 5vw, 60px); line-height: 1; }
+.carsHeroCopy p:last-child { font-size: 17px; line-height: 1.7; color: var(--body); max-width: 22em; }
 
-.carsGallery { display: flex; flex-direction: column; gap: 8px; background: #0b0d0c; padding-bottom: 8px; }
-.carsShot { position: relative; display: flex; align-items: flex-end; min-height: 380px; overflow: hidden; color: #fff; }
-.carsShot img { object-fit: cover; object-position: center 60%; }
-.carsShotLead { min-height: clamp(460px, 62vw, 640px); }
-.carsShotWide { min-height: clamp(420px, 52vw, 560px); }
-.carsShotCopy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; width: 100%; padding: 72px 28px 24px; background: linear-gradient(180deg, transparent, #0b0d0ce6 70%); }
-.carsShotMark { color: var(--lime); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; }
-.carsShot .carsCar { font-size: clamp(26px, 3.4vw, 44px); line-height: 1.1; color: #fff; }
-.carsShot p { font-size: 17px; line-height: 1.6; color: #f3f5f2; max-width: 22em; }
-.carsShotRow { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 8px; }
-.carsShotRow .carsShot { min-height: 440px; }
+.carsGallery { background: #fff; padding-bottom: 8px; }
+.carsGallery .inner { display: flex; flex-direction: column; gap: 22px; }
+.carsShot { display: flex; flex-direction: column; gap: 8px; background: #fff; color: var(--ink); min-height: 0; }
+.carsShotPhoto { position: relative; height: 160px; background: #f7f7f5; overflow: hidden; }
+.carsShotLead .carsShotPhoto { height: 200px; }
+.carsShotWide .carsShotPhoto { height: 170px; }
+.carsShotPhoto img { object-fit: cover; object-position: center 55%; }
+.carsShotCopy { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 0; background: none; }
+.carsShotMark { color: var(--mute); font-size: 13px; font-weight: 700; }
+.carsShot .carsCar { font-size: 18px; line-height: 1.25; color: var(--ink); }
+.carsShot p { font-size: 15px; line-height: 1.6; color: var(--body); max-width: 36em; }
+.carsShotRow { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.carsShotRow .carsShotPhoto { height: 140px; }
 
-.carsBody { display: flex; flex-direction: column; gap: 36px; padding-block: 28px 72px; }
+.carsBody { display: flex; flex-direction: column; gap: 36px; padding-block: 20px 72px; background: #fff; }
+.carsSheet { background: #fff; }
 .carsCaption { font-size: 13px; line-height: 1.7; color: var(--mute); max-width: 62em; }
 .carsTech h2, .carsAsk h2 { font-size: clamp(28px, 3vw, 36px); }
 .carsPulse { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 12px; margin-top: 16px; }
-.carsPulse article { display: flex; flex-direction: column; gap: 8px; padding: 20px; background: var(--tint); }
-.carsPulse article:first-child { background: var(--ink); color: #fff; }
-.carsPulse h3 { font-size: 20px; }
-.carsPulse article:first-child h3 { color: var(--lime); }
-.carsPulse p { font-size: 15px; line-height: 1.75; }
+.carsPulse article { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: #fff; color: var(--ink); border: 1px solid var(--rule); }
+.carsPulse h3 { font-size: 18px; color: var(--ink); }
+.carsPulse p { font-size: 15px; line-height: 1.75; color: var(--body); }
 
-.carsFact { font-size: 17px; line-height: 1.7; padding-top: 8px; border-top: 1px solid var(--ink); }
+.carsFact { font-size: 17px; line-height: 1.7; padding-top: 8px; border-top: 1px solid var(--rule); }
 .carsFact .num { font-size: 28px; font-weight: 700; margin-inline-end: 8px; }
 .carsFact a { font-size: 14px; color: var(--mute); }
 .carsOnly { font-size: 17px; line-height: 1.7; }
@@ -286,7 +288,7 @@
 .carsAsk .form :is(input, select, textarea) { border: 1px solid var(--rule); }
 
 @media (max-width: 800px) {
-  .carsShotRow, .carsPulse { grid-template-columns: 1fr; }
-  .carsShot, .carsShotRow .carsShot { min-height: 300px; }
-  .carsShotLead, .carsShotWide { min-height: 380px; }
+  .carsHeroGrid, .carsShotRow, .carsPulse { grid-template-columns: 1fr; }
+  .carsHeroPhoto { height: 180px; }
+  .carsShotPhoto, .carsShotLead .carsShotPhoto, .carsShotWide .carsShotPhoto, .carsShotRow .carsShotPhoto { height: 150px; }
 }
