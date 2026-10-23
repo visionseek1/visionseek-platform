@@ -21,8 +21,8 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   assert.equal(data.workshop.instructor.en, 'Ahmed Abdelalim');
   assert.equal(data.workshop.instructorShort.en, 'Ahmed Abdelalim');
   assert.equal(data.workshop.instructorShort.ar, 'د. أحمد');
-  assert.equal(data.workshop.title.en, 'AI Governance for Business Leaders and Executives');
-  assert.equal(data.workshop.title.ar, 'حوكمة الذكاء الاصطناعي لمديري الشركات والمديرين التنفيذيين');
+  assert.equal(data.workshop.title.en, 'AI Governance for Organizational Leaders and Executives');
+  assert.equal(data.workshop.title.ar, 'حوكمة الذكاء الاصطناعي لمديري المؤسسات والمديرين التنفيذيين');
   assert.equal(data.workshop.subtitle.en, data.workshop.title.en);
   assert.equal(data.workshop.subtitle.ar, data.workshop.title.ar);
   assert.equal(data.workshop.subscribe.en, 'Subscribe');
