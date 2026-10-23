@@ -52,11 +52,11 @@
 .heroInner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.4rem, 5vw, 3.5rem) clamp(2.5rem, 5vw, 4.25rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(16rem, 0.7fr);
-  gap: clamp(1.5rem, 4vw, 3.5rem);
-  align-items: center;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 3.5rem) clamp(2rem, 4vw, 3.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(1.4rem, 3vw, 2.25rem);
 }
 .heroSolo { grid-template-columns: minmax(0, 44rem); }
 .heroCopy { display: flex; flex-direction: column; gap: 1.05rem; min-width: 0; }
@@ -116,11 +116,20 @@
   flex: none;
 }
 .poster {
+  width: 100%;
+  max-width: none;
   margin: 0;
-  background: #161716;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  border: 0;
 }
-.poster img { width: 100%; height: auto; display: block; }
+.poster img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
 .poster figcaption {
   padding: 0.55rem 0.75rem 0.7rem;
   color: #bdbdb4;
@@ -427,7 +436,6 @@
   .page.page .hero h1, .page.page.en .hero h1 { max-width: none; }
   .card div { padding: 0 1rem 1.15rem; }
   .examples { grid-template-columns: 1fr; }
-  .poster { max-width: 28rem; }
 }
 
 @media (max-width: 720px) {

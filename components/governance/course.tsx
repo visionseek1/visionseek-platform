@@ -36,7 +36,15 @@ export function MasterclassPage({locale}: {locale: Locale}) {
             <Subscribe locale={locale} />
           </div>
           <figure className={styles.poster}>
-            <Image src={workshop.cover} alt={t(locale, workshop.coverAlt)} width={1280} height={720} priority />
+            <Image
+              src={workshop.cover}
+              alt={t(locale, workshop.coverAlt)}
+              width={1280}
+              height={720}
+              priority
+              sizes="(max-width: 1120px) 100vw, 1008px"
+              style={{width: '100%', height: 'auto', objectFit: 'contain'}}
+            />
           </figure>
         </div>
       </header>
