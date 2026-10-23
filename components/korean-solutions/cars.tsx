@@ -8,12 +8,12 @@ type Locale = 'ar' | 'en';
 type Mark = 'hybrid' | 'electric';
 
 const CARS: {name: string; mark: Mark; line: Bi}[] = [
-  {name: 'Genesis Electrified G80', mark: 'electric', line: {ar: 'سيدان البيت.', en: 'The house sedan.'}},
+  {name: 'Genesis Electrified G80', mark: 'electric', line: {ar: 'سيدان للطريق الطويل.', en: 'A sedan for the long road.'}},
   {name: 'Genesis Electrified GV70', mark: 'electric', line: {ar: 'للمدينة.', en: 'For the city.'}},
-  {name: 'Hyundai Ioniq 5', mark: 'electric', line: {ar: 'على الطريق من سنوات.', en: 'Already on the road.'}},
-  {name: 'Kia EV9', mark: 'electric', line: {ar: 'للأسطول أو للعائلة.', en: 'For a fleet or a family.'}},
-  {name: 'Hyundai Santa Fe Hybrid', mark: 'hybrid', line: {ar: 'للمسافة.', en: 'For the distance.'}},
-  {name: 'Kia Sorento Hybrid', mark: 'hybrid', line: {ar: 'للمسافة.', en: 'For the distance.'}},
+  {name: 'Hyundai Ioniq 5', mark: 'electric', line: {ar: 'مجرّبة على الطريق من سنوات.', en: 'On the road for years.'}},
+  {name: 'Kia EV9', mark: 'electric', line: {ar: 'ثلاثة صفوف. للأسطول أو للعائلة.', en: 'Three rows. For a fleet or a family.'}},
+  {name: 'Hyundai Santa Fe Hybrid', mark: 'hybrid', line: {ar: 'عائلة ومسافة.', en: 'A family, and distance.'}},
+  {name: 'Kia Sorento Hybrid', mark: 'hybrid', line: {ar: 'نفس المسافة، من كيا.', en: 'The same distance, from Kia.'}},
 ];
 
 const TECH: {title: Bi; text: Bi}[] = [
@@ -34,60 +34,48 @@ const LICENSE = 'https://creativecommons.org/licenses/by-sa/4.0';
 export default function KoreanCars({locale}: {locale: Locale}) {
   const ar = locale === 'ar';
   const t = (v: Bi) => (ar ? v.ar : v.en);
+  const groups: Mark[] = ['electric', 'hybrid'];
   return <Shell locale={locale} path="/korean-solutions/cars" here={ar ? 'السيارات' : 'Cars'}>
-    <section className={styles.carsStage} aria-labelledby="cars-title">
-      <div className={`${styles.gutter} ${styles.carsFlag}`}>
-        <div className={styles.carsCopy}>
-          <p className={`${styles.carsEyebrow} ${styles.latin}`} lang="en" dir="ltr">CARS · GENESIS</p>
-          <h1 id="cars-title" className={`${styles.carsName} ${styles.latin}`} lang="en" dir="ltr">GV90</h1>
-          <p className={styles.carsMark}>{t(MARK.electric)}</p>
-          <p className={styles.carsLine}>{ar
-            ? 'الأعلى في بيت جينيسيس. كهرباء، جديدة، ومن غير سعر في الصفحة.'
-            : 'The top of the Genesis house. Electric, new, and with no price on this page.'}</p>
-        </div>
-        <figure className={styles.carsFigure}>
-          <div className={styles.carsPhoto}><Image src="/ks/gv90.jpg" alt={ar ? 'جينيسيس GV90' : 'Genesis GV90'} fill sizes="(max-width:800px) 100vw, 720px" priority/></div>
-          <figcaption className={styles.carsCaption}>{ar
-            ? <>الصورة لجينيسيس GV90. <a href={PHOTO}>Damian B Oh</a>، <a href={LICENSE}>CC BY-SA 4.0</a>.</>
-            : <>The photograph is the Genesis GV90. <a href={PHOTO}>Damian B Oh</a>, <a href={LICENSE}>CC BY-SA 4.0</a>.</>}</figcaption>
-        </figure>
+    <section className={styles.carsHero} aria-labelledby="cars-title">
+      <div className={styles.carsHeroPhoto}><Image src="/ks/gv90.jpg" alt="" fill sizes="100vw" priority/></div>
+      <div className={`${styles.gutter} ${styles.carsHeroCopy}`}>
+        <p className={`${styles.carsHeroEn} ${styles.latin}`} lang="en" dir="ltr">GENESIS · GV90</p>
+        <h1 id="cars-title">{ar ? 'السيارات' : 'Cars'}</h1>
+        <p>{ar
+          ? 'الأعلى في بيت جينيسيس. كهرباء، جديدة، ومن غير سعر.'
+          : 'The top of the Genesis house. Electric, new, and with no price.'}</p>
       </div>
     </section>
 
     <div className={styles.gutter}><div className={`${styles.inner} ${styles.carsBody}`}>
+      <p className={styles.carsCaption}>{ar
+        ? <>الصورة لجينيسيس GV90. <a href={PHOTO}>Damian B Oh</a>، <a href={LICENSE}>CC BY-SA 4.0</a>.</>
+        : <>The photograph is the Genesis GV90. <a href={PHOTO}>Damian B Oh</a>, <a href={LICENSE}>CC BY-SA 4.0</a>.</>}</p>
+
       <section className={styles.carsList} aria-labelledby="cars-list">
-        <h2 id="cars-list">{ar ? 'قائمة واحدة' : 'One list'}</h2>
-        <p className={styles.carsIntro}>{ar
-          ? 'علامة على كل اسم. هجين أو كهرباء. الفخامة البيت، مش فلتر.'
-          : 'A mark on each name. Hybrid or electric. Luxury is the house, not a filter.'}</p>
-        <ul>
-          {CARS.map(car => <li key={car.name}>
-            <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{car.name}</span>
-            <span className={styles.carsRowLine}>{t(car.line)}</span>
-            <span className={styles.carsTag}>{t(MARK[car.mark])}</span>
-          </li>)}
-        </ul>
+        <h2 id="cars-list">{ar ? 'الطرازات' : 'The models'}</h2>
+        {groups.map(mark => <div key={mark} className={styles.carsGroup}>
+          <h3>{t(MARK[mark])}</h3>
+          <ul>
+            {CARS.filter(car => car.mark === mark).map(car => <li key={car.name}>
+              <span className={`${styles.carsCar} ${styles.latin}`} lang="en" dir="ltr">{car.name}</span>
+              <span>{t(car.line)}</span>
+            </li>)}
+          </ul>
+        </div>)}
       </section>
 
       <section className={styles.carsTech} aria-labelledby="cars-tech">
         <h2 id="cars-tech">{ar ? 'التقنية' : 'Technology'}</h2>
-        <p className={styles.carsIntro}>{ar ? 'ليست طرازًا. ثلاثة أشياء داخل السيارة.' : 'Not a model. Three things inside the car.'}</p>
-        <div className={styles.carsTechGrid}>
-          {TECH.map(item => <article key={item.title.en}><h3>{t(item.title)}</h3><p>{t(item.text)}</p></article>)}
-        </div>
+        <p className={styles.carsIntro}>{ar ? 'مش طراز رابع. موجودة جوه السيارة.' : 'Not a fourth model. It sits inside the car.'}</p>
+        <dl>
+          {TECH.map(item => <div key={item.title.en}><dt>{t(item.title)}</dt><dd>{t(item.text)}</dd></div>)}
+        </dl>
       </section>
 
-      <section className={styles.carsFact} aria-labelledby="cars-fact">
-        <p id="cars-fact" className={`${styles.carsNumber} ${styles.num}`}>14.8</p>
-        <div>
-          <p className={styles.carsFactUnit}>{ar ? 'مليار دولار' : 'billion dollars'}</p>
-          <p>{ar
-            ? 'صادرات كوريا من السيارات الهجين في 2025، بزيادة 30٪.'
-            : 'Korean hybrid-car exports in 2025, up 30 percent.'}</p>
-          <a href={SOURCE}>{ar ? 'كوريا تايمز عن وزارة التجارة · 15 يناير 2026' : 'Korea Times, citing the trade ministry · 15 January 2026'}</a>
-        </div>
-      </section>
-
+      <p className={styles.carsFact}>
+        <span className={styles.num}>14.8</span> {ar ? 'مليار دولار، صادرات كوريا من الهجين في 2025، بزيادة 30٪.' : 'billion dollars. Korean hybrid exports in 2025, up 30 percent.'} <a href={SOURCE}>{ar ? 'المصدر' : 'Source'}</a>
+      </p>
       <p className={styles.carsOnly}>{ar
         ? 'جديدة فقط. لا مستعمل. VisionSeek لا تخزّن سيارات. تفتح الطلب.'
         : 'New only. Not used. VisionSeek does not stock cars. It opens the request.'}</p>
