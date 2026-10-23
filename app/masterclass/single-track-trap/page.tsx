@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title,
     description: workshop.blurb.en.replace(/\s*\n+\s*/g, ' '),
     url: coursePath,
-    images: [{url: workshop.cover, width: 1280, height: 720, alt: workshop.coverAlt.en}],
+    images: [{url: workshop.cover.en, width: 1600, height: 900, alt: workshop.coverAlt.en}],
   },
 };
 

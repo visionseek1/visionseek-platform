@@ -53,10 +53,10 @@ export function MasterclassPage({locale}: {locale: Locale}) {
             <h1>{t(locale, workshop.title)}</h1>
             <figure className={styles.poster}>
               <Image
-                src={workshop.cover}
+                src={workshop.cover[locale]}
                 alt={t(locale, workshop.coverAlt)}
-                width={1280}
-                height={720}
+                width={1600}
+                height={900}
                 priority
                 sizes="(max-width: 900px) 100vw, 720px"
                 style={{width: '100%', height: 'auto', objectFit: 'contain'}}

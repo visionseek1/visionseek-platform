@@ -49,7 +49,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
         <section className="vs-wl-catalog-grid" id="institutions" aria-label={text(locale, section.title)}>
           <article className="vs-wl-offer vs-wl-course-card">
             <Link href={courseHref}>
-              <Image src={governanceCourse.cover} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} priority />
+              <Image src={governanceCourse.cover[locale]} alt={text(locale, governanceCourse.coverAlt)} width={1600} height={900} priority />
             </Link>
             <div>
               <h2 id="vs-wl-course-title"><Link href={courseHref}>{text(locale, governanceCourse.title)}</Link></h2>
@@ -77,21 +77,6 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           <ul>
             {live.independence.lines.map(line => <li key={line.en}>{text(locale, line)}</li>)}
           </ul>
-        </section>
-
-        <section className="vs-wl-price is-compact" id="price">
-          <h2>{text(locale, live.dependence.title)}</h2>
-          <div className="vs-wl-price-grid">
-            {live.dependence.cards.map(card => (
-              <article key={card.title.en}>
-                <span className="vs-wl-price-date">{text(locale, card.date)}</span>
-                <h3>{text(locale, card.title)}</h3>
-                <p>{text(locale, card.body)}</p>
-                <p className="vs-wl-price-lesson">{text(locale, card.lesson)}</p>
-                <a href={card.source.url} target="_blank" rel="noreferrer">{card.source.title}<ArrowUpRight size={14} aria-hidden /></a>
-              </article>
-            ))}
-          </div>
         </section>
 
         <section className="vs-wl-catalog-close" id="start">
