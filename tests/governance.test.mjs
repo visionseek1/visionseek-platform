@@ -21,6 +21,10 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   assert.equal(data.workshop.instructor.en, 'Ahmed Abdelalim');
   assert.equal(data.workshop.instructorShort.en, 'Ahmed Abdelalim');
   assert.equal(data.workshop.instructorShort.ar, 'د. أحمد');
+  assert.equal(data.workshop.title.en, 'AI Governance for Business Leaders and Executives');
+  assert.equal(data.workshop.title.ar, 'حوكمة الذكاء الاصطناعي لمديري الشركات والمديرين التنفيذيين');
+  assert.equal(data.workshop.subtitle.en, data.workshop.title.en);
+  assert.equal(data.workshop.subtitle.ar, data.workshop.title.ar);
   assert.equal(data.workshop.subscribe.en, 'Subscribe');
   assert.equal(data.workshop.subscribe.ar, 'اشترك');
   assert.ok(data.workshop.topics.length >= 4 && data.workshop.topics.length <= 6);
@@ -45,18 +49,29 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
 });
 
 test('the course sits under masterclass, the old section is gone, and enrollment is one href', () => {
-  assert.doesNotMatch(flat, /anchoring|تثبيت|HLO|L-002|l-002|\bDr\.|دكتوراه|\bprice\b|سعر/i);
+  const withoutCoursePrice = JSON.parse(JSON.stringify(data));
+  delete withoutCoursePrice.workshop.price;
+  assert.equal(data.workshop.price.en, '$199 — one-time payment');
+  assert.equal(data.workshop.price.ar, '199 دولار — دفعة واحدة');
+  assert.doesNotMatch(JSON.stringify(withoutCoursePrice), /anchoring|تثبيت|HLO|L-002|l-002|\bDr\.|دكتوراه|\bprice\b|سعر/i);
   assert.doesNotMatch(flat, /insights\/notes/);
   const simulation = read('components/governance/simulation.tsx');
   assert.doesNotMatch(simulation, /fetch\(|localStorage|sessionStorage|indexedDB/);
   const course = read('components/governance/course.tsx');
   assert.doesNotMatch(course, /Simulation|اكشف البدائل|workshop\.evidence|workshop\.stations/);
   assert.match(course, /enrollHref/);
+  assert.match(course, /target="_blank"/);
+  assert.match(course, /rel="noopener noreferrer"/);
+  assert.match(course, /workshop\.price/);
   assert.match(course, /workshop\.blurb/);
+  assert.doesNotMatch(course, /workshop\.subtitle/);
   assert.doesNotMatch(course, /workshop\.topics|topicsLabel|course-topics|المحاور/);
   assert.match(course, /workshop\.instructorShort/);
+  const card = read('components/institution/workshops-view.tsx');
+  assert.doesNotMatch(card, /governanceCourse\.price|workshop\.price|governanceCourse\.subtitle/);
   const lib = read('lib/governance.ts');
-  assert.match(lib, /export const ENROLL_HREF = '\/start'/);
+  assert.match(lib, /export const ENROLL_HREF = 'https:\/\/link\.fastpaydirect\.com\/payment-link\/6adb486bcaf20c1f8ff2b74a'/);
+  assert.match(lib, /export const enrollHref = \(locale: Locale\) => \(locale === 'ar' \? ENROLL_HREF : ENROLL_HREF\)/);
   assert.match(lib, /\/masterclass\/\$\{workshop\.slug\}/);
   assert.match(read('components/governance/document-locale.tsx'), /documentElement/);
   const sitemap = read('app/sitemap.ts');

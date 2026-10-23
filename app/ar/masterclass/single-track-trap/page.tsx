@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import {MasterclassPage} from '@/components/governance/course';
 import {coursePath, localePath, workshop} from '@/lib/governance';
 
-const title = `${workshop.subtitle.ar} | VisionSeek`;
+const title = `${workshop.title.ar} | VisionSeek`;
 
 export const metadata: Metadata = {
   title,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title,
-    description: workshop.subtitle.ar,
+    description: workshop.blurb.ar.replace(/\s*\n+\s*/g, ' '),
     url: localePath('ar', coursePath),
     images: [{url: workshop.cover, width: 1280, height: 720, alt: workshop.coverAlt.ar}],
   },

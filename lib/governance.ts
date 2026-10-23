@@ -14,8 +14,8 @@ export const localePath = (locale: Locale, path: string) => (locale === 'ar' ? `
 export const coursePath = `/masterclass/${workshop.slug}`;
 
 /**
- * The one enrollment link. Swap this single constant when GoHighLevel is connected.
- * Arabic pages prefix it with /ar. No price and no payment on the course page.
+ * The one enrollment link for this course, in both languages.
+ * Swap this single constant if the payment link changes.
  */
-export const ENROLL_HREF = '/start';
-export const enrollHref = (locale: Locale) => localePath(locale, ENROLL_HREF);
+export const ENROLL_HREF = 'https://link.fastpaydirect.com/payment-link/6adb486bcaf20c1f8ff2b74a';
+export const enrollHref = (locale: Locale) => (locale === 'ar' ? ENROLL_HREF : ENROLL_HREF);

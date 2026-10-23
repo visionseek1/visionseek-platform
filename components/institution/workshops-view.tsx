@@ -141,8 +141,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
           <Link className="vs-wl-course-card" href={`${prefix}${coursePath}`}>
             <Image src={governanceCourse.cover} alt={text(locale, governanceCourse.coverAlt)} width={1280} height={720} />
             <div>
-              <span className="vs-wl-code">{text(locale, governanceCourse.title)}</span>
-              <h2 id="vs-wl-course-title">{text(locale, governanceCourse.subtitle)}</h2>
+              <h2 id="vs-wl-course-title">{text(locale, governanceCourse.title)}</h2>
               <p>{text(locale, governanceCourse.instructorShort)}</p>
             </div>
           </Link>

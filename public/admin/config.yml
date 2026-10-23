@@ -3241,7 +3241,7 @@ collections:
 
   - name: governance
     label: "حوكمة الذكاء الاصطناعي"
-    description: "كورس فخ الإجابة الواحدة داخل الماستركلاس. يظهر على /masterclass/single-track-trap، وبالعربية تحت /ar. الصفحة المختصرة تعرض النبذة والمحاور والمحاضر وزر اشترك. لا تضف رقمًا بلا مصدر، ولا سعرًا."
+    description: "كورس الماستركلاس على /masterclass/single-track-trap، وبالعربية تحت /ar. الصفحة المختصرة تعرض العنوان والنبذة والمحاضر وزر اشترك والسعر جنبه. لا تضف رقمًا بلا مصدر خارج حقل السعر."
     preview_path: "ar/masterclass/single-track-trap"
     editor: {preview: false}
     files:
@@ -3337,7 +3337,14 @@ collections:
               - label: "زر الاشتراك"
                 name: subscribe
                 widget: object
-                hint: "نص الزر فقط. الرابط ثابت في الكود (ENROLL_HREF) إلى أن يُربط GoHighLevel."
+                hint: "نص الزر فقط. الرابط ثابت في الكود (ENROLL_HREF)."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السعر بجانب الزر"
+                name: price
+                widget: object
+                hint: "يظهر في صفحة هذا الكورس فقط، جنب زر اشترك."
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}

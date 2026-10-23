@@ -17,9 +17,12 @@ function Lockup() {
 
 function Subscribe({locale}: {locale: Locale}) {
   return (
-    <Link className={`${styles.lime} ${styles.enroll}`} href={enrollHref(locale)}>
-      {t(locale, workshop.subscribe)}
-    </Link>
+    <div className={styles.enrollRow}>
+      <Link className={`${styles.lime} ${styles.enroll}`} href={enrollHref(locale)} target="_blank" rel="noopener noreferrer">
+        {t(locale, workshop.subscribe)}
+      </Link>
+      <span className={styles.price}>{t(locale, workshop.price)}</span>
+    </div>
   );
 }
 
@@ -32,7 +35,6 @@ export function MasterclassPage({locale}: {locale: Locale}) {
           <div className={styles.heroCopy}>
             <Lockup />
             <h1>{t(locale, workshop.title)}</h1>
-            <p className={styles.subtitle}>{t(locale, workshop.subtitle)}</p>
             <Subscribe locale={locale} />
           </div>
           <figure className={styles.poster}>
