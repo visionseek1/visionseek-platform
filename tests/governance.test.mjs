@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {existsSync, readFileSync} from 'node:fs';
 import test from 'node:test';
 
@@ -129,10 +130,13 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.match(redirects, /source: '\/ar\/governance', destination: '\/ar\/masterclass'/);
   assert.match(read('components/institution/workshops-view.tsx'), /vs-wl-course-card/);
   assert.match(read('components/institution/workshops-view.tsx'), /coursePath/);
-  assert.equal(data.workshop.cover.en, '/governance/cover-en.png');
-  assert.equal(data.workshop.cover.ar, '/governance/cover-ar.png');
-  assert.equal(existsSync(new URL('../public/governance/cover-en.png', import.meta.url)), true);
-  assert.equal(existsSync(new URL('../public/governance/cover-ar.png', import.meta.url)), true);
+  assert.equal(data.workshop.cover.en, '/governance/cover-v2-en.png');
+  assert.equal(data.workshop.cover.ar, '/governance/cover-v2-ar.png');
+  const sha = name => createHash('sha256').update(readFileSync(new URL(`../${name}`, import.meta.url))).digest('hex');
+  assert.equal(sha('public/governance/cover-v2-ar.png'), '1330c73df04454d2d6a51b841312d9bfc958e0923a3a2848d969a7a795aba147');
+  assert.equal(sha('public/governance/cover-v2-en.png'), '6fc71810cc7cbb68180880f18becbbe00eb5ca8f5f7f87fadde5a21a46e74890');
+  assert.equal(existsSync(new URL('../public/governance/cover-en.png', import.meta.url)), false);
+  assert.equal(existsSync(new URL('../public/governance/cover-ar.png', import.meta.url)), false);
   assert.equal(existsSync(new URL('../public/governance/cover.jpg', import.meta.url)), false);
   assert.match(course, /workshop\.cover\[locale\]/);
   assert.match(card, /governanceCourse\.cover\[locale\]/);
