@@ -3344,7 +3344,56 @@ collections:
               - label: "السعر بجانب الزر"
                 name: price
                 widget: object
-                hint: "يظهر في صفحة هذا الكورس فقط، جنب زر اشترك."
+                hint: "يظهر في صفحة هذا الكورس فقط: البطاقة الجانبية، والتفاصيل، وقسم اشترك الآن."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان عن الماستر كلاس"
+                name: aboutLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان لمن هذا الماستر كلاس"
+                name: forLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان ماذا ستخرج به"
+                name: gainLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "قريبًا"
+                name: soon
+                widget: object
+                hint: "للمدة والشكل وماذا ستخرج به. لا تكتب مدة أو موعدًا أو شكلًا."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان التفاصيل"
+                name: detailsLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المدة"
+                name: durationLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الشكل"
+                name: formatLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان اشترك الآن"
+                name: enrollLabel
+                widget: object
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}

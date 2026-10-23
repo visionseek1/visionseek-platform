@@ -38,6 +38,24 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   assert.equal(data.workshop.blurb.ar.split('\n\n').length, 2);
   assert.equal(data.workshop.blurb.en.split('\n\n').length, 2);
   assert.equal(data.workshop.blurb.ar.split('\n\n')[0], 'حين تعتمد الشركات الكبرى على النماذج اللغوية الكبرى لاستشراف قراراتها الاستراتيجية، غالباً ما تفترض أن الإجابة الواثقة والمنمقة التي تتلقاها تمثل الحقيقة المطلقة. غير أن المأزق الحقيقي يكمن في "انحياز الإجابة الواحدة"؛ إذ تميل أدوات الذكاء الاصطناعي بطبيعتها الإحصائية إلى ترشيح مدرسة إدارية واحدة وتجاهل البدائل المنهجية المتاحة. هذا الخفاء المعرفي يضع القادة أمام خطر خفي: استثمار ملايين الدولارات في مسار تشغيلي قد لا يتناسب مع طبيعة أصول مؤسستهم.');
+  assert.equal(data.workshop.blurb.ar.split('\n\n')[1].split(/\.\s+/).at(-1), 'صُمم هذا البرنامج خصيصاً للقادة وصناع القرار في أسواق الخليج ومصر الراغبين في بناء منظومات مؤسسية صلبة وواعية.');
+  assert.equal(data.workshop.blurb.en.split('\n\n')[1].split(/\.\s+/).at(-1), 'This program was designed specifically for leaders and decision-makers in the Gulf and Egypt markets who wish to build solid, aware institutional systems.');
+  assert.equal(data.workshop.aboutLabel.ar, 'عن الماستر كلاس');
+  assert.equal(data.workshop.aboutLabel.en, 'About this Masterclass');
+  assert.equal(data.workshop.forLabel.ar, 'لمن هذا الماستر كلاس');
+  assert.equal(data.workshop.forLabel.en, "Who it's for");
+  assert.equal(data.workshop.gainLabel.ar, 'ماذا ستخرج به');
+  assert.equal(data.workshop.gainLabel.en, "What you'll gain");
+  assert.equal(data.workshop.soon.ar, 'قريبًا');
+  assert.equal(data.workshop.soon.en, 'Coming soon');
+  assert.equal(data.workshop.detailsLabel.ar, 'التفاصيل');
+  assert.equal(data.workshop.detailsLabel.en, 'Details');
+  assert.equal(data.workshop.durationLabel.ar, 'المدة');
+  assert.equal(data.workshop.durationLabel.en, 'Duration');
+  assert.equal(data.workshop.formatLabel.ar, 'الشكل');
+  assert.equal(data.workshop.formatLabel.en, 'Format');
+  assert.equal(data.workshop.enrollLabel.ar, 'اشترك الآن');
+  assert.equal(data.workshop.enrollLabel.en, 'Enroll');
   const prose = [];
   const collect = value => {
     if (typeof value === 'string') prose.push(value);
