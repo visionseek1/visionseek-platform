@@ -87,6 +87,8 @@
 .empty { grid-column: 1 / -1; padding: 32px; background: var(--card); border: 1px dashed var(--dash); text-align: center; color: var(--mute); line-height: 1.8; }
 
 .card { background: var(--card); border: 1px solid var(--rule); padding: 22px; display: flex; flex-direction: column; gap: 12px; position: relative; }
+.cardPhoto { position: relative; height: 176px; margin: -22px -22px 4px; overflow: hidden; background: var(--ink); }
+.cardPhoto img, .dPhoto img { object-fit: cover; }
 .card:hover { border-color: var(--ink); }
 .tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .tag { font-size: 12px; padding: 3px 10px; background: var(--tint); color: var(--mute); }
@@ -142,7 +144,8 @@
 
 /* Detail page */
 .dHero { background: var(--ink); color: var(--paper); }
-.dHeroInner { display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: flex-end; padding-block: 56px 64px; }
+.dHeroInner { display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: stretch; padding-block: 56px 64px; }
+.dPhoto { position: relative; flex: 1 1 300px; min-height: 260px; }
 .dHeroMain { flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
 .dTags { display: flex; gap: 8px; flex-wrap: wrap; }
 .dTags span { font-size: 13px; padding: 4px 12px; border: 1px solid #ffffff55; }
@@ -150,7 +153,7 @@
 .dTags .dIn { background: var(--lime); color: var(--ink); font-weight: 600; border-color: var(--lime); }
 .page.page .dHero h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.2; text-wrap: balance; }
 .dMaker { font-size: 18px; color: var(--soft); }
-.dActions { flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px; }
+.dActions { flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px; align-self: flex-end; }
 .page .dActions a { display: inline-flex; justify-content: center; align-items: center; text-decoration: none; }
 .page .dActions .primary { min-height: 54px; background: var(--lime); color: var(--ink); font-weight: 700; font-size: 17px; }
 .page .dActions .secondary { min-height: 48px; border: 1px solid #ffffff66; color: var(--paper); font-size: 15px; }
@@ -188,3 +191,43 @@
 .related { display: flex; flex-direction: column; gap: 16px; padding-block: 0 72px; }
 .page.page .related h2 { font-size: 22px; border-top: 2px solid var(--ink); padding-top: 18px; }
 .relatedGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+
+.sections { background: var(--paper); scroll-margin-top: 80px; padding-block: 28px 8px; }
+.tileRow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 48px); }
+.tile { position: relative; display: block; min-height: 168px; padding: 0; border: 0; overflow: hidden; background: var(--ink); color: #fff; text-align: start; cursor: pointer; min-width: 0; }
+.tilePhoto { position: absolute; inset: 0; }
+.tilePhoto img, .bannerPhoto img, .offerPhoto img { object-fit: cover; }
+.tileName { position: relative; z-index: 1; display: flex; align-items: flex-end; min-height: 168px; padding: 12px; font-size: 15px; font-weight: 700; line-height: 1.35; color: #fff; background: linear-gradient(180deg, transparent 28%, #0b0d0ce0 100%); }
+.tile[aria-selected="true"] { box-shadow: inset 0 0 0 3px var(--lime); }
+.tile:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+.panel { max-width: 1240px; margin: 18px auto 8px; padding-inline: clamp(16px, 4vw, 48px); display: flex; flex-direction: column; gap: 16px; }
+.banner { position: relative; min-height: 320px; overflow: hidden; background: var(--ink); color: #fff; display: flex; }
+.bannerPhoto { position: absolute; inset: 0; }
+.bannerCopy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 10px; width: 100%; min-height: 320px; padding: 28px 28px 24px; background: linear-gradient(180deg, transparent 18%, #0b0d0cf2 72%); }
+.page.page .bannerCopy h2 { color: #fff; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.25; max-width: 18ch; }
+.bannerCopy p { font-size: 16px; line-height: 1.75; color: #e7eae8; max-width: 68ch; }
+.bannerCopy .source { color: var(--lime); }
+.photoNote { font-size: 13px; line-height: 1.6; color: var(--mute); }
+.panelAsk { align-self: flex-start; min-height: 48px; padding: 0 18px; background: var(--lime); color: var(--ink); font-weight: 700; border: 0; cursor: pointer; }
+.panel .offerGrid { max-width: none; margin: 0; padding-inline: 0; }
+@media (max-width: 900px) { .tileRow { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tile, .tileName { min-height: 132px; } }
+@media (max-width: 560px) { .tileRow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .banner, .bannerCopy { min-height: 240px; } .bannerCopy { padding: 18px 16px 16px; } }
+
+.demand { padding-block: 36px 8px; border-top: 1px solid var(--rule); }
+.demandHead { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 28px; align-items: center; max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 48px); }
+.demandPhoto { position: relative; min-height: 280px; background: var(--ink); }
+.demandText { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.demandText p { font-size: 17px; line-height: 1.8; }
+.demandText button, .offerBody button { min-height: 48px; padding: 0 18px; background: var(--lime); color: var(--ink); font-weight: 700; border: 0; cursor: pointer; }
+.source { font-size: 13px; color: var(--mute); text-decoration: underline; text-underline-offset: 3px; }
+.offerGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; max-width: 1240px; margin: 22px auto 28px; padding-inline: clamp(16px, 4vw, 48px); }
+.offer { background: var(--card); border: 1px solid var(--rule); display: flex; flex-direction: column; min-width: 0; }
+.offer a { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: inherit; }
+.offerPhoto { position: relative; height: 200px; background: var(--ink); }
+.offerBody { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px 18px; flex: 1; }
+.offerBody p { font-size: 15px; line-height: 1.7; color: var(--body); }
+.offerBody span { font-weight: 700; margin-top: auto; }
+@media (max-width: 800px) {
+  .demandHead { grid-template-columns: 1fr; }
+  .demandPhoto { min-height: 200px; }
+}

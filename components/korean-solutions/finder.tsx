@@ -1,6 +1,9 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import {useMemo, useState} from 'react';
+import DemandSections from './sections';
+import {productImage} from './photos';
 import styles from './ks.module.css';
 import {NO_PARTNERSHIP, REGION_COPY, ROUTE_COPY, SECTOR_EN, TYPE_COPY, TYPES, type Bi, type Region, type Solution, type SolutionType} from '@/lib/korean-solutions-copy';
 
@@ -40,8 +43,8 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
         <h1 id="ks-title">{ar ? 'حلول من كوريا' : 'Korean Solutions'}</h1>
         <p className={styles.heroLede}>{ar
-          ? 'بنت كوريا في عقود ما تحتاجه منطقتنا اليوم. نختار منها ما أثبت نفسه هناك، ونحمله إلى المؤسسة العربية التي تحتاجه: منتجات جاهزة، وحلول تعمل داخل المؤسسة، وتكنولوجيا تُنقل وتُصنع عندنا.'
-          : 'Over a few decades Korea built much of what our region needs today. We pick what has proven itself there and carry it to the Arab organisation that needs it: ready products, solutions that work inside the organisation, and technology that is transferred and made here.'}</p>
+          ? 'اختر القسم. شوف المنتج أو الخدمة. لو محتاجها، اطلبها.'
+          : 'Choose a section. See the product or service. If you need it, ask for it.'}</p>
         <label className={styles.search}>
           <span>{ar ? 'ابحث عن حل' : 'Search for a solution'}</span>
           <span className={styles.searchBox}>
@@ -49,25 +52,10 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
             <input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder={ar ? 'مثال: سرطان الثدي، رعاية المسنّين، الزراعة…' : 'e.g. breast screening, elderly care, farming…'} aria-controls="ks-results"/>
           </span>
         </label>
-        <div className={styles.stats}>
-          <div><b className={styles.num}>{solutions.length}</b><span>{ar ? 'حل في المنصة' : 'on the platform'}</span></div>
-          <div><b className={styles.num}>{sectors.length}</b><span>{ar ? 'مجالات' : 'fields'}</span></div>
-          <div><b className={`${styles.num} ${styles.hot}`}>{solutions.filter(s => s.region === 'نعم').length}</b><span>{ar ? 'وصلت المنطقة العربية' : 'already in the Arab region'}</span></div>
-        </div>
       </div></div>
     </section>
 
-    <div className={styles.gutter}><section className={`${styles.inner} ${styles.doors}`} aria-label={ar ? 'الأبواب الثلاثة' : 'Three doors'}>
-      {TYPES.map(k => {
-        const c = TYPE_COPY[k]; const on = f.type === k;
-        return <button key={k} type="button" className={styles.door} aria-pressed={on} onClick={() => { setF(prev => ({...prev, type: on ? 'all' : k})); document.getElementById('finder')?.scrollIntoView({behavior: 'smooth', block: 'start'}); }}>
-          <span className={`${styles.doorEn} ${styles.latin}`} lang="en">{c.many.en.toUpperCase()}</span>
-          <span className={styles.doorName}>{t(c.many)}</span>
-          <span className={styles.doorLine}>{t(c.line)}</span>
-          <span className={styles.doorCount}><span className={styles.num}>{solutions.filter(s => s.type === k).length}</span> {ar ? 'في المنصة' : 'on the platform'} {arrow}</span>
-        </button>;
-      })}
-    </section></div>
+    <DemandSections locale={locale} solutions={solutions}/>
 
     <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">
       <div className={styles.finderHead}>
@@ -109,6 +97,7 @@ export function SolutionCard({s, locale}: {s: Solution; locale: Locale}) {
   const where = t(s.where);
   const proof = s.proof[0];
   return <article className={styles.card}>
+    <div className={styles.cardPhoto}><Image src={productImage(s.slug)} alt="" fill sizes="(max-width:760px) 100vw, 33vw"/></div>
     <div className={styles.tags}><span className={`${styles.type} ${styles['t-' + c.key]}`}>{t(c.one)}</span>{s.sector && <span className={styles.tag}>{ar ? s.sector : SECTOR_EN[s.sector] || s.sector}</span>}</div>
     <h3><Link href={`${p}/korean-solutions/${s.slug}`}>{t(s.title) || s.title.ar}</Link></h3>
     {s.maker && <p className={styles.maker} dir="auto">{s.maker}</p>}
