@@ -232,15 +232,17 @@
   .demandPhoto { min-height: 200px; }
 }
 
-/* Cars door: after the sections, a photograph, not a line of text between the hero and the tiles. */
-.carsEntry { display: grid; grid-template-columns: 1.45fr 0.85fr; min-height: 340px; margin: 28px 0 8px; background: var(--ink); color: #fff; text-decoration: none; }
-.carsEntryPhoto { position: relative; min-height: 260px; }
-.carsEntryPhoto img { object-fit: cover; object-position: center 58%; }
-.carsEntryCopy { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 8px; padding: clamp(24px, 4vw, 48px); }
-.carsEntryEn { font-size: 12px; letter-spacing: 0.2em; color: var(--lime); font-weight: 600; }
-.carsEntryWord { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-size: clamp(40px, 5vw, 64px); font-weight: 700; line-height: 1; color: #fff; }
-.carsEntryLine { font-size: 17px; line-height: 1.6; color: #d6d9d7; }
-.page .carsEntry:hover .carsEntryWord { color: var(--lime); }
+/* Cars sit under the sections, as one row inside the finder. Not above the tiles. */
+.carsRow { display: flex; align-items: stretch; gap: 0; margin-bottom: 8px; background: var(--card); border: 1px solid var(--ink); text-decoration: none; color: inherit; min-height: 112px; }
+.carsRowPhoto { position: relative; flex: 0 0 168px; background: #ececec; }
+.carsRowPhoto img { object-fit: cover; object-position: center 55%; }
+.carsRowCopy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2px; padding: 14px 18px; min-width: 0; }
+.carsRowEn { font-size: 11px; letter-spacing: 0.16em; color: var(--mute); font-weight: 600; }
+.carsRowWord { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-size: 28px; font-weight: 700; line-height: 1.1; }
+.carsRowLine { font-size: 14px; color: var(--mute); }
+.carsRow:hover { background: var(--ink); color: #fff; }
+.carsRow:hover .carsRowEn, .carsRow:hover .carsRowLine { color: #d6d9d7; }
+@media (max-width: 560px) { .carsRowPhoto { flex-basis: 112px; } .carsRowWord { font-size: 22px; } }
 
 .carsHero { position: relative; display: flex; align-items: flex-end; min-height: clamp(460px, 68vw, 720px); background: #111; color: #fff; }
 .carsHeroPhoto { position: absolute; inset: 0; }

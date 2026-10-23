@@ -57,16 +57,15 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
 
     <DemandSections locale={locale} solutions={solutions}/>
 
-    <Link href={`${p}/korean-solutions/cars`} className={styles.carsEntry}>
-      <span className={styles.carsEntryPhoto}><Image src="/ks/gv90.jpg" alt="" fill sizes="(max-width:800px) 100vw, 70vw"/></span>
-      <span className={styles.carsEntryCopy}>
-        <span className={`${styles.carsEntryEn} ${styles.latin}`} lang="en">GENESIS</span>
-        <span className={styles.carsEntryWord}>{ar ? 'السيارات' : 'Cars'}</span>
-        <span className={styles.carsEntryLine}>{ar ? 'هجين وكهرباء. جديدة فقط.' : 'Hybrid and electric. New only.'}</span>
-      </span>
-    </Link>
-
     <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">
+      <Link href={`${p}/korean-solutions/cars`} className={styles.carsRow}>
+        <span className={styles.carsRowPhoto}><Image src="/ks/gv90.jpg" alt="" fill sizes="160px"/></span>
+        <span className={styles.carsRowCopy}>
+          <span className={`${styles.carsRowEn} ${styles.latin}`} lang="en">GENESIS</span>
+          <span className={styles.carsRowWord}>{ar ? 'السيارات' : 'Cars'}</span>
+          <span className={styles.carsRowLine}>{ar ? 'هجين وكهرباء. جديدة فقط.' : 'Hybrid and electric. New only.'}</span>
+        </span>
+      </Link>
       <div className={styles.finderHead}>
         <h2 id="finder-title">{ar ? 'المستكشف' : 'Finder'}</h2>
         <span className={styles.resultLine} role="status"><span className={styles.num}>{results.length}</span> {ar ? 'من' : 'of'} <span className={styles.num}>{solutions.length}</span> {ar ? 'حل' : 'solutions'}</span>
