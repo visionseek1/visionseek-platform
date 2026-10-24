@@ -28,7 +28,7 @@
 .stats div{background:var(--surface);padding:20px 18px;display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;min-height:118px;min-width:0}
 .stats dt{font-size:16px;line-height:1.4;color:var(--soft);font-weight:500}
 .stats dd{margin:0;font-family:var(--font-display),ui-monospace,monospace;font-size:34px;line-height:1.1;color:var(--text)}
-.statsPhrase{font-family:inherit!important;font-size:16px!important;line-height:1.45!important;font-weight:600;color:var(--text)!important}
+.statsPhrase{font-family:inherit!important;font-size:16px!important;line-height:1.45!important;font-weight:600;color:var(--text)!important;text-wrap:balance}
 @media (max-width:860px){.heroSplit{grid-template-columns:1fr}}
 @media (max-width:640px){.stats{grid-template-columns:1fr}.stats div{min-height:0}}
 .breadcrumb{display:flex;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--dim)}.breadcrumb a{color:var(--dim)}.breadcrumb a:hover{color:var(--text)}
