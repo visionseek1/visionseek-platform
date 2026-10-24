@@ -1,30 +1,28 @@
 'use client';
 import {useEffect, useState} from 'react';
-import {whatsappUrl} from '@/lib/site';
+import {mailto} from '@/lib/site';
 import styles from './ks.module.css';
 
 type Locale = 'ar' | 'en';
 
-/**
- * On a narrow screen the request button leaves the viewport quickly. This bar stays until the form
- * itself is on screen, so it never covers the fields the visitor is filling.
- */
+/** Mobile bar for the email CTA. Hides while the contact band is on screen. */
 export default function StickyCta({locale}: {locale: Locale}) {
   const ar = locale === 'ar';
   const [show, setShow] = useState(false);
+  const href = mailto(ar ? 'VisionSeek — مناقشة مشروع نقل تكنولوجيا' : 'VisionSeek — Technology-transfer discussion');
 
   useEffect(() => {
-    const needs = document.getElementById('needs');
-    let needsIn = false;
-    const io = needs ? new IntersectionObserver(([entry]) => {
-      needsIn = entry.isIntersecting;
+    const talk = document.getElementById('talk');
+    let talkIn = false;
+    const io = talk ? new IntersectionObserver(([entry]) => {
+      talkIn = entry.isIntersecting;
       tick();
     }, {threshold: 0.12}) : null;
-    if (needs && io) io.observe(needs);
+    if (talk && io) io.observe(talk);
 
     const tick = () => {
       const narrow = window.matchMedia('(max-width: 719px)').matches;
-      setShow(narrow && window.scrollY > 240 && !needsIn);
+      setShow(narrow && window.scrollY > 240 && !talkIn);
     };
     window.addEventListener('scroll', tick, {passive: true});
     window.addEventListener('resize', tick);
@@ -37,8 +35,7 @@ export default function StickyCta({locale}: {locale: Locale}) {
   }, []);
 
   if (!show) return null;
-  return <div className={styles.sticky} role="region" aria-label={ar ? 'إرسال الطلب' : 'Send a request'}>
-    <a className={styles.stickyMain} href="#needs">{ar ? 'اطلب من كوريا' : 'Request from Korea'}</a>
-    <a className={styles.stickyWa} href={whatsappUrl()} target="_blank" rel="noreferrer">{ar ? 'واتساب' : 'WhatsApp'}</a>
+  return <div className={styles.sticky} role="region" aria-label={ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a technology-transfer project'}>
+    <a className={styles.stickyMain} href={href}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a transfer project'}</a>
   </div>;
 }

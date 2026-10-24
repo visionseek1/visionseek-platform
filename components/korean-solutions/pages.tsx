@@ -2,18 +2,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import RequestForm from '@/components/requests/request-form';
-import Audience from './audience';
-import Categories from './categories';
-import Finder, {SolutionCard} from './finder';
+import {SolutionCard} from './finder';
 import StickyCta from './sticky-cta';
 import {PHOTO_CREDIT, productImage} from './photos';
 import styles from './ks.module.css';
-import {CATEGORIES, NO_PARTNERSHIP, REGION_COPY, ROUTES, ROUTE_COPY, SECTOR_EN, TYPE_COPY, type Bi, type Solution} from '@/lib/korean-solutions-copy';
-import {site, whatsappUrl} from '@/lib/site';
+import {NO_PARTNERSHIP, REGION_COPY, ROUTES, ROUTE_COPY, SECTOR_EN, TYPE_COPY, type Bi, type Solution} from '@/lib/korean-solutions-copy';
+import {mailto, site} from '@/lib/site';
 
 type Locale = 'ar' | 'en';
-const ORIGIN = 'https://visionseek.org';
+
+function transferMail(locale: Locale, about?: string) {
+  const subject = locale === 'ar'
+    ? `VisionSeek — مناقشة مشروع نقل تكنولوجيا${about ? `: ${about}` : ''}`
+    : `VisionSeek — Technology-transfer discussion${about ? `: ${about}` : ''}`;
+  return mailto(subject);
+}
 
 function Shell({locale, path, here, children}: {locale: Locale; path: string; here?: string; children: React.ReactNode}) {
   const ar = locale === 'ar'; const p = ar ? '/ar' : '';
@@ -23,13 +26,11 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
       <nav className={`${styles.bar} ${styles.gutter}`} aria-label={ar ? 'أقسام حلول من كوريا' : 'Korean Solutions sections'}><div className={`${styles.inner} ${styles.barInner}`}>
         <span className={styles.barName}><Link href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
         <span className={styles.barNav}>
-          <a href={`${p}/korean-solutions#how`}>{ar ? 'خطوات الطلب' : 'How it works'}</a>
-          <a href={`${p}/korean-solutions#verify`}>{ar ? 'التحقق' : 'Verification'}</a>
-          <a href={`${p}/korean-solutions#categories`}>{ar ? 'ماذا تطلب' : 'What to request'}</a>
-          <a href={`${p}/korean-solutions#next`}>{ar ? 'بعد الإرسال' : 'After you send'}</a>
-          <a href={`${p}/korean-solutions#faq`}>{ar ? 'أسئلة' : 'FAQ'}</a>
+          <a href={`${p}/korean-solutions#do`}>{ar ? 'ماذا نفعل' : 'What we do'}</a>
+          <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف نعمل' : 'How we work'}</a>
+          <a href={`${p}/korean-solutions#initiatives`}>{ar ? 'المبادرات' : 'Initiatives'}</a>
           <Link href={`${p}/cars`}>{ar ? 'السيارات' : 'Cars'}</Link>
-          <a className={styles.barCta} href={`${p}/korean-solutions#needs`}>{ar ? 'اكتب طلبك' : 'Your request'}</a>
+          <a className={styles.barCta} href={transferMail(locale)}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a transfer project'}</a>
         </span>
       </div></nav>
       {children}
@@ -39,130 +40,113 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
   </div>;
 }
 
-const STEPS: {title: Bi; text: Bi}[] = [
-  {title: {ar: 'قل لنا ما تحتاجه', en: 'Tell us what you need'}, text: {ar: 'اكتب المنتج أو الخدمة، والمواصفة، والكمية أو الميزانية إن توفرت.', en: 'Describe the product or service, the spec, and a quantity or budget if you have one.'}},
-  {title: {ar: 'نبحث عنه في كوريا', en: 'We find it in Korea'}, text: {ar: 'نبحث لدى المصنّعين والمورّدين في كوريا عمّا يناسب طلبك.', en: 'We look among Korean makers and suppliers for what fits your request.'}},
-  {title: {ar: 'نتحقق', en: 'We verify'}, text: {ar: 'نراجع المورّد والمواصفات معك قبل أي التزام.', en: 'We check the supplier and the specifications with you before anything is committed.'}},
-  {title: {ar: 'نوصّله إليك', en: 'We deliver'}, text: {ar: 'نرتّب الشحن والتوصيل إلى بلدك في الخليج أو مصر.', en: 'We arrange shipping and delivery to your country in the Gulf or Egypt.'}},
+const WHAT: {title: Bi; text: Bi}[] = [
+  {title: {ar: 'نقل التكنولوجيا', en: 'Technology transfer'}, text: {ar: 'نربط المؤسسة بالشريك الكوري المناسب، ونصمم مسار النقل والتدريب حتى تمتلك القدرة.', en: 'We connect the institution to the right Korean counterpart, and design the transfer and training path until the capability is theirs.'}},
+  {title: {ar: 'شراكات صناعية', en: 'Industrial partnerships'}, text: {ar: 'شراكات تصنيع وتجميع وتكييف محلي بدل الاستيراد الدائم.', en: 'Partnerships for manufacturing, assembly and local adaptation — not permanent import.'}},
+  {title: {ar: 'المبادرات', en: 'Initiatives'}, text: {ar: 'برامج تبني الكفاءات العربية التي تحمل هذه القدرات.', en: 'Programmes that build the Arab people who will carry these capabilities.'}},
 ];
 
-const REQUEST_CATEGORIES = CATEGORIES.filter(c => !c.href).map(c => ({value: c.sector, label: c.name}));
-
-const VERIFY: {title: Bi; text: Bi}[] = [
-  {title: {ar: 'نفهم المواصفة', en: 'We understand the spec'}, text: {ar: 'ما الذي يُعد مطابقًا لطلبك: المقاس، والخامة، والاستخدام، وأي شرط مكتوب.', en: 'What “a match” means for you: size, material, use, and any written condition.'}},
-  {title: {ar: 'نراجع المورّد', en: 'We review the supplier'}, text: {ar: 'من الشركة، وماذا تصنع. من دون أن نختلق شهادات أو شارات توثيق.', en: 'Who the company is, and what it makes. We do not invent certificates or verification badges.'}},
-  {title: {ar: 'نطابق العرض على طلبك', en: 'We match the offer to your request'}, text: {ar: 'يُقاس العرض على المواصفة، لا على وصف عام.', en: 'The offer is measured against the spec, not against a vague description.'}},
-  {title: {ar: 'نعرضه عليك قبل أي التزام', en: 'We show it to you before any commitment'}, text: {ar: 'لا يُكتب أي التزام إلا بعد أن ترى العرض وتوافق عليه.', en: 'Nothing is committed until you have seen it and agreed.'}},
-  {title: {ar: 'معاينة على الأرض إن استدعت الحالة', en: 'A physical look when the case needs it'}, text: {ar: 'إن استدعى الطلب فحصًا في كوريا، نتفق على نطاقه معك أولًا. ليست خدمة معلنة لكل طلب.', en: 'If the request warrants a check in Korea, we agree the scope with you first. It is not a published service on every request.'}},
+const HOW: Bi[] = [
+  {ar: 'نفهم الحاجة الاستراتيجية', en: 'Understand the strategic need'},
+  {ar: 'نحدد القدرة الكورية المناسبة', en: 'Identify the fitting Korean capability'},
+  {ar: 'نصمم مسار النقل', en: 'Design the transfer path'},
+  {ar: 'نبني الكفاءة محليًا', en: 'Build competence locally'},
+  {ar: 'تمتلك المؤسسة القدرة', en: 'The institution owns the capability'},
 ];
 
-const NEXT: {title: Bi; text: Bi}[] = [
-  {title: {ar: 'يصلنا الطلب', en: 'The request reaches us'}, text: {ar: 'الزر يفتح رسالة جاهزة إلى بريد أحمد عبدالعليم. على الموقع الحي نسجّل الطلب أيضًا للمتابعة الداخلية.', en: 'The button opens a ready email to Ahmed Abdelalim. On the live site we also file the request for internal follow-up.'}},
-  {title: {ar: 'نقرأه، ونسأل إن نقص شيء', en: 'We read it, and ask if something is missing'}, text: {ar: 'إن لم تكن المواصفة أو الكمية أو بلد التسليم واضحة، نعود إليك بسؤال محدد.', en: 'If the spec, quantity or destination is unclear, we come back with a specific question.'}},
-  {title: {ar: 'نبحث في كوريا', en: 'We search in Korea'}, text: {ar: 'بين المصنّعين والمورّدين على ما يناسب الطلب. ليس كتالوجًا مفتوحًا للشراء الفوري.', en: 'Among makers and suppliers for what fits the request. This is not an open catalogue for instant purchase.'}},
-  {title: {ar: 'نعود إليك بما وجدناه', en: 'We come back with what we found'}, text: {ar: 'الخيارات والخطوة التالية. من دون مهلة معلنة بالأيام — المدة تختلف بحسب الطلب.', en: 'The options and the next step. We do not publish a turnaround in days — it depends on the request.'}},
-  {title: {ar: 'إن وافقت: نتحقق ونرتّب التوصيل', en: 'If you agree: we verify, then arrange delivery'}, text: {ar: 'أي تكلفة أو شرط دفع يُكتب معك قبل أن يقع أي التزام.', en: 'Any cost or payment term is written with you before a commitment is made.'}},
-];
+const INITIATIVE = {
+  proposedName: {ar: 'بوابات إنتشون: مبادرة تمكين الشباب العربي', en: 'Incheon Gateways: an initiative to empower Arab youth'},
+  alternatives: [
+    {ar: 'جسور القدرات الكورية', en: 'Korean Capability Bridges'},
+    {ar: 'سفراء القدرات', en: 'Capability Ambassadors'},
+  ],
+  idea: {
+    ar: 'نختار شبابًا عربًا متميزين وندربهم تدريبًا عميقًا على القدرات والتكنولوجيا الكورية وطريقة نقلها، ليصبح كل منهم بوابة لهذه القدرات في بلده ومؤسسته.',
+    en: 'We select outstanding Arab youth and train them in depth on Korean capabilities and technology, and on how those are transferred, so each becomes a gateway to those capabilities in their country and institution.',
+  },
+  gains: {
+    ar: 'تدريب متخصص، وفهم عملي لمنظومة الصناعة والتكنولوجيا الكورية، وموقع بوابة بين القدرات الكورية والمؤسسات العربية.',
+    en: 'Specialised training, a working grasp of Korea’s industry and technology system, and a place as a gateway between Korean capabilities and Arab institutions.',
+  },
+  status: {ar: 'سيتم فتح باب التسجيل قريبًا', en: 'Registration will open soon'},
+};
 
-const FAQ: {q: Bi; a: Bi}[] = [
-  {q: {ar: 'ماذا يمكنني أن أطلب من هذه الصفحة؟', en: 'What can I request on this page?'}, a: {ar: 'منتجًا أو خدمة من كوريا: معدات، أو إلكترونيات، أو حلولًا للشركات، أو غيرها. للسيارات صفحة مستقلة.', en: 'A product or service from Korea: equipment, electronics, solutions for companies, or something else. Cars have their own page.'}},
-  {q: {ar: 'هل يشترط أن أكون شركة؟', en: 'Do I have to be a company?'}, a: {ar: 'لا. للشركات والأفراد أن يطلبوا. اختر «شركة أو مؤسسة» أو «فرد» في النموذج حتى نفهم طبيعة الطلب.', en: 'No. Companies and individuals can request. Choose “A company or institution” or “An individual” on the form so we understand the request.'}},
-  {q: {ar: 'كيف يتم الدفع، وهل هناك رسوم؟', en: 'How does payment work, and are there fees?'}, a: {ar: 'لا يوجد دفع على الموقع، ولا جدول رسوم منشور. نتفق على التكلفة والشحن وأي شرط دفع بعد أن نفهم الطلب، وقبل أي التزام.', en: 'Nothing is paid on this site, and there is no published fee schedule. Cost, shipping and any payment term are agreed after we understand the request, and before any commitment.'}},
-  {q: {ar: 'متى تردّون؟', en: 'When will you reply?'}, a: {ar: 'في أقرب وقت نتمكن فيه من فهم الطلب والنظر في السوق. لا وعد بعدد أيام على الموقع — المدة تختلف بحسب المنتج.', en: 'As soon as we can understand the request and look at the market. We do not promise a number of days on the site — it depends on the item.'}},
-  {q: {ar: 'كيف تتحققون من المورّد؟', en: 'How do you check the supplier?'}, a: {ar: 'نفهم المواصفة، ونراجع هوية المورّد، ونطابق العرض على طلبك، ونعرضه عليك قبل الالتزام. المعاينة في كوريا إن استدعت الحالة واتفقنا على نطاقها. لا ضمان عام مكتوب هنا.', en: 'We understand the spec, review who the supplier is, match the offer to your request, and show it to you before a commitment. A check in Korea happens when the case needs it and we agree the scope. There is no general guarantee written here.'}},
-  {q: {ar: 'الجمارك والشحن؟', en: 'What about customs and shipping?'}, a: {ar: 'نرتّب الشحن من كوريا إلى بلد التسليم. رسوم الجمارك في بلدك بحسب قانون بلدك — من دون أن نحدد رقمًا هنا.', en: 'We arrange shipping from Korea to the destination country. Customs charges in your country follow your country’s law — we do not name a figure here.'}},
-  {q: {ar: 'ماذا عن السيارات؟', en: 'What about cars?'}, a: {ar: 'السيارات الهجينة والكهربائية على صفحة مستقلة. على الموقع الحي القائمة فارغة إلى أن يتوفر عرض حقيقي.', en: 'Hybrid and electric cars have their own page. On the live site the list is empty until a real listing exists.'}},
-  {q: {ar: 'كيف تتواصلون معي؟', en: 'How will you contact me?'}, a: {ar: 'على البريد أو واتساب بالرقم الظاهر في الصفحة. أحمد عبدالعليم يرد بنفسه، بلا رسائل آلية.', en: 'By email or WhatsApp, using the number on this page. Ahmed Abdelalim replies himself. No automated messages.'}},
-];
-
-/** The sourcing funnel: one promise and one button, the four steps, the fields, the request, then the solutions we track. */
-export function KoreanSolutionsHub({locale, solutions, record}: {locale: Locale; solutions: Solution[]; record: boolean}) {
-  const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en); const p = ar ? '/ar' : '';
+/** Institutional front: transfer the capability, not ship the product. Initiatives live here. Cars stay on /cars. */
+export function KoreanSolutionsHub({locale}: {locale: Locale}) {
+  const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en);
   return <Shell locale={locale} path="/korean-solutions">
     <section className={styles.hero} aria-labelledby="ks-title"><div className={styles.gutter}><div className={`${styles.inner} ${styles.heroInner}`}>
       <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
-      <h1 id="ks-title">{ar ? 'هل تحتاج منتجًا أو خدمة من كوريا؟ نتولى توريدها إليك.' : 'Need a product or service from Korea? We’ll source it for you.'}</h1>
+      <h1 id="ks-title">{ar ? 'من كوريا إلى المنطقة العربية: نقل القدرة، لا شحن المنتج' : 'From Korea to the Arab region: transfer the capability, not ship the product'}</h1>
       <p className={styles.heroLede}>{ar
-        ? 'من مصر أو من أي بلد في الخليج — للشركات وللأفراد: قل لنا ما تحتاجه، فنبحث عنه في كوريا، ونتحقق منه، ونوصّله إليك.'
-        : 'From Egypt or anywhere in the Gulf — for companies and for individuals: tell us what you need. We find it in Korea, check it, and deliver it to you.'}</p>
+        ? 'نساعد الشركات والمؤسسات العربية على نقل المنتجات والتكنولوجيا الكورية وتوطينها، ونطلق مبادرات تبني جسورًا دائمة بين كوريا والعالم العربي.'
+        : 'We help Arab companies and institutions transfer Korean products and technology, and localise them. We also launch initiatives that build lasting bridges between Korea and the Arab world.'}</p>
       <div className={styles.heroCta}>
-        <a className={styles.cta} href="#needs">{ar ? 'اطلب من كوريا' : 'Request from Korea'} <span aria-hidden="true">{ar ? '←' : '→'}</span></a>
-        <span>{ar ? 'نرد عليك بأنفسنا، بلا رسائل آلية.' : 'We reply personally. No automated messages.'}</span>
+        <a className={styles.cta} href={transferMail(locale)}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a technology-transfer project'} <span aria-hidden="true">{ar ? '←' : '→'}</span></a>
+        <span>{ar ? 'يفتح الزر رسالة إلى أحمد عبدالعليم. بلا رسائل آلية.' : 'The button opens an email to Ahmed Abdelalim. No automated messages.'}</span>
       </div>
-      <Audience locale={locale}/>
     </div></div></section>
 
+    <div className={styles.gutter}><section id="do" className={`${styles.inner} ${styles.band}`} aria-labelledby="do-title">
+      <div className={styles.secHead}>
+        <h2 id="do-title">{ar ? 'ماذا نفعل' : 'What we do'}</h2>
+        <p>{ar ? 'المنطق مؤسسي: امتلاك القدرة، لا شراء شحنة.' : 'The posture is institutional: own the capability, do not buy a shipment.'}</p>
+      </div>
+      <ul className={styles.doGrid}>{WHAT.map((item, i) => <li key={i}><b>{t(item.title)}</b><p>{t(item.text)}</p></li>)}</ul>
+    </section></div>
+
     <div className={styles.gutter}><section id="how" className={`${styles.inner} ${styles.how}`} aria-labelledby="how-title">
-      <h2 id="how-title">{ar ? 'خطوات الطلب' : 'How it works'}</h2>
-      <ol className={styles.steps}>{STEPS.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s.title)}</b><p>{t(s.text)}</p></li>)}</ol>
-    </section></div>
-
-    <div className={styles.gutter}><section id="verify" className={`${styles.inner} ${styles.band}`} aria-labelledby="verify-title">
-      <div className={styles.secHead}>
-        <h2 id="verify-title">{ar ? 'كيف نتحقق' : 'How we verify'}</h2>
-        <p>{ar ? 'هذه خطوات عمل، وليست ضمانًا منشورًا ولا برنامج توثيق.' : 'These are working steps, not a published guarantee or a verification programme.'}</p>
-      </div>
-      <ol className={styles.steps}>{VERIFY.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s.title)}</b><p>{t(s.text)}</p></li>)}</ol>
-      <p className={styles.note}>{ar
-        ? 'لا توجد محفظة ضمان ولا إسكرو على الموقع. أي التزام يُكتب معك قبل أن يقع.'
-        : 'There is no escrow or payment-protection product on this site. Any commitment is written with you before it happens.'}</p>
-    </section></div>
-
-    <Categories locale={locale}/>
-
-    <section id="needs" className={`${styles.needs} ${styles.gutter}`} aria-labelledby="needs-title"><div className={`${styles.inner} ${styles.needsInner}`}>
-      <div className={styles.needsText}>
-        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>YOUR REQUEST</p>
-        <h2 id="needs-title">{ar ? 'اكتب طلبك' : 'Tell us what you need'}</h2>
-        <p>{ar ? 'اختر شركة أو فردًا، واملأ الحقول المطلوبة (*)، وأضف المواصفة والكمية والموعد إن توفرت.' : 'Choose company or individual, fill in the required fields (*), and add the spec, quantity and timing if you have them.'}</p>
-        <p className={styles.needsAlt}>{ar ? 'هل تفضّل واتساب؟' : 'Prefer WhatsApp?'} <a href={whatsappUrl()} target="_blank" rel="noreferrer" dir="ltr">{site.phoneDisplay}</a></p>
-      </div>
-      <div className={styles.needsForm}>
-        <RequestForm locale={locale} kind="korea" page={`${ORIGIN}${p}/korean-solutions`} categories={REQUEST_CATEGORIES} record={record}/>
-      </div>
-    </div></section>
-
-    <div className={styles.gutter}><section id="next" className={`${styles.inner} ${styles.band}`} aria-labelledby="next-title">
-      <div className={styles.secHead}>
-        <h2 id="next-title">{ar ? 'بعد إرسال الطلب' : 'What happens after you send'}</h2>
-        <p>{ar ? 'المدة تختلف بحسب الطلب. لا مهلة معلنة بالأيام على هذه الصفحة.' : 'Timing depends on the request. This page does not publish a turnaround in days.'}</p>
-      </div>
-      <ol className={styles.steps}>{NEXT.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s.title)}</b><p>{t(s.text)}</p></li>)}</ol>
+      <h2 id="how-title">{ar ? 'كيف نعمل' : 'How we work'}</h2>
+      <ol className={styles.steps}>{HOW.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s)}</b></li>)}</ol>
     </section></div>
 
     <section id="talk" className={`${styles.talk} ${styles.gutter}`} aria-labelledby="talk-title"><div className={`${styles.inner} ${styles.talkInner}`}>
       <div>
-        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>WHATSAPP</p>
-        <h2 id="talk-title">{ar ? 'راسلنا على واتساب' : 'Write to us on WhatsApp'}</h2>
-        <p>{ar ? 'الطلب نفسه، من دون أن تفتح البريد. أحمد عبدالعليم يرد بنفسه.' : 'The same request, without opening email. Ahmed Abdelalim replies himself.'}</p>
+        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>EMAIL</p>
+        <h2 id="talk-title">{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a technology-transfer project'}</h2>
+        <p>{ar ? 'التواصل بالبريد فقط. أحمد عبدالعليم يرد بنفسه.' : 'Email only. Ahmed Abdelalim replies himself.'}</p>
       </div>
-      <a className={styles.talkBtn} href={whatsappUrl()} target="_blank" rel="noreferrer">
-        <span>{ar ? 'افتح واتساب' : 'Open WhatsApp'}</span>
-        <b dir="ltr">{site.phoneDisplay}</b>
+      <a className={styles.talkBtn} href={transferMail(locale)}>
+        <span>{ar ? 'افتح رسالة' : 'Open an email'}</span>
+        <b dir="ltr">{site.email}</b>
       </a>
-    </div></section>
-
-    <div className={styles.gutter}><section id="faq" className={`${styles.inner} ${styles.faq}`} aria-labelledby="faq-title">
-      <div className={styles.secHead}>
-        <h2 id="faq-title">{ar ? 'أسئلة متكررة' : 'Questions people ask'}</h2>
-        <p>{ar ? 'إن لم تجد سؤالك هنا، فاكتبه في الطلب أو على واتساب.' : 'If your question is not here, write it in the request or on WhatsApp.'}</p>
-      </div>
-      <div className={styles.faqList}>{FAQ.map((item, i) => <details key={i} className={styles.faqItem}>
-        <summary>{t(item.q)}</summary>
-        <p>{t(item.a)}</p>
-      </details>)}</div>
     </section></div>
 
-    <Finder locale={locale} solutions={solutions}/>
+    <div className={styles.gutter}><section id="initiatives" className={`${styles.inner} ${styles.band}`} aria-labelledby="ini-title">
+      <div className={styles.secHead}>
+        <h2 id="ini-title">{ar ? 'المبادرات' : 'Initiatives'}</h2>
+        <p>{ar ? 'مبادرات تبني جسورًا بشرية دائمة بين كوريا والمنطقة العربية.' : 'Initiatives that build lasting human bridges between Korea and the Arab region.'}</p>
+      </div>
+      <article className={styles.ini} aria-labelledby="ini-name">
+        <p className={styles.proposal}>{ar ? 'اسم مقترح — بانتظار اعتماد أحمد عبدالعليم' : 'Proposed name — pending Ahmed Abdelalim’s approval'}</p>
+        <h3 id="ini-name">{t(INITIATIVE.proposedName)}</h3>
+        <p className={styles.iniAlts}>{ar ? 'بدائل مقترحة:' : 'Proposed alternatives:'} {INITIATIVE.alternatives.map(a => t(a)).join(ar ? ' · ' : ' · ')}</p>
+        <p className={styles.iniStatus} role="status">{t(INITIATIVE.status)}</p>
+        <div className={styles.iniBody}>
+          <div>
+            <h4>{ar ? 'الفكرة' : 'The idea'}</h4>
+            <p>{t(INITIATIVE.idea)}</p>
+          </div>
+          <div>
+            <h4>{ar ? 'ماذا يحصل عليه المشارك' : 'What a participant receives'}</h4>
+            <p>{t(INITIATIVE.gains)}</p>
+          </div>
+        </div>
+        <p className={styles.iniNote}>{ar
+          ? 'لا يوجد نموذج تسجيل على هذه الصفحة. سيُعلن فتح الباب هنا عندما يُعتمد.'
+          : 'There is no registration form on this page. The opening will be announced here when it is approved.'}</p>
+      </article>
+    </section></div>
   </Shell>;
 }
 
-export function KoreanSolutionDetail({locale, s, related, record}: {locale: Locale; s: Solution; related: Solution[]; record: boolean}) {
+export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: Solution; related: Solution[]}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en) || v.ar; const p = ar ? '/ar' : '';
   const type = TYPE_COPY[s.type];
   const sector = ar ? s.sector : SECTOR_EN[s.sector] || s.sector;
   const where = t(s.where);
   const credit = PHOTO_CREDIT[s.slug];
+  const mail = transferMail(locale, t(s.title));
   return <Shell locale={locale} path={`/korean-solutions/${s.slug}`} here={`${t(type.many)} · ${sector}`}>
     <section className={`${styles.dHero} ${styles.gutter}`} aria-labelledby="sol-title"><div className={`${styles.inner} ${styles.dHeroInner}`}>
       <div className={styles.dHeroMain}>
@@ -180,8 +164,8 @@ export function KoreanSolutionDetail({locale, s, related, record}: {locale: Loca
         {credit && <figcaption className={styles.credit}>{ar ? 'الصورة' : 'Photo'}: {credit}</figcaption>}
       </figure>
       <div className={styles.dActions}>
-        <a className={styles.primary} href="#request">{ar ? 'اطلب هذا الحل' : 'Ask for this solution'}</a>
-        <Link className={styles.secondary} href={`${p}/korean-solutions#finder`}>{ar ? 'كل الحلول التي نرصدها' : 'All the solutions we track'}</Link>
+        <a className={styles.primary} href={mail}>{ar ? 'ناقش نقل هذه القدرة' : 'Discuss transferring this capability'}</a>
+        <Link className={styles.secondary} href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>
       </div>
     </div></section>
 
@@ -213,10 +197,10 @@ export function KoreanSolutionDetail({locale, s, related, record}: {locale: Loca
           <div className={styles.routeGrid}>{ROUTES.map(r => { const open = s.routes.includes(r); return <div key={r} className={open ? styles.open : ''}><b>{t(ROUTE_COPY[r].name)}</b><span>{open ? t(ROUTE_COPY[r].line) : (ar ? 'غير مطروح لهذا الحل' : 'Not offered for this solution')}</span></div>; })}</div>
         </section>
       </article>
-      <aside id="request" className={styles.aside} aria-labelledby="request-title">
-        <h2 id="request-title">{ar ? 'اطلب هذا الحل' : 'Ask for this solution'}</h2>
-        <p>{ar ? 'اكتب لنا عن طلبك، ونعود إليك بالخطوة التالية.' : 'Tell us about your request, and we will come back to you with the next step.'}</p>
-        <RequestForm locale={locale} kind="korea" page={`${ORIGIN}${p}/korean-solutions/${s.slug}`} about={t(s.title)} hide={['category', 'link']} record={record}/>
+      <aside id="talk" className={styles.aside} aria-labelledby="request-title">
+        <h2 id="request-title">{ar ? 'ناقش نقل هذه القدرة' : 'Discuss transferring this capability'}</h2>
+        <p>{ar ? 'التواصل بالبريد فقط. ليست طلب شراء، ولا نموذج تسجيل.' : 'Email only. This is not a purchase request, and not a registration form.'}</p>
+        <a className={styles.cta} href={mail}>{ar ? 'افتح رسالة' : 'Open an email'} <span aria-hidden="true">↗</span></a>
         <p className={styles.fine}>{t(NO_PARTNERSHIP)}</p>
       </aside>
     </div></div>

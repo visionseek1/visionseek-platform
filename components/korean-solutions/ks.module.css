@@ -1,5 +1,4 @@
-/* حلول من كوريا / Korean Solutions: an ink gateway with one request button, four steps, the fields people ask in,
-   a violet request form, then the solutions we track with their filters. */
+/* حلول من كوريا / Korean Solutions: institutional transfer, then initiatives. Cars stay on /cars. */
 .page {
   --paper: #f5f5f2;
   --card: #ffffff;
@@ -125,6 +124,22 @@
 .catBody > span:not(.catGo) { font-size: 15px; line-height: 1.7; color: var(--body); }
 .catGo { margin-top: auto; padding-top: 6px; font-size: 14px; font-weight: 700; color: var(--violet); }
 .photoNote { font-size: 13px; line-height: 1.6; color: var(--mute); }
+
+.doGrid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.doGrid li { background: var(--card); border: 1px solid var(--rule); padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
+.doGrid b { font-size: 20px; line-height: 1.4; }
+.doGrid p { font-size: 16px; line-height: 1.8; color: var(--body); }
+
+.ini { background: var(--card); border: 1px solid var(--rule); padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; }
+.proposal { font-size: 13px; font-weight: 700; color: var(--violet); letter-spacing: 0.02em; }
+.page.page .ini h3 { font-size: clamp(24px, 3vw, 32px); line-height: 1.35; }
+.iniAlts { font-size: 15px; line-height: 1.7; color: var(--mute); }
+.iniStatus { display: inline-flex; align-self: flex-start; padding: 8px 14px; background: var(--lime); color: var(--ink); font-weight: 700; font-size: 15px; }
+.iniBody { display: grid; grid-template-columns: 1fr; gap: 18px; padding-top: 8px; }
+@media (min-width: 720px) { .iniBody { grid-template-columns: 1fr 1fr; } }
+.iniBody h4 { font-size: 15px; font-weight: 700; margin: 0 0 8px; }
+.iniBody p { font-size: 16px; line-height: 1.85; color: var(--body); }
+.iniNote { font-size: 14px; line-height: 1.7; color: var(--mute); }
 @media (max-width: 559px) {
   .cat { flex-direction: row; }
   .catPhoto { aspect-ratio: auto; width: 104px; flex: none; min-height: 112px; }

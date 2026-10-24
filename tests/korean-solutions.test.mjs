@@ -24,33 +24,32 @@ test('Korean Solutions: the JSON copy holds ten complete, bilingual, sourced sol
   assert.doesNotMatch(all, /هانا ?كار|Hana ?Car|Nine Star|skincare|injectable|halal|used car/i);
 });
 
-test('Korean Solutions: pages in both languages, the no-partnership line, and no automatic reply', () => {
+test('Korean Solutions: institutional transfer front, no sourcing funnel, cars stay linked', () => {
   for (const f of ['app/korean-solutions/page.tsx', 'app/ar/korean-solutions/page.tsx', 'app/korean-solutions/[slug]/page.tsx', 'app/ar/korean-solutions/[slug]/page.tsx']) assert.ok(existsSync(new URL(`../${f}`, import.meta.url)), f);
   assert.ok(read('lib/korean-solutions-copy.ts').includes(NO_PARTNERSHIP));
-  const pages = read('components/korean-solutions/pages.tsx'); const finder = read('components/korean-solutions/finder.tsx');
+  const pages = read('components/korean-solutions/pages.tsx');
+  const finder = read('components/korean-solutions/finder.tsx');
   assert.match(finder, /t\(NO_PARTNERSHIP\)/);
   assert.match(pages, /t\(NO_PARTNERSHIP\)/);
-  const api = read('app/api/korean-solutions/request/route.ts');
-  assert.match(api, /createLead\(/);
-  assert.match(api, /source: 'الموقع'/);
-  assert.match(api, /website/); // honeypot
-  assert.doesNotMatch(api, /sendMail|nodemailer|resend|sendgrid|fetch\(['"`]https/i);
-  const form = read('components/requests/request-form.tsx');
-  assert.match(form, /mailto\(/);
-  assert.match(pages, /اطلب من كوريا|Request from Korea/);
-  assert.match(pages, /#needs/);
-  assert.match(pages, /id="verify"/);
-  assert.match(pages, /id="next"/);
-  assert.match(pages, /id="faq"/);
-  assert.match(pages, /id="talk"/);
-  assert.match(pages, /شركة أو مؤسسة|A company or institution/);
+  assert.match(pages, /نقل القدرة، لا شحن المنتج|transfer the capability, not ship the product/);
+  assert.match(pages, /ناقش مشروع نقل تكنولوجيا|Discuss a technology-transfer project/);
+  assert.match(pages, /سيتم فتح باب التسجيل قريبًا|Registration will open soon/);
+  assert.match(pages, /اسم مقترح|Proposed name/);
+  assert.match(pages, /بوابات إنتشون|Incheon Gateways/);
+  assert.match(pages, /id="do"/);
+  assert.match(pages, /id="how"/);
+  assert.match(pages, /id="initiatives"/);
+  assert.match(pages, /\/cars/);
+  assert.match(pages, /mailto\(/);
   assert.match(pages, /أحمد عبدالعليم|Ahmed Abdelalim/);
+  assert.doesNotMatch(pages, /RequestForm|اطلب من كوريا|Request from Korea|اطلب من هذا المجال|#needs|YOUR REQUEST/);
+  assert.doesNotMatch(pages, /whatsappUrl|واتساب|WhatsApp/);
   assert.doesNotMatch(pages, /\bDr\.|\bد\. أحمد/);
-  assert.doesNotMatch(pages, /48 hours|24 hours|1–2 days|two business days|Trade Assurance|\b6%|\b10%/i);
-  assert.match(read('components/korean-solutions/sticky-cta.tsx'), /whatsappUrl/);
-  assert.match(read('components/korean-solutions/audience.tsx'), /prefillRequest/);
-  assert.match(read('lib/requests.ts'), /BUYERS/);
-  assert.match(read('lib/requests.ts'), /TIMELINES/);
+  assert.doesNotMatch(pages, /48 hours|24 hours|1–2 days|two business days|Trade Assurance|\b6%|\b10%|زمالة|fellowship/i);
+  assert.doesNotMatch(pages, /<form|input type="email"/);
+  assert.match(pages, /لا يوجد نموذج تسجيل|There is no registration form/);
+  assert.match(read('components/korean-solutions/sticky-cta.tsx'), /mailto\(/);
+  assert.doesNotMatch(read('components/korean-solutions/sticky-cta.tsx'), /whatsappUrl/);
 });
 
 const COLLOQUIAL_AR = /مش |مفيش|مافيش|عايز|بتاع|اللي |إزاي|ازاي|امتى|دلوقتي|عشان|كمان|منغير|ولا لأ|العربيات|حاجة تانية|ندوّر|يستاهل|معاك|لقيناه|فاضية|يقدروا|لوحدها|هترد|هتدفع|هتتواصل|بتتأكد|بيرد|بنتفق|بتعمل|لأ\.|الصفحة دي|من غير ما |من غير |نجيبها|محتاج |قول ل|كلّمنا|نرجع لك|يتقاس|يتكتب/;
@@ -84,6 +83,9 @@ test('Korean Solutions: in the menu, the sitemap and the archive list; the ops s
   assert.equal(nav[0].path, '/korean-solutions');
   assert.equal(nav[0].ar, 'حلول من كوريا');
   assert.equal(nav[0].en, 'Korean Solutions');
+  assert.equal(nav[0].children.some(c => c.href === '/korean-solutions#needs'), false);
+  assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#initiatives' && c.ar === 'المبادرات'));
+  assert.ok(nav[0].children.some(c => c.href === '/cars'));
   assert.match(read('app/sitemap.ts'), /korean-solutions/);
   assert.match(read('app/sitemap.ts'), /path: '\/cars'/);
   assert.match(read('public/admin/config.yml'), /value: "\/korean-solutions"/);
