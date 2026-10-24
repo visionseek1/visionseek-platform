@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": {
-      "en": "Incheon Dialogue | VisionSeek",
-      "ar": "حوار إنتشون | VisionSeek"
+      "en": "Conferences | VisionSeek",
+      "ar": "المؤتمرات | VisionSeek"
     },
     "description": {
       "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
@@ -15,8 +15,8 @@
       "ar": "الرئيسية"
     },
     "section": {
-      "en": "Conferences & Forums",
-      "ar": "المؤتمرات والمنتديات"
+      "en": "Conferences",
+      "ar": "المؤتمرات"
     },
     "status": {
       "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
@@ -90,7 +90,7 @@
         {"label": {"en": "Where", "ar": "المكان"}, "value": {"en": "Incheon", "ar": "إنتشون"}},
         {"label": {"en": "Access", "ar": "الحضور"}, "value": {"en": "Invitation only", "ar": "بالدعوة فقط"}}
       ],
-      "visual": "/forums/incheon-dialogue.svg",
+      "visual": "/conferences/incheon-dialogue.svg",
       "visualAlt": {
         "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula.",
         "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل مخطط كوريا المنقّط بشبه الجزيرة العربية."
@@ -175,7 +175,7 @@
           "en": "Announced at the Incheon Dialogue, April 2027, Incheon.",
           "ar": "تُعلن ضمن «حوار إنتشون» في أبريل 2027، في إنتشون، إن شاء الله."
         },
-        "visual": "/forums/incheon-awards.svg",
+        "visual": "/conferences/incheon-awards.svg",
         "visualAlt": {
           "en": "Vector mark for the Incheon Localization Awards: a lime isometric VisionSeek symbol on black, with a soft glow.",
           "ar": "علامة جوائز إنتشون للتوطين: رمز VisionSeek المتساوي القياس بالأخضر على أسود، مع توهج خفيف."
