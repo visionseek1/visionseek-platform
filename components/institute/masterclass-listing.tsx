@@ -40,6 +40,13 @@ export function MasterclassListing({locale}: {locale: Locale}) {
 
           <section className="vs-wl-catalog-grid is-single" aria-label={tx(locale, institute.masterclassTitle)}>
             <InstituteWorkshopCard locale={locale} />
+            <p className="vs-institute-related">
+              <span>{tx(locale, institute.relatedProgram.kicker)}</span>
+              {' '}
+              <Link href={localePath(locale, institute.relatedProgram.href)}>{tx(locale, institute.relatedProgram.title)}</Link>
+              {' · '}
+              <Link href={localePath(locale, institute.relatedProgram.href)}>{tx(locale, institute.relatedProgram.cta)}</Link>
+            </p>
           </section>
         </div>
       </main>

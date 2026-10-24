@@ -62,6 +62,8 @@ collections:
                   - {label: "معهد VisionSeek ← الزمالة  /institute/fellowship", value: "/institute/fellowship"}
                   - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
                   - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
+                  - {label: "البرامج ← Clause  /programs/clause", value: "/programs/clause"}
+                  - {label: "البرامج ← Relay  /programs/relay", value: "/programs/relay"}
                   - {label: "تقارير ← التقارير  /reports/reports", value: "/reports/reports"}
                   - {label: "تقارير ← الأوراق العلمية  /reports/research", value: "/reports/research"}
                   - {label: "تقارير ← ملاحظات  /reports/notes/l-001", value: "/reports/notes/l-001"}
@@ -1330,7 +1332,7 @@ collections:
     label: البرامج
     editor: {preview: false}
     label_singular: برنامج
-    description: "تصورات البرامج الستة. الهيكل الثابت لكل صفحة برنامج (مراحل القرار، الفريق، أسئلة الفرص) يبقى في الكود؛ من هنا تُعدَّل نصوص التصور نفسه."
+    description: "صفحات البرامج الميدانية (Aegis و Apex و Clause و Relay). من هنا تُعدَّل النصوص والصورة والحالة. لا تضع أرقامًا أو أسماء عملاء أو منافسين."
     folder: content/programs
     create: true
     extension: json
@@ -1357,6 +1359,101 @@ collections:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
       - {label: الصورة, name: image, widget: image, choose_url: true, hint: "مفتاح جاهز مثل chips أو مسار محلي يبدأ بـ /."}
+      - label: الاسم الرسمي
+        name: name
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: التصنيف
+        name: classification
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الحالة
+        name: status
+        widget: object
+        required: false
+        hint: "العربية مثل Aegis: جاهز للتجريب — مفتوح للتطوير المشترك المؤسسي."
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: زر الطلب
+        name: cta
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: عنوان التحدي
+        name: challengeTitle
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: التحدي
+        name: challenge
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: عنوان المنهج
+        name: approachTitle
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: المنهج
+        name: approach
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+      - label: عنوان المبادئ
+        name: principlesTitle
+        widget: object
+        required: false
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: المبادئ
+        name: principles
+        widget: list
+        required: false
+        summary: "{{fields.ar}}"
+        fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: روابط مرتبطة
+        name: related
+        widget: list
+        required: false
+        field: {label: المسار, name: href, widget: string}
+      - label: المراحل
+        name: steps
+        widget: list
+        required: false
+        summary: "{{fields.title.ar}}"
+        fields:
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+          - label: النص
+            name: body
+            widget: object
+            fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
       - label: القدرة والمستفيد
         name: beneficiary
         widget: object
@@ -3163,7 +3260,12 @@ collections:
             fields:
               - {label: English, name: en, widget: string}
               - {label: العربية, name: ar, widget: string}
-          - {label: الشعار النصي, name: tagline, widget: string}
+          - label: الشعار النصي
+            name: tagline
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
           - label: فقرة التذييل
             name: footerBlurb
             widget: object
@@ -3419,6 +3521,30 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
+              - label: "برنامج مرتبط"
+                name: relatedProgram
+                widget: object
+                required: false
+                fields:
+                  - {label: الرابط, name: href, widget: string}
+                  - label: السطر
+                    name: kicker
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: الزر
+                    name: cta
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
               - label: "اسم المقدّم"
                 name: instructor
                 widget: object
@@ -4806,6 +4932,30 @@ collections:
             fields:
               - {label: "English", name: en, widget: string}
               - {label: "العربية", name: ar, widget: string}
+          - label: "برنامج مرتبط"
+            name: relatedProgram
+            widget: object
+            required: false
+            fields:
+              - {label: الرابط, name: href, widget: string}
+              - label: السطر
+                name: kicker
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: الزر
+                name: cta
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
           - label: "وسم الزمالة"
             name: fellowshipKind
             widget: object

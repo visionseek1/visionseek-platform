@@ -41,6 +41,7 @@ test('Korean Solutions: institutional transfer front, no sourcing funnel, cars a
   assert.match(pages, /id="domains"/);
   assert.match(pages, /id="services"/);
   assert.match(pages, /id="how"/);
+  assert.match(pages, /\/programs\/relay/);
   assert.match(pages, /id="initiatives"/);
   assert.doesNotMatch(pages, /\/cars/);
   assert.match(pages, /mailto\(/);

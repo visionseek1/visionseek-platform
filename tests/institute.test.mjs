@@ -99,6 +99,8 @@ test('Institute surfaces only the governance workshop; old Masterclass routes st
   assert.match(hub, /masterclassListingPath/);
   assert.doesNotMatch(hub, /workshopSection/);
   assert.match(listing, /InstituteWorkshopCard/);
+  assert.match(listing, /institute\.relatedProgram/);
+  assert.equal(institute.relatedProgram.href, '/programs/clause');
   assert.match(card, /institute\.workshopTitle/);
   assert.match(card, /InterestButton/);
   assert.doesNotMatch(card, /governanceCourse\.price/);

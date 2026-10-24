@@ -116,6 +116,14 @@ export function MasterclassPage({locale}: {locale: Locale}) {
               <p className={styles.instructorName}>{t(locale, workshop.instructorShort)}</p>
             </section>
 
+            <section className={styles.block} aria-labelledby="course-related">
+              <p className={styles.sectionLabel}>{t(locale, workshop.relatedProgram.kicker)}</p>
+              <h2 id="course-related">{t(locale, workshop.relatedProgram.title)}</h2>
+              <p className={styles.lede}>
+                <Link href={localePath(locale, workshop.relatedProgram.href)}>{t(locale, workshop.relatedProgram.cta)}</Link>
+              </p>
+            </section>
+
             <section className={styles.block} aria-labelledby="course-enroll">
               <h2 id="course-enroll">{t(locale, workshop.enrollLabel)}</h2>
               <Register locale={locale} />

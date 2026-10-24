@@ -1,0 +1,112 @@
+{
+  "position": 4,
+  "slug": "relay",
+  "code": "VS-P04",
+  "name": {
+    "en": "Relay",
+    "ar": "Relay"
+  },
+  "classification": {
+    "en": "Management of the technology-transfer obligation",
+    "ar": "إدارة التزام نقل التكنولوجيا"
+  },
+  "title": {
+    "en": "Relay: we manage the technology-transfer obligation for the life of the project",
+    "ar": "Relay: ندير التزام نقل القدرة على مدى عمر المشروع"
+  },
+  "summary": {
+    "en": "In civil Korean–Arab deals, VisionSeek manages the technology-transfer obligation from the first day to the last. We measure transfer on the ownership ladder: use, assemble, adapt, design, export. Reports go to both sides.",
+    "ar": "في الصفقات الكورية–العربية المدنية تتولى VisionSeek التزام نقل التكنولوجيا من أول يوم إلى آخره. نقيس النقل على سلّم الامتلاك: استخدام، تجميع، تكييف، تصميم، تصدير. والتقارير تصل إلى الطرفين."
+  },
+  "status": {
+    "en": "Pilot-Ready — open for joint institutional development",
+    "ar": "جاهز للتجريب — مفتوح للتطوير المشترك المؤسسي"
+  },
+  "image": "/programs/relay.jpg",
+  "cta": {
+    "en": "Request transfer-obligation management",
+    "ar": "اطلب إدارة التزام النقل"
+  },
+  "challengeTitle": {
+    "en": "An obligation that is counted in money is not yet owned",
+    "ar": "الالتزام الذي يُحسب بالمال لم يُملك بعد"
+  },
+  "challenge": {
+    "en": "Many Korean–Arab deals carry a duty to transfer technology. That duty is often closed as a financial credit, not as a capability the local team can run alone. Relay exists so the obligation is managed for the life of the project, in civil domains only: industry, data, and artificial intelligence.",
+    "ar": "تحمل صفقات كورية–عربية كثيرة واجب نقل التكنولوجيا. وكثيرًا ما يُغلق هذا الواجب رصيدًا ماليًا، لا قدرة يشغّلها الفريق المحلي وحده. وُجد Relay ليدار الالتزام على مدى عمر المشروع، وفي المجالات المدنية فقط: الصناعة، والبيانات، والذكاء الاصطناعي."
+  },
+  "approachTitle": {
+    "en": "The ownership ladder is the measure",
+    "ar": "سلّم الامتلاك هو المقياس"
+  },
+  "approach": {
+    "en": "We do not certify the end of a deal and leave. We sit inside the obligation as its manager. The Localization Doctrine is the reference: ownership is a sequence, export is the exam, and what is not verified has not happened. The contract is written so both sides receive the same report. We sell no product and we take no side in the supply.",
+    "ar": "لا نختم الصفقة ونغادر. نجلس داخل الالتزام مديرًا له. المرجع عقيدة التوطين: الامتلاك تسلسل، والتصدير امتحانه، وما لم يُتحقق منه لم يحدث. ويُكتب العقد بحيث يصل التقرير نفسه إلى الطرفين. لا نبيع منتجًا ولا ننحاز في التوريد."
+  },
+  "principlesTitle": {
+    "en": "The ownership ladder",
+    "ar": "سلّم الامتلاك"
+  },
+  "principles": [
+    {"en": "Use", "ar": "استخدام"},
+    {"en": "Assemble", "ar": "تجميع"},
+    {"en": "Adapt", "ar": "تكييف"},
+    {"en": "Design", "ar": "تصميم"},
+    {"en": "Export", "ar": "تصدير"}
+  ],
+  "related": [
+    "/korean-solutions"
+  ],
+  "steps": [
+    {
+      "title": {
+        "en": "Phase 01 — Map the starting capability",
+        "ar": "المرحلة 01 — رسم القدرة عند نقطة البداية"
+      },
+      "body": {
+        "en": "We record what the local team can already do, and where the Korean counterpart actually holds the know-how. The map is the first document both sides sign.",
+        "ar": "نثبت ما يستطيعه الفريق المحلي اليوم، وأين تقف المعرفة عند الطرف الكوري. والخريطة أول وثيقة يوقعها الطرفان."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 02 — Write the transfer plan against the ladder",
+        "ar": "المرحلة 02 — كتابة خطة النقل على السلّم"
+      },
+      "body": {
+        "en": "Each stage of the project is tied to a rung: use, assemble, adapt, design, export. A stage is complete only when the local team can perform that rung without the counterpart in the room.",
+        "ar": "تُربط كل مرحلة من المشروع بدرجة: استخدام، تجميع، تكييف، تصميم، تصدير. ولا تكتمل المرحلة إلا حين يؤدّي الفريق المحلي هذه الدرجة من غير أن يكون الطرف الآخر في القاعة."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 03 — Execute the transfer on the ground",
+        "ar": "المرحلة 03 — تنفيذ النقل على الأرض"
+      },
+      "body": {
+        "en": "We run the work beside both teams: training that produces an output, documentation that another engineer can follow, and joint design only where the plan requires it.",
+        "ar": "ندير العمل إلى جانب الفريقين: تدريب يُنتج مخرجًا، وتوثيق يستطيع مهندس آخر أن يتبعه، وتصميم مشترك حيث تطلبه الخطة فقط."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 04 — Document what the local team now does alone",
+        "ar": "المرحلة 04 — توثيق ما صار الفريق المحلي يفعل وحده"
+      },
+      "body": {
+        "en": "The file must be auditable. If the local team cannot repeat the step, the transfer has not happened — whatever the schedule says.",
+        "ar": "الملف يجب أن يحتمل التدقيق. إذا لم يستطع الفريق المحلي إعادة الخطوة، فالنقل لم يحدث — مهما قال الجدول."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 05 — Report to both sides for the life of the project",
+        "ar": "المرحلة 05 — رفع التقرير إلى الطرفين على مدى عمر المشروع"
+      },
+      "body": {
+        "en": "The same report goes to the buyer and to the counterpart. The measure is the rung reached, not a credit closed. We stay until the last agreed rung is verified.",
+        "ar": "التقرير نفسه يصل إلى المشتري وإلى الطرف المقابل. المقياس هو الدرجة التي بُلغت، لا رصيد أُغلق. ونبقى حتى تُتحقق آخر درجة متفق عليها."
+      }
+    }
+  ]
+}
