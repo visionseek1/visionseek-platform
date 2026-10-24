@@ -82,7 +82,7 @@ function AwardsBlock({awards, locale, slug}: {awards: ForumAwards; locale: Local
         alt={tx(locale, awards.visualAlt)}
         compact
       />
-      <p className={styles.honesty}>{tx(locale, awards.honesty)}</p>
+      {awards.honesty ? <p className={styles.honesty}>{tx(locale, awards.honesty)}</p> : null}
     </aside>
   );
 }
@@ -177,7 +177,7 @@ function ForumArticle({forum, locale}: {forum: Forum; locale: Locale}) {
           <h2 id={`${forum.slug}-register-title`}>{tx(locale, labels.register)}</h2>
           <Invite forum={forum} locale={locale} strong/>
           <p className={styles.host}>{tx(locale, labels.host)}</p>
-          <p className={styles.honesty}>{tx(locale, labels.honesty)}</p>
+          {labels.honesty ? <p className={styles.honesty}>{tx(locale, labels.honesty)}</p> : null}
         </section>
       </div>
     </article>

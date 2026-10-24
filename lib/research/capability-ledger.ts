@@ -7,12 +7,12 @@ export type Bi = {ar: string; en: string};
 
 export const paper = {
   slug: 'capability-ledger',
-  pdfAr: '/insights/reports/capability-ledger-ar.pdf',
-  cover: '/insights/reports/capability-ledger-cover.jpg',
+  pdfAr: '/reports/reports/capability-ledger-ar.pdf',
+  cover: '/reports/reports/capability-ledger-cover.jpg',
   date: '2026-10-24',
   dateLabel: {ar: 'أكتوبر 2026', en: 'October 2026'},
   versionLabel: {ar: 'الإصدار 1', en: 'Edition 1'},
-  label: {ar: 'مختبر VisionSeek · رؤى · الإصدار 1', en: 'VisionSeek Lab · Insights · Edition 1'},
+  label: {ar: 'مختبر VisionSeek · تقارير · الإصدار 1', en: 'VisionSeek Lab · Reports · Edition 1'},
   lab: 'VISIONSEEK LAB · CAPABILITY LEDGER',
   title: {ar: 'سجل نقل القدرة', en: 'Capability Ledger'},
   question: {
@@ -34,9 +34,9 @@ export const paper = {
     body: 'الإصدار الأول من «سجل نقل القدرة» يستند إلى تركيب منهجي للأدلة المنشورة. كل حقيقة فيه منسوبة إلى مصدرها الأصلي، ثم مُسقطة على سلّم الامتلاك. ونطاقه صفقات الذكاء الاصطناعي ومراكز البيانات في السعودية والإمارات.',
     note: 'أرقام الإعلانات التزامات معلنة، لا إنجازات متحققة.',
   },
-  methodologyHref: '/insights/reports/methodology',
+  methodologyHref: '/reports/reports/methodology',
   methodologyLabel: {ar: 'منهجية التقارير', en: 'Reports Methodology'},
-  doctrineHref: '/insights/reports/localization-doctrine',
+  doctrineHref: '/reports/reports/localization-doctrine',
   doctrineLabel: {ar: 'عقيدة التوطين', en: 'The Localization Doctrine'},
   headline: 'الحجم معلَن؛ أما القدرة المنقولة فبلا قياس منشور في الأدلة المفحوصة.',
   headlineNote: 'الخلاصة الأولى من هذا الإصدار',

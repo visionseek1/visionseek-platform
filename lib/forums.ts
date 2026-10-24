@@ -37,7 +37,7 @@ export type ForumAwards = {
   exclusion: Bi;
   honesty: Bi;
   labels: {
-    soon: Bi;
+    soon?: Bi;
     mandate: Bi;
     principles: Bi;
     categories: Bi;
@@ -97,7 +97,7 @@ export type ForumsContent = {
     outcome: Bi;
     dialogue: Bi;
     register: Bi;
-    honesty: Bi;
+    honesty?: Bi;
     host: Bi;
   };
   forums: Forum[];

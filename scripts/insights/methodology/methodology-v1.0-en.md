@@ -81,7 +81,7 @@ Rules:
 1. **No silent imputation.** Missing values in headline results read "Not available".
 2. **Coverage is reported.** For each indicator we report data coverage and the dates of the data.
 3. **Labelled estimates.** An unavoidable estimate is labelled **[Estimate]**, its method is shown in the annex, it is given as a range, and it is excluded from any ranking.
-4. **"Not found" describes our search, not the world.** Gaps are worded as "not identified in the sources searched (listed)", never as "does not exist".
+4. **Wording a gap.** A gap is worded by describing the documented search scope: "It does not appear in the sources listed in Annex [number]".
 5. **"Not assessable", not ranked low.** A country or technology with insufficient data is marked "Not assessable" rather than ranked low.
 6. **"What we don't know."** Every report includes a page with this title.
 7. **Dependencies stated.** Where a conclusion depends on a missing item, the report says so explicitly.
@@ -101,7 +101,7 @@ An independent internal verification function, separate from the authoring team,
 The function produces a written review memo recording each issue and how it was resolved.
 
 ### 4.2 External expert review
-Reports are reviewed by external experts in the following roles, as relevant:
+External expert review will be added in later editions, in the following roles as relevant:
 - a domain expert for each technology covered;
 - a patent and intellectual-property analyst;
 - a statistics or labour-market methodologist;
@@ -109,7 +109,7 @@ Reports are reviewed by external experts in the following roles, as relevant:
 - a policy specialist from outside the region assessed, to test for bias;
 - a data and statistics reviewer for any composite index.
 
-Reviewers sign a conflict-of-interest declaration. Combined internal and external peer review is an established practice: Chatham House states that all its reports and research papers "are externally and internally peer reviewed, fact-checked and tested for originality" [Source: https://www.chathamhouse.org/about-us/our-editorial-standards].
+When this phase is introduced, reviewers will sign a conflict-of-interest declaration. Combined internal and external peer review is an established practice: Chatham House states that all its reports and research papers "are externally and internally peer reviewed, fact-checked and tested for originality" [Source: https://www.chathamhouse.org/about-us/our-editorial-standards].
 
 ---
 
@@ -166,7 +166,7 @@ No report claims to be "the first" or "the only", or to fill "a gap", unless thi
 3. **Keep a log** of every query, database and date and the results reviewed. List the closest existing works and how they differ.
 4. **Second searcher.** The independent internal verification function repeats the search independently.
 5. **Expert check.** External domain experts are asked whether they know of prior work.
-6. **Wording rule: "not found" does not mean "does not exist".** The permitted wording is: *"To our knowledge, after the search documented in Annex X, we did not identify…"*. "First" or "only" is used only after steps 1–5. It is withdrawn by a correction if prior work comes to light.
+6. **Wording rule.** A gap is worded by describing the documented search scope: "It does not appear in the sources listed in Annex [number]". "First" or "only" is used only after steps 1–5. It is withdrawn by a correction if prior work comes to light.
 
 ---
 

@@ -5,8 +5,8 @@
       "ar": "المؤتمرات | VisionSeek"
     },
     "description": {
-      "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
-      "ar": "حوار إنتشون منتدى صغير بالدعوة فقط لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول: أبريل 2027، إنتشون."
+      "en": "The Incheon Dialogue is an invitation-only annual forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
+      "ar": "حوار إنتشون منتدى سنوي مغلق بالدعوة لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول: أبريل 2027، إنتشون."
     }
   },
   "page": {
@@ -56,10 +56,6 @@
       "en": "Register interest",
       "ar": "سجّل اهتمامك"
     },
-    "honesty": {
-      "en": "No specific venue in Incheon, and no names, partners or sponsors have been set.",
-      "ar": "لا مكان محدد داخل إنتشون، ولا أسماء، ولا شركاء ولا رعاة."
-    },
     "host": {
       "en": "Invitations are considered by Ahmed Abdelalim.",
       "ar": "ينظر في طلبات الدعوة أحمد عبدالعليم."
@@ -100,14 +96,14 @@
         "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن.\n\nحقّقت كوريا ذلك في جيل واحد. والعالم العربي يملك الطموح والإمكانات ليقود.\n\n«حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
       },
       "what": {
-        "en": "A small, closed annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
-        "ar": "منتدى سنوي صغير ومغلق، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        "en": "An invitation-only annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
+        "ar": "منتدى سنوي مغلق، بالدعوة، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
       },
       "principles": [
         {
           "title": {
-            "en": "Small and selected",
-            "ar": "صغير ومختار"
+            "en": "Select, by invitation",
+            "ar": "نخبوي ومختار"
           },
           "text": {
             "en": "Attendance is by invitation only, so the conversation can be real.",
@@ -336,7 +332,6 @@
           "ar": "الجائزة تكريم، وليست مبلغًا ماليًا."
         },
         "labels": {
-          "soon": {"en": "Announced at the Incheon Dialogue", "ar": "تُعلن في حوار إنتشون"},
           "mandate": {"en": "What the awards are", "ar": "ما هي الجوائز"},
           "principles": {"en": "Principles", "ar": "مبادئ الجوائز"},
           "categories": {"en": "Categories", "ar": "الفئات"},

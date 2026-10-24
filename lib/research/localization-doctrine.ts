@@ -7,12 +7,12 @@ export type Bi = {ar: string; en: string};
 
 export const paper = {
   slug: 'localization-doctrine',
-  pdfAr: '/insights/reports/localization-doctrine-ar.pdf',
-  pdfEn: '/insights/reports/localization-doctrine-en.pdf',
-  cover: '/insights/reports/localization-doctrine-cover.jpg',
+  pdfAr: '/reports/reports/localization-doctrine-ar.pdf',
+  pdfEn: '/reports/reports/localization-doctrine-en.pdf',
+  cover: '/reports/reports/localization-doctrine-cover.jpg',
   date: '2026-10-24',
   dateLabel: {ar: 'أكتوبر 2026', en: 'October 2026'},
-  label: {ar: 'مختبر VisionSeek · ورقة عقيدة · رؤى', en: 'VisionSeek Lab · Doctrine paper · Insights'},
+  label: {ar: 'مختبر VisionSeek · ورقة عقيدة · تقارير', en: 'VisionSeek Lab · Doctrine paper · Reports'},
   title: {ar: 'عقيدة التوطين', en: 'The Localization Doctrine'},
   question: {
     ar: 'من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون',
@@ -33,7 +33,7 @@ export const paper = {
   },
   indexHref: '/indices/arab-technology-capability',
   indexLabel: {ar: 'مؤشر القدرة التكنولوجية العربية', en: 'Arab Technology Capability Index'},
-  methodologyHref: '/insights/reports/methodology',
+  methodologyHref: '/reports/reports/methodology',
   methodologyLabel: {ar: 'منهجية التقارير', en: 'Reports Methodology'},
   headline: {
     ar: 'كوريا ليست موضوع هذا التقرير، بل دليله: الدولة التي تبدأ مشترية تستطيع أن تصبح مالكة خلال عمر مهني واحد.',

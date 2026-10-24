@@ -91,15 +91,15 @@ export default function PositioningPage({locale}:{locale:Locale}) {
 
       <section className={styles.founder} id="founder">
         <figure className={styles.founderPortrait}>
-          <Image src="/ahmed-abdelalim.jpg" width={923} height={892} alt={ar?'د. أحمد عبدالعليم، مؤسس VisionSeek':'Dr. Ahmed Abdelalim, founder of VisionSeek'} sizes="(max-width: 760px) 90vw, 40vw"/>
-          <figcaption><strong>{ar?'د. أحمد عبدالعليم':'Dr. Ahmed Abdelalim'}</strong><span>{ar?'مؤسس VisionSeek · كوريا الجنوبية':'Founder of VisionSeek · South Korea'}</span></figcaption>
+          <Image src="/ahmed-abdelalim.jpg" width={923} height={892} alt={ar?'د. أحمد عبدالعليم، مؤسس VisionSeek':'Ahmed Abdelalim, founder of VisionSeek'} sizes="(max-width: 760px) 90vw, 40vw"/>
+          <figcaption><strong>{ar?'د. أحمد عبدالعليم':'Ahmed Abdelalim'}</strong><span>{ar?'مؤسس VisionSeek · كوريا الجنوبية':'Founder of VisionSeek · South Korea'}</span></figcaption>
         </figure>
         <div className={styles.founderStory}>
           <p className={styles.eyebrow}>{ar?'الفكرة التي تقود المؤسسة':'THE CONVICTION BEHIND VISIONSEEK'}</p>
           <h2>{ar?'من كوريا الجنوبية، برسالة إلى العالم العربي.':'From South Korea, with a mission for the Arab world.'}</h2>
           <p className={styles.founderMission}>{ar?'أن تمتلك مؤسساتنا القدرة على البناء والمنافسة إلى جانب عمالقة التكنولوجيا والذكاء الاصطناعي.':'For our institutions to build and compete alongside the world’s technology and AI leaders.'}</p>
-          <p>{ar?'يقيم د. أحمد عبدالعليم في كوريا الجنوبية، ويحمل إلى VisionSeek قناعة بأن العالم العربي يستحق أن يصنع موقعه في مقدمة هذا التحول. رسالته هي تمكين مؤسساته من المعرفة والتقنيات والفرص التي تساعدها على المنافسة من موقع الندّية.':'Based in South Korea, Dr. Ahmed Abdelalim brings to VisionSeek the conviction that the Arab world should help lead this transformation. His mission is to enable its institutions to access the knowledge, technology and opportunities needed to compete on equal footing.'}</p>
-          <div className={styles.founderBelief}><h3>{ar?'هذه لحظة تستحق أن نتحرك.':'This is a moment to act.'}</h3><p>{ar?'يؤمن د. أحمد بأن الذكاء الاصطناعي فتح بابًا واسعًا أمام من يملك الرؤية والجرأة على البناء. يرى فيه فرصة لتقليص المسافة مع الكبار، بالوصول إلى المعرفة وتسريع التجربة وجمع قدرات كانت متفرقة.':'Dr. Ahmed believes AI has opened a major opportunity for those with the vision and courage to build. He sees a chance to close the gap with established leaders through access to knowledge, faster experimentation and the assembly of previously disconnected capabilities.'}</p></div>
+          <p>{ar?'يقيم د. أحمد عبدالعليم في كوريا الجنوبية، ويحمل إلى VisionSeek قناعة بأن العالم العربي يستحق أن يصنع موقعه في مقدمة هذا التحول. رسالته هي تمكين مؤسساته من المعرفة والتقنيات والفرص التي تساعدها على المنافسة من موقع الندّية.':'Based in South Korea, Ahmed Abdelalim brings to VisionSeek the conviction that the Arab world should help lead this transformation. His mission is to enable its institutions to access the knowledge, technology and opportunities needed to compete on equal footing.'}</p>
+          <div className={styles.founderBelief}><h3>{ar?'هذه لحظة تستحق أن نتحرك.':'This is a moment to act.'}</h3><p>{ar?'يؤمن د. أحمد بأن الذكاء الاصطناعي فتح بابًا واسعًا أمام من يملك الرؤية والجرأة على البناء. يرى فيه فرصة لتقليص المسافة مع الكبار، بالوصول إلى المعرفة وتسريع التجربة وجمع قدرات كانت متفرقة.':'Ahmed Abdelalim believes AI has opened a major opportunity for those with the vision and courage to build. He sees a chance to close the gap with established leaders through access to knowledge, faster experimentation and the assembly of previously disconnected capabilities.'}</p></div>
         </div>
       </section>
 

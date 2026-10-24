@@ -146,37 +146,37 @@
       ]
     },
     {
-      "path": "/insights",
-      "en": "Insights",
-      "ar": "Insights",
+      "path": "/reports",
+      "en": "Reports",
+      "ar": "تقارير",
       "children": [
         {
-          "href": "/insights",
-          "en": "VisionSeek Insights",
-          "ar": "VisionSeek Insights"
+          "href": "/reports",
+          "en": "VisionSeek Reports",
+          "ar": "تقارير VisionSeek"
         },
         {
-          "href": "/insights/reports",
+          "href": "/reports/reports",
           "en": "Reports",
           "ar": "التقارير"
         },
         {
-          "href": "/insights/research",
+          "href": "/reports/research",
           "en": "Research papers",
           "ar": "الأوراق العلمية"
         },
         {
-          "href": "/insights/notes/l-001",
+          "href": "/reports/notes/l-001",
           "en": "Notes",
           "ar": "ملاحظات"
         },
         {
-          "href": "/insights/frameworks/decision-dimensions",
+          "href": "/reports/frameworks/decision-dimensions",
           "en": "Frameworks & tools",
           "ar": "الأطر والأدوات"
         },
         {
-          "href": "/insights#newsletter",
+          "href": "/reports#newsletter",
           "en": "Monthly newsletter",
           "ar": "النشرة الشهرية"
         }
@@ -261,7 +261,7 @@
         {
           "href": "/work-with-us#now-competing",
           "en": "Now competing",
-          "ar": "مشاركين فيها دلوقتي"
+          "ar": "الجارية"
         },
         {
           "href": "/work-with-us#join",
@@ -271,12 +271,12 @@
         {
           "href": "/work-with-us#completed",
           "en": "Completed",
-          "ar": "خلصت"
+          "ar": "المكتملة"
         },
         {
           "href": "/work-with-us#how-we-work",
           "en": "How we work",
-          "ar": "إزاي بنشتغل"
+          "ar": "كيف نعمل"
         }
       ]
     },

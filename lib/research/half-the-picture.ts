@@ -9,7 +9,7 @@ export const paper = {
   slug: 'half-the-picture',
   doi: '10.5281/zenodo.23399249',
   doiUrl: 'https://doi.org/10.5281/zenodo.23399249',
-  pdfAr: '/insights/reports/half-the-picture-ar.pdf',
+  pdfAr: '/reports/reports/half-the-picture-ar.pdf',
   date: '2026-10-16',
   dateLabel: {ar: 'أكتوبر 2026', en: 'October 2026'},
   label: {ar: 'مختبر VisionSeek · تقرير مبسّط لدراسة استكشافية', en: 'VisionSeek Lab · A plain-language report on an exploratory study'},
@@ -55,7 +55,7 @@ export const paper = {
   },
   research: {
     heading: {ar: 'سؤال البحث', en: 'The research question'},
-    intro: {ar: 'انطلقت الدراسة من سؤال صاغه د. أحمد:', en: 'The study began from a question posed by Dr. Ahmed:'},
+    intro: {ar: 'انطلقت الدراسة من سؤال صاغه د. أحمد:', en: 'The study began from a question posed by Ahmed Abdelalim:'},
     quote: {ar: '«عندما يستشير المستخدم نموذج ذكاء اصطناعي في قرار إنساني مركّب (علاقة، إدارة، أو ما يشبههما)، إلى أي مدى يوجّه النموذج القرار اعتمادًا على المعطيات القليلة المقدَّمة له، متجاهلًا أبعادًا حاسمة لا يملكها إلا المستخدم، مثل السياق، وتاريخ العلاقة، والأشخاص المتأثرين، والدين والقيم، والعواقب المترتبة؟ وهل يمكن لبروتوكول يجعل النموذج يكشف هذه الأبعاد الناقصة قبل التوجيه أن يقلّل هذا القصور؟»', en: '“When someone consults an AI model about a complex human decision (a relationship, a management call, or the like), how far does the model steer that decision from the little it has been given, while ignoring decisive dimensions only the user holds: context, the history of the relationship, the people affected, faith and values, and the consequences? And can a protocol that makes the model disclose these missing dimensions before advising reduce that shortfall?”'},
     after: {ar: 'الدراسة إذن لا تقارن بين أنواع القرارات. هي تقيس الفجوة بين ما يُقال للنموذج وما يتوقف عليه القرار فعلًا.', en: 'So the study does not compare kinds of decisions. It measures the gap between what the model is told and what the decision actually turns on.'},
   },
@@ -115,13 +115,9 @@ export const paper = {
     warnLabel: {ar: 'تنبيه', en: 'Note'},
   },
   limits: {
-    heading: {ar: 'حدود هذه الدراسة', en: 'Limits of this study'},
-    intro: {ar: 'نريد أن نكون واضحين في حدود ما توصّلنا إليه:', en: 'We want to be clear about how far these findings go:'},
+    heading: {ar: 'نطاق الدراسة ومنهجها', en: 'Scope and method of the study'},
+    intro: {ar: 'نطاق الدراسة: 24 موقفًا رئيسيًا و16 إضافيًا من إعداد فريق البحث؛ إجابات المستخدم مولّدة آليًا ضمن معلومات الموقف؛ التصنيف آلي؛ الإصدار التالي يضيف مشاركين ومقيّمين بشريين.', en: 'Scope of the study: 24 main situations and 16 additional ones prepared by the research team; user answers generated automatically from the situation facts; classification is automated; the next edition adds human participants and raters.'},
     items: [
-      {title: {ar: 'هي دراسة استكشافية وليست دراسة حاسمة.', en: 'Exploratory, not conclusive.'}, text: {ar: 'عدد المواقف محدود (24 موقفًا رئيسيًا و16 موقفًا إضافيًا)، وكلها من إعداد فريق البحث.', en: 'The set of situations is small (24 main and 16 additional), all written by the research team.'}},
-      {title: {ar: 'لم يشارك بشر حقيقيون.', en: 'No real people took part.'}, text: {ar: 'إجابات «المستخدم» عن أسئلة النموذج كتبها نموذج آخر مقيّد بمعلومات الموقف. والناس في الواقع يجيبون بطرق مختلفة.', en: 'The “user’s” answers were written by another model limited to the situation’s facts. Real people answer differently.'}},
-      {title: {ar: 'التصنيف آلي.', en: 'Automated coding.'}, text: {ar: 'نموذج ذكاء اصطناعي هو من صنّف الإجابات (هل سألت؟ هل اشترطت؟)، ولم يراجعها مقيّمون بشريون بعد.', en: 'An AI model classified the answers (did it ask? did it hedge?); human raters have not reviewed them yet.'}},
-      {title: {ar: 'التجارب اليدوية محدودة.', en: 'Limited hand tests.'}, text: {ar: 'أُجريت مرة واحدة لكل سؤال وفي جلسة واحدة لكل نموذج، فقد تتأثر الإجابات بما سبقها.', en: 'Run once per question, in one session per model, so earlier answers may have influenced later ones.'}},
       {title: {ar: 'نحن نقيس تغيّر النصيحة، لا ضررها.', en: 'We measure change in advice, not harm.'}, text: {ar: 'وتشير استطلاعات منشورة إلى أن كثيرًا من الناس يرون فائدة في نصائح الذكاء الاصطناعي. ويبيّن تحليل تجميعي معروف (Vaccaro وزملاؤه) أن الجمع بين الإنسان والذكاء الاصطناعي لا يحقق دائمًا نتائج أفضل، وأن النتائج تختلف من نوع مهمة إلى آخر.', en: 'Published surveys suggest many people find AI advice useful. A well-known meta-analysis (Vaccaro and colleagues) shows that human–AI combinations do not always do better, and that results vary by type of task.'}, wide: true},
     ],
   },

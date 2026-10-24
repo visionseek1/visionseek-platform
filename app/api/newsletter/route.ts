@@ -1,7 +1,7 @@
 import { addNewsletterSubscriber, notionConfigured, validEmail } from "@/lib/notion-room";
 
 /**
- * اشتراك النشرة الشهرية لـ VisionSeek Insights.
+ * اشتراك النشرة الشهرية لـ VisionSeek Reports.
  * بيسجّل البريد بس في قاعدة «النشرة الشهرية — المشتركين» (قطاع الظهور والتواصل).
  * مفيش أي إرسال للمشتركين من الموقع: الإرسال بموافقة د. أحمد.
  */

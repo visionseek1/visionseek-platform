@@ -56,10 +56,7 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   assert.equal(forums.labels.mandate.en, 'About');
   assert.equal(forums.labels.register.en, 'Register interest');
   assert.equal(forums.labels.dialogue.ar, 'حوار إنتشون');
-  assert.match(forums.labels.honesty.en, /No specific venue in Incheon/);
-  assert.match(forums.labels.honesty.ar, /لا مكان محدد داخل إنتشون/);
-  assert.doesNotMatch(forums.labels.honesty.en, /No date/i);
-  assert.doesNotMatch(forums.labels.honesty.ar, /لا تاريخ/);
+  assert.equal(forums.labels.honesty, undefined);
   assert.match(forums.labels.host.en, /Ahmed Abdelalim/);
   assert.doesNotMatch(forums.labels.host.en, /\bDr\.?\b/);
   assert.doesNotMatch(JSON.stringify(first), /\bDr\.?\b/);
@@ -111,6 +108,7 @@ test('Incheon Localization Awards sit inside the dialogue, extended, with a vect
   assert.ok(awards);
   assert.equal(awards.title.ar, 'جوائز إنتشون للتوطين');
   assert.equal(awards.title.en, 'Incheon Localization Awards');
+  assert.equal(awards.labels.soon, undefined);
   assert.equal(awards.status.ar, 'تُعلن في حوار إنتشون.');
   assert.equal(awards.status.en, 'Announced at the Incheon Dialogue.');
   assert.doesNotMatch(awards.status.en, /April|2027|May|June|prize money|\$/i);
@@ -143,6 +141,7 @@ test('Incheon Localization Awards sit inside the dialogue, extended, with a vect
   assert.match(awards.honesty.ar, /تكريم، وليست مبلغًا ماليًا/);
   assert.doesNotMatch(awards.honesty.en, /have been set|not yet|coming soon/i);
   assert.doesNotMatch(awards.honesty.ar, /لا قيمة للجوائز|قريبًا|إن شاء الله/);
+  assert.doesNotMatch(blob, /Coming soon|قريبًا|لا قيمة للجوائز|No prize value/);
   for (const item of [...awards.principles, ...awards.categories]) {
     assert.ok(isText(item.title) && isText(item.text), item.title.en);
   }
@@ -186,7 +185,7 @@ test('the conferences routes and admin collection exist, and Conferences is a to
   assert.equal(item.ar, 'المؤتمرات');
   assert.equal(nav.sections.filter(s => s.path === '/conferences').length, 1, 'Conferences appears once');
   assert.equal(nav.sections.find(s => s.path === '/forums'), undefined);
-  assert.deepEqual(paths.slice(paths.indexOf('/insights'), paths.indexOf('/work-with-us') + 1), ['/insights', '/indices', '/news', '/conferences', '/work-with-us']);
+  assert.deepEqual(paths.slice(paths.indexOf('/reports'), paths.indexOf('/work-with-us') + 1), ['/reports', '/indices', '/news', '/conferences', '/work-with-us']);
   assert.equal(paths[paths.indexOf('/news') + 1], '/conferences');
   assert.ok(item.children.some(c => c.href === '/conferences' && c.en === 'Conferences' && c.ar === 'المؤتمرات'));
   assert.ok(item.children.some(c => c.href === '/conferences#incheon-dialogue' && c.en === 'Incheon Dialogue' && c.ar === 'حوار إنتشون'));
