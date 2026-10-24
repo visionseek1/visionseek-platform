@@ -434,6 +434,7 @@ function renderSide() {
 <a class="nl ${on("research")}" href="#research">${ICON.book}الأبحاث والنشر<span class="c num">${PUBS.length}</span></a>
 <a class="nl ${on("comps")}" href="#comps">${ICON.trophy}المسابقات${redComps().length ? `<span class="c num" style="color:var(--late)">${redComps().length}</span>` : `<span class="c num">${COMPS.length}</span>`}</a>
 <a class="nl ${on("solutions")}" href="#solutions">${ICON.globe}حلول من كوريا<span class="c num">${SOLS.filter((x) => x.visible).length}</span></a>
+<a class="nl ${on("medical")}" href="#medical">${ICON.layers}القطاع الطبي<span class="c num">${medicalOpps().length}</span></a>
 <span class="grp">القطاعات</span>${sec}<a class="nl sub ${on("later")}" href="#later" style="color:var(--mute)">بعدين<span class="c num">${later}</span></a>
 <span class="grp">الأقسام والمسارات</span>${deps}
 <span class="grp">المكتبة</span>
@@ -584,6 +585,33 @@ function pageSolutions(a) {
 <p class="small mute">اللي بتغيّره هنا بيظهر على الموقع خلال 10 دقايق. النص الكامل والدليل بيتعدّلوا في Notion. مفيش حذف من هنا — «اخفيه» بيشيله من الموقع بس.</p>
 ${groups}`;
 }
+// ---------- القطاع الطبي (معاينة): قراءة من data/ops/medical.ts عبر السيرفر. مفيش كتابة ومفيش Notion.
+function medicalData() {
+  const m = RM && RM.medical;
+  return {
+    opportunities: m && Array.isArray(m.opportunities) ? m.opportunities : [],
+    relationships: m && Array.isArray(m.relationships) ? m.relationships : [],
+    research: m && Array.isArray(m.research) ? m.research : [],
+  };
+}
+function medicalOpps() { return medicalData().opportunities; }
+function showDash(v) { const s = String(v == null ? "" : v).trim(); return t(s || "—"); }
+function pageMedical() {
+  const m = medicalData();
+  const empty = (n) => `<tr><td colspan="${n}" class="empty">لا يوجد بعد.</td></tr>`;
+  const opps = m.opportunities.map((o) => `<tr><td>${t(o.name || "—")}</td><td>${showDash(o.source)}</td><td>${showDash(o.owner)}</td><td>${showDash(o.nextStep)}</td><td class="num">${o.date ? fmt(String(o.date).slice(0, 10)) : "—"}</td><td>${showDash(o.venue)}</td><td>${showDash(o.status)}</td></tr>`).join("");
+  const rels = m.relationships.map((r) => `<tr><td>${showDash(r.organization)}</td><td>${showDash(r.person)}</td><td class="num">${r.lastContact ? fmt(String(r.lastContact).slice(0, 10)) : "—"}</td><td>${showDash(r.where)}</td></tr>`).join("");
+  const papers = m.research.map((r) => `<tr><td>${showDash(r.title)}</td><td>${showDash(r.status)}</td><td>${showDash(r.outputs)}</td></tr>`).join("");
+  return head("القطاع الطبي", `<a href="#home">الرئيسية</a>`) + `
+<p class="small mute">قراءة بس. البيانات في ملف المعاينة، ومفيش كتابة على Notion من هنا.</p>
+<section class="sec" aria-label="الفرص"><div class="t"><h2>الفرص</h2><span class="num">${m.opportunities.length}</span></div>
+<section class="card tbl"><table><thead><tr><th>الاسم</th><th>المصدر</th><th>صاحبه</th><th>الخطوة الجاية</th><th>التاريخ</th><th>المكان</th><th>الحالة</th></tr></thead><tbody>${opps || empty(7)}</tbody></table></section></section>
+<section class="sec" aria-label="العلاقات"><div class="t"><h2>العلاقات</h2><span class="num">${m.relationships.length}</span></div>
+<section class="card tbl"><table><thead><tr><th>المؤسسة</th><th>الشخص</th><th>آخر تواصل</th><th>أين نحن</th></tr></thead><tbody>${rels || empty(4)}</tbody></table></section></section>
+<section class="sec" aria-label="الأبحاث"><div class="t"><h2>الأبحاث</h2><span>القدرات هتيجي من هنا بعدين</span></div>
+<section class="card tbl"><table><thead><tr><th>العنوان</th><th>الحالة</th><th>المخرجات</th></tr></thead><tbody>${papers || empty(3)}</tbody></table></section></section>`;
+}
+
 // ---------- النشرة الشهرية لـ VisionSeek Insights: بند في قطاع الظهور والتواصل (15 أكتوبر 2026)
 const SUBS = (L && L.newsletter ? L.newsletter : []).map((r) => ({ email: String(r["البريد"] || ""), lang: String(r["اللغة"] || ""), page: String(r["الصفحة"] || ""), status: String(r["الحالة"] || "مشترك"), date: day(r["تاريخ الاشتراك"]) || day(r.created) })).filter((x) => x.email).sort((a, b) => (a.date < b.date ? 1 : -1));
 function newsletterBlock() {
@@ -945,7 +973,7 @@ function render() {
   let h = location.hash.slice(1) || "home";
   if (ALIAS[h]) { location.replace("#" + ALIAS[h]); return; }
   const [p, a] = [h.split("/")[0], h.split("/").slice(1).join("/")];
-  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "research" ? pageResearch(a) : p === "comps" ? pageComps(a) : p === "solutions" ? pageSolutions(a) : pageHome();
+  const html = p === "sector" ? pageSector(a) : p === "later" ? pageLater() : p === "dept" ? pageDept(a) : p === "track" ? pageTrack(a) : p === "item" ? pageItem(a) : p === "new" ? pageNew(a) : p === "services" ? pageServices() : p === "clients" ? pageClients(a) : p === "client" ? pageClient(a) : p === "ref" ? pageRef(a) : p === "research" ? pageResearch(a) : p === "comps" ? pageComps(a) : p === "solutions" ? pageSolutions(a) : p === "medical" ? pageMedical() : pageHome();
   $("#main").innerHTML = html;
   renderSide();
   menu(false);

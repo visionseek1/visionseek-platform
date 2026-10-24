@@ -199,3 +199,34 @@ test("research & publishing and competitions replace the learning engine; Notion
     assert.doesNotMatch(route, /archived|in_trash|DELETE/);
   }
 });
+
+test("medical sector is a read-only preview from a typed file and does not touch Notion", async () => {
+  const [data, route, mod, source, notion] = await Promise.all([
+    read("data/ops/medical.ts"),
+    read("app/ops/route.ts"),
+    read("app/ops/room-html.ts"),
+    read("scripts/ops-room/room.html"),
+    read("lib/notion-room.ts"),
+  ]);
+  const html = JSON.parse(mod.slice(mod.indexOf('"'), mod.lastIndexOf('"') + 1));
+  for (const text of [html, source]) {
+    for (const needle of ["القطاع الطبي", "#medical", "pageMedical", "الفرص", "العلاقات", "الأبحاث", "لا يوجد بعد.", "القدرات هتيجي من هنا بعدين"]) {
+      assert.ok(text.includes(needle), needle);
+    }
+    assert.doesNotMatch(text, /إشارات الماكينة|أفكار الماكينة/);
+    assert.doesNotMatch(text, /action="\/ops\/medical"/);
+  }
+  assert.match(data, /Medical Korea 2026 in the UAE/);
+  assert.match(data, /source: "KHIDI"/);
+  assert.match(data, /date: "2026-10-22"/);
+  assert.match(data, /venue: "ADNEC"/);
+  assert.match(data, /بلا سفر، نتواصل مع KHIDI كوريا لمقابلات أونلاين\/كوريا/);
+  assert.match(data, /owner: "—"/);
+  assert.match(data, /status: "—"/);
+  assert.match(data, /relationships: \[\]/);
+  assert.match(data, /research: \[\]/);
+  assert.match(route, /medical: medicalSector/);
+  assert.doesNotMatch(notion, /medicalSector|القطاع الطبي/);
+  assert.doesNotMatch(data, /ntn_|ROOM_PASSWORD|NOTION_TOKEN\s*=/);
+  assert.ok(!existsSync(new URL("../app/ops/medical/route.ts", import.meta.url)));
+});
