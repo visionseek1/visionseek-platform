@@ -134,6 +134,7 @@ test('the forums routes and admin collection exist, and Forums is a top-level na
   assert.equal(item.en, 'Forums');
   assert.equal(item.ar, 'المنتديات');
   assert.equal(nav.sections.filter(s => s.path === '/forums').length, 1, 'Forums appears once');
+  assert.deepEqual(paths.slice(paths.indexOf('/insights'), paths.indexOf('/work-with-us') + 1), ['/insights', '/indices', '/news', '/forums', '/work-with-us']);
   assert.equal(paths[paths.indexOf('/news') + 1], '/forums');
   assert.ok(item.children.some(c => c.href === '/forums'));
   assert.ok(item.children.some(c => c.href === '/forums#incheon-dialogue' && c.en === 'Incheon Dialogue' && c.ar === 'حوار إنتشون'));

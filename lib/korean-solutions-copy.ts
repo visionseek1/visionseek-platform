@@ -41,6 +41,38 @@ export const ROUTE_COPY: Record<Route, {name: Bi; line: Bi}> = {
   'مشروع مشترك': {name: {ar: 'مشروع مشترك', en: 'Joint venture'}, line: {ar: 'شركة مشتركة بين الطرف الكوري وشريك في المنطقة', en: 'A joint company between the Korean side and a regional partner'}},
 };
 
+/**
+ * What people can ask us to bring from Korea. `sector` is the value the leads board knows; `href` sends the tile to its
+ * own page instead of the request form. Photos illustrate the field, never a product, and show no people.
+ */
+export type Category = {id: string; sector: string; image?: string; href?: string; name: Bi; examples: Bi};
+export const CATEGORIES: Category[] = [
+  {id: 'health', sector: 'الصحة', image: '/ks/health.jpg',
+    name: {ar: 'الأجهزة الطبية والتشخيص', en: 'Medical devices and diagnostics'},
+    examples: {ar: 'أجهزة تشخيص وعلاج للمستشفيات والعيادات ومراكز الفحص.', en: 'Diagnostic and treatment devices for hospitals, clinics and screening centres.'}},
+  {id: 'machines', sector: 'التصنيع', image: '/ks/workshop.jpg',
+    name: {ar: 'المعدات الصناعية وقطع الغيار', en: 'Industrial equipment and spare parts'},
+    examples: {ar: 'خطوط إنتاج وتعبئة، ومعدات ورش، وقطع غيار، وخامات للمصانع.', en: 'Production and packaging lines, workshop equipment, spare parts and factory materials.'}},
+  {id: 'power', sector: 'الكهرباء والإلكترونيات', image: '/ks/lines.jpg',
+    name: {ar: 'الكهرباء والإلكترونيات', en: 'Electrical equipment and electronics'},
+    examples: {ar: 'كابلات ولوحات توزيع، وبطاريات وتخزين طاقة، وإلكترونيات قياس وتحكم.', en: 'Cables and switchgear, batteries and energy storage, measurement and control electronics.'}},
+  {id: 'water', sector: 'الطاقة', image: '/ks/plant.jpg',
+    name: {ar: 'الطاقة والمياه', en: 'Energy and water'},
+    examples: {ar: 'معدات محطات الطاقة، والتحلية ومعالجة المياه، والمضخات.', en: 'Power-plant equipment, desalination and water treatment, pumps.'}},
+  {id: 'food', sector: 'الزراعة والغذاء', image: '/field-food.jpg',
+    name: {ar: 'الزراعة المحمية والتقنية', en: 'Protected and technical farming'},
+    examples: {ar: 'مزارع ذكية ومحمية، وتقنيات للزراعة مع الحر وقلة المياه.', en: 'Smart and protected farms, and farming technology for heat and scarce water.'}},
+  {id: 'cities', sector: 'الأمن والمدن', image: '/ks/cameras.jpg',
+    name: {ar: 'الأمن والمدن', en: 'Security and cities'},
+    examples: {ar: 'كاميرات وأنظمة مراقبة ذكية للمنشآت والمدن.', en: 'Smart cameras and monitoring systems for facilities and cities.'}},
+  {id: 'cars', sector: 'السيارات', href: '/cars',
+    name: {ar: 'سيارات هايبرد وكهربائية', en: 'Hybrid and electric cars'},
+    examples: {ar: 'للسيارات صفحة خاصة: اطلب السيارة التي تريدها من هناك.', en: 'Cars have their own page: request the car you want there.'}},
+  {id: 'other', sector: 'مجال آخر',
+    name: {ar: 'شيء آخر؟', en: 'Something else?'},
+    examples: {ar: 'اكتب أي منتج أو خدمة تحتاجها من كوريا.', en: 'Write down any product or service you need from Korea.'}},
+];
+
 /** The one line every Korean Solutions page carries (Dr. Ahmed's wording). */
 export const NO_PARTNERSHIP: Bi = {
   ar: 'هذه حلول كورية نرصدها ونقترحها. وجودها هنا لا يعني شراكة بيننا وبين الشركة، إلا إذا ذكرنا ذلك.',
