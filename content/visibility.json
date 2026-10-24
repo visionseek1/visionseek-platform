@@ -7,16 +7,22 @@
       "path": "/leaders-house"
     },
     {
-      "path": "/reports"
-    },
-    {
       "path": "/news"
     },
     {
-      "path": "/insights/frameworks/decision-dimensions"
+      "path": "/reports/frameworks/decision-dimensions"
     },
     {
-      "path": "/insights/notes/l-001"
+      "path": "/reports/notes/l-001"
+    },
+    {
+      "path": "/reports/methodology"
+    },
+    {
+      "path": "/reports/agent-governance"
+    },
+    {
+      "path": "/reports/physical-ai"
     }
   ],
   "hiddenBlocks": []

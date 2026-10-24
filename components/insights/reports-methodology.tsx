@@ -56,14 +56,14 @@ export function ReportsMethodology({locale}: {locale: Locale}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en); const p = ar ? '/ar' : '';
   const doctrine = `${p}${paper.doctrineHref}`;
   const sec = (n: string, label: Bi) => <p className={styles.kicker}><i aria-hidden="true"/><span className={styles.mono}>{n}</span> · {t(label)}</p>;
-  return <Shell locale={locale} path={`/insights/reports/${paper.slug}`}>
+  return <Shell locale={locale} path={`/reports/reports/${paper.slug}`}>
     <SubNav locale={locale} current="reports"/>
     <div className={`${styles.r} ${ar ? '' : styles.en}`}>
 
       <header className={styles.cover}>
         <div className={styles.grid} aria-hidden="true"/>
         <div className={styles.coverIn}>
-          <nav className={styles.crumbs} aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}><Link href={`${p}/insights`}>Insights</Link><span aria-hidden="true">/</span><Link href={`${p}/insights/reports`}>{t(insights.sections.reports.title)}</Link></nav>
+          <nav className={styles.crumbs} aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}><Link href={`${p}/reports`}>{ar ? 'تقارير' : 'Reports'}</Link><span aria-hidden="true">/</span><Link href={`${p}/reports/reports`}>{t(insights.sections.reports.title)}</Link></nav>
           <p className={styles.lab} lang="en" dir="ltr">VISIONSEEK LAB · METHODOLOGY</p>
           <h1>{t(paper.cardTitle)}</h1>
           <p className={styles.q}>{t(paper.title)}</p>

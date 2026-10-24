@@ -17,10 +17,16 @@ const nextConfig: NextConfig = {
         // «الورش» became Masterclass; Institute is the umbrella above it.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
-        // «احذر نصائح الذكاء الاصطناعي» moved from the papers to the reports (16 Oct 2026).
-        {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/insights/reports/half-the-picture`, permanent: true},
+        // Forums was renamed Conferences (24 Oct 2026): old /forums links keep working.
+        {source: `${prefix}/forums`, destination: `${prefix}/conferences`, permanent: true},
+        {source: `${prefix}/forums/:path*`, destination: `${prefix}/conferences/:path*`, permanent: true},
+        // Insights was renamed Reports (24 Oct 2026): old /insights links keep working.
+        // The research→reports move for this paper must sit above the catch-all.
+        {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/reports/reports/half-the-picture`, permanent: true},
+        {source: `${prefix}/insights/research/half-the-picture-ar.pdf`, destination: '/reports/reports/half-the-picture-ar.pdf', permanent: true},
+        {source: `${prefix}/insights`, destination: `${prefix}/reports`, permanent: true},
+        {source: `${prefix}/insights/:path*`, destination: `${prefix}/reports/:path*`, permanent: true},
       ]),
-      {source: '/insights/research/half-the-picture-ar.pdf', destination: '/insights/reports/half-the-picture-ar.pdf', permanent: true},
       // The governance section was folded into Masterclass (23 Oct 2026).
       {source: '/governance/single-track-trap', destination: '/masterclass/single-track-trap', permanent: true},
       {source: '/ar/governance/single-track-trap', destination: '/ar/masterclass/single-track-trap', permanent: true},

@@ -48,8 +48,8 @@
     "ar": "نرسم الشغل الذي يستطيع الناس الحاليون والمال الحالي تغييره. ثم نسمّي ما لا يُرى من الداخل: قدرة، أو فرصة، أو طريق تمويل. لا تُخاطَب جهة خارجية في الجلسة، ولا يُوعد بواحدة."
   },
   "after": {
-    "en": "After 30 days we look at what the institution actually started with its own resources, and which of the outside items it chose to pursue. Pursuit is not a deal. No partner is named because no partner exists.",
-    "ar": "بعد 30 يومًا ننظر فيما بدأته المؤسسة فعلًا بمواردها، وأي البنود الخارجية اختارت أن تسعى إليها. السعي ليس اتفاقًا. لا تُذكر جهة لأن لا جهة قائمة."
+    "en": "After 30 days we look at what the institution actually started with its own resources, and which of the outside items it chose to pursue. Pursuit is not a deal. The second step is built on the external paths the institution chooses.",
+    "ar": "بعد 30 يومًا ننظر فيما بدأته المؤسسة فعلًا بمواردها، وأي البنود الخارجية اختارت أن تسعى إليها. السعي ليس اتفاقًا. والخطوة الثانية تُبنى على ما تختاره المؤسسة من مسارات خارجية."
   },
   "questions": [
     {
@@ -83,8 +83,8 @@
       "ar": "قائمة قصيرة بما لا تراه القيادة: قدرة، وفرصة، وطريق تمويل."
     },
     {
-      "en": "A first move that does not wait for an outside party, and a second move that does not pretend one is already there.",
-      "ar": "خطوة أولى لا تنتظر جهة خارجية، وخطوة ثانية لا تدّعي أن الجهة موجودة."
+      "en": "A first move that does not wait for an outside party, and a second step built on the external paths the institution chooses.",
+      "ar": "خطوة أولى لا تنتظر جهة خارجية، وخطوة ثانية تُبنى على ما تختاره المؤسسة من مسارات خارجية."
     }
   ],
   "faq": [
@@ -104,8 +104,8 @@
         "ar": "هل نسبة الـ70% نتيجتكم؟"
       },
       "a": {
-        "en": "No. It is BCG's, from the article linked on this page. We have held no masterclass, so we have no result of our own to show.",
-        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة. لم نعقد ماستركلاس، فلا نتيجة لنا نعرضها."
+        "en": "No. It is BCG's, from the article linked on this page.",
+        "ar": "لا. هي لـBCG، من المقال المربوط في هذه الصفحة."
       }
     }
   ]

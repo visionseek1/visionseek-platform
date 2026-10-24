@@ -30,7 +30,7 @@ const alexandria = Alexandria({
   adjustFontFallback: true,
 });
 
-// Editorial serif for English headings in VisionSeek Insights only (calm, research-house register).
+// Editorial serif for English headings in VisionSeek Reports only (calm, research-house register).
 const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
   weight: ["500"],

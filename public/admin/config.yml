@@ -45,13 +45,12 @@ collections:
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "معهد VisionSeek (القسم كله)  /institute", value: "/institute"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
-                  - {label: "Insights (القسم كله)  /insights", value: "/insights"}
+                  - {label: "تقارير (القسم كله)  /reports", value: "/reports"}
                   - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
-                  - {label: "المنتديات (القسم كله)  /forums", value: "/forums"}
+                  - {label: "المؤتمرات (القسم كله)  /conferences", value: "/conferences"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
-                  - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
                   - {label: "بيت القادة (القسم كله)  /leaders-house", value: "/leaders-house"}
                   - {label: "منهجنا  /method", value: "/method"}
                   - {label: "حلول من كوريا ← سيارات هايبرد وكهربائية  /cars", value: "/cars"}
@@ -70,10 +69,10 @@ collections:
                   - {label: "معهد VisionSeek ← الزمالة  /institute/fellowship", value: "/institute/fellowship"}
                   - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
                   - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
-                  - {label: "Insights ← التقارير  /insights/reports", value: "/insights/reports"}
-                  - {label: "Insights ← الأوراق العلمية  /insights/research", value: "/insights/research"}
-                  - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
-                  - {label: "Insights ← الأطر والأدوات  /insights/frameworks/decision-dimensions", value: "/insights/frameworks/decision-dimensions"}
+                  - {label: "تقارير ← التقارير  /reports/reports", value: "/reports/reports"}
+                  - {label: "تقارير ← الأوراق العلمية  /reports/research", value: "/reports/research"}
+                  - {label: "تقارير ← ملاحظات  /reports/notes/l-001", value: "/reports/notes/l-001"}
+                  - {label: "تقارير ← الأطر والأدوات  /reports/frameworks/decision-dimensions", value: "/reports/frameworks/decision-dimensions"}
                   - {label: "المؤشرات ← مؤشر القدرة التكنولوجية العربية  /indices/arab-technology-capability", value: "/indices/arab-technology-capability"}
                   - {label: "المؤشرات ← أطلس القدرات العربية الحرجة  /indices/arab-critical-capabilities-atlas", value: "/indices/arab-critical-capabilities-atlas"}
                   - {label: "الأخبار ← الإعلام والاستفسارات  /news/media", value: "/news/media"}
@@ -2147,12 +2146,12 @@ collections:
               - {label: رابط الرجوع, name: back, widget: string}
 
   - name: insights
-    label: VisionSeek Insights
+    label: VisionSeek Reports
     description: "الواجهة العامة لمحرّك التعلم: الملاحظات، والأطر، والتقارير، والمقالات، والأبحاث المحكّمة، والنشرة. أي قسم فاضي ما بيظهرش على الموقع لحد ما يتحط فيه محتوى. إيميلات النشرة بتتحفظ في منصة الإدارة، ومفيش إرسال غير بموافقة د. أحمد."
-    preview_path: "ar/insights"
+    preview_path: "ar/reports"
     editor: {preview: false}
     files:
-    - label: VisionSeek Insights
+    - label: VisionSeek Reports
       name: insights
       file: content/insights.json
       fields:
@@ -2409,9 +2408,10 @@ collections:
           - {label: العربية, name: ar, widget: text}
         - {label: "الرابط", name: url, widget: string, required: false}
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
+        - {label: "ملف PDF بالإنجليزي", name: pdfEn, widget: file, required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
-        - {label: "صفحة التقرير على الموقع (مثلًا /insights/reports/half-the-picture)", name: page, widget: string, required: false}
+        - {label: "صفحة التقرير على الموقع (مثلًا /reports/reports/half-the-picture)", name: page, widget: string, required: false}
         - {label: "صورة الغلاف", name: cover, widget: image, required: false}
         - {label: "لغة ملف PDF", name: pdfLang, widget: select, options: [ar, en], required: false}
         - label: "رابط مرتبط (تقرير ↔ ورقة)"
@@ -3946,12 +3946,12 @@ collections:
                   - {label: "العربية", name: ar, widget: string}
 
   - name: forums
-    label: المؤتمرات والمنتديات
-    description: "صفحة /forums و /ar/forums. أضف منتدى جديدًا من القائمة. الشهر المعتمد فقط (أبريل 2027). لا تكتب يومًا ولا مكانًا محددًا داخل إنتشون ولا متحدثين ولا شركاء ولا رعاة."
-    preview_path: "ar/forums"
+    label: المؤتمرات
+    description: "صفحة /conferences و /ar/conferences. أضف منتدى جديدًا من القائمة. الشهر المعتمد فقط (أبريل 2027). لا تكتب يومًا ولا مكانًا محددًا داخل إنتشون ولا متحدثين ولا شركاء ولا رعاة."
+    preview_path: "ar/conferences"
     editor: {preview: false}
     files:
-      - label: المؤتمرات والمنتديات
+      - label: المؤتمرات
         name: forums
         file: content/forums.json
         fields:
@@ -4057,7 +4057,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-          - label: المنتديات
+          - label: المؤتمرات
             name: forums
             widget: list
             summary: "{{fields.title.ar}} / {{fields.slug}}"

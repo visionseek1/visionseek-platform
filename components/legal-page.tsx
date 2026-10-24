@@ -20,7 +20,7 @@ export default function LegalPage({ locale, kind }: { locale: "ar" | "en"; kind:
         items={[
           { href: home, label: ar ? "الرئيسية" : "HOME" },
           { href: ar ? "/ar/projects" : "/projects", label: ar ? "المجالات" : "FIELDS" },
-          { href: ar ? "/ar/insights" : "/insights", label: ar ? "رؤى" : "INSIGHTS" },
+          { href: ar ? "/ar/reports" : "/reports", label: ar ? "تقارير" : "REPORTS" },
         ]}
       />
 

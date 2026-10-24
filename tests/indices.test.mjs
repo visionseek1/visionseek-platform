@@ -32,8 +32,8 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.equal(data.indices[0].status, 'upcoming');
   assert.equal(data.indices[0].title.ar, 'مؤشر القدرة التكنولوجية العربية');
   assert.equal(data.indices[0].title.en, 'Arab Technology Capability Index');
-  assert.equal(data.indices[0].statusLabel.ar, 'الإصدار التجريبي قريبًا');
-  assert.equal(data.indices[0].statusLabel.en, 'Pilot edition coming soon');
+  assert.equal(data.indices[0].statusLabel.ar, 'قيد الإعداد');
+  assert.equal(data.indices[0].statusLabel.en, 'In preparation');
   assert.equal(data.indices[0].subtitle.ar, 'التكنولوجيات السبعة الأساسية — الامتلاك والتوطين');
   assert.equal(data.indices[0].subtitle.en, 'Seven Core Technologies — Ownership & Localization');
   assert.match(data.indices[0].heroImage, /^\/indices\/.+\.(jpg|jpeg|webp)$/);
@@ -46,16 +46,16 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.equal(data.indices[1].status, 'upcoming');
   assert.equal(data.indices[1].title.ar, 'أطلس القدرات العربية الحرجة');
   assert.equal(data.indices[1].title.en, 'Arab Critical Capabilities Atlas');
-  assert.equal(data.indices[1].statusLabel.ar, 'قريبًا');
-  assert.equal(data.indices[1].statusLabel.en, 'Coming soon');
+  assert.equal(data.indices[1].statusLabel.ar, 'قيد الإعداد');
+  assert.equal(data.indices[1].statusLabel.en, 'In preparation');
   assert.equal(data.indices[1].subtitle.ar, 'الخريطة المفتوحة للقدرات العربية في التكنولوجيات السبعة الأساسية');
   assert.equal(data.indices[1].subtitle.en, 'The Open Map of Arab Capability in the Seven Core Technologies');
   assert.equal(data.indices[1].pillars.length, 4);
   assert.deepEqual(data.indices[1].pillars.map(p => p.id), ['explore', 'profiles', 'gaps', 'sources']);
   assert.equal(data.indices[1].principles.length, 6);
   assert.deepEqual(data.indices[1].principles.map(p => p.id), ['open', 'source', 'method', 'correctable', 'own', 'independent']);
-  assert.match(data.indices[1].results.en, /symbolic/i);
-  assert.match(data.indices[1].results.ar, /رمزية/);
+  assert.match(data.indices[1].results.en, /first edition/i);
+  assert.match(data.indices[1].results.ar, /الإصدار الأول/);
   assert.match(data.indices[1].heroImage, /^\/indices\/.+\.svg$/);
   const atlasSvg = read(`public${data.indices[1].heroImage}`);
   assert.doesNotMatch(atlasSvg, /<text[\s>]/i);
@@ -80,8 +80,8 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
     }
     assert.match(item.methodology.ar, /ستُنشر|سيتم نشر|تُنشر/);
     assert.match(item.methodology.en, /will be published/i);
-    assert.match(item.results.ar, /لا توجد نتائج بعد/);
-    assert.match(item.results.en, /No results yet/);
+    assert.match(item.results.ar, /الإصدار الأول/);
+    assert.match(item.results.en, /first edition/i);
     assert.doesNotMatch(item.title.en + item.lede.en + item.pilot.en, /\bDr\.?\b/);
   }
   walk(data, 'indices', (key, value, path) => {
@@ -111,7 +111,7 @@ test('Indices: own pages in both languages, sitemap and /admin, in the header af
   assert.ok(item, 'Indices belongs in the header after Ahmed approved the live page');
   assert.equal(item.en, 'Indices');
   assert.equal(item.ar, 'المؤشرات');
-  assert.equal(paths[paths.indexOf('/insights') + 1], '/indices');
+  assert.equal(paths[paths.indexOf('/reports') + 1], '/indices');
   assert.deepEqual(item.children.map(c => c.href), [
     '/indices',
     '/indices/arab-technology-capability',
@@ -146,27 +146,27 @@ test('Indices: built pages stay empty of results and keep the pilot line', () =>
     assert.doesNotMatch(main, /<form[\s>]/i);
     assert.doesNotMatch(main, /Korea|كوريا|Incheon|إنتشون/);
   }
-  assert.match(en, /Pilot edition coming soon/);
+  assert.match(en, /In preparation/);
   assert.match(en, /Ahmed Abdelalim/);
   assert.doesNotMatch(en, /Dr\. Ahmed/);
   assert.match(en, /mailto:abdelalim@visionseek\.org/);
   assert.match(en, /Key visual for the Arab Technology Capability Index/);
-  assert.match(ar, /الإصدار التجريبي قريبًا/);
+  assert.match(ar, /قيد الإعداد/);
   assert.match(ar, /مؤشر القدرة التكنولوجية العربية/);
-  assert.match(ar, /لا توجد نتائج بعد/);
+  assert.match(ar, /تُعلن النتائج مع الإصدار الأول/);
   assert.match(ar, /dir="rtl"/);
   assert.match(ar, /الامتلاك لا الاستخدام/);
   assert.doesNotMatch(mainOf(ar), colloquialAr);
   assert.match(enSlug, /Arab Technology Capability Index/);
   assert.match(arSlug, /المنهجية ستُنشر/);
   assert.match(arSlug, /الرسم المفتاحي لمؤشر القدرة التكنولوجية العربية/);
-  assert.match(en, /Coming soon/);
+  assert.doesNotMatch(en, /Coming soon|Pilot edition coming soon/);
   assert.match(en, /Arab Critical Capabilities Atlas/);
   assert.match(en, /The index and the atlas/);
-  assert.match(ar, /قريبًا/);
+  assert.doesNotMatch(ar, /قريبًا/);
   assert.match(ar, /أطلس القدرات العربية الحرجة/);
   assert.match(ar, /المؤشر والأطلس/);
-  assert.match(enAtlas, /Coming soon/);
+  assert.match(enAtlas, /In preparation/);
   assert.match(enAtlas, /Key visual for the Arab Critical Capabilities Atlas/);
   assert.match(enAtlas, /arab-critical-capabilities-atlas\.svg/);
   assert.doesNotMatch(enAtlas, /arab-critical-capabilities-atlas\.jpg/);

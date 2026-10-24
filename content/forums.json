@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": {
-      "en": "Incheon Dialogue | VisionSeek",
-      "ar": "حوار إنتشون | VisionSeek"
+      "en": "Conferences | VisionSeek",
+      "ar": "المؤتمرات | VisionSeek"
     },
     "description": {
-      "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
-      "ar": "حوار إنتشون منتدى صغير بالدعوة فقط لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول: أبريل 2027، إنتشون."
+      "en": "The Incheon Dialogue is an invitation-only annual forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
+      "ar": "حوار إنتشون منتدى سنوي مغلق بالدعوة لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول: أبريل 2027، إنتشون."
     }
   },
   "page": {
@@ -15,8 +15,8 @@
       "ar": "الرئيسية"
     },
     "section": {
-      "en": "Conferences & Forums",
-      "ar": "المؤتمرات والمنتديات"
+      "en": "Conferences",
+      "ar": "المؤتمرات"
     },
     "status": {
       "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
@@ -56,10 +56,6 @@
       "en": "Register interest",
       "ar": "سجّل اهتمامك"
     },
-    "honesty": {
-      "en": "No specific venue in Incheon, and no names, partners or sponsors have been set.",
-      "ar": "لا مكان محدد داخل إنتشون، ولا أسماء، ولا شركاء ولا رعاة."
-    },
     "host": {
       "en": "Invitations are considered by Ahmed Abdelalim.",
       "ar": "ينظر في طلبات الدعوة أحمد عبدالعليم."
@@ -90,7 +86,7 @@
         {"label": {"en": "Where", "ar": "المكان"}, "value": {"en": "Incheon", "ar": "إنتشون"}},
         {"label": {"en": "Access", "ar": "الحضور"}, "value": {"en": "Invitation only", "ar": "بالدعوة فقط"}}
       ],
-      "visual": "/forums/incheon-dialogue.svg",
+      "visual": "/conferences/incheon-dialogue.svg",
       "visualAlt": {
         "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula.",
         "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل مخطط كوريا المنقّط بشبه الجزيرة العربية."
@@ -100,14 +96,14 @@
         "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن.\n\nحقّقت كوريا ذلك في جيل واحد. والعالم العربي يملك الطموح والإمكانات ليقود.\n\n«حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
       },
       "what": {
-        "en": "A small, closed annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
-        "ar": "منتدى سنوي صغير ومغلق، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        "en": "An invitation-only annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
+        "ar": "منتدى سنوي مغلق، بالدعوة، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
       },
       "principles": [
         {
           "title": {
-            "en": "Small and selected",
-            "ar": "صغير ومختار"
+            "en": "Select, by invitation",
+            "ar": "نخبوي ومختار"
           },
           "text": {
             "en": "Attendance is by invitation only, so the conversation can be real.",
@@ -175,7 +171,7 @@
           "en": "Announced at the Incheon Dialogue, April 2027, Incheon.",
           "ar": "تُعلن ضمن «حوار إنتشون» في أبريل 2027، في إنتشون، إن شاء الله."
         },
-        "visual": "/forums/incheon-awards.svg",
+        "visual": "/conferences/incheon-awards.svg",
         "visualAlt": {
           "en": "Vector mark for the Incheon Localization Awards: a lime isometric VisionSeek symbol on black, with a soft glow.",
           "ar": "علامة جوائز إنتشون للتوطين: رمز VisionSeek المتساوي القياس بالأخضر على أسود، مع توهج خفيف."
@@ -265,12 +261,7 @@
           "en": "The institutions and individuals who built the capability quietly and deserve recognition; governments looking for models to follow; Korean partners who transferred knowledge in good faith; and every Arab leader who wants to know what real success looks like.",
           "ar": "المؤسسات والأفراد الذين بنوا القدرة بصمت ويستحقون الاعتراف، والحكومات التي تبحث عن نماذج تُحتذى، والشركاء الكوريون الذين نقلوا المعرفة بصدق، وكل قائد عربي يريد أن يعرف كيف يبدو النجاح الحقيقي."
         },
-        "honesty": {
-          "en": "No prize value, no juror or winner names, and no nomination window have been set.",
-          "ar": "لا قيمة للجوائز، ولا أسماء محكّمين أو فائزين، ولا نافذة ترشيح."
-        },
         "labels": {
-          "soon": {"en": "Coming soon", "ar": "قريبًا"},
           "mandate": {"en": "What the awards are", "ar": "ما هي الجوائز"},
           "principles": {"en": "Principles", "ar": "مبادئ الجوائز"},
           "categories": {"en": "Categories", "ar": "الفئات"},

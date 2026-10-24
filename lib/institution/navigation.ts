@@ -12,7 +12,10 @@ const visible = (section: NavSection): NavSection => ({...section, children: sec
 
 export const institutionNav: NavSection[] = data.sections.filter(section => !isArchived(section.path)).map(visible);
 
-// Reports belongs in the header; preserve the existing footer navigation.
+// The live Reports section is now a regular nav item (formerly Insights). The older
+// reports-center entry in navigation.json stays for /admin archive options; it is
+// not injected again when that path is already in the main sections.
 const reportsNav: NavSection = visible(data.reports);
 const showReports = !isArchived(data.reports.path);
-export const institutionHeaderNav: NavSection[] = institutionNav.flatMap(item => item.path === '/news' && showReports ? [reportsNav, item] : [item]);
+const reportsAlreadyInNav = data.sections.some(section => section.path === data.reports.path);
+export const institutionHeaderNav: NavSection[] = institutionNav.flatMap(item => item.path === '/news' && showReports && !reportsAlreadyInNav ? [reportsNav, item] : [item]);

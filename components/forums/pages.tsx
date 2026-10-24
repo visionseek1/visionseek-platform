@@ -31,7 +31,7 @@ function AwardsSoon({awards, locale, slug}: {awards: ForumAwards; locale: Locale
   const opening = paragraphs(tx(locale, awards.opening))[0] ?? tx(locale, awards.opening);
   return (
     <aside className={styles.awards} id={`${slug}-awards`} aria-labelledby={`${slug}-awards-title`}>
-      <p className={styles.soon}>{tx(locale, awards.labels.soon)}</p>
+      {awards.labels.soon ? <p className={styles.soon}>{tx(locale, awards.labels.soon)}</p> : null}
       <h3 id={`${slug}-awards-title`}>{tx(locale, awards.title)}</h3>
       <p className={styles.awardsKicker}>{tx(locale, awards.kicker)}</p>
       <p className={styles.edition}>{tx(locale, awards.status)}</p>
@@ -41,7 +41,7 @@ function AwardsSoon({awards, locale, slug}: {awards: ForumAwards; locale: Locale
         alt={tx(locale, awards.visualAlt)}
         compact
       />
-      <p className={styles.honesty}>{tx(locale, awards.honesty)}</p>
+      {awards.honesty ? <p className={styles.honesty}>{tx(locale, awards.honesty)}</p> : null}
     </aside>
   );
 }
@@ -135,7 +135,7 @@ function ForumArticle({forum, locale}: {forum: Forum; locale: Locale}) {
           <h2 id={`${forum.slug}-register-title`}>{tx(locale, labels.register)}</h2>
           <Invite forum={forum} locale={locale} strong/>
           <p className={styles.host}>{tx(locale, labels.host)}</p>
-          <p className={styles.honesty}>{tx(locale, labels.honesty)}</p>
+          {labels.honesty ? <p className={styles.honesty}>{tx(locale, labels.honesty)}</p> : null}
         </section>
       </div>
     </article>
@@ -146,7 +146,7 @@ export default function ForumsPage({locale}: {locale: Locale}) {
   const {forums} = forumsContent;
   return (
     <div className={`vs-site locale-${locale} ${styles.root}`} lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <CapabilityHeader locale={locale} path="/forums"/>
+      <CapabilityHeader locale={locale} path="/conferences"/>
       <main id="main-content" className={styles.page}>
         {forums.map(forum => <ForumArticle key={forum.slug} forum={forum} locale={locale}/>)}
       </main>
@@ -164,7 +164,7 @@ export function forumsMetadata(locale: Locale): Metadata {
   return {
     title,
     description,
-    alternates: {canonical: path, languages: {en: '/forums', ar: '/ar/forums'}},
+    alternates: {canonical: path, languages: {en: '/conferences', ar: '/ar/conferences'}},
     openGraph: {
       title,
       description,
