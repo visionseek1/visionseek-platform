@@ -32,6 +32,8 @@ export const paper = {
   },
   indexHref: '/indices/arab-technology-capability',
   indexLabel: {ar: 'مؤشر القدرة التكنولوجية العربية', en: 'Arab Technology Capability Index'},
+  methodologyHref: '/insights/reports/methodology',
+  methodologyLabel: {ar: 'منهجية التقارير', en: 'Reports Methodology'},
   headline: {
     ar: 'كوريا ليست موضوع هذا التقرير، بل دليله: الدولة التي تبدأ مشترية تستطيع أن تصبح مالكة خلال عمر مهني واحد.',
     en: 'Korea is not the subject of this report. It is the proof that a country that starts as a buyer can become an owner within one working lifetime.',

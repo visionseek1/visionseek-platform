@@ -1,0 +1,265 @@
+/**
+ * «منهجية تقارير VisionSeek» الإصدار 1.0 — النص العربي والإنجليزي كما ورد في المصدر المعتمد.
+ * لا اختراع لمحتوى أو أرقام أو أسماء. العلامات [مصدر] و[VisionSeek] تبقى ظاهرة.
+ */
+export type Bi = {ar: string; en: string};
+
+export const paper = {
+  slug: 'methodology',
+  version: '1.0',
+  cover: '/insights/reports/methodology-cover.jpg',
+  date: '2026-10-24',
+  dateLabel: {ar: '24 أكتوبر 2026', en: '24 October 2026'},
+  versionLabel: {ar: 'الإصدار 1.0', en: 'Version 1.0'},
+  label: {ar: 'مختبر VisionSeek · منهجية · الإصدار 1.0', en: 'VisionSeek Lab · Methodology · Version 1.0'},
+  cardTitle: {ar: 'منهجية تقارير VisionSeek', en: 'VisionSeek Reports Methodology'},
+  title: {ar: 'منهجية موحّدة لتقارير VisionSeek الاستراتيجية', en: 'VisionSeek Strategic Reports — Unified Methodology'},
+  question: {ar: 'الإصدار 1.0 · 24 أكتوبر 2026', en: 'Version 1.0 · 24 October 2026'},
+  author: {ar: 'أحمد عبدالعليم', en: 'Ahmed Abdelalim'},
+  authorRole: {ar: 'المسؤول عن المنهجية', en: 'Responsible for this methodology'},
+  cardSummary: {
+    ar: 'تضع هذه الوثيقة منهجًا واحدًا لكل تقارير VisionSeek الاستراتيجية ومؤشراتها وسجلاتها وتعداداتها وأدلّتها. ونحن ننشرها قبل تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.',
+    en: 'This document sets one method for every VisionSeek strategic report, index, ledger, census and playbook. We publish it before our reports so that readers can judge each report against rules fixed in advance.',
+  },
+  doctrineHref: '/insights/reports/localization-doctrine',
+  doctrineName: {ar: '«عقيدة التوطين»', en: 'Localization Doctrine'},
+  doctrineLabel: {ar: 'عقيدة التوطين', en: 'The Localization Doctrine'},
+  markersLegend: {
+    heading: {ar: 'كيف تقرأ الوسوم', en: 'How to read the labels'},
+    items: [
+      {kind: 's' as const, ar: '[مصدر: الرابط] = ورد في المصدر على هذا الرابط، وجرى الاطلاع عليه في 24 أكتوبر 2026.', en: '[Source: URL] = stated by the source at that URL, consulted 24 October 2026.'},
+      {kind: 'i' as const, ar: '[VisionSeek] = اختيار أو تحليل من VisionSeek.', en: '[VisionSeek] = VisionSeek\'s own design choice or reasoning.'},
+    ],
+  },
+  purpose: {
+    heading: {ar: 'الغرض والموقف', en: 'Purpose and posture'},
+    body: [
+      {ar: 'تضع هذه الوثيقة منهجًا واحدًا لكل تقارير VisionSeek الاستراتيجية ومؤشراتها وسجلاتها وتعداداتها وأدلّتها. ونحن ننشرها **قبل** تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.', en: 'This document sets one method for every VisionSeek strategic report, index, ledger, census and playbook. We publish it **before** our reports so that readers can judge each report against rules fixed in advance.'},
+      {ar: '**حقائق لا توجيهات.** تبني تقارير VisionSeek قاعدة حقائق عن القدرة التكنولوجية. فهي لا تتخذ مواقف سياسية، ولا تحكم على خيارات الحكومات، ولا تتضمن توصيات سياسات. وما يُذكر من دلالات يُصاغ ملاحظاتٍ مشروطة مرتبطة بالأدلة («إذا كان كذا، تُظهر البيانات كذا»)، لا نصائح [VisionSeek]. وهذه ممارسة راسخة: يصف معهد ماكنزي العالمي (MGI) دوره بأنه «بناء قاعدة حقائق»، ويقول إنه لا يقدّم «أي وصفات سياسية» [مصدر: https://www.mckinsey.com/about-us/new-at-mckinsey-blog/how-the-mckinsey-global-institute-is-changing-the-way-we-think-about-work-gender-equality-and-more].', en: '**Facts, not directives.** VisionSeek reports build a fact base about technological capability. They take no policy positions, do not judge governments\' choices, and contain no policy recommendations. Where a report states implications, they are written as conditional, evidence-linked observations ("if X, the data show Y"), not as advice [VisionSeek]. This follows an established practice: the McKinsey Global Institute describes its role as "developing a fact base" and states that it does not give "any policy prescriptions" [Source: https://www.mckinsey.com/about-us/new-at-mckinsey-blog/how-the-mckinsey-global-institute-is-changing-the-way-we-think-about-work-gender-equality-and-more].'},
+    ],
+    pull: {ar: 'حقائق لا توجيهات.', en: 'Facts, not directives.'},
+  },
+  takeaways: [
+    {ar: 'حقائق لا توجيهات.', en: 'Facts, not directives.'},
+    {ar: 'ونحن ننشرها **قبل** تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.', en: 'We publish it **before** our reports so that readers can judge each report against rules fixed in advance.'},
+    {ar: 'المبدأ الحاكم: الامتلاك لا الاستخدام.', en: 'Core principle: ownership, not usage.'},
+    {ar: 'لا رقم ولا اسم ولا مصدر مخترعًا أبدًا.', en: 'No number, name or source is ever invented.'},
+  ],
+  stats: [
+    {big: '5', text: {ar: 'سلّم الامتلاك: درجات لكل دولة ولكل تكنولوجيا.', en: 'the Ownership Ladder: rungs for each country and each technology.'}},
+    {big: 'A–E', text: {ar: 'مستويات الموثوقية في ملف البيانات المنشور.', en: 'reliability tiers in the published data file.'}},
+    {big: '6', text: {ar: 'مبادئ RAND: الانخراط، والشمول، والصلة، والصرامة، والشفافية، والمشروعية.', en: 'RAND principles: Engagement, Inclusion, Relevance, Rigor, Transparency and Legitimacy.'}},
+    {big: '9', text: {ar: 'عناصر البنية القياسية للتقرير.', en: 'parts of the standard report structure.'}},
+  ],
+  definitions: {
+    heading: {ar: 'التعريفات والنطاق', en: 'Definitions and scope'},
+    principle: {
+      heading: {ar: 'المبدأ الحاكم: الامتلاك لا الاستخدام', en: 'Core principle: ownership, not usage'},
+      intro: {
+        ar: 'تقيس VisionSeek هل القدرة **مملوكة**، لا هل التكنولوجيا **مستخدَمة**. وتتسق التعريفات التالية مع «عقيدة التوطين» الصادرة عن VisionSeek:',
+        en: 'VisionSeek measures whether a capability is **owned**, not whether a technology is **used**. These definitions are consistent with VisionSeek\'s Localization Doctrine:',
+      },
+      items: [
+        {title: {ar: 'الاستخدام', en: 'Usage'}, text: {ar: 'تشغيل تكنولوجيا صُمّمت أو تُدار أو تُصان في الخارج. فمركز البيانات على أرضنا استخدام.', en: 'operating technology that is designed, controlled or maintained elsewhere. A data centre on our soil is use.'}},
+        {title: {ar: 'الامتلاك', en: 'Ownership'}, text: {ar: 'امتلاك برمجيات التشغيل ومعايير البيانات والمهندسين المدرّبين الذين يصممون القدرة ويكيّفونها ويحافظون عليها.', en: 'control of the operating software, the data standards, and the trained engineers who design, adapt and sustain the capability.'}},
+        {title: {ar: 'الامتلاك تسلسل، لا صفقة.', en: 'Ownership is a sequence, not a purchase.'}, text: {ar: '', en: ''}},
+        {title: {ar: 'التصدير هو ما يثبت الامتلاك.', en: 'Export is what proves ownership.'}, text: {ar: '', en: ''}},
+        {title: {ar: 'تحقّق، وإلا فلم يحدث', en: 'Verify, or it didn\'t happen'}, text: {ar: 'يُحتسب الامتلاك المُتحقَّق منه، لا المُعلَن.', en: 'only verified ownership counts, never announced ownership.'}},
+        {title: {ar: 'مؤسسة الاستيعاب', en: 'Absorption institution'}, text: {ar: 'مؤسسة بتكليف صريح لاستيعاب التكنولوجيا المنقولة.', en: 'an institution with an explicit mandate to absorb transferred technology.'}},
+      ],
+    },
+    ladder: {
+      heading: {ar: 'الإطار الثابت: سلّم الامتلاك', en: 'Fixed framework: the Ownership Ladder'},
+      intro: {ar: 'يضع كل تقرير القدرة على الدرجات الخمس نفسها، لكل دولة ولكل تكنولوجيا:', en: 'Every report places capability on the same five rungs, for each country and each technology:'},
+      columns: {ar: ['الدرجة', 'الاسم', 'التعريف العملي'], en: ['Rung', 'Name', 'Working definition']},
+      rows: [
+        {n: '1', name: {ar: 'استخدام', en: 'Use'}, def: {ar: 'استيراد تكنولوجيا مصمَّمة في الخارج وتشغيلها، وتبقى الصيانة والتطوير بيد المورّد.', en: 'Imports and operates foreign-designed technology. Maintenance and upgrades depend on the supplier.'}},
+        {n: '2', name: {ar: 'تجميع', en: 'Assemble'}, def: {ar: 'تجميع مكوّنات مصمَّمة في الخارج أو تركيبها أو دمجها محليًا.', en: 'Assembles, installs or integrates foreign-designed components locally.'}},
+        {n: '3', name: {ar: 'تكييف', en: 'Adapt'}, def: {ar: 'فرق محلية تعدّل التصميم أو البرمجيات أو العمليات، وتملك الوثائق اللازمة لذلك.', en: 'Local teams modify designs, software or processes and hold the documentation needed to do so.'}},
+        {n: '4', name: {ar: 'تصميم', en: 'Design'}, def: {ar: 'جهات محلية تملك سلطة التصميم، وتنشئ التصاميم، وتملك ما ينتج عنها من ملكية فكرية.', en: 'Local entities hold design authority, originate designs and own the resulting intellectual property.'}},
+        {n: '5', name: {ar: 'تصدير/معيار', en: 'Export / Standard'}, def: {ar: 'منتجات أو خدمات مصمَّمة محليًا تُعتمد أو تُباع في الخارج، أو جهات محلية تشارك في صياغة المعايير الدولية.', en: 'Locally designed products or services are certified or sold abroad, or local actors help shape international standards.'}},
+      ],
+      rulesHeading: {ar: 'القواعد:', en: 'Rules:'},
+      rules: [
+        {ar: '**(أ)** السلّم ثابت في كل التقارير والإصدارات، وأي تغيير فيه يتطلب إصدارًا رئيسيًا جديدًا من هذه المنهجية مع جدول مقابلة منشور بالإصدار السابق.', en: '**(a)** The ladder is fixed across all reports and editions. Any change requires a new major version of this methodology and a published crosswalk to the old version.'},
+        {ar: '**(ب)** لا تُسند درجة إلا بأدلة تستوفي متطلبات المستويات في §2.', en: '**(b)** A rung is assigned only on evidence that meets the tier requirements in §2.'},
+        {ar: '**(ج)** عند نقص الأدلة تُكتب الخانة **«غير قابل للتقييم»**، ولا نخمّن درجة أبدًا.', en: '**(c)** Where the evidence is insufficient, the cell reads **"Not assessable"**. We never guess a rung.'},
+        {ar: '**(د)** يُذكر تاريخ الدليل مع كل درجة.', en: '**(d)** Every rung assignment states the date of its evidence.'},
+      ],
+    },
+    terms: {
+      heading: {ar: 'مصطلحات أخرى', en: 'Other standard terms'},
+      items: [
+        {title: {ar: 'القدرة', en: 'Capability'}, text: {ar: 'قدرة جهات مقرّها الدولة على أداء وظيفة تقنية (تصميم، إنتاج، تشغيل، صيانة، اعتماد) دون الاعتماد في هذه الوظيفة على طرف أجنبي واحد.', en: 'the ability of entities based in a country to perform a technical function (design, produce, operate, maintain, certify) without depending on a single foreign party for that function.'}},
+        {title: {ar: 'المجالات التكنولوجية الحرجة', en: 'Critical technology areas'}, text: {ar: 'أشباه الموصلات؛ الذكاء الاصطناعي؛ السحابة والبيانات؛ 5G/6G؛ الروبوتات؛ الطاقة النظيفة والبطاريات؛ التقنية الحيوية والتقنية الصحية.', en: 'semiconductors; artificial intelligence; cloud and data; 5G/6G; robotics; clean energy and batteries; biotechnology and health technology.'}},
+        {title: {ar: 'المُعلَن مقابل المُنفَّذ', en: 'Announced vs delivered'}, text: {ar: 'الإعلان ادعاء من طرف، والتنفيذ يتطلب دليلًا مستقلًا (§2).', en: 'an announcement is a claim by a party. Delivery requires independent evidence (§2).'}},
+        {title: {ar: '«محلي»', en: 'Local'}, text: {ar: 'يحدد كل تقرير التعريف الذي يعتمده (مكان التسجيل، أو ملكية رأس المال، أو إقامة المخترعين والمهندسين، أو الجنسية)، ولا يخلط بينها.', en: 'each report states which definition it uses (place of incorporation, equity ownership, residence of inventors or engineers, or nationality) and does not mix them.'}},
+      ],
+    },
+    scope: {
+      heading: {ar: 'بيان النطاق الإلزامي', en: 'Required scope statement'},
+      intro: {ar: 'يبدأ كل تقرير بـ:', en: 'Each report opens with:'},
+      items: [
+        {ar: 'الجغرافيا؛', en: 'geography;'},
+        {ar: 'التقنيات؛', en: 'technologies;'},
+        {ar: 'الإطار الزمني؛', en: 'time window;'},
+        {ar: 'وحدة التحليل؛', en: 'unit of analysis;'},
+        {ar: 'ما هو خارج النطاق؛', en: 'what is out of scope;'},
+        {ar: 'درجات السلّم المقيَّمة.', en: 'the ladder rungs assessed.'},
+      ],
+    },
+  },
+  tiers: {
+    heading: {ar: 'مصادر البيانات ومستويات الموثوقية', en: 'Data sources and reliability tiers'},
+    intro: {ar: 'تحمل كل نقطة بيانات وسم مستواها في ملف البيانات المنشور.', en: 'Every data point carries a tier label in the published data file.'},
+    columns: {ar: ['المستوى', 'النوع', 'أمثلة (أنواع لا تزكيات)', 'الاستخدام المسموح'], en: ['Tier', 'Type', 'Examples (types, not endorsements)', 'Permitted use']},
+    rows: [
+      {tier: {ar: 'أ', en: 'A'}, type: {ar: 'سجلات رسمية ووثائق أولية', en: 'Official registers and primary records'}, examples: {ar: 'سجلات البراءات، واعتمادات الجهات التنظيمية، وإيداعات الشركات والمحاكم، والتقارير السنوية المدققة، والإحصاءات الرسمية', en: 'Patent registers, regulator certifications, company and court filings, audited annual reports, official statistics'}, use: {ar: 'يكفي وحده لدعم ادعاء', en: 'Can support a claim on its own'}},
+      {tier: {ar: 'ب', en: 'B'}, type: {ar: 'بيانات مؤسسية أولية', en: 'Primary institutional statements'}, examples: {ar: 'البيانات الصحفية للحكومات والشركات، ووثائق الاستراتيجيات الرسمية', en: 'Government and company press releases, official strategy documents'}, use: {ar: 'يدعم ادعاءً عمّا *قيل*، أما ادعاءات التنفيذ فتحتاج تعزيزًا', en: 'Supports claims about *what was stated*. Delivery claims need corroboration'}},
+      {tier: {ar: 'ج', en: 'C'}, type: {ar: 'بحوث محكَّمة أو راسخة', en: 'Peer-reviewed or established research'}, examples: {ar: 'أوراق محكَّمة، وتقارير منظمات حكومية دولية، ومراكز بحث بمنهج منشور', en: 'Peer-reviewed papers, intergovernmental reports, research organizations with published methods'}, use: {ar: 'سياق ومقارنات، مع الإحالة إلى الصفحة أو القسم', en: 'Context and benchmarks, cited to page or section'}},
+      {tier: {ar: 'د', en: 'D'}, type: {ar: 'صحافة موثوقة وتقارير صناعة', en: 'Reputable press and industry reports'}, examples: {ar: 'منافذ إخبارية راسخة، وتقارير صناعة بلا منهج منشور', en: 'Established news outlets; industry reports without a published method'}, use: {ar: 'خيوط وتعزيز فقط، ولا يكون وحده سندًا لرقم', en: 'Leads and corroboration only. Never the sole support for a number'}},
+      {tier: {ar: 'هـ', en: 'E'}, type: {ar: 'مصادر غير متحقَّق منها أو مجهولة', en: 'Unverified or anonymous sources'}, examples: {ar: 'مواقع مجهولة الملكية، ومتتبعات بلا نسبة، ووسائل التواصل الاجتماعي', en: 'Sites of unknown ownership, unattributed trackers, social media'}, use: {ar: 'لا يُقتبس منها، وتُستخدم خيوطًا فقط تُتتبَّع إلى المستويات أ–ج', en: 'Not citable. Used only as leads to trace back to Tiers A–C'}},
+    ],
+    rulesHeading: {ar: 'القواعد:', en: 'Rules:'},
+    rules: [
+      {ar: 'لكل رقم مصدر من المستويات أ–ج، أو مصدران مستقلان من المستوى د مع ذكر أي خلاف بينهما.', en: 'Every number has a Tier A–C source, or two independent Tier D sources with any disagreement stated.'},
+      {ar: 'تُعرض مادة المستوى ب بوصفها تصريحات («أعلنت س…»)، لا وقائع تنفيذ.', en: 'Tier B content is reported as a statement ("X announced…"), not as a fact of delivery.'},
+      {ar: 'عند تعارض مصادر رسمية يُعرض الاثنان.', en: 'When official sources disagree, both are reported.'},
+      {ar: 'لكل مصدر سجل يتضمن: الرابط أو المرجع، وتاريخ الاطلاع، وطريقة الاطلاع (قراءة كاملة أو جزئية)، والمستوى، والادعاء الذي يدعمه بالتحديد.', en: 'Each source record holds: the URL or reference, the access date, how it was accessed (full or partial read), the tier, and the exact claim it supports.'},
+      {ar: 'تُؤرشف المصادر الإلكترونية وقت الاطلاع عليها متى أمكن.', en: 'Web sources are archived at the time of access wherever possible.'},
+    ],
+  },
+  missing: {
+    heading: {ar: 'التعامل مع البيانات الناقصة', en: 'Handling missing data'},
+    items: [
+      {title: {ar: 'لا تعويض صامتًا للقيم الناقصة.', en: 'No silent imputation.'}, text: {ar: 'تُكتب القيمة الناقصة في النتائج الرئيسية «غير متاح».', en: 'Missing values in headline results read "Not available".'}},
+      {title: {ar: 'إعلان التغطية.', en: 'Coverage is reported.'}, text: {ar: 'نعلن لكل مؤشر معدل تغطية البيانات وتواريخها.', en: 'For each indicator we report data coverage and the dates of the data.'}},
+      {title: {ar: 'التقديرات موسومة.', en: 'Labelled estimates.'}, text: {ar: 'التقدير الذي لا مفر منه يوسَم **[تقدير]**، ويُشرح منهجه في الملحق، ويُعطى في صورة نطاق، ويُستبعد من أي ترتيب.', en: 'An unavoidable estimate is labelled **[Estimate]**, its method is shown in the annex, it is given as a range, and it is excluded from any ranking.'}},
+      {title: {ar: '«لم نجده» وصفٌ لبحثنا لا للواقع.', en: '"Not found" describes our search, not the world.'}, text: {ar: 'تُصاغ الفجوة «لم نحدده في المصادر التي بحثناها (مذكورة)»، لا «غير موجود».', en: 'Gaps are worded as "not identified in the sources searched (listed)", never as "does not exist".'}},
+      {title: {ar: '«غير قابل للتقييم» لا ذيل الترتيب.', en: '"Not assessable", not ranked low.'}, text: {ar: 'الدولة أو التقنية الناقصة البيانات توسَم «غير قابل للتقييم» ولا توضع في ذيل الترتيب.', en: 'A country or technology with insufficient data is marked "Not assessable" rather than ranked low.'}},
+      {title: {ar: '«ما لا نعرفه».', en: '"What we don\'t know."'}, text: {ar: 'في كل تقرير صفحة بهذا العنوان.', en: 'Every report includes a page with this title.'}},
+      {title: {ar: 'إعلان الاعتماد على الناقص.', en: 'Dependencies stated.'}, text: {ar: 'إذا توقّف استنتاج على عنصر ناقص يُذكر ذلك صراحة.', en: 'Where a conclusion depends on a missing item, the report says so explicitly.'}},
+    ],
+  },
+  review: {
+    heading: {ar: 'المراجعة', en: 'Review'},
+    internal: {
+      heading: {ar: 'التحقق الداخلي المستقل', en: 'Independent internal verification'},
+      intro: {ar: 'تمرّ كل مسودة على وظيفة تحقق داخلي مستقلة عن فريق التأليف، وتتحقق من أن:', en: 'An independent internal verification function, separate from the authoring team, reviews every draft. It checks that:'},
+      items: [
+        {ar: 'كل رقم تُتبّع إلى مصدره وأُعيدت قراءته؛', en: 'every number has been traced back to its source and re-read;'},
+        {ar: 'وسوم المستويات صحيحة، ولا يُقتبس أي مصدر من المستوى هـ؛', en: 'tier labels are correct and no Tier E source is cited;'},
+        {ar: 'درجات السلّم تطابق الأدلة؛', en: 'ladder assignments match the evidence;'},
+        {ar: 'فحص التغطية السابقة (§8) مكتمل وموثّق؛', en: 'the prior-coverage check (§8) is complete and logged;'},
+        {ar: 'النص خالٍ من لغة التوصيات؛', en: 'the text contains no policy-recommendation language;'},
+        {ar: 'النسختين العربية والإنجليزية متسقتان.', en: 'the Arabic and English versions are consistent.'},
+      ],
+      after: {ar: 'وتصدر عن هذه الوظيفة مذكرة مراجعة مكتوبة تسجّل كل ملاحظة وكيف عولجت.', en: 'The function produces a written review memo recording each issue and how it was resolved.'},
+    },
+    external: {
+      heading: {ar: 'مراجعة الخبراء الخارجيين', en: 'External expert review'},
+      intro: {ar: 'يراجع التقارير خبراء خارجيون في الأدوار التالية بحسب الحاجة:', en: 'Reports are reviewed by external experts in the following roles, as relevant:'},
+      items: [
+        {ar: 'خبير مجال لكل تقنية مشمولة؛', en: 'a domain expert for each technology covered;'},
+        {ar: 'محلل براءات وملكية فكرية؛', en: 'a patent and intellectual-property analyst;'},
+        {ar: 'منهجي في الإحصاء أو سوق العمل؛', en: 'a statistics or labour-market methodologist;'},
+        {ar: 'مراجع قانوني لأعمال العقود (VisionSeek لا تقدم استشارة قانونية)؛', en: 'a legal reviewer for contract-related work (VisionSeek does not give legal advice);'},
+        {ar: 'متخصص في السياسات من خارج المنطقة المقيَّمة لاختبار التحيّز؛', en: 'a policy specialist from outside the region assessed, to test for bias;'},
+        {ar: 'مراجع بيانات وإحصاء لأي مؤشر مركّب.', en: 'a data and statistics reviewer for any composite index.'},
+      ],
+      after: {ar: 'ويوقّع المراجعون إقرارًا بتضارب المصالح. والجمع بين مراجعة الأقران الداخلية والخارجية ممارسة راسخة: تنص Chatham House على أن جميع تقاريرها وأوراقها البحثية تخضع لمراجعة أقران خارجية وداخلية، وتدقيق للحقائق، واختبار للأصالة [مصدر: https://www.chathamhouse.org/about-us/our-editorial-standards].', en: 'Reviewers sign a conflict-of-interest declaration. Combined internal and external peer review is an established practice: Chatham House states that all its reports and research papers "are externally and internally peer reviewed, fact-checked and tested for originality" [Source: https://www.chathamhouse.org/about-us/our-editorial-standards].'},
+    },
+  },
+  independence: {
+    heading: {ar: 'بيان الاستقلال وتضارب المصالح', en: 'Independence and conflict-of-interest statement'},
+    text: {
+      ar: 'تموّل VisionSeek أبحاثها ذاتيًا، ولا تقبل تكليفات مدفوعة ولا تمويلًا من أي جهة لتقاريرها. وتنفرد VisionSeek بتحديد أسئلة بحثها ومنهجها واستنتاجاتها، ولا يحق لأي حكومة أو شركة أو جهة أخرى إجازة تقرير أو تعديله أو تأخير نشره. ويفصح المؤلفون والمراجعون عن أي علاقة مالية أو وظيفية أو استشارية أو شخصية بالجهات المقيَّمة، وعند وجود تضارب جوهري يُنحّى الشخص عن العمل المعني ويُسجَّل ذلك. ويجوز أن يُعرض على الجهات المقيَّمة التحقق من دقة البيانات الخاصة بها قبل النشر، فتصحّح الوقائع لا الاستنتاجات.',
+      en: 'VisionSeek self-funds its research. It accepts no paid commissions and no funding from any party for its reports. VisionSeek alone determines its research questions, methods and conclusions. No government, company or other party may approve, alter or delay a report. Authors and reviewers declare any financial, employment, advisory or personal relationship with the entities assessed. Where a material conflict exists, the person is recused from the relevant work and the recusal is recorded. Entities assessed may be offered a check on the factual accuracy of data about themselves before publication. They may correct facts, not conclusions.',
+    },
+  },
+  quality: {
+    heading: {ar: 'معايير الجودة', en: 'Quality standards'},
+    intro: {ar: 'تقوم معايير RAND لجودة البحث على ستة مبادئ: **الانخراط، والشمول، والصلة، والصرامة، والشفافية، والمشروعية**. وقد أُطلقت أول مرة عام 1997، وحُدّثت في 1999 و2003 و2009 و2022 [مصدر: https://www.rand.org/about/standards.html]. وتعتمد VisionSeek المبادئ الستة نفسها متطلباتٍ مكتوبة:', en: 'RAND\'s standards for research quality are framed around six principles: **Engagement, Inclusion, Relevance, Rigor, Transparency and Legitimacy**. They were first launched in 1997 and updated in 1999, 2003, 2009 and 2022 [Source: https://www.rand.org/about/standards.html]. VisionSeek adopts the same six principles as written requirements:'},
+    columns: {ar: ['المعيار', 'خلاصة RAND [مصدر: الرابط نفسه، ترجمة بتصرف]', 'متطلب VisionSeek'], en: ['Standard', 'RAND\'s summary [Source: same URL]', 'VisionSeek requirement']},
+    rows: [
+      {name: {ar: 'الانخراط', en: 'Engagement'}, rand: {ar: 'التفاعل مع أصحاب المصلحة في كيفية إجراء البحث وتفسيره وتطبيقه', en: '"we interact with those who have a stake in how our research is conducted, interpreted, and applied"'}, vs: {ar: 'توثيق النطاق والأسئلة قبل بدء البحث، وعرض التحقق من دقة البيانات على الجهات المقيَّمة (§5)', en: 'Scope and questions are documented before research starts. Assessed entities are offered a factual-accuracy check (§5).'}},
+      {name: {ar: 'الشمول', en: 'Inclusion'}, rand: {ar: 'إدراج كل المنظورات المهمة طوال عملية البحث', en: '"we include all important perspectives throughout the research process"'}, vs: {ar: 'عرض الأدلة المخالفة والتفسيرات البديلة، ومراجع واحد على الأقل من خارج المنطقة المقيَّمة', en: 'Contrary evidence and alternative interpretations are reported. At least one reviewer comes from outside the region assessed.'}},
+      {name: {ar: 'الصلة', en: 'Relevance'}, rand: {ar: 'الإسهام في حلول فعالة وفي وقتها لمشكلات مهمة', en: '"we seek to inform and influence effective and timely solutions to important policy problems"'}, vs: {ar: 'يشرح بيان النطاق لماذا السؤال مهم الآن، دون وصفات سياسية (§0)', en: 'The scope statement explains why the question matters now, without policy prescriptions (§0).'}},
+      {name: {ar: 'الصرامة', en: 'Rigor'}, rand: {ar: 'تحليل موضوعي بغرض واضح ومنطق سليم وأنسب النظريات والمناهج والبيانات المتاحة', en: '"objective analyses grounded in a clear purpose using sound logic and the most appropriate theories, methods, and data sources available"'}, vs: {ar: 'سلّم ثابت، ومصادر مصنّفة بمستويات، وتعريفات مؤشرات قابلة للتكرار، وكل ادعاء قابل للتتبع إلى مصدره', en: 'A fixed ladder, tiered sources, replicable indicator definitions, and every claim traceable to its source.'}},
+      {name: {ar: 'الشفافية', en: 'Transparency'}, rand: {ar: 'توثيق الغرض والنطاق ومصادر الدعم والافتراضات والبيانات والمناهج والنتائج والحدود', en: 'document "purpose, scope, sources of support, assumptions, activities, data, methods, results, limitations…"'}, vs: {ar: 'ملحق منهجي وملف بيانات وقائمة مصادر مع كل تقرير، إلى جانب بيان التمويل وصفحة الحدود', en: 'A method annex, a data file and a source list are published with every report, along with a funding statement and a limitations page.'}},
+      {name: {ar: 'المشروعية', en: 'Legitimacy'}, rand: {ar: 'إجراء البحث بأخلاقية، وتجنب تضارب المصالح، والحفاظ على الاستقلال والموضوعية', en: '"we conduct research ethically, avoid conflicts of interest, and maintain independence and objectivity"'}, vs: {ar: 'بيان الاستقلال (§5)، وإقرارات التضارب، وسياسة التصحيح (§7)', en: 'Independence statement (§5), conflict-of-interest declarations, and the corrections policy (§7).'}},
+    ],
+    extraHeading: {ar: 'قواعد إضافية:', en: 'Additional rules:'},
+    extra: [
+      {ar: 'لا رقم ولا اسم ولا مصدر مخترعًا أبدًا.', en: 'No number, name or source is ever invented.'},
+      {ar: 'يُذكر المصدر تحت كل رسم.', en: 'Every exhibit carries its source beneath it.'},
+      {ar: 'كل ادعاء قابل للتتبع إلى دليل، أو موسوم بوصفه تحليلًا من VisionSeek.', en: 'Every claim is traceable to evidence or labelled as VisionSeek analysis.'},
+    ],
+  },
+  corrections: {
+    heading: {ar: 'التصحيح والتحديث والحدود المعلنة', en: 'Corrections, updates and declared limitations'},
+    items: [
+      {title: {ar: 'التصحيح.', en: 'Corrections.'}, text: {ar: 'تُصحَّح أخطاء الوقائع سريعًا، وتحمل الوثيقة المصحَّحة ملاحظة مؤرخة توضح ما تغيّر. ولا تعديلات صامتة. وتُفتح قناة التصحيح العامة مع إصدار أول تقرير.', en: 'Factual errors are corrected promptly. The corrected document carries a dated correction note stating what changed. Silent edits are not permitted. The public corrections channel opens with the release of the first report.'}},
+      {title: {ar: 'الإصدارات.', en: 'Versioning.'}, text: {ar: 'لكل تقرير ومجموعة بيانات رقم إصدار (رئيسي.فرعي). يشمل الإصدار الفرعي التصحيحات وتحديث البيانات، ويشمل الإصدار الرئيسي تغيير المنهج أو تعريفات السلّم، ويُنشر مع جدول مقابلة بالإصدار السابق.', en: 'Every report and dataset carries a version number (MAJOR.MINOR). A minor version covers corrections and data updates. A major version covers a change of method or ladder definitions and is published with a crosswalk to the previous version.'}},
+      {title: {ar: 'سجل الإصدارات.', en: 'Version log.'}, text: {ar: 'يسجّل ملحق كل تقرير الإصدار والتاريخ والتغيير وسببه.', en: 'Each report annex records the version, date, change and reason.'}},
+      {title: {ar: 'التحديث.', en: 'Updates.'}, text: {ar: 'تعلن المنتجات الدورية دورة تحديثها، وتبقى الإصدارات السابقة متاحة.', en: 'Recurring products state their update cycle. Past editions remain available.'}},
+      {title: {ar: 'الحدود المعلنة.', en: 'Declared limitations.'}, text: {ar: 'يعلن كل تقرير حدوده، ومنها:', en: 'Every report states its limitations, including:'}},
+    ],
+    limits: [
+      {ar: 'فجوات تغطية البيانات؛', en: 'gaps in data coverage;'},
+      {ar: 'الاعتماد على المصادر العامة؛', en: 'reliance on public sources;'},
+      {ar: 'اللغات التي جرى البحث بها؛', en: 'the languages searched;'},
+      {ar: 'تاريخ الأدلة؛', en: 'the date of the evidence;'},
+      {ar: 'الاختيارات التعريفية، مثل ما يُعدّ «محليًا»؛', en: 'definitional choices, such as what counts as "local";'},
+      {ar: 'أن الصفقات المعلنة قد لا تكون قابلة للرصد كاملًا.', en: 'the fact that announced deals may not be fully observable.'},
+    ],
+  },
+  prior: {
+    heading: {ar: 'فحص التغطية السابقة قبل أي ادعاء بـ«الأول» أو «فجوة»', en: 'Prior-coverage check before any "first" or "gap" claim'},
+    intro: {ar: 'لا يدّعي تقرير أنه «الأول» أو «الوحيد»، أو أنه يسد «فجوة»، إلا بعد استكمال هذا البروتوكول وتوثيقه:', en: 'No report claims to be "the first" or "the only", or to fill "a gap", unless this protocol has been completed and logged:'},
+    items: [
+      {title: {ar: 'صياغة الادعاء بدقة', en: 'State the claim precisely'}, text: {ar: 'الموضوع، والجغرافيا، والمنهج، والفترة.', en: 'topic, geography, method and period.'}},
+      {title: {ar: 'خطة بحث مكتوبة مسبقًا', en: 'Write a search plan in advance.'}, text: {ar: 'تشمل على الأقل:', en: 'At minimum it covers:'}, list: [
+        {ar: 'بحث ويب عام بالعربية والإنجليزية وغيرهما من اللغات ذات الصلة؛', en: 'general web search in Arabic, English and other relevant languages;'},
+        {ar: 'قواعد البيانات الأكاديمية؛', en: 'academic databases;'},
+        {ar: 'إصدارات المنظمات الحكومية الدولية؛', en: 'publications of intergovernmental organizations;'},
+        {ar: 'مراكز الفكر الإقليمية والدولية؛', en: 'regional and international think tanks;'},
+        {ar: 'تقارير الاستشارات والصناعة؛', en: 'consultancy and industry reports;'},
+        {ar: 'مواقع الإحصاءات الوطنية والوزارات؛', en: 'national statistics and ministry sites;'},
+        {ar: 'الرسائل الجامعية وأعمال المؤتمرات.', en: 'dissertations and conference proceedings.'},
+      ]},
+      {title: {ar: 'سجل بحث', en: 'Keep a log'}, text: {ar: 'يوثّق كل عبارة بحث وقاعدة بيانات وتاريخ والنتائج التي رُوجعت، مع ذكر أقرب الأعمال الموجودة ووجه الاختلاف عنها.', en: 'of every query, database and date and the results reviewed. List the closest existing works and how they differ.'}},
+      {title: {ar: 'باحث ثانٍ', en: 'Second searcher.'}, text: {ar: 'تعيد وظيفة التحقق الداخلي المستقلة البحث بصورة مستقلة.', en: 'The independent internal verification function repeats the search independently.'}},
+      {title: {ar: 'فحص الخبراء', en: 'Expert check.'}, text: {ar: 'يُسأل خبراء مجال خارجيون هل يعرفون أعمالًا سابقة.', en: 'External domain experts are asked whether they know of prior work.'}},
+      {title: {ar: 'قاعدة الصياغة: «لم نجده» لا يعني «غير موجود».', en: 'Wording rule: "not found" does not mean "does not exist".'}, text: {ar: 'الصياغة المسموحة: *«على حد علمنا، وبعد البحث الموثق في الملحق س، لم نحدد…»*. ولا تُستخدم «الأول» أو «الوحيد» إلا بعد استكمال الخطوات 1–5، وتُسحب بتصحيح إن ظهر عمل سابق.', en: 'The permitted wording is: *"To our knowledge, after the search documented in Annex X, we did not identify…"*. "First" or "only" is used only after steps 1–5. It is withdrawn by a correction if prior work comes to light.'}},
+    ],
+  },
+  structure: {
+    heading: {ar: 'البنية القياسية للتقرير', en: 'Standard report structure'},
+    intro: {ar: 'يلتزم كل تقرير بالبنية التالية:', en: 'Every report follows this structure:'},
+    items: [
+      {ar: 'صفحة الأرقام الرئيسية؛', en: 'key numbers page;'},
+      {ar: 'ملخص تنفيذي؛', en: 'executive summary;'},
+      {ar: 'بيان النطاق؛', en: 'scope statement;'},
+      {ar: 'النتائج مع رسوم مرقّمة، تحت كل رسم مصدره؛', en: 'findings with numbered exhibits, each with its source beneath it;'},
+      {ar: '«ما لا نعرفه»؛', en: '"What we don\'t know";'},
+      {ar: 'ملحق منهجي؛', en: 'method annex;'},
+      {ar: 'قائمة المصادر بمستوياتها؛', en: 'source list with tiers;'},
+      {ar: 'سجل الإصدارات؛', en: 'version log;'},
+      {ar: 'بيان الاستقلال والتمويل.', en: 'independence and funding statement.'},
+    ],
+  },
+  versions: {
+    heading: {ar: 'سجل الإصدارات', en: 'Version log'},
+    columns: {ar: ['الإصدار', 'التاريخ', 'التغيير'], en: ['Version', 'Date', 'Change']},
+    rows: [
+      {version: '1.0', date: '2026-10-24', change: {ar: 'الإصدار العام الأول', en: 'First public version'}},
+    ],
+  },
+  closing: {
+    heading: {ar: 'الغرض والموقف', en: 'Purpose and posture'},
+    text: {ar: 'تضع هذه الوثيقة منهجًا واحدًا لكل تقارير VisionSeek الاستراتيجية ومؤشراتها وسجلاتها وتعداداتها وأدلّتها. ونحن ننشرها قبل تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.', en: 'This document sets one method for every VisionSeek strategic report, index, ledger, census and playbook. We publish it before our reports so that readers can judge each report against rules fixed in advance.'},
+    strong: {ar: 'حقائق لا توجيهات.', en: 'Facts, not directives.'},
+  },
+  citation: 'Abdelalim, A. (2026). VisionSeek Strategic Reports — Unified Methodology (Version 1.0). VisionSeek Lab.',
+};
