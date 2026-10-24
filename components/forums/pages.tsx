@@ -3,7 +3,7 @@ import {ArrowRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {ForumKeyVisual} from '@/components/forums/key-visual';
-import {forumPath, forumsContent, paragraphs, tx, type Forum, type ForumAwards, type Locale} from '@/lib/forums';
+import {forumPath, forumsContent, paragraphs, tx, type Forum, type ForumAwards, type ForumCouncil, type ForumPrinciple, type Locale} from '@/lib/forums';
 import type {Metadata} from 'next';
 import {mailto} from '@/lib/site';
 import styles from './forums.module.css';
@@ -27,15 +27,56 @@ function Copy({text}: {text: string}) {
   );
 }
 
-function AwardsSoon({awards, locale, slug}: {awards: ForumAwards; locale: Locale; slug: string}) {
-  const opening = paragraphs(tx(locale, awards.opening))[0] ?? tx(locale, awards.opening);
+function Rules({items, locale}: {items: ForumPrinciple[]; locale: Locale}) {
+  return (
+    <dl className={styles.format}>
+      {items.map(item => (
+        <div key={item.title.en}>
+          <dt>{tx(locale, item.title)}</dt>
+          <dd>{tx(locale, item.text)}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+function CouncilBlock({council, locale, slug}: {council: ForumCouncil; locale: Locale; slug: string}) {
+  return (
+    <aside className={styles.awards} id={`${slug}-council`} aria-labelledby={`${slug}-council-title`}>
+      <h3 id={`${slug}-council-title`}>{tx(locale, council.title)}</h3>
+      <p className={styles.awardsKicker}>{tx(locale, council.kicker)}</p>
+      <p className={styles.edition}>{tx(locale, council.status)}</p>
+      <p className={styles.subhead}>{tx(locale, council.labels.role)}</p>
+      <Copy text={tx(locale, council.role)}/>
+      <p className={styles.subhead}>{tx(locale, council.labels.independence)}</p>
+      <Rules items={council.independence} locale={locale}/>
+    </aside>
+  );
+}
+
+function AwardsBlock({awards, locale, slug}: {awards: ForumAwards; locale: Locale; slug: string}) {
   return (
     <aside className={styles.awards} id={`${slug}-awards`} aria-labelledby={`${slug}-awards-title`}>
-      <p className={styles.soon}>{tx(locale, awards.labels.soon)}</p>
       <h3 id={`${slug}-awards-title`}>{tx(locale, awards.title)}</h3>
       <p className={styles.awardsKicker}>{tx(locale, awards.kicker)}</p>
       <p className={styles.edition}>{tx(locale, awards.status)}</p>
-      <p>{opening}</p>
+      <Copy text={tx(locale, awards.opening)}/>
+      <p className={styles.subhead}>{tx(locale, awards.labels.categories)}</p>
+      <Rules items={awards.categories} locale={locale}/>
+      <dl className={styles.format}>
+        <div>
+          <dt>{tx(locale, awards.labels.ownership)}</dt>
+          <dd>{tx(locale, awards.ownership)}</dd>
+        </div>
+        <div>
+          <dt>{tx(locale, awards.labels.nomination)}</dt>
+          <dd>{tx(locale, awards.nomination)}</dd>
+        </div>
+        <div>
+          <dt>{tx(locale, awards.labels.exclusion)}</dt>
+          <dd>{tx(locale, awards.exclusion)}</dd>
+        </div>
+      </dl>
       <ForumKeyVisual
         src={awards.visual}
         alt={tx(locale, awards.visualAlt)}
@@ -128,7 +169,8 @@ function ForumArticle({forum, locale}: {forum: Forum; locale: Locale}) {
         <section className={styles.block} id={`${forum.slug}-dialogue`} aria-labelledby={`${forum.slug}-dialogue-title`}>
           <h2 id={`${forum.slug}-dialogue-title`}>{tx(locale, labels.dialogue)}</h2>
           <p className={styles.edition}>{tx(locale, forum.status)}</p>
-          {forum.awards && <AwardsSoon awards={forum.awards} locale={locale} slug={forum.slug}/>}
+          {forum.council && <CouncilBlock council={forum.council} locale={locale} slug={forum.slug}/>}
+          {forum.awards && <AwardsBlock awards={forum.awards} locale={locale} slug={forum.slug}/>}
         </section>
 
         <section className={styles.close} id={`${forum.slug}-register`} aria-labelledby={`${forum.slug}-register-title`}>

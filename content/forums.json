@@ -162,18 +162,72 @@
         "en": "A discussion paper before the dialogue, a summary after it, and clear partnership priorities between the two sides.",
         "ar": "ورقة نقاش تصدر قبل الحوار، وملخص يصدر بعده، وأولويات شراكة واضحة بين الطرفين."
       },
+      "council": {
+        "title": {
+          "en": "Incheon Advisory Council",
+          "ar": "مجلس إنتشون الاستشاري"
+        },
+        "kicker": {
+          "en": "It guides and reviews methodologies. It does not rate institutions.",
+          "ar": "يوجّه المنهجيات ويراجعها، ولا يقيّم المؤسسات."
+        },
+        "status": {
+          "en": "Its composition is announced at the Incheon Dialogue.",
+          "ar": "يُعلَن تشكيله في حوار إنتشون."
+        },
+        "role": {
+          "en": "The Incheon Advisory Council guides and reviews VisionSeek's methodologies, and gives a written opinion before each major release.\n\nIt does not rate institutions. It does not assign a score, and it does not change a ranking. Assessment belongs to the methodological team alone.",
+          "ar": "يوجّه مجلس إنتشون الاستشاري منهجيات VisionSeek ويراجعها، ويُبدي رأيًا مكتوبًا قبل كل إصدار رئيسي.\n\nلا يقيّم المؤسسات، ولا يضع درجة، ولا يغيّر ترتيبًا. التقييم للفريق المنهجي وحده."
+        },
+        "independence": [
+          {
+            "title": {
+              "en": "No ranking or award for payment",
+              "ar": "لا ترتيب ولا جائزة مقابل دفع"
+            },
+            "text": {
+              "en": "No ranking or award is given in exchange for payment, in any form.",
+              "ar": "لا يُمنح ترتيب ولا جائزة مقابل دفع، بأي صورة."
+            }
+          },
+          {
+            "title": {
+              "en": "Annual disclosure",
+              "ar": "إفصاح سنوي"
+            },
+            "text": {
+              "en": "Each member makes a written annual disclosure of offices and interests.",
+              "ar": "يقدّم كل عضو إفصاحًا سنويًا مكتوبًا عن مناصبه ومصالحه."
+            }
+          },
+          {
+            "title": {
+              "en": "No sitting officials from the countries we measure",
+              "ar": "لا مسؤول حكومي حالي من دولة نقيسها"
+            },
+            "text": {
+              "en": "No current government official from a country we measure is appointed to the Council.",
+              "ar": "لا يُعيَّن في المجلس مسؤول حكومي في منصبه الحالي من دولة نقيسها."
+            }
+          }
+        ],
+        "labels": {
+          "role": {"en": "Role", "ar": "الدور"},
+          "independence": {"en": "Independence", "ar": "الاستقلال"}
+        }
+      },
       "awards": {
         "title": {
           "en": "Incheon Localization Awards",
           "ar": "جوائز إنتشون للتوطين"
         },
         "kicker": {
-          "en": "Honoring those who own capability, not those who merely bought it",
+          "en": "Honoring those who owned the capability, not those who bought it",
           "ar": "تكريم من امتلك القدرة، لا من اشتراها"
         },
         "status": {
-          "en": "Announced at the Incheon Dialogue, April 2027, Incheon.",
-          "ar": "تُعلن ضمن «حوار إنتشون» في أبريل 2027، في إنتشون، إن شاء الله."
+          "en": "Announced at the Incheon Dialogue.",
+          "ar": "تُعلن في حوار إنتشون."
         },
         "visual": "/conferences/incheon-awards.svg",
         "visualAlt": {
@@ -181,8 +235,8 @@
           "ar": "علامة جوائز إنتشون للتوطين: رمز VisionSeek المتساوي القياس بالأخضر على أسود، مع توهج خفيف."
         },
         "opening": {
-          "en": "Buying technology is a transaction. Owning it is an achievement.\n\nBehind every capability that has truly been localized stands a team that learned, built, and can now operate and develop it without waiting for anyone. These awards honor that achievement, and set a standard others can follow.",
-          "ar": "شراء التكنولوجيا صفقة، أما امتلاكها فإنجاز.\n\nخلف كل قدرة وُطّنت فعلًا فريق تعلّم وبنى وأصبح قادرًا على التشغيل والتطوير دون أن ينتظر أحدًا. هذه الجوائز تكرّم هذا الإنجاز، وتضع له معيارًا يُحتذى."
+          "en": "Buying technology is a transaction. Owning it is an achievement.\n\nThese awards honor the institution, the individual, and the partnership that localized a critical capability and now own it. The minimum for nomination is the adaptation level.",
+          "ar": "شراء التكنولوجيا صفقة، أما امتلاكها فإنجاز.\n\nتُكرَّم المؤسسة والفرد والشراكة التي وطّنت قدرة حرجة وأصبحت تملكها. الحد الأدنى للترشح هو مستوى التكييف."
         },
         "what": {
           "en": "Annual awards given by VisionSeek at the Incheon Dialogue. They honor institutions, individuals, and Korean–Arab partnerships that transferred a critical capability, localized it, and now own it — in the seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
@@ -192,8 +246,8 @@
           {
             "title": {"en": "Own, do not buy", "ar": "امتلاك لا شراء"},
             "text": {
-              "en": "The only test is a capability operated and developed locally, without depending on the supplier.",
-              "ar": "المعيار الوحيد هو قدرة تُشغَّل وتُطوَّر محليًا دون الاعتماد على المورّد."
+              "en": "These awards honor those who owned the capability, not those who bought it. The minimum is the adaptation level.",
+              "ar": "تُكرَّم من امتلك القدرة، لا من اشتراها. الحد الأدنى هو مستوى التكييف."
             }
           },
           {
@@ -220,8 +274,8 @@
           {
             "title": {"en": "Independent", "ar": "مستقلة"},
             "text": {
-              "en": "No sponsorship and no commercial relationship that would affect the choice.",
-              "ar": "لا رعاية ولا علاقة تجارية تؤثر على الاختيار."
+              "en": "Entities linked to VisionSeek are excluded. No ranking or award is given in exchange for payment.",
+              "ar": "تُستبعد الجهات المرتبطة بـVisionSeek. ولا ترتيب ولا جائزة مقابل دفع."
             }
           },
           {
@@ -265,15 +319,30 @@
           "en": "The institutions and individuals who built the capability quietly and deserve recognition; governments looking for models to follow; Korean partners who transferred knowledge in good faith; and every Arab leader who wants to know what real success looks like.",
           "ar": "المؤسسات والأفراد الذين بنوا القدرة بصمت ويستحقون الاعتراف، والحكومات التي تبحث عن نماذج تُحتذى، والشركاء الكوريون الذين نقلوا المعرفة بصدق، وكل قائد عربي يريد أن يعرف كيف يبدو النجاح الحقيقي."
         },
+        "ownership": {
+          "en": "These awards honor those who owned the capability, not those who bought it. The minimum for nomination is the adaptation level.",
+          "ar": "تُكرَّم من امتلك القدرة، لا من اشتراها. الحد الأدنى للترشح هو مستوى التكييف."
+        },
+        "nomination": {
+          "en": "Nomination is by invitation. Self-nomination is not accepted.",
+          "ar": "الترشيح بالدعوة فقط، ولا يُقبل الترشيح الذاتي."
+        },
+        "exclusion": {
+          "en": "Entities linked to VisionSeek are excluded.",
+          "ar": "تُستبعد الجهات المرتبطة بـVisionSeek."
+        },
         "honesty": {
-          "en": "No prize value, no juror or winner names, and no nomination window have been set.",
-          "ar": "لا قيمة للجوائز، ولا أسماء محكّمين أو فائزين، ولا نافذة ترشيح."
+          "en": "The award is an honor, not a cash prize.",
+          "ar": "الجائزة تكريم، وليست مبلغًا ماليًا."
         },
         "labels": {
-          "soon": {"en": "Coming soon", "ar": "قريبًا"},
+          "soon": {"en": "Announced at the Incheon Dialogue", "ar": "تُعلن في حوار إنتشون"},
           "mandate": {"en": "What the awards are", "ar": "ما هي الجوائز"},
           "principles": {"en": "Principles", "ar": "مبادئ الجوائز"},
           "categories": {"en": "Categories", "ar": "الفئات"},
+          "ownership": {"en": "Ownership", "ar": "شرط الامتلاك"},
+          "nomination": {"en": "Nomination", "ar": "الترشيح"},
+          "exclusion": {"en": "Exclusion", "ar": "الاستبعاد"},
           "process": {"en": "How they work", "ar": "كيف تعمل"},
           "who": {"en": "Who benefits", "ar": "من يستفيد"}
         }

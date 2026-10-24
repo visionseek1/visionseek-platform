@@ -256,6 +256,23 @@
   border: 1px solid var(--vs-line);
   background: #0b0c0d;
 }
+.awards + .awards {
+  margin-top: calc(var(--forum-space) * 4);
+}
+.subhead {
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.35;
+  color: var(--white);
+  margin: calc(var(--forum-space) * 4) 0 calc(var(--forum-space) * 1.5) !important;
+  font-family: var(--font-display), sans-serif;
+}
+.root[lang='ar'] .subhead {
+  font-family: var(--font-arabic-display), var(--font-arabic), sans-serif;
+}
+.awards .format {
+  margin-top: calc(var(--forum-space) * 1);
+}
 .soon {
   color: var(--lime);
   font-size: 0.75rem;
