@@ -1,6 +1,6 @@
 'use client';
 import {useEffect, useState} from 'react';
-import {site, whatsappUrl} from '@/lib/site';
+import {whatsappUrl} from '@/lib/site';
 import styles from './ks.module.css';
 
 type Locale = 'ar' | 'en';
@@ -39,6 +39,6 @@ export default function StickyCta({locale}: {locale: Locale}) {
   if (!show) return null;
   return <div className={styles.sticky} role="region" aria-label={ar ? 'إرسال الطلب' : 'Send a request'}>
     <a className={styles.stickyMain} href="#needs">{ar ? 'اطلب من كوريا' : 'Request from Korea'}</a>
-    <a className={styles.stickyWa} href={whatsappUrl()} target="_blank" rel="noreferrer">{ar ? 'واتساب' : 'WhatsApp'} <span dir="ltr">{site.phoneDisplay}</span></a>
+    <a className={styles.stickyWa} href={whatsappUrl()} target="_blank" rel="noreferrer">{ar ? 'واتساب' : 'WhatsApp'}</a>
   </div>;
 }
