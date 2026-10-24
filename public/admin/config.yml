@@ -52,6 +52,7 @@ collections:
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
                   - {label: "بيت القادة (القسم كله)  /leaders-house", value: "/leaders-house"}
                   - {label: "منهجنا  /method", value: "/method"}
+                  - {label: "حلول من كوريا ← سيارات هايبرد وكهربائية  /cars", value: "/cars"}
                   - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
                   - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
                   - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
@@ -107,6 +108,7 @@ collections:
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}
                   - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
                   - {label: "المؤشرات ← مؤشر القدرة التكنولوجية العربية  /indices/arab-technology-capability", value: "/indices/arab-technology-capability"}
+                  - {label: "المؤشرات ← أطلس القدرات العربية الحرجة  /indices/arab-critical-capabilities-atlas", value: "/indices/arab-critical-capabilities-atlas"}
                 # archive-options:end
               - {label: ملاحظة لنفسك (اختياري), name: note, widget: string, required: false}
           - label: أقسام مخفية داخل الصفحات
@@ -3263,6 +3265,78 @@ collections:
                       - {label: English, name: en, widget: string}
                       - {label: العربية, name: ar, widget: string}
 
+  - name: cars
+    label: "السيارات (هايبرد وكهربائية)"
+    description: "قائمة السيارات على /cars. القائمة العامة فارغة إلى أن يضيف أحمد سيارات حقيقية. الأمثلة نموذج للتصميم فقط، ولا تظهر على الموقع الحي."
+    preview_path: "ar/cars"
+    editor: {preview: false}
+    files:
+      - label: السيارات
+        name: cars
+        file: content/cars.json
+        fields:
+          - {label: ملاحظة داخلية, name: _note, widget: text}
+          - {label: "إظهار الأمثلة في المعاينة فقط", name: showExamples, widget: boolean, default: true}
+          - label: السيارات المعروضة
+            name: cars
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - {label: المسار (إنجليزي صغير بشرطات), name: slug, widget: string}
+              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
+              - label: الماركة
+                name: brand
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الموديل
+                name: model
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - {label: السنة, name: year, widget: number, required: false, value_type: int}
+              - {label: صور (مسار يبدأ بـ /), name: photos, widget: list, required: false, field: {label: مسار, name: src, widget: string}}
+              - label: مجموعة الحركة
+                name: powertrain
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - {label: المدى (كم), name: rangeKm, widget: number, required: false, value_type: int}
+              - {label: البطارية (ك.و.س), name: batteryKwh, widget: number, required: false, value_type: int}
+              - {label: المقاعد, name: seats, widget: number, required: false, value_type: int}
+              - {label: السعر (رقم فقط إن وُجد), name: priceAmount, widget: number, required: false, value_type: int}
+              - {label: عملة السعر, name: priceCurrency, widget: string, required: false}
+              - label: ما يشمله الطلب
+                name: included
+                widget: list
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: أمثلة التصميم (لا تظهر على الموقع الحي)
+            name: examples
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - {label: المسار, name: slug, widget: string}
+              - {label: "بيانات نموذجية", name: example, widget: boolean, default: true}
+              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
+              - label: الماركة
+                name: brand
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الموديل
+                name: model
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
 
   - name: governance
     label: "حوكمة الذكاء الاصطناعي"
@@ -4222,7 +4296,7 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - {label: "الصورة المفتاحية", name: heroImage, widget: image, choose_url: true, hint: "١٦:٩ في /indices/. من غير أرقام ولا ترتيب."}
+              - {label: "الصورة المفتاحية", name: heroImage, widget: image, choose_url: true, hint: "١٦:٩ في /indices/ (jpg أو svg). من غير أرقام ولا كتابة على الرسم."}
               - label: "وصف الصورة"
                 name: heroAlt
                 widget: object
