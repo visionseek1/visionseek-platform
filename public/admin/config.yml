@@ -48,7 +48,6 @@ collections:
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
-                  - {label: "المسابقات (القسم كله)  /competitions", value: "/competitions"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
@@ -3862,8 +3861,8 @@ collections:
 
   - name: competitions
     label: "المسابقات"
-    description: "صفحة /competitions وبالعربية /ar/competitions. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد. الكارت المفتوح يتعلّم «اكتمل» لوحده بعد آخر موعد (نهاية اليوم بتوقيت كوريا)."
-    preview_path: "ar/competitions"
+    description: "قسم المسابقات داخل «اعمل معنا» (/work-with-us#competitions وبالعربية /ar/work-with-us#competitions). الروابط القديمة /competitions تتحوّل هناك. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد. الكارت المفتوح يتعلّم «اكتمل» لوحده بعد آخر موعد (نهاية اليوم بتوقيت كوريا)."
+    preview_path: "ar/work-with-us"
     editor: {preview: false}
     files:
       - label: "الصفحة"

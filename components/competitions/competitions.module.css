@@ -125,12 +125,18 @@
   background: linear-gradient(to left, var(--bg) 0%, rgb(247 247 242 / 0.76) 10%, rgb(247 247 242 / 0.43) 20%, rgb(247 247 242 / 0.25) 28%, rgb(247 247 242 / 0) 36%);
 }
 
+.page,
+.section {
+  scroll-margin-top: 6rem;
+}
+
 .section {
   max-width: 78rem;
   margin: 0 auto;
   padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
 }
 
+.page > .section:first-child,
 .hero + .section {
   padding-top: clamp(2.5rem, 4vw, 3.5rem);
 }

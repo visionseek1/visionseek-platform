@@ -24,38 +24,24 @@
           }
         },
         {
-          "href": "/work-with-us/new-to-visionseek",
+          "href": "/work-with-us#now-competing",
           "label": {
-            "en": "New to VisionSeek",
-            "ar": "ابدأ مع VisionSeek"
+            "en": "Now competing",
+            "ar": "مشاركين فيها دلوقتي"
           }
         },
         {
-          "href": "/work-with-us/how-to-respond",
+          "href": "/work-with-us#join",
           "label": {
-            "en": "How to respond",
-            "ar": "كيف تشارك؟"
+            "en": "Join",
+            "ar": "انضم"
           }
         },
         {
-          "href": "/work-with-us/prepare-a-concept",
+          "href": "/work-with-us#how-we-work",
           "label": {
-            "en": "Prepare a concept",
-            "ar": "جهّز تصورًا"
-          }
-        },
-        {
-          "href": "/work-with-us/review-and-selection",
-          "label": {
-            "en": "Review & selection",
-            "ar": "المراجعة والاختيار"
-          }
-        },
-        {
-          "href": "/work-with-us/transition",
-          "label": {
-            "en": "Transition to use",
-            "ar": "النقل للتشغيل"
+            "en": "How we work",
+            "ar": "إزاي بنشتغل"
           }
         }
       ]
