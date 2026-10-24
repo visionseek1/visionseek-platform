@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>سجل نقل القدرة — VisionSeek</title><style>
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Light.ttf);font-weight:300}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Regular.ttf);font-weight:400}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Medium.ttf);font-weight:500}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-SemiBold.ttf);font-weight:600}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Bold.ttf);font-weight:700}
+@font-face{font-family:"Kufi";src:url(fonts/NotoKufiArabic-VariableFont_wght.ttf);font-weight:100 900}
+@font-face{font-family:"Grotesk";src:url(fonts/SpaceGrotesk-VariableFont_wght.ttf);font-weight:300 700}
+
+:root{--ink:#0D0D0D;--lime:#CCFF00;--lime2:#B0F51E;--olive:#5B7300;--g1:#F3F4EF;--g2:#E4E6DE;--g3:#8A8D84;--g4:#4A4C47}
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#d9d9d6}
+body{font-family:"Plex Arabic",sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.85;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:#fff;margin:0 auto 8mm;page-break-after:always;break-after:page}
+@media print{html,body{background:#fff}.page{margin:0}}
+.lat{font-family:"Grotesk",sans-serif;direction:ltr;unicode-bidi:isolate}
+bdi{unicode-bidi:isolate}
+
+/* ---------- source markers ---------- */
+sup{line-height:0;font-size:6.2pt;vertical-align:super;font-weight:500;white-space:nowrap}
+sup.s{color:var(--olive);font-family:"Grotesk";direction:ltr;unicode-bidi:isolate;margin-inline-start:1px}
+sup.s::before{content:"["}sup.s::after{content:"]"}
+sup.i{color:var(--g3);margin-inline-start:2px}
+sup.i::before{content:"◇ ";font-size:5pt}
+sup.g{color:#A0522D;margin-inline-start:2px}
+sup.g::before{content:"○ ";font-size:5pt}
+.dark sup.s{color:var(--lime2)} .dark sup.i{color:#9a9d94}
+
+/* ---------- dark pages ---------- */
+.dark{background:var(--ink);color:#fff}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:12mm 12mm;background-position:-1px -1px}
+.bar{position:absolute;top:0;bottom:0;right:0;width:13mm;background:var(--lime)}
+.kicker{font-family:"Grotesk";font-weight:700;letter-spacing:.32em;font-size:7.6pt;color:var(--lime);direction:ltr;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:3.5mm;direction:ltr}
+.brand img{height:13mm;width:auto;display:block;background:transparent}
+.brand span{font-family:"Grotesk";font-weight:700;font-size:16pt;letter-spacing:.02em}
+.draft-tag{display:inline-block;border:0.3mm solid var(--lime);color:var(--lime);font-size:6.6pt;padding:1.2mm 2.6mm;line-height:1.5;letter-spacing:.02em}
+.draft-tag .lat{letter-spacing:.14em;font-weight:600}
+
+/* cover */
+.cover .inner{position:absolute;top:0;bottom:0;right:13mm;left:0;padding:22mm 20mm 20mm 20mm}
+.cover .brand{position:absolute;top:24mm;right:20mm}
+.cover .dt{position:absolute;top:24mm;left:20mm}
+.cover .kicker{position:absolute;top:96mm;right:20mm}
+.cover h1{position:absolute;top:104mm;right:20mm;left:20mm;font-family:"Kufi";font-weight:800;font-size:58pt;line-height:1.35;color:#fff}
+.cover .sub{position:absolute;top:150mm;right:20mm;width:132mm;font-family:"Kufi";font-weight:400;font-size:17pt;line-height:1.75;color:#e9e9e4}
+.cover .label{position:absolute;top:196mm;right:20mm;border:0.35mm solid var(--lime2);color:var(--lime2);font-size:8.2pt;padding:2.2mm 5mm}
+.cover .steps{position:absolute;left:20mm;bottom:30mm;display:flex;align-items:flex-end;gap:2.4mm;direction:ltr}
+.cover .steps i{display:block;width:9mm;border:0.3mm solid rgba(204,255,0,.55);border-bottom:none}
+.cover .steps i:last-child{background:var(--lime);border-color:var(--lime)}
+.cover .foot{position:absolute;bottom:20mm;right:20mm;font-size:7.6pt;color:#a9aba4;line-height:1.8}
+.cover .foot b{color:#fff;font-weight:600}
+
+/* ---------- light page chrome ---------- */
+.hdr{position:absolute;top:11mm;right:18mm;left:18mm;display:flex;justify-content:space-between;align-items:center;font-size:6.8pt;color:var(--g3);border-bottom:0.25mm solid var(--g2);padding-bottom:2mm}
+.hdr .k{font-family:"Grotesk";letter-spacing:.24em;font-weight:700;color:var(--ink);direction:ltr;display:flex;align-items:center;gap:2mm}
+.hdr .k::before{content:"";width:2.4mm;height:2.4mm;background:var(--lime2);display:inline-block}
+.ftr{position:absolute;bottom:10mm;right:18mm;left:18mm;display:flex;justify-content:space-between;align-items:center;font-size:6.6pt;color:var(--g3)}
+.ftr .pn{font-family:"Grotesk";font-weight:700;font-size:9pt;color:var(--ink);display:flex;align-items:center;gap:2mm}
+.ftr .pn::before{content:"";width:6mm;height:1.2mm;background:var(--lime2)}
+.ftr .dr{border:0.25mm solid var(--g2);padding:.6mm 2mm;letter-spacing:.02em}
+.ftr .dr .lat{letter-spacing:.12em}
+.dark .ftr{color:#8b8d86}.dark .ftr .pn{color:#fff}.dark .ftr .dr{border-color:#3a3b37}
+.body{position:absolute;top:24mm;right:18mm;left:18mm;bottom:20mm}
+
+/* typography */
+.eyebrow{font-family:"Grotesk";font-size:7.4pt;font-weight:700;letter-spacing:.26em;color:var(--olive);direction:ltr;text-align:right;margin-bottom:2mm}
+.eyebrow.ar{font-family:"Plex Arabic";letter-spacing:0;font-size:8.4pt}
+h2{font-family:"Kufi";font-weight:800;font-size:24pt;line-height:1.45;margin-bottom:4mm}
+h3{font-family:"Kufi";font-weight:700;font-size:13pt;line-height:1.5;margin-bottom:2mm}
+h4{font-weight:700;font-size:9.6pt;margin-bottom:1mm}
+p{margin-bottom:2.6mm;text-align:justify}
+.lede{font-size:12.4pt;line-height:1.85;font-weight:400;color:#1b1b1b;margin-bottom:5mm}
+.rule{height:1.4mm;width:18mm;background:var(--lime2);margin:0 0 5mm}
+.cols{display:grid;grid-template-columns:50mm 1fr;gap:10mm}
+.side{font-size:8.2pt;color:var(--g4);line-height:1.75}
+.pq{font-family:"Kufi";font-weight:700;font-size:15pt;line-height:1.65;border-right:1.6mm solid var(--lime2);padding-right:5mm;margin:4mm 0 6mm}
+.pq small{display:block;font-family:"Plex Arabic";font-size:7.4pt;font-weight:400;color:var(--g3);margin-top:2mm}
+
+/* exhibits */
+.ex{margin-top:4mm;border-top:0.6mm solid var(--ink);padding-top:3mm}
+.ex-h{display:flex;gap:3mm;align-items:baseline;margin-bottom:1mm}
+.ex-n{font-weight:700;font-size:8.6pt;color:var(--ink);background:var(--lime2);padding:0 2mm}
+.ex-t{font-family:"Kufi";font-weight:700;font-size:10.6pt}
+.ex-s{font-size:7.8pt;color:var(--g4);margin-bottom:3mm}
+.ex-src{font-size:6.8pt;color:var(--g3);border-top:0.25mm solid var(--g2);padding-top:1.6mm;margin-top:3mm;line-height:1.7}
+
+/* timeline */
+.tl{position:relative;display:grid;grid-template-columns:repeat(11,1fr);gap:0;margin-top:2mm}
+.tl::before{content:"";position:absolute;top:13.2mm;right:0;left:0;height:0.5mm;background:var(--ink)}
+.tl .ev{position:relative;padding:0 1.2mm;text-align:center}
+.tl .yr{font-family:"Grotesk";font-weight:700;font-size:10.5pt;height:11mm;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1mm}
+.tl .dot{width:3.6mm;height:3.6mm;border-radius:50%;background:#fff;border:0.6mm solid var(--ink);margin:0 auto 2.4mm;position:relative;z-index:1}
+.tl .ev.hl .dot{background:var(--lime);}
+.tl .tx{font-size:6.9pt;line-height:1.55;color:#262626}
+
+/* exec summary */
+.kt{display:grid;grid-template-columns:14mm 1fr;gap:4mm;padding:4.2mm 0;border-bottom:0.25mm solid var(--g2)}
+.kt:first-child{border-top:0.6mm solid var(--ink)}
+.kt .n{font-family:"Grotesk";font-weight:700;font-size:26pt;line-height:1;color:var(--ink)}
+.kt .n span{display:block;width:8mm;height:1.2mm;background:var(--lime2);margin-top:2mm}
+.kt h3{font-size:12.4pt;margin-bottom:1mm}
+.kt p{margin:0;font-size:9.2pt;color:#2a2a2a}
+
+/* flow (absorption) */
+.flow{display:grid;grid-template-columns:1fr 6mm 1.25fr 6mm 1fr 6mm 1fr;align-items:stretch;margin-top:1mm}
+.fb{border:0.35mm solid var(--ink);padding:3mm;font-size:7.6pt;line-height:1.6}
+.fb b{display:block;font-family:"Kufi";font-size:9pt;margin-bottom:1mm}
+.fb.k{background:var(--ink);color:#fff;border-color:var(--ink)}
+.fb.k b{color:var(--lime)}
+.fb.x{background:var(--lime);border-color:var(--lime)}
+.arw{display:flex;align-items:center;justify-content:center;font-size:12pt;color:var(--ink)}
+
+/* why now */
+.drv{display:grid;grid-template-columns:9mm 1fr;gap:3mm;padding:3mm 0;border-bottom:0.25mm solid var(--g2)}
+.drv .ic{width:7mm;height:7mm;background:var(--ink);color:var(--lime);font-family:"Grotesk";font-weight:700;display:flex;align-items:center;justify-content:center;font-size:9pt}
+.drv h4{font-family:"Kufi";font-size:10pt}
+.drv p{margin:0;font-size:8.8pt}
+.dense .drv{padding:2.2mm 0}.dense .drv p{font-size:8.4pt;line-height:1.72}
+.stat{border-top:0.6mm solid var(--ink);padding:2.4mm 0 3.4mm}
+.stat .v{font-family:"Grotesk";font-weight:700;font-size:24pt;line-height:1.1;direction:ltr;text-align:right}
+.stat .v small{font-size:11pt}
+.stat .d{font-size:7.6pt;color:var(--g4);line-height:1.6}
+
+/* divider */
+.divider .num{position:absolute;top:50mm;right:24mm;font-family:"Grotesk";font-weight:700;font-size:150pt;line-height:1;color:transparent;-webkit-text-stroke:0.5mm var(--lime);direction:ltr}
+.divider .kicker{position:absolute;top:122mm;right:24mm}
+.divider h2{position:absolute;top:130mm;right:24mm;left:24mm;color:#fff;font-size:40pt;line-height:1.4}
+.divider .dsub{position:absolute;top:186mm;right:24mm;width:120mm;font-size:11pt;line-height:1.9;color:#cfd0ca}
+.divider .list{position:absolute;bottom:34mm;right:24mm;left:24mm;display:grid;grid-template-columns:repeat(7,1fr);gap:2mm;border-top:0.3mm solid #33342f;padding-top:3mm}
+.divider .list div{font-size:7.6pt;color:#cfd0ca;line-height:1.5}
+.divider .list div b{display:block;font-family:"Grotesk";color:var(--lime);font-size:9pt}
+
+/* 7-tech table */
+table.tt{width:100%;border-collapse:collapse;font-size:7.7pt;line-height:1.6}
+.tt th{text-align:right;font-weight:700;font-size:7.4pt;padding:1.8mm 2mm;border-bottom:0.6mm solid var(--ink);color:var(--g4)}
+.tt td{padding:2.2mm 2mm;border-bottom:0.25mm solid var(--g2);vertical-align:top}
+.tt td.t{font-family:"Kufi";font-weight:700;font-size:8.6pt;white-space:nowrap}
+.tt td.t span{font-family:"Grotesk";color:var(--g3);margin-left:2mm;font-size:8pt}
+.ev-b{display:inline-flex;align-items:center;gap:1.4mm;white-space:nowrap;font-size:7pt}
+.ev-b i{width:2.6mm;height:2.6mm;display:inline-block}
+.ev-full i{background:var(--ink)} .ev-part i{background:linear-gradient(90deg,var(--ink) 50%,var(--g2) 50%)} .ev-none i{border:0.3mm solid var(--ink)}
+
+/* tech pages */
+.tech{margin-bottom:6mm}
+.tech .th{display:flex;align-items:baseline;gap:4mm;border-bottom:0.6mm solid var(--ink);padding-bottom:1.6mm;margin-bottom:3mm}
+.tech .th .no{font-family:"Grotesk";font-weight:700;font-size:22pt;line-height:1;color:var(--ink);background:var(--lime2);padding:0.5mm 2.4mm}
+.tech .th h2{margin:0;font-size:19pt}
+.row{display:grid;grid-template-columns:30mm 1fr;gap:5mm;padding:2mm 0;border-bottom:0.25mm solid var(--g1)}
+.row .l{font-weight:700;font-size:8pt;color:var(--g4);padding-top:.4mm}
+.row .c{font-size:9pt;line-height:1.8;text-align:justify}
+.row.opp{background:var(--g1);border:none;padding:3mm 3mm;margin-top:2mm;border-right:1.4mm solid var(--lime2)}
+.row.opp .l{color:var(--ink)}
+.row.opp .c{text-align:right}
+.row.fail .l{color:#8a3b12}
+.note{font-size:8.2pt;color:var(--g4);background:var(--g1);padding:2.4mm 3mm;margin-bottom:3mm;border-right:1.4mm solid var(--g3)}
+
+/* bars */
+.bars{margin-top:2mm}
+.br{display:grid;grid-template-columns:36mm 1fr 16mm;align-items:center;gap:3mm;margin-bottom:3mm}
+.br .bl{font-size:8.2pt;font-weight:600}
+.br .bl small{display:block;font-weight:400;color:var(--g3);font-size:6.8pt;font-family:"Grotesk"}
+.br .track{height:7mm;background:var(--g1);position:relative}
+.br .fill{position:absolute;top:0;bottom:0;right:0;background:var(--ink)}
+.br .fill.hl{background:var(--lime2)}
+.br .val{font-family:"Grotesk";font-weight:700;font-size:13pt;direction:ltr;text-align:left}
+.axis{display:grid;grid-template-columns:36mm 1fr 16mm;gap:3mm;font-family:"Grotesk";font-size:6.4pt;color:var(--g3)}
+.axis .sc{display:flex;justify-content:space-between}
+
+/* principles */
+.pr{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
+.pc{border-top:0.6mm solid var(--ink);padding:3mm 0 0;min-height:44mm}
+.pc .n{font-family:"Grotesk";font-weight:700;font-size:28pt;line-height:1;color:transparent;-webkit-text-stroke:0.35mm var(--ink)}
+.pc.hl{background:var(--ink);color:#fff;padding:3mm;border-top-color:var(--lime)}
+.pc.hl .n{-webkit-text-stroke:0.35mm var(--lime)}
+.pc h4{font-family:"Kufi";font-size:10.4pt;line-height:1.6;margin-top:3mm}
+.pc p{font-size:7.8pt;color:var(--g4);margin-top:1mm;text-align:right}
+.pc.hl p{color:#cfd0ca}
+
+/* ladder */
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:2.4mm;align-items:end;height:92mm;margin-top:4mm}
+.st{border:0.35mm solid var(--ink);padding:3mm;display:flex;flex-direction:column;justify-content:flex-start;position:relative}
+.st .sn{font-family:"Grotesk";font-weight:700;font-size:9pt;color:var(--g3)}
+.st .nm{font-family:"Kufi";font-weight:800;font-size:13pt;line-height:1.5;margin-top:1mm}
+.st .kp{font-size:7.4pt;color:var(--g4);line-height:1.5;margin-top:1mm}
+.st:nth-child(1){height:30%}.st:nth-child(2){height:45%}.st:nth-child(3){height:60%;background:var(--g1)}.st:nth-child(4){height:78%;background:var(--ink);color:#fff}.st:nth-child(5){height:100%;background:var(--lime);border-color:var(--lime)}
+.st:nth-child(4) .sn,.st:nth-child(4) .kp{color:#bfc1ba}
+.st:nth-child(5) .sn,.st:nth-child(5) .kp{color:#2b3300}
+.lad-ax{display:flex;justify-content:space-between;font-size:7pt;color:var(--g3);margin-top:2mm;border-top:0.25mm solid var(--g2);padding-top:1.4mm}
+.zones{display:grid;grid-template-columns:2fr 3fr;gap:2.4mm;margin-top:2mm;font-size:7.4pt;font-weight:600;text-align:center}
+.zones div{padding:1.2mm;border:0.3mm dashed var(--g3);color:var(--g4)}
+.zones div:last-child{border-style:solid;border-color:var(--ink);color:var(--ink)}
+
+/* call page */
+.call .body{top:30mm}
+.call .bigq{font-family:"Kufi";font-weight:800;font-size:30pt;line-height:1.55;color:#fff;margin:8mm 0 10mm}
+.call .bigq em{font-style:normal;color:var(--lime)}
+.call p{color:#dcddd7;font-size:11pt;line-height:1.95;max-width:150mm}
+.call .ask{border:0.4mm solid var(--lime);padding:6mm 7mm;margin:8mm 0;max-width:150mm}
+.call .ask .kicker{font-size:7pt;margin-bottom:2mm}
+.call .ask div.q{font-family:"Kufi";font-weight:700;font-size:16pt;color:#fff;line-height:1.6}
+
+/* sources */
+ol.srcs{columns:2;column-gap:8mm;font-size:7.2pt;line-height:1.55;list-style:none;counter-reset:s}
+ol.srcs li{break-inside:avoid;margin-bottom:1.8mm;counter-increment:s;display:grid;grid-template-columns:7mm 1fr}
+ol.srcs li::before{content:counter(s);font-family:"Grotesk";font-weight:700;color:var(--olive)}
+ol.srcs li .u{font-family:"Grotesk";font-size:6.4pt;color:var(--g3);direction:ltr;text-align:right;word-break:break-all;display:block}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin:2mm 0 5mm}
+.legend div{background:var(--g1);padding:3mm;font-size:7.8pt;line-height:1.6}
+.legend b{display:block;margin-bottom:1mm}
+.gaps li{font-size:8pt;margin:0 4mm 1.4mm 0}
+
+/* toc */
+.toc a{display:grid;grid-template-columns:12mm 1fr 10mm;align-items:baseline;padding:3mm 0;border-bottom:0.25mm solid var(--g2);color:inherit;text-decoration:none}
+.toc .tn{font-family:"Grotesk";font-weight:700;color:var(--olive);font-size:9pt}
+.toc .tt2{font-family:"Kufi";font-weight:600;font-size:11pt}
+.toc .tp{font-family:"Grotesk";font-weight:700;text-align:left;font-size:9pt}
+.toc .sub{display:block;font-family:"Plex Arabic";font-weight:400;font-size:7.6pt;color:var(--g3)}
+
+sup.p{color:#7a5a00;margin-inline-start:1px}
+sup.p::before{content:"[صحافة "}sup.p::after{content:"]"}
+.tl{grid-template-columns:repeat(12,1fr)}
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2mm}
+.path .pp{border-top:1.6mm solid var(--g2);padding:2.4mm 2.6mm 0 2mm;position:relative}
+.path .pp:nth-child(2){border-top-color:var(--g3)}.path .pp:nth-child(3){border-top-color:var(--ink)}.path .pp:nth-child(4){border-top-color:var(--lime2)}
+.path .y{font-family:"Grotesk";font-weight:700;font-size:15pt;line-height:1.2}
+.path .ph{font-size:7pt;font-weight:700;color:var(--olive);margin-bottom:1mm}
+.path .d{font-size:7.6pt;line-height:1.6}
+
+
+.ex-n{white-space:nowrap!important;flex:0 0 auto!important;display:inline-block}
+.ex-t{flex:1 1 auto;min-width:0}
+sup.c{color:#8a3b12;margin-inline-start:2px}
+sup.c::before{content:"◆ ";font-size:5pt}
+table.tt td{font-size:7.3pt}
+.mx{width:100%;border-collapse:collapse;font-size:7.6pt}
+.mx th{font-size:7.2pt;padding:1.6mm;border-bottom:0.6mm solid var(--ink);color:var(--g4);text-align:center}
+.mx th:first-child{text-align:right}
+.mx td{border-bottom:0.25mm solid var(--g2);padding:1.6mm;text-align:center;height:8.4mm}
+.mx td:first-child{text-align:right;font-weight:600}
+.mx .f{background:var(--ink)} .mx .cl{background:repeating-linear-gradient(45deg,var(--ink) 0 1mm,#fff 1mm 2mm)} .mx .nt{background:var(--lime2)} .mx .pl{background:#fff;outline:0.35mm dashed var(--g3);outline-offset:-1.6mm}
+.lg{display:flex;gap:6mm;font-size:7pt;margin-top:2mm;color:var(--g4)} .lg i{display:inline-block;width:3mm;height:3mm;margin-left:1.4mm;vertical-align:middle}
+.gii{display:grid;grid-template-columns:28mm repeat(4,1fr);gap:2mm;align-items:end;font-size:7.4pt}
+ul.b{list-style:none} ul.b li{position:relative;padding-right:5mm;margin-bottom:2.4mm;text-align:justify}
+ul.b li::before{content:"";position:absolute;right:0;top:2.4mm;width:2mm;height:2mm;background:var(--lime2)}
+</style>
+</head><body><section class="page dark cover"><div class="grid"></div><div class="bar"></div>
+<div class="brand"><img src="assets/visionseek-chevron.png" alt="VisionSeek"><span>VISIONSEEK</span></div>
+
+<div class="kicker">VisionSeek Lab · Capability Ledger · Edition 1</div>
+<h1 style="font-size:50pt">سجل نقل القدرة</h1>
+<div class="sub">ماذا يبقى في الخليج بعد صفقات الذكاء الاصطناعي ومراكز البيانات؟<br><span style="font-size:12pt;color:#a9aba4">تركيب منهجي للأدلة المنشورة · السعودية والإمارات</span></div>
+<div class="label">مختبر <bdi>VisionSeek</bdi> · رؤى · الإصدار 1</div>
+<div class="steps"><i style="height:8mm"></i><i style="height:14mm"></i><i style="height:20mm"></i><i style="height:27mm"></i><i style="height:35mm"></i></div>
+<div class="foot"><b>أكتوبر 2026</b><br>إعداد: أحمد عبدالعليم</div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="cols"><div class="side"><div class="eyebrow">ABOUT</div><h3>عن هذا التقرير</h3>
+<p style="text-align:right">الإصدار الأول من «سجل نقل القدرة» يستند إلى تركيب منهجي للأدلة المنشورة. كل حقيقة فيه منسوبة إلى مصدرها الأصلي، ثم مُسقطة على سلّم الامتلاك. ونطاقه صفقات الذكاء الاصطناعي ومراكز البيانات في السعودية والإمارات.</p>
+<div class="rule" style="margin-top:6mm"></div><h4>كيف تقرأ العلامات</h4>
+<p style="text-align:right;font-size:7.8pt"><sup class="s" style="font-size:7.4pt">4</sup> مؤكد بمصدر؛ الرقم يحيل إلى قائمة المصادر.<br><sup class="c" style="font-size:7.4pt">ادعاء أطراف</sup> تصريح أطراف الصفقة نفسها، بلا تحقق مستقل.<br><sup class="i" style="font-size:7.4pt">استنتاج</sup> قراءة <bdi>VisionSeek</bdi>.</p>
+<div class="note" style="margin-top:5mm;font-size:7.4pt">أرقام الإعلانات التزامات معلنة، لا إنجازات متحققة.</div></div>
+<div><div class="eyebrow">CONTENTS</div><h2>المحتويات</h2><div class="rule"></div><nav class="toc"><a><span class="tn">—</span><span class="tt2">الملخص التنفيذي: ست خلاصات</span><span class="tp">3</span></a><a><span class="tn">—</span><span class="tt2">المنهجية وسلّم الامتلاك</span><span class="tp">4</span></a><a><span class="tn">01</span><span class="tt2">السجل صفقةً بصفقة</span><span class="tp">6</span></a><a><span class="tn">02</span><span class="tt2">النتائج حسب الدرجة</span><span class="tp">9</span></a><a><span class="tn">—</span><span class="tt2">أسئلة مفتوحة، ونطاق الإصدار ومصادره</span><span class="tp">12</span></a><a><span class="tn">—</span><span class="tt2">المصادر</span><span class="tp">13</span></a></nav>
+<div class="pq" style="margin-top:12mm">الحجم معلَن؛ أما القدرة المنقولة فبلا قياس منشور في الأدلة المفحوصة.<small>الخلاصة الأولى من هذا الإصدار</small></div></div></div></div><div class="ftr"><span class="pn">2</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="eyebrow">EXECUTIVE SUMMARY</div><h2>الملخص التنفيذي: ست خلاصات</h2><div class="kt"><div class="n">1<span></span></div><div><h3>الحجم معلَن؛ أما القدرة المنقولة فبلا قياس منشور في الأدلة المفحوصة.</h3><p>تحدد الإعلانات الميغاواطات والمعالجات والمليارات بدقة. أما ما يبقى محلياً من مهارات وتصميم وملكية فكرية، فلا تتضمن المصادر المفحوصة سجلاً منشوراً يقيسه صفقةً بصفقة. <sup class="i">استنتاج</sup></p></div></div><div class="kt"><div class="n">2<span></span></div><div><h3>الملكية تتقدّم؛ أما التصميم فما زال نيةً معلنة.</h3><p>تنص مذكرة تفاهم أفصحت عنها stc على أن تملك HUMAIN 51% من مشروع مشترك مزمع مع center3<sup class="s">8</sup>. ومؤشر التصميم الوحيد على مستوى الصفقة هو مركز تصميم أُعلن ضمن مذكرة HUMAIN–Qualcomm <sup class="c">ادعاء أطراف</sup><sup class="s">4</sup><sup class="s">5</sup>.</p></div></div><div class="kt"><div class="n">3<span></span></div><div><h3>ظهر مورّد محلي في سلسلة البناء.</h3><p>أفصحت شركة المعمر لأنظمة المعلومات (MIS) في تداول عن اتفاقية مع HUMAIN «لتصميم وبناء» مراكز بيانات للذكاء الاصطناعي، تتجاوز قيمتها 689% من إيراداتها لعام 2025 (شاملة ضريبة القيمة المضافة)، وتنفَّذ بأوامر عمل<sup class="s">9</sup><sup class="s">10</sup>. هذه أوضح علامة منشورة على الدرجة ٢. <sup class="i">استنتاج</sup></p></div></div><div class="kt"><div class="n">4<span></span></div><div><h3>المدخلات أقوى من المخرجات.</h3><p>في مؤشر الابتكار العالمي 2025: السعودية 31 في المدخلات و61 في المخرجات، والإمارات 14 في المدخلات و47 في المخرجات<sup class="s">17</sup><sup class="s">18</sup>.</p></div></div><div class="kt"><div class="n">5<span></span></div><div><h3>المهارات لا تتحقق تلقائياً.</h3><p>تنبّه OECD إلى أن مبادرات المهارات في الإمارات «do not materialise automatically and may depend on active measures»<sup class="s">20</sup>.</p></div></div><div class="kt"><div class="n">6<span></span></div><div><h3>الفرصة في القياس نفسه.</h3><p>صار في يد صانع القرار العربي ما يكفي من الإفصاحات الرسمية لبدء سجل علني يتتبع ما ينتقل فعلاً، لا ما يُعلن فقط. <sup class="i">استنتاج</sup></p></div></div></div><div class="ftr"><span class="pn">3</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="eyebrow">METHODOLOGY</div><h2>المنهجية</h2><div class="rule"></div>
+<p class="lede">يستند هذا الإصدار إلى تركيب منهجي للأدلة المنشورة، تحقّقنا فيه من كل مصدر في أصله، وكل حقيقة فيه منسوبة إلى رابط فتحناه وقرأناه.</p>
+<div class="cols"><div class="side"><h4>وحدة التحليل</h4><p style="text-align:right">الصفقة، مفككةً إلى عناصر قدرة، ثم يُسقَط كل عنصر على درجة من درجات السلّم.</p><h4>المنهجية الكاملة</h4><p style="text-align:right">منهجية <bdi>VisionSeek</bdi> v1.0 (وثيقة مرافقة).</p></div>
+<div><h3>طبقات المصادر</h3><table class="tt"><tr><th>الطبقة</th><th>النوع</th><th>الاستخدام</th></tr>
+<tr><td class="t">أ</td><td>رسمي أو منظمة دولية</td><td>حقيقة</td></tr>
+<tr><td class="t">ب</td><td>إفصاح أو بيان صادر عن أطراف الصفقة</td><td>حقيقة إفصاح، أو «ادعاء أطراف»</td></tr>
+<tr><td class="t">ج</td><td>صحافة موثوقة، بحث محكَّم، مركز أبحاث</td><td>حقيقة منسوبة</td></tr>
+<tr><td class="t">د</td><td>استشاري</td><td>أطر ومقارنة فقط</td></tr>
+<tr><td class="t">هـ</td><td>خيوط بحث</td><td>لا يُستشهد بها</td></tr></table>
+<div class="pq">كل حقيقة منسوبة إلى مصدرها الأصلي، ومُسقطة على سلّم الامتلاك.<small>المنهج</small></div></div></div></div><div class="ftr"><span class="pn">4</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="eyebrow">FRAMEWORK</div><h2>سلّم الامتلاك</h2>
+<div class="ex"><div class="ex-h"><span class="ex-n">الشكل 1</span><span class="ex-t">خمس درجات من الاستخدام إلى التصدير</span></div><div class="ex-s">مؤشرات الأدلة المنشورة لكل درجة</div>
+<div class="ladder" style="height:80mm"><div class="st"><span class="sn">1</span><span class="nm">استخدام</span><span class="kp">تشغيل عتاد أو خدمة أجنبية</span></div><div class="st"><span class="sn">2</span><span class="nm">تجميع</span><span class="kp">بناء ودمج وتشغيل بأيدٍ محلية؛ عقود EPC</span></div><div class="st"><span class="sn">3</span><span class="nm">تكييف</span><span class="kp">نماذج مكيَّفة؛ تدريب يتحول إلى أدوار هندسية</span></div><div class="st"><span class="sn">4</span><span class="nm">تصميم</span><span class="kp">مراكز تصميم؛ براءات؛ نماذج أساس محلية</span></div><div class="st"><span class="sn">5</span><span class="nm">تصدير/معيار</span><span class="kp">بيع التصميم المحلي أو وضع معيار</span></div></div>
+<div class="ex-src">المصدر: إطار <bdi>VisionSeek</bdi>؛ يتقاطع مع تسلسل Strategy& (2020، Exhibit 3) ومع سلّم Matchpoint (2026، القسم 14).</div></div>
+<h3 style="margin-top:6mm">إفصاح عن التشابه</h3>
+<p>يتقاطع السلّم مع تسلسل نشره Strategy& (2020) يتدرج من الصيانة والإصلاح إلى التكامل والتجميع والتكييف، ثم الإنتاج المشترك، ثم التصميم المستقل<sup class="s">23</sup>. ويعرض Matchpoint (2026) سلّماً من خمس درجات ينتهي بـ<bdi class="lat">“independent development and exportable products”</bdi>، وينبّه إلى أن <bdi class="lat">“Training completions alone do not establish capability”</bdi><sup class="s">24</sup>. كلاهما من الطبقة د. لا ندّعي أصالة فكرة السلّم؛ ما نفعله هو تطبيق سلّم مماثل على صفقات منشورة بعينها. <sup class="i">استنتاج</sup></p></div><div class="ftr"><span class="pn">5</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page dark divider"><div class="grid"></div><div class="bar"></div><div class="num">01</div><div class="kicker">Part One · The Ledger</div><h2>السجل<br>صفقةً بصفقة</h2><div class="dsub">إحدى عشرة صفقة أو حدثاً في السعودية والإمارات: الحجم المعلن، ومن يقدّم ماذا، وأعلى درجة يدعمها دليل منشور.</div><div class="ftr" style="right:31mm"><span class="pn">6</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="eyebrow">THE LEDGER</div><h3>جدول السجل</h3>
+<table class="tt"><tr><th style="width:34mm">الصفقة</th><th>الحجم المعلن</th><th>من يقدّم ماذا</th><th style="width:16mm">أعلى درجة بدليل</th><th style="width:18mm">المصدر · الطبقة</th></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–NVIDIA</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">5/2025</span></td><td>حتى 500 ميغاواط خلال 5 سنوات؛ المرحلة الأولى 18,000 معالج GB300 <sup class="c">ادعاء أطراف</sup></td><td>عتاد؛ تدريب «آلاف المواطنين»</td><td style="text-align:center;font-weight:700">١</td><td><sup class="s">1</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–AMD</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">5/2025</span></td><td>حتى 10 مليارات$ و500 ميغاواط <sup class="c">ادعاء أطراف</sup></td><td>AMD: الحوسبة وROCm. HUMAIN: التسليم الشامل</td><td style="text-align:center;font-weight:700">١–٢</td><td><sup class="s">2</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–AWS</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">5/2025</span></td><td>أكثر من 5 مليارات$ لمنطقة AI Zone <sup class="c">ادعاء أطراف</sup></td><td>خدمات المنصة؛ تدريب 100 ألف مواطن</td><td style="text-align:center;font-weight:700">١</td><td><sup class="s">3</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–Qualcomm</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">مذكرة تفاهم 5/2025</span></td><td>— <sup class="c">ادعاء أطراف</sup></td><td>تعاون مع وزارة الاتصالات وتقنية المعلومات لإنشاء مركز تصميم؛ دمج ALLaM</td><td style="text-align:center;font-weight:700">٤ (نية)</td><td><sup class="s">4</sup><sup class="s">5</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>موافقة تصدير أمريكية</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">11/2025</span></td><td>«equivalent of up to 35,000» GB300 (الصيغة تحتمل: لكل شركة، أو للشركتين معاً)</td><td>مشروطة؛ BIS تراقب الالتزام</td><td style="text-align:center;font-weight:700">١</td><td><sup class="s">6</sup> <span style="color:var(--g3)">أ</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–xAI</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">إطارية 11/2025</span></td><td>منشأة رئيسية «500 MW+» <sup class="c">ادعاء أطراف</sup></td><td>تصميم وإنشاء وتشغيل؛ دمج Grok</td><td style="text-align:center;font-weight:700">١–٢</td><td><sup class="s">7</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–center3</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">مذكرة 12/2025</span></td><td>حتى 1 غيغاواط؛ يبدأ بحتى 250 ميغاواط، رهناً بالتزامات العملاء</td><td>مشروع مشترك مزمع (51/49)؛ الطرفان مرتبطان عبر صندوق الاستثمارات العامة</td><td style="text-align:center;font-weight:700">١–٢ (مزمع)</td><td><sup class="s">8</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>HUMAIN–MIS</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">9/2026</span></td><td>أكثر من 689% من إيرادات MIS (شاملة ضريبة القيمة المضافة)؛ من 50 إلى 250 ميغاواط</td><td>تصميم وبناء، وEPC عبر أوامر عمل</td><td style="text-align:center;font-weight:700">٢</td><td><sup class="s">9</sup><sup class="s">10</sup> <span style="color:var(--g3)">ب</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>تمويل HUMAIN</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">5/2026</span></td><td>«could be worth at least 20 billion riyals» لـ2 غيغاواط (بحسب مصادر)</td><td>Goldman Sachs مستشاراً</td><td style="text-align:center;font-weight:700">—</td><td><sup class="s">12</sup> <span style="color:var(--g3)">ج</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>Microsoft–G42</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0">4/2024</span></td><td>1.5 مليار$؛ صندوق مهارات بمليار$ <sup class="c">ادعاء أطراف</sup></td><td>ترحيل منصة G42 إلى Azure</td><td style="text-align:center;font-weight:700">١ (ادعاء: ٣)</td><td><sup class="s">13</sup><sup class="s">14</sup> <span style="color:var(--g3)">ب/ج</span></td></tr><tr><td class="t" style="white-space:normal;font-size:7.6pt"><bdi>Stargate UAE / حرم أبوظبي</bdi><br><span style="font-family:Plex Arabic;font-weight:400;color:#4A4C47;margin:0"></span></td><td>5 غيغاواط مخططة؛ المرحلة الأولى 1 غيغاواط</td><td>—</td><td style="text-align:center;font-weight:700">١</td><td><sup class="s">14</sup><sup class="s">15</sup> <span style="color:var(--g3)">ج</span></td></tr></table>
+<p style="font-size:7.4pt;color:var(--g4);margin-top:3mm">الأرقام في عمود «الحجم المعلن» التزامات أُعلنت، لا إنجازات تحققت. <sup class="i">استنتاج</sup></p></div><div class="ftr"><span class="pn">7</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="eyebrow">EXHIBIT</div><h2>الصفقات على السلّم</h2>
+<div class="ex"><div class="ex-h"><span class="ex-n">الشكل 2</span><span class="ex-t">أعلى درجة يدعمها دليل منشور، حسب نوع الدليل</span></div><div class="ex-s">صفقة التمويل مستبعدة، فليس لها درجة</div>
+<table class="mx"><tr><th>الصفقة</th><th>١ استخدام</th><th>٢ تجميع</th><th>٣ تكييف</th><th>٤ تصميم</th><th>٥ تصدير</th></tr><tr><td>HUMAIN–NVIDIA</td><td class="cl"></td><td></td><td></td><td></td><td></td></tr><tr><td>HUMAIN–AMD</td><td class="cl"></td><td class="cl"></td><td></td><td></td><td></td></tr><tr><td>HUMAIN–AWS</td><td class="cl"></td><td></td><td></td><td></td><td></td></tr><tr><td>HUMAIN–Qualcomm</td><td></td><td></td><td></td><td class="pl"></td><td></td></tr><tr><td>موافقة التصدير</td><td class="f"></td><td></td><td></td><td></td><td></td></tr><tr><td>HUMAIN–xAI</td><td class="cl"></td><td class="cl"></td><td></td><td></td><td></td></tr><tr><td>HUMAIN–center3</td><td class="pl"></td><td class="pl"></td><td></td><td></td><td></td></tr><tr><td>HUMAIN–MIS</td><td class="f"></td><td class="nt"></td><td></td><td></td><td></td></tr><tr><td>Microsoft–G42</td><td class="cl"></td><td></td><td class="cl"></td><td></td><td></td></tr><tr><td>Stargate UAE</td><td class="f"></td><td></td><td></td><td></td><td></td></tr></table>
+<div class="lg"><span><i style="background:var(--lime2)"></i>إفصاح رسمي (تداول)</span><span><i style="background:var(--ink)"></i>مصدر رسمي أو مستقل</span><span><i style="background:repeating-linear-gradient(45deg,#0D0D0D 0 1mm,#fff 1mm 2mm)"></i>ادعاء أطراف</span><span><i style="border:0.35mm dashed #8A8D84"></i>نية أو مذكرة تفاهم</span></div>
+<div class="ex-src">المصدر: تجميع <bdi>VisionSeek</bdi> من إفصاحات تداول وبيانات الأطراف وCSET وAGSI (المصادر 1–15). التصنيف قراءة <bdi>VisionSeek</bdi>.</div></div>
+<div class="pq" style="margin-top:8mm">العمود الخامس فارغ: لا توثّق الأدلة المنشورة المفحوصة تصديراً ناتجاً عن صفقة من صفقات السجل.<small>استنتاج</small></div></div><div class="ftr"><span class="pn">8</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page dark divider"><div class="grid"></div><div class="bar"></div><div class="num">02</div><div class="kicker">Part Two · Findings by Rung</div><h2>النتائج<br>حسب الدرجة</h2><div class="dsub">ما تقوله المصادر المفتوحة عن كل درجة، من أقواها تغطيةً إلى أضعفها.</div><div class="ftr" style="right:31mm"><span class="pn">9</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="tech"><div class="th"><span class="no">1</span><h2>الاستخدام والتشغيل: أقوى تغطية</h2></div>
+<ul class="b"><li>يرى البنك الدولي أن استثمارات مراكز البيانات والحوسبة عالية الأداء، خاصة في السعودية والإمارات، تدعم الاقتصاد الرقمي والجاهزية للذكاء الاصطناعي (إعادة صياغة)<sup class="s">21</sup>.</li>
+<li>تصف UNCTAD السعودية والإمارات بأنهما <bdi class="lat" style="white-space:nowrap">“lead in West Asia”</bdi> في مشاريع الاستثمار الرقمي الجديدة المعلنة<sup class="s">16</sup>.</li>
+<li>وافقت وزارة التجارة الأمريكية على تصدير معالجات GB300 إلى HUMAIN وG42 بشروط أمنية ورقابية، وتتولى BIS مراقبة الالتزام بصفة مستمرة<sup class="s">6</sup>. ويبدو أن العتاد في الصفقات السعودية المدروسة أجنبي في معظمه، وأن الملكية القانونية لا تساوي حرية التصرف الكاملة فيه. <sup class="i">استنتاج</sup></li></ul></div>
+<div class="tech"><div class="th"><span class="no">2</span><h2>التجميع والبناء المحلي: علامة منشورة حديثة</h2></div>
+<ul class="b"><li>يذكر إفصاح MIS في تداول بتاريخ 20/9/2026 أن موضوع العقد <bdi class="lat">“Design and build data centers specifically for artificial intelligence technologies”</bdi>، وأن أعمال EPC تُنفَّذ عبر أوامر عمل تصدرها HUMAIN. والطرفان غير مرتبطين بحسب الإفصاح<sup class="s">9</sup>.</li>
+<li>تنص مذكرة center3 على نية إنشاء كيان محلي، أغلبيته لـHUMAIN، لتطوير مراكز البيانات وتشغيلها. وعبارة stc عن «localizing» التوطين <sup class="c">ادعاء أطراف</sup><sup class="s">8</sup>.</li>
+<li>لا يكشف أيٌّ من الإفصاحات نسبة المكوّن المحلي ولا عدد المهندسين المحليين. <sup class="i">استنتاج</sup></li></ul></div>
+<div class="ex"><div class="ex-h"><span class="ex-n">الشكل 3</span><span class="ex-t">اتفاقية MIS–HUMAIN على خط زمني</span></div>
+<div class="path"><div class="pp"><div class="ph">الترسية</div><div class="y lat">26/8/2026</div><div class="d">إعلان الترسية</div></div><div class="pp"><div class="ph">التوقيع</div><div class="y lat">19/9/2026</div><div class="d">أكثر من 689% من إيرادات 2025، شاملة ضريبة القيمة المضافة؛ من 50 إلى 250 ميغاواط (أُعلنت في 20/9)</div></div><div class="pp"><div class="ph">أمر العمل 3</div><div class="y lat">10/10/2026</div><div class="d">أكثر من 135%؛ مدة 16 شهراً</div></div><div class="pp"><div class="ph">أمر العمل 4</div><div class="y lat">10/10/2026</div><div class="d">أكثر من 135%؛ مدة 16 شهراً؛ الأثر المالي من الربع الرابع 2026</div></div></div>
+<div class="ex-src">المصدر: إفصاحات شركة المعمر لأنظمة المعلومات في تداول (المصدران 9 و10). أمر العمل 3 من إفصاح تداول anId=98469 كما ظهر في فهرس البحث. يعرض الشكل أمر العمل 3.</div></div></div><div class="ftr"><span class="pn">10</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="tech"><div class="th"><span class="no">3</span><h2>التكييف: تغطية ضعيفة</h2></div>
+<ul class="b"><li>التدريب المعلن مرتبط بمنتجات المورّدين: AWS وصندوق الاستثمارات العامة يعلنان تدريب 100 ألف مواطن <sup class="c">ادعاء أطراف</sup><sup class="s">3</sup>.</li>
+<li>في الإمارات، يورد تقرير OECD نقلاً عن Microsoft أن برنامج Elevate UAE يستهدف أكثر من 250 ألف طالب وأكاديمي و55 ألف موظف اتحادي <sup class="c">ادعاء أطراف</sup>. وتنبّه OECD إلى أن هذه المبادرات <bdi class="lat" style="white-space:nowrap">“do not materialise automatically”</bdi><sup class="s">20</sup>.</li>
+<li>عدد المتدرَّبين مؤشر مدخلات، ولا يثبت وحده انتقال قدرة التكييف. <sup class="i">استنتاج</sup></li></ul></div>
+<div class="tech"><div class="th"><span class="no">4</span><h2>التصميم: نية معلنة ومؤشرات وطنية</h2></div>
+<ul class="b"><li>أعلنت HUMAIN وQualcomm، ضمن مذكرة تفاهمهما، تعاوناً مع وزارة الاتصالات وتقنية المعلومات لإنشاء <bdi class="lat" style="white-space:nowrap">“Qualcomm Design Center”</bdi> <sup class="c">ادعاء أطراف</sup><sup class="s">4</sup><sup class="s">5</sup>. لا تتضمن الأدلة المنشورة المفحوصة ما يثبت تشغيل المركز.</li>
+<li>يذكر ملف GRC الاستراتيجي 2026: Jais 2 وK2 Think في الإمارات، وهدف السعودية جذب ما لا يقل عن 50 شركة لتصميم أشباه الموصلات بحلول 2030. ويصف النهج الخليجي بأنه <bdi class="lat">“gradual and selective capacity-building”</bdi><sup class="s">22</sup>.</li>
+<li>بحسب ملف WIPO لعام 2024، أودع مودِعون مقيمون في السعودية 6,071 طلب براءة حول العالم، منها 3,141 في المكتب المحلي، و498 طلباً دولياً عبر PCT. وتلقّى المكتب السعودي 8,029 طلباً، 38.7% منها من مقيمين<sup class="s">19</sup>. هذه أرقام لجميع القطاعات، لا للذكاء الاصطناعي وحده.</li></ul></div>
+<div class="ex"><div class="ex-h"><span class="ex-n">الشكل 4</span><span class="ex-t">المدخلات أقوى من المخرجات: الترتيب في مؤشر الابتكار العالمي 2025</span></div><div class="ex-s">المرتبة من 139 اقتصاداً؛ العمود الأطول يعني ترتيباً أفضل</div>
+<div class="bars"><div class="br"><div class="bl">السعودية · المدخلات</div><div class="track"><div class="fill" style="width:78%"></div></div><div class="val">31</div></div><div class="br"><div class="bl">السعودية · المخرجات</div><div class="track"><div class="fill hl" style="width:57%"></div></div><div class="val">61</div></div><div class="br"><div class="bl">الإمارات · المدخلات</div><div class="track"><div class="fill" style="width:91%"></div></div><div class="val">14</div></div><div class="br"><div class="bl">الإمارات · المخرجات</div><div class="track"><div class="fill hl" style="width:67%"></div></div><div class="val">47</div></div></div>
+<div class="ex-src">المصدر: WIPO، Global Innovation Index 2025، بطاقتا السعودية والإمارات (المصدران 17 و18). في محور مخرجات المعرفة والتكنولوجيا: السعودية 74 والإمارات 57.</div></div>
+<div class="tech" style="margin-top:4mm"><div class="th"><span class="no">5</span><h2>التصدير والمعيار</h2></div><p>لا توثّق الأدلة المنشورة المفحوصة تصديراً أو معياراً ناتجاً عن صفقة من صفقات السجل. <sup class="i">استنتاج</sup></p></div></div><div class="ftr"><span class="pn">11</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="cols" style="grid-template-columns:1fr 1fr"><div><div class="eyebrow">OPEN QUESTIONS</div><h2>أسئلة مفتوحة</h2><div class="rule"></div>
+<ul class="b"><li>حجم القدرة التي تعمل اليوم مقابل المعلنة.</li><li>نسبة المكوّن المحلي في عقود MIS، وفي المشروع المشترك المزمع مع center3.</li><li>هل يعمل مركز تصميم Qualcomm؟ وكم مهندساً سعودياً فيه؟</li><li>من يملك الملكية الفكرية الناتجة عن التكامل، ومن يملك مفاتيح التشغيل.</li></ul>
+<div class="ex"><div class="ex-h"><span class="ex-n">الشكل 5</span><span class="ex-t">طلبات البراءات المرتبطة بالسعودية (2024)</span></div>
+<div class="stat"><div class="v">6,071</div><div class="d">طلبات مودِعين مقيمين في السعودية حول العالم (منها 3,141 في المكتب المحلي، و498 عبر PCT)</div></div>
+<div class="stat"><div class="v">8,029</div><div class="d">طلبات تلقّاها المكتب السعودي (3,108 من مقيمين، أي 38.7%، و4,921 من غير مقيمين)</div></div>
+<div class="ex-src">المصدر: WIPO، IP Statistical Country Profile 2024: Saudi Arabia (المصدر 19). ليست أرقاماً خاصة بالذكاء الاصطناعي.</div></div></div>
+<div><div class="eyebrow">SCOPE &amp; SOURCES</div><h2>نطاق الإصدار ومصادره</h2><div class="rule"></div>
+<ul class="b"><li>يغطي هذا الإصدار 11 صفقة وإعلاناً للذكاء الاصطناعي ومراكز البيانات في السعودية والإمارات، مُسقطة على سلّم امتلاك من خمس درجات.</li><li>يستند إلى تركيب منهجي للأدلة المنشورة: إفصاحات رسمية، وبيانات أطراف الصفقات، ومؤشرات دولية من WIPO وOECD. كل مصدر مقروء في أصله، وبيانات الشركات موسومة «ادعاء أطراف».</li><li>تقيس النتائج ما تتضمنه الأدلة المنشورة، وهي وصفية لا تتضمن توصيات سياسات.</li><li>يضيف الإصدار التالي: إفصاحات أوامر عمل MIS، وبيانات براءات الذكاء الاصطناعي من PATENTSCOPE، ونص أشكناني (GRC، يونيو 2026)، وتدفقات الاستثمار من UNCTAD بعد مطابقتها بأصلها.</li></ul>
+<div class="pq">ما لا يُقاس لا يُملك.<small>استنتاج</small></div></div></div></div><div class="ftr"><span class="pn">12</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page"><div class="hdr"><span class="k">VISIONSEEK LAB · CAPABILITY LEDGER</span><span>سجل نقل القدرة</span></div><div class="body"><div class="eyebrow">SOURCES</div><h2>المصادر</h2><div class="rule"></div><ol class="srcs"><li><span>NVIDIA IR، 13/5/2025<span class="u">https://investor.nvidia.com/news/press-release-details/2025/HUMAIN-and-NVIDIA-Announce-Strategic-Partnership-to-Build-AI-Factories-of-the-Future-in-Saudi-Arabia/default.aspx</span></span></li><li><span>AMD Newsroom، 13/5/2025<span class="u">https://www.amd.com/en/newsroom/press-releases/2025-5-13-amd-and-humain-form-strategic--10b-collaboration-.html</span></span></li><li><span>HUMAIN، HUMAIN and AWS، 2025<span class="u">https://www.humain.com/en/news/humain-and-aws</span></span></li><li><span>HUMAIN، HUMAIN and Qualcomm، 2025<span class="u">https://www.humain.com/en/news/humain-and-qualcomm</span></span></li><li><span>Zawya، Qualcomm and HUMAIN (بيان صحفي)، 14/5/2025<span class="u">https://www.zawya.com/en/press-release/companies-news/qualcomm-and-humain-to-develop-state-of-the-art-ai-data-centers-to-deliver-cloud-to-edge-hybrid-ai-services-jyo15aw4</span></span></li><li><span>U.S. Department of Commerce، Statement on UAE and Saudi Chip Exports، 19/11/2025<span class="u">https://www.commerce.gov/news/press-releases/2025/11/statement-uae-and-saudi-chip-exports</span></span></li><li><span>HUMAIN عبر PR Newswire، HUMAIN and xAI Partner…، 19/11/2025<span class="u">https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html</span></span></li><li><span>تداول، إفصاح stc عن مذكرة تفاهم مع HUMAIN، 18/12/2025<span class="u">https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details?anCat=1&anId=92131&locale=en</span></span></li><li><span>تداول، إفصاح المعمر لأنظمة المعلومات (MIS) عن اتفاقية مع HUMAIN، 20/9/2026<span class="u">https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=98203&cs=7200&locale=en</span></span></li><li><span>تداول، إفصاح MIS: أمر العمل رقم 4، 11/10/2026<span class="u">https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=98471&cs=7200&locale=ar</span></span></li><li><span>Zawya/Refinitiv عبر TradingView، 27/8/2026<span class="u">https://www.tradingview.com/news/reuters.com,2026-08-27:newsml_ZawbqMj80:0-mis-gets-humain-contract-to-expand-saudi-data-centre-capacity/</span></span></li><li><span>Reuters عبر CNA، 19/5/2026<span class="u">https://www.channelnewsasia.com/business/saudi-arabias-humain-picks-goldman-sachs-advise-data-centre-financing-sources-say-6130976</span></span></li><li><span>Microsoft، Microsoft and G42 partner…، 15/4/2024<span class="u">https://blogs.microsoft.com/blog/2024/04/15/microsoft-and-g42-partner-to-accelerate-ai-innovation-in-uae-and-beyond/</span></span></li><li><span>CSET (Chavez)، U.S. AI Statecraft، أكتوبر 2025<span class="u">https://cset.georgetown.edu/wp-content/uploads/CSET-U.S.-AI-Statecraft.pdf</span></span></li><li><span>AGSI، AI and the U.S.-Gulf Tech Axis، 28/7/2025<span class="u">https://agsi.org/analysis/ai-and-the-u-s-gulf-tech-axis/</span></span></li><li><span>UNCTAD، World Investment Report 2025، الفصل 4<span class="u">https://unctad.org/system/files/official-document/wir2025_ch04_en.pdf</span></span></li><li><span>WIPO، Global Innovation Index 2025: Saudi Arabia<span class="u">https://www.wipo.int/edocs/gii-ranking/2025/sa.pdf</span></span></li><li><span>WIPO، Global Innovation Index 2025: UAE<span class="u">https://www.wipo.int/edocs/gii-ranking/2025/ae.pdf</span></span></li><li><span>WIPO، IP Statistical Country Profile 2024: Saudi Arabia<span class="u">https://www.wipo.int/edocs/statistics-country-profile/en/sa.pdf</span></span></li><li><span>OECD، Investment Policy Perspectives in the UAE، الفصل 8، 2026<span class="u">https://www.oecd.org/en/publications/investment-policy-perspectives-in-the-united-arab-emirates_d83cbff3-en/full-report/harnessing-fdi-for-the-uae-s-digital-transformation-and-skills-development_62ddce5d.html</span></span></li><li><span>World Bank، Gulf Economic Update، ديسمبر 2025<span class="u">https://documents1.worldbank.org/curated/en/099703212012571773/pdf/IDU-25e71676-54fb-43fd-b763-66a5b6b568fa.pdf</span></span></li><li><span>GRC، 2026 Strategic Dossier<span class="u">https://www.grc.net/documents/695d091168107GRC2026StrategicDossierFinal2.pdf</span></span></li><li><span>Strategy&، Joint ventures to build national defence industries، 2020<span class="u">https://www.strategyand.pwc.com/m1/en/reports/2020/joint-ventures-to-build-national-defence-industries/joint-ventures-to-build-national-defence-industry.pdf</span></span></li><li><span>Matchpoint، Sovereign by Design، 2026<span class="u">https://www.matchpoint-partners.com/our-insights/sovereign-by-design-control-localisation-and-exit-gcc-defence-ai-jvs.html</span></span></li><li><span>Matchpoint، Saudi Sovereign Compute JVs، 2026<span class="u">https://www.matchpoint-partners.com/our-insights/saudi-sovereign-compute-jvs-governance-localisation-exit.html</span></span></li></ol><p style="font-size:7pt;color:var(--g3);margin-top:4mm">فُتحت المصادر كلها وقُرئت في أكتوبر 2026. حقوق النصوص والأشكال الأصلية لأصحابها؛ الأشكال هنا مُعاد بناؤها من البيانات، ومع كل منها سطر مصدر.</p></div><div class="ftr"><span class="pn">13</span><span class="dr"></span><span class="lat">visionseek.org/insights</span></div></section>
+<section class="page dark cover"><div class="grid"></div><div class="bar"></div>
+<div class="brand" style="top:auto;bottom:120mm;right:20mm;position:absolute"><img src="assets/visionseek-chevron.png" alt="VisionSeek" style="height:20mm"><span style="font-size:22pt">VISIONSEEK</span></div>
+<div class="kicker" style="top:auto;bottom:104mm">VisionSeek Lab · Insights</div>
+<div class="sub" style="top:auto;bottom:72mm;font-size:13pt">من استخدام التكنولوجيا إلى امتلاكها.</div>
+<div class="foot"><b class="lat">visionseek.org/insights</b><br>© 2026 <bdi>VisionSeek</bdi>.</div>
+</section></body></html>

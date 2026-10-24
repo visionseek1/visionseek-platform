@@ -103,7 +103,7 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
 
 test('navigation.json keeps the header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/forums', '/indices', '/insights', '/institute', '/korean-solutions', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/conferences', '/indices', '/institute', '/korean-solutions', '/news', '/opportunities', '/programs', '/projects', '/reports', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);

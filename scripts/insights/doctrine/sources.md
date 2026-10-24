@@ -28,7 +28,7 @@ Access method: **F** = full page fetched and read · **S** = page text read thro
 | 22 | EMA, Remsima EPAR: https://www.ema.europa.eu/en/medicines/human/EPAR/remsima | P | F | EU authorisation 10 Sep 2013 |
 | 23 | Samsung Biologics, Plant 5: https://samsungbiologics.com/media/bio-story/plant5-re-shaping-biopharma-operations | P | F | Plant 5 opened April 2025 (+180 kL); total 784 kL |
 | 24 | PubMed record 15905366: https://pubmed.ncbi.nlm.nih.gov/15905366/ (read via the NCBI E-utilities API) | R | F (API) | The 2005 Science SCNT stem-cell paper is marked "Retracted Publication" |
-| 25 | Saudi Cabinet Decision 308/1437 (Lexis Middle East): https://www.lexismiddleeast.com/law/SaudiArabia/CabinetDecision_308_1437/en | P (legal text) | F | Vision 2030 approved 25 Apr 2016 |
+| 25 | Saudi Cabinet Decision 308/1437 (Saudi Press Agency): https://www.spa.gov.sa/en/ca8521ac35 | P (official cabinet notice) | F | Vision 2030 approved 25 Apr 2016 |
 | 26 | Saudi Vision 2030 document (PDF): https://www.vision2030.gov.sa/media/rc0b5oy1/saudi_vision203.pdf | P | F | Its stated goal of diversifying the economy |
 | 27 | Egypt MPED, Egypt Vision 2030: https://www.mped.gov.eg/DynamicPage?id=115&lang=en | P | F | Launched in 2016 and later updated |
 | 28 | WAM, MBZUAI established, 16 Oct 2019: https://www.wam.ae/en/article/hszr9b3g-abu-dhabi-announces-establishment-the-mohamed-bin | P | F | "First graduate-level research-based AI university"; first class Sept 2020; UAE made AI a national priority in 2017 and appointed the first Minister of State for AI |

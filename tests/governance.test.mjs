@@ -73,7 +73,7 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.equal(data.workshop.price.en, '$199 — one-time payment');
   assert.equal(data.workshop.price.ar, '199 دولار — دفعة واحدة');
   assert.doesNotMatch(JSON.stringify(withoutCoursePrice), /anchoring|تثبيت|HLO|L-002|l-002|\bDr\.|دكتوراه|\bprice\b|سعر/i);
-  assert.doesNotMatch(flat, /insights\/notes/);
+  assert.doesNotMatch(flat, /reports\/notes/);
   const simulation = read('components/governance/simulation.tsx');
   assert.doesNotMatch(simulation, /fetch\(|localStorage|sessionStorage|indexedDB/);
   const course = read('components/governance/course.tsx');

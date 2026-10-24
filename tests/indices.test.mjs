@@ -33,7 +33,7 @@ function walk(node, path, visit) {
 test('Indices hub: three products, shared principles, no product-page copy', () => {
   for (const key of hubTextKeys) assert.ok(isText(data.hub[key]), `hub.${key}`);
   assert.equal(typeof data.hub.methodologyHref, 'string');
-  assert.equal(data.hub.methodologyHref, '/insights/reports/methodology');
+  assert.equal(data.hub.methodologyHref, '/reports/reports/methodology');
   assert.equal(data.hub.intro.en, 'Three measurement products. Each has one question and one unit of analysis.');
   assert.equal(data.hub.intro.ar, 'ثلاثة منتجات قياس. لكل منتج سؤال واحد، ووحدة تحليل واحدة.');
   assert.equal(data.hub.aboutProduct.en, 'About the product');
@@ -171,7 +171,7 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.doesNotMatch(read('components/indices/pages.tsx'), /list\.map\(item => <IndexArticle/);
 });
 
-test('Indices: own pages in both languages, sitemap and /admin, in the header after Insights', () => {
+test('Indices: own pages in both languages, sitemap and /admin, in the header after Reports', () => {
   for (const f of ['app/indices/page.tsx', 'app/ar/indices/page.tsx', 'app/indices/[slug]/page.tsx', 'app/ar/indices/[slug]/page.tsx']) {
     assert.ok(existsSync(url(f)), f);
   }
@@ -184,7 +184,7 @@ test('Indices: own pages in both languages, sitemap and /admin, in the header af
   assert.equal(item.children[0].en, 'VisionSeek Indices');
   assert.equal(item.children[1].en, 'Arab Technology Capability Index');
   assert.equal(item.children[2].en, 'Arab Critical Capabilities Atlas');
-  assert.equal(paths[paths.indexOf('/insights') + 1], '/indices');
+  assert.equal(paths[paths.indexOf('/reports') + 1], '/indices');
   assert.deepEqual(item.children.map(c => c.href), [
     '/indices',
     '/indices/arab-technology-capability',
@@ -233,7 +233,7 @@ test('Indices: built hub stays a hub; product routes keep working', () => {
   assert.match(enMain, /Arab Technology Capability Index/);
   assert.match(enMain, /How the products connect/);
   assert.match(enMain, /Next-generation networks 5G-6G/);
-  assert.match(enMain, /\/insights\/reports\/methodology/);
+  assert.match(enMain, /\/reports\/reports\/methodology/);
   assert.equal((enMain.match(/About the product/g) || []).length, 2);
   assert.doesNotMatch(enMain, />Open</);
   assert.doesNotMatch(enMain, /What the index is|What the atlas is/);
@@ -243,7 +243,7 @@ test('Indices: built hub stays a hub; product routes keep working', () => {
   assert.match(arMain, /أطلس القدرات العربية الحرجة/);
   assert.match(arMain, /عن المنتج/);
   assert.match(arMain, /شبكات الجيل التالي 5G-6G/);
-  assert.match(arMain, /\/ar\/insights\/reports\/methodology/);
+  assert.match(arMain, /\/ar\/reports\/reports\/methodology/);
   assert.match(arMain, /سلّم الامتلاك/);
   assert.doesNotMatch(arMain, />افتح</);
   assert.doesNotMatch(arMain, /ما هو المؤشر|ما هو الأطلس/);
