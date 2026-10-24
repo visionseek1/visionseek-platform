@@ -10,7 +10,7 @@
     },
     "intro": {
       "en": "VisionSeek measures. It does not sell a ranking, and it does not publish a result before the method is public. This page holds the first index.",
-      "ar": "VisionSeek تقيس. مش بتبيع ترتيب، ومش بتعلن نتيجة قبل ما المنهج ينزل. الصفحة دي لأول مؤشر."
+      "ar": "VisionSeek تقيس. لا تبيع ترتيبًا، ولا تعلن نتيجة قبل أن يُنشر المنهج. هذه الصفحة للمؤشر الأول."
     },
     "measuringBodyTitle": {
       "en": "The measuring body",
@@ -18,7 +18,7 @@
     },
     "measuringBody": {
       "en": "VisionSeek is the measuring body. When an edition is published, VisionSeek issues it. The methodology will be public before any result.",
-      "ar": "VisionSeek هي جهة القياس. لما يطلع إصدار، يطلع عنها. والمنهج بيتنشر قبل أي نتيجة."
+      "ar": "VisionSeek هي جهة القياس. حين يصدر إصدار، يصدر عنها. ويُنشر المنهج قبل أي نتيجة."
     },
     "empty": {
       "en": "None yet.",
@@ -83,11 +83,11 @@
       "heroImage": "/indices/arab-technology-capability.jpg",
       "heroAlt": {
         "en": "Key visual for the Arab Technology Capability Index: a silent world map and a lit hexagonal frame. No figures.",
-        "ar": "الرسم المفتاحي لمؤشر القدرة التكنولوجية العربية: خريطة صامتة وإطار سداسي مضيء. من غير أرقام."
+        "ar": "الرسم المفتاحي لمؤشر القدرة التكنولوجية العربية: خريطة صامتة وإطار سداسي مضيء. بلا أرقام."
       },
       "lede": {
         "en": "Using a technology is one thing. Owning it is something else entirely. This index measures the difference: ownership and localization, not purchase.",
-        "ar": "إن الدولة تستخدم تكنولوجيا حاجة، وإنها تمتلكها حاجة تانية خالص. المؤشر ده بيقيس الفرق بين الاتنين: الامتلاك والتوطين، مش الشراء."
+        "ar": "إن استخدام الدولة للتكنولوجيا شيء، وامتلاكها شيء آخر تمامًا. يقيس هذا المؤشر الفرق بينهما: الامتلاك والتوطين، لا الشراء."
       },
       "measuresTitle": {
         "en": "What the index is",
@@ -95,7 +95,7 @@
       },
       "measures": {
         "en": "An independent annual report issued by VisionSeek. It measures ownership and localization of the core technologies — not use alone.",
-        "ar": "تقرير سنوي مستقل بتصدره VisionSeek. بيقيس مستوى امتلاك وتوطين التكنولوجيات الأساسية — مش استخدامها وبس."
+        "ar": "تقرير سنوي مستقل تصدره VisionSeek. يقيس مستوى امتلاك التكنولوجيات الأساسية وتوطينها — لا استخدامها فحسب."
       },
       "pillarsTitle": {
         "en": "The core technologies",
@@ -103,7 +103,7 @@
       },
       "pillarsIntro": {
         "en": "The names are here. Measurement has not begun.",
-        "ar": "الأسماء هنا. القياس لسه ما بدأ."
+        "ar": "الأسماء هنا. لم يبدأ القياس بعد."
       },
       "pillars": [
         {
@@ -165,11 +165,11 @@
           "id": "own",
           "title": {
             "en": "Ownership, not use",
-            "ar": "امتلاك مش استخدام"
+            "ar": "الامتلاك لا الاستخدام"
           },
           "text": {
             "en": "We measure who builds the capability and owns it — not who only buys it.",
-            "ar": "بنقيس مين بيبني القدرة ويملكها، مش مين بيشتريها بس."
+            "ar": "نقيس من يبني القدرة ويملكها، لا من يشتريها فحسب."
           }
         },
         {
@@ -180,7 +180,7 @@
           },
           "text": {
             "en": "The measurement method will be published in full, and anyone can review it.",
-            "ar": "طريقة القياس هتتعلن كاملة، وأي حد يقدر يراجعها."
+            "ar": "ستُنشر طريقة القياس كاملة، ويستطيع أي قارئ مراجعتها."
           }
         },
         {
@@ -191,7 +191,7 @@
           },
           "text": {
             "en": "No sale and no sponsorship shapes the findings.",
-            "ar": "مفيش بيع ولا رعاية بتأثر على النتايج."
+            "ar": "لا بيع ولا رعاية يؤثران في النتائج."
           }
         },
         {
@@ -202,7 +202,7 @@
           },
           "text": {
             "en": "Each edition builds on the one before it.",
-            "ar": "كل إصدار بيتبني على اللي قبله."
+            "ar": "كل إصدار يُبنى على ما سبقه."
           }
         }
       ],
@@ -212,7 +212,7 @@
       },
       "methodology": {
         "en": "The methodology will be published. No results before the method, and no comparison before the definitions.",
-        "ar": "المنهجية ستُنشر. مفيش نتائج قبل المنهج، ومفيش مقارنة قبل التعريفات."
+        "ar": "المنهجية ستُنشر. لا نتائج قبل المنهج، ولا مقارنة قبل التعريفات."
       },
       "pilotTitle": {
         "en": "First edition",
@@ -220,15 +220,15 @@
       },
       "pilot": {
         "en": "A pilot edition focused on artificial intelligence, issued with the full measurement method.",
-        "ar": "إصدار تجريبي بيركّز على الذكاء الاصطناعي، ومعاه طريقة القياس الكاملة."
+        "ar": "إصدار تجريبي يركّز على الذكاء الاصطناعي، ومعه طريقة القياس الكاملة."
       },
       "audienceTitle": {
         "en": "Who it is for",
-        "ar": "مين بيستفيد"
+        "ar": "من يستفيد"
       },
       "audience": {
         "en": "Decision-makers in government, leaders of institutions, investors, researchers, and anyone who wants to see where the Arab world stands on these core capabilities.",
-        "ar": "صناع القرار في الحكومات، وقيادات المؤسسات، والمستثمرين، والباحثين، وأي حد عايز يعرف فين العالم العربي بالظبط من القدرات الأساسية."
+        "ar": "صنّاع القرار في الحكومات، وقيادات المؤسسات، والمستثمرون، والباحثون، وكل من يريد أن يعرف أين يقف العالم العربي من هذه القدرات الأساسية."
       },
       "resultsTitle": {
         "en": "Results",
@@ -236,7 +236,7 @@
       },
       "results": {
         "en": "No results yet. No scores, no ranking, and no charts that carry figures.",
-        "ar": "لا توجد نتائج بعد. مفيش درجات، ومفيش ترتيب، ومفيش رسوم عليها أرقام."
+        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا رسوم تحمل أرقامًا."
       }
     }
   ]

@@ -9,6 +9,7 @@ const built = f => read(`.next/server/app/${f}.html`);
 const isText = value => Boolean(value && typeof value.en === 'string' && typeof value.ar === 'string');
 const forbiddenKeys = /^(score|scores|rank|ranking|rankings|chart|charts|value|values|resultValue|benchmark)$/i;
 const forbiddenCopy = /ترتيب الدول|قائمة الدول بالقيم|country ranking|ranked first|top-ranked|Korea|كوريا|Incheon|إنتشون|5G|6G|\bDr\.?\b/i;
+const colloquialAr = /مش |عايز| المؤشر ده|الصفحة دي|اللي |بتاع|مفيش|مافيش|لسه |هتتعلن|بيقيس|بنقيس|بتبيع|بتعلن|بيتنشر|بيتبنى|بيركّز|ومعاه|أي حد |بالظبط| وبس|تانية خالص|الاتنين|من غير /;
 
 function walk(node, path, visit) {
   if (Array.isArray(node)) node.forEach((item, i) => walk(item, `${path}[${i}]`, visit));
@@ -66,7 +67,10 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   }
   walk(data, 'indices', (key, value, path) => {
     assert.equal(forbiddenKeys.test(key), false, `forbidden field ${path}`);
-    if (typeof value === 'string') assert.doesNotMatch(value, forbiddenCopy, path);
+    if (typeof value === 'string') {
+      assert.doesNotMatch(value, forbiddenCopy, path);
+      if (key === 'ar' || path.endsWith('.ar')) assert.doesNotMatch(value, colloquialAr, path);
+    }
   });
   const blob = JSON.stringify(data);
   assert.doesNotMatch(blob, /Stanford|شراكة|شريك رسمي|partnership|endorsed by/i);
@@ -116,7 +120,8 @@ test('Indices: built pages stay empty of results and keep the pilot line', () =>
   assert.match(ar, /مؤشر القدرة التكنولوجية العربية/);
   assert.match(ar, /لا توجد نتائج بعد/);
   assert.match(ar, /dir="rtl"/);
-  assert.match(ar, /امتلاك مش استخدام/);
+  assert.match(ar, /الامتلاك لا الاستخدام/);
+  assert.doesNotMatch(mainOf(ar), colloquialAr);
   assert.match(enSlug, /Arab Technology Capability Index/);
   assert.match(arSlug, /المنهجية ستُنشر/);
   assert.match(arSlug, /الرسم المفتاحي لمؤشر القدرة التكنولوجية العربية/);
