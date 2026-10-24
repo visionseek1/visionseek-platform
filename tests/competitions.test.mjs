@@ -42,6 +42,7 @@ test('Competitions: live on Work with Us, old /competitions URLs permanently red
   assert.equal(nav.sections.find(s => s.path === '/competitions'), undefined);
   const workNav = nav.sections.find(s => s.path === '/work-with-us');
   assert.ok(workNav);
+  assert.ok(workNav.children.some(c => c.href === '/work-with-us#competitions' && c.en === 'Competitions' && c.ar === 'المسابقات'));
   assert.ok(workNav.children.some(c => c.href === '/work-with-us#now-competing'));
   for (const guide of removedWorkWithUsGuides) {
     assert.equal(workNav.children.find(c => c.href === guide.href), undefined, guide.href);
@@ -49,6 +50,7 @@ test('Competitions: live on Work with Us, old /competitions URLs permanently red
 
   const work = JSON.parse(read('content/sections.json')).sections.find(s => s.id === 'work-with-us');
   assert.equal(work.image, '/work-with-us/hero-sign.jpg');
+  assert.ok(work.links.some(l => l.href === '/work-with-us#competitions' && l.label.en === 'Competitions' && l.label.ar === 'المسابقات'));
   for (const guide of removedWorkWithUsGuides) {
     assert.equal(work.links.find(l => l.href === guide.href), undefined, guide.href);
   }
@@ -86,7 +88,11 @@ test('Competitions: Work with Us is native RTL and LTR and renders the competiti
   const open = current.filter(card => card.status === 'open' && now <= deadlineEnd(card));
   for (const [locale, html] of Object.entries(pages)) {
     const has = text => html.includes(esc(text));
-    for (const id of ['competitions', 'now-competing', 'join', 'completed', 'how-we-work']) assert.ok(html.includes(`id="${id}"`), `${locale} #${id}`);
+    for (const id of ['competitions', 'competitions-title', 'now-competing', 'join', 'completed', 'how-we-work']) assert.ok(html.includes(`id="${id}"`), `${locale} #${id}`);
+    assert.match(html, new RegExp(`id="competitions-title"[^>]*>\\s*${esc(data.hero.kicker[locale]).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*<`));
+    const sectionAt = html.indexOf('id="competitions"');
+    const titleAt = html.indexOf('id="competitions-title"');
+    assert.ok(sectionAt !== -1 && titleAt > sectionAt, `${locale} heading sits inside #competitions`);
     assert.ok(html.includes('href="mailto:abdelalim@visionseek.org"'), `${locale} mail draft`);
     assert.ok(html.includes('/work-with-us/hero-sign.jpg'), `${locale} office hero`);
     for (const guide of removedWorkWithUsGuides) {
@@ -97,6 +103,8 @@ test('Competitions: Work with Us is native RTL and LTR and renders the competiti
     }
     assert.equal(html.includes(`>${esc(data.labels.empty[locale])}<`), current.length === 0 || completed.length === 0, `${locale} empty state`);
     for (const card of current) {
+      const cardAt = html.indexOf(esc(card.project));
+      assert.ok(cardAt > titleAt, `${locale} ${card.id} sits under the Competitions heading`);
       for (const text of [card.project, card.competition, card.summary[locale], card.role[locale], card.leader[locale], formatDeadline(card, locale), data.labels.competingIn[locale]]) {
         assert.ok(has(text), `${locale} ${card.id}: ${text}`);
       }

@@ -52,43 +52,47 @@ function CompletedCard({card, locale}: {card: CompetitionCard; locale: Locale}) 
   );
 }
 
-/** The four Competitions blocks live on Work with Us. `/competitions` redirects here. */
+/** Competitions band on Work with Us. Cards from /admin (`competitions.cards`) render here. `/competitions` redirects to #competitions. */
 export function CompetitionsBody({locale, fontClassName = ''}: {locale: Locale; fontClassName?: string}) {
   const ar = locale === 'ar';
   const {current, completed} = cardsNow();
   const teams = current.filter(({state}) => state === 'open').map(({card}) => ({id: card.id, project: card.project, competition: card.competition}));
 
   return (
-    <div id="competitions" className={`${styles.page} ${ar ? styles.ar : styles.en} ${fontClassName}`} aria-label={hero.kicker[locale]}>
-      <section id="now-competing" className={styles.section} aria-labelledby="now-competing-title">
-        <h2 id="now-competing-title" className={styles.heading}>{labels.now[locale]}</h2>
+    <section id="competitions" className={`${styles.page} ${ar ? styles.ar : styles.en} ${fontClassName}`} aria-labelledby="competitions-title">
+      <header className={styles.bandHead}>
+        <h2 id="competitions-title" className={styles.sectionTitle}>{hero.kicker[locale]}</h2>
+      </header>
+
+      <div id="now-competing" className={styles.section} aria-labelledby="now-competing-title">
+        <h3 id="now-competing-title" className={styles.heading}>{labels.now[locale]}</h3>
         {current.length
           ? <div className={styles.cards}>{current.map(({card, state}) => <Card key={card.id} card={card} state={state} locale={locale}/>)}</div>
           : <p className={styles.empty}>{labels.empty[locale]}</p>}
-      </section>
+      </div>
 
-      <section id="join" className={styles.section} aria-labelledby="join-title">
-        <h2 id="join-title" className={styles.heading}>{labels.join[locale]}</h2>
+      <div id="join" className={styles.section} aria-labelledby="join-title">
+        <h3 id="join-title" className={styles.heading}>{labels.join[locale]}</h3>
         <JoinForm
           teams={teams}
           subject={hero.kicker[locale]}
           labels={{name: form.name[locale], email: form.email[locale], role: form.role[locale], link: form.link[locale], note: form.note[locale], submit: labels.joinTeam[locale], competition: labels.competition[locale]}}
         />
-      </section>
+      </div>
 
-      <section id="completed" className={styles.section} aria-labelledby="completed-title">
-        <h2 id="completed-title" className={styles.heading}>{labels.completed[locale]}</h2>
+      <div id="completed" className={styles.section} aria-labelledby="completed-title">
+        <h3 id="completed-title" className={styles.heading}>{labels.completed[locale]}</h3>
         {completed.length
           ? <div className={styles.cards}>{completed.map(card => <CompletedCard key={card.id} card={card} locale={locale}/>)}</div>
           : <p className={styles.empty}>{labels.empty[locale]}</p>}
-      </section>
+      </div>
 
-      <section id="how-we-work" className={styles.section} aria-labelledby="how-we-work-title">
-        <h2 id="how-we-work-title" className={styles.heading}>{labels.how[locale]}</h2>
+      <div id="how-we-work" className={styles.section} aria-labelledby="how-we-work-title">
+        <h3 id="how-we-work-title" className={styles.heading}>{labels.how[locale]}</h3>
         <ul className={styles.how}>
           {how.map(item => <li key={item.en}>{item[locale]}</li>)}
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
