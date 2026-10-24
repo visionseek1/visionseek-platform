@@ -173,6 +173,28 @@
       ]
     },
     {
+      "path": "/indices",
+      "en": "Indices",
+      "ar": "المؤشرات",
+      "children": [
+        {
+          "href": "/indices",
+          "en": "VisionSeek Indices",
+          "ar": "مؤشرات VisionSeek"
+        },
+        {
+          "href": "/indices/arab-technology-capability",
+          "en": "Arab Technology Capability Index",
+          "ar": "مؤشر القدرة التكنولوجية العربية"
+        },
+        {
+          "href": "/indices/arab-critical-capabilities-atlas",
+          "en": "Arab Critical Capabilities Atlas",
+          "ar": "أطلس القدرات العربية الحرجة"
+        }
+      ]
+    },
+    {
       "path": "/news",
       "en": "News",
       "ar": "الأخبار",
