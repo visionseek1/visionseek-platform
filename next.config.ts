@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
         // Competitions now lives on Work with Us (24 Oct 2026): old /competitions links keep working.
         {source: `${prefix}/competitions`, destination: `${prefix}/work-with-us#competitions`, permanent: true},
-        // «الورش» became «ماستركلاس» (9 Oct 2026): old links keep working.
+        // «الورش» became Masterclass; Institute is the umbrella above it.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
         // «احذر نصائح الذكاء الاصطناعي» moved from the papers to the reports (16 Oct 2026).

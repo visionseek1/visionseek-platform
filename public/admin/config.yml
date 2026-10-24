@@ -43,9 +43,10 @@ collections:
                   - {label: "حلول من كوريا (القسم كله)  /korean-solutions", value: "/korean-solutions"}
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
-                  - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
+                  - {label: "معهد VisionSeek (القسم كله)  /institute", value: "/institute"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
+                  - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
                   - {label: "المنتديات (القسم كله)  /forums", value: "/forums"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
@@ -64,19 +65,19 @@ collections:
                   - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
                   - {label: "فرص البحث والتطوير ← دليل المشاركة  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
-                  - {label: "ماستركلاس ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
-                  - {label: "ماستركلاس ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
+                  - {label: "معهد VisionSeek ← ماستر كلاس  /institute/masterclass", value: "/institute/masterclass"}
+                  - {label: "معهد VisionSeek ← حوكمة الذكاء الاصطناعي  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
+                  - {label: "معهد VisionSeek ← الزمالة  /institute/fellowship", value: "/institute/fellowship"}
                   - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
                   - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
                   - {label: "Insights ← التقارير  /insights/reports", value: "/insights/reports"}
                   - {label: "Insights ← الأوراق العلمية  /insights/research", value: "/insights/research"}
                   - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
                   - {label: "Insights ← الأطر والأدوات  /insights/frameworks/decision-dimensions", value: "/insights/frameworks/decision-dimensions"}
+                  - {label: "المؤشرات ← مؤشر القدرة التكنولوجية العربية  /indices/arab-technology-capability", value: "/indices/arab-technology-capability"}
+                  - {label: "المؤشرات ← أطلس القدرات العربية الحرجة  /indices/arab-critical-capabilities-atlas", value: "/indices/arab-critical-capabilities-atlas"}
                   - {label: "الأخبار ← الإعلام والاستفسارات  /news/media", value: "/news/media"}
                   - {label: "اعمل معنا ← ابنِ حلولك معنا  /start", value: "/start"}
-                  - {label: "اعمل معنا ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
-                  - {label: "اعمل معنا ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
-                  - {label: "اعمل معنا ← النقل للتشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
                   - {label: "عن VisionSeek ← كيف تعمل VisionSeek؟  /about/what-we-do", value: "/about/what-we-do"}
                   - {label: "عن VisionSeek ← نموذج التشغيل  /about/operating-model", value: "/about/operating-model"}
                   - {label: "عن VisionSeek ← أسئلة البرنامج  /about/program-questions", value: "/about/program-questions"}
@@ -88,6 +89,9 @@ collections:
                   - {label: "programs ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
                   - {label: "programs ← كيف يعمل البرنامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
                   - {label: "programs ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
+                  - {label: "work-with-us ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
+                  - {label: "work-with-us ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
+                  - {label: "work-with-us ← من الإثبات إلى التشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}
@@ -97,19 +101,18 @@ collections:
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
                   - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
                   - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
+                  - {label: "ماستركلاس ← ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم،  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
                   - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
+                  - {label: "ماستركلاس ← قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
-                  - {label: "ماستركلاس ← فخ الإجابة الواحدة  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
+                  - {label: "ماستركلاس  /masterclass", value: "/masterclass"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /leaders-house/physical-ai", value: "/leaders-house/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}
-                  - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
-                  - {label: "المؤشرات ← مؤشر القدرة التكنولوجية العربية  /indices/arab-technology-capability", value: "/indices/arab-technology-capability"}
-                  - {label: "المؤشرات ← أطلس القدرات العربية الحرجة  /indices/arab-critical-capabilities-atlas", value: "/indices/arab-critical-capabilities-atlas"}
                 # archive-options:end
               - {label: ملاحظة لنفسك (اختياري), name: note, widget: string, required: false}
           - label: أقسام مخفية داخل الصفحات
@@ -1653,7 +1656,7 @@ collections:
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس
-    description: "رأس صفحة /masterclass ونصوصها العامة: اسم المدرّس، وفيديو المقدمة، والبابان (لك أنت، ولمؤسستك)."
+    description: "نصوص ماستر كلاس الكاملة على /masterclass. تبقى الصفحة والروابط القديمة كما هي. المعهد يعرض ورشة الحوكمة فقط ولا يحذف هذه النصوص."
     preview_path: "ar/masterclass"
     editor: {preview: false}
     files:
@@ -1818,7 +1821,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: عنوان ليه VisionSeek
+              - label: عنوان لماذا VisionSeek
                 name: whyLabel
                 widget: object
                 fields:
@@ -4801,3 +4804,243 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}
+
+  - name: institute
+    label: "معهد VisionSeek"
+    description: "رأس صفحة المعهد /institute وصفحة ماستر كلاس /institute/masterclass. المعهد يعرض ورشة الحوكمة فقط. لا تكتب أرقامًا أو شركاء أو نتائج لم تحدث. في الإنجليزية Ahmed Abdelalim من غير Dr."
+    preview_path: "ar/institute"
+    editor: {preview: false}
+    files:
+      - label: "الصفحة"
+        name: institute
+        file: content/institute.json
+        fields:
+          - label: "العنوان"
+            name: title
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "وسم المسودة"
+            name: draft
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "السطر فوق العنوان"
+            name: kicker
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "المقدمة"
+            name: intro
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان البرامج"
+            name: programsLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "زر فتح البرنامج"
+            name: openProgram
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "وسم الماستركلاس"
+            name: masterclassKind
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "عنوان قائمة الماستر كلاس"
+            name: masterclassTitle
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "مقدمة قائمة الماستر كلاس"
+            name: masterclassIntro
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "اسم الورشة في المعهد"
+            name: workshopTitle
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "نبذة الورشة في المعهد"
+            name: workshopLead
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "زر فتح الورشة"
+            name: openWorkshop
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "وسم الزمالة"
+            name: fellowshipKind
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+
+  - name: fellowship
+    label: "زمالة VisionSeek"
+    description: "صفحة /institute/fellowship. ممنوع مواعيد ورسوم ومنح وأسماء شركاء ونموذج تقديم. زر الاهتمام بريد فقط إلى abdelalim@visionseek.org. في الإنجليزية Ahmed Abdelalim من غير Dr."
+    preview_path: "ar/institute/fellowship"
+    editor: {preview: false}
+    files:
+      - label: "الصفحة"
+        name: fellowship
+        file: content/fellowship.json
+        fields:
+          - label: "العنوان"
+            name: title
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "السطر تحت العنوان"
+            name: subtitle
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - {label: "صورة الغلاف", name: hero, widget: image, choose_url: true}
+          - label: "وصف الصورة"
+            name: heroAlt
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "الافتتاحية"
+            name: opening
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان ما هي الزمالة"
+            name: whatLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "ما هي الزمالة"
+            name: what
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان المبادئ"
+            name: principlesLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "المبادئ"
+            name: principles
+            widget: list
+            fields:
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النص"
+                name: body
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان الرحلة"
+            name: journeyLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "رحلة الزميل"
+            name: journey
+            widget: list
+            fields:
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النص"
+                name: body
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان من يتقدم"
+            name: whoLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "من يتقدم"
+            name: who
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان ما يخرج به الزميل"
+            name: leavesLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "ما يخرج به الزميل"
+            name: leaves
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "عنوان الحالة"
+            name: statusLabel
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "الحالة"
+            name: status
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "تسجيل الاهتمام"
+            name: interest
+            widget: object
+            fields:
+              - label: "نص الزر"
+                name: label
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "البريد", name: email, widget: string}
+              - label: "موضوع الرسالة"
+                name: subject
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "اسم المستلم"
+                name: toName
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}

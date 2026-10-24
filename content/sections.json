@@ -169,38 +169,45 @@
     {
       "id": "workshops",
       "title": {
-        "en": "Masterclass",
-        "ar": "ماستركلاس"
+        "en": "VisionSeek Institute",
+        "ar": "معهد VisionSeek"
       },
       "eyebrow": {
-        "en": "VISIONSEEK MASTERCLASS",
-        "ar": "VISIONSEEK MASTERCLASS"
+        "en": "VISIONSEEK INSTITUTE",
+        "ar": "معهد VisionSeek"
       },
       "intro": {
-        "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
-        "ar": "يجعلك ترى ما يستطيع الذكاء الاصطناعي أن يغيّره في عملك، بخبرة مؤسسية من مصر والخليج وكوريا الجنوبية."
+        "en": "The home of VisionSeek's learning programs. Masterclass is here. So is the VisionSeek Fellowship.",
+        "ar": "بيت برامج التعلّم في VisionSeek. يضم ماستر كلاس، ويضم زمالة VisionSeek."
       },
       "image": "industry",
       "links": [
         {
-          "href": "/masterclass/leader-seat",
+          "href": "/institute",
           "label": {
-            "en": "For you",
-            "ar": "لك أنت"
+            "en": "The Institute",
+            "ar": "المعهد"
           }
         },
         {
-          "href": "/masterclass/develop-the-institution",
+          "href": "/institute/masterclass",
           "label": {
-            "en": "For your institution",
-            "ar": "لمؤسستك"
+            "en": "Masterclass",
+            "ar": "ماستر كلاس"
           }
         },
         {
-          "href": "/masterclass#institutions",
+          "href": "/masterclass/single-track-trap",
           "label": {
-            "en": "Choose your sector",
-            "ar": "اختر قطاعك"
+            "en": "AI Governance workshop",
+            "ar": "حوكمة الذكاء الاصطناعي"
+          }
+        },
+        {
+          "href": "/institute/fellowship",
+          "label": {
+            "en": "Fellowship",
+            "ar": "الزمالة"
           }
         }
       ]

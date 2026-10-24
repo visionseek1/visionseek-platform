@@ -1,0 +1,134 @@
+{
+  "title": {
+    "en": "VisionSeek Fellowship",
+    "ar": "زمالة VisionSeek"
+  },
+  "subtitle": {
+    "en": "Program Managers for Critical Capabilities — Incheon · Gulf",
+    "ar": "مديرو برامج للقدرات الحرجة — إنتشون · الخليج"
+  },
+  "hero": "/institute/fellowship-hero.jpg",
+  "heroAlt": {
+    "en": "A dark map of the Arabian Peninsula and nearby seas, with a path of light from Incheon toward the Gulf, titled VisionSeek Fellowship.",
+    "ar": "خريطة مظلمة لشبه الجزيرة العربية والبحار من حولها، ومسار نور من إنتشون نحو الخليج، بعنوان زمالة VisionSeek."
+  },
+  "opening": {
+    "en": "Behind every large technological leap stood one person who chose to own it from the first step to the last. That is what DARPA calls a program manager. The Arab world needs a generation of these people: leaders who turn national ambition into a capability the state actually owns.",
+    "ar": "وراء كل قفزة تكنولوجية كبيرة كان هناك شخص واحد قرر أن يملكها من أولها إلى آخرها. هذا ما تسمّيه DARPA «مدير البرنامج». والعالم العربي يحتاج جيلًا من هؤلاء: قادة يحوّلون الطموح الوطني إلى قدرة حقيقية تملكها الدولة."
+  },
+  "whatLabel": {
+    "en": "What the Fellowship is",
+    "ar": "ما هي الزمالة"
+  },
+  "what": {
+    "en": "A selective program of VisionSeek Institute. It chooses a small cohort of the strongest Arab minds and prepares them to lead critical-capability programs in the DARPA manner. Fellows learn and work between Incheon in Korea and the Gulf, on real projects inside institutions, across foundational technologies.",
+    "ar": "برنامج انتقائي يقدّمه معهد VisionSeek. يختار دفعة صغيرة من أقوى العقول العربية، ويؤهّلهم لقيادة برامج قدرات حرجة على طريقة DARPA. الزملاء يتعلّمون ويعملون بين إنتشون في كوريا والخليج، على مشاريع حقيقية داخل مؤسسات، وفي التكنولوجيات الأساسية."
+  },
+  "principlesLabel": {
+    "en": "Principles",
+    "ar": "مبادئ الزمالة"
+  },
+  "principles": [
+    {
+      "title": {"en": "Selective", "ar": "انتقائية"},
+      "body": {
+        "en": "A small cohort, chosen on merit alone.",
+        "ar": "دفعة صغيرة، والاختيار على الجدارة وحدها."
+      }
+    },
+    {
+      "title": {"en": "Learn by doing", "ar": "التعلّم بالعمل"},
+      "body": {
+        "en": "Each fellow leads a real question for a real institution, not a theoretical study.",
+        "ar": "كل زميل يقود سؤالًا حقيقيًا لمؤسسة حقيقية، لا دراسة نظرية."
+      }
+    },
+    {
+      "title": {"en": "A bridge between two places", "ar": "جسر بين بلدين"},
+      "body": {
+        "en": "Learn from the Korean experience, and apply it in the Arab region.",
+        "ar": "التعلّم من التجربة الكورية، والتطبيق في المنطقة العربية."
+      }
+    },
+    {
+      "title": {"en": "It continues after the program", "ar": "تستمر بعد البرنامج"},
+      "body": {
+        "en": "Fellows remain a network of capability leaders in the Arab world.",
+        "ar": "الزملاء يبقون شبكة من قادة القدرات في العالم العربي."
+      }
+    }
+  ],
+  "journeyLabel": {
+    "en": "The fellow's path",
+    "ar": "رحلة الزميل"
+  },
+  "journey": [
+    {
+      "title": {"en": "Incheon", "ar": "إنتشون"},
+      "body": {
+        "en": "Go deep into the DARPA method and the VisionSeek method, and get close to the Korean technology system.",
+        "ar": "التعمّق في منهج DARPA ومنهج VisionSeek، والاقتراب من منظومة التكنولوجيا الكورية."
+      }
+    },
+    {
+      "title": {"en": "The question", "ar": "السؤال"},
+      "body": {
+        "en": "With an Arab institution, name one critical capability and write Heilmeier questions for it.",
+        "ar": "تحديد قدرة حرجة واحدة مع مؤسسة عربية، وكتابة أسئلة Heilmeier لها."
+      }
+    },
+    {
+      "title": {"en": "The build", "ar": "البناء"},
+      "body": {
+        "en": "Lead the program inside the institution, with guidance from Korea and from the world.",
+        "ar": "قيادة البرنامج داخل المؤسسة، مع إرشاد من كوريا ومن العالم."
+      }
+    },
+    {
+      "title": {"en": "The evidence", "ar": "الدليل"},
+      "body": {
+        "en": "Present a measurable result to a panel. After that, the institution owns the capability.",
+        "ar": "تقديم نتيجة تُقاس أمام لجنة، ثم المؤسسة هي التي تملك القدرة."
+      }
+    }
+  ],
+  "whoLabel": {
+    "en": "Who it is for",
+    "ar": "من يتقدم"
+  },
+  "who": {
+    "en": "Engineers, scientists, founders, and younger leaders in Arab institutions who have a record of delivery and want to lead technological change in the region.",
+    "ar": "مهندسون وعلماء وروّاد أعمال وقيادات شابة في مؤسسات عربية، لهم سجل في الإنجاز ورغبة في قيادة التحوّل التكنولوجي في المنطقة."
+  },
+  "leavesLabel": {
+    "en": "What a fellow leaves with",
+    "ar": "ما يخرج به الزميل"
+  },
+  "leaves": {
+    "en": "The title «VisionSeek Fellow», the experience of having led a real capability program, a network in Korea and the Gulf, and a place in a community of Arab capability leaders.",
+    "ar": "لقب «زميل VisionSeek»، وخبرة قيادة برنامج قدرة حقيقي، وشبكة في كوريا والخليج، ومكان في مجتمع قادة القدرات العرب."
+  },
+  "statusLabel": {
+    "en": "Status",
+    "ar": "الحالة"
+  },
+  "status": {
+    "en": "The first cohort is coming soon.",
+    "ar": "الدفعة الأولى قريبًا."
+  },
+  "interest": {
+    "label": {
+      "en": "Register interest",
+      "ar": "سجّل اهتمامك"
+    },
+    "email": "abdelalim@visionseek.org",
+    "subject": {
+      "en": "VisionSeek Fellowship — register interest",
+      "ar": "زمالة VisionSeek — تسجيل اهتمام"
+    },
+    "toName": {
+      "en": "Ahmed Abdelalim",
+      "ar": "د. أحمد عبدالعليم"
+    }
+  }
+}

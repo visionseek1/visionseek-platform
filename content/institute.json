@@ -1,0 +1,54 @@
+{
+  "title": {
+    "en": "VisionSeek Institute",
+    "ar": "معهد VisionSeek"
+  },
+  "draft": {
+    "en": "DRAFT",
+    "ar": "مسودة"
+  },
+  "kicker": {
+    "en": "VISIONSEEK INSTITUTE",
+    "ar": "معهد VisionSeek"
+  },
+  "intro": {
+    "en": "The home of VisionSeek's learning programs. Masterclass is here. So is the VisionSeek Fellowship.",
+    "ar": "بيت برامج التعلّم في VisionSeek. يضم ماستر كلاس، ويضم زمالة VisionSeek."
+  },
+  "programsLabel": {
+    "en": "Programs",
+    "ar": "البرامج"
+  },
+  "openProgram": {
+    "en": "Open the program",
+    "ar": "افتح البرنامج"
+  },
+  "masterclassKind": {
+    "en": "Masterclass",
+    "ar": "ماستر كلاس"
+  },
+  "masterclassTitle": {
+    "en": "Masterclass",
+    "ar": "ماستر كلاس"
+  },
+  "masterclassIntro": {
+    "en": "The Institute Masterclass now lists one workshop: AI Governance — The Single-Track Trap.",
+    "ar": "يعرض ماستر كلاس المعهد الآن ورشة واحدة: حوكمة الذكاء الاصطناعي — فخ الإجابة الواحدة."
+  },
+  "workshopTitle": {
+    "en": "AI Governance — The Single-Track Trap",
+    "ar": "حوكمة الذكاء الاصطناعي — فخ الإجابة الواحدة"
+  },
+  "workshopLead": {
+    "en": "How to protect a costly decision from an answer built on a single method.",
+    "ar": "كيف تحمي قرارًا له كلفة من إجابة مبنية على منهج واحد."
+  },
+  "openWorkshop": {
+    "en": "Open the workshop",
+    "ar": "افتح الورشة"
+  },
+  "fellowshipKind": {
+    "en": "Fellowship",
+    "ar": "زمالة"
+  }
+}

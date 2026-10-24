@@ -107,29 +107,24 @@
       ]
     },
     {
-      "path": "/masterclass",
-      "en": "Masterclass",
-      "ar": "ماستركلاس",
+      "path": "/institute",
+      "en": "VisionSeek Institute",
+      "ar": "معهد VisionSeek",
       "children": [
         {
-          "href": "/masterclass",
-          "en": "The three doors",
-          "ar": "الأبواب الثلاثة"
+          "href": "/institute/masterclass",
+          "en": "Masterclass",
+          "ar": "ماستر كلاس"
         },
         {
-          "href": "/masterclass/leader-seat",
-          "en": "Management and leadership in the age of AI",
-          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
+          "href": "/masterclass/single-track-trap",
+          "en": "AI Governance workshop",
+          "ar": "حوكمة الذكاء الاصطناعي"
         },
         {
-          "href": "/masterclass#institutions",
-          "en": "Working with AI",
-          "ar": "العمل مع الذكاء الاصطناعي"
-        },
-        {
-          "href": "/masterclass/develop-the-institution",
-          "en": "The institution and AI",
-          "ar": "المؤسسة والذكاء الاصطناعي"
+          "href": "/institute/fellowship",
+          "en": "Fellowship",
+          "ar": "الزمالة"
         }
       ]
     },
