@@ -5,14 +5,18 @@ import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {DocumentLocale} from '@/components/governance/document-locale';
 import {CompetitionsBody} from '@/components/competitions/competitions-page';
+import {entries, entryPath, getSection, type Locale} from '@/lib/institution';
 import {entryImage} from '@/lib/institution/schema';
-import {getSection, type Locale} from '@/lib/institution';
+import Directory from './directory';
 import {InstitutionCTA} from './pages';
+
+const removedGuides = new Set(['new-to-visionseek', 'how-to-respond', 'prepare-a-concept', 'review-and-selection', 'transition']);
 
 export function WorkWithUsPage({locale, fontClassName = ''}: {locale: Locale; fontClassName?: string}) {
   const section = getSection('work-with-us')!;
   const ar = locale === 'ar';
   const p = ar ? '/ar' : '';
+  const communities = entries.filter(e => e.section === 'work-with-us' && !removedGuides.has(e.slug));
 
   return (
     <div className={`vs-site locale-${locale}`} lang={locale} dir={ar ? 'rtl' : 'ltr'}>
@@ -43,6 +47,12 @@ export function WorkWithUsPage({locale, fontClassName = ''}: {locale: Locale; fo
               <p>{ar ? 'ابدأ بوصف قصير لما تريد تحقيقه، وتواصل معنا مباشرة لنناقش الخطوة المناسبة.' : 'Start with a short description of your desired outcome and contact us directly to discuss the next step.'}</p>
               <Link className="vs-button" href={`${p}/start`}>{ar ? 'ابنِ حلولك معنا' : 'Build your solutions with us'}<ArrowRight size={18}/></Link>
             </div>
+            <Directory
+              ar={ar}
+              label={section.title[locale]}
+              filters={false}
+              items={communities.map(e => ({path: `${p}${entryPath(e)}`, title: e.title[locale], summary: e.summary[locale], category: e.category[locale], status: e.status[locale], image: entryImage(e.image), code: e.code}))}
+            />
           </div>
         </div>
         <InstitutionCTA locale={locale}/>
