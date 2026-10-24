@@ -150,20 +150,20 @@
   },
   "fields": {
     "eyebrow": {
-      "en": "FIELDS OF EXPLORATION",
-      "ar": "مجالات نستكشفها"
+      "en": "THE WORK",
+      "ar": "محاور العمل"
     },
     "title": {
-      "en": "Where we look for possibility",
-      "ar": "أين نبحث عن الممكن"
+      "en": "The work, along its axes.",
+      "ar": "العمل على محاوره."
     },
     "text": {
-      "en": "From science and industry to infrastructure. Fields we explore for capabilities worth building.",
-      "ar": "من العلم والصناعة إلى البنية التحتية. مجالات نتابعها بحثًا عن قدرات تستحق البناء."
+      "en": "Programs, projects, indices, reports, and the Masterclass under the Institute.",
+      "ar": "البرامج، والمشاريع، والمؤشرات، والتقارير، والماستر كلاس في المعهد."
     },
     "link": {
-      "en": "Explore the fields",
-      "ar": "استكشف المجالات"
+      "en": "Explore the projects",
+      "ar": "استكشف المشاريع"
     }
   },
   "work": {

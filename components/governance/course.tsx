@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {coursePath, enrollHref, localePath, tx, type Bi, type Locale, workshop} from '@/lib/governance';
+import {coursePage, coursePath, localePath, tx, type Bi, type Locale, workshop} from '@/lib/governance';
+import {InterestButton} from '@/components/interest/interest-form';
 import {Shell} from './shell';
 import styles from './governance.module.css';
 
@@ -21,13 +22,16 @@ function Lockup() {
   );
 }
 
-function Subscribe({locale}: {locale: Locale}) {
+function Register({locale}: {locale: Locale}) {
   return (
     <div className={styles.enrollRow}>
-      <Link className={`${styles.lime} ${styles.enroll}`} href={enrollHref(locale)} target="_blank" rel="noopener noreferrer">
-        {t(locale, workshop.subscribe)}
-      </Link>
-      <span className={styles.price}>{t(locale, workshop.price)}</span>
+      <InterestButton
+        locale={locale}
+        topic={t(locale, workshop.title)}
+        page={coursePage(locale)}
+        label={t(locale, workshop.subscribe)}
+        className={`${styles.lime} ${styles.enroll}`}
+      />
     </div>
   );
 }
@@ -66,10 +70,13 @@ export function MasterclassPage({locale}: {locale: Locale}) {
           </header>
 
           <aside className={styles.enrollCard}>
-            <p className={styles.price}>{t(locale, workshop.price)}</p>
-            <Link className={`${styles.lime} ${styles.enroll}`} href={enrollHref(locale)} target="_blank" rel="noopener noreferrer">
-              {t(locale, workshop.subscribe)}
-            </Link>
+            <InterestButton
+              locale={locale}
+              topic={t(locale, workshop.title)}
+              page={coursePage(locale)}
+              label={t(locale, workshop.subscribe)}
+              className={`${styles.lime} ${styles.enroll}`}
+            />
           </aside>
 
           <div className={styles.sections}>
@@ -102,7 +109,6 @@ export function MasterclassPage({locale}: {locale: Locale}) {
                   <dd>{t(locale, workshop.soon)}</dd>
                 </div>
               </dl>
-              <p className={styles.price}>{t(locale, workshop.price)}</p>
             </section>
 
             <section className={styles.block} aria-labelledby="course-instructor">
@@ -112,7 +118,7 @@ export function MasterclassPage({locale}: {locale: Locale}) {
 
             <section className={styles.block} aria-labelledby="course-enroll">
               <h2 id="course-enroll">{t(locale, workshop.enrollLabel)}</h2>
-              <Subscribe locale={locale} />
+              <Register locale={locale} />
             </section>
           </div>
         </div>

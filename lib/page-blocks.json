@@ -6,7 +6,7 @@
     {"id": "home.updates", "page": "/", "label": "الرئيسية ← ماستركلاس والأخبار"},
     {"id": "home.method", "page": "/", "label": "الرئيسية ← المنهج"},
     {"id": "home.communities", "page": "/", "label": "الرئيسية ← المجتمعات"},
-    {"id": "home.fields", "page": "/", "label": "الرئيسية ← المجالات"},
+    {"id": "home.fields", "page": "/", "label": "الرئيسية ← المحاور"},
     {"id": "home.work", "page": "/", "label": "الرئيسية ← اعمل معنا"},
     {"id": "home.contact", "page": "/", "label": "الرئيسية ← التواصل"}
   ]

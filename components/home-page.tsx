@@ -7,12 +7,19 @@ import CapabilityFooter from "@/components/capability/footer";
 import CapabilityHero from "@/components/capability/hero";
 import { InstitutionExplainer } from "@/components/positioning/positioning";
 import MethodSpotlight from "@/components/capability/method-spotlight";
-import { communities, fields, type Locale } from "@/components/capability/content";
+import { communities, type Locale } from "@/components/capability/content";
 import { isArchived, isBlockHidden } from "@/lib/visibility";
 import {site, whatsappUrl} from '@/lib/site';
 import {home} from '@/lib/home';
 
 const icons = [Building2, Landmark, Microscope, Users, Factory, Network];
+const axes = [
+  {href: '/programs', en: 'Programs', ar: 'البرامج', image: 'chips'},
+  {href: '/projects', en: 'Projects', ar: 'المشاريع', image: 'cities'},
+  {href: '/indices', en: 'Indices', ar: 'المؤشرات', image: 'space'},
+  {href: '/reports', en: 'Reports', ar: 'التقارير', image: 'energy'},
+  {href: '/institute/masterclass', en: 'Masterclass', ar: 'الماستر كلاس', image: 'industry'},
+] as const;
 
 export default function HomePage({locale}: {locale:Locale}) {
   const ar=locale==="ar";const p=ar?"/ar":"";
@@ -33,7 +40,7 @@ export default function HomePage({locale}: {locale:Locale}) {
       <InstitutionHome locale={locale}/>
       {!isBlockHidden("home.method")&&<MethodSpotlight locale={locale}/>}
       {!isBlockHidden("home.communities")&&<section className="vs-section vs-communities" id="communities"><div className="vs-section-heading"><div><p className="vs-eyebrow">{tx(communitiesCopy.eyebrow)}</p><h2>{tx(communitiesCopy.title)}</h2></div><p>{tx(communitiesCopy.text)}</p></div><div className="vs-community-grid">{communities.map((c,i)=>{const Icon=icons[i];return <Link href={`${p}/work-with-us#${c.id}`} key={c.id} className="vs-community-card"><Icon size={40} strokeWidth={1.25}/><h3>{ar?c.ar:c.en}</h3><p>{ar?c.textAr:c.textEn}</p><ArrowRight className="vs-card-arrow" size={22}/></Link>;})}</div></section>}
-      {!isBlockHidden("home.fields")&&<section className="vs-section vs-fields" id="fields"><div className="vs-section-heading"><div><p className="vs-eyebrow">{tx(fieldsCopy.eyebrow)}</p><h2>{tx(fieldsCopy.title)}</h2></div><div><p>{tx(fieldsCopy.text)}</p><Link className="vs-text-link" href={`${p}/projects`}>{tx(fieldsCopy.link)}<ArrowRight size={20}/></Link></div></div><div className="vs-fields-grid">{fields.map(({id,en,ar:arabic,image:img},i)=><Link href={`${p}/projects#${id}`} key={id} className="vs-field-card"><Image src={`/field-${img}.jpg`} alt="" fill sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 25vw"/><div><span>0{i+1}</span><h3>{ar?arabic:en}</h3><ArrowRight size={21}/></div></Link>)}</div></section>}
+      {!isBlockHidden("home.fields")&&<section className="vs-section vs-fields" id="fields"><div className="vs-section-heading"><div><p className="vs-eyebrow">{tx(fieldsCopy.eyebrow)}</p><h2>{tx(fieldsCopy.title)}</h2></div><div><p>{tx(fieldsCopy.text)}</p><Link className="vs-text-link" href={`${p}/projects`}>{tx(fieldsCopy.link)}<ArrowRight size={20}/></Link></div></div><div className="vs-fields-grid">{axes.map(({href,en,ar:arabic,image:img},i)=><Link href={`${p}${href}`} key={href} className="vs-field-card"><Image src={`/field-${img}.jpg`} alt="" fill sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 25vw"/><div><span>0{i+1}</span><h3>{ar?arabic:en}</h3><ArrowRight size={21}/></div></Link>)}</div></section>}
       {!isBlockHidden("home.work")&&<section className="vs-work-feature"><div className="vs-work-copy"><p className="vs-eyebrow">{tx(work.eyebrow)}</p><h2>{tx(work.title)}</h2><p>{tx(work.text)}</p><Link className="vs-button" href={`${p}/start`}>{tx(work.button)}<ArrowRight size={20}/></Link></div><div className="vs-work-image"><Image src={work.image} alt={tx(work.imageAlt)} fill sizes="(max-width:760px) 100vw, 50vw"/></div></section>}
       {!isBlockHidden("home.contact")&&<section className="vs-section vs-contact" id="contact"><p className="vs-eyebrow">{tx(contact.eyebrow)}</p><h2>{tx(contact.title)}</h2><Link className="vs-button" href={`${p}/start`}>{tx(contact.button)}<ArrowRight size={20}/></Link><div className="vs-contact-links"><a href={`mailto:${site.email}`}><span>{ar?"البريد الإلكتروني":"Email"}</span><strong>{site.email}</strong><ArrowRight size={22}/></a><a href={whatsappUrl()} target="_blank" rel="noreferrer"><span>{ar?"واتساب":"WhatsApp"}</span><strong dir="ltr">{site.phoneDisplay}</strong><ArrowRight size={22}/></a><a href={site.linkedinUrl} target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>{ar?site.linkedinName.ar:site.linkedinName.en}</strong><ArrowRight size={22}/></a></div><Link className="vs-founder-link" id="founder" href={`${p}/about#founder`}>{tx(contact.founderLink)}<ArrowRight size={18}/></Link></section>}
     </main><CapabilityFooter locale={locale}/>
