@@ -71,9 +71,11 @@ export function CompetitionsPage({locale, fontClassName = ''}: {locale: Locale; 
               <Image src="/visionseek-symbol-color.png" alt="" width={36} height={36}/>
               <span>VisionSeek</span>
             </div>
-            <p className={styles.kicker}>{hero.kicker[locale]}</p>
-            <h1 id="competitions-title" className={styles.title}>{hero.title[locale]}</h1>
-            <p className={styles.lede}>{hero.text[locale]}</p>
+            <div className={styles.heroText}>
+              <p className={styles.kicker}>{hero.kicker[locale]}</p>
+              <h1 id="competitions-title" className={styles.title}>{hero.title[locale]}</h1>
+              <p className={styles.lede}>{hero.text[locale]}</p>
+            </div>
           </div>
           <div className={styles.heroPhoto}>
             <Image src={hero.image} alt="" fill priority sizes="(max-width: 860px) 100vw, 55vw"/>

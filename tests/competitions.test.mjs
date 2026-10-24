@@ -72,8 +72,14 @@ test('Competitions: the built pages are native RTL and LTR and render the conten
   }
 });
 
-test('Competitions: images are optimized, and Work with Us can take its hero from a /path', () => {
+test('Competitions: images are optimized, and Work with Us uses the office hero', () => {
   assert.ok(statSync(url('public/competitions/team-photo.jpg')).size < 200_000);
   assert.ok(statSync(url('public/competitions/meta-logo.png')).size < 40_000);
   assert.match(read('components/institution/pages.tsx'), /vs-institution-hero-image"><Image src=\{entryImage\(section\.image\)\}/);
+  const work = JSON.parse(read('content/sections.json')).sections.find(s => s.id === 'work-with-us');
+  assert.equal(work.image, '/work-with-us/hero-sign.jpg');
+  assert.ok(statSync(url('public/work-with-us/hero-sign.jpg')).size < 200_000);
+  // The competitions hero is HTML, not the baked hero-ar/en.png files.
+  assert.equal(data.hero.image, '/competitions/team-photo.jpg');
+  assert.match(read('components/competitions/competitions-page.tsx'), /styles\.heroCopy/);
 });
