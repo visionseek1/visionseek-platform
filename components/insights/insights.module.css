@@ -70,7 +70,7 @@
 
 .item { background: var(--card); border: 1px solid var(--rule); padding: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--ink) !important; text-decoration: none; overflow: hidden; }
 .item.hasCover { padding: 0; gap: 0; }
-.itemCover { position: relative; aspect-ratio: 210 / 297; background: #0b0d0c; }
+.itemCover { position: relative; aspect-ratio: 4 / 3; background: #0b0d0c; }
 .itemCover img { object-fit: cover; object-position: top center; }
 .itemBody { display: flex; flex-direction: column; gap: 10px; }
 .item.hasCover .itemBody { padding: 24px; }
