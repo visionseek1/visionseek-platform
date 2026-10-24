@@ -42,7 +42,7 @@ export function CarsHub({locale, cars, record}: {locale: Locale; cars: Car[]; re
       <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>HYBRID &amp; EV · VISIONSEEK</p>
       <h1 id="cars-title">{ar ? 'سيارات هايبرد وكهربائية من كوريا' : 'Hybrid and electric cars from Korea'}</h1>
       <p className={styles.heroLede}>{ar
-        ? 'مفيش سيارات معروضة للبيع هنا دلوقتي. اطلب اللي تحتاجه، ونبحث عنها في كوريا.'
+        ? 'لا توجد سيارات معروضة للبيع هنا الآن. اطلب ما تحتاجه، ونبحث عنه في كوريا.'
         : 'There is no inventory on this page yet. Tell us the car you want, and we will look for it in Korea.'}</p>
       <div className={styles.heroCta}>
         <a className={styles.cta} href="#request">{ar ? 'اطلب سيارة' : 'Request a car'} <span aria-hidden="true">{ar ? '←' : '→'}</span></a>
@@ -56,8 +56,8 @@ export function CarsHub({locale, cars, record}: {locale: Locale; cars: Car[]; re
       <div className={styles.askText}>
         <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>REQUEST A CAR</p>
         <h2 id="ask-title">{ar ? 'اطلب سيارة غير معروضة' : 'Request a car that is not listed'}</h2>
-        <p>{ar ? 'اكتب الماركة والموديل والسنة إن عرفتها. نبحث عنها في كوريا ونرجع لك.' : 'Write the brand, model and year if you know them. We look in Korea and come back to you.'}</p>
-        <p className={styles.askAlt}>{ar ? 'تفضّل واتساب؟' : 'Prefer WhatsApp?'} <a href={whatsappUrl()} target="_blank" rel="noreferrer" dir="ltr">{site.phoneDisplay}</a></p>
+        <p>{ar ? 'اكتب الماركة والموديل والسنة إن عرفتها. نبحث عنها في كوريا ونعود إليك.' : 'Write the brand, model and year if you know them. We look in Korea and come back to you.'}</p>
+        <p className={styles.askAlt}>{ar ? 'هل تفضّل واتساب؟' : 'Prefer WhatsApp?'} <a href={whatsappUrl()} target="_blank" rel="noreferrer" dir="ltr">{site.phoneDisplay}</a></p>
       </div>
       <div className={styles.askForm}>
         <RequestForm locale={locale} kind="car-wanted" page={`${ORIGIN}${p}/cars`} record={record}/>
@@ -110,7 +110,7 @@ export function CarDetail({locale, car, record}: {locale: Locale; car: Car; reco
       </article>
       <aside id="request" className={styles.aside} aria-labelledby="req-title">
         <h2 id="req-title">{ar ? 'اطلب هذه السيارة' : 'Request this car'}</h2>
-        <p>{ar ? 'نبحث عنها في كوريا ونرجع لك. لا التزام من الرسالة.' : 'We look for it in Korea and come back to you. The message is not a commitment.'}</p>
+        <p>{ar ? 'نبحث عنها في كوريا ونعود إليك. لا التزام من الرسالة.' : 'We look for it in Korea and come back to you. The message is not a commitment.'}</p>
         <RequestForm locale={locale} kind="car-listed" page={`${ORIGIN}${p}/cars/${car.slug}`} about={title} record={record}/>
       </aside>
     </div></div>

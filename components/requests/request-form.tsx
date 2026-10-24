@@ -17,7 +17,7 @@ const PLACEHOLDER: Partial<Record<RequestKey, Bi>> = {
   phone: {ar: '+20 أو +966 أو …', en: '+20, +966, …'},
   company: {ar: 'الاسم كما يُكتب في التعامل', en: 'The name you use in business'},
   product: {ar: 'مثال: قطع غيار لخط إنتاج', en: 'e.g. spare parts for a production line'},
-  quantity: {ar: 'عدد القطع أو الوزن — ولو تقدير', en: 'Units or weight — an estimate is fine'},
+  quantity: {ar: 'عدد القطع أو الوزن — حتى إن كان تقديرًا', en: 'Units or weight — an estimate is fine'},
   car: {ar: 'الماركة والموديل والسنة', en: 'Brand, model and year'},
   budget: {ar: 'المبلغ والعملة', en: 'Amount and currency'},
   details: {ar: 'المقاس، الخامة، الاستخدام، وأي شهادة مطلوبة', en: 'Size, material, use, and any certificate you need'},
@@ -25,8 +25,8 @@ const PLACEHOLDER: Partial<Record<RequestKey, Bi>> = {
 };
 
 const HINT: Partial<Record<RequestKey, Bi>> = {
-  quantity: {ar: 'الطلب الأول يكفي. لو في تصوّر لاحق اكتبه هنا.', en: 'The first order is enough. Add a later volume if you have one.'},
-  budget: {ar: 'اختياري. يساعدنا نعرف إن كان العرض في المدى ولا لأ.', en: 'Optional. It helps us see whether an offer is in range.'},
+  quantity: {ar: 'الطلب الأول يكفي. إن وُجد تصوّر لاحق فاكتبه هنا.', en: 'The first order is enough. Add a later volume if you have one.'},
+  budget: {ar: 'اختياري. يساعدنا على معرفة ما إذا كان العرض ضمن المدى أم لا.', en: 'Optional. It helps us see whether an offer is in range.'},
   link: {ar: 'رابط لمنتج مشابه، أو لملف مواصفات أو صورة على Google Drive أو غيره.', en: 'A link to a similar product, or to a spec file or photo on Google Drive or similar.'},
 };
 

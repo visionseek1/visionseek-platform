@@ -53,6 +53,32 @@ test('Korean Solutions: pages in both languages, the no-partnership line, and no
   assert.match(read('lib/requests.ts'), /TIMELINES/);
 });
 
+const COLLOQUIAL_AR = /مش |مفيش|مافيش|عايز|بتاع|اللي |إزاي|ازاي|امتى|دلوقتي|عشان|كمان|منغير|ولا لأ|العربيات|حاجة تانية|ندوّر|يستاهل|معاك|لقيناه|فاضية|يقدروا|لوحدها|هترد|هتدفع|هتتواصل|بتتأكد|بيرد|بنتفق|بتعمل|لأ\.|الصفحة دي|من غير ما |من غير |نجيبها|محتاج |قول ل|كلّمنا|نرجع لك|يتقاس|يتكتب/;
+
+test('Korean Solutions and cars: public Arabic copy is contemporary MSA, not Egyptian colloquial', () => {
+  const files = [
+    'app/ar/korean-solutions/page.tsx',
+    'app/ar/cars/page.tsx',
+    'components/korean-solutions/pages.tsx',
+    'components/korean-solutions/audience.tsx',
+    'components/korean-solutions/categories.tsx',
+    'components/korean-solutions/finder.tsx',
+    'components/korean-solutions/sticky-cta.tsx',
+    'components/cars/pages.tsx',
+    'components/cars/listing.tsx',
+    'components/requests/request-form.tsx',
+    'lib/korean-solutions-copy.ts',
+    'lib/requests.ts',
+    'lib/cars.ts',
+    'content/cars.json',
+    'content/korean-solutions.json',
+  ];
+  for (const file of files) {
+    const src = read(file).replace(/['"]لسه['"]/g, '');
+    assert.doesNotMatch(src, COLLOQUIAL_AR, file);
+  }
+});
+
 test('Korean Solutions: in the menu, the sitemap and the archive list; the ops section writes to Notion only', () => {
   const nav = json('content/navigation.json').sections;
   assert.equal(nav[0].path, '/korean-solutions');

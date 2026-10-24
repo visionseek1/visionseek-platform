@@ -5,7 +5,7 @@ import {isLiveSite} from '@/lib/deploy';
 
 export const metadata: Metadata = {
   title: 'سيارات هايبرد وكهربائية | VisionSeek',
-  description: 'مفيش سيارات معروضة هنا دلوقتي. قول لـ VisionSeek السيارة الهايبرد أو الكهربائية اللي تحتاجها من كوريا.',
+  description: 'لا توجد سيارات معروضة هنا الآن. أخبر VisionSeek بالسيارة الهايبرد أو الكهربائية التي تحتاجها من كوريا.',
   alternates: {canonical: '/ar/cars', languages: {ar: '/ar/cars', en: '/cars'}},
 };
 export default function Page() {

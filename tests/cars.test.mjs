@@ -37,6 +37,8 @@ test('cars pages exist in both languages; examples stay behind the preview flag'
   const listing = read('components/cars/listing.tsx');
   assert.match(listing, /Cars coming soon|السيارات قريبًا/);
   assert.match(listing, /EXAMPLE DATA|بيانات نموذجية/);
+  assert.match(listing, /لا توجد سيارات معروضة للبيع هنا الآن/);
+  assert.doesNotMatch(listing, /مفيش|دلوقتي|اللي تحتاجه/);
   const pages = read('components/cars/pages.tsx');
   assert.match(pages, /car-wanted/);
   assert.match(pages, /car-listed/);

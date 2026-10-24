@@ -82,7 +82,7 @@ export default function CarListing({locale, cars}: {locale: Locale; cars: Car[]}
       ? <div className={styles.empty} id="soon">
           <CarMark className={styles.emptyMark}/>
           <h3>{ar ? 'السيارات قريبًا' : 'Cars coming soon'}</h3>
-          <p>{ar ? 'مفيش سيارات معروضة للبيع هنا دلوقتي. اكتب لنا اللي تحتاجه، ونبحث عنها في كوريا.' : 'There is no inventory here yet. Tell us the car you want, and we will look for it in Korea.'}</p>
+          <p>{ar ? 'لا توجد سيارات معروضة للبيع هنا الآن. اكتب لنا ما تحتاجه، ونبحث عنه في كوريا.' : 'There is no inventory here yet. Tell us the car you want, and we will look for it in Korea.'}</p>
           <a href="#request">{ar ? 'اطلب سيارة' : 'Request a car'} <span aria-hidden="true">{ar ? '←' : '→'}</span></a>
         </div>
       : <ul className={styles.grid}>

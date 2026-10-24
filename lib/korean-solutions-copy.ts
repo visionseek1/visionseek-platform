@@ -69,7 +69,7 @@ export const CATEGORIES: Category[] = [
     name: {ar: 'سيارات هايبرد وكهربائية', en: 'Hybrid and electric cars'},
     examples: {ar: 'للسيارات صفحة خاصة: اطلب السيارة التي تريدها من هناك.', en: 'Cars have their own page: request the car you want there.'}},
   {id: 'other', sector: 'مجال آخر',
-    name: {ar: 'حاجة تانية؟', en: 'Something else?'},
+    name: {ar: 'شيء آخر؟', en: 'Something else?'},
     examples: {ar: 'اكتب أي منتج أو خدمة تحتاجها من كوريا.', en: 'Write down any product or service you need from Korea.'}},
 ];
 

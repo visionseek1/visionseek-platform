@@ -68,7 +68,7 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         <div id="ks-results" className={styles.results}>
           {results.map(s => <SolutionCard key={s.slug} s={s} locale={locale}/>)}
           {!results.length && <p className={styles.empty}>{ar
-            ? 'لا يوجد حل بهذه المواصفات بعد. اكتب لنا طلبك، ونبحث لك عنه في كوريا.'
+            ? 'لا يوجد حل بهذه المواصفات بعد. اكتب لنا طلبك، ونبحث عنه في كوريا.'
             : 'No solution matches yet. Tell us what you need, and we will look for it in Korea.'} <a href={`${p}/korean-solutions#needs`}>{ar ? 'اكتب طلبك' : 'Write your request'} {arrow}</a></p>}
         </div>
       </div>

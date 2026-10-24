@@ -39,8 +39,8 @@ export const TIMELINES: {value: string; label: Bi}[] = [
   {value: 'soon', label: {ar: 'في أقرب وقت', en: 'As soon as possible'}},
   {value: 'month', label: {ar: 'خلال هذا الشهر', en: 'This month'}},
   {value: 'quarter', label: {ar: 'خلال هذا الربع', en: 'This quarter'}},
-  {value: 'later', label: {ar: 'مش مستعجل', en: 'No rush'}},
-  {value: 'unsure', label: {ar: 'لسه ماحددتش', en: 'Not sure yet'}},
+  {value: 'later', label: {ar: 'من دون استعجال', en: 'No rush'}},
+  {value: 'unsure', label: {ar: 'لم أحدد بعد', en: 'Not sure yet'}},
 ];
 
 export const REQUEST_FIELDS: Record<RequestKind, RequestKey[]> = {
