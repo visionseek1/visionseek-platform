@@ -9,32 +9,32 @@
       "ar": "المؤشرات"
     },
     "intro": {
-      "en": "VisionSeek measures. It does not sell a ranking, and it does not publish a result before the method is public. This page holds the index, and the open map it is built on.",
-      "ar": "VisionSeek تقيس. لا تبيع ترتيبًا، ولا تعلن نتيجة قبل أن يُنشر المنهج. هذه الصفحة للمؤشر، وللخريطة المفتوحة التي يُبنى عليها."
+      "en": "Three measurement products. Each has one question and one unit of analysis.",
+      "ar": "ثلاثة منتجات قياس. لكل منتج سؤال واحد، ووحدة تحليل واحدة."
     },
     "measuringBodyTitle": {
       "en": "The measuring body",
       "ar": "جهة القياس"
     },
     "measuringBody": {
-      "en": "VisionSeek is the measuring body. When an edition is published, VisionSeek issues it. The methodology will be public before any result.",
-      "ar": "VisionSeek هي جهة القياس. حين يصدر إصدار، يصدر عنها. ويُنشر المنهج قبل أي نتيجة."
+      "en": "VisionSeek is the measuring body. When an edition is published, VisionSeek issues it. The method is public before any result.",
+      "ar": "VisionSeek هي جهة القياس. حين يصدر إصدار، يصدر عنها. والمنهج علني قبل أي نتيجة."
     },
     "empty": {
       "en": "None yet.",
       "ar": "لا يوجد بعد."
     },
     "catalogTitle": {
-      "en": "The index and the atlas",
-      "ar": "المؤشر والأطلس"
+      "en": "Three measurement products",
+      "ar": "ثلاثة منتجات قياس"
     },
     "catalogIntro": {
-      "en": "The atlas is the open map the index is built on.",
-      "ar": "الأطلس هو الخريطة المفتوحة التي يُبنى عليها المؤشر."
+      "en": "Each product has a question, a unit, and an output. The atlas feeds the other two.",
+      "ar": "لكل منتج سؤال، ووحدة، ومخرج. والأطلس يغذّي المنتجين الآخرين."
     },
-    "openIndex": {
-      "en": "Open",
-      "ar": "افتح"
+    "aboutProduct": {
+      "en": "About the product",
+      "ar": "عن المنتج"
     },
     "home": {
       "en": "Home",
@@ -43,8 +43,213 @@
     "back": {
       "en": "All indices",
       "ar": "كل المؤشرات"
-    }
+    },
+    "principlesTitle": {
+      "en": "How VisionSeek measures",
+      "ar": "مبادئ القياس في VisionSeek"
+    },
+    "principles": [
+      {
+        "id": "own",
+        "title": {
+          "en": "Ownership, not use",
+          "ar": "الامتلاك لا الاستخدام"
+        },
+        "text": {
+          "en": "We measure who builds the capability and owns it — not who only buys it.",
+          "ar": "نقيس من يبني القدرة ويملكها، لا من يشتريها فحسب."
+        }
+      },
+      {
+        "id": "method",
+        "title": {
+          "en": "Published method",
+          "ar": "منهجية منشورة"
+        },
+        "text": {
+          "en": "The method is public before any result. Scores follow the Ownership Ladder in VisionSeek Reports Methodology 1.0.",
+          "ar": "المنهج علني قبل أي نتيجة. والدرجات تُقرأ على سلّم الامتلاك في منهجية تقارير VisionSeek 1.0."
+        }
+      },
+      {
+        "id": "independent",
+        "title": {
+          "en": "Independent",
+          "ar": "مستقل"
+        },
+        "text": {
+          "en": "No sale and no sponsorship shapes what is measured or what is published.",
+          "ar": "لا بيع ولا رعاية يحدّدان ما يُقاس أو ما يُعلَن."
+        }
+      }
+    ],
+    "diagramTitle": {
+      "en": "How the products connect",
+      "ar": "كيف تتصل المنتجات"
+    },
+    "diagramIntro": {
+      "en": "The atlas is the database. It feeds the index, and it feeds the company list.",
+      "ar": "الأطلس هو قاعدة البيانات. منه يُبنى المؤشر، ومنه تُعدّ قائمة الشركات."
+    },
+    "diagramSourceName": {
+      "en": "Arab Critical Capabilities Atlas",
+      "ar": "أطلس القدرات العربية الحرجة"
+    },
+    "diagramSourceRole": {
+      "en": "Data: documented records, no scores",
+      "ar": "بيانات: سجلات موثّقة، بلا درجات"
+    },
+    "diagramFeeds": {
+      "en": "feeds",
+      "ar": "يغذّي"
+    },
+    "diagramIndexName": {
+      "en": "Arab Technology Capability Index",
+      "ar": "مؤشر القدرة التكنولوجية العربية"
+    },
+    "diagramIndexRole": {
+      "en": "Country scores on the Ownership Ladder",
+      "ar": "درجات الدول على سلّم الامتلاك"
+    },
+    "diagramListRole": {
+      "en": "Arab companies that own an artificial-intelligence capability",
+      "ar": "الشركات العربية التي تملك قدرة ذكاء اصطناعي"
+    },
+    "technologiesTitle": {
+      "en": "The seven technologies",
+      "ar": "التقنيات السبع"
+    },
+    "questionLabel": {
+      "en": "Question",
+      "ar": "السؤال"
+    },
+    "unitLabel": {
+      "en": "Unit",
+      "ar": "وحدة التحليل"
+    },
+    "outputLabel": {
+      "en": "Output",
+      "ar": "المخرج"
+    },
+    "cadenceLabel": {
+      "en": "Cadence",
+      "ar": "الدورية"
+    },
+    "statusFieldLabel": {
+      "en": "Status",
+      "ar": "الحالة"
+    },
+    "methodologyLabel": {
+      "en": "Methodology",
+      "ar": "المنهجية"
+    },
+    "methodologyName": {
+      "en": "The Ownership Ladder — VisionSeek Reports Methodology 1.0",
+      "ar": "سلّم الامتلاك — منهجية تقارير VisionSeek 1.0"
+    },
+    "methodologyHref": "/insights/reports/methodology"
   },
+  "products": [
+    {
+      "id": "atlas",
+      "slug": "arab-critical-capabilities-atlas",
+      "named": true,
+      "title": {
+        "en": "Arab Critical Capabilities Atlas",
+        "ar": "أطلس القدرات العربية الحرجة"
+      },
+      "definition": {
+        "en": "An open data map of the entities building critical capabilities in the Arab world. Every record carries its source.",
+        "ar": "خريطة بيانات مفتوحة للكيانات التي تبني القدرات الحرجة في العالم العربي. كل سجل معه مصدره."
+      },
+      "question": {
+        "en": "Where is the capability being built, and who is building it?",
+        "ar": "أين تُبنى القدرة، ومن يبنيها؟"
+      },
+      "unit": {
+        "en": "Entity × technology — a laboratory, factory, research team, or company.",
+        "ar": "الكيان × التقنية: مختبر أو مصنع أو فريق بحث أو شركة."
+      },
+      "output": {
+        "en": "Documented records. No scores and no ranking.",
+        "ar": "سجلات موثّقة، بلا درجات وبلا ترتيب."
+      },
+      "cadence": {
+        "en": "Continuous, with a dated change log.",
+        "ar": "تحديث مستمر، وسجل تعديلات مؤرّخ."
+      },
+      "status": {
+        "en": "Under construction — first edition: artificial intelligence",
+        "ar": "قيد البناء — الإصدار الأول: الذكاء الاصطناعي"
+      }
+    },
+    {
+      "id": "index",
+      "slug": "arab-technology-capability",
+      "named": true,
+      "title": {
+        "en": "Arab Technology Capability Index",
+        "ar": "مؤشر القدرة التكنولوجية العربية"
+      },
+      "definition": {
+        "en": "An annual index of Arab states' ownership and localization of the seven technologies, read on the Ownership Ladder.",
+        "ar": "مؤشر سنوي لامتلاك الدول العربية للتقنيات السبع وتوطينها على سلّم الامتلاك."
+      },
+      "question": {
+        "en": "Where does each Arab state stand on the Ownership Ladder, for each of the seven technologies?",
+        "ar": "أين تقف كل دولة عربية على سلّم الامتلاك، في كل تقنية من السبع؟"
+      },
+      "unit": {
+        "en": "Country × technology.",
+        "ar": "الدولة × التقنية."
+      },
+      "output": {
+        "en": "A score on the five-rung Ownership Ladder — Use, Assemble, Adapt, Design, Export/Standard — for each country and each technology.",
+        "ar": "درجة على سلّم الامتلاك ذي الدرجات الخمس: استخدام، فتجميع، فتكييف، فتصميم، فتصدير/معيار؛ لكل دولة ولكل تقنية."
+      },
+      "cadence": {
+        "en": "Annual.",
+        "ar": "سنوي."
+      },
+      "status": {
+        "en": "In preparation",
+        "ar": "قيد الإعداد"
+      }
+    },
+    {
+      "id": "companies",
+      "slug": "",
+      "named": false,
+      "title": {
+        "en": "",
+        "ar": ""
+      },
+      "definition": {
+        "en": "An annual list of Arab companies that built an artificial-intelligence capability and own it, each passing strict evidence gates.",
+        "ar": "قائمة سنوية بالشركات العربية التي بنت قدرة ذكاء اصطناعي وتملكها، بعد بوابات أدلة صارمة."
+      },
+      "question": {
+        "en": "Which Arab companies have built an artificial-intelligence capability they own?",
+        "ar": "أيّ الشركات العربية بنت قدرة ذكاء اصطناعي تملكها؟"
+      },
+      "unit": {
+        "en": "The company.",
+        "ar": "الشركة."
+      },
+      "output": {
+        "en": "A list of at most 100 companies, in tiers, each with its evidence.",
+        "ar": "قائمة بحد أقصى 100 شركة، على شرائح، ومع كل شركة أدلتها."
+      },
+      "cadence": {
+        "en": "Annual.",
+        "ar": "سنوي."
+      },
+      "status": {
+        "en": "In preparation — published after the census is complete",
+        "ar": "قيد الإعداد — تُنشر بعد اكتمال الحصر"
+      }
+    }
+  ],
   "notify": {
     "label": {
       "en": "Notify Ahmed Abdelalim",
@@ -56,8 +261,8 @@
     },
     "email": "abdelalim@visionseek.org",
     "subject": {
-      "en": "Notify me — VisionSeek Indices, pilot edition",
-      "ar": "أبلغني — مؤشرات VisionSeek، الإصدار التجريبي"
+      "en": "Notify me — VisionSeek Indices",
+      "ar": "أبلغني — مؤشرات VisionSeek"
     }
   },
   "indices": [
@@ -65,20 +270,20 @@
       "slug": "arab-technology-capability",
       "status": "upcoming",
       "statusLabel": {
-        "en": "Pilot edition coming soon",
-        "ar": "الإصدار التجريبي قريبًا"
+        "en": "In preparation",
+        "ar": "قيد الإعداد"
       },
       "title": {
         "en": "Arab Technology Capability Index",
         "ar": "مؤشر القدرة التكنولوجية العربية"
       },
       "shortTitle": {
-        "en": "Arab Technology Capability",
-        "ar": "القدرة التكنولوجية العربية"
+        "en": "Arab Technology Capability Index",
+        "ar": "مؤشر القدرة التكنولوجية العربية"
       },
       "subtitle": {
         "en": "Seven Core Technologies — Ownership & Localization",
-        "ar": "التكنولوجيات السبعة الأساسية — الامتلاك والتوطين"
+        "ar": "التقنيات السبع الأساسية — الامتلاك والتوطين"
       },
       "heroImage": "/indices/arab-technology-capability.jpg",
       "heroAlt": {
@@ -94,16 +299,16 @@
         "ar": "ما هو المؤشر"
       },
       "measures": {
-        "en": "An independent annual report issued by VisionSeek. It measures ownership and localization of the core technologies — not use alone.",
-        "ar": "تقرير سنوي مستقل تصدره VisionSeek. يقيس مستوى امتلاك التكنولوجيات الأساسية وتوطينها — لا استخدامها فحسب."
+        "en": "An independent annual report issued by VisionSeek. It measures ownership and localization of the seven technologies — not use alone.",
+        "ar": "تقرير سنوي مستقل تصدره VisionSeek. يقيس مستوى امتلاك التقنيات السبع وتوطينها — لا استخدامها فحسب."
       },
       "pillarsTitle": {
-        "en": "The core technologies",
-        "ar": "التكنولوجيات الأساسية"
+        "en": "The seven technologies",
+        "ar": "التقنيات السبع"
       },
       "pillarsIntro": {
-        "en": "The names are here. Measurement has not begun.",
-        "ar": "الأسماء هنا. لم يبدأ القياس بعد."
+        "en": "The seven technologies covered:",
+        "ar": "التقنيات السبع المشمولة:"
       },
       "pillars": [
         {
@@ -130,8 +335,8 @@
         {
           "id": "networks",
           "name": {
-            "en": "Next-generation networks",
-            "ar": "شبكات الجيل التالي"
+            "en": "Next-generation networks 5G-6G",
+            "ar": "شبكات الجيل التالي 5G-6G"
           }
         },
         {
@@ -157,43 +362,10 @@
         }
       ],
       "principlesTitle": {
-        "en": "Principles",
-        "ar": "مبادئ المؤشر"
+        "en": "What sets this product apart",
+        "ar": "ما يميّز هذا المنتج"
       },
       "principles": [
-        {
-          "id": "own",
-          "title": {
-            "en": "Ownership, not use",
-            "ar": "الامتلاك لا الاستخدام"
-          },
-          "text": {
-            "en": "We measure who builds the capability and owns it — not who only buys it.",
-            "ar": "نقيس من يبني القدرة ويملكها، لا من يشتريها فحسب."
-          }
-        },
-        {
-          "id": "method",
-          "title": {
-            "en": "Published method",
-            "ar": "منهجية منشورة"
-          },
-          "text": {
-            "en": "The measurement method will be published in full, and anyone can review it.",
-            "ar": "ستُنشر طريقة القياس كاملة، ويستطيع أي قارئ مراجعتها."
-          }
-        },
-        {
-          "id": "independent",
-          "title": {
-            "en": "Independent",
-            "ar": "مستقل"
-          },
-          "text": {
-            "en": "No sale and no sponsorship shapes the findings.",
-            "ar": "لا بيع ولا رعاية يؤثران في النتائج."
-          }
-        },
         {
           "id": "annual",
           "title": {
@@ -211,16 +383,16 @@
         "ar": "المنهج"
       },
       "methodology": {
-        "en": "The methodology will be published. No results before the method, and no comparison before the definitions.",
-        "ar": "المنهجية ستُنشر. لا نتائج قبل المنهج، ولا مقارنة قبل التعريفات."
+        "en": "Scores are read on the Ownership Ladder published in VisionSeek Reports Methodology 1.0. A dedicated index methodology will follow on its own page.",
+        "ar": "تُقرأ الدرجات على سلّم الامتلاك المنشور في منهجية تقارير VisionSeek 1.0. وستُنشر منهجية مستقلة للمؤشر في صفحة خاصة بها."
       },
       "pilotTitle": {
-        "en": "First edition",
-        "ar": "الإصدار الأول"
+        "en": "What it covers",
+        "ar": "نطاق المؤشر"
       },
       "pilot": {
-        "en": "A pilot edition focused on artificial intelligence, issued with the full measurement method.",
-        "ar": "إصدار تجريبي يركّز على الذكاء الاصطناعي، ومعه طريقة القياس الكاملة."
+        "en": "The index covers the seven technologies on the Ownership Ladder. It is not limited to one technology.",
+        "ar": "يغطي المؤشر التقنيات السبع على سلّم الامتلاك. ولا يُختصر في تقنية واحدة."
       },
       "audienceTitle": {
         "en": "Who it is for",
@@ -235,28 +407,28 @@
         "ar": "النتائج"
       },
       "results": {
-        "en": "No results yet. No scores, no ranking, and no charts that carry figures.",
-        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا رسوم تحمل أرقامًا."
+        "en": "Results are published with the first edition.",
+        "ar": "تُنشر النتائج مع الإصدار الأول."
       }
     },
     {
       "slug": "arab-critical-capabilities-atlas",
       "status": "upcoming",
       "statusLabel": {
-        "en": "Coming soon",
-        "ar": "قريبًا"
+        "en": "Under construction — first edition: artificial intelligence",
+        "ar": "قيد البناء — الإصدار الأول: الذكاء الاصطناعي"
       },
       "title": {
         "en": "Arab Critical Capabilities Atlas",
         "ar": "أطلس القدرات العربية الحرجة"
       },
       "shortTitle": {
-        "en": "Arab Critical Capabilities",
-        "ar": "القدرات العربية الحرجة"
+        "en": "Arab Critical Capabilities Atlas",
+        "ar": "أطلس القدرات العربية الحرجة"
       },
       "subtitle": {
-        "en": "The Open Map of Arab Capability in the Seven Core Technologies",
-        "ar": "الخريطة المفتوحة للقدرات العربية في التكنولوجيات السبعة الأساسية"
+        "en": "The Open Map of Arab Capability in the Seven Technologies",
+        "ar": "الخريطة المفتوحة للقدرات العربية في التقنيات السبع"
       },
       "heroImage": "/indices/arab-critical-capabilities-atlas.svg",
       "heroAlt": {
@@ -272,16 +444,16 @@
         "ar": "ما هو الأطلس"
       },
       "measures": {
-        "en": "An open map issued by VisionSeek. It traces critical technology capability in the Arab world — laboratories, factories, research teams, companies, and talent — across the seven core technologies: chips, artificial intelligence, cloud and data, next-generation networks, robotics, clean energy and batteries, and biotech and health tech. The atlas is the database the Arab Technology Capability Index is built on.",
-        "ar": "خريطة مفتوحة تصدرها VisionSeek، ترصد القدرات التكنولوجية الحرجة في العالم العربي: مختبرات ومصانع وفرق بحث وشركات ومواهب، في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، وشبكات الجيل التالي، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية. الأطلس هو قاعدة البيانات التي يُبنى عليها «مؤشر القدرة التكنولوجية العربية»."
+        "en": "An open map issued by VisionSeek. It traces critical technology capability in the Arab world — laboratories, factories, research teams, companies, and talent — across the seven technologies: chips, artificial intelligence, cloud and data, next-generation networks 5G-6G, robotics, clean energy and batteries, and biotech and health tech. The atlas is the database the Arab Technology Capability Index is built on.",
+        "ar": "خريطة مفتوحة تصدرها VisionSeek، ترصد القدرات التكنولوجية الحرجة في العالم العربي: مختبرات ومصانع وفرق بحث وشركات ومواهب، في التقنيات السبع: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، وشبكات الجيل التالي 5G-6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية. الأطلس هو قاعدة البيانات التي يُبنى عليها «مؤشر القدرة التكنولوجية العربية»."
       },
       "pillarsTitle": {
         "en": "How it works",
         "ar": "كيف يعمل"
       },
       "pillarsIntro": {
-        "en": "These are the doors of exploration. None is open yet.",
-        "ar": "هذه أبواب الاستكشاف. لم يُفتح منها شيء بعد."
+        "en": "Doors of exploration:",
+        "ar": "أبواب الاستكشاف:"
       },
       "pillars": [
         {
@@ -314,8 +486,8 @@
         }
       ],
       "principlesTitle": {
-        "en": "Principles of the atlas",
-        "ar": "مبادئ الأطلس"
+        "en": "What sets the atlas apart",
+        "ar": "ما يميّز الأطلس"
       },
       "principles": [
         {
@@ -341,17 +513,6 @@
           }
         },
         {
-          "id": "method",
-          "title": {
-            "en": "Published method",
-            "ar": "منهجية منشورة"
-          },
-          "text": {
-            "en": "The criteria for inclusion and classification will be published in full, and any change will be announced and dated.",
-            "ar": "ستُنشر معايير الإدراج والتصنيف كاملة، وأي تعديل عليها مُعلن ومؤرّخ."
-          }
-        },
-        {
           "id": "correctable",
           "title": {
             "en": "Correctable",
@@ -361,28 +522,6 @@
             "en": "Observed parties will be able to review their records and request a correction through a published procedure.",
             "ar": "تستطيع الجهات المرصودة مراجعة بياناتها وطلب تصحيحها وفق إجراء واضح."
           }
-        },
-        {
-          "id": "own",
-          "title": {
-            "en": "Ownership, not use",
-            "ar": "امتلاك لا استخدام"
-          },
-          "text": {
-            "en": "We record who builds the capability and owns it — not who only buys it.",
-            "ar": "نرصد من يبني القدرة ويملكها، لا من يشتريها فحسب."
-          }
-        },
-        {
-          "id": "independent",
-          "title": {
-            "en": "Independent",
-            "ar": "مستقل"
-          },
-          "text": {
-            "en": "No sale and no sponsorship shapes what appears on the map.",
-            "ar": "لا بيع ولا رعاية يؤثران في ما يظهر على الخريطة."
-          }
         }
       ],
       "methodologyTitle": {
@@ -390,8 +529,8 @@
         "ar": "المنهج"
       },
       "methodology": {
-        "en": "The atlas will be explored by technology, show where capability is present and where it is absent, and keep sources beside every record. The method will be published on a separate page before any finding.",
-        "ar": "يُستكشف الأطلس حسب التكنولوجيا، ويبين أين توجد القدرة وأين تغيب، ويضع المصدر إلى جانب كل سجل. وستُنشر طريقة الرصد في صفحة مستقلة قبل أي نتيجة."
+        "en": "Inclusion criteria will be published on their own page. Until then the frame is VisionSeek Reports Methodology 1.0.",
+        "ar": "ستُنشر معايير الإدراج في صفحة مستقلة. والإطار المعتمد حتى ذلك الحين هو منهجية تقارير VisionSeek 1.0."
       },
       "pilotTitle": {
         "en": "First edition",
@@ -414,8 +553,8 @@
         "ar": "النتائج"
       },
       "results": {
-        "en": "No results yet. No scores, no ranking, and no map that carries real data. The picture is symbolic.",
-        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا خريطة تحمل بيانات حقيقية. الصورة رمزية."
+        "en": "The atlas does not issue scores or a ranking. Its output is entity records and their sources.",
+        "ar": "الأطلس لا يصدر درجات ولا ترتيبًا. المخرج سجلات الكيانات ومصادرها."
       }
     }
   ]

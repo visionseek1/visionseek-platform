@@ -168,46 +168,140 @@
 .catalog h2 { font-size: 1.6rem; }
 .catalogHead p { color: var(--mute); line-height: 1.75; }
 
-.cards {
+.products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
-.card {
+.product {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  padding: 1.4rem 1.35rem;
+  padding: 1.4rem 1.35rem 1.5rem;
   background: var(--panel);
   border: 1px solid var(--line);
-  text-decoration: none;
   min-height: 11rem;
 }
 
-.cardVisual {
-  display: block;
-  margin: -1.4rem -1.35rem 0;
-  background: #050505;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
+.product h3 { font-size: 1.28rem; max-width: none; }
+.cardDef, .cardLead { color: var(--body); font-size: 0.98rem; line-height: 1.7; }
+.productUnnamed .cardLead { font-size: 1.18rem; }
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0.2rem 0 0;
 }
 
-.cardVisual img {
-  display: block;
+.field dt {
+  color: var(--lime);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.page.ar .field dt {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.8rem;
+}
+
+.field dd {
+  color: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.more {
+  margin-top: auto;
+  color: var(--lime);
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.methodLink { color: var(--lime); font-weight: 650; }
+.methodLink:hover { color: var(--mint); }
+
+.diagram {
+  margin: 3.4rem 0 0;
+  padding: 1.8rem 1.6rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.diagram figcaption h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  margin: 0 0 0.7rem !important;
+}
+
+.diagram figcaption p {
+  max-width: 42rem;
+  color: var(--body);
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.diagramFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.diagramNode {
+  width: min(100%, 28rem);
+  background: #101313;
+  border-top: 2px solid var(--lime);
+  padding: 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.diagramNode strong { font-size: 1.05rem; }
+.diagramNode span { color: var(--mute); font-size: 0.92rem; line-height: 1.6; }
+
+.diagramSource { width: min(100%, 36rem); }
+
+.diagramFeeds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--lime);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.diagramArrow {
+  width: 2px;
+  height: 1.6rem;
+  background: var(--lime);
+}
+
+.diagramTargets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
   width: 100%;
-  height: auto;
-  max-width: 1280px;
-  max-height: 720px;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  object-position: center;
 }
 
-.card:hover { border-color: rgba(207, 255, 0, 0.45); }
-.card h3 { font-size: 1.35rem; }
-.card p { color: var(--mute); font-size: 0.95rem; line-height: 1.7; }
-.more { margin-top: auto; color: var(--lime); font-weight: 650; font-size: 0.92rem; }
+.diagramTargets .diagramNode { width: 100%; }
+.diagramUnnamed { justify-content: center; }
+
+.techs {
+  margin-top: 3.4rem;
+}
+
+.techs h2 {
+  font-size: 1.6rem;
+  margin: 0 0 1.2rem !important;
+}
 
 .article {
   margin-top: 4.2rem;
@@ -362,8 +456,12 @@
 
 .page[dir=rtl] .back svg { transform: rotate(180deg); }
 
+@media (max-width: 1100px) {
+  .products { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 900px) {
-  .panels, .principles { grid-template-columns: 1fr; }
+  .panels, .principles, .diagramTargets { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(2.6rem, 12vw, 3.6rem); }
 }
 
@@ -373,7 +471,7 @@
   .article { margin-top: 3rem; padding-top: 2rem; }
   .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillar { min-height: 5.4rem; }
-  .band, .results { padding: 1.4rem 1.15rem; }
+  .band, .results, .diagram { padding: 1.4rem 1.15rem; }
   .button { width: 100%; }
 }
 
