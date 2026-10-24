@@ -9,8 +9,8 @@
       "ar": "المؤشرات"
     },
     "intro": {
-      "en": "Three measurement products. Each has one question and one unit of analysis.",
-      "ar": "ثلاثة منتجات قياس. لكل منتج سؤال واحد، ووحدة تحليل واحدة."
+      "en": "Three measurement products. Published methodology. Public-source evidence.",
+      "ar": "ثلاثة منتجات قياس، منهجية منشورة، أدلة من مصادر عامة."
     },
     "measuringBodyTitle": {
       "en": "The measuring body",
@@ -29,8 +29,8 @@
       "ar": "ثلاثة منتجات قياس"
     },
     "catalogIntro": {
-      "en": "Each product has a question, a unit, and an output. The atlas feeds the other two.",
-      "ar": "لكل منتج سؤال، ووحدة، ومخرج. والأطلس يغذّي المنتجين الآخرين."
+      "en": "Each product answers one question. The atlas feeds the other two.",
+      "ar": "كل منتج يجيب عن سؤال واحد. والأطلس يغذّي المنتجين الآخرين."
     },
     "aboutProduct": {
       "en": "About the product",
@@ -45,8 +45,8 @@
       "ar": "كل المؤشرات"
     },
     "principlesTitle": {
-      "en": "How VisionSeek measures",
-      "ar": "مبادئ القياس في VisionSeek"
+      "en": "Principles and independence",
+      "ar": "المبادئ والاستقلال"
     },
     "principles": [
       {
@@ -56,8 +56,8 @@
           "ar": "الامتلاك لا الاستخدام"
         },
         "text": {
-          "en": "We measure who builds the capability and owns it — not who only buys it.",
-          "ar": "نقيس من يبني القدرة ويملكها، لا من يشتريها فحسب."
+          "en": "We measure the capability a state owns — not the technology it only uses.",
+          "ar": "نقيس القدرة التي تملكها الدولة، لا التكنولوجيا التي تستخدمها فحسب."
         }
       },
       {
@@ -67,8 +67,8 @@
           "ar": "منهجية منشورة"
         },
         "text": {
-          "en": "The method is public before any result. Scores follow the Ownership Ladder in VisionSeek Reports Methodology 1.0.",
-          "ar": "المنهج علني قبل أي نتيجة. والدرجات تُقرأ على سلّم الامتلاك في منهجية تقارير VisionSeek 1.0."
+          "en": "The method is public before any result.",
+          "ar": "المنهج علني قبل أي نتيجة."
         }
       },
       {
@@ -78,8 +78,8 @@
           "ar": "مستقل"
         },
         "text": {
-          "en": "No sale and no sponsorship shapes what is measured or what is published.",
-          "ar": "لا بيع ولا رعاية يحدّدان ما يُقاس أو ما يُعلَن."
+          "en": "No sale and no sponsorship shapes the results.",
+          "ar": "لا بيع ولا رعاية يؤثّران في النتائج."
         }
       }
     ],
@@ -147,13 +147,340 @@
       "en": "The Ownership Ladder — VisionSeek Reports Methodology 1.0",
       "ar": "سلّم الامتلاك — منهجية تقارير VisionSeek 1.0"
     },
-    "methodologyHref": "/reports/reports/methodology"
+    "methodologyHref": "/reports/reports/methodology",
+    "thesis": {
+      "en": "Measuring the technology capabilities Arab states own — not just use.",
+      "ar": "نقيس ما تملكه الدول العربية من قدرات تقنية، لا ما تستخدمه."
+    },
+    "readMethodology": {
+      "en": "Read the methodology",
+      "ar": "اقرأ المنهجية"
+    },
+    "followEdition": {
+      "en": "Follow the first edition",
+      "ar": "تابع الإصدار الأول"
+    },
+    "mapTitle": {
+      "en": "Coverage of the first-edition pilot",
+      "ar": "نطاق التجربة الأولى"
+    },
+    "mapIntro": {
+      "en": "The first-edition pilot covers Egypt and the six Gulf states. The map shows where we measure — not a score, and not a ranking.",
+      "ar": "تغطي التجربة الأولى مصر ودول الخليج الست. والخريطة تبيّن أين نقيس، لا درجة ولا ترتيبًا."
+    },
+    "mapPilotLabel": {
+      "en": "First-edition pilot scope",
+      "ar": "نطاق التجربة الأولى"
+    },
+    "mapLaterLabel": {
+      "en": "Later expansion",
+      "ar": "توسّع لاحق"
+    },
+    "ctaMethod": {
+      "en": "Methodology v0.3",
+      "ar": "المنهجية v0.3"
+    },
+    "ctaPrinciples": {
+      "en": "Principles",
+      "ar": "المبادئ"
+    },
+    "ctaFollow": {
+      "en": "Follow",
+      "ar": "تابع"
+    },
+    "measureTitle": {
+      "en": "How we measure",
+      "ar": "كيف نقيس"
+    },
+    "measureIntro": {
+      "en": "The method is public before any result. The Atlas records a level and its evidence. It does not issue a score.",
+      "ar": "المنهج علني قبل أي نتيجة. يسجّل الأطلس المستوى ودليله. ولا يصدر درجة."
+    },
+    "measureAtlasNote": {
+      "en": "The Atlas shows levels and evidence, not scores or rankings.",
+      "ar": "لا درجات ولا ترتيب في الأطلس."
+    },
+    "ladderTitle": {
+      "en": "The Ownership Ladder",
+      "ar": "سلّم الامتلاك"
+    },
+    "atlasScaleTitle": {
+      "en": "Atlas scale R0–R4",
+      "ar": "مقياس الأطلس R0–R4"
+    },
+    "evidenceScaleTitle": {
+      "en": "Evidence ladder E0–E4",
+      "ar": "سلّم الدليل E0–E4"
+    },
+    "unitTitle": {
+      "en": "Unit of measure",
+      "ar": "وحدة القياس"
+    },
+    "unitText": {
+      "en": "Entity × sub-domain.",
+      "ar": "جهة × مجال فرعي."
+    },
+    "validityTitle": {
+      "en": "Evidence window",
+      "ar": "صلاحية الدليل"
+    },
+    "validityText": {
+      "en": "Evidence is valid for one year, and is reviewed every 60 days.",
+      "ar": "صلاحية الدليل سنة واحدة، ويُراجع كل ستين يومًا."
+    },
+    "downloadLabel": {
+      "en": "Download the methodology",
+      "ar": "تحميل المنهجية"
+    },
+    "citeTitle": {
+      "en": "How to cite",
+      "ar": "صيغة الاستشهاد"
+    },
+    "releaseMethodology": {
+      "en": "Methodology: Atlas v0.3 (frozen for pilot)",
+      "ar": "المنهجية: الأطلس v0.3 (مجمّدة للتجربة)"
+    },
+    "releaseEdition": {
+      "en": "First edition: under construction",
+      "ar": "الإصدار الأول: قيد البناء"
+    },
+    "previousEditionsTitle": {
+      "en": "Previous editions",
+      "ar": "الإصدارات السابقة"
+    },
+    "showPreviousEditions": false,
+    "pressTitle": {
+      "en": "For researchers and the press",
+      "ar": "للباحثين والصحافة"
+    },
+    "pressIntro": {
+      "en": "The published method, a suggested citation, and the public address of the team.",
+      "ar": "المنهج المنشور، وصيغة استشهاد مقترحة، وعنوان الفريق العام."
+    },
+    "downloadArLabel": {
+      "en": "Methodology in Arabic",
+      "ar": "المنهجية بالعربية"
+    },
+    "downloadEnLabel": {
+      "en": "Methodology in English",
+      "ar": "المنهجية بالإنجليزية"
+    },
+    "downloadArHref": "/ar/reports/reports/methodology",
+    "downloadEnHref": "/reports/reports/methodology",
+    "citeHow": {
+      "en": "Abdelalim, A. VisionSeek Strategic Reports — Unified Methodology (Version 1.0). VisionSeek Lab. Atlas method: VisionSeek, Atlas methodology v0.3.",
+      "ar": "عبدالعليم، أ. منهجية تقارير VisionSeek — الإصدار 1.0. VisionSeek Lab. منهجية الأطلس: VisionSeek، منهجية الأطلس v0.3."
+    },
+    "teamEmailLabel": {
+      "en": "Team email",
+      "ar": "بريد الفريق"
+    },
+    "relatedTitle": {
+      "en": "In VisionSeek",
+      "ar": "في VisionSeek"
+    },
+    "relatedLine": {
+      "en": "Indices are part of VisionSeek.",
+      "ar": "المؤشرات جزء من VisionSeek."
+    },
+    "reportsLabel": {
+      "en": "Reports",
+      "ar": "تقارير"
+    },
+    "reportsHref": "/reports",
+    "programsLabel": {
+      "en": "Programs",
+      "ar": "البرامج"
+    },
+    "programsHref": "/programs",
+    "ladder": [
+      {
+        "id": "use",
+        "name": {
+          "en": "Use",
+          "ar": "استخدام"
+        },
+        "text": {
+          "en": "Imports and operates foreign-designed technology. Maintenance and upgrades depend on the supplier.",
+          "ar": "استيراد تكنولوجيا مصمَّمة في الخارج وتشغيلها، وتبقى الصيانة والتطوير بيد المورّد."
+        }
+      },
+      {
+        "id": "assemble",
+        "name": {
+          "en": "Assemble",
+          "ar": "تجميع"
+        },
+        "text": {
+          "en": "Assembles, installs or integrates foreign-designed components locally.",
+          "ar": "تجميع مكوّنات مصمَّمة في الخارج أو تركيبها أو دمجها محليًا."
+        }
+      },
+      {
+        "id": "adapt",
+        "name": {
+          "en": "Adapt",
+          "ar": "تكييف"
+        },
+        "text": {
+          "en": "Local teams modify designs, software or processes and hold the documentation needed to do so.",
+          "ar": "فرق محلية تعدّل التصميم أو البرمجيات أو العمليات، وتملك الوثائق اللازمة لذلك."
+        }
+      },
+      {
+        "id": "design",
+        "name": {
+          "en": "Design",
+          "ar": "تصميم"
+        },
+        "text": {
+          "en": "Local entities hold design authority, originate designs and own the resulting intellectual property.",
+          "ar": "جهات محلية تملك سلطة التصميم، وتنشئ التصاميم، وتملك ما ينتج عنها من ملكية فكرية."
+        }
+      },
+      {
+        "id": "export",
+        "name": {
+          "en": "Export",
+          "ar": "تصدير"
+        },
+        "text": {
+          "en": "Locally designed products or services are certified or sold abroad, or local actors help shape international standards.",
+          "ar": "منتجات أو خدمات مصمَّمة محليًا تُعتمد أو تُباع في الخارج، أو جهات محلية تشارك في صياغة المعايير الدولية."
+        }
+      }
+    ],
+    "atlasScale": [
+      {
+        "id": "r0",
+        "code": "R0",
+        "name": {
+          "en": "Use",
+          "ar": "استخدام"
+        },
+        "text": {
+          "en": "The entity operates a foreign-designed capability. Maintenance stays with the supplier.",
+          "ar": "التشغيل لقدرة صُمّمت في الخارج، وتبقى الصيانة بيد المورّد."
+        }
+      },
+      {
+        "id": "r1",
+        "code": "R1",
+        "name": {
+          "en": "Assemble",
+          "ar": "تجميع"
+        },
+        "text": {
+          "en": "The entity assembles or integrates foreign-designed components locally.",
+          "ar": "تجميع مكوّنات مصمَّمة في الخارج أو دمجها محليًا."
+        }
+      },
+      {
+        "id": "r2",
+        "code": "R2",
+        "name": {
+          "en": "Adapt",
+          "ar": "تكييف"
+        },
+        "text": {
+          "en": "Local teams modify the design or the process, and hold the documents that make that possible.",
+          "ar": "فرق محلية تعدّل التصميم أو العملية، وتملك الوثائق التي تمكّنها من ذلك."
+        }
+      },
+      {
+        "id": "r3",
+        "code": "R3",
+        "name": {
+          "en": "Design",
+          "ar": "تصميم"
+        },
+        "text": {
+          "en": "The entity holds design authority and owns the resulting intellectual property.",
+          "ar": "الجهة تملك سلطة التصميم وما ينتج عنها من ملكية فكرية."
+        }
+      },
+      {
+        "id": "r4",
+        "code": "R4",
+        "name": {
+          "en": "Export",
+          "ar": "تصدير"
+        },
+        "text": {
+          "en": "A locally designed product or service is certified or sold abroad, or the entity helps set the standard.",
+          "ar": "منتج أو خدمة مصمَّمة محليًا تُعتمد أو تُباع في الخارج، أو تشارك الجهة في وضع المعيار."
+        }
+      }
+    ],
+    "evidenceScale": [
+      {
+        "id": "e0",
+        "code": "E0",
+        "name": {
+          "en": "None",
+          "ar": "لا دليل"
+        },
+        "text": {
+          "en": "No evidence attached to the record.",
+          "ar": "لا دليل مرفقًا بالسجل."
+        }
+      },
+      {
+        "id": "e1",
+        "code": "E1",
+        "name": {
+          "en": "Lead",
+          "ar": "خيط"
+        },
+        "text": {
+          "en": "A single uncorroborated lead.",
+          "ar": "خيط واحد غير معزّز."
+        }
+      },
+      {
+        "id": "e2",
+        "code": "E2",
+        "name": {
+          "en": "Public",
+          "ar": "معلن"
+        },
+        "text": {
+          "en": "A public statement that can be reviewed.",
+          "ar": "مصدر معلن يمكن الرجوع إليه."
+        }
+      },
+      {
+        "id": "e3",
+        "code": "E3",
+        "name": {
+          "en": "Documented",
+          "ar": "موثّق"
+        },
+        "text": {
+          "en": "Documented evidence that matches the claim.",
+          "ar": "دليل موثّق يطابق الادعاء."
+        }
+      },
+      {
+        "id": "e4",
+        "code": "E4",
+        "name": {
+          "en": "Archived",
+          "ar": "مؤرشف"
+        },
+        "text": {
+          "en": "Documented evidence, archived.",
+          "ar": "دليل موثّق ومؤرشف."
+        }
+      }
+    ]
   },
   "products": [
     {
       "id": "atlas",
       "slug": "arab-critical-capabilities-atlas",
       "named": true,
+      "cta": "method",
       "title": {
         "en": "Arab Critical Capabilities Atlas",
         "ar": "أطلس القدرات العربية الحرجة"
@@ -163,49 +490,50 @@
         "ar": "خريطة بيانات مفتوحة للكيانات التي تبني القدرات الحرجة في العالم العربي. كل سجل معه مصدره."
       },
       "question": {
-        "en": "Where is the capability being built, and who is building it?",
-        "ar": "أين تُبنى القدرة، ومن يبنيها؟"
+        "en": "Who owns this capability, and at what level?",
+        "ar": "من يملك هذه القدرة، وعلى أي مستوى؟"
       },
       "unit": {
-        "en": "Entity × technology — a laboratory, factory, research team, or company.",
-        "ar": "الكيان × التقنية: مختبر أو مصنع أو فريق بحث أو شركة."
+        "en": "Entity × sub-domain.",
+        "ar": "جهة × مجال فرعي."
       },
       "output": {
         "en": "Documented records. No scores and no ranking.",
         "ar": "سجلات موثّقة، بلا درجات وبلا ترتيب."
       },
       "cadence": {
-        "en": "Continuous, with a dated change log.",
-        "ar": "تحديث مستمر، وسجل تعديلات مؤرّخ."
+        "en": "Continuous.",
+        "ar": "مستمر."
       },
       "status": {
-        "en": "Under construction — first edition: artificial intelligence",
-        "ar": "قيد البناء — الإصدار الأول: الذكاء الاصطناعي"
+        "en": "Under construction",
+        "ar": "قيد البناء"
       }
     },
     {
       "id": "index",
       "slug": "arab-technology-capability",
       "named": true,
+      "cta": "principles",
       "title": {
         "en": "Arab Technology Capability Index",
         "ar": "مؤشر القدرة التكنولوجية العربية"
       },
       "definition": {
-        "en": "An annual index of Arab states' ownership and localization of the seven technologies, read on the Ownership Ladder.",
-        "ar": "مؤشر سنوي لامتلاك الدول العربية للتقنيات السبع وتوطينها على سلّم الامتلاك."
+        "en": "An annual index of Arab states on the Ownership Ladder, across the seven technologies.",
+        "ar": "مؤشر سنوي لموقع الدول العربية على سلّم الامتلاك، في التقنيات السبع."
       },
       "question": {
-        "en": "Where does each Arab state stand on the Ownership Ladder, for each of the seven technologies?",
-        "ar": "أين تقف كل دولة عربية على سلّم الامتلاك، في كل تقنية من السبع؟"
+        "en": "Where does the state stand on the Ownership Ladder?",
+        "ar": "أين تقف الدولة على سلّم الامتلاك؟"
       },
       "unit": {
         "en": "Country × technology.",
         "ar": "الدولة × التقنية."
       },
       "output": {
-        "en": "A score on the five-rung Ownership Ladder — Use, Assemble, Adapt, Design, Export/Standard — for each country and each technology.",
-        "ar": "درجة على سلّم الامتلاك ذي الدرجات الخمس: استخدام، فتجميع، فتكييف، فتصميم، فتصدير/معيار؛ لكل دولة ولكل تقنية."
+        "en": "A reading on the five-rung Ownership Ladder: Use, Assemble, Adapt, Design, Export.",
+        "ar": "قراءة على سلّم الامتلاك ذي الدرجات الخمس: استخدام، فتجميع، فتكييف، فتصميم، فتصدير."
       },
       "cadence": {
         "en": "Annual.",
@@ -220,17 +548,18 @@
       "id": "companies",
       "slug": "",
       "named": false,
+      "cta": "follow",
       "title": {
-        "en": "",
-        "ar": ""
+        "en": "Company list",
+        "ar": "قائمة الشركات"
       },
       "definition": {
-        "en": "An annual list of Arab companies that built an artificial-intelligence capability and own it, each passing strict evidence gates.",
-        "ar": "قائمة سنوية بالشركات العربية التي بنت قدرة ذكاء اصطناعي وتملكها، بعد بوابات أدلة صارمة."
+        "en": "An annual list of Arab companies that built an artificial-intelligence capability and own it.",
+        "ar": "قائمة سنوية بالشركات العربية التي بنت قدرة ذكاء اصطناعي وتملكها."
       },
       "question": {
-        "en": "Which Arab companies have built an artificial-intelligence capability they own?",
-        "ar": "أيّ الشركات العربية بنت قدرة ذكاء اصطناعي تملكها؟"
+        "en": "Which companies are building a local capability?",
+        "ar": "أيّ الشركات تبني قدرة محلية؟"
       },
       "unit": {
         "en": "The company.",
@@ -245,15 +574,15 @@
         "ar": "سنوي."
       },
       "status": {
-        "en": "In preparation — published after the census is complete",
-        "ar": "قيد الإعداد — تُنشر بعد اكتمال الحصر"
+        "en": "In preparation",
+        "ar": "قيد الإعداد"
       }
     }
   ],
   "notify": {
     "label": {
-      "en": "Notify Ahmed Abdelalim",
-      "ar": "أبلغ أحمد عبدالعليم"
+      "en": "Follow the first edition",
+      "ar": "تابع الإصدار الأول"
     },
     "hint": {
       "en": "Opens a draft in your email app. Nothing is sent automatically.",
@@ -261,8 +590,8 @@
     },
     "email": "abdelalim@visionseek.org",
     "subject": {
-      "en": "Notify me — VisionSeek Indices",
-      "ar": "أبلغني — مؤشرات VisionSeek"
+      "en": "Follow the first edition — VisionSeek Indices",
+      "ar": "تابع الإصدار الأول — مؤشرات VisionSeek"
     }
   },
   "indices": [

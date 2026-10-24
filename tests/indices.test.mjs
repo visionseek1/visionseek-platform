@@ -11,11 +11,19 @@ const forbiddenKeys = /^(score|scores|rank|ranking|rankings|chart|charts|value|v
 const forbiddenCopy = /ترتيب الدول|قائمة الدول بالقيم|country ranking|ranked first|top-ranked|Korea|كوريا|Incheon|إنتشون|\bDr\.?\b/i;
 const colloquialAr = /مش |عايز| المؤشر ده|الصفحة دي|اللي |بتاع|مفيش|مافيش|لسه |هتتعلن|بيقيس|بنقيس|بتبيع|بتعلن|بيتنشر|بيتبنى|بيركّز|ومعاه|أي حد |بالظبط| وبس|تانية خالص|الاتنين|من غير /;
 const hubTextKeys = [
-  'eyebrow', 'title', 'intro', 'measuringBodyTitle', 'measuringBody', 'empty',
-  'catalogTitle', 'catalogIntro', 'aboutProduct', 'home', 'back', 'principlesTitle',
-  'diagramTitle', 'diagramIntro', 'diagramSourceName', 'diagramSourceRole', 'diagramFeeds',
-  'diagramIndexName', 'diagramIndexRole', 'diagramListRole', 'technologiesTitle',
-  'questionLabel', 'unitLabel', 'outputLabel', 'cadenceLabel', 'statusFieldLabel',
+  'eyebrow', 'title', 'thesis', 'intro', 'readMethodology', 'followEdition',
+  'measuringBodyTitle', 'measuringBody', 'empty', 'catalogTitle', 'catalogIntro',
+  'aboutProduct', 'ctaMethod', 'ctaPrinciples', 'ctaFollow', 'home', 'back',
+  'mapTitle', 'mapIntro', 'mapPilotLabel', 'mapLaterLabel', 'measureTitle',
+  'measureIntro', 'measureAtlasNote', 'ladderTitle', 'atlasScaleTitle',
+  'evidenceScaleTitle', 'unitTitle', 'unitText', 'validityTitle', 'validityText',
+  'downloadLabel', 'citeTitle', 'citeHow', 'releaseMethodology', 'releaseEdition',
+  'previousEditionsTitle', 'principlesTitle', 'pressTitle', 'pressIntro',
+  'downloadArLabel', 'downloadEnLabel', 'teamEmailLabel', 'relatedTitle',
+  'relatedLine', 'reportsLabel', 'programsLabel', 'diagramTitle', 'diagramIntro',
+  'diagramSourceName', 'diagramSourceRole', 'diagramFeeds', 'diagramIndexName',
+  'diagramIndexRole', 'diagramListRole', 'technologiesTitle', 'questionLabel',
+  'unitLabel', 'outputLabel', 'cadenceLabel', 'statusFieldLabel',
   'methodologyLabel', 'methodologyName',
 ];
 const productTextKeys = ['title', 'definition', 'question', 'unit', 'output', 'cadence', 'status'];
@@ -30,16 +38,33 @@ function walk(node, path, visit) {
   }
 }
 
-test('Indices hub: three products, shared principles, no product-page copy', () => {
+test('Indices hub: eight sections, thesis, map, method, no product-page copy', () => {
   for (const key of hubTextKeys) assert.ok(isText(data.hub[key]), `hub.${key}`);
   assert.equal(typeof data.hub.methodologyHref, 'string');
   assert.equal(data.hub.methodologyHref, '/reports/reports/methodology');
-  assert.equal(data.hub.intro.en, 'Three measurement products. Each has one question and one unit of analysis.');
-  assert.equal(data.hub.intro.ar, 'ثلاثة منتجات قياس. لكل منتج سؤال واحد، ووحدة تحليل واحدة.');
-  assert.equal(data.hub.aboutProduct.en, 'About the product');
-  assert.equal(data.hub.aboutProduct.ar, 'عن المنتج');
-  assert.equal(data.hub.catalogTitle.en, 'Three measurement products');
-  assert.equal(data.hub.catalogTitle.ar, 'ثلاثة منتجات قياس');
+  assert.equal(data.hub.reportsHref, '/reports');
+  assert.equal(data.hub.programsHref, '/programs');
+  assert.equal(data.hub.showPreviousEditions, false);
+  assert.equal(data.hub.thesis.ar, 'نقيس ما تملكه الدول العربية من قدرات تقنية، لا ما تستخدمه.');
+  assert.equal(data.hub.thesis.en, 'Measuring the technology capabilities Arab states own — not just use.');
+  assert.equal(data.hub.intro.ar, 'ثلاثة منتجات قياس، منهجية منشورة، أدلة من مصادر عامة.');
+  assert.equal(data.hub.releaseMethodology.ar, 'المنهجية: الأطلس v0.3 (مجمّدة للتجربة)');
+  assert.equal(data.hub.releaseEdition.ar, 'الإصدار الأول: قيد البناء');
+  assert.match(data.hub.releaseMethodology.en, /Atlas v0\.3/);
+  assert.match(data.hub.releaseEdition.en, /under construction/i);
+  assert.doesNotMatch(data.hub.releaseMethodology.en + data.hub.releaseEdition.en + data.hub.releaseMethodology.ar + data.hub.releaseEdition.ar, /20\d\d|April|أبريل|October|أكتوبر/);
+  assert.equal(data.hub.unitText.en, 'Entity × sub-domain.');
+  assert.equal(data.hub.unitText.ar, 'جهة × مجال فرعي.');
+  assert.match(data.hub.validityText.en, /one year/);
+  assert.match(data.hub.validityText.en, /60 days/);
+  assert.match(data.hub.validityText.ar, /سنة/);
+  assert.match(data.hub.validityText.ar, /ستين يوم/);
+  assert.equal(data.hub.ladder.length, 5);
+  assert.deepEqual(data.hub.ladder.map(r => r.id), ['use', 'assemble', 'adapt', 'design', 'export']);
+  assert.equal(data.hub.atlasScale.length, 5);
+  assert.deepEqual(data.hub.atlasScale.map(r => r.code), ['R0', 'R1', 'R2', 'R3', 'R4']);
+  assert.equal(data.hub.evidenceScale.length, 5);
+  assert.deepEqual(data.hub.evidenceScale.map(r => r.code), ['E0', 'E1', 'E2', 'E3', 'E4']);
   assert.ok(!('openIndex' in data.hub), 'no Open button label');
   assert.equal(data.hub.principles.length, 3);
   assert.deepEqual(data.hub.principles.map(p => p.id), ['own', 'method', 'independent']);
@@ -49,6 +74,7 @@ test('Indices hub: three products, shared principles, no product-page copy', () 
   assert.ok(Array.isArray(data.products) && data.products.length === 3);
   assert.deepEqual(data.products.map(p => p.id), ['atlas', 'index', 'companies']);
   assert.deepEqual(data.products.map(p => p.named), [true, true, false]);
+  assert.deepEqual(data.products.map(p => p.cta), ['method', 'principles', 'follow']);
   assert.deepEqual(data.products.map(p => p.slug), [
     'arab-critical-capabilities-atlas',
     'arab-technology-capability',
@@ -58,35 +84,37 @@ test('Indices hub: three products, shared principles, no product-page copy', () 
   assert.equal(data.products[0].title.ar, 'أطلس القدرات العربية الحرجة');
   assert.equal(data.products[1].title.en, 'Arab Technology Capability Index');
   assert.equal(data.products[1].title.ar, 'مؤشر القدرة التكنولوجية العربية');
-  assert.equal(data.products[2].title.en, '');
-  assert.equal(data.products[2].title.ar, '');
+  assert.equal(data.products[2].title.en, 'Company list');
+  assert.equal(data.products[2].title.ar, 'قائمة الشركات');
   assert.match(data.products[0].unit.en, /Entity/i);
-  assert.match(data.products[0].unit.ar, /الكيان/);
+  assert.match(data.products[0].unit.en, /sub-domain/i);
   assert.match(data.products[0].output.en, /Documented records/i);
   assert.match(data.products[0].cadence.en, /Continuous/i);
   assert.match(data.products[1].unit.en, /Country/i);
-  assert.match(data.products[1].unit.ar, /الدولة/);
   assert.match(data.products[1].output.en, /Ownership Ladder/);
   assert.match(data.products[1].cadence.en, /Annual/i);
   assert.match(data.products[2].unit.en, /company/i);
   assert.match(data.products[2].output.en, /100/);
   assert.match(data.products[2].cadence.en, /Annual/i);
+  assert.match(data.products[0].status.ar, /قيد البناء/);
   assert.match(data.products[1].status.en, /In preparation/);
   assert.match(data.products[1].status.ar, /قيد الإعداد/);
+  assert.match(data.products[2].status.ar, /قيد الإعداد/);
   assert.doesNotMatch(data.products[1].status.en + data.products[1].status.ar, /2027|April|أبريل|pilot|تجريبي/i);
   for (const item of data.products) {
     for (const key of productTextKeys) assert.ok(isText(item[key]), `${item.id}.${key}`);
     assert.equal(typeof item.named, 'boolean', item.id);
     assert.equal(typeof item.slug, 'string', item.id);
-    assert.doesNotMatch(item.status.ar, /لم يبدأ القياس|قريبًا/);
-    assert.doesNotMatch(item.status.en, /coming soon|has not begun/i);
+    assert.doesNotMatch(item.status.ar, /لم يبدأ القياس|قريبًا|للأسف|لم يتوفر/);
+    assert.doesNotMatch(item.status.en, /coming soon|has not begun|unfortunately/i);
+    assert.doesNotMatch(item.title.en + item.title.ar, /AI\s*100|ai100/i);
   }
 });
 
 test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim without Dr.', () => {
   assert.match(data.notify.email, /^abdelalim@visionseek\.org$/);
   assert.ok(isText(data.notify.label) && isText(data.notify.hint) && isText(data.notify.subject));
-  assert.match(data.notify.label.en, /Ahmed Abdelalim/);
+  assert.match(data.notify.label.en, /Ahmed Abdelalim|Follow the first edition/);
   assert.doesNotMatch(data.notify.label.en, /\bDr\.?\b/);
   assert.ok(Array.isArray(data.indices) && data.indices.length >= 2);
   assert.equal(data.indices[0].slug, 'arab-technology-capability');
@@ -166,9 +194,12 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.match(read('components/indices/pages.tsx'), /maxHeight: 480/);
   assert.match(read('components/indices/pages.tsx'), /unoptimized=\{svg\}|unoptimized=\{item\.heroImage\.endsWith\('\.svg'\)\}/);
   assert.match(read('components/indices/pages.tsx'), /liveHubProducts/);
+  assert.match(read('components/indices/pages.tsx'), /CoverageMap/);
   assert.match(read('components/indices/pages.tsx'), /RelationshipDiagram|diagramFlow/);
   assert.doesNotMatch(read('components/indices/pages.tsx'), /padStart|styles\.num|<form/i);
   assert.doesNotMatch(read('components/indices/pages.tsx'), /list\.map\(item => <IndexArticle/);
+  assert.match(read('lib/indices-map.ts'), /PILOT_IDS/);
+  assert.match(read('components/indices/coverage-map.tsx'), /Egypt and the six Gulf states/);
 });
 
 test('Indices: own pages in both languages, sitemap and /admin, in the header after Reports', () => {
@@ -199,6 +230,10 @@ test('Indices: own pages in both languages, sitemap and /admin, in the header af
   assert.match(read('public/admin/config.yml'), /name: products/);
   assert.match(read('public/admin/config.yml'), /name: aboutProduct/);
   assert.match(read('public/admin/config.yml'), /name: methodologyHref/);
+  assert.match(read('public/admin/config.yml'), /name: thesis/);
+  assert.match(read('public/admin/config.yml'), /name: atlasScale/);
+  assert.match(read('public/admin/config.yml'), /name: evidenceScale/);
+  assert.match(read('public/admin/config.yml'), /name: releaseMethodology/);
   assert.doesNotMatch(read('public/admin/config.yml'), /name: openIndex/);
   assert.match(read('scripts/archive-options.py'), /add\('\/indices'/);
 });
@@ -226,25 +261,39 @@ test('Indices: built hub stays a hub; product routes keep working', () => {
   }
   const enMain = mainOf(en);
   const arMain = mainOf(ar);
-  assert.match(enMain, /Three measurement products/);
-  assert.match(enMain, /Ahmed Abdelalim|How VisionSeek measures|About the product/);
-  assert.doesNotMatch(en, /Dr\. Ahmed/);
+  assert.match(enMain, /Measuring the technology capabilities Arab states own/);
+  assert.match(enMain, /First-edition pilot scope/);
+  assert.match(enMain, /How we measure/);
+  assert.match(enMain, /Atlas scale R0–R4|Atlas scale R0-R4|R0/);
+  assert.match(enMain, /E0/);
+  assert.match(enMain, /Entity × sub-domain/);
+  assert.match(enMain, /60 days/);
+  assert.match(enMain, /Atlas v0\.3/);
+  assert.match(enMain, /First edition: under construction/);
+  assert.match(enMain, /For researchers and the press/);
+  assert.match(enMain, /\/reports/);
+  assert.match(enMain, /\/programs/);
+  assert.match(enMain, /Company list/);
   assert.match(enMain, /Arab Critical Capabilities Atlas/);
   assert.match(enMain, /Arab Technology Capability Index/);
-  assert.match(enMain, /How the products connect/);
   assert.match(enMain, /Next-generation networks 5G-6G/);
   assert.match(enMain, /\/reports\/reports\/methodology/);
-  assert.equal((enMain.match(/About the product/g) || []).length, 2);
   assert.doesNotMatch(enMain, />Open</);
   assert.doesNotMatch(enMain, /What the index is|What the atlas is/);
-  assert.doesNotMatch(enMain, /mailto:abdelalim@visionseek\.org/);
-  assert.match(arMain, /ثلاثة منتجات قياس/);
+  assert.doesNotMatch(en, /Dr\. Ahmed/);
+  assert.match(arMain, /نقيس ما تملكه الدول العربية من قدرات تقنية، لا ما تستخدمه/);
+  assert.match(arMain, /كيف نقيس/);
+  assert.match(arMain, /سلّم الامتلاك/);
+  assert.match(arMain, /جهة × مجال فرعي/);
+  assert.match(arMain, /المنهجية: الأطلس v0\.3/);
+  assert.match(arMain, /الإصدار الأول: قيد البناء/);
+  assert.match(arMain, /قائمة الشركات/);
   assert.match(arMain, /مؤشر القدرة التكنولوجية العربية/);
   assert.match(arMain, /أطلس القدرات العربية الحرجة/);
-  assert.match(arMain, /عن المنتج/);
   assert.match(arMain, /شبكات الجيل التالي 5G-6G/);
   assert.match(arMain, /\/ar\/reports\/reports\/methodology/);
-  assert.match(arMain, /سلّم الامتلاك/);
+  assert.match(arMain, /\/ar\/reports/);
+  assert.match(arMain, /\/ar\/programs/);
   assert.doesNotMatch(arMain, />افتح</);
   assert.doesNotMatch(arMain, /ما هو المؤشر|ما هو الأطلس/);
   assert.doesNotMatch(arMain, colloquialAr);

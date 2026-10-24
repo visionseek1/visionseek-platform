@@ -5,12 +5,12 @@ import {ArrowLeft, ArrowRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {DocumentLocale} from '@/components/governance/document-locale';
+import {CoverageMap} from '@/components/indices/coverage-map';
 import {
   indexPath,
   indicesContent,
   liveHubProducts,
   notifyMailto,
-  sevenTechnologies,
   type HubProduct,
   type IndexEntry,
 } from '@/lib/indices';
@@ -54,11 +54,11 @@ function Crumb({locale, trail}: {locale: Locale; trail: {href?: string; label: s
   );
 }
 
-function MethodLink({locale}: {locale: Locale}) {
+function MethodLink({locale, children}: {locale: Locale; children?: ReactNode}) {
   const {hub} = indicesContent;
   return (
     <Link className={styles.methodLink} href={`${prefixFor(locale)}${hub.methodologyHref}`}>
-      {hub.methodologyName[locale]}
+      {children ?? hub.methodologyName[locale]}
       <span aria-hidden="true"> ↗</span>
     </Link>
   );
@@ -167,28 +167,47 @@ function Field({label, children}: {label: string; children: ReactNode}) {
   );
 }
 
+function ProductAction({locale, item}: {locale: Locale; item: HubProduct}) {
+  const {hub} = indicesContent;
+  if (item.cta === 'method') {
+    return <a className={styles.more} href="#measure">{hub.ctaMethod[locale]}</a>;
+  }
+  if (item.cta === 'principles') {
+    return <a className={styles.more} href="#principles">{hub.ctaPrinciples[locale]}</a>;
+  }
+  if (item.cta === 'follow') {
+    return <a className={styles.more} href={notifyMailto(locale)}>{hub.ctaFollow[locale]}</a>;
+  }
+  if (item.slug) {
+    return <Link className={styles.more} href={`${prefixFor(locale)}${indexPath(item.slug)}`}>{hub.aboutProduct[locale]}</Link>;
+  }
+  return null;
+}
+
 function HubProductCard({locale, item}: {locale: Locale; item: HubProduct}) {
   const {hub} = indicesContent;
   const href = item.slug ? `${prefixFor(locale)}${indexPath(item.slug)}` : '';
+  const heading = item.title[locale] || item.definition[locale];
   return (
     <article
       className={`${styles.product} ${item.named ? '' : styles.productUnnamed}`}
       aria-labelledby={`product-${item.id}`}
     >
       <p className={styles.status}>{item.status[locale]}</p>
-      {item.named
-        ? <h3 id={`product-${item.id}`}>{item.title[locale]}</h3>
-        : <h3 id={`product-${item.id}`} className={styles.cardLead}>{item.definition[locale]}</h3>}
-      {item.named ? <p className={styles.cardDef}>{item.definition[locale]}</p> : null}
+      {href
+        ? <h3 id={`product-${item.id}`}><Link href={href}>{heading}</Link></h3>
+        : <h3 id={`product-${item.id}`}>{heading}</h3>}
+      {item.title[locale] ? <p className={styles.cardDef}>{item.definition[locale]}</p> : null}
+      <p className={styles.cardQuestion}>
+        <span>{hub.questionLabel[locale]}</span>
+        {item.question[locale]}
+      </p>
       <dl className={styles.fields}>
-        <Field label={hub.questionLabel[locale]}>{item.question[locale]}</Field>
         <Field label={hub.unitLabel[locale]}>{item.unit[locale]}</Field>
         <Field label={hub.outputLabel[locale]}>{item.output[locale]}</Field>
         <Field label={hub.cadenceLabel[locale]}>{item.cadence[locale]}</Field>
-        <Field label={hub.statusFieldLabel[locale]}>{item.status[locale]}</Field>
-        <Field label={hub.methodologyLabel[locale]}><MethodLink locale={locale}/></Field>
       </dl>
-      {href ? <Link className={styles.more} href={href}>{hub.aboutProduct[locale]}</Link> : null}
+      <ProductAction locale={locale} item={item}/>
     </article>
   );
 }
@@ -198,7 +217,7 @@ function RelationshipDiagram({locale}: {locale: Locale}) {
   return (
     <figure className={styles.diagram} aria-labelledby="indices-diagram">
       <figcaption>
-        <h2 id="indices-diagram">{hub.diagramTitle[locale]}</h2>
+        <h3 id="indices-diagram">{hub.diagramTitle[locale]}</h3>
         <p>{hub.diagramIntro[locale]}</p>
       </figcaption>
       <div className={styles.diagramFlow}>
@@ -224,24 +243,61 @@ function RelationshipDiagram({locale}: {locale: Locale}) {
   );
 }
 
+function ScaleRow({
+  locale,
+  title,
+  items,
+  coded,
+}: {
+  locale: Locale;
+  title: string;
+  items: {id: string; code?: string; name: {en: string; ar: string}; text: {en: string; ar: string}}[];
+  coded?: boolean;
+}) {
+  return (
+    <div className={styles.scale}>
+      <h3>{title}</h3>
+      <ol className={coded ? styles.scaleCodes : styles.ladder}>
+        {items.map(item => (
+          <li key={item.id}>
+            {coded ? <span className={styles.scaleCode}>{item.code}</span> : null}
+            <strong>{item.name[locale]}</strong>
+            <p>{item.text[locale]}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 export function IndicesHub({locale}: {locale: Locale}) {
-  const {hub} = indicesContent;
+  const {hub, notify} = indicesContent;
   const products = liveHubProducts();
-  const techs = sevenTechnologies();
+  const prefix = prefixFor(locale);
   return (
     <Shell locale={locale} path="/indices">
       <div className={styles.wrap}>
         <Crumb locale={locale} trail={[{label: hub.title[locale]}]}/>
+
         <header className={styles.hero}>
           <div className={styles.masthead}>
             <span>{hub.eyebrow[locale]}</span>
             <span>VISIONSEEK</span>
           </div>
-          <h1>{hub.title[locale]}</h1>
+          <h1>{hub.thesis[locale]}</h1>
           <p className={styles.lede}>{hub.intro[locale]}</p>
+          <div className={styles.heroActions}>
+            <Link className={styles.button} href={`${prefix}${hub.methodologyHref}`}>
+              {hub.readMethodology[locale]}
+            </Link>
+            <a className={styles.buttonGhost} href={notifyMailto(locale)}>
+              {hub.followEdition[locale]}
+            </a>
+          </div>
+          <p className={styles.hint}>{notify.hint[locale]}</p>
         </header>
 
-        <RelationshipDiagram locale={locale}/>
+        <CoverageMap locale={locale}/>
 
         {products.length === 0 && <p className={styles.empty}>{hub.empty[locale]}</p>}
 
@@ -254,38 +310,91 @@ export function IndicesHub({locale}: {locale: Locale}) {
             <div className={styles.products}>
               {products.map(item => <HubProductCard key={item.id} locale={locale} item={item}/>)}
             </div>
+            <RelationshipDiagram locale={locale}/>
           </section>
         )}
 
-        {techs.length > 0 && (
-          <section className={styles.techs} aria-labelledby="indices-techs">
-            <h2 id="indices-techs">{hub.technologiesTitle[locale]}</h2>
-            <ul className={styles.pillars}>
-              {techs.map(tech => (
-                <li key={tech.id} className={styles.pillar}>
-                  <p className={styles.pillarName}>{tech.name[locale]}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+        <section id="measure" className={styles.measure} aria-labelledby="indices-measure">
+          <h2 id="indices-measure">{hub.measureTitle[locale]}</h2>
+          <p className={styles.measureIntro}>{hub.measureIntro[locale]}</p>
+          <ScaleRow locale={locale} title={hub.ladderTitle[locale]} items={hub.ladder}/>
+          <ScaleRow locale={locale} title={hub.atlasScaleTitle[locale]} items={hub.atlasScale} coded/>
+          <ScaleRow locale={locale} title={hub.evidenceScaleTitle[locale]} items={hub.evidenceScale} coded/>
+          <div className={styles.measureFacts}>
+            <div>
+              <h3>{hub.unitTitle[locale]}</h3>
+              <p>{hub.unitText[locale]}</p>
+            </div>
+            <div>
+              <h3>{hub.validityTitle[locale]}</h3>
+              <p>{hub.validityText[locale]}</p>
+            </div>
+          </div>
+          <p className={styles.measureNote}>{hub.measureAtlasNote[locale]}</p>
+          <div className={styles.measureActions}>
+            <MethodLink locale={locale}>{hub.downloadLabel[locale]}</MethodLink>
+            <div>
+              <h3>{hub.citeTitle[locale]}</h3>
+              <p className={styles.cite}>{hub.citeHow[locale]}</p>
+            </div>
+          </div>
+        </section>
 
-        <section className={styles.block} aria-labelledby="indices-principles">
+        <aside className={styles.release} aria-label={hub.releaseEdition[locale]}>
+          <p>{hub.releaseMethodology[locale]}</p>
+          <p>{hub.releaseEdition[locale]}</p>
+        </aside>
+
+        <section id="principles" className={styles.block} aria-labelledby="indices-principles">
           <h2 id="indices-principles">{hub.principlesTitle[locale]}</h2>
           <ul className={styles.principles}>
             {hub.principles.map(principle => (
               <li key={principle.id} className={styles.principle}>
-                <h4>{principle.title[locale]}</h4>
+                <h3>{principle.title[locale]}</h3>
                 <p>{principle.text[locale]}</p>
               </li>
             ))}
           </ul>
         </section>
 
-        <aside className={styles.band} aria-labelledby="measuring-body">
-          <h2 id="measuring-body">{hub.measuringBodyTitle[locale]}</h2>
-          <p>{hub.measuringBody[locale]}</p>
-        </aside>
+        <section className={styles.press} aria-labelledby="indices-press">
+          <h2 id="indices-press">{hub.pressTitle[locale]}</h2>
+          <p>{hub.pressIntro[locale]}</p>
+          <div className={styles.pressGrid}>
+            <div>
+              <h3>{hub.downloadLabel[locale]}</h3>
+              <p>
+                <Link className={styles.methodLink} href={hub.downloadArHref}>{hub.downloadArLabel[locale]}</Link>
+                <span aria-hidden="true"> · </span>
+                <Link className={styles.methodLink} href={hub.downloadEnHref}>{hub.downloadEnLabel[locale]}</Link>
+              </p>
+            </div>
+            <div>
+              <h3>{hub.citeTitle[locale]}</h3>
+              <p className={styles.cite}>{hub.citeHow[locale]}</p>
+            </div>
+            <div>
+              <h3>{hub.teamEmailLabel[locale]}</h3>
+              <p><a className={styles.methodLink} href={`mailto:${notify.email}`}>{notify.email}</a></p>
+            </div>
+          </div>
+        </section>
+
+        <nav className={styles.related} aria-labelledby="indices-related">
+          <h2 id="indices-related">{hub.relatedTitle[locale]}</h2>
+          <p>{hub.relatedLine[locale]}</p>
+          <ul>
+            <li><Link href={`${prefix}${hub.reportsHref}`}>{hub.reportsLabel[locale]}</Link></li>
+            <li><Link href={`${prefix}${hub.programsHref}`}>{hub.programsLabel[locale]}</Link></li>
+            {products.map(item => (
+              <li key={item.id}>
+                {item.slug
+                  ? <Link href={`${prefix}${indexPath(item.slug)}`}>{item.title[locale] || item.definition[locale]}</Link>
+                  : <a href="#indices-catalog">{item.title[locale] || item.definition[locale]}</a>}
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </Shell>
   );
