@@ -146,7 +146,7 @@ export default function ForumsPage({locale}: {locale: Locale}) {
   const {forums} = forumsContent;
   return (
     <div className={`vs-site locale-${locale} ${styles.root}`} lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <CapabilityHeader locale={locale} path="/forums"/>
+      <CapabilityHeader locale={locale} path="/conferences"/>
       <main id="main-content" className={styles.page}>
         {forums.map(forum => <ForumArticle key={forum.slug} forum={forum} locale={locale}/>)}
       </main>
@@ -164,7 +164,7 @@ export function forumsMetadata(locale: Locale): Metadata {
   return {
     title,
     description,
-    alternates: {canonical: path, languages: {en: '/forums', ar: '/ar/forums'}},
+    alternates: {canonical: path, languages: {en: '/conferences', ar: '/ar/conferences'}},
     openGraph: {
       title,
       description,

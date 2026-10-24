@@ -10,8 +10,10 @@ const invented = ['date', 'venue', 'speakers', 'partners', 'sponsors', 'location
 
 test('forums.json is bilingual and ready for more entries', () => {
   assert.ok(isText(forums.page.section));
-  assert.equal(forums.page.section.ar, 'المؤتمرات والمنتديات');
-  assert.equal(forums.page.section.en, 'Conferences & Forums');
+  assert.equal(forums.page.section.ar, 'المؤتمرات');
+  assert.equal(forums.page.section.en, 'Conferences');
+  assert.equal(forums.meta.title.ar, 'المؤتمرات | VisionSeek');
+  assert.equal(forums.meta.title.en, 'Conferences | VisionSeek');
   assert.equal(forums.page.status.ar, 'الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط.');
   assert.equal(forums.page.status.en, 'First edition: April 2027, Incheon. Attendance is by invitation only.');
   assert.doesNotMatch(forums.page.status.en, /April\s+\d{1,2}(?!\d)/);
@@ -62,17 +64,17 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   assert.equal(first.invite.label.en, 'Request an invitation');
 });
 
-test('the Incheon key visual is a local SVG under public/forums, not a stretched JPEG', () => {
+test('the Incheon key visual is a local SVG under public/conferences, not a stretched JPEG', () => {
   const first = forums.forums[0];
-  assert.equal(first.visual, '/forums/incheon-dialogue.svg');
-  const file = join(root, 'public/forums/incheon-dialogue.svg');
+  assert.equal(first.visual, '/conferences/incheon-dialogue.svg');
+  const file = join(root, 'public/conferences/incheon-dialogue.svg');
   const stat = statSync(file);
   assert.ok(stat.size > 1_000 && stat.size < 20_000, stat.size);
   const svg = readFileSync(file, 'utf8');
   assert.match(svg, /<svg /);
   assert.match(svg, /#cfff00|#050607/);
   assert.doesNotMatch(svg, /<image /);
-  assert.equal(existsSync(join(root, 'public/forums/incheon-dialogue.jpg')), false);
+  assert.equal(existsSync(join(root, 'public/conferences/incheon-dialogue.jpg')), false);
 });
 
 test('Incheon Localization Awards sit inside the dialogue, with a vector mark', () => {
@@ -87,14 +89,14 @@ test('Incheon Localization Awards sit inside the dialogue, with a vector mark', 
   assert.equal(awards.principles.length, 6);
   assert.equal(awards.categories.length, 3);
   assert.equal(awards.process.length, 4);
-  assert.equal(awards.visual, '/forums/incheon-awards.svg');
-  const file = join(root, 'public/forums/incheon-awards.svg');
+  assert.equal(awards.visual, '/conferences/incheon-awards.svg');
+  const file = join(root, 'public/conferences/incheon-awards.svg');
   const stat = statSync(file);
   assert.ok(stat.size > 800 && stat.size < 20_000, stat.size);
   const svg = readFileSync(file, 'utf8');
   assert.match(svg, /<svg /);
   assert.doesNotMatch(svg, /<image /);
-  assert.equal(existsSync(join(root, 'public/forums/incheon-awards.jpg')), false);
+  assert.equal(existsSync(join(root, 'public/conferences/incheon-awards.jpg')), false);
   const blob = JSON.stringify(awards);
   assert.doesNotMatch(blob, /\$\d|USD|nomination form|self-nominate here/i);
   assert.equal(awards.honesty, undefined);
@@ -104,8 +106,8 @@ test('Incheon Localization Awards sit inside the dialogue, with a vector mark', 
   }
 });
 
-test('the forums routes and admin collection exist, and Forums is a top-level nav item after News', () => {
-  for (const path of ['app/forums/page.tsx', 'app/ar/forums/page.tsx', 'components/forums/pages.tsx', 'lib/forums.ts', 'docs/forums-benchmark.md']) {
+test('the conferences routes and admin collection exist, and Conferences is a top-level nav item after News', () => {
+  for (const path of ['app/conferences/page.tsx', 'app/ar/conferences/page.tsx', 'components/forums/pages.tsx', 'lib/forums.ts', 'docs/forums-benchmark.md']) {
     assert.ok(readFileSync(join(root, path), 'utf8').length, path);
   }
   const page = readFileSync(join(root, 'components/forums/pages.tsx'), 'utf8');
@@ -120,32 +122,43 @@ test('the forums routes and admin collection exist, and Forums is a top-level na
   const config = readFileSync(join(root, 'public/admin/config.yml'), 'utf8');
   assert.match(config, /name: forums/);
   assert.match(config, /file: content\/forums\.json/);
+  assert.match(config, /preview_path: "ar\/conferences"/);
+  assert.match(config, /صفحة \/conferences و \/ar\/conferences/);
   const sitemap = readFileSync(join(root, 'app/sitemap.ts'), 'utf8');
-  assert.match(sitemap, /\/forums/);
-  assert.match(sitemap, /\/ar\/forums/);
+  assert.match(sitemap, /\/conferences/);
+  assert.match(sitemap, /\/ar\/conferences/);
+  assert.doesNotMatch(sitemap, /\/forums/);
+  const redirects = readFileSync(join(root, 'next.config.ts'), 'utf8');
+  assert.match(redirects, /source: `\$\{prefix\}\/forums`, destination: `\$\{prefix\}\/conferences`/);
+  assert.match(redirects, /source: `\$\{prefix\}\/forums\/:path\*`/);
   const nav = JSON.parse(readFileSync(join(root, 'content/navigation.json'), 'utf8'));
   const paths = nav.sections.map(s => s.path);
-  const item = nav.sections.find(s => s.path === '/forums');
-  assert.ok(item, 'Forums belongs in the header');
-  assert.equal(item.en, 'Forums');
-  assert.equal(item.ar, 'المنتديات');
-  assert.equal(nav.sections.filter(s => s.path === '/forums').length, 1, 'Forums appears once');
-  assert.deepEqual(paths.slice(paths.indexOf('/insights'), paths.indexOf('/work-with-us') + 1), ['/insights', '/indices', '/news', '/forums', '/work-with-us']);
-  assert.equal(paths[paths.indexOf('/news') + 1], '/forums');
-  assert.ok(item.children.some(c => c.href === '/forums'));
-  assert.ok(item.children.some(c => c.href === '/forums#incheon-dialogue' && c.en === 'Incheon Dialogue' && c.ar === 'حوار إنتشون'));
+  const item = nav.sections.find(s => s.path === '/conferences');
+  assert.ok(item, 'Conferences belongs in the header');
+  assert.equal(item.en, 'Conferences');
+  assert.equal(item.ar, 'المؤتمرات');
+  assert.equal(nav.sections.filter(s => s.path === '/conferences').length, 1, 'Conferences appears once');
+  assert.equal(nav.sections.find(s => s.path === '/forums'), undefined);
+  assert.deepEqual(paths.slice(paths.indexOf('/insights'), paths.indexOf('/work-with-us') + 1), ['/insights', '/indices', '/news', '/conferences', '/work-with-us']);
+  assert.equal(paths[paths.indexOf('/news') + 1], '/conferences');
+  assert.ok(item.children.some(c => c.href === '/conferences' && c.en === 'Conferences' && c.ar === 'المؤتمرات'));
+  assert.ok(item.children.some(c => c.href === '/conferences#incheon-dialogue' && c.en === 'Incheon Dialogue' && c.ar === 'حوار إنتشون'));
 });
 
-test('the built forums pages are native RTL and LTR and keep the draft facts honest', () => {
-  const html = locale => readFileSync(join(root, `.next/server/app/${locale === 'ar' ? 'ar/' : ''}forums.html`), 'utf8');
+test('the built conferences pages are native RTL and LTR and keep the draft facts honest', () => {
+  const html = locale => readFileSync(join(root, `.next/server/app/${locale === 'ar' ? 'ar/' : ''}conferences.html`), 'utf8');
   const en = html('en');
   const ar = html('ar');
   assert.match(en, /class="vs-site locale-en[^"]*" lang="en" dir="ltr"/);
   assert.match(ar, /class="vs-site locale-ar[^"]*" lang="ar" dir="rtl"/);
-  assert.match(en, /href="\/forums"[^>]*>Forums</);
-  assert.match(ar, /href="\/ar\/forums"[^>]*>المنتديات</);
-  assert.match(en, /Conferences &amp; Forums|Conferences & Forums/);
-  assert.match(ar, /المؤتمرات والمنتديات/);
+  assert.match(en, /href="\/conferences"[^>]*>Conferences</);
+  assert.match(ar, /href="\/ar\/conferences"[^>]*>المؤتمرات</);
+  assert.doesNotMatch(en, />Forums</);
+  assert.doesNotMatch(ar, /المنتديات/);
+  assert.doesNotMatch(en, /Conferences &amp; Forums|Conferences & Forums/);
+  assert.doesNotMatch(ar, /المؤتمرات والمنتديات/);
+  assert.match(en, /<title>Conferences \| VisionSeek<\/title>/);
+  assert.match(ar, /<title>المؤتمرات \| VisionSeek<\/title>/);
   assert.match(en, /Incheon Dialogue/);
   assert.match(ar, /حوار إنتشون/);
   assert.match(en, /April 2027, Incheon/);
@@ -167,8 +180,8 @@ test('the built forums pages are native RTL and LTR and keep the draft facts hon
   assert.doesNotMatch(en, /Dr\.?\s*Ahmed/);
   assert.match(en, /mailto:abdelalim@visionseek\.org/);
   assert.match(ar, /mailto:abdelalim@visionseek\.org/);
-  assert.match(en, /forums\/incheon-dialogue\.svg/);
-  assert.match(en, /forums\/incheon-awards\.svg/);
+  assert.match(en, /conferences\/incheon-dialogue\.svg/);
+  assert.match(en, /conferences\/incheon-awards\.svg/);
   assert.match(en, /Incheon Localization Awards/);
   assert.match(ar, /جوائز إنتشون للتوطين/);
   assert.doesNotMatch(en, /Coming soon/);

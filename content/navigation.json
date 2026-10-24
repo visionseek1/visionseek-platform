@@ -227,17 +227,17 @@
       ]
     },
     {
-      "path": "/forums",
-      "en": "Forums",
-      "ar": "المنتديات",
+      "path": "/conferences",
+      "en": "Conferences",
+      "ar": "المؤتمرات",
       "children": [
         {
-          "href": "/forums",
-          "en": "Conferences & Forums",
-          "ar": "المؤتمرات والمنتديات"
+          "href": "/conferences",
+          "en": "Conferences",
+          "ar": "المؤتمرات"
         },
         {
-          "href": "/forums#incheon-dialogue",
+          "href": "/conferences#incheon-dialogue",
           "en": "Incheon Dialogue",
           "ar": "حوار إنتشون"
         }
