@@ -5,6 +5,7 @@ import test from 'node:test';
 const read = name => readFileSync(new URL(`../${name}`, import.meta.url), 'utf8');
 const institute = JSON.parse(read('content/institute.json'));
 const fellowship = JSON.parse(read('content/fellowship.json'));
+const workshopSection = JSON.parse(read('content/workshop-section.json'));
 const prose = [];
 const collect = value => {
   if (typeof value === 'string') prose.push(value);
@@ -12,6 +13,13 @@ const collect = value => {
 };
 collect(institute);
 collect(fellowship);
+collect(workshopSection.live.whyLabel);
+collect(workshopSection.live.teaches);
+collect(workshopSection.live.aboutInstructor);
+collect(workshopSection.live.founderKicker);
+collect(workshopSection.live.founderStatement);
+collect(workshopSection.live.independence.lines);
+collect(workshopSection.live.privateCta);
 const flat = prose.join('\n');
 
 test('Institute is marked DRAFT and named in both languages', () => {
@@ -23,6 +31,15 @@ test('Institute is marked DRAFT and named in both languages', () => {
   assert.match(institute.intro.en, /AI Governance/);
   assert.match(institute.intro.en, /Fellowship/);
   assert.match(institute.intro.ar, /زمالة/);
+  assert.equal(institute.intro.ar, 'بيت برامج التعلّم في VisionSeek. يضم ماستركلاس «حوكمة الذكاء الاصطناعي»، ويضم زمالة VisionSeek.');
+  assert.equal(workshopSection.live.whyLabel.ar, 'لماذا VisionSeek');
+});
+
+test('Institute and Fellowship Arabic stay in contemporary MSA', () => {
+  assert.doesNotMatch(flat, /ليه|إزاي|ازاي|دلوقتي|بتاع|علشان|عشان|عايز|عاوز/);
+  assert.doesNotMatch(read('content/institute.json'), /ليه|إزاي|دلوقتي/);
+  assert.doesNotMatch(read('content/fellowship.json'), /ليه|إزاي|دلوقتي/);
+  assert.match(read('content/governance.json'), /"ar": "حوكمة الذكاء الاصطناعي"/);
 });
 
 test('Fellowship copy stays inside the hard rules', () => {

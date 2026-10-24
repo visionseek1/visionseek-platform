@@ -1815,7 +1815,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: عنوان ليه VisionSeek
+              - label: عنوان لماذا VisionSeek
                 name: whyLabel
                 widget: object
                 fields:
