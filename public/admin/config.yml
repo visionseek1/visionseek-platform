@@ -3860,6 +3860,205 @@ collections:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
 
+  - name: forums
+    label: المؤتمرات والمنتديات
+    description: "صفحة /forums و /ar/forums. أضف منتدى جديدًا من القائمة. لا تكتب موعدًا ولا مكانًا ولا متحدثين ولا شركاء ولا رعاة ما لم تُعتمد."
+    preview_path: "ar/forums"
+    editor: {preview: false}
+    files:
+      - label: المؤتمرات والمنتديات
+        name: forums
+        file: content/forums.json
+        fields:
+          - label: عنوان الصفحة للمتصفح
+            name: meta
+            widget: object
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الوصف
+                name: description
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: رأس الصفحة
+            name: page
+            widget: object
+            fields:
+              - label: الرئيسية في مسار الصفحة
+                name: home
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر العلوي
+                name: eyebrow
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المقدمة
+                name: intro
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: "حالة الصفحة (مثل «قريبًا — بالدعوة»)"
+                name: status
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: تسميات الأقسام
+            name: labels
+            widget: object
+            fields:
+              - label: ما هو
+                name: what
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: لمن
+                name: who
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: لماذا كوريا والعالم العربي
+                name: why
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المؤشر
+                name: index
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: جملة الصدق
+                name: honesty
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: من ينظر في الدعوات
+                name: host
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: محور كوريا
+                name: axisKorea
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: محور الوسط
+                name: axisCenter
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: محور العالم العربي
+                name: axisArab
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: المنتديات
+            name: forums
+            widget: list
+            summary: "{{fields.title.ar}} / {{fields.slug}}"
+            fields:
+              - label: المعرّف
+                name: slug
+                widget: string
+                hint: "بالإنجليزية الصغيرة، مثل incheon-dialogue. لا تغيّره بعد النشر."
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر فوق العنوان
+                name: kicker
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الحالة
+                name: status
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: النبذة
+                name: standfirst
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: ما هو
+                name: what
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: لمن
+                name: who
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: لماذا كوريا والعالم العربي
+                name: why
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: المؤشر
+                name: index
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: طلب الدعوة
+                name: invite
+                widget: object
+                required: false
+                fields:
+                  - label: نص الزر
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: موضوع الرسالة
+                    name: subject
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: نص الرسالة
+                    name: body
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+
   - name: competitions
     label: "المسابقات"
     description: "صفحة /competitions وبالعربية /ar/competitions. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد. الكارت المفتوح يتعلّم «اكتمل» لوحده بعد آخر موعد (نهاية اليوم بتوقيت كوريا)."

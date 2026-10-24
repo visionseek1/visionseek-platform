@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": {
+      "en": "Conferences & Forums | VisionSeek",
+      "ar": "المؤتمرات والمنتديات | VisionSeek"
+    },
+    "description": {
+      "en": "Invitation-only forums convened by VisionSeek. The first is the Incheon Dialogue: a small annual room for technology decision-makers from Korea and the Arab world. Coming soon — by invitation.",
+      "ar": "منتديات VisionSeek بالدعوة فقط. أولها حوار إنتشون: غرفة سنوية صغيرة لصنّاع قرار التكنولوجيا من كوريا والعالم العربي. قريبًا — بالدعوة."
+    }
+  },
+  "page": {
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "eyebrow": {
+      "en": "VISIONSEEK FORUMS",
+      "ar": "منتديات VisionSeek"
+    },
+    "title": {
+      "en": "Conferences & Forums",
+      "ar": "المؤتمرات والمنتديات"
+    },
+    "intro": {
+      "en": "VisionSeek forums are not public stages. They are small, invitation-only rooms for the people who decide how technology is owned — not only bought — across Korea and the Arab world.",
+      "ar": "منتديات VisionSeek ليست منصات عرض. هي طاولات صغيرة، بالدعوة فقط، لمن يقرر كيف تُملَك التكنولوجيا — لا كيف تُشترى فحسب — بين كوريا والعالم العربي."
+    },
+    "status": {
+      "en": "Coming soon — by invitation",
+      "ar": "قريبًا — بالدعوة"
+    }
+  },
+  "labels": {
+    "what": {
+      "en": "What it is",
+      "ar": "ما هو"
+    },
+    "who": {
+      "en": "Who it is for",
+      "ar": "لمن"
+    },
+    "why": {
+      "en": "Why Korea and the Arab world",
+      "ar": "لماذا كوريا والعالم العربي"
+    },
+    "index": {
+      "en": "The Index",
+      "ar": "المؤشر"
+    },
+    "honesty": {
+      "en": "No date, venue, speakers, partners or sponsors have been set. This page states the idea only.",
+      "ar": "لا موعد بعد، ولا مكان، ولا قائمة متحدثين، ولا شركاء، ولا رعاة. الصفحة تعرض الفكرة فقط."
+    },
+    "host": {
+      "en": "Invitations are considered by Ahmed Abdelalim.",
+      "ar": "الدعوات ينظر فيها أحمد عبدالعليم."
+    },
+    "axisKorea": {
+      "en": "Korea",
+      "ar": "كوريا"
+    },
+    "axisCenter": {
+      "en": "A table that belongs to neither government nor vendor",
+      "ar": "طاولة لا تتبع حكومة ولا شركة"
+    },
+    "axisArab": {
+      "en": "The Arab world",
+      "ar": "العالم العربي"
+    }
+  },
+  "forums": [
+    {
+      "slug": "incheon-dialogue",
+      "title": {
+        "en": "Incheon Dialogue",
+        "ar": "حوار إنتشون"
+      },
+      "kicker": {
+        "en": "Annual invitation-only forum",
+        "ar": "منتدى سنوي — بالدعوة فقط"
+      },
+      "status": {
+        "en": "Coming soon — by invitation",
+        "ar": "قريبًا — بالدعوة"
+      },
+      "standfirst": {
+        "en": "A closed annual dialogue for technology decision-makers from Korea and the Arab world. This is the room where the Arab Technology Capability Index is announced each year.",
+        "ar": "حوار سنوي مغلق لصنّاع قرار التكنولوجيا من كوريا والعالم العربي. من هذه الطاولة يُعلَن مؤشر القدرة التكنولوجية العربية كل سنة."
+      },
+      "what": {
+        "en": "A small annual gathering, by invitation only. Technology decision-makers from Korea and the Arab world sit at one table. It is closer in spirit to the Munich Security Conference than to an open industry expo: a limited room, a direct conversation, no public gallery. The name marks VisionSeek’s home in Incheon; a venue has not been set.",
+        "ar": "لقاء سنوي صغير، بدعوات فقط. يجمع صنّاع قرار التكنولوجيا من كوريا ومن العالم العربي على طاولة واحدة. روحه أقرب إلى مؤتمر ميونخ للأمن منه إلى معرض مفتوح: غرفة محدودة، حديث مباشر، بلا جمهور عام. الاسم من مقر VisionSeek في إنتشون؛ والمكان لم يُحدَّد بعد."
+      },
+      "who": {
+        "en": "People who hold the decision: ministers and agency heads, company leaders, and research directors. Those who decide whether technology is owned and built — not those who only speak about it from a distance.",
+        "ar": "لمن يملك القرار: وزراء وهيئات وقيادات شركات ومديرو مراكز بحث. لمن يقرر إن كانت التكنولوجيا تُملَك وتُبنى، لا لمن يتحدث عنها من بعيد."
+      },
+      "why": {
+        "en": "VisionSeek works from Incheon, and the Korea–Arab bridge is the work. Both sides need a table that is not a government table and not a vendor table: Korea for what it has already made work; the Arab world for what it intends to own.",
+        "ar": "نعمل من إنتشون، والجسر بين كوريا والعالم العربي هو عملنا. الطرفان يحتاجان طاولة لا تتبع حكومة ولا شركة: كوريا بما أثبته تشغيلًا، والعالم العربي بما يريد أن يملكه."
+      },
+      "index": {
+        "en": "Each year, the Arab Technology Capability Index is announced in this room. The Index is the scoreboard of what Arab countries own and localize in critical technologies, with Korea as the comparison. The Index itself is a separate work; it is not published on this page.",
+        "ar": "من هذه الطاولة يُعلَن مؤشر القدرة التكنولوجية العربية كل سنة. المؤشر لوحة نتائج: يقيس ما تملكه الدول العربية وتوطّنه في التكنولوجيات الحرجة، وكوريا مرجع المقارنة. المؤشر عمل مستقل؛ وليس منشورًا في هذه الصفحة."
+      },
+      "invite": {
+        "label": {
+          "en": "Request an invitation",
+          "ar": "اطلب دعوة"
+        },
+        "subject": {
+          "en": "Invitation request — Incheon Dialogue",
+          "ar": "طلب دعوة — حوار إنتشون"
+        },
+        "body": {
+          "en": "I would like to be considered for an invitation to the Incheon Dialogue.\n\nName:\nInstitution:\nRole:\n",
+          "ar": "أود أن أُنظر في دعوتي إلى حوار إنتشون.\n\nالاسم:\nالمؤسسة:\nالدور:\n"
+        }
+      }
+    }
+  ]
+}
