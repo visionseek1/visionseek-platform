@@ -12,10 +12,5 @@ export const localePath = (locale: Locale, path: string) => (locale === 'ar' ? `
 
 /** Public course URL, inside Masterclass. */
 export const coursePath = `/masterclass/${workshop.slug}`;
-
-/**
- * The one enrollment link for this course, in both languages.
- * Swap this single constant if the payment link changes.
- */
-export const ENROLL_HREF = 'https://link.fastpaydirect.com/payment-link/6adb486bcaf20c1f8ff2b74a';
-export const enrollHref = (locale: Locale) => (locale === 'ar' ? ENROLL_HREF : ENROLL_HREF);
+export const courseOrigin = 'https://visionseek.org';
+export const coursePage = (locale: Locale) => `${courseOrigin}${localePath(locale, coursePath)}`;

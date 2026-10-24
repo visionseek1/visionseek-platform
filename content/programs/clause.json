@@ -1,0 +1,132 @@
+{
+  "position": 3,
+  "slug": "clause",
+  "code": "VS-P03",
+  "name": {
+    "en": "Clause",
+    "ar": "Clause"
+  },
+  "classification": {
+    "en": "Independent review of AI procurement contracts",
+    "ar": "مراجعة مستقلة لعقود شراء الذكاء الاصطناعي"
+  },
+  "title": {
+    "en": "Clause: the contract you sign today decides who owns the capability tomorrow",
+    "ar": "Clause: العقد الذي تُمضيه اليوم يحدد من يملك القدرة غدًا"
+  },
+  "summary": {
+    "en": "We review an AI tender or contract before you sign. We write capability-ownership clauses: training your team, ownership of your data, the right to leave the vendor, and intellectual property in what your institution builds. We are independent advisers. We sell no products and we recommend no vendors.",
+    "ar": "نراجع مناقصة الذكاء الاصطناعي أو عقده قبل التوقيع. نكتب بنود ملكية القدرة: تدريب فريقك، وملكية بياناتك، وحق الخروج من المورّد، والملكية الفكرية لما تبنيه المؤسسة. نحن مستشارون مستقلون: لا نبيع منتجًا ولا نرشّح مورّدًا."
+  },
+  "status": {
+    "en": "Pilot-Ready — open for joint institutional development",
+    "ar": "جاهز للتجريب — مفتوح للتطوير المشترك المؤسسي"
+  },
+  "image": "/programs/clause.jpg",
+  "cta": {
+    "en": "Request a contract review",
+    "ar": "اطلب مراجعة عقد"
+  },
+  "challengeTitle": {
+    "en": "The contract writes the owner",
+    "ar": "العقد هو الذي يكتب المالك"
+  },
+  "challenge": {
+    "en": "An institution can buy a model or a platform and still remain a tenant of the capability. If the contract is silent on knowledge transfer, data, exit, and intellectual property, the vendor keeps what matters when the term ends. Public-buyer guidance already asks who owns what is newly trained on the institution's data. Clause answers that question in the text you sign.",
+    "ar": "قد تشتري المؤسسة نموذجًا أو منصة وتبقى مستأجرة للقدرة. إذا صمت العقد عن نقل المعرفة والبيانات وحق الخروج والملكية الفكرية، بقي ما يهم عند المورّد حين تنتهي المدة. وإرشاد المشترين العام يسأل أصلًا: من يملك ما يُدرَّب من جديد على بيانات الجهة؟ Clause يجيب عن هذا السؤال في نص التوقيع."
+  },
+  "approachTitle": {
+    "en": "Independent advisers. Published principles. Clear phases.",
+    "ar": "مستشارون مستقلون. مبادئ معلنة. مراحل واضحة."
+  },
+  "approach": {
+    "en": "We do not sell software and we do not place vendors. The Localization Doctrine is the reference: ownership is a sequence, not a purchase, and what is not verified has not happened. The work ends in a short report and clauses ready to insert. The principles are published here. The review is the service.",
+    "ar": "لا نبيع برمجيات ولا نرشّح مورّدين. المرجع عقيدة التوطين: الامتلاك تسلسل لا صفقة، وما لم يُتحقق منه لم يحدث. والمخرج تقرير قصير وبنود جاهزة للإدراج. المبادئ منشورة هنا. والمراجعة هي الخدمة."
+  },
+  "principlesTitle": {
+    "en": "Buyer principles — published here",
+    "ar": "مبادئ المشتري — منشورة هنا"
+  },
+  "principles": [
+    {
+      "en": "We sell no product and we recommend no vendor.",
+      "ar": "لا نبيع منتجًا ولا نرشّح مورّدًا."
+    },
+    {
+      "en": "The institution owns its data, its inputs, and the weights adapted on that data.",
+      "ar": "المؤسسة تملك بياناتها ومدخلاتها والأوزان المعدّلة على تلك البيانات."
+    },
+    {
+      "en": "Training the team is a measurable output, not a courtesy day.",
+      "ar": "تدريب الفريق مخرج يُقاس، لا يوم مجاملة."
+    },
+    {
+      "en": "Intellectual property in what the institution creates stays with the institution.",
+      "ar": "الملكية الفكرية لما تُنشئه المؤسسة تبقى لها."
+    },
+    {
+      "en": "The right to leave the vendor is written before signature.",
+      "ar": "حق الخروج من المورّد يُكتب قبل التوقيع."
+    },
+    {
+      "en": "What is not verified has not happened.",
+      "ar": "ما لم يُتحقق منه لم يحدث."
+    }
+  ],
+  "related": [
+    "/masterclass/single-track-trap",
+    "/reports/reports/localization-doctrine"
+  ],
+  "steps": [
+    {
+      "title": {
+        "en": "Phase 01 — Read the draft before it is issued",
+        "ar": "المرحلة 01 — قراءة المسودة قبل صدورها"
+      },
+      "body": {
+        "en": "We read the tender or the draft contract while you still have leverage. We name the gaps that would leave the institution a tenant of the capability.",
+        "ar": "نقرأ المناقصة أو مسودة العقد وأنت ما زلت تملك ورقة الضغط. نسمّي الثغرات التي تُبقي المؤسسة مستأجرة للقدرة."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 02 — Write ownership into the specification",
+        "ar": "المرحلة 02 — كتابة الامتلاك في كراسة الشروط"
+      },
+      "body": {
+        "en": "Training the local team, ownership of data and adapted weights, documentation, and exit rights become requirements, not a courtesy paragraph.",
+        "ar": "تدريب الفريق المحلي، وملكية البيانات والأوزان المعدّلة، والتوثيق، وحق الخروج: تصير متطلبات، لا فقرة مجاملة."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 03 — Test every offer against those requirements",
+        "ar": "المرحلة 03 — اختبار كل عرض على هذه المتطلبات"
+      },
+      "body": {
+        "en": "We score the offers on whether they move the buyer up the ownership ladder — use, assemble, adapt, design, export — not only on price or delivery date.",
+        "ar": "نقيس العروض على قدرتها أن تصعد بالمشتري على سلّم الامتلاك — استخدام، تجميع، تكييف، تصميم، تصدير — لا على السعر أو موعد التسليم وحدهما."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 04 — Lock the clauses before signature",
+        "ar": "المرحلة 04 — تثبيت البنود قبل التوقيع"
+      },
+      "body": {
+        "en": "The report is short. The clauses are ready to insert. Intellectual property in what the institution creates stays with the institution. Exit is written while the relationship can still be refused.",
+        "ar": "التقرير قصير. والبنود جاهزة للإدراج. الملكية الفكرية لما تُنشئه المؤسسة تبقى لها. والخروج يُكتب والعلاقة ما زالت قابلة للرفض."
+      }
+    },
+    {
+      "title": {
+        "en": "Phase 05 — Watch the first period of operation, and prepare the exit while the contract is alive",
+        "ar": "المرحلة 05 — مراقبة أول التشغيل، وتهيئة الخروج والعقد ما زال حيًا"
+      },
+      "body": {
+        "en": "A signed clause that is never tested has not happened. We define how the contract and the data end, and how knowledge is handed over, before the last month arrives.",
+        "ar": "البند الموقَّع الذي لا يُختبر لم يحدث. نحدد كيف ينتهي العقد والبيانات، وكيف تُسلَّم المعرفة، قبل أن يصل الشهر الأخير."
+      }
+    }
+  ]
+}

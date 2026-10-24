@@ -30,7 +30,6 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
           <a href={`${p}/korean-solutions#domains`}>{ar ? 'المجالات' : 'Fields'}</a>
           <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف نعمل' : 'How we work'}</a>
           <a href={`${p}/korean-solutions#initiatives`}>{ar ? 'المبادرات' : 'Initiatives'}</a>
-          <Link href={`${p}/cars`}>{ar ? 'السيارات' : 'Cars'}</Link>
           <a className={styles.barCta} href={transferMail(locale)}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a transfer project'}</a>
         </span>
       </div></nav>
@@ -58,13 +57,12 @@ const HOW: Bi[] = [
 type Domain = {id: string; image: string; title: Bi; text: Bi; href?: string};
 
 const PRODUCTS: Domain[] = [
-  {id: 'medical', image: '/ks/domains/medical.webp', title: {ar: 'الطب والتقنية الصحية', en: 'Medicine and health tech'}, text: {ar: 'ننقل أجهزة التشخيص والعلاج والتقنيات الصحية الكورية، ونوطّن تشغيلها في المؤسسة.', en: 'We transfer Korean diagnostic, treatment and health technologies, and root their operation in the institution.'}},
+  {id: 'medical', image: '/ks/domains/medical.webp', title: {ar: 'الطب والتقنية الصحية', en: 'Medicine and health tech'}, text: {ar: 'مثال على قدرة يمكن نقلها وتوطينها: التشخيص والعلاج والتقنيات الصحية الكورية.', en: 'An example of a capability that can be transferred and localised: Korean diagnostics, treatment and health technologies.'}},
   {id: 'beauty', image: '/ks/domains/beauty.webp', title: {ar: 'التجميل والعناية الكورية', en: 'K-beauty and personal care'}, text: {ar: 'ننقل منظومة التجميل والعناية الكورية: المنتج، والمعرفة، ومعايير التشغيل.', en: 'We transfer the Korean beauty and care system: the product, the know-how, and the operating standard.'}},
   {id: 'manufacturing', image: '/ks/domains/manufacturing.webp', title: {ar: 'التصنيع الذكي والمعدات الصناعية', en: 'Smart manufacturing and industrial equipment'}, text: {ar: 'ننقل خطوط التصنيع والمعدات الصناعية الكورية، ونوطّن تشغيلها.', en: 'We transfer Korean production lines and industrial equipment, and root their operation locally.'}},
   {id: 'energy', image: '/ks/domains/energy.webp', title: {ar: 'الطاقة والبطاريات والمركبات الكهربائية', en: 'Energy, batteries and electric vehicles'}, text: {ar: 'ننقل قدرات الطاقة والبطارية والمركبة الكهربائية الكورية إلى المؤسسة.', en: 'We transfer Korean energy, battery and electric-vehicle capability into the institution.'}},
   {id: 'education', image: '/ks/domains/education.webp', title: {ar: 'التعليم والتقنيات الرقمية', en: 'Education and digital / edtech'}, text: {ar: 'ننقل حلول التعليم الرقمي والمنصات الكورية، ونوطّنها في المؤسسة التعليمية.', en: 'We transfer Korean digital-education solutions and platforms, and root them in the learning institution.'}},
   {id: 'agriculture', image: '/ks/domains/agriculture.webp', title: {ar: 'الزراعة الذكية وتقنيات الغذاء', en: 'Smart agriculture and food tech'}, text: {ar: 'ننقل الزراعة المحمية وتقنيات الغذاء الكورية إلى المنتج العربي.', en: 'We transfer Korean protected agriculture and food technology to the Arab producer.'}},
-  {id: 'cars', image: '/ks/domains/cars.webp', href: '/cars', title: {ar: 'سيارات هايبرد وكهربائية', en: 'Hybrid and electric cars'}, text: {ar: 'صفحة مستقلة للسيارات الكورية الهجينة والكهربائية.', en: 'A dedicated page for Korean hybrid and electric cars.'}},
 ];
 
 const SERVICES: Domain[] = [
@@ -72,6 +70,14 @@ const SERVICES: Domain[] = [
   {id: 'partnerships', image: '/ks/domains/partnerships.webp', title: {ar: 'الشراكات الصناعية', en: 'Industrial partnerships'}, text: {ar: 'نبني شراكة تصنيع وتجميع وتكييف تملك المؤسسة موضعها في السلسلة.', en: 'We build a manufacturing, assembly and adaptation partnership that gives the institution its place in the chain.'}},
   {id: 'training', image: '/ks/domains/training.webp', title: {ar: 'التدريب وبناء الكفاءة', en: 'Training and competence'}, text: {ar: 'ندرّب الفريق المحلي حتى يشغّل القدرة ويطوّرها.', en: 'We train the local team to run the capability and advance it.'}},
 ];
+
+const RELAY = {
+  href: '/programs/relay',
+  kicker: {ar: 'برنامج مرتبط', en: 'Related program'},
+  title: {ar: 'Relay يدير التزام نقل القدرة على مدى عمر المشروع.', en: 'Relay manages the transfer obligation for the life of the project.'},
+  body: {ar: 'في الصفقات الكورية–العربية المدنية نقيس النقل على سلّم الامتلاك: استخدام، تجميع، تكييف، تصميم، تصدير. التقارير تصل إلى الطرفين.', en: 'In civil Korean–Arab deals we measure transfer on the ownership ladder: use, assemble, adapt, design, export. Reports go to both sides.'},
+  cta: {ar: 'افتح Relay', en: 'Open Relay'},
+};
 
 const INITIATIVE = {
   name: {ar: 'بوابات إنتشون: مبادرة تمكين الشباب العربي', en: 'Incheon Gateways: an initiative to empower Arab youth'},
@@ -95,7 +101,7 @@ function DomainGrid({locale, items}: {locale: Locale; items: Domain[]}) {
         <span className={styles.catBody}>
           <b>{t(c.title)}</b>
           <span>{t(c.text)}</span>
-          {c.href && <span className={styles.catGo}>{ar ? 'افتح صفحة السيارات' : 'Open the cars page'} <span aria-hidden="true">{ar ? '←' : '→'}</span></span>}
+          {c.href && <span className={styles.catGo}>{ar ? 'افتح الصفحة' : 'Open the page'} <span aria-hidden="true">{ar ? '←' : '→'}</span></span>}
         </span>
       </>;
       return <li key={c.id}>{c.href
@@ -105,7 +111,7 @@ function DomainGrid({locale, items}: {locale: Locale; items: Domain[]}) {
   </ul>;
 }
 
-/** Institutional front: transfer and localise Korean capability. Initiatives live here. Cars stay on /cars. */
+/** Institutional front: transfer and localise Korean capability. Initiatives live here. */
 export function KoreanSolutionsHub({locale}: {locale: Locale}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en);
   return <Shell locale={locale} path="/korean-solutions">
@@ -143,6 +149,12 @@ export function KoreanSolutionsHub({locale}: {locale: Locale}) {
     <div className={styles.gutter}><section id="how" className={`${styles.inner} ${styles.how}`} aria-labelledby="how-title">
       <h2 id="how-title">{ar ? 'كيف نعمل' : 'How we work'}</h2>
       <ol className={styles.steps}>{HOW.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s)}</b></li>)}</ol>
+      <article className={styles.programCall} aria-labelledby="relay-title">
+        <p className={styles.eyebrow}>{t(RELAY.kicker)}</p>
+        <h3 id="relay-title">{t(RELAY.title)}</h3>
+        <p>{t(RELAY.body)}</p>
+        <Link className={styles.cta} href={`${ar ? '/ar' : ''}${RELAY.href}`}>{t(RELAY.cta)} <span aria-hidden="true">{ar ? '←' : '→'}</span></Link>
+      </article>
     </section></div>
 
     <div className={styles.gutter}><section id="initiatives" className={`${styles.inner} ${styles.band}`} aria-labelledby="ini-title">

@@ -15,7 +15,7 @@ export type Site = {
   location: SiteText;
   locationHint: SiteText;
   footerLocation: SiteText;
-  tagline: string;
+  tagline: SiteText;
   footerBlurb: SiteText;
 };
 

@@ -26,8 +26,8 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   assert.equal(data.workshop.title.ar, 'حوكمة الذكاء الاصطناعي لمديري المؤسسات والمديرين التنفيذيين');
   assert.equal(data.workshop.subtitle.en, data.workshop.title.en);
   assert.equal(data.workshop.subtitle.ar, data.workshop.title.ar);
-  assert.equal(data.workshop.subscribe.en, 'Subscribe');
-  assert.equal(data.workshop.subscribe.ar, 'اشترك');
+  assert.equal(data.workshop.subscribe.en, 'Register interest');
+  assert.equal(data.workshop.subscribe.ar, 'سجّل اهتمامك');
   assert.ok(data.workshop.topics.length >= 4 && data.workshop.topics.length <= 6);
   assert.equal(data.workshop.exercise.minutes, 15);
   assert.equal(data.workshop.simulation.approaches.length, 5);
@@ -55,8 +55,8 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   assert.equal(data.workshop.durationLabel.en, 'Duration');
   assert.equal(data.workshop.formatLabel.ar, 'الشكل');
   assert.equal(data.workshop.formatLabel.en, 'Format');
-  assert.equal(data.workshop.enrollLabel.ar, 'اشترك الآن');
-  assert.equal(data.workshop.enrollLabel.en, 'Enroll');
+  assert.equal(data.workshop.enrollLabel.ar, 'سجّل اهتمامك');
+  assert.equal(data.workshop.enrollLabel.en, 'Register interest');
   const prose = [];
   const collect = value => {
     if (typeof value === 'string') prose.push(value);
@@ -67,32 +67,31 @@ test('governance copy stays bilingual and keeps the sourced figures only', () =>
   assert.doesNotMatch(prose.join('\n'), /single-answer/i);
 });
 
-test('the course sits under masterclass, the old section is gone, and enrollment is one href', () => {
-  const withoutCoursePrice = JSON.parse(JSON.stringify(data));
-  delete withoutCoursePrice.workshop.price;
-  assert.equal(data.workshop.price.en, '$199 — one-time payment');
-  assert.equal(data.workshop.price.ar, '199 دولار — دفعة واحدة');
-  assert.doesNotMatch(JSON.stringify(withoutCoursePrice), /anchoring|تثبيت|HLO|L-002|l-002|\bDr\.|دكتوراه|\bprice\b|سعر/i);
+test('the course sits under masterclass, the old section is gone, and pay/subscribe is gone', () => {
+  assert.equal(data.workshop.price, undefined);
+  assert.doesNotMatch(flat, /\$199|199 دولار|one-time payment|fastpaydirect|ENROLL_HREF/i);
+  assert.doesNotMatch(JSON.stringify(data), /anchoring|تثبيت|HLO|L-002|l-002|\bDr\.|دكتوراه|\bprice\b|سعر/i);
   assert.doesNotMatch(flat, /reports\/notes/);
   const simulation = read('components/governance/simulation.tsx');
   assert.doesNotMatch(simulation, /fetch\(|localStorage|sessionStorage|indexedDB/);
   const course = read('components/governance/course.tsx');
   assert.doesNotMatch(course, /Simulation|اكشف البدائل|workshop\.evidence|workshop\.stations/);
-  assert.match(course, /enrollHref/);
-  assert.match(course, /target="_blank"/);
-  assert.match(course, /rel="noopener noreferrer"/);
-  assert.match(course, /workshop\.price/);
+  assert.match(course, /InterestButton/);
+  assert.doesNotMatch(course, /enrollHref|fastpaydirect|target="_blank"/);
+  assert.doesNotMatch(course, /workshop\.price/);
   assert.match(course, /workshop\.blurb/);
   assert.doesNotMatch(course, /workshop\.subtitle/);
   assert.doesNotMatch(course, /workshop\.topics|topicsLabel|course-topics|المحاور/);
   assert.match(course, /workshop\.instructorShort/);
+  assert.match(course, /workshop\.relatedProgram/);
+  assert.equal(data.workshop.relatedProgram.href, '/programs/clause');
   const card = read('components/institution/workshops-view.tsx');
-  assert.match(card, /governanceCourse\.price/);
+  assert.match(card, /InterestButton/);
+  assert.doesNotMatch(card, /governanceCourse\.price/);
   assert.match(card, /governanceCourse\.soon/);
   assert.doesNotMatch(card, /governanceCourse\.subtitle/);
   const lib = read('lib/governance.ts');
-  assert.match(lib, /export const ENROLL_HREF = 'https:\/\/link\.fastpaydirect\.com\/payment-link\/6adb486bcaf20c1f8ff2b74a'/);
-  assert.match(lib, /export const enrollHref = \(locale: Locale\) => \(locale === 'ar' \? ENROLL_HREF : ENROLL_HREF\)/);
+  assert.doesNotMatch(lib, /ENROLL_HREF|fastpaydirect|enrollHref/);
   assert.match(lib, /\/masterclass\/\$\{workshop\.slug\}/);
   assert.match(read('components/governance/document-locale.tsx'), /documentElement/);
   const sitemap = read('app/sitemap.ts');

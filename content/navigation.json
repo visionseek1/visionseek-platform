@@ -24,11 +24,6 @@
           "href": "/korean-solutions#initiatives",
           "en": "Initiatives",
           "ar": "المبادرات"
-        },
-        {
-          "href": "/cars",
-          "en": "Hybrid & EV cars",
-          "ar": "سيارات هايبرد وكهربائية"
         }
       ]
     },
@@ -39,48 +34,18 @@
       "children": [
         {
           "href": "/projects",
-          "en": "All sectors",
-          "ar": "كل المجالات"
+          "en": "All projects",
+          "ar": "كل المشاريع"
         },
         {
-          "href": "/projects/energy",
-          "en": "Energy & Climate",
-          "ar": "الطاقة والمناخ"
+          "href": "/projects/institutional-ai/agent-governance/proviso-ai",
+          "en": "Proviso AI",
+          "ar": "Proviso AI"
         },
         {
-          "href": "/projects/semiconductors",
-          "en": "Chips & Semiconductors",
-          "ar": "الرقائق وأشباه الموصلات"
-        },
-        {
-          "href": "/projects/drones-aviation",
-          "en": "Drones & Aviation",
-          "ar": "الدرونز والطيران"
-        },
-        {
-          "href": "/projects/defense",
-          "en": "Defense & Security",
-          "ar": "الدفاع والأمن"
-        },
-        {
-          "href": "/projects/robotics",
-          "en": "Robotics & Industry",
-          "ar": "الروبوتات والصناعة"
-        },
-        {
-          "href": "/projects/health",
-          "en": "Medicine & Health",
-          "ar": "الطب والصحة"
-        },
-        {
-          "href": "/projects/agriculture",
-          "en": "Agriculture & Food Security",
-          "ar": "الزراعة والأمن الغذائي"
-        },
-        {
-          "href": "/projects/infrastructure",
-          "en": "Cities & Infrastructure",
-          "ar": "المدن والبنية التحتية"
+          "href": "/projects/institutional-ai/sovereign-ai/visionseek-box",
+          "en": "VisionSeek Box",
+          "ar": "VisionSeek Box"
         }
       ]
     },
@@ -142,6 +107,16 @@
           "href": "/programs/apex",
           "en": "Apex",
           "ar": "Apex"
+        },
+        {
+          "href": "/programs/clause",
+          "en": "Clause",
+          "ar": "Clause"
+        },
+        {
+          "href": "/programs/relay",
+          "en": "Relay",
+          "ar": "Relay"
         }
       ]
     },

@@ -17,6 +17,7 @@ export type InstituteCopy = {
   workshopTitle: Bi;
   workshopLead: Bi;
   openWorkshop: Bi;
+  relatedProgram: {href: string; kicker: Bi; title: Bi; cta: Bi};
   fellowshipKind: Bi;
 };
 
