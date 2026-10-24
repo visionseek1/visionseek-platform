@@ -381,8 +381,10 @@
 .awardsHero .stageHead { margin-bottom: 0; max-width: none; }
 .awardsHero .visualCompact {
   margin: 0;
-  width: 100%;
-  border-color: color-mix(in srgb, var(--lime) 18%, var(--vs-line));
+  width: min(100%, 22rem);
+  justify-self: end;
+  border: 0;
+  background: transparent;
 }
 .pull {
   font-family: var(--font-display), sans-serif;
