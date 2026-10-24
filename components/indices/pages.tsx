@@ -1,4 +1,5 @@
 import type {ReactNode} from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {ArrowLeft, ArrowRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
@@ -47,15 +48,33 @@ function Crumb({locale, trail}: {locale: Locale; trail: {href?: string; label: s
   );
 }
 
+function IndexVisual({locale, item}: {locale: Locale; item: IndexEntry}) {
+  if (!item.heroImage) return null;
+  return (
+    <div className={styles.visual}>
+      <Image
+        src={item.heroImage}
+        alt={item.heroAlt[locale]}
+        width={1280}
+        height={720}
+        sizes="(max-width: 1220px) calc(100vw - 3rem), 1220px"
+        priority
+      />
+    </div>
+  );
+}
+
 function IndexArticle({locale, item, solo}: {locale: Locale; item: IndexEntry; solo?: boolean}) {
   const {notify} = indicesContent;
   const prefix = locale === 'ar' ? '/ar' : '';
   return (
     <article id={item.slug} className={`${styles.article} ${solo ? styles.articleSolo : ''}`} aria-labelledby={`${item.slug}-title`}>
+      <IndexVisual locale={locale} item={item}/>
       <p className={styles.status}>{item.statusLabel[locale]}</p>
       {solo
         ? <h1 id={`${item.slug}-title`}>{item.title[locale]}</h1>
         : <h2 id={`${item.slug}-title`}><Link href={`${prefix}${indexPath(item.slug)}`}>{item.title[locale]}</Link></h2>}
+      <p className={styles.subtitle}>{item.subtitle[locale]}</p>
       <p className={styles.lede}>{item.lede[locale]}</p>
 
       <section className={styles.block} aria-labelledby={`${item.slug}-measures`}>
@@ -66,28 +85,39 @@ function IndexArticle({locale, item, solo}: {locale: Locale; item: IndexEntry; s
       <section className={styles.block} aria-labelledby={`${item.slug}-pillars`}>
         <h3 id={`${item.slug}-pillars`}>{item.pillarsTitle[locale]}</h3>
         <p>{item.pillarsIntro[locale]}</p>
-        <ol className={styles.pillars}>
-          {item.pillars.map((pillar, i) => (
+        <ul className={styles.pillars}>
+          {item.pillars.map(pillar => (
             <li key={pillar.id} className={styles.pillar}>
-              <span className={styles.num} aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
               <p className={styles.pillarName}>{pillar.name[locale]}</p>
             </li>
           ))}
-        </ol>
+        </ul>
+      </section>
+
+      <section className={styles.block} aria-labelledby={`${item.slug}-principles`}>
+        <h3 id={`${item.slug}-principles`}>{item.principlesTitle[locale]}</h3>
+        <ul className={styles.principles}>
+          {item.principles.map(principle => (
+            <li key={principle.id} className={styles.principle}>
+              <h4>{principle.title[locale]}</h4>
+              <p>{principle.text[locale]}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <div className={styles.panels}>
-        <section className={styles.panel} aria-labelledby={`${item.slug}-benchmark`}>
-          <h3 id={`${item.slug}-benchmark`}>{item.benchmarkTitle[locale]}</h3>
-          <p>{item.benchmark[locale]}</p>
+        <section className={styles.panel} aria-labelledby={`${item.slug}-pilot`}>
+          <h3 id={`${item.slug}-pilot`}>{item.pilotTitle[locale]}</h3>
+          <p>{item.pilot[locale]}</p>
+        </section>
+        <section className={styles.panel} aria-labelledby={`${item.slug}-audience`}>
+          <h3 id={`${item.slug}-audience`}>{item.audienceTitle[locale]}</h3>
+          <p>{item.audience[locale]}</p>
         </section>
         <section className={styles.panel} aria-labelledby={`${item.slug}-method`}>
           <h3 id={`${item.slug}-method`}>{item.methodologyTitle[locale]}</h3>
           <p>{item.methodology[locale]}</p>
-        </section>
-        <section className={styles.panel} aria-labelledby={`${item.slug}-pilot`}>
-          <h3 id={`${item.slug}-pilot`}>{item.pilotTitle[locale]}</h3>
-          <p>{item.pilot[locale]}</p>
         </section>
       </div>
 

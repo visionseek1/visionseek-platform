@@ -19,7 +19,12 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
       canonical: `/ar/indices/${item.slug}`,
       languages: {en: `/indices/${item.slug}`, ar: `/ar/indices/${item.slug}`},
     },
-    openGraph: {title: `${item.title.ar} | VisionSeek`, description: item.lede.ar, url: `/ar/indices/${item.slug}`},
+    openGraph: {
+      title: `${item.title.ar} | VisionSeek`,
+      description: item.lede.ar,
+      url: `/ar/indices/${item.slug}`,
+      images: [{url: item.heroImage, alt: item.heroAlt.ar, width: 1280, height: 720}],
+    },
   };
 }
 

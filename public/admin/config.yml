@@ -4081,7 +4081,7 @@ collections:
 
   - name: indices
     label: "المؤشرات"
-    description: "صفحة /indices وبالعربية /ar/indices. مؤشرات قادمة بلا نتائج. ممنوع درجات أو ترتيب أو قائمة دول بقيم أو رسوم تحمل أرقامًا. الإنجليزي: Ahmed Abdelalim من غير لقب. المنهجية ستُنشر. القائمة مش في الشريط إلا بموافقة د. أحمد."
+    description: "صفحة /indices وبالعربية /ar/indices. مؤشرات قادمة بلا نتائج. ممنوع درجات أو ترتيب أو أسماء دول أو تاريخ إصدار أو شركاء أو فورم تسجيل. الصورة المفتاحية ١٦:٩ من غير بيانات. الإنجليزي: Ahmed Abdelalim من غير لقب. المنهجية ستُنشر. القائمة مش في الشريط إلا بموافقة د. أحمد."
     preview_path: "ar/indices"
     editor: {preview: false}
     files:
@@ -4214,37 +4214,50 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان الفرعي"
+                name: subtitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "الصورة المفتاحية", name: heroImage, widget: image, choose_url: true, hint: "١٦:٩ في /indices/. من غير أرقام ولا ترتيب."}
+              - label: "وصف الصورة"
+                name: heroAlt
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
               - label: "المقدمة"
                 name: lede
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}
-              - label: "عنوان ماذا يقيس"
+              - label: "عنوان ما هو المؤشر"
                 name: measuresTitle
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - label: "نص ماذا يقيس"
+              - label: "نص ما هو المؤشر"
                 name: measures
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}
-              - label: "عنوان الأعمدة"
+              - label: "عنوان التكنولوجيات"
                 name: pillarsTitle
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - label: "سطر الأعمدة"
+              - label: "سطر التكنولوجيات"
                 name: pillarsIntro
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}
-              - label: "الأعمدة"
+              - label: "التكنولوجيات"
                 name: pillars
                 widget: list
                 summary: "{{fields.name.ar}}"
@@ -4256,18 +4269,31 @@ collections:
                     fields:
                       - {label: "English", name: en, widget: string}
                       - {label: "العربية", name: ar, widget: string}
-              - label: "عنوان المرجع"
-                name: benchmarkTitle
+              - label: "عنوان المبادئ"
+                name: principlesTitle
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - label: "نص المرجع"
-                name: benchmark
-                widget: object
+              - label: "المبادئ"
+                name: principles
+                widget: list
+                summary: "{{fields.title.ar}}"
+                hint: "من غير شركاء ومن غير مكان إعلان."
                 fields:
-                  - {label: "English", name: en, widget: text}
-                  - {label: "العربية", name: ar, widget: text}
+                  - {label: "المعرّف", name: id, widget: string}
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "النص"
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
               - label: "عنوان المنهج"
                 name: methodologyTitle
                 widget: object
@@ -4288,6 +4314,18 @@ collections:
                   - {label: "العربية", name: ar, widget: string}
               - label: "نص الإصدار التجريبي"
                 name: pilot
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان مين بيستفيد"
+                name: audienceTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص مين بيستفيد"
+                name: audience
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: text}

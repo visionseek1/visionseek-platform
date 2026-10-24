@@ -1,6 +1,5 @@
 /* VisionSeek Indices: a research prospectus inside the dark site chrome.
-   Stanford-index spirit (masthead, numbered chapters, honest empty results)
-   without scores, rankings, or charts. */
+   Honest empty results. No scores, rankings, charts, or numbered pillars. */
 
 .page {
   --line: rgba(245, 245, 242, 0.16);
@@ -19,7 +18,7 @@
 }
 
 /* Beat .vs-site heading rules: Oxanium in English, IBM Plex Sans Arabic in Arabic. */
-.page.page.page :is(h1, h2, h3) {
+.page.page.page :is(h1, h2, h3, h4) {
   font-family: var(--font-display), sans-serif !important;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -27,14 +26,14 @@
   color: var(--ink);
 }
 
-.page.page.page.ar :is(h1, h2, h3) {
+.page.page.page.ar :is(h1, h2, h3, h4) {
   font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif !important;
   letter-spacing: 0 !important;
   line-height: 1.4;
   font-weight: 600;
 }
 
-.page :is(p, ul) { margin: 0; }
+.page :is(p, ul, h4) { margin: 0; }
 .page a { color: inherit; }
 
 .page :is(a, button):focus-visible {
@@ -78,6 +77,30 @@
   font-size: clamp(3.1rem, 7vw, 6.2rem);
   max-width: 18ch;
   margin: 0 0 1.4rem !important;
+}
+
+.visual {
+  margin: 0 0 1.8rem;
+  background: #050505;
+  overflow: hidden;
+}
+
+.visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  object-position: center;
+}
+
+.subtitle {
+  max-width: 40rem;
+  margin: 0 0 1.35rem !important;
+  color: var(--lime);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 650;
 }
 
 .lede {
@@ -186,7 +209,7 @@
 .article :is(h1, h2) {
   font-size: clamp(2.1rem, 4.2vw, 3.6rem);
   max-width: 22ch;
-  margin: 0 0 1.2rem !important;
+  margin: 0 0 0.7rem !important;
 }
 
 .article h2 a:hover { color: var(--lime); }
@@ -210,17 +233,10 @@
   border-top: 2px solid var(--lime);
   background: #101313;
   padding: 1.1rem 1rem 1.25rem;
-  min-height: 8.2rem;
+  min-height: 6.4rem;
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
-}
-
-.num {
-  font-family: var(--font-display), sans-serif;
-  font-size: 1.15rem;
-  color: var(--lime);
-  letter-spacing: 0.04em;
+  justify-content: flex-end;
 }
 
 .pillarName {
@@ -228,6 +244,32 @@
   line-height: 1.35;
   font-weight: 600;
   color: var(--ink);
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principle {
+  background: var(--panel);
+  padding: 1.35rem 1.25rem;
+  border-top: 2px solid var(--lime);
+}
+
+.principle h4 {
+  font-size: 1.15rem !important;
+  margin: 0 0 0.65rem !important;
+}
+
+.principle p {
+  color: var(--body);
+  line-height: 1.8;
+  font-size: 0.98rem;
 }
 
 .page.page.page.en .pillarName { font-family: var(--font-display), sans-serif; }
@@ -299,7 +341,7 @@
 .page[dir=rtl] .back svg { transform: rotate(180deg); }
 
 @media (max-width: 900px) {
-  .panels { grid-template-columns: 1fr; }
+  .panels, .principles { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(2.6rem, 12vw, 3.6rem); }
 }
 
@@ -308,7 +350,7 @@
   .crumb { margin-bottom: 2rem; }
   .article { margin-top: 3rem; padding-top: 2rem; }
   .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pillar { min-height: 7.2rem; }
+  .pillar { min-height: 5.4rem; }
   .band, .results { padding: 1.4rem 1.15rem; }
   .button { width: 100%; }
 }
