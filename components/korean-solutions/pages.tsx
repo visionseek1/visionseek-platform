@@ -2,13 +2,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
+import RequestForm from '@/components/requests/request-form';
+import Categories from './categories';
 import Finder, {SolutionCard} from './finder';
-import {productImage} from './photos';
-import RequestForm from './request-form';
+import {PHOTO_CREDIT, productImage} from './photos';
 import styles from './ks.module.css';
-import {NO_PARTNERSHIP, REGION_COPY, ROUTES, ROUTE_COPY, SECTOR_EN, TYPE_COPY, type Bi, type Solution} from '@/lib/korean-solutions-copy';
+import {CATEGORIES, NO_PARTNERSHIP, REGION_COPY, ROUTES, ROUTE_COPY, SECTOR_EN, TYPE_COPY, type Bi, type Solution} from '@/lib/korean-solutions-copy';
+import {site, whatsappUrl} from '@/lib/site';
 
 type Locale = 'ar' | 'en';
+const ORIGIN = 'https://visionseek.org';
 
 function Shell({locale, path, here, children}: {locale: Locale; path: string; here?: string; children: React.ReactNode}) {
   const ar = locale === 'ar'; const p = ar ? '/ar' : '';
@@ -18,9 +21,11 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
       <nav className={`${styles.bar} ${styles.gutter}`} aria-label={ar ? 'أقسام حلول من كوريا' : 'Korean Solutions sections'}><div className={`${styles.inner} ${styles.barInner}`}>
         <span className={styles.barName}><Link href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
         <span className={styles.barNav}>
-          <a href={`${p}/korean-solutions#sections`}>{ar ? 'الأقسام' : 'Sections'}</a>
-          <a href={`${p}/korean-solutions#needs`}>{ar ? 'احتياجات المنطقة' : 'Regional needs'}</a>
-          <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف ننقل الحل' : 'How we transfer'}</a>
+          <a href={`${p}/korean-solutions#how`}>{ar ? 'خطوات الطلب' : 'How it works'}</a>
+          <a href={`${p}/korean-solutions#categories`}>{ar ? 'ماذا تطلب' : 'What to request'}</a>
+          <a href={`${p}/korean-solutions#finder`}>{ar ? 'حلول نرصدها' : 'Solutions we track'}</a>
+          <Link href={`${p}/cars`}>{ar ? 'السيارات' : 'Cars'}</Link>
+          <a className={styles.barCta} href={`${p}/korean-solutions#needs`}>{ar ? 'اكتب طلبك' : 'Your request'}</a>
         </span>
       </div></nav>
       {children}
@@ -30,38 +35,60 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
 }
 
 const STEPS: {title: Bi; text: Bi}[] = [
-  {title: {ar: 'نفهم المشكلة', en: 'We understand the problem'}, text: {ar: 'نجلس مع المؤسسة ونحدد ما تحتاجه بالضبط، وأين يقف الحل الحالي.', en: 'We sit with the organisation and pin down exactly what it needs, and where today’s answer falls short.'}},
-  {title: {ar: 'نختار من كوريا', en: 'We choose from Korea'}, text: {ar: 'نرشّح الحل الكوري الأنسب، ومعه دليله واعتماده وأين يعمل.', en: 'We put forward the best-fitting Korean solution, with its proof, its approvals and where it already works.'}},
-  {title: {ar: 'نجرّب على نطاق صغير', en: 'We pilot small'}, text: {ar: 'تجربة محدودة داخل المؤسسة، بمقياس نجاح متفق عليه من البداية.', en: 'A limited trial inside the organisation, with a measure of success agreed at the start.'}},
-  {title: {ar: 'ننقل ونوطّن', en: 'We transfer and localise'}, text: {ar: 'شراء أو توزيع أو ترخيص أو مشروع مشترك، حتى يعمل الحل عندك بفريقك.', en: 'Purchase, distribution, licensing or a joint venture, until the solution runs with your own team.'}},
+  {title: {ar: 'قل لنا ما تحتاجه', en: 'Tell us what you need'}, text: {ar: 'اكتب المنتج أو الخدمة، ومعها الكمية أو الميزانية إن كانت عندك.', en: 'Describe the product or service, with a quantity or budget if you have one.'}},
+  {title: {ar: 'نبحث عنه في كوريا', en: 'We find it in Korea'}, text: {ar: 'ندوّر عند المصنّعين والموردين في كوريا على ما يناسب طلبك.', en: 'We look among Korean makers and suppliers for what fits your request.'}},
+  {title: {ar: 'نتحقق', en: 'We verify'}, text: {ar: 'نراجع المورّد والمواصفات معك قبل أي التزام.', en: 'We check the supplier and the specifications with you before anything is committed.'}},
+  {title: {ar: 'نوصّله لك', en: 'We deliver'}, text: {ar: 'نرتّب الشحن والتوصيل إلى بلدك في الخليج أو مصر.', en: 'We arrange shipping and delivery to your country in the Gulf or Egypt.'}},
 ];
 
-export function KoreanSolutionsHub({locale, solutions}: {locale: Locale; solutions: Solution[]}) {
-  const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en);
+const REQUEST_CATEGORIES = CATEGORIES.filter(c => !c.href).map(c => ({value: c.sector, label: c.name}));
+
+/** The sourcing funnel: one promise and one button, the four steps, the fields, the request, then the solutions we track. */
+export function KoreanSolutionsHub({locale, solutions, record}: {locale: Locale; solutions: Solution[]; record: boolean}) {
+  const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en); const p = ar ? '/ar' : '';
   return <Shell locale={locale} path="/korean-solutions">
-    <Finder locale={locale} solutions={solutions}/>
+    <section className={styles.hero} aria-labelledby="ks-title"><div className={styles.gutter}><div className={`${styles.inner} ${styles.heroInner}`}>
+      <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
+      <h1 id="ks-title">{ar ? 'محتاج منتج أو خدمة من كوريا؟ نجيبها لك.' : 'Need a product or service from Korea? We’ll source it for you.'}</h1>
+      <p className={styles.heroLede}>{ar
+        ? 'من مصر أو من أي بلد في الخليج: قل لنا ما تحتاجه، فنبحث عنه في كوريا، ونتحقق منه، ونوصّله لك.'
+        : 'From Egypt or anywhere in the Gulf: tell us what you need. We find it in Korea, check it, and deliver it to you.'}</p>
+      <div className={styles.heroCta}>
+        <a className={styles.cta} href="#needs">{ar ? 'اطلب من كوريا' : 'Request from Korea'} <span aria-hidden="true">{ar ? '←' : '→'}</span></a>
+        <span>{ar ? 'نرد عليك بأنفسنا، بلا رسائل آلية.' : 'We reply personally. No automated messages.'}</span>
+      </div>
+    </div></div></section>
+
+    <div className={styles.gutter}><section id="how" className={`${styles.inner} ${styles.how}`} aria-labelledby="how-title">
+      <h2 id="how-title">{ar ? 'خطوات الطلب' : 'How it works'}</h2>
+      <ol className={styles.steps}>{STEPS.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s.title)}</b><p>{t(s.text)}</p></li>)}</ol>
+    </section></div>
+
+    <Categories locale={locale}/>
+
     <section id="needs" className={`${styles.needs} ${styles.gutter}`} aria-labelledby="needs-title"><div className={`${styles.inner} ${styles.needsInner}`}>
       <div className={styles.needsText}>
-        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>REGIONAL NEEDS</p>
-        <h2 id="needs-title">{ar ? 'عندك مشكلة، ولم تجد حلها؟' : 'Have a problem you cannot find a solution for?'}</h2>
-        <p>{ar ? 'اكتب لنا ما تحتاجه مؤسستك. نبحث عن الحل في كوريا، ونعود إليك بما وجدنا، ومعه الطريق إلى نقله.' : 'Tell us what your organisation needs. We look for the answer in Korea and come back to you with what we found, and the route to bring it over.'}</p>
+        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>YOUR REQUEST</p>
+        <h2 id="needs-title">{ar ? 'اكتب طلبك' : 'Tell us what you need'}</h2>
+        <p>{ar ? 'املأ الحقول المطلوبة (*)، وأضف أي تفصيل يساعدنا على فهم طلبك.' : 'Fill in the required fields (*), and add any detail that helps us understand your request.'}</p>
+        <p className={styles.needsAlt}>{ar ? 'تفضّل واتساب؟' : 'Prefer WhatsApp?'} <a href={whatsappUrl()} target="_blank" rel="noreferrer" dir="ltr">{site.phoneDisplay}</a></p>
       </div>
-      <RequestForm locale={locale} kind="need"/>
+      <div className={styles.needsForm}>
+        <RequestForm locale={locale} kind="korea" page={`${ORIGIN}${p}/korean-solutions`} categories={REQUEST_CATEGORIES} record={record}/>
+      </div>
     </div></section>
-    <div className={styles.gutter}><section id="how" className={`${styles.inner} ${styles.how}`} aria-labelledby="how-title">
-      <h2 id="how-title">{ar ? 'كيف ننقل الحل' : 'How we transfer a solution'}</h2>
-      <ol className={styles.steps}>{STEPS.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s.title)}</b><p>{t(s.text)}</p></li>)}</ol>
-      <div className={styles.routeBar}><b>{ar ? 'طرق النقل:' : 'Transfer routes:'}</b>{ROUTES.map(r => <span key={r}>{t(ROUTE_COPY[r].name)}</span>)}</div>
-    </section></div>
+
+    <Finder locale={locale} solutions={solutions}/>
   </Shell>;
 }
 
-export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: Solution; related: Solution[]}) {
+export function KoreanSolutionDetail({locale, s, related, record}: {locale: Locale; s: Solution; related: Solution[]; record: boolean}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en) || v.ar; const p = ar ? '/ar' : '';
   const type = TYPE_COPY[s.type];
   const sector = ar ? s.sector : SECTOR_EN[s.sector] || s.sector;
   const where = t(s.where);
-  return <Shell locale={locale} path="/korean-solutions" here={`${t(type.many)} · ${sector}`}>
+  const credit = PHOTO_CREDIT[s.slug];
+  return <Shell locale={locale} path={`/korean-solutions/${s.slug}`} here={`${t(type.many)} · ${sector}`}>
     <section className={`${styles.dHero} ${styles.gutter}`} aria-labelledby="sol-title"><div className={`${styles.inner} ${styles.dHeroInner}`}>
       <div className={styles.dHeroMain}>
         <div className={styles.dTags}>
@@ -73,10 +100,13 @@ export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: S
         <h1 id="sol-title">{t(s.title)}</h1>
         {s.maker && <p className={`${styles.dMaker} ${styles.latin}`} dir="auto">{s.maker}</p>}
       </div>
-      <div className={styles.dPhoto}><Image src={productImage(s.slug)} alt="" fill sizes="(max-width:900px) 100vw, 420px"/></div>
+      <figure className={styles.dPhoto}>
+        <Image src={productImage(s.slug)} alt="" fill sizes="(max-width:900px) 100vw, 420px"/>
+        {credit && <figcaption className={styles.credit}>{ar ? 'الصورة' : 'Photo'}: {credit}</figcaption>}
+      </figure>
       <div className={styles.dActions}>
         <a className={styles.primary} href="#request">{ar ? 'اطلب هذا الحل' : 'Ask for this solution'}</a>
-        <Link className={styles.secondary} href={`${p}/korean-solutions#finder`}>{ar ? 'رجوع للمستكشف' : 'Back to the finder'}</Link>
+        <Link className={styles.secondary} href={`${p}/korean-solutions#finder`}>{ar ? 'كل الحلول التي نرصدها' : 'All the solutions we track'}</Link>
       </div>
     </div></section>
 
@@ -110,8 +140,8 @@ export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: S
       </article>
       <aside id="request" className={styles.aside} aria-labelledby="request-title">
         <h2 id="request-title">{ar ? 'اطلب هذا الحل' : 'Ask for this solution'}</h2>
-        <p>{ar ? 'اكتب لنا عن مؤسستك، ونعود إليك بالخطوة التالية.' : 'Tell us about your organisation, and we will come back to you with the next step.'}</p>
-        <RequestForm locale={locale} kind="solution" solution={{slug: s.slug, title: s.title.ar}}/>
+        <p>{ar ? 'اكتب لنا عن طلبك، ونعود إليك بالخطوة التالية.' : 'Tell us about your request, and we will come back to you with the next step.'}</p>
+        <RequestForm locale={locale} kind="korea" page={`${ORIGIN}${p}/korean-solutions/${s.slug}`} about={t(s.title)} hide={['category', 'link']} record={record}/>
         <p className={styles.fine}>{t(NO_PARTNERSHIP)}</p>
       </aside>
     </div></div>

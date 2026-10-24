@@ -1,0 +1,85 @@
+/* The request form sits on a dark panel (violet on Korean Solutions, ink on the cars pages).
+   One column on phones and in side panels; two columns once the form itself is wide enough. */
+.form {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  color: inherit;
+}
+.form :is(input, select, textarea, button) { font: inherit; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+@container (min-width: 520px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .wide { grid-column: 1 / -1; }
+}
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field label { font-size: 14px; font-weight: 600; line-height: 1.5; }
+.req { color: #cfff00; }
+.opt { font-weight: 400; opacity: 0.72; }
+.form .field :is(input, select, textarea) {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 0;
+  padding: 0 12px;
+  background: #f5f5f2;
+  color: #0b0d0c;
+  font-size: 16px;
+}
+.form .field select {
+  appearance: none;
+  padding-inline-end: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230b0d0c' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+[dir="rtl"] .form .field select { background-position: left 14px center; }
+.form .field textarea { padding: 12px; min-height: 120px; resize: vertical; line-height: 1.7; }
+.field ::placeholder { color: #6d716e; }
+.form .field :is(input, select, textarea):focus-visible { outline: 3px solid #cfff00; outline-offset: 1px; }
+.form .field [aria-invalid="true"] { outline: 2px solid #ff8a7a; outline-offset: 1px; }
+.hint { font-size: 13px; line-height: 1.6; opacity: 0.78; }
+.error { font-size: 13px; font-weight: 600; color: #ffd2cc; }
+.alert { font-size: 14px; font-weight: 600; color: #ffd2cc; margin: 0; }
+.about { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 12px 14px; background: #ffffff14; border-inline-start: 4px solid #cfff00; }
+.about span { font-size: 13px; opacity: 0.78; }
+.about b { font-size: 16px; line-height: 1.5; }
+.send { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.form .send button {
+  min-height: 52px;
+  padding: 0 28px;
+  border: 0;
+  background: #cfff00;
+  color: #0b0d0c;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.form .send button:hover { background: #ffffff; }
+.form .send button:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+.fine { margin: 0; font-size: 13px; line-height: 1.7; opacity: 0.8; max-width: 62ch; }
+.form .fine a { color: inherit; }
+.ready { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px; background: #ffffff14; border-inline-start: 4px solid #cfff00; }
+.ready p { margin: 0; font-size: 15px; line-height: 1.8; }
+.readyAsk { font-size: 14px; opacity: 0.85; }
+.readyActions { display: flex; flex-wrap: wrap; gap: 8px; }
+.form .readyActions :is(a, button) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #ffffff66;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.form .readyActions :is(a, button):hover { border-color: #cfff00; color: #cfff00; }
+.trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (min-width: 640px) {
+  .send { flex-direction: row; align-items: center; gap: 18px; }
+}

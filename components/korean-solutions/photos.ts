@@ -13,3 +13,8 @@ export const PRODUCT_IMAGE: Record<string, string> = {
 };
 
 export const productImage = (slug: string) => PRODUCT_IMAGE[slug] || '/ks/health.jpg';
+
+/** Photos whose licence asks for a credit wherever they are shown (Wikimedia Commons, CC BY-SA). */
+export const PHOTO_CREDIT: Record<string, string> = {
+  'gait-training-robot': 'Shefali.assam · Wikimedia Commons · CC BY-SA',
+};

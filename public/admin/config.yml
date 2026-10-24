@@ -44,7 +44,6 @@ collections:
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "ماستركلاس (القسم كله)  /masterclass", value: "/masterclass"}
-                  - {label: "ماستركلاس ← فخ الإجابة الواحدة  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
@@ -53,6 +52,7 @@ collections:
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
                   - {label: "بيت القادة (القسم كله)  /leaders-house", value: "/leaders-house"}
                   - {label: "منهجنا  /method", value: "/method"}
+                  - {label: "حلول من كوريا ← سيارات هايبرد وكهربائية  /cars", value: "/cars"}
                   - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
                   - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
                   - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
@@ -65,10 +65,8 @@ collections:
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
                   - {label: "ماستركلاس ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
                   - {label: "ماستركلاس ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
-                  - {label: "البرامج ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
-                  - {label: "البرامج ← التحديات  /programs/challenges", value: "/programs/challenges"}
-                  - {label: "البرامج ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
-                  - {label: "البرامج ← كيف تعمل البرامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
+                  - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
+                  - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
                   - {label: "Insights ← التقارير  /insights/reports", value: "/insights/reports"}
                   - {label: "Insights ← الأوراق العلمية  /insights/research", value: "/insights/research"}
                   - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
@@ -85,8 +83,10 @@ collections:
                   - {label: "عن VisionSeek ← الحوكمة  /about/governance", value: "/about/governance"}
                   - {label: "عن VisionSeek ← التعلم من DARPA  /about/learning-from-darpa", value: "/about/learning-from-darpa"}
                   - {label: "التقارير ← المنهج والمعايير  /reports/methodology", value: "/reports/methodology"}
-                  - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
-                  - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
+                  - {label: "programs ← التحديات وتجارب الإثبات  /programs/challenges", value: "/programs/challenges"}
+                  - {label: "programs ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
+                  - {label: "programs ← كيف يعمل البرنامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
+                  - {label: "programs ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}
@@ -99,6 +99,7 @@ collections:
                   - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
+                  - {label: "ماستركلاس ← فخ الإجابة الواحدة  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
@@ -3260,6 +3261,78 @@ collections:
                       - {label: English, name: en, widget: string}
                       - {label: العربية, name: ar, widget: string}
 
+  - name: cars
+    label: "السيارات (هايبرد وكهربائية)"
+    description: "قائمة السيارات على /cars. القائمة العامة فاضية إلى أن يضيف أحمد سيارات حقيقية. الأمثلة نموذج للتصميم فقط، ولا تظهر على الموقع الحي."
+    preview_path: "ar/cars"
+    editor: {preview: false}
+    files:
+      - label: السيارات
+        name: cars
+        file: content/cars.json
+        fields:
+          - {label: ملاحظة داخلية, name: _note, widget: text}
+          - {label: "إظهار الأمثلة في المعاينة فقط", name: showExamples, widget: boolean, default: true}
+          - label: السيارات المعروضة
+            name: cars
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - {label: المسار (إنجليزي صغير بشرطات), name: slug, widget: string}
+              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
+              - label: الماركة
+                name: brand
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الموديل
+                name: model
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - {label: السنة, name: year, widget: number, required: false, value_type: int}
+              - {label: صور (مسار يبدأ بـ /), name: photos, widget: list, required: false, field: {label: مسار, name: src, widget: string}}
+              - label: مجموعة الحركة
+                name: powertrain
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - {label: المدى (كم), name: rangeKm, widget: number, required: false, value_type: int}
+              - {label: البطارية (ك.و.س), name: batteryKwh, widget: number, required: false, value_type: int}
+              - {label: المقاعد, name: seats, widget: number, required: false, value_type: int}
+              - {label: السعر (رقم فقط إن وُجد), name: priceAmount, widget: number, required: false, value_type: int}
+              - {label: عملة السعر, name: priceCurrency, widget: string, required: false}
+              - label: ما يشمله الطلب
+                name: included
+                widget: list
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: أمثلة التصميم (لا تظهر على الموقع الحي)
+            name: examples
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - {label: المسار, name: slug, widget: string}
+              - {label: "بيانات نموذجية", name: example, widget: boolean, default: true}
+              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
+              - label: الماركة
+                name: brand
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الموديل
+                name: model
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
 
   - name: governance
     label: "حوكمة الذكاء الاصطناعي"

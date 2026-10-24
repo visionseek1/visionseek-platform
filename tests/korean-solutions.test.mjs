@@ -35,6 +35,10 @@ test('Korean Solutions: pages in both languages, the no-partnership line, and no
   assert.match(api, /source: 'الموقع'/);
   assert.match(api, /website/); // honeypot
   assert.doesNotMatch(api, /sendMail|nodemailer|resend|sendgrid|fetch\(['"`]https/i);
+  const form = read('components/requests/request-form.tsx');
+  assert.match(form, /mailto\(/);
+  assert.match(pages, /اطلب من كوريا|Request from Korea/);
+  assert.match(pages, /#needs/);
 });
 
 test('Korean Solutions: in the menu, the sitemap and the archive list; the ops section writes to Notion only', () => {
@@ -43,7 +47,9 @@ test('Korean Solutions: in the menu, the sitemap and the archive list; the ops s
   assert.equal(nav[0].ar, 'حلول من كوريا');
   assert.equal(nav[0].en, 'Korean Solutions');
   assert.match(read('app/sitemap.ts'), /korean-solutions/);
+  assert.match(read('app/sitemap.ts'), /path: '\/cars'/);
   assert.match(read('public/admin/config.yml'), /value: "\/korean-solutions"/);
+  assert.match(read('public/admin/config.yml'), /value: "\/cars"/);
   const lib = read('lib/notion-room.ts');
   assert.match(lib, /koreanSolutions: \{ ds: "d81a751a-06b2-4ab1-933e-a6aa0deab79d"/);
   const route = read('app/ops/solutions/route.ts');

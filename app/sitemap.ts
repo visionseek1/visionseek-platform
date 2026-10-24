@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/projects", priority: 0.8 },
     { path: "/ar/projects", priority: 0.8 },
     {path: '/korean-solutions', priority: 0.85}, {path: '/ar/korean-solutions', priority: 0.85},
+    {path: '/cars', priority: 0.8}, {path: '/ar/cars', priority: 0.8},
     ...koreanSolutions.flatMap(k => [{path: `/korean-solutions/${k.slug}`, priority: 0.7}, {path: `/ar/korean-solutions/${k.slug}`, priority: 0.7}]),
     { path: "/insights", priority: 0.85 },
     { path: "/ar/insights", priority: 0.85 },

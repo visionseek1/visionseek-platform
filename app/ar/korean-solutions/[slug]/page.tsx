@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import {KoreanSolutionDetail} from '@/components/korean-solutions/pages';
+import {isLiveSite} from '@/lib/deploy';
 import {getSolution, getSolutions} from '@/lib/korean-solutions';
 
 type Props = {params: Promise<{slug: string}>};
@@ -17,5 +18,5 @@ export default async function Page({params}: Props) {
   const all = await getSolutions();
   const s = all.find(x => x.slug === slug); if (!s) notFound();
   const related = all.filter(x => x.slug !== s.slug && x.sector === s.sector).slice(0, 3);
-  return <KoreanSolutionDetail locale="ar" s={s} related={related}/>;
+  return <KoreanSolutionDetail locale="ar" s={s} related={related} record={isLiveSite()}/>;
 }
