@@ -1,6 +1,6 @@
 import data from '@/content/forums.json';
 
-/** Conferences & Forums — edited from /admin («المؤتمرات والمنتديات»). */
+/** Conferences — edited from /admin («المؤتمرات»). */
 export type Bi = {en: string; ar: string};
 export type Locale = 'ar' | 'en';
 
@@ -86,6 +86,6 @@ export type ForumsContent = {
 
 export const forumsContent = data as ForumsContent;
 export const tx = (locale: Locale, value: Bi) => value[locale];
-export const forumPath = (locale: Locale) => (locale === 'ar' ? '/ar/forums' : '/forums');
+export const forumPath = (locale: Locale) => (locale === 'ar' ? '/ar/conferences' : '/conferences');
 export const forumBySlug = (slug: string) => forumsContent.forums.find(forum => forum.slug === slug);
 export const paragraphs = (value: string) => value.split(/\n\n+/).map(part => part.trim()).filter(Boolean);

@@ -95,7 +95,7 @@ Photographs of rooms and people, or a film. Logos stay logos. A sharp mark is ac
 
 ## What VisionSeek will take
 
-1. The forum name is the H1; “Conferences & Forums” stays a breadcrumb.
+1. The forum name is the H1; “Conferences” stays a breadcrumb.
 2. The edition line is a fact in type: **First edition: April 2027, Incheon** / **الإصدار الأول: أبريل 2027، إنتشون**. City only. No day, no hall.
 3. A four-fact strip under the title (edition / when / where / access), in the Shangri-La + Milken manner.
 4. Real section titles (About / Why / Themes / Format), sized like MSC/WEF H2s, not lime micro-labels.
