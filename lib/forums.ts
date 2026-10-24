@@ -89,3 +89,8 @@ export const tx = (locale: Locale, value: Bi) => value[locale];
 export const forumPath = (locale: Locale) => (locale === 'ar' ? '/ar/forums' : '/forums');
 export const forumBySlug = (slug: string) => forumsContent.forums.find(forum => forum.slug === slug);
 export const paragraphs = (value: string) => value.split(/\n\n+/).map(part => part.trim()).filter(Boolean);
+export const firstSentence = (value: string) => {
+  const para = paragraphs(value)[0] ?? value;
+  const match = para.match(/^.+?[.!?؟](?:\s|$)/u);
+  return match ? match[0].trim() : para;
+};
