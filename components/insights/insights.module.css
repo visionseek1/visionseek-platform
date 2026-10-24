@@ -68,7 +68,12 @@
 .framework .order i { width: 10px; height: 10px; background: var(--lime); }
 .framework p:last-child { font-size: 15px; line-height: 1.8; color: #d6d9d7; margin-top: auto; }
 
-.item { background: var(--card); border: 1px solid var(--rule); padding: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--ink) !important; text-decoration: none; }
+.item { background: var(--card); border: 1px solid var(--rule); padding: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--ink) !important; text-decoration: none; overflow: hidden; }
+.item.hasCover { padding: 0; gap: 0; }
+.itemCover { position: relative; aspect-ratio: 210 / 297; background: #0b0d0c; }
+.itemCover img { object-fit: cover; object-position: top center; }
+.itemBody { display: flex; flex-direction: column; gap: 10px; }
+.item.hasCover .itemBody { padding: 24px; }
 .page.page .item h3 { font-size: 20px; line-height: 1.5; }
 .item p { font-size: 15px; line-height: 1.8; color: var(--body); }
 .kindLine { font-size: 13px; font-weight: 600; color: var(--violet); }
@@ -124,3 +129,5 @@
 .listBody { display: block; }
 .listGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; }
 .listGrid .item { padding: clamp(24px, 3vw, 36px); }
+.listGrid .item.hasCover { padding: 0; }
+.listGrid .item.hasCover .itemBody { padding: clamp(24px, 3vw, 36px); }
