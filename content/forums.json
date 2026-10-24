@@ -38,11 +38,11 @@
     },
     "who": {
       "en": "Who attends",
-      "ar": "مين بيحضر"
+      "ar": "من يحضر"
     },
     "outcome": {
       "en": "What comes out",
-      "ar": "اللي بيطلع من الحوار"
+      "ar": "ما يصدر عن الحوار"
     },
     "honesty": {
       "en": "No specific venue in Incheon, and no names, partners or sponsors have been set.",
@@ -75,11 +75,11 @@
       },
       "opening": {
         "en": "The technologies that will shape the next decade are not bought. They are built and localized. Korea did this in a generation. The Arab world has the ambition and the means to lead. The Incheon Dialogue is where both sides sit down to decide how that happens.",
-        "ar": "القدرات التكنولوجية اللي هتشكّل العقد الجاي مش بتتشترى، دي بتتبني وبتتوطّن. كوريا عملت ده خلال جيل واحد، والعالم العربي عنده الطموح والإمكانيات إنه يقود. «حوار إنتشون» هو المكان اللي بيقعد فيه الطرفين عشان يقرروا إزاي ده يحصل."
+        "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن. حقّقت كوريا ذلك في جيل واحد، والعالم العربي يملك الطموح والإمكانات ليقود. «حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
       },
       "what": {
         "en": "A small, closed annual forum, convened by VisionSeek in Incheon. It brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities in seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
-        "ar": "منتدى سنوي صغير ومغلق، بتنظمه VisionSeek في إنتشون. بيجمع اللي بياخدوا قرارات التكنولوجيا في كوريا والعالم العربي، عشان يتكلموا بصراحة عن نقل القدرات الحرجة وتوطينها في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        "ar": "منتدى سنوي صغير ومغلق، تنظّمه VisionSeek في إنتشون. يجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي، ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
       },
       "principles": [
         {
@@ -89,7 +89,7 @@
           },
           "text": {
             "en": "Attendance is by invitation only, so the conversation can be real.",
-            "ar": "الحضور بالدعوة بس، عشان النقاش يكون حقيقي."
+            "ar": "الحضور بالدعوة فقط، حتى يكون النقاش حقيقيًا."
           }
         },
         {
@@ -99,7 +99,7 @@
           },
           "text": {
             "en": "Sessions follow the Chatham House Rule: use what was said, without naming who said it.",
-            "ar": "الجلسات بقاعدة Chatham House، يعني بنستخدم اللي اتقال من غير ما نقول مين قاله."
+            "ar": "تُعقد الجلسات وفق قاعدة Chatham House: يُستخدم ما قيل من دون تسمية قائله."
           }
         },
         {
@@ -109,7 +109,7 @@
           },
           "text": {
             "en": "No selling, no product pitches. The point is the decision.",
-            "ar": "مفيش بيع ولا عروض منتجات، والهدف هو القرار."
+            "ar": "لا بيع ولا عروض منتجات؛ الغاية هي القرار."
           }
         },
         {
@@ -119,7 +119,7 @@
           },
           "text": {
             "en": "It is held each year, and the Arab Technology Capability Index is announced there.",
-            "ar": "بيتعمل كل سنة، وبيتعلن فيه «مؤشر القدرة التكنولوجية العربية»."
+            "ar": "يُعقد كل سنة، ويُعلن فيه «مؤشر القدرة التكنولوجية العربية»."
           }
         }
       ],
@@ -134,11 +134,11 @@
       ],
       "who": {
         "en": "Those responsible for technology in Arab government bodies; chief executives and technology leaders in Arab institutions; leaders of Korean companies and agencies; and researchers whose word carries weight in the seven technologies.",
-        "ar": "المسؤولين عن التكنولوجيا في جهات حكومية عربية، ورؤساء تنفيذيين ومديري تكنولوجيا في مؤسسات عربية، وقيادات شركات وهيئات كورية، وباحثين ليهم كلمة مسموعة في التكنولوجيات السبعة."
+        "ar": "المسؤولون عن التكنولوجيا في جهات حكومية عربية، والرؤساء التنفيذيون ومديرو التكنولوجيا في مؤسسات عربية، وقيادات شركات وهيئات كورية، وباحثون لهم كلمة مسموعة في التكنولوجيات السبعة."
       },
       "outcome": {
         "en": "A discussion paper before the dialogue, a summary after it, and clear partnership priorities between the two sides.",
-        "ar": "ورقة نقاش بتطلع قبل الحوار، وملخص بيطلع بعده، وأولويات شراكة واضحة بين الطرفين."
+        "ar": "ورقة نقاش تصدر قبل الحوار، وملخص يصدر بعده، وأولويات شراكة واضحة بين الطرفين."
       },
       "invite": {
         "label": {

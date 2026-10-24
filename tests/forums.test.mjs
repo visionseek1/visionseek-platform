@@ -29,7 +29,9 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   for (const key of invented) {
     assert.equal(first[key], undefined, `do not invent ${key}`);
   }
-  assert.match(first.opening.ar, /بتتوطّن/);
+  assert.match(first.opening.ar, /تُوطَّن/);
+  const arabic = JSON.stringify(forums).match(/"ar":"[^"]+"/g)?.join('\n') ?? '';
+  assert.doesNotMatch(arabic, /عشان|مفيش|بيتعمل|بتطلع|مين بيحضر|اللي بيطلع/);
   assert.match(first.what.ar, /التكنولوجيات السبعة/);
   assert.match(first.what.en, /seven foundational technologies/);
   assert.equal(first.principles.length, 4);

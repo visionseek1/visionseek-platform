@@ -3930,13 +3930,13 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: مين بيحضر
+              - label: من يحضر
                 name: who
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: اللي بيطلع من الحوار
+              - label: ما يصدر عن الحوار
                 name: outcome
                 widget: object
                 fields:
@@ -4024,13 +4024,13 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: مين بيحضر
+              - label: من يحضر
                 name: who
                 widget: object
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: اللي بيطلع من الحوار
+              - label: ما يصدر عن الحوار
                 name: outcome
                 widget: object
                 fields:
