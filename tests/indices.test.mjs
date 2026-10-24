@@ -90,6 +90,8 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.doesNotMatch(blob, /Stanford|شراكة|شريك رسمي|partnership|endorsed by/i);
   assert.doesNotMatch(blob, /VTO|2036|2027|أبريل|April/);
   assert.match(read('components/indices/pages.tsx'), /from 'next\/image'/);
+  assert.match(read('components/indices/pages.tsx'), /maxWidth: 1280/);
+  assert.match(read('components/indices/pages.tsx'), /maxHeight: 480/);
   assert.doesNotMatch(read('components/indices/pages.tsx'), /padStart|styles\.num|<form/i);
 });
 
