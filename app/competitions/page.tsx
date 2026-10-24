@@ -1,9 +1,7 @@
 import type {Metadata} from 'next';
-import {IBM_Plex_Sans} from 'next/font/google';
 import {CompetitionsPage} from '@/components/competitions/competitions-page';
+import {plexSans} from '@/components/competitions/plex-sans';
 import {competitions} from '@/lib/competitions';
-
-const plexSans = IBM_Plex_Sans({subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap', variable: '--font-plex-sans'});
 
 // Hourly, so an open card turns «Filled» soon after its deadline without a new deploy.
 export const revalidate = 3600;
