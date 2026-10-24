@@ -5,8 +5,8 @@
       "ar": "المؤتمرات والمنتديات | VisionSeek"
     },
     "description": {
-      "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. The first edition is coming soon.",
-      "ar": "حوار إنتشون منتدى صغير بالدعوة فقط لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول قريبًا."
+      "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
+      "ar": "حوار إنتشون منتدى صغير بالدعوة فقط لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول: أبريل 2027، إنتشون."
     }
   },
   "page": {
@@ -27,8 +27,8 @@
       "ar": "منتديات VisionSeek بالدعوة فقط. أولها حوار إنتشون: منتدى قيادة التكنولوجيا بين كوريا والعالم العربي."
     },
     "status": {
-      "en": "The first edition is coming soon. Attendance is by invitation only.",
-      "ar": "الإصدار الأول قريبًا. الحضور بالدعوة فقط."
+      "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
+      "ar": "الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط."
     }
   },
   "labels": {
@@ -49,8 +49,8 @@
       "ar": "اللي بيطلع من الحوار"
     },
     "honesty": {
-      "en": "No date, no specific venue in Incheon, and no names, partners or sponsors have been set.",
-      "ar": "لا تاريخ ولا مكان محدد داخل إنتشون، ولا أسماء، ولا شركاء ولا رعاة."
+      "en": "No specific venue in Incheon, and no names, partners or sponsors have been set.",
+      "ar": "لا مكان محدد داخل إنتشون، ولا أسماء، ولا شركاء ولا رعاة."
     },
     "host": {
       "en": "Invitations are considered by Ahmed Abdelalim.",
@@ -81,8 +81,8 @@
         "ar": "منتدى قيادة التكنولوجيا بين كوريا والعالم العربي — بالدعوة فقط"
       },
       "status": {
-        "en": "The first edition is coming soon. Attendance is by invitation only.",
-        "ar": "الإصدار الأول قريبًا. الحضور بالدعوة فقط."
+        "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
+        "ar": "الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط."
       },
       "image": "/forums/incheon-dialogue.jpg",
       "imageAlt": {

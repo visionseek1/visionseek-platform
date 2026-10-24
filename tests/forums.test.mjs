@@ -12,10 +12,9 @@ test('forums.json is bilingual and ready for more entries', () => {
   assert.ok(isText(forums.page.title));
   assert.equal(forums.page.title.ar, 'المؤتمرات والمنتديات');
   assert.equal(forums.page.title.en, 'Conferences & Forums');
-  assert.match(forums.page.status.ar, /قريبًا/);
-  assert.match(forums.page.status.en, /coming soon/i);
-  assert.match(forums.page.status.ar, /دعوة/);
-  assert.match(forums.page.status.en, /invitation/i);
+  assert.equal(forums.page.status.ar, 'الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط.');
+  assert.equal(forums.page.status.en, 'First edition: April 2027, Incheon. Attendance is by invitation only.');
+  assert.doesNotMatch(forums.page.status.en, /April\s+\d{1,2}(?!\d)/);
   assert.ok(Array.isArray(forums.forums) && forums.forums.length >= 1);
 });
 
@@ -39,7 +38,13 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   }
   assert.match(first.principles[1].text.en, /Chatham House/);
   assert.match(first.principles[3].text.ar, /مؤشر القدرة التكنولوجية العربية/);
+  assert.match(first.status.ar, /أبريل 2027، إنتشون/);
+  assert.match(first.status.en, /April 2027, Incheon/);
   assert.match(first.status.en, /invitation only/i);
+  assert.match(forums.labels.honesty.en, /No specific venue in Incheon/);
+  assert.match(forums.labels.honesty.ar, /لا مكان محدد داخل إنتشون/);
+  assert.doesNotMatch(forums.labels.honesty.en, /No date/i);
+  assert.doesNotMatch(forums.labels.honesty.ar, /لا تاريخ/);
   assert.match(forums.labels.host.en, /Ahmed Abdelalim/);
   assert.doesNotMatch(forums.labels.host.en, /\bDr\.?\b/);
   assert.doesNotMatch(JSON.stringify(first), /\bDr\.?\b/);
@@ -99,6 +104,8 @@ test('the built forums pages are native RTL and LTR and keep the draft facts hon
   assert.match(ar, /المؤتمرات والمنتديات/);
   assert.match(en, /Incheon Dialogue/);
   assert.match(ar, /حوار إنتشون/);
+  assert.match(en, /April 2027, Incheon/);
+  assert.match(ar, /أبريل 2027، إنتشون/);
   assert.match(en, /invitation only/i);
   assert.match(ar, /الحضور بالدعوة فقط/);
   assert.match(en, /Arab Technology Capability Index/);

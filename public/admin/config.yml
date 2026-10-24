@@ -3862,7 +3862,7 @@ collections:
 
   - name: forums
     label: المؤتمرات والمنتديات
-    description: "صفحة /forums و /ar/forums. أضف منتدى جديدًا من القائمة. لا تكتب موعدًا ولا مكانًا ولا متحدثين ولا شركاء ولا رعاة ما لم تُعتمد."
+    description: "صفحة /forums و /ar/forums. أضف منتدى جديدًا من القائمة. الشهر المعتمد فقط (أبريل 2027). لا تكتب يومًا ولا مكانًا محددًا داخل إنتشون ولا متحدثين ولا شركاء ولا رعاة."
     preview_path: "ar/forums"
     editor: {preview: false}
     files:
@@ -3914,7 +3914,7 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: "حالة الصفحة (مثل «قريبًا — بالدعوة»)"
+              - label: "حالة الصفحة (مثل «أبريل 2027، إنتشون — بالدعوة»)"
                 name: status
                 widget: object
                 fields:
