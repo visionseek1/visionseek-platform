@@ -74,9 +74,54 @@
 .page.ar .masthead { letter-spacing: 0; }
 
 .hero h1 {
-  font-size: clamp(3.1rem, 7vw, 6.2rem);
-  max-width: 18ch;
+  font-size: clamp(2.35rem, 5.4vw, 4.4rem);
+  max-width: 22ch;
   margin: 0 0 1.4rem !important;
+}
+
+.page.en .hero h1 { max-width: 18ch; }
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin: 1.8rem 0 0.85rem;
+}
+
+.buttonGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid rgba(245, 245, 242, 0.35);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.buttonGhost:hover { border-color: var(--lime); color: var(--lime); }
+
+.cardQuestion {
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.cardQuestion span {
+  display: block;
+  color: var(--lime);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.page.ar .cardQuestion span {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.8rem;
 }
 
 .visual {
@@ -168,46 +213,140 @@
 .catalog h2 { font-size: 1.6rem; }
 .catalogHead p { color: var(--mute); line-height: 1.75; }
 
-.cards {
+.products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
-.card {
+.product {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  padding: 1.4rem 1.35rem;
+  padding: 1.4rem 1.35rem 1.5rem;
   background: var(--panel);
   border: 1px solid var(--line);
-  text-decoration: none;
   min-height: 11rem;
 }
 
-.cardVisual {
-  display: block;
-  margin: -1.4rem -1.35rem 0;
-  background: #050505;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
+.product h3 { font-size: 1.28rem; max-width: none; }
+.cardDef, .cardLead { color: var(--body); font-size: 0.98rem; line-height: 1.7; }
+.productUnnamed .cardLead { font-size: 1.18rem; }
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0.2rem 0 0;
 }
 
-.cardVisual img {
-  display: block;
+.field dt {
+  color: var(--lime);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.page.ar .field dt {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.8rem;
+}
+
+.field dd {
+  color: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.more {
+  margin-top: auto;
+  color: var(--lime);
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.methodLink { color: var(--lime); font-weight: 650; }
+.methodLink:hover { color: var(--mint); }
+
+.diagram {
+  margin: 3.4rem 0 0;
+  padding: 1.8rem 1.6rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.diagram figcaption h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  margin: 0 0 0.7rem !important;
+}
+
+.diagram figcaption p {
+  max-width: 42rem;
+  color: var(--body);
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.diagramFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.diagramNode {
+  width: min(100%, 28rem);
+  background: #101313;
+  border-top: 2px solid var(--lime);
+  padding: 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.diagramNode strong { font-size: 1.05rem; }
+.diagramNode span { color: var(--mute); font-size: 0.92rem; line-height: 1.6; }
+
+.diagramSource { width: min(100%, 36rem); }
+
+.diagramFeeds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--lime);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.diagramArrow {
+  width: 2px;
+  height: 1.6rem;
+  background: var(--lime);
+}
+
+.diagramTargets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
   width: 100%;
-  height: auto;
-  max-width: 1280px;
-  max-height: 720px;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  object-position: center;
 }
 
-.card:hover { border-color: rgba(207, 255, 0, 0.45); }
-.card h3 { font-size: 1.35rem; }
-.card p { color: var(--mute); font-size: 0.95rem; line-height: 1.7; }
-.more { margin-top: auto; color: var(--lime); font-weight: 650; font-size: 0.92rem; }
+.diagramTargets .diagramNode { width: 100%; }
+.diagramUnnamed { justify-content: center; }
+
+.techs {
+  margin-top: 3.4rem;
+}
+
+.techs h2, .techs h3 {
+  font-size: 1.6rem;
+  margin: 0 0 1.2rem !important;
+}
 
 .article {
   margin-top: 4.2rem;
@@ -270,7 +409,7 @@
 
 .principles {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.85rem;
   margin: 1.3rem 0 0;
   padding: 0;
@@ -283,9 +422,16 @@
   border-top: 2px solid var(--lime);
 }
 
-.principle h4 {
+.principle :is(h3, h4) {
   font-size: 1.15rem !important;
   margin: 0 0 0.65rem !important;
+}
+
+.product h3 a:hover { color: var(--lime); }
+
+.diagram figcaption h3 {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  margin: 0 0 0.7rem !important;
 }
 
 .principle p {
@@ -362,9 +508,202 @@
 
 .page[dir=rtl] .back svg { transform: rotate(180deg); }
 
+.map {
+  margin: 3.6rem 0 0;
+}
+
+.map figcaption h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  margin: 0 0 0.7rem !important;
+}
+
+.map figcaption p {
+  max-width: 44rem;
+  color: var(--body);
+  line-height: 1.8;
+  margin-bottom: 1.3rem;
+}
+
+.mapFrame {
+  background: #07080a;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.mapSvg { display: block; width: 100%; height: auto; }
+.mapSea { fill: #0a0c10; }
+.mapLater { fill: #2a2e33; stroke: #101318; stroke-width: 1; }
+.mapPilot { fill: #cfff00; stroke: #0b0d0e; stroke-width: 1.2; }
+.mapDot { fill: #cfff00; stroke: #0b0d0e; stroke-width: 1.5; }
+.mapLabel {
+  fill: #f5f5f2;
+  font-size: 18px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #07080a;
+  stroke-width: 4px;
+}
+
+.mapLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  list-style: none;
+  padding: 1rem 0 0;
+  margin: 0;
+  color: var(--mute);
+  font-size: 0.92rem;
+}
+
+.mapLegend li { display: flex; align-items: center; gap: 0.55rem; }
+.mapSwatchPilot, .mapSwatchLater {
+  width: 0.9rem;
+  height: 0.9rem;
+  display: inline-block;
+}
+.mapSwatchPilot { background: var(--lime); }
+.mapSwatchLater { background: #2a2e33; border: 1px solid var(--line); }
+
+.measure {
+  margin-top: 4rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.measure h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 0 0 0.9rem !important; }
+.measureIntro { max-width: 44rem; color: var(--body); line-height: 1.8; margin-bottom: 1.8rem; }
+
+.scale { margin-top: 2rem; }
+.scale h3 { font-size: 1.2rem; margin: 0 0 0.9rem !important; }
+
+.ladder, .scaleCodes {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: none;
+}
+
+.ladder li, .scaleCodes li {
+  background: var(--panel);
+  border-top: 2px solid var(--lime);
+  padding: 1.05rem 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-height: 100%;
+}
+
+.ladder li strong, .scaleCodes li strong { font-size: 1rem; }
+.ladder li p, .scaleCodes li p { color: var(--mute); font-size: 0.88rem; line-height: 1.65; }
+.scaleCode {
+  color: var(--lime);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.measureFacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.measureFacts div, .measureActions div {
+  background: var(--panel);
+  padding: 1.3rem 1.2rem;
+}
+
+.measureFacts h3, .measureActions h3, .pressGrid h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.55rem !important;
+}
+
+.measureFacts p, .pressGrid p { color: var(--body); line-height: 1.75; }
+
+.measureNote {
+  margin: 1.4rem 0 0;
+  color: var(--lime);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.measureActions {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.cite { color: var(--body); line-height: 1.75; font-size: 0.95rem; }
+
+.release {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.8rem 1.5rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--lime);
+  color: var(--black);
+  font-weight: 800;
+}
+
+.release p { color: var(--black); font-size: 0.98rem; }
+
+.press {
+  margin-top: 3.4rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.press h2 { font-size: 1.6rem; margin: 0 0 0.7rem !important; }
+.press > p { max-width: 42rem; color: var(--body); line-height: 1.8; }
+
+.pressGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.pressGrid > div {
+  background: var(--panel);
+  padding: 1.3rem 1.2rem;
+}
+
+.related {
+  margin-top: 3.4rem;
+  padding: 1.8rem 1.6rem;
+  background: var(--panel);
+  border-inline-start: 3px solid var(--lime);
+}
+
+.related h2 { font-size: 1.4rem; margin: 0 0 0.6rem !important; }
+.related p { color: var(--body); line-height: 1.75; }
+.related ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.3rem;
+  list-style: none;
+  padding: 1rem 0 0;
+  margin: 0;
+}
+
+.related a { color: var(--lime); font-weight: 650; }
+.related a:hover { color: var(--mint); }
+
+@media (max-width: 1100px) {
+  .products { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 900px) {
-  .panels, .principles { grid-template-columns: 1fr; }
-  .hero h1 { font-size: clamp(2.6rem, 12vw, 3.6rem); }
+  .panels, .principles, .diagramTargets, .ladder, .scaleCodes, .measureFacts, .measureActions, .pressGrid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(2.1rem, 9vw, 3.1rem); }
 }
 
 @media (max-width: 760px) {
@@ -373,8 +712,8 @@
   .article { margin-top: 3rem; padding-top: 2rem; }
   .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillar { min-height: 5.4rem; }
-  .band, .results { padding: 1.4rem 1.15rem; }
-  .button { width: 100%; }
+  .band, .results, .diagram, .related, .release { padding: 1.4rem 1.15rem; }
+  .button, .buttonGhost { width: 100%; }
 }
 
 @media (max-width: 400px) {

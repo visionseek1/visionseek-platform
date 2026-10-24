@@ -96,8 +96,8 @@
         "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن.\n\nحقّقت كوريا ذلك في جيل واحد. والعالم العربي يملك الطموح والإمكانات ليقود.\n\n«حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
       },
       "what": {
-        "en": "An invitation-only annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
-        "ar": "منتدى سنوي مغلق، بالدعوة، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        "en": "An invitation-only annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, next-generation networks 5G-6G, robotics, clean energy and batteries, and health biotechnology.",
+        "ar": "منتدى سنوي مغلق، بالدعوة، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، وشبكات الجيل التالي 5G-6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
       },
       "principles": [
         {
@@ -145,7 +145,7 @@
         {"en": "Semiconductors", "ar": "الرقائق"},
         {"en": "Artificial intelligence", "ar": "الذكاء الاصطناعي"},
         {"en": "Cloud and data", "ar": "السحابة والبيانات"},
-        {"en": "5G/6G", "ar": "5G/6G"},
+        {"en": "Next-generation networks 5G-6G", "ar": "شبكات الجيل التالي 5G-6G"},
         {"en": "Robotics", "ar": "الروبوتات"},
         {"en": "Clean energy and batteries", "ar": "الطاقة النظيفة والبطاريات"},
         {"en": "Health biotechnology", "ar": "التكنولوجيا الحيوية والصحية"}
@@ -181,8 +181,8 @@
           "ar": "شراء التكنولوجيا صفقة، أما امتلاكها فإنجاز.\n\nخلف كل قدرة وُطّنت فعلًا فريق تعلّم وبنى وأصبح قادرًا على التشغيل والتطوير دون أن ينتظر أحدًا. هذه الجوائز تكرّم هذا الإنجاز، وتضع له معيارًا يُحتذى."
         },
         "what": {
-          "en": "Annual awards given by VisionSeek at the Incheon Dialogue. They honor institutions, individuals, and Korean–Arab partnerships that transferred a critical capability, localized it, and now own it — in the seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
-          "ar": "جوائز سنوية تمنحها VisionSeek ضمن «حوار إنتشون»، تكرّم المؤسسات والأفراد والشراكات الكورية-العربية التي نقلت قدرة حرجة ووطّنتها وأصبحت تملكها، في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+          "en": "Annual awards given by VisionSeek at the Incheon Dialogue. They honor institutions, individuals, and Korean–Arab partnerships that transferred a critical capability, localized it, and now own it — in the seven foundational technologies: semiconductors, artificial intelligence, cloud and data, next-generation networks 5G-6G, robotics, clean energy and batteries, and health biotechnology.",
+          "ar": "جوائز سنوية تمنحها VisionSeek ضمن «حوار إنتشون»، تكرّم المؤسسات والأفراد والشراكات الكورية-العربية التي نقلت قدرة حرجة ووطّنتها وأصبحت تملكها، في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، وشبكات الجيل التالي 5G-6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
         },
         "principles": [
           {
