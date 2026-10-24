@@ -21,11 +21,12 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/forums`, destination: `${prefix}/conferences`, permanent: true},
         {source: `${prefix}/forums/:path*`, destination: `${prefix}/conferences/:path*`, permanent: true},
         // Insights was renamed Reports (24 Oct 2026): old /insights links keep working.
+        // The research→reports move for this paper must sit above the catch-all.
         {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/reports/reports/half-the-picture`, permanent: true},
+        {source: `${prefix}/insights/research/half-the-picture-ar.pdf`, destination: '/reports/reports/half-the-picture-ar.pdf', permanent: true},
         {source: `${prefix}/insights`, destination: `${prefix}/reports`, permanent: true},
         {source: `${prefix}/insights/:path*`, destination: `${prefix}/reports/:path*`, permanent: true},
       ]),
-      {source: '/insights/research/half-the-picture-ar.pdf', destination: '/reports/reports/half-the-picture-ar.pdf', permanent: true},
       // The governance section was folded into Masterclass (23 Oct 2026).
       {source: '/governance/single-track-trap', destination: '/masterclass/single-track-trap', permanent: true},
       {source: '/ar/governance/single-track-trap', destination: '/ar/masterclass/single-track-trap', permanent: true},

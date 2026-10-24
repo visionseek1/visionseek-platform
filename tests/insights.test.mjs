@@ -256,7 +256,10 @@ test('Insights was renamed Reports: /insights 308s to /reports, leftover reports
   assert.match(redirects, /source: `\$\{prefix\}\/insights\/:path\*`/);
   assert.match(redirects, /destination: `\$\{prefix\}\/reports\/:path\*`/);
   assert.match(redirects, /source: `\$\{prefix\}\/insights\/research\/half-the-picture`, destination: `\$\{prefix\}\/reports\/reports\/half-the-picture`/);
-  assert.match(redirects, /source: '\/insights\/research\/half-the-picture-ar\.pdf', destination: '\/reports\/reports\/half-the-picture-ar\.pdf'/);
+  assert.match(redirects, /source: `\$\{prefix\}\/insights\/research\/half-the-picture-ar\.pdf`, destination: '\/reports\/reports\/half-the-picture-ar\.pdf'/);
+  const pdfRule = redirects.indexOf('/insights/research/half-the-picture-ar.pdf');
+  const catchAll = redirects.indexOf('${prefix}/insights/:path*');
+  assert.ok(pdfRule !== -1 && pdfRule < catchAll, 'the research PDF 308 must win over the /insights catch-all');
   const sitemap = read('app/sitemap.ts');
   assert.match(sitemap, /path: "\/reports"/);
   assert.match(sitemap, /path: "\/ar\/reports"/);
