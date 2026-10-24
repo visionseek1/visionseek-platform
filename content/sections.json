@@ -14,7 +14,7 @@
         "en": "Bring an important need, a deep expertise or a capability the world should use. Find your path into a mission.",
         "ar": "قدّم احتياجًا مهمًا أو خبرة عميقة أو قدرة تستحق الاستخدام. اكتشف مسارك للمشاركة في مهمة."
       },
-      "image": "industry",
+      "image": "/work-with-us/hero-sign.jpg",
       "links": [
         {
           "href": "/start",
@@ -24,38 +24,31 @@
           }
         },
         {
-          "href": "/work-with-us/new-to-visionseek",
+          "href": "/work-with-us#competitions",
           "label": {
-            "en": "New to VisionSeek",
-            "ar": "ابدأ مع VisionSeek"
+            "en": "Competitions",
+            "ar": "المسابقات"
           }
         },
         {
-          "href": "/work-with-us/how-to-respond",
+          "href": "/work-with-us#now-competing",
           "label": {
-            "en": "How to respond",
-            "ar": "كيف تشارك؟"
+            "en": "Now competing",
+            "ar": "مشاركين فيها دلوقتي"
           }
         },
         {
-          "href": "/work-with-us/prepare-a-concept",
+          "href": "/work-with-us#join",
           "label": {
-            "en": "Prepare a concept",
-            "ar": "جهّز تصورًا"
+            "en": "Join",
+            "ar": "انضم"
           }
         },
         {
-          "href": "/work-with-us/review-and-selection",
+          "href": "/work-with-us#how-we-work",
           "label": {
-            "en": "Review & selection",
-            "ar": "المراجعة والاختيار"
-          }
-        },
-        {
-          "href": "/work-with-us/transition",
-          "label": {
-            "en": "Transition to use",
-            "ar": "النقل للتشغيل"
+            "en": "How we work",
+            "ar": "إزاي بنشتغل"
           }
         }
       ]

@@ -1,0 +1,243 @@
+{
+  "hub": {
+    "eyebrow": {
+      "en": "VISIONSEEK INDICES",
+      "ar": "مؤشرات VisionSeek"
+    },
+    "title": {
+      "en": "Indices",
+      "ar": "المؤشرات"
+    },
+    "intro": {
+      "en": "VisionSeek measures. It does not sell a ranking, and it does not publish a result before the method is public. This page holds the first index.",
+      "ar": "VisionSeek تقيس. لا تبيع ترتيبًا، ولا تعلن نتيجة قبل أن يُنشر المنهج. هذه الصفحة للمؤشر الأول."
+    },
+    "measuringBodyTitle": {
+      "en": "The measuring body",
+      "ar": "جهة القياس"
+    },
+    "measuringBody": {
+      "en": "VisionSeek is the measuring body. When an edition is published, VisionSeek issues it. The methodology will be public before any result.",
+      "ar": "VisionSeek هي جهة القياس. حين يصدر إصدار، يصدر عنها. ويُنشر المنهج قبل أي نتيجة."
+    },
+    "empty": {
+      "en": "None yet.",
+      "ar": "لا يوجد بعد."
+    },
+    "catalogTitle": {
+      "en": "All indices",
+      "ar": "كل المؤشرات"
+    },
+    "catalogIntro": {
+      "en": "A new index is added here when it is adopted.",
+      "ar": "يُضاف مؤشر جديد من هنا حين يُعتمد."
+    },
+    "openIndex": {
+      "en": "Open the index",
+      "ar": "افتح المؤشر"
+    },
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "back": {
+      "en": "All indices",
+      "ar": "كل المؤشرات"
+    }
+  },
+  "notify": {
+    "label": {
+      "en": "Notify Ahmed Abdelalim",
+      "ar": "أبلغ أحمد عبدالعليم"
+    },
+    "hint": {
+      "en": "Opens a draft in your email app. Nothing is sent automatically.",
+      "ar": "يفتح الزر مسودة في تطبيق بريدك. لا يحدث إرسال تلقائي."
+    },
+    "email": "abdelalim@visionseek.org",
+    "subject": {
+      "en": "Notify me — VisionSeek Indices, pilot edition",
+      "ar": "أبلغني — مؤشرات VisionSeek، الإصدار التجريبي"
+    }
+  },
+  "indices": [
+    {
+      "slug": "arab-technology-capability",
+      "status": "upcoming",
+      "statusLabel": {
+        "en": "Pilot edition coming soon",
+        "ar": "الإصدار التجريبي قريبًا"
+      },
+      "title": {
+        "en": "Arab Technology Capability Index",
+        "ar": "مؤشر القدرة التكنولوجية العربية"
+      },
+      "shortTitle": {
+        "en": "Arab Technology Capability",
+        "ar": "القدرة التكنولوجية العربية"
+      },
+      "subtitle": {
+        "en": "Seven Core Technologies — Ownership & Localization",
+        "ar": "التكنولوجيات السبعة الأساسية — الامتلاك والتوطين"
+      },
+      "heroImage": "/indices/arab-technology-capability.jpg",
+      "heroAlt": {
+        "en": "Key visual for the Arab Technology Capability Index: a silent world map and a lit hexagonal frame. No figures.",
+        "ar": "الرسم المفتاحي لمؤشر القدرة التكنولوجية العربية: خريطة صامتة وإطار سداسي مضيء. بلا أرقام."
+      },
+      "lede": {
+        "en": "Using a technology is one thing. Owning it is something else entirely. This index measures the difference: ownership and localization, not purchase.",
+        "ar": "إن استخدام الدولة للتكنولوجيا شيء، وامتلاكها شيء آخر تمامًا. يقيس هذا المؤشر الفرق بينهما: الامتلاك والتوطين، لا الشراء."
+      },
+      "measuresTitle": {
+        "en": "What the index is",
+        "ar": "ما هو المؤشر"
+      },
+      "measures": {
+        "en": "An independent annual report issued by VisionSeek. It measures ownership and localization of the core technologies — not use alone.",
+        "ar": "تقرير سنوي مستقل تصدره VisionSeek. يقيس مستوى امتلاك التكنولوجيات الأساسية وتوطينها — لا استخدامها فحسب."
+      },
+      "pillarsTitle": {
+        "en": "The core technologies",
+        "ar": "التكنولوجيات الأساسية"
+      },
+      "pillarsIntro": {
+        "en": "The names are here. Measurement has not begun.",
+        "ar": "الأسماء هنا. لم يبدأ القياس بعد."
+      },
+      "pillars": [
+        {
+          "id": "chips",
+          "name": {
+            "en": "Chips",
+            "ar": "الرقائق"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "en": "Artificial intelligence",
+            "ar": "الذكاء الاصطناعي"
+          }
+        },
+        {
+          "id": "cloud",
+          "name": {
+            "en": "Cloud and data",
+            "ar": "السحابة والبيانات"
+          }
+        },
+        {
+          "id": "networks",
+          "name": {
+            "en": "Next-generation networks",
+            "ar": "شبكات الجيل التالي"
+          }
+        },
+        {
+          "id": "robotics",
+          "name": {
+            "en": "Robotics",
+            "ar": "الروبوتات"
+          }
+        },
+        {
+          "id": "energy",
+          "name": {
+            "en": "Clean energy and batteries",
+            "ar": "الطاقة النظيفة والبطاريات"
+          }
+        },
+        {
+          "id": "biotech",
+          "name": {
+            "en": "Biotech and health tech",
+            "ar": "التكنولوجيا الحيوية والصحية"
+          }
+        }
+      ],
+      "principlesTitle": {
+        "en": "Principles",
+        "ar": "مبادئ المؤشر"
+      },
+      "principles": [
+        {
+          "id": "own",
+          "title": {
+            "en": "Ownership, not use",
+            "ar": "الامتلاك لا الاستخدام"
+          },
+          "text": {
+            "en": "We measure who builds the capability and owns it — not who only buys it.",
+            "ar": "نقيس من يبني القدرة ويملكها، لا من يشتريها فحسب."
+          }
+        },
+        {
+          "id": "method",
+          "title": {
+            "en": "Published method",
+            "ar": "منهجية منشورة"
+          },
+          "text": {
+            "en": "The measurement method will be published in full, and anyone can review it.",
+            "ar": "ستُنشر طريقة القياس كاملة، ويستطيع أي قارئ مراجعتها."
+          }
+        },
+        {
+          "id": "independent",
+          "title": {
+            "en": "Independent",
+            "ar": "مستقل"
+          },
+          "text": {
+            "en": "No sale and no sponsorship shapes the findings.",
+            "ar": "لا بيع ولا رعاية يؤثران في النتائج."
+          }
+        },
+        {
+          "id": "annual",
+          "title": {
+            "en": "Annual",
+            "ar": "سنوي"
+          },
+          "text": {
+            "en": "Each edition builds on the one before it.",
+            "ar": "كل إصدار يُبنى على ما سبقه."
+          }
+        }
+      ],
+      "methodologyTitle": {
+        "en": "Methodology",
+        "ar": "المنهج"
+      },
+      "methodology": {
+        "en": "The methodology will be published. No results before the method, and no comparison before the definitions.",
+        "ar": "المنهجية ستُنشر. لا نتائج قبل المنهج، ولا مقارنة قبل التعريفات."
+      },
+      "pilotTitle": {
+        "en": "First edition",
+        "ar": "الإصدار الأول"
+      },
+      "pilot": {
+        "en": "A pilot edition focused on artificial intelligence, issued with the full measurement method.",
+        "ar": "إصدار تجريبي يركّز على الذكاء الاصطناعي، ومعه طريقة القياس الكاملة."
+      },
+      "audienceTitle": {
+        "en": "Who it is for",
+        "ar": "من يستفيد"
+      },
+      "audience": {
+        "en": "Decision-makers in government, leaders of institutions, investors, researchers, and anyone who wants to see where the Arab world stands on these core capabilities.",
+        "ar": "صنّاع القرار في الحكومات، وقيادات المؤسسات، والمستثمرون، والباحثون، وكل من يريد أن يعرف أين يقف العالم العربي من هذه القدرات الأساسية."
+      },
+      "resultsTitle": {
+        "en": "Results",
+        "ar": "النتائج"
+      },
+      "results": {
+        "en": "No results yet. No scores, no ranking, and no charts that carry figures.",
+        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا رسوم تحمل أرقامًا."
+      }
+    }
+  ]
+}
