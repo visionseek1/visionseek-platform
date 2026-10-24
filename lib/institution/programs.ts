@@ -26,9 +26,10 @@ export const programEntries: Entry[] = concepts.map(c => ({
   slug: c.slug,
   code: c.code,
   title: c.title,
+  name: c.name,
   summary: c.summary,
   category: c.classification ?? t('Program', 'برنامج'),
-  status: c.status ?? t('Pilot-Ready', 'جاهز للتجربة'),
+  status: c.status ?? t('Pilot-Ready', 'جاهز للتجريب'),
   image: c.image,
   action: 'concept',
   cta: {
@@ -39,7 +40,7 @@ export const programEntries: Entry[] = concepts.map(c => ({
   facts: [
     {label: t('Official name', 'الاسم الرسمي'), value: c.name ?? c.title},
     {label: t('Classification', 'التصنيف'), value: c.classification ?? t('Institutional AI', 'ذكاء اصطناعي مؤسسي')},
-    {label: t('Status', 'الحالة'), value: c.status ?? t('Pilot-Ready', 'جاهز للتجربة')},
+    {label: t('Status', 'الحالة'), value: c.status ?? t('Pilot-Ready', 'جاهز للتجريب')},
   ],
   blocks: [
     {title: c.challengeTitle ?? t('The operational reality', 'التحدي المؤسسي'), body: c.challenge},

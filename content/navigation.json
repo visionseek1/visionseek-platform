@@ -148,12 +148,12 @@
     {
       "path": "/insights",
       "en": "Insights",
-      "ar": "Insights",
+      "ar": "الرؤى",
       "children": [
         {
           "href": "/insights",
           "en": "VisionSeek Insights",
-          "ar": "VisionSeek Insights"
+          "ar": "رؤى VisionSeek"
         },
         {
           "href": "/insights/reports",

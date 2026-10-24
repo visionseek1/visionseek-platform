@@ -4,17 +4,16 @@ import Image from 'next/image';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2, BrainCircuit} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, boxMailto, type Sector, type SectorIcon, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
+import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, boxMailto, conceptNotice, type Sector, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 import {ProjectFilter, type ProjectCardData} from './project-filter';
 
 const icons = {energy:Zap,chips:Cpu,flight:Plane,defense:ShieldCheck,robotics:Bot,health:HeartPulse,agriculture:Wheat,cities:Building2,ai:BrainCircuit};
-/** One colour per sector, so every field reads at a glance. */
-export const sectorColors:Record<SectorIcon,string> = {energy:'#FFB347',chips:'#2FD3C7',flight:'#7AA7FF',defense:'#A3B1C6',robotics:'#FF7A59',health:'#FF6B8B',agriculture:'#9BD66B',cities:'#C9A6FF',ai:'#5B8CFF'};
+/** Site accent — lime — one colour for buttons, filters, and field marks. */
+const ACCENT = '#cfff00';
 const allAudiences:ProjectAudience[] = ['government','institution','company','individual'];
 const projectCount = (count:number,locale:Locale) => locale==='ar'?(count===1?'مشروع واحد':count===2?'مشروعان':`${new Intl.NumberFormat('ar').format(count)} مشاريع`):`${count} project${count===1?'':'s'}`;
-const colorOf = (sectorSlug:string) => sectorColors[sectorBySlug(sectorSlug)?.icon ?? 'ai'];
-const tone = (color:string) => ({'--tone':color} as CSSProperties);
+const tone = (color:string=ACCENT) => ({'--tone':color} as CSSProperties);
 const trackOf = (project:Project) => tracks.find(t=>t.sector===project.sector&&t.slug===project.track);
 
 function Frame({locale,path,children}:{locale:Locale;path:string;children:ReactNode}) {
@@ -38,7 +37,7 @@ function cardData(project:Project,locale:Locale):ProjectCardData {
   const track=trackOf(project);
   return {
     id:project.id, href:projectPath(project.slug,locale), title:project.title[locale], summary:project.summary[locale],
-    sector:sectorBySlug(project.sector)?.title[locale] ?? '', track:track?trackLabel(track):'', color:colorOf(project.sector),
+    sector:sectorBySlug(project.sector)?.title[locale] ?? '', track:track?trackLabel(track):'', color:ACCENT,
     mark:project.title.en.trim().charAt(0).toUpperCase(), logo:project.logo,
     audiences:project.profile?.audiences ?? [], audienceText:(project.profile?.audiences ?? []).map(a=>audienceLabels[a][locale]),
   };
@@ -47,7 +46,7 @@ function SectorGrid({locale}:{locale:Locale}) {
   const ar=locale==='ar';
   return <div className={styles.sectorGrid}>{sectors.map((sector,i)=>{
     const Icon=icons[sector.icon];const count=projects.filter(p=>p.sector===sector.slug).length;
-    return <article className={styles.sectorCard} key={sector.slug} style={tone(sectorColors[sector.icon])}>
+    return <article className={styles.sectorCard} key={sector.slug} style={tone()}>
       {sector.anchors.map(anchor=><span className={styles.anchor} id={anchor} key={anchor}/>)}
       <Link href={sectorPath(sector.slug,locale)}>
         <div className={styles.sectorTop}><span className={styles.sectorBar} aria-hidden="true"/><Icon size={22} strokeWidth={1.5} aria-hidden="true"/><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span></div>
@@ -64,21 +63,24 @@ function Contact({locale}:{locale:Locale}) {
     <Link className={styles.primary} href={`${prefix(locale)}/start`}>{ar?'ابنِ حلولك معنا':'Build your solutions with us'}<ArrowRight size={18} aria-hidden="true"/></Link>
   </div></section>;
 }
-function GridHero({children,glow}:{children:ReactNode;glow?:string}) {
-  return <section className={styles.hero} style={glow?tone(glow):undefined}><div className={styles.heroGrid} aria-hidden="true"/><div className={styles.wrap}>{children}</div></section>;
+function GridHero({children,glow,split}:{children:ReactNode;glow?:string;split?:boolean}) {
+  return <section className={styles.hero} style={glow?tone(glow):undefined}><div className={styles.heroGrid} aria-hidden="true"/><div className={split?`${styles.wrap} ${styles.heroSplit}`:styles.wrap}>{children}</div></section>;
 }
 
 export function ProjectsIndex({locale}:{locale:Locale}) {
   const ar=locale==='ar';
   return <Frame locale={locale} path="/projects">
-    <GridHero>
-      <p className={styles.live}><span aria-hidden="true"/>VISIONSEEK / PROJECTS</p>
-      <h1>{ar?<>مشاريع تفتح <em>خيارات جديدة.</em></>:<>Projects that open <em>new possibilities.</em></>}</h1>
-      <p className={styles.lede}>{ar?'أدوات وحلول نبنيها من قراءة ما تحتاجه المؤسسات الآن.':'Tools and solutions we build from what institutions need right now.'}</p>
+    <GridHero split>
+      <div className={styles.heroCopy}>
+        <p className={styles.live}><span aria-hidden="true"/>VISIONSEEK / PROJECTS</p>
+        <h1>{ar?<>مشاريع تفتح <br/><em className={styles.keepTogether}>خيارات جديدة.</em></>:<>Projects that open <em>new possibilities.</em></>}</h1>
+        <p className={styles.lede}>{ar?'أدوات وحلول نبنيها من قراءة ما تحتاجه المؤسسات الآن.':'Tools and solutions we build from what institutions need right now.'}</p>
+        <p className={styles.heroNotice}>{conceptNotice[locale]}</p>
+      </div>
       <dl className={styles.stats}>
         <div><dt>{ar?'مشاريع':'Projects'}</dt><dd dir="ltr">{String(projects.length).padStart(2,'0')}</dd></div>
         <div><dt>{ar?'مجالات عمل':'Sectors'}</dt><dd dir="ltr">{String(sectors.length).padStart(2,'0')}</dd></div>
-        <div><dt>{ar?'لمن نصمّم':'Designed for'}</dt><dd className={styles.liveText}>{ar?'حكومات · مؤسسات · شركات':'Gov · Institutions · Companies'}</dd></div>
+        <div><dt>{ar?'لمن نصمّم':'Designed for'}</dt><dd className={styles.statsPhrase}>{ar?'حكومات · مؤسسات · شركات':'Gov · Institutions · Companies'}</dd></div>
       </dl>
     </GridHero>
     <section className={styles.section} id="project-files"><div className={styles.wrap}>
@@ -95,7 +97,7 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
 
 export function SectorPage({sector,locale}:{sector:Sector;locale:Locale}) {
   const ar=locale==='ar';const children=tracks.filter(track=>track.sector===sector.slug);const Icon=icons[sector.icon];
-  const items=projects.filter(p=>p.sector===sector.slug);const color=sectorColors[sector.icon];
+  const items=projects.filter(p=>p.sector===sector.slug);const color=ACCENT;
   return <Frame locale={locale} path={sectorPath(sector.slug,'en')}>
     <GridHero glow={color}>
       <Breadcrumb locale={locale}/>
@@ -116,7 +118,7 @@ export function SectorPage({sector,locale}:{sector:Sector;locale:Locale}) {
 }
 
 export function TrackPage({track,locale}:{track:Track;locale:Locale}) {
-  const sector=sectorBySlug(track.sector)!;const items=projects.filter(p=>p.sector===track.sector&&p.track===track.slug);const color=sectorColors[sector.icon];
+  const sector=sectorBySlug(track.sector)!;const items=projects.filter(p=>p.sector===track.sector&&p.track===track.slug);const color=ACCENT;
   return <Frame locale={locale} path={trackPath(track,'en')}>
     <GridHero glow={color}>
       <Breadcrumb locale={locale} sector={sector}/>
@@ -149,7 +151,7 @@ function ProfileCard({project,locale}:{project:Project;locale:Locale}) {
 export function ProjectDetail({project,locale}:{project:Project;locale:Locale}) {
   const ar=locale==='ar';const sector=sectorBySlug(project.sector)!;const track=trackOf(project)!;
   const related=projects.filter(p=>p.id!==project.id&&p.sector===project.sector&&p.track===project.track);
-  const file=projectFileById(project.id);const color=sectorColors[sector.icon];
+  const file=projectFileById(project.id);const color=ACCENT;
   const pitch=project.pitch;const box=project.box;
   const tabs:[string,string][]=box?[['why',box.whyTitle[locale]],['inside',box.insideTitle[locale]],['cohort',box.cohortTitle[locale]]]:[
     ...(pitch?[['risks',ar?'الخطر':'The risk'],['gains',ar?'الفائدة':'What you gain']] as [string,string][]:[]),

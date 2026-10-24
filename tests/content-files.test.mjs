@@ -27,7 +27,9 @@ test('site.json carries the contact details once, for the whole site', () => {
   assert.match(site.whatsapp, /^\d{8,15}$/);
   assert.match(site.phoneE164, /^\+\d[\d-]+$/);
   assert.match(site.linkedinUrl, /^https:\/\/www\.linkedin\.com\//);
-  for (const key of ['linkedinName', 'location', 'locationHint', 'footerLocation', 'footerBlurb']) assert.ok(isText(site[key]), key);
+  for (const key of ['linkedinName', 'location', 'locationHint', 'footerLocation', 'footerBlurb', 'tagline']) assert.ok(isText(site[key]), key);
+  assert.equal(site.tagline.en, 'Make It Possible.');
+  assert.equal(site.tagline.ar, 'اجعله ممكنًا.');
 });
 
 // Order is the editor's choice in /admin; the tests check what is there, not where.
@@ -45,9 +47,16 @@ test('two programs, Aegis and Apex, each complete', () => {
   const programs = readDir('programs');
   assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02']);
   assert.deepEqual(programs.map(p => p.slug).sort(), ['aegis', 'apex']);
+  const section = read('sections.json').sections.find(s => s.id === 'programs');
+  assert.equal(section.image, '/programs/hero.jpg');
+  assert.ok(readFileSync(join(root, 'public/programs/hero.jpg')));
   for (const program of programs) {
     for (const key of ['title', 'summary', 'challenge', 'approach', 'status', 'cta']) assert.ok(isText(program[key]), `${program.slug}.${key}`);
     assert.ok(Array.isArray(program.steps) && program.steps.length >= 1, program.slug);
+    assert.match(program.image, /^\/programs\/.+\.jpg$/);
+    assert.ok(readFileSync(join(root, 'public', program.image.replace(/^\//, ''))));
+    assert.match(program.status.ar, /جاهز للتجريب/);
+    assert.doesNotMatch(program.status.ar, /Pilot-Ready/);
   }
 });
 
@@ -103,6 +112,9 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
 
 test('navigation.json keeps the header sections and site-relative paths', () => {
   const nav = read('navigation.json');
+  const insights = nav.sections.find(s => s.path === '/insights');
+  assert.equal(insights.ar, 'الرؤى');
+  assert.equal(insights.children[0].ar, 'رؤى VisionSeek');
   assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/forums', '/indices', '/insights', '/institute', '/korean-solutions', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {

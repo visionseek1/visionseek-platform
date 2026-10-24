@@ -3164,7 +3164,12 @@ collections:
             fields:
               - {label: English, name: en, widget: string}
               - {label: العربية, name: ar, widget: string}
-          - {label: الشعار النصي, name: tagline, widget: string}
+          - label: الشعار النصي
+            name: tagline
+            widget: object
+            fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
           - label: فقرة التذييل
             name: footerBlurb
             widget: object
