@@ -112,6 +112,11 @@ test('Indices: own pages in both languages, sitemap and /admin, in the header af
   assert.equal(item.en, 'Indices');
   assert.equal(item.ar, 'المؤشرات');
   assert.equal(paths[paths.indexOf('/insights') + 1], '/indices');
+  assert.deepEqual(item.children.map(c => c.href), [
+    '/indices',
+    '/indices/arab-technology-capability',
+    '/indices/arab-critical-capabilities-atlas',
+  ]);
   assert.match(read('app/sitemap.ts'), /'\/indices'/);
   assert.match(read('public/admin/config.yml'), /value: "\/indices"/);
   assert.match(read('public/admin/config.yml'), /value: "\/indices\/arab-critical-capabilities-atlas"/);

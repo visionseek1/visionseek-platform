@@ -186,6 +186,11 @@
           "href": "/indices/arab-technology-capability",
           "en": "Arab Technology Capability Index",
           "ar": "مؤشر القدرة التكنولوجية العربية"
+        },
+        {
+          "href": "/indices/arab-critical-capabilities-atlas",
+          "en": "Arab Critical Capabilities Atlas",
+          "ar": "أطلس القدرات العربية الحرجة"
         }
       ]
     },

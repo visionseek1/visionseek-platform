@@ -135,5 +135,5 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   assert.match(read('public/admin/config.yml'), /name: cover/);
   const nav = json('content/navigation.json').sections.map(s => s.path);
   assert.equal(nav[nav.indexOf('/insights') - 1], '/programs');
-  assert.equal(nav[nav.indexOf('/insights') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/insights') + 1], '/indices');
 });
