@@ -3912,19 +3912,25 @@ collections:
             name: labels
             widget: object
             fields:
-              - label: ما هو الحوار
+              - label: عن الحوار
                 name: mandate
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: شكل الحوار
+              - label: لماذا
+                name: why
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الشكل
                 name: format
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: التكنولوجيات السبعة
+              - label: المحاور
                 name: themes
                 widget: object
                 fields:
@@ -3938,6 +3944,18 @@ collections:
                   - {label: العربية, name: ar, widget: string}
               - label: ما يصدر عن الحوار
                 name: outcome
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: كتلة حوار إنتشون
+                name: dialogue
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: سجّل اهتمامك
+                name: register
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
@@ -3981,6 +3999,31 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
+              - label: سطر الإصدار
+                name: edition
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: حقائق الإصدار
+                name: facts
+                widget: list
+                required: false
+                hint: "أربعة حقائق: الإصدار، الزمان، المكان، الحضور. لا يوم ولا قاعة."
+                fields:
+                  - label: الوسم
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: القيمة
+                    name: value
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
               - {label: العلامة البصرية, name: visual, widget: string, hint: "مسار SVG فقط. ممنوع JPEG ممدود."}
               - label: وصف العلامة
                 name: visualAlt

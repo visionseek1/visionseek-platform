@@ -27,14 +27,6 @@ export function ForumKeyVisual({
         unoptimized
         priority={priority}
       />
-      <div className={styles.logoTile} aria-hidden="true">
-        <Image
-          src="/visionseek-symbol-color.png"
-          alt=""
-          width={36}
-          height={36}
-        />
-      </div>
     </figure>
   );
 }

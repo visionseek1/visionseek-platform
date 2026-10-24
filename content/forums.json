@@ -25,16 +25,20 @@
   },
   "labels": {
     "mandate": {
-      "en": "Mandate",
-      "ar": "ما هو الحوار"
+      "en": "About",
+      "ar": "عن الحوار"
+    },
+    "why": {
+      "en": "Why",
+      "ar": "لماذا"
     },
     "format": {
       "en": "Format",
-      "ar": "شكل الحوار"
+      "ar": "الشكل"
     },
     "themes": {
-      "en": "Seven technologies",
-      "ar": "التكنولوجيات السبعة"
+      "en": "Themes",
+      "ar": "المحاور"
     },
     "who": {
       "en": "Who attends",
@@ -42,7 +46,15 @@
     },
     "outcome": {
       "en": "What comes out",
-      "ar": "ما يصدر عن الحوار"
+      "ar": "ما يصدر عنه"
+    },
+    "dialogue": {
+      "en": "Incheon Dialogue",
+      "ar": "حوار إنتشون"
+    },
+    "register": {
+      "en": "Register interest",
+      "ar": "سجّل اهتمامك"
     },
     "honesty": {
       "en": "No specific venue in Incheon, and no names, partners or sponsors have been set.",
@@ -50,7 +62,7 @@
     },
     "host": {
       "en": "Invitations are considered by Ahmed Abdelalim.",
-      "ar": "الدعوات ينظر فيها أحمد عبدالعليم."
+      "ar": "ينظر في طلبات الدعوة أحمد عبدالعليم."
     }
   },
   "forums": [
@@ -61,25 +73,35 @@
         "ar": "حوار إنتشون"
       },
       "kicker": {
-        "en": "Korea · Arab World — Technology Leadership Forum (by invitation only)",
-        "ar": "منتدى قيادة التكنولوجيا بين كوريا والعالم العربي — بالدعوة فقط"
+        "en": "Korea · Arab World — technology leadership forum",
+        "ar": "منتدى قيادة التكنولوجيا بين كوريا والعالم العربي"
+      },
+      "edition": {
+        "en": "First edition: April 2027, Incheon",
+        "ar": "الإصدار الأول: أبريل 2027، إنتشون"
       },
       "status": {
         "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
         "ar": "الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط."
       },
+      "facts": [
+        {"label": {"en": "Edition", "ar": "الإصدار"}, "value": {"en": "First", "ar": "الأول"}},
+        {"label": {"en": "When", "ar": "الزمان"}, "value": {"en": "April 2027", "ar": "أبريل 2027"}},
+        {"label": {"en": "Where", "ar": "المكان"}, "value": {"en": "Incheon", "ar": "إنتشون"}},
+        {"label": {"en": "Access", "ar": "الحضور"}, "value": {"en": "Invitation only", "ar": "بالدعوة فقط"}}
+      ],
       "visual": "/forums/incheon-dialogue.svg",
       "visualAlt": {
         "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula.",
         "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل مخطط كوريا المنقّط بشبه الجزيرة العربية."
       },
       "opening": {
-        "en": "The technologies that will shape the next decade are not bought. They are built and localized. Korea did this in a generation. The Arab world has the ambition and the means to lead. The Incheon Dialogue is where both sides sit down to decide how that happens.",
-        "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن. حقّقت كوريا ذلك في جيل واحد، والعالم العربي يملك الطموح والإمكانات ليقود. «حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
+        "en": "The technologies that will shape the next decade are not bought. They are built and localized.\n\nKorea did this in a generation. The Arab world has the ambition and the means to lead.\n\nThe Incheon Dialogue is where both sides sit down to decide how that happens.",
+        "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن.\n\nحقّقت كوريا ذلك في جيل واحد. والعالم العربي يملك الطموح والإمكانات ليقود.\n\n«حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
       },
       "what": {
-        "en": "A small, closed annual forum, convened by VisionSeek in Incheon. It brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities in seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
-        "ar": "منتدى سنوي صغير ومغلق، تنظّمه VisionSeek في إنتشون. يجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي، ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        "en": "A small, closed annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
+        "ar": "منتدى سنوي صغير ومغلق، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
       },
       "principles": [
         {
@@ -151,7 +173,7 @@
         },
         "status": {
           "en": "Announced at the Incheon Dialogue, April 2027, Incheon.",
-          "ar": "تُعلن ضمن «حوار إنتشون»، أبريل 2027، إن شاء الله، في إنتشون."
+          "ar": "تُعلن ضمن «حوار إنتشون» في أبريل 2027، في إنتشون، إن شاء الله."
         },
         "visual": "/forums/incheon-awards.svg",
         "visualAlt": {
@@ -267,7 +289,7 @@
         },
         "body": {
           "en": "I would like to be considered for an invitation to the Incheon Dialogue.\n\nName:\nInstitution:\nRole:\n",
-          "ar": "أود أن أُنظر في دعوتي إلى حوار إنتشون.\n\nالاسم:\nالمؤسسة:\nالدور:\n"
+          "ar": "أود أن يُنظر في دعوتي إلى «حوار إنتشون».\n\nالاسم:\nالمؤسسة:\nالدور:\n"
         }
       }
     }

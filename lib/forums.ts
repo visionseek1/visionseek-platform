@@ -15,6 +15,11 @@ export type ForumPrinciple = {
   text: Bi;
 };
 
+export type ForumFact = {
+  label: Bi;
+  value: Bi;
+};
+
 export type ForumAwards = {
   title: Bi;
   kicker: Bi;
@@ -42,7 +47,9 @@ export type Forum = {
   slug: string;
   title: Bi;
   kicker: Bi;
+  edition?: Bi;
   status: Bi;
+  facts?: ForumFact[];
   visual?: string;
   visualAlt?: Bi;
   opening: Bi;
@@ -64,10 +71,13 @@ export type ForumsContent = {
   };
   labels: {
     mandate: Bi;
+    why: Bi;
     format: Bi;
     themes: Bi;
     who: Bi;
     outcome: Bi;
+    dialogue: Bi;
+    register: Bi;
     honesty: Bi;
     host: Bi;
   };
@@ -78,3 +88,4 @@ export const forumsContent = data as ForumsContent;
 export const tx = (locale: Locale, value: Bi) => value[locale];
 export const forumPath = (locale: Locale) => (locale === 'ar' ? '/ar/forums' : '/forums');
 export const forumBySlug = (slug: string) => forumsContent.forums.find(forum => forum.slug === slug);
+export const paragraphs = (value: string) => value.split(/\n\n+/).map(part => part.trim()).filter(Boolean);
