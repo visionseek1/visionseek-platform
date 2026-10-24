@@ -125,14 +125,41 @@
   background: linear-gradient(to left, var(--bg) 0%, rgb(247 247 242 / 0.76) 10%, rgb(247 247 242 / 0.43) 20%, rgb(247 247 242 / 0.25) 28%, rgb(247 247 242 / 0) 36%);
 }
 
+.page,
+.section,
+.bandHead {
+  scroll-margin-top: 6rem;
+}
+
+.bandHead {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 4.5vw, 4rem) clamp(1.5rem, 5vw, 3rem) 0;
+}
+
+.page.page.page .sectionTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  max-width: 12em;
+  text-wrap: balance;
+}
+
+.sectionTitle::before {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 0.4rem;
+  margin-bottom: 1rem;
+  background: var(--lime);
+}
+
 .section {
   max-width: 78rem;
   margin: 0 auto;
   padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
 }
 
-.hero + .section {
-  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+.bandHead + .section {
+  padding-top: clamp(1.4rem, 2.4vw, 2rem);
 }
 
 .section:last-child {

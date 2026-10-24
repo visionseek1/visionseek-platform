@@ -7,13 +7,28 @@
       "children": [
         {
           "href": "/korean-solutions",
-          "en": "Find a solution",
-          "ar": "المستكشف"
+          "en": "Transfer the capability",
+          "ar": "نقل القدرة"
         },
         {
-          "href": "/korean-solutions#needs",
-          "en": "Tell us your need",
-          "ar": "اكتب احتياجك"
+          "href": "/korean-solutions#domains",
+          "en": "Fields",
+          "ar": "المجالات"
+        },
+        {
+          "href": "/korean-solutions#how",
+          "en": "How we work",
+          "ar": "كيف نعمل"
+        },
+        {
+          "href": "/korean-solutions#initiatives",
+          "en": "Initiatives",
+          "ar": "المبادرات"
+        },
+        {
+          "href": "/cars",
+          "en": "Hybrid & EV cars",
+          "ar": "سيارات هايبرد وكهربائية"
         }
       ]
     },
@@ -168,6 +183,28 @@
       ]
     },
     {
+      "path": "/indices",
+      "en": "Indices",
+      "ar": "المؤشرات",
+      "children": [
+        {
+          "href": "/indices",
+          "en": "VisionSeek Indices",
+          "ar": "مؤشرات VisionSeek"
+        },
+        {
+          "href": "/indices/arab-technology-capability",
+          "en": "Arab Technology Capability Index",
+          "ar": "مؤشر القدرة التكنولوجية العربية"
+        },
+        {
+          "href": "/indices/arab-critical-capabilities-atlas",
+          "en": "Arab Critical Capabilities Atlas",
+          "ar": "أطلس القدرات العربية الحرجة"
+        }
+      ]
+    },
+    {
       "path": "/news",
       "en": "News",
       "ar": "الأخبار",
@@ -190,24 +227,19 @@
       ]
     },
     {
-      "path": "/competitions",
-      "en": "Competitions",
-      "ar": "المسابقات",
+      "path": "/forums",
+      "en": "Forums",
+      "ar": "المنتديات",
       "children": [
         {
-          "href": "/competitions#now-competing",
-          "en": "Now competing",
-          "ar": "مشاركين فيها دلوقتي"
+          "href": "/forums",
+          "en": "Conferences & Forums",
+          "ar": "المؤتمرات والمنتديات"
         },
         {
-          "href": "/competitions#join",
-          "en": "Join",
-          "ar": "انضم"
-        },
-        {
-          "href": "/competitions#how-we-work",
-          "en": "How we work",
-          "ar": "إزاي بنشتغل"
+          "href": "/forums#incheon-dialogue",
+          "en": "Incheon Dialogue",
+          "ar": "حوار إنتشون"
         }
       ]
     },
@@ -222,29 +254,29 @@
           "ar": "ابنِ حلولك معنا"
         },
         {
-          "href": "/work-with-us/new-to-visionseek",
-          "en": "New to VisionSeek",
-          "ar": "ابدأ مع VisionSeek"
+          "href": "/work-with-us#competitions",
+          "en": "Competitions",
+          "ar": "المسابقات"
         },
         {
-          "href": "/work-with-us/how-to-respond",
-          "en": "How to respond",
-          "ar": "كيف تشارك؟"
+          "href": "/work-with-us#now-competing",
+          "en": "Now competing",
+          "ar": "مشاركين فيها دلوقتي"
         },
         {
-          "href": "/work-with-us/prepare-a-concept",
-          "en": "Prepare a concept",
-          "ar": "جهّز تصورًا"
+          "href": "/work-with-us#join",
+          "en": "Join",
+          "ar": "انضم"
         },
         {
-          "href": "/work-with-us/review-and-selection",
-          "en": "Review & selection",
-          "ar": "المراجعة والاختيار"
+          "href": "/work-with-us#completed",
+          "en": "Completed",
+          "ar": "خلصت"
         },
         {
-          "href": "/work-with-us/transition",
-          "en": "Transition to use",
-          "ar": "النقل للتشغيل"
+          "href": "/work-with-us#how-we-work",
+          "en": "How we work",
+          "ar": "إزاي بنشتغل"
         }
       ]
     },

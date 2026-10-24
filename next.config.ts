@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
       ...['', '/ar'].flatMap(prefix => [
         {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
+        // Competitions now lives on Work with Us (24 Oct 2026): old /competitions links keep working.
+        {source: `${prefix}/competitions`, destination: `${prefix}/work-with-us#competitions`, permanent: true},
         // «الورش» became Masterclass; Institute is the umbrella above it.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},

@@ -46,13 +46,15 @@ collections:
                   - {label: "معهد VisionSeek (القسم كله)  /institute", value: "/institute"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
+                  - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
-                  - {label: "المسابقات (القسم كله)  /competitions", value: "/competitions"}
+                  - {label: "المنتديات (القسم كله)  /forums", value: "/forums"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
                   - {label: "بيت القادة (القسم كله)  /leaders-house", value: "/leaders-house"}
                   - {label: "منهجنا  /method", value: "/method"}
+                  - {label: "حلول من كوريا ← سيارات هايبرد وكهربائية  /cars", value: "/cars"}
                   - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
                   - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
                   - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
@@ -72,11 +74,10 @@ collections:
                   - {label: "Insights ← الأوراق العلمية  /insights/research", value: "/insights/research"}
                   - {label: "Insights ← ملاحظات  /insights/notes/l-001", value: "/insights/notes/l-001"}
                   - {label: "Insights ← الأطر والأدوات  /insights/frameworks/decision-dimensions", value: "/insights/frameworks/decision-dimensions"}
+                  - {label: "المؤشرات ← مؤشر القدرة التكنولوجية العربية  /indices/arab-technology-capability", value: "/indices/arab-technology-capability"}
+                  - {label: "المؤشرات ← أطلس القدرات العربية الحرجة  /indices/arab-critical-capabilities-atlas", value: "/indices/arab-critical-capabilities-atlas"}
                   - {label: "الأخبار ← الإعلام والاستفسارات  /news/media", value: "/news/media"}
                   - {label: "اعمل معنا ← ابنِ حلولك معنا  /start", value: "/start"}
-                  - {label: "اعمل معنا ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
-                  - {label: "اعمل معنا ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
-                  - {label: "اعمل معنا ← النقل للتشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
                   - {label: "عن VisionSeek ← كيف تعمل VisionSeek؟  /about/what-we-do", value: "/about/what-we-do"}
                   - {label: "عن VisionSeek ← نموذج التشغيل  /about/operating-model", value: "/about/operating-model"}
                   - {label: "عن VisionSeek ← أسئلة البرنامج  /about/program-questions", value: "/about/program-questions"}
@@ -88,6 +89,9 @@ collections:
                   - {label: "programs ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
                   - {label: "programs ← كيف يعمل البرنامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
                   - {label: "programs ← تحت المجهر  /programs/spotlights", value: "/programs/spotlights"}
+                  - {label: "work-with-us ← ابدأ مع VisionSeek  /work-with-us/new-to-visionseek", value: "/work-with-us/new-to-visionseek"}
+                  - {label: "work-with-us ← المراجعة والاختيار  /work-with-us/review-and-selection", value: "/work-with-us/review-and-selection"}
+                  - {label: "work-with-us ← من الإثبات إلى التشغيل  /work-with-us/transition", value: "/work-with-us/transition"}
                   - {label: "الأخبار ← ابدأ بقدرة قبل أن تحدد الحل  /news/capability-before-solution", value: "/news/capability-before-solution"}
                   - {label: "الأخبار ← صحة مصر بالأرقام: أين تضغط الحاجة اليوم  /news/egypt-health-in-numbers", value: "/news/egypt-health-in-numbers"}
                   - {label: "الأخبار ← امنح الفكرة مكانًا قبل أن تصبح برنامجًا  /news/ideas-before-programs", value: "/news/ideas-before-programs"}
@@ -2408,6 +2412,7 @@ collections:
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
         - {label: "صفحة التقرير على الموقع (مثلًا /insights/reports/half-the-picture)", name: page, widget: string, required: false}
+        - {label: "صورة الغلاف", name: cover, widget: image, required: false}
         - {label: "لغة ملف PDF", name: pdfLang, widget: select, options: [ar, en], required: false}
         - label: "رابط مرتبط (تقرير ↔ ورقة)"
           name: related
@@ -3264,6 +3269,78 @@ collections:
                       - {label: English, name: en, widget: string}
                       - {label: العربية, name: ar, widget: string}
 
+  - name: cars
+    label: "السيارات (هايبرد وكهربائية)"
+    description: "قائمة السيارات على /cars. القائمة العامة فارغة إلى أن يضيف أحمد سيارات حقيقية. الأمثلة نموذج للتصميم فقط، ولا تظهر على الموقع الحي."
+    preview_path: "ar/cars"
+    editor: {preview: false}
+    files:
+      - label: السيارات
+        name: cars
+        file: content/cars.json
+        fields:
+          - {label: ملاحظة داخلية, name: _note, widget: text}
+          - {label: "إظهار الأمثلة في المعاينة فقط", name: showExamples, widget: boolean, default: true}
+          - label: السيارات المعروضة
+            name: cars
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - {label: المسار (إنجليزي صغير بشرطات), name: slug, widget: string}
+              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
+              - label: الماركة
+                name: brand
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الموديل
+                name: model
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - {label: السنة, name: year, widget: number, required: false, value_type: int}
+              - {label: صور (مسار يبدأ بـ /), name: photos, widget: list, required: false, field: {label: مسار, name: src, widget: string}}
+              - label: مجموعة الحركة
+                name: powertrain
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - {label: المدى (كم), name: rangeKm, widget: number, required: false, value_type: int}
+              - {label: البطارية (ك.و.س), name: batteryKwh, widget: number, required: false, value_type: int}
+              - {label: المقاعد, name: seats, widget: number, required: false, value_type: int}
+              - {label: السعر (رقم فقط إن وُجد), name: priceAmount, widget: number, required: false, value_type: int}
+              - {label: عملة السعر, name: priceCurrency, widget: string, required: false}
+              - label: ما يشمله الطلب
+                name: included
+                widget: list
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: أمثلة التصميم (لا تظهر على الموقع الحي)
+            name: examples
+            widget: list
+            summary: "{{fields.slug}}"
+            fields:
+              - {label: المسار, name: slug, widget: string}
+              - {label: "بيانات نموذجية", name: example, widget: boolean, default: true}
+              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
+              - label: الماركة
+                name: brand
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الموديل
+                name: model
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
 
   - name: governance
     label: "حوكمة الذكاء الاصطناعي"
@@ -3863,10 +3940,391 @@ collections:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
 
+  - name: forums
+    label: المؤتمرات والمنتديات
+    description: "صفحة /forums و /ar/forums. أضف منتدى جديدًا من القائمة. الشهر المعتمد فقط (أبريل 2027). لا تكتب يومًا ولا مكانًا محددًا داخل إنتشون ولا متحدثين ولا شركاء ولا رعاة."
+    preview_path: "ar/forums"
+    editor: {preview: false}
+    files:
+      - label: المؤتمرات والمنتديات
+        name: forums
+        file: content/forums.json
+        fields:
+          - label: عنوان الصفحة للمتصفح
+            name: meta
+            widget: object
+            fields:
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الوصف
+                name: description
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+          - label: رأس الصفحة
+            name: page
+            widget: object
+            fields:
+              - label: الرئيسية في مسار الصفحة
+                name: home
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: اسم القسم في مسار الصفحة
+                name: section
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: "حالة الصفحة (مثل «أبريل 2027، إنتشون — بالدعوة»)"
+                name: status
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: تسميات الأقسام
+            name: labels
+            widget: object
+            fields:
+              - label: عن الحوار
+                name: mandate
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: لماذا
+                name: why
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الشكل
+                name: format
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: المحاور
+                name: themes
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: من يحضر
+                name: who
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: ما يصدر عن الحوار
+                name: outcome
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: كتلة حوار إنتشون
+                name: dialogue
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: سجّل اهتمامك
+                name: register
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: جملة الصدق
+                name: honesty
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: من ينظر في الدعوات
+                name: host
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+          - label: المنتديات
+            name: forums
+            widget: list
+            summary: "{{fields.title.ar}} / {{fields.slug}}"
+            fields:
+              - label: المعرّف
+                name: slug
+                widget: string
+                hint: "بالإنجليزية الصغيرة، مثل incheon-dialogue. لا تغيّره بعد النشر."
+              - label: العنوان
+                name: title
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: السطر فوق العنوان
+                name: kicker
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: الحالة
+                name: status
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: سطر الإصدار
+                name: edition
+                widget: object
+                required: false
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: حقائق الإصدار
+                name: facts
+                widget: list
+                required: false
+                hint: "أربعة حقائق: الإصدار، الزمان، المكان، الحضور. لا يوم ولا قاعة."
+                fields:
+                  - label: الوسم
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: القيمة
+                    name: value
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+              - {label: العلامة البصرية, name: visual, widget: string, hint: "مسار SVG فقط. ممنوع JPEG ممدود."}
+              - label: وصف العلامة
+                name: visualAlt
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: الافتتاحية
+                name: opening
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: ما هو الحوار
+                name: what
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: المبادئ
+                name: principles
+                widget: list
+                summary: "{{fields.title.ar}}"
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: النص
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+              - label: التكنولوجيات السبعة
+                name: themes
+                widget: list
+                summary: "{{fields.ar}}"
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: من يحضر
+                name: who
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: ما يصدر عن الحوار
+                name: outcome
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: جوائز إنتشون للتوطين
+                name: awards
+                widget: object
+                required: false
+                hint: "كتلة داخل الحوار. وسم «قريبًا». لا قيمة للجوائز ولا أسماء ولا فورم ترشيح ولا يوم محدد."
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: السطر فوق الحالة
+                    name: kicker
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الحالة
+                    name: status
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - {label: العلامة البصرية, name: visual, widget: string, hint: "مسار SVG فقط. مصدر JPEG 1280×720 لا يُمدّ."}
+                  - label: وصف العلامة
+                    name: visualAlt
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: الافتتاحية
+                    name: opening
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: ما هي الجوائز
+                    name: what
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: المبادئ
+                    name: principles
+                    widget: list
+                    summary: "{{fields.title.ar}}"
+                    fields:
+                      - label: العنوان
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: النص
+                        name: text
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                  - label: الفئات
+                    name: categories
+                    widget: list
+                    summary: "{{fields.title.ar}}"
+                    hint: "صياغة مبدئية حتى يعتمدها د. أحمد."
+                    fields:
+                      - label: العنوان
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: النص
+                        name: text
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                  - label: كيف تعمل
+                    name: process
+                    widget: list
+                    summary: "{{fields.ar}}"
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: من يستفيد
+                    name: who
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: جملة الصدق
+                    name: honesty
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: تسميات أقسام الجوائز
+                    name: labels
+                    widget: object
+                    fields:
+                      - label: وسم قريبًا
+                        name: soon
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: ما هي الجوائز
+                        name: mandate
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: مبادئ الجوائز
+                        name: principles
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: الفئات
+                        name: categories
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: كيف تعمل
+                        name: process
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: من يستفيد
+                        name: who
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+              - label: طلب الدعوة
+                name: invite
+                widget: object
+                required: false
+                hint: "بريد فقط. لا تضف فورم تسجيل."
+                fields:
+                  - label: نص الزر
+                    name: label
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: موضوع الرسالة
+                    name: subject
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: نص الرسالة
+                    name: body
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+
   - name: competitions
     label: "المسابقات"
-    description: "صفحة /competitions وبالعربية /ar/competitions. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد. الكارت المفتوح يتعلّم «اكتمل» لوحده بعد آخر موعد (نهاية اليوم بتوقيت كوريا)."
-    preview_path: "ar/competitions"
+    description: "قسم ظاهر عنوانه «المسابقات / Competitions» داخل «اعمل معنا» (/work-with-us#competitions). أي كارت جديد من القائمة تحت ينزل في نفس القسم (مفتوح تحت «مشاركين فيها دلوقتي»، أو «خلصت» لو الحالة completed). الروابط القديمة /competitions تتحوّل هناك. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد."
+    preview_path: "ar/work-with-us"
     editor: {preview: false}
     files:
       - label: "الصفحة"
@@ -3877,9 +4335,10 @@ collections:
             name: hero
             widget: object
             fields:
-              - label: "الوسم"
+              - label: "عنوان القسم الظاهر (المسابقات / Competitions)"
                 name: kicker
                 widget: object
+                hint: "العنوان الكبير فوق الكروت في اعمل معنا. ده id=competitions."
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
@@ -4026,9 +4485,10 @@ collections:
             fields:
               - {label: "English", name: en, widget: string}
               - {label: "العربية", name: ar, widget: string}
-          - label: "الكروت"
+          - label: "الكروت (تظهر كلها تحت عنوان المسابقات في اعمل معنا)"
             name: cards
             widget: list
+            hint: "كارت جديد = نفس القسم #competitions. مفتوح ينزل تحت «مشاركين فيها دلوقتي»؛ completed ينزل تحت «خلصت»."
             summary: "{{fields.project}} — {{fields.status}}"
             fields:
               - {label: "المعرّف", name: id, widget: string, hint: "حروف إنجليزية صغيرة وشرطات، ومايتكررش."}
@@ -4076,6 +4536,271 @@ collections:
                 name: lessons
                 widget: object
                 required: false
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+
+  - name: indices
+    label: "المؤشرات"
+    description: "صفحة /indices وبالعربية /ar/indices. مؤشرات قادمة بلا نتائج. ممنوع درجات أو ترتيب أو أسماء دول أو تاريخ إصدار أو شركاء أو فورم تسجيل. الصورة المفتاحية ١٦:٩ من غير بيانات. الإنجليزي: Ahmed Abdelalim من غير لقب. المنهجية ستُنشر. القائمة مش في الشريط إلا بموافقة د. أحمد."
+    preview_path: "ar/indices"
+    editor: {preview: false}
+    files:
+      - label: "الصفحة"
+        name: indices
+        file: content/indices.json
+        fields:
+          - label: "رأس القسم"
+            name: hub
+            widget: object
+            fields:
+              - label: "السطر العلوي"
+                name: eyebrow
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الصفحة"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "التعريف"
+                name: intro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان جهة القياس"
+                name: measuringBodyTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص جهة القياس"
+                name: measuringBody
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "القسم الفاضي"
+                name: empty
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان قائمة المؤشرات"
+                name: catalogTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر قائمة المؤشرات"
+                name: catalogIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "رابط افتح المؤشر"
+                name: openIndex
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الرئيسية في المسار"
+                name: home
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العودة لكل المؤشرات"
+                name: back
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+          - label: "أبلغني"
+            name: notify
+            widget: object
+            hint: "الزر يفتح مسودة إيميل. مفيش إرسال من الموقع."
+            fields:
+              - label: "نص الزر"
+                name: label
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السطر تحت الزر"
+                name: hint
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - {label: "البريد", name: email, widget: string}
+              - label: "عنوان الرسالة"
+                name: subject
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+          - label: "المؤشرات"
+            name: indices
+            widget: list
+            summary: "{{fields.title.ar}} — {{fields.slug}}"
+            hint: "مؤشر جديد = عنصر جديد. بلا درجات ولا ترتيب ولا قيم دول."
+            fields:
+              - {label: "المسار (slug)", name: slug, widget: string, hint: "حروف إنجليزية صغيرة وشرطات."}
+              - label: "الحالة"
+                name: status
+                widget: select
+                options:
+                  - {label: "قادم (من غير نتائج)", value: upcoming}
+                  - {label: "منشور (بعد ما النتائج تتعمد)", value: published}
+              - label: "وسم الحالة"
+                name: statusLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان المختصر"
+                name: shortTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان الفرعي"
+                name: subtitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "الصورة المفتاحية", name: heroImage, widget: image, choose_url: true, hint: "١٦:٩ في /indices/ (jpg أو svg). من غير أرقام ولا كتابة على الرسم."}
+              - label: "وصف الصورة"
+                name: heroAlt
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المقدمة"
+                name: lede
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان ما هو المؤشر"
+                name: measuresTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص ما هو المؤشر"
+                name: measures
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان التكنولوجيات"
+                name: pillarsTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر التكنولوجيات"
+                name: pillarsIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "التكنولوجيات"
+                name: pillars
+                widget: list
+                summary: "{{fields.name.ar}}"
+                fields:
+                  - {label: "المعرّف", name: id, widget: string}
+                  - label: "الاسم"
+                    name: name
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المبادئ"
+                name: principlesTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المبادئ"
+                name: principles
+                widget: list
+                summary: "{{fields.title.ar}}"
+                hint: "من غير شركاء ومن غير مكان إعلان."
+                fields:
+                  - {label: "المعرّف", name: id, widget: string}
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "النص"
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان المنهج"
+                name: methodologyTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص المنهج"
+                name: methodology
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان الإصدار التجريبي"
+                name: pilotTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص الإصدار التجريبي"
+                name: pilot
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان مين بيستفيد"
+                name: audienceTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص مين بيستفيد"
+                name: audience
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان النتائج"
+                name: resultsTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص النتائج"
+                name: results
+                widget: object
+                hint: "مافيش نتائج بعد. اكتب كده صراحة."
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}

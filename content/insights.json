@@ -168,6 +168,56 @@
   "reports": [
     {
       "title": {
+        "ar": "منهجية تقارير VisionSeek",
+        "en": "VisionSeek Reports Methodology"
+      },
+      "kind": {
+        "ar": "منهجية · الإصدار 1.0 · مختبر VisionSeek · أكتوبر 2026",
+        "en": "Methodology · Version 1.0 · VisionSeek Lab · October 2026"
+      },
+      "summary": {
+        "ar": "تضع هذه الوثيقة منهجًا واحدًا لكل تقارير VisionSeek الاستراتيجية ومؤشراتها وسجلاتها وتعداداتها وأدلّتها. ونحن ننشرها قبل تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.",
+        "en": "This document sets one method for every VisionSeek strategic report, index, ledger, census and playbook. We publish it before our reports so that readers can judge each report against rules fixed in advance."
+      },
+      "page": "/insights/reports/methodology",
+      "cover": "/insights/reports/methodology-cover.jpg",
+      "related": {
+        "href": "/insights/reports/localization-doctrine",
+        "label": {
+          "ar": "عقيدة التوطين",
+          "en": "The Localization Doctrine"
+        }
+      },
+      "date": "2026-10-24"
+    },
+    {
+      "title": {
+        "ar": "عقيدة التوطين: من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون",
+        "en": "The Localization Doctrine: From Using Technology to Owning It — What Korea Proves Is Possible for the Arab World"
+      },
+      "kind": {
+        "ar": "ورقة عقيدة · مختبر VisionSeek · أكتوبر 2026",
+        "en": "Doctrine paper · VisionSeek Lab · October 2026"
+      },
+      "summary": {
+        "ar": "ظلّ العالم العربي جيلين مشتريًا ممتازًا للتكنولوجيا. كوريا دليلٌ على أن من يبدأ مشتريًا يستطيع أن يملك خلال عمر مهني واحد. ومعها ثمانية مبادئ تُسأل بها كل صفقة.",
+        "en": "For two generations the Arab world has been an excellent buyer of technology. Korea is the proof that a buyer can become an owner within one working lifetime. With eight principles for every technology deal."
+      },
+      "page": "/insights/reports/localization-doctrine",
+      "pdf": "/insights/reports/localization-doctrine-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/insights/reports/localization-doctrine-cover.jpg",
+      "related": {
+        "href": "/insights/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-24"
+    },
+    {
+      "title": {
         "ar": "احذر نصائح الذكاء الاصطناعي: هل يوجّهك الذكاء الاصطناعي في قراراتك الإنسانية وهو لا يعرف إلا القليل؟",
         "en": "Advice from Half the Picture: does AI steer your human decisions while knowing very little?"
       },

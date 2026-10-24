@@ -1,6 +1,6 @@
 import data from '@/content/competitions.json';
 
-/** Copy for /competitions. Edited from /admin («المسابقات»). */
+/** Copy for the Competitions band on /work-with-us. Edited from /admin («المسابقات»). */
 export type Locale = 'en' | 'ar';
 export type Bi = {en: string; ar: string};
 export type CardStatus = 'open' | 'filled' | 'completed';

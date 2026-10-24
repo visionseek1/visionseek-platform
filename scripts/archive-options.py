@@ -39,6 +39,9 @@ for f in sorted(glob.glob('content/projects/concepts/*.json')):
 add('/leaders-house/physical-ai', 'بيت القادة ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/physical-ai', 'التقارير ← إحاطة الذكاء الاصطناعي المادي')
 add('/reports/agent-governance', 'التقارير ← حوكمة الوكلاء الأذكياء')
+add('/indices', 'المؤشرات (القسم كله)')
+for item in load('content/indices.json').get('indices', []):
+    add(f"/indices/{item['slug']}", f"المؤشرات ← {item['title']['ar']}")
 
 def q(s): return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 lines = ''.join(f"                  - {{label: {q(l + '  ' + p)}, value: {q(p)}}}\n" for p, l in opts)
