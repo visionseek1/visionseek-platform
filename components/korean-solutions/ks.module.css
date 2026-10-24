@@ -20,6 +20,7 @@
   color: var(--ink);
   font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
 }
+@media (max-width: 719px) { .page { padding-bottom: 72px; } }
 .page :is(h1, h2, h3, p, ul, ol) { margin: 0; }
 /* English titles stay on the site's Oxanium; Arabic titles take the site-wide Arabic display face. */
 .page.page :is(h1, h2, h3) { font-weight: 700; letter-spacing: normal; color: inherit; }
@@ -56,6 +57,43 @@
 .page .cta { display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; background: var(--lime); color: var(--ink); font-size: 18px; font-weight: 700; text-decoration: none; }
 .page .cta:hover { background: #ffffff; color: var(--ink); }
 .heroCta > span { font-size: 14px; color: var(--soft); }
+.who { display: grid; grid-template-columns: 1fr; gap: 10px; width: min(100%, 720px); margin-top: 8px; }
+@media (min-width: 560px) { .who { grid-template-columns: 1fr 1fr; } }
+.page a.whoCard { display: flex; flex-direction: column; gap: 6px; min-height: 96px; padding: 16px 18px; border: 1px solid #ffffff33; color: var(--paper); text-decoration: none; background: #ffffff0f; }
+.page a.whoCard:hover { border-color: var(--lime); color: var(--paper); }
+.whoCard b { font-size: 17px; }
+.whoCard span { font-size: 14px; line-height: 1.6; color: #c9ccca; }
+
+.band { display: flex; flex-direction: column; gap: 24px; padding-block: 56px; scroll-margin-top: 80px; }
+.page.page .band h2 { font-size: clamp(28px, 3.4vw, 34px); }
+
+.talk { background: var(--ink); color: var(--paper); }
+.talkInner { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 40px; padding-block: 48px; }
+.talkInner > div { flex: 1 1 280px; display: flex; flex-direction: column; gap: 10px; }
+.page.page .talk h2 { font-size: clamp(28px, 3.6vw, 36px); color: #ffffff; }
+.talkInner p:not(.eyebrow) { font-size: 17px; line-height: 1.8; color: #d6d9d7; max-width: 52ch; }
+.page a.talkBtn { display: flex; flex-direction: column; gap: 4px; min-width: min(100%, 260px); padding: 16px 22px; background: var(--lime); color: var(--ink); text-decoration: none; }
+.page a.talkBtn:hover { background: #ffffff; color: var(--ink); }
+.talkBtn span { font-size: 14px; font-weight: 600; }
+.talkBtn b { font-size: 22px; font-family: var(--font-display), sans-serif; }
+
+.faq { display: flex; flex-direction: column; gap: 20px; padding-block: 56px; scroll-margin-top: 80px; }
+.faqList { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
+.faqItem { border-bottom: 1px solid var(--rule); background: var(--card); }
+.faqItem summary { cursor: pointer; list-style: none; font-weight: 700; font-size: 17px; line-height: 1.5; padding: 16px 4px; }
+.faqItem summary::-webkit-details-marker { display: none; }
+.faqItem summary::after { content: "+"; float: inline-end; font-family: var(--font-display), sans-serif; font-weight: 400; color: var(--violet); }
+.faqItem[open] summary::after { content: "–"; }
+.faqItem p { padding: 0 4px 18px; font-size: 16px; line-height: 1.85; color: var(--body); max-width: 68ch; }
+
+.sticky { position: fixed; inset-inline: 0; bottom: 0; z-index: 40; display: flex; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: var(--ink); box-shadow: 0 -8px 24px #0b0d0c33; }
+.page .sticky a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 14px; text-decoration: none; font-weight: 700; font-size: 15px; }
+.page .stickyMain { flex: 1 1 auto; background: var(--lime); color: var(--ink); }
+.page .stickyMain:hover { background: #ffffff; color: var(--ink); }
+.page .stickyWa { flex: 0 1 auto; border: 1px solid #ffffff55; color: var(--paper); }
+.page .stickyWa:hover { border-color: var(--lime); color: var(--lime); }
+.stickyWa span { margin-inline-start: 6px; font-weight: 600; font-size: 13px; }
+@media (min-width: 720px) { .sticky { display: none; } }
 
 /* How it works */
 .how { display: flex; flex-direction: column; gap: 24px; padding-block: 56px; scroll-margin-top: 80px; }

@@ -6,7 +6,7 @@
 export type RequestLocale = 'ar' | 'en';
 export type Bi = {ar: string; en: string};
 export type RequestKind = 'korea' | 'car-wanted' | 'car-listed';
-export type RequestKey = 'name' | 'country' | 'phone' | 'email' | 'category' | 'product' | 'quantity' | 'car' | 'carType' | 'budget' | 'details' | 'link';
+export type RequestKey = 'buyer' | 'name' | 'company' | 'country' | 'phone' | 'email' | 'category' | 'product' | 'quantity' | 'budget' | 'timeline' | 'car' | 'carType' | 'details' | 'link';
 export type RequestValues = Partial<Record<RequestKey, string>>;
 
 /** Egypt and the Gulf. `value` is the Arabic name the leads board already understands (app/api/korean-solutions/request). */
@@ -28,32 +28,50 @@ export const CAR_TYPES: {value: string; label: Bi}[] = [
   {value: 'unsure', label: {ar: 'لم أقرر بعد', en: 'Not sure yet'}},
 ];
 
+/** Company sourcing vs a personal request. The company name is asked only when `buyer` is `company`. */
+export const BUYERS: {value: string; label: Bi; hint: Bi}[] = [
+  {value: 'company', label: {ar: 'شركة أو مؤسسة', en: 'A company or institution'}, hint: {ar: 'توريد، خط إنتاج، أو خدمة للنشاط.', en: 'Sourcing, a production line, or a service for the business.'}},
+  {value: 'person', label: {ar: 'فرد', en: 'An individual'}, hint: {ar: 'طلب شخصي أو قطعة واحدة.', en: 'A personal need, or a single item.'}},
+];
+
+/** Urgency as a description, never a promised number of days. */
+export const TIMELINES: {value: string; label: Bi}[] = [
+  {value: 'soon', label: {ar: 'في أقرب وقت', en: 'As soon as possible'}},
+  {value: 'month', label: {ar: 'خلال هذا الشهر', en: 'This month'}},
+  {value: 'quarter', label: {ar: 'خلال هذا الربع', en: 'This quarter'}},
+  {value: 'later', label: {ar: 'مش مستعجل', en: 'No rush'}},
+  {value: 'unsure', label: {ar: 'لسه ماحددتش', en: 'Not sure yet'}},
+];
+
 export const REQUEST_FIELDS: Record<RequestKind, RequestKey[]> = {
-  'korea': ['name', 'country', 'phone', 'email', 'category', 'product', 'quantity', 'details', 'link'],
+  'korea': ['buyer', 'name', 'company', 'country', 'phone', 'email', 'category', 'product', 'quantity', 'budget', 'timeline', 'details', 'link'],
   'car-wanted': ['name', 'country', 'phone', 'email', 'car', 'carType', 'budget', 'details', 'link'],
   'car-listed': ['name', 'country', 'phone', 'email', 'details'],
 };
 
-export const REQUIRED: RequestKey[] = ['name', 'country', 'phone', 'email', 'product', 'car'];
+export const REQUIRED: RequestKey[] = ['buyer', 'name', 'country', 'phone', 'email', 'product', 'car'];
 
 export const REQUEST_LABELS: Record<RequestKey, Bi> = {
+  buyer: {ar: 'الطلب باسم', en: 'This request is for'},
   name: {ar: 'الاسم', en: 'Name'},
-  country: {ar: 'البلد', en: 'Country'},
+  company: {ar: 'اسم الشركة أو المؤسسة', en: 'Company or institution name'},
+  country: {ar: 'بلد التسليم', en: 'Destination country'},
   phone: {ar: 'الهاتف / واتساب', en: 'Phone / WhatsApp'},
   email: {ar: 'البريد الإلكتروني', en: 'Email'},
   category: {ar: 'المجال', en: 'Field'},
   product: {ar: 'المنتج أو الخدمة التي تحتاجها', en: 'The product or service you need'},
-  quantity: {ar: 'الكمية أو الميزانية', en: 'Quantity or budget'},
+  quantity: {ar: 'الكمية', en: 'Quantity'},
+  budget: {ar: 'الميزانية المستهدفة', en: 'Target budget'},
+  timeline: {ar: 'متى تحتاجه', en: 'When you need it'},
   car: {ar: 'السيارة التي تريدها', en: 'The car you want'},
   carType: {ar: 'النوع', en: 'Type'},
-  budget: {ar: 'الميزانية', en: 'Budget'},
-  details: {ar: 'تفاصيل', en: 'Details'},
-  link: {ar: 'رابط أو صورة', en: 'Link or photo'},
+  details: {ar: 'المواصفات والتفاصيل', en: 'Specifications and details'},
+  link: {ar: 'رابط مرفق أو صورة', en: 'Attachment link or photo'},
 };
 
 export const MAX: Record<RequestKey, number> = {
-  name: 120, country: 40, phone: 32, email: 254, category: 60, product: 300, quantity: 200,
-  car: 200, carType: 40, budget: 120, details: 1200, link: 500,
+  buyer: 20, name: 120, company: 160, country: 40, phone: 32, email: 254, category: 60, product: 300,
+  quantity: 200, budget: 120, timeline: 40, car: 200, carType: 40, details: 1200, link: 500,
 };
 
 const clean = (v: string | undefined) => (v || '').replace(/\s+/g, ' ').trim();
@@ -72,6 +90,9 @@ export type RequestProblem = {key: RequestKey; reason: 'missing' | 'invalid'};
 export function requestProblems(kind: RequestKind, values: RequestValues, about?: string): RequestProblem[] {
   const keys = REQUEST_FIELDS[kind].filter(k => !(about && (k === 'product' || k === 'car')));
   const missing = keys.filter(k => REQUIRED.includes(k) && !clean(values[k])).map(key => ({key, reason: 'missing' as const}));
+  if (keys.includes('company') && clean(values.buyer) === 'company' && !clean(values.company)) {
+    missing.push({key: 'company', reason: 'missing'});
+  }
   const invalid: RequestProblem[] = [];
   if (clean(values.email) && !isEmail(clean(values.email))) invalid.push({key: 'email', reason: 'invalid'});
   if (clean(values.phone) && !isPhone(clean(values.phone))) invalid.push({key: 'phone', reason: 'invalid'});
@@ -107,6 +128,7 @@ export function composeRequest({locale, kind, values, about, page, display}: {
   const lines: [RequestKey | 'about', string][] = [];
   if (about) lines.push(['about', about]);
   for (const k of REQUEST_FIELDS[kind]) {
+    if (k === 'company' && clean(values.buyer) !== 'company') continue;
     const v = k === 'details' ? details : shown(k);
     if (v) lines.push([k, v]);
   }

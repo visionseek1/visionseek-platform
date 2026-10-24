@@ -1,7 +1,7 @@
 'use client';
 import {useEffect, useId, useState, type FormEvent, type ReactNode} from 'react';
 import {mailto, site, whatsappUrl} from '@/lib/site';
-import {CAR_TYPES, COUNTRIES, MAX, REQUEST_FIELDS, REQUEST_LABELS, REQUIRED, composeRequest, requestProblems, type Bi, type RequestKey, type RequestKind, type RequestProblem, type RequestValues} from '@/lib/requests';
+import {BUYERS, CAR_TYPES, COUNTRIES, MAX, REQUEST_FIELDS, REQUEST_LABELS, REQUIRED, TIMELINES, composeRequest, requestProblems, type Bi, type RequestKey, type RequestKind, type RequestProblem, type RequestValues} from '@/lib/requests';
 import styles from './request-form.module.css';
 
 type Locale = 'ar' | 'en';
@@ -11,20 +11,23 @@ export type RequestOption = {value: string; label: Bi};
 export const REQUEST_PREFILL = 'vs-request-prefill';
 export const prefillRequest = (values: RequestValues) => window.dispatchEvent(new CustomEvent(REQUEST_PREFILL, {detail: values}));
 
-const WIDE = new Set<RequestKey>(['product', 'car', 'details', 'link']);
+const WIDE = new Set<RequestKey>(['buyer', 'product', 'car', 'details', 'link']);
 
 const PLACEHOLDER: Partial<Record<RequestKey, Bi>> = {
   phone: {ar: '+20 أو +966 أو …', en: '+20, +966, …'},
+  company: {ar: 'الاسم كما يُكتب في التعامل', en: 'The name you use in business'},
   product: {ar: 'مثال: قطع غيار لخط إنتاج', en: 'e.g. spare parts for a production line'},
-  quantity: {ar: 'عدد القطع، أو المبلغ والعملة', en: 'Number of units, or amount and currency'},
+  quantity: {ar: 'عدد القطع أو الوزن — ولو تقدير', en: 'Units or weight — an estimate is fine'},
   car: {ar: 'الماركة والموديل والسنة', en: 'Brand, model and year'},
   budget: {ar: 'المبلغ والعملة', en: 'Amount and currency'},
-  details: {ar: 'المواصفات، والاستخدام، وأي موعد يهمك', en: 'Specs, how you will use it, any deadline'},
+  details: {ar: 'المقاس، الخامة، الاستخدام، وأي شهادة مطلوبة', en: 'Size, material, use, and any certificate you need'},
   link: {ar: 'https://', en: 'https://'},
 };
 
 const HINT: Partial<Record<RequestKey, Bi>> = {
-  link: {ar: 'رابط لمنتج مشابه، أو لصورة على Google Drive أو غيره.', en: 'A link to a similar product, or to a photo on Google Drive or similar.'},
+  quantity: {ar: 'الطلب الأول يكفي. لو في تصوّر لاحق اكتبه هنا.', en: 'The first order is enough. Add a later volume if you have one.'},
+  budget: {ar: 'اختياري. يساعدنا نعرف إن كان العرض في المدى ولا لأ.', en: 'Optional. It helps us see whether an offer is in range.'},
+  link: {ar: 'رابط لمنتج مشابه، أو لملف مواصفات أو صورة على Google Drive أو غيره.', en: 'A link to a similar product, or to a spec file or photo on Google Drive or similar.'},
 };
 
 const INVALID: Partial<Record<RequestKey, Bi>> = {
@@ -53,7 +56,13 @@ export default function RequestForm({locale, kind, page, about, categories = [],
   const t = (b: Bi) => (ar ? b.ar : b.en);
   const uid = useId();
   const fid = (k: string) => `${uid}-${k}`;
-  const [picked, setPicked] = useState<RequestValues>({category: defaults.category || '', carType: defaults.carType || ''});
+  const [picked, setPicked] = useState<RequestValues>({
+    buyer: defaults.buyer || '',
+    category: defaults.category || '',
+    carType: defaults.carType || '',
+    timeline: defaults.timeline || '',
+    company: defaults.company || '',
+  });
   const [problems, setProblems] = useState<RequestProblem[]>([]);
   const [ready, setReady] = useState<{subject: string; body: string; url: string} | null>(null);
   const [copied, setCopied] = useState(false);
@@ -88,12 +97,22 @@ export default function RequestForm({locale, kind, page, about, categories = [],
       return;
     }
     const mail = composeRequest({locale, kind, values, about, page, display: {
-      country: v => nameOf(COUNTRIES, v), category: v => nameOf(categories, v), carType: v => nameOf(CAR_TYPES, v),
+      country: v => nameOf(COUNTRIES, v),
+      category: v => nameOf(categories, v),
+      carType: v => nameOf(CAR_TYPES, v),
+      buyer: v => nameOf(BUYERS, v),
+      timeline: v => nameOf(TIMELINES, v),
     }});
     if (record) {
       fetch('/api/korean-solutions/request', {
         method: 'POST', keepalive: true, headers: {'content-type': 'application/json'},
-        body: JSON.stringify({kind: 'need', locale, org: values.name, country: values.country, email: values.email, sector: kind === 'korea' ? values.category : 'السيارات', need: mail.note, website: ''}),
+        body: JSON.stringify({
+          kind: 'need', locale,
+          org: values.company || values.name,
+          country: values.country, email: values.email,
+          sector: kind === 'korea' ? values.category : 'السيارات',
+          need: mail.note, website: '',
+        }),
       }).catch(() => {});
     }
     const url = mailto(mail.subject, mail.body);
@@ -113,13 +132,37 @@ export default function RequestForm({locale, kind, page, about, categories = [],
   }
 
   const field = (k: RequestKey) => {
-    const required = REQUIRED.includes(k);
+    if (k === 'company' && picked.buyer !== 'company') return null;
+    const required = REQUIRED.includes(k) || (k === 'company' && picked.buyer === 'company');
     const problem = problemOf(k);
     const hint = HINT[k];
     const describedBy = [hint && fid(`${k}-hint`), problem && fid(`${k}-error`)].filter(Boolean).join(' ') || undefined;
     const common = {id: fid(k), name: k, 'aria-invalid': problem ? true : undefined, 'aria-required': required || undefined, 'aria-describedby': describedBy};
     const ph = PLACEHOLDER[k];
     const placeholder = ph ? t(ph) : undefined;
+    const mark = required
+      ? <span className={styles.req} aria-hidden="true"> *</span>
+      : <span className={styles.opt}> {ar ? '(اختياري)' : '(optional)'}</span>;
+    const title = <>{t(REQUEST_LABELS[k])}{mark}</>;
+    const after = <>
+      {hint && <span id={fid(`${k}-hint`)} className={styles.hint}>{t(hint)}</span>}
+      {problem && <span id={fid(`${k}-error`)} className={styles.error}>{problem.reason === 'missing' ? (ar ? 'هذا الحقل مطلوب.' : 'This field is required.') : t(INVALID[k] || {ar: 'القيمة غير صحيحة.', en: 'This value is not valid.'})}</span>}
+    </>;
+    if (k === 'buyer') return <fieldset key={k} className={`${styles.field} ${styles.wide} ${styles.choiceSet}`}>
+      <legend id={fid(k)}>{title}</legend>
+      <div className={styles.choice} role="radiogroup" aria-labelledby={fid(k)} aria-required={true} aria-invalid={problem ? true : undefined}>
+        {BUYERS.map(b => {
+          const on = picked.buyer === b.value;
+          return <label key={b.value} className={on ? styles.choiceOn : undefined}>
+            <input type="radio" name="buyer" value={b.value} checked={on}
+              onChange={() => { setPicked(p => ({...p, buyer: b.value})); setProblems(prev => prev.filter(x => x.key !== 'buyer' && x.key !== 'company')); }}/>
+            <b>{t(b.label)}</b>
+            <span>{t(b.hint)}</span>
+          </label>;
+        })}
+      </div>
+      {after}
+    </fieldset>;
     let control: ReactNode;
     if (k === 'country') control = <select {...common} defaultValue={defaults.country || ''} autoComplete="country-name">
       <option value="" disabled>{ar ? 'اختر البلد' : 'Choose a country'}</option>
@@ -133,17 +176,20 @@ export default function RequestForm({locale, kind, page, about, categories = [],
       <option value="">{ar ? 'اختر النوع' : 'Choose a type'}</option>
       {CAR_TYPES.map(c => <option key={c.value} value={c.value}>{t(c.label)}</option>)}
     </select>;
+    else if (k === 'timeline') control = <select {...common} value={picked.timeline || ''} onChange={e => setPicked(p => ({...p, timeline: e.target.value}))}>
+      <option value="">{ar ? 'اختر موعدًا إن وجد' : 'Choose a timing if you have one'}</option>
+      {TIMELINES.map(c => <option key={c.value} value={c.value}>{t(c.label)}</option>)}
+    </select>;
     else if (k === 'details') control = <textarea {...common} rows={4} maxLength={MAX.details} defaultValue={defaults.details} placeholder={placeholder} dir="auto"/>;
-    else control = <input {...common} maxLength={MAX[k]} defaultValue={defaults[k]} placeholder={placeholder}
+    else control = <input {...common} maxLength={MAX[k]} defaultValue={k === 'company' ? (picked.company || defaults.company || '') : defaults[k]} placeholder={placeholder}
       type={k === 'email' ? 'email' : k === 'phone' ? 'tel' : k === 'link' ? 'url' : 'text'}
       inputMode={k === 'email' ? 'email' : k === 'phone' ? 'tel' : k === 'link' ? 'url' : undefined}
-      autoComplete={k === 'name' ? 'name' : k === 'email' ? 'email' : k === 'phone' ? 'tel' : 'off'}
+      autoComplete={k === 'name' ? 'name' : k === 'company' ? 'organization' : k === 'email' ? 'email' : k === 'phone' ? 'tel' : 'off'}
       dir={k === 'email' || k === 'phone' || k === 'link' ? 'ltr' : 'auto'}/>;
     return <div key={k} className={`${styles.field} ${WIDE.has(k) ? styles.wide : ''}`}>
-      <label htmlFor={fid(k)}>{t(REQUEST_LABELS[k])}{required ? <span className={styles.req} aria-hidden="true"> *</span> : <span className={styles.opt}> {ar ? '(اختياري)' : '(optional)'}</span>}</label>
+      <label htmlFor={fid(k)}>{title}</label>
       {control}
-      {hint && <span id={fid(`${k}-hint`)} className={styles.hint}>{t(hint)}</span>}
-      {problem && <span id={fid(`${k}-error`)} className={styles.error}>{problem.reason === 'missing' ? (ar ? 'هذا الحقل مطلوب.' : 'This field is required.') : t(INVALID[k] || {ar: 'القيمة غير صحيحة.', en: 'This value is not valid.'})}</span>}
+      {after}
     </div>;
   };
 

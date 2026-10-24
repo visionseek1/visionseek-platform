@@ -39,6 +39,18 @@ test('Korean Solutions: pages in both languages, the no-partnership line, and no
   assert.match(form, /mailto\(/);
   assert.match(pages, /اطلب من كوريا|Request from Korea/);
   assert.match(pages, /#needs/);
+  assert.match(pages, /id="verify"/);
+  assert.match(pages, /id="next"/);
+  assert.match(pages, /id="faq"/);
+  assert.match(pages, /id="talk"/);
+  assert.match(pages, /شركة أو مؤسسة|A company or institution/);
+  assert.match(pages, /أحمد عبدالعليم|Ahmed Abdelalim/);
+  assert.doesNotMatch(pages, /\bDr\.|\bد\. أحمد/);
+  assert.doesNotMatch(pages, /48 hours|24 hours|1–2 days|two business days|Trade Assurance|\b6%|\b10%/i);
+  assert.match(read('components/korean-solutions/sticky-cta.tsx'), /whatsappUrl/);
+  assert.match(read('components/korean-solutions/audience.tsx'), /prefillRequest/);
+  assert.match(read('lib/requests.ts'), /BUYERS/);
+  assert.match(read('lib/requests.ts'), /TIMELINES/);
 });
 
 test('Korean Solutions: in the menu, the sitemap and the archive list; the ops section writes to Notion only', () => {

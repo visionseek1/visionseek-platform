@@ -43,6 +43,28 @@
 .hint { font-size: 13px; line-height: 1.6; opacity: 0.78; }
 .error { font-size: 13px; font-weight: 600; color: #ffd2cc; }
 .alert { font-size: 14px; font-weight: 600; color: #ffd2cc; margin: 0; }
+.choiceSet { border: 0; padding: 0; margin: 0; min-width: 0; }
+.choiceSet legend { padding: 0; }
+.choice { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@container (min-width: 520px) {
+  .choice { grid-template-columns: 1fr 1fr; }
+}
+.choice label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 72px;
+  padding: 12px 14px;
+  background: #f5f5f2;
+  color: #0b0d0c;
+  cursor: pointer;
+}
+.choice label b { font-size: 15px; line-height: 1.4; }
+.choice label span { font-size: 13px; line-height: 1.55; color: #4a4f4c; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.choice .choiceOn { outline: 3px solid #cfff00; outline-offset: 0; background: #cfff00; }
+.choice .choiceOn span { color: #2b2f2d; }
+.choice label:focus-within { outline: 3px solid #cfff00; outline-offset: 2px; }
 .about { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 12px 14px; background: #ffffff14; border-inline-start: 4px solid #cfff00; }
 .about span { font-size: 13px; opacity: 0.78; }
 .about b { font-size: 16px; line-height: 1.5; }
