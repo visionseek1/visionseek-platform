@@ -7,7 +7,7 @@ export type Bi = {ar: string; en: string};
 export const paper = {
   slug: 'methodology',
   version: '1.0',
-  cover: '/insights/reports/methodology-cover.jpg',
+  cover: '/reports/reports/methodology-cover.jpg',
   date: '2026-10-24',
   dateLabel: {ar: '24 أكتوبر 2026', en: '24 October 2026'},
   versionLabel: {ar: 'الإصدار 1.0', en: 'Version 1.0'},
@@ -21,7 +21,7 @@ export const paper = {
     ar: 'تضع هذه الوثيقة منهجًا واحدًا لكل تقارير VisionSeek الاستراتيجية ومؤشراتها وسجلاتها وتعداداتها وأدلّتها. ونحن ننشرها قبل تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.',
     en: 'This document sets one method for every VisionSeek strategic report, index, ledger, census and playbook. We publish it before our reports so that readers can judge each report against rules fixed in advance.',
   },
-  doctrineHref: '/insights/reports/localization-doctrine',
+  doctrineHref: '/reports/reports/localization-doctrine',
   doctrineName: {ar: '«عقيدة التوطين»', en: 'Localization Doctrine'},
   doctrineLabel: {ar: 'عقيدة التوطين', en: 'The Localization Doctrine'},
   markersLegend: {

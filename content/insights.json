@@ -179,10 +179,10 @@
         "ar": "تضع هذه الوثيقة منهجًا واحدًا لكل تقارير VisionSeek الاستراتيجية ومؤشراتها وسجلاتها وتعداداتها وأدلّتها. ونحن ننشرها قبل تقاريرنا ليقيس القارئ كل تقرير على قواعد محددة مسبقًا.",
         "en": "This document sets one method for every VisionSeek strategic report, index, ledger, census and playbook. We publish it before our reports so that readers can judge each report against rules fixed in advance."
       },
-      "page": "/insights/reports/methodology",
-      "cover": "/insights/reports/methodology-cover.jpg",
+      "page": "/reports/reports/methodology",
+      "cover": "/reports/reports/methodology-cover.jpg",
       "related": {
-        "href": "/insights/reports/localization-doctrine",
+        "href": "/reports/reports/localization-doctrine",
         "label": {
           "ar": "عقيدة التوطين",
           "en": "The Localization Doctrine"
@@ -203,13 +203,13 @@
         "ar": "ظلّ العالم العربي جيلين مشتريًا ممتازًا للتكنولوجيا. كوريا دليلٌ على أن من يبدأ مشتريًا يستطيع أن يملك خلال عمر مهني واحد. ومعها ثمانية مبادئ تُسأل بها كل صفقة.",
         "en": "For two generations the Arab world has been an excellent buyer of technology. Korea is the proof that a buyer can become an owner within one working lifetime. With eight principles for every technology deal."
       },
-      "page": "/insights/reports/localization-doctrine",
-      "pdf": "/insights/reports/localization-doctrine-ar.pdf",
-      "pdfEn": "/insights/reports/localization-doctrine-en.pdf",
+      "page": "/reports/reports/localization-doctrine",
+      "pdf": "/reports/reports/localization-doctrine-ar.pdf",
+      "pdfEn": "/reports/reports/localization-doctrine-en.pdf",
       "pdfLang": "ar",
-      "cover": "/insights/reports/localization-doctrine-cover.jpg",
+      "cover": "/reports/reports/localization-doctrine-cover.jpg",
       "related": {
-        "href": "/insights/reports/methodology",
+        "href": "/reports/reports/methodology",
         "label": {
           "ar": "منهجية التقارير",
           "en": "Reports Methodology"
@@ -230,12 +230,12 @@
         "ar": "الإصدار الأول من «سجل نقل القدرة» يستند إلى تركيب منهجي للأدلة المنشورة. كل حقيقة فيه منسوبة إلى مصدرها الأصلي، ثم مُسقطة على سلّم الامتلاك. ونطاقه صفقات الذكاء الاصطناعي ومراكز البيانات في السعودية والإمارات.",
         "en": "Edition 1. A systematic synthesis of published evidence. Every fact is attributed to its original source and placed on the ownership ladder. Scope: AI and data-centre deals in Saudi Arabia and the United Arab Emirates."
       },
-      "page": "/insights/reports/capability-ledger",
-      "pdf": "/insights/reports/capability-ledger-ar.pdf",
+      "page": "/reports/reports/capability-ledger",
+      "pdf": "/reports/reports/capability-ledger-ar.pdf",
       "pdfLang": "ar",
-      "cover": "/insights/reports/capability-ledger-cover.jpg",
+      "cover": "/reports/reports/capability-ledger-cover.jpg",
       "related": {
-        "href": "/insights/reports/methodology",
+        "href": "/reports/reports/methodology",
         "label": {
           "ar": "منهجية التقارير",
           "en": "Reports Methodology"
@@ -256,11 +256,11 @@
         "ar": "حين يستشير الإنسان نموذج ذكاء اصطناعي في قرار إنساني بسطر واحد، تنقلب النصيحة في نحو خُمس الحالات إذا عرف النموذج الصورة كاملة. ومعها بروتوكول من ثلاث خطوات تطبّقه بنفسك.",
         "en": "Ask a language model about a human decision in one line, and in about one case in five its advice reverses once it sees the whole picture. With a three-step protocol anyone can apply."
       },
-      "page": "/insights/reports/half-the-picture",
-      "pdf": "/insights/reports/half-the-picture-ar.pdf",
+      "page": "/reports/reports/half-the-picture",
+      "pdf": "/reports/reports/half-the-picture-ar.pdf",
       "pdfLang": "ar",
       "related": {
-        "href": "/insights/research",
+        "href": "/reports/research",
         "label": {
           "ar": "الورقة العلمية",
           "en": "The research paper"

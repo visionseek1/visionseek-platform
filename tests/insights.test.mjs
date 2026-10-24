@@ -5,20 +5,27 @@ import test from 'node:test';
 const read = p => readFileSync(new URL(`../${p}`, import.meta.url), 'utf8');
 const json = p => JSON.parse(read(p));
 
-test('VisionSeek Insights takes /insights; Leaders House moves to /leaders-house and stays archived', () => {
+test('VisionSeek Reports takes /reports; Leaders House moves to /leaders-house and stays archived', () => {
   const vis = json('content/visibility.json');
   const archived = vis.archived.map(a => a.path);
   assert.ok(archived.includes('/leaders-house'));
-  assert.ok(!archived.includes('/insights'));
-  for (const p of ['app/insights/page.tsx', 'app/ar/insights/page.tsx', 'app/insights/notes/[slug]/page.tsx', 'app/ar/insights/notes/[slug]/page.tsx', 'app/insights/frameworks/[slug]/page.tsx', 'app/ar/insights/frameworks/[slug]/page.tsx', 'app/leaders-house/page.tsx', 'app/ar/leaders-house/page.tsx']) assert.ok(existsSync(new URL(`../${p}`, import.meta.url)), p);
+  assert.ok(!archived.includes('/reports'));
+  for (const p of ['app/reports/page.tsx', 'app/ar/reports/page.tsx', 'app/reports/notes/[slug]/page.tsx', 'app/ar/reports/notes/[slug]/page.tsx', 'app/reports/frameworks/[slug]/page.tsx', 'app/ar/reports/frameworks/[slug]/page.tsx', 'app/leaders-house/page.tsx', 'app/ar/leaders-house/page.tsx']) assert.ok(existsSync(new URL(`../${p}`, import.meta.url)), p);
   assert.match(read('components/capability/navigation.tsx'), /isArchived\('\/leaders-house'\)/);
 });
 
-test('Insights sits in the main menu between Programs and Indices', () => {
-  const nav = json('content/navigation.json').sections.map(s => s.path);
-  assert.equal(nav[nav.indexOf('/insights') - 1], '/programs');
-  assert.equal(nav[nav.indexOf('/insights') + 1], '/indices');
-  for (const s of json('content/navigation.json').sections) for (const c of s.children) if (c.ar === 'بيت القادة') assert.equal(c.href, '/leaders-house');
+test('Reports sits in the main menu between Programs and Indices, with MSA Arabic label تقارير', () => {
+  const data = json('content/navigation.json');
+  const nav = data.sections.map(s => s.path);
+  const item = data.sections.find(s => s.path === '/reports');
+  assert.ok(item);
+  assert.equal(item.en, 'Reports');
+  assert.equal(item.ar, 'تقارير');
+  assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
+  assert.equal(nav[nav.indexOf('/reports') + 1], '/indices');
+  assert.equal(data.sections.filter(s => s.path === '/reports').length, 1);
+  assert.equal(data.sections.find(s => s.path === '/insights'), undefined);
+  for (const s of data.sections) for (const c of s.children) if (c.ar === 'بيت القادة') assert.equal(c.href, '/leaders-house');
 });
 
 test('first launch: note L-001 (research in progress), the Decision Dimensions Map (in development) and the newsletter; empty sections hidden', () => {
@@ -69,20 +76,20 @@ test('Insights: reports and research papers live apart; the frameworks are archi
   const d = json('content/insights.json');
   assert.equal(d.sections.reports.title.ar, 'التقارير');
   assert.equal(d.sections.research.title.ar, 'الأوراق العلمية');
-  const report = d.reports.find(x => x.page === '/insights/reports/half-the-picture');
+  const report = d.reports.find(x => x.page === '/reports/reports/half-the-picture');
   assert.ok(report);
   assert.match(report.title.ar, /^احذر نصائح الذكاء الاصطناعي/);
   assert.ok(existsSync('public' + report.pdf), report.pdf);
-  assert.equal(report.related.href, '/insights/research');
+  assert.equal(report.related.href, '/reports/research');
   const paper = d.research[0];
   assert.match(paper.title.en, /^Advice from Half the Picture/);
   assert.equal(paper.preprint, 'https://doi.org/10.5281/zenodo.23399249');
   assert.equal(paper.related, undefined);
-  assert.ok(json('content/visibility.json').archived.some(a => a.path === '/insights/notes/l-001'));
-  for (const f of ['insights/reports/page.tsx', 'insights/research/page.tsx', 'insights/reports/half-the-picture/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
-  assert.ok(json('content/visibility.json').archived.some(a => a.path === '/insights/frameworks/decision-dimensions'));
+  assert.ok(json('content/visibility.json').archived.some(a => a.path === '/reports/notes/l-001'));
+  for (const f of ['reports/reports/page.tsx', 'reports/research/page.tsx', 'reports/reports/half-the-picture/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  assert.ok(json('content/visibility.json').archived.some(a => a.path === '/reports/frameworks/decision-dimensions'));
   assert.equal(d.frameworks[0].slug, 'decision-dimensions');
-  assert.match(read('next.config.ts'), /insights\/research\/half-the-picture`, destination: `\$\{prefix\}\/insights\/reports\/half-the-picture/);
+  assert.match(read('next.config.ts'), /insights\/research\/half-the-picture`, destination: `\$\{prefix\}\/reports\/reports\/half-the-picture/);
   const lib = read('lib/research/half-the-picture.ts');
   assert.match(lib, /zenodo\.23399249/);
   assert.match(lib, /القرار الإنساني يبقى قرارك/);
@@ -90,22 +97,22 @@ test('Insights: reports and research papers live apart; the frameworks are archi
 
 test('Insights: Localization Doctrine follows the first report pattern; numbers, sources and marks stay exact', () => {
   const d = json('content/insights.json');
-  const report = d.reports.find(x => x.page === '/insights/reports/localization-doctrine');
+  const report = d.reports.find(x => x.page === '/reports/reports/localization-doctrine');
   assert.ok(report);
-  assert.equal(d.reports[1].page, '/insights/reports/localization-doctrine');
-  assert.equal(report.related.href, '/insights/reports/methodology');
+  assert.equal(d.reports[1].page, '/reports/reports/localization-doctrine');
+  assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'عقيدة التوطين: من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون');
   assert.equal(report.title.en, 'The Localization Doctrine: From Using Technology to Owning It — What Korea Proves Is Possible for the Arab World');
-  assert.equal(report.pdf, '/insights/reports/localization-doctrine-ar.pdf');
-  assert.equal(report.pdfEn, '/insights/reports/localization-doctrine-en.pdf');
+  assert.equal(report.pdf, '/reports/reports/localization-doctrine-ar.pdf');
+  assert.equal(report.pdfEn, '/reports/reports/localization-doctrine-en.pdf');
   assert.equal(report.pdfLang, 'ar');
-  assert.equal(report.cover, '/insights/reports/localization-doctrine-cover.jpg');
+  assert.equal(report.cover, '/reports/reports/localization-doctrine-cover.jpg');
   assert.ok(existsSync('public' + report.pdf), report.pdf);
   assert.ok(existsSync('public' + report.pdfEn), report.pdfEn);
   assert.ok(existsSync('public' + report.cover), report.cover);
   assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 1272683);
   assert.equal(readFileSync(new URL('../public' + report.pdfEn, import.meta.url)).length, 976919);
-  for (const f of ['insights/reports/localization-doctrine/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  for (const f of ['reports/reports/localization-doctrine/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
   const lib = read('lib/research/localization-doctrine.ts');
   const page = read('components/insights/localization-doctrine.tsx');
   const catalog = read('components/insights/pages.tsx');
@@ -156,24 +163,24 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   assert.match(read('public/admin/config.yml'), /name: cover/);
   assert.match(read('public/admin/config.yml'), /name: pdfEn/);
   const nav = json('content/navigation.json').sections.map(s => s.path);
-  assert.equal(nav[nav.indexOf('/insights') - 1], '/programs');
-  assert.equal(nav[nav.indexOf('/insights') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
+  assert.equal(nav[nav.indexOf('/reports') + 1], '/indices');
 });
 
 test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source text and cross-links stay exact', () => {
   const d = json('content/insights.json');
-  const report = d.reports.find(x => x.page === '/insights/reports/methodology');
+  const report = d.reports.find(x => x.page === '/reports/reports/methodology');
   assert.ok(report);
-  assert.equal(d.reports[0].page, '/insights/reports/methodology');
+  assert.equal(d.reports[0].page, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'منهجية تقارير VisionSeek');
   assert.equal(report.title.en, 'VisionSeek Reports Methodology');
   assert.match(report.kind.ar, /الإصدار 1\.0/);
   assert.match(report.kind.en, /Version 1\.0/);
-  assert.equal(report.cover, '/insights/reports/methodology-cover.jpg');
+  assert.equal(report.cover, '/reports/reports/methodology-cover.jpg');
   assert.ok(existsSync('public' + report.cover), report.cover);
   assert.equal(report.pdf, undefined);
-  assert.equal(report.related.href, '/insights/reports/localization-doctrine');
-  for (const f of ['insights/reports/methodology/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  assert.equal(report.related.href, '/reports/reports/localization-doctrine');
+  for (const f of ['reports/reports/methodology/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
   const lib = read('lib/research/reports-methodology.ts');
   const page = read('components/insights/reports-methodology.tsx');
   const doctrine = read('lib/research/localization-doctrine.ts');
@@ -189,9 +196,9 @@ test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source te
   assert.match(lib, /https:\/\/www\.mckinsey\.com\/about-us\/new-at-mckinsey-blog\/how-the-mckinsey-global-institute-is-changing-the-way-we-think-about-work-gender-equality-and-more/);
   assert.match(lib, /https:\/\/www\.chathamhouse\.org\/about-us\/our-editorial-standards/);
   assert.match(lib, /https:\/\/www\.rand\.org\/about\/standards\.html/);
-  assert.match(lib, /doctrineHref: '\/insights\/reports\/localization-doctrine'/);
+  assert.match(lib, /doctrineHref: '\/reports\/reports\/localization-doctrine'/);
   assert.match(page, /DoctrineLink/);
-  assert.match(doctrine, /methodologyHref: '\/insights\/reports\/methodology'/);
+  assert.match(doctrine, /methodologyHref: '\/reports\/reports\/methodology'/);
   assert.match(doctrinePage, /paper\.methodologyHref/);
   assert.ok(existsSync('scripts/insights/methodology/methodology-v1.0-ar.md'));
   assert.ok(existsSync('scripts/insights/methodology/methodology-v1.0-en.md'));
@@ -201,21 +208,21 @@ test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source te
 
 test('Insights: Capability Ledger sits next to the doctrine; Arabic body, sources and marks stay exact', () => {
   const d = json('content/insights.json');
-  const report = d.reports.find(x => x.page === '/insights/reports/capability-ledger');
+  const report = d.reports.find(x => x.page === '/reports/reports/capability-ledger');
   assert.ok(report);
-  assert.equal(d.reports[2].page, '/insights/reports/capability-ledger');
-  assert.equal(report.related.href, '/insights/reports/methodology');
+  assert.equal(d.reports[2].page, '/reports/reports/capability-ledger');
+  assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'سجل نقل القدرة: ماذا يبقى في الخليج بعد صفقات الذكاء الاصطناعي ومراكز البيانات؟');
   assert.equal(report.title.en, 'Capability Ledger');
   assert.match(report.kind.ar, /الإصدار 1/);
   assert.match(report.kind.en, /Edition 1/);
-  assert.equal(report.pdf, '/insights/reports/capability-ledger-ar.pdf');
+  assert.equal(report.pdf, '/reports/reports/capability-ledger-ar.pdf');
   assert.equal(report.pdfLang, 'ar');
-  assert.equal(report.cover, '/insights/reports/capability-ledger-cover.jpg');
+  assert.equal(report.cover, '/reports/reports/capability-ledger-cover.jpg');
   assert.ok(existsSync('public' + report.pdf), report.pdf);
   assert.ok(existsSync('public' + report.cover), report.cover);
   assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 368697);
-  for (const f of ['insights/reports/capability-ledger/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  for (const f of ['reports/reports/capability-ledger/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
   const lib = read('lib/research/capability-ledger.ts');
   const page = read('components/insights/capability-ledger.tsx');
   assert.match(lib, /أحمد عبدالعليم/);
@@ -241,4 +248,48 @@ test('Insights: Capability Ledger sits next to the doctrine; Arabic body, source
   assert.match(page, /localization-doctrine\.module\.css/);
   assert.ok(existsSync('scripts/insights/capability-ledger/report-ar-v1.0.html'));
   assert.ok(existsSync('scripts/insights/capability-ledger/report-ar-v1.0.pdf'));
+});
+
+test('Insights was renamed Reports: /insights 308s to /reports, leftover reports-center pages stay archived', () => {
+  const redirects = read('next.config.ts');
+  assert.match(redirects, /source: `\$\{prefix\}\/insights`, destination: `\$\{prefix\}\/reports`/);
+  assert.match(redirects, /source: `\$\{prefix\}\/insights\/:path\*`/);
+  assert.match(redirects, /destination: `\$\{prefix\}\/reports\/:path\*`/);
+  assert.match(redirects, /source: `\$\{prefix\}\/insights\/research\/half-the-picture`, destination: `\$\{prefix\}\/reports\/reports\/half-the-picture`/);
+  assert.match(redirects, /source: '\/insights\/research\/half-the-picture-ar\.pdf', destination: '\/reports\/reports\/half-the-picture-ar\.pdf'/);
+  const sitemap = read('app/sitemap.ts');
+  assert.match(sitemap, /path: "\/reports"/);
+  assert.match(sitemap, /path: "\/ar\/reports"/);
+  assert.doesNotMatch(sitemap, /["'`]\/(?:ar\/)?insights/);
+  const config = read('public/admin/config.yml');
+  assert.match(config, /preview_path: "ar\/reports"/);
+  assert.match(config, /file: content\/insights\.json/);
+  assert.match(config, /value: "\/reports"/);
+  assert.doesNotMatch(config, /value: "\/insights"/);
+  const archived = json('content/visibility.json').archived.map(a => a.path);
+  assert.ok(!archived.includes('/reports'), 'the live Reports hub is not archived');
+  for (const path of ['/reports/methodology', '/reports/agent-governance', '/reports/physical-ai']) {
+    assert.ok(archived.includes(path), path);
+  }
+  const legal = read('components/legal-page.tsx');
+  assert.match(legal, /"REPORTS"/);
+  assert.match(legal, /"تقارير"/);
+  assert.doesNotMatch(legal, /INSIGHTS|رؤى/);
+});
+
+test('the built Reports hub is native RTL and LTR and uses Reports / تقارير in the main nav', () => {
+  const html = locale => readFileSync(new URL(`../.next/server/app/${locale === 'ar' ? 'ar/' : ''}reports.html`, import.meta.url), 'utf8');
+  const en = html('en');
+  const ar = html('ar');
+  assert.match(en, /class="vs-site locale-en[^"]*" lang="en" dir="ltr"/);
+  assert.match(ar, /class="vs-site locale-ar[^"]*" lang="ar" dir="rtl"/);
+  assert.match(en, /<title>VisionSeek Reports<\/title>/);
+  assert.match(ar, /<title>تقارير VisionSeek \| الفكرة قبل القرار<\/title>/);
+  assert.match(en, /href="\/reports"[^>]*>Reports</);
+  assert.match(ar, /href="\/ar\/reports"[^>]*>تقارير</);
+  assert.doesNotMatch(en, />Insights</);
+  assert.doesNotMatch(ar, />Insights</);
+  assert.match(en, /VisionSeek Reports/);
+  assert.match(en, /Insight before decision/);
+  assert.match(ar, /الفكرة قبل القرار/);
 });
