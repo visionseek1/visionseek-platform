@@ -205,8 +205,35 @@
       },
       "page": "/insights/reports/localization-doctrine",
       "pdf": "/insights/reports/localization-doctrine-ar.pdf",
+      "pdfEn": "/insights/reports/localization-doctrine-en.pdf",
       "pdfLang": "ar",
       "cover": "/insights/reports/localization-doctrine-cover.jpg",
+      "related": {
+        "href": "/insights/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-24"
+    },
+    {
+      "title": {
+        "ar": "سجل نقل القدرة: ماذا يبقى في الخليج بعد صفقات الذكاء الاصطناعي ومراكز البيانات؟",
+        "en": "Capability Ledger"
+      },
+      "kind": {
+        "ar": "سجل · الإصدار 1 · مختبر VisionSeek · أكتوبر 2026",
+        "en": "Capability Ledger · Edition 1 · VisionSeek Lab · October 2026"
+      },
+      "summary": {
+        "ar": "الإصدار الأول من «سجل نقل القدرة» يستند إلى تركيب منهجي للأدلة المنشورة. كل حقيقة فيه منسوبة إلى مصدرها الأصلي، ثم مُسقطة على سلّم الامتلاك. ونطاقه صفقات الذكاء الاصطناعي ومراكز البيانات في السعودية والإمارات.",
+        "en": "Edition 1. A systematic synthesis of published evidence. Every fact is attributed to its original source and placed on the ownership ladder. Scope: AI and data-centre deals in Saudi Arabia and the United Arab Emirates."
+      },
+      "page": "/insights/reports/capability-ledger",
+      "pdf": "/insights/reports/capability-ledger-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/insights/reports/capability-ledger-cover.jpg",
       "related": {
         "href": "/insights/reports/methodology",
         "label": {

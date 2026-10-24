@@ -2406,6 +2406,7 @@ collections:
           - {label: العربية, name: ar, widget: text}
         - {label: "الرابط", name: url, widget: string, required: false}
         - {label: "ملف PDF", name: pdf, widget: file, required: false}
+        - {label: "ملف PDF بالإنجليزي", name: pdfEn, widget: file, required: false}
         - {label: "اسم المجلة", name: journal, widget: string, required: false}
         - {label: "النسخة الأولية (arXiv أو SSRN)", name: preprint, widget: string, required: false}
         - {label: "صفحة التقرير على الموقع (مثلًا /insights/reports/half-the-picture)", name: page, widget: string, required: false}
