@@ -11,12 +11,14 @@ export const entries:Entry[]=[...programEntries,...opportunityEntries,...worksho
 export const sections:Section[]=readContentFile<{sections:Section[]}>('sections.json').sections.map(section=>({...section,links:section.links.filter(link=>!isArchived(link.href)),notice:section.notice&&section.notice.en?section.notice:undefined}));
 export const getSection=(id:string)=>sections.find(s=>s.id===id);
 export const getEntry=(section:string,slug:string)=>entries.find(e=>e.section===section&&e.slug===slug);
-/** Public URL of a section. Institute is the umbrella; the workshops id still serves Masterclass at /masterclass. */
+/** Public URL of a section. Institute is the umbrella; old Masterclass doors stay at /masterclass. */
 export const sectionPath=(id:string)=>id==='workshops'?'/institute':`/${id}`;
 const sectionForSegment=(segment:string)=>segment==='masterclass'||segment==='institute'?'workshops':segment;
 export const entryPath=(e:Entry)=>e.section==='workshops'?`/masterclass/${e.slug}`:`${sectionPath(e.section)}/${e.slug}`;
 export const titleForPath=(path:string,locale:'en'|'ar')=>{
  const [segment,slug]=path.split('/').filter(Boolean);const section=sectionForSegment(segment??'');
+ if(segment==='institute'&&slug==='masterclass')return locale==='ar'?'ماستر كلاس':'Masterclass';
+ if(segment==='institute'&&slug==='fellowship')return locale==='ar'?'زمالة VisionSeek':'VisionSeek Fellowship';
  if(!slug){
   if(segment==='masterclass')return locale==='ar'?'ماستر كلاس':'Masterclass';
   if(segment==='institute')return locale==='ar'?'معهد VisionSeek':'VisionSeek Institute';

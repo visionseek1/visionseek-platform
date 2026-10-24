@@ -4,13 +4,13 @@ import {ArrowRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {DocumentLocale} from '@/components/governance/document-locale';
-import {workshopSection} from '@/lib/institution/workshops';
+import {InstituteWorkshopCard} from '@/components/institute/workshop-card';
 import {
   fellowship,
   fellowshipPath,
   institute,
   institutePath,
-  masterclassPath,
+  masterclassListingPath,
   tx,
   type Locale,
 } from '@/lib/institute';
@@ -18,7 +18,7 @@ import {
 export function InstituteHub({locale}: {locale: Locale}) {
   const ar = locale === 'ar';
   const prefix = ar ? '/ar' : '';
-  const masterclassHref = `${prefix}${masterclassPath}`;
+  const listingHref = `${prefix}${masterclassListingPath}`;
   const fellowshipHref = `${prefix}${fellowshipPath}`;
 
   return (
@@ -42,20 +42,9 @@ export function InstituteHub({locale}: {locale: Locale}) {
           </header>
 
           <section className="vs-wl-catalog-grid" aria-label={tx(locale, institute.programsLabel)}>
-            <article className="vs-wl-offer">
-              <Link href={masterclassHref}>
-                <Image src={workshopSection.live.heroImage} alt={tx(locale, workshopSection.live.heroImageAlt)} width={1254} height={1254} priority />
-              </Link>
-              <div>
-                <p className="vs-institute-kind">{tx(locale, institute.masterclassKind)}</p>
-                <h2><Link href={masterclassHref}>{tx(locale, workshopSection.title)}</Link></h2>
-                <p>{tx(locale, workshopSection.intro)}</p>
-                <Link className="vs-wl-btn is-lime" href={masterclassHref}>
-                  {tx(locale, institute.openProgram)}
-                  <ArrowRight size={18} aria-hidden />
-                </Link>
-              </div>
-            </article>
+            <div className="vs-institute-masterclass" id="masterclass">
+              <InstituteWorkshopCard locale={locale} listingHref={listingHref} />
+            </div>
             <article className="vs-wl-offer">
               <Link href={fellowshipHref}>
                 <Image src={fellowship.hero} alt={tx(locale, fellowship.heroAlt)} width={1280} height={720} />

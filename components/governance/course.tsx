@@ -43,7 +43,7 @@ export function MasterclassPage({locale}: {locale: Locale}) {
           <span aria-hidden="true">/</span>
           <Link href={localePath(locale, '/institute')}>{locale === 'ar' ? 'معهد VisionSeek' : 'VisionSeek Institute'}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={localePath(locale, '/masterclass')}>{locale === 'ar' ? 'ماستر كلاس' : 'Masterclass'}</Link>
+          <Link href={localePath(locale, '/institute/masterclass')}>{locale === 'ar' ? 'ماستر كلاس' : 'Masterclass'}</Link>
           <span aria-hidden="true">/</span>
           <span>{t(locale, workshop.title)}</span>
         </nav>

@@ -63,11 +63,9 @@ collections:
                   - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
                   - {label: "فرص البحث والتطوير ← دليل المشاركة  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
-                  - {label: "معهد VisionSeek ← ماستر كلاس  /masterclass", value: "/masterclass"}
-                  - {label: "معهد VisionSeek ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
-                  - {label: "معهد VisionSeek ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
+                  - {label: "معهد VisionSeek ← ماستر كلاس  /institute/masterclass", value: "/institute/masterclass"}
                   - {label: "معهد VisionSeek ← حوكمة الذكاء الاصطناعي  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
-                  - {label: "معهد VisionSeek ← زمالة VisionSeek  /institute/fellowship", value: "/institute/fellowship"}
+                  - {label: "معهد VisionSeek ← الزمالة  /institute/fellowship", value: "/institute/fellowship"}
                   - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
                   - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
                   - {label: "Insights ← التقارير  /insights/reports", value: "/insights/reports"}
@@ -99,9 +97,12 @@ collections:
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
                   - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
                   - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
+                  - {label: "ماستركلاس ← ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم،  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
                   - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
+                  - {label: "ماستركلاس ← قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
+                  - {label: "ماستركلاس  /masterclass", value: "/masterclass"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
                   - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
                   - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
@@ -1651,7 +1652,7 @@ collections:
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس
-    description: "نصوص ماستر كلاس الكاملة على /masterclass، تحت معهد VisionSeek. لا تحذف الأبواب أو الصفحات القائمة."
+    description: "نصوص ماستر كلاس الكاملة على /masterclass. تبقى الصفحة والروابط القديمة كما هي. المعهد يعرض ورشة الحوكمة فقط ولا يحذف هذه النصوص."
     preview_path: "ar/masterclass"
     editor: {preview: false}
     files:
@@ -4081,7 +4082,7 @@ collections:
 
   - name: institute
     label: "معهد VisionSeek"
-    description: "رأس صفحة المعهد /institute. وسم المسودة يظهر على الصفحة. لا تكتب أرقامًا أو شركاء أو نتائج لم تحدث."
+    description: "رأس صفحة المعهد /institute وصفحة ماستر كلاس /institute/masterclass. المعهد يعرض ورشة الحوكمة فقط. لا تكتب أرقامًا أو شركاء أو نتائج لم تحدث. في الإنجليزية Ahmed Abdelalim من غير Dr."
     preview_path: "ar/institute"
     editor: {preview: false}
     files:
@@ -4127,6 +4128,36 @@ collections:
               - {label: "العربية", name: ar, widget: string}
           - label: "وسم الماستركلاس"
             name: masterclassKind
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "عنوان قائمة الماستر كلاس"
+            name: masterclassTitle
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "مقدمة قائمة الماستر كلاس"
+            name: masterclassIntro
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "اسم الورشة في المعهد"
+            name: workshopTitle
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "نبذة الورشة في المعهد"
+            name: workshopLead
+            widget: object
+            fields:
+              - {label: "English", name: en, widget: text}
+              - {label: "العربية", name: ar, widget: text}
+          - label: "زر فتح الورشة"
+            name: openWorkshop
             widget: object
             fields:
               - {label: "English", name: en, widget: string}

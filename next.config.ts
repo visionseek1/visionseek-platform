@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
         // «الورش» became Masterclass; Institute is the umbrella above it.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
-        {source: `${prefix}/institute/masterclass`, destination: `${prefix}/masterclass`, permanent: true},
         // «احذر نصائح الذكاء الاصطناعي» moved from the papers to the reports (16 Oct 2026).
         {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/insights/reports/half-the-picture`, permanent: true},
       ]),

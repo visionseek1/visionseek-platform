@@ -12,6 +12,11 @@ export type InstituteCopy = {
   programsLabel: Bi;
   openProgram: Bi;
   masterclassKind: Bi;
+  masterclassTitle: Bi;
+  masterclassIntro: Bi;
+  workshopTitle: Bi;
+  workshopLead: Bi;
+  openWorkshop: Bi;
   fellowshipKind: Bi;
 };
 
@@ -43,6 +48,7 @@ export const fellowship: FellowshipCopy = read('fellowship.json');
 
 export const institutePath = '/institute';
 export const masterclassPath = '/masterclass';
+export const masterclassListingPath = '/institute/masterclass';
 export const fellowshipPath = '/institute/fellowship';
 
 export const tx = (locale: Locale, value: Bi) => value[locale];
