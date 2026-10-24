@@ -109,7 +109,7 @@ export function SectorPage({sector,locale}:{sector:Sector;locale:Locale}) {
     </div></section>:<section className={styles.section}><div className={styles.wrap}>
       <div className={styles.heading}><h2>{ar?'آفاق هذا المجال':'Within this field'}</h2></div>
       <div className={styles.focusGrid}>{sector.focus.map((focus,i)=><div key={focus.en} style={tone(color)}><span dir="ltr" className={styles.mono}>0{i+1}</span><h3>{focus[locale]}</h3></div>)}</div>
-      <div className={styles.emptyState}><h3>{ar?'مساحة للمشاريع القادمة.':'Space for future projects.'}</h3><p>{ar?'لا توجد مشاريع معروضة في هذا المجال بعد.':'No projects are shown in this sector yet.'}</p></div>
+      <div className={styles.emptyState}><h3>{ar?'مشاريع هذا المجال':'Projects in this field'}</h3><p>{ar?'تُنشر في هذه الصفحة المشاريع المعتمدة في هذا المجال.':'Approved projects in this field are published on this page.'}</p></div>
     </div></section>}
     <Contact locale={locale}/>
   </Frame>;

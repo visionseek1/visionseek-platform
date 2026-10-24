@@ -52,8 +52,8 @@
       {
         "image": "/field-chips.jpg",
         "label": {
-          "en": "HIGHEST LEVEL ONE",
-          "ar": "HIGHEST LEVEL ONE"
+          "en": "Built on the world's frontier",
+          "ar": "مبني على طليعة ما توصّل إليه العالم"
         },
         "title": {
           "en": "The best of what is possible.",
@@ -289,17 +289,10 @@
   },
   "proof": {
     "heading": {
-      "en": "Built. Not promised.",
-      "ar": "اتبنى بالفعل — مش وعود"
+      "en": "What we have built",
+      "ar": "ما أنجزناه"
     },
     "items": [
-      {
-        "value": "6",
-        "label": {
-          "en": "Autonomous engines running the institution's research, every hour",
-          "ar": "محركات ذاتية تدير بحث المؤسسة — تلف كل ساعة بلا توقف"
-        }
-      },
       {
         "value": "6",
         "label": {
@@ -308,10 +301,10 @@
         }
       },
       {
-        "value": "9",
+        "value": "3",
         "label": {
-          "en": "Research reports and readings published",
-          "ar": "تقارير وقراءات منشورة"
+          "en": "Published reports",
+          "ar": "تقارير منشورة"
         }
       }
     ]
@@ -331,7 +324,7 @@
     },
     "link": {
       "en": "See what is already built",
-      "ar": "شوف اللي اتبنى فعلًا"
+      "ar": "اطلع على ما بُني"
     }
   }
 }

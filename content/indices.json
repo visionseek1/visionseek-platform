@@ -65,8 +65,8 @@
       "slug": "arab-technology-capability",
       "status": "upcoming",
       "statusLabel": {
-        "en": "Pilot edition coming soon",
-        "ar": "الإصدار التجريبي قريبًا"
+        "en": "In preparation",
+        "ar": "قيد الإعداد"
       },
       "title": {
         "en": "Arab Technology Capability Index",
@@ -102,8 +102,8 @@
         "ar": "التكنولوجيات الأساسية"
       },
       "pillarsIntro": {
-        "en": "The names are here. Measurement has not begun.",
-        "ar": "الأسماء هنا. لم يبدأ القياس بعد."
+        "en": "The first edition, focused on artificial intelligence, is issued after its full methodology is published.",
+        "ar": "يصدر الإصدار الأول، بتركيز على الذكاء الاصطناعي، بعد نشر منهجيته كاملة."
       },
       "pillars": [
         {
@@ -235,16 +235,16 @@
         "ar": "النتائج"
       },
       "results": {
-        "en": "No results yet. No scores, no ranking, and no charts that carry figures.",
-        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا رسوم تحمل أرقامًا."
+        "en": "Results are published with the first edition.",
+        "ar": "تُعلن النتائج مع الإصدار الأول."
       }
     },
     {
       "slug": "arab-critical-capabilities-atlas",
       "status": "upcoming",
       "statusLabel": {
-        "en": "Coming soon",
-        "ar": "قريبًا"
+        "en": "In preparation",
+        "ar": "قيد الإعداد"
       },
       "title": {
         "en": "Arab Critical Capabilities Atlas",
@@ -280,8 +280,8 @@
         "ar": "كيف يعمل"
       },
       "pillarsIntro": {
-        "en": "These are the doors of exploration. None is open yet.",
-        "ar": "هذه أبواب الاستكشاف. لم يُفتح منها شيء بعد."
+        "en": "The doors of exploration open with the first edition.",
+        "ar": "أبواب الاستكشاف تُفتح مع الإصدار الأول."
       },
       "pillars": [
         {
@@ -414,8 +414,8 @@
         "ar": "النتائج"
       },
       "results": {
-        "en": "No results yet. No scores, no ranking, and no map that carries real data. The picture is symbolic.",
-        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا خريطة تحمل بيانات حقيقية. الصورة رمزية."
+        "en": "Atlas findings are published with the first edition.",
+        "ar": "تُعرض نتائج الأطلس مع الإصدار الأول."
       }
     }
   ]

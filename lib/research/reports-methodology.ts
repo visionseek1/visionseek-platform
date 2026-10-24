@@ -135,7 +135,7 @@ export const paper = {
       {title: {ar: 'لا تعويض صامتًا للقيم الناقصة.', en: 'No silent imputation.'}, text: {ar: 'تُكتب القيمة الناقصة في النتائج الرئيسية «غير متاح».', en: 'Missing values in headline results read "Not available".'}},
       {title: {ar: 'إعلان التغطية.', en: 'Coverage is reported.'}, text: {ar: 'نعلن لكل مؤشر معدل تغطية البيانات وتواريخها.', en: 'For each indicator we report data coverage and the dates of the data.'}},
       {title: {ar: 'التقديرات موسومة.', en: 'Labelled estimates.'}, text: {ar: 'التقدير الذي لا مفر منه يوسَم **[تقدير]**، ويُشرح منهجه في الملحق، ويُعطى في صورة نطاق، ويُستبعد من أي ترتيب.', en: 'An unavoidable estimate is labelled **[Estimate]**, its method is shown in the annex, it is given as a range, and it is excluded from any ranking.'}},
-      {title: {ar: '«لم نجده» وصفٌ لبحثنا لا للواقع.', en: '"Not found" describes our search, not the world.'}, text: {ar: 'تُصاغ الفجوة «لم نحدده في المصادر التي بحثناها (مذكورة)»، لا «غير موجود».', en: 'Gaps are worded as "not identified in the sources searched (listed)", never as "does not exist".'}},
+      {title: {ar: 'صياغة الفجوة.', en: 'Wording a gap.'}, text: {ar: 'تُصاغ الفجوة بوصف نطاق البحث الموثق: «لم يرد في المصادر المذكورة في الملحق [رقم]».', en: 'A gap is worded by describing the documented search scope: "It does not appear in the sources listed in Annex [number]".'}},
       {title: {ar: '«غير قابل للتقييم» لا ذيل الترتيب.', en: '"Not assessable", not ranked low.'}, text: {ar: 'الدولة أو التقنية الناقصة البيانات توسَم «غير قابل للتقييم» ولا توضع في ذيل الترتيب.', en: 'A country or technology with insufficient data is marked "Not assessable" rather than ranked low.'}},
       {title: {ar: '«ما لا نعرفه».', en: '"What we don\'t know."'}, text: {ar: 'في كل تقرير صفحة بهذا العنوان.', en: 'Every report includes a page with this title.'}},
       {title: {ar: 'إعلان الاعتماد على الناقص.', en: 'Dependencies stated.'}, text: {ar: 'إذا توقّف استنتاج على عنصر ناقص يُذكر ذلك صراحة.', en: 'Where a conclusion depends on a missing item, the report says so explicitly.'}},
@@ -158,7 +158,7 @@ export const paper = {
     },
     external: {
       heading: {ar: 'مراجعة الخبراء الخارجيين', en: 'External expert review'},
-      intro: {ar: 'يراجع التقارير خبراء خارجيون في الأدوار التالية بحسب الحاجة:', en: 'Reports are reviewed by external experts in the following roles, as relevant:'},
+      intro: {ar: 'تُضاف مراجعة الخبراء الخارجيين في الإصدارات اللاحقة وفق الأدوار التالية:', en: 'External expert review will be added in later editions, in the following roles as relevant:'},
       items: [
         {ar: 'خبير مجال لكل تقنية مشمولة؛', en: 'a domain expert for each technology covered;'},
         {ar: 'محلل براءات وملكية فكرية؛', en: 'a patent and intellectual-property analyst;'},
@@ -167,7 +167,7 @@ export const paper = {
         {ar: 'متخصص في السياسات من خارج المنطقة المقيَّمة لاختبار التحيّز؛', en: 'a policy specialist from outside the region assessed, to test for bias;'},
         {ar: 'مراجع بيانات وإحصاء لأي مؤشر مركّب.', en: 'a data and statistics reviewer for any composite index.'},
       ],
-      after: {ar: 'ويوقّع المراجعون إقرارًا بتضارب المصالح. والجمع بين مراجعة الأقران الداخلية والخارجية ممارسة راسخة: تنص Chatham House على أن جميع تقاريرها وأوراقها البحثية تخضع لمراجعة أقران خارجية وداخلية، وتدقيق للحقائق، واختبار للأصالة [مصدر: https://www.chathamhouse.org/about-us/our-editorial-standards].', en: 'Reviewers sign a conflict-of-interest declaration. Combined internal and external peer review is an established practice: Chatham House states that all its reports and research papers "are externally and internally peer reviewed, fact-checked and tested for originality" [Source: https://www.chathamhouse.org/about-us/our-editorial-standards].'},
+      after: {ar: 'عند تفعيل هذه المرحلة يوقّع المراجعون إقرارًا بتضارب المصالح. والجمع بين مراجعة الأقران الداخلية والخارجية ممارسة راسخة: تنص Chatham House على أن جميع تقاريرها وأوراقها البحثية تخضع لمراجعة أقران خارجية وداخلية، وتدقيق للحقائق، واختبار للأصالة [مصدر: https://www.chathamhouse.org/about-us/our-editorial-standards].', en: 'When this phase is introduced, reviewers will sign a conflict-of-interest declaration. Combined internal and external peer review is an established practice: Chatham House states that all its reports and research papers "are externally and internally peer reviewed, fact-checked and tested for originality" [Source: https://www.chathamhouse.org/about-us/our-editorial-standards].'},
     },
   },
   independence: {
@@ -231,7 +231,7 @@ export const paper = {
       {title: {ar: 'سجل بحث', en: 'Keep a log'}, text: {ar: 'يوثّق كل عبارة بحث وقاعدة بيانات وتاريخ والنتائج التي رُوجعت، مع ذكر أقرب الأعمال الموجودة ووجه الاختلاف عنها.', en: 'of every query, database and date and the results reviewed. List the closest existing works and how they differ.'}},
       {title: {ar: 'باحث ثانٍ', en: 'Second searcher.'}, text: {ar: 'تعيد وظيفة التحقق الداخلي المستقلة البحث بصورة مستقلة.', en: 'The independent internal verification function repeats the search independently.'}},
       {title: {ar: 'فحص الخبراء', en: 'Expert check.'}, text: {ar: 'يُسأل خبراء مجال خارجيون هل يعرفون أعمالًا سابقة.', en: 'External domain experts are asked whether they know of prior work.'}},
-      {title: {ar: 'قاعدة الصياغة: «لم نجده» لا يعني «غير موجود».', en: 'Wording rule: "not found" does not mean "does not exist".'}, text: {ar: 'الصياغة المسموحة: *«على حد علمنا، وبعد البحث الموثق في الملحق س، لم نحدد…»*. ولا تُستخدم «الأول» أو «الوحيد» إلا بعد استكمال الخطوات 1–5، وتُسحب بتصحيح إن ظهر عمل سابق.', en: 'The permitted wording is: *"To our knowledge, after the search documented in Annex X, we did not identify…"*. "First" or "only" is used only after steps 1–5. It is withdrawn by a correction if prior work comes to light.'}},
+      {title: {ar: 'قاعدة الصياغة.', en: 'Wording rule.'}, text: {ar: 'تُصاغ الفجوة بوصف نطاق البحث الموثق: «لم يرد في المصادر المذكورة في الملحق [رقم]». ولا تُستخدم «الأول» أو «الوحيد» إلا بعد استكمال الخطوات 1–5، وتُسحب بتصحيح إن ظهر عمل سابق.', en: 'A gap is worded by describing the documented search scope: "It does not appear in the sources listed in Annex [number]". "First" or "only" is used only after steps 1–5. It is withdrawn by a correction if prior work comes to light.'}},
     ],
   },
   structure: {

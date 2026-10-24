@@ -41,7 +41,7 @@ function cardState(card: CompetitionCard, now: number): CardStatus {
   return Number.isFinite(end) && now > end ? 'filled' : 'open';
 }
 
-/** The cards as of render time: current ones (open first) for «مشاركين فيها دلوقتي», finished ones for «خلصت». */
+/** The cards as of render time: current ones (open first) for «الجارية», finished ones for «المكتملة». */
 export function cardsNow(now = Date.now()) {
   const current = competitions.cards
     .map(card => ({card, state: cardState(card, now)}))

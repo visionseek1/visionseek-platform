@@ -56,10 +56,7 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   assert.equal(forums.labels.mandate.en, 'About');
   assert.equal(forums.labels.register.en, 'Register interest');
   assert.equal(forums.labels.dialogue.ar, 'حوار إنتشون');
-  assert.match(forums.labels.honesty.en, /No specific venue in Incheon/);
-  assert.match(forums.labels.honesty.ar, /لا مكان محدد داخل إنتشون/);
-  assert.doesNotMatch(forums.labels.honesty.en, /No date/i);
-  assert.doesNotMatch(forums.labels.honesty.ar, /لا تاريخ/);
+  assert.equal(forums.labels.honesty, undefined);
   assert.match(forums.labels.host.en, /Ahmed Abdelalim/);
   assert.doesNotMatch(forums.labels.host.en, /\bDr\.?\b/);
   assert.doesNotMatch(JSON.stringify(first), /\bDr\.?\b/);
@@ -80,13 +77,12 @@ test('the Incheon key visual is a local SVG under public/conferences, not a stre
   assert.equal(existsSync(join(root, 'public/conferences/incheon-dialogue.jpg')), false);
 });
 
-test('Incheon Localization Awards sit inside the dialogue, coming soon, with a vector mark', () => {
+test('Incheon Localization Awards sit inside the dialogue, with a vector mark', () => {
   const awards = forums.forums[0].awards;
   assert.ok(awards);
   assert.equal(awards.title.ar, 'جوائز إنتشون للتوطين');
   assert.equal(awards.title.en, 'Incheon Localization Awards');
-  assert.equal(awards.labels.soon.ar, 'قريبًا');
-  assert.equal(awards.labels.soon.en, 'Coming soon');
+  assert.equal(awards.labels.soon, undefined);
   assert.match(awards.status.ar, /أبريل 2027/);
   assert.match(awards.status.en, /April 2027/);
   assert.doesNotMatch(awards.status.en, /April\s+\d{1,2}(?!\d)/);
@@ -103,8 +99,8 @@ test('Incheon Localization Awards sit inside the dialogue, coming soon, with a v
   assert.equal(existsSync(join(root, 'public/conferences/incheon-awards.jpg')), false);
   const blob = JSON.stringify(awards);
   assert.doesNotMatch(blob, /\$\d|USD|nomination form|self-nominate here/i);
-  assert.match(awards.honesty.en, /No prize value/);
-  assert.match(awards.honesty.ar, /لا قيمة للجوائز/);
+  assert.equal(awards.honesty, undefined);
+  assert.doesNotMatch(blob, /Coming soon|قريبًا|لا قيمة للجوائز|No prize value/);
   for (const item of [...awards.principles, ...awards.categories]) {
     assert.ok(isText(item.title) && isText(item.text), item.title.en);
   }
@@ -188,8 +184,8 @@ test('the built conferences pages are native RTL and LTR and keep the draft fact
   assert.match(en, /conferences\/incheon-awards\.svg/);
   assert.match(en, /Incheon Localization Awards/);
   assert.match(ar, /جوائز إنتشون للتوطين/);
-  assert.match(en, /Coming soon/);
-  assert.match(ar, /قريبًا/);
+  assert.doesNotMatch(en, /Coming soon/);
+  assert.doesNotMatch(ar, /قريبًا/);
   assert.doesNotMatch(en, /incheon-dialogue\.jpg|incheon-awards\.jpg/);
   assert.doesNotMatch(en, /<form/i);
   assert.doesNotMatch(ar, /<form/i);
