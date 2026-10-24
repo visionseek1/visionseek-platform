@@ -31,9 +31,12 @@ test('Korean Solutions: pages in both languages, the no-partnership line, and no
   assert.match(finder, /t\(NO_PARTNERSHIP\)/);
   assert.match(pages, /t\(NO_PARTNERSHIP\)/);
   const api = read('app/api/korean-solutions/request/route.ts');
-  assert.match(api, /createLead\(/);
-  assert.match(api, /source: 'الموقع'/);
+  assert.match(api, /recordClientIntake\(/);
+  assert.match(api, /SITE_SOURCES\.korean/);
+  assert.match(api, /isPreview\(\)/);
+  assert.match(api, /validEmail/);
   assert.match(api, /website/); // honeypot
+  assert.doesNotMatch(api, /source:\s*'الموقع'/);
   assert.doesNotMatch(api, /sendMail|nodemailer|resend|sendgrid|fetch\(['"`]https/i);
 });
 

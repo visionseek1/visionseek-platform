@@ -3,6 +3,11 @@
  * التوكن من متغير البيئة NOTION_TOKEN (سرّ في Vercel). بدون توكن: الغرفة تعرض اللقطة.
  * الكتابة الوحيدة المسموحة من الموقع: سطر في قاعدة «طلبات المحرك». لا تعديل على أي قاعدة تانية.
  */
+import { isPreview } from "./room-auth";
+import { koreaDate, planIntake, validEmail, LEAD_SOURCES, type IntakeFields } from "./lead-intake";
+import { pushConfigured, sendPush } from "./webpush";
+
+export { koreaDate, validEmail, LEAD_SOURCES };
 
 const API = "https://api.notion.com/v1";
 const VERSION = "2025-09-03";
@@ -303,8 +308,7 @@ export function leadStale(r: Row, today: string): boolean {
 }
 /** مراحل لوحة العملاء — تحريك الكارت من الغرفة محصور فيها (الجديدة + القديمة عشان أي كارت قديم يتحرك). */
 const LEAD_STAGES = new Set([...LEAD_PIPELINE, ...LEAD_CLOSED, ...Object.keys(LEAD_LEGACY)]);
-/** مصادر العميل السبعة. «تواصل مباشر» للعملاء اللي اتسجّلوا من إيميل مباشر (قرار د. أحمد 15 أكتوبر). */
-export const LEAD_SOURCES = ["الموقع", "الحجز", "الرادار", "تعارف", "لينكدإن", "ماستركلاس", "تواصل مباشر"];
+/** مصادر العميل: الجديدة والقديمة مع بعض، من lib/lead-intake. «تواصل مباشر» فاضلة. */
 /** القطاع اللي العميل جاي منه — نفس أسماء قطاعات المنصة. */
 export const LEAD_SECTORS = ["خدمات المؤسسات", "المنتجات الجاهزة", "الشراكات ونقل التكنولوجيا", "المعرفة وبناء القادة", "الظهور والتواصل"];
 /** عميل مفتوح من غير أي تواصل 14 يوم = علم أحمر على اللوحة. */
@@ -453,6 +457,79 @@ export async function createLead(l: NewLead): Promise<string> {
   const json: any = await res.json();
   cache = null;
   return json.url as string;
+}
+
+export type ClientIntake = IntakeFields & { place?: string; sector?: string; lead?: Partial<NewLead> };
+
+/** يلاقي عميل بإيميله في «عملاء — خط المتابعة». فشل البحث يرمي، عشان ما نعملش صف مكرر واحنا مش متأكدين. */
+async function findLeadByEmail(email: string): Promise<{ id: string; note: string } | null> {
+  const filter = { property: "الإيميل", email: { equals: email } };
+  let res = await call(`/data_sources/${SOURCES.leads.ds}/query`, { page_size: 1, filter });
+  if (res.status === 404 || res.status === 400) res = await call(`/databases/${SOURCES.leads.db}/query`, { page_size: 1, filter }, "2022-06-28");
+  if (!res.ok) throw new Error(`notion ${res.status} finding lead`);
+  const json: any = await res.json();
+  const page = (json.results || [])[0];
+  if (!page) return null;
+  const row = toRow(page);
+  const id = String(page.id || row.id || "");
+  if (!isPageId(id)) throw new Error("bad page id");
+  return { id, note: String(row["ملاحظة"] || "") };
+}
+
+/** تنبيه Web Push لأجهزة أحمد: الاسم والمصدر بس. مفيش رسالة للعميل. فشل التنبيه ما يلغيش الحفظ. */
+async function notifyNewClient(name: string, source: string): Promise<void> {
+  if (!pushConfigured()) return;
+  const subs = await listSubscriptions();
+  if (!subs.length) return;
+  const payload = { title: "عميل جديد", body: `${name} · ${source}`, url: "/ops#clients" };
+  let sent = 0;
+  for (const s of subs) {
+    try {
+      const code = await sendPush(s.sub, payload);
+      if (code === 404 || code === 410) await expireSubscription(s.id);
+      else if (code >= 200 && code < 300) sent++;
+    } catch {
+      /* جهاز واحد يفشل ما يوقفش الباقي */
+    }
+  }
+  if (sent) await logNotification(payload.title, payload.body, sent);
+}
+
+/**
+ * يحفظ طلب عميل: صف جديد بمرحلة «جديد»، أو يلحق الطلب على ملاحظة عميل الإيميل موجود.
+ * التنبيه للعميل الجديد بس. المعاينة ما تكتبش على Notion — حتى لو التوكن هو توكن الإنتاج.
+ */
+export async function recordClientIntake(input: ClientIntake, opts?: { requireEmail?: boolean }): Promise<"created" | "appended"> {
+  if (isPreview()) throw new Error("preview");
+  if (!notionConfigured()) throw new Error("NOTION_TOKEN is not set");
+  const email = (input.email || "").trim().toLowerCase();
+  const existing = email && validEmail(email) ? await findLeadByEmail(email) : null;
+  const plan = planIntake({ ...input, email, date: input.date || koreaDate() }, existing, opts);
+  if (!plan.ok) throw new Error(plan.error);
+  if (plan.action === "append" && existing) {
+    await patchPage(existing.id, { "ملاحظة": rt(plan.note), "آخر تواصل": { date: { start: plan.date } } });
+    cache = null;
+    return "appended";
+  }
+  const extra = input.lead || {};
+  await createLead({
+    ...extra,
+    name: plan.title,
+    source: plan.source,
+    email: plan.email || undefined,
+    note: plan.note,
+    decider: plan.decider || extra.decider,
+    place: input.place || extra.place,
+    sector: input.sector || extra.sector,
+    stage: extra.stage && extra.stage.trim() ? extra.stage : "جديد",
+    lastContact: plan.date,
+  });
+  try {
+    await notifyNewClient(plan.title, plan.source);
+  } catch {
+    /* الصف اتسجل؛ التنبيه تحسين */
+  }
+  return "created";
 }
 
 /* ---------- سجل التواصل: صف لكل مكالمة أو إيميل أو جلسة. كتابة بس — مفيش إرسال لأي عميل من المنصة (قاعدة د. أحمد). ---------- */
@@ -783,7 +860,7 @@ async function createIn(src: { ds: string; db: string }, properties: Record<stri
   return res.json();
 }
 
-const todayStr = () => new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10); // توقيت كوريا
+const todayStr = () => koreaDate();
 
 /* ---------- الأبحاث والنشر، والمسابقات (16 أكتوبر 2026) — كتابة بس، مفيش حذف ---------- */
 export const PUB_TYPES = ["ورقة علمية", "تقرير", "مقال"];
@@ -898,11 +975,6 @@ export async function updateSolution(pageId: string, p: SolutionPatch): Promise<
 }
 
 /* ---------- النشرة الشهرية (VisionSeek Insights) ---------- */
-
-/** صيغة بريد معقولة، من غير مسافات، وبطول محدود. */
-export function validEmail(v: string): boolean {
-  return v.length >= 6 && v.length <= 254 && /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/.test(v);
-}
 
 /**
  * يسجّل مشترك في «النشرة الشهرية — المشتركين». البريد المكرر ما يتسجّلش مرتين.

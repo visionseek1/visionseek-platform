@@ -1,5 +1,5 @@
 import { cookieIsOwner, cookieIsValid, isPreview, readCookie } from "@/lib/room-auth";
-import { addContact, createLead, notionConfigured, updateLeadMap, updateLeadStage } from "@/lib/notion-room";
+import { addContact, notionConfigured, recordClientIntake, updateLeadMap, updateLeadStage } from "@/lib/notion-room";
 
 /**
  * نظام العملاء (المرحلة 1): تحريك كارت عميل على الخط، وبياناته، وتسجيل تواصل عليه.
@@ -32,7 +32,17 @@ export async function POST(request: Request) {
   if (action === "create") {
     if (!g("source")) return Response.redirect(`${origin}/ops?r=nosource${hash}`, 303);
     try {
-      await createLead({ name: g("name"), stage: g("stage"), type: g("type"), place: g("place"), service: g("service"), outcome: g("outcome"), followup: g("followup"), decider: g("decider"), note: g("note"), signal: g("signal"), signalUrl: g("signalUrl"), by: g("by"), value: g("value"), forecast: g("forecast"), track: g("track"), source: g("source"), sector: g("sector"), next: g("next"), email: g("email") });
+      // الجهة في خانة الاسم، والقائد في صاحب القرار. الإيميل المكرر يلحق على الملاحظة وما يعملش صف جديد.
+      await recordClientIntake({
+        organization: g("name"),
+        name: g("decider"),
+        email: g("email"),
+        need: g("note"),
+        source: g("source"),
+        place: g("place"),
+        sector: g("sector"),
+        lead: { stage: g("stage"), type: g("type"), place: g("place"), service: g("service"), outcome: g("outcome"), followup: g("followup"), decider: g("decider"), signal: g("signal"), signalUrl: g("signalUrl"), by: g("by"), value: g("value"), forecast: g("forecast"), track: g("track"), sector: g("sector"), next: g("next") },
+      });
       return Response.redirect(`${origin}/ops?r=saved${hash}`, 303);
     } catch {
       return Response.redirect(`${origin}/ops?r=err${hash}`, 303);
