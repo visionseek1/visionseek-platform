@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "kicker": {
+      "en": "Competitions",
+      "ar": "المسابقات"
+    },
+    "title": {
+      "en": "Big ideas are built together",
+      "ar": "الأفكار الكبيرة بتتبني مع بعض"
+    },
+    "text": {
+      "en": "We enter global AI competitions with projects that solve real gaps, together with partners who complete us.",
+      "ar": "بندخل مسابقات الذكاء الاصطناعي العالمية بمشاريع بتعالج ثغرات حقيقية، ومع شركاء بيكمّلونا."
+    },
+    "image": "/competitions/team-photo.jpg"
+  },
+  "labels": {
+    "now": {
+      "en": "Now competing",
+      "ar": "مشاركين فيها دلوقتي"
+    },
+    "join": {
+      "en": "Join",
+      "ar": "انضم"
+    },
+    "completed": {
+      "en": "Completed",
+      "ar": "خلصت"
+    },
+    "how": {
+      "en": "How we work",
+      "ar": "إزاي بنشتغل"
+    },
+    "empty": {
+      "en": "None yet",
+      "ar": "لا يوجد بعد"
+    },
+    "competingIn": {
+      "en": "Competing in",
+      "ar": "مشاركين في"
+    },
+    "open": {
+      "en": "Open · Partner wanted",
+      "ar": "مفتوح · مطلوب شريك"
+    },
+    "filled": {
+      "en": "Filled",
+      "ar": "اكتمل"
+    },
+    "competition": {
+      "en": "Competition",
+      "ar": "المسابقة"
+    },
+    "role": {
+      "en": "Role needed",
+      "ar": "الدور المطلوب"
+    },
+    "deadline": {
+      "en": "Deadline",
+      "ar": "آخر موعد"
+    },
+    "joinTeam": {
+      "en": "Join the team",
+      "ar": "انضم للفريق"
+    },
+    "result": {
+      "en": "Result",
+      "ar": "النتيجة"
+    },
+    "lessons": {
+      "en": "Lessons",
+      "ar": "الدروس"
+    }
+  },
+  "form": {
+    "name": {
+      "en": "Name",
+      "ar": "الاسم"
+    },
+    "email": {
+      "en": "Email",
+      "ar": "الإيميل"
+    },
+    "role": {
+      "en": "Role",
+      "ar": "الدور"
+    },
+    "link": {
+      "en": "Portfolio link",
+      "ar": "لينك لشغل سابق"
+    },
+    "note": {
+      "en": "The button opens a draft in your email app. Review and send it there; no email or registration is submitted automatically.",
+      "ar": "يفتح الزر مسودة في تطبيق بريدك. راجعها وأكمل الإرسال هناك؛ لا يحدث إرسال أو تسجيل تلقائي."
+    }
+  },
+  "how": [
+    {
+      "en": "VisionSeek leads",
+      "ar": "VisionSeek بتقود"
+    },
+    {
+      "en": "Partners complete us",
+      "ar": "الشركاء بيكمّلونا"
+    },
+    {
+      "en": "Every agreement is written upfront",
+      "ar": "كل اتفاق مكتوب من الأول"
+    }
+  ],
+  "cards": [
+    {
+      "id": "open-decision-guard",
+      "status": "open",
+      "project": "Open Decision Guard",
+      "summary": {
+        "en": "A layer that stops AI from closing a decision too early for the manager, and hands the decision back to the human.",
+        "ar": "طبقة بتوقّف الذكاء الاصطناعي لما يحسم القرار بدري بدل المدير، وبترجّع القرار للإنسان."
+      },
+      "organizer": "Meta",
+      "logo": "/competitions/meta-logo.png",
+      "competition": "Meta Global AI Developer Hackathon",
+      "role": {
+        "en": "AI agent developer · LLM APIs",
+        "ar": "مطوّر وكلاء AI · LLM APIs"
+      },
+      "deadline": "2026-10-26",
+      "leader": {
+        "en": "Led by Ahmed Abdelalim",
+        "ar": "يقوده د. أحمد عبدالعليم"
+      },
+      "leaderImage": "/ahmed-abdelalim-2026.jpg",
+      "image": "/competitions/team-photo.jpg"
+    }
+  ]
+}

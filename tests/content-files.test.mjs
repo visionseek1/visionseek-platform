@@ -82,7 +82,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports']) {
+  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports', 'competitions']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {
@@ -103,7 +103,7 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
 
 test('navigation.json keeps the header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/insights', '/korean-solutions', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/competitions', '/insights', '/korean-solutions', '/masterclass', '/news', '/opportunities', '/programs', '/projects', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);

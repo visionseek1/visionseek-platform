@@ -48,6 +48,7 @@ collections:
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
+                  - {label: "المسابقات (القسم كله)  /competitions", value: "/competitions"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
@@ -3858,3 +3859,220 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
+
+  - name: competitions
+    label: "المسابقات"
+    description: "صفحة /competitions وبالعربية /ar/competitions. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد. الكارت المفتوح يتعلّم «اكتمل» لوحده بعد آخر موعد (نهاية اليوم بتوقيت كوريا)."
+    preview_path: "ar/competitions"
+    editor: {preview: false}
+    files:
+      - label: "الصفحة"
+        name: competitions
+        file: content/competitions.json
+        fields:
+          - label: "الغلاف"
+            name: hero
+            widget: object
+            fields:
+              - label: "الوسم"
+                name: kicker
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السطر تحت العنوان"
+                name: text
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - {label: "الصورة", name: image, widget: image, choose_url: true}
+          - label: "عناوين الأقسام والكروت"
+            name: labels
+            widget: object
+            fields:
+              - label: "مشاركين فيها دلوقتي"
+                name: now
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "انضم"
+                name: join
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "خلصت"
+                name: completed
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "إزاي بنشتغل"
+                name: how
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "القسم الفاضي"
+                name: empty
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "مشاركين في"
+                name: competingIn
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الحالة: مفتوح"
+                name: open
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الحالة: اكتمل"
+                name: filled
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المسابقة"
+                name: competition
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الدور المطلوب"
+                name: role
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "آخر موعد"
+                name: deadline
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زرار انضم للفريق"
+                name: joinTeam
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النتيجة"
+                name: result
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الدروس"
+                name: lessons
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+          - label: "فورم «انضم»"
+            name: form
+            widget: object
+            hint: "الفورم بيفتح مسودة إيميل على بريد الموقع (بيانات التواصل). مفيش إرسال من الموقع نفسه."
+            fields:
+              - label: "الاسم"
+                name: name
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الإيميل"
+                name: email
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الدور"
+                name: role
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "لينك لشغل سابق"
+                name: link
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السطر تحت الزرار"
+                name: note
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+          - label: "إزاي بنشتغل"
+            name: how
+            widget: list
+            summary: "{{fields.ar}}"
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "الكروت"
+            name: cards
+            widget: list
+            summary: "{{fields.project}} — {{fields.status}}"
+            fields:
+              - {label: "المعرّف", name: id, widget: string, hint: "حروف إنجليزية صغيرة وشرطات، ومايتكررش."}
+              - label: "الحالة"
+                name: status
+                widget: select
+                options:
+                  - {label: "مفتوح · مطلوب شريك", value: open}
+                  - {label: "اكتمل", value: filled}
+                  - {label: "خلصت (ينزل في قسم «خلصت»)", value: completed}
+              - {label: "اسم المشروع", name: project, widget: string}
+              - label: "سطر الوصف"
+                name: summary
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - {label: "الجهة (نص بديل للوجو)", name: organizer, widget: string}
+              - {label: "لوجو الجهة", name: logo, widget: image, choose_url: true}
+              - {label: "المسابقة", name: competition, widget: string}
+              - label: "الدور المطلوب"
+                name: role
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "آخر موعد", name: deadline, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true}
+              - label: "يقوده"
+                name: leader
+                widget: object
+                hint: "العربي: د. أحمد. الإنجليزي: Ahmed Abdelalim من غير لقب."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "صورة اللي بيقود", name: leaderImage, widget: image, choose_url: true}
+              - {label: "صورة الكارت", name: image, widget: image, choose_url: true}
+              - label: "النتيجة (لما المسابقة تخلص)"
+                name: result
+                widget: object
+                required: false
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "الدروس (لما المسابقة تخلص)"
+                name: lessons
+                widget: object
+                required: false
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}

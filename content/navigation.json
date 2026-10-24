@@ -195,6 +195,28 @@
       ]
     },
     {
+      "path": "/competitions",
+      "en": "Competitions",
+      "ar": "المسابقات",
+      "children": [
+        {
+          "href": "/competitions#now-competing",
+          "en": "Now competing",
+          "ar": "مشاركين فيها دلوقتي"
+        },
+        {
+          "href": "/competitions#join",
+          "en": "Join",
+          "ar": "انضم"
+        },
+        {
+          "href": "/competitions#how-we-work",
+          "en": "How we work",
+          "ar": "إزاي بنشتغل"
+        }
+      ]
+    },
+    {
       "path": "/work-with-us",
       "en": "Work with Us",
       "ar": "اعمل معنا",
