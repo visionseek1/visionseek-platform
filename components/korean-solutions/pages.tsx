@@ -110,7 +110,7 @@ export function KoreanSolutionsHub({locale}: {locale: Locale}) {
         <span>{ar ? 'افتح رسالة' : 'Open an email'}</span>
         <b dir="ltr">{site.email}</b>
       </a>
-    </section></div>
+    </div></section>
 
     <div className={styles.gutter}><section id="initiatives" className={`${styles.inner} ${styles.band}`} aria-labelledby="ini-title">
       <div className={styles.secHead}>
