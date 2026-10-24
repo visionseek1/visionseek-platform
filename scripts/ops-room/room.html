@@ -680,8 +680,7 @@ ${Object.entries(bySec).map(([k, its]) => `<div class="card"><div style="padding
 }
 function enginesBlock() {
   const reqs = (L ? L.requests : []).slice().sort((a, b) => (String(a.edited) < String(b.edited) ? 1 : -1)).slice(0, 8);
-  return `<section class="sec"><div class="t"><h2>المحركات</h2><span>تشغيل دورة بيسجّل طلب، والمهمة المجدولة بتلقطه خلال ساعة</span></div>
-<form class="card pad" method="post" action="/ops/run" style="display:flex;gap:10px;flex-wrap:wrap;align-items:end"><label class="f">المحرك<select class="sel" name="engine">${["الدورة كاملة", "رادار الفرص", "رادار القدرات", "المعالج", "رادار العملاء", "المُجهِّز"].map((e) => `<option>${e}</option>`).join("")}</select></label><label class="f" style="flex:1;min-width:200px">ملاحظة (اختياري)<input class="inp" name="note" maxlength="600"></label><button class="btn pri" type="submit">شغّل دورة</button></form>
+  return `<section class="sec"><div class="t"><h2>المحركات</h2></div>
 <div class="card"><div class="rows">${reqs.map((r) => `<div class="row"><span style="flex:1;min-width:0">${t(r["الطلب"])}</span><span class="tag">${t(r["الحالة"] || "")}</span>${r["النتيجة"] ? `<a class="small" href="${esc(r["النتيجة"])}" target="_blank" rel="noreferrer">النتيجة</a>` : ""}</div>`).join("") || '<p class="empty">مفيش طلبات.</p>'}</div></div></section>`;
 }
 function publishBlock() {
@@ -952,7 +951,7 @@ function render() {
 }
 let lastPage = "";
 window.addEventListener("hashchange", () => { const p = location.hash.split("/").slice(0, 2).join("/"); if (p !== lastPage) { FILTER = { dept: "", owner: "", track: "" }; LF.stale = false; lastPage = p; } render(); window.scrollTo(0, 0); });
-const FLASH = { ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.", card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", pub: "اتسجّل في الأبحاث والنشر.", comp: "اتسجّل في المسابقات.", sol: "الحل اتضاف في Notion وهو مخفي. اظهره لما تراجعه.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
+const FLASH = { card: "العنصر اتضاف في Notion.", saved: "اتحفظ في Notion.", comment: "التعليق اتسجّل.", dec: "القرار اتسجّل في Notion.", proposed: "الطلب راح «قرارات مستنياك».", pub: "اتسجّل في الأبحاث والنشر.", comp: "اتسجّل في المسابقات.", sol: "الحل اتضاف في Notion وهو مخفي. اظهره لما تراجعه.", contact: "التواصل اتسجّل على العميل.", preview: "معاينة — مفيش حفظ. الكتابة على Notion من الإنتاج بس.", readonly: "دخول مراجعة — قراءة بس، مفيش حفظ.", nosource: "المصدر مطلوب — اختار مصدر العميل الأول.", err: "ما قدرناش نحفظ. جرّب تاني أو اعمله في Notion." };
 render();
 if (RM.flash || /[?&]r=/.test(location.search)) {
   const r = new URLSearchParams(location.search).get("r") || "";

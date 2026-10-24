@@ -70,7 +70,6 @@ export async function GET(request: Request) {
     const url = new URL(request.url);
     const r = url.searchParams.get("r") || "";
     const FLASH: Record<string, string> = {
-      ok: "طلب الدورة اتسجّل. المهمة المجدولة هتلقطه خلال ساعة.",
       card: "العنصر اتضاف في Notion.",
       saved: "اتحفظ في Notion.",
       comment: "التعليق اتسجّل. Claude هيقراه ويرد في الغرفة.",
