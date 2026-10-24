@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {existsSync, readFileSync} from 'node:fs';
+import {existsSync, readFileSync, statSync} from 'node:fs';
 import test from 'node:test';
 
 const url = f => new URL(`../${f}`, import.meta.url);
@@ -56,13 +56,18 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.deepEqual(data.indices[1].principles.map(p => p.id), ['open', 'source', 'method', 'correctable', 'own', 'independent']);
   assert.match(data.indices[1].results.en, /symbolic/i);
   assert.match(data.indices[1].results.ar, /رمزية/);
+  assert.match(data.indices[1].heroImage, /^\/indices\/.+\.svg$/);
+  const atlasSvg = read(`public${data.indices[1].heroImage}`);
+  assert.doesNotMatch(atlasSvg, /<text[\s>]/i);
+  assert.doesNotMatch(atlasSvg, /Atllas|Arabb|Comingsoon|Coming soon|قريب|أطلس|Atlas/i);
+  assert.ok(statSync(url(`public${data.indices[1].heroImage}`)).size < 40_000, 'atlas svg stays small');
   for (const item of data.indices) {
     assert.match(item.slug, /^[a-z0-9-]+$/);
     assert.ok(['upcoming', 'published'].includes(item.status), item.slug);
     for (const key of ['statusLabel', 'title', 'shortTitle', 'subtitle', 'heroAlt', 'lede', 'measuresTitle', 'measures', 'pillarsTitle', 'pillarsIntro', 'principlesTitle', 'methodologyTitle', 'methodology', 'pilotTitle', 'pilot', 'audienceTitle', 'audience', 'resultsTitle', 'results']) {
       assert.ok(isText(item[key]), `${item.slug}.${key}`);
     }
-    assert.match(item.heroImage, /^\/indices\/.+\.(jpg|jpeg|webp)$/, item.slug);
+    assert.match(item.heroImage, /^\/indices\/.+\.(jpg|jpeg|webp|svg)$/, item.slug);
     assert.ok(existsSync(url(`public${item.heroImage}`)), item.heroImage);
     assert.ok(item.pillars.length >= 1, item.slug);
     for (const pillar of item.pillars) {
@@ -92,6 +97,7 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.match(read('components/indices/pages.tsx'), /from 'next\/image'/);
   assert.match(read('components/indices/pages.tsx'), /maxWidth: 1280/);
   assert.match(read('components/indices/pages.tsx'), /maxHeight: 480/);
+  assert.match(read('components/indices/pages.tsx'), /unoptimized=\{svg\}|unoptimized=\{item\.heroImage\.endsWith\('\.svg'\)\}/);
   assert.doesNotMatch(read('components/indices/pages.tsx'), /padStart|styles\.num|<form/i);
 });
 
@@ -152,7 +158,11 @@ test('Indices: built pages stay empty of results and keep the pilot line', () =>
   assert.match(ar, /المؤشر والأطلس/);
   assert.match(enAtlas, /Coming soon/);
   assert.match(enAtlas, /Key visual for the Arab Critical Capabilities Atlas/);
+  assert.match(enAtlas, /arab-critical-capabilities-atlas\.svg/);
+  assert.doesNotMatch(enAtlas, /arab-critical-capabilities-atlas\.jpg/);
+  assert.doesNotMatch(mainOf(enAtlas), /Atllas|Arabb|Comingsoon/);
   assert.match(arAtlas, /ما هو الأطلس/);
   assert.match(arAtlas, /الرسم المفتاحي لأطلس القدرات العربية الحرجة/);
   assert.match(arAtlas, /وستُنشر طريقة الرصد/);
+  assert.match(arAtlas, /arab-critical-capabilities-atlas\.svg/);
 });

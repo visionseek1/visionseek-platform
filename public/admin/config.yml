@@ -4222,7 +4222,7 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - {label: "الصورة المفتاحية", name: heroImage, widget: image, choose_url: true, hint: "١٦:٩ في /indices/. من غير أرقام ولا ترتيب."}
+              - {label: "الصورة المفتاحية", name: heroImage, widget: image, choose_url: true, hint: "١٦:٩ في /indices/ (jpg أو svg). من غير أرقام ولا كتابة على الرسم."}
               - label: "وصف الصورة"
                 name: heroAlt
                 widget: object

@@ -50,6 +50,7 @@ function Crumb({locale, trail}: {locale: Locale; trail: {href?: string; label: s
 
 function IndexVisual({locale, item}: {locale: Locale; item: IndexEntry}) {
   if (!item.heroImage) return null;
+  const svg = item.heroImage.endsWith('.svg');
   return (
     <div className={styles.visual}>
       <Image
@@ -59,6 +60,7 @@ function IndexVisual({locale, item}: {locale: Locale; item: IndexEntry}) {
         height={720}
         sizes="(max-width: 1220px) calc(100vw - 3rem), 1220px"
         style={{width: '100%', height: 'auto', maxWidth: 1280, maxHeight: 480}}
+        unoptimized={svg}
         priority
       />
     </div>
@@ -180,6 +182,7 @@ export function IndicesHub({locale}: {locale: Locale}) {
                           height={720}
                           sizes="(max-width: 760px) calc(100vw - 3rem), (max-width: 1220px) calc(50vw - 2rem), 580px"
                           style={{width: 'auto', height: 'auto', maxWidth: 1280, maxHeight: 180}}
+                          unoptimized={item.heroImage.endsWith('.svg')}
                         />
                       </span>
                     )
