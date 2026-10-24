@@ -16,6 +16,9 @@ type Concept = {
   approachTitle?: Text;
   approach?: Text;
   steps?: Step[];
+  principlesTitle?: Text;
+  principles?: Text[];
+  related?: Array<string | {href: string}>;
   cta?: Text;
 };
 /** Programs. Edited from /admin («البرامج»). Aegis is the first field program. */
@@ -45,9 +48,13 @@ export const programEntries: Entry[] = concepts.map(c => ({
   blocks: [
     {title: c.challengeTitle ?? t('The operational reality', 'التحدي المؤسسي'), body: c.challenge},
     {title: c.approachTitle ?? t('The field method', 'المنهج الميداني'), body: c.approach},
+    ...(c.principles?.length ? [{title: c.principlesTitle ?? t('Principles', 'المبادئ'), items: c.principles}] : []),
     ...(c.steps ?? []).map(step => ({title: step.title, body: step.body})),
   ],
-  related: ['/programs'],
+  related: (() => {
+    const paths = (c.related ?? []).map(item => typeof item === 'string' ? item : item.href).filter(Boolean);
+    return paths.length ? paths : ['/programs'];
+  })(),
 }));
 
 export const opportunityEntries: Entry[] = [];

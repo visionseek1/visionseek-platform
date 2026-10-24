@@ -86,6 +86,8 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.doesNotMatch(course, /workshop\.subtitle/);
   assert.doesNotMatch(course, /workshop\.topics|topicsLabel|course-topics|المحاور/);
   assert.match(course, /workshop\.instructorShort/);
+  assert.match(course, /workshop\.relatedProgram/);
+  assert.equal(data.workshop.relatedProgram.href, '/programs/clause');
   const card = read('components/institution/workshops-view.tsx');
   assert.match(card, /governanceCourse\.price/);
   assert.match(card, /governanceCourse\.soon/);

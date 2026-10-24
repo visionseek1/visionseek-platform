@@ -62,6 +62,7 @@ export function LocalizationDoctrine({locale}: {locale: Locale}) {
             <a className={styles.btn} href={pdf} download>{pdfLabel}</a>
             <Link className={styles.btnGhost} href={`${p}${paper.methodologyHref}`}>{t(paper.methodologyLabel)}</Link>
             <Link className={styles.btnGhost} href={`${p}${paper.indexHref}`}>{t(paper.indexLabel)}</Link>
+            <Link className={styles.btnGhost} href={`${p}${paper.clauseProgram.href}`}>{t(paper.clauseProgram.cta)}</Link>
           </div>
           <p className={styles.tag}>{t(paper.label)}</p>
         </div>
@@ -127,6 +128,12 @@ export function LocalizationDoctrine({locale}: {locale: Locale}) {
           <Exhibit no={3} ar={ar} title={{ar: 'المبادئ الثمانية لعقيدة التوطين', en: 'The eight principles of the Localization Doctrine'}}>
             <div className={styles.pr}>{paper.doctrine.items.map(item => <div key={item.n} className={`${styles.pc} ${'hl' in item && item.hl ? styles.hl : ''}`}><div className={styles.pn}>{item.n}</div><h3>{t(item.title)}</h3><p><Rich text={t(item.text)}/></p></div>)}</div>
           </Exhibit>
+          <aside className={styles.relatedProgram} aria-label={t(paper.clauseProgram.kicker)}>
+            <p className={styles.kicker}><i aria-hidden="true"/><span>{t(paper.clauseProgram.kicker)}</span></p>
+            <h3>{t(paper.clauseProgram.title)}</h3>
+            <p>{t(paper.clauseProgram.body)}</p>
+            <Link className={styles.btnLine} href={`${p}${paper.clauseProgram.href}`}>{t(paper.clauseProgram.cta)}</Link>
+          </aside>
         </section>
 
         <section className={styles.sec} aria-labelledby="ladder">
@@ -169,6 +176,7 @@ export function LocalizationDoctrine({locale}: {locale: Locale}) {
             <a className={styles.btnDark} href={pdf} download>{pdfLabel}</a>
             <Link className={styles.btnLine} href={`${p}${paper.methodologyHref}`}>{t(paper.methodologyLabel)}</Link>
             <Link className={styles.btnLine} href={`${p}${paper.indexHref}`}>{t(paper.indexLabel)}</Link>
+            <Link className={styles.btnLine} href={`${p}${paper.clauseProgram.href}`}>{t(paper.clauseProgram.cta)}</Link>
           </div>
         </section>
       </div>

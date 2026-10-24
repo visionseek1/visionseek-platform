@@ -43,10 +43,14 @@ test('the six section headers keep their ids and links', () => {
   }
 });
 
-test('two programs, Aegis and Apex, each complete', () => {
+test('four programs, Aegis Apex Clause and Relay, each complete', () => {
   const programs = readDir('programs');
-  assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02']);
-  assert.deepEqual(programs.map(p => p.slug).sort(), ['aegis', 'apex']);
+  assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02', 'VS-P03', 'VS-P04']);
+  assert.deepEqual(programs.map(p => p.slug).sort(), ['aegis', 'apex', 'clause', 'relay']);
+  const banned = /Gartner|UpperEdge|ISG|Corvitex|Tawazun|GAMI|Lewis Silkin|Morgan Lewis/i;
+  for (const program of programs) {
+    assert.doesNotMatch(JSON.stringify(program), banned, program.slug);
+  }
   const section = read('sections.json').sections.find(s => s.id === 'programs');
   assert.equal(section.image, '/programs/hero.jpg');
   assert.ok(readFileSync(join(root, 'public/programs/hero.jpg')));
@@ -57,7 +61,24 @@ test('two programs, Aegis and Apex, each complete', () => {
     assert.ok(readFileSync(join(root, 'public', program.image.replace(/^\//, ''))));
     assert.match(program.status.ar, /جاهز للتجريب/);
     assert.doesNotMatch(program.status.ar, /Pilot-Ready/);
+    if (program.slug === 'clause' || program.slug === 'relay') {
+      assert.ok(Array.isArray(program.principles) && program.principles.length >= 5, program.slug);
+      assert.ok(Array.isArray(program.related) && program.related.length >= 1, program.slug);
+      assert.doesNotMatch(JSON.stringify(program), /checklist|download|\.pdf|قايمة|قائمة قابلة للتنزيل/i);
+      assert.doesNotMatch(JSON.stringify(program), /ليه|إزاي|ازاي|دلوقتي|بتاع|علشان|عشان|عايز|عاوز/);
+    }
   }
+  const clause = programs.find(p => p.slug === 'clause');
+  const relay = programs.find(p => p.slug === 'relay');
+  assert.equal(clause.cta.ar, 'اطلب مراجعة عقد');
+  assert.equal(clause.cta.en, 'Request a contract review');
+  assert.deepEqual(clause.related, ['/masterclass/single-track-trap', '/reports/reports/localization-doctrine']);
+  assert.deepEqual(relay.related, ['/korean-solutions']);
+  assert.match(JSON.stringify(relay.principles), /استخدام.*تجميع.*تكييف.*تصميم.*تصدير/s);
+  assert.match(readFileSync(join(root, 'components/institution/home-sections.tsx'), 'utf8'), /Clause و Relay/);
+  const nav = read('navigation.json');
+  const programHrefs = nav.sections.find(s => s.path === '/programs').children.map(c => c.href);
+  assert.deepEqual(programHrefs, ['/programs/aegis', '/programs/apex', '/programs/clause', '/programs/relay']);
 });
 
 test('guide pages keep their section and slug, with at least one block each', () => {

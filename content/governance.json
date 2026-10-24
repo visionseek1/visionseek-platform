@@ -57,6 +57,15 @@
     "durationLabel": {"en": "Duration", "ar": "المدة"},
     "formatLabel": {"en": "Format", "ar": "الشكل"},
     "enrollLabel": {"en": "Enroll", "ar": "اشترك الآن"},
+    "relatedProgram": {
+      "href": "/programs/clause",
+      "kicker": {"en": "Related program", "ar": "برنامج مرتبط"},
+      "title": {
+        "en": "If the decision will be bought in a contract, review it in Clause before you sign.",
+        "ar": "إذا كان القرار سيُشترى بعقد، راجعه في Clause قبل التوقيع."
+      },
+      "cta": {"en": "Open Clause", "ar": "افتح Clause"}
+    },
     "instructor": {"en": "Ahmed Abdelalim", "ar": "د. أحمد عبدالعليم"},
     "withLine": {
       "en": "With Ahmed Abdelalim",

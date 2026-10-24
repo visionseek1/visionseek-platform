@@ -142,6 +142,16 @@
           "href": "/programs/apex",
           "en": "Apex",
           "ar": "Apex"
+        },
+        {
+          "href": "/programs/clause",
+          "en": "Clause",
+          "ar": "Clause"
+        },
+        {
+          "href": "/programs/relay",
+          "en": "Relay",
+          "ar": "Relay"
         }
       ]
     },

@@ -73,6 +73,14 @@ const SERVICES: Domain[] = [
   {id: 'training', image: '/ks/domains/training.webp', title: {ar: 'التدريب وبناء الكفاءة', en: 'Training and competence'}, text: {ar: 'ندرّب الفريق المحلي حتى يشغّل القدرة ويطوّرها.', en: 'We train the local team to run the capability and advance it.'}},
 ];
 
+const RELAY = {
+  href: '/programs/relay',
+  kicker: {ar: 'برنامج مرتبط', en: 'Related program'},
+  title: {ar: 'Relay يدير التزام نقل القدرة على مدى عمر المشروع.', en: 'Relay manages the transfer obligation for the life of the project.'},
+  body: {ar: 'في الصفقات الكورية–العربية المدنية نقيس النقل على سلّم الامتلاك: استخدام، تجميع، تكييف، تصميم، تصدير. التقارير تصل إلى الطرفين.', en: 'In civil Korean–Arab deals we measure transfer on the ownership ladder: use, assemble, adapt, design, export. Reports go to both sides.'},
+  cta: {ar: 'افتح Relay', en: 'Open Relay'},
+};
+
 const INITIATIVE = {
   name: {ar: 'بوابات إنتشون: مبادرة تمكين الشباب العربي', en: 'Incheon Gateways: an initiative to empower Arab youth'},
   idea: {
@@ -143,6 +151,12 @@ export function KoreanSolutionsHub({locale}: {locale: Locale}) {
     <div className={styles.gutter}><section id="how" className={`${styles.inner} ${styles.how}`} aria-labelledby="how-title">
       <h2 id="how-title">{ar ? 'كيف نعمل' : 'How we work'}</h2>
       <ol className={styles.steps}>{HOW.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s)}</b></li>)}</ol>
+      <article className={styles.programCall} aria-labelledby="relay-title">
+        <p className={styles.eyebrow}>{t(RELAY.kicker)}</p>
+        <h3 id="relay-title">{t(RELAY.title)}</h3>
+        <p>{t(RELAY.body)}</p>
+        <Link className={styles.cta} href={`${ar ? '/ar' : ''}${RELAY.href}`}>{t(RELAY.cta)} <span aria-hidden="true">{ar ? '←' : '→'}</span></Link>
+      </article>
     </section></div>
 
     <div className={styles.gutter}><section id="initiatives" className={`${styles.inner} ${styles.band}`} aria-labelledby="ini-title">
