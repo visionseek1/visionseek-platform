@@ -47,7 +47,6 @@ collections:
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "Insights (القسم كله)  /insights", value: "/insights"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
-                  - {label: "المسابقات (القسم كله)  /competitions", value: "/competitions"}
                   - {label: "اعمل معنا (القسم كله)  /work-with-us", value: "/work-with-us"}
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "التقارير (القسم كله)  /reports", value: "/reports"}
@@ -3864,8 +3863,8 @@ collections:
 
   - name: competitions
     label: "المسابقات"
-    description: "صفحة /competitions وبالعربية /ar/competitions. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد. الكارت المفتوح يتعلّم «اكتمل» لوحده بعد آخر موعد (نهاية اليوم بتوقيت كوريا)."
-    preview_path: "ar/competitions"
+    description: "قسم ظاهر عنوانه «المسابقات / Competitions» داخل «اعمل معنا» (/work-with-us#competitions). أي كارت جديد من القائمة تحت ينزل في نفس القسم (مفتوح تحت «مشاركين فيها دلوقتي»، أو «خلصت» لو الحالة completed). الروابط القديمة /competitions تتحوّل هناك. نكتب «مشاركين في / Competing in» بس، من غير أي ادعاء شراكة رسمية مع Meta أو غيرها، ومن غير مبالغ ولا تقسيم عائد."
+    preview_path: "ar/work-with-us"
     editor: {preview: false}
     files:
       - label: "الصفحة"
@@ -3876,9 +3875,10 @@ collections:
             name: hero
             widget: object
             fields:
-              - label: "الوسم"
+              - label: "عنوان القسم الظاهر (المسابقات / Competitions)"
                 name: kicker
                 widget: object
+                hint: "العنوان الكبير فوق الكروت في اعمل معنا. ده id=competitions."
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
@@ -4025,9 +4025,10 @@ collections:
             fields:
               - {label: "English", name: en, widget: string}
               - {label: "العربية", name: ar, widget: string}
-          - label: "الكروت"
+          - label: "الكروت (تظهر كلها تحت عنوان المسابقات في اعمل معنا)"
             name: cards
             widget: list
+            hint: "كارت جديد = نفس القسم #competitions. مفتوح ينزل تحت «مشاركين فيها دلوقتي»؛ completed ينزل تحت «خلصت»."
             summary: "{{fields.project}} — {{fields.status}}"
             fields:
               - {label: "المعرّف", name: id, widget: string, hint: "حروف إنجليزية صغيرة وشرطات، ومايتكررش."}
