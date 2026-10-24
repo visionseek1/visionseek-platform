@@ -163,6 +163,14 @@ test('the conferences routes and admin collection exist, and Conferences is a to
   assert.match(css, /--forum-measure:\s*68ch/);
   assert.match(css, /padding-inline/);
   assert.match(css, /clamp\(1\.85rem/);
+  assert.match(css, /\.cardGrid/);
+  assert.match(css, /\.categoryGrid/);
+  assert.match(css, /\.pull/);
+  assert.match(css, /\.awardsHero/);
+  assert.match(css, /\.criteria/);
+  assert.match(page, /blockquote className=\{styles\.pull\}/);
+  assert.match(page, /councilIcons/);
+  assert.match(page, /awardIcons/);
   const config = readFileSync(join(root, 'public/admin/config.yml'), 'utf8');
   assert.match(config, /name: forums/);
   assert.match(config, /file: content\/forums\.json/);
@@ -258,6 +266,11 @@ test('the built conferences pages are native RTL and LTR and keep the draft fact
   assert.doesNotMatch(ar, /قريبًا/);
   assert.match(en, /id="incheon-dialogue-council"/);
   assert.match(en, /id="incheon-dialogue-awards"/);
+  assert.match(en, /<blockquote[^>]*>Honoring those who owned the capability, not those who bought it<\/blockquote>/);
+  assert.match(ar, /<blockquote[^>]*>تكريم من امتلك القدرة، لا من اشتراها<\/blockquote>/);
+  assert.match(en, />01</);
+  assert.match(en, />02</);
+  assert.match(en, />03</);
   assert.match(ar, /id="incheon-dialogue-council"/);
   assert.match(ar, /id="incheon-dialogue-awards"/);
   assert.doesNotMatch(en, /incheon-dialogue\.jpg|incheon-awards\.jpg/);
