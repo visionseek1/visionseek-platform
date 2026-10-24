@@ -70,8 +70,8 @@
       },
       "visual": "/forums/incheon-dialogue.svg",
       "visualAlt": {
-        "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula, with the VisionSeek symbol.",
-        "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل نقاط خريطة كوريا بشبه الجزيرة العربية، وعليها رمز VisionSeek."
+        "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula.",
+        "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل مخطط كوريا المنقّط بشبه الجزيرة العربية."
       },
       "opening": {
         "en": "The technologies that will shape the next decade are not bought. They are built and localized. Korea did this in a generation. The Arab world has the ambition and the means to lead. The Incheon Dialogue is where both sides sit down to decide how that happens.",
@@ -139,6 +139,122 @@
       "outcome": {
         "en": "A discussion paper before the dialogue, a summary after it, and clear partnership priorities between the two sides.",
         "ar": "ورقة نقاش تصدر قبل الحوار، وملخص يصدر بعده، وأولويات شراكة واضحة بين الطرفين."
+      },
+      "awards": {
+        "title": {
+          "en": "Incheon Localization Awards",
+          "ar": "جوائز إنتشون للتوطين"
+        },
+        "kicker": {
+          "en": "Honoring those who own capability, not those who merely bought it",
+          "ar": "تكريم من امتلك القدرة، لا من اشتراها"
+        },
+        "status": {
+          "en": "Announced at the Incheon Dialogue, April 2027, Incheon.",
+          "ar": "تُعلن ضمن «حوار إنتشون»، أبريل 2027، إن شاء الله، في إنتشون."
+        },
+        "visual": "/forums/incheon-awards.svg",
+        "visualAlt": {
+          "en": "Vector mark for the Incheon Localization Awards: a lime isometric VisionSeek symbol on black, with a soft glow.",
+          "ar": "علامة جوائز إنتشون للتوطين: رمز VisionSeek المتساوي القياس بالأخضر على أسود، مع توهج خفيف."
+        },
+        "opening": {
+          "en": "Buying technology is a transaction. Owning it is an achievement. Behind every capability that has truly been localized stands a team that learned, built, and can now operate and develop it without waiting for anyone. These awards honor that achievement, and set a standard others can follow.",
+          "ar": "شراء التكنولوجيا صفقة، أما امتلاكها فإنجاز. خلف كل قدرة وُطّنت فعلًا فريق تعلّم وبنى وأصبح قادرًا على التشغيل والتطوير دون أن ينتظر أحدًا. هذه الجوائز تكرّم هذا الإنجاز، وتضع له معيارًا يُحتذى."
+        },
+        "what": {
+          "en": "Annual awards given by VisionSeek at the Incheon Dialogue. They honor institutions, individuals, and Korean–Arab partnerships that transferred a critical capability, localized it, and now own it — in the seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
+          "ar": "جوائز سنوية تمنحها VisionSeek ضمن «حوار إنتشون»، تكرّم المؤسسات والأفراد والشراكات الكورية-العربية التي نقلت قدرة حرجة ووطّنتها وأصبحت تملكها، في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        },
+        "principles": [
+          {
+            "title": {"en": "Own, do not buy", "ar": "امتلاك لا شراء"},
+            "text": {
+              "en": "The only test is a capability operated and developed locally, without depending on the supplier.",
+              "ar": "المعيار الوحيد هو قدرة تُشغَّل وتُطوَّر محليًا دون الاعتماد على المورّد."
+            }
+          },
+          {
+            "title": {"en": "Verifiable evidence", "ar": "دليل قابل للتحقق"},
+            "text": {
+              "en": "What is honored is an achievement proven by a measurable result — not promises, not announcements.",
+              "ar": "يُكرَّم الإنجاز المثبت بنتيجة يمكن قياسها، لا الوعود ولا الإعلانات."
+            }
+          },
+          {
+            "title": {"en": "Nomination by invitation", "ar": "ترشيح بالدعوة"},
+            "text": {
+              "en": "Qualified bodies and experts invited by VisionSeek nominate. Self-nomination is not accepted.",
+              "ar": "يرشّح جهات وخبراء مؤهلون تدعوهم VisionSeek، ولا يُقبل الترشيح الذاتي."
+            }
+          },
+          {
+            "title": {"en": "Separation of roles", "ar": "فصل الأدوار"},
+            "text": {
+              "en": "Screening of nominations is separate from judging. Deliberations are confidential, to protect their integrity.",
+              "ar": "فرز الترشيحات منفصل عن التحكيم، والمداولات سرية حمايةً لنزاهتها."
+            }
+          },
+          {
+            "title": {"en": "Independent", "ar": "مستقلة"},
+            "text": {
+              "en": "No sponsorship and no commercial relationship that would affect the choice.",
+              "ar": "لا رعاية ولا علاقة تجارية تؤثر على الاختيار."
+            }
+          },
+          {
+            "title": {"en": "Annual and continuing", "ar": "سنوية وممتدة"},
+            "text": {
+              "en": "Announced each year at the Incheon Dialogue. We follow the effect of those honored after the recognition.",
+              "ar": "تُعلن كل عام في «حوار إنتشون»، ونتابع أثر الفائزين بعد التكريم."
+            }
+          }
+        ],
+        "categories": [
+          {
+            "title": {"en": "Localization Institution", "ar": "مؤسسة التوطين"},
+            "text": {
+              "en": "An Arab institution that localized a critical capability and now owns it.",
+              "ar": "مؤسسة عربية وطّنت قدرة حرجة وأصبحت تملكها."
+            }
+          },
+          {
+            "title": {"en": "Localization Pioneer", "ar": "رائد التوطين"},
+            "text": {
+              "en": "An individual who led the building of a critical capability inside their institution or country.",
+              "ar": "فرد قاد بناء قدرة حرجة داخل مؤسسته أو بلده."
+            }
+          },
+          {
+            "title": {"en": "Bridge Partnership", "ar": "شراكة الجسر"},
+            "text": {
+              "en": "A Korean–Arab partnership that transferred the knowledge in fact, not only the product.",
+              "ar": "شراكة كورية-عربية نقلت المعرفة فعلًا لا المنتج فقط."
+            }
+          }
+        ],
+        "process": [
+          {"en": "Nominators are invited", "ar": "دعوة المرشِّحين"},
+          {"en": "Nominations are screened and the evidence is checked", "ar": "فرز الترشيحات والتحقق من الأدلة"},
+          {"en": "The jury deliberates", "ar": "مداولات هيئة التحكيم"},
+          {"en": "Announcement and honoring at the Incheon Dialogue", "ar": "الإعلان والتكريم في «حوار إنتشون»"}
+        ],
+        "who": {
+          "en": "The institutions and individuals who built the capability quietly and deserve recognition; governments looking for models to follow; Korean partners who transferred knowledge in good faith; and every Arab leader who wants to know what real success looks like.",
+          "ar": "المؤسسات والأفراد الذين بنوا القدرة بصمت ويستحقون الاعتراف، والحكومات التي تبحث عن نماذج تُحتذى، والشركاء الكوريون الذين نقلوا المعرفة بصدق، وكل قائد عربي يريد أن يعرف كيف يبدو النجاح الحقيقي."
+        },
+        "honesty": {
+          "en": "No prize value, no juror or winner names, and no nomination window have been set.",
+          "ar": "لا قيمة للجوائز، ولا أسماء محكّمين أو فائزين، ولا نافذة ترشيح."
+        },
+        "labels": {
+          "soon": {"en": "Coming soon", "ar": "قريبًا"},
+          "mandate": {"en": "What the awards are", "ar": "ما هي الجوائز"},
+          "principles": {"en": "Principles", "ar": "مبادئ الجوائز"},
+          "categories": {"en": "Categories", "ar": "الفئات"},
+          "process": {"en": "How they work", "ar": "كيف تعمل"},
+          "who": {"en": "Who benefits", "ar": "من يستفيد"}
+        }
       },
       "invite": {
         "label": {

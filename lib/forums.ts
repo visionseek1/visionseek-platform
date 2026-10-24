@@ -15,6 +15,29 @@ export type ForumPrinciple = {
   text: Bi;
 };
 
+export type ForumAwards = {
+  title: Bi;
+  kicker: Bi;
+  status: Bi;
+  visual: string;
+  visualAlt: Bi;
+  opening: Bi;
+  what: Bi;
+  principles: ForumPrinciple[];
+  categories: ForumPrinciple[];
+  process: Bi[];
+  who: Bi;
+  honesty: Bi;
+  labels: {
+    soon: Bi;
+    mandate: Bi;
+    principles: Bi;
+    categories: Bi;
+    process: Bi;
+    who: Bi;
+  };
+};
+
 export type Forum = {
   slug: string;
   title: Bi;
@@ -28,6 +51,7 @@ export type Forum = {
   themes: Bi[];
   who: Bi;
   outcome: Bi;
+  awards?: ForumAwards;
   invite?: ForumInvite;
 };
 

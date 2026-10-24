@@ -71,6 +71,36 @@ test('the Incheon key visual is a local SVG under public/forums, not a stretched
   assert.equal(existsSync(join(root, 'public/forums/incheon-dialogue.jpg')), false);
 });
 
+test('Incheon Localization Awards sit inside the dialogue, coming soon, with a vector mark', () => {
+  const awards = forums.forums[0].awards;
+  assert.ok(awards);
+  assert.equal(awards.title.ar, 'جوائز إنتشون للتوطين');
+  assert.equal(awards.title.en, 'Incheon Localization Awards');
+  assert.equal(awards.labels.soon.ar, 'قريبًا');
+  assert.equal(awards.labels.soon.en, 'Coming soon');
+  assert.match(awards.status.ar, /أبريل 2027/);
+  assert.match(awards.status.en, /April 2027/);
+  assert.doesNotMatch(awards.status.en, /April\s+\d{1,2}(?!\d)/);
+  assert.equal(awards.principles.length, 6);
+  assert.equal(awards.categories.length, 3);
+  assert.equal(awards.process.length, 4);
+  assert.equal(awards.visual, '/forums/incheon-awards.svg');
+  const file = join(root, 'public/forums/incheon-awards.svg');
+  const stat = statSync(file);
+  assert.ok(stat.size > 800 && stat.size < 20_000, stat.size);
+  const svg = readFileSync(file, 'utf8');
+  assert.match(svg, /<svg /);
+  assert.doesNotMatch(svg, /<image /);
+  assert.equal(existsSync(join(root, 'public/forums/incheon-awards.jpg')), false);
+  const blob = JSON.stringify(awards);
+  assert.doesNotMatch(blob, /\$\d|USD|nomination form|self-nominate here/i);
+  assert.match(awards.honesty.en, /No prize value/);
+  assert.match(awards.honesty.ar, /لا قيمة للجوائز/);
+  for (const item of [...awards.principles, ...awards.categories]) {
+    assert.ok(isText(item.title) && isText(item.text), item.title.en);
+  }
+});
+
 test('the forums routes and admin collection exist, and nav is untouched', () => {
   for (const path of ['app/forums/page.tsx', 'app/ar/forums/page.tsx', 'components/forums/pages.tsx', 'lib/forums.ts', 'docs/forums-benchmark.md']) {
     assert.ok(readFileSync(join(root, path), 'utf8').length, path);
@@ -112,7 +142,12 @@ test('the built forums pages are native RTL and LTR and keep the draft facts hon
   assert.match(en, /mailto:abdelalim@visionseek\.org/);
   assert.match(ar, /mailto:abdelalim@visionseek\.org/);
   assert.match(en, /forums\/incheon-dialogue\.svg/);
-  assert.doesNotMatch(en, /incheon-dialogue\.jpg/);
+  assert.match(en, /forums\/incheon-awards\.svg/);
+  assert.match(en, /Incheon Localization Awards/);
+  assert.match(ar, /جوائز إنتشون للتوطين/);
+  assert.match(en, /Coming soon/);
+  assert.match(ar, /قريبًا/);
+  assert.doesNotMatch(en, /incheon-dialogue\.jpg|incheon-awards\.jpg/);
   assert.doesNotMatch(en, /<form/i);
   assert.doesNotMatch(ar, /<form/i);
   assert.doesNotMatch(en, /عشاء مغلق|12 people/);

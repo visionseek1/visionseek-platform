@@ -1,17 +1,31 @@
 import Image from 'next/image';
 import styles from './forums.module.css';
 
-export function IncheonKeyVisual({alt}: {alt: string}) {
+export function ForumKeyVisual({
+  src,
+  alt,
+  width = 1200,
+  height = 420,
+  priority = false,
+  compact = false,
+}: {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  compact?: boolean;
+}) {
   return (
-    <figure className={styles.visual} dir="ltr">
+    <figure className={compact ? styles.visualCompact : styles.visual} dir="ltr">
       <Image
-        className={styles.visualMark}
-        src="/forums/incheon-dialogue.svg"
+        className={compact ? styles.visualMarkCompact : styles.visualMark}
+        src={src}
         alt={alt}
-        width={1200}
-        height={380}
+        width={width}
+        height={height}
         unoptimized
-        priority
+        priority={priority}
       />
       <div className={styles.logoTile} aria-hidden="true">
         <Image

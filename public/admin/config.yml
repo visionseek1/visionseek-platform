@@ -4036,6 +4036,143 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
+              - label: جوائز إنتشون للتوطين
+                name: awards
+                widget: object
+                required: false
+                hint: "كتلة داخل الحوار. وسم «قريبًا». لا قيمة للجوائز ولا أسماء ولا فورم ترشيح ولا يوم محدد."
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: السطر فوق الحالة
+                    name: kicker
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الحالة
+                    name: status
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - {label: العلامة البصرية, name: visual, widget: string, hint: "مسار SVG فقط. مصدر JPEG 1280×720 لا يُمدّ."}
+                  - label: وصف العلامة
+                    name: visualAlt
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: الافتتاحية
+                    name: opening
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: ما هي الجوائز
+                    name: what
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: المبادئ
+                    name: principles
+                    widget: list
+                    summary: "{{fields.title.ar}}"
+                    fields:
+                      - label: العنوان
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: النص
+                        name: text
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                  - label: الفئات
+                    name: categories
+                    widget: list
+                    summary: "{{fields.title.ar}}"
+                    hint: "صياغة مبدئية حتى يعتمدها د. أحمد."
+                    fields:
+                      - label: العنوان
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: النص
+                        name: text
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                  - label: كيف تعمل
+                    name: process
+                    widget: list
+                    summary: "{{fields.ar}}"
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: من يستفيد
+                    name: who
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: جملة الصدق
+                    name: honesty
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: تسميات أقسام الجوائز
+                    name: labels
+                    widget: object
+                    fields:
+                      - label: وسم قريبًا
+                        name: soon
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: ما هي الجوائز
+                        name: mandate
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: مبادئ الجوائز
+                        name: principles
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: الفئات
+                        name: categories
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: كيف تعمل
+                        name: process
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: من يستفيد
+                        name: who
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
               - label: طلب الدعوة
                 name: invite
                 widget: object

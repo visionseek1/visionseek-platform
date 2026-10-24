@@ -2,8 +2,8 @@ import Link from 'next/link';
 import {ArrowRight} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {IncheonKeyVisual} from '@/components/forums/key-visual';
-import {forumPath, forumsContent, tx, type Forum, type Locale} from '@/lib/forums';
+import {ForumKeyVisual} from '@/components/forums/key-visual';
+import {forumPath, forumsContent, tx, type Forum, type ForumAwards, type Locale} from '@/lib/forums';
 import type {Metadata} from 'next';
 import {mailto} from '@/lib/site';
 import styles from './forums.module.css';
@@ -16,6 +16,68 @@ function Invite({forum, locale}: {forum: Forum; locale: Locale}) {
       {tx(locale, forum.invite.label)}
       <ArrowRight size={16} aria-hidden="true"/>
     </a>
+  );
+}
+
+function AwardsBlock({awards, locale, slug}: {awards: ForumAwards; locale: Locale; slug: string}) {
+  return (
+    <section className={styles.awards} id={`${slug}-awards`} aria-labelledby={`${slug}-awards-title`}>
+      <p className={styles.soon}>{tx(locale, awards.labels.soon)}</p>
+      <h2 id={`${slug}-awards-title`}>{tx(locale, awards.title)}</h2>
+      <p className={styles.awardsKicker}>{tx(locale, awards.kicker)}</p>
+      <p className={styles.edition}>{tx(locale, awards.status)}</p>
+      <p className={styles.standfirst}>{tx(locale, awards.opening)}</p>
+      <ForumKeyVisual
+        src={awards.visual}
+        alt={tx(locale, awards.visualAlt)}
+        compact
+      />
+
+      <div className={styles.block} aria-labelledby={`${slug}-awards-mandate`}>
+        <h3 id={`${slug}-awards-mandate`}>{tx(locale, awards.labels.mandate)}</h3>
+        <p>{tx(locale, awards.what)}</p>
+      </div>
+
+      <div className={styles.block} aria-labelledby={`${slug}-awards-principles`}>
+        <h3 id={`${slug}-awards-principles`}>{tx(locale, awards.labels.principles)}</h3>
+        <dl className={styles.format}>
+          {awards.principles.map(item => (
+            <div key={item.title.en}>
+              <dt>{tx(locale, item.title)}</dt>
+              <dd>{tx(locale, item.text)}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div className={styles.block} aria-labelledby={`${slug}-awards-categories`}>
+        <h3 id={`${slug}-awards-categories`}>{tx(locale, awards.labels.categories)}</h3>
+        <dl className={styles.format}>
+          {awards.categories.map(item => (
+            <div key={item.title.en}>
+              <dt>{tx(locale, item.title)}</dt>
+              <dd>{tx(locale, item.text)}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div className={styles.block} aria-labelledby={`${slug}-awards-process`}>
+        <h3 id={`${slug}-awards-process`}>{tx(locale, awards.labels.process)}</h3>
+        <ol className={styles.process}>
+          {awards.process.map(step => (
+            <li key={step.en}>{tx(locale, step)}</li>
+          ))}
+        </ol>
+      </div>
+
+      <div className={styles.block} aria-labelledby={`${slug}-awards-who`}>
+        <h3 id={`${slug}-awards-who`}>{tx(locale, awards.labels.who)}</h3>
+        <p>{tx(locale, awards.who)}</p>
+      </div>
+
+      <p className={styles.honesty}>{tx(locale, awards.honesty)}</p>
+    </section>
   );
 }
 
@@ -39,7 +101,7 @@ function ForumArticle({forum, locale}: {forum: Forum; locale: Locale}) {
           <Invite forum={forum} locale={locale}/>
         </div>
         {forum.visual && forum.visualAlt && (
-          <IncheonKeyVisual alt={tx(locale, forum.visualAlt)}/>
+          <ForumKeyVisual src={forum.visual} alt={tx(locale, forum.visualAlt)} priority/>
         )}
       </header>
 
@@ -82,6 +144,8 @@ function ForumArticle({forum, locale}: {forum: Forum; locale: Locale}) {
           <h2 id={`${forum.slug}-outcome`}>{tx(locale, labels.outcome)}</h2>
           <p>{tx(locale, forum.outcome)}</p>
         </section>
+
+        {forum.awards && <AwardsBlock awards={forum.awards} locale={locale} slug={forum.slug}/>}
 
         <footer className={styles.close}>
           <Invite forum={forum} locale={locale}/>

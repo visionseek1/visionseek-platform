@@ -22,4 +22,4 @@ Compared five convening sites (October 2026): [Munich Security Conference](https
 
 ## What VisionSeek will not copy
 
-No invented speakers, partners, sponsors, halls, or day-of-month. No blog/news card dump. No MSC/WEF photography we do not have. The Incheon page uses approved wording only, and a vector key visual (Korea–Arabia arc) that stays sharp at any size.
+No invented speakers, partners, sponsors, halls, or day-of-month. No blog/news card dump. No MSC/WEF photography we do not have. The Incheon page uses approved wording only, and a vector key visual (Korea–Arabia arc) that stays sharp at any size. The Incheon Localization Awards sit inside that same article as a “Coming soon” sub-block — not a second hero, not a prize-card grid.
