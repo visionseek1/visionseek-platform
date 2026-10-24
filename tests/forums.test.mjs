@@ -52,3 +52,27 @@ test('the forums routes and admin collection exist', () => {
   const nav = readFileSync(join(root, 'content/navigation.json'), 'utf8');
   assert.doesNotMatch(nav, /\/forums/);
 });
+
+test('the built forums pages are native RTL and LTR and keep the draft facts honest', () => {
+  const html = locale => readFileSync(join(root, `.next/server/app/${locale === 'ar' ? 'ar/' : ''}forums.html`), 'utf8');
+  const en = html('en');
+  const ar = html('ar');
+  assert.match(en, /class="vs-site locale-en[^"]*" lang="en" dir="ltr"/);
+  assert.match(ar, /class="vs-site locale-ar[^"]*" lang="ar" dir="rtl"/);
+  assert.match(en, /Conferences &amp; Forums|Conferences & Forums/);
+  assert.match(ar, /المؤتمرات والمنتديات/);
+  assert.match(en, /Incheon Dialogue/);
+  assert.match(ar, /حوار إنتشون/);
+  assert.match(en, /Coming soon — by invitation/);
+  assert.match(ar, /قريبًا — بالدعوة/);
+  assert.match(en, /Arab Technology Capability Index/);
+  assert.match(ar, /مؤشر القدرة التكنولوجية العربية/);
+  assert.match(en, /Ahmed Abdelalim/);
+  assert.doesNotMatch(en, /Dr\.?\s*Ahmed/);
+  assert.match(en, /mailto:abdelalim@visionseek\.org/);
+  assert.match(ar, /mailto:abdelalim@visionseek\.org/);
+  assert.match(en, /No date, venue, speakers, partners or sponsors have been set/);
+  assert.match(ar, /لا موعد بعد، ولا مكان، ولا قائمة متحدثين، ولا شركاء، ولا رعاة/);
+  assert.doesNotMatch(en, /عشاء مغلق|12 people/);
+  assert.doesNotMatch(ar, /عشاء مغلق/);
+});
