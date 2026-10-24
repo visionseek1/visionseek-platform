@@ -101,6 +101,7 @@ test('Indices: own pages in both languages, sitemap and /admin, not in the heade
   assert.equal(nav.sections.some(s => s.path === '/indices'), false, 'do not add a nav item before Ahmed approves');
   assert.match(read('app/sitemap.ts'), /'\/indices'/);
   assert.match(read('public/admin/config.yml'), /value: "\/indices"/);
+  assert.match(read('public/admin/config.yml'), /value: "\/indices\/arab-critical-capabilities-atlas"/);
   assert.match(read('public/admin/config.yml'), /file: content\/indices\.json/);
   assert.match(read('public/admin/config.yml'), /name: heroImage/);
   assert.match(read('public/admin/config.yml'), /name: principles/);
