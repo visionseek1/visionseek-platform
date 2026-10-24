@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>عقيدة التوطين — VisionSeek Lab · Doctrine Paper (مسودة للمراجعة)</title>
+<style>
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Light.ttf);font-weight:300}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Regular.ttf);font-weight:400}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Medium.ttf);font-weight:500}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-SemiBold.ttf);font-weight:600}
+@font-face{font-family:"Plex Arabic";src:url(fonts/IBMPlexSansArabic-Bold.ttf);font-weight:700}
+@font-face{font-family:"Kufi";src:url(fonts/NotoKufiArabic-VariableFont_wght.ttf);font-weight:100 900}
+@font-face{font-family:"Grotesk";src:url(fonts/SpaceGrotesk-VariableFont_wght.ttf);font-weight:300 700}
+
+:root{--ink:#0D0D0D;--lime:#CCFF00;--lime2:#B0F51E;--olive:#5B7300;--g1:#F3F4EF;--g2:#E4E6DE;--g3:#8A8D84;--g4:#4A4C47}
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#d9d9d6}
+body{font-family:"Plex Arabic",sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.85;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:#fff;margin:0 auto 8mm;page-break-after:always;break-after:page}
+@media print{html,body{background:#fff}.page{margin:0}}
+.lat{font-family:"Grotesk",sans-serif;direction:ltr;unicode-bidi:isolate}
+bdi{unicode-bidi:isolate}
+
+/* ---------- source markers ---------- */
+sup{line-height:0;font-size:6.2pt;vertical-align:super;font-weight:500;white-space:nowrap}
+sup.s{color:var(--olive);font-family:"Grotesk";direction:ltr;unicode-bidi:isolate;margin-inline-start:1px}
+sup.s::before{content:"["}sup.s::after{content:"]"}
+sup.i{color:var(--g3);margin-inline-start:2px}
+sup.i::before{content:"◇ ";font-size:5pt}
+sup.g{color:#A0522D;margin-inline-start:2px}
+sup.g::before{content:"○ ";font-size:5pt}
+.dark sup.s{color:var(--lime2)} .dark sup.i{color:#9a9d94}
+
+/* ---------- dark pages ---------- */
+.dark{background:var(--ink);color:#fff}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:12mm 12mm;background-position:-1px -1px}
+.bar{position:absolute;top:0;bottom:0;right:0;width:13mm;background:var(--lime)}
+.kicker{font-family:"Grotesk";font-weight:700;letter-spacing:.32em;font-size:7.6pt;color:var(--lime);direction:ltr;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:3.5mm;direction:ltr}
+.brand img{height:13mm;width:auto;display:block;background:transparent}
+.brand span{font-family:"Grotesk";font-weight:700;font-size:16pt;letter-spacing:.02em}
+.draft-tag{display:inline-block;border:0.3mm solid var(--lime);color:var(--lime);font-size:6.6pt;padding:1.2mm 2.6mm;line-height:1.5;letter-spacing:.02em}
+.draft-tag .lat{letter-spacing:.14em;font-weight:600}
+
+/* cover */
+.cover .inner{position:absolute;top:0;bottom:0;right:13mm;left:0;padding:22mm 20mm 20mm 20mm}
+.cover .brand{position:absolute;top:24mm;right:20mm}
+.cover .dt{position:absolute;top:24mm;left:20mm}
+.cover .kicker{position:absolute;top:96mm;right:20mm}
+.cover h1{position:absolute;top:104mm;right:20mm;left:20mm;font-family:"Kufi";font-weight:800;font-size:58pt;line-height:1.35;color:#fff}
+.cover .sub{position:absolute;top:150mm;right:20mm;width:132mm;font-family:"Kufi";font-weight:400;font-size:17pt;line-height:1.75;color:#e9e9e4}
+.cover .label{position:absolute;top:196mm;right:20mm;border:0.35mm solid var(--lime2);color:var(--lime2);font-size:8.2pt;padding:2.2mm 5mm}
+.cover .steps{position:absolute;left:20mm;bottom:30mm;display:flex;align-items:flex-end;gap:2.4mm;direction:ltr}
+.cover .steps i{display:block;width:9mm;border:0.3mm solid rgba(204,255,0,.55);border-bottom:none}
+.cover .steps i:last-child{background:var(--lime);border-color:var(--lime)}
+.cover .foot{position:absolute;bottom:20mm;right:20mm;font-size:7.6pt;color:#a9aba4;line-height:1.8}
+.cover .foot b{color:#fff;font-weight:600}
+
+/* ---------- light page chrome ---------- */
+.hdr{position:absolute;top:11mm;right:18mm;left:18mm;display:flex;justify-content:space-between;align-items:center;font-size:6.8pt;color:var(--g3);border-bottom:0.25mm solid var(--g2);padding-bottom:2mm}
+.hdr .k{font-family:"Grotesk";letter-spacing:.24em;font-weight:700;color:var(--ink);direction:ltr;display:flex;align-items:center;gap:2mm}
+.hdr .k::before{content:"";width:2.4mm;height:2.4mm;background:var(--lime2);display:inline-block}
+.ftr{position:absolute;bottom:10mm;right:18mm;left:18mm;display:flex;justify-content:space-between;align-items:center;font-size:6.6pt;color:var(--g3)}
+.ftr .pn{font-family:"Grotesk";font-weight:700;font-size:9pt;color:var(--ink);display:flex;align-items:center;gap:2mm}
+.ftr .pn::before{content:"";width:6mm;height:1.2mm;background:var(--lime2)}
+.ftr .dr{border:0.25mm solid var(--g2);padding:.6mm 2mm;letter-spacing:.02em}
+.ftr .dr .lat{letter-spacing:.12em}
+.dark .ftr{color:#8b8d86}.dark .ftr .pn{color:#fff}.dark .ftr .dr{border-color:#3a3b37}
+.body{position:absolute;top:24mm;right:18mm;left:18mm;bottom:20mm}
+
+/* typography */
+.eyebrow{font-family:"Grotesk";font-size:7.4pt;font-weight:700;letter-spacing:.26em;color:var(--olive);direction:ltr;text-align:right;margin-bottom:2mm}
+.eyebrow.ar{font-family:"Plex Arabic";letter-spacing:0;font-size:8.4pt}
+h2{font-family:"Kufi";font-weight:800;font-size:24pt;line-height:1.45;margin-bottom:4mm}
+h3{font-family:"Kufi";font-weight:700;font-size:13pt;line-height:1.5;margin-bottom:2mm}
+h4{font-weight:700;font-size:9.6pt;margin-bottom:1mm}
+p{margin-bottom:2.6mm;text-align:justify}
+.lede{font-size:12.4pt;line-height:1.85;font-weight:400;color:#1b1b1b;margin-bottom:5mm}
+.rule{height:1.4mm;width:18mm;background:var(--lime2);margin:0 0 5mm}
+.cols{display:grid;grid-template-columns:50mm 1fr;gap:10mm}
+.side{font-size:8.2pt;color:var(--g4);line-height:1.75}
+.pq{font-family:"Kufi";font-weight:700;font-size:15pt;line-height:1.65;border-right:1.6mm solid var(--lime2);padding-right:5mm;margin:4mm 0 6mm}
+.pq small{display:block;font-family:"Plex Arabic";font-size:7.4pt;font-weight:400;color:var(--g3);margin-top:2mm}
+
+/* exhibits */
+.ex{margin-top:4mm;border-top:0.6mm solid var(--ink);padding-top:3mm}
+.ex-h{display:flex;gap:3mm;align-items:baseline;margin-bottom:1mm}
+.ex-n{font-weight:700;font-size:8.6pt;color:var(--ink);background:var(--lime2);padding:0 2mm}
+.ex-t{font-family:"Kufi";font-weight:700;font-size:10.6pt}
+.ex-s{font-size:7.8pt;color:var(--g4);margin-bottom:3mm}
+.ex-src{font-size:6.8pt;color:var(--g3);border-top:0.25mm solid var(--g2);padding-top:1.6mm;margin-top:3mm;line-height:1.7}
+
+/* timeline */
+.tl{position:relative;display:grid;grid-template-columns:repeat(11,1fr);gap:0;margin-top:2mm}
+.tl::before{content:"";position:absolute;top:13.2mm;right:0;left:0;height:0.5mm;background:var(--ink)}
+.tl .ev{position:relative;padding:0 1.2mm;text-align:center}
+.tl .yr{font-family:"Grotesk";font-weight:700;font-size:10.5pt;height:11mm;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1mm}
+.tl .dot{width:3.6mm;height:3.6mm;border-radius:50%;background:#fff;border:0.6mm solid var(--ink);margin:0 auto 2.4mm;position:relative;z-index:1}
+.tl .ev.hl .dot{background:var(--lime);}
+.tl .tx{font-size:6.9pt;line-height:1.55;color:#262626}
+
+/* exec summary */
+.kt{display:grid;grid-template-columns:14mm 1fr;gap:4mm;padding:4.2mm 0;border-bottom:0.25mm solid var(--g2)}
+.kt:first-child{border-top:0.6mm solid var(--ink)}
+.kt .n{font-family:"Grotesk";font-weight:700;font-size:26pt;line-height:1;color:var(--ink)}
+.kt .n span{display:block;width:8mm;height:1.2mm;background:var(--lime2);margin-top:2mm}
+.kt h3{font-size:12.4pt;margin-bottom:1mm}
+.kt p{margin:0;font-size:9.2pt;color:#2a2a2a}
+
+/* flow (absorption) */
+.flow{display:grid;grid-template-columns:1fr 6mm 1.25fr 6mm 1fr 6mm 1fr;align-items:stretch;margin-top:1mm}
+.fb{border:0.35mm solid var(--ink);padding:3mm;font-size:7.6pt;line-height:1.6}
+.fb b{display:block;font-family:"Kufi";font-size:9pt;margin-bottom:1mm}
+.fb.k{background:var(--ink);color:#fff;border-color:var(--ink)}
+.fb.k b{color:var(--lime)}
+.fb.x{background:var(--lime);border-color:var(--lime)}
+.arw{display:flex;align-items:center;justify-content:center;font-size:12pt;color:var(--ink)}
+
+/* why now */
+.drv{display:grid;grid-template-columns:9mm 1fr;gap:3mm;padding:3mm 0;border-bottom:0.25mm solid var(--g2)}
+.drv .ic{width:7mm;height:7mm;background:var(--ink);color:var(--lime);font-family:"Grotesk";font-weight:700;display:flex;align-items:center;justify-content:center;font-size:9pt}
+.drv h4{font-family:"Kufi";font-size:10pt}
+.drv p{margin:0;font-size:8.8pt}
+.dense .drv{padding:2.2mm 0}.dense .drv p{font-size:8.4pt;line-height:1.72}
+.stat{border-top:0.6mm solid var(--ink);padding:2.4mm 0 3.4mm}
+.stat .v{font-family:"Grotesk";font-weight:700;font-size:24pt;line-height:1.1;direction:ltr;text-align:right}
+.stat .v small{font-size:11pt}
+.stat .d{font-size:7.6pt;color:var(--g4);line-height:1.6}
+
+/* divider */
+.divider .num{position:absolute;top:50mm;right:24mm;font-family:"Grotesk";font-weight:700;font-size:150pt;line-height:1;color:transparent;-webkit-text-stroke:0.5mm var(--lime);direction:ltr}
+.divider .kicker{position:absolute;top:122mm;right:24mm}
+.divider h2{position:absolute;top:130mm;right:24mm;left:24mm;color:#fff;font-size:40pt;line-height:1.4}
+.divider .dsub{position:absolute;top:186mm;right:24mm;width:120mm;font-size:11pt;line-height:1.9;color:#cfd0ca}
+.divider .list{position:absolute;bottom:34mm;right:24mm;left:24mm;display:grid;grid-template-columns:repeat(7,1fr);gap:2mm;border-top:0.3mm solid #33342f;padding-top:3mm}
+.divider .list div{font-size:7.6pt;color:#cfd0ca;line-height:1.5}
+.divider .list div b{display:block;font-family:"Grotesk";color:var(--lime);font-size:9pt}
+
+/* 7-tech table */
+table.tt{width:100%;border-collapse:collapse;font-size:7.7pt;line-height:1.6}
+.tt th{text-align:right;font-weight:700;font-size:7.4pt;padding:1.8mm 2mm;border-bottom:0.6mm solid var(--ink);color:var(--g4)}
+.tt td{padding:2.2mm 2mm;border-bottom:0.25mm solid var(--g2);vertical-align:top}
+.tt td.t{font-family:"Kufi";font-weight:700;font-size:8.6pt;white-space:nowrap}
+.tt td.t span{font-family:"Grotesk";color:var(--g3);margin-left:2mm;font-size:8pt}
+.ev-b{display:inline-flex;align-items:center;gap:1.4mm;white-space:nowrap;font-size:7pt}
+.ev-b i{width:2.6mm;height:2.6mm;display:inline-block}
+.ev-full i{background:var(--ink)} .ev-part i{background:linear-gradient(90deg,var(--ink) 50%,var(--g2) 50%)} .ev-none i{border:0.3mm solid var(--ink)}
+
+/* tech pages */
+.tech{margin-bottom:6mm}
+.tech .th{display:flex;align-items:baseline;gap:4mm;border-bottom:0.6mm solid var(--ink);padding-bottom:1.6mm;margin-bottom:3mm}
+.tech .th .no{font-family:"Grotesk";font-weight:700;font-size:22pt;line-height:1;color:var(--ink);background:var(--lime2);padding:0.5mm 2.4mm}
+.tech .th h2{margin:0;font-size:19pt}
+.row{display:grid;grid-template-columns:30mm 1fr;gap:5mm;padding:2mm 0;border-bottom:0.25mm solid var(--g1)}
+.row .l{font-weight:700;font-size:8pt;color:var(--g4);padding-top:.4mm}
+.row .c{font-size:9pt;line-height:1.8;text-align:justify}
+.row.opp{background:var(--g1);border:none;padding:3mm 3mm;margin-top:2mm;border-right:1.4mm solid var(--lime2)}
+.row.opp .l{color:var(--ink)}
+.row.opp .c{text-align:right}
+.row.fail .l{color:#8a3b12}
+.note{font-size:8.2pt;color:var(--g4);background:var(--g1);padding:2.4mm 3mm;margin-bottom:3mm;border-right:1.4mm solid var(--g3)}
+
+/* bars */
+.bars{margin-top:2mm}
+.br{display:grid;grid-template-columns:36mm 1fr 16mm;align-items:center;gap:3mm;margin-bottom:3mm}
+.br .bl{font-size:8.2pt;font-weight:600}
+.br .bl small{display:block;font-weight:400;color:var(--g3);font-size:6.8pt;font-family:"Grotesk"}
+.br .track{height:7mm;background:var(--g1);position:relative}
+.br .fill{position:absolute;top:0;bottom:0;right:0;background:var(--ink)}
+.br .fill.hl{background:var(--lime2)}
+.br .val{font-family:"Grotesk";font-weight:700;font-size:13pt;direction:ltr;text-align:left}
+.axis{display:grid;grid-template-columns:36mm 1fr 16mm;gap:3mm;font-family:"Grotesk";font-size:6.4pt;color:var(--g3)}
+.axis .sc{display:flex;justify-content:space-between}
+
+/* principles */
+.pr{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm}
+.pc{border-top:0.6mm solid var(--ink);padding:3mm 0 0;min-height:44mm}
+.pc .n{font-family:"Grotesk";font-weight:700;font-size:28pt;line-height:1;color:transparent;-webkit-text-stroke:0.35mm var(--ink)}
+.pc.hl{background:var(--ink);color:#fff;padding:3mm;border-top-color:var(--lime)}
+.pc.hl .n{-webkit-text-stroke:0.35mm var(--lime)}
+.pc h4{font-family:"Kufi";font-size:10.4pt;line-height:1.6;margin-top:3mm}
+.pc p{font-size:7.8pt;color:var(--g4);margin-top:1mm;text-align:right}
+.pc.hl p{color:#cfd0ca}
+
+/* ladder */
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:2.4mm;align-items:end;height:92mm;margin-top:4mm}
+.st{border:0.35mm solid var(--ink);padding:3mm;display:flex;flex-direction:column;justify-content:flex-start;position:relative}
+.st .sn{font-family:"Grotesk";font-weight:700;font-size:9pt;color:var(--g3)}
+.st .nm{font-family:"Kufi";font-weight:800;font-size:13pt;line-height:1.5;margin-top:1mm}
+.st .kp{font-size:7.4pt;color:var(--g4);line-height:1.5;margin-top:1mm}
+.st:nth-child(1){height:30%}.st:nth-child(2){height:45%}.st:nth-child(3){height:60%;background:var(--g1)}.st:nth-child(4){height:78%;background:var(--ink);color:#fff}.st:nth-child(5){height:100%;background:var(--lime);border-color:var(--lime)}
+.st:nth-child(4) .sn,.st:nth-child(4) .kp{color:#bfc1ba}
+.st:nth-child(5) .sn,.st:nth-child(5) .kp{color:#2b3300}
+.lad-ax{display:flex;justify-content:space-between;font-size:7pt;color:var(--g3);margin-top:2mm;border-top:0.25mm solid var(--g2);padding-top:1.4mm}
+.zones{display:grid;grid-template-columns:2fr 3fr;gap:2.4mm;margin-top:2mm;font-size:7.4pt;font-weight:600;text-align:center}
+.zones div{padding:1.2mm;border:0.3mm dashed var(--g3);color:var(--g4)}
+.zones div:last-child{border-style:solid;border-color:var(--ink);color:var(--ink)}
+
+/* call page */
+.call .body{top:30mm}
+.call .bigq{font-family:"Kufi";font-weight:800;font-size:30pt;line-height:1.55;color:#fff;margin:8mm 0 10mm}
+.call .bigq em{font-style:normal;color:var(--lime)}
+.call p{color:#dcddd7;font-size:11pt;line-height:1.95;max-width:150mm}
+.call .ask{border:0.4mm solid var(--lime);padding:6mm 7mm;margin:8mm 0;max-width:150mm}
+.call .ask .kicker{font-size:7pt;margin-bottom:2mm}
+.call .ask div.q{font-family:"Kufi";font-weight:700;font-size:16pt;color:#fff;line-height:1.6}
+
+/* sources */
+ol.srcs{columns:2;column-gap:8mm;font-size:7.2pt;line-height:1.55;list-style:none;counter-reset:s}
+ol.srcs li{break-inside:avoid;margin-bottom:1.8mm;counter-increment:s;display:grid;grid-template-columns:7mm 1fr}
+ol.srcs li::before{content:counter(s);font-family:"Grotesk";font-weight:700;color:var(--olive)}
+ol.srcs li .u{font-family:"Grotesk";font-size:6.4pt;color:var(--g3);direction:ltr;text-align:right;word-break:break-all;display:block}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin:2mm 0 5mm}
+.legend div{background:var(--g1);padding:3mm;font-size:7.8pt;line-height:1.6}
+.legend b{display:block;margin-bottom:1mm}
+.gaps li{font-size:8pt;margin:0 4mm 1.4mm 0}
+
+/* toc */
+.toc a{display:grid;grid-template-columns:12mm 1fr 10mm;align-items:baseline;padding:3mm 0;border-bottom:0.25mm solid var(--g2);color:inherit;text-decoration:none}
+.toc .tn{font-family:"Grotesk";font-weight:700;color:var(--olive);font-size:9pt}
+.toc .tt2{font-family:"Kufi";font-weight:600;font-size:11pt}
+.toc .tp{font-family:"Grotesk";font-weight:700;text-align:left;font-size:9pt}
+.toc .sub{display:block;font-family:"Plex Arabic";font-weight:400;font-size:7.6pt;color:var(--g3)}
+
+sup.p{color:#7a5a00;margin-inline-start:1px}
+sup.p::before{content:"[صحافة "}sup.p::after{content:"]"}
+.tl{grid-template-columns:repeat(12,1fr)}
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2mm}
+.path .pp{border-top:1.6mm solid var(--g2);padding:2.4mm 2.6mm 0 2mm;position:relative}
+.path .pp:nth-child(2){border-top-color:var(--g3)}.path .pp:nth-child(3){border-top-color:var(--ink)}.path .pp:nth-child(4){border-top-color:var(--lime2)}
+.path .y{font-family:"Grotesk";font-weight:700;font-size:15pt;line-height:1.2}
+.path .ph{font-size:7pt;font-weight:700;color:var(--olive);margin-bottom:1mm}
+.path .d{font-size:7.6pt;line-height:1.6}
+</style>
+</head>
+<body>
+<!-- 1 COVER -->
+<section class="page dark cover">
+  <div class="grid"></div><div class="bar"></div>
+  <div class="brand"><img src="assets/visionseek-chevron.png" alt="VisionSeek"><span>VISIONSEEK</span></div>
+  <div class="dt"><span class="draft-tag"><span class="lat">DRAFT FOR REVIEW</span><br>مسودة للمراجعة</span></div>
+  <div class="kicker">VisionSeek Lab · Doctrine Paper</div>
+  <h1>عقيدة التوطين</h1>
+  <div class="sub">من استخدام التكنولوجيا إلى امتلاكها:<br>كوريا دليلٌ على أن العرب يستطيعون</div>
+  <div class="label">مختبر <bdi>VisionSeek</bdi> · ورقة عقيدة · رؤى</div>
+  <div class="steps"><i style="height:8mm"></i><i style="height:14mm"></i><i style="height:20mm"></i><i style="height:27mm"></i><i style="height:35mm"></i></div>
+  <div class="foot"><b>أكتوبر 2026</b><br>تغذّي مؤشر القدرة التكنولوجية العربية وحوار إنتشون (أبريل 2027)</div>
+</section>
+
+<!-- 2 ABOUT + TOC -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>عقيدة التوطين</span></div>
+  <div class="body">
+    <div class="cols">
+      <div class="side">
+        <div class="eyebrow">ABOUT</div>
+        <h3>عن هذه الورقة</h3>
+        <p style="text-align:right">ورقة عقيدة من مختبر <bdi>VisionSeek</bdi> ضمن سلسلة «رؤى». تقرأ تجربة كوريا الجنوبية في سبع تكنولوجيات، لا بوصفها موضوعًا، بل بوصفها دليلًا على أن الانتقال من شراء التكنولوجيا إلى امتلاكها ممكن خلال عمر مهني واحد.</p>
+        <p style="text-align:right">تغذّي هذه الورقة مؤشر القدرة التكنولوجية العربية وحوار إنتشون (أبريل 2027).</p>
+        <div class="rule" style="margin-top:6mm"></div>
+        <h4>كيف تقرأ علامات المصادر</h4>
+        <p style="text-align:right;font-size:7.8pt"><sup class="s" style="font-size:7.4pt">4</sup> مؤكد بمصدر؛ الرقم يحيل إلى قائمة المصادر في آخر الورقة.<br>
+        <sup class="p" style="font-size:7.4pt">6</sup> مصدر صحفي ثانوي.<br>
+        <sup class="i" style="font-size:7.4pt">استنتاج</sup> تحليل <bdi>VisionSeek</bdi>.<br>
+        <sup class="g" style="font-size:7.4pt">فجوة</sup> لم نجد مصدرًا أوليًا، فلا نحكم.</p>
+        <div class="note" style="margin-top:5mm;font-size:7.4pt">مسودة للمراجعة. تستند إلى 31 مصدرًا: 28 أوليًا، وسجلّان رسميان، ومصدر صحفي واحد. لا تتضمن الورقة أي أرقام عربية عمدًا.</div>
+      </div>
+      <div>
+        <div class="eyebrow">CONTENTS</div>
+        <h2>المحتويات</h2>
+        <div class="rule"></div>
+        <nav class="toc">
+          <a><span class="tn">—</span><span class="tt2">هذه لحظتنا<span class="sub">كوريا ليست موضوع هذا التقرير، بل دليله</span></span><span class="tp">3</span></a>
+          <a><span class="tn">—</span><span class="tt2">الملخص التنفيذي: خمسة استنتاجات</span><span class="tp">4</span></a>
+          <a><span class="tn">—</span><span class="tt2">لماذا الآن؟ ما الذي تغيّر فعلًا</span><span class="tp">5</span></a>
+          <a><span class="tn">01</span><span class="tt2">سبع تكنولوجيات، سبعة دروس<span class="sub">الرقائق · الذكاء الاصطناعي · السحابة والبيانات · الجيل الخامس والسادس · الروبوتات · الطاقة النظيفة والبطاريات · التكنولوجيا الحيوية</span></span><span class="tp">6</span></a>
+          <a><span class="tn">02</span><span class="tt2">عقيدة التوطين<span class="sub">ثمانية مبادئ وسُلّم الامتلاك</span></span><span class="tp">12</span></a>
+          <a><span class="tn">—</span><span class="tt2">نداء إلى صُنّاع القرار العرب</span><span class="tp">15</span></a>
+          <a><span class="tn">—</span><span class="tt2">المصادر والمنهجية</span><span class="tp">16</span></a>
+        </nav>
+        <div class="pq" style="margin-top:12mm">ماذا سنملك حين ينتهي هذا العقد؟<small>السؤال الذي تقترحه هذه الورقة لكل صفقة تكنولوجية عربية قادمة</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">2</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>visionseek.org/insights</span></div>
+</section>
+
+<!-- 3 OUR MOMENT -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>هذه لحظتنا</span></div>
+  <div class="body">
+    <div class="eyebrow">THIS IS OUR MOMENT</div>
+    <h2 style="font-size:30pt">هذه لحظتنا</h2>
+    <div class="rule"></div>
+    <div class="cols">
+      <div>
+        <div class="pq">كوريا ليست موضوع هذا التقرير، بل <span style="background:var(--lime);padding:0 1mm">دليله</span><small>الدولة التي تبدأ مشترية تستطيع أن تصبح مالكة خلال عمر مهني واحد.</small></div>
+      </div>
+      <div>
+        <p class="lede">ظلّ العالم العربي جيلين كاملين مشتريًا ممتازًا للتكنولوجيا. اشترينا أفضل الشبكات وأفضل المحطات وأفضل الأجهزة، وكل صفقة جدّدت اعتمادنا على غيرنا. لم يكن السؤال يومًا: هل نقدر على ثمن التكنولوجيا؟ بل: متى نمتلكها؟</p>
+        <p>وكوريا تجيب عن هذا السؤال. ففي عام 1971 أسست أول جامعة للعلوم والتكنولوجيا بقانون خاص وبقرض من الوكالة الأمريكية للتنمية الدولية قدره ستة ملايين دولار<sup class="s">1</sup>. وفي 1983 طوّرت سامسونغ ذاكرة <bdi>64Kb DRAM</bdi>، فصارت كوريا ثالث دولة في العالم تمتلك تقنية الدوائر المتكاملة فائقة الكثافة <bdi>(VLSI)</bdi><sup class="s">4</sup>. وفي 1992 تصدّرت سامسونغ حصة سوق <bdi>DRAM</bdi> العالمية<sup class="s">4</sup>. كوريا ليست موضوع هذا التقرير، بل <b>دليله</b>: الدولة التي تبدأ مشترية تستطيع أن تصبح مالكة خلال عمر مهني واحد.</p>
+        <p>ولأول مرة تجتمع في منطقتنا عدة شروط من تلك التي صنعت قفزة كوريا. هذا هو الوقت الذي انتظرناه، والخطر الوحيد أن نُنفقه في الشراء مرة أخرى.</p>
+      </div>
+    </div>
+
+    <div class="ex" style="margin-top:7mm">
+      <div class="ex-h"><span class="ex-n">شكل 1</span><span class="ex-t">من مشترٍ إلى مالك: محطات كورية موثقة في هذه الورقة</span></div>
+      <div class="ex-s">تواريخ مختارة من النص، مرتبة زمنيًا؛ النقاط المضيئة محطات «امتلاك» (سبق عالمي، أو صدارة سوق، أو اعتماد وتشغيل في الخارج)</div>
+      <div class="tl">
+        <div class="ev"><div class="yr">1971</div><div class="dot"></div><div class="tx">تأسيس <bdi>KAIST</bdi> بقانون خاص وقرض 6 ملايين دولار<sup class="s">1</sup></div></div>
+        <div class="ev"><div class="yr">1974</div><div class="dot"></div><div class="tx">سامسونغ تستحوذ على <bdi>Hankook Semiconductor</bdi><sup class="s">4</sup></div></div>
+        <div class="ev"><div class="yr">1983</div><div class="dot"></div><div class="tx"><bdi>64Kb DRAM</bdi> — ثالث دولة تمتلك تقنية <bdi>VLSI</bdi><sup class="s">4</sup></div></div>
+        <div class="ev"><div class="yr">1986</div><div class="dot"></div><div class="tx"><bdi>ETRI</bdi> يطوّر مقسم <bdi>TDX</bdi><sup class="s">3</sup></div></div>
+        <div class="ev hl"><div class="yr">1992</div><div class="dot"></div><div class="tx">أول <bdi>64Mb DRAM</bdi> وصدارة سوق <bdi>DRAM</bdi><sup class="s">4</sup></div></div>
+        <div class="ev hl"><div class="yr">1995</div><div class="dot"></div><div class="tx">أول نظام <bdi>CDMA</bdi> تجاري متنقل في العالم<sup class="s">3</sup></div></div>
+        <div class="ev"><div class="yr">1999</div><div class="dot"></div><div class="tx"><bdi>LG</bdi>: إنتاج واسع لبطاريات ليثيوم أيون أسطوانية<sup class="s">15</sup></div></div>
+        <div class="ev hl"><div class="yr">2013</div><div class="dot"></div><div class="tx">ترخيص <bdi>Remsima</bdi> في الاتحاد الأوروبي<sup class="s">22</sup></div></div>
+        <div class="ev hl"><div class="yr">2019</div><div class="dot"></div><div class="tx">أول <bdi>5G</bdi> تجارية على الهواتف<sup class="s">10</sup>؛ اعتماد <bdi>APR1400</bdi> أمريكيًا<sup class="s">18</sup></div></div>
+        <div class="ev hl"><div class="yr">2021</div><div class="dot"></div><div class="tx">الوحدة الأولى في براكة تدخل التشغيل التجاري<sup class="s">19</sup></div></div>
+        <div class="ev"><div class="yr">2023</div><div class="dot"></div><div class="tx"><bdi>Naver</bdi> تكشف <bdi>HyperCLOVA X</bdi><sup class="s">9</sup></div></div>
+        <div class="ev"><div class="yr">2025</div><div class="dot"></div><div class="tx">موافقة على استحواذ سامسونغ على <bdi>Rainbow Robotics</bdi><sup class="s">14</sup></div></div>
+      </div>
+      <div class="ex-src">المصادر: [1] [3] [4] [9] [10] [14] [15] [18] [19] [22] — انظر قائمة المصادر. تصنيف «محطة امتلاك» تحليل <bdi>VisionSeek</bdi><sup class="i">استنتاج</sup>.</div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">3</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 4 EXEC SUMMARY -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>الملخص التنفيذي</span></div>
+  <div class="body">
+    <div class="eyebrow">EXECUTIVE SUMMARY</div>
+    <h2>الملخص التنفيذي: خمسة استنتاجات</h2>
+    <div class="rule"></div>
+    <div class="kt"><div class="n">1<span></span></div><div><h3>الامتلاك تسلسل، لا صفقة.</h3><p>سارت كوريا من الاستيراد إلى التجميع، ثم الاستيعاب، ثم التصميم الذاتي، ثم وضع المعايير. وكانت التكنولوجيا الأجنبية الخطوة الأولى دائمًا، لا الأخيرة<sup class="i">استنتاج</sup>.</p></div></div>
+    <div class="kt"><div class="n">2<span></span></div><div><h3>الأصل الحاسم هو «مؤسسة الاستيعاب».</h3><p>أُنشئت <bdi>KAIST</bdi> بقانون خاص ولها رسالة وطنية صريحة<sup class="s">1</sup>، وقاد معهد <bdi>ETRI</bdi> كوريا من المقاسم الهاتفية إلى <bdi>CDMA</bdi> ثم إلى الجيل السادس<sup class="s">3</sup>. استثمر العرب في الشراء، وقليلون بنوا المؤسسة التي تستوعب ما يُشترى<sup class="i">استنتاج</sup>.</p></div></div>
+    <div class="kt"><div class="n">3<span></span></div><div><h3>التصدير هو ما يثبت الامتلاك.</h3><p>صار المفاعل الكوري <bdi>APR1400</bdi> «مِلكًا» لكوريا حين اعتُمد في الخارج<sup class="s">18</sup> وعمل في الإمارات<sup class="s">19</sup>. ومع ذلك احتاج نزاعٌ على ملكيته الفكرية إلى تسوية<sup class="s">20</sup><sup class="i">استنتاج (الدرس)</sup>.</p></div></div>
+    <div class="kt"><div class="n">4<span></span></div><div><h3>احسم الحقوق عند الباب.</h3><p>وصل قادة البطاريات في كوريا إلى هيئة تجارية أمريكية في نزاع على أسرار تجارية<sup class="s">17</sup>، واضطرت الجهة الكورية المصدّرة للمفاعل إلى التسوية مع <bdi>Westinghouse</bdi><sup class="s">20</sup>. فحقوق الملكية الفكرية التي لا تُحسم عند نقل التكنولوجيا تعود عند التصدير<sup class="i">استنتاج</sup>.</p></div></div>
+    <div class="kt"><div class="n">5<span></span></div><div><h3>النزاهة بنية تحتية.</h3><p>سُحبت الورقة الكورية الشهيرة عن الخلايا الجذعية المنشورة في مجلة <bdi><i>Science</i></bdi> عام 2005<sup class="s">24</sup>. القدرة المزيّفة تهدم الثقة أسرع مما تبنيها القدرة الحقيقية، ولذلك يجب أن يقيس المؤشر العربي الامتلاك المُتحقَّق منه، لا الإعلانات<sup class="i">استنتاج</sup>.</p></div></div>
+
+    <div class="ex" style="margin-top:6mm">
+      <div class="ex-h"><span class="ex-n">شكل 2</span><span class="ex-t">مؤسسة الاستيعاب: الحلقة التي تحوّل الشراء إلى امتلاك</span></div>
+      <div class="ex-s">نموذج مفاهيمي مستخلص من الاستنتاجات 2 و3 و4 — ليس بيانات</div>
+      <div class="flow">
+        <div class="fb"><b>معرفة مستوردة</b>ترخيص، شراء، شراكة أجنبية — بحقوق محسومة عند الباب</div>
+        <div class="arw">←</div>
+        <div class="fb k"><b>مؤسسة الاستيعاب</b>كوريا: <bdi>KAIST</bdi> و<bdi>ETRI</bdi><br>عربيًا اليوم: جامعة محمد بن زايد، و<bdi>TII</bdi>، و<bdi>G42</bdi>، وهيوماين</div>
+        <div class="arw">←</div>
+        <div class="fb"><b>قدرة وطنية</b>تصميم وهندسة وكفاءات محلية</div>
+        <div class="arw">←</div>
+        <div class="fb x"><b>تصدير / معيار</b>الامتحان الوحيد للامتلاك</div>
+      </div>
+      <div class="ex-src">المصدر: تحليل <bdi>VisionSeek</bdi><sup class="i">استنتاج</sup>؛ أسماء المؤسسات<sup class="s">1, 3, 28–31</sup>.</div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">4</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 5 WHY NOW -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>لماذا الآن؟</span></div>
+  <div class="body">
+    <div class="eyebrow">WHY NOW</div>
+    <h2>لماذا الآن؟ ما الذي تغيّر فعلًا</h2>
+    <div class="rule" style="margin-bottom:3mm"></div>
+    <div class="cols" style="grid-template-columns:1fr 46mm;gap:8mm">
+      <div class="dense">
+        <div class="drv"><div class="ic">1</div><div><h4>رؤى وطنية هدفها المعلن التنويع</h4><p>أقرّ مجلس الوزراء السعودي رؤية 2030 في 25 أبريل 2016<sup class="s">25</sup>، ووثيقتها تلتزم بتنويع الاقتصاد<sup class="s">26</sup>. وأطلقت مصر رؤيتها 2030 عام 2016 ثم حدّثتها لاحقًا<sup class="s">27</sup>. والرؤى المبنية على الشراء تتعثر، أما المبنية على الاستيعاب فتتراكم<sup class="i">استنتاج</sup>.</p></div></div>
+        <div class="drv"><div class="ic">2</div><div><h4>مؤسسات ذكاء اصطناعي عربية قائمة</h4><p>جعلت الإمارات الذكاء الاصطناعي أولوية وطنية عام 2017، وعيّنت أول وزير دولة للذكاء الاصطناعي في العالم، وأعلنت عام 2019 تأسيس جامعة محمد بن زايد للذكاء الاصطناعي، التي وُصفت بأنها أول جامعة بحثية للدراسات العليا في الذكاء الاصطناعي، وبدأت أول دفعة فيها الدراسة في سبتمبر 2020<sup class="s">28</sup>. ومعهد الابتكار التكنولوجي <bdi>TII</bdi> جزء من مجلس أبحاث التكنولوجيا المتطورة في أبوظبي<sup class="s">29</sup>. وتصف <bdi>G42</bdi> نفسها بأنها «وُلدت في أبوظبي وتعمل عالميًا»<sup class="s">30</sup>. وفي 2025 أطلق صندوق الاستثمارات العامة السعودي شركة «هيوماين» لتعمل عبر سلسلة قيمة الذكاء الاصطناعي، ومن ضمن ما تقدمه نموذج لغوي عربي متعدد الوسائط<sup class="s">31</sup>. هذه أول طبقة عربية تقابل طبقة <bdi>KAIST</bdi> و<bdi>ETRI</bdi> في كوريا<sup class="i">استنتاج</sup>.</p></div></div>
+        <div class="drv"><div class="ic">3</div><div><h4>نافذة الذكاء الاصطناعي مفتوحة</h4><p>القدرة في الذكاء الاصطناعي ما زالت تتشكل، وكلفة الدخول في النماذج التطبيقية والقطاعية والعربية أقل بكثير من كلفة مصانع الرقائق المتقدمة<sup class="i">استنتاج</sup>.</p></div></div>
+        <div class="drv"><div class="ic">4</div><div><h4>الحكومات تعيد رسم سلاسل الإمداد</h4><p>يخصص قانون الرقائق والعلوم الأمريكي 52.7 مليار دولار وإعفاءً ضريبيًا على الاستثمار بنسبة 25%، ويذكر البيت الأبيض أن الولايات المتحدة تعتمد على شرق آسيا في 75% من إنتاج الرقائق<sup class="s">8</sup>. ووسّعت كوريا دعمها الضريبي لاستثمارات الرقائق عام 2023<sup class="s">7</sup>. وحين يدعم الكبار إعادة توطين الصناعة، يبحث الشركاء عن مواقع جديدة مستقرة غنية بالطاقة ورأس المال، والمنطقة العربية منها<sup class="i">استنتاج</sup>.</p></div></div>
+        <div class="drv"><div class="ic">5</div><div><h4>كوريا تنظر إلينا</h4><p>تذكر استراتيجية كوريا للجيل السادس الشرقَ الأوسط بين المناطق ذات الأولوية لصادراتها الرقمية<sup class="s">11</sup>. والشريك الذي يريد سوقنا شريك يمكن أن نطلب منه شروط الاستيعاب<sup class="i">استنتاج</sup>.</p></div></div>
+        <div class="drv" style="border:none"><div class="ic">6</div><div><h4>في أرضنا دليل كوري قائم</h4><p>تضم محطة براكة أربع وحدات <bdi>APR-1400</bdi>، وبدأ بناؤها عام 2012، ودخلت الوحدة الأولى التشغيل التجاري في أبريل 2021<sup class="s">19</sup>.</p></div></div>
+      </div>
+      <div>
+        <div class="eyebrow ar" style="color:var(--ink)">أرقام من النص</div>
+        <div class="stat"><div class="v"><small>$</small>52.7<small>bn</small></div><div class="d">مخصصات قانون الرقائق والعلوم الأمريكي<sup class="s">8</sup></div></div>
+        <div class="stat"><div class="v">25%</div><div class="d">إعفاء ضريبي على الاستثمار في القانون نفسه<sup class="s">8</sup></div></div>
+        <div class="stat"><div class="v">75%</div><div class="d">من إنتاج الرقائق تعتمد فيه الولايات المتحدة على شرق آسيا، وفق البيت الأبيض<sup class="s">8</sup></div></div>
+        <div class="stat"><div class="v">4 <small>× APR-1400</small></div><div class="d">وحدات كورية في براكة؛ الوحدة الأولى تجاريًا أبريل 2021<sup class="s">19</sup></div></div>
+        <div class="pq" style="font-size:11.4pt;margin-top:4mm">الرؤى المبنية على الشراء تتعثر، أما المبنية على الاستيعاب فتتراكم.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">5</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 6 DIVIDER 01 -->
+<section class="page dark divider">
+  <div class="grid"></div><div class="bar"></div>
+  <div class="num">01</div>
+  <div class="kicker">Part One · Seven Technologies</div>
+  <h2>سبع تكنولوجيات،<br>سبعة دروس</h2>
+  <div class="dsub">لكل تكنولوجيا: ماذا فعلت كوريا، والآلية، وما فشل، وما ينطبق عربيًا وما لا ينطبق، والفرصة العربية المفتوحة الآن.</div>
+  <div class="list">
+    <div><b>1</b>الرقائق</div><div><b>2</b>الذكاء الاصطناعي</div><div><b>3</b>السحابة والبيانات</div><div><b>4</b>الجيل الخامس والسادس</div><div><b>5</b>الروبوتات</div><div><b>6</b>الطاقة النظيفة والبطاريات</div><div><b>7</b>التكنولوجيا الحيوية والصحية</div>
+  </div>
+  <div class="ftr" style="right:31mm"><span class="pn">6</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span></span></div>
+</section>
+
+<!-- 7 OVERVIEW -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>01 · سبع تكنولوجيات</span></div>
+  <div class="body">
+    <div class="eyebrow">OVERVIEW</div>
+    <h2>خريطة التكنولوجيات السبع</h2>
+    <div class="rule"></div>
+    <p class="lede" style="font-size:11pt">في كل تكنولوجيا دخلت كوريا من باب ضيق، ثم صعدت. والفرصة العربية لا تكمن في تكرار الطريق نفسه، بل في اختيار رأس الجسر المناسب لمشكلاتنا نحن<sup class="i">استنتاج</sup>.</p>
+    <div class="ex">
+      <div class="ex-h"><span class="ex-n">شكل 3</span><span class="ex-t">سبع تكنولوجيات: باب الدخول الكوري، والفرصة العربية، ودرجة التوثيق</span></div>
+      <div class="ex-s">ملخص للأقسام التالية؛ عمود «درجة التوثيق» يعكس ما توفر من مصادر أولية في هذه المسودة</div>
+      <table class="tt">
+        <tr><th style="width:30mm">التكنولوجيا</th><th>باب الدخول الكوري</th><th>الفرصة العربية المفتوحة الآن<sup class="i">استنتاج</sup></th><th style="width:28mm">درجة التوثيق</th></tr>
+        <tr><td class="t">الرقائق</td><td>الاستحواذ على <bdi>Hankook Semiconductor</bdi> (1974)<sup class="s">4</sup>، ثم تقنية <bdi>DRAM</bdi> من <bdi>Micron</bdi> بعقد<sup class="p">6</sup></td><td>التغليف والاختبار، وتصميم رقائق للطاقة والمياه، وأشباه موصلات القدرة للشبكات الكهربائية</td><td><span class="ev-b ev-part"><i></i>موثق؛ حصص السوق فجوة</span></td></tr>
+        <tr><td class="t">الذكاء الاصطناعي</td><td>منصة وطنية: <bdi>HyperCLOVA X</bdi> من <bdi>Naver</bdi> (2023)<sup class="s">9</sup></td><td>نماذج عربية للصحة والتعليم والخدمات العامة والقانون والتراث</td><td><span class="ev-b ev-part"><i></i>موثق؛ الإخفاقات فجوة</span></td></tr>
+        <tr><td class="t">السحابة والبيانات</td><td>اعتماد أمن الخدمات السحابية <bdi>(CSAP)</bdi> لدخول القطاع العام<sup class="s">12</sup></td><td>اعتماد سحابي سيادي يشترط فرق تشغيل وهندسة محلية</td><td><span class="ev-b ev-part"><i></i>موثق؛ الآلية استنتاج</span></td></tr>
+        <tr><td class="t">الجيل الخامس والسادس</td><td>مختبر حكومي <bdi>(ETRI)</bdi> يطوّر مع الصناعة: <bdi>TDX</bdi> ثم <bdi>CDMA</bdi> ثم <bdi>LTE-A</bdi><sup class="s">3</sup></td><td>المساهمة في معايير الجيل السادس ومنصات الاختبار</td><td><span class="ev-b ev-part"><i></i>موثق؛ الإخفاقات فجوة</span></td></tr>
+        <tr><td class="t">الروبوتات</td><td>باحثو الروبوتات البشرية في <bdi>KAIST</bdi> يؤسسون <bdi>Rainbow Robotics</bdi> (2011)<sup class="s">13</sup></td><td>روبوتات للحرارة ولوجستيات الصحراء والبناء والمستشفيات وخدمة الحشود في الحج والعمرة</td><td><span class="ev-b ev-part"><i></i>موثق؛ الإخفاقات فجوة</span></td></tr>
+        <tr><td class="t">الطاقة والبطاريات</td><td>أبحاث الليثيوم أيون في <bdi>LG</bdi><sup class="s">15–16</sup>؛ مفاعل <bdi>APR1400</bdi><sup class="s">18</sup></td><td>تخزين الطاقة على مستوى الشبكات لدعم الطاقة الشمسية، ومعالجة مواد البطاريات</td><td><span class="ev-b ev-full"><i></i>موثق</span></td></tr>
+        <tr><td class="t">التكنولوجيا الحيوية</td><td>التصنيع بالمعايير الغربية: <bdi>Celltrion</bdi> و<bdi>Samsung Biologics</bdi><sup class="s">21–23</sup></td><td>قاعدة إقليمية للبدائل الحيوية وتعبئة اللقاحات للأسواق العربية والأفريقية</td><td><span class="ev-b ev-full"><i></i>موثق</span></td></tr>
+      </table>
+      <div class="ex-src">المصادر: كما هو مشار في كل خلية. «درجة التوثيق» تقدير تحريري لما تغطيه مصادر هذه المسودة، وليس مقياسًا كميًا.</div>
+    </div>
+    <div class="pq" style="margin-top:8mm">اختر رأس جسر واحدًا ضيقًا. كوريا فازت بالذاكرة لا بكل الرقائق.<small>المبدأ الثالث من عقيدة التوطين</small></div>
+  </div>
+  <div class="ftr"><span class="pn">7</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 8 CHIPS -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>01 · الرقائق</span></div>
+  <div class="body">
+    <div class="tech">
+      <div class="th"><span class="no">1</span><h2>الرقائق</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">دخلت سامسونغ المجال بالاستحواذ على شركة <bdi>Hankook Semiconductor</bdi> عام 1974<sup class="s">4</sup>. وأعلن مؤسسها «إعلان طوكيو» في 8 فبراير 1983<sup class="s">5</sup>، وفي العام نفسه طوّرت سامسونغ ذاكرة <bdi>64Kb DRAM</bdi><sup class="s">4</sup>، بعدما حصلت على تقنية <bdi>DRAM</bdi> الأساسية من شركة <bdi>Micron</bdi> بعقد، ولم يُتح لمتدربيها خلال النقل إلا اطلاع محدود<sup class="p">6</sup>. وفي 1992 طوّرت أول ذاكرة <bdi>64Mb DRAM</bdi> في الصناعة وتصدّرت حصة سوق <bdi>DRAM</bdi><sup class="s">4</sup>. وطوّر معهد <bdi>ETRI</bdi> الحكومي ذاكرة <bdi>4M DRAM</bdi> عام 1989<sup class="s">3</sup>.</div></div>
+      <div class="row"><div class="l">الآلية</div><div class="c">ترخيص، ثم استيعاب تفرضه الضرورة حين يبخل المرخِّص بالمعرفة، ثم قفز في شريحة واحدة ضيقة (الذاكرة) يتفوق فيها انضباط التصنيع على اتساع التصميم<sup class="i">استنتاج</sup>. وعمل معهد بحثي حكومي بالتوازي مع الشركات<sup class="s">3</sup><sup class="i">استنتاج (الدور)</sup>.</div></div>
+      <div class="row fail"><div class="l">ما فشل</div><div class="c">لا نذكر أرقامًا لحصص السوق لأننا لم نتحقق منها من مصادر أولية<sup class="g">فجوة</sup>. ومخاطر التركّز في الذاكرة، مثل دورات الأسعار، استنتاج<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row"><div class="l">عربيًا</div><div class="c">ينطبق اختيار شريحة واحدة، وإدخال بنود الاستيعاب في كل ترخيص. ولا ينطبق تكرار مصنع متقدم، فنافذة الثمانينيات أُغلقت<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">التغليف والاختبار، وتصميم رقائق لقطاعاتنا (الطاقة والمياه)، وأشباه موصلات القدرة للشبكات الكهربائية<sup class="i">استنتاج، تحتاج دراسة جدوى</sup>.</div></div>
+    </div>
+
+    <div class="ex">
+      <div class="ex-h"><span class="ex-n">شكل 4</span><span class="ex-t">ترخيص ← استيعاب ← قفز: مسار الذاكرة الكورية في أربع محطات</span></div>
+      <div class="ex-s">محطات موثقة من النص؛ تسمية المراحل تحليل <bdi>VisionSeek</bdi></div>
+      <div class="path">
+        <div class="pp"><div class="ph">الدخول</div><div class="y">1974</div><div class="d">سامسونغ تستحوذ على <bdi>Hankook Semiconductor</bdi><sup class="s">4</sup></div></div>
+        <div class="pp"><div class="ph">الترخيص</div><div class="y">1983</div><div class="d">«إعلان طوكيو»<sup class="s">5</sup>؛ تقنية <bdi>DRAM</bdi> من <bdi>Micron</bdi> بعقد واطلاع محدود<sup class="p">6</sup>؛ <bdi>64Kb DRAM</bdi><sup class="s">4</sup></div></div>
+        <div class="pp"><div class="ph">الاستيعاب</div><div class="y">1989</div><div class="d">معهد <bdi>ETRI</bdi> الحكومي يطوّر <bdi>4M DRAM</bdi> بالتوازي مع الشركات<sup class="s">3</sup></div></div>
+        <div class="pp"><div class="ph">القفز</div><div class="y">1992</div><div class="d">أول <bdi>64Mb DRAM</bdi> في الصناعة، وصدارة حصة سوق <bdi>DRAM</bdi><sup class="s">4</sup></div></div>
+      </div>
+      <div class="ex-src">المصادر: [3] [4] [5]؛ [6] مصدر صحفي ثانوي وهو الوحيد لتفاصيل النقل من <bdi>Micron</bdi>. تسمية المراحل<sup class="i">استنتاج</sup>.</div>
+    </div>
+    <div class="pq" style="margin-top:7mm">استيعابٌ تفرضه الضرورة حين يبخل المرخِّص بالمعرفة.</div>
+  </div>
+  <div class="ftr"><span class="pn">8</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 9 AI + CLOUD -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>01 · الذكاء الاصطناعي · السحابة والبيانات</span></div>
+  <div class="body">
+    <div class="tech">
+      <div class="th"><span class="no">2</span><h2>الذكاء الاصطناعي</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">كشفت <bdi>Naver</bdi> في 24 أغسطس 2023 عن نموذجها التوليدي <bdi>HyperCLOVA X</bdi>، ومعه المساعد <bdi>CLOVA X</bdi> وخدمة البحث <bdi>CUE:</bdi><sup class="s">9</sup>، وهي منصة وطنية مبنية على بياناتها وبنيتها التحتية.</div></div>
+      <div class="row"><div class="l">الآلية</div><div class="c">شركة منصّة وطنية تملك طبقة اللغة والبحث والبيانات<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row fail"><div class="l">ما فشل</div><div class="c">لم نجد مصدرًا أوليًا عن إخفاقات الذكاء الاصطناعي الكوري، فلا نحكم عليه<sup class="g">فجوة</sup>.</div></div>
+      <div class="row"><div class="l">عربيًا</div><div class="c">ينطبق مبدأ السيادة اللغوية، فالعربية سوق كبيرة بما يكفي لنماذج نملكها<sup class="i">استنتاج</sup>. ولا ينطبق التنافس على الحوسبة القصوى وحدها<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">نماذج عربية للصحة والتعليم والخدمات العامة والقانون والتراث، والمؤسسات القادرة على حملها موجودة<sup class="s">28, 29, 31</sup><sup class="i">استنتاج (الفرصة)</sup>.</div></div>
+    </div>
+    <div class="pq" style="margin:5mm 0 8mm">العربية سوق كبيرة بما يكفي لنماذج نملكها.</div>
+    <div class="tech">
+      <div class="th"><span class="no">3</span><h2>السحابة والبيانات</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">تطبّق كوريا برنامجًا لاعتماد أمن الخدمات السحابية <bdi>(CSAP)</bdi> لمن يريد خدمة القطاع العام. وأعلنت وزارة العلوم وتقنية المعلومات وجهاز الاستخبارات الوطني دمجه في نظام تحقق واحد يقوده الجهاز، على أن يُطبَّق بالكامل في النصف الثاني من 2027<sup class="s">12</sup>.</div></div>
+      <div class="row"><div class="l">الآلية</div><div class="c">الدولة تضع قواعد دخول السوق العامة، فتُمارَس السيادة عبر الاعتماد لا عبر امتلاك كل مركز بيانات<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row"><div class="l">عربيًا</div><div class="c">مركز البيانات على أرضنا استخدام. أما امتلاك برمجيات التشغيل ومعايير البيانات والمهندسين المدرّبين فهو الامتلاك<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">اعتماد سحابي سيادي يشترط فرق تشغيل وهندسة محلية، فيتحول كل مركز بيانات إلى موقع استيعاب<sup class="i">استنتاج</sup>.</div></div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">9</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 10 5G + ROBOTICS -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>01 · الاتصالات · الروبوتات</span></div>
+  <div class="body">
+    <div class="tech" style="margin-bottom:4mm">
+      <div class="th"><span class="no">4</span><h2>الجيل الخامس والسادس</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">طوّر معهد <bdi>ETRI</bdi> مقسم <bdi>TDX</bdi> عام 1986، وأدخل أول نظام <bdi>CDMA</bdi> تجاري للاتصالات المتنقلة في العالم عام 1995، ثم <bdi>WiBro</bdi> عام 2004 و<bdi>LTE-Advanced</bdi> عام 2010<sup class="s">3</sup>. وفي 3 أبريل 2019 حققت كوريا أول خدمة <bdi>5G</bdi> تجارية في العالم تعمل على الهواتف الذكية<sup class="s">10</sup>. وفي فبراير 2023 أطلقت الوزارة استراتيجية <bdi>K-Network 2030</bdi>، وفيها دراسة جدوى أولية لمشروعات بحث في الجيل السادس بقيمة 625.3 مليار وون، ومهرجان <bdi>Pre-6G</bdi> عام 2026، وهدف رفع حصة كوريا من براءات <bdi>5G</bdi> إلى أكثر من 30% بعد أن بلغت 25.9% وفق <bdi>IPlytics</bdi> كما تنقل الوزارة<sup class="s">11</sup>.</div></div>
+      <div class="row"><div class="l">الآلية</div><div class="c">مختبر حكومي يطوّر مع الصناعة، والمشغلون الوطنيون أول المشترين، ثم تقود الدولة أجندة المعايير<sup class="s">3, 11</sup><sup class="i">استنتاج (الآلية)</sup>.</div></div>
+      <div class="row fail"><div class="l">ما فشل</div><div class="c">لم نجمع مصدرًا أوليًا عنه<sup class="g">فجوة</sup>.</div></div>
+      <div class="row"><div class="l">عربيًا</div><div class="c">ينطبق دور الدولة «مشتريًا أول متطلبًا» يفرض التزامات بحث محلية. ولا ينطبق بناء مورّد وطني كامل للمعدات<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">الجيل السادس ما زال قبل وضع المعايير، فهذا وقت المساهمة في المعايير ومنصات الاختبار لا شرائها لاحقًا، وكوريا نفسها تبحث عن شركاء في الشرق الأوسط<sup class="s">11</sup><sup class="i">استنتاج</sup>.</div></div>
+    </div>
+    <div class="ex" style="margin:0 0 5mm">
+      <div class="ex-h"><span class="ex-n">شكل 5</span><span class="ex-t">من المشاركة إلى قيادة المعيار: حصة كوريا من براءات <bdi>5G</bdi> وهدفها</span></div>
+      <div class="bars" style="margin-top:2mm">
+        <div class="br" style="margin-bottom:2mm"><div class="bl">الحصة المُعلنة<small>IPlytics, as cited by MSIT</small></div><div class="track" style="height:5.5mm"><div class="fill" style="width:25.9%"></div></div><div class="val">25.9%</div></div>
+        <div class="br" style="margin-bottom:2mm"><div class="bl">هدف <bdi>K-Network 2030</bdi><small>target</small></div><div class="track" style="height:5.5mm"><div class="fill hl" style="width:30%"></div></div><div class="val">&gt;30%</div></div>
+        <div class="axis"><span></span><div class="sc"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><span></span></div>
+      </div>
+      <div class="ex-src">المصدر: [11] وزارة العلوم وتقنية المعلومات الكورية، استراتيجية <bdi>K-Network 2030</bdi> (فبراير 2023)، نقلًا عن <bdi>IPlytics</bdi>. الهدف «أكثر من 30%» مرسوم عند حدّه الأدنى.</div>
+    </div>
+    <div class="tech" style="margin-bottom:0">
+      <div class="th"><span class="no">5</span><h2>الروبوتات</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">أسس باحثون من مركز الروبوتات البشرية في <bdi>KAIST</bdi> شركة <bdi>Rainbow Robotics</bdi> عام 2011، وهم الفريق الذي طوّر <bdi>Hubo</bdi>، أول روبوت كوري يمشي على قدمين. واشترت سامسونغ 14.7% منها عام 2023 بمبلغ 86.8 مليار وون، ثم رفعت حصتها إلى 35%<sup class="s">13</sup>. ووافقت هيئة المنافسة الكورية على الصفقة في 5 مارس 2025<sup class="s">14</sup>.</div></div>
+      <div class="row"><div class="l">الآلية</div><div class="c">مختبر جامعي يصبح شركة ناشئة، ثم يستحوذ عليها بطل وطني، فتكتمل دورة رأس المال<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row fail"><div class="l">ما فشل</div><div class="c">لم نجمع مصدرًا أوليًا عنه<sup class="g">فجوة</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">روبوتات لمشكلاتنا نحن: الحرارة، ولوجستيات الصحراء، والبناء، والمستشفيات، وخدمة الحشود في الحج والعمرة<sup class="i">استنتاج</sup>.</div></div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">10</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 11 ENERGY + BIO -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>01 · الطاقة · التكنولوجيا الحيوية</span></div>
+  <div class="body">
+    <div class="tech" style="margin-bottom:4mm">
+      <div class="th"><span class="no">6</span><h2>الطاقة النظيفة والبطاريات</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">تؤرّخ <bdi>LG Energy Solution</bdi> بدء أبحاث الليثيوم أيون بعام 1992، والإنتاج الواسع للبطاريات الأسطوانية بعام 1999<sup class="s">15</sup>، بينما يؤرّخ أرشيف <bdi>LG Chem</bdi> بدء أبحاث البطاريات بعام 1995<sup class="s">16</sup>، فالمصدران الرسميان مختلفان. ونوويًا، اعتمدت هيئة الرقابة النووية الأمريكية تصميم <bdi>APR1400</bdi> اعتبارًا من 19 سبتمبر 2019<sup class="s">18</sup>، وبُنيت منه أربع وحدات في براكة بالإمارات<sup class="s">19</sup>.</div></div>
+      <div class="row fail"><div class="l">ما فشل</div><div class="c">خاضت <bdi>SK</bdi> و<bdi>LG</bdi> نزاعًا على أسرار تجارية للبطاريات أمام لجنة التجارة الدولية الأمريكية، وتمت تسويته في أبريل 2021<sup class="s">17</sup>. وسوّت <bdi>Westinghouse</bdi> نزاعًا على الملكية الفكرية مع <bdi>KEPCO</bdi> و<bdi>KHNP</bdi> في يناير 2025 بشروط سرية<sup class="s">20</sup>. الدرس: <b>حقوق الملكية غير المحسومة عند النقل تعود عند التصدير</b><sup class="i">استنتاج</sup>.</div></div>
+      <div class="row"><div class="l">عربيًا</div><div class="c">تُظهر براكة أن الدول العربية قادرة على احتضان الامتلاك، والخطوة التالية اشتراط أدوار هندسية عربية في التشغيل والتصميم<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">تخزين الطاقة على مستوى الشبكات لدعم الطاقة الشمسية، ومعالجة مواد البطاريات حيث تتوفر الطاقة ورأس المال<sup class="i">استنتاج</sup>.</div></div>
+    </div>
+    <div class="pq" style="margin:3mm 0 6mm">حقوق الملكية غير المحسومة عند النقل تعود عند التصدير.</div>
+    <div class="tech">
+      <div class="th"><span class="no">7</span><h2>التكنولوجيا الحيوية والصحية</h2></div>
+      <div class="row"><div class="l">ماذا فعلت كوريا</div><div class="c">أوصت الوكالة الأوروبية للأدوية بدواء <bdi>Remsima</bdi> من <bdi>Celltrion</bdi>، ومعه <bdi>Inflectra</bdi>، بوصفهما أول بديلين حيويين لأجسام مضادة وحيدة النسيلة<sup class="s">21</sup>، وحصل <bdi>Remsima</bdi> على ترخيص في الاتحاد الأوروبي كله في 10 سبتمبر 2013<sup class="s">22</sup>. وافتتحت <bdi>Samsung Biologics</bdi> مصنعها الخامس في أبريل 2025، فبلغت طاقتها الإنتاجية الإجمالية 784 ألف لتر<sup class="s">23</sup>.</div></div>
+      <div class="row"><div class="l">الآلية</div><div class="c">الدخول من باب التصنيع وفق المعايير التنظيمية الغربية، ثم الصعود نحو الابتكار<sup class="i">استنتاج</sup>.</div></div>
+      <div class="row fail"><div class="l">ما فشل</div><div class="c">سُحبت ورقة الخلايا الجذعية المنشورة في <bdi><i>Science</i></bdi> عام 2005<sup class="s">24</sup>.</div></div>
+      <div class="row opp"><div class="l">الفرصة العربية المفتوحة الآن</div><div class="c">قاعدة إقليمية للبدائل الحيوية وتعبئة اللقاحات تخدم الأسواق العربية والأفريقية، مع حوكمة أخلاقية للبيانات الجينية في حدود الشريعة وأخلاقيات الطب<sup class="i">استنتاج</sup>.</div></div>
+    </div>
+  </div>
+  <div class="ftr"><span class="pn">11</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 12 DIVIDER 02 -->
+<section class="page dark divider">
+  <div class="grid"></div><div class="bar"></div>
+  <div class="num">02</div>
+  <div class="kicker">Part Two · The Doctrine</div>
+  <h2>عقيدة التوطين</h2>
+  <div class="dsub" style="top:160mm">نملك رأس المال والطاقة والشباب. ما ينقصنا هو العقيدة: أن نحوّل كل صفقة إلى درس، وكل درس إلى امتلاك.</div>
+  <div class="list" style="grid-template-columns:repeat(5,1fr)">
+    <div><b>1</b>استخدام</div><div><b>2</b>تجميع</div><div><b>3</b>تكييف</div><div><b>4</b>تصميم</div><div><b>5</b>تصدير / معيار</div>
+  </div>
+  <div class="ftr" style="right:31mm"><span class="pn">12</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span></span></div>
+</section>
+
+<!-- 13 PRINCIPLES -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>02 · ثمانية مبادئ</span></div>
+  <div class="body">
+    <div class="eyebrow">EIGHT PRINCIPLES</div>
+    <h2>عقيدة التوطين: ثمانية مبادئ<sup class="i" style="font-size:8pt">استنتاج</sup></h2>
+    <div class="rule"></div>
+    <p class="lede" style="font-size:11pt">ثمانية مبادئ مستخلصة من التكنولوجيات السبع، تصلح قائمةَ فحص لأي صفقة أو شراكة تكنولوجية عربية.</p>
+    <div class="ex" style="border-top:none;padding-top:0">
+      <div class="ex-h"><span class="ex-n">شكل 6</span><span class="ex-t">المبادئ الثمانية لعقيدة التوطين</span></div>
+      <div class="ex-s">إطار مفاهيمي من تحليل <bdi>VisionSeek</bdi>؛ الأسطر الصغيرة تحيل إلى الشواهد الكورية في أقسام الورقة</div>
+      <div class="pr">
+        <div class="pc hl"><div class="n">1</div><h4>اشترِ لتتعلم، لا لتحتفظ.</h4><p>كل عقد يحدد ماذا سنستوعب، ومن يستوعبه، ومتى.</p></div>
+        <div class="pc"><div class="n">2</div><h4>ابنِ المؤسسة المستوعِبة قبل الصفقة.</h4><p><bdi>KAIST</bdi> بقانون خاص<sup class="s">1</sup>؛ <bdi>ETRI</bdi><sup class="s">3</sup></p></div>
+        <div class="pc"><div class="n">3</div><h4>اختر رأس جسر واحدًا ضيقًا.</h4><p>كوريا فازت بالذاكرة لا بكل الرقائق.</p></div>
+        <div class="pc"><div class="n">4</div><h4>الدولة أول مشترٍ وواضعة معايير، لا مشغّلة.</h4><p>المشغلون أول المشترين، والدولة تقود أجندة المعايير<sup class="s">3, 11</sup></p></div>
+        <div class="pc"><div class="n">5</div><h4>أبقِ النواة (البحث، والإنتاج التجريبي، والجودة) في الداخل في كل شراكة.</h4><p>هذا اقتراحنا، وليس ادعاءً عن كوريا.</p></div>
+        <div class="pc"><div class="n">6</div><h4>احسم الملكية الفكرية عند الباب.</h4><p>تسوية <bdi>SK–LG</bdi><sup class="s">17</sup>؛ تسوية <bdi>Westinghouse</bdi><sup class="s">20</sup></p></div>
+        <div class="pc"><div class="n">7</div><h4>التصدير هو الامتحان.</h4><p>اعتماد <bdi>APR1400</bdi> أمريكيًا<sup class="s">18</sup> وتشغيله في براكة<sup class="s">19</sup></p></div>
+        <div class="pc hl"><div class="n">8</div><h4>ما لم يُتحقق منه لم يحدث.</h4><p>سحب ورقة الخلايا الجذعية (2005)<sup class="s">24</sup></p></div>
+      </div>
+      <div class="ex-src">المصدر: تحليل <bdi>VisionSeek</bdi><sup class="i">استنتاج</sup>؛ الشواهد مرتبطة بمصادرها. ربط الشاهد بالمبدأ تحليل تحريري.</div>
+    </div>
+    <div class="pq" style="margin-top:8mm">اشترِ لتتعلم، لا لتحتفظ.<small>كل عقد يحدد ماذا سنستوعب، ومن يستوعبه، ومتى.</small></div>
+  </div>
+  <div class="ftr"><span class="pn">13</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 14 LADDER -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>02 · سُلّم الامتلاك</span></div>
+  <div class="body">
+    <div class="eyebrow">THE OWNERSHIP LADDER</div>
+    <h2>سُلّم الامتلاك: من الاستخدام إلى وضع المعيار</h2>
+    <div class="rule"></div>
+    <div class="cols">
+      <div class="side">
+        <p style="text-align:right">لمؤشر القدرة التكنولوجية العربية نقترح سُلّمًا من خمس درجات لكل دولة ولكل تكنولوجيا<sup class="i">استنتاج</sup>.</p>
+        <p style="text-align:right">وهو يعكس التسلسل الذي سارت عليه كوريا: من الاستيراد إلى التجميع، ثم الاستيعاب، ثم التصميم الذاتي، ثم وضع المعايير<sup class="i">استنتاج</sup>.</p>
+      </div>
+      <div><p class="lede" style="font-size:11.6pt">الامتلاك تسلسل، لا صفقة. وكانت التكنولوجيا الأجنبية الخطوة الأولى دائمًا، لا الأخيرة. والمؤشر العربي يجب أن يقيس الامتلاك المُتحقَّق منه، لا الإعلانات.</p></div>
+    </div>
+    <div class="ex">
+      <div class="ex-h"><span class="ex-n">شكل 7</span><span class="ex-t">سُلّم الامتلاك ذو الدرجات الخمس — مقترح لمؤشر القدرة التكنولوجية العربية</span></div>
+      <div class="ex-s">نموذج مفاهيمي؛ ارتفاع الدرجات توضيحي ولا يمثل قيمًا مقيسة</div>
+      <div class="ladder">
+        <div class="st"><span class="sn">01</span><span class="nm">استخدام</span><span class="kp">المسار الكوري: الاستيراد</span></div>
+        <div class="st"><span class="sn">02</span><span class="nm">تجميع</span><span class="kp">المسار الكوري: التجميع</span></div>
+        <div class="st"><span class="sn">03</span><span class="nm">تكييف</span><span class="kp">المسار الكوري: الاستيعاب</span></div>
+        <div class="st"><span class="sn">04</span><span class="nm">تصميم</span><span class="kp">المسار الكوري: التصميم الذاتي</span></div>
+        <div class="st"><span class="sn">05</span><span class="nm">تصدير / معيار</span><span class="kp">المسار الكوري: وضع المعايير — «التصدير هو ما يثبت الامتلاك»</span></div>
+      </div>
+      <div class="zones"><div>استخدام التكنولوجيا</div><div>امتلاك التكنولوجيا</div></div>
+      <div class="ex-src">المصدر: تحليل <bdi>VisionSeek</bdi><sup class="i">استنتاج</sup>. تقسيم «استخدام / امتلاك» توضيحي يستند إلى أطروحة الورقة بأن التصدير هو امتحان الامتلاك.</div>
+    </div>
+    <div class="pq" style="margin-top:7mm">التصدير هو ما يثبت الامتلاك.<small>صار المفاعل الكوري <bdi>APR1400</bdi> «مِلكًا» لكوريا حين اعتُمد في الخارج<sup class="s">18</sup> وعمل في الإمارات<sup class="s">19</sup>.</small></div>
+  </div>
+  <div class="ftr"><span class="pn">14</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 15 CALL -->
+<section class="page dark call">
+  <div class="grid"></div><div class="bar"></div>
+  <div class="body" style="right:31mm;left:22mm">
+    <div class="kicker">A Call to Arab Decision-Makers</div>
+    <div class="bigq">نداء إلى صُنّاع القرار العرب:<br><em>هذه لحظتنا.</em></div>
+    <p>بدأت كوريا جامعتها البحثية الأولى بقرض قدره ستة ملايين دولار<sup class="s">1</sup>. ونحن نملك رأس المال والطاقة والشباب، ولأول مرة مؤسسات عربية للذكاء الاصطناعي<sup class="s">28–31</sup>. ما ينقصنا هو العقيدة: أن نحوّل كل صفقة إلى درس، وكل درس إلى امتلاك.</p>
+    <div class="ask">
+      <div class="kicker">One question for your next technology deal</div>
+      <div class="q">في صفقتكم التكنولوجية القادمة اسألوا سؤالًا واحدًا: ماذا سنملك حين ينتهي هذا العقد؟</div>
+      <p style="font-size:9.6pt;margin:3mm 0 0;color:#cfd0ca">فإن لم يكن هناك جواب، فالصفقة لم تكتمل بعد.</p>
+    </div>
+    <p>ليكن حوار إنتشون في أبريل 2027 نقطة البداية، واللحظة التي توقف فيها العرب عن شراء المستقبل وبدأوا في بنائه.</p>
+  </div>
+  <div class="ftr" style="right:31mm"><span class="pn">15</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 16 SOURCES -->
+<section class="page">
+  <div class="hdr"><span class="k">VISIONSEEK LAB · DOCTRINE PAPER</span><span>المصادر والمنهجية</span></div>
+  <div class="body">
+    <div class="eyebrow">SOURCES &amp; METHODOLOGY</div>
+    <h2 style="font-size:20pt;margin-bottom:2mm">المصادر والمنهجية</h2>
+    <div class="legend" style="grid-template-columns:repeat(4,1fr);gap:2.4mm;margin-bottom:3mm">
+      <div><b><sup class="s" style="font-size:8pt">n</sup> مؤكد بمصدر</b>الرقم يحيل إلى القائمة أدناه.</div>
+      <div><b><sup class="p" style="font-size:8pt">n</sup></b>مصدر صحفي ثانوي، يُستخدم حيث يُشار فقط.</div>
+      <div><b><sup class="i" style="font-size:8pt">استنتاج</sup></b>تحليل <bdi>VisionSeek</bdi> مبني على الحالات الموثقة.</div>
+      <div><b><sup class="g" style="font-size:8pt">فجوة</sup></b>لا مصدر أولي؛ لا نصدر حكمًا.</div>
+    </div>
+    <p style="font-size:7.2pt;color:var(--g4);margin-bottom:2mm">فُتحت جميع المصادر وقُرئت في 24 أكتوبر 2026. 31 مصدرًا: 28 أوليًا (حكومة، جهة تنظيمية، شركة أو مؤسسة)، وسجلّان رسميان، ومصدر صحفي واحد. لا يستشهد التقرير إلا بما تقوله كل صفحة فعلًا.</p>
+    <ol class="srcs" style="font-size:6.7pt;line-height:1.45">
+      <li><span>KAIST, Founding Philosophy<span class="u">kaist.ac.kr/en/html/kaist/011701.html</span></span></li>
+      <li><span>KAIST, About<span class="u">kaist.ac.kr/en/html/kaist/01.html</span></span></li>
+      <li><span>ETRI, 50-year history<span class="u">etri.re.kr/50th/eng/history-overview.html</span></span></li>
+      <li><span>Samsung Semiconductor Newsroom, About/History<span class="u">news.samsungsemiconductor.com/global/about-us/</span></span></li>
+      <li><span>Samsung Newsroom Korea, «우리는 왜 반도체사업을 해야 하는가»<span class="u">news.samsung.com/kr/87</span></span></li>
+      <li><span>Electronic Times (etnews), 64K DRAM 1983 — صحافة<span class="u">etnews.com/201209110688</span></span></li>
+      <li><span>MOEF via korea.kr, semiconductor tax-support release, 3 Jan 2023<span class="u">korea.kr/briefing/pressReleaseView.do?newsId=156546154</span></span></li>
+      <li><span>White House (archived), CHIPS and Science Act fact sheet, 9 Aug 2022<span class="u">bidenwhitehouse.archives.gov/briefing-room/statements-releases/2022/08/09/fact-sheet-chips-and-science-act-…</span></span></li>
+      <li><span>NAVER press release, 24 Aug 2023<span class="u">navercorp.com/en/media/pressReleasesDetail?seq=31266</span></span></li>
+      <li><span>MSIT / korea.kr, 5G launch, 4 Apr 2019<span class="u">korea.kr/news/policyNewsView.do?newsId=148859737</span></span></li>
+      <li><span>MSIT, K-Network 2030 Strategy, 20 Feb 2023<span class="u">msit.go.kr/eng/bbs/view.do?…&amp;nttSeqNo=783</span></span></li>
+      <li><span>MSIT and NIS, public cloud verification reform<span class="u">msit.go.kr/eng/bbs/view.do?…&amp;nttSeqNo=1249</span></span></li>
+      <li><span>Samsung Global Newsroom, Rainbow Robotics, 31 Dec 2024<span class="u">news.samsung.com/global/samsung-electronics-to-become-largest-shareholder-in-rainbow-robotics-…</span></span></li>
+      <li><span>Rainbow Robotics, KFTC approval notice<span class="u">rainbow-robotics.com/pr/250305-1</span></span></li>
+      <li><span>LG Energy Solution, History<span class="u">lgensol.com/en/company/info-history</span></span></li>
+      <li><span>LG Chem, Archive 100<span class="u">lgchem.com/lg-chem-history/archives100/diggingCathode-eng</span></span></li>
+      <li><span>USTR statement, 11 Apr 2021 (SK–LG settlement)<span class="u">ustr.gov/…/2021/april/statement-ambassador-katherine-tai-settlement-reached-between-sk-and-lg</span></span></li>
+      <li><span>Federal Register, APR1400 design certification<span class="u">federalregister.gov/documents/2019/08/16/2019-17588/…</span></span></li>
+      <li><span>ENEC, Barakah Unit 1 commercial operation, 6 Apr 2021<span class="u">enec.ae/news/latest-news/unit-1-of-barakah-plant-started-commercial-operations/</span></span></li>
+      <li><span>Westinghouse, global settlement with KEPCO/KHNP, 16 Jan 2025<span class="u">info.westinghousenuclear.com/news/westinghouse-announces-global-settlement-agreement-with-kepco-and-khnp</span></span></li>
+      <li><span>EMA, first two monoclonal-antibody biosimilars<span class="u">ema.europa.eu/en/news/european-medicines-agency-recommends-approval-first-two-monoclonal-antibody-biosimilars</span></span></li>
+      <li><span>EMA, Remsima EPAR<span class="u">ema.europa.eu/en/medicines/human/EPAR/remsima</span></span></li>
+      <li><span>Samsung Biologics, Plant 5<span class="u">samsungbiologics.com/media/bio-story/plant5-re-shaping-biopharma-operations</span></span></li>
+      <li><span>PubMed record 15905366 (Retracted Publication)<span class="u">pubmed.ncbi.nlm.nih.gov/15905366/</span></span></li>
+      <li><span>Saudi Cabinet Decision 308/1437 (Lexis Middle East)<span class="u">lexismiddleeast.com/law/SaudiArabia/CabinetDecision_308_1437/en</span></span></li>
+      <li><span>Saudi Vision 2030 document (PDF)<span class="u">vision2030.gov.sa/media/rc0b5oy1/saudi_vision203.pdf</span></span></li>
+      <li><span>Egypt MPED, Egypt Vision 2030<span class="u">mped.gov.eg/DynamicPage?id=115&amp;lang=en</span></span></li>
+      <li><span>WAM, MBZUAI established, 16 Oct 2019<span class="u">wam.ae/en/article/hszr9b3g-abu-dhabi-announces-establishment-the-mohamed-bin</span></span></li>
+      <li><span>TII, About<span class="u">tii.ae/about-us</span></span></li>
+      <li><span>G42, About<span class="u">g42.ai/about</span></span></li>
+      <li><span>PIF, HUMAIN launch (2025)<span class="u">pif.gov.sa/en/news-and-insights/press-releases/2025/hrh-crown-prince-launches-humain-as-global-ai-powerhouse/</span></span></li>
+    </ol>
+    <h4 style="margin-top:1mm;font-size:8.4pt">فجوات معروفة</h4>
+    <ul class="gaps" style="font-size:7.2pt">
+      <li>لا مصدر أوليًا عن إخفاقات كورية في الذكاء الاصطناعي أو الروبوتات؛ هذه الأجزاء استنتاج أو مُعلَّمة فجوة.</li>
+      <li>نسب الإعفاء الضريبي الكوري للرقائق غير مذكورة، لأن مرفق البيان الرسمي لم يُقرأ.</li>
+      <li>الجانب العربي: لا أرقام موثقة عن الإنفاق العربي على البحث والتطوير أو مشروعات الرقائق والبطاريات أو أحجام الأسواق؛ لذلك لا أرقام عربية في الورقة عمدًا.</li>
+      <li>لم تُجمع بيانات مقارنة من <bdi>OECD</bdi> أو البنك الدولي أو <bdi>IEA</bdi> أو <bdi>WIPO</bdi>؛ يجب إضافتها قبل أن تغذّي الورقة المؤشر.</li>
+      <li>لم يُجمع مصدر سياسات كوري عن قانون الروبوتات وخطتها. والمصدر [6] صحفي، وهو الوحيد لتفاصيل النقل من <bdi>Micron</bdi>.</li>
+    </ul>
+  </div>
+  <div class="ftr"><span class="pn">16</span><span class="dr"><span class="lat">DRAFT FOR REVIEW</span> · مسودة للمراجعة</span><span>عقيدة التوطين</span></div>
+</section>
+
+<!-- 17 BACK COVER -->
+<section class="page dark cover">
+  <div class="grid"></div><div class="bar"></div>
+  <div class="brand" style="top:auto;bottom:120mm;right:20mm;position:absolute"><img src="assets/visionseek-chevron.png" alt="VisionSeek" style="height:20mm"><span style="font-size:22pt">VISIONSEEK</span></div>
+  <div class="kicker" style="top:auto;bottom:104mm">VisionSeek Lab · Insights</div>
+  <div class="sub" style="top:auto;bottom:72mm;font-size:13pt">من استخدام التكنولوجيا إلى امتلاكها.</div>
+  <div class="foot"><b class="lat">visionseek.org/insights</b><br>© 2026 <bdi>VisionSeek</bdi>. نسخة مسودة للمراجعة، لا تُنشر قبل اعتمادها.</div>
+  <div class="dt"><span class="draft-tag"><span class="lat">DRAFT FOR REVIEW</span><br>مسودة للمراجعة</span></div>
+</section>
+
+</body>
+</html>
