@@ -82,7 +82,7 @@ test('home.json and about.json hold every bilingual block the pages render', () 
 });
 
 test('every content collection in /admin points at a file or folder that exists', () => {
-  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports', 'cars', 'competitions', 'forums', 'indices', 'institute', 'fellowship']) {
+  for (const name of ['news', 'site', 'programs', 'guides', 'sections', 'home', 'about', 'method', 'navigation', 'legal', 'projects_catalog', 'project_concepts', 'reports', 'competitions', 'forums', 'indices', 'institute', 'fellowship']) {
     const paths = collectionPaths(name);
     assert.ok(paths && paths.length, name);
     for (const path of paths) {

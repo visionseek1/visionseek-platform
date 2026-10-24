@@ -1,5 +1,5 @@
 /**
- * The request forms on «حلول من كوريا» and the cars pages. Each request becomes one email to the address in
+ * The request forms on «حلول من كوريا». Each request becomes one email to the address in
  * content/site.json, opened in the visitor's own mail app: the project has no mail service, so the site never sends
  * anything by itself. No imports here, so the browser bundle stays small and the tests can load this file directly.
  */

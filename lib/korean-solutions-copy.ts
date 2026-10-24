@@ -49,7 +49,7 @@ export type Category = {id: string; sector: string; image?: string; href?: strin
 export const CATEGORIES: Category[] = [
   {id: 'health', sector: 'الصحة', image: '/ks/health.jpg',
     name: {ar: 'الأجهزة الطبية والتشخيص', en: 'Medical devices and diagnostics'},
-    examples: {ar: 'أجهزة تشخيص وعلاج للمستشفيات والعيادات ومراكز الفحص.', en: 'Diagnostic and treatment devices for hospitals, clinics and screening centres.'}},
+    examples: {ar: 'مثال على قدرة: أجهزة تشخيص وعلاج للمستشفيات والعيادات ومراكز الفحص.', en: 'An example of a capability: diagnostic and treatment devices for hospitals, clinics and screening centres.'}},
   {id: 'machines', sector: 'التصنيع', image: '/ks/workshop.jpg',
     name: {ar: 'المعدات الصناعية وقطع الغيار', en: 'Industrial equipment and spare parts'},
     examples: {ar: 'خطوط إنتاج وتعبئة، ومعدات ورش، وقطع غيار، وخامات للمصانع.', en: 'Production and packaging lines, workshop equipment, spare parts and factory materials.'}},
@@ -65,9 +65,6 @@ export const CATEGORIES: Category[] = [
   {id: 'cities', sector: 'الأمن والمدن', image: '/ks/cameras.jpg',
     name: {ar: 'الأمن والمدن', en: 'Security and cities'},
     examples: {ar: 'كاميرات وأنظمة مراقبة ذكية للمنشآت والمدن.', en: 'Smart cameras and monitoring systems for facilities and cities.'}},
-  {id: 'cars', sector: 'السيارات', href: '/cars',
-    name: {ar: 'سيارات هايبرد وكهربائية', en: 'Hybrid and electric cars'},
-    examples: {ar: 'للسيارات صفحة خاصة: اطلب السيارة التي تريدها من هناك.', en: 'Cars have their own page: request the car you want there.'}},
   {id: 'other', sector: 'مجال آخر',
     name: {ar: 'شيء آخر؟', en: 'Something else?'},
     examples: {ar: 'اكتب أي منتج أو خدمة تحتاجها من كوريا.', en: 'Write down any product or service you need from Korea.'}},

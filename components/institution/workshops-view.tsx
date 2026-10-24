@@ -11,7 +11,8 @@ import {
   type WorkshopHeadingKey,
   type WorkshopKind,
 } from '@/lib/institution/workshops';
-import {coursePath, workshop as governanceCourse} from '@/lib/governance';
+import {coursePage, coursePath, workshop as governanceCourse} from '@/lib/governance';
+import {InterestButton} from '@/components/interest/interest-form';
 import {institute, institutePath, masterclassPath, tx as instituteText} from '@/lib/institute';
 import {DocumentLocale} from '@/components/governance/document-locale';
 
@@ -90,8 +91,14 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
             <div>
               <h2 id="vs-wl-course-title"><Link href={courseHref}>{text(locale, governanceCourse.title)}</Link></h2>
               <p><span>{text(locale, governanceCourse.durationLabel)}</span> {text(locale, governanceCourse.soon)}</p>
-              <p className="vs-wl-offer-price">{text(locale, governanceCourse.price)}</p>
-              <Link className="vs-wl-btn is-lime" href={courseHref}>{text(locale, governanceCourse.subscribe)}<ArrowRight size={18} aria-hidden /></Link>
+              <InterestButton
+                locale={locale}
+                topic={text(locale, governanceCourse.title)}
+                page={coursePage(locale)}
+                label={text(locale, governanceCourse.subscribe)}
+                className="vs-wl-btn is-lime"
+              />
+              <Link className="vs-wl-btn" href={courseHref}>{locale === 'ar' ? 'افتح الصفحة' : 'Open the page'}<ArrowRight size={18} aria-hidden /></Link>
             </div>
           </article>
         </section>

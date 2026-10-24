@@ -10,8 +10,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...['', '/ar'].flatMap(prefix => [
-        {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
-        {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
+        {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects`, permanent: true},
+        {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects`, permanent: true},
+        // Cars left the site (24 Oct 2026): old /cars links go home. 308.
+        {source: `${prefix}/cars`, destination: `${prefix || '/'}`, permanent: true},
+        {source: `${prefix}/cars/:path*`, destination: `${prefix || '/'}`, permanent: true},
+        // Empty sector landings left the menu. Closest axis is Projects. 308.
+        ...['energy', 'semiconductors', 'drones-aviation', 'defense', 'robotics', 'health', 'agriculture', 'infrastructure'].flatMap(sector => [
+          {source: `${prefix}/projects/${sector}`, destination: `${prefix}/projects`, permanent: true},
+          {source: `${prefix}/projects/${sector}/:path*`, destination: `${prefix}/projects`, permanent: true},
+        ]),
         // Competitions now lives on Work with Us (24 Oct 2026): old /competitions links keep working.
         {source: `${prefix}/competitions`, destination: `${prefix}/work-with-us#competitions`, permanent: true},
         // «الورش» became Masterclass; Institute is the umbrella above it.

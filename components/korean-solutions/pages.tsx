@@ -30,7 +30,6 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
           <a href={`${p}/korean-solutions#domains`}>{ar ? 'المجالات' : 'Fields'}</a>
           <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف نعمل' : 'How we work'}</a>
           <a href={`${p}/korean-solutions#initiatives`}>{ar ? 'المبادرات' : 'Initiatives'}</a>
-          <Link href={`${p}/cars`}>{ar ? 'السيارات' : 'Cars'}</Link>
           <a className={styles.barCta} href={transferMail(locale)}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a transfer project'}</a>
         </span>
       </div></nav>
@@ -58,13 +57,12 @@ const HOW: Bi[] = [
 type Domain = {id: string; image: string; title: Bi; text: Bi; href?: string};
 
 const PRODUCTS: Domain[] = [
-  {id: 'medical', image: '/ks/domains/medical.webp', title: {ar: 'الطب والتقنية الصحية', en: 'Medicine and health tech'}, text: {ar: 'ننقل أجهزة التشخيص والعلاج والتقنيات الصحية الكورية، ونوطّن تشغيلها في المؤسسة.', en: 'We transfer Korean diagnostic, treatment and health technologies, and root their operation in the institution.'}},
+  {id: 'medical', image: '/ks/domains/medical.webp', title: {ar: 'الطب والتقنية الصحية', en: 'Medicine and health tech'}, text: {ar: 'مثال على قدرة يمكن نقلها وتوطينها: التشخيص والعلاج والتقنيات الصحية الكورية.', en: 'An example of a capability that can be transferred and localised: Korean diagnostics, treatment and health technologies.'}},
   {id: 'beauty', image: '/ks/domains/beauty.webp', title: {ar: 'التجميل والعناية الكورية', en: 'K-beauty and personal care'}, text: {ar: 'ننقل منظومة التجميل والعناية الكورية: المنتج، والمعرفة، ومعايير التشغيل.', en: 'We transfer the Korean beauty and care system: the product, the know-how, and the operating standard.'}},
   {id: 'manufacturing', image: '/ks/domains/manufacturing.webp', title: {ar: 'التصنيع الذكي والمعدات الصناعية', en: 'Smart manufacturing and industrial equipment'}, text: {ar: 'ننقل خطوط التصنيع والمعدات الصناعية الكورية، ونوطّن تشغيلها.', en: 'We transfer Korean production lines and industrial equipment, and root their operation locally.'}},
   {id: 'energy', image: '/ks/domains/energy.webp', title: {ar: 'الطاقة والبطاريات والمركبات الكهربائية', en: 'Energy, batteries and electric vehicles'}, text: {ar: 'ننقل قدرات الطاقة والبطارية والمركبة الكهربائية الكورية إلى المؤسسة.', en: 'We transfer Korean energy, battery and electric-vehicle capability into the institution.'}},
   {id: 'education', image: '/ks/domains/education.webp', title: {ar: 'التعليم والتقنيات الرقمية', en: 'Education and digital / edtech'}, text: {ar: 'ننقل حلول التعليم الرقمي والمنصات الكورية، ونوطّنها في المؤسسة التعليمية.', en: 'We transfer Korean digital-education solutions and platforms, and root them in the learning institution.'}},
   {id: 'agriculture', image: '/ks/domains/agriculture.webp', title: {ar: 'الزراعة الذكية وتقنيات الغذاء', en: 'Smart agriculture and food tech'}, text: {ar: 'ننقل الزراعة المحمية وتقنيات الغذاء الكورية إلى المنتج العربي.', en: 'We transfer Korean protected agriculture and food technology to the Arab producer.'}},
-  {id: 'cars', image: '/ks/domains/cars.webp', href: '/cars', title: {ar: 'سيارات هايبرد وكهربائية', en: 'Hybrid and electric cars'}, text: {ar: 'صفحة مستقلة للسيارات الكورية الهجينة والكهربائية.', en: 'A dedicated page for Korean hybrid and electric cars.'}},
 ];
 
 const SERVICES: Domain[] = [
@@ -95,7 +93,7 @@ function DomainGrid({locale, items}: {locale: Locale; items: Domain[]}) {
         <span className={styles.catBody}>
           <b>{t(c.title)}</b>
           <span>{t(c.text)}</span>
-          {c.href && <span className={styles.catGo}>{ar ? 'افتح صفحة السيارات' : 'Open the cars page'} <span aria-hidden="true">{ar ? '←' : '→'}</span></span>}
+          {c.href && <span className={styles.catGo}>{ar ? 'افتح الصفحة' : 'Open the page'} <span aria-hidden="true">{ar ? '←' : '→'}</span></span>}
         </span>
       </>;
       return <li key={c.id}>{c.href
@@ -105,7 +103,7 @@ function DomainGrid({locale, items}: {locale: Locale; items: Domain[]}) {
   </ul>;
 }
 
-/** Institutional front: transfer and localise Korean capability. Initiatives live here. Cars stay on /cars. */
+/** Institutional front: transfer and localise Korean capability. Initiatives live here. */
 export function KoreanSolutionsHub({locale}: {locale: Locale}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en);
   return <Shell locale={locale} path="/korean-solutions">
