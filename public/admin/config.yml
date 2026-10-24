@@ -3924,26 +3924,26 @@ collections:
             name: labels
             widget: object
             fields:
-              - label: ما هو
+              - label: ما هو الحوار
                 name: what
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: لمن
+              - label: مبادئ الحوار
+                name: principles
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: مين بيحضر
                 name: who
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: لماذا كوريا والعالم العربي
-                name: why
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: المؤشر
-                name: index
+              - label: اللي بيطلع من الحوار
+                name: outcome
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
@@ -4005,32 +4005,50 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: النبذة
-                name: standfirst
+              - {label: الصورة الرئيسية, name: image, widget: image, choose_url: true}
+              - label: وصف الصورة
+                name: imageAlt
                 widget: object
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: ما هو
+              - label: الافتتاحية
+                name: opening
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: text}
+                  - {label: العربية, name: ar, widget: text}
+              - label: ما هو الحوار
                 name: what
                 widget: object
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: لمن
+              - label: المبادئ
+                name: principles
+                widget: list
+                summary: "{{fields.title.ar}}"
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: النص
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+              - label: مين بيحضر
                 name: who
                 widget: object
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
-              - label: لماذا كوريا والعالم العربي
-                name: why
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: text}
-                  - {label: العربية, name: ar, widget: text}
-              - label: المؤشر
-                name: index
+              - label: اللي بيطلع من الحوار
+                name: outcome
                 widget: object
                 fields:
                   - {label: English, name: en, widget: text}
@@ -4039,6 +4057,7 @@ collections:
                 name: invite
                 widget: object
                 required: false
+                hint: "بريد فقط. لا تضف فورم تسجيل."
                 fields:
                   - label: نص الزر
                     name: label

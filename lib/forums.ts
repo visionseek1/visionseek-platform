@@ -10,16 +10,23 @@ export type ForumInvite = {
   body: Bi;
 };
 
+export type ForumPrinciple = {
+  title: Bi;
+  text: Bi;
+};
+
 export type Forum = {
   slug: string;
   title: Bi;
   kicker: Bi;
   status: Bi;
-  standfirst: Bi;
+  image?: string;
+  imageAlt?: Bi;
+  opening: Bi;
   what: Bi;
+  principles: ForumPrinciple[];
   who: Bi;
-  why: Bi;
-  index: Bi;
+  outcome: Bi;
   invite?: ForumInvite;
 };
 
@@ -34,9 +41,9 @@ export type ForumsContent = {
   };
   labels: {
     what: Bi;
+    principles: Bi;
     who: Bi;
-    why: Bi;
-    index: Bi;
+    outcome: Bi;
     honesty: Bi;
     host: Bi;
     axisKorea: Bi;

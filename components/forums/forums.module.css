@@ -13,7 +13,7 @@
   background: #0b0d0e;
   color: var(--white);
 }
-.page :is(h1, h2, h3, p, ol, li) { margin: 0; }
+.page :is(h1, h2, h3, h4, p, ol, ul, li, figure) { margin: 0; }
 .page a { color: inherit; }
 
 .hero,
@@ -85,6 +85,18 @@
 .forum {
   padding-top: 4.2rem;
   padding-bottom: 5.5rem;
+}
+
+.visual {
+  position: relative;
+  margin: 0 0 2.4rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #050607;
+  border: 1px solid var(--vs-line);
+}
+.visual img {
+  object-fit: cover;
 }
 
 .forumHead { max-width: 46rem; }
@@ -169,6 +181,42 @@
   color: #c8ccc9;
 }
 
+.principles {
+  margin: 2.6rem 0 0.4rem;
+  padding: 2.2rem 0 0.4rem;
+  border-top: 1px solid var(--vs-line);
+}
+.principles > h3 {
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  margin-bottom: 1.4rem !important;
+}
+.principles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.principles li {
+  border-top: 2px solid var(--lime);
+  background: #15171e;
+  padding: 1.3rem 1.4rem 1.5rem;
+}
+.principles h4 {
+  margin: 0 0 0.55rem;
+  font-size: 1.15rem;
+  font-family: var(--font-display), sans-serif;
+}
+.root[lang='ar'] .principles h4 {
+  font-family: var(--font-arabic), sans-serif !important;
+}
+.principles p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #c8ccc9;
+}
+
 .forumClose {
   margin-top: 2.8rem;
   max-width: 40rem;
@@ -216,6 +264,7 @@
   .axis { grid-template-columns: 1fr; }
   .axis strong { border-inline: 0; border-block: 1px solid var(--vs-line); text-align: start; }
   .pillars li { grid-template-columns: 2.4rem 1fr; gap: 0.9rem; padding: 1.7rem 0; }
+  .principles ul { grid-template-columns: 1fr; }
   .invite { width: 100%; }
 }
 
