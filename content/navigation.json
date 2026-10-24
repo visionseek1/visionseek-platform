@@ -173,6 +173,23 @@
       ]
     },
     {
+      "path": "/indices",
+      "en": "Indices",
+      "ar": "المؤشرات",
+      "children": [
+        {
+          "href": "/indices",
+          "en": "VisionSeek Indices",
+          "ar": "مؤشرات VisionSeek"
+        },
+        {
+          "href": "/indices/arab-technology-capability",
+          "en": "Arab Technology Capability Index",
+          "ar": "مؤشر القدرة التكنولوجية العربية"
+        }
+      ]
+    },
+    {
       "path": "/news",
       "en": "News",
       "ar": "الأخبار",

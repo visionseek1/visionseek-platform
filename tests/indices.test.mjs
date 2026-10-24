@@ -79,12 +79,17 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.doesNotMatch(read('components/indices/pages.tsx'), /padStart|styles\.num|<form/i);
 });
 
-test('Indices: own pages in both languages, sitemap and /admin, not in the header yet', () => {
+test('Indices: own pages in both languages, sitemap and /admin, in the header after Insights', () => {
   for (const f of ['app/indices/page.tsx', 'app/ar/indices/page.tsx', 'app/indices/[slug]/page.tsx', 'app/ar/indices/[slug]/page.tsx']) {
     assert.ok(existsSync(url(f)), f);
   }
   const nav = JSON.parse(read('content/navigation.json'));
-  assert.equal(nav.sections.some(s => s.path === '/indices'), false, 'do not add a nav item before Ahmed approves');
+  const paths = nav.sections.map(s => s.path);
+  const item = nav.sections.find(s => s.path === '/indices');
+  assert.ok(item, 'Indices belongs in the header after Ahmed approved the live page');
+  assert.equal(item.en, 'Indices');
+  assert.equal(item.ar, 'المؤشرات');
+  assert.equal(paths[paths.indexOf('/insights') + 1], '/indices');
   assert.match(read('app/sitemap.ts'), /'\/indices'/);
   assert.match(read('public/admin/config.yml'), /value: "\/indices"/);
   assert.match(read('public/admin/config.yml'), /file: content\/indices\.json/);
