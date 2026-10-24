@@ -17,13 +17,18 @@
   line-height: 1.6;
 }
 
-/* Three classes so these win over the dark site's `.vs-site.locale-ar :is(h1,h2,h3)`. */
+/* Extra classes to win over the site's `.vs-site :is(h1,h2,h3)` rules. The site sets Arabic headings in
+   Alexandria with !important; this page is briefed in IBM Plex Sans Arabic, hence the !important here. */
 .page.page.page :is(h1, h2, h3) {
   font-family: inherit;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.35;
   color: var(--ink);
+}
+
+.page.page.page.ar :is(h1, h2, h3) {
+  font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif !important;
 }
 
 .page.page.page.en :is(h1, h2, h3) {
@@ -118,7 +123,11 @@
 .section {
   max-width: 78rem;
   margin: 0 auto;
-  padding: clamp(2.25rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 3rem);
+  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.hero + .section {
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 .section:last-child {
@@ -302,7 +311,6 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.1rem 1.25rem;
-  max-width: 54rem;
   padding: clamp(1.5rem, 3vw, 2.25rem);
   background: var(--card);
   border: 1px solid var(--line);

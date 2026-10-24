@@ -67,7 +67,7 @@ export function CompetitionsPage({locale, fontClassName = ''}: {locale: Locale; 
       <main id="main-content" className={`${styles.page} ${ar ? styles.ar : styles.en} ${fontClassName}`}>
         <section className={styles.hero} aria-labelledby="competitions-title">
           <div className={styles.heroCopy}>
-            <div className={styles.lockup}>
+            <div className={styles.lockup} dir="ltr">
               <Image src="/visionseek-symbol-color.png" alt="" width={36} height={36}/>
               <span>VisionSeek</span>
             </div>
