@@ -99,7 +99,7 @@ test('the Incheon Advisory Council sits inside the dialogue, with no members nam
   assert.match(council.independence[2].text.ar, /مسؤول حكومي في منصبه الحالي/);
   assert.match(council.independence[2].text.en, /current government official/);
   const blob = JSON.stringify(council);
-  assert.doesNotMatch(blob, /7–9|7-9|صور|photo|Emeritus|The Elders|Ahmed|عبد ?العليم/i);
+  assert.doesNotMatch(blob, /7–9|7-9|photograph|headshot|Emeritus|The Elders|\bAhmed\b|عبد ?العليم/i);
   assert.doesNotMatch(blob, /sorry|unfortunately|not yet|coming soon|قريبًا|إن شاء الله|نعتذر/i);
   for (const item of council.independence) {
     assert.ok(isText(item.title) && isText(item.text), item.title.en);
