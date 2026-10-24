@@ -40,14 +40,14 @@ export function LocalizationDoctrine({locale}: {locale: Locale}) {
   const pdf = ar ? paper.pdfAr : paper.pdfEn;
   const pdfLabel = ar ? 'تحميل التقرير (PDF)' : 'Download the report (PDF)';
   const sec = (n: string, label: Bi) => <p className={styles.kicker}><i aria-hidden="true"/><span className={styles.mono}>{n}</span> · {t(label)}</p>;
-  return <Shell locale={locale} path={`/insights/reports/${paper.slug}`}>
+  return <Shell locale={locale} path={`/reports/reports/${paper.slug}`}>
     <SubNav locale={locale} current="reports"/>
     <div className={`${styles.r} ${ar ? '' : styles.en}`}>
 
       <header className={styles.cover}>
         <div className={styles.grid} aria-hidden="true"/>
         <div className={styles.coverIn}>
-          <nav className={styles.crumbs} aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}><Link href={`${p}/insights`}>Insights</Link><span aria-hidden="true">/</span><Link href={`${p}/insights/reports`}>{t(insights.sections.reports.title)}</Link></nav>
+          <nav className={styles.crumbs} aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}><Link href={`${p}/reports`}>{ar ? 'تقارير' : 'Reports'}</Link><span aria-hidden="true">/</span><Link href={`${p}/reports/reports`}>{t(insights.sections.reports.title)}</Link></nav>
           <p className={styles.lab} lang="en" dir="ltr">VISIONSEEK LAB · DOCTRINE PAPER</p>
           <h1>{t(paper.title)}</h1>
           <p className={styles.q}>{t(paper.question)}</p>

@@ -139,7 +139,7 @@ test('the conferences routes and admin collection exist, and Conferences is a to
   assert.equal(item.ar, 'المؤتمرات');
   assert.equal(nav.sections.filter(s => s.path === '/conferences').length, 1, 'Conferences appears once');
   assert.equal(nav.sections.find(s => s.path === '/forums'), undefined);
-  assert.deepEqual(paths.slice(paths.indexOf('/insights'), paths.indexOf('/work-with-us') + 1), ['/insights', '/indices', '/news', '/conferences', '/work-with-us']);
+  assert.deepEqual(paths.slice(paths.indexOf('/reports'), paths.indexOf('/work-with-us') + 1), ['/reports', '/indices', '/news', '/conferences', '/work-with-us']);
   assert.equal(paths[paths.indexOf('/news') + 1], '/conferences');
   assert.ok(item.children.some(c => c.href === '/conferences' && c.en === 'Conferences' && c.ar === 'المؤتمرات'));
   assert.ok(item.children.some(c => c.href === '/conferences#incheon-dialogue' && c.en === 'Incheon Dialogue' && c.ar === 'حوار إنتشون'));

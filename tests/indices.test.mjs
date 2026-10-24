@@ -111,7 +111,7 @@ test('Indices: own pages in both languages, sitemap and /admin, in the header af
   assert.ok(item, 'Indices belongs in the header after Ahmed approved the live page');
   assert.equal(item.en, 'Indices');
   assert.equal(item.ar, 'المؤشرات');
-  assert.equal(paths[paths.indexOf('/insights') + 1], '/indices');
+  assert.equal(paths[paths.indexOf('/reports') + 1], '/indices');
   assert.deepEqual(item.children.map(c => c.href), [
     '/indices',
     '/indices/arab-technology-capability',
