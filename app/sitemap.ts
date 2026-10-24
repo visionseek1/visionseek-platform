@@ -26,6 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...workshops.flatMap(item=>[{path:`/masterclass/${item.slug}`,priority:0.75},{path:`/ar/masterclass/${item.slug}`,priority:0.75}]),
     {path:'/masterclass/single-track-trap',priority:0.75},{path:'/ar/masterclass/single-track-trap',priority:0.75},
     ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
+    { path: "/forums", priority: 0.75 },
+    { path: "/ar/forums", priority: 0.75 },
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },

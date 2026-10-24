@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": {
+      "en": "Incheon Dialogue | VisionSeek",
+      "ar": "حوار إنتشون | VisionSeek"
+    },
+    "description": {
+      "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
+      "ar": "حوار إنتشون منتدى صغير بالدعوة فقط لقيادة التكنولوجيا بين كوريا والعالم العربي. الإصدار الأول: أبريل 2027، إنتشون."
+    }
+  },
+  "page": {
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "section": {
+      "en": "Conferences & Forums",
+      "ar": "المؤتمرات والمنتديات"
+    },
+    "status": {
+      "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
+      "ar": "الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط."
+    }
+  },
+  "labels": {
+    "mandate": {
+      "en": "About",
+      "ar": "عن الحوار"
+    },
+    "why": {
+      "en": "Why",
+      "ar": "لماذا"
+    },
+    "format": {
+      "en": "Format",
+      "ar": "الشكل"
+    },
+    "themes": {
+      "en": "Themes",
+      "ar": "المحاور"
+    },
+    "who": {
+      "en": "Who attends",
+      "ar": "من يحضر"
+    },
+    "outcome": {
+      "en": "What comes out",
+      "ar": "ما يصدر عنه"
+    },
+    "dialogue": {
+      "en": "Incheon Dialogue",
+      "ar": "حوار إنتشون"
+    },
+    "register": {
+      "en": "Register interest",
+      "ar": "سجّل اهتمامك"
+    },
+    "honesty": {
+      "en": "No specific venue in Incheon, and no names, partners or sponsors have been set.",
+      "ar": "لا مكان محدد داخل إنتشون، ولا أسماء، ولا شركاء ولا رعاة."
+    },
+    "host": {
+      "en": "Invitations are considered by Ahmed Abdelalim.",
+      "ar": "ينظر في طلبات الدعوة أحمد عبدالعليم."
+    }
+  },
+  "forums": [
+    {
+      "slug": "incheon-dialogue",
+      "title": {
+        "en": "Incheon Dialogue",
+        "ar": "حوار إنتشون"
+      },
+      "kicker": {
+        "en": "Korea · Arab World — technology leadership forum",
+        "ar": "منتدى قيادة التكنولوجيا بين كوريا والعالم العربي"
+      },
+      "edition": {
+        "en": "First edition: April 2027, Incheon",
+        "ar": "الإصدار الأول: أبريل 2027، إنتشون"
+      },
+      "status": {
+        "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
+        "ar": "الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط."
+      },
+      "facts": [
+        {"label": {"en": "Edition", "ar": "الإصدار"}, "value": {"en": "First", "ar": "الأول"}},
+        {"label": {"en": "When", "ar": "الزمان"}, "value": {"en": "April 2027", "ar": "أبريل 2027"}},
+        {"label": {"en": "Where", "ar": "المكان"}, "value": {"en": "Incheon", "ar": "إنتشون"}},
+        {"label": {"en": "Access", "ar": "الحضور"}, "value": {"en": "Invitation only", "ar": "بالدعوة فقط"}}
+      ],
+      "visual": "/forums/incheon-dialogue.svg",
+      "visualAlt": {
+        "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula.",
+        "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل مخطط كوريا المنقّط بشبه الجزيرة العربية."
+      },
+      "opening": {
+        "en": "The technologies that will shape the next decade are not bought. They are built and localized.\n\nKorea did this in a generation. The Arab world has the ambition and the means to lead.\n\nThe Incheon Dialogue is where both sides sit down to decide how that happens.",
+        "ar": "القدرات التكنولوجية التي ستشكّل العقد المقبل لا تُشترى؛ تُبنى وتُوطَّن.\n\nحقّقت كوريا ذلك في جيل واحد. والعالم العربي يملك الطموح والإمكانات ليقود.\n\n«حوار إنتشون» هو الموضع الذي يجلس فيه الطرفان ليقرّرا كيف يحدث ذلك."
+      },
+      "what": {
+        "en": "A small, closed annual forum, convened by VisionSeek in Incheon.\n\nIt brings together the people who take technology decisions in Korea and the Arab world, to speak plainly about transferring and localizing critical capabilities.\n\nThe seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
+        "ar": "منتدى سنوي صغير ومغلق، تنظّمه VisionSeek في إنتشون.\n\nيجمع من يتّخذون قرارات التكنولوجيا في كوريا والعالم العربي؛ ليتحدثوا بصراحة عن نقل القدرات الحرجة وتوطينها.\n\nالتكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+      },
+      "principles": [
+        {
+          "title": {
+            "en": "Small and selected",
+            "ar": "صغير ومختار"
+          },
+          "text": {
+            "en": "Attendance is by invitation only, so the conversation can be real.",
+            "ar": "الحضور بالدعوة فقط، حتى يكون النقاش حقيقيًا."
+          }
+        },
+        {
+          "title": {
+            "en": "Frank",
+            "ar": "صريح"
+          },
+          "text": {
+            "en": "Sessions follow the Chatham House Rule: use what was said, without naming who said it.",
+            "ar": "تُعقد الجلسات وفق قاعدة Chatham House: يُستخدم ما قيل من دون تسمية قائله."
+          }
+        },
+        {
+          "title": {
+            "en": "Neutral",
+            "ar": "محايد"
+          },
+          "text": {
+            "en": "No selling, no product pitches. The point is the decision.",
+            "ar": "لا بيع ولا عروض منتجات؛ الغاية هي القرار."
+          }
+        },
+        {
+          "title": {
+            "en": "Recurring",
+            "ar": "ممتد"
+          },
+          "text": {
+            "en": "It is held each year, and the Arab Technology Capability Index is announced there.",
+            "ar": "يُعقد كل سنة، ويُعلن فيه «مؤشر القدرة التكنولوجية العربية»."
+          }
+        }
+      ],
+      "themes": [
+        {"en": "Semiconductors", "ar": "الرقائق"},
+        {"en": "Artificial intelligence", "ar": "الذكاء الاصطناعي"},
+        {"en": "Cloud and data", "ar": "السحابة والبيانات"},
+        {"en": "5G/6G", "ar": "5G/6G"},
+        {"en": "Robotics", "ar": "الروبوتات"},
+        {"en": "Clean energy and batteries", "ar": "الطاقة النظيفة والبطاريات"},
+        {"en": "Health biotechnology", "ar": "التكنولوجيا الحيوية والصحية"}
+      ],
+      "who": {
+        "en": "Those responsible for technology in Arab government bodies; chief executives and technology leaders in Arab institutions; leaders of Korean companies and agencies; and researchers whose word carries weight in the seven technologies.",
+        "ar": "المسؤولون عن التكنولوجيا في جهات حكومية عربية، والرؤساء التنفيذيون ومديرو التكنولوجيا في مؤسسات عربية، وقيادات شركات وهيئات كورية، وباحثون لهم كلمة مسموعة في التكنولوجيات السبعة."
+      },
+      "outcome": {
+        "en": "A discussion paper before the dialogue, a summary after it, and clear partnership priorities between the two sides.",
+        "ar": "ورقة نقاش تصدر قبل الحوار، وملخص يصدر بعده، وأولويات شراكة واضحة بين الطرفين."
+      },
+      "awards": {
+        "title": {
+          "en": "Incheon Localization Awards",
+          "ar": "جوائز إنتشون للتوطين"
+        },
+        "kicker": {
+          "en": "Honoring those who own capability, not those who merely bought it",
+          "ar": "تكريم من امتلك القدرة، لا من اشتراها"
+        },
+        "status": {
+          "en": "Announced at the Incheon Dialogue, April 2027, Incheon.",
+          "ar": "تُعلن ضمن «حوار إنتشون» في أبريل 2027، في إنتشون، إن شاء الله."
+        },
+        "visual": "/forums/incheon-awards.svg",
+        "visualAlt": {
+          "en": "Vector mark for the Incheon Localization Awards: a lime isometric VisionSeek symbol on black, with a soft glow.",
+          "ar": "علامة جوائز إنتشون للتوطين: رمز VisionSeek المتساوي القياس بالأخضر على أسود، مع توهج خفيف."
+        },
+        "opening": {
+          "en": "Buying technology is a transaction. Owning it is an achievement.\n\nBehind every capability that has truly been localized stands a team that learned, built, and can now operate and develop it without waiting for anyone. These awards honor that achievement, and set a standard others can follow.",
+          "ar": "شراء التكنولوجيا صفقة، أما امتلاكها فإنجاز.\n\nخلف كل قدرة وُطّنت فعلًا فريق تعلّم وبنى وأصبح قادرًا على التشغيل والتطوير دون أن ينتظر أحدًا. هذه الجوائز تكرّم هذا الإنجاز، وتضع له معيارًا يُحتذى."
+        },
+        "what": {
+          "en": "Annual awards given by VisionSeek at the Incheon Dialogue. They honor institutions, individuals, and Korean–Arab partnerships that transferred a critical capability, localized it, and now own it — in the seven foundational technologies: semiconductors, artificial intelligence, cloud and data, 5G/6G, robotics, clean energy and batteries, and health biotechnology.",
+          "ar": "جوائز سنوية تمنحها VisionSeek ضمن «حوار إنتشون»، تكرّم المؤسسات والأفراد والشراكات الكورية-العربية التي نقلت قدرة حرجة ووطّنتها وأصبحت تملكها، في التكنولوجيات السبعة الأساسية: الرقائق، والذكاء الاصطناعي، والسحابة والبيانات، و5G/6G، والروبوتات، والطاقة النظيفة والبطاريات، والتكنولوجيا الحيوية والصحية."
+        },
+        "principles": [
+          {
+            "title": {"en": "Own, do not buy", "ar": "امتلاك لا شراء"},
+            "text": {
+              "en": "The only test is a capability operated and developed locally, without depending on the supplier.",
+              "ar": "المعيار الوحيد هو قدرة تُشغَّل وتُطوَّر محليًا دون الاعتماد على المورّد."
+            }
+          },
+          {
+            "title": {"en": "Verifiable evidence", "ar": "دليل قابل للتحقق"},
+            "text": {
+              "en": "What is honored is an achievement proven by a measurable result — not promises, not announcements.",
+              "ar": "يُكرَّم الإنجاز المثبت بنتيجة يمكن قياسها، لا الوعود ولا الإعلانات."
+            }
+          },
+          {
+            "title": {"en": "Nomination by invitation", "ar": "ترشيح بالدعوة"},
+            "text": {
+              "en": "Qualified bodies and experts invited by VisionSeek nominate. Self-nomination is not accepted.",
+              "ar": "يرشّح جهات وخبراء مؤهلون تدعوهم VisionSeek، ولا يُقبل الترشيح الذاتي."
+            }
+          },
+          {
+            "title": {"en": "Separation of roles", "ar": "فصل الأدوار"},
+            "text": {
+              "en": "Screening of nominations is separate from judging. Deliberations are confidential, to protect their integrity.",
+              "ar": "فرز الترشيحات منفصل عن التحكيم، والمداولات سرية حمايةً لنزاهتها."
+            }
+          },
+          {
+            "title": {"en": "Independent", "ar": "مستقلة"},
+            "text": {
+              "en": "No sponsorship and no commercial relationship that would affect the choice.",
+              "ar": "لا رعاية ولا علاقة تجارية تؤثر على الاختيار."
+            }
+          },
+          {
+            "title": {"en": "Annual and continuing", "ar": "سنوية وممتدة"},
+            "text": {
+              "en": "Announced each year at the Incheon Dialogue. We follow the effect of those honored after the recognition.",
+              "ar": "تُعلن كل عام في «حوار إنتشون»، ونتابع أثر الفائزين بعد التكريم."
+            }
+          }
+        ],
+        "categories": [
+          {
+            "title": {"en": "Localization Institution", "ar": "مؤسسة التوطين"},
+            "text": {
+              "en": "An Arab institution that localized a critical capability and now owns it.",
+              "ar": "مؤسسة عربية وطّنت قدرة حرجة وأصبحت تملكها."
+            }
+          },
+          {
+            "title": {"en": "Localization Pioneer", "ar": "رائد التوطين"},
+            "text": {
+              "en": "An individual who led the building of a critical capability inside their institution or country.",
+              "ar": "فرد قاد بناء قدرة حرجة داخل مؤسسته أو بلده."
+            }
+          },
+          {
+            "title": {"en": "Bridge Partnership", "ar": "شراكة الجسر"},
+            "text": {
+              "en": "A Korean–Arab partnership that transferred the knowledge in fact, not only the product.",
+              "ar": "شراكة كورية-عربية نقلت المعرفة فعلًا لا المنتج فقط."
+            }
+          }
+        ],
+        "process": [
+          {"en": "Nominators are invited", "ar": "دعوة المرشِّحين"},
+          {"en": "Nominations are screened and the evidence is checked", "ar": "فرز الترشيحات والتحقق من الأدلة"},
+          {"en": "The jury deliberates", "ar": "مداولات هيئة التحكيم"},
+          {"en": "Announcement and honoring at the Incheon Dialogue", "ar": "الإعلان والتكريم في «حوار إنتشون»"}
+        ],
+        "who": {
+          "en": "The institutions and individuals who built the capability quietly and deserve recognition; governments looking for models to follow; Korean partners who transferred knowledge in good faith; and every Arab leader who wants to know what real success looks like.",
+          "ar": "المؤسسات والأفراد الذين بنوا القدرة بصمت ويستحقون الاعتراف، والحكومات التي تبحث عن نماذج تُحتذى، والشركاء الكوريون الذين نقلوا المعرفة بصدق، وكل قائد عربي يريد أن يعرف كيف يبدو النجاح الحقيقي."
+        },
+        "honesty": {
+          "en": "No prize value, no juror or winner names, and no nomination window have been set.",
+          "ar": "لا قيمة للجوائز، ولا أسماء محكّمين أو فائزين، ولا نافذة ترشيح."
+        },
+        "labels": {
+          "soon": {"en": "Coming soon", "ar": "قريبًا"},
+          "mandate": {"en": "What the awards are", "ar": "ما هي الجوائز"},
+          "principles": {"en": "Principles", "ar": "مبادئ الجوائز"},
+          "categories": {"en": "Categories", "ar": "الفئات"},
+          "process": {"en": "How they work", "ar": "كيف تعمل"},
+          "who": {"en": "Who benefits", "ar": "من يستفيد"}
+        }
+      },
+      "invite": {
+        "label": {
+          "en": "Request an invitation",
+          "ar": "اطلب دعوة"
+        },
+        "subject": {
+          "en": "Invitation request — Incheon Dialogue",
+          "ar": "طلب دعوة — حوار إنتشون"
+        },
+        "body": {
+          "en": "I would like to be considered for an invitation to the Incheon Dialogue.\n\nName:\nInstitution:\nRole:\n",
+          "ar": "أود أن يُنظر في دعوتي إلى «حوار إنتشون».\n\nالاسم:\nالمؤسسة:\nالدور:\n"
+        }
+      }
+    }
+  ]
+}
