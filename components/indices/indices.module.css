@@ -343,7 +343,7 @@
   margin-top: 3.4rem;
 }
 
-.techs h2 {
+.techs h2, .techs h3 {
   font-size: 1.6rem;
   margin: 0 0 1.2rem !important;
 }

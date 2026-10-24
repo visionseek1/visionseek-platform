@@ -11,6 +11,7 @@ import {
   indicesContent,
   liveHubProducts,
   notifyMailto,
+  sevenTechnologies,
   type HubProduct,
   type IndexEntry,
 } from '@/lib/indices';
@@ -273,6 +274,7 @@ function ScaleRow({
 export function IndicesHub({locale}: {locale: Locale}) {
   const {hub, notify} = indicesContent;
   const products = liveHubProducts();
+  const techs = sevenTechnologies();
   const prefix = prefixFor(locale);
   return (
     <Shell locale={locale} path="/indices">
@@ -311,6 +313,18 @@ export function IndicesHub({locale}: {locale: Locale}) {
               {products.map(item => <HubProductCard key={item.id} locale={locale} item={item}/>)}
             </div>
             <RelationshipDiagram locale={locale}/>
+            {techs.length > 0 && (
+              <div className={styles.techs}>
+                <h3>{hub.technologiesTitle[locale]}</h3>
+                <ul className={styles.pillars}>
+                  {techs.map(tech => (
+                    <li key={tech.id} className={styles.pillar}>
+                      <p className={styles.pillarName}>{tech.name[locale]}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         )}
 
