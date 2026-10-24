@@ -27,7 +27,7 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.ok(isText(data.notify.label) && isText(data.notify.hint) && isText(data.notify.subject));
   assert.match(data.notify.label.en, /Ahmed Abdelalim/);
   assert.doesNotMatch(data.notify.label.en, /\bDr\.?\b/);
-  assert.ok(Array.isArray(data.indices) && data.indices.length >= 1);
+  assert.ok(Array.isArray(data.indices) && data.indices.length >= 2);
   assert.equal(data.indices[0].slug, 'arab-technology-capability');
   assert.equal(data.indices[0].status, 'upcoming');
   assert.equal(data.indices[0].title.ar, 'مؤشر القدرة التكنولوجية العربية');
@@ -42,6 +42,20 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.deepEqual(data.indices[0].pillars.map(p => p.id), ['chips', 'ai', 'cloud', 'networks', 'robotics', 'energy', 'biotech']);
   assert.equal(data.indices[0].principles.length, 4);
   assert.deepEqual(data.indices[0].principles.map(p => p.id), ['own', 'method', 'independent', 'annual']);
+  assert.equal(data.indices[1].slug, 'arab-critical-capabilities-atlas');
+  assert.equal(data.indices[1].status, 'upcoming');
+  assert.equal(data.indices[1].title.ar, 'أطلس القدرات العربية الحرجة');
+  assert.equal(data.indices[1].title.en, 'Arab Critical Capabilities Atlas');
+  assert.equal(data.indices[1].statusLabel.ar, 'قريبًا');
+  assert.equal(data.indices[1].statusLabel.en, 'Coming soon');
+  assert.equal(data.indices[1].subtitle.ar, 'الخريطة المفتوحة للقدرات العربية في التكنولوجيات السبعة الأساسية');
+  assert.equal(data.indices[1].subtitle.en, 'The Open Map of Arab Capability in the Seven Core Technologies');
+  assert.equal(data.indices[1].pillars.length, 4);
+  assert.deepEqual(data.indices[1].pillars.map(p => p.id), ['explore', 'profiles', 'gaps', 'sources']);
+  assert.equal(data.indices[1].principles.length, 6);
+  assert.deepEqual(data.indices[1].principles.map(p => p.id), ['open', 'source', 'method', 'correctable', 'own', 'independent']);
+  assert.match(data.indices[1].results.en, /symbolic/i);
+  assert.match(data.indices[1].results.ar, /رمزية/);
   for (const item of data.indices) {
     assert.match(item.slug, /^[a-z0-9-]+$/);
     assert.ok(['upcoming', 'published'].includes(item.status), item.slug);
@@ -99,12 +113,14 @@ test('Indices: built pages stay empty of results and keep the pilot line', () =>
   const ar = built('ar/indices');
   const enSlug = built('indices/arab-technology-capability');
   const arSlug = built('ar/indices/arab-technology-capability');
+  const enAtlas = built('indices/arab-critical-capabilities-atlas');
+  const arAtlas = built('ar/indices/arab-critical-capabilities-atlas');
   const mainOf = html => {
     const match = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
     assert.ok(match, 'main');
     return match[1];
   };
-  for (const html of [en, ar, enSlug, arSlug]) {
+  for (const html of [en, ar, enSlug, arSlug, enAtlas, arAtlas]) {
     const main = mainOf(html);
     assert.doesNotMatch(main, /<svg[^>]*(chart|bar|plot)/i);
     assert.doesNotMatch(main, /score="|ranking=|data-score/);
@@ -125,4 +141,15 @@ test('Indices: built pages stay empty of results and keep the pilot line', () =>
   assert.match(enSlug, /Arab Technology Capability Index/);
   assert.match(arSlug, /المنهجية ستُنشر/);
   assert.match(arSlug, /الرسم المفتاحي لمؤشر القدرة التكنولوجية العربية/);
+  assert.match(en, /Coming soon/);
+  assert.match(en, /Arab Critical Capabilities Atlas/);
+  assert.match(en, /The index and the atlas/);
+  assert.match(ar, /قريبًا/);
+  assert.match(ar, /أطلس القدرات العربية الحرجة/);
+  assert.match(ar, /المؤشر والأطلس/);
+  assert.match(enAtlas, /Coming soon/);
+  assert.match(enAtlas, /Key visual for the Arab Critical Capabilities Atlas/);
+  assert.match(arAtlas, /ما هو الأطلس/);
+  assert.match(arAtlas, /الرسم المفتاحي لأطلس القدرات العربية الحرجة/);
+  assert.match(arAtlas, /وستُنشر طريقة الرصد/);
 });

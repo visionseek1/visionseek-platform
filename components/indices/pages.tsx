@@ -169,6 +169,19 @@ export function IndicesHub({locale}: {locale: Locale}) {
             <div className={styles.cards}>
               {list.map(item => (
                 <Link key={item.slug} className={styles.card} href={`${locale === 'ar' ? '/ar' : ''}${indexPath(item.slug)}`}>
+                  {item.heroImage
+                    ? (
+                      <span className={styles.cardVisual}>
+                        <Image
+                          src={item.heroImage}
+                          alt={item.heroAlt[locale]}
+                          width={1280}
+                          height={720}
+                          sizes="(max-width: 760px) calc(100vw - 3rem), (max-width: 1220px) calc(50vw - 2rem), 580px"
+                        />
+                      </span>
+                    )
+                    : null}
                   <p className={styles.status}>{item.statusLabel[locale]}</p>
                   <h3>{item.shortTitle[locale]}</h3>
                   <p>{item.lede[locale]}</p>

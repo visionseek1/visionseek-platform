@@ -83,12 +83,15 @@
   margin: 0 0 1.8rem;
   background: #050505;
   overflow: hidden;
+  max-width: 1280px;
 }
 
 .visual img {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 1280px;
+  max-height: 720px;
   aspect-ratio: 16 / 9;
   object-fit: contain;
   object-position: center;
@@ -180,6 +183,26 @@
   border: 1px solid var(--line);
   text-decoration: none;
   min-height: 11rem;
+}
+
+.cardVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -1.4rem -1.35rem 0;
+  height: 180px;
+  background: #050505;
+  overflow: hidden;
+}
+
+.cardVisual img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 1280px);
+  max-height: min(180px, 720px);
+  object-fit: contain;
+  object-position: center;
 }
 
 .card:hover { border-color: rgba(207, 255, 0, 0.45); }

@@ -107,6 +107,7 @@ collections:
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}
                   - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
                   - {label: "المؤشرات ← مؤشر القدرة التكنولوجية العربية  /indices/arab-technology-capability", value: "/indices/arab-technology-capability"}
+                  - {label: "المؤشرات ← أطلس القدرات العربية الحرجة  /indices/arab-critical-capabilities-atlas", value: "/indices/arab-critical-capabilities-atlas"}
                 # archive-options:end
               - {label: ملاحظة لنفسك (اختياري), name: note, widget: string, required: false}
           - label: أقسام مخفية داخل الصفحات
