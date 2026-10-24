@@ -3896,24 +3896,12 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: السطر العلوي
-                name: eyebrow
+              - label: اسم القسم في مسار الصفحة
+                name: section
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: العنوان
-                name: title
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: المقدمة
-                name: intro
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: text}
-                  - {label: العربية, name: ar, widget: text}
               - label: "حالة الصفحة (مثل «أبريل 2027، إنتشون — بالدعوة»)"
                 name: status
                 widget: object
@@ -3925,13 +3913,19 @@ collections:
             widget: object
             fields:
               - label: ما هو الحوار
-                name: what
+                name: mandate
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - label: مبادئ الحوار
-                name: principles
+              - label: شكل الحوار
+                name: format
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
+              - label: التكنولوجيات السبعة
+                name: themes
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
@@ -3956,24 +3950,6 @@ collections:
                   - {label: العربية, name: ar, widget: text}
               - label: من ينظر في الدعوات
                 name: host
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: محور كوريا
-                name: axisKorea
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: محور الوسط
-                name: axisCenter
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: محور العالم العربي
-                name: axisArab
                 widget: object
                 fields:
                   - {label: English, name: en, widget: string}
@@ -4005,9 +3981,9 @@ collections:
                 fields:
                   - {label: English, name: en, widget: string}
                   - {label: العربية, name: ar, widget: string}
-              - {label: الصورة الرئيسية, name: image, widget: image, choose_url: true}
-              - label: وصف الصورة
-                name: imageAlt
+              - {label: العلامة البصرية, name: visual, widget: string, hint: "مسار SVG فقط. ممنوع JPEG ممدود."}
+              - label: وصف العلامة
+                name: visualAlt
                 widget: object
                 fields:
                   - {label: English, name: en, widget: text}
@@ -4041,6 +4017,13 @@ collections:
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
+              - label: التكنولوجيات السبعة
+                name: themes
+                widget: list
+                summary: "{{fields.ar}}"
+                fields:
+                  - {label: English, name: en, widget: string}
+                  - {label: العربية, name: ar, widget: string}
               - label: مين بيحضر
                 name: who
                 widget: object

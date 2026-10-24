@@ -20,11 +20,12 @@ export type Forum = {
   title: Bi;
   kicker: Bi;
   status: Bi;
-  image?: string;
-  imageAlt?: Bi;
+  visual?: string;
+  visualAlt?: Bi;
   opening: Bi;
   what: Bi;
   principles: ForumPrinciple[];
+  themes: Bi[];
   who: Bi;
   outcome: Bi;
   invite?: ForumInvite;
@@ -34,21 +35,17 @@ export type ForumsContent = {
   meta: {title: Bi; description: Bi};
   page: {
     home: Bi;
-    eyebrow: Bi;
-    title: Bi;
-    intro: Bi;
+    section: Bi;
     status: Bi;
   };
   labels: {
-    what: Bi;
-    principles: Bi;
+    mandate: Bi;
+    format: Bi;
+    themes: Bi;
     who: Bi;
     outcome: Bi;
     honesty: Bi;
     host: Bi;
-    axisKorea: Bi;
-    axisCenter: Bi;
-    axisArab: Bi;
   };
   forums: Forum[];
 };

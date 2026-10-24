@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readFileSync, statSync} from 'node:fs';
+import {existsSync, readFileSync, statSync} from 'node:fs';
 import {join} from 'node:path';
 import test from 'node:test';
 
@@ -9,9 +9,9 @@ const isText = value => value && typeof value.en === 'string' && typeof value.ar
 const invented = ['date', 'venue', 'speakers', 'partners', 'sponsors', 'location', 'when'];
 
 test('forums.json is bilingual and ready for more entries', () => {
-  assert.ok(isText(forums.page.title));
-  assert.equal(forums.page.title.ar, 'المؤتمرات والمنتديات');
-  assert.equal(forums.page.title.en, 'Conferences & Forums');
+  assert.ok(isText(forums.page.section));
+  assert.equal(forums.page.section.ar, 'المؤتمرات والمنتديات');
+  assert.equal(forums.page.section.en, 'Conferences & Forums');
   assert.equal(forums.page.status.ar, 'الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط.');
   assert.equal(forums.page.status.en, 'First edition: April 2027, Incheon. Attendance is by invitation only.');
   assert.doesNotMatch(forums.page.status.en, /April\s+\d{1,2}(?!\d)/);
@@ -23,7 +23,7 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   assert.equal(first.slug, 'incheon-dialogue');
   assert.equal(first.title.ar, 'حوار إنتشون');
   assert.equal(first.title.en, 'Incheon Dialogue');
-  for (const key of ['title', 'kicker', 'status', 'opening', 'what', 'who', 'outcome', 'imageAlt']) {
+  for (const key of ['title', 'kicker', 'status', 'opening', 'what', 'who', 'outcome', 'visualAlt']) {
     assert.ok(isText(first[key]), key);
   }
   for (const key of invented) {
@@ -35,6 +35,10 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   assert.equal(first.principles.length, 4);
   for (const item of first.principles) {
     assert.ok(isText(item.title) && isText(item.text), item.title.en);
+  }
+  assert.equal(first.themes.length, 7);
+  for (const theme of first.themes) {
+    assert.ok(isText(theme), theme.en);
   }
   assert.match(first.principles[1].text.en, /Chatham House/);
   assert.match(first.principles[3].text.ar, /مؤشر القدرة التكنولوجية العربية/);
@@ -52,38 +56,29 @@ test('the first forum is the Incheon Dialogue, with approved wording and no inve
   assert.equal(first.invite.label.en, 'Request an invitation');
 });
 
-test('the Incheon key visual is a local 16:9 image under public/forums', () => {
+test('the Incheon key visual is a local SVG under public/forums, not a stretched JPEG', () => {
   const first = forums.forums[0];
-  assert.equal(first.image, '/forums/incheon-dialogue.jpg');
-  const file = join(root, 'public/forums/incheon-dialogue.jpg');
+  assert.equal(first.visual, '/forums/incheon-dialogue.svg');
+  const file = join(root, 'public/forums/incheon-dialogue.svg');
   const stat = statSync(file);
-  assert.ok(stat.size > 10_000 && stat.size < 200_000, stat.size);
-  const jpeg = readFileSync(file);
-  let i = 2;
-  let width = 0;
-  let height = 0;
-  while (i < jpeg.length - 8) {
-    if (jpeg[i] !== 0xff) { i += 1; continue; }
-    const marker = jpeg[i + 1];
-    if (marker === 0xc0 || marker === 0xc1 || marker === 0xc2) {
-      height = jpeg.readUInt16BE(i + 5);
-      width = jpeg.readUInt16BE(i + 7);
-      break;
-    }
-    if (marker === 0xd8 || marker === 0xd9 || (marker >= 0xd0 && marker <= 0xd7)) { i += 2; continue; }
-    i += 2 + jpeg.readUInt16BE(i + 2);
-  }
-  assert.equal(width, 1280);
-  assert.equal(height, 720);
+  assert.ok(stat.size > 1_000 && stat.size < 20_000, stat.size);
+  const svg = readFileSync(file, 'utf8');
+  assert.match(svg, /<svg /);
+  assert.match(svg, /#cfff00|#050607/);
+  assert.doesNotMatch(svg, /<image /);
+  assert.equal(existsSync(join(root, 'public/forums/incheon-dialogue.jpg')), false);
 });
 
 test('the forums routes and admin collection exist, and nav is untouched', () => {
-  for (const path of ['app/forums/page.tsx', 'app/ar/forums/page.tsx', 'components/forums/pages.tsx', 'lib/forums.ts']) {
+  for (const path of ['app/forums/page.tsx', 'app/ar/forums/page.tsx', 'components/forums/pages.tsx', 'lib/forums.ts', 'docs/forums-benchmark.md']) {
     assert.ok(readFileSync(join(root, path), 'utf8').length, path);
   }
   const page = readFileSync(join(root, 'components/forums/pages.tsx'), 'utf8');
   assert.match(page, /mailto\(/);
   assert.doesNotMatch(page, /<form|JoinForm|registration/i);
+  const css = readFileSync(join(root, 'components/forums/forums.module.css'), 'utf8');
+  assert.match(css, /object-fit:\s*contain/);
+  assert.doesNotMatch(css, /object-fit:\s*cover/);
   const config = readFileSync(join(root, 'public/admin/config.yml'), 'utf8');
   assert.match(config, /name: forums/);
   assert.match(config, /file: content\/forums\.json/);
@@ -114,7 +109,8 @@ test('the built forums pages are native RTL and LTR and keep the draft facts hon
   assert.doesNotMatch(en, /Dr\.?\s*Ahmed/);
   assert.match(en, /mailto:abdelalim@visionseek\.org/);
   assert.match(ar, /mailto:abdelalim@visionseek\.org/);
-  assert.match(en, /forums\/incheon-dialogue/);
+  assert.match(en, /forums\/incheon-dialogue\.svg/);
+  assert.doesNotMatch(en, /incheon-dialogue\.jpg/);
   assert.doesNotMatch(en, /<form/i);
   assert.doesNotMatch(ar, /<form/i);
   assert.doesNotMatch(en, /عشاء مغلق|12 people/);

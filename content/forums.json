@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": {
-      "en": "Conferences & Forums | VisionSeek",
-      "ar": "المؤتمرات والمنتديات | VisionSeek"
+      "en": "Incheon Dialogue | VisionSeek",
+      "ar": "حوار إنتشون | VisionSeek"
     },
     "description": {
       "en": "The Incheon Dialogue is a small, invitation-only forum for technology leadership between Korea and the Arab world. First edition: April 2027, Incheon.",
@@ -14,17 +14,9 @@
       "en": "Home",
       "ar": "الرئيسية"
     },
-    "eyebrow": {
-      "en": "VISIONSEEK FORUMS",
-      "ar": "منتديات VisionSeek"
-    },
-    "title": {
+    "section": {
       "en": "Conferences & Forums",
       "ar": "المؤتمرات والمنتديات"
-    },
-    "intro": {
-      "en": "VisionSeek forums are by invitation only. The first is the Incheon Dialogue: a technology leadership forum between Korea and the Arab world.",
-      "ar": "منتديات VisionSeek بالدعوة فقط. أولها حوار إنتشون: منتدى قيادة التكنولوجيا بين كوريا والعالم العربي."
     },
     "status": {
       "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
@@ -32,13 +24,17 @@
     }
   },
   "labels": {
-    "what": {
-      "en": "What the dialogue is",
+    "mandate": {
+      "en": "Mandate",
       "ar": "ما هو الحوار"
     },
-    "principles": {
-      "en": "Principles",
-      "ar": "مبادئ الحوار"
+    "format": {
+      "en": "Format",
+      "ar": "شكل الحوار"
+    },
+    "themes": {
+      "en": "Seven technologies",
+      "ar": "التكنولوجيات السبعة"
     },
     "who": {
       "en": "Who attends",
@@ -55,18 +51,6 @@
     "host": {
       "en": "Invitations are considered by Ahmed Abdelalim.",
       "ar": "الدعوات ينظر فيها أحمد عبدالعليم."
-    },
-    "axisKorea": {
-      "en": "Korea",
-      "ar": "كوريا"
-    },
-    "axisCenter": {
-      "en": "Technology leadership forum",
-      "ar": "منتدى قيادة التكنولوجيا"
-    },
-    "axisArab": {
-      "en": "The Arab world",
-      "ar": "العالم العربي"
     }
   },
   "forums": [
@@ -84,10 +68,10 @@
         "en": "First edition: April 2027, Incheon. Attendance is by invitation only.",
         "ar": "الإصدار الأول: أبريل 2027، إنتشون. الحضور بالدعوة فقط."
       },
-      "image": "/forums/incheon-dialogue.jpg",
-      "imageAlt": {
-        "en": "Key visual for the Incheon Dialogue: outline maps of Korea and the Arab world joined by an arc, with the titles Incheon Dialogue and حوار إنتشون.",
-        "ar": "الصورة الرئيسية لحوار إنتشون: خريطة كوريا والعالم العربي يصل بينهما قوس، وعليها عنوان Incheon Dialogue وحوار إنتشون."
+      "visual": "/forums/incheon-dialogue.svg",
+      "visualAlt": {
+        "en": "Vector mark for the Incheon Dialogue: a thin lime arc linking dotted outlines of Korea and the Arabian Peninsula, with the VisionSeek symbol.",
+        "ar": "علامة حوار إنتشون: قوس أخضر رفيع يصل نقاط خريطة كوريا بشبه الجزيرة العربية، وعليها رمز VisionSeek."
       },
       "opening": {
         "en": "The technologies that will shape the next decade are not bought. They are built and localized. Korea did this in a generation. The Arab world has the ambition and the means to lead. The Incheon Dialogue is where both sides sit down to decide how that happens.",
@@ -138,6 +122,15 @@
             "ar": "بيتعمل كل سنة، وبيتعلن فيه «مؤشر القدرة التكنولوجية العربية»."
           }
         }
+      ],
+      "themes": [
+        {"en": "Semiconductors", "ar": "الرقائق"},
+        {"en": "Artificial intelligence", "ar": "الذكاء الاصطناعي"},
+        {"en": "Cloud and data", "ar": "السحابة والبيانات"},
+        {"en": "5G/6G", "ar": "5G/6G"},
+        {"en": "Robotics", "ar": "الروبوتات"},
+        {"en": "Clean energy and batteries", "ar": "الطاقة النظيفة والبطاريات"},
+        {"en": "Health biotechnology", "ar": "التكنولوجيا الحيوية والصحية"}
       ],
       "who": {
         "en": "Those responsible for technology in Arab government bodies; chief executives and technology leaders in Arab institutions; leaders of Korean companies and agencies; and researchers whose word carries weight in the seven technologies.",
