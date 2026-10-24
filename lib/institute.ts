@@ -42,6 +42,7 @@ export const institute: InstituteCopy = read('institute.json');
 export const fellowship: FellowshipCopy = read('fellowship.json');
 
 export const institutePath = '/institute';
+export const masterclassPath = '/masterclass';
 export const fellowshipPath = '/institute/fellowship';
 
 export const tx = (locale: Locale, value: Bi) => value[locale];

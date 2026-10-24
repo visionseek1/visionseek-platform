@@ -63,6 +63,9 @@ collections:
                   - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
                   - {label: "فرص البحث والتطوير ← دليل المشاركة  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
+                  - {label: "معهد VisionSeek ← ماستر كلاس  /masterclass", value: "/masterclass"}
+                  - {label: "معهد VisionSeek ← الإدارة والقيادة في عصر الذكاء الاصطناعي  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
+                  - {label: "معهد VisionSeek ← المؤسسة والذكاء الاصطناعي  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
                   - {label: "معهد VisionSeek ← حوكمة الذكاء الاصطناعي  /masterclass/single-track-trap", value: "/masterclass/single-track-trap"}
                   - {label: "معهد VisionSeek ← زمالة VisionSeek  /institute/fellowship", value: "/institute/fellowship"}
                   - {label: "البرامج ← Aegis  /programs/aegis", value: "/programs/aegis"}
@@ -96,9 +99,7 @@ collections:
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
                   - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
                   - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
-                  - {label: "ماستركلاس ← ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم،  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
                   - {label: "ماستركلاس ← رسائل المواعيد والمذكرات الداخلية وورقة الاجتماع ت  /masterclass/hospital-administration", value: "/masterclass/hospital-administration"}
-                  - {label: "ماستركلاس ← قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه  /masterclass/leader-seat", value: "/masterclass/leader-seat"}
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
@@ -1650,8 +1651,8 @@ collections:
 
   - name: workshops_section
     label: صفحة قسم ماستركلاس
-    description: "نصوص الماستركلاس القديمة التي ما زالت تُستخدم في بطاقة المدرّس على صفحة المعهد. الصفحة العامة صارت /institute."
-    preview_path: "ar/institute"
+    description: "نصوص ماستر كلاس الكاملة على /masterclass، تحت معهد VisionSeek. لا تحذف الأبواب أو الصفحات القائمة."
+    preview_path: "ar/masterclass"
     editor: {preview: false}
     files:
       - label: صفحة القسم

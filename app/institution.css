@@ -365,6 +365,10 @@
 .vs-wl-catalog .vs-wl-price-grid p{color:#242624;font-size:.98rem;line-height:1.65}
 .vs-wl-catalog .vs-wl-price-grid a{color:#3c403e}
 .vs-wl-catalog-close{display:flex;padding-bottom:3rem}
+.vs-wl>.vs-wl-course{padding:0 clamp(1.5rem,5vw,6rem) 2.5rem;grid-template-columns:minmax(0,36rem)}
+.vs-wl>.vs-wl-course .vs-wl-course-card{background:#fff;color:#141414;border-color:#d8d8d2}
+.vs-wl>.vs-wl-course .vs-wl-course-card p{color:#242624}
+.vs-institute-hub{padding-bottom:3rem}
 .vs-institute-draft{display:inline-flex;align-items:center;margin-inline-start:.6rem;padding:.15rem .55rem;border:1px solid #c9a227;border-radius:999px;font-style:normal;font-size:.72rem;letter-spacing:.08em;font-weight:700;color:#7a5b00;background:#fff6d6}
 .vs-institute-kind{margin:0;font-size:.82rem;letter-spacing:.08em;font-weight:700;text-transform:uppercase;color:#3c403e}
 .vs-fellowship-head,.vs-fellowship-body{max-width:1120px;margin:0 auto;padding:1.6rem clamp(1.25rem,5vw,3.5rem)}

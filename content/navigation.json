@@ -97,9 +97,24 @@
       "ar": "معهد VisionSeek",
       "children": [
         {
-          "href": "/institute",
-          "en": "The Institute",
-          "ar": "المعهد"
+          "href": "/masterclass",
+          "en": "Masterclass",
+          "ar": "ماستر كلاس"
+        },
+        {
+          "href": "/masterclass/leader-seat",
+          "en": "Management and leadership in the age of AI",
+          "ar": "الإدارة والقيادة في عصر الذكاء الاصطناعي"
+        },
+        {
+          "href": "/masterclass#institutions",
+          "en": "Working with AI",
+          "ar": "العمل مع الذكاء الاصطناعي"
+        },
+        {
+          "href": "/masterclass/develop-the-institution",
+          "en": "The institution and AI",
+          "ar": "المؤسسة والذكاء الاصطناعي"
         },
         {
           "href": "/masterclass/single-track-trap",

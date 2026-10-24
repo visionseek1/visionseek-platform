@@ -1,12 +1,12 @@
 import type {Metadata} from 'next';
 import {WorkshopsIndex} from '@/components/institution/workshops-view';
-import {institute} from '@/lib/institute';
+import {workshopSection} from '@/lib/institution/workshops';
 
 export const metadata: Metadata = {
-  title: `${institute.title.en} | VisionSeek`,
-  description: institute.intro.en,
-  alternates: {canonical: '/institute', languages: {en: '/institute', ar: '/ar/institute'}},
-  openGraph: {title: `${institute.title.en} | VisionSeek`, description: institute.intro.en, url: '/institute'},
+  title: `${workshopSection.title.en} | VisionSeek`,
+  description: workshopSection.intro.en,
+  alternates: {canonical: '/masterclass', languages: {en: '/masterclass', ar: '/ar/masterclass'}},
+  openGraph: {title: `${workshopSection.title.en} | VisionSeek`, description: workshopSection.intro.en, url: '/masterclass'},
 };
 
 export default function Page() {

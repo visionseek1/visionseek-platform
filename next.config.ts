@@ -12,10 +12,10 @@ const nextConfig: NextConfig = {
       ...['', '/ar'].flatMap(prefix => [
         {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects/energy/lng/sovereign-floating-gas-supply`, permanent: true},
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects/energy/lng/second-lng-containment-standard`, permanent: true},
-        // «الورش» then «ماستركلاس» became VisionSeek Institute: old index links keep working.
-        {source: `${prefix}/workshops`, destination: `${prefix}/institute`, permanent: true},
+        // «الورش» became Masterclass; Institute is the umbrella above it.
+        {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},
-        {source: `${prefix}/masterclass`, destination: `${prefix}/institute`, permanent: true},
+        {source: `${prefix}/institute/masterclass`, destination: `${prefix}/masterclass`, permanent: true},
         // «احذر نصائح الذكاء الاصطناعي» moved from the papers to the reports (16 Oct 2026).
         {source: `${prefix}/insights/research/half-the-picture`, destination: `${prefix}/insights/reports/half-the-picture`, permanent: true},
       ]),
@@ -23,8 +23,8 @@ const nextConfig: NextConfig = {
       // The governance section was folded into Masterclass (23 Oct 2026).
       {source: '/governance/single-track-trap', destination: '/masterclass/single-track-trap', permanent: true},
       {source: '/ar/governance/single-track-trap', destination: '/ar/masterclass/single-track-trap', permanent: true},
-      {source: '/governance', destination: '/institute', permanent: true},
-      {source: '/ar/governance', destination: '/ar/institute', permanent: true},
+      {source: '/governance', destination: '/masterclass', permanent: true},
+      {source: '/ar/governance', destination: '/ar/masterclass', permanent: true},
       // English lives at the root: /en/privacy → /privacy (the /en home page itself stays).
       {source: '/en/:path+', destination: '/:path+', permanent: true},
       {

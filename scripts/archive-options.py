@@ -19,7 +19,7 @@ for s in nav['sections'] + [nav['reports']]:
         if h and h != s['path']: add(h, f"{s['ar']} ← {c['ar']}")
 for f in sorted(glob.glob('content/programs/*.json')):
     d = load(f); add(f"/programs/{d['slug']}", f"البرامج ← {d['title']['ar']}")
-PUBLIC = {'workshops': 'institute'}  # section id → public URL segment (lib/institution sectionPath)
+PUBLIC = {'workshops': 'institute'}  # homepage section id; masterclass slugs stay under /masterclass
 for f in sorted(glob.glob('content/guides/*.json')):
     d = load(f); seg = PUBLIC.get(d['section'], d['section']); add(f"/{seg}/{d['slug']}", f"{seg} ← {d['title']['ar']}")
 for f in sorted(glob.glob('content/news/*.json')):
@@ -28,7 +28,8 @@ for f in sorted(glob.glob('content/workshops/*.json')):
     d = load(f)
     if d.get('draft'): continue  # drafts are not on the site
     add(f"/masterclass/{d['slug']}", f"ماستركلاس ← {d['outcome']['ar'][:50]}")
-add('/masterclass/single-track-trap', 'معهد VisionSeek ← حوكمة الذكاء الاصطناعي')
+add('/masterclass', 'معهد VisionSeek ← ماستر كلاس')
+add('/masterclass/single-track-trap', 'ماستر كلاس ← حوكمة الذكاء الاصطناعي')
 add('/institute/fellowship', 'معهد VisionSeek ← زمالة VisionSeek')
 cat = load('content/projects/catalog.json')
 for s in cat['sectors']: add(f"/projects/{s['slug']}", f"المشاريع ← {s['title']['ar']}")

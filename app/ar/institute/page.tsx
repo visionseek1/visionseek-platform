@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {WorkshopsIndex} from '@/components/institution/workshops-view';
+import {InstituteHub} from '@/components/institute/institute-hub';
 import {institute} from '@/lib/institute';
 
 export const metadata: Metadata = {
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <WorkshopsIndex locale="ar" />;
+  return <InstituteHub locale="ar" />;
 }

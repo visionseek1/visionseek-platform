@@ -12,8 +12,8 @@
     "ar": "معهد VisionSeek"
   },
   "intro": {
-    "en": "The home of VisionSeek's learning programs. The AI Governance masterclass is here. So is the VisionSeek Fellowship.",
-    "ar": "بيت برامج التعلّم في VisionSeek. يضم ماستركلاس «حوكمة الذكاء الاصطناعي»، ويضم زمالة VisionSeek."
+    "en": "The home of VisionSeek's learning programs. Masterclass is here. So is the VisionSeek Fellowship.",
+    "ar": "بيت برامج التعلّم في VisionSeek. يضم ماستر كلاس، ويضم زمالة VisionSeek."
   },
   "programsLabel": {
     "en": "Programs",
@@ -25,7 +25,7 @@
   },
   "masterclassKind": {
     "en": "Masterclass",
-    "ar": "ماستركلاس"
+    "ar": "ماستر كلاس"
   },
   "fellowshipKind": {
     "en": "Fellowship",

@@ -126,8 +126,8 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   const redirects = read('next.config.ts');
   assert.match(redirects, /source: '\/governance\/single-track-trap', destination: '\/masterclass\/single-track-trap'/);
   assert.match(redirects, /source: '\/ar\/governance\/single-track-trap', destination: '\/ar\/masterclass\/single-track-trap'/);
-  assert.match(redirects, /source: '\/governance', destination: '\/institute'/);
-  assert.match(redirects, /source: '\/ar\/governance', destination: '\/ar\/institute'/);
+  assert.match(redirects, /source: '\/governance', destination: '\/masterclass'/);
+  assert.match(redirects, /source: '\/ar\/governance', destination: '\/ar\/masterclass'/);
   assert.match(read('components/institution/workshops-view.tsx'), /vs-wl-course-card/);
   assert.match(read('components/institution/workshops-view.tsx'), /coursePath/);
   assert.equal(data.workshop.cover.en, '/governance/cover-v3-en.png');
@@ -142,7 +142,7 @@ test('the course sits under masterclass, the old section is gone, and enrollment
   assert.equal(existsSync(new URL('../public/governance/cover.jpg', import.meta.url)), false);
   assert.match(course, /workshop\.cover\[locale\]/);
   assert.match(card, /governanceCourse\.cover\[locale\]/);
-  assert.doesNotMatch(card, /live\.dependence/);
+  assert.match(card, /live\.dependence/);
   assert.doesNotMatch([course, card, read('app/masterclass/single-track-trap/page.tsx'), read('app/ar/masterclass/single-track-trap/page.tsx'), read('content/governance.json')].join('\n'), /cover\.jpg/);
   assert.match(card, /live\.teaches/);
 });
