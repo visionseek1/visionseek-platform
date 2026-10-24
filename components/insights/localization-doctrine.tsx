@@ -58,6 +58,7 @@ export function LocalizationDoctrine({locale}: {locale: Locale}) {
           </dl>
           <div className={styles.actions}>
             <a className={styles.btn} href={paper.pdfAr} download>{ar ? 'تحميل التقرير (PDF)' : 'Arabic report (PDF)'}</a>
+            <Link className={styles.btnGhost} href={`${p}${paper.methodologyHref}`}>{t(paper.methodologyLabel)}</Link>
             <Link className={styles.btnGhost} href={`${p}${paper.indexHref}`}>{t(paper.indexLabel)}</Link>
           </div>
           <p className={styles.tag}>{t(paper.label)}</p>
@@ -164,6 +165,7 @@ export function LocalizationDoctrine({locale}: {locale: Locale}) {
           <p>{t(paper.feeds)}</p>
           <div className={styles.actions}>
             <a className={styles.btnDark} href={paper.pdfAr} download>{ar ? 'تحميل التقرير (PDF)' : 'Arabic report (PDF)'}</a>
+            <Link className={styles.btnLine} href={`${p}${paper.methodologyHref}`}>{t(paper.methodologyLabel)}</Link>
             <Link className={styles.btnLine} href={`${p}${paper.indexHref}`}>{t(paper.indexLabel)}</Link>
           </div>
         </section>
