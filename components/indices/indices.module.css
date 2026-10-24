@@ -186,21 +186,20 @@
 }
 
 .cardVisual {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   margin: -1.4rem -1.35rem 0;
-  height: 180px;
   background: #050505;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .cardVisual img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: min(100%, 1280px);
-  max-height: min(180px, 720px);
+  max-width: 1280px;
+  max-height: 720px;
+  aspect-ratio: 16 / 9;
   object-fit: contain;
   object-position: center;
 }

@@ -181,7 +181,7 @@ export function IndicesHub({locale}: {locale: Locale}) {
                           width={1280}
                           height={720}
                           sizes="(max-width: 760px) calc(100vw - 3rem), (max-width: 1220px) calc(50vw - 2rem), 580px"
-                          style={{width: 'auto', height: 'auto', maxWidth: 1280, maxHeight: 180}}
+                          style={{width: '100%', height: 'auto', maxWidth: 1280, maxHeight: 720}}
                           unoptimized={item.heroImage.endsWith('.svg')}
                         />
                       </span>
