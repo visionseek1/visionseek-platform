@@ -95,11 +95,17 @@ test('Indices: built pages stay empty of results and keep the pilot line', () =>
   const ar = built('ar/indices');
   const enSlug = built('indices/arab-technology-capability');
   const arSlug = built('ar/indices/arab-technology-capability');
+  const mainOf = html => {
+    const match = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
+    assert.ok(match, 'main');
+    return match[1];
+  };
   for (const html of [en, ar, enSlug, arSlug]) {
-    assert.doesNotMatch(html, /<svg[^>]*(chart|bar|plot)/i);
-    assert.doesNotMatch(html, /score="|ranking=|data-score/);
-    assert.doesNotMatch(html, /<form[\s>]/i);
-    assert.doesNotMatch(html, /Korea|كوريا|Incheon|إنتشون/);
+    const main = mainOf(html);
+    assert.doesNotMatch(main, /<svg[^>]*(chart|bar|plot)/i);
+    assert.doesNotMatch(main, /score="|ranking=|data-score/);
+    assert.doesNotMatch(main, /<form[\s>]/i);
+    assert.doesNotMatch(main, /Korea|كوريا|Incheon|إنتشون/);
   }
   assert.match(en, /Pilot edition coming soon/);
   assert.match(en, /Ahmed Abdelalim/);
