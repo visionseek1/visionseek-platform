@@ -77,7 +77,7 @@
         "ar": "لصاحب المؤسسة وقائدها: ليفهم الذكاء الاصطناعي بنفسه، ويعرف كيف يقود مؤسسته فيه."
       },
       "body": {
-        "en": "Dr. Ahmed sits with you and understands your work before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
+        "en": "Ahmed Abdelalim sits with you and understands your work before he says a word about any tool. Then you understand AI from inside your own work: where it saves you time, and where it opens a door you couldn't open before.",
         "ar": "يجلس معك د. أحمد، ويفهم عملك قبل أن يكلّمك عن أي أداة. ثم تفهم الذكاء الاصطناعي من داخل عملك أنت: أين يختصر عليك الوقت، وأين يفتح لك بابًا لم تكن تقدر عليه."
       },
       "meta": {
@@ -218,7 +218,7 @@
     "kicker": "VISIONSEEK MASTERCLASS",
     "instructor": {
       "ar": "د. أحمد عبدالعليم",
-      "en": "Dr. Ahmed Abdelalim"
+      "en": "Ahmed Abdelalim"
     },
     "teaches": {
       "en": "Shows you what AI can change in your own work, through institutional experience built in Egypt, the Gulf and South Korea.",
@@ -364,13 +364,13 @@
     },
     "heroImage": "/masterclass/ahmed-abdelalim.jpg",
     "heroImageAlt": {
-      "en": "Dr. Ahmed Abdelalim",
+      "en": "Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
     },
     "heroImageLabel": "VISIONSEEK · MAKE IT POSSIBLE",
     "ctaPrimary": {
       "ar": "اطلب ماستركلاس خاصًا مع د. أحمد عبدالعليم",
-      "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
+      "en": "Request a private masterclass with Ahmed Abdelalim"
     },
     "doorsLabel": {
       "en": "We start by understanding you, or your institution",
@@ -395,7 +395,7 @@
       "ar": "ادخل من هنا"
     },
     "cardTeacher": {
-      "en": "With Dr. Ahmed Abdelalim",
+      "en": "With Ahmed Abdelalim",
       "ar": "مع د. أحمد عبدالعليم"
     },
     "institutionPick": {
@@ -427,7 +427,7 @@
           "ar": "ندرس عملك"
         },
         "line": {
-          "en": "Before any session, Dr. Ahmed studies your work, your institution, and how far its counterparts abroad have come.",
+          "en": "Before any session, Ahmed Abdelalim studies your work, your institution, and how far its counterparts abroad have come.",
           "ar": "قبل أي جلسة، يدرس د. أحمد عملك ومؤسستك، وما وصلت إليه مثيلاتها في العالم."
         }
       },
@@ -443,7 +443,7 @@
       }
     ],
     "founderName": {
-      "en": "Dr. Ahmed Abdelalim",
+      "en": "Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
     },
     "founderKicker": {
@@ -474,7 +474,7 @@
     ],
     "closingCta": {
       "ar": "اطلب ماستركلاس خاصًا مع د. أحمد عبدالعليم",
-      "en": "Request a private masterclass with Dr. Ahmed Abdelalim"
+      "en": "Request a private masterclass with Ahmed Abdelalim"
     }
   }
 }

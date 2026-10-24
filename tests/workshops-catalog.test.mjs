@@ -103,7 +103,7 @@ test('the live section page is short: hero, two doors, founder, closing', () => 
 test('masterclass: the teacher leads, the introduction video has a slot, and the old wording is gone', () => {
   const live = section.live;
   assert.equal(live.instructor.ar, 'د. أحمد عبدالعليم');
-  assert.equal(live.instructor.en, 'Dr. Ahmed Abdelalim');
+  assert.equal(live.instructor.en, 'Ahmed Abdelalim');
   for (const key of ['teaches', 'cardTeacher', 'doorsLine', 'institutionPick']) assert.ok(live[key].ar && live[key].en, key);
   assert.equal(typeof live.trailer.video, 'string');
   assert.ok(live.trailer.label.ar);

@@ -16,7 +16,7 @@
     "ar": "قُد مؤسستك إلى الذكاء الاصطناعي، قبل أن يسبقك إليه غيرك."
   },
   "summary": {
-    "en": "AI is moving faster than anything organizations have seen, and yours will only get ahead if you understand it first. Dr. Ahmed Abdelalim sits down with you and studies your work and your organization before any tool comes up. Then you see for yourself what AI can change there, so you lead with the best the world has reached, not with what the organization is used to. And you leave knowing the way, and leading it yourself.",
+    "en": "AI is moving faster than anything organizations have seen, and yours will only get ahead if you understand it first. Ahmed Abdelalim sits down with you and studies your work and your organization before any tool comes up. Then you see for yourself what AI can change there, so you lead with the best the world has reached, not with what the organization is used to. And you leave knowing the way, and leading it yourself.",
     "ar": "العالم يتحرك في الذكاء الاصطناعي بسرعة لم يعرفها من قبل، ولن تسبق مؤسستك فيه إلا إذا فهمته أنت أولًا. يجلس معك د. أحمد عبدالعليم، ويدرس عملك ومؤسستك قبل أي أداة، ثم ترى بعينك ما يستطيع الذكاء الاصطناعي أن يغيّره فيها، لتقودها بأعلى ما وصل إليه العالم، لا بما اعتادت عليه. وتخرج وأنت تعرف الطريق، وتقوده بنفسك."
   },
   "pace": {
@@ -134,7 +134,7 @@
     "ar": "قبل الجلسة نسألك عن مؤسستك وأسبوعك الحقيقي، لا عن خبرتك في التقنية. أسئلة مثل:"
   },
   "during": {
-    "en": "Dr. Ahmed works with you on your own material, not a prepared example: a memo you have to write, a figure you don't yet trust, a decision you are taking into a meeting. You see for yourself where AI saves time, where it opens up something your organization could not do before, and where it gets things wrong and cannot be trusted.",
+    "en": "Ahmed Abdelalim works with you on your own material, not a prepared example: a memo you have to write, a figure you don't yet trust, a decision you are taking into a meeting. You see for yourself where AI saves time, where it opens up something your organization could not do before, and where it gets things wrong and cannot be trusted.",
     "ar": "يعمل معك د. أحمد على مادتك أنت، لا على مثال جاهز: مذكرة عليك أن تكتبها، أو رقم لم تطمئن إليه، أو قرار ستدخل به اجتماعًا. وترى بعينك أين يختصر الذكاء الاصطناعي الوقت، وأين يفتح لمؤسستك ما لم تكن تقدر عليه، وأين يخطئ فلا يُؤتمن."
   },
   "after": {
@@ -352,7 +352,7 @@
     }
   },
   "cta": {
-    "en": "Ask for your session with Dr. Ahmed Abdelalim",
+    "en": "Ask for your session with Ahmed Abdelalim",
     "ar": "اطلب جلستك مع د. أحمد عبدالعليم"
   }
 }

@@ -14,7 +14,7 @@
   "blocks": [
     {
       "title": {
-        "en": "Dr. Ahmed Abdelalim",
+        "en": "Ahmed Abdelalim",
         "ar": "د. أحمد عبدالعليم"
       },
       "body": {
@@ -28,8 +28,8 @@
         "ar": "قيادة البرامج"
       },
       "body": {
-        "en": "Program-manager appointments are not yet published. The operating model describes proposed responsibilities, not appointed staff.",
-        "ar": "لم تُنشر تعيينات مديري البرامج. يشرح نموذج التشغيل المسؤوليات المقترحة، ولا يمثل موظفين معينين."
+        "en": "Each program team is formed around the required capability, and is led by a named program manager at launch.",
+        "ar": "يُشكَّل فريق كل برنامج حول القدرة المطلوبة، ويقوده مدير برنامج مسمّى عند الإطلاق."
       }
     }
   ],
