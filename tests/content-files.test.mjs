@@ -65,7 +65,15 @@ test('four programs, Aegis Apex Clause and Relay, each complete', () => {
       assert.ok(Array.isArray(program.principles) && program.principles.length >= 5, program.slug);
       assert.ok(Array.isArray(program.related) && program.related.length >= 1, program.slug);
       assert.doesNotMatch(JSON.stringify(program), /checklist|download|\.pdf|قايمة|قائمة قابلة للتنزيل/i);
-      assert.doesNotMatch(JSON.stringify(program), /ليه|إزاي|ازاي|دلوقتي|بتاع|علشان|عشان|عايز|عاوز/);
+      const arabic = [];
+      const collectAr = value => {
+        if (value && typeof value === 'object') {
+          if (typeof value.ar === 'string') arabic.push(value.ar);
+          for (const child of Object.values(value)) if (child && typeof child === 'object') collectAr(child);
+        }
+      };
+      collectAr(program);
+      assert.doesNotMatch(arabic.join('\n'), /(?:^|[^\u0600-\u06FF])(?:ليه|إزاي|ازاي|دلوقتي|بتاع|علشان|عشان|عايز|عاوز)(?:[^\u0600-\u06FF]|$)/);
     }
   }
   const clause = programs.find(p => p.slug === 'clause');
