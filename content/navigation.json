@@ -7,13 +7,28 @@
       "children": [
         {
           "href": "/korean-solutions",
-          "en": "Find a solution",
-          "ar": "المستكشف"
+          "en": "Transfer the capability",
+          "ar": "نقل القدرة"
         },
         {
-          "href": "/korean-solutions#needs",
-          "en": "Tell us your need",
-          "ar": "اكتب احتياجك"
+          "href": "/korean-solutions#domains",
+          "en": "Fields",
+          "ar": "المجالات"
+        },
+        {
+          "href": "/korean-solutions#how",
+          "en": "How we work",
+          "ar": "كيف نعمل"
+        },
+        {
+          "href": "/korean-solutions#initiatives",
+          "en": "Initiatives",
+          "ar": "المبادرات"
+        },
+        {
+          "href": "/cars",
+          "en": "Hybrid & EV cars",
+          "ar": "سيارات هايبرد وكهربائية"
         }
       ]
     },

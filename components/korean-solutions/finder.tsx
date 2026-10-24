@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {useMemo, useState} from 'react';
-import DemandSections from './sections';
 import {productImage} from './photos';
 import styles from './ks.module.css';
 import {NO_PARTNERSHIP, REGION_COPY, ROUTE_COPY, SECTOR_EN, TYPE_COPY, TYPES, type Bi, type Region, type Solution, type SolutionType} from '@/lib/korean-solutions-copy';
@@ -14,7 +13,7 @@ const ALL: Filter = {type: 'all', sector: 'all', region: 'all'};
 /** Lower-case, strip Arabic diacritics and unify alef/yaa/taa forms, so the search forgives spelling. */
 const fold = (v: string) => v.toLowerCase().replace(/[ً-ْـ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه');
 
-/** The gateway search, the three doors and the finder. All filtering happens in the page; nothing is sent anywhere. */
+/** The solutions we track, with their search and filters. All filtering happens in the page; nothing is sent anywhere. */
 export default function Finder({locale, solutions}: {locale: Locale; solutions: Solution[]}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en); const p = ar ? '/ar' : '';
   const [q, setQ] = useState('');
@@ -37,33 +36,20 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
   const chip = (k: keyof Filter, v: string, label: string, n: number) =>
     <button key={v} type="button" className={styles.chip} aria-pressed={f[k] === v} disabled={n === 0 && f[k] !== v} onClick={() => pick(k, v)}>{label}<span className={styles.num}>{n}</span></button>;
 
-  return <>
-    <section className={styles.hero} aria-labelledby="ks-title">
-      <div className={`${styles.gutter}`}><div className={`${styles.inner} ${styles.heroInner}`}>
-        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
-        <h1 id="ks-title">{ar ? 'حلول من كوريا' : 'Korean Solutions'}</h1>
-        <p className={styles.heroLede}>{ar
-          ? 'اختر القسم. شوف المنتج أو الخدمة. لو محتاجها، اطلبها.'
-          : 'Choose a section. See the product or service. If you need it, ask for it.'}</p>
-        <label className={styles.search}>
-          <span>{ar ? 'ابحث عن حل' : 'Search for a solution'}</span>
-          <span className={styles.searchBox}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{color: '#0b0d0c', flex: 'none'}}><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-            <input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder={ar ? 'مثال: سرطان الثدي، رعاية المسنّين، الزراعة…' : 'e.g. breast screening, elderly care, farming…'} aria-controls="ks-results"/>
-          </span>
-        </label>
-      </div></div>
-    </section>
-
-    <DemandSections locale={locale} solutions={solutions}/>
-
-    <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">
+  return <div className={styles.gutter}><section id="finder" className={`${styles.inner} ${styles.finder}`} aria-labelledby="finder-title">
       <div className={styles.finderHead}>
-        <h2 id="finder-title">{ar ? 'المستكشف' : 'Finder'}</h2>
+        <h2 id="finder-title">{ar ? 'حلول كورية نرصدها' : 'Korean solutions we track'}</h2>
         <span className={styles.resultLine} role="status"><span className={styles.num}>{results.length}</span> {ar ? 'من' : 'of'} <span className={styles.num}>{solutions.length}</span> {ar ? 'حل' : 'solutions'}</span>
         {filtered && <button type="button" className={styles.reset} onClick={() => { setF(ALL); setQ(''); }}>{ar ? 'مسح الفلاتر' : 'Clear filters'}</button>}
       </div>
       <p className={styles.note}>{t(NO_PARTNERSHIP)}</p>
+      <label className={styles.search}>
+        <span>{ar ? 'ابحث عن حل' : 'Search for a solution'}</span>
+        <span className={styles.searchBox}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{color: '#0b0d0c', flex: 'none'}}><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder={ar ? 'مثال: سرطان الثدي، رعاية المسنّين، الزراعة…' : 'e.g. breast screening, elderly care, farming…'} aria-controls="ks-results"/>
+        </span>
+      </label>
       <div className={styles.finderBody}>
         <aside className={styles.filters} aria-label={ar ? 'الفلاتر' : 'Filters'}>
           <fieldset className={styles.group}><legend>{ar ? 'النوع' : 'Type'}</legend>
@@ -82,12 +68,14 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
         <div id="ks-results" className={styles.results}>
           {results.map(s => <SolutionCard key={s.slug} s={s} locale={locale}/>)}
           {!results.length && <p className={styles.empty}>{ar
-            ? 'لا يوجد حل بهذه المواصفات بعد. اكتب لنا احتياجك في الأسفل، ونبحث لك عنه في كوريا.'
-            : 'No solution matches yet. Tell us your need below, and we will look for it in Korea.'} <a href={`${p}/korean-solutions#needs`}>{ar ? 'اكتب احتياجك' : 'Write your need'} {arrow}</a></p>}
+            ? 'لا يوجد حل بهذه المواصفات بعد.'
+            : 'No solution matches yet.'} <a href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'} {arrow}</a></p>}
         </div>
       </div>
-    </section></div>
-  </>;
+      <p className={styles.photoNote}>{ar
+        ? 'الصور توضيحية للمجال، وليست صورة المنتج نفسه. صورة جهاز المشي الآلي: Shefali.assam عبر ويكيميديا كومنز، بترخيص CC BY-SA.'
+        : 'Photos illustrate the field. They are not the product itself. Gait robot photo: Shefali.assam via Wikimedia Commons, CC BY-SA.'}</p>
+    </section></div>;
 }
 
 export function SolutionCard({s, locale}: {s: Solution; locale: Locale}) {
