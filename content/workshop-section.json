@@ -149,8 +149,8 @@
     {
       "id": "hospital",
       "label": {
-        "en": "Hospitals",
-        "ar": "المستشفيات"
+        "en": "Hospitals — an example",
+        "ar": "المستشفيات — مثال على قدرة"
       }
     },
     {
@@ -211,8 +211,8 @@
     }
   ],
   "allInstitutions": {
-    "en": "All sectors",
-    "ar": "كل القطاعات"
+    "en": "All examples",
+    "ar": "كل الأمثلة"
   },
   "live": {
     "kicker": "VISIONSEEK MASTERCLASS",
@@ -399,8 +399,8 @@
       "ar": "مع د. أحمد عبدالعليم"
     },
     "institutionPick": {
-      "ar": "اختر قطاعك",
-      "en": "Choose your sector"
+      "ar": "أمثلة على مؤسسات",
+      "en": "Examples of institutions"
     },
     "howLabel": {
       "ar": "التخصيص هو ميزتنا",

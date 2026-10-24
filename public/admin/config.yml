@@ -53,15 +53,8 @@ collections:
                   - {label: "عن VisionSeek (القسم كله)  /about", value: "/about"}
                   - {label: "بيت القادة (القسم كله)  /leaders-house", value: "/leaders-house"}
                   - {label: "منهجنا  /method", value: "/method"}
-                  - {label: "حلول من كوريا ← سيارات هايبرد وكهربائية  /cars", value: "/cars"}
-                  - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
-                  - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
-                  - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
-                  - {label: "المشاريع ← الدفاع والأمن  /projects/defense", value: "/projects/defense"}
-                  - {label: "المشاريع ← الروبوتات والصناعة  /projects/robotics", value: "/projects/robotics"}
-                  - {label: "المشاريع ← الطب والصحة  /projects/health", value: "/projects/health"}
-                  - {label: "المشاريع ← الزراعة والأمن الغذائي  /projects/agriculture", value: "/projects/agriculture"}
-                  - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
+                  - {label: "المشاريع ← Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
+                  - {label: "المشاريع ← VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
                   - {label: "فرص البحث والتطوير ← دليل المشاركة  /work-with-us/how-to-respond", value: "/work-with-us/how-to-respond"}
                   - {label: "فرص البحث والتطوير ← جهّز مذكرتك  /work-with-us/prepare-a-concept", value: "/work-with-us/prepare-a-concept"}
                   - {label: "معهد VisionSeek ← ماستر كلاس  /institute/masterclass", value: "/institute/masterclass"}
@@ -108,9 +101,15 @@ collections:
                   - {label: "ماستركلاس ← ردود خدمة المواطن تخرج أسرع، والإدارة الداخلية أوض  /masterclass/police-citizen-service", value: "/masterclass/police-citizen-service"}
                   - {label: "ماستركلاس ← الفريق ينهي الورقة وخطاب الطالب ومذكرة اللجنة، من   /masterclass/university-teams", value: "/masterclass/university-teams"}
                   - {label: "ماستركلاس  /masterclass", value: "/masterclass"}
+                  - {label: "المشاريع ← الطاقة والمناخ  /projects/energy", value: "/projects/energy"}
+                  - {label: "المشاريع ← الرقائق وأشباه الموصلات  /projects/semiconductors", value: "/projects/semiconductors"}
+                  - {label: "المشاريع ← الدرونز والطيران  /projects/drones-aviation", value: "/projects/drones-aviation"}
+                  - {label: "المشاريع ← الدفاع والأمن  /projects/defense", value: "/projects/defense"}
+                  - {label: "المشاريع ← الروبوتات والصناعة  /projects/robotics", value: "/projects/robotics"}
+                  - {label: "المشاريع ← الطب والصحة  /projects/health", value: "/projects/health"}
+                  - {label: "المشاريع ← الزراعة والأمن الغذائي  /projects/agriculture", value: "/projects/agriculture"}
+                  - {label: "المشاريع ← المدن والبنية التحتية  /projects/infrastructure", value: "/projects/infrastructure"}
                   - {label: "المشاريع ← الذكاء الاصطناعي في المؤسسات  /projects/institutional-ai", value: "/projects/institutional-ai"}
-                  - {label: "المشاريع ← VS-P09 Proviso AI  /projects/institutional-ai/agent-governance/proviso-ai", value: "/projects/institutional-ai/agent-governance/proviso-ai"}
-                  - {label: "المشاريع ← VS-P11 VisionSeek Box  /projects/institutional-ai/sovereign-ai/visionseek-box", value: "/projects/institutional-ai/sovereign-ai/visionseek-box"}
                   - {label: "بيت القادة ← إحاطة الذكاء الاصطناعي المادي  /leaders-house/physical-ai", value: "/leaders-house/physical-ai"}
                   - {label: "التقارير ← إحاطة الذكاء الاصطناعي المادي  /reports/physical-ai", value: "/reports/physical-ai"}
                   - {label: "التقارير ← حوكمة الوكلاء الأذكياء  /reports/agent-governance", value: "/reports/agent-governance"}
@@ -131,7 +130,7 @@ collections:
               - {label: "الرئيسية ← ماستركلاس والأخبار", value: "home.updates"}
               - {label: "الرئيسية ← المنهج", value: "home.method"}
               - {label: "الرئيسية ← المجتمعات", value: "home.communities"}
-              - {label: "الرئيسية ← المجالات", value: "home.fields"}
+              - {label: "الرئيسية ← المحاور", value: "home.fields"}
               - {label: "الرئيسية ← اعمل معنا", value: "home.work"}
               - {label: "الرئيسية ← التواصل", value: "home.contact"}
                 # block-options:end
@@ -3371,82 +3370,9 @@ collections:
                       - {label: English, name: en, widget: string}
                       - {label: العربية, name: ar, widget: string}
 
-  - name: cars
-    label: "السيارات (هايبرد وكهربائية)"
-    description: "قائمة السيارات على /cars. القائمة العامة فارغة إلى أن يضيف أحمد سيارات حقيقية. الأمثلة نموذج للتصميم فقط، ولا تظهر على الموقع الحي."
-    preview_path: "ar/cars"
-    editor: {preview: false}
-    files:
-      - label: السيارات
-        name: cars
-        file: content/cars.json
-        fields:
-          - {label: ملاحظة داخلية, name: _note, widget: text}
-          - {label: "إظهار الأمثلة في المعاينة فقط", name: showExamples, widget: boolean, default: true}
-          - label: السيارات المعروضة
-            name: cars
-            widget: list
-            summary: "{{fields.slug}}"
-            fields:
-              - {label: المسار (إنجليزي صغير بشرطات), name: slug, widget: string}
-              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
-              - label: الماركة
-                name: brand
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: الموديل
-                name: model
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - {label: السنة, name: year, widget: number, required: false, value_type: int}
-              - {label: صور (مسار يبدأ بـ /), name: photos, widget: list, required: false, field: {label: مسار, name: src, widget: string}}
-              - label: مجموعة الحركة
-                name: powertrain
-                widget: object
-                required: false
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - {label: المدى (كم), name: rangeKm, widget: number, required: false, value_type: int}
-              - {label: البطارية (ك.و.س), name: batteryKwh, widget: number, required: false, value_type: int}
-              - {label: المقاعد, name: seats, widget: number, required: false, value_type: int}
-              - {label: السعر (رقم فقط إن وُجد), name: priceAmount, widget: number, required: false, value_type: int}
-              - {label: عملة السعر, name: priceCurrency, widget: string, required: false}
-              - label: ما يشمله الطلب
-                name: included
-                widget: list
-                required: false
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-          - label: أمثلة التصميم (لا تظهر على الموقع الحي)
-            name: examples
-            widget: list
-            summary: "{{fields.slug}}"
-            fields:
-              - {label: المسار, name: slug, widget: string}
-              - {label: "بيانات نموذجية", name: example, widget: boolean, default: true}
-              - {label: "النوع", name: type, widget: select, options: ["hybrid", "phev", "ev"]}
-              - label: الماركة
-                name: brand
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-              - label: الموديل
-                name: model
-                widget: object
-                fields:
-                  - {label: English, name: en, widget: string}
-                  - {label: العربية, name: ar, widget: string}
-
   - name: governance
     label: "حوكمة الذكاء الاصطناعي"
-    description: "كورس الماستركلاس على /masterclass/single-track-trap، وبالعربية تحت /ar. الصفحة المختصرة تعرض العنوان والنبذة والمحاضر وزر اشترك والسعر جنبه. لا تضف رقمًا بلا مصدر خارج حقل السعر."
+    description: "كورس الماستركلاس على /masterclass/single-track-trap، وبالعربية تحت /ar. الصفحة تعرض العنوان والنبذة والمحاضر وزر «سجّل اهتمامك». لا سعر ولا رابط دفع."
     preview_path: "ar/masterclass/single-track-trap"
     editor: {preview: false}
     files:
@@ -3539,17 +3465,10 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - label: "زر الاشتراك"
+              - label: "زر تسجيل الاهتمام"
                 name: subscribe
                 widget: object
-                hint: "نص الزر فقط. الرابط ثابت في الكود (ENROLL_HREF)."
-                fields:
-                  - {label: "English", name: en, widget: string}
-                  - {label: "العربية", name: ar, widget: string}
-              - label: "السعر بجانب الزر"
-                name: price
-                widget: object
-                hint: "يظهر في صفحة هذا الكورس فقط: البطاقة الجانبية، والتفاصيل، وقسم اشترك الآن."
+                hint: "نص الزر فقط. يفتح نموذج الاسم والبريد والمؤسسة."
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
@@ -3596,7 +3515,7 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-              - label: "عنوان اشترك الآن"
+              - label: "عنوان سجّل اهتمامك"
                 name: enrollLabel
                 widget: object
                 fields:

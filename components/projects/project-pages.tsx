@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {ArrowUpRight, ArrowRight, Zap, Cpu, Plane, ShieldCheck, Bot, HeartPulse, Wheat, Building2, BrainCircuit} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
-import {sectors, tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, boxMailto, conceptNotice, type Sector, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
+import {tracks, projects, prefix, sectorBySlug, sectorPath, trackPath, projectPath, projectInquiry, projectFileById, trackLabel, audienceLabels, boxMailto, conceptNotice, type Sector, type Track, type Project, type ProjectAudience, type Locale} from '@/lib/projects';
 import styles from './projects.module.css';
 import {ProjectFilter, type ProjectCardData} from './project-filter';
 
@@ -42,20 +42,6 @@ function cardData(project:Project,locale:Locale):ProjectCardData {
     audiences:project.profile?.audiences ?? [], audienceText:(project.profile?.audiences ?? []).map(a=>audienceLabels[a][locale]),
   };
 }
-function SectorGrid({locale}:{locale:Locale}) {
-  const ar=locale==='ar';
-  return <div className={styles.sectorGrid}>{sectors.map((sector,i)=>{
-    const Icon=icons[sector.icon];const count=projects.filter(p=>p.sector===sector.slug).length;
-    return <article className={styles.sectorCard} key={sector.slug} style={tone()}>
-      {sector.anchors.map(anchor=><span className={styles.anchor} id={anchor} key={anchor}/>)}
-      <Link href={sectorPath(sector.slug,locale)}>
-        <div className={styles.sectorTop}><span className={styles.sectorBar} aria-hidden="true"/><Icon size={22} strokeWidth={1.5} aria-hidden="true"/><span dir="ltr" className={styles.mono}>{String(i+1).padStart(2,'0')}</span></div>
-        <h3>{sector.title[locale]}</h3>
-        <span className={count?styles.sectorCountLive:styles.sectorCount}>{count?projectCount(count,locale):(ar?'مجال عمل':'Field of work')}</span>
-      </Link>
-    </article>;
-  })}</div>;
-}
 function Contact({locale}:{locale:Locale}) {
   const ar=locale==='ar';
   return <section className={styles.contact}><div className={styles.wrap}>
@@ -79,17 +65,12 @@ export function ProjectsIndex({locale}:{locale:Locale}) {
       </div>
       <dl className={styles.stats}>
         <div><dt>{ar?'مشاريع':'Projects'}</dt><dd dir="ltr">{String(projects.length).padStart(2,'0')}</dd></div>
-        <div><dt>{ar?'مجالات عمل':'Sectors'}</dt><dd dir="ltr">{String(sectors.length).padStart(2,'0')}</dd></div>
         <div><dt>{ar?'لمن نصمّم':'Designed for'}</dt><dd className={styles.statsPhrase}>{ar?'حكومات · مؤسسات · شركات':'Gov · Institutions · Companies'}</dd></div>
       </dl>
     </GridHero>
     <section className={styles.section} id="project-files"><div className={styles.wrap}>
       <ProjectFilter locale={locale} cards={projects.map(p=>cardData(p,locale))} audiences={allAudiences.map(a=>({id:a,label:audienceLabels[a][locale]}))}/>
       
-    </div></section>
-    <section id="fields" className={styles.section}><div className={styles.wrap}>
-      <div className={styles.heading}><h2>{ar?'المجالات':'Sectors'}</h2><span className={styles.count} dir="ltr">{String(sectors.length).padStart(2,'0')}</span></div>
-      <SectorGrid locale={locale}/>
     </div></section>
     <Contact locale={locale}/>
   </Frame>;

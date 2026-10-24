@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {ArrowRight} from 'lucide-react';
-import {coursePath, workshop as governanceCourse, tx as courseText} from '@/lib/governance';
+import {coursePage, coursePath, workshop as governanceCourse, tx as courseText} from '@/lib/governance';
 import {institute, localePath, tx, type Locale} from '@/lib/institute';
+import {InterestButton} from '@/components/interest/interest-form';
 
 export function InstituteWorkshopCard({locale, listingHref}: {locale: Locale; listingHref?: string}) {
   const href = localePath(locale, coursePath);
@@ -23,9 +24,15 @@ export function InstituteWorkshopCard({locale, listingHref}: {locale: Locale; li
         <h2><Link href={href}>{tx(locale, institute.workshopTitle)}</Link></h2>
         <p>{tx(locale, institute.workshopLead)}</p>
         <p><span>{courseText(locale, governanceCourse.durationLabel)}</span> {courseText(locale, governanceCourse.soon)}</p>
-        <p className="vs-wl-offer-price">{courseText(locale, governanceCourse.price)}</p>
         <p>{courseText(locale, governanceCourse.instructor)}</p>
-        <Link className="vs-wl-btn is-lime" href={href}>
+        <InterestButton
+          locale={locale}
+          topic={courseText(locale, governanceCourse.title)}
+          page={coursePage(locale)}
+          label={courseText(locale, governanceCourse.subscribe)}
+          className="vs-wl-btn is-lime"
+        />
+        <Link className="vs-wl-btn" href={href}>
           {tx(locale, institute.openWorkshop)}
           <ArrowRight size={18} aria-hidden />
         </Link>

@@ -24,7 +24,7 @@ test('Korean Solutions: the JSON copy holds ten complete, bilingual, sourced sol
   assert.doesNotMatch(all, /هانا ?كار|Hana ?Car|Nine Star|skincare|injectable|halal|used car/i);
 });
 
-test('Korean Solutions: institutional transfer front, no sourcing funnel, cars stay linked', () => {
+test('Korean Solutions: institutional transfer front, no sourcing funnel, cars are gone', () => {
   for (const f of ['app/korean-solutions/page.tsx', 'app/ar/korean-solutions/page.tsx', 'app/korean-solutions/[slug]/page.tsx', 'app/ar/korean-solutions/[slug]/page.tsx']) assert.ok(existsSync(new URL(`../${f}`, import.meta.url)), f);
   assert.ok(read('lib/korean-solutions-copy.ts').includes(NO_PARTNERSHIP));
   const pages = read('components/korean-solutions/pages.tsx');
@@ -43,7 +43,7 @@ test('Korean Solutions: institutional transfer front, no sourcing funnel, cars s
   assert.match(pages, /id="how"/);
   assert.match(pages, /\/programs\/relay/);
   assert.match(pages, /id="initiatives"/);
-  assert.match(pages, /\/cars/);
+  assert.doesNotMatch(pages, /\/cars/);
   assert.match(pages, /mailto\(/);
   assert.match(pages, /أحمد عبدالعليم|Ahmed Abdelalim/);
   assert.doesNotMatch(pages, /RequestForm|اطلب من كوريا|Request from Korea|اطلب من هذا المجال|#needs|YOUR REQUEST/);
@@ -62,22 +62,17 @@ test('Korean Solutions: institutional transfer front, no sourcing funnel, cars s
 
 const COLLOQUIAL_AR = /مش |مفيش|مافيش|عايز|بتاع|اللي |إزاي|ازاي|امتى|دلوقتي|عشان|كمان|منغير|ولا لأ|العربيات|حاجة تانية|ندوّر|يستاهل|معاك|لقيناه|فاضية|يقدروا|لوحدها|هترد|هتدفع|هتتواصل|بتتأكد|بيرد|بنتفق|بتعمل|لأ\.|الصفحة دي|من غير ما |من غير |نجيبها|محتاج |قول ل|كلّمنا|نرجع لك|يتقاس|يتكتب/;
 
-test('Korean Solutions and cars: public Arabic copy is contemporary MSA, not Egyptian colloquial', () => {
+test('Korean Solutions: public Arabic copy is contemporary MSA, not Egyptian colloquial', () => {
   const files = [
     'app/ar/korean-solutions/page.tsx',
-    'app/ar/cars/page.tsx',
     'components/korean-solutions/pages.tsx',
     'components/korean-solutions/audience.tsx',
     'components/korean-solutions/categories.tsx',
     'components/korean-solutions/finder.tsx',
     'components/korean-solutions/sticky-cta.tsx',
-    'components/cars/pages.tsx',
-    'components/cars/listing.tsx',
     'components/requests/request-form.tsx',
     'lib/korean-solutions-copy.ts',
     'lib/requests.ts',
-    'lib/cars.ts',
-    'content/cars.json',
     'content/korean-solutions.json',
   ];
   for (const file of files) {
@@ -94,11 +89,11 @@ test('Korean Solutions: in the menu, the sitemap and the archive list; the ops s
   assert.equal(nav[0].children.some(c => c.href === '/korean-solutions#needs'), false);
   assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#domains' && c.ar === 'المجالات'));
   assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#initiatives' && c.ar === 'المبادرات'));
-  assert.ok(nav[0].children.some(c => c.href === '/cars'));
+  assert.equal(nav[0].children.some(c => c.href === '/cars'), false);
   assert.match(read('app/sitemap.ts'), /korean-solutions/);
-  assert.match(read('app/sitemap.ts'), /path: '\/cars'/);
+  assert.doesNotMatch(read('app/sitemap.ts'), /path: '\/cars'/);
   assert.match(read('public/admin/config.yml'), /value: "\/korean-solutions"/);
-  assert.match(read('public/admin/config.yml'), /value: "\/cars"/);
+  assert.doesNotMatch(read('public/admin/config.yml'), /value: "\/cars"/);
   const lib = read('lib/notion-room.ts');
   assert.match(lib, /koreanSolutions: \{ ds: "d81a751a-06b2-4ab1-933e-a6aa0deab79d"/);
   const route = read('app/ops/solutions/route.ts');

@@ -81,7 +81,7 @@ test('Institute surfaces only the governance workshop; old Masterclass routes st
   const instituteSurfaces = [hub, listing, card, read('content/navigation.json'), read('content/sections.json')].join('\n');
 
   assert.match(lib, /export const coursePath = `\/masterclass\/\$\{workshop\.slug\}`/);
-  assert.match(lib, /export const ENROLL_HREF = 'https:\/\/link\.fastpaydirect\.com\/payment-link\/6adb486bcaf20c1f8ff2b74a'/);
+  assert.doesNotMatch(lib, /ENROLL_HREF|fastpaydirect/);
   assert.doesNotMatch(redirects, /source: `\$\{prefix\}\/masterclass`, destination: `\$\{prefix\}\/institute`/);
   assert.doesNotMatch(redirects, /source: `\$\{prefix\}\/institute\/masterclass`, destination: `\$\{prefix\}\/masterclass`/);
   assert.match(redirects, /source: `\$\{prefix\}\/workshops`, destination: `\$\{prefix\}\/masterclass`/);
@@ -102,7 +102,8 @@ test('Institute surfaces only the governance workshop; old Masterclass routes st
   assert.match(listing, /institute\.relatedProgram/);
   assert.equal(institute.relatedProgram.href, '/programs/clause');
   assert.match(card, /institute\.workshopTitle/);
-  assert.match(card, /governanceCourse\.price/);
+  assert.match(card, /InterestButton/);
+  assert.doesNotMatch(card, /governanceCourse\.price/);
   assert.match(card, /coursePath/);
   assert.doesNotMatch(instituteSurfaces, /leader-seat|#institutions|develop-the-institution|airport-teams|company-teams|hospital-administration|police-citizen-service|university-teams/);
 

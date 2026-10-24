@@ -47,8 +47,7 @@
     ],
     "instructorLabel": {"en": "Instructor", "ar": "المحاضر"},
     "instructorShort": {"en": "Ahmed Abdelalim", "ar": "د. أحمد"},
-    "subscribe": {"en": "Subscribe", "ar": "اشترك"},
-    "price": {"en": "$199 — one-time payment", "ar": "199 دولار — دفعة واحدة"},
+    "subscribe": {"en": "Register interest", "ar": "سجّل اهتمامك"},
     "aboutLabel": {"en": "About this Masterclass", "ar": "عن الماستر كلاس"},
     "forLabel": {"en": "Who it's for", "ar": "لمن هذا الماستر كلاس"},
     "gainLabel": {"en": "What you'll gain", "ar": "ماذا ستخرج به"},
@@ -56,7 +55,7 @@
     "detailsLabel": {"en": "Details", "ar": "التفاصيل"},
     "durationLabel": {"en": "Duration", "ar": "المدة"},
     "formatLabel": {"en": "Format", "ar": "الشكل"},
-    "enrollLabel": {"en": "Enroll", "ar": "اشترك الآن"},
+    "enrollLabel": {"en": "Register interest", "ar": "سجّل اهتمامك"},
     "relatedProgram": {
       "href": "/programs/clause",
       "kicker": {"en": "Related program", "ar": "برنامج مرتبط"},
