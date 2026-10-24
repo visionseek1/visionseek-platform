@@ -50,6 +50,7 @@ function Crumb({locale, trail}: {locale: Locale; trail: {href?: string; label: s
 
 function IndexVisual({locale, item}: {locale: Locale; item: IndexEntry}) {
   if (!item.heroImage) return null;
+  const svg = item.heroImage.endsWith('.svg');
   return (
     <div className={styles.visual}>
       <Image
@@ -58,6 +59,8 @@ function IndexVisual({locale, item}: {locale: Locale; item: IndexEntry}) {
         width={1280}
         height={720}
         sizes="(max-width: 1220px) calc(100vw - 3rem), 1220px"
+        style={{width: '100%', height: 'auto', maxWidth: 1280, maxHeight: 480}}
+        unoptimized={svg}
         priority
       />
     </div>
@@ -169,6 +172,21 @@ export function IndicesHub({locale}: {locale: Locale}) {
             <div className={styles.cards}>
               {list.map(item => (
                 <Link key={item.slug} className={styles.card} href={`${locale === 'ar' ? '/ar' : ''}${indexPath(item.slug)}`}>
+                  {item.heroImage
+                    ? (
+                      <span className={styles.cardVisual}>
+                        <Image
+                          src={item.heroImage}
+                          alt={item.heroAlt[locale]}
+                          width={1280}
+                          height={720}
+                          sizes="(max-width: 760px) calc(100vw - 3rem), (max-width: 1220px) calc(50vw - 2rem), 580px"
+                          style={{width: '100%', height: 'auto', maxWidth: 1280, maxHeight: 720}}
+                          unoptimized={item.heroImage.endsWith('.svg')}
+                        />
+                      </span>
+                    )
+                    : null}
                   <p className={styles.status}>{item.statusLabel[locale]}</p>
                   <h3>{item.shortTitle[locale]}</h3>
                   <p>{item.lede[locale]}</p>
