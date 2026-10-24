@@ -108,7 +108,7 @@ test('Incheon Localization Awards sit inside the dialogue, coming soon, with a v
   }
 });
 
-test('the forums routes and admin collection exist, and nav is untouched', () => {
+test('the forums routes and admin collection exist, and Forums is a top-level nav item after News', () => {
   for (const path of ['app/forums/page.tsx', 'app/ar/forums/page.tsx', 'components/forums/pages.tsx', 'lib/forums.ts', 'docs/forums-benchmark.md']) {
     assert.ok(readFileSync(join(root, path), 'utf8').length, path);
   }
@@ -127,8 +127,16 @@ test('the forums routes and admin collection exist, and nav is untouched', () =>
   const sitemap = readFileSync(join(root, 'app/sitemap.ts'), 'utf8');
   assert.match(sitemap, /\/forums/);
   assert.match(sitemap, /\/ar\/forums/);
-  const nav = readFileSync(join(root, 'content/navigation.json'), 'utf8');
-  assert.doesNotMatch(nav, /\/forums/);
+  const nav = JSON.parse(readFileSync(join(root, 'content/navigation.json'), 'utf8'));
+  const paths = nav.sections.map(s => s.path);
+  const item = nav.sections.find(s => s.path === '/forums');
+  assert.ok(item, 'Forums belongs in the header');
+  assert.equal(item.en, 'Forums');
+  assert.equal(item.ar, 'المنتديات');
+  assert.equal(nav.sections.filter(s => s.path === '/forums').length, 1, 'Forums appears once');
+  assert.equal(paths[paths.indexOf('/news') + 1], '/forums');
+  assert.ok(item.children.some(c => c.href === '/forums'));
+  assert.ok(item.children.some(c => c.href === '/forums#incheon-dialogue' && c.en === 'Incheon Dialogue' && c.ar === 'حوار إنتشون'));
 });
 
 test('the built forums pages are native RTL and LTR and keep the draft facts honest', () => {
@@ -137,6 +145,8 @@ test('the built forums pages are native RTL and LTR and keep the draft facts hon
   const ar = html('ar');
   assert.match(en, /class="vs-site locale-en[^"]*" lang="en" dir="ltr"/);
   assert.match(ar, /class="vs-site locale-ar[^"]*" lang="ar" dir="rtl"/);
+  assert.match(en, /href="\/forums"[^>]*>Forums</);
+  assert.match(ar, /href="\/ar\/forums"[^>]*>المنتديات</);
   assert.match(en, /Conferences &amp; Forums|Conferences & Forums/);
   assert.match(ar, /المؤتمرات والمنتديات/);
   assert.match(en, /Incheon Dialogue/);

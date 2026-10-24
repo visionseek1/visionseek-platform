@@ -195,6 +195,23 @@
       ]
     },
     {
+      "path": "/forums",
+      "en": "Forums",
+      "ar": "المنتديات",
+      "children": [
+        {
+          "href": "/forums",
+          "en": "Conferences & Forums",
+          "ar": "المؤتمرات والمنتديات"
+        },
+        {
+          "href": "/forums#incheon-dialogue",
+          "en": "Incheon Dialogue",
+          "ar": "حوار إنتشون"
+        }
+      ]
+    },
+    {
       "path": "/work-with-us",
       "en": "Work with Us",
       "ar": "اعمل معنا",
