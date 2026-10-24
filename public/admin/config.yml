@@ -4204,11 +4204,75 @@ collections:
                 fields:
                   - {label: English, name: en, widget: text}
                   - {label: العربية, name: ar, widget: text}
+              - label: مجلس إنتشون الاستشاري
+                name: council
+                widget: object
+                required: false
+                hint: "كتلة داخل الحوار. يُعلَن التشكيل في الحوار. لا أسماء ولا صور ولا تلميح إلى الأعضاء. لا يقيّم المؤسسات."
+                fields:
+                  - label: العنوان
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: السطر فوق الحالة
+                    name: kicker
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الحالة
+                    name: status
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: string}
+                      - {label: العربية, name: ar, widget: string}
+                  - label: الدور
+                    name: role
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: مبادئ الاستقلال
+                    name: independence
+                    widget: list
+                    summary: "{{fields.title.ar}}"
+                    hint: "ثلاثة مبادئ. لا أسماء ولا مدد ولا أعداد أعضاء."
+                    fields:
+                      - label: العنوان
+                        name: title
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: النص
+                        name: text
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: text}
+                          - {label: العربية, name: ar, widget: text}
+                  - label: تسميات أقسام المجلس
+                    name: labels
+                    widget: object
+                    fields:
+                      - label: الدور
+                        name: role
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: الاستقلال
+                        name: independence
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
               - label: جوائز إنتشون للتوطين
                 name: awards
                 widget: object
                 required: false
-                hint: "كتلة داخل الحوار. وسم «قريبًا». لا قيمة للجوائز ولا أسماء ولا فورم ترشيح ولا يوم محدد."
+                hint: "كتلة داخل الحوار. تُعلن في الحوار. لا مبلغ مالي ولا تاريخ محدد ولا أسماء محكّمين."
                 fields:
                   - label: العنوان
                     name: title
@@ -4295,6 +4359,24 @@ collections:
                     fields:
                       - {label: English, name: en, widget: text}
                       - {label: العربية, name: ar, widget: text}
+                  - label: شرط الامتلاك
+                    name: ownership
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: الترشيح
+                    name: nomination
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: الاستبعاد
+                    name: exclusion
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
                   - label: جملة الصدق
                     name: honesty
                     widget: object
@@ -4305,7 +4387,7 @@ collections:
                     name: labels
                     widget: object
                     fields:
-                      - label: وسم قريبًا
+                      - label: وسم الحالة
                         name: soon
                         widget: object
                         fields:
@@ -4325,6 +4407,24 @@ collections:
                           - {label: العربية, name: ar, widget: string}
                       - label: الفئات
                         name: categories
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: شرط الامتلاك
+                        name: ownership
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: الترشيح
+                        name: nomination
+                        widget: object
+                        fields:
+                          - {label: English, name: en, widget: string}
+                          - {label: العربية, name: ar, widget: string}
+                      - label: الاستبعاد
+                        name: exclusion
                         widget: object
                         fields:
                           - {label: English, name: en, widget: string}

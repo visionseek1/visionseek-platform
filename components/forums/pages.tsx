@@ -1,12 +1,15 @@
 import Link from 'next/link';
-import {ArrowRight} from 'lucide-react';
+import {ArrowRight, Ban, Building2, FileCheck2, Handshake, Landmark, UserRound, type LucideIcon} from 'lucide-react';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {ForumKeyVisual} from '@/components/forums/key-visual';
-import {forumPath, forumsContent, paragraphs, tx, type Forum, type ForumAwards, type Locale} from '@/lib/forums';
+import {forumPath, forumsContent, paragraphs, tx, type Forum, type ForumAwards, type ForumCouncil, type Locale} from '@/lib/forums';
 import type {Metadata} from 'next';
 import {mailto} from '@/lib/site';
 import styles from './forums.module.css';
+
+const councilIcons: LucideIcon[] = [Ban, FileCheck2, Landmark];
+const awardIcons: LucideIcon[] = [Building2, UserRound, Handshake];
 
 function Invite({forum, locale, strong = false}: {forum: Forum; locale: Locale; strong?: boolean}) {
   if (!forum.invite) return null;
@@ -27,20 +30,111 @@ function Copy({text}: {text: string}) {
   );
 }
 
-function AwardsSoon({awards, locale, slug}: {awards: ForumAwards; locale: Locale; slug: string}) {
-  const opening = paragraphs(tx(locale, awards.opening))[0] ?? tx(locale, awards.opening);
+function StageLabel({children}: {children: string}) {
+  return <p className={styles.stageLabel}>{children}</p>;
+}
+
+function Card({
+  index,
+  title,
+  text,
+  Icon,
+}: {
+  index: number;
+  title: string;
+  text: string;
+  Icon: LucideIcon;
+}) {
   return (
-    <aside className={styles.awards} id={`${slug}-awards`} aria-labelledby={`${slug}-awards-title`}>
-      {awards.labels.soon ? <p className={styles.soon}>{tx(locale, awards.labels.soon)}</p> : null}
-      <h3 id={`${slug}-awards-title`}>{tx(locale, awards.title)}</h3>
-      <p className={styles.awardsKicker}>{tx(locale, awards.kicker)}</p>
-      <p className={styles.edition}>{tx(locale, awards.status)}</p>
-      <p>{opening}</p>
-      <ForumKeyVisual
-        src={awards.visual}
-        alt={tx(locale, awards.visualAlt)}
-        compact
-      />
+    <li className={styles.card}>
+      <span className={styles.cardMeta}>
+        <span className={styles.cardNum}>{String(index + 1).padStart(2, '0')}</span>
+        <Icon size={20} strokeWidth={1.5} aria-hidden="true"/>
+      </span>
+      <h4>{title}</h4>
+      <p>{text}</p>
+    </li>
+  );
+}
+
+function CouncilBlock({council, locale, slug}: {council: ForumCouncil; locale: Locale; slug: string}) {
+  return (
+    <aside className={styles.stage} id={`${slug}-council`} aria-labelledby={`${slug}-council-title`}>
+      <header className={styles.stageHead}>
+        <p className={styles.eyebrow}>{tx(locale, council.status)}</p>
+        <h3 id={`${slug}-council-title`}>{tx(locale, council.title)}</h3>
+        <p className={styles.stageLead}>{tx(locale, council.kicker)}</p>
+      </header>
+      <div className={styles.role}>
+        <StageLabel>{tx(locale, council.labels.role)}</StageLabel>
+        <Copy text={tx(locale, council.role)}/>
+      </div>
+      <div>
+        <StageLabel>{tx(locale, council.labels.independence)}</StageLabel>
+        <ul className={styles.cardGrid}>
+          {council.independence.map((item, index) => (
+            <Card
+              key={item.title.en}
+              index={index}
+              title={tx(locale, item.title)}
+              text={tx(locale, item.text)}
+              Icon={councilIcons[index] ?? Ban}
+            />
+          ))}
+        </ul>
+      </div>
+    </aside>
+  );
+}
+
+function AwardsBlock({awards, locale, slug}: {awards: ForumAwards; locale: Locale; slug: string}) {
+  const criteria = [
+    {label: awards.labels.ownership, text: awards.ownership},
+    {label: awards.labels.nomination, text: awards.nomination},
+    {label: awards.labels.exclusion, text: awards.exclusion},
+  ];
+  return (
+    <aside className={`${styles.stage} ${styles.awardsStage}`} id={`${slug}-awards`} aria-labelledby={`${slug}-awards-title`}>
+      <div className={styles.awardsHero}>
+        <header className={styles.stageHead}>
+          <p className={styles.eyebrow}>{tx(locale, awards.status)}</p>
+          <h3 id={`${slug}-awards-title`}>{tx(locale, awards.title)}</h3>
+          <blockquote className={styles.pull}>{tx(locale, awards.kicker)}</blockquote>
+        </header>
+        <ForumKeyVisual
+          src={awards.visual}
+          alt={tx(locale, awards.visualAlt)}
+          compact
+        />
+      </div>
+      <div className={styles.awardsOpening}>
+        <Copy text={tx(locale, awards.opening)}/>
+      </div>
+      <div>
+        <StageLabel>{tx(locale, awards.labels.categories)}</StageLabel>
+        <ul className={styles.categoryGrid}>
+          {awards.categories.map((item, index) => (
+            <Card
+              key={item.title.en}
+              index={index}
+              title={tx(locale, item.title)}
+              text={tx(locale, item.text)}
+              Icon={awardIcons[index] ?? Building2}
+            />
+          ))}
+        </ul>
+      </div>
+      <ol className={styles.criteria}>
+        {criteria.map((item, index) => (
+          <li key={item.label.en}>
+            <span className={styles.cardNum} aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h4>{tx(locale, item.label)}</h4>
+              <p>{tx(locale, item.text)}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
       {awards.honesty ? <p className={styles.honesty}>{tx(locale, awards.honesty)}</p> : null}
     </aside>
   );
@@ -125,10 +219,13 @@ function ForumArticle({forum, locale}: {forum: Forum; locale: Locale}) {
           </dl>
         </section>
 
-        <section className={styles.block} id={`${forum.slug}-dialogue`} aria-labelledby={`${forum.slug}-dialogue-title`}>
-          <h2 id={`${forum.slug}-dialogue-title`}>{tx(locale, labels.dialogue)}</h2>
-          <p className={styles.edition}>{tx(locale, forum.status)}</p>
-          {forum.awards && <AwardsSoon awards={forum.awards} locale={locale} slug={forum.slug}/>}
+        <section className={styles.dialogue} id={`${forum.slug}-dialogue`} aria-labelledby={`${forum.slug}-dialogue-title`}>
+          <div className={styles.dialogueIntro}>
+            <h2 id={`${forum.slug}-dialogue-title`}>{tx(locale, labels.dialogue)}</h2>
+            <p className={styles.edition}>{tx(locale, forum.status)}</p>
+          </div>
+          {forum.council && <CouncilBlock council={forum.council} locale={locale} slug={forum.slug}/>}
+          {forum.awards && <AwardsBlock awards={forum.awards} locale={locale} slug={forum.slug}/>}
         </section>
 
         <section className={styles.close} id={`${forum.slug}-register`} aria-labelledby={`${forum.slug}-register-title`}>
