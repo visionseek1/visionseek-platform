@@ -1,0 +1,184 @@
+{
+  "hub": {
+    "eyebrow": {
+      "en": "VISIONSEEK INDICES",
+      "ar": "مؤشرات VisionSeek"
+    },
+    "title": {
+      "en": "Indices",
+      "ar": "المؤشرات"
+    },
+    "intro": {
+      "en": "VisionSeek measures. It does not sell a ranking, and it does not publish a result before the method is public. These pages will hold annual indices on what Arab countries own and have localized — not what they have bought.",
+      "ar": "VisionSeek تقيس. لا تبيع ترتيبًا، ولا تعلن نتيجة قبل أن يُنشر المنهج. هذه الصفحات لمؤشرات سنوية تسأل الدول العربية: ماذا تملك من التكنولوجيا، وماذا وطّنت — لا ماذا اشترت."
+    },
+    "measuringBodyTitle": {
+      "en": "The measuring body",
+      "ar": "جهة القياس"
+    },
+    "measuringBody": {
+      "en": "VisionSeek is the measuring body. When an edition is published, it will be issued by VisionSeek. The methodology will be public before any figure.",
+      "ar": "VisionSeek هي جهة القياس. حين يصدر تقرير، يصدر عنها. والمنهج يُنشر قبل أي رقم."
+    },
+    "empty": {
+      "en": "None yet.",
+      "ar": "لا يوجد بعد."
+    },
+    "catalogTitle": {
+      "en": "All indices",
+      "ar": "كل المؤشرات"
+    },
+    "catalogIntro": {
+      "en": "A new index is added here when it is adopted.",
+      "ar": "يُضاف مؤشر جديد من هنا حين يُعتمد."
+    },
+    "openIndex": {
+      "en": "Open the index",
+      "ar": "افتح المؤشر"
+    },
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "back": {
+      "en": "All indices",
+      "ar": "كل المؤشرات"
+    }
+  },
+  "notify": {
+    "label": {
+      "en": "Notify Ahmed Abdelalim",
+      "ar": "أبلغ أحمد عبدالعليم"
+    },
+    "hint": {
+      "en": "Opens a draft in your email app. Nothing is sent automatically.",
+      "ar": "يفتح الزر مسودة في تطبيق بريدك. لا يحدث إرسال تلقائي."
+    },
+    "email": "abdelalim@visionseek.org",
+    "subject": {
+      "en": "Notify me — VisionSeek Indices, pilot edition",
+      "ar": "أبلغني — مؤشرات VisionSeek، الإصدار التجريبي"
+    }
+  },
+  "indices": [
+    {
+      "slug": "arab-technology-capability",
+      "status": "upcoming",
+      "statusLabel": {
+        "en": "Pilot edition coming soon",
+        "ar": "الإصدار التجريبي قريبًا"
+      },
+      "title": {
+        "en": "Arab Technology Capability Index",
+        "ar": "مؤشر القدرة التكنولوجية العربية"
+      },
+      "shortTitle": {
+        "en": "Arab Technology Capability",
+        "ar": "القدرة التكنولوجية العربية"
+      },
+      "lede": {
+        "en": "An annual report on one question: how much of each technology does an Arab country own and localize — not how much it purchases.",
+        "ar": "تقرير سنوي على سؤال واحد: كم تملك الدولة العربية من التكنولوجيا، وكم وطّنتها، لا كم اشترتها."
+      },
+      "measuresTitle": {
+        "en": "What it measures",
+        "ar": "ماذا يقيس"
+      },
+      "measures": {
+        "en": "The index is designed to measure ownership and localization of seven technologies in Arab countries, with Korea as the benchmark. There are no scores yet, no ranking, and no charts with values.",
+        "ar": "المؤشر وُضع ليقيس الملكية والتوطين في الدول العربية عبر سبعة أعمدة تقنية، وكوريا هي المرجع. لا درجات اليوم، ولا ترتيب، ولا رسوم تحمل أرقامًا."
+      },
+      "pillarsTitle": {
+        "en": "The seven pillars",
+        "ar": "الأعمدة السبعة"
+      },
+      "pillarsIntro": {
+        "en": "The seven technologies the index will cover. Names only. Measurement has not begun.",
+        "ar": "سبع تكنولوجيات سيغطيها المؤشر. الأسماء هنا. القياس لم يبدأ."
+      },
+      "pillars": [
+        {
+          "id": "chips",
+          "name": {
+            "en": "Chips",
+            "ar": "الرقائق"
+          }
+        },
+        {
+          "id": "ai",
+          "name": {
+            "en": "Artificial intelligence",
+            "ar": "الذكاء الاصطناعي"
+          }
+        },
+        {
+          "id": "cloud",
+          "name": {
+            "en": "Cloud and data",
+            "ar": "السحابة والبيانات"
+          }
+        },
+        {
+          "id": "networks",
+          "name": {
+            "en": "5G / 6G",
+            "ar": "الجيل الخامس والسادس"
+          }
+        },
+        {
+          "id": "robotics",
+          "name": {
+            "en": "Robotics",
+            "ar": "الروبوتات"
+          }
+        },
+        {
+          "id": "energy",
+          "name": {
+            "en": "Clean energy and batteries",
+            "ar": "الطاقة النظيفة والبطاريات"
+          }
+        },
+        {
+          "id": "biotech",
+          "name": {
+            "en": "Biotech and health tech",
+            "ar": "التقانة الحيوية وتقنيات الصحة"
+          }
+        }
+      ],
+      "benchmarkTitle": {
+        "en": "Korea as the benchmark",
+        "ar": "كوريا مرجعًا"
+      },
+      "benchmark": {
+        "en": "Korea is the benchmark, not a rival. Arab capability will be read beside a path whose construction is known — not beside a slogan.",
+        "ar": "كوريا هي المرجع، لا الخصم. نقرأ القدرة العربية إلى جوار مسارٍ عُرف كيف بُني، لا إلى جوار شعار."
+      },
+      "methodologyTitle": {
+        "en": "Methodology",
+        "ar": "المنهج"
+      },
+      "methodology": {
+        "en": "The methodology will be published. No results before the method, and no comparison before the definitions.",
+        "ar": "المنهجية ستُنشر. لا نتائج قبل المنهج، ولا مقارنة قبل التعريفات."
+      },
+      "pilotTitle": {
+        "en": "Pilot edition",
+        "ar": "الإصدار التجريبي"
+      },
+      "pilot": {
+        "en": "Pilot edition coming soon. The first cycle will measure artificial intelligence in three to four countries. There are no results yet, and the countries have not been named.",
+        "ar": "الإصدار التجريبي قريبًا. أول دورة تقيس الذكاء الاصطناعي في ثلاث إلى أربع دول. لا نتائج بعد، ولم تُسمَّ الدول بعد."
+      },
+      "resultsTitle": {
+        "en": "Results",
+        "ar": "النتائج"
+      },
+      "results": {
+        "en": "No results yet. No scores, no ranking, no country list with values, and no charts that carry numbers.",
+        "ar": "لا توجد نتائج بعد. لا درجات، ولا ترتيب، ولا قائمة دول بقيم، ولا رسوم بيانية تحمل أرقامًا."
+      }
+    }
+  ]
+}

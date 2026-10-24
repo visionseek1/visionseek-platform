@@ -7,6 +7,7 @@ import {showPublicCharacters} from '@/lib/leaders/presentation';
 import {projectRoutes} from '@/lib/projects';
 import {isArchived} from '@/lib/visibility';
 import {insights} from '@/lib/insights';
+import {liveIndices} from '@/lib/indices';
 import ksData from '@/content/korean-solutions.json';
 
 // Korean Solutions pages known at build time (the JSON copy of the Notion database).
@@ -31,6 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/projects", priority: 0.8 },
     {path: '/korean-solutions', priority: 0.85}, {path: '/ar/korean-solutions', priority: 0.85},
     {path: '/competitions', priority: 0.8}, {path: '/ar/competitions', priority: 0.8},
+    {path: '/indices', priority: 0.8}, {path: '/ar/indices', priority: 0.8},
+    ...liveIndices().flatMap(item => [{path: `/indices/${item.slug}`, priority: 0.75}, {path: `/ar/indices/${item.slug}`, priority: 0.75}]),
     ...koreanSolutions.flatMap(k => [{path: `/korean-solutions/${k.slug}`, priority: 0.7}, {path: `/ar/korean-solutions/${k.slug}`, priority: 0.7}]),
     { path: "/insights", priority: 0.85 },
     { path: "/ar/insights", priority: 0.85 },
