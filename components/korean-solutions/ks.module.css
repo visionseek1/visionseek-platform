@@ -102,16 +102,17 @@
 .steps b { font-size: 18px; }
 .steps p { font-size: 15px; line-height: 1.8; color: var(--body); }
 
-/* What you can request */
-.cats { display: flex; flex-direction: column; gap: 20px; padding-block: 8px 64px; scroll-margin-top: 80px; }
+/* Fields we transfer */
+.cats { display: flex; flex-direction: column; gap: 20px; padding-block: 56px 64px; scroll-margin-top: 80px; }
 .secHead { display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--ink); padding-top: 18px; }
 .page.page .secHead h2 { font-size: clamp(28px, 3.4vw, 34px); }
 .secHead p { font-size: 16px; line-height: 1.7; color: var(--mute); }
 .catGrid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px; }
 .catGrid li { min-width: 0; }
 .cat { display: flex; flex-direction: column; height: 100%; background: var(--card); border: 1px solid var(--rule); text-decoration: none; }
-.page a.cat { color: var(--ink); }
+.page :is(a.cat, article.cat) { color: var(--ink); }
 .page a.cat:hover { border-color: var(--ink); color: var(--ink); }
+.subHead { font-size: 20px; font-weight: 700; margin: 8px 0 0; scroll-margin-top: 80px; }
 .cat:hover .catGo { text-decoration: underline; text-underline-offset: 4px; }
 .catPhoto { position: relative; display: block; aspect-ratio: 16 / 10; background: var(--ink); overflow: hidden; }
 .catPhoto img { object-fit: cover; }

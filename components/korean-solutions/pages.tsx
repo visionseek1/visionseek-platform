@@ -27,6 +27,7 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
         <span className={styles.barName}><Link href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
         <span className={styles.barNav}>
           <a href={`${p}/korean-solutions#do`}>{ar ? 'ماذا نفعل' : 'What we do'}</a>
+          <a href={`${p}/korean-solutions#domains`}>{ar ? 'المجالات' : 'Fields'}</a>
           <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف نعمل' : 'How we work'}</a>
           <a href={`${p}/korean-solutions#initiatives`}>{ar ? 'المبادرات' : 'Initiatives'}</a>
           <Link href={`${p}/cars`}>{ar ? 'السيارات' : 'Cars'}</Link>
@@ -42,24 +43,38 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
 
 const WHAT: {title: Bi; text: Bi}[] = [
   {title: {ar: 'نقل التكنولوجيا', en: 'Technology transfer'}, text: {ar: 'نربط المؤسسة بالشريك الكوري المناسب، ونصمم مسار النقل والتدريب حتى تمتلك القدرة.', en: 'We connect the institution to the right Korean counterpart, and design the transfer and training path until the capability is theirs.'}},
-  {title: {ar: 'شراكات صناعية', en: 'Industrial partnerships'}, text: {ar: 'شراكات تصنيع وتجميع وتكييف محلي بدل الاستيراد الدائم.', en: 'Partnerships for manufacturing, assembly and local adaptation — not permanent import.'}},
-  {title: {ar: 'المبادرات', en: 'Initiatives'}, text: {ar: 'برامج تبني الكفاءات العربية التي تحمل هذه القدرات.', en: 'Programmes that build the Arab people who will carry these capabilities.'}},
+  {title: {ar: 'شراكات صناعية', en: 'Industrial partnerships'}, text: {ar: 'نصمم شراكات تصنيع وتجميع وتكييف محلي تملك المؤسسة خط الإنتاج.', en: 'We design manufacturing, assembly and local-adaptation partnerships that put the production line in the institution’s hands.'}},
+  {title: {ar: 'المبادرات', en: 'Initiatives'}, text: {ar: 'نبني الكفاءات العربية التي تحمل هذه القدرات وتنقلها.', en: 'We build the Arab talent who will carry these capabilities and pass them on.'}},
 ];
 
 const HOW: Bi[] = [
   {ar: 'نفهم الحاجة الاستراتيجية', en: 'Understand the strategic need'},
-  {ar: 'نحدد القدرة الكورية المناسبة', en: 'Identify the fitting Korean capability'},
+  {ar: 'نحدد القدرة الكورية المناسبة', en: 'Select the Korean capability'},
   {ar: 'نصمم مسار النقل', en: 'Design the transfer path'},
   {ar: 'نبني الكفاءة محليًا', en: 'Build competence locally'},
   {ar: 'تمتلك المؤسسة القدرة', en: 'The institution owns the capability'},
 ];
 
+type Domain = {id: string; image: string; title: Bi; text: Bi; href?: string};
+
+const PRODUCTS: Domain[] = [
+  {id: 'medical', image: '/ks/domains/medical.webp', title: {ar: 'الطب والتقنية الصحية', en: 'Medicine and health tech'}, text: {ar: 'ننقل أجهزة التشخيص والعلاج والتقنيات الصحية الكورية، ونوطّن تشغيلها في المؤسسة.', en: 'We transfer Korean diagnostic, treatment and health technologies, and root their operation in the institution.'}},
+  {id: 'beauty', image: '/ks/domains/beauty.webp', title: {ar: 'التجميل والعناية الكورية', en: 'K-beauty and personal care'}, text: {ar: 'ننقل منظومة التجميل والعناية الكورية: المنتج، والمعرفة، ومعايير التشغيل.', en: 'We transfer the Korean beauty and care system: the product, the know-how, and the operating standard.'}},
+  {id: 'manufacturing', image: '/ks/domains/manufacturing.webp', title: {ar: 'التصنيع الذكي والمعدات الصناعية', en: 'Smart manufacturing and industrial equipment'}, text: {ar: 'ننقل خطوط التصنيع والمعدات الصناعية الكورية، ونوطّن تشغيلها.', en: 'We transfer Korean production lines and industrial equipment, and root their operation locally.'}},
+  {id: 'energy', image: '/ks/domains/energy.webp', title: {ar: 'الطاقة والبطاريات والمركبات الكهربائية', en: 'Energy, batteries and electric vehicles'}, text: {ar: 'ننقل قدرات الطاقة والبطارية والمركبة الكهربائية الكورية إلى المؤسسة.', en: 'We transfer Korean energy, battery and electric-vehicle capability into the institution.'}},
+  {id: 'education', image: '/ks/domains/education.webp', title: {ar: 'التعليم والتقنيات الرقمية', en: 'Education and digital / edtech'}, text: {ar: 'ننقل حلول التعليم الرقمي والمنصات الكورية، ونوطّنها في المؤسسة التعليمية.', en: 'We transfer Korean digital-education solutions and platforms, and root them in the learning institution.'}},
+  {id: 'agriculture', image: '/ks/domains/agriculture.webp', title: {ar: 'الزراعة الذكية وتقنيات الغذاء', en: 'Smart agriculture and food tech'}, text: {ar: 'ننقل الزراعة المحمية وتقنيات الغذاء الكورية إلى المنتج العربي.', en: 'We transfer Korean protected agriculture and food technology to the Arab producer.'}},
+  {id: 'cars', image: '/ks/domains/cars.webp', href: '/cars', title: {ar: 'سيارات هايبرد وكهربائية', en: 'Hybrid and electric cars'}, text: {ar: 'صفحة مستقلة للسيارات الكورية الهجينة والكهربائية.', en: 'A dedicated page for Korean hybrid and electric cars.'}},
+];
+
+const SERVICES: Domain[] = [
+  {id: 'transfer', image: '/ks/domains/transfer.webp', title: {ar: 'نقل التكنولوجيا', en: 'Technology transfer'}, text: {ar: 'نصمم مسار النقل من الشريك الكوري حتى تمتلك المؤسسة القدرة.', en: 'We design the transfer path from the Korean counterpart until the institution owns the capability.'}},
+  {id: 'partnerships', image: '/ks/domains/partnerships.webp', title: {ar: 'الشراكات الصناعية', en: 'Industrial partnerships'}, text: {ar: 'نبني شراكة تصنيع وتجميع وتكييف تملك المؤسسة موضعها في السلسلة.', en: 'We build a manufacturing, assembly and adaptation partnership that gives the institution its place in the chain.'}},
+  {id: 'training', image: '/ks/domains/training.webp', title: {ar: 'التدريب وبناء الكفاءة', en: 'Training and competence'}, text: {ar: 'ندرّب الفريق المحلي حتى يشغّل القدرة ويطوّرها.', en: 'We train the local team to run the capability and advance it.'}},
+];
+
 const INITIATIVE = {
-  proposedName: {ar: 'بوابات إنتشون: مبادرة تمكين الشباب العربي', en: 'Incheon Gateways: an initiative to empower Arab youth'},
-  alternatives: [
-    {ar: 'جسور القدرات الكورية', en: 'Korean Capability Bridges'},
-    {ar: 'سفراء القدرات', en: 'Capability Ambassadors'},
-  ],
+  name: {ar: 'بوابات إنتشون: مبادرة تمكين الشباب العربي', en: 'Incheon Gateways: an initiative to empower Arab youth'},
   idea: {
     ar: 'نختار شبابًا عربًا متميزين وندربهم تدريبًا عميقًا على القدرات والتكنولوجيا الكورية وطريقة نقلها، ليصبح كل منهم بوابة لهذه القدرات في بلده ومؤسسته.',
     en: 'We select outstanding Arab youth and train them in depth on Korean capabilities and technology, and on how those are transferred, so each becomes a gateway to those capabilities in their country and institution.',
@@ -71,28 +86,58 @@ const INITIATIVE = {
   status: {ar: 'سيتم فتح باب التسجيل قريبًا', en: 'Registration will open soon'},
 };
 
-/** Institutional front: transfer the capability, not ship the product. Initiatives live here. Cars stay on /cars. */
+function DomainGrid({locale, items}: {locale: Locale; items: Domain[]}) {
+  const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en); const p = ar ? '/ar' : '';
+  return <ul className={styles.catGrid}>
+    {items.map(c => {
+      const body = <>
+        <span className={styles.catPhoto}><Image src={c.image} alt="" fill sizes="(max-width:560px) 100vw, (max-width:1100px) 50vw, 300px"/></span>
+        <span className={styles.catBody}>
+          <b>{t(c.title)}</b>
+          <span>{t(c.text)}</span>
+          {c.href && <span className={styles.catGo}>{ar ? 'افتح صفحة السيارات' : 'Open the cars page'} <span aria-hidden="true">{ar ? '←' : '→'}</span></span>}
+        </span>
+      </>;
+      return <li key={c.id}>{c.href
+        ? <Link className={styles.cat} href={`${p}${c.href}`}>{body}</Link>
+        : <article className={styles.cat}>{body}</article>}</li>;
+    })}
+  </ul>;
+}
+
+/** Institutional front: transfer and localise Korean capability. Initiatives live here. Cars stay on /cars. */
 export function KoreanSolutionsHub({locale}: {locale: Locale}) {
   const ar = locale === 'ar'; const t = (v: Bi) => (ar ? v.ar : v.en);
   return <Shell locale={locale} path="/korean-solutions">
     <section className={styles.hero} aria-labelledby="ks-title"><div className={styles.gutter}><div className={`${styles.inner} ${styles.heroInner}`}>
       <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>KOREAN SOLUTIONS · VISIONSEEK</p>
-      <h1 id="ks-title">{ar ? 'من كوريا إلى المنطقة العربية: نقل القدرة، لا شحن المنتج' : 'From Korea to the Arab region: transfer the capability, not ship the product'}</h1>
+      <h1 id="ks-title">{ar ? 'من كوريا إلى المنطقة العربية: ننقل القدرة الكورية ونوطّنها' : 'From Korea to the Arab region: we transfer Korean capability and localise it'}</h1>
       <p className={styles.heroLede}>{ar
-        ? 'نساعد الشركات والمؤسسات العربية على نقل المنتجات والتكنولوجيا الكورية وتوطينها، ونطلق مبادرات تبني جسورًا دائمة بين كوريا والعالم العربي.'
-        : 'We help Arab companies and institutions transfer Korean products and technology, and localise them. We also launch initiatives that build lasting bridges between Korea and the Arab world.'}</p>
+        ? 'ننقل إلى الشركات والمؤسسات العربية المنتجات والتكنولوجيا والقدرة الكورية، ونوطّنها في أرضها، ونطلق مبادرات تبني جسورًا راسخة بين كوريا والعالم العربي.'
+        : 'We transfer Korean products, technology and capability to Arab companies and institutions, root them locally, and launch initiatives that bind Korea to the Arab world.'}</p>
       <div className={styles.heroCta}>
         <a className={styles.cta} href={transferMail(locale)}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a technology-transfer project'} <span aria-hidden="true">{ar ? '←' : '→'}</span></a>
-        <span>{ar ? 'يفتح الزر رسالة إلى أحمد عبدالعليم. بلا رسائل آلية.' : 'The button opens an email to Ahmed Abdelalim. No automated messages.'}</span>
+        <span>{ar ? 'أحمد عبدالعليم يرد بنفسه.' : 'Ahmed Abdelalim replies himself.'}</span>
       </div>
     </div></div></section>
 
     <div className={styles.gutter}><section id="do" className={`${styles.inner} ${styles.band}`} aria-labelledby="do-title">
       <div className={styles.secHead}>
         <h2 id="do-title">{ar ? 'ماذا نفعل' : 'What we do'}</h2>
-        <p>{ar ? 'المنطق مؤسسي: امتلاك القدرة، لا شراء شحنة.' : 'The posture is institutional: own the capability, do not buy a shipment.'}</p>
+        <p>{ar ? 'نملك المؤسسة القدرة الكورية: نقلًا، وشراكة، وكفاءة تحملها.' : 'We put Korean capability in the institution’s hands: transfer, partnership, and the people who carry it.'}</p>
       </div>
       <ul className={styles.doGrid}>{WHAT.map((item, i) => <li key={i}><b>{t(item.title)}</b><p>{t(item.text)}</p></li>)}</ul>
+    </section></div>
+
+    <div className={styles.gutter}><section id="domains" className={`${styles.inner} ${styles.cats}`} aria-labelledby="domains-title">
+      <div className={styles.secHead}>
+        <h2 id="domains-title">{ar ? 'المجالات' : 'Fields'}</h2>
+        <p>{ar ? 'ننقل القدرة الكورية في هذه الميادين، ونوطّنها.' : 'We transfer Korean capability in these fields, and root it here.'}</p>
+      </div>
+      <h3 className={styles.subHead}>{ar ? 'المنتجات والقدرات' : 'Products and capabilities'}</h3>
+      <DomainGrid locale={locale} items={PRODUCTS}/>
+      <h3 id="services" className={styles.subHead}>{ar ? 'الخدمات' : 'Services'}</h3>
+      <DomainGrid locale={locale} items={SERVICES}/>
     </section></div>
 
     <div className={styles.gutter}><section id="how" className={`${styles.inner} ${styles.how}`} aria-labelledby="how-title">
@@ -100,27 +145,13 @@ export function KoreanSolutionsHub({locale}: {locale: Locale}) {
       <ol className={styles.steps}>{HOW.map((s, i) => <li key={i}><span className={styles.num}>{String(i + 1).padStart(2, '0')}</span><b>{t(s)}</b></li>)}</ol>
     </section></div>
 
-    <section id="talk" className={`${styles.talk} ${styles.gutter}`} aria-labelledby="talk-title"><div className={`${styles.inner} ${styles.talkInner}`}>
-      <div>
-        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>EMAIL</p>
-        <h2 id="talk-title">{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a technology-transfer project'}</h2>
-        <p>{ar ? 'التواصل بالبريد فقط. أحمد عبدالعليم يرد بنفسه.' : 'Email only. Ahmed Abdelalim replies himself.'}</p>
-      </div>
-      <a className={styles.talkBtn} href={transferMail(locale)}>
-        <span>{ar ? 'افتح رسالة' : 'Open an email'}</span>
-        <b dir="ltr">{site.email}</b>
-      </a>
-    </div></section>
-
     <div className={styles.gutter}><section id="initiatives" className={`${styles.inner} ${styles.band}`} aria-labelledby="ini-title">
       <div className={styles.secHead}>
         <h2 id="ini-title">{ar ? 'المبادرات' : 'Initiatives'}</h2>
-        <p>{ar ? 'مبادرات تبني جسورًا بشرية دائمة بين كوريا والمنطقة العربية.' : 'Initiatives that build lasting human bridges between Korea and the Arab region.'}</p>
+        <p>{ar ? 'مبادرات تبني جسورًا بشرية راسخة بين كوريا والمنطقة العربية.' : 'Initiatives that build lasting human bridges between Korea and the Arab region.'}</p>
       </div>
       <article className={styles.ini} aria-labelledby="ini-name">
-        <p className={styles.proposal}>{ar ? 'اسم مقترح — بانتظار اعتماد أحمد عبدالعليم' : 'Proposed name — pending Ahmed Abdelalim’s approval'}</p>
-        <h3 id="ini-name">{t(INITIATIVE.proposedName)}</h3>
-        <p className={styles.iniAlts}>{ar ? 'بدائل مقترحة:' : 'Proposed alternatives:'} {INITIATIVE.alternatives.map(a => t(a)).join(ar ? ' · ' : ' · ')}</p>
+        <h3 id="ini-name">{t(INITIATIVE.name)}</h3>
         <p className={styles.iniStatus} role="status">{t(INITIATIVE.status)}</p>
         <div className={styles.iniBody}>
           <div>
@@ -128,15 +159,24 @@ export function KoreanSolutionsHub({locale}: {locale: Locale}) {
             <p>{t(INITIATIVE.idea)}</p>
           </div>
           <div>
-            <h4>{ar ? 'ماذا يحصل عليه المشارك' : 'What a participant receives'}</h4>
+            <h4>{ar ? 'ما يكتسبه المشارك' : 'What a participant gains'}</h4>
             <p>{t(INITIATIVE.gains)}</p>
           </div>
         </div>
-        <p className={styles.iniNote}>{ar
-          ? 'لا يوجد نموذج تسجيل على هذه الصفحة. سيُعلن فتح الباب هنا عندما يُعتمد.'
-          : 'There is no registration form on this page. The opening will be announced here when it is approved.'}</p>
       </article>
     </section></div>
+
+    <section id="talk" className={`${styles.talk} ${styles.gutter}`} aria-labelledby="talk-title"><div className={`${styles.inner} ${styles.talkInner}`}>
+      <div>
+        <p className={`${styles.eyebrow} ${styles.latin}`} lang="en" dir="ltr" style={{textAlign: ar ? 'right' : 'left'}}>EMAIL</p>
+        <h2 id="talk-title">{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a technology-transfer project'}</h2>
+        <p>{ar ? 'أحمد عبدالعليم يرد بنفسه.' : 'Ahmed Abdelalim replies himself.'}</p>
+      </div>
+      <a className={styles.talkBtn} href={transferMail(locale)}>
+        <span>{ar ? 'افتح رسالة' : 'Open an email'}</span>
+        <b dir="ltr">{site.email}</b>
+      </a>
+    </div></section>
   </Shell>;
 }
 
@@ -199,7 +239,7 @@ export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: S
       </article>
       <aside id="talk" className={styles.aside} aria-labelledby="request-title">
         <h2 id="request-title">{ar ? 'ناقش نقل هذه القدرة' : 'Discuss transferring this capability'}</h2>
-        <p>{ar ? 'التواصل بالبريد فقط. ليست طلب شراء، ولا نموذج تسجيل.' : 'Email only. This is not a purchase request, and not a registration form.'}</p>
+        <p>{ar ? 'أحمد عبدالعليم يرد بنفسه.' : 'Ahmed Abdelalim replies himself.'}</p>
         <a className={styles.cta} href={mail}>{ar ? 'افتح رسالة' : 'Open an email'} <span aria-hidden="true">↗</span></a>
         <p className={styles.fine}>{t(NO_PARTNERSHIP)}</p>
       </aside>
