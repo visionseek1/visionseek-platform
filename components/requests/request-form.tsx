@@ -148,8 +148,8 @@ export default function RequestForm({locale, kind, page, about, categories = [],
   };
 
   return <form className={styles.form} onSubmit={submit} noValidate onChange={e => {
-    const k = (e.target as HTMLInputElement).name;
-    if (problems.some(p => p.key === k)) setProblems(prev => prev.filter(p => p.key !== k));
+    const name = 'name' in e.target ? String((e.target as {name: string}).name) : '';
+    if (name && problems.some(p => p.key === name)) setProblems(prev => prev.filter(p => p.key !== name));
     if (ready) setReady(null);
   }}>
     {about && <p className={styles.about}><span>{ar ? 'بخصوص' : 'About'}</span><b dir="auto">{about}</b></p>}
