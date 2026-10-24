@@ -10,6 +10,7 @@ import {
   type WorkshopHeadingKey,
 } from '@/lib/institution/workshops';
 import {coursePath, workshop as governanceCourse} from '@/lib/governance';
+import {fellowship, fellowshipPath, institute, institutePath, tx as instituteText} from '@/lib/institute';
 import {DocumentLocale} from '@/components/governance/document-locale';
 
 function Frame({locale, path, children}: {locale: Locale; path: string; children: React.ReactNode}) {
@@ -28,34 +29,49 @@ const text = (locale: Locale, value: {en: string; ar: string}) => value[locale];
 export function WorkshopsIndex({locale}: {locale: Locale}) {
   const ar = locale === 'ar';
   const prefix = ar ? '/ar' : '';
-  const section = workshopSection;
-  const live = section.live;
+  const live = workshopSection.live;
   const courseHref = `${prefix}${coursePath}`;
+  const fellowshipHref = `${prefix}${fellowshipPath}`;
   const privateHref = `${prefix}/start?${new URLSearchParams({from: 'workshops', idea: text(locale, live.ctaPrimary)})}`;
 
   return (
-    <Frame locale={locale} path="/masterclass">
+    <Frame locale={locale} path={institutePath}>
       <div className="vs-wl vs-wl-catalog">
         <header className="vs-wl-catalog-intro">
           <nav className="vs-breadcrumb" aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}>
             <Link href={prefix || '/'}>{ar ? 'الرئيسية' : 'Home'}</Link>
             <span>/</span>
-            <span>{text(locale, section.title)}</span>
+            <span>{instituteText(locale, institute.title)}</span>
           </nav>
-          <h1>{text(locale, section.title)}</h1>
+          <p className="vs-wl-kicker"><span>{instituteText(locale, institute.kicker)}</span><em className="vs-institute-draft">{instituteText(locale, institute.draft)}</em></p>
+          <h1>{instituteText(locale, institute.title)}</h1>
+          <p>{instituteText(locale, institute.intro)}</p>
           <p>{text(locale, live.teaches)}</p>
         </header>
 
-        <section className="vs-wl-catalog-grid" id="institutions" aria-label={text(locale, section.title)}>
+        <section className="vs-wl-catalog-grid" id="institutions" aria-label={instituteText(locale, institute.programsLabel)}>
           <article className="vs-wl-offer vs-wl-course-card">
             <Link href={courseHref}>
               <Image src={governanceCourse.cover[locale]} alt={text(locale, governanceCourse.coverAlt)} width={1600} height={900} priority />
             </Link>
             <div>
+              <p className="vs-institute-kind">{instituteText(locale, institute.masterclassKind)}</p>
               <h2 id="vs-wl-course-title"><Link href={courseHref}>{text(locale, governanceCourse.title)}</Link></h2>
               <p><span>{text(locale, governanceCourse.durationLabel)}</span> {text(locale, governanceCourse.soon)}</p>
               <p className="vs-wl-offer-price">{text(locale, governanceCourse.price)}</p>
               <Link className="vs-wl-btn is-lime" href={courseHref}>{text(locale, governanceCourse.subscribe)}<ArrowRight size={18} aria-hidden /></Link>
+            </div>
+          </article>
+          <article className="vs-wl-offer vs-wl-fellowship-card">
+            <Link href={fellowshipHref}>
+              <Image src={fellowship.hero} alt={instituteText(locale, fellowship.heroAlt)} width={1280} height={720} />
+            </Link>
+            <div>
+              <p className="vs-institute-kind">{instituteText(locale, institute.fellowshipKind)}</p>
+              <h2><Link href={fellowshipHref}>{instituteText(locale, fellowship.title)}</Link></h2>
+              <p>{instituteText(locale, fellowship.subtitle)}</p>
+              <p>{instituteText(locale, fellowship.status)}</p>
+              <Link className="vs-wl-btn is-lime" href={fellowshipHref}>{instituteText(locale, institute.openProgram)}<ArrowRight size={18} aria-hidden /></Link>
             </div>
           </article>
         </section>
@@ -111,7 +127,7 @@ export function WorkshopPage({locale, slug}: {locale: Locale; slug: string}) {
         <nav className="vs-breadcrumb" aria-label={ar ? 'مسار الصفحة' : 'Breadcrumb'}>
           <Link href={prefix || '/'}>{ar ? 'الرئيسية' : 'Home'}</Link>
           <span>/</span>
-          <Link href={`${prefix}/masterclass`}>{text(locale, workshopSection.title)}</Link>
+          <Link href={`${prefix}${institutePath}`}>{instituteText(locale, institute.title)}</Link>
           <span>/</span>
           <span>{text(locale, kindName)}</span>
         </nav>

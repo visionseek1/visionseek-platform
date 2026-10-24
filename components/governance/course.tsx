@@ -33,7 +33,6 @@ function Subscribe({locale}: {locale: Locale}) {
 }
 
 export function MasterclassPage({locale}: {locale: Locale}) {
-  const masterclass = locale === 'ar' ? 'ماستركلاس' : 'Masterclass';
   const about = t(locale, workshop.blurb).split('\n\n');
   const forWhom = lastSentence(about[about.length - 1]);
   return (
@@ -42,7 +41,7 @@ export function MasterclassPage({locale}: {locale: Locale}) {
         <nav className={styles.crumb} aria-label={locale === 'ar' ? 'مسار الصفحة' : 'Breadcrumb'}>
           <Link href={locale === 'ar' ? '/ar' : '/'}>{t(locale, workshop.home)}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={localePath(locale, '/masterclass')}>{masterclass}</Link>
+          <Link href={localePath(locale, '/institute')}>{locale === 'ar' ? 'معهد VisionSeek' : 'VisionSeek Institute'}</Link>
           <span aria-hidden="true">/</span>
           <span>{t(locale, workshop.title)}</span>
         </nav>

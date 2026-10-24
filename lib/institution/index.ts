@@ -11,9 +11,9 @@ export const entries:Entry[]=[...programEntries,...opportunityEntries,...worksho
 export const sections:Section[]=readContentFile<{sections:Section[]}>('sections.json').sections.map(section=>({...section,links:section.links.filter(link=>!isArchived(link.href)),notice:section.notice&&section.notice.en?section.notice:undefined}));
 export const getSection=(id:string)=>sections.find(s=>s.id===id);
 export const getEntry=(section:string,slug:string)=>entries.find(e=>e.section===section&&e.slug===slug);
-/** Public URL of a section. «workshops» is served as /masterclass; the id stays so content and /admin keep working. */
-export const sectionPath=(id:string)=>id==='workshops'?'/masterclass':`/${id}`;
-const sectionForSegment=(segment:string)=>segment==='masterclass'?'workshops':segment;
+/** Public URL of a section. «workshops» is served as /institute; the id stays so content and /admin keep working. Old /masterclass still maps back. */
+export const sectionPath=(id:string)=>id==='workshops'?'/institute':`/${id}`;
+const sectionForSegment=(segment:string)=>segment==='masterclass'||segment==='institute'?'workshops':segment;
 export const entryPath=(e:Entry)=>`${sectionPath(e.section)}/${e.slug}`;
 export const titleForPath=(path:string,locale:'en'|'ar')=>{
  const [segment,slug]=path.split('/').filter(Boolean);const section=sectionForSegment(segment??'');

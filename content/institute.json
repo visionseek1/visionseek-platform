@@ -1,0 +1,34 @@
+{
+  "title": {
+    "en": "VisionSeek Institute",
+    "ar": "معهد VisionSeek"
+  },
+  "draft": {
+    "en": "DRAFT",
+    "ar": "مسودة"
+  },
+  "kicker": {
+    "en": "VISIONSEEK INSTITUTE",
+    "ar": "معهد VisionSeek"
+  },
+  "intro": {
+    "en": "The home of VisionSeek's learning programs. The AI Governance masterclass is here. So is the VisionSeek Fellowship.",
+    "ar": "بيت برامج التعلّم في VisionSeek. ماستر كلاس «حوكمة الذكاء الاصطناعي» هنا. وزمالة VisionSeek هنا."
+  },
+  "programsLabel": {
+    "en": "Programs",
+    "ar": "البرامج"
+  },
+  "openProgram": {
+    "en": "Open the program",
+    "ar": "افتح البرنامج"
+  },
+  "masterclassKind": {
+    "en": "Masterclass",
+    "ar": "ماستركلاس"
+  },
+  "fellowshipKind": {
+    "en": "Fellowship",
+    "ar": "زمالة"
+  }
+}

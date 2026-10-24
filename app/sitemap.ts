@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
     ...workshops.flatMap(item=>[{path:`/masterclass/${item.slug}`,priority:0.75},{path:`/ar/masterclass/${item.slug}`,priority:0.75}]),
     {path:'/masterclass/single-track-trap',priority:0.75},{path:'/ar/masterclass/single-track-trap',priority:0.75},
+    {path:'/institute/fellowship',priority:0.75},{path:'/ar/institute/fellowship',priority:0.75},
     ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
     { path: "", priority: 1 },
     { path: "/ar", priority: 0.9 },
