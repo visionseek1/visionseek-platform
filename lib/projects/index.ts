@@ -91,13 +91,17 @@ export const trackPath = (track:Track,locale:Locale) => `${sectorPath(track.sect
 export const projectPath = (slug:string,locale:Locale) => {const project=projectBySlug(slug);if(!project)throw new Error(`Unknown project: ${slug}`);return `${sectorPath(project.sector,locale)}/${project.track}/${project.slug}`;};
 export type ProjectInquiryIntent='commission'|'partner';
 export const projectInquiry = (project:Project,locale:Locale,intent:ProjectInquiryIntent='commission') => `${prefix(locale)}/start?${new URLSearchParams({from:'projects',project:project.id,intent,idea:`${project.id} — ${project.title[locale]}`})}`;
+/** Empty sector landings left the public site. Their old URLs redirect to /projects. */
+export const retiredSectors = ['energy','semiconductors','drones-aviation','defense','robotics','health','agriculture','infrastructure'] as const;
+export const isRetiredSector = (slug:string) => (retiredSectors as readonly string[]).includes(slug);
 export const projectRoutes = [
-  ...sectors.map(item=>[item.slug]),
-  ...tracks.map(item=>[item.sector,item.slug]),
+  ...sectors.filter(item=>!isRetiredSector(item.slug)).map(item=>[item.slug]),
+  ...tracks.filter(item=>!isRetiredSector(item.sector)).map(item=>[item.sector,item.slug]),
   ...projects.map(item=>[item.sector,item.track,item.slug]),
 ];
 export type ProjectRoute = {kind:'sector';data:Sector}|{kind:'track';data:Track}|{kind:'project';data:Project};
 export function resolveProjectRoute(parts:string[]):ProjectRoute|undefined {
+  if(parts[0] && isRetiredSector(parts[0])) return undefined;
   if(parts.length===1){const data=sectorBySlug(parts[0]);if(data)return {kind:'sector',data};}
   if(parts.length===2){const data=tracks.find(item=>item.sector===parts[0]&&item.slug===parts[1]);if(data)return {kind:'track',data};}
   if(parts.length===3){const data=projects.find(item=>item.sector===parts[0]&&item.track===parts[1]&&item.slug===parts[2]);if(data)return {kind:'project',data};}

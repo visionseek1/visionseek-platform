@@ -228,6 +228,13 @@ export const paper = {
     text: {ar: 'الامتلاك تسلسل لا صفقة، ومؤسسة الاستيعاب أصله، والتصدير امتحانه. اشترِ لتتعلم، لا لتحتفظ.', en: 'Ownership is a sequence, not a purchase. The absorbing institution is the decisive asset. Export is the exam. Buy to learn, never buy to keep.'},
     strong: {ar: 'ما لم يُتحقق منه لم يحدث.', en: 'Verify, or it didn\'t happen.'},
   },
+  clauseProgram: {
+    href: '/programs/clause',
+    kicker: {ar: 'برنامج مرتبط', en: 'Related program'},
+    title: {ar: 'العقد الذي تُمضيه اليوم يحدد من يملك القدرة غدًا.', en: 'The contract you sign today decides who owns the capability tomorrow.'},
+    body: {ar: 'Clause يراجع مناقصة الذكاء الاصطناعي أو عقده قبل التوقيع، ويكتب بنود ملكية القدرة. مستشارون مستقلون: لا يبيعون منتجًا ولا يرشّحون مورّدًا.', en: 'Clause reviews an AI tender or contract before you sign, and writes the capability-ownership clauses. Independent advisers: they sell no product and recommend no vendor.'},
+    cta: {ar: 'افتح Clause', en: 'Open Clause'},
+  },
   sources: {
     heading: {ar: 'المصادر والمنهجية', en: 'Sources and methodology'},
     intro: {ar: 'فُتحت جميع المصادر وقُرئت في 24 أكتوبر 2026. 31 مصدرًا: 28 أوليًا (حكومة، جهة تنظيمية، شركة أو مؤسسة)، وسجلّان رسميان، ومصدر صحفي واحد. لا يستشهد التقرير إلا بما تقوله كل صفحة فعلًا.', en: 'All sources were opened and read on 24 October 2026. 31 sources: 28 primary (government, regulator, company, or institution), 2 official registries, and 1 press source. The report cites only what each page actually says.'},

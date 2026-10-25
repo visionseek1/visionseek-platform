@@ -200,6 +200,8 @@ test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source te
   assert.match(page, /DoctrineLink/);
   assert.match(doctrine, /methodologyHref: '\/reports\/reports\/methodology'/);
   assert.match(doctrinePage, /paper\.methodologyHref/);
+  assert.match(doctrine, /href: '\/programs\/clause'/);
+  assert.match(doctrinePage, /paper\.clauseProgram/);
   assert.ok(existsSync('scripts/insights/methodology/methodology-v1.0-ar.md'));
   assert.ok(existsSync('scripts/insights/methodology/methodology-v1.0-en.md'));
   assert.match(read('scripts/insights/methodology/methodology-v1.0-ar.md'), /منهجية موحّدة لتقارير VisionSeek الاستراتيجية/);

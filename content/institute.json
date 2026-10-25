@@ -47,6 +47,15 @@
     "en": "Open the workshop",
     "ar": "افتح الورشة"
   },
+  "relatedProgram": {
+    "href": "/programs/clause",
+    "kicker": {"en": "Related program", "ar": "برنامج مرتبط"},
+    "title": {
+      "en": "Clause reviews the AI contract before signature.",
+      "ar": "Clause يراجع عقد الذكاء الاصطناعي قبل التوقيع."
+    },
+    "cta": {"en": "Open Clause", "ar": "افتح Clause"}
+  },
   "fellowshipKind": {
     "en": "Fellowship",
     "ar": "زمالة"

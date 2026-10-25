@@ -196,7 +196,6 @@
   padding: 1.25rem 1.15rem 1.35rem;
   border-inline-start: 8px solid var(--lime);
 }
-.enrollCard .price { color: #f4f4f0; font-size: 1.2rem; }
 .enrollCard .enroll { width: 100%; }
 .block {
   padding: 2rem 0;
@@ -247,9 +246,6 @@
 }
 .block .enrollRow { margin-top: 1.15rem; }
 .enroll { align-self: center; margin-top: 0; }
-.price { font-weight: 650; font-size: 1.05rem; }
-.hero .price { color: #f4f4f0; }
-.block .price { color: var(--ink); }
 .visuallyHidden {
   position: absolute;
   width: 1px;

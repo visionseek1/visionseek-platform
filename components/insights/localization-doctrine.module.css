@@ -217,5 +217,11 @@
 .closing p:last-child { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-size: clamp(21px, 2.6vw, 30px); line-height: 1.85; }
 .en .closing p:last-child { font-family: var(--font-serif), Georgia, serif; line-height: 1.45; }
 .closing b { color: var(--lime); font-weight: 600; }
+.relatedProgram { margin-top: 28px; padding: 22px 24px; background: var(--ink); color: #f0f1ee; display: flex; flex-direction: column; gap: 12px; }
+.relatedProgram h3 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.45; color: #fff; max-width: 28ch; }
+.relatedProgram p { font-size: 16px; line-height: 1.8; color: #d6d9d7; max-width: 52ch; }
+.relatedProgram .kicker { color: var(--lime); }
+.r .relatedProgram .btnLine { align-self: flex-start; border-color: var(--lime); color: var(--lime); }
+
 .cite { display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--rule); padding-top: 22px; font-size: 14px; color: var(--mute); }
 .citeText { font-size: 14px; line-height: 1.7; text-align: left; overflow-wrap: anywhere; }
