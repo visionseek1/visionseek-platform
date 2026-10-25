@@ -4687,7 +4687,7 @@ collections:
 
   - name: indices
     label: "المؤشرات"
-    description: "صفحة /indices وبالعربية /ar/indices. مؤشرات قادمة بلا نتائج. ممنوع درجات أو ترتيب أو أسماء دول أو تاريخ إصدار أو شركاء أو فورم تسجيل. الصورة المفتاحية ١٦:٩ من غير بيانات. الإنجليزي: Ahmed Abdelalim من غير لقب. المنهجية ستُنشر. القائمة مش في الشريط إلا بموافقة د. أحمد."
+    description: "صفحة /indices وبالعربية /ar/indices. ثمانية أقسام من فوق لتحت. ممنوع اسم AI 100 وتاريخ إصدار و«لم يبدأ القياس» وزر افتح لصفحة فاضية. منهجية الأطلس v0.3. الإنجليزي: Ahmed Abdelalim من غير لقب."
     preview_path: "ar/indices"
     editor: {preview: false}
     files:
@@ -4747,8 +4747,8 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}
-              - label: "رابط افتح المؤشر"
-                name: openIndex
+              - label: "رابط عن المنتج"
+                name: aboutProduct
                 widget: object
                 fields:
                   - {label: "English", name: en, widget: string}
@@ -4765,6 +4765,399 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان المبادئ المشتركة"
+                name: principlesTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المبادئ المشتركة"
+                name: principles
+                widget: list
+                summary: "{{fields.title.ar}}"
+                hint: "مرة واحدة في الصفحة الأم. بلا شركاء وبلا مكان إعلان."
+                fields:
+                  - {label: "المعرّف", name: id, widget: string}
+                  - label: "العنوان"
+                    name: title
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "النص"
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان الرسم"
+                name: diagramTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر الرسم"
+                name: diagramIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "اسم الأطلس في الرسم"
+                name: diagramSourceName
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "دور الأطلس في الرسم"
+                name: diagramSourceRole
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر يغذّي"
+                name: diagramFeeds
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "اسم المؤشر في الرسم"
+                name: diagramIndexName
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "دور المؤشر في الرسم"
+                name: diagramIndexRole
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "دور قائمة الشركات في الرسم من غير اسم منتج"
+                name: diagramListRole
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان التقنيات السبع"
+                name: technologiesTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية السؤال"
+                name: questionLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية الوحدة"
+                name: unitLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية المخرج"
+                name: outputLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية الدورية"
+                name: cadenceLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية الحالة"
+                name: statusFieldLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تسمية المنهجية"
+                name: methodologyLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "اسم المنهجية المنشورة"
+                name: methodologyName
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "رابط المنهجية", name: methodologyHref, widget: string, hint: "مسار الموقع، مثل /reports/reports/methodology"}
+              - label: "جملة الافتتاح"
+                name: thesis
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "اقرأ المنهجية"
+                name: readMethodology
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تابع الإصدار الأول"
+                name: followEdition
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الخريطة"
+                name: mapTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر الخريطة"
+                name: mapIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "وسم التجربة الأولى"
+                name: mapPilotLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "وسم التوسع اللاحق"
+                name: mapLaterLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زر المنهجية على الكارت"
+                name: ctaMethod
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زر المبادئ على الكارت"
+                name: ctaPrinciples
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زر تابع على الكارت"
+                name: ctaFollow
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان كيف نقيس"
+                name: measureTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "مقدمة كيف نقيس"
+                name: measureIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "ملاحظة الأطلس"
+                name: measureAtlasNote
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان سلّم الامتلاك"
+                name: ladderTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سلّم الامتلاك"
+                name: ladder
+                widget: list
+                summary: "{{fields.name.ar}}"
+                fields:
+                  - {label: "المعرّف", name: id, widget: string}
+                  - label: "الاسم"
+                    name: name
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "التعريف"
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان مقياس الأطلس"
+                name: atlasScaleTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "مقياس الأطلس R0–R4"
+                name: atlasScale
+                widget: list
+                summary: "{{fields.code}} — {{fields.name.ar}}"
+                fields:
+                  - {label: "المعرّف", name: id, widget: string}
+                  - {label: "الرمز", name: code, widget: string}
+                  - label: "الاسم"
+                    name: name
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "التعريف"
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان سلّم الدليل"
+                name: evidenceScaleTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سلّم الدليل E0–E4"
+                name: evidenceScale
+                widget: list
+                summary: "{{fields.code}} — {{fields.name.ar}}"
+                fields:
+                  - {label: "المعرّف", name: id, widget: string}
+                  - {label: "الرمز", name: code, widget: string}
+                  - label: "الاسم"
+                    name: name
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: string}
+                      - {label: "العربية", name: ar, widget: string}
+                  - label: "التعريف"
+                    name: text
+                    widget: object
+                    fields:
+                      - {label: "English", name: en, widget: text}
+                      - {label: "العربية", name: ar, widget: text}
+              - label: "عنوان وحدة القياس"
+                name: unitTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص وحدة القياس"
+                name: unitText
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان صلاحية الدليل"
+                name: validityTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "نص صلاحية الدليل"
+                name: validityText
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "تحميل المنهجية"
+                name: downloadLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الاستشهاد"
+                name: citeTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "صيغة الاستشهاد"
+                name: citeHow
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "شريط المنهجية"
+                name: releaseMethodology
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "شريط الإصدار"
+                name: releaseEdition
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الإصدارات السابقة"
+                name: previousEditionsTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "إظهار الإصدارات السابقة", name: showPreviousEditions, widget: boolean}
+              - label: "عنوان الباحثين والصحافة"
+                name: pressTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "مقدمة الباحثين والصحافة"
+                name: pressIntro
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "تحميل العربية"
+                name: downloadArLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تحميل الإنجليزية"
+                name: downloadEnLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "رابط المنهجية العربية", name: downloadArHref, widget: string}
+              - {label: "رابط المنهجية الإنجليزية", name: downloadEnHref, widget: string}
+              - label: "تسمية بريد الفريق"
+                name: teamEmailLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "عنوان الربط"
+                name: relatedTitle
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر الربط"
+                name: relatedLine
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "تسمية التقارير"
+                name: reportsLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "رابط التقارير", name: reportsHref, widget: string}
+              - label: "تسمية البرامج"
+                name: programsLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "رابط البرامج", name: programsHref, widget: string}
           - label: "أبلغني"
             name: notify
             widget: object
@@ -4789,11 +5182,64 @@ collections:
                 fields:
                   - {label: "English", name: en, widget: string}
                   - {label: "العربية", name: ar, widget: string}
-          - label: "المؤشرات"
+          - label: "بطاقات الصفحة الأم"
+            name: products
+            widget: list
+            summary: "{{fields.id}} — {{fields.title.ar}}"
+            hint: "ثلاث بطاقات. قائمة الشركات عنوان وصفي فقط. ممنوع AI 100. cta: method أو principles أو follow."
+            fields:
+              - {label: "المعرّف", name: id, widget: string}
+              - {label: "المسار (slug)", name: slug, widget: string, required: false, hint: "فارغ لو مفيش صفحة منتج."}
+              - {label: "له اسم منشور", name: named, widget: boolean}
+              - {label: "نوع الزر", name: cta, widget: string, hint: "method أو principles أو follow أو about"}
+              - label: "الاسم"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string, required: false}
+                  - {label: "العربية", name: ar, widget: string, required: false}
+              - label: "التعريف في سطر"
+                name: definition
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "السؤال"
+                name: question
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "وحدة التحليل"
+                name: unit
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "المخرج"
+                name: output
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "الدورية"
+                name: cadence
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الحالة"
+                name: status
+                widget: object
+                hint: "صياغة واثقة. ممنوع لم يبدأ القياس، وممنوع تاريخ إصدار للمؤشر."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+          - label: "صفحات المنتجات"
             name: indices
             widget: list
             summary: "{{fields.title.ar}} — {{fields.slug}}"
-            hint: "مؤشر جديد = عنصر جديد. بلا درجات ولا ترتيب ولا قيم دول."
+            hint: "صفحة المنتج. بلا درجات ولا ترتيب ولا قيم دول ولا تاريخ إصدار للمؤشر."
             fields:
               - {label: "المسار (slug)", name: slug, widget: string, hint: "حروف إنجليزية صغيرة وشرطات."}
               - label: "الحالة"
@@ -4945,7 +5391,7 @@ collections:
               - label: "نص النتائج"
                 name: results
                 widget: object
-                hint: "مافيش نتائج بعد. اكتب كده صراحة."
+                hint: "من غير أرقام مخترعة. الأطلس يسجّل كيانات بلا درجات. المؤشر ينشر النتائج مع الإصدار الأول، من غير تاريخ."
                 fields:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}

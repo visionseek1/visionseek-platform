@@ -3,7 +3,7 @@ import {IndicesHub} from '@/components/indices/pages';
 import {indicesContent, liveIndices} from '@/lib/indices';
 
 const title = `${indicesContent.hub.title.en} | VisionSeek`;
-const description = indicesContent.hub.intro.en;
+const description = indicesContent.hub.thesis.en;
 const first = liveIndices()[0];
 
 export const metadata: Metadata = {
