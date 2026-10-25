@@ -79,19 +79,19 @@
 
 .heroGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.85fr);
+  grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 0.75fr);
   gap: 2.4rem 3.2rem;
   align-items: end;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 5.6vw, 4.8rem);
-  max-width: 16ch;
+  font-size: clamp(2.4rem, 4.8vw, 4.35rem);
+  max-width: 13ch;
   margin: 0 !important;
   text-wrap: balance;
 }
 
-.page.en .hero h1 { max-width: 14ch; }
+.page.en .hero h1 { max-width: 22ch; }
 
 .heroAside {
   display: flex;
