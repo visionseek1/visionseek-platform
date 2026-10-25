@@ -32,14 +32,32 @@ export type ForumAwards = {
   categories: ForumPrinciple[];
   process: Bi[];
   who: Bi;
-  honesty?: Bi;
+  ownership: Bi;
+  nomination: Bi;
+  exclusion: Bi;
+  honesty: Bi;
   labels: {
     soon?: Bi;
     mandate: Bi;
     principles: Bi;
     categories: Bi;
+    ownership: Bi;
+    nomination: Bi;
+    exclusion: Bi;
     process: Bi;
     who: Bi;
+  };
+};
+
+export type ForumCouncil = {
+  title: Bi;
+  kicker: Bi;
+  status: Bi;
+  role: Bi;
+  independence: ForumPrinciple[];
+  labels: {
+    role: Bi;
+    independence: Bi;
   };
 };
 
@@ -58,6 +76,7 @@ export type Forum = {
   themes: Bi[];
   who: Bi;
   outcome: Bi;
+  council?: ForumCouncil;
   awards?: ForumAwards;
   invite?: ForumInvite;
 };

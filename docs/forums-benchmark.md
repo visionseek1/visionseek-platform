@@ -101,9 +101,9 @@ Photographs of rooms and people, or a film. Logos stay logos. A sharp mark is ac
 4. Real section titles (About / Why / Themes / Format), sized like MSC/WEF H2s, not lime micro-labels.
 5. Measure locked at ~68ch; short paragraphs; 8px spacing grid.
 6. Themes as a named list of the seven technologies — no cards.
-7. Awards sit **inside** the Incheon Dialogue block as “Coming soon” / «قريبًا». Not a second hero.
+7. The Incheon Advisory Council and the Localization Awards sit **inside** the Incheon Dialogue sequence, as wide bands (not the 68ch editorial column). Each has an eyebrow, a large title, and a short lead. Council independence is a numbered card grid. Awards open on a hero band with the ownership line as a pull quote; categories are cards; ownership / nomination / exclusion are a three-step row. Status stays a fact in type. No member names or photos.
 8. Register-interest close is a lime button that opens mail. No form, no invented speakers, partners, numbers, or venue beyond Incheon.
 
 ## What VisionSeek will not copy
 
-No invented speakers, partners, sponsors, halls, or day-of-month. No blog/news card dump. No MSC/WEF photography we do not have. The page uses approved wording and the existing vector marks (Korea–Arabia arc; awards symbol). Anything not yet set is marked coming soon.
+No invented speakers, partners, sponsors, halls, or day-of-month. No blog/news card dump. No MSC/WEF photography we do not have. The page uses approved wording and the existing vector marks (Korea–Arabia arc; awards symbol). The Council names no members. The awards name no judges, no prize money, and no day.

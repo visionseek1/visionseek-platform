@@ -5,11 +5,11 @@
   --forum-ink: #d4d7d2;
   --forum-lead: #e8eae6;
 }
-.root :is(h1, h2, h3) {
+.root :is(h1, h2, h3, h4) {
   font-family: var(--font-display), sans-serif;
 }
-:global(.vs-site.locale-ar).root :is(h1, h2, h3),
-.root[lang='ar'] :is(h1, h2, h3) {
+:global(.vs-site.locale-ar).root :is(h1, h2, h3, h4),
+.root[lang='ar'] :is(h1, h2, h3, h4) {
   font-family: var(--font-arabic-display), var(--font-arabic), sans-serif !important;
   letter-spacing: 0 !important;
 }
@@ -19,7 +19,7 @@
   background: #070809;
   color: var(--white);
 }
-.page :is(h1, h2, h3, p, ol, ul, li, dl, dt, dd, figure) { margin: 0; }
+.page :is(h1, h2, h3, h4, p, ol, ul, li, dl, dt, dd, figure, blockquote) { margin: 0; }
 .page a { color: inherit; }
 
 .article { display: block; }
@@ -148,7 +148,7 @@
 }
 
 .body {
-  max-width: calc(var(--forum-measure) + 12rem);
+  max-width: 1680px;
   margin-inline: auto;
   padding: calc(var(--forum-space) * 2) clamp(1.25rem, 5vw, 6.5rem) calc(var(--forum-space) * 12);
 }
@@ -191,14 +191,16 @@
 }
 
 .block > p,
-.awards > p {
+.role > p,
+.awardsOpening > p {
   font-size: 1.0625rem;
   line-height: 1.75;
   color: var(--forum-ink);
   max-width: var(--forum-measure);
 }
 .block > p + p,
-.awards > p + p {
+.role > p + p,
+.awardsOpening > p + p {
   margin-top: calc(var(--forum-space) * 2.5) !important;
 }
 
@@ -250,12 +252,181 @@
 }
 .root[lang='ar'] .themes span { letter-spacing: 0; }
 
-.awards {
-  margin-top: calc(var(--forum-space) * 4);
-  padding: calc(var(--forum-space) * 4);
+.dialogue {
+  margin-top: calc(var(--forum-space) * 8);
+  padding-top: calc(var(--forum-space) * 8);
+  border-top: 1px solid var(--vs-line);
+}
+.dialogueIntro {
+  max-width: var(--forum-measure);
+  margin-bottom: calc(var(--forum-space) * 6);
+}
+
+.stage {
+  padding: calc(var(--forum-space) * 7) 0;
+}
+.stage + .stage {
+  border-top: 1px solid var(--vs-line);
+}
+.stageHead {
+  max-width: 56rem;
+  margin-bottom: calc(var(--forum-space) * 5);
+}
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  color: var(--lime);
+  margin-bottom: calc(var(--forum-space) * 2) !important;
+}
+.root[lang='ar'] .eyebrow { letter-spacing: 0; }
+
+.stage h3 {
+  font-size: clamp(2rem, 3.6vw, 3.15rem);
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  line-height: 1.12;
+  max-width: 18ch;
+  margin-bottom: calc(var(--forum-space) * 2.5) !important;
+  text-wrap: balance;
+}
+.root[lang='ar'] .stage h3 {
+  letter-spacing: 0;
+  line-height: 1.3;
+  max-width: 14ch;
+}
+.stageLead {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.55;
+  color: var(--forum-lead);
+  max-width: 42rem;
+}
+
+.stageLabel {
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+  margin-bottom: calc(var(--forum-space) * 2.5) !important;
+}
+.root[lang='ar'] .stageLabel { letter-spacing: 0; }
+
+.role {
+  margin-bottom: calc(var(--forum-space) * 6);
+}
+
+.cardGrid,
+.categoryGrid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(var(--forum-space) * 2);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--forum-space) * 2);
+  min-height: 100%;
+  padding: calc(var(--forum-space) * 3);
   border: 1px solid var(--vs-line);
+  border-block-start: 2px solid var(--lime);
   background: #0b0c0d;
 }
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--lime);
+}
+.cardNum {
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: var(--lime);
+}
+.root[lang='ar'] .cardNum { letter-spacing: 0; }
+.card h4,
+.criteria h4 {
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.35;
+  color: var(--white);
+  text-wrap: balance;
+}
+.root[lang='ar'] .card h4,
+.root[lang='ar'] .criteria h4 { line-height: 1.45; }
+.card p,
+.criteria p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--forum-ink);
+}
+
+.awardsStage { padding-top: calc(var(--forum-space) * 8); }
+.awardsHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(14rem, 0.7fr);
+  gap: calc(var(--forum-space) * 5);
+  align-items: end;
+  margin-bottom: calc(var(--forum-space) * 6);
+  padding: calc(var(--forum-space) * 6) calc(var(--forum-space) * 5);
+  border: 1px solid var(--vs-line);
+  background:
+    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--lime) 10%, transparent), transparent 42%),
+    #090a0b;
+}
+.awardsHero .stageHead { margin-bottom: 0; max-width: none; }
+.awardsHero .visualCompact {
+  margin: 0;
+  width: min(100%, 22rem);
+  justify-self: end;
+  border: 0;
+  background: transparent;
+}
+.pull {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white);
+  max-width: 22ch;
+  padding-inline-start: calc(var(--forum-space) * 3);
+  border-inline-start: 3px solid var(--lime);
+  text-wrap: balance;
+}
+.root[lang='ar'] .pull {
+  font-family: var(--font-arabic-display), var(--font-arabic), sans-serif;
+  letter-spacing: 0;
+  line-height: 1.5;
+  max-width: 16ch;
+}
+
+.awardsOpening {
+  margin-bottom: calc(var(--forum-space) * 6);
+}
+
+.criteria {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: calc(var(--forum-space) * 7);
+  border-block: 1px solid var(--vs-line);
+}
+.criteria > li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: calc(var(--forum-space) * 2);
+  padding-block: calc(var(--forum-space) * 3);
+  padding-inline: 0 calc(var(--forum-space) * 3);
+  border-inline-end: 1px solid var(--vs-line);
+}
+.criteria > li:last-child { border-inline-end: 0; }
+
 .soon {
   color: var(--lime);
   font-size: 0.75rem;
@@ -264,13 +435,6 @@
   margin-bottom: calc(var(--forum-space) * 2) !important;
 }
 .root[lang='ar'] .soon { letter-spacing: 0; }
-.awardsKicker {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: var(--forum-lead);
-}
-.awards .edition { color: var(--lime); font-size: 1.05rem; }
-.awards .honesty { margin-top: calc(var(--forum-space) * 3) !important; }
 
 .invite {
   display: inline-flex;
@@ -305,8 +469,8 @@
   color: var(--forum-lead);
 }
 .honesty {
-  margin-top: calc(var(--forum-space) * 1.5) !important;
-  font-size: 0.9rem;
+  margin-top: calc(var(--forum-space) * 4) !important;
+  font-size: 0.95rem;
   line-height: 1.7;
   color: var(--grey);
   max-width: var(--forum-measure);
@@ -316,6 +480,18 @@
 .page :is(h1, h2, h3, p):focus-visible {
   outline: 3px solid var(--lime);
   outline-offset: 5px;
+}
+
+@media (max-width: 1100px) {
+  .cardGrid,
+  .categoryGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .criteria { grid-template-columns: 1fr; }
+  .criteria > li {
+    border-inline-end: 0;
+    border-bottom: 1px solid var(--vs-line);
+    padding-inline: 0;
+  }
+  .criteria > li:last-child { border-bottom: 0; }
 }
 
 @media (max-width: 900px) {
@@ -334,7 +510,27 @@
   .page h2 { font-size: 1.7rem; }
   .themes { grid-template-columns: 1fr; }
   .themes li:nth-child(2) { border-top: 1px solid var(--vs-line); }
-  .awards { padding: calc(var(--forum-space) * 3); }
+  .dialogue { margin-top: calc(var(--forum-space) * 5); padding-top: calc(var(--forum-space) * 5); }
+  .dialogueIntro { margin-bottom: calc(var(--forum-space) * 4); }
+  .stage { padding: calc(var(--forum-space) * 5) 0; }
+  .stage h3 { font-size: 1.85rem; max-width: none; }
+  .stageLead { font-size: 1.125rem; }
+  .cardGrid,
+  .categoryGrid,
+  .criteria { grid-template-columns: 1fr; }
+  .awardsHero {
+    grid-template-columns: 1fr;
+    gap: calc(var(--forum-space) * 3);
+    padding: calc(var(--forum-space) * 4) calc(var(--forum-space) * 3);
+    margin-bottom: calc(var(--forum-space) * 5);
+  }
+  .pull { font-size: 1.35rem; max-width: none; }
+  .criteria > li {
+    padding: calc(var(--forum-space) * 3) 0;
+    border-inline-end: 0;
+    border-bottom: 1px solid var(--vs-line);
+  }
+  .criteria > li:last-child { border-bottom: 0; }
   .close { margin-top: calc(var(--forum-space) * 5); padding-top: calc(var(--forum-space) * 5); }
 }
 
