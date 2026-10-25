@@ -28,7 +28,7 @@ export function CoverageMap({locale}: {locale: Locale}) {
     : 'Coverage map of the first-edition pilot: Egypt and the six Gulf states. No values and no ranking.';
   return (
     <figure className={styles.map} aria-labelledby="indices-coverage">
-      <figcaption>
+      <figcaption className={styles.sectionHead}>
         <h2 id="indices-coverage">{hub.mapTitle[locale]}</h2>
         <p>{hub.mapIntro[locale]}</p>
       </figcaption>

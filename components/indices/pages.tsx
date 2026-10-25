@@ -168,6 +168,15 @@ function Field({label, children}: {label: string; children: ReactNode}) {
   );
 }
 
+function SectionHead({id, title, intro}: {id?: string; title: string; intro?: string}) {
+  return (
+    <div className={styles.sectionHead}>
+      <h2 id={id}>{title}</h2>
+      {intro ? <p>{intro}</p> : null}
+    </div>
+  );
+}
+
 function ProductAction({locale, item}: {locale: Locale; item: HubProduct}) {
   const {hub} = indicesContent;
   if (item.cta === 'method') {
@@ -286,54 +295,64 @@ export function IndicesHub({locale}: {locale: Locale}) {
             <span>{hub.eyebrow[locale]}</span>
             <span>VISIONSEEK</span>
           </div>
-          <h1>{hub.thesis[locale]}</h1>
-          <p className={styles.lede}>{hub.intro[locale]}</p>
-          <div className={styles.heroActions}>
-            <Link className={styles.button} href={`${prefix}${hub.methodologyHref}`}>
-              {hub.readMethodology[locale]}
-            </Link>
-            <a className={styles.buttonGhost} href={notifyMailto(locale)}>
-              {hub.followEdition[locale]}
-            </a>
+          <div className={styles.heroGrid}>
+            <h1>{hub.thesis[locale]}</h1>
+            <div className={styles.heroAside}>
+              <p className={styles.lede}>{hub.intro[locale]}</p>
+              <div className={styles.heroActions}>
+                <Link className={styles.button} href={`${prefix}${hub.methodologyHref}`}>
+                  {hub.readMethodology[locale]}
+                </Link>
+                <a className={styles.buttonGhost} href={notifyMailto(locale)}>
+                  {hub.followEdition[locale]}
+                </a>
+              </div>
+              <p className={styles.hint}>{notify.hint[locale]}</p>
+            </div>
           </div>
-          <p className={styles.hint}>{notify.hint[locale]}</p>
         </header>
 
         <CoverageMap locale={locale}/>
+
+        <aside className={styles.release} aria-label={hub.releaseEdition[locale]}>
+          <p>{hub.releaseMethodology[locale]}</p>
+          <p>{hub.releaseEdition[locale]}</p>
+        </aside>
 
         {products.length === 0 && <p className={styles.empty}>{hub.empty[locale]}</p>}
 
         {products.length > 0 && (
           <section className={styles.catalog} aria-labelledby="indices-catalog">
-            <div className={styles.catalogHead}>
-              <h2 id="indices-catalog">{hub.catalogTitle[locale]}</h2>
-              <p>{hub.catalogIntro[locale]}</p>
-            </div>
+            <SectionHead id="indices-catalog" title={hub.catalogTitle[locale]} intro={hub.catalogIntro[locale]}/>
             <div className={styles.products}>
               {products.map(item => <HubProductCard key={item.id} locale={locale} item={item}/>)}
             </div>
-            <RelationshipDiagram locale={locale}/>
-            {techs.length > 0 && (
-              <div className={styles.techs}>
-                <h3>{hub.technologiesTitle[locale]}</h3>
-                <ul className={styles.pillars}>
-                  {techs.map(tech => (
-                    <li key={tech.id} className={styles.pillar}>
-                      <p className={styles.pillarName}>{tech.name[locale]}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <div className={styles.connect}>
+              <RelationshipDiagram locale={locale}/>
+              {techs.length > 0 && (
+                <div className={styles.techs}>
+                  <h3>{hub.technologiesTitle[locale]}</h3>
+                  <ul className={styles.pillars}>
+                    {techs.map(tech => (
+                      <li key={tech.id} className={styles.pillar}>
+                        <p className={styles.pillarName}>{tech.name[locale]}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </section>
         )}
 
         <section id="measure" className={styles.measure} aria-labelledby="indices-measure">
-          <h2 id="indices-measure">{hub.measureTitle[locale]}</h2>
-          <p className={styles.measureIntro}>{hub.measureIntro[locale]}</p>
+          <SectionHead id="indices-measure" title={hub.measureTitle[locale]} intro={hub.measureIntro[locale]}/>
           <ScaleRow locale={locale} title={hub.ladderTitle[locale]} items={hub.ladder}/>
-          <ScaleRow locale={locale} title={hub.atlasScaleTitle[locale]} items={hub.atlasScale} coded/>
-          <ScaleRow locale={locale} title={hub.evidenceScaleTitle[locale]} items={hub.evidenceScale} coded/>
+          <div className={styles.scalePair}>
+            <ScaleRow locale={locale} title={hub.atlasScaleTitle[locale]} items={hub.atlasScale} coded/>
+            <ScaleRow locale={locale} title={hub.evidenceScaleTitle[locale]} items={hub.evidenceScale} coded/>
+          </div>
+          <p className={styles.measureNote}>{hub.measureAtlasNote[locale]}</p>
           <div className={styles.measureFacts}>
             <div>
               <h3>{hub.unitTitle[locale]}</h3>
@@ -343,10 +362,10 @@ export function IndicesHub({locale}: {locale: Locale}) {
               <h3>{hub.validityTitle[locale]}</h3>
               <p>{hub.validityText[locale]}</p>
             </div>
-          </div>
-          <p className={styles.measureNote}>{hub.measureAtlasNote[locale]}</p>
-          <div className={styles.measureActions}>
-            <MethodLink locale={locale}>{hub.downloadLabel[locale]}</MethodLink>
+            <div>
+              <h3>{hub.downloadLabel[locale]}</h3>
+              <p><MethodLink locale={locale}>{hub.downloadLabel[locale]}</MethodLink></p>
+            </div>
             <div>
               <h3>{hub.citeTitle[locale]}</h3>
               <p className={styles.cite}>{hub.citeHow[locale]}</p>
@@ -354,13 +373,8 @@ export function IndicesHub({locale}: {locale: Locale}) {
           </div>
         </section>
 
-        <aside className={styles.release} aria-label={hub.releaseEdition[locale]}>
-          <p>{hub.releaseMethodology[locale]}</p>
-          <p>{hub.releaseEdition[locale]}</p>
-        </aside>
-
-        <section id="principles" className={styles.block} aria-labelledby="indices-principles">
-          <h2 id="indices-principles">{hub.principlesTitle[locale]}</h2>
+        <section id="principles" className={styles.principlesBlock} aria-labelledby="indices-principles">
+          <SectionHead id="indices-principles" title={hub.principlesTitle[locale]}/>
           <ul className={styles.principles}>
             {hub.principles.map(principle => (
               <li key={principle.id} className={styles.principle}>
@@ -372,8 +386,7 @@ export function IndicesHub({locale}: {locale: Locale}) {
         </section>
 
         <section className={styles.press} aria-labelledby="indices-press">
-          <h2 id="indices-press">{hub.pressTitle[locale]}</h2>
-          <p>{hub.pressIntro[locale]}</p>
+          <SectionHead id="indices-press" title={hub.pressTitle[locale]} intro={hub.pressIntro[locale]}/>
           <div className={styles.pressGrid}>
             <div>
               <h3>{hub.downloadLabel[locale]}</h3>
@@ -395,9 +408,8 @@ export function IndicesHub({locale}: {locale: Locale}) {
         </section>
 
         <nav className={styles.related} aria-labelledby="indices-related">
-          <h2 id="indices-related">{hub.relatedTitle[locale]}</h2>
-          <p>{hub.relatedLine[locale]}</p>
-          <ul>
+          <SectionHead id="indices-related" title={hub.relatedTitle[locale]} intro={hub.relatedLine[locale]}/>
+          <ul className={styles.relatedGrid}>
             <li><Link href={`${prefix}${hub.reportsHref}`}>{hub.reportsLabel[locale]}</Link></li>
             <li><Link href={`${prefix}${hub.programsHref}`}>{hub.programsLabel[locale]}</Link></li>
             {products.map(item => (

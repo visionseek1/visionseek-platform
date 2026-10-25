@@ -42,9 +42,9 @@
 }
 
 .wrap {
-  max-width: 1220px;
+  max-width: 1520px;
   margin: 0 auto;
-  padding: 2rem clamp(1.5rem, 5vw, 4.5rem) 5.5rem;
+  padding: 2rem clamp(1.25rem, 4vw, 4rem) 5.5rem;
 }
 
 .crumb {
@@ -73,20 +73,62 @@
 .page.en .masthead { font-family: var(--font-display), sans-serif; }
 .page.ar .masthead { letter-spacing: 0; }
 
-.hero h1 {
-  font-size: clamp(2.35rem, 5.4vw, 4.4rem);
-  max-width: 22ch;
-  margin: 0 0 1.4rem !important;
+.hero {
+  padding-bottom: 0.4rem;
 }
 
-.page.en .hero h1 { max-width: 18ch; }
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.85fr);
+  gap: 2.4rem 3.2rem;
+  align-items: end;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5.6vw, 4.8rem);
+  max-width: 16ch;
+  margin: 0 !important;
+  text-wrap: balance;
+}
+
+.page.en .hero h1 { max-width: 14ch; }
+
+.heroAside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding-bottom: 0.2rem;
+}
 
 .heroActions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin: 1.8rem 0 0.85rem;
+  margin: 0;
 }
+
+.sectionHead {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.9fr) minmax(16rem, 1.1fr);
+  gap: 1rem 2.4rem;
+  align-items: end;
+  margin-bottom: 1.6rem;
+}
+
+.sectionHead h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+  margin: 0 !important;
+  max-width: 18ch;
+}
+
+.sectionHead p {
+  color: var(--mute);
+  line-height: 1.75;
+  max-width: 42rem;
+  margin: 0;
+}
+
+.sectionHead:not(:has(p)) { grid-template-columns: 1fr; }
 
 .buttonGhost {
   display: inline-flex;
@@ -103,8 +145,8 @@
 
 .cardQuestion {
   color: var(--ink);
-  font-size: 1.12rem;
-  line-height: 1.55;
+  font-size: 1.28rem;
+  line-height: 1.45;
   font-weight: 650;
 }
 
@@ -197,9 +239,7 @@
 }
 
 .catalog {
-  margin-top: 3.8rem;
-  padding-top: 2.2rem;
-  border-top: 1px solid var(--line);
+  margin-top: 3.6rem;
 }
 
 .catalogHead {
@@ -210,35 +250,48 @@
   max-width: 40rem;
 }
 
-.catalog h2 { font-size: 1.6rem; }
+.catalog h2 { font-size: clamp(1.7rem, 2.6vw, 2.35rem); }
 .catalogHead p { color: var(--mute); line-height: 1.75; }
 
 .products {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.1rem;
   align-items: stretch;
+  counter-reset: product;
 }
 
 .product {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
-  padding: 1.4rem 1.35rem 1.5rem;
+  gap: 0.9rem;
+  padding: 1.55rem 1.45rem 1.6rem;
   background: var(--panel);
   border: 1px solid var(--line);
-  min-height: 11rem;
+  border-top: 3px solid var(--lime);
+  min-height: 22rem;
 }
 
-.product h3 { font-size: 1.28rem; max-width: none; }
+.product::before {
+  counter-increment: product;
+  content: counter(product, decimal-leading-zero);
+  color: var(--lime);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.page.ar .product::before { letter-spacing: 0; }
+
+.product h3 { font-size: 1.35rem; max-width: none; }
 .cardDef, .cardLead { color: var(--body); font-size: 0.98rem; line-height: 1.7; }
 .productUnnamed .cardLead { font-size: 1.18rem; }
 
 .fields {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin: 0.2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem 0.85rem;
+  margin: 0.4rem 0 0;
 }
 
 .field dt {
@@ -272,8 +325,16 @@
 .methodLink { color: var(--lime); font-weight: 650; }
 .methodLink:hover { color: var(--mint); }
 
+.connect {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.9fr);
+  gap: 1.1rem;
+  margin-top: 1.4rem;
+  align-items: stretch;
+}
+
 .diagram {
-  margin: 3.4rem 0 0;
+  margin: 0;
   padding: 1.8rem 1.6rem;
   background: var(--panel);
   border: 1px solid var(--line);
@@ -292,14 +353,14 @@
 }
 
 .diagramFlow {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) auto minmax(0, 1.35fr);
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.9rem 1rem;
 }
 
 .diagramNode {
-  width: min(100%, 28rem);
+  width: 100%;
   background: #101313;
   border-top: 2px solid var(--lime);
   padding: 1.1rem 1.15rem;
@@ -311,7 +372,7 @@
 .diagramNode strong { font-size: 1.05rem; }
 .diagramNode span { color: var(--mute); font-size: 0.92rem; line-height: 1.6; }
 
-.diagramSource { width: min(100%, 36rem); }
+.diagramSource { width: 100%; }
 
 .diagramFeeds {
   display: flex;
@@ -324,15 +385,17 @@
 }
 
 .diagramArrow {
-  width: 2px;
-  height: 1.6rem;
+  width: 2.2rem;
+  height: 2px;
   background: var(--lime);
 }
+
+.page[dir=rtl] .diagramArrow { transform: scaleX(-1); }
 
 .diagramTargets {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.85rem;
   width: 100%;
 }
 
@@ -340,7 +403,10 @@
 .diagramUnnamed { justify-content: center; }
 
 .techs {
-  margin-top: 3.4rem;
+  margin: 0;
+  padding: 1.8rem 1.6rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
 }
 
 .techs h2, .techs h3 {
@@ -509,20 +575,10 @@
 .page[dir=rtl] .back svg { transform: rotate(180deg); }
 
 .map {
-  margin: 3.6rem 0 0;
+  margin: 3.2rem 0 0;
 }
 
-.map figcaption h2 {
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  margin: 0 0 0.7rem !important;
-}
-
-.map figcaption p {
-  max-width: 44rem;
-  color: var(--body);
-  line-height: 1.8;
-  margin-bottom: 1.3rem;
-}
+.map .sectionHead { margin-bottom: 1.2rem; }
 
 .mapFrame {
   background: #07080a;
@@ -565,7 +621,7 @@
 .mapSwatchLater { background: #2a2e33; border: 1px solid var(--line); }
 
 .measure {
-  margin-top: 4rem;
+  margin-top: 3.8rem;
   padding-top: 2.4rem;
   border-top: 1px solid var(--line);
 }
@@ -573,8 +629,14 @@
 .measure h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 0 0 0.9rem !important; }
 .measureIntro { max-width: 44rem; color: var(--body); line-height: 1.8; margin-bottom: 1.8rem; }
 
-.scale { margin-top: 2rem; }
-.scale h3 { font-size: 1.2rem; margin: 0 0 0.9rem !important; }
+.scale { margin-top: 1.5rem; }
+.scale h3 { font-size: 1.15rem; margin: 0 0 0.75rem !important; }
+
+.scalePair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+}
 
 .ladder, .scaleCodes {
   display: grid;
@@ -607,9 +669,9 @@
 
 .measureFacts {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
 }
 
 .measureFacts div, .measureActions div {
@@ -625,10 +687,10 @@
 .measureFacts p, .pressGrid p { color: var(--body); line-height: 1.75; }
 
 .measureNote {
-  margin: 1.4rem 0 0;
+  margin: 1.6rem 0 0;
   color: var(--lime);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 .measureActions {
@@ -642,18 +704,23 @@
 .cite { color: var(--body); line-height: 1.75; font-size: 0.95rem; }
 
 .release {
-  margin-top: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.8rem 1.5rem;
-  padding: 1.1rem 1.3rem;
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem 2rem;
+  padding: 1.25rem 1.5rem;
   background: var(--lime);
   color: var(--black);
   font-weight: 800;
 }
 
-.release p { color: var(--black); font-size: 0.98rem; }
+.release p { color: var(--black); font-size: 1.05rem; }
+
+.principlesBlock {
+  margin-top: 3.6rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--line);
+}
 
 .press {
   margin-top: 3.4rem;
@@ -678,41 +745,70 @@
 
 .related {
   margin-top: 3.4rem;
-  padding: 1.8rem 1.6rem;
-  background: var(--panel);
-  border-inline-start: 3px solid var(--lime);
+  padding: 2rem 0 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
 }
 
 .related h2 { font-size: 1.4rem; margin: 0 0 0.6rem !important; }
 .related p { color: var(--body); line-height: 1.75; }
-.related ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem 1.3rem;
+.related ul,
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.85rem;
   list-style: none;
-  padding: 1rem 0 0;
+  padding: 0.2rem 0 0;
   margin: 0;
 }
 
-.related a { color: var(--lime); font-weight: 650; }
-.related a:hover { color: var(--mint); }
-
-@media (max-width: 1100px) {
-  .products { grid-template-columns: 1fr; }
+.relatedGrid a,
+.related a {
+  display: flex;
+  align-items: flex-end;
+  min-height: 7.2rem;
+  padding: 1.15rem 1.1rem;
+  background: var(--panel);
+  border-top: 2px solid var(--lime);
+  color: var(--ink);
+  font-weight: 650;
+  font-size: 1.05rem;
+  line-height: 1.35;
 }
 
-@media (max-width: 900px) {
-  .panels, .principles, .diagramTargets, .ladder, .scaleCodes, .measureFacts, .measureActions, .pressGrid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: clamp(2.1rem, 9vw, 3.1rem); }
+.related a:hover { color: var(--lime); }
+
+@media (max-width: 1100px) {
+  .heroGrid, .sectionHead, .connect, .diagramFlow { grid-template-columns: 1fr; }
+  .diagramFeeds { flex-direction: row; justify-content: center; }
+  .diagramArrow { width: 2px; height: 1.4rem; }
+  .relatedGrid, .related ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .measureFacts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .products, .principles, .pressGrid, .panels, .diagramTargets, .release { grid-template-columns: 1fr; }
+  .fields { grid-template-columns: 1fr; }
+  .product { min-height: 0; }
+  .hero h1 { font-size: clamp(2.15rem, 9vw, 3.2rem); max-width: none; }
+  .page.en .hero h1 { max-width: none; }
+  .ladder, .scaleCodes {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(5, minmax(12.5rem, 1fr));
+    overflow-x: auto;
+    padding-bottom: 0.4rem;
+  }
 }
 
 @media (max-width: 760px) {
-  .wrap { padding: 1.4rem 1.5rem 3.8rem; }
+  .wrap { padding: 1.4rem 1.15rem 3.8rem; }
   .crumb { margin-bottom: 2rem; }
   .article { margin-top: 3rem; padding-top: 2rem; }
   .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillar { min-height: 5.4rem; }
-  .band, .results, .diagram, .related, .release { padding: 1.4rem 1.15rem; }
+  .relatedGrid, .related ul, .measureFacts { grid-template-columns: 1fr; }
+  .band, .results, .diagram, .techs, .release { padding: 1.4rem 1.15rem; }
   .button, .buttonGhost { width: 100%; }
 }
 
