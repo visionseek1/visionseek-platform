@@ -1,0 +1,107 @@
+/* VisionSeek Research: the Reports paper surface as a publication grid. */
+.page {
+  --paper: #f5f5f2;
+  --card: #ffffff;
+  --ink: #0b0d0c;
+  --body: #2b2f2d;
+  --mute: #4a4f4c;
+  --soft: #5b605d;
+  --rule: #dadbd5;
+  --violet: #292a40;
+  --lime: #cfff00;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
+}
+.page :is(h1, h2, p) { margin: 0; }
+.page.page.page :is(h1, h2) { font-family: var(--font-arabic-display), var(--font-arabic), sans-serif; font-weight: 600; letter-spacing: normal; }
+.page.page.en :is(h1, h2) { font-family: var(--font-serif), Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+
+.wrap { padding-inline: clamp(16px, 5vw, 72px); }
+.inner { max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 64px; padding: 72px 0 96px; }
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 48px;
+  align-items: end;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 56px;
+}
+.brandline { font-family: var(--font-serif), Georgia, serif; font-size: 18px; color: var(--violet); }
+.page.page .intro h1 { font-size: clamp(40px, 5vw, 64px); line-height: 1.2; text-wrap: balance; margin-top: 20px; }
+.ledeBlock { display: flex; flex-direction: column; gap: 18px; }
+.lede { font-size: 19px; line-height: 1.9; color: var(--body); max-width: 520px; }
+.en .lede { line-height: 1.65; }
+.count { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--violet); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+  scroll-margin-top: 120px;
+}
+.topic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--violet);
+}
+.topic i { flex: none; width: 8px; height: 8px; background: var(--lime); }
+.page.page .card h2 { font-size: clamp(22px, 2vw, 26px); line-height: 1.4; text-wrap: balance; }
+.page.page.en .card h2 { line-height: 1.25; }
+.altTitle { font-size: 14px; line-height: 1.6; color: var(--soft); }
+.summary { font-size: 15px; line-height: 1.85; color: var(--body); }
+.en .summary { line-height: 1.65; }
+
+.meta {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.author { font-size: 13px; font-weight: 600; color: var(--ink); }
+.cta,
+.ctaPending {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cta { background: var(--ink); color: var(--paper) !important; }
+.cta:hover { background: var(--violet); }
+.ctaPending {
+  background: transparent;
+  color: var(--soft);
+  border: 1px solid var(--rule);
+  cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .inner { gap: 40px; padding: 40px 0 64px; }
+  .intro { padding-bottom: 36px; gap: 20px; }
+  .lede { font-size: 17px; }
+  .card { padding: 24px; }
+}

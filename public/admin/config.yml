@@ -46,6 +46,7 @@ collections:
                   - {label: "معهد VisionSeek (القسم كله)  /institute", value: "/institute"}
                   - {label: "البرامج (القسم كله)  /programs", value: "/programs"}
                   - {label: "تقارير (القسم كله)  /reports", value: "/reports"}
+                  - {label: "الأبحاث (القسم كله)  /research", value: "/research"}
                   - {label: "المؤشرات (القسم كله)  /indices", value: "/indices"}
                   - {label: "الأخبار (القسم كله)  /news", value: "/news"}
                   - {label: "المؤتمرات (القسم كله)  /conferences", value: "/conferences"}
@@ -2654,6 +2655,92 @@ collections:
           fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
+
+  - name: research
+    label: الأبحاث
+    description: "قسم الأبحاث العام في /research و/ar/research. الأوراق الثلاث من ملف واحد. حقل doi فارغ يظهر زر «الورقة الكاملة — قريبًا» معطّلًا؛ ضع DOI بعد النشر على Zenodo."
+    preview_path: "ar/research"
+    editor: {preview: false}
+    files:
+    - label: الأبحاث
+      name: research
+      file: content/research.json
+      fields:
+      - label: رأس الصفحة
+        name: hub
+        widget: object
+        fields:
+        - label: "العنوان"
+          name: title
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "السطر العلوي"
+          name: brandline
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "التعريف"
+          name: intro
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+        - label: "عدد الأوراق"
+          name: count
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: أزرار الورقة
+        name: cta
+        widget: object
+        fields:
+        - label: "عند وجود DOI"
+          name: available
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "عند غياب DOI"
+          name: pending
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: الأوراق
+        name: papers
+        widget: list
+        summary: "{{fields.title.ar}}"
+        fields:
+        - {label: "المعرّف (مرساة الصفحة)", name: id, widget: string}
+        - label: "العنوان"
+          name: title
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "وسم الموضوع"
+          name: topic
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "الملخص"
+          name: summary
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+        - label: "سطر المؤلف"
+          name: author
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - {label: "DOI (فارغ = قريبًا على Zenodo)", name: doi, widget: string, required: false}
 
   - name: about
     label: عن VisionSeek والمنهج
