@@ -29,6 +29,7 @@ const parseScalar = (value: string): unknown => {
   const trimmed = value.trim();
   if (trimmed === 'true') return true;
   if (trimmed === 'false') return false;
+  if (trimmed === '[]') return [];
   if (trimmed === '') return '';
   if ((trimmed.startsWith('"') && trimmed.endsWith('"')) || (trimmed.startsWith("'") && trimmed.endsWith("'"))) {
     return trimmed.slice(1, -1);
@@ -52,6 +53,7 @@ export function parseNewsBody(markdown: string, file: string): NewsBody {
     }
     const line = rawLine.trim();
     if (!line) continue;
+    if (line === '---' || line === '***' || line === '___' || /^\*\*المصدر/.test(line)) break;
     if (!seenHeading) {
       ledeLines.push(cleanInline(line));
       continue;

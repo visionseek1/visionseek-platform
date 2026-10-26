@@ -45,8 +45,14 @@ const parseFront = raw => {
       list = [];
       data[listKey] = list;
     } else if (kv[2] === 'true' || kv[2] === 'false') data[kv[1]] = kv[2] === 'true';
+    else if (kv[2] === '[]') data[kv[1]] = [];
     else if (/^-?\d+$/.test(kv[2])) data[kv[1]] = Number(kv[2]);
-    else data[kv[1]] = kv[2];
+    else {
+      const raw = kv[2];
+      data[kv[1]] = ((raw.startsWith('"') && raw.endsWith('"')) || (raw.startsWith("'") && raw.endsWith("'")))
+        ? raw.slice(1, -1)
+        : raw;
+    }
   }
   return {data, body: match[2]};
 };
@@ -58,9 +64,21 @@ const pngSize = path => {
 
 const required = ['slug', 'title', 'dek', 'publishedAt', 'tag', 'sourceName', 'sourceUrl', 'heroImage', 'heroAlt', 'imageCredit', 'readingMinutes'];
 
+const sampleFiles = mdFiles.filter(name => name.includes('sample'));
+const publishedFiles = mdFiles.filter(name => !name.includes('sample'));
+
+const assertNewsImages = (data, name) => {
+  assert.ok(existsSync(join(newsDir, data.heroImage)), `${name} ${data.heroImage}`);
+  const hero = pngSize(join(newsDir, data.heroImage));
+  assert.equal(hero.width / hero.height, 16 / 9, `${name} hero 16:9`);
+  const og = data.heroImage.replace(/(\.[a-z]+)$/i, '.og$1');
+  assert.ok(existsSync(join(newsDir, og)), og);
+  assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
+};
+
 test('news briefings: two sample markdown files validate and stay obviously fake', () => {
-  assert.deepEqual(mdFiles.sort(), ['2026-10-27-sample-1.md', '2026-10-27-sample-2.md']);
-  for (const name of mdFiles) {
+  assert.deepEqual(sampleFiles.sort(), ['2026-10-27-sample-1.md', '2026-10-27-sample-2.md']);
+  for (const name of sampleFiles) {
     const {data, body} = parseFront(read(join('content/news', name)));
     for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
     assert.equal(data.sample, true, name);
@@ -69,17 +87,31 @@ test('news briefings: two sample markdown files validate and stay obviously fake
     assert.match(data.imageCredit, /VisionSeek/);
     assert.equal(['summary', 'image', 'imageAlt'].some(key => key in data), false, name);
     assert.match(data.publishedAt, /[+-]\d{2}:\d{2}$/);
-    assert.ok(existsSync(join(newsDir, data.heroImage)), data.heroImage);
-    const hero = pngSize(join(newsDir, data.heroImage));
-    assert.equal(hero.width / hero.height, 16 / 9);
-    const og = data.heroImage.replace(/(\.[a-z]+)$/i, '.og$1');
-    assert.ok(existsSync(join(newsDir, og)), og);
-    assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
+    assertNewsImages(data, name);
     assert.match(body, /## ما الذي حدث/);
     assert.match(body, /## لماذا يهم الخليج والعالم العربي/);
     assert.match(body, /## قراءة VisionSeek/);
     assert.match(body, /مصدر تجريبي|example\.com|قالب/);
   }
+});
+
+test('news briefings: first published item validates and is not a sample', () => {
+  assert.ok(publishedFiles.includes('dubai-ai-campus-1000-companies-2030.md'));
+  const name = 'dubai-ai-campus-1000-companies-2030.md';
+  const {data, body} = parseFront(read(join('content/news', name)));
+  for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
+  assert.notEqual(data.sample, true, name);
+  assert.equal(data.slug, 'dubai-ai-campus-1000-companies-2030');
+  assert.equal(data.tag, 'استثمار وشركات');
+  assert.match(data.publishedAt, /[+-]\d{2}:\d{2}$/);
+  assert.equal(['summary', 'image', 'imageAlt'].some(key => key in data), false, name);
+  assertNewsImages(data, name);
+  const hero = pngSize(join(newsDir, data.heroImage));
+  assert.deepEqual(hero, {width: 1600, height: 900});
+  assert.match(body, /## ما الذي حدث/);
+  assert.match(body, /## لماذا يهم الخليج والعالم العربي/);
+  assert.match(body, /## قراءة VisionSeek/);
+  assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
 });
 
 test('news briefings: README documents the style-guide schema and sample exclusion', () => {
@@ -102,6 +134,8 @@ test('news briefings: loader rejects missing fields and hides samples outside pr
   assert.match(read('lib/news/schema.ts'), /heroImage:/);
   assert.match(read('lib/news/schema.ts'), /readingMinutes:/);
   assert.doesNotMatch(read('lib/news/schema.ts'), /summary:/);
+  assert.match(read('lib/news/parse.ts'), /trimmed === '\[\]'/);
+  assert.match(read('lib/news/parse.ts'), /المصدر/);
 });
 
 test('news briefings: index is a lead plus two columns, detail has opinion/source/related/jsonld', () => {
@@ -148,5 +182,8 @@ test('news briefings: production CI build does not publish samples', () => {
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي/);
+  assert.match(html, /dubai-ai-campus-1000-companies-2030/);
+  assert.match(html, /أمننا الاقتصادي في الخليج/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-campus-1000-companies-2030.html')), 'built published detail');
 });
