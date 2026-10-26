@@ -29,7 +29,7 @@ function CardMedia({item}: {item: NewsCardModel}) {
   return (
     <div className={styles.cardMedia}>
       {item.imageExists
-        ? <Image src={item.imageSrc} alt={item.imageAlt} fill sizes="(max-width: 1100px) 100vw, 50vw"/>
+        ? <Image src={item.imageSrc} alt={item.imageAlt} fill sizes="(max-width: 1100px) 100vw, 50vw" unoptimized/>
         : <div className={styles.fallback} role="img" aria-label={item.imageAlt}><i aria-hidden="true"/>VISIONSEEK</div>}
     </div>
   );

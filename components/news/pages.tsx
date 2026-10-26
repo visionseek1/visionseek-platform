@@ -144,7 +144,7 @@ export function NewsDetail({locale, item}: {locale: NewsLocale; item: NewsItem})
             <figure className={styles.heroFigure}>
               <div className={styles.heroMedia}>
                 {item.imageExists
-                  ? <Image src={item.imageSrc} alt={alt} fill sizes="(max-width: 1240px) 100vw, 1240px" priority/>
+                  ? <Image src={item.imageSrc} alt={alt} fill sizes="(max-width: 1240px) 100vw, 1240px" priority unoptimized/>
                   : <div className={styles.fallback} role="img" aria-label={alt}><i aria-hidden="true"/>VISIONSEEK</div>}
               </div>
               <figcaption>{displayCredit(item, locale)}</figcaption>
@@ -203,7 +203,7 @@ export function NewsDetail({locale, item}: {locale: NewsLocale; item: NewsItem})
                     <Link key={entry.slug} className={styles.card} href={card.href}>
                       <div className={styles.cardMedia}>
                         {card.imageExists
-                          ? <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 1100px) 100vw, 33vw"/>
+                          ? <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 1100px) 100vw, 33vw" unoptimized/>
                           : <div className={styles.fallback} role="img" aria-label={card.imageAlt}><i aria-hidden="true"/>VISIONSEEK</div>}
                       </div>
                       <div className={styles.cardBody}>
