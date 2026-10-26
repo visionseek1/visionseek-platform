@@ -12,7 +12,7 @@
       "en": "When a public tender is open only to registered suppliers, VisionSeek looks for a registered UAE systems integrator to partner with. We bring the Arabic agent layer, evaluation, and safety. The integrator is the one who enters the portal and submits.",
       "ar": "حين تُفتح مناقصة عامة للمورّدين المسجّلين فقط، تبحث VisionSeek عن مكامل أنظمة إماراتي مسجّل للشراكة. نحن نقدّم طبقة الوكيل العربي، والتقييم، والأمان. المكامل هو من يدخل البوابة ويقدّم."
     },
-    "image": "/work-with-us/tenders/moei-12718.png"
+    "image": "/tenders/moei-12718.png"
   },
   "labels": {
     "now": {
@@ -165,7 +165,7 @@
       },
       "opened": "2026-10-13",
       "deadline": "2026-11-03T15:00:00+04:00",
-      "image": "/work-with-us/tenders/moei-12718.png",
+      "image": "/tenders/moei-12718.png",
       "imageAlt": {
         "en": "Abstract editorial drawing of a government-services AI network on a dark field with VisionSeek lime chevrons. No logos, flags, or people.",
         "ar": "رسم تحريري تجريدي لشبكة خدمات حكومية ووكلاء أذكياء، على خلفية داكنة ولمسات VisionSeek الخضراء، من دون شعارات أو أعلام أو أشخاص."

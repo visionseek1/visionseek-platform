@@ -126,13 +126,16 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
 });
 
 test('Tenders: editorial image is SVG 16:9, with a PNG render used on the card', () => {
-  const svg = read('public/work-with-us/tenders/moei-12718.svg');
+  const svg = read('public/tenders/moei-12718.svg');
   assert.match(svg, /viewBox="0 0 1600 900"/);
   assert.doesNotMatch(svg, /<text[\s>]/);
-  assert.ok(statSync(url('public/work-with-us/tenders/moei-12718.svg')).size < 20_000);
-  assert.ok(existsSync(url('public/work-with-us/tenders/moei-12718.png')));
-  assert.ok(statSync(url('public/work-with-us/tenders/moei-12718.png')).size < 400_000);
-  assert.equal(data.hero.image, '/work-with-us/tenders/moei-12718.png');
+  assert.ok(statSync(url('public/tenders/moei-12718.svg')).size < 20_000);
+  assert.ok(existsSync(url('public/tenders/moei-12718.png')));
+  assert.ok(statSync(url('public/tenders/moei-12718.png')).size < 400_000);
+  assert.equal(data.hero.image, '/tenders/moei-12718.png');
+  for (const card of data.cards) {
+    assert.match(card.image, /^\/tenders\//, `${card.id} art stays under /tenders, not the [slug] page`);
+  }
   assert.match(read('components/institution/work-with-us-page.tsx'), /TendersBody/);
   assert.match(read('components/tenders/tenders-page.tsx'), /id="tenders"/);
 });
