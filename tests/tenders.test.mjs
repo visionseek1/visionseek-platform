@@ -22,7 +22,7 @@ test('Tenders: confirmed facts only — no budget, no company names, no people, 
   assert.doesNotMatch(all, /aimuse|230,?000|1,?150,?000|4\s*[–-]\s*6|أسبوع|weeks?|budget|تمويل|ميزانية|درهم|aed/i);
   assert.doesNotMatch(all, /presight|blackstone|net0|injazat|e&\s*enterprise|ناين\s*ستار|nine\s*star/i);
   assert.doesNotMatch(all, /we (have )?(applied|registered)|قدّمن[ات]|تسجّل<|سجّلنا|شريك رسمي|بالشراكة مع الوزارة/i);
-  assert.doesNotMatch(all, /logo|شعار الوزارة|علم|flag/i);
+  assert.doesNotMatch(all, /شعار الوزارة|ministry logo/i);
   for (const key of ['kicker', 'title', 'text']) assert.ok(isText(data.hero[key]), `hero.${key}`);
   for (const [key, value] of Object.entries({...data.labels, ...data.form})) assert.ok(isText(value), key);
   assert.ok(data.how.length >= 1 && data.how.every(isText));

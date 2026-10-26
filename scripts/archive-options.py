@@ -18,7 +18,7 @@ for s in nav['sections'] + [nav['reports']]:
         h = c['href'].split('#')[0]
         if h and h != s['path']: add(h, f"{s['ar']} ← {c['ar']}")
 for f in sorted(glob.glob('content/programs/*.json')):
-    d = load(f); add(f"/programs/{d['slug']}", f"البرامج ← {d['title']['ar']}")
+    d = load(f); add(f"/programs/{d['slug']}", f"البرامج ← {d.get('name', {}).get('ar') or d['title']['ar']}")
 PUBLIC = {'workshops': 'institute'}  # homepage section id; masterclass slugs stay under /masterclass
 for f in sorted(glob.glob('content/guides/*.json')):
     d = load(f); seg = PUBLIC.get(d['section'], d['section']); add(f"/{seg}/{d['slug']}", f"{seg} ← {d['title']['ar']}")
