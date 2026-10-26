@@ -2658,7 +2658,7 @@ collections:
 
   - name: research
     label: الأبحاث
-    description: "قسم الأبحاث العام في /research و/ar/research. عدد الأوراق ذات DOI يُحسب من الملف. حقل doi فارغ يظهر زر «الورقة الكاملة — قريبًا» معطّلًا."
+    description: "قسم الأبحاث العام في /research و/ar/research. عدد الأوراق العلمية ذات DOI يُحسب من الملف. حقل doi فارغ يظهر زر «الورقة العلمية الكاملة — قريبًا» معطّلًا."
     preview_path: "ar/research"
     editor: {preview: false}
     files:
@@ -2710,7 +2710,7 @@ collections:
           summary: "{{fields.id}}"
           fields:
           - {label: المعرّف, name: id, widget: string}
-          - {label: "النوع (doiCount = عدد الأوراق ذات DOI)", name: kind, widget: string, required: false}
+          - {label: "النوع (doiCount = عدد الأوراق العلمية ذات DOI)", name: kind, widget: string, required: false}
           - label: القيمة
             name: value
             widget: object
@@ -2771,7 +2771,7 @@ collections:
               fields:
               - {label: English, name: en, widget: string}
               - {label: العربية, name: ar, widget: string}
-      - label: رأس الأوراق
+      - label: رأس الأوراق العلمية
         name: papersHeading
         widget: object
         fields:
@@ -2924,7 +2924,7 @@ collections:
           - {label: العربية, name: ar, widget: text}
         - {label: "رابط العمل السابق", name: priorHref, widget: string}
         - {label: "DOI العمل السابق", name: priorDoi, widget: string}
-      - label: الأوراق
+      - label: الأوراق العلمية
         name: papers
         widget: list
         summary: "{{fields.title.ar}}"

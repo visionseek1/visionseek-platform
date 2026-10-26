@@ -10,11 +10,11 @@
     },
     "headline": {
       "en": "Independent, open, reproducible research on the critical questions of the Gulf and the Arab world.",
-      "ar": "أسئلة حرجة في الخليج والعالم العربي. نبحثها مستقلّين، وننشر الأوراق وبياناتها مفتوحة وقابلة لإعادة الإنتاج."
+      "ar": "أسئلة حرجة في الخليج والعالم العربي. نبحثها مستقلّين، وننشر الأوراق العلمية وبياناتها مفتوحة وقابلة لإعادة الإنتاج."
     },
     "intro": {
       "en": "We take questions that bear on the region's medicine, technology and health security. Each paper is published with its data, its code and a persistent DOI, so any reader can inspect the work and reproduce it.",
-      "ar": "نختار أسئلة تمس أمن المنطقة الدوائي والتقني والصحي. كل ورقة تخرج ببياناتها وشيفرتها وبمعرّف DOI دائم، ليتمكّن أي قارئ من فحص العمل وإعادة إنتاجه."
+      "ar": "نختار أسئلة تمس أمن المنطقة الدوائي والتقني والصحي. كل ورقة علمية تخرج ببياناتها وشيفرتها وبمعرّف DOI دائم، ليتمكّن أي قارئ من فحص العمل وإعادة إنتاجه."
     }
   },
   "trust": {
@@ -28,7 +28,7 @@
         "kind": "doiCount",
         "caption": {
           "en": "Published papers with DOI",
-          "ar": "أوراق منشورة بمعرّف DOI"
+          "ar": "أوراق علمية منشورة بمعرّف DOI"
         }
       },
       {
@@ -39,7 +39,7 @@
         },
         "caption": {
           "en": "Open data with every paper",
-          "ar": "بيانات مفتوحة مع كل ورقة"
+          "ar": "بيانات مفتوحة مع كل ورقة علمية"
         }
       },
       {
@@ -96,7 +96,7 @@
         },
         "text": {
           "en": "Each paper is published with its raw data, code and derived tables under CC BY 4.0. Any researcher can reproduce the results from scratch.",
-          "ar": "كل ورقة تُنشر مع بياناتها الخام وشيفرتها وجداولها المشتقة بترخيص CC BY 4.0. يمكن لأي باحث إعادة إنتاج النتائج من الصفر."
+          "ar": "كل ورقة علمية تُنشر مع بياناتها الخام وشيفرتها وجداولها المشتقة بترخيص CC BY 4.0. يمكن لأي باحث إعادة إنتاج النتائج من الصفر."
         }
       },
       {
@@ -184,7 +184,7 @@
   "papersHeading": {
     "title": {
       "en": "Papers",
-      "ar": "الأوراق"
+      "ar": "الأوراق العلمية"
     },
     "preprint": {
       "en": "Preprint",
@@ -194,11 +194,11 @@
   "cta": {
     "available": {
       "en": "Read on Zenodo",
-      "ar": "اقرأ الورقة على Zenodo"
+      "ar": "اقرأ الورقة العلمية على Zenodo"
     },
     "pending": {
       "en": "Full paper — coming soon",
-      "ar": "الورقة الكاملة — قريبًا"
+      "ar": "الورقة العلمية الكاملة — قريبًا"
     },
     "data": {
       "en": "Open data",
@@ -231,7 +231,7 @@
         },
         "text": {
           "en": "Each paper is published with its raw data, code and derived tables under CC BY 4.0. Any researcher can reproduce the results from scratch.",
-          "ar": "كل ورقة تُنشر مع بياناتها الخام وشيفرتها وجداولها المشتقة بترخيص CC BY 4.0. يمكن لأي باحث إعادة إنتاج النتائج من الصفر."
+          "ar": "كل ورقة علمية تُنشر مع بياناتها الخام وشيفرتها وجداولها المشتقة بترخيص CC BY 4.0. يمكن لأي باحث إعادة إنتاج النتائج من الصفر."
         }
       },
       {
