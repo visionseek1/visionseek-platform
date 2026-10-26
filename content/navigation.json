@@ -158,6 +158,33 @@
       ]
     },
     {
+      "path": "/research",
+      "en": "Research",
+      "ar": "الأبحاث",
+      "children": [
+        {
+          "href": "/research",
+          "en": "All papers",
+          "ar": "كل الأوراق"
+        },
+        {
+          "href": "/research#gulf-medicine",
+          "en": "Who Owns the Gulf's Medicine?",
+          "ar": "من يملك دواء الخليج؟"
+        },
+        {
+          "href": "/research#gulf-stack",
+          "en": "Who Owns the Stack?",
+          "ar": "من يملك البنية التحتية؟"
+        },
+        {
+          "href": "/research#arabic-health",
+          "en": "Official-source health information",
+          "ar": "المعلومة الصحية من مصدر رسمي"
+        }
+      ]
+    },
+    {
       "path": "/indices",
       "en": "Indices",
       "ar": "المؤشرات",

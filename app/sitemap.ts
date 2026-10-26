@@ -42,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...koreanSolutions.flatMap(k => [{path: `/korean-solutions/${k.slug}`, priority: 0.7}, {path: `/ar/korean-solutions/${k.slug}`, priority: 0.7}]),
     { path: "/reports", priority: 0.85 },
     { path: "/ar/reports", priority: 0.85 },
+    { path: "/research", priority: 0.85 },
+    { path: "/ar/research", priority: 0.85 },
     ...insights.notes.flatMap(n => [{path: `/reports/notes/${n.slug}`, priority: 0.7}, {path: `/ar/reports/notes/${n.slug}`, priority: 0.7}]),
     ...insights.frameworks.flatMap(f => [{path: `/reports/frameworks/${f.slug}`, priority: 0.7}, {path: `/ar/reports/frameworks/${f.slug}`, priority: 0.7}]),
     {path: '/reports/reports', priority: 0.75}, {path: '/ar/reports/reports', priority: 0.75},
