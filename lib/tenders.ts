@@ -57,6 +57,11 @@ export function tenderCardsNow(now = Date.now()) {
   return {current, completed: tenders.cards.filter(card => card.status === 'completed')};
 }
 
+/** Open announcements only: status open and the stored +04:00 deadline is still in the future. */
+export function openTenderCount(now = Date.now()) {
+  return tenderCardsNow(now).current.filter(({state}) => state === 'open').length;
+}
+
 export function getTender(id: string) {
   return tenders.cards.find(card => card.id === id);
 }
