@@ -4,8 +4,8 @@ import {research} from '@/lib/research-hub';
 
 export const metadata: Metadata = {
   title: 'الأبحاث | VisionSeek',
-  description: research.hub.intro.ar,
+  description: research.hub.headline.ar,
   alternates: {canonical: '/ar/research', languages: {en: '/research', ar: '/ar/research'}},
-  openGraph: {title: 'أبحاث VisionSeek', description: research.hub.intro.ar, url: '/ar/research'},
+  openGraph: {title: 'أبحاث VisionSeek', description: research.hub.headline.ar, url: '/ar/research'},
 };
 export default function Page() { return <ResearchHub locale="ar"/>; }
