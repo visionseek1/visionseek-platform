@@ -95,23 +95,34 @@ test('news briefings: two sample markdown files validate and stay obviously fake
   }
 });
 
-test('news briefings: first published item validates and is not a sample', () => {
-  assert.ok(publishedFiles.includes('dubai-ai-campus-1000-companies-2030.md'));
-  const name = 'dubai-ai-campus-1000-companies-2030.md';
-  const {data, body} = parseFront(read(join('content/news', name)));
-  for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
-  assert.notEqual(data.sample, true, name);
-  assert.equal(data.slug, 'dubai-ai-campus-1000-companies-2030');
-  assert.equal(data.tag, 'استثمار وشركات');
-  assert.match(data.publishedAt, /[+-]\d{2}:\d{2}$/);
-  assert.equal(['summary', 'image', 'imageAlt'].some(key => key in data), false, name);
-  assertNewsImages(data, name);
-  const hero = pngSize(join(newsDir, data.heroImage));
-  assert.deepEqual(hero, {width: 1600, height: 900});
-  assert.match(body, /## ما الذي حدث/);
-  assert.match(body, /## لماذا يهم الخليج والعالم العربي/);
-  assert.match(body, /## قراءة VisionSeek/);
-  assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
+test('news briefings: published items validate and are not samples', () => {
+  assert.deepEqual(publishedFiles.sort(), [
+    'dubai-ai-campus-1000-companies-2030.md',
+    'stv-dga-ai-government-consulting-rfs.md',
+  ]);
+  const expected = {
+    'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
+    'stv-dga-ai-government-consulting-rfs.md': {slug: 'stv-dga-ai-government-consulting-rfs', tag: 'تنظيم وسياسات', hero: {width: 1280, height: 720}},
+  };
+  for (const name of publishedFiles) {
+    const {data, body} = parseFront(read(join('content/news', name)));
+    const want = expected[name];
+    for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
+    assert.notEqual(data.sample, true, name);
+    assert.equal(data.slug, want.slug);
+    assert.equal(data.tag, want.tag);
+    assert.equal(data.updatedAt, undefined, `${name} must not repeat publishedAt as updatedAt`);
+    assert.match(data.publishedAt, /[+-]\d{2}:\d{2}$/);
+    assert.equal(['summary', 'image', 'imageAlt'].some(key => key in data), false, name);
+    assertNewsImages(data, name);
+    assert.deepEqual(pngSize(join(newsDir, data.heroImage)), want.hero);
+    assert.match(body, /## ما الذي حدث/);
+    assert.match(body, /## لماذا يهم الخليج والعالم العربي/);
+    assert.match(body, /## قراءة VisionSeek/);
+    assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
+  }
+  const times = publishedFiles.map(name => parseFront(read(join('content/news', name))).data.publishedAt);
+  assert.ok(times[publishedFiles.indexOf('stv-dga-ai-government-consulting-rfs.md')] > times[publishedFiles.indexOf('dubai-ai-campus-1000-companies-2030.md')]);
 });
 
 test('news briefings: README documents the style-guide schema and sample exclusion', () => {
@@ -182,8 +193,15 @@ test('news briefings: production CI build does not publish samples', () => {
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي/);
+  assert.match(html, /stv-dga-ai-government-consulting-rfs/);
+  assert.match(html, /أمننا الحكومي في الخليج/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /أمننا الاقتصادي في الخليج/);
+  const leadAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
+  const olderAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
+  assert.ok(leadAt >= 0 && olderAt >= 0 && leadAt < olderAt, 'STV is the lead');
+  assert.doesNotMatch(html, /محدَّث|حُدّث/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/stv-dga-ai-government-consulting-rfs.html')), 'built STV detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-campus-1000-companies-2030.html')), 'built published detail');
 });

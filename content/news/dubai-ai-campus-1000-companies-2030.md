@@ -3,7 +3,6 @@ slug: dubai-ai-campus-1000-companies-2030
 title: "أمننا الاقتصادي في الخليج: ماذا تعني ألف شركة ذكاء اصطناعي في دبي؟"
 dek: "ولي عهد دبي يعتمد هدفًا جديدًا لمجمّع دبي للذكاء الاصطناعي: أكثر من 1,000 شركة و5,000 وظيفة عالية المهارة بحلول 2030، بعد تجاوز 500 شركة."
 publishedAt: "2026-10-26T22:50:00+04:00"
-updatedAt: "2026-10-26T22:50:00+04:00"
 tag: "استثمار وشركات"
 sourceName: "المكتب الإعلامي لحكومة دبي"
 sourceUrl: "https://mediaoffice.ae/en/news/2026/october/26-10/hamdan-bin-mohammed-approves-new-targets-for-dubai-ai-campus"
