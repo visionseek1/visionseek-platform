@@ -43,6 +43,7 @@
   font-size: 18px;
   color: var(--violet);
   margin-bottom: 28px;
+  text-align: start;
 }
 .heroGrid {
   display: grid;

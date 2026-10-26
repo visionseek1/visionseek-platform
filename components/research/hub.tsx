@@ -32,7 +32,7 @@ export function ResearchHub({locale}: {locale: Locale}) {
       <main id="main-content" className={`${styles.page} ${ar ? '' : styles.en}`}>
         <section className={styles.hero} aria-labelledby="research-title">
           <div className={styles.wrap}>
-            <p className={styles.brandline} lang="en" dir="ltr">{hub.brandline.en}</p>
+            <p className={styles.brandline}><span lang="en" dir="ltr">{hub.brandline.en}</span></p>
             <div className={styles.heroGrid}>
               <h1 id="research-title">{t(hub.headline)}</h1>
               <p className={styles.lede}>{t(hub.intro)}</p>
