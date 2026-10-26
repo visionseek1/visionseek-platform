@@ -19,6 +19,8 @@ test('Research sits in the main menu immediately after Reports, with الأبح�
   assert.equal(data.sections.filter(s => s.path === '/research').length, 1);
   assert.ok(item.children.length >= 2);
   assert.equal(item.children[0].href, '/research');
+  assert.equal(item.children.find(c => c.href === '/research#gulf-stack').ar, 'من يملك البنية التحتية؟');
+  assert.doesNotMatch(JSON.stringify(data), /ركام/);
 });
 
 test('research hub: three papers from one content file, doi null, no draft-status lines', () => {
@@ -28,6 +30,8 @@ test('research hub: three papers from one content file, doi null, no draft-statu
   assert.equal(d.hub.title.en, 'Research');
   assert.equal(d.hub.title.ar, 'الأبحاث');
   assert.equal(d.cta.pending.ar, 'الورقة الكاملة — قريبًا');
+  assert.equal(d.papers[1].title.ar, 'من يملك البنية التحتية؟ — مكوّنات مراكز بيانات الذكاء الاصطناعي في الخليج');
+  assert.doesNotMatch(JSON.stringify(d), /ركام/);
   for (const paper of d.papers) {
     assert.equal(paper.doi, null);
     assert.equal(paper.author.en, 'Ahmed Abdelalim, VisionSeek');
@@ -69,7 +73,8 @@ test('the built Research hub is native RTL and LTR and keeps the DOI button disa
   assert.match(en, /Who Owns the Gulf&#x27;s Medicine\?/);
   assert.match(ar, /من يملك دواء الخليج؟/);
   assert.match(en, /Who Owns the Stack\?/);
-  assert.match(ar, /من يملك الركام؟/);
+  assert.match(ar, /من يملك البنية التحتية؟/);
+  assert.doesNotMatch(ar, /ركام/);
   assert.match(en, /Official-Source Health Information in MSA and Gulf Dialects/);
   assert.match(ar, /المعلومة الصحية من مصدر رسمي/);
   assert.match(en, /Ahmed Abdelalim, VisionSeek/);

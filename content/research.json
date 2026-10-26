@@ -10,7 +10,7 @@
     },
     "intro": {
       "en": "Independent papers on who supplies the Gulf: medicines, data-centre components, and the official health information people receive.",
-      "ar": "أوراق مستقلة فيمن يورّد الخليج: الدواء، ومكوّنات مراكز البيانات، والمعلومة الصحية الرسمية التي تصل إلى الناس."
+      "ar": "أوراق مستقلة عن مصادر توريد الخليج: الدواء، ومكوّنات مراكز البيانات، والمعلومة الصحية الرسمية التي تصل إلى الناس."
     },
     "count": {
       "en": "Three papers",
@@ -40,7 +40,7 @@
       },
       "summary": {
         "en": "Gulf Cooperation Council states import most of their medicines, yet published local-production figures disagree because they rest on different definitions. This paper measures supplier-country concentration of medicine imports in all six GCC states, and compares the finished-product layer with the active pharmaceutical ingredient layer for tracer medicines from the 2025 WHO Model List of Essential Medicines. At heading level, import dependence looks diversified; at tracer level it is concentrated, and for insulin it rests almost entirely on finished-product imports from one or two European suppliers.",
-        "ar": "تستورد دول مجلس التعاون معظم أدويتها، غير أن أرقام الإنتاج المحلي المنشورة تختلف لأنها تقوم على تعريفات متباينة. تقيس هذه الورقة تركز بلدان التوريد لواردات الدواء في الدول الست، وتقارن طبقة المنتج النهائي بطبقة المادة الفعالة لأدوية تتبع من القائمة النموذجية للأدوية الأساسية الصادرة عن منظمة الصحة العالمية لعام 2025. على مستوى البند الجمركي تبدو التبعية للاستيراد متنوعة؛ أما على مستوى الدواء المتتبَّع فهي مركزة، وفي الإنسولين تستند شبه كليًا إلى واردات المنتج النهائي من مورّد أوروبي واحد أو اثنين."
+        "ar": "تستورد دول مجلس التعاون معظم أدويتها، غير أن أرقام الإنتاج المحلي المنشورة تختلف لأنها تقوم على تعريفات متباينة. تقيس هذه الورقة تركّز الدول المورّدة لواردات الدواء في الدول الست، وتقارن مستوى المنتج النهائي بمستوى المادة الفعّالة في مجموعة تتبُّع من أدوية القائمة النموذجية للأدوية الأساسية الصادرة عن منظمة الصحة العالمية لعام 2025. على مستوى البند الجمركي تبدو التبعية للاستيراد متنوعة؛ أما على مستوى الدواء المتتبَّع فهي مركّزة، وفي الإنسولين تستند شبه كليًا إلى واردات المنتج النهائي من مورِّد أوروبي واحد أو اثنين."
       },
       "author": {
         "en": "Ahmed Abdelalim, VisionSeek",
@@ -52,15 +52,15 @@
       "id": "gulf-stack",
       "title": {
         "en": "Who Owns the Stack? — Gulf AI data-centre components",
-        "ar": "من يملك الركام؟ — مكوّنات مراكز بيانات الذكاء الاصطناعي في الخليج"
+        "ar": "من يملك البنية التحتية؟ — مكوّنات مراكز بيانات الذكاء الاصطناعي في الخليج"
       },
       "topic": {
         "en": "AI data centres · Supply concentration",
-        "ar": "مراكز بيانات الذكاء الاصطناعي · تركز التوريد"
+        "ar": "مراكز بيانات الذكاء الاصطناعي · تركّز التوريد"
       },
       "summary": {
         "en": "The six GCC states have announced AI data-centre programmes; a 2026 Abha Foundation review puts them at about 12.8 GW in Saudi Arabia, 8.1 GW in the United Arab Emirates and 1.8 GW in Qatar. This paper builds a replicable, per-country indicator of import-supplier concentration for four critical component classes: compute and network equipment, high-voltage power equipment, cooling equipment, and water-treatment machinery used in desalination. In the 2023 sample, five of twenty-four reporter–class cells are highly concentrated and eight are moderately concentrated — bounds on the trade channel through which these components arrive, not ownership shares.",
-        "ar": "أعلنت دول مجلس التعاون الست برامج لمراكز بيانات الذكاء الاصطناعي، ويضعها استعراض مؤسسة أبها لعام 2026 عند نحو 12.8 غيغاواط في السعودية و8.1 في الإمارات و1.8 في قطر. تبني هذه الورقة مؤشرًا قابلًا للتكرار لكل دولة لتركز موردي الواردات في أربع فئات من المكونات الحرجة: الحوسبة والشبكات، ومعدات الجهد العالي، والتبريد، وآلات معالجة المياه المستخدمة في التحلية. في عينة 2023، خمس من أربع وعشرين خلية (دولة–فئة) شديدة التركز وثمان متوسطة التركز؛ وهي حدود لتركز قناة التجارة التي تصل عبرها هذه المكونات، لا حصص ملكية."
+        "ar": "أعلنت دول مجلس التعاون الست برامج لمراكز بيانات الذكاء الاصطناعي، ويضعها تقرير مؤسسة أبها لعام 2026 عند نحو 12.8 غيغاواط في السعودية و8.1 في الإمارات و1.8 في قطر. تبني هذه الورقة مؤشرًا قطريًا قابلًا للتكرار لتركّز مورّدي الواردات في أربع فئات من المكوّنات الحرجة: الحوسبة والشبكات، ومعدات الجهد العالي، والتبريد، وآلات معالجة المياه المستخدمة في التحلية. في عيّنة 2023، خمسٌ من أربعٍ وعشرين مقارنة (دولة × فئة) شديدة التركّز وثمانٍ متوسطة التركّز؛ وهي مؤشرات لتركّز مسار الاستيراد الذي تصل عبره هذه المكوّنات، لا حصصًا في الملكية."
       },
       "author": {
         "en": "Ahmed Abdelalim, VisionSeek",
@@ -80,7 +80,7 @@
       },
       "summary": {
         "en": "Arabic language models are increasingly evaluated on medical content, yet existing Arabic health benchmarks mostly draw on examination questions, translated English material or online forums, and rarely place Gulf dialects alongside Modern Standard Arabic or involve pharmacists. This paper designs and pilots an evaluation set whose ground truth is public awareness content published by GCC ministries of health on diabetes, obesity, medicines use and fasting in Ramadan. The set comprises 69 MSA question–answer items — 48 from nine Saudi Ministry of Health pages and 21 from two Omani ministry documents — with Saudi and Kuwaiti variants of every question, and with official ministry text as the reference.",
-        "ar": "تُختبر نماذج اللغة العربية على المحتوى الطبي على نحو متزايد، غير أن معايير التقييم الصحية العربية القائمة تستند في معظمها إلى أسئلة الامتحانات أو مادة إنجليزية مترجمة أو منتديات، ونادرًا ما تضع لهجات الخليج إلى جانب الفصحى أو تُشرك الصيادلة. تصف هذه الورقة تصميم عينة تقييم تجريبية وحقيقتها المرجعية محتوى التوعية الذي تنشره وزارات الصحة في دول مجلس التعاون في أربعة موضوعات موجهة للجمهور: السكري والسمنة واستخدام الأدوية والصيام في رمضان. تضم العينة 69 بندًا سؤالًا وجوابًا بالفصحى — 48 من تسع صفحات لوزارة الصحة السعودية و21 من وثيقتين عمانيتين — مع صياغة سعودية وكويتية لكل سؤال، والجواب المرجعي مقتطف حرفي من النص الرسمي."
+        "ar": "تُختبر نماذج اللغة العربية على المحتوى الطبي على نحو متزايد، غير أن مجموعات التقييم الصحية العربية القائمة تستند في معظمها إلى أسئلة الامتحانات أو مادة إنجليزية مترجمة أو منتديات، ونادرًا ما تضع لهجات الخليج إلى جانب الفصحى أو تُشرك الصيادلة. تصف هذه الورقة تصميم عيّنة تقييم تجريبية، ومرجعها محتوى التوعية الذي تنشره وزارات الصحة في دول مجلس التعاون في أربعة موضوعات موجّهة للجمهور: السكري والسمنة واستخدام الأدوية والصيام في رمضان. تضم العيّنة 69 سؤالًا وجوابًا بالفصحى — 48 من تسع صفحات لوزارة الصحة السعودية و21 من وثيقتين عمانيتين — مع صياغة سعودية وكويتية لكل سؤال، والجواب المرجعي مقتطف حرفي من النص الرسمي."
       },
       "author": {
         "en": "Ahmed Abdelalim, VisionSeek",
