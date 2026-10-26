@@ -134,7 +134,7 @@ test('the built Research hub is native RTL and LTR and links each paper to Zenod
   assert.match(en, /Quality and integrity standards/);
   assert.match(ar, /معايير الجودة والنزاهة/);
   assert.match(en, /Who Owns the Gulf&#x27;s Medicine\?/);
-  assert.match(ar, /أمننا الدوائي في الخليج/);
+  assert.match(ar, /إنسولين الخليج في يد مورّد واحد تقريبًا/);
   assert.match(en, /Who Owns the Stack\?/);
   assert.match(ar, /من يملك البنية التحتية؟/);
   assert.doesNotMatch(ar, /ركام/);
