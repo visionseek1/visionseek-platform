@@ -77,6 +77,15 @@
   align-items: flex-start;
 }
 .author { font-size: 13px; font-weight: 600; color: var(--ink); }
+.doi {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--violet);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+.doi:hover { color: var(--ink); }
 .cta,
 .ctaPending {
   display: inline-flex;

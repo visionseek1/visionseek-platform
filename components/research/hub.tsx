@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {DocumentLocale} from '@/components/governance/document-locale';
-import {paperDoiHref, research, type ResearchPaper} from '@/lib/research-hub';
+import {paperDoiHref, paperDoiLabel, paperRecordHref, research, type ResearchPaper} from '@/lib/research-hub';
 import styles from './research.module.css';
 
 type Locale = 'ar' | 'en';
@@ -42,7 +41,9 @@ export function ResearchHub({locale}: {locale: Locale}) {
 
 function PaperCard({paper, locale, cta}: {paper: ResearchPaper; locale: Locale; cta: {available: {en: string; ar: string}; pending: {en: string; ar: string}}}) {
   const t = tx(locale);
-  const href = paperDoiHref(paper.doi);
+  const recordHref = paperRecordHref(paper);
+  const doiHref = paperDoiHref(paper.doi);
+  const doiLabel = paperDoiLabel(paper.doi);
   const other = locale === 'ar' ? 'en' : 'ar';
   return (
     <article id={paper.id} className={styles.card}>
@@ -52,8 +53,11 @@ function PaperCard({paper, locale, cta}: {paper: ResearchPaper; locale: Locale; 
       <p className={styles.summary}>{t(paper.summary)}</p>
       <div className={styles.meta}>
         <p className={styles.author}>{t(paper.author)}</p>
-        {href
-          ? <Link className={styles.cta} href={href} target="_blank" rel="noreferrer">{t(cta.available)}</Link>
+        {doiHref && doiLabel && (
+          <a className={styles.doi} href={doiHref} target="_blank" rel="noopener" dir="ltr">DOI: {doiLabel}</a>
+        )}
+        {recordHref
+          ? <a className={styles.cta} href={recordHref} target="_blank" rel="noopener">{t(cta.available)}</a>
           : <span className={styles.ctaPending} aria-disabled="true">{t(cta.pending)}</span>}
       </div>
     </article>

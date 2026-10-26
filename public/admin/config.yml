@@ -2658,7 +2658,7 @@ collections:
 
   - name: research
     label: الأبحاث
-    description: "قسم الأبحاث العام في /research و/ar/research. الأوراق الثلاث من ملف واحد. حقل doi فارغ يظهر زر «الورقة الكاملة — قريبًا» معطّلًا؛ ضع DOI بعد النشر على Zenodo."
+    description: "قسم الأبحاث العام في /research و/ar/research. الأوراق الثلاث من ملف واحد. حقل doi فارغ يظهر زر «الورقة الكاملة — قريبًا» معطّلًا؛ ضع DOI ورابط سجل Zenodo بعد النشر."
     preview_path: "ar/research"
     editor: {preview: false}
     files:
@@ -2741,6 +2741,7 @@ collections:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
         - {label: "DOI (فارغ = قريبًا على Zenodo)", name: doi, widget: string, required: false}
+        - {label: "رابط سجل Zenodo", name: url, widget: string, required: false}
 
   - name: about
     label: عن VisionSeek والمنهج
