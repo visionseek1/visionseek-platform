@@ -15,6 +15,7 @@ export type NewsCardModel = {
   title: string;
   dek: string;
   tag: string;
+  tagKey: string;
   publishedAt: string;
   fullStamp: string;
   updated: boolean;
@@ -53,7 +54,7 @@ function CardCopy({item, locale, heading}: {item: NewsCardModel; locale: NewsLoc
 export function NewsGrid({locale, items}: {locale: NewsLocale; items: NewsCardModel[]}) {
   const [tag, setTag] = useState<string | null>(null);
   const [limit, setLimit] = useState(NEWS_PAGE_SIZE);
-  const filtered = useMemo(() => tag ? items.filter(item => item.tag === tag) : items, [items, tag]);
+  const filtered = useMemo(() => tag ? items.filter(item => item.tagKey === tag) : items, [items, tag]);
   const page = filtered.slice(0, limit);
   const lead = page[0];
   const rest = page.slice(1);

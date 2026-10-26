@@ -39,6 +39,7 @@ export function toCard(item: NewsItem, locale: NewsLocale): NewsCardModel {
     title: displayTitle(item, locale),
     dek: displayDek(item, locale),
     tag: displayTag(item, locale),
+    tagKey: item.tag,
     publishedAt: item.publishedAt,
     fullStamp: formatGulfTime(item.publishedAt, locale).short,
     updated: Boolean(item.updatedAt),
