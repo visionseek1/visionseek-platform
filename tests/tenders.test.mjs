@@ -97,7 +97,7 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
     assert.ok(tendersAt !== -1 && clientAt > tendersAt, `${locale} client entry after tenders`);
     assert.match(html, new RegExp(`id="tenders-title"[^>]*>\\s*${esc(data.hero.kicker[locale])}\\s*<`));
     assert.ok(html.includes('href="mailto:abdelalim@visionseek.org"'), `${locale} mail draft`);
-    assert.ok(html.includes('https://procurement.gov.ae'), `${locale} source`);
+    assert.match(html, /href="https:\/\/procurement\.gov\.ae"/, `${locale} source`);
     for (const text of [data.labels.now[locale], data.labels.join[locale], data.labels.completed[locale], data.labels.how[locale], ...data.how.map(item => item[locale])]) {
       assert.ok(has(text), `${locale}: ${text}`);
     }
@@ -119,7 +119,7 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
   for (const [locale, html] of Object.entries(details)) {
     assert.ok(html.includes(esc(first.title[locale])), `${locale} detail title`);
     assert.ok(html.includes(esc(first.body[locale].split('\n\n')[0])), `${locale} detail body`);
-    assert.ok(html.includes('https://procurement.gov.ae'), `${locale} detail source`);
+    assert.match(html, /href="https:\/\/procurement\.gov\.ae"/, `${locale} detail source`);
     assert.ok(html.includes(esc(first.imageAlt[locale])), `${locale} alt`);
     assert.ok(html.includes(esc(formatDeadline(first, locale))), `${locale} detail deadline`);
   }
