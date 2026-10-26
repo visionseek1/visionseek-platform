@@ -123,14 +123,13 @@
   color: var(--violet);
 }
 .tag i { flex: none; width: 8px; height: 8px; background: var(--lime); }
-.sample,
 .updated {
   font-weight: 700;
   font-size: 12px;
   padding: 3px 10px;
+  background: var(--violet);
+  color: var(--paper);
 }
-.sample { background: var(--lime); color: var(--ink); }
-.updated { background: var(--violet); color: var(--paper); }
 .page.page .card h2,
 .page.page .card h3 { font-size: clamp(20px, 1.8vw, 24px); line-height: 1.4; text-wrap: balance; }
 .card p { font-size: 16px; line-height: 1.75; color: var(--body); }

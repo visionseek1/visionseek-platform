@@ -30,7 +30,6 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
       alternates: {canonical: `/news/${slug}`, languages: {en: `/news/${slug}`, ar: `/ar/news/${slug}`}},
       openGraph: {title, description, url: `/news/${slug}`, images: [image]},
       twitter: {card: 'summary_large_image', title, description, images: [image.url]},
-      robots: item.sample ? {index: false, follow: false} : undefined,
     };
   }
   const entry = getEntry('news', slug);

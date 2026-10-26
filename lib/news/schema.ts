@@ -34,7 +34,6 @@ export const newsFrontmatterSchema = z.object({
   imageCredit: z.string().min(1),
   readingMinutes: z.number().int().positive(),
   corrections: z.array(newsCorrectionSchema).optional().default([]),
-  sample: z.boolean().optional().default(false),
   coverageName: z.string().min(1).optional(),
   coverageUrl: z.string().url().optional(),
   titleEn: z.string().min(1).optional(),

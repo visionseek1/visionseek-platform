@@ -27,7 +27,6 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
       alternates: {canonical: `/ar/news/${slug}`, languages: {en: `/news/${slug}`, ar: `/ar/news/${slug}`}},
       openGraph: {title: item.title, description: item.dek, url: `/ar/news/${slug}`, images: [image]},
       twitter: {card: 'summary_large_image', title: item.title, description: item.dek, images: [image.url]},
-      robots: item.sample ? {index: false, follow: false} : undefined,
     };
   }
   const entry = getEntry('news', slug);

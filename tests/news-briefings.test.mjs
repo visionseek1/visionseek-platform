@@ -64,9 +64,6 @@ const pngSize = path => {
 
 const required = ['slug', 'title', 'dek', 'publishedAt', 'tag', 'sourceName', 'sourceUrl', 'heroImage', 'heroAlt', 'imageCredit', 'readingMinutes'];
 
-const sampleFiles = mdFiles.filter(name => name.includes('sample'));
-const publishedFiles = mdFiles.filter(name => !name.includes('sample'));
-
 const assertNewsImages = (data, name) => {
   assert.ok(existsSync(join(newsDir, data.heroImage)), `${name} ${data.heroImage}`);
   const hero = pngSize(join(newsDir, data.heroImage));
@@ -76,27 +73,8 @@ const assertNewsImages = (data, name) => {
   assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
 };
 
-test('news briefings: two sample markdown files validate and stay obviously fake', () => {
-  assert.deepEqual(sampleFiles.sort(), ['2026-10-27-sample-1.md', '2026-10-27-sample-2.md']);
-  for (const name of sampleFiles) {
-    const {data, body} = parseFront(read(join('content/news', name)));
-    for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
-    assert.equal(data.sample, true, name);
-    assert.match(data.title, /^خبر تجريبي:/);
-    assert.equal(data.sourceUrl, 'https://example.com');
-    assert.match(data.imageCredit, /VisionSeek/);
-    assert.equal(['summary', 'image', 'imageAlt'].some(key => key in data), false, name);
-    assert.match(data.publishedAt, /[+-]\d{2}:\d{2}$/);
-    assertNewsImages(data, name);
-    assert.match(body, /## ما الذي حدث/);
-    assert.match(body, /## لماذا يهم الخليج والعالم العربي/);
-    assert.match(body, /## قراءة VisionSeek/);
-    assert.match(body, /مصدر تجريبي|example\.com|قالب/);
-  }
-});
-
-test('news briefings: published items validate and are not samples', () => {
-  assert.deepEqual(publishedFiles.sort(), [
+test('news briefings: the two published items validate and no samples remain', () => {
+  assert.deepEqual(mdFiles.sort(), [
     'dubai-ai-campus-1000-companies-2030.md',
     'stv-dga-ai-government-consulting-rfs.md',
   ]);
@@ -104,11 +82,11 @@ test('news briefings: published items validate and are not samples', () => {
     'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
     'stv-dga-ai-government-consulting-rfs.md': {slug: 'stv-dga-ai-government-consulting-rfs', tag: 'تنظيم وسياسات', hero: {width: 1280, height: 720}},
   };
-  for (const name of publishedFiles) {
+  for (const name of mdFiles) {
     const {data, body} = parseFront(read(join('content/news', name)));
     const want = expected[name];
     for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
-    assert.notEqual(data.sample, true, name);
+    assert.equal(data.sample, undefined, name);
     assert.equal(data.slug, want.slug);
     assert.equal(data.tag, want.tag);
     assert.equal(data.updatedAt, undefined, `${name} must not repeat publishedAt as updatedAt`);
@@ -121,32 +99,33 @@ test('news briefings: published items validate and are not samples', () => {
     assert.match(body, /## قراءة VisionSeek/);
     assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
   }
-  const times = publishedFiles.map(name => parseFront(read(join('content/news', name))).data.publishedAt);
-  assert.ok(times[publishedFiles.indexOf('stv-dga-ai-government-consulting-rfs.md')] > times[publishedFiles.indexOf('dubai-ai-campus-1000-companies-2030.md')]);
+  const times = Object.fromEntries(mdFiles.map(name => [name, parseFront(read(join('content/news', name))).data.publishedAt]));
+  assert.ok(times['stv-dga-ai-government-consulting-rfs.md'] > times['dubai-ai-campus-1000-companies-2030.md']);
 });
 
-test('news briefings: README documents the style-guide schema and sample exclusion', () => {
+test('news briefings: README documents the style-guide schema', () => {
   const readme = read('content/news/README.md');
   for (const field of [...required, 'updatedAt', 'corrections', 'heroImage', 'dek']) assert.match(readme, new RegExp(field));
-  assert.match(readme, /VERCEL_ENV/);
-  assert.match(readme, /عيّنة تجريبية|sample: true/);
+  assert.doesNotMatch(readme, /sample: true|عيّنة تجريبية/);
   assert.match(readme, /1200×630|1200x630/);
   assert.match(readme, /Asia\/Dubai|GMT\+4/);
 });
 
-test('news briefings: loader rejects missing fields and hides samples outside preview', () => {
+test('news briefings: loader requires heroes and has no sample path', () => {
   const load = read('lib/news/load.ts');
   assert.match(load, /REQUIRED_NEWS_FIELDS/);
   assert.match(load, /heroImage/);
-  assert.match(load, /isPreviewBuild/);
-  assert.match(load, /item => !item\.sample/);
-  assert.match(read('lib/deploy.ts'), /VERCEL_ENV === 'preview'/);
+  assert.match(load, /hasPublishedNews/);
+  assert.doesNotMatch(load, /isPreviewBuild|includeSampleNews|item\.sample/);
   assert.match(read('lib/news/schema.ts'), /dek:/);
   assert.match(read('lib/news/schema.ts'), /heroImage:/);
   assert.match(read('lib/news/schema.ts'), /readingMinutes:/);
   assert.doesNotMatch(read('lib/news/schema.ts'), /summary:/);
+  assert.doesNotMatch(read('lib/news/schema.ts'), /sample:/);
   assert.match(read('lib/news/parse.ts'), /trimmed === '\[\]'/);
   assert.match(read('lib/news/parse.ts'), /المصدر/);
+  assert.match(read('next.config.ts'), /hasPublishedNews/);
+  assert.doesNotMatch(read('next.config.ts'), /sample:\s*true/);
 });
 
 test('news briefings: index is a lead plus two columns, detail has opinion/source/related/jsonld', () => {
@@ -185,24 +164,23 @@ test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', ()
   assert.match(read('components/news/pages.tsx'), /height: 630/);
 });
 
-test('news briefings: production CI build does not publish samples', () => {
+test('news briefings: production CI build publishes STV then Dubai and shows the nav', () => {
   const ar = join(root, '.next/server/app/ar/news.html');
   assert.ok(existsSync(ar), 'built /ar/news');
   const html = readFileSync(ar, 'utf8');
   assert.match(html, /أخبار/);
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
-  assert.doesNotMatch(html, /خبر تجريبي/);
+  assert.doesNotMatch(html, /خبر تجريبي|عيّنة تجريبية|2026-10-27-sample/);
   assert.match(html, /stv-dga-ai-government-consulting-rfs/);
   assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
-  assert.doesNotMatch(html, /أمننا الحكومي في الخليج/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
-  assert.doesNotMatch(html, /أمننا الاقتصادي في الخليج/);
   const leadAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
   const olderAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
   assert.ok(leadAt >= 0 && olderAt >= 0 && leadAt < olderAt, 'STV is the lead');
   assert.doesNotMatch(html, /محدَّث|حُدّث/);
+  assert.match(html, /href="\/ar\/news"/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/stv-dga-ai-government-consulting-rfs.html')), 'built STV detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-campus-1000-companies-2030.html')), 'built published detail');

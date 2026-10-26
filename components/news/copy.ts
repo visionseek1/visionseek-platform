@@ -8,7 +8,6 @@ export const newsCopy = {
     en: 'Short briefings on technology and capability: what happened, and why it matters to the Gulf and the Arab world.',
   },
   allTags: {ar: 'الكل', en: 'All'},
-  sample: {ar: 'عيّنة تجريبية', en: 'Sample'},
   updated: {ar: 'محدَّث', en: 'Updated'},
   source: {ar: 'المصدر الأصلي', en: 'Original source'},
   sourceBox: {ar: 'المصدر', en: 'Source'},
@@ -23,8 +22,8 @@ export const newsCopy = {
   corrections: {ar: 'تصحيح', en: 'Correction'},
   emptyTitle: {ar: 'لا توجد أخبار في هذا الملف', en: 'No briefings in this file'},
   emptyBody: {
-    ar: 'لم يُنشر في هذا القسم خبر مكتمل. العيّنات التجريبية لا تظهر على الموقع الحي.',
-    en: 'No published briefing is live in this language. Sample items never appear on the production site.',
+    ar: 'لم يُنشر في هذا القسم خبر مكتمل.',
+    en: 'No published briefing is live in this language.',
   },
   emptyEn: {
     ar: 'لا توجد مواد إنجليزية بعد. غرفة الأخبار بالعربية على /ar/news.',

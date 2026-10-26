@@ -14,7 +14,6 @@ export {
   displayTitle,
   getNews,
   hasPublishedNews,
-  includeSampleNews,
   listNews,
   relatedNews,
   visibleNews,

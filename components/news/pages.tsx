@@ -46,7 +46,6 @@ export function toCard(item: NewsItem, locale: NewsLocale): NewsCardModel {
     imageSrc: item.imageSrc,
     imageAlt: displayHeroAlt(item, locale),
     imageExists: item.imageExists,
-    sample: item.sample,
   };
 }
 
@@ -123,7 +122,6 @@ export function NewsDetail({locale, item}: {locale: NewsLocale; item: NewsItem})
           <header className={styles.hero}>
             <div className={styles.heroTop}>
               <span className={styles.tag}><i aria-hidden="true"/>{displayTag(item, locale)}</span>
-              {item.sample && <span className={styles.sample}>{t(locale, 'sample')}</span>}
               {updated && <span className={styles.updated}>{t(locale, 'updated')}</span>}
             </div>
             <h1>{title}</h1>

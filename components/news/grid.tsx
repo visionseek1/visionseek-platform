@@ -22,7 +22,6 @@ export type NewsCardModel = {
   imageSrc: string;
   imageAlt: string;
   imageExists: boolean;
-  sample: boolean;
 };
 
 function CardMedia({item}: {item: NewsCardModel}) {
@@ -41,7 +40,6 @@ function CardCopy({item, locale, heading}: {item: NewsCardModel; locale: NewsLoc
     <div className={styles.cardBody}>
       <div className={styles.meta}>
         <span className={styles.tag}><i aria-hidden="true"/>{item.tag}</span>
-        {item.sample && <span className={styles.sample}>{t(locale, 'sample')}</span>}
         {item.updated && <span className={styles.updated}>{t(locale, 'updated')}</span>}
       </div>
       <Heading>{item.title}</Heading>

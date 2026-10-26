@@ -1,12 +1,11 @@
-import {existsSync, readdirSync, readFileSync} from "node:fs";
+import {existsSync, readdirSync} from "node:fs";
 import {join} from "node:path";
 import type { NextConfig } from "next";
 
 const newsDir = join(__dirname, "content/news");
-const hasPublishedNews = existsSync(newsDir) && readdirSync(newsDir).some(name => {
-  if (!name.endsWith(".md") || name.toLowerCase() === "readme.md") return false;
-  return !/^sample:\s*true\s*$/m.test(readFileSync(join(newsDir, name), "utf8"));
-});
+const hasPublishedNews = existsSync(newsDir) && readdirSync(newsDir).some(name =>
+  name.endsWith(".md") && name.toLowerCase() !== "readme.md"
+);
 const showNewsNav =
   process.env.VERCEL_ENV === "preview" ||
   process.env.NODE_ENV !== "production" ||

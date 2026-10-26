@@ -1,6 +1,5 @@
 import {copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync} from 'node:fs';
 import {basename, join} from 'node:path';
-import {isPreviewBuild} from '@/lib/deploy';
 import {parseFrontmatter, parseNewsBody, type NewsBody} from './parse';
 import {newsFrontmatterSchema, REQUIRED_NEWS_FIELDS, type NewsFrontmatter} from './schema';
 
@@ -62,8 +61,8 @@ const loadOne = (name: string): NewsItem => {
   }
   const fm = parsed.data;
   const hero = resolveImage(fm.heroImage);
-  if (!hero.exists && !fm.sample) {
-    throw new Error(`${name}: heroImage file content/news/${basename(fm.heroImage)} is required for published items`);
+  if (!hero.exists) {
+    throw new Error(`${name}: heroImage file content/news/${basename(fm.heroImage)} is required`);
   }
   const ogFile = ogName(basename(fm.heroImage));
   const og = resolveImage(ogFile);
@@ -89,15 +88,12 @@ const loadAll = (): NewsItem[] => {
   return items.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : a.publishedAt > b.publishedAt ? -1 : a.slug.localeCompare(b.slug)));
 };
 
-/** Every valid briefing, including samples. Throws at import if a file is incomplete. */
+/** Every valid briefing. Throws at import if a file is incomplete. */
 syncPublicImages();
 export const allNewsItems: NewsItem[] = loadAll();
 
-/** Samples render on Vercel previews and `next dev` only — never on production. */
-export const includeSampleNews = (): boolean => isPreviewBuild();
-
 export function visibleNews(): NewsItem[] {
-  return includeSampleNews() ? allNewsItems : allNewsItems.filter(item => !item.sample);
+  return allNewsItems;
 }
 
 export function listNews(locale: 'ar' | 'en' = 'ar'): NewsItem[] {
@@ -138,5 +134,5 @@ export function displayCredit(item: NewsItem, locale: 'ar' | 'en'): string {
 }
 
 export function hasPublishedNews(): boolean {
-  return allNewsItems.some(item => !item.sample);
+  return allNewsItems.length > 0;
 }
