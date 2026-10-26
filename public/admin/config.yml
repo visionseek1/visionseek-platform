@@ -2512,6 +2512,7 @@ collections:
         - {label: "صفحة التقرير على الموقع (مثلًا /reports/reports/half-the-picture)", name: page, widget: string, required: false}
         - {label: "صورة الغلاف", name: cover, widget: image, required: false}
         - {label: "لغة ملف PDF", name: pdfLang, widget: select, options: [ar, en], required: false}
+        - {label: "DOI", name: doi, widget: string, required: false}
         - label: "رابط مرتبط (تقرير ↔ ورقة)"
           name: related
           widget: object

@@ -100,7 +100,7 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/localization-doctrine');
   assert.ok(report);
-  assert.equal(d.reports[2].page, '/reports/reports/localization-doctrine');
+  assert.equal(d.reports[5].page, '/reports/reports/localization-doctrine');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'عقيدة التوطين: من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون');
   assert.equal(report.title.en, 'The Localization Doctrine: From Using Technology to Owning It — What Korea Proves Is Possible for the Arab World');
@@ -214,7 +214,7 @@ test('Insights: Gulf patent ownership map sits after methodology; Arabic body, s
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/patent-ownership-map');
   assert.ok(report);
-  assert.equal(d.reports[1].page, '/reports/reports/patent-ownership-map');
+  assert.equal(d.reports[4].page, '/reports/reports/patent-ownership-map');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'من يملك الابتكار الخليجي؟ خريطة ملكية البراءات');
   assert.equal(report.title.en, 'Who Owns Gulf Innovation? A Patent Ownership Map');
@@ -262,7 +262,7 @@ test('Insights: Capability Ledger sits next to the doctrine; Arabic body, source
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/capability-ledger');
   assert.ok(report);
-  assert.equal(d.reports[3].page, '/reports/reports/capability-ledger');
+  assert.equal(d.reports[6].page, '/reports/reports/capability-ledger');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'سجل نقل القدرة: ماذا يبقى في الخليج بعد صفقات الذكاء الاصطناعي ومراكز البيانات؟');
   assert.equal(report.title.en, 'Capability Ledger');
@@ -300,6 +300,97 @@ test('Insights: Capability Ledger sits next to the doctrine; Arabic body, source
   assert.match(page, /localization-doctrine\.module\.css/);
   assert.ok(existsSync('scripts/insights/capability-ledger/report-ar-v1.0.html'));
   assert.ok(existsSync('scripts/insights/capability-ledger/report-ar-v1.0.pdf'));
+});
+
+test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks, DOI and PDFs stay exact', () => {
+  const d = json('content/insights.json');
+  const specs = [
+    {
+      page: '/reports/reports/gulf-medicine-ownership',
+      index: 1,
+      titleAr: 'من يملك دواء الخليج؟ تركّز واردات الدواء الجاهز مقابل المادة الفعالة',
+      pdf: '/reports/reports/gulf-medicine-ownership-ar.pdf',
+      cover: '/reports/reports/gulf-medicine-ownership-cover.jpg',
+      doi: '10.5281/zenodo.23657727',
+      bytes: 447287,
+      slug: 'gulf-medicine-ownership',
+      lib: 'lib/research/gulf-medicine-ownership.ts',
+      component: 'components/insights/gulf-medicine-ownership.tsx',
+      hit: /الإنسولين معلّق بدولة مورّدة واحدة/,
+      related: '/research#gulf-medicine',
+    },
+    {
+      page: '/reports/reports/gulf-data-center-stack',
+      index: 2,
+      titleAr: 'من يملك المكدّس؟ تركّز مورّدي مكوّنات مراكز البيانات الخليجية',
+      pdf: '/reports/reports/gulf-data-center-stack-ar.pdf',
+      cover: '/reports/reports/gulf-data-center-stack-cover.jpg',
+      doi: '10.5281/zenodo.23657775',
+      bytes: 499215,
+      slug: 'gulf-data-center-stack',
+      lib: 'lib/research/gulf-data-center-stack.ts',
+      component: 'components/insights/gulf-data-center-stack.tsx',
+      hit: /الحوسبة تصل إلى الخليج من قناة ضيقة/,
+      related: '/research#gulf-stack',
+    },
+    {
+      page: '/reports/reports/ai-ministry-health-answers',
+      index: 3,
+      titleAr: 'هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟ معلومات صحية رسمية بالفصحى واللهجات الخليجية',
+      pdf: '/reports/reports/ai-ministry-health-answers-ar.pdf',
+      cover: '/reports/reports/ai-ministry-health-answers-cover.jpg',
+      doi: '10.5281/zenodo.23657799',
+      bytes: 454526,
+      slug: 'ai-ministry-health-answers',
+      lib: 'lib/research/ai-ministry-health-answers.ts',
+      component: 'components/insights/ai-ministry-health-answers.tsx',
+      hit: /المعقول طبيًا ليس دائمًا الرسمي/,
+      related: '/research#arabic-health',
+    },
+  ];
+  const shared = read('components/insights/arabic-lab-report.tsx');
+  assert.match(shared, /paper\.doiLine/);
+  assert.match(shared, /paper\.attribution/);
+  assert.doesNotMatch(shared, /اقرأ البحث على Zenodo/);
+  assert.match(read('public/admin/config.yml'), /name: doi/);
+  for (const spec of specs) {
+    const report = d.reports.find(x => x.page === spec.page);
+    assert.ok(report, spec.page);
+    assert.equal(d.reports[spec.index].page, spec.page);
+    assert.equal(report.title.ar, spec.titleAr);
+    assert.match(report.kind.ar, /الإصدار 1\.1/);
+    assert.match(report.kind.ar, /26 أكتوبر 2026/);
+    assert.equal(report.pdf, spec.pdf);
+    assert.equal(report.cover, spec.cover);
+    assert.equal(report.doi, spec.doi);
+    assert.equal(report.related.href, spec.related);
+    assert.ok(existsSync('public' + report.pdf), report.pdf);
+    assert.ok(existsSync('public' + report.cover), report.cover);
+    assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, spec.bytes);
+    for (const f of [`reports/reports/${spec.slug}/page.tsx`]) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+    const lib = read(spec.lib);
+    const page = read(spec.component) + shared;
+    assert.match(lib, /د\.\s*أحمد عبدالعليم، VisionSeek \(إنتشون، كوريا الجنوبية\)/);
+    assert.match(lib, /Ahmed Abdelalim, VisionSeek \(Incheon, South Korea\)/);
+    assert.doesNotMatch(lib + page, /Dr\. Ahmed Abdelalim|Dr\. Abdelalim/);
+    assert.doesNotMatch(lib, /إنشيون/);
+    assert.doesNotMatch(lib + page, /مسودة|معاينة|DRAFT FOR REVIEW|\bPreview\b/);
+    assert.match(lib, /مبني على بحث أجرته VisionSeek/);
+    assert.match(lib, /\[مؤكد بمصدر/);
+    assert.match(lib, /\[استنتاج/);
+    assert.match(lib, spec.hit);
+    assert.match(lib, new RegExp(spec.doi.replace(/\./g, '\\.')));
+    assert.match(lib, new RegExp(`https://doi\\.org/${spec.doi.replace(/\./g, '\\.')}`));
+    assert.match(lib, /الإصدار 1\.1/);
+    assert.doesNotMatch(lib, /اقرأ البحث على Zenodo/);
+    assert.doesNotMatch(lib, /يُضاف عند النشر/);
+    if (spec.slug === 'ai-ministry-health-answers') {
+      assert.match(lib, /https:\/\/visionseek\.org\/ar\/reports\/reports\/ai-ministry-health-answers/);
+    }
+    assert.ok(existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.1.md`));
+    assert.ok(existsSync(`scripts/insights/${spec.slug}/report-ar-v1.1.pdf`));
+    assert.ok(!existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.0.md`));
+  }
 });
 
 test('Insights was renamed Reports: /insights 308s to /reports, leftover reports-center pages stay archived', () => {

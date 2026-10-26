@@ -192,6 +192,87 @@
     },
     {
       "title": {
+        "ar": "من يملك دواء الخليج؟ تركّز واردات الدواء الجاهز مقابل المادة الفعالة",
+        "en": "Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.1 · مختبر VisionSeek · 26 أكتوبر 2026",
+        "en": "Report · Version 1.1 · VisionSeek Lab · 26 October 2026"
+      },
+      "summary": {
+        "ar": "على الورق تبدو واردات الأدوية الجاهزة متنوعة (49–101 دولة؛ مؤشر تركّز 588–2,277). الإنسولين معلّق بدولة مورّدة واحدة: المؤشر 5,663–9,407، وألمانيا تورّد 73–97% في خمس من الدول الست.",
+        "en": "At heading level, finished-medicine imports look diversified (49–101 partner countries; concentration 588–2,277). Insulin is hung on one supplier country: the index is 5,663–9,407, and Germany supplies 73–97% in five of the six states."
+      },
+      "page": "/reports/reports/gulf-medicine-ownership",
+      "pdf": "/reports/reports/gulf-medicine-ownership-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/gulf-medicine-ownership-cover.jpg",
+      "doi": "10.5281/zenodo.23657727",
+      "related": {
+        "href": "/research#gulf-medicine",
+        "label": {
+          "ar": "الورقة في الأبحاث",
+          "en": "The paper on Research"
+        }
+      },
+      "date": "2026-10-26"
+    },
+    {
+      "title": {
+        "ar": "من يملك المكدّس؟ تركّز مورّدي مكوّنات مراكز البيانات الخليجية",
+        "en": "Who Owns the Stack? Supplier Concentration of Gulf Data-Centre Components"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.1 · مختبر VisionSeek · 26 أكتوبر 2026",
+        "en": "Report · Version 1.1 · VisionSeek Lab · 26 October 2026"
+      },
+      "summary": {
+        "ar": "واردات الحوسبة والشبكات شديدة التركّز في السعودية (2708) والإمارات (2986) والكويت (3874) وعُمان (2937). الصين أكثر مورّد أول تكرارًا: 9 خانات من 24، وحصتها 49.1% و52.2% و60.9% في السعودية والإمارات والكويت.",
+        "en": "Compute-and-network imports are highly concentrated in Saudi Arabia (2708), the UAE (2986), Kuwait (3874) and Oman (2937). China is the most frequent top supplier: 9 of 24 cells, with 49.1%, 52.2% and 60.9% of compute-and-network imports in Saudi Arabia, the UAE and Kuwait."
+      },
+      "page": "/reports/reports/gulf-data-center-stack",
+      "pdf": "/reports/reports/gulf-data-center-stack-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/gulf-data-center-stack-cover.jpg",
+      "doi": "10.5281/zenodo.23657775",
+      "related": {
+        "href": "/research#gulf-stack",
+        "label": {
+          "ar": "الورقة في الأبحاث",
+          "en": "The paper on Research"
+        }
+      },
+      "date": "2026-10-26"
+    },
+    {
+      "title": {
+        "ar": "هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟ معلومات صحية رسمية بالفصحى واللهجات الخليجية",
+        "en": "Does AI Answer What Health Ministries Say? Official Health Information in MSA and Gulf Dialects"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.1 · مختبر VisionSeek · 26 أكتوبر 2026",
+        "en": "Report · Version 1.1 · VisionSeek Lab · 26 October 2026"
+      },
+      "summary": {
+        "ar": "مجموعة من 69 سؤالًا صحيًا بالفصحى مرجعها صفحات وزارات الصحة. في الأسئلة الرقمية ذكر النموذج كل الأرقام الصحيحة في 13 من 17 حالة. المراجعة أُجريت بالذكاء الاصطناعي، ولم يراجعها صيدلي بشري.",
+        "en": "A set of 69 MSA health questions grounded in ministry awareness pages. On numeric items the model named every official figure in 13 of 17 cases. The clinical review was done by AI; no human pharmacist reviewed it."
+      },
+      "page": "/reports/reports/ai-ministry-health-answers",
+      "pdf": "/reports/reports/ai-ministry-health-answers-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/ai-ministry-health-answers-cover.jpg",
+      "doi": "10.5281/zenodo.23657799",
+      "related": {
+        "href": "/research#arabic-health",
+        "label": {
+          "ar": "الورقة في الأبحاث",
+          "en": "The paper on Research"
+        }
+      },
+      "date": "2026-10-26"
+    },
+    {
+      "title": {
         "ar": "من يملك الابتكار الخليجي؟ خريطة ملكية البراءات",
         "en": "Who Owns Gulf Innovation? A Patent Ownership Map"
       },
