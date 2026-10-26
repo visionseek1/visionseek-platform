@@ -66,11 +66,11 @@ test('research hub: three papers from one content file, Zenodo DOIs live, no dra
     assert.ok(paper.topic.en && paper.topic.ar);
     assert.match(paper.citation, /Abdelalim, A\. \(2026\)\./);
     assert.match(paper.citation, /\[Preprint\]\. Zenodo\./);
-    assert.match(paper.citation, paper.doi.replaceAll('.', '\\.'));
+    assert.match(paper.citation, new RegExp(paper.doi.replaceAll('.', '\\.')));
   }
   assert.match(d.strengths.items.find(s => s.id === 'questions').text.ar, /لم نجد في فحصنا للأدبيات/);
   assert.match(JSON.stringify(d.trust), /CC BY 4\.0/);
-  assert.match(JSON.stringify(d), protocol.replaceAll('.', '\\.'));
+  assert.match(JSON.stringify(d), new RegExp(protocol.replaceAll('.', '\\.')));
   assert.doesNotMatch(JSON.stringify(d), banned);
   assert.doesNotMatch(JSON.stringify(d), invented);
   assert.doesNotMatch(read('components/research/hub.tsx'), banned);
@@ -142,7 +142,7 @@ test('the built Research hub is native RTL and LTR and links each paper to Zenod
   assert.match(en + ar, new RegExp(`orcid\\.org/${orcid}`));
   assert.match(en + ar, new RegExp(ijms.replaceAll('.', '\\.')));
   assert.match(en + ar, /CC BY 4\.0/);
-  assert.match(en + ar, protocol.replaceAll('.', '\\.'));
+  assert.match(en + ar, new RegExp(protocol.replaceAll('.', '\\.')));
   assert.match(en, /Published papers with DOI/);
   assert.match(ar, /أوراق منشورة بمعرّف DOI/);
   assert.match(en, />3</);
