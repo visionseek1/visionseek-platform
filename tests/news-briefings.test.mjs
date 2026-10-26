@@ -194,7 +194,8 @@ test('news briefings: production CI build does not publish samples', () => {
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي/);
   assert.match(html, /stv-dga-ai-government-consulting-rfs/);
-  assert.match(html, /أمننا الحكومي في الخليج/);
+  assert.match(html, /من يراجع تقارير الذكاء الاصطناعي قبل أن تصل إلى صانع القرار؟/);
+  assert.doesNotMatch(html, /أمننا الحكومي في الخليج/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /أمننا الاقتصادي في الخليج/);
   const leadAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
