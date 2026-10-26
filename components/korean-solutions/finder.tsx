@@ -69,7 +69,7 @@ export default function Finder({locale, solutions}: {locale: Locale; solutions: 
           {results.map(s => <SolutionCard key={s.slug} s={s} locale={locale}/>)}
           {!results.length && <p className={styles.empty}>{ar
             ? 'لا يوجد حل بهذه المواصفات بعد.'
-            : 'No solution matches yet.'} <a href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'} {arrow}</a></p>}
+            : 'No solution matches yet.'} <a href={`${p}/korea-gate`}>{ar ? 'بوابة كوريا' : 'Korea Gate'} {arrow}</a></p>}
         </div>
       </div>
       <p className={styles.photoNote}>{ar

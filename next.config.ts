@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
         {source: `${prefix}/projects/egypt-lng-supply`, destination: `${prefix}/projects`, permanent: true},
         {source: `${prefix}/projects/gulf-lng-fleet`, destination: `${prefix}/projects`, permanent: true},
         // Cars left the site (24 Oct 2026): old /cars links go home. 308.
+        {source: `${prefix}/korean-solutions`, destination: `${prefix}/korea-gate`, permanent: true},
         {source: `${prefix}/cars`, destination: `${prefix || '/'}`, permanent: true},
         {source: `${prefix}/cars/:path*`, destination: `${prefix || '/'}`, permanent: true},
         // Empty sector landings left the menu. Closest axis is Projects. 308.

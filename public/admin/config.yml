@@ -40,7 +40,7 @@ collections:
                 widget: select
                 options:
                 # archive-options:start
-                  - {label: "حلول من كوريا (القسم كله)  /korean-solutions", value: "/korean-solutions"}
+                  - {label: "بوابة كوريا (القسم كله)  /korea-gate", value: "/korea-gate"}
                   - {label: "المشاريع (القسم كله)  /projects", value: "/projects"}
                   - {label: "فرص البحث والتطوير (القسم كله)  /opportunities", value: "/opportunities"}
                   - {label: "معهد VisionSeek (القسم كله)  /institute", value: "/institute"}

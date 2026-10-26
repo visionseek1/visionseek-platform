@@ -1,29 +1,29 @@
 {
   "sections": [
     {
-      "path": "/korean-solutions",
-      "en": "Korean Solutions",
-      "ar": "حلول من كوريا",
+      "path": "/korea-gate",
+      "en": "Korea Gate",
+      "ar": "بوابة كوريا",
       "children": [
         {
-          "href": "/korean-solutions",
-          "en": "Transfer the capability",
-          "ar": "نقل القدرة"
+          "href": "/korea-gate",
+          "en": "The Gate",
+          "ar": "البوابة"
         },
         {
-          "href": "/korean-solutions#domains",
-          "en": "Fields",
-          "ar": "المجالات"
+          "href": "/korea-gate#services",
+          "en": "Services",
+          "ar": "الخدمات"
         },
         {
-          "href": "/korean-solutions#how",
-          "en": "How we work",
-          "ar": "كيف نعمل"
+          "href": "/korea-gate#studies",
+          "en": "Studies",
+          "ar": "الدراسات"
         },
         {
-          "href": "/korean-solutions#initiatives",
-          "en": "Initiatives",
-          "ar": "المبادرات"
+          "href": "/korea-gate#request",
+          "en": "Request a study",
+          "ar": "اطلب دراسة"
         }
       ]
     },

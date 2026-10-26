@@ -82,7 +82,7 @@ test('five programs, Aegis Apex Clause Relay and Lodestar, each complete', () =>
   assert.equal(clause.cta.ar, 'اطلب مراجعة عقد');
   assert.equal(clause.cta.en, 'Request a contract review');
   assert.deepEqual(clause.related, ['/masterclass/single-track-trap', '/reports/reports/localization-doctrine']);
-  assert.deepEqual(relay.related, ['/korean-solutions']);
+  assert.deepEqual(relay.related, ['/korea-gate']);
   assert.match(JSON.stringify(relay.principles), /استخدام.*تجميع.*تكييف.*تصميم.*تصدير/s);
   assert.equal(lodestar.position, 5);
   assert.equal(lodestar.code, 'VS-P05');
@@ -164,7 +164,7 @@ test('method.json keeps the nine steps, six communities and eight field cards wi
 
 test('navigation.json keeps the header sections and site-relative paths', () => {
   const nav = read('navigation.json');
-  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/conferences', '/indices', '/institute', '/korean-solutions', '/news', '/opportunities', '/programs', '/projects', '/reports', '/research', '/work-with-us']);
+  assert.deepEqual(nav.sections.map(s => s.path).sort(), ['/about', '/conferences', '/indices', '/institute', '/korea-gate', '/news', '/opportunities', '/programs', '/projects', '/reports', '/research', '/work-with-us']);
   assert.equal(new Set(nav.sections.map(s => s.path)).size, nav.sections.length, 'a header section appears twice');
   for (const section of [...nav.sections, nav.reports]) {
     assert.ok(section.path.startsWith('/') && !section.path.startsWith('/ar'), section.path);

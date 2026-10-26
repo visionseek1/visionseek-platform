@@ -19,7 +19,7 @@ export const titleForPath=(path:string,locale:'en'|'ar')=>{
  const [segment,slug]=path.split('/').filter(Boolean);const section=sectionForSegment(segment??'');
  if(segment==='institute'&&slug==='masterclass')return locale==='ar'?'ماستر كلاس':'Masterclass';
  if(segment==='institute'&&slug==='fellowship')return locale==='ar'?'زمالة VisionSeek':'VisionSeek Fellowship';
- if(segment==='korean-solutions')return locale==='ar'?'حلول من كوريا':'Korean Solutions';
+ if(segment==='korean-solutions'||segment==='korea-gate')return locale==='ar'?'بوابة كوريا':'Korea Gate';
  if(path.endsWith('localization-doctrine'))return locale==='ar'?'عقيدة التوطين':'The Localization Doctrine';
  if(path.endsWith('single-track-trap'))return locale==='ar'?'حوكمة الذكاء الاصطناعي':'AI Governance workshop';
  if(!slug){

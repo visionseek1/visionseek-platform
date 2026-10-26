@@ -28,7 +28,7 @@ test('old cars URLs redirect home in both languages (308)', () => {
 
 test('cars is out of the Korean Solutions menu, the hub and the request categories', () => {
   const nav = json('content/navigation.json').sections[0];
-  assert.equal(nav.path, '/korean-solutions');
+  assert.equal(nav.path, '/korea-gate');
   assert.equal(nav.children.some(c => c.href === '/cars' || /هايبرد|Hybrid|EV cars/i.test(`${c.ar} ${c.en}`)), false);
   const pages = read('components/korean-solutions/pages.tsx');
   assert.doesNotMatch(pages, /\/cars/);

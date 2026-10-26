@@ -23,14 +23,13 @@ function Shell({locale, path, here, children}: {locale: Locale; path: string; he
   return <div className={`vs-site locale-${locale}`} lang={locale} dir={ar ? 'rtl' : 'ltr'}>
     <CapabilityHeader locale={locale} path={path}/>
     <main id="main-content" className={`${styles.page} ${ar ? '' : styles.en}`}>
-      <nav className={`${styles.bar} ${styles.gutter}`} aria-label={ar ? 'أقسام حلول من كوريا' : 'Korean Solutions sections'}><div className={`${styles.inner} ${styles.barInner}`}>
-        <span className={styles.barName}><Link href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
+      <nav className={`${styles.bar} ${styles.gutter}`} aria-label={ar ? 'أقسام بوابة كوريا' : 'Korea Gate sections'}><div className={`${styles.inner} ${styles.barInner}`}>
+        <span className={styles.barName}><Link href={`${p}/korea-gate`}>{ar ? 'بوابة كوريا' : 'Korea Gate'}</Link>{here && <><span className={styles.sep} aria-hidden="true">/</span><span className={styles.here}>{here}</span></>}</span>
         <span className={styles.barNav}>
-          <a href={`${p}/korean-solutions#do`}>{ar ? 'ماذا نفعل' : 'What we do'}</a>
-          <a href={`${p}/korean-solutions#domains`}>{ar ? 'المجالات' : 'Fields'}</a>
-          <a href={`${p}/korean-solutions#how`}>{ar ? 'كيف نعمل' : 'How we work'}</a>
-          <a href={`${p}/korean-solutions#initiatives`}>{ar ? 'المبادرات' : 'Initiatives'}</a>
-          <a className={styles.barCta} href={transferMail(locale)}>{ar ? 'ناقش مشروع نقل تكنولوجيا' : 'Discuss a transfer project'}</a>
+          <a href={`${p}/korea-gate#services`}>{ar ? 'الخدمات' : 'Services'}</a>
+          <a href={`${p}/korea-gate#studies`}>{ar ? 'الدراسات' : 'Studies'}</a>
+          <a href={`${p}/korea-gate#request`}>{ar ? 'اطلب دراسة' : 'Request a study'}</a>
+          <a className={styles.barCta} href={`${p}/korea-gate#request`}>{ar ? 'اطلب دراسة أو استشارة مجانية' : 'Request a free study or consultation'}</a>
         </span>
       </div></nav>
       {children}
@@ -217,7 +216,7 @@ export function KoreanSolutionDetail({locale, s, related}: {locale: Locale; s: S
       </figure>
       <div className={styles.dActions}>
         <a className={styles.primary} href={mail}>{ar ? 'ناقش نقل هذه القدرة' : 'Discuss transferring this capability'}</a>
-        <Link className={styles.secondary} href={`${p}/korean-solutions`}>{ar ? 'حلول من كوريا' : 'Korean Solutions'}</Link>
+        <Link className={styles.secondary} href={`${p}/korea-gate`}>{ar ? 'بوابة كوريا' : 'Korea Gate'}</Link>
       </div>
     </div></section>
 

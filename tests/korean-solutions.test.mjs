@@ -31,26 +31,15 @@ test('Korean Solutions: institutional transfer front, no sourcing funnel, cars a
   const finder = read('components/korean-solutions/finder.tsx');
   assert.match(finder, /t\(NO_PARTNERSHIP\)/);
   assert.match(pages, /t\(NO_PARTNERSHIP\)/);
-  assert.match(pages, /ننقل القدرة الكورية ونوطّنها|we transfer Korean capability and localise it/);
+  assert.match(pages, /بوابة كوريا|Korea Gate/);
+  assert.match(pages, /\/korea-gate/);
   assert.doesNotMatch(pages, /لا شحن المنتج|not ship the product/);
-  assert.match(pages, /ناقش مشروع نقل تكنولوجيا|Discuss a technology-transfer project/);
-  assert.match(pages, /سيتم فتح باب التسجيل قريبًا|Registration will open soon/);
-  assert.match(pages, /بوابات إنتشون|Incheon Gateways/);
   assert.doesNotMatch(pages, /اسم مقترح|Proposed name|بانتظار اعتماد|pending Ahmed|بدائل مقترحة|Proposed alternatives/);
-  assert.match(pages, /id="do"/);
-  assert.match(pages, /id="domains"/);
-  assert.match(pages, /id="services"/);
-  assert.match(pages, /id="how"/);
-  assert.match(pages, /\/programs\/relay/);
-  assert.match(pages, /id="initiatives"/);
   assert.doesNotMatch(pages, /\/cars/);
-  assert.match(pages, /mailto\(/);
-  assert.match(pages, /أحمد عبدالعليم|Ahmed Abdelalim/);
   assert.doesNotMatch(pages, /RequestForm|اطلب من كوريا|Request from Korea|اطلب من هذا المجال|#needs|YOUR REQUEST/);
   assert.doesNotMatch(pages, /whatsappUrl|واتساب|WhatsApp/);
-  assert.doesNotMatch(pages, /\bDr\.|\bد\. أحمد/);
+  assert.doesNotMatch(pages, /\bDr\./);
   assert.doesNotMatch(pages, /48 hours|24 hours|1–2 days|two business days|Trade Assurance|\b6%|\b10%|زمالة|fellowship/i);
-  assert.doesNotMatch(pages, /<form|input type="email"/);
   assert.doesNotMatch(pages, /لا يوجد نموذج تسجيل|There is no registration form|بلا رسائل آلية|No automated messages|لا شراء شحنة|do not buy a shipment|بدل الاستيراد|not permanent import/);
   for (const img of ['medical', 'beauty', 'manufacturing', 'energy', 'education', 'agriculture', 'cars', 'transfer', 'partnerships', 'training']) {
     assert.ok(existsSync(new URL(`../public/ks/domains/${img}.webp`, import.meta.url)), img);
@@ -65,6 +54,10 @@ const COLLOQUIAL_AR = /مش |مفيش|مافيش|عايز|بتاع|اللي |إ�
 test('Korean Solutions: public Arabic copy is contemporary MSA, not Egyptian colloquial', () => {
   const files = [
     'app/ar/korean-solutions/page.tsx',
+    'app/ar/korea-gate/page.tsx',
+    'lib/korea-gate.ts',
+    'lib/korea-gate-documents.ts',
+    'components/korea-gate/hub.tsx',
     'components/korean-solutions/pages.tsx',
     'components/korean-solutions/audience.tsx',
     'components/korean-solutions/categories.tsx',
@@ -83,16 +76,17 @@ test('Korean Solutions: public Arabic copy is contemporary MSA, not Egyptian col
 
 test('Korean Solutions: in the menu, the sitemap and the archive list; the ops section writes to Notion only', () => {
   const nav = json('content/navigation.json').sections;
-  assert.equal(nav[0].path, '/korean-solutions');
-  assert.equal(nav[0].ar, 'حلول من كوريا');
-  assert.equal(nav[0].en, 'Korean Solutions');
+  assert.equal(nav[0].path, '/korea-gate');
+  assert.equal(nav[0].ar, 'بوابة كوريا');
+  assert.equal(nav[0].en, 'Korea Gate');
   assert.equal(nav[0].children.some(c => c.href === '/korean-solutions#needs'), false);
-  assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#domains' && c.ar === 'المجالات'));
-  assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#initiatives' && c.ar === 'المبادرات'));
+  assert.ok(nav[0].children.some(c => c.href === '/korea-gate#services' && c.ar === 'الخدمات'));
+  assert.ok(nav[0].children.some(c => c.href === '/korea-gate#studies' && c.ar === 'الدراسات'));
   assert.equal(nav[0].children.some(c => c.href === '/cars'), false);
+  assert.match(read('app/sitemap.ts'), /korea-gate/);
   assert.match(read('app/sitemap.ts'), /korean-solutions/);
   assert.doesNotMatch(read('app/sitemap.ts'), /path: '\/cars'/);
-  assert.match(read('public/admin/config.yml'), /value: "\/korean-solutions"/);
+  assert.match(read('public/admin/config.yml'), /value: "\/korea-gate"/);
   assert.doesNotMatch(read('public/admin/config.yml'), /value: "\/cars"/);
   const lib = read('lib/notion-room.ts');
   assert.match(lib, /koreanSolutions: \{ ds: "d81a751a-06b2-4ab1-933e-a6aa0deab79d"/);

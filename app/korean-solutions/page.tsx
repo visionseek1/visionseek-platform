@@ -1,11 +1,6 @@
-import type {Metadata} from 'next';
-import {KoreanSolutionsHub} from '@/components/korean-solutions/pages';
+import {permanentRedirect} from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: 'Korean Solutions | VisionSeek',
-  description: 'We transfer Korean products, technology and capability to Arab companies and institutions, and root them locally.',
-  alternates: {canonical: '/korean-solutions', languages: {en: '/korean-solutions', ar: '/ar/korean-solutions'}},
-};
+/** Old hub. Canonical page is /korea-gate. 308. */
 export default function Page() {
-  return <KoreanSolutionsHub locale="en"/>;
+  permanentRedirect('/korea-gate');
 }
