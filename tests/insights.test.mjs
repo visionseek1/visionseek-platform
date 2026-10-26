@@ -316,7 +316,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
       slug: 'gulf-medicine-ownership',
       lib: 'lib/research/gulf-medicine-ownership.ts',
       component: 'components/insights/gulf-medicine-ownership.tsx',
-      hit: 'الإنسولين معلّق بدولة مورّدة واحدة',
+      hit: /الإنسولين معلّق بدولة مورّدة واحدة/,
       related: '/research#gulf-medicine',
     },
     {
@@ -330,7 +330,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
       slug: 'gulf-data-center-stack',
       lib: 'lib/research/gulf-data-center-stack.ts',
       component: 'components/insights/gulf-data-center-stack.tsx',
-      hit: 'الحوسبة تصل إلى الخليج من قناة ضيقة',
+      hit: /الحوسبة تصل إلى الخليج من قناة ضيقة/,
       related: '/research#gulf-stack',
     },
     {
@@ -344,7 +344,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
       slug: 'ai-ministry-health-answers',
       lib: 'lib/research/ai-ministry-health-answers.ts',
       component: 'components/insights/ai-ministry-health-answers.tsx',
-      hit: 'المعقول طبيًا ليس دائمًا الرسمي',
+      hit: /المعقول طبيًا ليس دائمًا الرسمي/,
       related: '/research#arabic-health',
     },
   ];
@@ -379,8 +379,8 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     assert.match(lib, /\[مؤكد بمصدر/);
     assert.match(lib, /\[استنتاج/);
     assert.match(lib, spec.hit);
-    assert.match(lib, spec.doi);
-    assert.match(lib, `https://doi.org/${spec.doi}`);
+    assert.match(lib, new RegExp(spec.doi.replace(/\./g, '\\.')));
+    assert.match(lib, new RegExp(`https://doi\\.org/${spec.doi.replace(/\./g, '\\.')}`));
     assert.match(lib, /الإصدار 1\.1/);
     assert.doesNotMatch(lib, /اقرأ البحث على Zenodo/);
     assert.ok(existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.1.md`));
