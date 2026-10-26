@@ -14,7 +14,7 @@ test('VisionSeek Reports takes /reports; Leaders House moves to /leaders-house a
   assert.match(read('components/capability/navigation.tsx'), /isArchived\('\/leaders-house'\)/);
 });
 
-test('Reports sits in the main menu after Programs, then Research, then Indices, with MSA Arabic label تقارير', () => {
+test('Reports sits in the main menu after Programs, then Research, then News, then Indices, with MSA Arabic label تقارير', () => {
   const data = json('content/navigation.json');
   const nav = data.sections.map(s => s.path);
   const item = data.sections.find(s => s.path === '/reports');
@@ -23,7 +23,8 @@ test('Reports sits in the main menu after Programs, then Research, then Indices,
   assert.equal(item.ar, 'تقارير');
   assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
   assert.equal(data.sections.filter(s => s.path === '/reports').length, 1);
   assert.equal(data.sections.find(s => s.path === '/insights'), undefined);
   for (const s of data.sections) for (const c of s.children) if (c.ar === 'بيت القادة') assert.equal(c.href, '/leaders-house');
@@ -166,7 +167,8 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   const nav = json('content/navigation.json').sections.map(s => s.path);
   assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
 });
 
 test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source text and cross-links stay exact', () => {

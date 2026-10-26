@@ -185,6 +185,23 @@
       ]
     },
     {
+      "path": "/news",
+      "en": "News",
+      "ar": "أخبار",
+      "children": [
+        {
+          "href": "/news",
+          "en": "All news",
+          "ar": "كل الأخبار"
+        },
+        {
+          "href": "/news/media",
+          "en": "Media & inquiries",
+          "ar": "الإعلام والاستفسارات"
+        }
+      ]
+    },
+    {
       "path": "/indices",
       "en": "Indices",
       "ar": "المؤشرات",
@@ -203,28 +220,6 @@
           "href": "/indices/arab-critical-capabilities-atlas",
           "en": "Arab Critical Capabilities Atlas",
           "ar": "أطلس القدرات العربية الحرجة"
-        }
-      ]
-    },
-    {
-      "path": "/news",
-      "en": "News",
-      "ar": "الأخبار",
-      "children": [
-        {
-          "href": "/news",
-          "en": "All news & notes",
-          "ar": "كل الأخبار والمقالات"
-        },
-        {
-          "href": "/leaders-house",
-          "en": "Leaders House",
-          "ar": "بيت القادة"
-        },
-        {
-          "href": "/news/media",
-          "en": "Media & inquiries",
-          "ar": "الإعلام والاستفسارات"
         }
       ]
     },

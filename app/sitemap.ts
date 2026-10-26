@@ -8,6 +8,7 @@ import {projectRoutes} from '@/lib/projects';
 import {isArchived} from '@/lib/visibility';
 import {insights} from '@/lib/insights';
 import {liveIndices} from '@/lib/indices';
+import {listNews} from '@/lib/news';
 import ksData from '@/content/korean-solutions.json';
 
 // Korean Solutions pages known at build time (the JSON copy of the Notion database).
@@ -44,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar/reports", priority: 0.85 },
     { path: "/research", priority: 0.85 },
     { path: "/ar/research", priority: 0.85 },
+    { path: "/news", priority: 0.85 },
+    { path: "/ar/news", priority: 0.85 },
+    ...listNews('ar').flatMap(item => [
+      {path: `/ar/news/${item.slug}`, priority: 0.7},
+      ...(item.hasEnglish ? [{path: `/news/${item.slug}`, priority: 0.65}] : []),
+    ]),
     ...insights.notes.flatMap(n => [{path: `/reports/notes/${n.slug}`, priority: 0.7}, {path: `/ar/reports/notes/${n.slug}`, priority: 0.7}]),
     ...insights.frameworks.flatMap(f => [{path: `/reports/frameworks/${f.slug}`, priority: 0.7}, {path: `/ar/reports/frameworks/${f.slug}`, priority: 0.7}]),
     {path: '/reports/reports', priority: 0.75}, {path: '/ar/reports/reports', priority: 0.75},
