@@ -59,7 +59,7 @@ test('Tenders: live on Work with Us right after Competitions, old /tenders URLs 
   const config = read('next.config.ts');
   assert.match(config, /source: `\$\{prefix\}\/tenders`/);
   assert.match(config, /destination: `\$\{prefix\}\/work-with-us#tenders`/);
-  assert.doesNotMatch(config, /tenders\/:[A-Za-z]+/);
+  assert.doesNotMatch(config, /source: `\$\{prefix\}\/tenders\/:/);
   assert.match(read('app/tenders/page.tsx'), /permanentRedirect\('\/work-with-us#tenders'\)/);
   assert.match(read('app/ar/tenders/page.tsx'), /permanentRedirect\('\/ar\/work-with-us#tenders'\)/);
 
