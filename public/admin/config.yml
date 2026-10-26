@@ -2658,7 +2658,7 @@ collections:
 
   - name: research
     label: الأبحاث
-    description: "قسم الأبحاث العام في /research و/ar/research. الأوراق الثلاث من ملف واحد. حقل doi فارغ يظهر زر «الورقة الكاملة — قريبًا» معطّلًا؛ ضع DOI ورابط سجل Zenodo بعد النشر."
+    description: "قسم الأبحاث العام في /research و/ar/research. عدد الأوراق العلمية ذات DOI يُحسب من الملف. حقل doi فارغ يظهر زر «الورقة العلمية الكاملة — قريبًا» معطّلًا."
     preview_path: "ar/research"
     editor: {preview: false}
     files:
@@ -2682,14 +2682,107 @@ collections:
           fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
+        - label: "العنوان الكبير"
+          name: headline
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
         - label: "التعريف"
           name: intro
           widget: object
           fields:
           - {label: English, name: en, widget: text}
           - {label: العربية, name: ar, widget: text}
-        - label: "عدد الأوراق"
-          name: count
+      - label: شريط الثقة
+        name: trust
+        widget: object
+        fields:
+        - label: "تسمية الشريط"
+          name: label
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: العناصر
+          name: items
+          widget: list
+          summary: "{{fields.id}}"
+          fields:
+          - {label: المعرّف, name: id, widget: string}
+          - {label: "النوع (doiCount = عدد الأوراق العلمية ذات DOI)", name: kind, widget: string, required: false}
+          - label: القيمة
+            name: value
+            widget: object
+            required: false
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - {label: الرابط, name: href, widget: string, required: false}
+          - label: الشرح
+            name: caption
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+      - label: "ما يميّز أبحاثنا"
+        name: strengths
+        widget: object
+        fields:
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: الاقتباس
+          name: quote
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+        - label: النقاط
+          name: items
+          widget: list
+          summary: "{{fields.title.ar}}"
+          fields:
+          - {label: المعرّف, name: id, widget: string}
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: النص
+            name: text
+            widget: object
+            fields:
+            - {label: English, name: en, widget: text}
+            - {label: العربية, name: ar, widget: text}
+          - label: رابط إضافي
+            name: link
+            widget: object
+            required: false
+            fields:
+            - {label: الرابط, name: href, widget: string}
+            - label: النص
+              name: label
+              widget: object
+              fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+      - label: رأس الأوراق العلمية
+        name: papersHeading
+        widget: object
+        fields:
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "وسم النسخة المسبقة"
+          name: preprint
           widget: object
           fields:
           - {label: English, name: en, widget: string}
@@ -2710,7 +2803,134 @@ collections:
           fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
-      - label: الأوراق
+        - label: "رابط البيانات"
+          name: data
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "نسخ الاستشهاد"
+          name: citation
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "تم النسخ"
+          name: copied
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "تعذّر النسخ"
+          name: copyError
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+      - label: "معايير الجودة والنزاهة"
+        name: standards
+        widget: object
+        fields:
+        - label: العنوان
+          name: title
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: البنود
+          name: items
+          widget: list
+          summary: "{{fields.title.ar}}"
+          fields:
+          - {label: المعرّف, name: id, widget: string}
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: النص
+            name: text
+            widget: object
+            fields:
+            - {label: English, name: en, widget: text}
+            - {label: العربية, name: ar, widget: text}
+          - label: رابط إضافي
+            name: link
+            widget: object
+            required: false
+            fields:
+            - {label: الرابط, name: href, widget: string}
+            - label: النص
+              name: label
+              widget: object
+              fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+      - label: المؤسس
+        name: researcher
+        widget: object
+        fields:
+        - label: عنوان القسم
+          name: title
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: الاسم
+          name: name
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: الدور
+          name: role
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: الدرجة
+          name: degree
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: الانتماء
+          name: affiliation
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - {label: ORCID, name: orcid, widget: string}
+        - {label: "رابط ORCID", name: orcidUrl, widget: string}
+        - label: "نص رابط ORCID"
+          name: orcidLabel
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - {label: الصورة, name: photo, widget: string}
+        - label: "وصف الصورة"
+          name: photoAlt
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: "تسمية العمل السابق"
+          name: priorLabel
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: العمل السابق
+          name: prior
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+        - {label: "رابط العمل السابق", name: priorHref, widget: string}
+        - {label: "DOI العمل السابق", name: priorDoi, widget: string}
+      - label: الأوراق العلمية
         name: papers
         widget: list
         summary: "{{fields.title.ar}}"
@@ -2740,8 +2960,11 @@ collections:
           fields:
           - {label: English, name: en, widget: string}
           - {label: العربية, name: ar, widget: string}
+        - {label: السنة, name: year, widget: number, required: false, value_type: int}
         - {label: "DOI (فارغ = قريبًا على Zenodo)", name: doi, widget: string, required: false}
         - {label: "رابط سجل Zenodo", name: url, widget: string, required: false}
+        - {label: "رابط ملف البيانات", name: datasetUrl, widget: string, required: false}
+        - {label: "استشهاد APA", name: citation, widget: text, required: false}
 
   - name: about
     label: عن VisionSeek والمنهج
