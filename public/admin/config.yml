@@ -2867,7 +2867,7 @@ collections:
               fields:
               - {label: English, name: en, widget: string}
               - {label: العربية, name: ar, widget: string}
-      - label: الباحث
+      - label: المؤسس
         name: researcher
         widget: object
         fields:
@@ -2879,6 +2879,12 @@ collections:
           - {label: العربية, name: ar, widget: string}
         - label: الاسم
           name: name
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: الدور
+          name: role
           widget: object
           fields:
           - {label: English, name: en, widget: string}

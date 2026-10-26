@@ -40,6 +40,7 @@ export type ResearchHub = {
   researcher: {
     title: Bi;
     name: Bi;
+    role: Bi;
     degree: Bi;
     affiliation: Bi;
     orcid: string;

@@ -289,12 +289,16 @@
   },
   "researcher": {
     "title": {
-      "en": "Researcher",
-      "ar": "الباحث"
+      "en": "Founder",
+      "ar": "المؤسس"
     },
     "name": {
       "en": "Ahmed Abdelalim",
       "ar": "د. أحمد عبدالعليم"
+    },
+    "role": {
+      "en": "Founder & Chief Capability Architect, VisionSeek",
+      "ar": "المؤسس وكبير مهندسي القدرات، VisionSeek"
     },
     "degree": {
       "en": "BPharm, Al-Azhar University",

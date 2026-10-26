@@ -398,6 +398,12 @@ a.trustItem:hover .trustValue { color: var(--violet); }
 .page.page .researcher .kicker { color: var(--lime); }
 .page.page .researcher .kicker i { outline-color: #f5f5f2; }
 .page.page .researcher h2 { color: #fff; max-width: 16ch; }
+.role {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #f5f5f2;
+}
 .degree,
 .affiliation {
   font-size: 18px;

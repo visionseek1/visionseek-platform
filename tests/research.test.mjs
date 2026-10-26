@@ -54,7 +54,12 @@ test('research hub: three papers from one content file, Zenodo DOIs live, no dra
   assert.equal(d.standards.items.length, 5);
   assert.equal(d.researcher.name.en, 'Ahmed Abdelalim');
   assert.equal(d.researcher.name.ar, 'د. أحمد عبدالعليم');
+  assert.equal(d.researcher.title.en, 'Founder');
+  assert.equal(d.researcher.title.ar, 'المؤسس');
+  assert.equal(d.researcher.role.en, 'Founder & Chief Capability Architect, VisionSeek');
+  assert.equal(d.researcher.role.ar, 'المؤسس وكبير مهندسي القدرات، VisionSeek');
   assert.doesNotMatch(d.researcher.name.en, /Dr\./);
+  assert.doesNotMatch(JSON.stringify(d.researcher), /"Researcher"|"الباحث"/);
   assert.equal(d.researcher.orcid, orcid);
   assert.equal(d.researcher.priorDoi, ijms);
   assert.doesNotMatch(JSON.stringify(d), /ركام/);
@@ -139,6 +144,12 @@ test('the built Research hub is native RTL and LTR and links each paper to Zenod
   assert.match(ar, /د\. أحمد عبدالعليم/);
   assert.match(en, />Ahmed Abdelalim</);
   assert.doesNotMatch(en, /Dr\. Ahmed|Dr\. Abdelalim|>Dr\. /);
+  assert.match(en, /Founder &amp; Chief Capability Architect, VisionSeek/);
+  assert.match(ar, /المؤسس وكبير مهندسي القدرات، VisionSeek/);
+  assert.match(en, />Founder</);
+  assert.match(ar, />المؤسس</);
+  assert.doesNotMatch(en, />Researcher</);
+  assert.doesNotMatch(ar, />الباحث</);
   assert.match(en, /BPharm, Al-Azhar University/);
   assert.match(ar, /بكالوريوس صيدلة، جامعة الأزهر/);
   assert.match(en, /VisionSeek, Incheon, South Korea/);

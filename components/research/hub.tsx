@@ -110,6 +110,7 @@ export function ResearchHub({locale}: {locale: Locale}) {
             <div className={styles.researcherCopy}>
               <p className={styles.kicker}><i aria-hidden="true"/>{t(researcher.title)}</p>
               <h2 id="research-author">{t(researcher.name)}</h2>
+              <p className={styles.role}>{t(researcher.role)}</p>
               <p className={styles.degree}>{t(researcher.degree)}</p>
               <p className={styles.affiliation}>{t(researcher.affiliation)}</p>
               <a className={styles.orcid} href={researcher.orcidUrl} target="_blank" rel="noopener" dir="ltr">
