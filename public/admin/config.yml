@@ -65,7 +65,6 @@ collections:
                   - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
                   - {label: "البرامج ← Clause  /programs/clause", value: "/programs/clause"}
                   - {label: "البرامج ← Relay  /programs/relay", value: "/programs/relay"}
-                  - {label: "البرامج ← Lodestar  /programs/lodestar", value: "/programs/lodestar"}
                   - {label: "تقارير ← التقارير  /reports/reports", value: "/reports/reports"}
                   - {label: "تقارير ← الأوراق العلمية  /reports/research", value: "/reports/research"}
                   - {label: "تقارير ← ملاحظات  /reports/notes/l-001", value: "/reports/notes/l-001"}
@@ -81,6 +80,7 @@ collections:
                   - {label: "عن VisionSeek ← الحوكمة  /about/governance", value: "/about/governance"}
                   - {label: "عن VisionSeek ← التعلم من DARPA  /about/learning-from-darpa", value: "/about/learning-from-darpa"}
                   - {label: "التقارير ← المنهج والمعايير  /reports/methodology", value: "/reports/methodology"}
+                  - {label: "البرامج ← Lodestar: المرجع الذي يهدي القرار  /programs/lodestar", value: "/programs/lodestar"}
                   - {label: "programs ← التحديات وتجارب الإثبات  /programs/challenges", value: "/programs/challenges"}
                   - {label: "programs ← أفكار قيد الاستكشاف  /programs/ideas", value: "/programs/ideas"}
                   - {label: "programs ← كيف يعمل البرنامج؟  /programs/program-lifecycle", value: "/programs/program-lifecycle"}
@@ -95,6 +95,7 @@ collections:
                   - {label: "الأخبار ← ما الذي ينبغي أن يثبته التحدي؟  /news/learning-from-challenges", value: "/news/learning-from-challenges"}
                   - {label: "الأخبار ← مدير البرنامج بوصفه بانيًا للقدرة  /news/program-manager-model", value: "/news/program-manager-model"}
                   - {label: "الأخبار ← لماذا لا يكفي المستشفى الافتراضي وحده  /news/virtual-hospital-not-enough", value: "/news/virtual-hospital-not-enough"}
+                  - {label: "اعمل معنا ← خدماتنا الحكومية في الخليج: من يشاركنا طبقة الوكيل  /work-with-us/tenders/moei-12718", value: "/work-with-us/tenders/moei-12718"}
                   - {label: "ماستركلاس ← معلومة المسافر، والمذكرة الداخلية التي تنسّقها، تُ  /masterclass/airport-teams", value: "/masterclass/airport-teams"}
                   - {label: "ماستركلاس ← الفريق يسترد ساعات من الكتابة التي يقوم بها أصلًا،  /masterclass/company-teams", value: "/masterclass/company-teams"}
                   - {label: "ماستركلاس ← ترى ما تستطيع المؤسسة فعله بمن فيها وبمالها اليوم،  /masterclass/develop-the-institution", value: "/masterclass/develop-the-institution"}
@@ -4767,6 +4768,283 @@ collections:
                   - {label: "English", name: en, widget: text}
                   - {label: "العربية", name: ar, widget: text}
               - label: "الدروس (لما المسابقة تخلص)"
+                name: lessons
+                widget: object
+                required: false
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+
+  - name: tenders
+    label: "المناقصات"
+    description: "قسم ظاهر عنوانه «المناقصات / Tenders» داخل «اعمل معنا» (/work-with-us#tenders)، بعد المسابقات. أي كارت جديد من القائمة تحت ينزل في نفس القسم، وله صفحة تفصيل /work-with-us/tenders/<id>. الروابط /tenders تتحوّل هناك. ممنوع ميزانية أو نطاق تفصيلي أو أسماء شركات أو شعار الوزارة أو أشخاص أو ادعاء أن VisionSeek قدّمت أو تسجّلت."
+    preview_path: "ar/work-with-us"
+    editor: {preview: false}
+    files:
+      - label: "الصفحة"
+        name: tenders
+        file: content/tenders.json
+        fields:
+          - label: "الغلاف"
+            name: hero
+            widget: object
+            fields:
+              - label: "عنوان القسم الظاهر (المناقصات / Tenders)"
+                name: kicker
+                widget: object
+                hint: "العنوان الكبير فوق الكروت في اعمل معنا. ده id=tenders."
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العنوان"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السطر تحت العنوان"
+                name: text
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - {label: "الصورة", name: image, widget: image, choose_url: true}
+          - label: "عناوين الأقسام والكروت"
+            name: labels
+            widget: object
+            fields:
+              - label: "المفتوحة"
+                name: now
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "تواصل"
+                name: join
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "أُغلقت"
+                name: completed
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "كيف نعمل"
+                name: how
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "القسم الفاضي"
+                name: empty
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الجهة"
+                name: issuerIn
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الحالة: مفتوح"
+                name: open
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الحالة: أُغلقت"
+                name: filled
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المناقصة"
+                name: tender
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الدور المطلوب"
+                name: role
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "آخر موعد"
+                name: deadline
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "افتتحت"
+                name: opened
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "من يحق له التقديم"
+                name: eligibility
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "المصدر"
+                name: source
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "زرار تواصل"
+                name: contact
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "اقرأ الإعلان"
+                name: read
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "العودة إلى المناقصات"
+                name: back
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النتيجة"
+                name: result
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الدروس"
+                name: lessons
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+          - label: "فورم «تواصل»"
+            name: form
+            widget: object
+            hint: "نفس مسار المسابقات: الفورم بيفتح مسودة إيميل على بريد الموقع. مفيش إرسال من الموقع نفسه."
+            fields:
+              - label: "الاسم"
+                name: name
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الإيميل"
+                name: email
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "الدور"
+                name: role
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "موقع الشركة"
+                name: link
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "السطر تحت الزرار"
+                name: note
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+          - label: "كيف نعمل"
+            name: how
+            widget: list
+            summary: "{{fields.ar}}"
+            fields:
+              - {label: "English", name: en, widget: string}
+              - {label: "العربية", name: ar, widget: string}
+          - label: "الكروت (تظهر كلها تحت عنوان المناقصات في اعمل معنا)"
+            name: cards
+            widget: list
+            hint: "كارت جديد = نفس القسم #tenders وصفحة /work-with-us/tenders/<id>. مفتوح ينزل تحت «المفتوحة»؛ completed ينزل تحت «أُغلقت»."
+            summary: "{{fields.number}} — {{fields.status}}"
+            fields:
+              - {label: "المعرّف", name: id, widget: string, hint: "حروف إنجليزية صغيرة وشرطات، ومايتكررش. يبقى slug الصفحة."}
+              - label: "الحالة"
+                name: status
+                widget: select
+                options:
+                  - {label: "مفتوح · مطلوب مكامل مسجّل", value: open}
+                  - {label: "أُغلقت", value: filled}
+                  - {label: "خلصت (ينزل في قسم «أُغلقت»)", value: completed}
+              - label: "العنوان (منهجية العناوين)"
+                name: title
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "الاسم الرسمي للمناقصة", name: officialName, widget: string}
+              - {label: "رقم المناقصة", name: number, widget: string}
+              - label: "الجهة (نص، من غير شعار)"
+                name: issuer
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "سطر الوصف"
+                name: summary
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "نص الإعلان الكامل"
+                name: body
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "الدور المطلوب"
+                name: role
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "من يحق له التقديم"
+                name: eligibility
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "رابط المصدر", name: sourceUrl, widget: string, hint: "https://procurement.gov.ae"}
+              - label: "تسمية المصدر"
+                name: sourceLabel
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - {label: "تاريخ الفتح", name: opened, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, picker_utc: true}
+              - {label: "آخر موعد (ISO مع المنطقة)", name: deadline, widget: string, hint: "مثال: 2026-11-03T15:00:00+04:00"}
+              - {label: "صورة الكارت", name: image, widget: image, choose_url: true}
+              - label: "النص البديل للصورة"
+                name: imageAlt
+                widget: object
+                fields:
+                  - {label: "English", name: en, widget: string}
+                  - {label: "العربية", name: ar, widget: string}
+              - label: "النتيجة (لما المناقصة تخلص)"
+                name: result
+                widget: object
+                required: false
+                fields:
+                  - {label: "English", name: en, widget: text}
+                  - {label: "العربية", name: ar, widget: text}
+              - label: "الدروس (لما المناقصة تخلص)"
                 name: lessons
                 widget: object
                 required: false

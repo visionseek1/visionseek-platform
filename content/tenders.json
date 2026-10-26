@@ -1,0 +1,175 @@
+{
+  "hero": {
+    "kicker": {
+      "en": "Tenders",
+      "ar": "المناقصات"
+    },
+    "title": {
+      "en": "A registered integrator completes the path",
+      "ar": "المكامل المسجّل يُكمل المسار"
+    },
+    "text": {
+      "en": "When a public tender is open only to registered suppliers, VisionSeek looks for a registered UAE systems integrator to partner with. We bring the Arabic agent layer, evaluation, and safety. The integrator is the one who enters the portal and submits.",
+      "ar": "حين تُفتح مناقصة عامة للمورّدين المسجّلين فقط، تبحث VisionSeek عن مكامل أنظمة إماراتي مسجّل للشراكة. نحن نقدّم طبقة الوكيل العربي، والتقييم، والأمان. المكامل هو من يدخل البوابة ويقدّم."
+    },
+    "image": "/tenders/moei-12718.png"
+  },
+  "labels": {
+    "now": {
+      "en": "Open now",
+      "ar": "المفتوحة"
+    },
+    "join": {
+      "en": "Contact",
+      "ar": "تواصل"
+    },
+    "completed": {
+      "en": "Closed",
+      "ar": "أُغلقت"
+    },
+    "how": {
+      "en": "How we work",
+      "ar": "كيف نعمل"
+    },
+    "empty": {
+      "en": "None yet",
+      "ar": "لا يوجد بعد"
+    },
+    "issuerIn": {
+      "en": "Issuer",
+      "ar": "الجهة"
+    },
+    "open": {
+      "en": "Open · Registered integrator wanted",
+      "ar": "مفتوح · مطلوب مكامل مسجّل"
+    },
+    "filled": {
+      "en": "Closed",
+      "ar": "أُغلقت"
+    },
+    "tender": {
+      "en": "Tender",
+      "ar": "المناقصة"
+    },
+    "role": {
+      "en": "Role needed",
+      "ar": "الدور المطلوب"
+    },
+    "deadline": {
+      "en": "Deadline",
+      "ar": "آخر موعد"
+    },
+    "opened": {
+      "en": "Opened",
+      "ar": "افتتحت"
+    },
+    "eligibility": {
+      "en": "Who may submit",
+      "ar": "من يحق له التقديم"
+    },
+    "source": {
+      "en": "Source",
+      "ar": "المصدر"
+    },
+    "contact": {
+      "en": "Contact VisionSeek",
+      "ar": "تواصل مع VisionSeek"
+    },
+    "read": {
+      "en": "Read the announcement",
+      "ar": "اقرأ الإعلان"
+    },
+    "back": {
+      "en": "Back to tenders",
+      "ar": "العودة إلى المناقصات"
+    },
+    "result": {
+      "en": "Result",
+      "ar": "النتيجة"
+    },
+    "lessons": {
+      "en": "Lessons",
+      "ar": "الدروس"
+    }
+  },
+  "form": {
+    "name": {
+      "en": "Name",
+      "ar": "الاسم"
+    },
+    "email": {
+      "en": "Email",
+      "ar": "الإيميل"
+    },
+    "role": {
+      "en": "Your role at the integrator",
+      "ar": "دورك لدى المكامل"
+    },
+    "link": {
+      "en": "Company website",
+      "ar": "موقع الشركة"
+    },
+    "note": {
+      "en": "The button opens a draft in your email app. Review and send it there; no email or registration is submitted automatically.",
+      "ar": "يفتح الزر مسودة في تطبيق بريدك. راجعها وأكمل الإرسال هناك؛ لا يحدث إرسال أو تسجيل تلقائي."
+    }
+  },
+  "how": [
+    {
+      "en": "VisionSeek brings the Arabic agent layer, evaluation, and safety",
+      "ar": "VisionSeek تقدّم طبقة الوكيل العربي والتقييم والأمان"
+    },
+    {
+      "en": "The registered integrator enters the portal and submits",
+      "ar": "المكامل المسجّل يدخل البوابة ويقدّم"
+    },
+    {
+      "en": "Every agreement is written upfront",
+      "ar": "كل اتفاق مكتوب من الأول"
+    }
+  ],
+  "cards": [
+    {
+      "id": "moei-12718",
+      "status": "open",
+      "title": {
+        "en": "Our government services in the Gulf: who partners on the Arabic agent layer?",
+        "ar": "خدماتنا الحكومية في الخليج: من يشاركنا طبقة الوكيل العربي؟"
+      },
+      "officialName": "AI Government Services",
+      "number": "12718",
+      "issuer": {
+        "en": "UAE Ministry of Energy and Infrastructure",
+        "ar": "وزارة الطاقة والبنية التحتية الإماراتية"
+      },
+      "summary": {
+        "en": "A request for quotation is live on the UAE federal procurement platform. It is open only to registered suppliers. VisionSeek is looking for a registered UAE systems integrator to partner on this path.",
+        "ar": "نُشر طلب عروض على منصة الشراء الرقمي الاتحادية في دولة الإمارات. المناقصة مفتوحة للمورّدين المسجّلين فقط. VisionSeek تبحث عن مكامل أنظمة إماراتي مسجّل للشراكة في هذا المسار."
+      },
+      "body": {
+        "en": "A request for quotation is live on the UAE federal procurement platform for AI government services. It is open only to registered suppliers.\n\nIt opened on 13 October 2026. It closes on 3 November 2026 at 3:00 p.m. UAE time.\n\nVisionSeek is looking for a registered UAE systems integrator to partner on this path. We bring the Arabic agent layer, evaluation, and safety: an auditable layer, human approval before any action, a full action log, and data that stays in the authority’s environment through the integrator. The integrator is the one who enters the portal and submits.\n\nIf you are a registered integrator on the platform, contact us.",
+        "ar": "نُشر طلب عروض على منصة الشراء الرقمي الاتحادية في دولة الإمارات لخدمات ذكاء اصطناعي حكومية. المناقصة مفتوحة للمورّدين المسجّلين فقط.\n\nافتتحت في ١٣ أكتوبر ٢٠٢٦، وتُقفل في ٣ نوفمبر ٢٠٢٦ الساعة ٣:٠٠ مساءً بتوقيت الإمارات.\n\nVisionSeek تبحث عن مكامل أنظمة إماراتي مسجّل للشراكة في هذا المسار. نقدّم طبقة الوكيل العربي، والتقييم، والأمان: طبقة قابلة للمراجعة، بموافقة بشرية قبل أي فعل، وبسجل كامل للأفعال، والبيانات تبقى في بيئة الجهة عبر المكامل. المكامل هو من يدخل البوابة ويقدّم.\n\nإن كنت مكاملًا مسجّلًا على المنصة، تواصل معنا."
+      },
+      "role": {
+        "en": "Registered UAE systems integrator",
+        "ar": "مكامل أنظمة إماراتي مسجّل"
+      },
+      "eligibility": {
+        "en": "Open only to registered suppliers",
+        "ar": "مفتوحة للمورّدين المسجّلين فقط"
+      },
+      "sourceUrl": "https://procurement.gov.ae",
+      "sourceLabel": {
+        "en": "UAE federal procurement platform",
+        "ar": "منصة الشراء الرقمي الاتحادية"
+      },
+      "opened": "2026-10-13",
+      "deadline": "2026-11-03T15:00:00+04:00",
+      "image": "/tenders/moei-12718.png",
+      "imageAlt": {
+        "en": "Abstract editorial drawing of a government-services AI network on a dark field with VisionSeek lime chevrons. No logos, flags, or people.",
+        "ar": "رسم تحريري تجريدي لشبكة خدمات حكومية ووكلاء أذكياء، على خلفية داكنة ولمسات VisionSeek الخضراء، من دون شعارات أو أعلام أو أشخاص."
+      }
+    }
+  ]
+}

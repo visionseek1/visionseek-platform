@@ -24,6 +24,8 @@ for f in sorted(glob.glob('content/guides/*.json')):
     d = load(f); seg = PUBLIC.get(d['section'], d['section']); add(f"/{seg}/{d['slug']}", f"{seg} ← {d['title']['ar']}")
 for f in sorted(glob.glob('content/news/*.json')):
     d = load(f); add(f"/news/{d['slug']}", f"الأخبار ← {d['title']['ar']}")
+for card in load('content/tenders.json').get('cards', []):
+    add(f"/work-with-us/tenders/{card['id']}", f"اعمل معنا ← {card['title']['ar'][:50]}")
 for f in sorted(glob.glob('content/workshops/*.json')):
     d = load(f)
     if d.get('draft'): continue  # drafts are not on the site

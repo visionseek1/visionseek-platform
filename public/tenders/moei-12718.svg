@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <title>VisionSeek editorial mark for a government-services AI network</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0c10"/>
+      <stop offset="0.45" stop-color="#07080b"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="62%" cy="42%" r="42%">
+      <stop offset="0" stop-color="#cfff00" stop-opacity=".22"/>
+      <stop offset="0.35" stop-color="#cfff00" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#cfff00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="28%" cy="70%" r="28%">
+      <stop offset="0" stop-color="#cfff00" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#cfff00" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#cfff00" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="arch" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#cfff00" stop-opacity=".0"/>
+      <stop offset="1" stop-color="#cfff00" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#glow2)"/>
+
+  <!-- Civic horizon: abstract pointed arches, not a skyline and not a flag. -->
+  <g fill="none" stroke="url(#arch)" stroke-width="2.2">
+    <path d="M80 820 V560 C80 470 170 400 260 400 C350 400 440 470 440 560 V820"/>
+    <path d="M470 820 V500 C470 400 575 320 680 320 C785 320 890 400 890 500 V820"/>
+    <path d="M920 820 V540 C920 445 1020 370 1120 370 C1220 370 1320 445 1320 540 V820"/>
+    <path d="M1350 820 V580 C1350 500 1430 440 1510 440 C1555 440 1575 470 1575 520 V820"/>
+  </g>
+  <g fill="none" stroke="#cfff00" stroke-opacity=".18" stroke-width="1">
+    <path d="M80 820 V560 C80 470 170 400 260 400 C350 400 440 470 440 560 V820"/>
+    <path d="M470 820 V500 C470 400 575 320 680 320 C785 320 890 400 890 500 V820"/>
+    <path d="M920 820 V540 C920 445 1020 370 1120 370 C1220 370 1320 445 1320 540 V820"/>
+  </g>
+  <line x1="0" y1="820" x2="1600" y2="820" stroke="#cfff00" stroke-opacity=".16" stroke-width="2"/>
+
+  <!-- Service / agent network -->
+  <g stroke="#cfff00" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-opacity=".28" stroke-width="1.4">
+      <path d="M220 210 L360 160 L520 210 L680 140 L860 190 L1040 120 L1220 180 L1400 130"/>
+      <path d="M260 340 L420 280 L600 330 L760 250 L940 300 L1120 230 L1300 290"/>
+      <path d="M360 160 L420 280 L520 210 L600 330 L680 140 L760 250 L860 190 L940 300 L1040 120 L1120 230"/>
+      <path d="M520 210 L520 430 L680 390 L860 450 L1040 380 L1220 430"/>
+      <path d="M680 140 L680 390 L940 300 L940 500"/>
+      <path d="M1040 120 L1040 380 L1300 290"/>
+    </g>
+    <g fill="#cfff00" stroke="none">
+      <circle cx="220" cy="210" r="5" opacity=".7"/>
+      <circle cx="360" cy="160" r="6"/>
+      <circle cx="520" cy="210" r="7"/>
+      <circle cx="680" cy="140" r="8"/>
+      <circle cx="860" cy="190" r="6"/>
+      <circle cx="1040" cy="120" r="7"/>
+      <circle cx="1220" cy="180" r="5" opacity=".8"/>
+      <circle cx="1400" cy="130" r="4" opacity=".6"/>
+      <circle cx="260" cy="340" r="4" opacity=".55"/>
+      <circle cx="420" cy="280" r="5" opacity=".8"/>
+      <circle cx="600" cy="330" r="6"/>
+      <circle cx="760" cy="250" r="5"/>
+      <circle cx="940" cy="300" r="7"/>
+      <circle cx="1120" cy="230" r="6"/>
+      <circle cx="1300" cy="290" r="5" opacity=".75"/>
+      <circle cx="520" cy="430" r="5" opacity=".7"/>
+      <circle cx="680" cy="390" r="6"/>
+      <circle cx="860" cy="450" r="5"/>
+      <circle cx="1040" cy="380" r="6"/>
+      <circle cx="1220" cy="430" r="4" opacity=".6"/>
+      <circle cx="940" cy="500" r="4" opacity=".5"/>
+    </g>
+    <g fill="none" stroke="#cfff00" stroke-width="1.6" stroke-opacity=".7">
+      <circle cx="680" cy="140" r="16"/>
+      <circle cx="940" cy="300" r="14"/>
+      <circle cx="520" cy="210" r="12"/>
+    </g>
+  </g>
+
+  <!-- VisionSeek chevron / isometric accent, geometric only, no wordmark. -->
+  <g transform="translate(1188 478) scale(1.15)" fill="none">
+    <path d="M0 86 L86 36 L172 86 L172 186 L86 236 L0 186 Z" fill="#0b0c0f" stroke="#cfff00" stroke-width="3"/>
+    <path d="M86 36 L172 86 L172 186 L86 136 Z" fill="#cfff00"/>
+    <path d="M0 86 L86 36 L86 136 L0 186 Z" fill="#111318" stroke="#cfff00" stroke-width="2"/>
+    <path d="M86 136 L172 186 L86 236 L0 186 Z" fill="#16181d" stroke="#cfff00" stroke-width="2"/>
+  </g>
+
+  <!-- Lime chevrons suggesting a route, not a flag. -->
+  <g fill="#cfff00">
+    <path d="M148 610 L188 590 L188 618 L148 638 Z" opacity=".9"/>
+    <path d="M206 610 L246 590 L246 618 L206 638 Z" opacity=".55"/>
+    <path d="M264 610 L304 590 L304 618 L264 638 Z" opacity=".28"/>
+  </g>
+</svg>

@@ -1,0 +1,479 @@
+.page {
+  --bg: #f7f7f2;
+  --ink: #111;
+  --lime: #c8f000;
+  --body: #2c2e2b;
+  --muted: #575a55;
+  --line: #e2e2da;
+  --card: #fff;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.75;
+}
+
+.page.en {
+  font-family: var(--font-plex-sans), var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+.page.page.page :is(h1, h2, h3) {
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.page.page.page.ar :is(h1, h2, h3) {
+  font-family: var(--font-arabic), "Segoe UI", Tahoma, sans-serif !important;
+}
+
+.page.page.page.en :is(h1, h2, h3) {
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.page.page :is(a, button, input, select):focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.page,
+.section,
+.bandHead {
+  scroll-margin-top: 6rem;
+}
+
+.bandHead {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 4.5vw, 4rem) clamp(1.5rem, 5vw, 3rem) 0;
+}
+
+.page.page.page .sectionTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  max-width: 12em;
+  text-wrap: balance;
+}
+
+.sectionTitle::before {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 0.4rem;
+  margin-bottom: 1rem;
+  background: var(--lime);
+}
+
+.section {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.bandHead + .section {
+  padding-top: clamp(1.4rem, 2.4vw, 2rem);
+}
+
+.section:last-child {
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.page.page.page .heading {
+  font-size: clamp(1.65rem, 2.6vw, 2.3rem);
+  margin-bottom: 1.5rem;
+}
+
+.heading::before {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 0.35rem;
+  margin-bottom: 0.9rem;
+  background: var(--lime);
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.empty {
+  padding: 1.15rem 1.4rem;
+  border: 1px dashed #c9c9c0;
+  border-radius: 16px;
+  color: var(--muted);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgb(17 17 17 / 0.04), 0 22px 44px -28px rgb(17 17 17 / 0.22);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.cardTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.status {
+  background: var(--lime);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0.35rem 0.8rem;
+}
+
+.statusFilled {
+  background: #e6e6df;
+}
+
+.issuer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.issuerName {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.page.page.page .project {
+  font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+  margin-top: 0.4rem;
+  max-width: 22em;
+  text-wrap: balance;
+}
+
+.project a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project a:hover {
+  box-shadow: inset 0 -0.35em 0 var(--lime);
+}
+
+.official {
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.summary {
+  max-width: 38rem;
+  color: var(--body);
+  font-size: clamp(1.02rem, 1.3vw, 1.15rem);
+  line-height: 1.75;
+}
+
+.facts {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.4rem 0 0;
+}
+
+.facts > div {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.facts dt {
+  color: var(--muted);
+}
+
+.facts dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.countdown {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.cardFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.6rem;
+  border: 0;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #000;
+  box-shadow: inset 0 -4px 0 var(--lime);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
+.ghost:hover {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: inset 0 -4px 0 var(--lime);
+}
+
+.cardPhoto {
+  position: relative;
+  min-height: 20rem;
+  background: #050607;
+}
+
+.cardPhoto img {
+  object-fit: cover;
+}
+
+.done {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.25rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field :is(input, select) {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #c4c4bb;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 400;
+}
+
+.page.page .field :is(input, select):focus-visible {
+  border-color: var(--ink);
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+  box-shadow: 0 0 0 5px rgb(200 240 0 / 0.55);
+}
+
+.field input::placeholder {
+  color: #8a8c86;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.formFoot {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.5rem;
+  margin-top: 0.4rem;
+}
+
+.note {
+  flex: 1 1 20rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.address {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  unicode-bidi: isolate;
+}
+
+.how {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.how li {
+  padding: 1.5rem 1.4rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.45;
+}
+
+.how li::before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 0.3rem;
+  margin-bottom: 1rem;
+  background: var(--lime);
+}
+
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.crumb a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.detailHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 0;
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 3rem) 0;
+}
+
+.detailCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 0.5rem 1.5rem;
+  padding-inline-end: clamp(1rem, 3vw, 2.5rem);
+}
+
+.page.page.page .detailTitle {
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  max-width: 18em;
+  text-wrap: balance;
+}
+
+.article {
+  display: grid;
+  gap: 1rem;
+  max-width: 40rem;
+  color: var(--body);
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.85;
+}
+
+.article p {
+  margin: 0;
+}
+
+.sourceLink {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.detailPhoto {
+  position: relative;
+  min-height: 18rem;
+  background: #050607;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.detailPhoto img {
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .card,
+  .detailHero {
+    grid-template-columns: 1fr;
+  }
+
+  .cardPhoto,
+  .detailPhoto {
+    order: -1;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .form,
+  .how {
+    grid-template-columns: 1fr;
+  }
+
+  .detailCopy {
+    padding-inline-end: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .facts > div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+
+  .cardFoot {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
