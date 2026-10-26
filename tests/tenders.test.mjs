@@ -128,7 +128,7 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
   }
 });
 
-test('Tenders: hero is a 16:9 PNG and the OG file is 1200×630; next/image does not hide them', () => {
+test('Tenders: v2 PNG stays 16:9 on disk; cards reuse the competitions photo column, not a banner', () => {
   const pngSize = path => {
     const buf = readFileSync(url(path));
     assert.equal(buf.toString('ascii', 1, 4), 'PNG');
@@ -151,11 +151,26 @@ test('Tenders: hero is a 16:9 PNG and the OG file is 1200×630; next/image does 
     assert.match(card.imageAlt.ar, /رسم تحريري/);
     assert.match(card.imageAlt.ar, /أفق مدينة خليجية/);
   }
+  const page = read('components/tenders/tenders-page.tsx');
+  const detail = read('components/tenders/tender-detail.tsx');
   const css = read('components/tenders/tenders.module.css');
-  assert.match(css, /\.cardPhoto[\s\S]*aspect-ratio:\s*16\s*\/\s*9/);
-  assert.match(css, /\.cardPhoto img[\s\S]*object-fit:\s*cover/);
-  assert.match(read('components/tenders/tenders-page.tsx'), /unoptimized/);
-  assert.match(read('components/tenders/tender-detail.tsx'), /unoptimized/);
+  const competitionsCss = read('components/competitions/competitions.module.css');
+  assert.match(page, /from '@\/components\/competitions\/competitions\.module\.css'/);
+  assert.match(detail, /from '@\/components\/competitions\/competitions\.module\.css'/);
+  assert.match(page, /cardStyles\.card\b/);
+  assert.match(page, /cardStyles\.cardPhoto\b/);
+  assert.match(detail, /cardStyles\.card\b/);
+  assert.match(detail, /cardStyles\.cardPhoto\b/);
+  assert.match(page, /sizes="\(max-width: 860px\) 100vw, 40vw"/);
+  assert.match(detail, /sizes="\(max-width: 860px\) 100vw, 40vw"/);
+  assert.doesNotMatch(page, /sizes="100vw"/);
+  assert.doesNotMatch(detail, /sizes="100vw"/);
+  assert.doesNotMatch(css, /aspect-ratio:\s*16\s*\/\s*9/);
+  assert.match(competitionsCss, /\.card\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1\.25fr\)\s*minmax\(0,\s*1fr\)/);
+  assert.match(competitionsCss, /\.cardPhoto\s*\{[^}]*min-height:\s*20rem/);
+  assert.match(competitionsCss, /\.cardPhoto\s*\{[^}]*aspect-ratio:\s*16\s*\/\s*10/);
+  assert.match(page, /unoptimized/);
+  assert.match(detail, /unoptimized/);
   assert.match(read('components/institution/work-with-us-page.tsx'), /TendersBody/);
-  assert.match(read('components/tenders/tenders-page.tsx'), /id="tenders"/);
+  assert.match(page, /id="tenders"/);
 });

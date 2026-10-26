@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import JoinForm from '@/components/competitions/join-form';
+import cardStyles from '@/components/competitions/competitions.module.css';
 import {
   formatOpened,
   officialRef,
@@ -20,8 +21,8 @@ function Card({card, state, locale}: {card: TenderCard; state: CardStatus; local
   const open = state === 'open';
   const href = tenderPath(card.id, locale);
   return (
-    <article className={styles.card} id={card.id} aria-labelledby={`${card.id}-title`}>
-      <div className={styles.cardBody}>
+    <article className={cardStyles.card} id={card.id} aria-labelledby={`${card.id}-title`}>
+      <div className={cardStyles.cardBody}>
         <div className={styles.cardTop}>
           <p className={open ? styles.status : `${styles.status} ${styles.statusFilled}`}>{open ? labels.open[locale] : labels.filled[locale]}</p>
           <p className={styles.issuer}>
@@ -53,8 +54,8 @@ function Card({card, state, locale}: {card: TenderCard; state: CardStatus; local
           <Link className={`${styles.button} ${styles.ghost}`} href={href}>{labels.read[locale]}</Link>
         </div>
       </div>
-      <div className={styles.cardPhoto}>
-        <Image src={card.image} alt={card.imageAlt[locale]} fill sizes="100vw" unoptimized/>
+      <div className={cardStyles.cardPhoto}>
+        <Image src={card.image} alt={card.imageAlt[locale]} fill sizes="(max-width: 860px) 100vw, 40vw" unoptimized/>
       </div>
     </article>
   );
