@@ -15,7 +15,8 @@ test('Research sits in the main menu immediately after Reports, with الأبح�
   assert.equal(item.en, 'Research');
   assert.equal(item.ar, 'الأبحاث');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
   assert.equal(data.sections.filter(s => s.path === '/research').length, 1);
   assert.ok(item.children.length >= 2);
   assert.equal(item.children[0].href, '/research');

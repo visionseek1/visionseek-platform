@@ -43,3 +43,7 @@ next-env.d.ts
 
 .trigger
 *.tsbuildinfo
+
+# Copied from content/news at build; source images stay in content/news/.
+/public/news-media/*
+!/public/news-media/fallback.svg

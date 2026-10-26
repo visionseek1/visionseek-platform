@@ -1,4 +1,5 @@
 import data from '@/content/navigation.json';
+import {showNewsNav} from '@/lib/news/nav-flag';
 import {isArchived} from '@/lib/visibility';
 
 /**
@@ -10,7 +11,10 @@ export type NavSection = {path: string; en: string; ar: string; children: NavLin
 
 const visible = (section: NavSection): NavSection => ({...section, children: section.children.filter(link => !isArchived(link.href))});
 
-export const institutionNav: NavSection[] = data.sections.filter(section => !isArchived(section.path)).map(visible);
+export const institutionNav: NavSection[] = data.sections
+  .filter(section => !isArchived(section.path))
+  .filter(section => section.path !== '/news' || showNewsNav())
+  .map(visible);
 
 // The live Reports section is now a regular nav item (formerly Insights). The older
 // reports-center entry in navigation.json stays for /admin archive options; it is

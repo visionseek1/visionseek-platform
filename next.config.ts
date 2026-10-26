@@ -1,6 +1,21 @@
+import {existsSync, readdirSync, readFileSync} from "node:fs";
+import {join} from "node:path";
 import type { NextConfig } from "next";
 
+const newsDir = join(__dirname, "content/news");
+const hasPublishedNews = existsSync(newsDir) && readdirSync(newsDir).some(name => {
+  if (!name.endsWith(".md") || name.toLowerCase() === "readme.md") return false;
+  return !/^sample:\s*true\s*$/m.test(readFileSync(join(newsDir, name), "utf8"));
+});
+const showNewsNav =
+  process.env.VERCEL_ENV === "preview" ||
+  process.env.NODE_ENV !== "production" ||
+  hasPublishedNews;
+
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_VS_SHOW_NEWS: showNewsNav ? "1" : "0",
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
