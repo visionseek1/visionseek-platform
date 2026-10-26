@@ -8,24 +8,327 @@
       "en": "VisionSeek Research",
       "ar": "أبحاث VisionSeek"
     },
-    "intro": {
-      "en": "Independent papers on who supplies the Gulf: medicines, data-centre components, and the official health information people receive.",
-      "ar": "أوراق مستقلة عن مصادر توريد الخليج: الدواء، ومكوّنات مراكز البيانات، والمعلومة الصحية الرسمية التي تصل إلى الناس."
+    "headline": {
+      "en": "Independent, open, reproducible research on the critical questions of the Gulf and the Arab world.",
+      "ar": "أسئلة حرجة في الخليج والعالم العربي. نبحثها مستقلّين، وننشر الأوراق العلمية وبياناتها مفتوحة وقابلة لإعادة الإنتاج."
     },
-    "count": {
-      "en": "Three papers",
-      "ar": "ثلاث أوراق"
+    "intro": {
+      "en": "We take questions that bear on the region's medicine, technology and health security. Each paper is published with its data, its code and a persistent DOI, so any reader can inspect the work and reproduce it.",
+      "ar": "نختار أسئلة تمس أمن المنطقة الدوائي والتقني والصحي. كل ورقة علمية تخرج ببياناتها وشيفرتها وبمعرّف DOI دائم، ليتمكّن أي قارئ من فحص العمل وإعادة إنتاجه."
+    }
+  },
+  "trust": {
+    "label": {
+      "en": "Verifiable facts",
+      "ar": "حقائق قابلة للتحقق"
+    },
+    "items": [
+      {
+        "id": "dois",
+        "kind": "doiCount",
+        "caption": {
+          "en": "Published papers with DOI",
+          "ar": "أوراق علمية منشورة بمعرّف DOI"
+        }
+      },
+      {
+        "id": "license",
+        "value": {
+          "en": "CC BY 4.0",
+          "ar": "CC BY 4.0"
+        },
+        "caption": {
+          "en": "Open data with every paper",
+          "ar": "بيانات مفتوحة مع كل ورقة علمية"
+        }
+      },
+      {
+        "id": "protocol",
+        "value": {
+          "en": "10.5281/zenodo.23421989",
+          "ar": "10.5281/zenodo.23421989"
+        },
+        "href": "https://doi.org/10.5281/zenodo.23421989",
+        "caption": {
+          "en": "Protocol published before execution",
+          "ar": "بروتوكول منشور قبل التنفيذ"
+        }
+      }
+    ]
+  },
+  "strengths": {
+    "title": {
+      "en": "What distinguishes our research",
+      "ar": "ما يميّز أبحاثنا"
+    },
+    "quote": {
+      "en": "Self-funded research. No commercial or government sponsor sets the questions or the findings.",
+      "ar": "أبحاث ممولة ذاتيًا. لا راعٍ تجاري ولا حكومي يحدد أسئلتها أو نتائجها."
+    },
+    "items": [
+      {
+        "id": "questions",
+        "title": {
+          "en": "Questions the literature has not measured",
+          "ar": "أسئلة لم نجد من قاسها"
+        },
+        "text": {
+          "en": "We choose questions that bear on the region's medicine, technology and health security, and we check first that the literature has not answered them. In our literature review we did not find a comparison of supplier concentration at the finished-product level with concentration at the API level for the same essential medicines across all six GCC states, nor a per-country quantitative indicator of data-centre component supplier concentration. Arabic health benchmarks rarely use Gulf dialects alongside Modern Standard Arabic or involve pharmacists.",
+          "ar": "نختار أسئلة تمس أمن المنطقة الدوائي والتقني والصحي، ونتحقق قبل البدء من أن الأدبيات لم تُجب عنها. لم نجد في فحصنا للأدبيات مقارنة لتركّز المورّدين بين مستوى المنتج النهائي ومستوى المادة الفعّالة للأدوية الأساسية نفسها في دول مجلس التعاون الست، ولا مؤشرًا كميًا لكل دولة لتركّز مورّدي مكوّنات مراكز البيانات. ونادرًا ما تستخدم معايير الصحة العربية اللهجات الخليجية إلى جانب الفصحى أو تُشرك الصيادلة."
+        }
+      },
+      {
+        "id": "method",
+        "title": {
+          "en": "Rigorous, explicit methodology",
+          "ar": "منهجية صارمة ومعلنة"
+        },
+        "text": {
+          "en": "Standard quantitative indicators — the Herfindahl–Hirschman Index and top-supplier shares — on official UN Comtrade data for six countries and six years, with sensitivity tests, mirror data, and HS codes matched to official descriptions.",
+          "ar": "مؤشرات كمية معيارية — مؤشر هيرفندال–هيرشمان وحصص أكبر المورّدين — على بيانات رسمية من UN Comtrade لست دول وست سنوات، مع اختبارات حساسية وبيانات مرآة، وتصنيفات رموز HS مطابقة للأوصاف الرسمية."
+        }
+      },
+      {
+        "id": "open-data",
+        "title": {
+          "en": "Open data, verifiable and reproducible",
+          "ar": "بيانات مفتوحة وقابلة للتحقق وإعادة الإنتاج"
+        },
+        "text": {
+          "en": "Each paper is published with its raw data, code and derived tables under CC BY 4.0. Any researcher can reproduce the results from scratch.",
+          "ar": "كل ورقة علمية تُنشر مع بياناتها الخام وشيفرتها وجداولها المشتقة بترخيص CC BY 4.0. يمكن لأي باحث إعادة إنتاج النتائج من الصفر."
+        }
+      },
+      {
+        "id": "protocol",
+        "title": {
+          "en": "Protocols published before the work",
+          "ar": "بروتوكولات منشورة قبل التنفيذ"
+        },
+        "text": {
+          "en": "We publish the review plan before execution, following JBI and PRISMA-ScR, so the finished work can be measured against what was announced. Protocol: From Pilots to Practice… version 0.6, 17 October 2026.",
+          "ar": "نعلن خطة المراجعة قبل تنفيذها وفق JBI وPRISMA-ScR، ليُقاس العمل النهائي على ما أُعلن مسبقًا. البروتوكول: «From Pilots to Practice…» الإصدار 0.6، 17 أكتوبر 2026."
+        },
+        "link": {
+          "href": "https://doi.org/10.5281/zenodo.23421989",
+          "label": {
+            "en": "doi: 10.5281/zenodo.23421989",
+            "ar": "doi: 10.5281/zenodo.23421989"
+          }
+        }
+      },
+      {
+        "id": "sources",
+        "title": {
+          "en": "Every source verified and logged",
+          "ar": "تحقق موثّق من كل مصدر"
+        },
+        "text": {
+          "en": "Every source is opened and the cited passage is read. Claims are tagged source-confirmed, inference, or unverified. Every DOI is checked through Crossref, and secondary citations are traced to their origin.",
+          "ar": "يُفتح كل مصدر ويُقرأ الموضع المستشهد به، ويُوسم «مؤكد بمصدر» أو «استنتاج» أو «لم يُتحقق». ويُتحقق من كل DOI عبر Crossref، وتُتتبَّع الاقتباسات الثانوية إلى أصلها."
+        }
+      },
+      {
+        "id": "ai",
+        "title": {
+          "en": "Multi-model AI evaluation",
+          "ar": "تقييم متعدد النماذج للذكاء الاصطناعي"
+        },
+        "text": {
+          "en": "We evaluate language models with independent cross-model review, deterministic automated checks, and a record of disagreements.",
+          "ar": "نقيّم نماذج اللغة بمراجعة متقاطعة بين نماذج مستقلة، مع فحص آلي حتمي وتسجيل الخلافات."
+        }
+      },
+      {
+        "id": "independence",
+        "title": {
+          "en": "Independence",
+          "ar": "استقلالية"
+        },
+        "text": {
+          "en": "Self-funded research. No commercial or government sponsor. No external party sets the questions or the findings.",
+          "ar": "أبحاث ممولة ذاتيًا، بلا راعٍ تجاري أو حكومي. لا يحدد أي طرف خارجي أسئلتها أو نتائجها."
+        }
+      },
+      {
+        "id": "limits",
+        "title": {
+          "en": "Candour on limits, respect for source rights",
+          "ar": "شفافية الحدود واحترام حقوق المصادر"
+        },
+        "text": {
+          "en": "We state what the results do not measure, and we do not redistribute others' text: we publish the questions and links to official sources, not ministry wording.",
+          "ar": "نعلن صراحة ما لا تقيسه النتائج، ولا نعيد توزيع نصوص الغير: ننشر الأسئلة وروابط المصادر الرسمية دون نصوص الوزارات."
+        }
+      },
+      {
+        "id": "pharmacy",
+        "title": {
+          "en": "Pharmaceutical expertise, prior peer-reviewed work",
+          "ar": "خبرة صيدلانية وسجل نشر محكّم سابق"
+        },
+        "text": {
+          "en": "The research is led by a pharmacist (BPharm, Al-Azhar University) who co-authored a paper in a peer-reviewed international journal: International Journal of Molecular Sciences, 2022.",
+          "ar": "يقود البحث صيدلي (بكالوريوس صيدلة، جامعة الأزهر) شارك في التأليف بمجلة دولية محكّمة: International Journal of Molecular Sciences، 2022."
+        },
+        "link": {
+          "href": "https://doi.org/10.3390/ijms23158407",
+          "label": {
+            "en": "doi: 10.3390/ijms23158407",
+            "ar": "doi: 10.3390/ijms23158407"
+          }
+        }
+      }
+    ]
+  },
+  "papersHeading": {
+    "title": {
+      "en": "Papers",
+      "ar": "الأوراق العلمية"
+    },
+    "preprint": {
+      "en": "Preprint",
+      "ar": "نسخة مسبقة (Preprint)"
     }
   },
   "cta": {
     "available": {
-      "en": "Read the full paper",
-      "ar": "الورقة الكاملة"
+      "en": "Read on Zenodo",
+      "ar": "اقرأ الورقة العلمية على Zenodo"
     },
     "pending": {
       "en": "Full paper — coming soon",
-      "ar": "الورقة الكاملة — قريبًا"
+      "ar": "الورقة العلمية الكاملة — قريبًا"
+    },
+    "data": {
+      "en": "Open data",
+      "ar": "البيانات"
+    },
+    "citation": {
+      "en": "Copy citation",
+      "ar": "نسخ الاستشهاد"
+    },
+    "copied": {
+      "en": "Citation copied.",
+      "ar": "تم نسخ الاستشهاد."
+    },
+    "copyError": {
+      "en": "Copy failed. Select the citation text and copy it.",
+      "ar": "تعذّر النسخ. حدّد نص الاستشهاد وانسخه."
     }
+  },
+  "standards": {
+    "title": {
+      "en": "Quality and integrity standards",
+      "ar": "معايير الجودة والنزاهة"
+    },
+    "items": [
+      {
+        "id": "open-data",
+        "title": {
+          "en": "Open data and reproducibility",
+          "ar": "البيانات المفتوحة وقابلية إعادة الإنتاج"
+        },
+        "text": {
+          "en": "Each paper is published with its raw data, code and derived tables under CC BY 4.0. Any researcher can reproduce the results from scratch.",
+          "ar": "كل ورقة علمية تُنشر مع بياناتها الخام وشيفرتها وجداولها المشتقة بترخيص CC BY 4.0. يمكن لأي باحث إعادة إنتاج النتائج من الصفر."
+        }
+      },
+      {
+        "id": "protocol",
+        "title": {
+          "en": "Protocol published before execution",
+          "ar": "بروتوكول منشور قبل التنفيذ"
+        },
+        "text": {
+          "en": "We publish the review plan before execution, following JBI and PRISMA-ScR, so the finished work can be measured against what was announced.",
+          "ar": "نعلن خطة المراجعة قبل تنفيذها وفق JBI وPRISMA-ScR، ليُقاس العمل النهائي على ما أُعلن مسبقًا."
+        },
+        "link": {
+          "href": "https://doi.org/10.5281/zenodo.23421989",
+          "label": {
+            "en": "doi: 10.5281/zenodo.23421989",
+            "ar": "doi: 10.5281/zenodo.23421989"
+          }
+        }
+      },
+      {
+        "id": "sources",
+        "title": {
+          "en": "Source verification",
+          "ar": "التحقق من المصادر"
+        },
+        "text": {
+          "en": "Every source is opened and the cited passage is read. Claims are tagged source-confirmed, inference, or unverified. Every DOI is checked through Crossref, and secondary citations are traced to their origin.",
+          "ar": "يُفتح كل مصدر ويُقرأ الموضع المستشهد به، ويُوسم «مؤكد بمصدر» أو «استنتاج» أو «لم يُتحقق». ويُتحقق من كل DOI عبر Crossref، وتُتتبَّع الاقتباسات الثانوية إلى أصلها."
+        }
+      },
+      {
+        "id": "ai",
+        "title": {
+          "en": "AI-use statement",
+          "ar": "بيان استخدام الذكاء الاصطناعي"
+        },
+        "text": {
+          "en": "Item reviews in our research are performed by independent AI tools, with cross-model review and automated checks of figures and drug names. No human pharmacist reviewed the items.",
+          "ar": "مراجعة البنود في أبحاثنا تتم بأدوات ذكاء اصطناعي مستقلة، بمراجعة متقاطعة بين النماذج وفحص آلي للأرقام وأسماء الأدوية. لم يراجع البنود صيدلي بشري."
+        }
+      },
+      {
+        "id": "funding",
+        "title": {
+          "en": "Independence and funding",
+          "ar": "الاستقلال والتمويل"
+        },
+        "text": {
+          "en": "Our research is self-funded; there is no external funder. No external party sets the questions or the findings.",
+          "ar": "أبحاثنا ممولة ذاتيًا؛ لا ممول خارجي. لا يحدد أي طرف خارجي الأسئلة أو النتائج."
+        }
+      }
+    ]
+  },
+  "researcher": {
+    "title": {
+      "en": "Founder",
+      "ar": "المؤسس"
+    },
+    "name": {
+      "en": "Ahmed Abdelalim",
+      "ar": "د. أحمد عبدالعليم"
+    },
+    "role": {
+      "en": "Founder & Chief Capability Architect, VisionSeek",
+      "ar": "المؤسس وكبير مهندسي القدرات، VisionSeek"
+    },
+    "degree": {
+      "en": "BPharm, Al-Azhar University",
+      "ar": "بكالوريوس صيدلة، جامعة الأزهر"
+    },
+    "affiliation": {
+      "en": "VisionSeek, Incheon, South Korea",
+      "ar": "VisionSeek، إنتشون، كوريا الجنوبية"
+    },
+    "orcid": "0000-0003-4085-0942",
+    "orcidUrl": "https://orcid.org/0000-0003-4085-0942",
+    "orcidLabel": {
+      "en": "ORCID 0000-0003-4085-0942",
+      "ar": "ORCID 0000-0003-4085-0942"
+    },
+    "photo": "/ahmed-abdelalim-2026.jpg",
+    "photoAlt": {
+      "en": "Ahmed Abdelalim",
+      "ar": "د. أحمد عبدالعليم"
+    },
+    "priorLabel": {
+      "en": "Prior peer-reviewed work",
+      "ar": "عمل محكّم سابق"
+    },
+    "prior": {
+      "en": "Elkaeed EB, Eissa IH, Elkady H, Abdelalim A, et al. A Multistage In Silico Study of Natural Potential Inhibitors Targeting SARS-CoV-2 Main Protease. International Journal of Molecular Sciences, 2022.",
+      "ar": "Elkaeed EB, Eissa IH, Elkady H, Abdelalim A, et al. A Multistage In Silico Study of Natural Potential Inhibitors Targeting SARS-CoV-2 Main Protease. International Journal of Molecular Sciences، 2022."
+    },
+    "priorHref": "https://doi.org/10.3390/ijms23158407",
+    "priorDoi": "10.3390/ijms23158407"
   },
   "papers": [
     {
@@ -39,14 +342,18 @@
         "ar": "الأدوية الأساسية · مجلس التعاون"
       },
       "summary": {
-        "en": "Gulf Cooperation Council states import most of their medicines, yet published local-production figures disagree because they rest on different definitions. This paper measures supplier-country concentration of medicine imports in all six GCC states, and compares the finished-product layer with the active pharmaceutical ingredient layer for tracer medicines from the 2025 WHO Model List of Essential Medicines. At heading level, import dependence looks diversified; at tracer level it is concentrated, and for insulin it rests almost entirely on finished-product imports from one or two European suppliers.",
-        "ar": "تستورد دول مجلس التعاون معظم أدويتها، غير أن أرقام الإنتاج المحلي المنشورة تختلف لأنها تقوم على تعريفات متباينة. تقيس هذه الورقة تركّز الدول المورّدة لواردات الدواء في الدول الست، وتقارن مستوى المنتج النهائي بمستوى المادة الفعّالة في مجموعة تتبُّع من أدوية القائمة النموذجية للأدوية الأساسية الصادرة عن منظمة الصحة العالمية لعام 2025. على مستوى البند الجمركي تبدو التبعية للاستيراد متنوعة؛ أما على مستوى الدواء المتتبَّع فهي مركّزة، وفي الإنسولين تستند شبه كليًا إلى واردات المنتج النهائي من مورِّد أوروبي واحد أو اثنين."
+        "en": "Gulf Cooperation Council states import most of their medicines, but published local-production figures disagree because they rest on different definitions. This paper measures supplier-country concentration of medicine imports in all six GCC states, and compares the finished-product layer with the active pharmaceutical ingredient layer for tracer medicines from the 2025 WHO Model List of Essential Medicines. At heading level, GCC import dependence looks diversified; at tracer level it is concentrated, and for insulin it rests almost entirely on finished-product imports from one or two European suppliers.",
+        "ar": "تستورد دول مجلس التعاون معظم أدويتها، غير أن أرقام الإنتاج المحلي المنشورة تختلف لأنها تقوم على تعريفات متباينة. تقيس هذه الورقة تركّز الدول المورِّدة لواردات الدواء في الدول الست، وتقارن مستوى المنتج النهائي بمستوى المادة الفعّالة في مجموعة تتبُّع من أدوية القائمة النموذجية للأدوية الأساسية الصادرة عن منظمة الصحة العالمية لعام 2025. على مستوى البند الجمركي تبدو تبعية الاستيراد متنوعة؛ أما على مستوى الدواء المتتبَّع فهي مركّزة، وفي الإنسولين تستند شبه كليًا إلى واردات المنتج النهائي من مورِّد أوروبي واحد أو اثنين."
       },
       "author": {
         "en": "Ahmed Abdelalim, VisionSeek",
         "ar": "د. أحمد عبدالعليم، VisionSeek"
       },
-      "doi": null
+      "year": 2026,
+      "doi": "10.5281/zenodo.23657727",
+      "url": "https://zenodo.org/records/23657727",
+      "datasetUrl": "https://zenodo.org/records/23657727/files/paper1-dataset-v1.0.zip",
+      "citation": "Abdelalim, A. (2026). Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration for WHO Essential Medicines across the Six GCC States [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.23657727"
     },
     {
       "id": "gulf-stack",
@@ -59,14 +366,18 @@
         "ar": "مراكز بيانات الذكاء الاصطناعي · تركّز التوريد"
       },
       "summary": {
-        "en": "The six GCC states have announced AI data-centre programmes; a 2026 Abha Foundation review puts them at about 12.8 GW in Saudi Arabia, 8.1 GW in the United Arab Emirates and 1.8 GW in Qatar. This paper builds a replicable, per-country indicator of import-supplier concentration for four critical component classes: compute and network equipment, high-voltage power equipment, cooling equipment, and water-treatment machinery used in desalination. In the 2023 sample, five of twenty-four reporter–class cells are highly concentrated and eight are moderately concentrated — bounds on the trade channel through which these components arrive, not ownership shares.",
-        "ar": "أعلنت دول مجلس التعاون الست برامج لمراكز بيانات الذكاء الاصطناعي، ويضعها تقرير مؤسسة أبها لعام 2026 عند نحو 12.8 غيغاواط في السعودية و8.1 في الإمارات و1.8 في قطر. تبني هذه الورقة مؤشرًا قطريًا قابلًا للتكرار لتركّز مورّدي الواردات في أربع فئات من المكوّنات الحرجة: الحوسبة والشبكات، ومعدات الجهد العالي، والتبريد، وآلات معالجة المياه المستخدمة في التحلية. في عيّنة 2023، خمسٌ من أربعٍ وعشرين مقارنة (دولة × فئة) شديدة التركّز وثمانٍ متوسطة التركّز؛ وهي مؤشرات لتركّز مسار الاستيراد الذي تصل عبره هذه المكوّنات، لا حصصًا في الملكية."
+        "en": "The six GCC states have announced AI data-centre programmes; a 2026 Abha Foundation review puts them at about 12.8 GW in Saudi Arabia, 8.1 GW in the United Arab Emirates and 1.8 GW in Qatar. This paper builds a replicable, per-country indicator of import-supplier concentration for four critical component classes: compute and network equipment, high-voltage power equipment, cooling equipment, and water-treatment machinery used in desalination. In the 2023 preliminary sample, five of twenty-four reporter–class cells are highly concentrated and eight are moderately concentrated — bounds on the trade channel through which these components arrive, not ownership shares.",
+        "ar": "أعلنت دول مجلس التعاون الست برامج لمراكز بيانات الذكاء الاصطناعي، ويضعها تقرير مؤسسة أبها لعام 2026 عند نحو 12.8 غيغاواط في السعودية و8.1 في الإمارات و1.8 في قطر. تبني هذه الورقة مؤشرًا قطريًا قابلًا للتكرار لتركّز مورِّدي الواردات في أربع فئات من المكوّنات الحرجة: الحوسبة والشبكات، ومعدات الجهد العالي، والتبريد، وآلات معالجة المياه المستخدمة في التحلية. في العيّنة الأولية لعام 2023، خمسٌ من أربعٍ وعشرين مقارنة (دولة × فئة) شديدة التركّز وثمانٍ متوسطة التركّز؛ وهي حدود لمسار الاستيراد الذي تصل عبره هذه المكوّنات، لا حصصًا في الملكية."
       },
       "author": {
         "en": "Ahmed Abdelalim, VisionSeek",
         "ar": "د. أحمد عبدالعليم، VisionSeek"
       },
-      "doi": null
+      "year": 2026,
+      "doi": "10.5281/zenodo.23657775",
+      "url": "https://zenodo.org/records/23657775",
+      "datasetUrl": "https://zenodo.org/records/23657775/files/paper3-dataset-v1.0.zip",
+      "citation": "Abdelalim, A. (2026). Who Owns the Stack? A Per-Country Quantification of Critical-Component Supplier Concentration behind Gulf AI Data-Centre Build-out [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.23657775"
     },
     {
       "id": "arabic-health",
@@ -79,14 +390,18 @@
         "ar": "الذكاء الاصطناعي الصحي بالعربية · لهجات الخليج"
       },
       "summary": {
-        "en": "Arabic language models are increasingly evaluated on medical content, yet existing Arabic health benchmarks mostly draw on examination questions, translated English material or online forums, and rarely place Gulf dialects alongside Modern Standard Arabic or involve pharmacists. This paper designs and pilots an evaluation set whose ground truth is public awareness content published by GCC ministries of health on diabetes, obesity, medicines use and fasting in Ramadan. The set comprises 69 MSA question–answer items — 48 from nine Saudi Ministry of Health pages and 21 from two Omani ministry documents — with Saudi and Kuwaiti variants of every question, and with official ministry text as the reference.",
-        "ar": "تُختبر نماذج اللغة العربية على المحتوى الطبي على نحو متزايد، غير أن مجموعات التقييم الصحية العربية القائمة تستند في معظمها إلى أسئلة الامتحانات أو مادة إنجليزية مترجمة أو منتديات، ونادرًا ما تضع لهجات الخليج إلى جانب الفصحى أو تُشرك الصيادلة. تصف هذه الورقة تصميم عيّنة تقييم تجريبية، ومرجعها محتوى التوعية الذي تنشره وزارات الصحة في دول مجلس التعاون في أربعة موضوعات موجّهة للجمهور: السكري والسمنة واستخدام الأدوية والصيام في رمضان. تضم العيّنة 69 سؤالًا وجوابًا بالفصحى — 48 من تسع صفحات لوزارة الصحة السعودية و21 من وثيقتين عمانيتين — مع صياغة سعودية وكويتية لكل سؤال، والجواب المرجعي مقتطف حرفي من النص الرسمي."
+        "en": "Arabic large language models are increasingly evaluated on medical content, but existing Arabic health benchmarks mostly draw on examination questions, translated English material or online forums, rarely use Gulf dialects in parallel with Modern Standard Arabic, and rarely involve pharmacists. This paper designs and pilots an evaluation set whose ground truth is public awareness content published by GCC ministries of health on diabetes, obesity, medicines use and fasting in Ramadan: 69 MSA question–answer items — 48 from nine Saudi Ministry of Health pages and 21 from two Omani ministry documents — with Saudi and Kuwaiti variants of every question. Two free AI models acting in a clinical-pharmacist role reviewed the items and a feasibility run; no human pharmacist or clinician reviewed either.",
+        "ar": "تُقيَّم نماذج اللغة العربية الكبيرة على المحتوى الطبي على نحو متزايد، غير أن مجموعات التقييم الصحية العربية القائمة تستند في معظمها إلى أسئلة الامتحانات أو مادة إنجليزية مترجمة أو منتديات، ونادرًا ما تضع لهجات الخليج إلى جانب الفصحى أو تُشرك الصيادلة. تصف هذه الورقة تصميم عيّنة تقييم تجريبية، ومرجعها محتوى التوعية الذي تنشره وزارات الصحة في دول مجلس التعاون في أربعة موضوعات موجّهة للجمهور: السكري والسمنة واستخدام الأدوية وصيام رمضان. تضم العيّنة 69 سؤالًا وجوابًا بالفصحى — 48 من تسع صفحات لوزارة الصحة السعودية و21 من وثيقتين عمانيتين — مع صياغة سعودية وكويتية لكل سؤال؛ وراجعها نموذجان مجانيان في دور صيدلي سريري، من دون مراجعة بشرية من صيدلي أو طبيب."
       },
       "author": {
         "en": "Ahmed Abdelalim, VisionSeek",
         "ar": "د. أحمد عبدالعليم، VisionSeek"
       },
-      "doi": null
+      "year": 2026,
+      "doi": "10.5281/zenodo.23657799",
+      "url": "https://zenodo.org/records/23657799",
+      "datasetUrl": "https://zenodo.org/records/23657799/files/paper4-dataset-v1.0.zip",
+      "citation": "Abdelalim, A. (2026). Official-Source Health Information in MSA and Gulf Dialects: A Pilot Evaluation Set Grounded in GCC Ministry-of-Health Awareness Content, with AI Review in a Clinical-Pharmacist Role [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.23657799"
     }
   ]
 }
