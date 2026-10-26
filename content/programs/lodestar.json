@@ -1,28 +1,28 @@
 {
   "position": 5,
-  "slug": "proof",
+  "slug": "lodestar",
   "code": "VS-P05",
   "name": {
-    "en": "Proof",
-    "ar": "Proof"
+    "en": "Lodestar",
+    "ar": "Lodestar"
   },
   "classification": {
     "en": "Independent evaluation of AI systems in Arabic",
     "ar": "تقييم مستقل لأنظمة الذكاء الاصطناعي بالعربية"
   },
   "title": {
-    "en": "Proof: the independent Arab lab for evaluating AI systems in Arabic",
-    "ar": "Proof: المختبر العربي المستقل لتقييم أنظمة الذكاء الاصطناعي بالعربية"
+    "en": "Lodestar: the reference that guides the decision",
+    "ar": "Lodestar: المرجع الذي يهدي القرار"
   },
   "summary": {
-    "en": "Proof is the independent Arab lab for evaluating AI systems in Arabic. It tests understanding — Modern Standard Arabic and dialects — information accuracy, safety, and resilience against manipulation, then gives the institution a clear report: where the system is fit to use, and where it is not.",
-    "ar": "Proof المختبر العربي المستقل لتقييم أنظمة الذكاء الاصطناعي بالعربية. يختبر الفهم — الفصحى واللهجات — ودقة المعلومات، والسلامة، والصمود أمام محاولات التلاعب، ثم يسلّم المؤسسة تقريرًا واضحًا: أين يصلح النظام للاستخدام، وأين لا يصلح."
+    "en": "Lodestar is the independent Arab lab for evaluating AI systems in Arabic — the reference that guides the decision. It tests understanding — Modern Standard Arabic and dialects — information accuracy, safety, and resilience against manipulation, then gives the institution a clear report: where the system is fit to use, and where it is not.",
+    "ar": "Lodestar المختبر العربي المستقل لتقييم أنظمة الذكاء الاصطناعي بالعربية — المرجع الذي يهدي القرار. يختبر الفهم — الفصحى واللهجات — ودقة المعلومات، والسلامة، والصمود أمام محاولات التلاعب، ثم يسلّم المؤسسة تقريرًا واضحًا: أين يصلح النظام للاستخدام، وأين لا يصلح."
   },
   "status": {
     "en": "Pilot-Ready — open for joint institutional development",
     "ar": "جاهز للتجريب — مفتوح للتطوير المشترك المؤسسي"
   },
-  "image": "/programs/proof.jpg",
+  "image": "/programs/lodestar.jpg",
   "cta": {
     "en": "Request an independent evaluation",
     "ar": "اطلب تقييمًا مستقلًا"

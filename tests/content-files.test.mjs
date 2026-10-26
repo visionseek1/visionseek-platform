@@ -43,10 +43,10 @@ test('the six section headers keep their ids and links', () => {
   }
 });
 
-test('five programs, Aegis Apex Clause Relay and Proof, each complete', () => {
+test('five programs, Aegis Apex Clause Relay and Lodestar, each complete', () => {
   const programs = readDir('programs');
   assert.deepEqual(programs.map(p => p.code).sort(), ['VS-P01', 'VS-P02', 'VS-P03', 'VS-P04', 'VS-P05']);
-  assert.deepEqual(programs.map(p => p.slug).sort(), ['aegis', 'apex', 'clause', 'proof', 'relay']);
+  assert.deepEqual(programs.map(p => p.slug).sort(), ['aegis', 'apex', 'clause', 'lodestar', 'relay']);
   const banned = /Gartner|UpperEdge|ISG|Corvitex|Tawazun|GAMI|Lewis Silkin|Morgan Lewis/i;
   for (const program of programs) {
     assert.doesNotMatch(JSON.stringify(program), banned, program.slug);
@@ -61,8 +61,8 @@ test('five programs, Aegis Apex Clause Relay and Proof, each complete', () => {
     assert.ok(readFileSync(join(root, 'public', program.image.replace(/^\//, ''))));
     assert.match(program.status.ar, /جاهز للتجريب/);
     assert.doesNotMatch(program.status.ar, /Pilot-Ready/);
-    if (program.slug === 'clause' || program.slug === 'relay' || program.slug === 'proof') {
-      assert.ok(Array.isArray(program.principles) && program.principles.length >= (program.slug === 'proof' ? 3 : 5), program.slug);
+    if (program.slug === 'clause' || program.slug === 'relay' || program.slug === 'lodestar') {
+      assert.ok(Array.isArray(program.principles) && program.principles.length >= (program.slug === 'lodestar' ? 3 : 5), program.slug);
       assert.ok(Array.isArray(program.related) && program.related.length >= 1, program.slug);
       assert.doesNotMatch(JSON.stringify(program), /checklist|download|\.pdf|قايمة|قائمة قابلة للتنزيل/i);
       const arabic = [];
@@ -78,30 +78,35 @@ test('five programs, Aegis Apex Clause Relay and Proof, each complete', () => {
   }
   const clause = programs.find(p => p.slug === 'clause');
   const relay = programs.find(p => p.slug === 'relay');
-  const proof = programs.find(p => p.slug === 'proof');
+  const lodestar = programs.find(p => p.slug === 'lodestar');
   assert.equal(clause.cta.ar, 'اطلب مراجعة عقد');
   assert.equal(clause.cta.en, 'Request a contract review');
   assert.deepEqual(clause.related, ['/masterclass/single-track-trap', '/reports/reports/localization-doctrine']);
   assert.deepEqual(relay.related, ['/korean-solutions']);
   assert.match(JSON.stringify(relay.principles), /استخدام.*تجميع.*تكييف.*تصميم.*تصدير/s);
-  assert.equal(proof.position, 5);
-  assert.equal(proof.code, 'VS-P05');
-  assert.equal(proof.cta.ar, 'اطلب تقييمًا مستقلًا');
-  assert.equal(proof.cta.en, 'Request an independent evaluation');
-  assert.equal(proof.challengeTitle.ar, 'المشكلة');
-  assert.equal(proof.challengeTitle.en, 'The problem');
-  assert.equal(proof.principlesTitle.ar, 'أمثلة على الخطر');
-  assert.equal(proof.principlesTitle.en, 'Examples of risk');
-  assert.equal(proof.approachTitle.ar, 'لماذا العربية');
-  assert.equal(proof.approachTitle.en, 'Why Arabic');
-  assert.equal(proof.steps[0].title.ar, 'القيمة للمؤسسة');
-  assert.equal(proof.steps[0].title.en, 'Value to the institution');
-  assert.match(JSON.stringify(proof), /تقييم مستقل|تقييمًا مستقلًا/);
-  assert.match(JSON.stringify(proof), /independent evaluation/i);
-  assert.doesNotMatch(JSON.stringify(proof), /اعتماد|شهادة|accreditation|certification|certified|Fanar|فانار/i);
-  assert.doesNotMatch(JSON.stringify(proof), /\$|USD|دولار|ريال|درهم|\b\d+\s*%|\b\d{2,}\b/);
-  assert.match(readFileSync(join(root, 'components/institution/home-sections.tsx'), 'utf8'), /Clause و Relay و Proof/);
-  assert.match(readFileSync(join(root, 'public/admin/config.yml'), 'utf8'), /البرامج ← Proof  \/programs\/proof/);
+  assert.equal(lodestar.position, 5);
+  assert.equal(lodestar.code, 'VS-P05');
+  assert.equal(lodestar.name.en, 'Lodestar');
+  assert.equal(lodestar.name.ar, 'Lodestar');
+  assert.equal(lodestar.cta.ar, 'اطلب تقييمًا مستقلًا');
+  assert.equal(lodestar.cta.en, 'Request an independent evaluation');
+  assert.equal(lodestar.challengeTitle.ar, 'المشكلة');
+  assert.equal(lodestar.challengeTitle.en, 'The problem');
+  assert.equal(lodestar.principlesTitle.ar, 'أمثلة على الخطر');
+  assert.equal(lodestar.principlesTitle.en, 'Examples of risk');
+  assert.equal(lodestar.approachTitle.ar, 'لماذا العربية');
+  assert.equal(lodestar.approachTitle.en, 'Why Arabic');
+  assert.equal(lodestar.steps[0].title.ar, 'القيمة للمؤسسة');
+  assert.equal(lodestar.steps[0].title.en, 'Value to the institution');
+  assert.match(lodestar.title.ar, /المرجع الذي يهدي القرار/);
+  assert.match(lodestar.title.en, /the reference that guides the decision/);
+  assert.match(JSON.stringify(lodestar), /تقييم مستقل|تقييمًا مستقلًا/);
+  assert.match(JSON.stringify(lodestar), /independent evaluation/i);
+  assert.doesNotMatch(JSON.stringify(lodestar), /\bProof\b/);
+  assert.doesNotMatch(JSON.stringify(lodestar), /اعتماد|شهادة|accreditation|certification|certified|Fanar|فانار/i);
+  assert.doesNotMatch(JSON.stringify(lodestar), /\$|USD|دولار|ريال|درهم|\b\d+\s*%|\b\d{2,}\b/);
+  assert.match(readFileSync(join(root, 'components/institution/home-sections.tsx'), 'utf8'), /Clause و Relay و Lodestar/);
+  assert.match(readFileSync(join(root, 'public/admin/config.yml'), 'utf8'), /البرامج ← Lodestar  \/programs\/lodestar/);
   const nav = read('navigation.json');
   const programHrefs = nav.sections.find(s => s.path === '/programs').children.map(c => c.href);
   assert.deepEqual(programHrefs, ['/programs/aegis', '/programs/apex', '/programs/clause', '/programs/relay']);
