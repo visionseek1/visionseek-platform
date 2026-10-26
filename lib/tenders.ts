@@ -20,6 +20,7 @@ export type TenderCard = {
   opened: string;
   deadline: string;
   image: string;
+  ogImage?: string;
   imageAlt: Bi;
   result?: Bi;
   lessons?: Bi;
@@ -29,7 +30,7 @@ type Labels =
   | 'tender' | 'role' | 'deadline' | 'opened' | 'eligibility' | 'source' | 'contact'
   | 'read' | 'back' | 'result' | 'lessons';
 export type Tenders = {
-  hero: {kicker: Bi; title: Bi; text: Bi; image: string};
+  hero: {kicker: Bi; title: Bi; text: Bi; image: string; ogImage?: string};
   labels: Record<Labels, Bi>;
   form: Record<'name' | 'email' | 'role' | 'link' | 'note', Bi>;
   how: Bi[];
@@ -72,6 +73,10 @@ export function tenderPath(id: string, locale: Locale) {
 
 export function officialRef(card: TenderCard) {
   return `${card.number} — ${card.officialName}`;
+}
+
+export function tenderOgImage(card: TenderCard) {
+  return card.ogImage || card.image;
 }
 
 export function formatOpened(opened: string, locale: Locale) {

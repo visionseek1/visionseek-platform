@@ -62,7 +62,7 @@ export function TenderDetailPage({card, locale, fontClassName = ''}: {card: Tend
               </dl>
             </div>
             <div className={styles.detailPhoto}>
-              <Image src={card.image} alt={card.imageAlt[locale]} fill sizes="(max-width: 860px) 100vw, 40vw" priority/>
+              <Image src={card.image} alt={card.imageAlt[locale]} fill sizes="100vw" unoptimized priority/>
             </div>
           </div>
 

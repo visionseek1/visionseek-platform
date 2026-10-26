@@ -54,7 +54,7 @@ function Card({card, state, locale}: {card: TenderCard; state: CardStatus; local
         </div>
       </div>
       <div className={styles.cardPhoto}>
-        <Image src={card.image} alt={card.imageAlt[locale]} fill sizes="(max-width: 860px) 100vw, 40vw"/>
+        <Image src={card.image} alt={card.imageAlt[locale]} fill sizes="100vw" unoptimized/>
       </div>
     </article>
   );

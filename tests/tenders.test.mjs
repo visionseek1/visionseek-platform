@@ -37,6 +37,7 @@ test('Tenders: confirmed facts only — no budget, no company names, no people, 
     }
     assert.ok(card.imageAlt.ar.length > 20, `${card.id} Arabic alt`);
     assert.ok(existsSync(url(`public${card.image}`)), card.image);
+    if (card.ogImage) assert.ok(existsSync(url(`public${card.ogImage}`)), card.ogImage);
     assert.doesNotMatch(card.body.en + card.body.ar, /applied|registered as a supplier|قدّمنا|سجّلنا/);
   }
 });
@@ -109,6 +110,7 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
         assert.ok(has(text), `${locale} ${card.id}: ${text}`);
       }
       assert.ok(html.includes(`/work-with-us/tenders/${card.id}`) || html.includes(`/ar/work-with-us/tenders/${card.id}`), `${locale} ${card.id} detail link`);
+      assert.ok(html.includes(`src="${card.image}"`), `${locale} ${card.id} card serves the PNG directly`);
     }
     assert.equal(has(data.labels.open[locale]), open.length > 0, `${locale} open label`);
     assert.equal(html.includes('href="#tenders-join"'), open.length > 0, `${locale} contact button`);
@@ -122,20 +124,38 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
     assert.match(html, /href="https:\/\/procurement\.gov\.ae"/, `${locale} detail source`);
     assert.ok(html.includes(esc(first.imageAlt[locale])), `${locale} alt`);
     assert.ok(html.includes(esc(formatDeadline(first, locale))), `${locale} detail deadline`);
+    assert.ok(html.includes('src="/tenders/moei-12718.png"'), `${locale} detail serves the PNG directly`);
   }
 });
 
-test('Tenders: editorial image is SVG 16:9, with a PNG render used on the card', () => {
-  const svg = read('public/tenders/moei-12718.svg');
-  assert.match(svg, /viewBox="0 0 1600 900"/);
-  assert.doesNotMatch(svg, /<text[\s>]/);
-  assert.ok(statSync(url('public/tenders/moei-12718.svg')).size < 20_000);
-  assert.ok(existsSync(url('public/tenders/moei-12718.png')));
-  assert.ok(statSync(url('public/tenders/moei-12718.png')).size < 400_000);
+test('Tenders: hero is a 16:9 PNG and the OG file is 1200×630; next/image does not hide them', () => {
+  const pngSize = path => {
+    const buf = readFileSync(url(path));
+    assert.equal(buf.toString('ascii', 1, 4), 'PNG');
+    return {w: buf.readUInt32BE(16), h: buf.readUInt32BE(20)};
+  };
+  assert.equal(existsSync(url('public/tenders/moei-12718.svg')), false);
+  const hero = pngSize('public/tenders/moei-12718.png');
+  const og = pngSize('public/tenders/moei-12718.og.png');
+  assert.deepEqual(hero, {w: 1600, h: 900});
+  assert.deepEqual(og, {w: 1200, h: 630});
+  assert.ok(statSync(url('public/tenders/moei-12718.png')).size < 1_200_000);
+  assert.ok(statSync(url('public/tenders/moei-12718.og.png')).size < 800_000);
   assert.equal(data.hero.image, '/tenders/moei-12718.png');
+  assert.equal(data.hero.ogImage, '/tenders/moei-12718.og.png');
   for (const card of data.cards) {
-    assert.match(card.image, /^\/tenders\//, `${card.id} art stays under /tenders, not the [slug] page`);
+    assert.match(card.image, /^\/tenders\/.+\.png$/, `${card.id} art stays under /tenders`);
+    assert.match(card.ogImage, /^\/tenders\/.+\.og\.png$/, `${card.id} OG`);
+    assert.match(card.imageAlt.en, /editorial illustration/i);
+    assert.match(card.imageAlt.en, /Gulf city skyline/i);
+    assert.match(card.imageAlt.ar, /رسم تحريري/);
+    assert.match(card.imageAlt.ar, /أفق مدينة خليجية/);
   }
+  const css = read('components/tenders/tenders.module.css');
+  assert.match(css, /\.cardPhoto[\s\S]*aspect-ratio:\s*16\s*\/\s*9/);
+  assert.match(css, /\.cardPhoto img[\s\S]*object-fit:\s*cover/);
+  assert.match(read('components/tenders/tenders-page.tsx'), /unoptimized/);
+  assert.match(read('components/tenders/tender-detail.tsx'), /unoptimized/);
   assert.match(read('components/institution/work-with-us-page.tsx'), /TendersBody/);
   assert.match(read('components/tenders/tenders-page.tsx'), /id="tenders"/);
 });
