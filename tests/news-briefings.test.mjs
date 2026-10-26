@@ -136,7 +136,7 @@ test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', ()
   const sitemap = read('app/sitemap.ts');
   assert.match(sitemap, /path: "\/ar\/news"/);
   assert.match(sitemap, /listNews/);
-  assert.match(read('app/ar/news/[slug]/page.tsx'), /width: 1200/);
+  assert.match(read('components/news/pages.tsx'), /width: 1200/);
   assert.match(read('components/news/pages.tsx'), /height: 630/);
 });
 

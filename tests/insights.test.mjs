@@ -167,7 +167,8 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   const nav = json('content/navigation.json').sections.map(s => s.path);
   assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
 });
 
 test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source text and cross-links stay exact', () => {

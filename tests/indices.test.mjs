@@ -202,7 +202,7 @@ test('Indices: bilingual prospectus, no scores or rankings, Ahmed Abdelalim with
   assert.match(read('components/indices/coverage-map.tsx'), /Egypt and the six Gulf states/);
 });
 
-test('Indices: own pages in both languages, sitemap and /admin, in the header after Research', () => {
+test('Indices: own pages in both languages, sitemap and /admin, in the header after News', () => {
   for (const f of ['app/indices/page.tsx', 'app/ar/indices/page.tsx', 'app/indices/[slug]/page.tsx', 'app/ar/indices/[slug]/page.tsx']) {
     assert.ok(existsSync(url(f)), f);
   }
@@ -216,7 +216,8 @@ test('Indices: own pages in both languages, sitemap and /admin, in the header af
   assert.equal(item.children[1].en, 'Arab Technology Capability Index');
   assert.equal(item.children[2].en, 'Arab Critical Capabilities Atlas');
   assert.equal(paths[paths.indexOf('/reports') + 1], '/research');
-  assert.equal(paths[paths.indexOf('/research') + 1], '/indices');
+  assert.equal(paths[paths.indexOf('/research') + 1], '/news');
+  assert.equal(paths[paths.indexOf('/news') + 1], '/indices');
   assert.deepEqual(item.children.map(c => c.href), [
     '/indices',
     '/indices/arab-technology-capability',
