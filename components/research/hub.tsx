@@ -54,7 +54,7 @@ function PaperCard({paper, locale, cta}: {paper: ResearchPaper; locale: Locale; 
       <div className={styles.meta}>
         <p className={styles.author}>{t(paper.author)}</p>
         {doiHref && doiLabel && (
-          <a className={styles.doi} href={doiHref} target="_blank" rel="noopener" dir="ltr">DOI: {doiLabel}</a>
+          <a className={styles.doi} href={doiHref} target="_blank" rel="noopener" dir="ltr">{`DOI: ${doiLabel}`}</a>
         )}
         {recordHref
           ? <a className={styles.cta} href={recordHref} target="_blank" rel="noopener">{t(cta.available)}</a>

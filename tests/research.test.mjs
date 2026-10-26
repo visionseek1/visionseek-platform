@@ -71,7 +71,7 @@ test('research pages, sitemap and /admin exist; DOI helper points at doi.org and
   assert.match(lib, /doi\.org/);
   const hub = read('components/research/hub.tsx');
   assert.match(hub, /rel="noopener"/);
-  assert.match(hub, /DOI: \{doiLabel\}/);
+  assert.match(hub, /DOI: \$\{doiLabel\}/);
   assert.match(hub, /paperRecordHref/);
   assert.match(hub, /target="_blank"/);
 });
