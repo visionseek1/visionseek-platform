@@ -8,8 +8,8 @@ export type Bi = {ar: string; en: string};
 export const tx = (locale: Locale) => (v: Bi) => (locale === 'ar' ? v.ar : v.en);
 
 export const GATE = '/korea-gate';
-export const LOGO = '/korea-gate-logo.webp';
-export const LOGO_SIZE = {width: 661, height: 547} as const;
+export const LOGO = '/korea-gate-mark.webp';
+export const LOGO_SIZE = {width: 661, height: 468} as const;
 export const UPDATED: Bi = {ar: '26 أكتوبر 2026', en: '26 October 2026'};
 export const PROGRAM_LINE: Bi = {
   ar: 'بوابة كوريا برنامجٌ من VisionSeek.',

@@ -23,7 +23,7 @@ test('Korea Gate: canonical routes, 308 from the old hub, logo in public', () =>
     'app/korea-gate/page.tsx', 'app/ar/korea-gate/page.tsx',
     'app/korea-gate/studies/[slug]/page.tsx', 'app/ar/korea-gate/studies/[slug]/page.tsx',
     'app/korea-gate/samples/[slug]/page.tsx', 'app/ar/korea-gate/samples/[slug]/page.tsx',
-    'public/korea-gate-logo.webp', 'public/korea-gate-logo.png',
+    'public/korea-gate-mark.webp', 'public/korea-gate-mark.png',
   ]) assert.ok(existsSync(new URL(`../${f}`, import.meta.url)), f);
   const redirects = read('next.config.ts');
   assert.match(redirects, /source: `\$\{prefix\}\/korean-solutions`, destination: `\$\{prefix\}\/korea-gate`, permanent: true/);
@@ -69,7 +69,7 @@ test('Korea Gate: fourteen public sections, approved headline, one request CTA, 
   assert.doesNotMatch(form, /fetch\(|mailto:|supabase|gohighlevel|resend/i);
   assert.doesNotMatch(form, /fetch\(/);
   const hub = read('components/korea-gate/hub.tsx');
-  assert.match(lib, /korea-gate-logo\.webp/);
+  assert.match(lib, /korea-gate-mark\.webp/);
   assert.match(hub, /LOGO/);
   assert.match(lib, /Your Gateway to Korea/);
   for (const id of ['hero', 'promise', 'services', 'read', 'exclusive', 'demand', 'lead', 'studies', 'method', 'independence', 'limits', 'founder', 'request', 'trust']) {
