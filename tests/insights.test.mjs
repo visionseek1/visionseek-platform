@@ -58,7 +58,8 @@ test('the cancelled programme does not appear anywhere on the public site', asyn
   const walk = d => readdirSync(new URL(`../${d}`, import.meta.url)).flatMap(f => { const p = `${d}/${f}`; return statSync(new URL(`../${p}`, import.meta.url)).isDirectory() ? walk(p) : [p]; });
   const files = ['components', 'content', 'app', 'lib', 'public/admin'].flatMap(walk).filter(p => /\.(tsx?|json|ya?ml|css)$/.test(p) && !p.startsWith('app/ops/'));
   for (const p of files) assert.doesNotMatch(read(p), /\bHLO\b|Highest Level One/, p);
-  assert.match(read('components/capability/navigation.tsx'), /مهندس القدرات المؤسسية/);
+  assert.match(read('components/capability/navigation.tsx'), /كبير مهندسي القدرات/);
+  assert.match(read('components/capability/navigation.tsx'), /Chief Capability Architect/);
 });
 
 test('«هندسة الفرص» / Engineering Opportunities no longer appears on the public site', async () => {

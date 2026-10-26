@@ -109,19 +109,19 @@
     "image": "/ahmed-abdelalim-2026.jpg",
     "imageAlt": {
       "en": "Ahmed Abdelalim, founder of VisionSeek",
-      "ar": "د. أحمد عبدالعليم، مؤسس VisionSeek"
+      "ar": "أحمد عبدالعليم، مؤسس VisionSeek"
     },
     "eyebrow": {
-      "en": "FOUNDER · VISION & STRATEGY",
-      "ar": "المؤسس · الرؤية والاستراتيجية"
+      "en": "FOUNDER",
+      "ar": "المؤسس"
     },
     "name": {
       "en": "Ahmed Abdelalim",
-      "ar": "د. أحمد عبدالعليم"
+      "ar": "أحمد عبدالعليم"
     },
     "bio": {
-      "ar": "مؤسس VisionSeek، وباحث ورائد أعمال ومستثمر، خاض تجارب في البحث العلمي، والأعمال، والتجارة الدولية، والاستثمار في مصر والإمارات وكوريا الجنوبية.",
-      "en": "Founder of VisionSeek. A researcher, entrepreneur and investor, with experience across scientific research, business, international trade and investment in Egypt, the UAE and South Korea."
+      "ar": "أسّسها أحمد عبدالعليم، المؤسس وكبير مهندسي القدرات.",
+      "en": "Founded by Ahmed Abdelalim, Founder and Chief Capability Architect."
     },
     "lens": {
       "ar": "تعلّم من العلم أن يرى ما وراء الظاهر، ومن الأعمال أن يرى ما يمكن أن يصنع قيمة، ومن العمل بين دول وقطاعات مختلفة أن يرى الروابط التي لا تظهر من زاوية واحدة.",
@@ -180,5 +180,189 @@
       "ar": "ابنِ حلولك معنا"
     },
     "line": "Make It Possible."
+  },
+  "studio": {
+    "label": {
+      "en": "ABOUT VISIONSEEK",
+      "ar": "عن VisionSeek"
+    },
+    "openingTitle": {
+      "en": "VisionSeek is a cross-sector studio for opportunities, capabilities and solutions.",
+      "ar": "VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات."
+    },
+    "openingLead": {
+      "en": "From South Korea, we connect Arab institutions to the capability they need, and build it with them so it stays theirs.",
+      "ar": "من كوريا الجنوبية، نصل المؤسسات العربية بالقدرة التي تحتاجها، ونبنيها معها لتبقى ملكًا لها."
+    },
+    "vision": {
+      "eyebrow": {
+        "en": "VISION",
+        "ar": "الرؤية"
+      },
+      "line": {
+        "en": "For Arab nations to be among those leading the world in AI, chips and energy.",
+        "ar": "أن تكون الدول العربية في طليعة من يقود العالم في الذكاء الاصطناعي والرقائق والطاقة."
+      }
+    },
+    "offerings": {
+      "eyebrow": {
+        "en": "WHAT WE DO",
+        "ar": "ماذا نفعل"
+      },
+      "items": [
+        {
+          "id": "programs",
+          "title": {
+            "en": "Programs",
+            "ar": "البرامج"
+          },
+          "line": {
+            "en": "Specialised programs in AI governance, evaluation and capability.",
+            "ar": "برامج متخصصة في حوكمة الذكاء الاصطناعي وتقييمه وبناء القدرة."
+          },
+          "links": [
+            {
+              "href": "/programs",
+              "label": {
+                "en": "Programs",
+                "ar": "البرامج"
+              }
+            }
+          ]
+        },
+        {
+          "id": "korea-gate",
+          "title": {
+            "en": "Korea Gate",
+            "ar": "بوابة كوريا"
+          },
+          "line": {
+            "en": "Your Gateway to Korea, starting with a free first consultation.",
+            "ar": "طريق المؤسسة العربية إلى القدرة الكورية، تبدأ باستشارة أولى مجانية."
+          },
+          "links": [
+            {
+              "href": "/korean-solutions",
+              "label": {
+                "en": "Korea Gate",
+                "ar": "بوابة كوريا"
+              }
+            }
+          ]
+        },
+        {
+          "id": "embedded",
+          "title": {
+            "en": "Building capability inside the institution",
+            "ar": "بناء القدرة داخل المؤسسة"
+          },
+          "line": {
+            "en": "One problem, built inside, measured, owned by you.",
+            "ar": "نشخّص مشكلة واحدة، نبني الحل من الداخل، نقيس النتيجة، وتحتفظ المؤسسة بالملكية."
+          },
+          "links": [
+            {
+              "href": "/method",
+              "label": {
+                "en": "Our method",
+                "ar": "المنهج"
+              }
+            }
+          ]
+        },
+        {
+          "id": "research",
+          "title": {
+            "en": "Research & Reports",
+            "ar": "الأبحاث والتقارير"
+          },
+          "line": {
+            "en": "Open research and clear reports for decision-makers.",
+            "ar": "أبحاث مفتوحة وتقارير واضحة لصنّاع القرار."
+          },
+          "links": [
+            {
+              "href": "/research",
+              "label": {
+                "en": "Research",
+                "ar": "الأبحاث"
+              }
+            },
+            {
+              "href": "/reports",
+              "label": {
+                "en": "Reports",
+                "ar": "التقارير"
+              }
+            }
+          ]
+        },
+        {
+          "id": "partnerships",
+          "title": {
+            "en": "Partnerships",
+            "ar": "الشراكات"
+          },
+          "line": {
+            "en": "Building partnerships with institutions in Korea and the Middle East.",
+            "ar": "نبني شراكات مع مؤسسات في كوريا والشرق الأوسط."
+          },
+          "links": [
+            {
+              "href": "/work-with-us",
+              "label": {
+                "en": "Work with us",
+                "ar": "اعمل معنا"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "principles": {
+      "eyebrow": {
+        "en": "HOW WE WORK",
+        "ar": "مبادئنا"
+      },
+      "items": [
+        {
+          "en": "Your institution owns the result",
+          "ar": "الملكية للمؤسسة"
+        },
+        {
+          "en": "Measured outcomes, not promises",
+          "ar": "نتيجة مقيسة لا وعود"
+        },
+        {
+          "en": "We claim only what we have done",
+          "ar": "لا ندّعي ما لم نفعله"
+        }
+      ]
+    },
+    "founder": {
+      "eyebrow": {
+        "en": "FOUNDER",
+        "ar": "المؤسس"
+      },
+      "line": {
+        "en": "Founded by Ahmed Abdelalim, Founder and Chief Capability Architect.",
+        "ar": "أسّسها أحمد عبدالعليم، المؤسس وكبير مهندسي القدرات."
+      }
+    },
+    "next": {
+      "eyebrow": {
+        "en": "NEXT STEP",
+        "ar": "الخطوة التالية"
+      },
+      "title": {
+        "en": "Start with a free first consultation.",
+        "ar": "ابدأ باستشارة أولى مجانية."
+      },
+      "button": {
+        "en": "Start with a free first consultation",
+        "ar": "ابدأ باستشارة أولى مجانية"
+      },
+      "href": "/start"
+    }
   }
 }

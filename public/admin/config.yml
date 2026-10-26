@@ -3282,6 +3282,140 @@ collections:
           - label: العربية
             name: ar
             widget: text
+      - label: صفحة عن VisionSeek
+        name: studio
+        widget: object
+        hint: "النص الظاهر في /about و /ar/about. خمسة أبواب بوزن متساوٍ، بلا ورش قادة وبلا صورة للمؤسس."
+        fields:
+        - label: السطر العلوي
+          name: label
+          widget: object
+          fields:
+          - {label: English, name: en, widget: string}
+          - {label: العربية, name: ar, widget: string}
+        - label: جملة الافتتاح
+          name: openingTitle
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+        - label: السطر التالي
+          name: openingLead
+          widget: object
+          fields:
+          - {label: English, name: en, widget: text}
+          - {label: العربية, name: ar, widget: text}
+        - label: الرؤية
+          name: vision
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: eyebrow
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: السطر
+            name: line
+            widget: object
+            fields:
+            - {label: English, name: en, widget: text}
+            - {label: العربية, name: ar, widget: text}
+        - label: ماذا نفعل
+          name: offerings
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: eyebrow
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: الأبواب الخمسة
+            name: items
+            widget: list
+            summary: "{{fields.id}}"
+            fields:
+            - {label: المعرّف, name: id, widget: string}
+            - label: العنوان
+              name: title
+              widget: object
+              fields:
+              - {label: English, name: en, widget: string}
+              - {label: العربية, name: ar, widget: string}
+            - label: السطر
+              name: line
+              widget: object
+              fields:
+              - {label: English, name: en, widget: text}
+              - {label: العربية, name: ar, widget: text}
+            - label: الروابط
+              name: links
+              widget: list
+              hint: "مسار موجود على الموقع. بوابة كوريا تستخدم /korean-solutions لأن /korea-gate غير موجود على main."
+              fields:
+              - {label: المسار, name: href, widget: string}
+              - label: نص الرابط
+                name: label
+                widget: object
+                fields:
+                - {label: English, name: en, widget: string}
+                - {label: العربية, name: ar, widget: string}
+        - label: المبادئ
+          name: principles
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: eyebrow
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: البنود الثلاثة
+            name: items
+            widget: list
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+        - label: سطر المؤسس
+          name: founder
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: eyebrow
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: السطر
+            name: line
+            widget: object
+            fields:
+            - {label: English, name: en, widget: text}
+            - {label: العربية, name: ar, widget: text}
+        - label: الخطوة التالية
+          name: next
+          widget: object
+          fields:
+          - label: السطر العلوي
+            name: eyebrow
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - label: العنوان
+            name: title
+            widget: object
+            fields:
+            - {label: English, name: en, widget: text}
+            - {label: العربية, name: ar, widget: text}
+          - label: نص الزر
+            name: button
+            widget: object
+            fields:
+            - {label: English, name: en, widget: string}
+            - {label: العربية, name: ar, widget: string}
+          - {label: المسار, name: href, widget: string}
       - label: ملاحظة «اعمل معنا»
         name: workNote
         widget: object
