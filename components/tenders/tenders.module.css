@@ -391,7 +391,8 @@
 .detailHero {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 0;
+  gap: 1.5rem;
+  align-items: start;
   max-width: 78rem;
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 3rem) 0;
@@ -433,7 +434,8 @@
 
 .detailPhoto {
   position: relative;
-  min-height: 18rem;
+  min-height: 22rem;
+  aspect-ratio: 16 / 9;
   background: #050607;
   border-radius: 22px;
   overflow: hidden;

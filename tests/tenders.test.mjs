@@ -59,6 +59,7 @@ test('Tenders: live on Work with Us right after Competitions, old /tenders URLs 
   const config = read('next.config.ts');
   assert.match(config, /source: `\$\{prefix\}\/tenders`/);
   assert.match(config, /destination: `\$\{prefix\}\/work-with-us#tenders`/);
+  assert.doesNotMatch(config, /tenders\/:[A-Za-z]+/);
   assert.match(read('app/tenders/page.tsx'), /permanentRedirect\('\/work-with-us#tenders'\)/);
   assert.match(read('app/ar/tenders/page.tsx'), /permanentRedirect\('\/ar\/work-with-us#tenders'\)/);
 
@@ -125,13 +126,13 @@ test('Tenders: Work with Us renders المناقصات after المسابقات,
 });
 
 test('Tenders: editorial image is SVG 16:9, with a PNG render used on the card', () => {
-  const svg = read('public/tenders/moei-12718.svg');
+  const svg = read('public/work-with-us/tenders/moei-12718.svg');
   assert.match(svg, /viewBox="0 0 1600 900"/);
   assert.doesNotMatch(svg, /<text[\s>]/);
-  assert.ok(statSync(url('public/tenders/moei-12718.svg')).size < 20_000);
-  assert.ok(existsSync(url('public/tenders/moei-12718.png')));
-  assert.ok(statSync(url('public/tenders/moei-12718.png')).size < 400_000);
-  assert.equal(data.hero.image, '/tenders/moei-12718.png');
+  assert.ok(statSync(url('public/work-with-us/tenders/moei-12718.svg')).size < 20_000);
+  assert.ok(existsSync(url('public/work-with-us/tenders/moei-12718.png')));
+  assert.ok(statSync(url('public/work-with-us/tenders/moei-12718.png')).size < 400_000);
+  assert.equal(data.hero.image, '/work-with-us/tenders/moei-12718.png');
   assert.match(read('components/institution/work-with-us-page.tsx'), /TendersBody/);
   assert.match(read('components/tenders/tenders-page.tsx'), /id="tenders"/);
 });

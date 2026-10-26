@@ -22,9 +22,8 @@ const nextConfig: NextConfig = {
         ]),
         // Competitions now lives on Work with Us (24 Oct 2026): old /competitions links keep working.
         {source: `${prefix}/competitions`, destination: `${prefix}/work-with-us#competitions`, permanent: true},
-        // Tenders lives on Work with Us: /tenders and /tenders/:slug keep working.
+        // Tenders lives on Work with Us. Do not catch /tenders/:file — that hid the art.
         {source: `${prefix}/tenders`, destination: `${prefix}/work-with-us#tenders`, permanent: true},
-        {source: `${prefix}/tenders/:slug`, destination: `${prefix}/work-with-us/tenders/:slug`, permanent: true},
         // «الورش» became Masterclass; Institute is the umbrella above it.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},

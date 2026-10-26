@@ -6,9 +6,9 @@
       <stop offset="0.45" stop-color="#07080b"/>
       <stop offset="1" stop-color="#050607"/>
     </linearGradient>
-    <radialGradient id="glow" cx="62%" cy="42%" r="42%">
-      <stop offset="0" stop-color="#cfff00" stop-opacity=".22"/>
-      <stop offset="0.35" stop-color="#cfff00" stop-opacity=".07"/>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0" stop-color="#cfff00" stop-opacity=".32"/>
+      <stop offset="0.35" stop-color="#cfff00" stop-opacity=".1"/>
       <stop offset="1" stop-color="#cfff00" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow2" cx="28%" cy="70%" r="28%">
@@ -45,7 +45,7 @@
 
   <!-- Service / agent network -->
   <g stroke="#cfff00" stroke-linecap="round" stroke-linejoin="round">
-    <g stroke-opacity=".28" stroke-width="1.4">
+    <g stroke-opacity=".45" stroke-width="1.6">
       <path d="M220 210 L360 160 L520 210 L680 140 L860 190 L1040 120 L1220 180 L1400 130"/>
       <path d="M260 340 L420 280 L600 330 L760 250 L940 300 L1120 230 L1300 290"/>
       <path d="M360 160 L420 280 L520 210 L600 330 L680 140 L760 250 L860 190 L940 300 L1040 120 L1120 230"/>
