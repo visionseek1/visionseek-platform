@@ -65,6 +65,7 @@ collections:
                   - {label: "البرامج ← Apex  /programs/apex", value: "/programs/apex"}
                   - {label: "البرامج ← Clause  /programs/clause", value: "/programs/clause"}
                   - {label: "البرامج ← Relay  /programs/relay", value: "/programs/relay"}
+                  - {label: "البرامج ← Proof  /programs/proof", value: "/programs/proof"}
                   - {label: "تقارير ← التقارير  /reports/reports", value: "/reports/reports"}
                   - {label: "تقارير ← الأوراق العلمية  /reports/research", value: "/reports/research"}
                   - {label: "تقارير ← ملاحظات  /reports/notes/l-001", value: "/reports/notes/l-001"}
@@ -1333,7 +1334,7 @@ collections:
     label: البرامج
     editor: {preview: false}
     label_singular: برنامج
-    description: "صفحات البرامج الميدانية (Aegis و Apex و Clause و Relay). من هنا تُعدَّل النصوص والصورة والحالة. لا تضع أرقامًا أو أسماء عملاء أو منافسين."
+    description: "صفحات البرامج الميدانية (Aegis و Apex و Clause و Relay و Proof). من هنا تُعدَّل النصوص والصورة والحالة. لا تضع أرقامًا أو أسماء عملاء أو منافسين."
     folder: content/programs
     create: true
     extension: json

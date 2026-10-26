@@ -1,0 +1,129 @@
+{
+  "position": 5,
+  "slug": "proof",
+  "code": "VS-P05",
+  "name": {
+    "en": "Proof",
+    "ar": "Proof"
+  },
+  "classification": {
+    "en": "Independent evaluation of AI systems in Arabic",
+    "ar": "تقييم مستقل لأنظمة الذكاء الاصطناعي بالعربية"
+  },
+  "title": {
+    "en": "Proof: the independent Arab lab for evaluating AI systems in Arabic",
+    "ar": "Proof: المختبر العربي المستقل لتقييم أنظمة الذكاء الاصطناعي بالعربية"
+  },
+  "summary": {
+    "en": "Proof is the independent Arab lab for evaluating AI systems in Arabic. It tests understanding — Modern Standard Arabic and dialects — information accuracy, safety, and resilience against manipulation, then gives the institution a clear report: where the system is fit to use, and where it is not.",
+    "ar": "Proof المختبر العربي المستقل لتقييم أنظمة الذكاء الاصطناعي بالعربية. يختبر الفهم — الفصحى واللهجات — ودقة المعلومات، والسلامة، والصمود أمام محاولات التلاعب، ثم يسلّم المؤسسة تقريرًا واضحًا: أين يصلح النظام للاستخدام، وأين لا يصلح."
+  },
+  "status": {
+    "en": "Pilot-Ready — open for joint institutional development",
+    "ar": "جاهز للتجريب — مفتوح للتطوير المشترك المؤسسي"
+  },
+  "image": "/programs/proof.jpg",
+  "cta": {
+    "en": "Request an independent evaluation",
+    "ar": "اطلب تقييمًا مستقلًا"
+  },
+  "challengeTitle": {
+    "en": "The problem",
+    "ar": "المشكلة"
+  },
+  "challenge": {
+    "en": "Arab institutions and governments buy AI systems and deploy them with the public without knowing whether they perform well in Arabic.",
+    "ar": "تشتري المؤسسات والحكومات العربية أنظمة ذكاء اصطناعي وتنشرها على الجمهور، من دون أن تعلم إن كانت تؤدي بالعربية كما ينبغي."
+  },
+  "approachTitle": {
+    "en": "Why Arabic",
+    "ar": "لماذا العربية"
+  },
+  "approach": {
+    "en": "Most global evaluations are built for English. Arabic and its dialects are rarely measured. An institution that measures an Arabic-facing system on an English yardstick does not know where the system holds, or where it fails.",
+    "ar": "معظم التقييمات العالمية بُنيت للإنجليزية. أما العربية ولهجاتها فقلّما تُقاس. ومن يقيس نظامًا يواجه الناس بالعربية بمقياس إنجليزي لا يعلم موضع القوة ولا موضع العجز."
+  },
+  "principlesTitle": {
+    "en": "Examples of risk",
+    "ar": "أمثلة على الخطر"
+  },
+  "principles": [
+    {
+      "en": "The system misunderstands a colloquial question and gives a wrong medicine dose.",
+      "ar": "يسيء النظام فهم سؤال بالعامية فيصف جرعة دواء خاطئة."
+    },
+    {
+      "en": "The system fabricates figures and information.",
+      "ar": "يختلق النظام أرقامًا ومعلومات ويقدّمها على أنها حقائق."
+    },
+    {
+      "en": "A large investment goes to a system that does not work properly in Arabic.",
+      "ar": "يذهب استثمار كبير إلى نظام لا يعمل بالعربية على الوجه الصحيح."
+    }
+  ],
+  "related": [
+    "/programs"
+  ],
+  "steps": [
+    {
+      "title": {
+        "en": "Value to the institution",
+        "ar": "القيمة للمؤسسة"
+      },
+      "body": {
+        "en": "Know before you pay that the system works correctly in Arabic. Know exactly where it can be used and where it cannot. Be able to show any regulator that the system was independently evaluated.",
+        "ar": "تعرف قبل أن تدفع أن النظام يعمل بالعربية على الوجه الصحيح. وتعرف على وجه التحديد أين يصلح استخدامه وأين لا يصلح. وتستطيع أن تُظهر لأي جهة رقابية أن النظام خضع لتقييم مستقل."
+      }
+    },
+    {
+      "title": {
+        "en": "Understanding: MSA and dialects",
+        "ar": "الفهم: الفصحى واللهجات"
+      },
+      "body": {
+        "en": "We test whether the system understands Modern Standard Arabic and the dialects people actually speak — not only the language of textbooks. A misunderstanding here is not a linguistic flaw; it is a wrong decision at the moment of use.",
+        "ar": "نختبر إن كان النظام يفهم العربية الفصحى ولهجاتها كما يتكلم الناس، لا كما تُكتب في الكتب وحدها. سوء الفهم هنا ليس عيبًا لغويًا؛ هو قرار خاطئ في لحظة الاستخدام."
+      }
+    },
+    {
+      "title": {
+        "en": "Information accuracy",
+        "ar": "دقة المعلومات"
+      },
+      "body": {
+        "en": "We test whether the system holds to the fact or invents it. The institution does not need fluent text; it needs to know where the system tells the truth and where it fabricates.",
+        "ar": "نختبر إن كان النظام يثبت المعلومة أو يخترعها. فالمؤسسة لا تحتاج نصًا سلسًا؛ تحتاج أن تعلم أين يصدق النظام وأين يلفّق."
+      }
+    },
+    {
+      "title": {
+        "en": "Safety",
+        "ar": "السلامة"
+      },
+      "body": {
+        "en": "We test whether the system protects the user in sensitive settings: health, rights, and public decisions. An error here does not stay on the screen.",
+        "ar": "نختبر إن كان النظام يحفظ سلامة المستخدم في السياقات الحساسة: الصحة، والحقوق، والقرار العام. الخطأ هنا لا يبقى على الشاشة."
+      }
+    },
+    {
+      "title": {
+        "en": "Resilience against manipulation",
+        "ar": "الصمود أمام محاولات التلاعب"
+      },
+      "body": {
+        "en": "We expose the system to manipulation attempts — adversarial attack and red-teaming — and we record where it breaks, not where it shines in a sales demo.",
+        "ar": "نُعرّض النظام لمحاولات التلاعب المقصودة، ونثبت أين ينهار، لا أين يتلألأ في العرض الترويجي."
+      }
+    },
+    {
+      "title": {
+        "en": "The report: where it is fit, and where it is not",
+        "ar": "التقرير: أين يصلح وأين لا يصلح"
+      },
+      "body": {
+        "en": "The output is a clear report for the institution: where the system is fit to use in Arabic, and where it is not. No hedging. The evaluation is independent, and the institution owns the report.",
+        "ar": "المخرج تقرير واضح للمؤسسة: أين يصلح النظام للاستخدام بالعربية، وأين لا يصلح. لا مواربة. التقييم مستقل، والمؤسسة تملك التقرير."
+      }
+    }
+  ]
+}
