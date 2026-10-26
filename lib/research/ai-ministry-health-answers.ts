@@ -1,5 +1,5 @@
 /**
- * «هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟» — الإصدار 1.1.
+ * «أمننا الصحي في الخليج: هل نثق بإجابات الذكاء الاصطناعي؟» — الإصدار 1.1.
  * النص العربي كما ورد في المصدر المعتمد (draft-ar-v1.1). الأرقام كما هي.
  * لا اختراع لمحتوى، ولا وسم مراجعة داخلية، ولا لقب دكتوراه بالإنجليزي.
  */
@@ -16,15 +16,15 @@ export const paper: LabReport = {
   versionLabel: {ar: 'الإصدار 1.1', en: 'Version 1.1'},
   label: {ar: 'مختبر VisionSeek · تقارير · الإصدار 1.1', en: 'VisionSeek Lab · Reports · Version 1.1'},
   lab: 'VISIONSEEK LAB · ARABIC HEALTH AI',
-  title: {ar: 'هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟', en: 'Does AI answer what health ministries say?'},
+  title: {ar: 'أمننا الصحي في الخليج', en: 'Does AI answer what health ministries say?'},
   question: {
-    ar: 'معلومات صحية رسمية بالفصحى واللهجات الخليجية',
+    ar: 'هل نثق بإجابات الذكاء الاصطناعي؟',
     en: 'Official health information in MSA and Gulf dialects',
   },
   deck: {ar: 'مختبر VisionSeek · أكتوبر 2026', en: 'Version 1.1'},
   attribution: {ar: 'مبني على بحث أجرته VisionSeek', en: 'Based on research conducted by VisionSeek'},
   fullTitle: {
-    ar: 'هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟ معلومات صحية رسمية بالفصحى واللهجات الخليجية',
+    ar: 'أمننا الصحي في الخليج: هل نثق بإجابات الذكاء الاصطناعي؟',
     en: 'Does AI Answer What Health Ministries Say? Official Health Information in MSA and Gulf Dialects',
   },
   author: {
@@ -226,6 +226,6 @@ export const paper: LabReport = {
     text: 'أي مساعد ذكي يجيب جمهوركم يُقاس بما تقوله وزارتكم، لا بما يبدو «معقولًا طبيًا».',
     strong: '[استنتاج]',
   },
-  citation: 'عبدالعليم، أحمد (2026). «هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟». VisionSeek، إنتشون، كوريا الجنوبية، v1.1. https://visionseek.org/ar/reports/reports/ai-ministry-health-answers',
+  citation: 'عبدالعليم، أحمد (2026). «أمننا الصحي في الخليج: هل نثق بإجابات الذكاء الاصطناعي؟». VisionSeek، إنتشون، كوريا الجنوبية، v1.1. https://visionseek.org/ar/reports/reports/ai-ministry-health-answers',
   researchCitation: 'Abdelalim, A. (2026). Official-Source Health Information in MSA and Gulf Dialects: A Pilot Evaluation Set Grounded in GCC Ministry-of-Health Awareness Content, with AI Review in a Clinical-Pharmacist Role (Preprint v1.0). VisionSeek, Incheon, South Korea. Zenodo. https://doi.org/10.5281/zenodo.23657799',
 };
