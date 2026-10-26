@@ -1,5 +1,5 @@
 # هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟ معلومات صحية رسمية بالفصحى واللهجات الخليجية
-**الإصدار العربي v1.1 · معاينة — للمراجعة الداخلية v1.1** · 2026-10-26 (توقيت سيول) · إعداد: د. أحمد عبدالعليم، VisionSeek (إنتشون، كوريا الجنوبية) · مبني على بحث أجرته VisionSeek
+**الإصدار العربي v1.1** · 2026-10-26 (توقيت سيول) · إعداد: د. أحمد عبدالعليم، VisionSeek (إنتشون، كوريا الجنوبية) · مبني على بحث أجرته VisionSeek
 
 > **مفتاح الوسوم:** [مؤكد بمصدر] = من بحث VisionSeek وبياناته المنشورة (التفاصيل في §6). [استنتاج] = قراءة VisionSeek لصانع القرار.
 >
@@ -108,4 +108,4 @@
 ## 7. للاستشهاد
 > Abdelalim, A. (2026). *Official-Source Health Information in MSA and Gulf Dialects: A Pilot Evaluation Set Grounded in GCC Ministry-of-Health Awareness Content, with AI Review in a Clinical-Pharmacist Role* (Preprint v1.0). VisionSeek, Incheon, South Korea. Zenodo. https://doi.org/10.5281/zenodo.23657799
 
-وللتقرير: عبدالعليم، أحمد (2026). «هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟». VisionSeek، إنتشون، كوريا الجنوبية، معاينة v1.1. (رابط التقرير على visionseek.org يُضاف عند النشر.)
+وللتقرير: عبدالعليم، أحمد (2026). «هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟». VisionSeek، إنتشون، كوريا الجنوبية، v1.1. https://visionseek.org/ar/reports/reports/ai-ministry-health-answers

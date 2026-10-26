@@ -312,7 +312,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
       pdf: '/reports/reports/gulf-medicine-ownership-ar.pdf',
       cover: '/reports/reports/gulf-medicine-ownership-cover.jpg',
       doi: '10.5281/zenodo.23657727',
-      bytes: 451296,
+      bytes: 447287,
       slug: 'gulf-medicine-ownership',
       lib: 'lib/research/gulf-medicine-ownership.ts',
       component: 'components/insights/gulf-medicine-ownership.tsx',
@@ -326,7 +326,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
       pdf: '/reports/reports/gulf-data-center-stack-ar.pdf',
       cover: '/reports/reports/gulf-data-center-stack-cover.jpg',
       doi: '10.5281/zenodo.23657775',
-      bytes: 502873,
+      bytes: 499215,
       slug: 'gulf-data-center-stack',
       lib: 'lib/research/gulf-data-center-stack.ts',
       component: 'components/insights/gulf-data-center-stack.tsx',
@@ -340,7 +340,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
       pdf: '/reports/reports/ai-ministry-health-answers-ar.pdf',
       cover: '/reports/reports/ai-ministry-health-answers-cover.jpg',
       doi: '10.5281/zenodo.23657799',
-      bytes: 461474,
+      bytes: 454526,
       slug: 'ai-ministry-health-answers',
       lib: 'lib/research/ai-ministry-health-answers.ts',
       component: 'components/insights/ai-ministry-health-answers.tsx',
@@ -383,6 +383,10 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     assert.match(lib, new RegExp(`https://doi\\.org/${spec.doi.replace(/\./g, '\\.')}`));
     assert.match(lib, /الإصدار 1\.1/);
     assert.doesNotMatch(lib, /اقرأ البحث على Zenodo/);
+    assert.doesNotMatch(lib, /يُضاف عند النشر/);
+    if (spec.slug === 'ai-ministry-health-answers') {
+      assert.match(lib, /https:\/\/visionseek\.org\/ar\/reports\/reports\/ai-ministry-health-answers/);
+    }
     assert.ok(existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.1.md`));
     assert.ok(existsSync(`scripts/insights/${spec.slug}/report-ar-v1.1.pdf`));
     assert.ok(!existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.0.md`));

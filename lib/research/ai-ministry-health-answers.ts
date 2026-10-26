@@ -226,6 +226,6 @@ export const paper: LabReport = {
     text: 'أي مساعد ذكي يجيب جمهوركم يُقاس بما تقوله وزارتكم، لا بما يبدو «معقولًا طبيًا».',
     strong: '[استنتاج]',
   },
-  citation: 'عبدالعليم، أحمد (2026). «هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟». VisionSeek، إنتشون، كوريا الجنوبية، v1.1.',
+  citation: 'عبدالعليم، أحمد (2026). «هل يجيب الذكاء الاصطناعي بما تقوله وزارات الصحة؟». VisionSeek، إنتشون، كوريا الجنوبية، v1.1. https://visionseek.org/ar/reports/reports/ai-ministry-health-answers',
   researchCitation: 'Abdelalim, A. (2026). Official-Source Health Information in MSA and Gulf Dialects: A Pilot Evaluation Set Grounded in GCC Ministry-of-Health Awareness Content, with AI Review in a Clinical-Pharmacist Role (Preprint v1.0). VisionSeek, Incheon, South Korea. Zenodo. https://doi.org/10.5281/zenodo.23657799',
 };
