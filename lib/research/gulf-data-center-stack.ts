@@ -1,5 +1,5 @@
 /**
- * «من يملك المكدّس؟ تركّز مورّدي مكوّنات مراكز البيانات الخليجية» — الإصدار 1.1.
+ * «أمننا الرقمي في الخليج: من أين تأتي مكوّنات مراكز بياناتنا؟» — الإصدار 1.1.
  * النص العربي كما ورد في المصدر المعتمد (draft-ar-v1.1). الأرقام كما هي.
  * لا اختراع لمحتوى، ولا وسم مراجعة داخلية، ولا لقب دكتوراه بالإنجليزي.
  */
@@ -16,15 +16,15 @@ export const paper: LabReport = {
   versionLabel: {ar: 'الإصدار 1.1', en: 'Version 1.1'},
   label: {ar: 'مختبر VisionSeek · تقارير · الإصدار 1.1', en: 'VisionSeek Lab · Reports · Version 1.1'},
   lab: 'VISIONSEEK LAB · DATA-CENTRE SUPPLY STACK',
-  title: {ar: 'من يملك المكدّس؟', en: 'Who Owns the Stack?'},
+  title: {ar: 'أمننا الرقمي في الخليج', en: 'Who Owns the Stack?'},
   question: {
-    ar: 'تركّز مورّدي مكوّنات مراكز البيانات الخليجية',
+    ar: 'من أين تأتي مكوّنات مراكز بياناتنا؟',
     en: 'Supplier concentration of Gulf data-centre components',
   },
   deck: {ar: 'الدول الست × أربع طبقات: الحوسبة · الكهرباء · التبريد · المياه', en: 'Version 1.1'},
   attribution: {ar: 'مبني على بحث أجرته VisionSeek', en: 'Based on research conducted by VisionSeek'},
   fullTitle: {
-    ar: 'من يملك المكدّس؟ تركّز مورّدي مكوّنات مراكز البيانات الخليجية',
+    ar: 'أمننا الرقمي في الخليج: من أين تأتي مكوّنات مراكز بياناتنا؟',
     en: 'Who Owns the Stack? Supplier Concentration of Gulf Data-Centre Components',
   },
   author: {
@@ -229,6 +229,6 @@ export const paper: LabReport = {
     text: 'بقدر ما تكشفه طرق الاستيراد، يقف المكدّس الخليجي عند درجة الاستخدام؛ والدرجات الأعلى تحتاج بيانات إنتاج وملكية فكرية.',
     strong: '[استنتاج]',
   },
-  citation: 'أحمد عبدالعليم (2026). من يملك المكدّس؟ تركّز مورّدي مكوّنات مراكز البيانات الخليجية. تقارير VisionSeek، v1.1.',
+  citation: 'أحمد عبدالعليم (2026). أمننا الرقمي في الخليج: من أين تأتي مكوّنات مراكز بياناتنا؟. تقارير VisionSeek، v1.1.',
   researchCitation: 'Abdelalim, A. (2026). Who Owns the Stack? A Per-Country Quantification of Critical-Component Supplier Concentration behind Gulf AI Data-Centre Build-out (Preprint v1.0). VisionSeek, Incheon, South Korea. Zenodo. https://doi.org/10.5281/zenodo.23657775',
 };

@@ -7,5 +7,6 @@ export const metadata: Metadata = {
   description: paper.cardSummary.ar,
   alternates: {canonical: '/ar/reports/reports/gulf-medicine-ownership', languages: {ar: '/ar/reports/reports/gulf-medicine-ownership', en: '/reports/reports/gulf-medicine-ownership'}},
   openGraph: {title: paper.fullTitle.ar, description: paper.cardSummary.ar, url: '/ar/reports/reports/gulf-medicine-ownership', images: [{url: paper.cover, alt: paper.fullTitle.ar, width: paper.coverWidth, height: paper.coverHeight}]},
+  twitter: {title: paper.fullTitle.ar, description: paper.cardSummary.ar, images: [paper.cover]},
 };
 export default function Page() { return <GulfMedicineOwnership locale="ar"/>; }

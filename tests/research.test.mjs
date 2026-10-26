@@ -71,7 +71,7 @@ test('the built Research hub is native RTL and LTR and keeps the DOI button disa
   assert.match(en, /href="\/research"[^>]*>Research</);
   assert.match(ar, /href="\/ar\/research"[^>]*>الأبحاث</);
   assert.match(en, /Who Owns the Gulf&#x27;s Medicine\?/);
-  assert.match(ar, /من يملك دواء الخليج؟/);
+  assert.match(ar, /أمننا الدوائي في الخليج/);
   assert.match(en, /Who Owns the Stack\?/);
   assert.match(ar, /من يملك البنية التحتية؟/);
   assert.doesNotMatch(ar, /ركام/);
