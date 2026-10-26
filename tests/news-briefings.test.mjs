@@ -197,7 +197,8 @@ test('news briefings: production CI build does not publish samples', () => {
   assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
   assert.doesNotMatch(html, /أمننا الحكومي في الخليج/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
-  assert.match(html, /أمننا الاقتصادي في الخليج/);
+  assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
+  assert.doesNotMatch(html, /أمننا الاقتصادي في الخليج/);
   const leadAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
   const olderAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
   assert.ok(leadAt >= 0 && olderAt >= 0 && leadAt < olderAt, 'STV is the lead');
