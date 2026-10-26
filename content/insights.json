@@ -192,6 +192,32 @@
     },
     {
       "title": {
+        "ar": "من يملك الابتكار الخليجي؟ خريطة ملكية البراءات",
+        "en": "Who Owns Gulf Innovation? A Patent Ownership Map"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.0 · مختبر VisionSeek · 25 أكتوبر 2026",
+        "en": "Report · Version 1.0 · VisionSeek Lab · 25 October 2026"
+      },
+      "summary": {
+        "ar": "في 2024 جاءت 61.3% من طلبات البراءات المودعة لدى المكتب السعودي من غير المقيمين، وتراوحت النسبة بين 88.5% و98.5% في الإمارات وعُمان والكويت وقطر والبحرين. خريطة ملكية البراءات في دول المجلس الست والمجالات الحرجة السبعة.",
+        "en": "In 2024, 61.3% of patent applications filed at the Saudi office came from non-residents, and the share ranged from 88.5% to 98.5% in the UAE, Oman, Kuwait, Qatar and Bahrain. A map of patent ownership across the six GCC states and seven critical fields."
+      },
+      "page": "/reports/reports/patent-ownership-map",
+      "pdf": "/reports/reports/patent-ownership-map-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/patent-ownership-map-cover.jpg",
+      "related": {
+        "href": "/reports/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-25"
+    },
+    {
+      "title": {
         "ar": "عقيدة التوطين: من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون",
         "en": "The Localization Doctrine: From Using Technology to Owning It — What Korea Proves Is Possible for the Arab World"
       },
