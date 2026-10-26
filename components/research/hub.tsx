@@ -41,7 +41,6 @@ export function ResearchHub({locale}: {locale: Locale}) {
 }
 
 function PaperCard({paper, locale, cta}: {paper: ResearchPaper; locale: Locale; cta: {available: {en: string; ar: string}; pending: {en: string; ar: string}}}) {
-  const ar = locale === 'ar';
   const t = tx(locale);
   const href = paperDoiHref(paper.doi);
   const other = locale === 'ar' ? 'en' : 'ar';
