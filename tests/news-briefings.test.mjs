@@ -73,8 +73,9 @@ const assertNewsImages = (data, name) => {
   assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
 };
 
-test('news briefings: the nine published items validate and no samples remain', () => {
+test('news briefings: the ten published items validate and no samples remain', () => {
   assert.deepEqual(mdFiles.sort(), [
+    'alpha-dhabi-alpha-wave-iii-1bn.md',
     'dubai-ai-campus-1000-companies-2030.md',
     'dubai-ai-sandbox-launch.md',
     'dubai-chambers-agentic-ai-marketplace.md',
@@ -86,6 +87,7 @@ test('news briefings: the nine published items validate and no samples remain', 
     'stv-dga-ai-government-consulting-rfs.md',
   ]);
   const expected = {
+    'alpha-dhabi-alpha-wave-iii-1bn.md': {slug: 'alpha-dhabi-alpha-wave-iii-1bn', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
     'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
     'dubai-ai-sandbox-launch.md': {slug: 'dubai-ai-sandbox-launch', tag: 'حكومات وسياسات', hero: {width: 1280, height: 720}},
     'dubai-chambers-agentic-ai-marketplace.md': {slug: 'dubai-chambers-agentic-ai-marketplace', tag: 'استثمار وشركات', hero: {width: 1280, height: 720}},
@@ -114,6 +116,8 @@ test('news briefings: the nine published items validate and no samples remain', 
     assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
   }
   const times = Object.fromEntries(mdFiles.map(name => [name, parseFront(read(join('content/news', name))).data.publishedAt]));
+  assert.equal(times['alpha-dhabi-alpha-wave-iii-1bn.md'], '2026-10-28T02:00:00+04:00');
+  assert.ok(times['alpha-dhabi-alpha-wave-iii-1bn.md'] > times['scale-ai-uae-entity-difc.md']);
   assert.equal(times['scale-ai-uae-entity-difc.md'], '2026-10-27T23:00:00+04:00');
   assert.ok(times['scale-ai-uae-entity-difc.md'] > times['oman-mubbadrah-salalah-ai-datacentre.md']);
   assert.equal(times['oman-mubbadrah-salalah-ai-datacentre.md'], '2026-10-27T20:00:00+04:00');
@@ -191,7 +195,7 @@ test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', ()
   assert.match(read('components/news/pages.tsx'), /height: 630/);
 });
 
-test('news briefings: production CI build publishes Scale AI then Oman then HUMAIN then Dubai sandbox then Qatar then Iraq then Chambers then STV then Dubai campus and shows the nav', () => {
+test('news briefings: production CI build publishes Alpha Dhabi then Scale AI then Oman then HUMAIN then Dubai sandbox then Qatar then Iraq then Chambers then STV then Dubai campus and shows the nav', () => {
   const ar = join(root, '.next/server/app/ar/news.html');
   assert.ok(existsSync(ar), 'built /ar/news');
   const html = readFileSync(ar, 'utf8');
@@ -199,6 +203,8 @@ test('news briefings: production CI build publishes Scale AI then Oman then HUMA
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي|عيّنة تجريبية|2026-10-27-sample/);
+  assert.match(html, /alpha-dhabi-alpha-wave-iii-1bn/);
+  assert.match(html, /ألفا ظبي تراهن مرة ثانية: مليار دولار على شركات الذكاء الاصطناعي في العالم/);
   assert.match(html, /scale-ai-uae-entity-difc/);
   assert.match(html, /من يختبر الذكاء الاصطناعي قبل أن يصل إليك\؟ Scale AI تفتح مكتبها في دبي/);
   assert.match(html, /oman-mubbadrah-salalah-ai-datacentre/);
@@ -217,6 +223,7 @@ test('news briefings: production CI build publishes Scale AI then Oman then HUMA
   assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
+  const alphaAt = html.indexOf('alpha-dhabi-alpha-wave-iii-1bn');
   const scaleAt = html.indexOf('scale-ai-uae-entity-difc');
   const omanAt = html.indexOf('oman-mubbadrah-salalah-ai-datacentre');
   const humainAt = html.indexOf('humain-nvidia-84mw-expansion');
@@ -226,10 +233,11 @@ test('news briefings: production CI build publishes Scale AI then Oman then HUMA
   const chambersAt = html.indexOf('dubai-chambers-agentic-ai-marketplace');
   const stvAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
   const campusAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
-  assert.ok(scaleAt >= 0 && omanAt >= 0 && humainAt >= 0 && sandboxAt >= 0 && qatarAt >= 0 && iraqAt >= 0 && chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && scaleAt < omanAt && omanAt < humainAt && humainAt < sandboxAt && sandboxAt < qatarAt && qatarAt < iraqAt && iraqAt < chambersAt && chambersAt < stvAt && stvAt < campusAt, 'Scale AI briefing is the lead');
+  assert.ok(alphaAt >= 0 && scaleAt >= 0 && omanAt >= 0 && humainAt >= 0 && sandboxAt >= 0 && qatarAt >= 0 && iraqAt >= 0 && chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && alphaAt < scaleAt && scaleAt < omanAt && omanAt < humainAt && humainAt < sandboxAt && sandboxAt < qatarAt && qatarAt < iraqAt && iraqAt < chambersAt && chambersAt < stvAt && stvAt < campusAt, 'Alpha Dhabi briefing is the lead');
   assert.doesNotMatch(html, /محدَّث|حُدّث/);
   assert.match(html, /href="\/ar\/news"/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/alpha-dhabi-alpha-wave-iii-1bn.html')), 'built Alpha Dhabi detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/scale-ai-uae-entity-difc.html')), 'built Scale AI detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/oman-mubbadrah-salalah-ai-datacentre.html')), 'built Oman detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/humain-nvidia-84mw-expansion.html')), 'built HUMAIN detail');
