@@ -73,9 +73,10 @@ const assertNewsImages = (data, name) => {
   assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
 };
 
-test('news briefings: the five published items validate and no samples remain', () => {
+test('news briefings: the six published items validate and no samples remain', () => {
   assert.deepEqual(mdFiles.sort(), [
     'dubai-ai-campus-1000-companies-2030.md',
+    'dubai-ai-sandbox-launch.md',
     'dubai-chambers-agentic-ai-marketplace.md',
     'iraq-digital-governance-ministry-ai.md',
     'qatar-national-ai-center-governance.md',
@@ -83,6 +84,7 @@ test('news briefings: the five published items validate and no samples remain', 
   ]);
   const expected = {
     'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
+    'dubai-ai-sandbox-launch.md': {slug: 'dubai-ai-sandbox-launch', tag: 'حكومات وسياسات', hero: {width: 1280, height: 720}},
     'dubai-chambers-agentic-ai-marketplace.md': {slug: 'dubai-chambers-agentic-ai-marketplace', tag: 'استثمار وشركات', hero: {width: 1280, height: 720}},
     'iraq-digital-governance-ministry-ai.md': {slug: 'iraq-digital-governance-ministry-ai', tag: 'حكومات وسياسات', hero: {width: 1280, height: 720}},
     'qatar-national-ai-center-governance.md': {slug: 'qatar-national-ai-center-governance', tag: 'حكومات وسياسات', hero: {width: 1280, height: 720}},
@@ -106,6 +108,8 @@ test('news briefings: the five published items validate and no samples remain', 
     assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
   }
   const times = Object.fromEntries(mdFiles.map(name => [name, parseFront(read(join('content/news', name))).data.publishedAt]));
+  assert.equal(times['dubai-ai-sandbox-launch.md'], '2026-10-27T13:55:00+04:00');
+  assert.ok(times['dubai-ai-sandbox-launch.md'] > times['qatar-national-ai-center-governance.md']);
   assert.equal(times['qatar-national-ai-center-governance.md'], '2026-10-27T10:55:00+04:00');
   assert.ok(times['qatar-national-ai-center-governance.md'] > times['iraq-digital-governance-ministry-ai.md']);
   assert.equal(times['iraq-digital-governance-ministry-ai.md'], '2026-10-27T07:55:00+04:00');
@@ -175,7 +179,7 @@ test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', ()
   assert.match(read('components/news/pages.tsx'), /height: 630/);
 });
 
-test('news briefings: production CI build publishes Qatar then Iraq then Chambers then STV then Dubai and shows the nav', () => {
+test('news briefings: production CI build publishes Dubai sandbox then Qatar then Iraq then Chambers then STV then Dubai campus and shows the nav', () => {
   const ar = join(root, '.next/server/app/ar/news.html');
   assert.ok(existsSync(ar), 'built /ar/news');
   const html = readFileSync(ar, 'utf8');
@@ -183,6 +187,8 @@ test('news briefings: production CI build publishes Qatar then Iraq then Chamber
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي|عيّنة تجريبية|2026-10-27-sample/);
+  assert.match(html, /dubai-ai-sandbox-launch/);
+  assert.match(html, /حلّك جاهز والقواعد لم تجهز بعد… دبي تفتح مساحة للتجربة/);
   assert.match(html, /qatar-national-ai-center-governance/);
   assert.match(html, /من يراقب الذكاء الاصطناعي في قطر\؟ مركز وطني جديد تابع للوزير مباشرة/);
   assert.match(html, /iraq-digital-governance-ministry-ai/);
@@ -193,15 +199,17 @@ test('news briefings: production CI build publishes Qatar then Iraq then Chamber
   assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
+  const sandboxAt = html.indexOf('dubai-ai-sandbox-launch');
   const qatarAt = html.indexOf('qatar-national-ai-center-governance');
   const iraqAt = html.indexOf('iraq-digital-governance-ministry-ai');
   const chambersAt = html.indexOf('dubai-chambers-agentic-ai-marketplace');
   const stvAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
   const campusAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
-  assert.ok(qatarAt >= 0 && iraqAt >= 0 && chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && qatarAt < iraqAt && iraqAt < chambersAt && chambersAt < stvAt && stvAt < campusAt, 'Qatar is the lead');
+  assert.ok(sandboxAt >= 0 && qatarAt >= 0 && iraqAt >= 0 && chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && sandboxAt < qatarAt && qatarAt < iraqAt && iraqAt < chambersAt && chambersAt < stvAt && stvAt < campusAt, 'Dubai sandbox is the lead');
   assert.doesNotMatch(html, /محدَّث|حُدّث/);
   assert.match(html, /href="\/ar\/news"/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-sandbox-launch.html')), 'built Dubai sandbox detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/qatar-national-ai-center-governance.html')), 'built Qatar detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/iraq-digital-governance-ministry-ai.html')), 'built Iraq detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-chambers-agentic-ai-marketplace.html')), 'built Chambers detail');
