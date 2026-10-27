@@ -73,13 +73,15 @@ const assertNewsImages = (data, name) => {
   assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
 };
 
-test('news briefings: the two published items validate and no samples remain', () => {
+test('news briefings: the three published items validate and no samples remain', () => {
   assert.deepEqual(mdFiles.sort(), [
     'dubai-ai-campus-1000-companies-2030.md',
+    'dubai-chambers-agentic-ai-marketplace.md',
     'stv-dga-ai-government-consulting-rfs.md',
   ]);
   const expected = {
     'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
+    'dubai-chambers-agentic-ai-marketplace.md': {slug: 'dubai-chambers-agentic-ai-marketplace', tag: 'استثمار وشركات', hero: {width: 1280, height: 720}},
     'stv-dga-ai-government-consulting-rfs.md': {slug: 'stv-dga-ai-government-consulting-rfs', tag: 'تنظيم وسياسات', hero: {width: 1280, height: 720}},
   };
   for (const name of mdFiles) {
@@ -100,6 +102,7 @@ test('news briefings: the two published items validate and no samples remain', (
     assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
   }
   const times = Object.fromEntries(mdFiles.map(name => [name, parseFront(read(join('content/news', name))).data.publishedAt]));
+  assert.ok(times['dubai-chambers-agentic-ai-marketplace.md'] > times['stv-dga-ai-government-consulting-rfs.md']);
   assert.ok(times['stv-dga-ai-government-consulting-rfs.md'] > times['dubai-ai-campus-1000-companies-2030.md']);
 });
 
@@ -164,7 +167,7 @@ test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', ()
   assert.match(read('components/news/pages.tsx'), /height: 630/);
 });
 
-test('news briefings: production CI build publishes STV then Dubai and shows the nav', () => {
+test('news briefings: production CI build publishes Chambers then STV then Dubai and shows the nav', () => {
   const ar = join(root, '.next/server/app/ar/news.html');
   assert.ok(existsSync(ar), 'built /ar/news');
   const html = readFileSync(ar, 'utf8');
@@ -172,16 +175,20 @@ test('news briefings: production CI build publishes STV then Dubai and shows the
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي|عيّنة تجريبية|2026-10-27-sample/);
+  assert.match(html, /dubai-chambers-agentic-ai-marketplace/);
+  assert.match(html, /موظفك الجديد يراجع العقود ويفرز السير الذاتية/);
   assert.match(html, /stv-dga-ai-government-consulting-rfs/);
   assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
-  const leadAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
-  const olderAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
-  assert.ok(leadAt >= 0 && olderAt >= 0 && leadAt < olderAt, 'STV is the lead');
+  const chambersAt = html.indexOf('dubai-chambers-agentic-ai-marketplace');
+  const stvAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
+  const campusAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
+  assert.ok(chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && chambersAt < stvAt && stvAt < campusAt, 'Chambers is the lead');
   assert.doesNotMatch(html, /محدَّث|حُدّث/);
   assert.match(html, /href="\/ar\/news"/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-chambers-agentic-ai-marketplace.html')), 'built Chambers detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/stv-dga-ai-government-consulting-rfs.html')), 'built STV detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-campus-1000-companies-2030.html')), 'built published detail');
 });
