@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {readingLabel} from '@/components/news/copy';
 import {insights} from '@/lib/insights';
-import {paper, type Bi} from '@/lib/research/arabic-token-tax';
+import {paper, type Bi, type MonoBlock} from '@/lib/research/arabic-token-tax';
 import {Shell, SubNav} from './pages';
 import styles from './localization-doctrine.module.css';
 
@@ -30,19 +30,17 @@ function Rich({text}: {text: string}) {
   return <>{renderRich(text)}</>;
 }
 
-type ReportBlock = (typeof paper.sections)[number]['blocks'][number];
-
-function BlockView({block, t}: {block: ReportBlock; t: (value: Bi) => string}) {
-  if (block.kind === 'prose') return <p><Rich text={t(block.text)}/></p>;
-  if (block.kind === 'list') return <div className={styles.findings}>{block.items.map((item, i) => <article key={item.ar}><span className={styles.n}>{i + 1}</span><div><p><Rich text={t(item)}/></p></div></article>)}</div>;
+function BlockView({block}: {block: MonoBlock}) {
+  if (block.kind === 'prose') return <p><Rich text={block.text}/></p>;
+  if (block.kind === 'list') return <div className={styles.findings}>{block.items.map((item, i) => <article key={item}><span className={styles.n}>{i + 1}</span><div><p><Rich text={item}/></p></div></article>)}</div>;
   return <>
     <div className={styles.tblWrap}>
       <table className={styles.tbl}>
-        <thead><tr>{block.columns.map(column => <th key={column.ar}><Rich text={t(column)}/></th>)}</tr></thead>
-        <tbody>{block.rows.map((row, i) => <tr key={`${row[0].ar}-${i}`}>{row.map((cell, j) => <td key={`${i}-${j}`} className={j === 0 ? styles.deal : undefined}><Rich text={t(cell)}/></td>)}</tr>)}</tbody>
+        <thead><tr>{block.columns.map(column => <th key={column}><Rich text={column}/></th>)}</tr></thead>
+        <tbody>{block.rows.map((row, i) => <tr key={`${row[0]}-${i}`}>{row.map((cell, j) => <td key={`${i}-${j}`} className={j === 0 ? styles.deal : undefined}><Rich text={cell}/></td>)}</tr>)}</tbody>
       </table>
     </div>
-    {block.note ? <p className={styles.exNote}><Rich text={t(block.note)}/></p> : null}
+    {block.note ? <p className={styles.exNote}><Rich text={block.note}/></p> : null}
   </>;
 }
 
@@ -51,6 +49,8 @@ export function ArabicTokenTax({locale}: {locale: Locale}) {
   const t = (value: Bi) => (ar ? value.ar : value.en);
   const p = ar ? '/ar' : '';
   const dir = (value: Bi) => (ar || value.ar === value.en ? 'rtl' : 'ltr');
+  const body = ar ? paper.bodies.ar : paper.bodies.en;
+  const sourcesHeading = ar ? 'المنهجية والمصادر' : 'Methodology and Sources';
   return <Shell locale={locale} path={`/reports/reports/${paper.slug}`}>
     <SubNav locale={locale} current="reports"/>
     <div className={`${styles.r} ${ar ? '' : styles.en}`} lang={ar ? 'ar' : 'en'} dir={ar ? 'rtl' : 'ltr'}>
@@ -94,11 +94,15 @@ export function ArabicTokenTax({locale}: {locale: Locale}) {
           <div className={styles.stats}>{paper.stats.map(stat => <div key={stat.big}><p className={styles.big}>{stat.big}</p><p dir={ar ? 'rtl' : 'ltr'} lang={ar ? 'ar' : 'en'}>{t(stat.text)}</p></div>)}</div>
         </section>
 
-        {paper.sections.map(section => {
-          const sources = section.heading.ar === 'المنهجية والمصادر';
-          return <section key={section.heading.ar} className={styles.sec} lang={ar ? 'ar' : 'en'} dir={ar ? 'rtl' : 'ltr'} id={sources ? 'sources' : undefined} aria-labelledby={section.heading.ar}>
-            <h2 id={section.heading.ar}>{t(section.heading)}</h2>
-            <div className={styles.prose}>{section.blocks.map((block, i) => <BlockView key={`${section.heading.ar}-${i}`} block={block} t={t}/>)}</div>
+        {body.intro.length > 0 && <section className={styles.sec} lang={ar ? 'ar' : 'en'} dir={ar ? 'rtl' : 'ltr'}>
+          <div className={styles.prose}>{body.intro.map(paragraph => <p key={paragraph}><Rich text={paragraph}/></p>)}</div>
+        </section>}
+
+        {body.sections.map(section => {
+          const sources = section.heading === sourcesHeading;
+          return <section key={section.heading} className={styles.sec} lang={ar ? 'ar' : 'en'} dir={ar ? 'rtl' : 'ltr'} id={sources ? 'sources' : undefined} aria-labelledby={section.heading}>
+            <h2 id={section.heading}>{section.heading}</h2>
+            <div className={styles.prose}>{section.blocks.map((block, i) => <BlockView key={`${section.heading}-${i}`} block={block}/>)}</div>
             {sources && <ol className={styles.srcs}>{paper.sources.map(source => <li key={source.id} id={`src-${source.id}`}><div>
               <a href={source.url} target="_blank" rel="noreferrer"><span>{source.title}</span><span className={styles.srcUrl}>{source.url}</span></a>
               <span className={styles.srcUsed}>{source.publisher}{source.date ? ` · ${source.date}` : ''}{' · '}<span className={source.tier.includes('ترويجي') ? `${styles.mark} ${styles.p}` : undefined}>{source.tier}</span></span>
