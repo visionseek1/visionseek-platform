@@ -83,7 +83,12 @@ test('the live section page is short: hero, two doors, founder, closing', () => 
   const live = section.live;
   assert.deepEqual(Object.keys(live.doorCards).sort(), ['individual', 'institution']);
   assert.ok(live.opening.length >= 3 && live.opening.every(line => line.ar && line.en), 'opening paragraphs');
-  for (const key of ['title', 'lead']) assert.ok(live.independence[key].ar && live.independence[key].en, `independence.${key}`);
+  for (const key of ['title', 'lead', 'body']) assert.ok(live.independence[key].ar && live.independence[key].en, `independence.${key}`);
+  assert.equal(live.independence.lead.ar, 'فخ الإجابة الواحدة وحوكمة القرار الذكي');
+  assert.equal(live.independence.lead.en, 'Escaping the Single-Track Trap & Governing AI Decisions');
+  assert.match(live.independence.body.ar, /الأدوات الجاهزة/);
+  assert.match(live.independence.body.en, /Off-the-shelf tools/);
+  assert.doesNotMatch(JSON.stringify(live.independence), /سمكة|teach you to fish/);
   assert.ok(live.independence.lines.length >= 2 && live.independence.lines.every(line => line.ar && line.en), 'independence lines');
   assert.ok(live.dependence.cards.length >= 3, 'documented cases of total dependence');
   for (const card of live.dependence.cards) {

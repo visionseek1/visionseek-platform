@@ -30,8 +30,13 @@ test('the about studio is the short umbrella: five equal doors, three principles
   assert.match(page, /id="what-we-do"/);
 });
 
-test('the site header names the Chief Capability Architect', () => {
-  assert.match(nav, /كبير مهندسي القدرات/);
-  assert.match(nav, /Chief Capability Architect/);
+test('the founder role stays on the about page, not in the header bar', () => {
+  assert.match(about.studio.founder.line.ar, /كبير مهندسي القدرات/);
+  assert.match(about.studio.founder.line.en, /Chief Capability Architect/);
+  assert.doesNotMatch(nav, /كبير مهندسي القدرات|Chief Capability Architect/);
   assert.doesNotMatch(nav, /مهندس القدرات المؤسسية|INSTITUTIONAL CAPABILITY ARCHITECT/);
+  assert.match(nav, /منهجنا/);
+  assert.match(nav, /تواصل/);
+  assert.match(nav, /Our Method/);
+  assert.match(nav, /Contact/);
 });

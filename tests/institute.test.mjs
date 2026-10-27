@@ -124,11 +124,11 @@ test('Institute surfaces only the governance workshop; old Masterclass routes st
     '/institute/fellowship',
   ]);
   assert.equal(section.children[0].en, 'Masterclass');
-  assert.equal(section.children[0].ar, 'ماستر كلاس');
+  assert.equal(section.children[0].ar, 'ماستركلاس');
   assert.equal(section.children[1].en, 'AI Governance workshop');
-  assert.equal(section.children[1].ar, 'حوكمة الذكاء الاصطناعي');
+  assert.equal(section.children[1].ar, 'ورشة حوكمة الذكاء الاصطناعي');
   assert.equal(section.children[2].en, 'Fellowship');
-  assert.equal(section.children[2].ar, 'الزمالة');
+  assert.equal(section.children[2].ar, 'الزمالة التنفيذية');
   assert.equal(nav.sections.some(item => item.path === '/work-with-us'), true);
   assert.equal(nav.sections.some(item => item.path === '/masterclass'), false);
 

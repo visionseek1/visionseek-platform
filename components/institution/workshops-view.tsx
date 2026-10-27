@@ -106,6 +106,7 @@ export function WorkshopsIndex({locale}: {locale: Locale}) {
         <section className="vs-wl-own" id="teach">
           <p className="vs-wl-code">{text(locale, live.independence.title)}</p>
           <h2>{text(locale, live.independence.lead)}</h2>
+          <p>{text(locale, live.independence.body)}</p>
           {live.independence.lines.map(line => <p key={line.en}>{text(locale, line)}</p>)}
         </section>
 

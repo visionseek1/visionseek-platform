@@ -157,6 +157,9 @@
       "en": "The work, along its axes.",
       "ar": "العمل على محاوره."
     },
+    "modelLine": {
+      "ar": "نعمل وفق نموذج (ائتلافات القدرات الموجهة بالمهمة)؛ حيث نستدعي ونربط نخبة المختبرات والشركات الصناعية الكورية المتخصصة لبناء القدرة المطلوبة لكل قطاع دون تضخم تشغيلي."
+    },
     "text": {
       "en": "Programs, projects, indices, reports, and the Masterclass under the Institute.",
       "ar": "البرامج، والمشاريع، والمؤشرات، والتقارير، والماستر كلاس في المعهد."
@@ -290,18 +293,18 @@
   "proof": {
     "heading": {
       "en": "What we have built",
-      "ar": "ما أنجزناه"
+      "ar": "ما بنيناه على الأرض"
     },
     "items": [
       {
-        "value": "6",
+        "id": "programs",
         "label": {
           "en": "Programs announced and open",
           "ar": "برامج معلنة ومتاحة"
         }
       },
       {
-        "value": "3",
+        "id": "reports",
         "label": {
           "en": "Published reports",
           "ar": "تقارير منشورة"
@@ -316,7 +319,7 @@
     },
     "title": {
       "en": "Within ten years, we will be steering the helm of the world's technological development.",
-      "ar": "احنا شايفين إن خلال 10 سنين هنكون بنقود دفة التطور التكنولوجي في العالم"
+      "ar": "العقد القادم: خلال عشر سنوات، نطمح للمساهمة في قيادة دفة التطور التكنولوجي عالمياً."
     },
     "sub": {
       "en": "",
@@ -324,7 +327,7 @@
     },
     "link": {
       "en": "See what is already built",
-      "ar": "اطلع على ما بُني"
+      "ar": "استكشف ما تم بناؤه بالفعل"
     }
   }
 }

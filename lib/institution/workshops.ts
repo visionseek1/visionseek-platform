@@ -94,7 +94,7 @@ export type WorkshopLive = {
   /** The opening paragraphs under the quote, in order. */
   opening: Bi[];
   /** Dr. Ahmed's most important point (9 Oct 2026): we teach people; we don't make them depend on us or anyone else. */
-  independence: {title: Bi; lead: Bi; lines: Bi[]};
+  independence: {title: Bi; lead: Bi; body: Bi; lines: Bi[]};
   /** Documented cases of what total dependence on one tool costs, each with its lesson and its source. */
   dependence: {title: Bi; cards: {date: Bi; title: Bi; body: Bi; lesson: Bi; source: {title: string; url: string}}[]};
   heroImage: string;
