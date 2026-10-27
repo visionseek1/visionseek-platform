@@ -73,15 +73,17 @@ const assertNewsImages = (data, name) => {
   assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
 };
 
-test('news briefings: the three published items validate and no samples remain', () => {
+test('news briefings: the four published items validate and no samples remain', () => {
   assert.deepEqual(mdFiles.sort(), [
     'dubai-ai-campus-1000-companies-2030.md',
     'dubai-chambers-agentic-ai-marketplace.md',
+    'iraq-digital-governance-ministry-ai.md',
     'stv-dga-ai-government-consulting-rfs.md',
   ]);
   const expected = {
     'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
     'dubai-chambers-agentic-ai-marketplace.md': {slug: 'dubai-chambers-agentic-ai-marketplace', tag: 'استثمار وشركات', hero: {width: 1280, height: 720}},
+    'iraq-digital-governance-ministry-ai.md': {slug: 'iraq-digital-governance-ministry-ai', tag: 'حكومات وسياسات', hero: {width: 1280, height: 720}},
     'stv-dga-ai-government-consulting-rfs.md': {slug: 'stv-dga-ai-government-consulting-rfs', tag: 'تنظيم وسياسات', hero: {width: 1280, height: 720}},
   };
   for (const name of mdFiles) {
@@ -102,6 +104,8 @@ test('news briefings: the three published items validate and no samples remain',
     assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
   }
   const times = Object.fromEntries(mdFiles.map(name => [name, parseFront(read(join('content/news', name))).data.publishedAt]));
+  assert.equal(times['iraq-digital-governance-ministry-ai.md'], '2026-10-27T07:55:00+04:00');
+  assert.ok(times['iraq-digital-governance-ministry-ai.md'] > times['dubai-chambers-agentic-ai-marketplace.md']);
   assert.ok(times['dubai-chambers-agentic-ai-marketplace.md'] > times['stv-dga-ai-government-consulting-rfs.md']);
   assert.ok(times['stv-dga-ai-government-consulting-rfs.md'] > times['dubai-ai-campus-1000-companies-2030.md']);
 });
@@ -167,7 +171,7 @@ test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', ()
   assert.match(read('components/news/pages.tsx'), /height: 630/);
 });
 
-test('news briefings: production CI build publishes Chambers then STV then Dubai and shows the nav', () => {
+test('news briefings: production CI build publishes Iraq then Chambers then STV then Dubai and shows the nav', () => {
   const ar = join(root, '.next/server/app/ar/news.html');
   assert.ok(existsSync(ar), 'built /ar/news');
   const html = readFileSync(ar, 'utf8');
@@ -175,19 +179,23 @@ test('news briefings: production CI build publishes Chambers then STV then Dubai
   assert.match(html, /lang="ar"/);
   assert.match(html, /dir="rtl"/);
   assert.doesNotMatch(html, /خبر تجريبي|عيّنة تجريبية|2026-10-27-sample/);
+  assert.match(html, /iraq-digital-governance-ministry-ai/);
+  assert.match(html, /العراق يضع الذكاء الاصطناعي والأمن السيبراني والبيانات تحت سقف وزارة واحدة/);
   assert.match(html, /dubai-chambers-agentic-ai-marketplace/);
   assert.match(html, /موظفك الجديد يراجع العقود ويفرز السير الذاتية/);
   assert.match(html, /stv-dga-ai-government-consulting-rfs/);
   assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
   assert.match(html, /dubai-ai-campus-1000-companies-2030/);
   assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
+  const iraqAt = html.indexOf('iraq-digital-governance-ministry-ai');
   const chambersAt = html.indexOf('dubai-chambers-agentic-ai-marketplace');
   const stvAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
   const campusAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
-  assert.ok(chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && chambersAt < stvAt && stvAt < campusAt, 'Chambers is the lead');
+  assert.ok(iraqAt >= 0 && chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && iraqAt < chambersAt && chambersAt < stvAt && stvAt < campusAt, 'Iraq is the lead');
   assert.doesNotMatch(html, /محدَّث|حُدّث/);
   assert.match(html, /href="\/ar\/news"/);
   assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/iraq-digital-governance-ministry-ai.html')), 'built Iraq detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-chambers-agentic-ai-marketplace.html')), 'built Chambers detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/stv-dga-ai-government-consulting-rfs.html')), 'built STV detail');
   assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-campus-1000-companies-2030.html')), 'built published detail');
