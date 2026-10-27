@@ -1,7 +1,7 @@
 ---
 slug: hospital-ai-pilots-ownership
-title: "مستشفياتنا تختبر الذكاء الاصطناعي، والدرس يسافر مع المورّد"
-titleEn: "Our Hospitals Test the AI. The Lesson Leaves With the Vendor."
+title: "الذكاء الاصطناعي في مستشفياتنا: نحن ندفع، والمورّد هو الذي يتعلّم"
+titleEn: "AI in Our Hospitals: We Pay, the Vendor Learns"
 summary: "في ستة أيام أعلنت جهات صحية في أبوظبي ودبي ست شراكات تُختبر فيها تقنيات ذكاء اصطناعي أجنبية على مرضاها وبياناتها وغرف عملياتها، ولم نجد في أيٍّ من نصوصها المعلنة لمن تؤول نتائج التجربة وتحسيناتها. التجربة الأولى هي أرخص لحظة يكتب فيها المستشفى حقّه."
 summaryEn: "In six days, health bodies in Abu Dhabi and Dubai announced six partnerships in which foreign AI is tested on their patients, data and operating rooms. None of the public texts we read says who owns the validation results or model improvements. The pilot is the cheapest moment for a hospital to write down what it keeps."
 cardSummary:

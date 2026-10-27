@@ -402,8 +402,8 @@ test('Insights: hospital AI pilots ownership keeps the source text, sponsored ma
   const report = d.reports.find(x => x.page === '/reports/reports/hospital-ai-pilots-ownership');
   assert.ok(report);
   assert.equal(d.reports[1].page, '/reports/reports/hospital-ai-pilots-ownership');
-  assert.equal(report.title.ar, 'مستشفياتنا تختبر الذكاء الاصطناعي، والدرس يسافر مع المورّد');
-  assert.equal(report.title.en, 'Our Hospitals Test the AI. The Lesson Leaves With the Vendor.');
+  assert.equal(report.title.ar, 'الذكاء الاصطناعي في مستشفياتنا: نحن ندفع، والمورّد هو الذي يتعلّم');
+  assert.equal(report.title.en, 'AI in Our Hospitals: We Pay, the Vendor Learns');
   assert.equal(report.summary.ar, 'ست شراكات ذكاء اصطناعي في مستشفيات الخليج خلال ستة أيام، ولا نص معلن يحدد لمن تؤول نتائج التجربة. ماذا يكتب مجلس الإدارة قبل أول مريض؟');
   assert.match(report.kind.ar, /الإصدار 1\.0/);
   assert.match(report.kind.ar, /27 أكتوبر 2026/);
@@ -414,7 +414,7 @@ test('Insights: hospital AI pilots ownership keeps the source text, sponsored ma
   assert.equal(report.date, '2026-10-27');
   assert.ok(existsSync('public' + report.pdf), report.pdf);
   assert.ok(existsSync('public' + report.cover), report.cover);
-  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 486904);
+  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 633764);
   const jpeg = readFileSync(new URL('../public' + report.cover, import.meta.url));
   assert.equal(jpeg[0], 0xff);
   assert.equal(jpeg[1], 0xd8);
