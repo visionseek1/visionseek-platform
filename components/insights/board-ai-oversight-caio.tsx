@@ -22,10 +22,11 @@ function Rich({text}: {text: string}) {
   })}</>;
 }
 
-type ReportBlock = (typeof paper.sections)[number]['blocks'][number];
+type ReportBlock = (typeof paper.sections)[number]['blocks'][number] | (typeof paper.opening)[number];
 
 function BlockView({block}: {block: ReportBlock}) {
   if (block.kind === 'prose') return <p><Rich text={block.text}/></p>;
+  if (block.kind === 'bullets') return <ul className={styles.bullets}>{block.items.map(item => <li key={item}><Rich text={item}/></li>)}</ul>;
   if (block.kind === 'list') return <div className={styles.findings}>{block.items.map((item, i) => <article key={item}><span className={styles.n}>{i + 1}</span><div><p><Rich text={item}/></p></div></article>)}</div>;
   return <>
     <div className={styles.tblWrap}>
@@ -85,6 +86,10 @@ export function BoardAiOversightCaio({locale}: {locale: Locale}) {
           <blockquote className={styles.quote} dir={dir(paper.answer)} lang={ar ? 'ar' : 'en'}>{t(paper.answer)}</blockquote>
           <div className={styles.stats}>{paper.stats.map(stat => <div key={stat.big}><p className={styles.big}>{stat.big}</p><p dir={ar ? 'rtl' : 'ltr'} lang={ar ? 'ar' : 'en'}>{t(stat.text)}</p></div>)}</div>
         </section>
+
+        {paper.opening.length > 0 && <section className={styles.sec} lang="ar" dir="rtl" aria-label={paper.opening[0].kind === 'prose' ? paper.opening[0].text : undefined}>
+          <div className={styles.prose}>{paper.opening.map((block, i) => <BlockView key={`opening-${i}`} block={block}/>)}</div>
+        </section>}
 
         {paper.sections.map(section => <section key={section.heading} className={styles.sec} lang="ar" dir="rtl" id={section.heading === 'المنهجية والمصادر' ? 'sources' : undefined} aria-labelledby={section.heading}>
           <h2 id={section.heading}>{section.heading}</h2>

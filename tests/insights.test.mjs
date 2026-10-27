@@ -414,7 +414,7 @@ test('Insights: board AI oversight keeps the source text, governance tag, cover 
   assert.equal(report.date, '2026-10-28');
   assert.ok(existsSync('public' + report.pdf), report.pdf);
   assert.ok(existsSync('public' + report.cover), report.cover);
-  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 511102);
+  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 513476);
   const jpeg = readFileSync(new URL('../public' + report.cover, import.meta.url));
   assert.equal(jpeg[0], 0xff);
   assert.equal(jpeg[1], 0xd8);
@@ -443,8 +443,12 @@ test('Insights: board AI oversight keeps the source text, governance tag, cover 
   assert.match(lib, /رسم توضيحي: VisionSeek \(مولَّد\)/);
   assert.match(lib, /الحوكمة/);
   assert.match(lib, /2026-10-28T01:43:00\+09:00/);
+  assert.match(lib, /مؤسسات الخليج تعيّن رؤساء للذكاء الاصطناعي بسرعة/);
+  assert.match(lib, /لو كنت في مجلس إدارة بنك أو جهة كبيرة في الخليج/);
   assert.match(lib, /المنظّم المصرفي في قطر والإمارات ينصّ صراحةً/);
   assert.match(lib, /فخ الإجابة الواحدة/);
+  assert.match(lib, /يعني: التعيين بداية الملف، لا نهايته/);
+  assert.doesNotMatch(lib, /تسارع مؤسسات الخليج إلى تعيين رؤساء/);
   assert.match(lib, /https:\/\/www\.qcb\.gov\.qa\/Services\/Financial%20Technology\/QCB_Artificial_Intelligence_Guideline\.pdf/);
   assert.match(lib, /https:\/\/www\.gartner\.com\/en\/articles\/genai-project-failure/);
   assert.equal((lib.match(/url: "https:\/\//g) || []).length, 13);
