@@ -414,7 +414,7 @@ test('Insights: hospital AI pilots ownership keeps the source text, sponsored ma
   assert.equal(report.date, '2026-10-27');
   assert.ok(existsSync('public' + report.pdf), report.pdf);
   assert.ok(existsSync('public' + report.cover), report.cover);
-  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 633764);
+  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 499533);
   const jpeg = readFileSync(new URL('../public' + report.cover, import.meta.url));
   assert.equal(jpeg[0], 0xff);
   assert.equal(jpeg[1], 0xd8);
@@ -437,8 +437,9 @@ test('Insights: hospital AI pilots ownership keeps the source text, sponsored ma
   for (const f of ['reports/reports/hospital-ai-pilots-ownership/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
   const lib = read('lib/research/hospital-ai-pilots-ownership.ts');
   const page = read('components/insights/hospital-ai-pilots-ownership.tsx');
-  assert.match(lib, /د\. أحمد عبدالعليم، VisionSeek \(إنتشون، كوريا الجنوبية\)/);
-  assert.match(lib, /Ahmed Abdelalim, VisionSeek \(Incheon, South Korea\)/);
+  assert.match(lib, /أحمد عبدالعليم، المؤسس وكبير مهندسي القدرات/);
+  assert.match(lib, /Ahmed Abdelalim, Founder & Chief Capability Architect/);
+  assert.doesNotMatch(lib, /د\. أحمد عبدالعليم، VisionSeek \(إنتشون، كوريا الجنوبية\)/);
   assert.doesNotMatch(lib + page, /Dr\. Ahmed Abdelalim|Dr\. Abdelalim/);
   assert.match(lib, /رسم توضيحي: VisionSeek \(مولَّد\)/);
   assert.match(lib, /ب \(محتوى ترويجي\)/);

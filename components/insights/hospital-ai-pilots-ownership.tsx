@@ -86,8 +86,8 @@ export function HospitalAiPilotsOwnership({locale}: {locale: Locale}) {
           <div className={styles.stats}>{paper.stats.map(stat => <div key={stat.big}><p className={styles.big}>{stat.big}</p><p dir={ar ? 'rtl' : 'ltr'} lang={ar ? 'ar' : 'en'}>{t(stat.text)}</p></div>)}</div>
         </section>
 
-        {paper.sections.map(section => <section key={section.heading} className={styles.sec} lang="ar" dir="rtl" id={section.heading === 'المنهجية والمصادر' ? 'sources' : undefined} aria-labelledby={section.heading}>
-          <h2 id={section.heading}>{section.heading}</h2>
+        {paper.sections.map((section, index) => <section key={section.heading || `s-${index}`} className={styles.sec} lang="ar" dir="rtl" id={section.heading === 'المنهجية والمصادر' ? 'sources' : undefined} aria-labelledby={section.heading || undefined}>
+          {section.heading ? <h2 id={section.heading}>{section.heading}</h2> : null}
           <div className={styles.prose}>{section.blocks.map((block, i) => <BlockView key={`${section.heading}-${i}`} block={block}/>)}</div>
           {section.heading === 'المنهجية والمصادر' && <ol className={styles.srcs}>{paper.sources.map(source => <li key={source.id} id={`src-${source.id}`}><div>
             <a href={source.url} target="_blank" rel="noreferrer"><span>{source.title}</span><span className={styles.srcUrl}>{source.url}</span></a>
