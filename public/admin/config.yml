@@ -311,7 +311,7 @@ collections:
           - label: العربية
             name: ar
             widget: string
-      - label: "شريط الإثبات: اتبنى بالفعل"
+      - label: "شريط الإثبات"
         name: proof
         widget: object
         fields:
@@ -329,9 +329,10 @@ collections:
           name: items
           widget: list
           fields:
-          - label: الرقم
-            name: value
+          - label: المعرّف
+            name: id
             widget: string
+            hint: "programs أو reports. الرقم يُحسب من ملفات البرامج وقائمة التقارير المنشورة، ولا يُكتب يدويًا."
           - label: الوصف
             name: label
             widget: object
@@ -544,6 +545,15 @@ collections:
           - label: العربية
             name: ar
             widget: text
+        - label: "سطر النموذج (عربي فقط)"
+          name: modelLine
+          widget: object
+          required: false
+          fields:
+          - label: العربية
+            name: ar
+            widget: text
+            required: false
         - label: نص الرابط
           name: link
           widget: object
@@ -1970,6 +1980,12 @@ collections:
                       - {label: العربية, name: ar, widget: string}
                   - label: الجملة الكبيرة
                     name: lead
+                    widget: object
+                    fields:
+                      - {label: English, name: en, widget: text}
+                      - {label: العربية, name: ar, widget: text}
+                  - label: النص
+                    name: body
                     widget: object
                     fields:
                       - {label: English, name: en, widget: text}

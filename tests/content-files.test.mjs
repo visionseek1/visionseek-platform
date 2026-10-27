@@ -129,6 +129,32 @@ test('guide pages keep their section and slug, with at least one block each', ()
   assert.equal(darpa.source.url, 'https://www.darpa.mil/research/programs');
 });
 
+test('homepage decade, shared proof counts, and the Arabic fields line', () => {
+  const home = read('home.json');
+  assert.equal(home.decade.title.ar, 'العقد القادم: خلال عشر سنوات، نطمح للمساهمة في قيادة دفة التطور التكنولوجي عالمياً.');
+  assert.equal(home.decade.link.ar, 'استكشف ما تم بناؤه بالفعل');
+  assert.doesNotMatch(home.decade.title.ar, /احنا شايفين|محركات ذاتية/);
+  assert.equal(home.proof.heading.ar, 'ما بنيناه على الأرض');
+  assert.deepEqual(home.proof.items.map(item => item.id), ['programs', 'reports']);
+  assert.equal(home.proof.items.some(item => Object.hasOwn(item, 'value')), false);
+  assert.match(home.fields.modelLine.ar, /ائتلافات القدرات الموجهة بالمهمة/);
+  assert.equal(home.fields.modelLine.en, undefined);
+  const page = readFileSync(join(root, 'components/home-page.tsx'), 'utf8');
+  assert.match(page, /homeProofCount/);
+  assert.doesNotMatch(page, /محركات ذاتية|احنا شايفين/);
+  const card = readFileSync(join(root, 'components/institution/home-sections.tsx'), 'utf8');
+  assert.match(card, /independence\.lead/);
+  assert.match(card, /independence\.body/);
+  assert.doesNotMatch(card, /سمكة|teach you to fish/);
+  const stats = readFileSync(join(root, 'lib/home-stats.ts'), 'utf8');
+  assert.match(stats, /concepts\.filter/);
+  assert.match(stats, /insights\.reports/);
+  const clause = read('programs/clause.json');
+  const relay = read('programs/relay.json');
+  assert.match(clause.summary.ar, /مراجعة عقود ومناقصات الذكاء الاصطناعي/);
+  assert.match(relay.summary.ar, /سلم الملكية/);
+});
+
 test('home.json and about.json hold every bilingual block the pages render', () => {
   const home = read('home.json');
   assert.equal(home.hero.slides.length, 3);

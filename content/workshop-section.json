@@ -270,8 +270,12 @@
         "ar": "نعلّمك، ولا نربطك بنا"
       },
       "lead": {
-        "en": "Tools hand you a fish every day, and charge you for it every day. We teach you to fish.",
-        "ar": "الأدوات تعطيك كل يوم سمكة، وتأخذ ثمنها كل يوم. نحن نعلّمك الصيد."
+        "en": "Escaping the Single-Track Trap & Governing AI Decisions",
+        "ar": "فخ الإجابة الواحدة وحوكمة القرار الذكي"
+      },
+      "body": {
+        "en": "Off-the-shelf tools hand you a single answer that can lead your enterprise down a costly, flawed path. Instead of mere tool operation, we equip leadership with a rigorous methodology to uncover hidden strategic alternatives and govern AI outputs before committing capital.",
+        "ar": "الأدوات الجاهزة تمنحك إجابة أحادية قد تقود مؤسستك إلى قرارات واستثمارات مكلفة في الاتجاه الخاطئ. نحن لا نعلّمك تشغيل الأدوات فحسب؛ بل نمنحك منهجية قيادية لكشف البدائل الاستراتيجية وحوكمة الذكاء الاصطناعي قبل البناء عليه."
       },
       "lines": [
         {
