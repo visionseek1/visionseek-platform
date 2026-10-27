@@ -11,7 +11,7 @@ test('VisionSeek Reports takes /reports; Leaders House moves to /leaders-house a
   assert.ok(archived.includes('/leaders-house'));
   assert.ok(!archived.includes('/reports'));
   for (const p of ['app/reports/page.tsx', 'app/ar/reports/page.tsx', 'app/reports/notes/[slug]/page.tsx', 'app/ar/reports/notes/[slug]/page.tsx', 'app/reports/frameworks/[slug]/page.tsx', 'app/ar/reports/frameworks/[slug]/page.tsx', 'app/leaders-house/page.tsx', 'app/ar/leaders-house/page.tsx']) assert.ok(existsSync(new URL(`../${p}`, import.meta.url)), p);
-  assert.match(read('components/capability/navigation.tsx'), /isArchived\('\/leaders-house'\)/);
+  assert.match(read('components/capability/navigation.tsx'), /isArchived\(["']\/leaders-house["']\)/);
 });
 
 test('Reports sits in the main menu after Programs, then Research, then News, then Indices, with MSA Arabic label تقارير', () => {
@@ -59,8 +59,9 @@ test('the cancelled programme does not appear anywhere on the public site', asyn
   const walk = d => readdirSync(new URL(`../${d}`, import.meta.url)).flatMap(f => { const p = `${d}/${f}`; return statSync(new URL(`../${p}`, import.meta.url)).isDirectory() ? walk(p) : [p]; });
   const files = ['components', 'content', 'app', 'lib', 'public/admin'].flatMap(walk).filter(p => /\.(tsx?|json|ya?ml|css)$/.test(p) && !p.startsWith('app/ops/'));
   for (const p of files) assert.doesNotMatch(read(p), /\bHLO\b|Highest Level One/, p);
-  assert.match(read('components/capability/navigation.tsx'), /كبير مهندسي القدرات/);
-  assert.match(read('components/capability/navigation.tsx'), /Chief Capability Architect/);
+  assert.match(read('content/about.json'), /كبير مهندسي القدرات/);
+  assert.match(read('content/about.json'), /Chief Capability Architect/);
+  assert.doesNotMatch(read('components/capability/navigation.tsx'), /كبير مهندسي القدرات|Chief Capability Architect/);
 });
 
 test('«هندسة الفرص» / Engineering Opportunities no longer appears on the public site', async () => {
