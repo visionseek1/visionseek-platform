@@ -7,6 +7,7 @@ import {showPublicCharacters} from '@/lib/leaders/presentation';
 import {projectRoutes} from '@/lib/projects';
 import {isArchived} from '@/lib/visibility';
 import {insights} from '@/lib/insights';
+import {tenders} from '@/lib/tenders';
 import {liveIndices} from '@/lib/indices';
 import {listNews} from '@/lib/news';
 import ksData from '@/content/korean-solutions.json';
@@ -31,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {path:'/institute/masterclass',priority:0.75},{path:'/ar/institute/masterclass',priority:0.75},
     {path:'/institute/fellowship',priority:0.75},{path:'/ar/institute/fellowship',priority:0.75},
     ...["method", "about", "work-with-us", "start"].flatMap(path => [{ path: `/${path}`, priority: 0.8 }, { path: `/ar/${path}`, priority: 0.8 }]),
+    ...tenders.cards.flatMap(card => [{path: `/work-with-us/tenders/${card.id}`, priority: 0.7}, {path: `/ar/work-with-us/tenders/${card.id}`, priority: 0.7}]),
     { path: "/conferences", priority: 0.75 },
     { path: "/ar/conferences", priority: 0.75 },
     { path: "", priority: 1 },
