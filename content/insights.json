@@ -192,6 +192,32 @@
     },
     {
       "title": {
+        "ar": "عيّنتم رئيسًا للذكاء الاصطناعي… فمن في مجلسكم يستطيع أن يسأله؟",
+        "en": "You Hired a Chief AI Officer. Who on Your Board Can Question Them?"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.0 · مختبر VisionSeek · 28 أكتوبر 2026",
+        "en": "Report · Version 1.0 · VisionSeek Lab · 28 October 2026"
+      },
+      "summary": {
+        "ar": "المنظّم في قطر والإمارات يحمّل مجلس الإدارة نتائج الذكاء الاصطناعي، وثلثا المشاركين في استطلاع عالمي يصفون معرفة مجالسهم به بالمحدودة. ست خطوات يكتبها المجلس في اجتماعه القادم.",
+        "en": "Qatar and UAE regulators hold the board accountable for AI outcomes, while two-thirds of respondents in a global survey describe their boards' AI knowledge as limited. Six steps a board can write into its next meeting."
+      },
+      "page": "/reports/reports/board-ai-oversight-caio",
+      "pdf": "/reports/reports/board-ai-oversight-caio-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/board-ai-oversight-caio-cover.jpg",
+      "related": {
+        "href": "/reports/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-28"
+    },
+    {
+      "title": {
         "ar": "إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟",
         "en": "Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration"
       },
