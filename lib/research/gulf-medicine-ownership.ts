@@ -1,5 +1,5 @@
 /**
- * «أمننا الدوائي في الخليج: من أين يأتي دواؤنا الأساسي؟» — الإصدار 1.1.
+ * «إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟» — الإصدار 1.1.
  * النص العربي كما ورد في المصدر المعتمد (draft-ar-v1.1). الأرقام كما هي.
  * لا اختراع لمحتوى، ولا وسم مراجعة داخلية، ولا لقب دكتوراه بالإنجليزي.
  */
@@ -16,15 +16,15 @@ export const paper: LabReport = {
   versionLabel: {ar: 'الإصدار 1.1', en: 'Version 1.1'},
   label: {ar: 'مختبر VisionSeek · تقارير · الإصدار 1.1', en: 'VisionSeek Lab · Reports · Version 1.1'},
   lab: 'VISIONSEEK LAB · GULF MEDICINE IMPORTS',
-  title: {ar: 'أمننا الدوائي في الخليج', en: "Who Owns the Gulf's Medicine?"},
+  title: {ar: 'إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟', en: "Who Owns the Gulf's Medicine?"},
   question: {
-    ar: 'من أين يأتي دواؤنا الأساسي؟',
+    ar: '',
     en: 'Finished-product versus API import concentration',
   },
   deck: {ar: 'تركيب منهجي للأدلة المنشورة · دول المجلس الست', en: 'Version 1.1'},
   attribution: {ar: 'مبني على بحث أجرته VisionSeek', en: 'Based on research conducted by VisionSeek'},
   fullTitle: {
-    ar: 'أمننا الدوائي في الخليج: من أين يأتي دواؤنا الأساسي؟',
+    ar: 'إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟',
     en: "Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration",
   },
   author: {
@@ -236,6 +236,6 @@ export const paper: LabReport = {
     text: 'نسبة «السوق المغطاة محليًا» لا تكفي. السؤال الحاسم: أي مرحلة من صناعة الدواء نوطّنها، وهل تتحرك واردات المواد الخام صعودًا مع التوطين؟',
     strong: '[استنتاج]',
   },
-  citation: 'عبدالعليم، أحمد (2026). أمننا الدوائي في الخليج: من أين يأتي دواؤنا الأساسي؟. تقرير VisionSeek الاستراتيجي v1.1. VisionSeek، إنتشون، كوريا الجنوبية.',
+  citation: 'عبدالعليم، أحمد (2026). إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟. تقرير VisionSeek الاستراتيجي v1.1. VisionSeek، إنتشون، كوريا الجنوبية.',
   researchCitation: 'Abdelalim, A. (2026). Who Owns the Gulf\'s Medicine? Finished-Product versus API Import Concentration for WHO Essential Medicines across the Six GCC States (Preprint v1.0). VisionSeek, Incheon, South Korea. Zenodo. https://doi.org/10.5281/zenodo.23657727',
 };

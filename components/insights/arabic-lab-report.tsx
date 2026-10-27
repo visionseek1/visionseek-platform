@@ -43,8 +43,8 @@ export function ArabicLabReport({locale, paper}: {locale: Locale; paper: LabRepo
             <Link href={`${p}/reports/reports`}>{t(insights.sections.reports.title)}</Link>
           </nav>
           <p className={styles.lab} lang="en" dir="ltr">{paper.lab}</p>
-          <h1>{paper.title.ar}</h1>
-          <p className={styles.q}>{paper.question.ar}</p>
+          <h1 className={paper.question.ar ? undefined : styles.solo}>{paper.title.ar}</h1>
+          {paper.question.ar ? <p className={styles.q}>{paper.question.ar}</p> : null}
           <p className={styles.tag}>{paper.deck.ar}</p>
           <p className={styles.tag}>{t(paper.attribution)}</p>
           <dl className={styles.meta}>

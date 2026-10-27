@@ -263,7 +263,7 @@ test('the built conferences pages are native RTL and LTR and keep the draft fact
   assert.match(en, /honor, not a cash prize/);
   assert.match(ar, /تكريم، وليست مبلغًا ماليًا/);
   assert.doesNotMatch(en, /Coming soon/);
-  assert.doesNotMatch(ar, /قريبًا/);
+  assert.doesNotMatch(ar, /(?<!ت)قريبًا/);
   assert.match(en, /id="incheon-dialogue-council"/);
   assert.match(en, /id="incheon-dialogue-awards"/);
   assert.match(en, /<blockquote[^>]*>Honoring those who owned the capability, not those who bought it<\/blockquote>/);
