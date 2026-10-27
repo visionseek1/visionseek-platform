@@ -192,6 +192,32 @@
     },
     {
       "title": {
+        "ar": "الجملة نفسها تكلّف أكثر حين تكتبها بالعربية",
+        "en": "The Same Sentence Costs More When You Write It in Arabic"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.0 · مختبر VisionSeek · 28 أكتوبر 2026",
+        "en": "Report · Version 1.0 · VisionSeek Lab · 28 October 2026"
+      },
+      "summary": {
+        "ar": "قياس VisionSeek على 1012 جملة متوازية: العربية تحتاج رموزًا أكثر بنسبة 38% إلى 65% في أشهر النماذج العالمية، وحتى 3.2 أضعاف في نماذج كورية سيادية تدخل سوق الخليج. خمس خطوات قبل توقيع أي عقد.",
+        "en": "VisionSeek measurement on 1,012 parallel sentences: Arabic needs 38% to 65% more tokens on the best-known global models, and up to 3.2 times more on Korean sovereign models entering the Gulf market. Five steps before signing any contract."
+      },
+      "page": "/reports/reports/arabic-token-tax",
+      "pdf": "/reports/reports/arabic-token-tax-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/arabic-token-tax-cover.jpg",
+      "related": {
+        "href": "/reports/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-28"
+    },
+    {
+      "title": {
         "ar": "إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟",
         "en": "Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration"
       },

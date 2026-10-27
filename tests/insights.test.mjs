@@ -103,7 +103,7 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/localization-doctrine');
   assert.ok(report);
-  assert.equal(d.reports[5].page, '/reports/reports/localization-doctrine');
+  assert.equal(d.reports[6].page, '/reports/reports/localization-doctrine');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'عقيدة التوطين: من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون');
   assert.equal(report.title.en, 'The Localization Doctrine: From Using Technology to Owning It — What Korea Proves Is Possible for the Arab World');
@@ -218,7 +218,7 @@ test('Insights: Gulf patent ownership map sits after methodology; Arabic body, s
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/patent-ownership-map');
   assert.ok(report);
-  assert.equal(d.reports[4].page, '/reports/reports/patent-ownership-map');
+  assert.equal(d.reports[5].page, '/reports/reports/patent-ownership-map');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'من يملك الابتكار الخليجي؟ خريطة ملكية البراءات');
   assert.equal(report.title.en, 'Who Owns Gulf Innovation? A Patent Ownership Map');
@@ -266,7 +266,7 @@ test('Insights: Capability Ledger sits next to the doctrine; Arabic body, source
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/capability-ledger');
   assert.ok(report);
-  assert.equal(d.reports[6].page, '/reports/reports/capability-ledger');
+  assert.equal(d.reports[7].page, '/reports/reports/capability-ledger');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'سجل نقل القدرة: ماذا يبقى في الخليج بعد صفقات الذكاء الاصطناعي ومراكز البيانات؟');
   assert.equal(report.title.en, 'Capability Ledger');
@@ -311,7 +311,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
   const specs = [
     {
       page: '/reports/reports/gulf-medicine-ownership',
-      index: 1,
+      index: 2,
       titleAr: 'إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟',
       pdf: '/reports/reports/gulf-medicine-ownership-ar.pdf',
       cover: '/reports/reports/gulf-medicine-ownership-cover.jpg',
@@ -325,7 +325,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     },
     {
       page: '/reports/reports/gulf-data-center-stack',
-      index: 2,
+      index: 3,
       titleAr: 'نصف حواسيب مراكز بياناتنا يأتي من الصين… فمن يملك المفتاح؟',
       pdf: '/reports/reports/gulf-data-center-stack-ar.pdf',
       cover: '/reports/reports/gulf-data-center-stack-cover.jpg',
@@ -339,7 +339,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     },
     {
       page: '/reports/reports/ai-ministry-health-answers',
-      index: 3,
+      index: 4,
       titleAr: 'هل نثق بالذكاء الاصطناعي في صحتنا؟',
       pdf: '/reports/reports/ai-ministry-health-answers-ar.pdf',
       cover: '/reports/reports/ai-ministry-health-answers-cover.jpg',
@@ -395,6 +395,75 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     assert.ok(existsSync(`scripts/insights/${spec.slug}/report-ar-v1.1.pdf`));
     assert.ok(!existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.0.md`));
   }
+});
+
+test('Insights: Arabic token tax keeps both source texts, the cost tag, cover and PDF', () => {
+  const d = json('content/insights.json');
+  const report = d.reports.find(x => x.page === '/reports/reports/arabic-token-tax');
+  assert.ok(report);
+  assert.equal(d.reports[1].page, '/reports/reports/arabic-token-tax');
+  assert.equal(report.title.ar, 'الجملة نفسها تكلّف أكثر حين تكتبها بالعربية');
+  assert.equal(report.title.en, 'The Same Sentence Costs More When You Write It in Arabic');
+  assert.equal(report.summary.ar, 'قياس VisionSeek على 1012 جملة متوازية: العربية تحتاج رموزًا أكثر بنسبة 38% إلى 65% في أشهر النماذج العالمية، وحتى 3.2 أضعاف في نماذج كورية سيادية تدخل سوق الخليج. خمس خطوات قبل توقيع أي عقد.');
+  assert.match(report.kind.ar, /الإصدار 1\.0/);
+  assert.match(report.kind.ar, /28 أكتوبر 2026/);
+  assert.equal(report.pdf, '/reports/reports/arabic-token-tax-ar.pdf');
+  assert.equal(report.pdfLang, 'ar');
+  assert.equal(report.cover, '/reports/reports/arabic-token-tax-cover.jpg');
+  assert.equal(report.related.href, '/reports/reports/methodology');
+  assert.equal(report.date, '2026-10-28');
+  assert.ok(existsSync('public' + report.pdf), report.pdf);
+  assert.ok(existsSync('public' + report.cover), report.cover);
+  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 444093);
+  const jpeg = readFileSync(new URL('../public' + report.cover, import.meta.url));
+  assert.equal(jpeg[0], 0xff);
+  assert.equal(jpeg[1], 0xd8);
+  let offset = 2;
+  let size = null;
+  while (offset < jpeg.length && jpeg[offset] === 0xff) {
+    const marker = jpeg[offset + 1];
+    if (marker === 0xd8 || marker === 0xd9) { offset += 2; continue; }
+    const length = jpeg.readUInt16BE(offset + 2);
+    if (marker >= 0xc0 && marker <= 0xc2) {
+      size = {height: jpeg.readUInt16BE(offset + 5), width: jpeg.readUInt16BE(offset + 7)};
+      break;
+    }
+    offset += 2 + length;
+  }
+  assert.deepEqual(size, {width: 1600, height: 1200});
+  const og = readFileSync(new URL('../public/reports/reports/arabic-token-tax.og.png', import.meta.url));
+  assert.equal(og.readUInt32BE(16), 1200);
+  assert.equal(og.readUInt32BE(20), 630);
+  for (const f of ['reports/reports/arabic-token-tax/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  const lib = read('lib/research/arabic-token-tax.ts');
+  const page = read('components/insights/arabic-token-tax.tsx');
+  assert.match(lib, /أحمد عبدالعليم، المؤسس وكبير مهندسي القدرات/);
+  assert.match(lib, /Ahmed Abdelalim, Founder & Chief Capability Architect/);
+  assert.doesNotMatch(lib + page, /Dr\. Ahmed Abdelalim|Dr\. Abdelalim|د\.\s*أحمد/);
+  assert.match(lib, /رسم توضيحي: VisionSeek \(مولَّد\)/);
+  assert.match(lib, /البنية والتكلفة/);
+  assert.match(lib, /2026-10-28T07:45:00\+09:00/);
+  assert.match(lib, /قسنا 1012 جملة متطابقة المعنى من مجموعة FLORES-200/);
+  assert.match(lib, /القاموس هو أول طبقة سيادة في الذكاء الاصطناعي/);
+  assert.match(lib, /We believe the tokenizer is the first and least discussed layer of AI sovereignty/);
+  assert.match(lib, /Exhibit 1: Same meaning, different bill, depending on the tokenizer/);
+  assert.match(lib, /https:\/\/arxiv\.org\/abs\/2207\.04672/);
+  assert.match(lib, /https:\/\/en\.sedaily\.com\/finance\/2026\/09\/23\/lg-pushes-exaone-exports-to-central-asia-middle-east/);
+  assert.equal((lib.match(/url: "https:\/\//g) || []).length, 18);
+  assert.match(page, /t\(section\.heading\)/);
+  assert.match(page, /styles\.en/);
+  assert.match(page, /paper\.pdfAr/);
+  assert.match(page, /تحميل PDF/);
+  assert.match(page, /Download PDF/);
+  assert.match(page, /paper\.cover/);
+  const routes = read('app/reports/reports/arabic-token-tax/page.tsx') + read('app/ar/reports/reports/arabic-token-tax/page.tsx');
+  assert.match(routes, /paper\.ogImage/);
+  assert.match(routes, /locale="en"/);
+  assert.match(routes, /locale="ar"/);
+  assert.doesNotMatch(lib + page, /مسودة|معاينة|DRAFT FOR REVIEW|\bPreview\b/);
+  assert.ok(existsSync('scripts/insights/arabic-token-tax/draft-ar-v1.0.md'));
+  assert.ok(existsSync('scripts/insights/arabic-token-tax/draft-en-v1.0.md'));
+  assert.ok(existsSync('scripts/insights/arabic-token-tax/report-ar-v1.0.pdf'));
 });
 
 test('Insights was renamed Reports: /insights 308s to /reports, leftover reports-center pages stay archived', () => {
