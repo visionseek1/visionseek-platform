@@ -5,6 +5,8 @@ import {CapabilityHeader} from '@/components/capability/navigation';
 import CapabilityFooter from '@/components/capability/footer';
 import {DocumentLocale} from '@/components/governance/document-locale';
 import {CompetitionsBody} from '@/components/competitions/competitions-page';
+import {WorkAnnouncementsNav} from '@/components/institution/work-announcements-nav';
+import {TendersBody} from '@/components/tenders/tenders-page';
 import {entries, entryPath, getSection, type Locale} from '@/lib/institution';
 import {entryImage} from '@/lib/institution/schema';
 import Directory from './directory';
@@ -38,7 +40,9 @@ export function WorkWithUsPage({locale, fontClassName = ''}: {locale: Locale; fo
             <Image src={entryImage(section.image)} alt="" fill priority sizes="(max-width:760px) 100vw, 40vw"/>
           </div>
         </section>
+        <WorkAnnouncementsNav locale={locale} fontClassName={fontClassName}/>
         <CompetitionsBody locale={locale} fontClassName={fontClassName}/>
+        <TendersBody locale={locale} fontClassName={fontClassName}/>
         <div className="vs-institution-layout is-single">
           <div>
             <div className="vs-client-entry">

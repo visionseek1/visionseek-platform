@@ -26,7 +26,8 @@ test('Research sits in the main menu immediately after Reports, with الأبح�
   assert.equal(item.en, 'Research');
   assert.equal(item.ar, 'الأبحاث');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
   assert.equal(data.sections.filter(s => s.path === '/research').length, 1);
   assert.ok(item.children.length >= 2);
   assert.equal(item.children[0].href, '/research');
@@ -134,7 +135,7 @@ test('the built Research hub is native RTL and LTR and links each paper to Zenod
   assert.match(en, /Quality and integrity standards/);
   assert.match(ar, /معايير الجودة والنزاهة/);
   assert.match(en, /Who Owns the Gulf&#x27;s Medicine\?/);
-  assert.match(ar, /أمننا الدوائي في الخليج/);
+  assert.match(ar, /إنسولين الخليج في يد مورّد واحد تقريبًا/);
   assert.match(en, /Who Owns the Stack\?/);
   assert.match(ar, /من يملك البنية التحتية؟/);
   assert.doesNotMatch(ar, /ركام/);

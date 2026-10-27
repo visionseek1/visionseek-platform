@@ -14,7 +14,7 @@ test('VisionSeek Reports takes /reports; Leaders House moves to /leaders-house a
   assert.match(read('components/capability/navigation.tsx'), /isArchived\('\/leaders-house'\)/);
 });
 
-test('Reports sits in the main menu after Programs, then Research, then Indices, with MSA Arabic label تقارير', () => {
+test('Reports sits in the main menu after Programs, then Research, then News, then Indices, with MSA Arabic label تقارير', () => {
   const data = json('content/navigation.json');
   const nav = data.sections.map(s => s.path);
   const item = data.sections.find(s => s.path === '/reports');
@@ -23,7 +23,8 @@ test('Reports sits in the main menu after Programs, then Research, then Indices,
   assert.equal(item.ar, 'تقارير');
   assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
   assert.equal(data.sections.filter(s => s.path === '/reports').length, 1);
   assert.equal(data.sections.find(s => s.path === '/insights'), undefined);
   for (const s of data.sections) for (const c of s.children) if (c.ar === 'بيت القادة') assert.equal(c.href, '/leaders-house');
@@ -58,7 +59,8 @@ test('the cancelled programme does not appear anywhere on the public site', asyn
   const walk = d => readdirSync(new URL(`../${d}`, import.meta.url)).flatMap(f => { const p = `${d}/${f}`; return statSync(new URL(`../${p}`, import.meta.url)).isDirectory() ? walk(p) : [p]; });
   const files = ['components', 'content', 'app', 'lib', 'public/admin'].flatMap(walk).filter(p => /\.(tsx?|json|ya?ml|css)$/.test(p) && !p.startsWith('app/ops/'));
   for (const p of files) assert.doesNotMatch(read(p), /\bHLO\b|Highest Level One/, p);
-  assert.match(read('components/capability/navigation.tsx'), /مهندس القدرات المؤسسية/);
+  assert.match(read('components/capability/navigation.tsx'), /كبير مهندسي القدرات/);
+  assert.match(read('components/capability/navigation.tsx'), /Chief Capability Architect/);
 });
 
 test('«هندسة الفرص» / Engineering Opportunities no longer appears on the public site', async () => {
@@ -166,7 +168,8 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   const nav = json('content/navigation.json').sections.map(s => s.path);
   assert.equal(nav[nav.indexOf('/reports') - 1], '/programs');
   assert.equal(nav[nav.indexOf('/reports') + 1], '/research');
-  assert.equal(nav[nav.indexOf('/research') + 1], '/indices');
+  assert.equal(nav[nav.indexOf('/research') + 1], '/news');
+  assert.equal(nav[nav.indexOf('/news') + 1], '/indices');
 });
 
 test('Insights: Reports Methodology v1.0 follows the doctrine pattern; source text and cross-links stay exact', () => {
@@ -308,11 +311,11 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     {
       page: '/reports/reports/gulf-medicine-ownership',
       index: 1,
-      titleAr: 'أمننا الدوائي في الخليج: من أين يأتي دواؤنا الأساسي؟',
+      titleAr: 'إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟',
       pdf: '/reports/reports/gulf-medicine-ownership-ar.pdf',
       cover: '/reports/reports/gulf-medicine-ownership-cover.jpg',
       doi: '10.5281/zenodo.23657727',
-      bytes: 444323,
+      bytes: 454180,
       slug: 'gulf-medicine-ownership',
       lib: 'lib/research/gulf-medicine-ownership.ts',
       component: 'components/insights/gulf-medicine-ownership.tsx',
@@ -322,11 +325,11 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     {
       page: '/reports/reports/gulf-data-center-stack',
       index: 2,
-      titleAr: 'أمننا الرقمي في الخليج: من أين تأتي مكوّنات مراكز بياناتنا؟',
+      titleAr: 'نصف حواسيب مراكز بياناتنا يأتي من الصين… فمن يملك المفتاح؟',
       pdf: '/reports/reports/gulf-data-center-stack-ar.pdf',
       cover: '/reports/reports/gulf-data-center-stack-cover.jpg',
       doi: '10.5281/zenodo.23657775',
-      bytes: 504181,
+      bytes: 508853,
       slug: 'gulf-data-center-stack',
       lib: 'lib/research/gulf-data-center-stack.ts',
       component: 'components/insights/gulf-data-center-stack.tsx',
@@ -336,11 +339,11 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     {
       page: '/reports/reports/ai-ministry-health-answers',
       index: 3,
-      titleAr: 'أمننا الصحي في الخليج: هل نثق بإجابات الذكاء الاصطناعي؟',
+      titleAr: 'هل نثق بالذكاء الاصطناعي في صحتنا؟',
       pdf: '/reports/reports/ai-ministry-health-answers-ar.pdf',
       cover: '/reports/reports/ai-ministry-health-answers-cover.jpg',
       doi: '10.5281/zenodo.23657799',
-      bytes: 447793,
+      bytes: 444944,
       slug: 'ai-ministry-health-answers',
       lib: 'lib/research/ai-ministry-health-answers.ts',
       component: 'components/insights/ai-ministry-health-answers.tsx',

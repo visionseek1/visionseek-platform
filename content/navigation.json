@@ -170,7 +170,7 @@
         {
           "href": "/research#gulf-medicine",
           "en": "Who Owns the Gulf's Medicine?",
-          "ar": "أمننا الدوائي في الخليج"
+          "ar": "إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟"
         },
         {
           "href": "/research#gulf-stack",
@@ -181,6 +181,23 @@
           "href": "/research#arabic-health",
           "en": "Official-source health information",
           "ar": "المعلومة الصحية من مصدر رسمي"
+        }
+      ]
+    },
+    {
+      "path": "/news",
+      "en": "News",
+      "ar": "أخبار",
+      "children": [
+        {
+          "href": "/news",
+          "en": "All news",
+          "ar": "كل الأخبار"
+        },
+        {
+          "href": "/news/media",
+          "en": "Media & inquiries",
+          "ar": "الإعلام والاستفسارات"
         }
       ]
     },
@@ -203,28 +220,6 @@
           "href": "/indices/arab-critical-capabilities-atlas",
           "en": "Arab Critical Capabilities Atlas",
           "ar": "أطلس القدرات العربية الحرجة"
-        }
-      ]
-    },
-    {
-      "path": "/news",
-      "en": "News",
-      "ar": "الأخبار",
-      "children": [
-        {
-          "href": "/news",
-          "en": "All news & notes",
-          "ar": "كل الأخبار والمقالات"
-        },
-        {
-          "href": "/leaders-house",
-          "en": "Leaders House",
-          "ar": "بيت القادة"
-        },
-        {
-          "href": "/news/media",
-          "en": "Media & inquiries",
-          "ar": "الإعلام والاستفسارات"
         }
       ]
     },
@@ -259,6 +254,11 @@
           "href": "/work-with-us#competitions",
           "en": "Competitions",
           "ar": "المسابقات"
+        },
+        {
+          "href": "/work-with-us#tenders",
+          "en": "Tenders",
+          "ar": "المناقصات"
         },
         {
           "href": "/work-with-us#now-competing",

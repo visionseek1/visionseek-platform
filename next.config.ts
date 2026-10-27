@@ -1,6 +1,20 @@
+import {existsSync, readdirSync} from "node:fs";
+import {join} from "node:path";
 import type { NextConfig } from "next";
 
+const newsDir = join(__dirname, "content/news");
+const hasPublishedNews = existsSync(newsDir) && readdirSync(newsDir).some(name =>
+  name.endsWith(".md") && name.toLowerCase() !== "readme.md"
+);
+const showNewsNav =
+  process.env.VERCEL_ENV === "preview" ||
+  process.env.NODE_ENV !== "production" ||
+  hasPublishedNews;
+
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_VS_SHOW_NEWS: showNewsNav ? "1" : "0",
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
@@ -23,6 +37,9 @@ const nextConfig: NextConfig = {
         ]),
         // Competitions now lives on Work with Us (24 Oct 2026): old /competitions links keep working.
         {source: `${prefix}/competitions`, destination: `${prefix}/work-with-us#competitions`, permanent: true},
+        // Tenders listing lives on Work with Us. Exact /tenders only — a /tenders/:slug
+        // catch-all would 308 the editorial PNG at /tenders/<id>.png.
+        {source: `${prefix}/tenders`, destination: `${prefix}/work-with-us#tenders`, permanent: true},
         // «الورش» became Masterclass; Institute is the umbrella above it.
         {source: `${prefix}/workshops`, destination: `${prefix}/masterclass`, permanent: true},
         {source: `${prefix}/workshops/:slug`, destination: `${prefix}/masterclass/:slug`, permanent: true},

@@ -1,6 +1,29 @@
 import type {Metadata} from 'next';
-import {SectionPage} from '@/components/institution/pages';
-import {getSection} from '@/lib/institution';
-const section = getSection('news')!;
-export const metadata:Metadata={title:section.title.ar+' | VisionSeek',description:section.intro.ar,alternates:{canonical:'/ar/news',languages:{en:'/news',ar:'/ar/news'}},openGraph:{title:section.title.ar+' | VisionSeek',url:'/ar/news'}};
-export default function Page(){return <SectionPage locale="ar" sectionId="news"/>;}
+import {NewsHub} from '@/components/news/pages';
+import {t} from '@/components/news/copy';
+import {listNews} from '@/lib/news';
+
+const items = listNews('ar');
+const og = items[0];
+
+export const metadata: Metadata = {
+  title: 'أخبار | VisionSeek',
+  description: t('ar', 'intro'),
+  alternates: {canonical: '/ar/news', languages: {en: '/news', ar: '/ar/news'}},
+  openGraph: {
+    title: 'أخبار | VisionSeek',
+    description: t('ar', 'intro'),
+    url: '/ar/news',
+    images: og ? [{url: og.ogImageSrc, alt: og.heroAlt, width: 1200, height: 630}] : undefined,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'أخبار | VisionSeek',
+    description: t('ar', 'intro'),
+    images: og ? [og.ogImageSrc] : undefined,
+  },
+};
+
+export default function Page() {
+  return <NewsHub locale="ar" items={items}/>;
+}

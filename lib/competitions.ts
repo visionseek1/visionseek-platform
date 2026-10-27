@@ -50,6 +50,11 @@ export function cardsNow(now = Date.now()) {
   return {current, completed: competitions.cards.filter(card => card.status === 'completed')};
 }
 
+/** Open announcements only: status open and the Korea-day deadline is still in the future. */
+export function openCompetitionCount(now = Date.now()) {
+  return cardsNow(now).current.filter(({state}) => state === 'open').length;
+}
+
 export function formatDeadline(deadline: string, locale: Locale) {
   const day = new Date(`${deadline}T00:00:00Z`);
   if (Number.isNaN(day.getTime())) return deadline;

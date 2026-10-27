@@ -1,0 +1,194 @@
+import assert from 'node:assert/strict';
+import {existsSync, readFileSync, readdirSync} from 'node:fs';
+import {join} from 'node:path';
+import test from 'node:test';
+
+const root = process.cwd();
+const read = rel => readFileSync(join(root, rel), 'utf8');
+const newsDir = join(root, 'content/news');
+const mdFiles = readdirSync(newsDir).filter(name => name.endsWith('.md') && name.toLowerCase() !== 'readme.md');
+
+const parseFront = raw => {
+  const match = raw.replace(/^\uFEFF/, '').match(/^---[ \t]*\n([\s\S]*?)\n---[ \t]*\n?([\s\S]*)$/);
+  assert.ok(match, 'frontmatter');
+  const data = {};
+  let listKey = null;
+  let list = null;
+  let current = null;
+  for (const line of match[1].split('\n')) {
+    if (!line.trim() || line.trim().startsWith('#')) continue;
+    const item = line.match(/^\s+-\s+(.*)$/);
+    if (item && list) {
+      const rest = item[1];
+      const colon = rest.indexOf(':');
+      if (colon > 0 && !/^\d/.test(rest)) {
+        current = {[rest.slice(0, colon).trim()]: rest.slice(colon + 1).trim()};
+        list.push(current);
+      } else {
+        current = null;
+        list.push(rest);
+      }
+      continue;
+    }
+    const nested = line.match(/^\s{2,}([A-Za-z][A-Za-zA-Z0-9]*):\s*(.*)$/);
+    if (nested && current) {
+      current[nested[1]] = nested[2].trim();
+      continue;
+    }
+    const kv = line.match(/^([A-Za-z][A-Za-zA-Z0-9]*):\s*(.*)$/);
+    assert.ok(kv, line);
+    listKey = null;
+    list = null;
+    current = null;
+    if (kv[2] === '') {
+      listKey = kv[1];
+      list = [];
+      data[listKey] = list;
+    } else if (kv[2] === 'true' || kv[2] === 'false') data[kv[1]] = kv[2] === 'true';
+    else if (kv[2] === '[]') data[kv[1]] = [];
+    else if (/^-?\d+$/.test(kv[2])) data[kv[1]] = Number(kv[2]);
+    else {
+      const raw = kv[2];
+      data[kv[1]] = ((raw.startsWith('"') && raw.endsWith('"')) || (raw.startsWith("'") && raw.endsWith("'")))
+        ? raw.slice(1, -1)
+        : raw;
+    }
+  }
+  return {data, body: match[2]};
+};
+
+const pngSize = path => {
+  const buf = readFileSync(path);
+  return {width: buf.readUInt32BE(16), height: buf.readUInt32BE(20)};
+};
+
+const required = ['slug', 'title', 'dek', 'publishedAt', 'tag', 'sourceName', 'sourceUrl', 'heroImage', 'heroAlt', 'imageCredit', 'readingMinutes'];
+
+const assertNewsImages = (data, name) => {
+  assert.ok(existsSync(join(newsDir, data.heroImage)), `${name} ${data.heroImage}`);
+  const hero = pngSize(join(newsDir, data.heroImage));
+  assert.equal(hero.width / hero.height, 16 / 9, `${name} hero 16:9`);
+  const og = data.heroImage.replace(/(\.[a-z]+)$/i, '.og$1');
+  assert.ok(existsSync(join(newsDir, og)), og);
+  assert.deepEqual(pngSize(join(newsDir, og)), {width: 1200, height: 630});
+};
+
+test('news briefings: the three published items validate and no samples remain', () => {
+  assert.deepEqual(mdFiles.sort(), [
+    'dubai-ai-campus-1000-companies-2030.md',
+    'dubai-chambers-agentic-ai-marketplace.md',
+    'stv-dga-ai-government-consulting-rfs.md',
+  ]);
+  const expected = {
+    'dubai-ai-campus-1000-companies-2030.md': {slug: 'dubai-ai-campus-1000-companies-2030', tag: 'استثمار وشركات', hero: {width: 1600, height: 900}},
+    'dubai-chambers-agentic-ai-marketplace.md': {slug: 'dubai-chambers-agentic-ai-marketplace', tag: 'استثمار وشركات', hero: {width: 1280, height: 720}},
+    'stv-dga-ai-government-consulting-rfs.md': {slug: 'stv-dga-ai-government-consulting-rfs', tag: 'تنظيم وسياسات', hero: {width: 1280, height: 720}},
+  };
+  for (const name of mdFiles) {
+    const {data, body} = parseFront(read(join('content/news', name)));
+    const want = expected[name];
+    for (const field of required) assert.notEqual(data[field], undefined, `${name} ${field}`);
+    assert.equal(data.sample, undefined, name);
+    assert.equal(data.slug, want.slug);
+    assert.equal(data.tag, want.tag);
+    assert.equal(data.updatedAt, undefined, `${name} must not repeat publishedAt as updatedAt`);
+    assert.match(data.publishedAt, /[+-]\d{2}:\d{2}$/);
+    assert.equal(['summary', 'image', 'imageAlt'].some(key => key in data), false, name);
+    assertNewsImages(data, name);
+    assert.deepEqual(pngSize(join(newsDir, data.heroImage)), want.hero);
+    assert.match(body, /## ما الذي حدث/);
+    assert.match(body, /## لماذا يهم الخليج والعالم العربي/);
+    assert.match(body, /## قراءة VisionSeek/);
+    assert.doesNotMatch(body, /خبر تجريبي|example\.com/);
+  }
+  const times = Object.fromEntries(mdFiles.map(name => [name, parseFront(read(join('content/news', name))).data.publishedAt]));
+  assert.ok(times['dubai-chambers-agentic-ai-marketplace.md'] > times['stv-dga-ai-government-consulting-rfs.md']);
+  assert.ok(times['stv-dga-ai-government-consulting-rfs.md'] > times['dubai-ai-campus-1000-companies-2030.md']);
+});
+
+test('news briefings: README documents the style-guide schema', () => {
+  const readme = read('content/news/README.md');
+  for (const field of [...required, 'updatedAt', 'corrections', 'heroImage', 'dek']) assert.match(readme, new RegExp(field));
+  assert.doesNotMatch(readme, /sample: true|عيّنة تجريبية/);
+  assert.match(readme, /1200×630|1200x630/);
+  assert.match(readme, /Asia\/Dubai|GMT\+4/);
+});
+
+test('news briefings: loader requires heroes and has no sample path', () => {
+  const load = read('lib/news/load.ts');
+  assert.match(load, /REQUIRED_NEWS_FIELDS/);
+  assert.match(load, /heroImage/);
+  assert.match(load, /hasPublishedNews/);
+  assert.doesNotMatch(load, /isPreviewBuild|includeSampleNews|item\.sample/);
+  assert.match(read('lib/news/schema.ts'), /dek:/);
+  assert.match(read('lib/news/schema.ts'), /heroImage:/);
+  assert.match(read('lib/news/schema.ts'), /readingMinutes:/);
+  assert.doesNotMatch(read('lib/news/schema.ts'), /summary:/);
+  assert.doesNotMatch(read('lib/news/schema.ts'), /sample:/);
+  assert.match(read('lib/news/parse.ts'), /trimmed === '\[\]'/);
+  assert.match(read('lib/news/parse.ts'), /المصدر/);
+  assert.match(read('next.config.ts'), /hasPublishedNews/);
+  assert.doesNotMatch(read('next.config.ts'), /sample:\s*true/);
+});
+
+test('news briefings: index is a lead plus two columns, detail has opinion/source/related/jsonld', () => {
+  const css = read('components/news/news.module.css');
+  assert.match(css, /\.lead/);
+  assert.match(css, /grid-template-columns: repeat\(2,/);
+  assert.match(css, /max-width: 70ch/);
+  const pages = read('components/news/pages.tsx');
+  assert.match(pages, /NewsArticle/);
+  assert.match(pages, /datePublished/);
+  assert.match(pages, /dateModified/);
+  assert.match(pages, /رأي|opinion/);
+  assert.match(pages, /relatedNews/);
+  assert.match(pages, /corrections/);
+  assert.match(read('components/news/grid.tsx'), /المزيد|more/);
+  assert.match(read('components/news/grid.tsx'), /NEWS_TOPICS/);
+  assert.match(read('components/news/relative-time.tsx'), /dateTime/);
+  assert.match(read('lib/news/time.ts'), /منذ ساعتين|ساعتين/);
+  assert.match(read('lib/news/time.ts'), /Asia\/Dubai/);
+});
+
+test('news briefings: nav order, unarchived /news, sitemap and og 1200×630', () => {
+  const nav = JSON.parse(read('content/navigation.json'));
+  const paths = nav.sections.map(s => s.path);
+  const news = nav.sections.find(s => s.path === '/news');
+  assert.equal(news.ar, 'أخبار');
+  assert.equal(news.en, 'News');
+  assert.equal(paths[paths.indexOf('/research') + 1], '/news');
+  assert.equal(paths[paths.indexOf('/news') + 1], '/indices');
+  const archived = JSON.parse(read('content/visibility.json')).archived.map(item => item.path);
+  assert.equal(archived.includes('/news'), false);
+  const sitemap = read('app/sitemap.ts');
+  assert.match(sitemap, /path: "\/ar\/news"/);
+  assert.match(sitemap, /listNews/);
+  assert.match(read('components/news/pages.tsx'), /width: 1200/);
+  assert.match(read('components/news/pages.tsx'), /height: 630/);
+});
+
+test('news briefings: production CI build publishes Chambers then STV then Dubai and shows the nav', () => {
+  const ar = join(root, '.next/server/app/ar/news.html');
+  assert.ok(existsSync(ar), 'built /ar/news');
+  const html = readFileSync(ar, 'utf8');
+  assert.match(html, /أخبار/);
+  assert.match(html, /lang="ar"/);
+  assert.match(html, /dir="rtl"/);
+  assert.doesNotMatch(html, /خبر تجريبي|عيّنة تجريبية|2026-10-27-sample/);
+  assert.match(html, /dubai-chambers-agentic-ai-marketplace/);
+  assert.match(html, /موظفك الجديد يراجع العقود ويفرز السير الذاتية/);
+  assert.match(html, /stv-dga-ai-government-consulting-rfs/);
+  assert.match(html, /4\.3 مليار دولار تنفقها السعودية على الاستشارات كل عام/);
+  assert.match(html, /dubai-ai-campus-1000-companies-2030/);
+  assert.match(html, /ألف شركة ذكاء اصطناعي في دبي/);
+  const chambersAt = html.indexOf('dubai-chambers-agentic-ai-marketplace');
+  const stvAt = html.indexOf('stv-dga-ai-government-consulting-rfs');
+  const campusAt = html.indexOf('dubai-ai-campus-1000-companies-2030');
+  assert.ok(chambersAt >= 0 && stvAt >= 0 && campusAt >= 0 && chambersAt < stvAt && stvAt < campusAt, 'Chambers is the lead');
+  assert.doesNotMatch(html, /محدَّث|حُدّث/);
+  assert.match(html, /href="\/ar\/news"/);
+  assert.equal(existsSync(join(root, '.next/server/app/ar/news/2026-10-27-sample-1.html')), false);
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-chambers-agentic-ai-marketplace.html')), 'built Chambers detail');
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/stv-dga-ai-government-consulting-rfs.html')), 'built STV detail');
+  assert.ok(existsSync(join(root, '.next/server/app/ar/news/dubai-ai-campus-1000-companies-2030.html')), 'built published detail');
+});
