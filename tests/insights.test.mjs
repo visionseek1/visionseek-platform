@@ -103,7 +103,7 @@ test('Insights: Localization Doctrine follows the first report pattern; numbers,
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/localization-doctrine');
   assert.ok(report);
-  assert.equal(d.reports[5].page, '/reports/reports/localization-doctrine');
+  assert.equal(d.reports[6].page, '/reports/reports/localization-doctrine');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'عقيدة التوطين: من استخدام التكنولوجيا إلى امتلاكها: كوريا دليلٌ على أن العرب يستطيعون');
   assert.equal(report.title.en, 'The Localization Doctrine: From Using Technology to Owning It — What Korea Proves Is Possible for the Arab World');
@@ -218,7 +218,7 @@ test('Insights: Gulf patent ownership map sits after methodology; Arabic body, s
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/patent-ownership-map');
   assert.ok(report);
-  assert.equal(d.reports[4].page, '/reports/reports/patent-ownership-map');
+  assert.equal(d.reports[5].page, '/reports/reports/patent-ownership-map');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'من يملك الابتكار الخليجي؟ خريطة ملكية البراءات');
   assert.equal(report.title.en, 'Who Owns Gulf Innovation? A Patent Ownership Map');
@@ -266,7 +266,7 @@ test('Insights: Capability Ledger sits next to the doctrine; Arabic body, source
   const d = json('content/insights.json');
   const report = d.reports.find(x => x.page === '/reports/reports/capability-ledger');
   assert.ok(report);
-  assert.equal(d.reports[6].page, '/reports/reports/capability-ledger');
+  assert.equal(d.reports[7].page, '/reports/reports/capability-ledger');
   assert.equal(report.related.href, '/reports/reports/methodology');
   assert.equal(report.title.ar, 'سجل نقل القدرة: ماذا يبقى في الخليج بعد صفقات الذكاء الاصطناعي ومراكز البيانات؟');
   assert.equal(report.title.en, 'Capability Ledger');
@@ -311,7 +311,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
   const specs = [
     {
       page: '/reports/reports/gulf-medicine-ownership',
-      index: 1,
+      index: 2,
       titleAr: 'إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟',
       pdf: '/reports/reports/gulf-medicine-ownership-ar.pdf',
       cover: '/reports/reports/gulf-medicine-ownership-cover.jpg',
@@ -325,7 +325,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     },
     {
       page: '/reports/reports/gulf-data-center-stack',
-      index: 2,
+      index: 3,
       titleAr: 'نصف حواسيب مراكز بياناتنا يأتي من الصين… فمن يملك المفتاح؟',
       pdf: '/reports/reports/gulf-data-center-stack-ar.pdf',
       cover: '/reports/reports/gulf-data-center-stack-cover.jpg',
@@ -339,7 +339,7 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     },
     {
       page: '/reports/reports/ai-ministry-health-answers',
-      index: 3,
+      index: 4,
       titleAr: 'هل نثق بالذكاء الاصطناعي في صحتنا؟',
       pdf: '/reports/reports/ai-ministry-health-answers-ar.pdf',
       cover: '/reports/reports/ai-ministry-health-answers-cover.jpg',
@@ -395,6 +395,64 @@ test('Insights: three Arabic lab reports v1.1 sit after methodology; copy, marks
     assert.ok(existsSync(`scripts/insights/${spec.slug}/report-ar-v1.1.pdf`));
     assert.ok(!existsSync(`scripts/insights/${spec.slug}/draft-ar-v1.0.md`));
   }
+});
+
+test('Insights: hospital AI pilots ownership keeps the source text, sponsored mark, cover and PDF', () => {
+  const d = json('content/insights.json');
+  const report = d.reports.find(x => x.page === '/reports/reports/hospital-ai-pilots-ownership');
+  assert.ok(report);
+  assert.equal(d.reports[1].page, '/reports/reports/hospital-ai-pilots-ownership');
+  assert.equal(report.title.ar, 'مستشفياتنا تختبر الذكاء الاصطناعي، والدرس يسافر مع المورّد');
+  assert.equal(report.title.en, 'Our Hospitals Test the AI. The Lesson Leaves With the Vendor.');
+  assert.equal(report.summary.ar, 'ست شراكات ذكاء اصطناعي في مستشفيات الخليج خلال ستة أيام، ولا نص معلن يحدد لمن تؤول نتائج التجربة. ماذا يكتب مجلس الإدارة قبل أول مريض؟');
+  assert.match(report.kind.ar, /الإصدار 1\.0/);
+  assert.match(report.kind.ar, /27 أكتوبر 2026/);
+  assert.equal(report.pdf, '/reports/reports/hospital-ai-pilots-ownership-ar.pdf');
+  assert.equal(report.pdfLang, 'ar');
+  assert.equal(report.cover, '/reports/reports/hospital-ai-pilots-ownership-cover.jpg');
+  assert.equal(report.related.href, '/reports/reports/methodology');
+  assert.equal(report.date, '2026-10-27');
+  assert.ok(existsSync('public' + report.pdf), report.pdf);
+  assert.ok(existsSync('public' + report.cover), report.cover);
+  assert.equal(readFileSync(new URL('../public' + report.pdf, import.meta.url)).length, 486904);
+  const jpeg = readFileSync(new URL('../public' + report.cover, import.meta.url));
+  assert.equal(jpeg[0], 0xff);
+  assert.equal(jpeg[1], 0xd8);
+  let offset = 2;
+  let size = null;
+  while (offset < jpeg.length && jpeg[offset] === 0xff) {
+    const marker = jpeg[offset + 1];
+    if (marker === 0xd8 || marker === 0xd9) { offset += 2; continue; }
+    const length = jpeg.readUInt16BE(offset + 2);
+    if (marker >= 0xc0 && marker <= 0xc2) {
+      size = {height: jpeg.readUInt16BE(offset + 5), width: jpeg.readUInt16BE(offset + 7)};
+      break;
+    }
+    offset += 2 + length;
+  }
+  assert.deepEqual(size, {width: 1600, height: 1200});
+  const og = readFileSync(new URL('../public/reports/reports/hospital-ai-pilots-ownership.og.png', import.meta.url));
+  assert.equal(og.readUInt32BE(16), 1200);
+  assert.equal(og.readUInt32BE(20), 630);
+  for (const f of ['reports/reports/hospital-ai-pilots-ownership/page.tsx']) for (const pre of ['app/', 'app/ar/']) assert.ok(existsSync(pre + f), pre + f);
+  const lib = read('lib/research/hospital-ai-pilots-ownership.ts');
+  const page = read('components/insights/hospital-ai-pilots-ownership.tsx');
+  assert.match(lib, /د\. أحمد عبدالعليم، VisionSeek \(إنتشون، كوريا الجنوبية\)/);
+  assert.match(lib, /Ahmed Abdelalim, VisionSeek \(Incheon, South Korea\)/);
+  assert.doesNotMatch(lib + page, /Dr\. Ahmed Abdelalim|Dr\. Abdelalim/);
+  assert.match(lib, /رسم توضيحي: VisionSeek \(مولَّد\)/);
+  assert.match(lib, /ب \(محتوى ترويجي\)/);
+  assert.match(lib, /المصدر \[7\] محتوى ترويجي منشور باسم الشركتين/);
+  assert.match(lib, /Gulf News Reach \(ترويجي\)/);
+  assert.match(lib, /https:\/\/gulfnews\.com\/uae\/health\/american-hospital-dubai-and-hei-global-health-partner-to-build-an-ai-powered-revenue-cycle-innovation-1\.500723825/);
+  assert.equal((lib.match(/url: "https:\/\//g) || []).length, 14);
+  assert.match(page, /paper\.pdfAr/);
+  assert.match(page, /تحميل PDF/);
+  assert.match(page, /Download PDF/);
+  assert.match(page, /paper\.ogImage|paper\.cover/);
+  assert.doesNotMatch(lib + page, /مسودة|معاينة|DRAFT FOR REVIEW|\bPreview\b/);
+  assert.ok(existsSync('scripts/insights/hospital-ai-pilots-ownership/draft-ar-v1.0.md'));
+  assert.ok(existsSync('scripts/insights/hospital-ai-pilots-ownership/report-ar-v1.0.pdf'));
 });
 
 test('Insights was renamed Reports: /insights 308s to /reports, leftover reports-center pages stay archived', () => {

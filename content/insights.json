@@ -192,6 +192,32 @@
     },
     {
       "title": {
+        "ar": "مستشفياتنا تختبر الذكاء الاصطناعي، والدرس يسافر مع المورّد",
+        "en": "Our Hospitals Test the AI. The Lesson Leaves With the Vendor."
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.0 · مختبر VisionSeek · 27 أكتوبر 2026",
+        "en": "Report · Version 1.0 · VisionSeek Lab · 27 October 2026"
+      },
+      "summary": {
+        "ar": "ست شراكات ذكاء اصطناعي في مستشفيات الخليج خلال ستة أيام، ولا نص معلن يحدد لمن تؤول نتائج التجربة. ماذا يكتب مجلس الإدارة قبل أول مريض؟",
+        "en": "Six hospital AI partnerships in six days, and no public text saying who owns the results. What a board should write before the first patient."
+      },
+      "page": "/reports/reports/hospital-ai-pilots-ownership",
+      "pdf": "/reports/reports/hospital-ai-pilots-ownership-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/hospital-ai-pilots-ownership-cover.jpg",
+      "related": {
+        "href": "/reports/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-27"
+    },
+    {
+      "title": {
         "ar": "إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟",
         "en": "Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration"
       },
