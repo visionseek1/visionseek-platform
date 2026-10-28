@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Alexandria, IBM_Plex_Sans_Arabic, IBM_Plex_Serif, Oxanium } from "next/font/google";
+import { Alexandria, IBM_Plex_Sans_Arabic, IBM_Plex_Serif, Noto_Sans_KR, Oxanium } from "next/font/google";
 import "./globals.css";
 import "./capability.css";
 import "./institution.css";
+import "./governance.css";
 import {site} from '@/lib/site';
 
 const oxanium = Oxanium({
@@ -31,6 +32,14 @@ const alexandria = Alexandria({
 });
 
 // Editorial serif for English headings in VisionSeek Reports only (calm, research-house register).
+const notoSansKr = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-korean",
+  adjustFontFallback: true,
+});
+
 const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
   weight: ["500"],
@@ -50,12 +59,12 @@ const structuredData = {
       url: "https://visionseek.org/",
       logo: "https://visionseek.org/visionseek-logo-color.png",
       description:
-        "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
+        "When AI models become abundant and cheap, intelligence is no longer rare. What remains rare is how institutions govern multi-path decisions, retain true ownership of their capabilities, and design bionic organizations where humans command agents without losing control.",
       email: site.email,
       telephone: site.phoneE164,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Incheon",
+        addressLocality: "Seoul",
         addressCountry: "KR",
       },
       founder: { "@id": "https://visionseek.org/#ahmed-abdelalim" },
@@ -75,7 +84,7 @@ const structuredData = {
       "@id": "https://visionseek.org/#website",
       name: "VisionSeek",
       url: "https://visionseek.org/",
-      inLanguage: ["en", "ar"],
+      inLanguage: ["en", "ar", "ko"],
       publisher: { "@id": "https://visionseek.org/#organization" },
     },
   ],
@@ -83,9 +92,9 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://visionseek.org"),
-  title: "VisionSeek | Make It Possible.",
+  title: "VisionSeek | Strategic & Operational Governance of Decisions, Capabilities, and Agents.",
   description:
-    "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
+    "When AI models become abundant and cheap, intelligence is no longer rare. What remains rare is how institutions govern multi-path decisions, retain true ownership of their capabilities, and design bionic organizations where humans command agents without losing control.",
   icons: {
     icon: [{ url: "/visionseek-symbol-color.png", type: "image/png" }],
     shortcut: "/visionseek-symbol-color.png",
@@ -96,16 +105,17 @@ export const metadata: Metadata = {
     languages: {
       en: "/",
       ar: "/ar",
+      ko: "/ko",
     },
   },
   openGraph: {
     type: "website",
     siteName: "VisionSeek",
-    title: "VisionSeek | Make It Possible.",
+    title: "VisionSeek | Strategic & Operational Governance of Decisions, Capabilities, and Agents.",
     description:
-      "VisionSeek is a Cross-sector Opportunity, Capability & Solutions Studio. We connect technology, knowledge and partners across sectors to develop projects, capabilities and solutions. Make It Possible.",
+      "When AI models become abundant and cheap, intelligence is no longer rare. What remains rare is how institutions govern multi-path decisions, retain true ownership of their capabilities, and design bionic organizations where humans command agents without losing control.",
     url: "/",
-    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Make It Possible." }],
+    images: [{ url: "/visionseek-hero.png", alt: "VisionSeek — Strategic & Operational Governance of Decisions, Capabilities, and Agents." }],
   },
   robots: {
     index: true,
@@ -123,7 +133,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable} ${alexandria.variable} ${ibmPlexSerif.variable}`}>
+    <html lang="en" dir="ltr" className={`${oxanium.variable} ${ibmPlexSansArabic.variable} ${alexandria.variable} ${ibmPlexSerif.variable} ${notoSansKr.variable}`}>
       <body className="antialiased">
         <script
           type="application/ld+json"

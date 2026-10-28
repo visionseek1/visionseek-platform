@@ -30,13 +30,15 @@ test('the about studio is the short umbrella: five equal doors, three principles
   assert.match(page, /id="what-we-do"/);
 });
 
-test('the founder role stays on the about page, not in the header bar', () => {
+test('the founder role stays on the about studio record, not in the header bar', () => {
   assert.match(about.studio.founder.line.ar, /كبير مهندسي القدرات/);
   assert.match(about.studio.founder.line.en, /Chief Capability Architect/);
   assert.doesNotMatch(nav, /كبير مهندسي القدرات|Chief Capability Architect/);
   assert.doesNotMatch(nav, /مهندس القدرات المؤسسية|INSTITUTIONAL CAPABILITY ARCHITECT/);
-  assert.match(nav, /منهجنا/);
-  assert.match(nav, /تواصل/);
-  assert.match(nav, /Our Method/);
-  assert.match(nav, /Contact/);
+  assert.match(nav, /assessCta/);
+  assert.match(nav, /hq/);
+  assert.match(read('lib/public-site.ts'), /افحص جاهزية مؤسستك/);
+  assert.match(read('lib/public-site.ts'), /Assess Your Institution/);
+  assert.match(read('lib/public-site.ts'), /سول، كوريا الجنوبية/);
+  assert.match(read('lib/public-site.ts'), /Seoul, South Korea/);
 });

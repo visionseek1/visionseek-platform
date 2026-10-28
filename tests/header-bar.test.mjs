@@ -5,16 +5,23 @@ import {chooseCollapsed, headerCollapseKey, HEADER_COLLAPSE_DEFAULT, HEADER_COLL
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const nav = read('components/capability/navigation.tsx');
+const copy = read('lib/public-site.ts');
 const css = read('app/institution.css');
-const paths = ['/korean-solutions', '/projects', '/programs', '/institute', '/reports', '/research', '/news', '/indices', '/conferences', '/work-with-us', '/about'];
+const paths = ['/about', '/frameworks', '/observatory', '/executive-masterclass', '/standards', '/diagnostic', '/pillars'];
 
-test('the header utility bar keeps the method and contact links and drops the founder role', () => {
+test('the header carries the institution line, the three languages, and the readiness CTA', () => {
   assert.doesNotMatch(nav, /كبير مهندسي القدرات|Chief Capability Architect/);
-  assert.match(nav, /منهجنا/);
-  assert.match(nav, /تواصل/);
-  assert.match(nav, /Our Method/);
-  assert.match(nav, /Contact/);
-  assert.match(nav, /isArchived\(["']\/method["']\)/);
+  assert.doesNotMatch(nav, /ابنِ حلولك معنا|Build your solutions with us/);
+  assert.doesNotMatch(nav, /Korean Solutions|حلول من كوريا|Aegis|Apex|Clause|Relay/);
+  assert.match(nav, /tx\(locale, hq\)/);
+  assert.match(nav, /tx\(locale, assessCta\)/);
+  assert.match(copy, /سول، كوريا الجنوبية · نعمل عالمياً عبر آسيا والعالم العربي/);
+  assert.match(copy, /Seoul, South Korea · Operating globally across Asia and the Arab World/);
+  assert.match(copy, /대한민국 서울 · 아시아 및 아랍권 전역에서 글로벌 운영/);
+  assert.match(copy, /افحص جاهزية مؤسستك/);
+  assert.match(copy, /Assess Your Institution/);
+  assert.match(copy, /기관의 준비도를 진단하십시오/);
+  assert.match(nav, /label: "KR"/);
   assert.match(nav, /isArchived\(["']\/leaders-house["']\)/);
 });
 
@@ -26,9 +33,7 @@ test('every header destination stays reachable from the bar, the more menu, and 
   assert.match(nav, /visibleSections/);
   assert.match(nav, /قائمة الهاتف/);
   assert.match(nav, /Mobile navigation/);
-  assert.match(nav, /ابنِ حلولك معنا/);
-  assert.match(nav, /Build your solutions with us/);
-  assert.match(nav, /hrefLang=\{ar \? "en" : "ar"\}/);
+  assert.match(nav, /hrefLang=\{language\.hrefLang\}/);
   for (const path of HEADER_COLLAPSE_ORDER) assert.match(read('lib/institution/header-fit.ts'), new RegExp(path.replace('/', '\\/')));
 });
 
@@ -42,20 +47,19 @@ test('the desktop row stays one line until the phone breakpoint', () => {
 });
 
 test('secondary sections collapse before primary ones, and none are dropped', () => {
-  const widths = new Map(paths.map(path => [path, path === '/institute' || path === '/korean-solutions' || path === '/about' ? 150 : 80]));
-  const tight = chooseCollapsed(paths, widths, 760, 16, 70);
+  const widths = new Map(paths.map(path => [path, path === '/about' || path === '/executive-masterclass' ? 150 : 80]));
+  const tight = chooseCollapsed(paths, widths, 520, 16, 70);
   assert.ok(tight);
   assert.equal(new Set([...tight, ...paths.filter(path => !tight.has(path))]).size, paths.length);
   assert.equal([...tight].every(path => paths.includes(path)), true);
-  for (const path of ['/conferences', '/indices', '/news', '/reports']) assert.equal(tight.has(path), true, path);
-  assert.equal(tight.has('/projects'), false);
-  assert.equal(tight.has('/programs'), false);
-  assert.equal(tight.has('/korean-solutions'), false);
+  for (const path of ['/about', '/frameworks', '/observatory', '/executive-masterclass']) assert.equal(tight.has(path), true, path);
+  assert.equal(tight.has('/pillars'), false);
+  assert.equal(tight.has('/standards'), false);
 
   const wide = chooseCollapsed(paths, widths, 4000, 16, 70);
   assert.equal(wide?.size, 0);
 
-  const unread = chooseCollapsed(paths, new Map([['/projects', 80]]), 1000, 16, 70);
+  const unread = chooseCollapsed(paths, new Map([['/pillars', 80]]), 1000, 16, 70);
   assert.equal(unread, null);
-  assert.equal(headerCollapseKey(HEADER_COLLAPSE_DEFAULT), '/conferences|/indices|/institute|/news|/reports|/research');
+  assert.equal(headerCollapseKey(HEADER_COLLAPSE_DEFAULT), '/about|/executive-masterclass|/frameworks|/observatory');
 });

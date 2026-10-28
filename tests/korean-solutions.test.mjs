@@ -90,7 +90,8 @@ test('Korean Solutions: in the menu, the sitemap and the archive list; the ops s
   assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#domains' && c.ar === 'المجالات'));
   assert.ok(nav[0].children.some(c => c.href === '/korean-solutions#initiatives' && c.ar === 'المبادرات'));
   assert.equal(nav[0].children.some(c => c.href === '/cars'), false);
-  assert.match(read('app/sitemap.ts'), /korean-solutions/);
+  assert.match(read('next.config.ts'), /korean-solutions/);
+  assert.doesNotMatch(read('app/sitemap.ts'), /korean-solutions/);
   assert.doesNotMatch(read('app/sitemap.ts'), /path: '\/cars'/);
   assert.match(read('public/admin/config.yml'), /value: "\/korean-solutions"/);
   assert.doesNotMatch(read('public/admin/config.yml'), /value: "\/cars"/);

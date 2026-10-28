@@ -1,15 +1,10 @@
-import type { Metadata } from "next";
-import HomePage from "@/components/home-page";
+import type {Metadata} from 'next';
+import {HomeView} from '@/components/governance/views';
+import {pageMeta} from '@/components/governance/frame';
+import {hero, tx} from '@/lib/public-site';
 
-export const metadata: Metadata = {
-  title: "VisionSeek | Future Technology, Science & Venture Building",
-  description: "VisionSeek connects capabilities that already exist into work a government or a company can actually operate.",
-  alternates: {
-    canonical: "/",
-    languages: { en: "/", ar: "/ar" },
-  },
-};
+export const metadata: Metadata = pageMeta('en', '/', tx('en', hero.headline), tx('en', hero.sub));
 
-export default function EnglishHome() {
-  return <HomePage locale="en" />;
+export default function EnglishAliasHome() {
+  return <HomeView locale="en"/>;
 }

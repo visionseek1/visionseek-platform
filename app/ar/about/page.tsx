@@ -1,15 +1,10 @@
-import type {Metadata} from "next";
-import AboutStudio from "@/components/capability/about-studio";
+import type {Metadata} from 'next';
+import {AboutView} from '@/components/governance/views';
+import {pageMeta} from '@/components/governance/frame';
+import {direction, navLabel, publicNav, tx} from '@/lib/public-site';
 
-const description = "VisionSeek استوديو للفرص والقدرات والحلول العابرة للقطاعات. من كوريا الجنوبية، نصل المؤسسات العربية بالقدرة التي تحتاجها، ونبنيها معها لتبقى ملكًا لها.";
-
-export const metadata: Metadata = {
-  title: "عن VisionSeek | VisionSeek",
-  description,
-  alternates: {canonical: "/ar/about", languages: {en: "/about", ar: "/ar/about"}},
-  openGraph: {title: "عن VisionSeek | VisionSeek", description, url: "/ar/about"},
-};
+export const metadata: Metadata = pageMeta('ar', '/about', navLabel('ar', publicNav[6]), tx('ar', direction));
 
 export default function Page() {
-  return <AboutStudio locale="ar"/>;
+  return <AboutView locale="ar"/>;
 }

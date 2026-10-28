@@ -1,0 +1,55 @@
+/* Governance restructure: wide institutional pages, card grids, prominent headings. */
+.vs-site.locale-ko{font-family:var(--font-korean),sans-serif}
+.vs-site.locale-ko :is(h1,h2,h3){font-family:var(--font-korean),sans-serif;letter-spacing:-.02em;line-height:1.35;font-weight:600}
+.vs-hq-line{margin:0;max-width:72rem;font-size:.78rem;line-height:1.5;letter-spacing:0;color:var(--grey)}
+.vs-language-group{display:inline-flex;align-items:center;gap:.35rem}
+.vs-expanded-header .vs-language-group .vs-language{padding:0 .65rem;border-inline-start:0}
+.vs-expanded-header .vs-language[aria-current="true"]{color:#10150b;background:var(--lime);border-color:var(--lime)}
+.vs-gov{padding:0 0 5rem}
+.vs-gov-hero{padding:4.5rem clamp(1.5rem,5vw,6rem) 4rem;background:#15171e}
+.vs-gov-hero h1{font-size:clamp(2.6rem,5vw,5.2rem);max-width:68rem;margin:1rem 0 1.4rem;line-height:1.12}
+.vs-site.locale-ar .vs-gov-hero h1{line-height:1.45}
+.vs-gov-hero .vs-hero-sub{max-width:62rem;font-size:clamp(1.15rem,1.6vw,1.45rem);line-height:1.7;color:#d5d8d4}
+.vs-gov-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.vs-gov-section{padding:4.5rem clamp(1.5rem,5vw,6rem)}
+.vs-gov-section h2{font-size:clamp(2rem,3.4vw,3.4rem);margin:0 0 1.6rem}
+.vs-pillar-grid,.vs-standard-grid,.vs-framework-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.vs-pillar-card,.vs-standard-card,.vs-framework-card,.vs-feed-card{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;min-width:0;background:#111516;border:1px solid #2c3138;border-top:3px solid var(--lime);padding:1.6rem 1.5rem 1.7rem}
+.vs-pillar-card h3,.vs-standard-card h3,.vs-framework-card h3,.vs-feed-card h3{font-size:clamp(1.35rem,1.8vw,1.8rem);line-height:1.35}
+.vs-pillar-card p,.vs-standard-card p,.vs-feed-card p,.vs-gov-prose{font-size:1.05rem;line-height:1.8;color:#d5d8d4}
+.vs-pillar-index{color:var(--lime);font-family:var(--font-display),sans-serif;font-size:.85rem;letter-spacing:.08em}
+.vs-site.locale-ar .vs-pillar-index,.vs-site.locale-ko .vs-pillar-index{letter-spacing:0}
+.vs-gov-split{display:grid;grid-template-columns:1.2fr .8fr;gap:1.25rem}
+.vs-gov-band{background:#10151a}
+.vs-outcome-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;list-style:none;padding:0;margin:1.5rem 0 0}
+.vs-outcome-list li{background:#111516;border-top:3px solid var(--lime);padding:1.4rem;font-size:1.08rem;line-height:1.75}
+.vs-outcome-list span{display:block;color:var(--lime);font-family:var(--font-display),sans-serif;margin-bottom:.6rem}
+.vs-leader{margin-top:1.5rem;font-size:1.2rem}
+.vs-question{font-size:clamp(1.35rem,2vw,1.8rem);line-height:1.6;max-width:70rem}
+.vs-diagnostic{display:grid;gap:1rem}
+.vs-diagnostic fieldset{border:1px solid #2c3138;background:#111516;padding:1.3rem 1.4rem;margin:0}
+.vs-diagnostic legend{font-size:1.08rem;line-height:1.7;padding:0 .2rem}
+.vs-choice-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
+.vs-choice-row button{border:1px solid #45494b;background:transparent;color:var(--white);padding:.8rem 1rem;font:inherit;font-size:1rem}
+.vs-choice-row button[aria-pressed="true"]{background:var(--lime);color:#10150b;border-color:var(--lime);font-weight:700}
+.vs-result-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.5rem}
+.vs-result-grid article{background:#171b20;padding:1.2rem}
+.vs-result-grid strong{display:block;margin-top:.4rem;color:var(--lime);font-size:1.15rem}
+.vs-feed-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.vs-feed-list{display:grid;gap:.8rem}
+.vs-feed-card{border-top-width:1px}
+.vs-feed-card span{color:var(--lime);font-size:.8rem}
+.vs-framework-card{font-size:1.15rem}
+@media(max-width:1023px){
+  .vs-expanded-header .vs-language-group{display:none}
+  .vs-pillar-grid,.vs-standard-grid,.vs-framework-grid,.vs-outcome-list,.vs-result-grid{grid-template-columns:1fr 1fr}
+  .vs-gov-split,.vs-feed-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .vs-gov-hero{padding:2.4rem 1.5rem 2.6rem}
+  .vs-gov-hero h1{font-size:2.15rem}
+  .vs-gov-section{padding:2.8rem 1.5rem}
+  .vs-pillar-grid,.vs-standard-grid,.vs-framework-grid,.vs-outcome-list,.vs-result-grid{grid-template-columns:1fr}
+  .vs-gov-actions .vs-button,.vs-choice-row button{width:100%;justify-content:center}
+  .vs-hq-line{font-size:.72rem}
+}
