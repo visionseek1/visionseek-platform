@@ -192,6 +192,32 @@
     },
     {
       "title": {
+        "ar": "موظفوك يضعون بيانات المؤسسة في أدوات ذكاء اصطناعي مجانية، والمنع وحده لا يوقفهم",
+        "en": "Your Staff Are Putting Company Data Into Free AI Tools, and a Ban Alone Will Not Stop Them"
+      },
+      "kind": {
+        "ar": "تقرير · الإصدار 1.0 · مختبر VisionSeek · 28 أكتوبر 2026",
+        "en": "Report · Version 1.0 · VisionSeek Lab · 28 October 2026"
+      },
+      "summary": {
+        "ar": "استطلاع KPMG وجامعة ملبورن: 47% إلى 56% من الموظفين في السعودية والإمارات ومصر استعملوا الذكاء الاصطناعي بخلاف سياسة مؤسستهم، والمنع ارتبط برفع بيانات أكثر لا أقل. خمس خطوات تبدأ بها المؤسسة غدًا.",
+        "en": "KPMG and University of Melbourne survey: 47% to 56% of employees in Saudi Arabia, the UAE and Egypt used AI against their organization's policy, and bans were linked to more data uploads, not fewer. Five steps an institution can start tomorrow."
+      },
+      "page": "/reports/reports/shadow-ai-employee-data",
+      "pdf": "/reports/reports/shadow-ai-employee-data-ar.pdf",
+      "pdfLang": "ar",
+      "cover": "/reports/reports/shadow-ai-employee-data-cover.jpg",
+      "related": {
+        "href": "/reports/reports/methodology",
+        "label": {
+          "ar": "منهجية التقارير",
+          "en": "Reports Methodology"
+        }
+      },
+      "date": "2026-10-28"
+    },
+    {
+      "title": {
         "ar": "إنسولين الخليج في يد مورّد واحد تقريبًا… فماذا لو تأخرت الشحنة؟",
         "en": "Who Owns the Gulf's Medicine? Finished-Product versus API Import Concentration"
       },
