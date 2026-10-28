@@ -3,27 +3,21 @@
  * before the row wraps or the gaps collapse. Every path stays in the result.
  */
 export const HEADER_COLLAPSE_ORDER = [
-  "/conferences",
-  "/indices",
-  "/news",
-  "/reports",
-  "/research",
-  "/institute",
   "/about",
-  "/work-with-us",
-  "/programs",
-  "/projects",
-  "/korean-solutions",
+  "/frameworks",
+  "/observatory",
+  "/executive-masterclass",
+  "/standards",
+  "/diagnostic",
+  "/pillars",
 ] as const;
 
-/** Safe first paint from 1024px up: the four publication sections, plus Research and Institute when the row is tight. */
+/** Safe first paint from 1024px up: the four longer labels leave the row until it is measured. */
 export const HEADER_COLLAPSE_DEFAULT = [
-  "/conferences",
-  "/indices",
-  "/news",
-  "/reports",
-  "/research",
-  "/institute",
+  "/about",
+  "/frameworks",
+  "/observatory",
+  "/executive-masterclass",
 ];
 
 export function headerCollapseKey(paths: Iterable<string>): string {

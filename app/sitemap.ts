@@ -10,11 +10,6 @@ import {insights} from '@/lib/insights';
 import {tenders} from '@/lib/tenders';
 import {liveIndices} from '@/lib/indices';
 import {listNews} from '@/lib/news';
-import ksData from '@/content/korean-solutions.json';
-
-// Korean Solutions pages known at build time (the JSON copy of the Notion database).
-const koreanSolutions = ksData.solutions;
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const entries = [
@@ -23,8 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...["/reports/methodology", "/ar/reports/methodology", "/reports/agent-governance", "/ar/reports/agent-governance"].map(path => ({path, priority: 0.7})),
     ...(showPublicCharacters?[...characters.flatMap(c=>[{path:characterPath(c.id,'ar'),priority:0.6},{path:characterPath(c.id,'en'),priority:0.6}]),
       {path:'/leaders-house/characters',priority:0.7},{path:'/ar/leaders-house/characters',priority:0.7}]:[]),
-    ...sections.filter(s=>!["about","work-with-us"].includes(s.id)).flatMap(s=>[{path:sectionPath(s.id),priority:0.8},{path:`/ar${sectionPath(s.id)}`,priority:0.8}]),
-    ...institutionEntries.flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
+    ...sections.filter(s=>!["about","work-with-us","programs"].includes(s.id)).flatMap(s=>[{path:sectionPath(s.id),priority:0.8},{path:`/ar${sectionPath(s.id)}`,priority:0.8}]),
+    ...institutionEntries.filter(e=>e.section!=='programs').flatMap(e=>[{path:entryPath(e),priority:0.7},{path:`/ar${entryPath(e)}`,priority:0.7}]),
     ...workshops.flatMap(item=>[{path:`/masterclass/${item.slug}`,priority:0.75},{path:`/ar/masterclass/${item.slug}`,priority:0.75}]),
     {path:'/masterclass',priority:0.8},{path:'/ar/masterclass',priority:0.8},
     {path:'/masterclass/single-track-trap',priority:0.75},{path:'/ar/masterclass/single-track-trap',priority:0.75},
@@ -39,10 +34,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ar", priority: 0.9 },
     { path: "/projects", priority: 0.8 },
     { path: "/ar/projects", priority: 0.8 },
-    {path: '/korean-solutions', priority: 0.85}, {path: '/ar/korean-solutions', priority: 0.85},
+    {path: '/pillars', priority: 0.9}, {path: '/ar/pillars', priority: 0.9}, {path: '/ko/pillars', priority: 0.9},
+    {path: '/standards', priority: 0.9}, {path: '/ar/standards', priority: 0.9}, {path: '/ko/standards', priority: 0.9},
+    {path: '/executive-masterclass', priority: 0.85}, {path: '/ar/executive-masterclass', priority: 0.85}, {path: '/ko/executive-masterclass', priority: 0.85},
+    {path: '/diagnostic', priority: 0.85}, {path: '/ar/diagnostic', priority: 0.85}, {path: '/ko/diagnostic', priority: 0.85},
+    {path: '/observatory', priority: 0.85}, {path: '/ar/observatory', priority: 0.85}, {path: '/ko/observatory', priority: 0.85},
+    {path: '/frameworks', priority: 0.8}, {path: '/ar/frameworks', priority: 0.8}, {path: '/ko/frameworks', priority: 0.8},
     {path: '/indices', priority: 0.8}, {path: '/ar/indices', priority: 0.8},
     ...liveIndices().flatMap(item => [{path: `/indices/${item.slug}`, priority: 0.75}, {path: `/ar/indices/${item.slug}`, priority: 0.75}]),
-    ...koreanSolutions.flatMap(k => [{path: `/korean-solutions/${k.slug}`, priority: 0.7}, {path: `/ar/korean-solutions/${k.slug}`, priority: 0.7}]),
+    {path: '/ko', priority: 0.9},
     { path: "/reports", priority: 0.85 },
     { path: "/ar/reports", priority: 0.85 },
     { path: "/research", priority: 0.85 },

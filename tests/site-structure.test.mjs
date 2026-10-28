@@ -25,10 +25,10 @@ test('header keeps the axes and drops the sector menu', () => {
   assert.doesNotMatch(read('components/capability/navigation.tsx'), /projects#fields/);
 });
 
-test('retired sector landings redirect to Projects', () => {
+test('retired sector landings redirect home', () => {
   const redirects = read('next.config.ts');
   assert.match(redirects, /energy', 'semiconductors', 'drones-aviation', 'defense', 'robotics', 'health', 'agriculture', 'infrastructure'/);
-  assert.match(redirects, /source: `\$\{prefix\}\/projects\/\$\{sector\}`, destination: `\$\{prefix\}\/projects`, permanent: true/);
+  assert.match(redirects, /source: `\$\{prefix\}\/projects\/\$\{sector\}`, destination: `\$\{prefix \|\| '\/'\}`, permanent: true/);
   const projects = read('lib/projects/index.ts');
   assert.match(projects, /export const retiredSectors/);
   assert.match(projects, /isRetiredSector/);
